@@ -1,0 +1,32 @@
+--	Stratagus Map - Single player campaign
+
+Load("campaigns/dwarf/level04d_c2.sms")
+
+Briefing(
+  title,
+  objectives,
+  "../graphics/ui/dwarf/introscreen1.png",
+  "campaigns/dwarf/level04d.txt",
+  {}
+)
+
+-- FIXME: Check if units are freed.
+
+Triggers = [[
+AddTrigger(
+  function() return IfRescuedNearUnit("this", ">=", 1, "unit-dwarven-axefighter", "unit-human-watch-tower") end,
+  function() return ActionVictory() end)
+AddTrigger(
+  function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
+  function() return ActionDefeat() end)
+
+StandardTriggers()
+]]
+
+assert(loadstring(Triggers))()
+
+-- AI
+
+-- Map
+
+Load("campaigns/dwarf/level04d.sms")

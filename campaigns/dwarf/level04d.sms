@@ -1,0 +1,192 @@
+-- Stratagus Map Setup
+-- File generated automatically from pudconvert V1.0
+
+SetStartView(0, 6, 27)
+SetPlayerData(0, "Resources", "gold", 4000)
+SetPlayerData(0, "Resources", "wood", 0)
+SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "dwarf")
+SetAiType(0, "land-attack")
+SetStartView(1, 12, 120)
+SetPlayerData(1, "Resources", "gold", 12000)
+SetPlayerData(1, "Resources", "wood", 0)
+SetPlayerData(1, "Resources", "oil", 0)
+SetPlayerData(1, "RaceName", "dwarf")
+SetAiType(1, "land-attack")
+SetStartView(2, 75, 48)
+SetPlayerData(2, "Resources", "gold", 7000)
+SetPlayerData(2, "Resources", "wood", 0)
+SetPlayerData(2, "Resources", "oil", 0)
+SetPlayerData(2, "RaceName", "orc")
+SetAiType(2, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+LoadTileModels("scripts/tilesets/wasteland.lua")
+
+-- Coal
+UI.Resources[4].G = CGraphic:New("ui/ore,stone,coal.png", 14, 14)
+UI.Resources[4].IconFrame = 2
+UI.Resources[4].IconX = 176 + 150
+UI.Resources[4].IconY = 0
+UI.Resources[4].TextX = 176 + 150 + 18
+UI.Resources[4].TextY = 1
+
+MapWidth = 40
+MapHeight = 40
+
+RawTiles = {
+	{"",     "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough", "",      "Rough", "",      "Rough", "Rough", "",      "",      ""},
+	{"",     "",      "Land",  "",      "",      "Land",  "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "Rough", "",      "Land",  "",      "",      "",      "",      "Land",  "",      ""},
+	{"",     "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Land",  "Rough", "",      "",      "",      "",      "Rough", "Land",  "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough"},
+	{"",     "",      "Rough", "",      "",      "Land",  "",      "Rough", "",      "",      "",      "",      "Land",  "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "Land",  "",      "",      "Rough", "Rough", "Rough", "",      "Rough", "Rough", ""},
+	{"",     "",      "",      "Rough", "",      "Rough", "",      "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "",      "Rough", "",      "",      "Land",  "",      "",      "",      "",      "Rough", "",      "Rough", "",      "Rough", "",      "",      ""},
+	{"",     "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Land",  "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      ""},
+	{"",     "",      "",      "",      "",      "Rough", "",      "",      "Land",  "",      "",      "Land",  "",      "",      "Rough", "Rough", "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Land",  "",      "",      "",      "",      "Rough", ""},
+	{"",     "Land",  "Rough", "",      "",      "Rough", "",      "Rough", "",      "",      "",      "",      "",      "Rough", "",      "Rough", "Rough", "",      "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      ""},
+	{"",     "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "Water", "Water", "",      "Rough", "",      "",      "Land",  "Rough", "",      "",      "",      "Land",  "",      "",      "",      "Rough", "",      "",      "Rough", "",      "Land",  "Rough", "",      "",      "Rough" , "",      "Rough", "",      ""},
+	{"",     "Rough", "",      "Rough", "",      "",      "",      "Land",  "Rough", "Rough", "Rough", "Water", "Water", "",      "Rough", "Rough", "Land",  "Rough", "",      "",      "Rough", "Rough", "",      "Water", "Water", "Water", "Land",  "",      "",      "",      "",      "",      "Rough", "Land",  "Rough", "",      "Rough", "",      "",      ""},
+	{"",     "",      "",      "",      "Rough", "Rough", "",      "Land",  "",      "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "Rough", "",      "",      "",      "",      "Water", "Water", "Water", "Water", "",      "Rough", "",      "Land",  "",      "",      "",      "",      "Rough", "Land",  "",      "",      "",      "Rough"},
+	{"",     "",      "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "Rough", "Rough", "",      "Rough", "",      "Rough", "",      "",      "Land",  "Rough", "",      "Water", "Water", "Water", "Water", "Rough", "",      "",      "",      "Land",  "",      "",      "",      "Rough", "",      "Rough", "",      "",      "Rough"},
+	{"",     "",      "Land",  "Rough", "",      "Rough", "",      "",      "Land",  "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "",      "Water", "Water", "",      "Rough", "Rough", "Rough", "Rough", "",      "Land",  "",      "",      "",      "",      "",      "",      "",      "",      ""},
+	{"",     "",      "",      "",      "Rough", "",      "",      "",      "Rough", "Rough", "Rough", "Rough", "",      "Tree",  "Tree",  "",      "",      "",      "Land",  "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "Rough", "",      "",      "",      "",      "Rough", "",      "Land",  "",      "",      ""},
+	{"",     "",      "",      "Rough", "",      "",      "",      "Rough", "",      "Rough", "",      "Rough", "",      "Tree",  "Tree",  "",      "",      "",      "Rough", "",      "",      "Rough", "",      "Rough", "Rough", "Rough", "",      "Land",  "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "Rough", "Rough", ""},
+	{"",     "",      "",      "Rough", "Rough", "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "Rough", "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      "",      "Rough", "",      "Rough", "",      "",      "",      "",      "",      "Rough", "Land",  "",      "Land",  "",      "",      "",      "",      ""},
+	{"",     "",      "",      "",      "Land",  "",      "",      "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "Rough", "Rough", "",      "Land",  "",      "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      "Land",  "Rough", "",      "",      "Rough", "",      "",      "",      "",      "",      ""},
+	{"",     "",      "",      "Land",  "",      "",      "",      "",      "Rough", "",      "Rough", "",      "",      "",      "Rough", "",      "",      "Land",  "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      "Rough", ""},
+	{"",     "",      "",      "",      "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "Rough", "",      "Rough", "",      "Rough", "",      "Rough", "Rough", "",      "",      "",      "",      "",      "Rough", "Rough", "Rough", "Land",  "",      "",      "",      "",      "",      "",      "Rough", ""},
+	{"",     "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "Land",  "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      "Rough", "Land",  "",      "",      "",      "Rough", "Rough", "Rough", "Rough", "",      "",      "Rough", "Rough", "",      "",      "",      "",      ""},
+	{"",     "",      "",      "",      "Land",  "Land",  "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Land",  "Rough", "Rough", "",      "Rough", "",      "",      "",      "",      "",      "Land",  "Rough", "",      "",      "",      "",      "Rough", "",      "Rough", "Rough", "",      "",      ""},
+	{"",     "",      "",      "",      "Rough", "",      "",      "",      "Rough", "Rough", "",      "",      "",      "Rough", "Rough", "Rough", "",      "",      "Rough", "",      "Rough", "",      "",      "Rough", "Rough", "",      "",      "",      "",      "Water", "Water", "Water", "",      "Land",  "",      "",      "",      "Land",  "",      ""},
+	{"",     "",      "",      "",      "",      "",      "",      "",      "",      "",      "Water", "Water", "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "",      "",      "",      "",      "Water", "Water", "Water", "",      "",      "",      "",      "",      "",      "",      ""},
+	{"",     "",      "",      "",      "",      "",      "",      "",      "",      "Land",  "Water", "Water", "",      "Rough", "",      "",      "",      "Rough", "Rough", "",      "",      "",      "Land",  "",      "",      "Land",  "Rough", "Rough", "Rough", "",      "Rough", "",      "Land",  "Rough", "",      "",      "",      "",      "Rough", ""},
+	{"",     "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "Land",  "",      "Rough", "",      "",      "Rough", "Land",  "",      "Rough", "",      "",      "",      "",      "Rough", "Rough", "Rough", "Rough", "",      "",      "Rough", "Rough", "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      ""},
+	{"",     "",      "",      "Land",  "",      "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "Rough", "Rough", "Rough", "",      "Rough", "Land",  "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "Rough", "Land",  "",      "",      "",      "",      ""},
+	{"",     "",      "",      "",      "Rough", "",      "",      "",      "Rough", "Rough", "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "",      "",      "",      "Land",  "Rough", "",      "Rough", "",      "Rough", "Rough", "",      "",      "Rough", "Rough"},
+	{"",     "",      "",      "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "Land",  "",      "Rough", "Rough", "",      "",      "",      "Rough", "Rough", "",      "Rough", "",      "",      "",      "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "",      "Rough", ""},
+	{"",     "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "",      "",      "Rough", "Land",  "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "",      "Rough", "",      "Rough", "",      "Rough", "",      "",      "",      ""},
+	{"",     "",      "",      "",      "",      "",      "Land",  "Rough", "",      "",      "Rough", "Rough", "Rough", "",      "",      "",      "Land",  "Rough", "",      "",      "",      "",      "Land",  "",      "",      "Rough", "Rough", "",      "Rough", "Land",  "",      "",      "Rough", "",      "Land",  "",      "Rough", "",      "",      ""},
+	{"",     "",      "Rough", "",      "Rough", "Land",  "",      "",      "",      "Rough", "",      "Rough", "",      "Rough", "Rough", "",      "Land",  "",      "Rough", "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "Rough", "",      ""},
+	{"",     "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "",      "",      "",      "Rough", "",      "Land",  "Rough", "",      "Rough", ""},
+	{"",     "",      "",      "",      "",      "Rough", "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "Rough", "Land",  "",      "Rough", "Rough", "Land",  "Rough", "Rough", "Rough", "",      "",      "Rough", ""},
+	{"",     "",      "",      "",      "Land",  "",      "Rough", "",      "",      "Rough", "Rough", "",      "Land",  "",      "Rough", "Rough", "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "Rough", "",      "Rough", "Rough", "",      "",      "",      "",      "Rough", "",      "",      ""},
+	{"",     "",      "",      "Rough", "",      "",      "Land",  "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "",      "Rough", "",      "Rough", "",      "Rough", "",      "",      "Rough", "Rough", "Rough", "",      "",      "",      "Rough", "Rough", "",      "",      "",      "",      "",      "",      "",      ""},
+	{"",     "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "Land",  "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "Rough", "",      "Land",  "",      "",      "Rough", "",      ""},
+	{"",     "",      "Land",  "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "Rough", "Rough", "",      "Land",  "",      "",      "",      "Rough", "",      "",      "",      "",      "Rough", "Rough", "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "Rough", "",      "",      ""},
+	{"",     "",      "",      "Rough", "",      "",      "",      "Rough", "",      "Rough", "Rough", "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "Land",  "Rough", "",      "Rough", "",      "",      "",      "",      "Rough", "Land",  "",      "Rough", "",      "",      "",      "",      "",      "Rough"},
+	{"",     "",      "",      "",      "Land",  "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "Rough", "Rough", "",      "",      "",      "Rough", "",      "",      "Rough", "",      "",      "",      "",      "Rough", "Rough", ""},
+	{"",     "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "",      "Rough", "",      "",      "",      "Rough", "",      "",      "",      "",      "",      "",      "",      "",      "",      ""}
+}
+
+-- create initial rock seeds
+Count = (MapWidth * MapHeight) / 8
+while (Count > 0) do
+	RandomX = SyncRand(MapWidth - 1)
+	RandomY = SyncRand(MapHeight - 1)
+	if (RawTile(RandomX, RandomY) == "") then
+		RandomNumber = SyncRand(4)
+		if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "" or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == "" or RawTile(RandomX, RandomY - 1) == "Rock")) then
+			SetRawTile(RandomX, RandomY, "Rock")
+			SetRawTile(RandomX - 1, RandomY - 1, "Rock")
+			SetRawTile(RandomX - 1, RandomY, "Rock")
+			SetRawTile(RandomX, RandomY - 1, "Rock")
+			Count = Count - 1
+		elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "" or RawTile(RandomX + 1, RandomY - 1) == "Rock") and (RawTile(RandomX, RandomY - 1) == "" or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "" or RawTile(RandomX + 1, RandomY) == "Rock")) then
+			SetRawTile(RandomX, RandomY, "Rock")
+			SetRawTile(RandomX + 1, RandomY - 1, "Rock")
+			SetRawTile(RandomX, RandomY - 1, "Rock")
+			SetRawTile(RandomX + 1, RandomY, "Rock")
+			Count = Count - 1
+		elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "" or RawTile(RandomX + 1, RandomY + 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "" or RawTile(RandomX + 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "" or RawTile(RandomX, RandomY + 1) == "Rock")) then
+			SetRawTile(RandomX, RandomY, "Rock")
+			SetRawTile(RandomX + 1, RandomY + 1, "Rock")
+			SetRawTile(RandomX + 1, RandomY, "Rock")
+			SetRawTile(RandomX, RandomY + 1, "Rock")
+			Count = Count - 1
+		elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "" or RawTile(RandomX - 1, RandomY + 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "" or RawTile(RandomX, RandomY + 1) == "Rock")) then
+			SetRawTile(RandomX, RandomY, "Rock")
+			SetRawTile(RandomX - 1, RandomY + 1, "Rock")
+			SetRawTile(RandomX - 1, RandomY, "Rock")
+			SetRawTile(RandomX, RandomY + 1, "Rock")
+			Count = Count - 1
+		end
+	end
+end
+
+-- convert empty tiles into grass
+for x=0,(MapWidth - 1) do
+	for y=0,(MapHeight - 1) do
+		if (RawTile(x, y) == "") then
+			SetRawTile(x, y, "Land")
+		end
+	end
+end
+
+-- convert grass tiles adjacent to rock tiles into dirt
+for x=0,(MapWidth - 1) do
+	for y=0,(MapHeight - 1) do
+		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+			SetRawTile(x, y, "Rough")
+		end
+	end
+end
+
+-- convert grass tiles adjacent to water tiles into dirt
+for x=0,(MapWidth - 1) do
+	for y=0,(MapHeight - 1) do
+		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+			SetRawTile(x, y, "Rough")
+		end
+	end
+end
+
+ApplyRawTiles()
+
+-- Rugnur
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Baglur
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Kawn (Gryphon Rider)
+--unit = CreateUnit("unit-gryphon-rider", 0, {5, 28})
+
+-- Guardsmen from last mission
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Extra Guardsman from last mission
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Enemies (originally randomly chosen from Wolves, Ogres, Trolls or Wose)
+unit = CreateUnit("unit-grunt", 2, {5, 5})
+unit = CreateUnit("unit-grunt", 2, {15, 15})
+unit = CreateUnit("unit-grunt", 2, {25, 25})
+unit = CreateUnit("unit-grunt", 2, {25, 10})
+
+unit = CreateUnit("unit-grunt", 2, {10, 10})
+unit = CreateUnit("unit-grunt", 2, {20, 20})
+unit = CreateUnit("unit-grunt", 2, {30, 30})
+
+unit = CreateUnit("unit-grunt", 2, {18, 6})
+unit = CreateUnit("unit-grunt", 2, {30, 7})
+
+unit = CreateUnit("unit-grunt", 2, {19, 31})
+unit = CreateUnit("unit-grunt", 2, {1, 21})
+unit = CreateUnit("unit-grunt", 2, {31, 21})
+unit = CreateUnit("unit-grunt", 2, {1, 15})
+
+-- Hard Difficulty
+--unit = CreateUnit("unit-grunt", 2, {30, 18})
+--unit = CreateUnit("unit-grunt", 2, {32, 1})
+
+-- Hardest Difficulty
+--unit = CreateUnit("unit-grunt", 2, {30, 18})
+--unit = CreateUnit("unit-grunt", 2, {20, 2})
+--unit = CreateUnit("unit-grunt", 2, {32, 1})
+--unit = CreateUnit("unit-grunt", 2, {32, 31})
+
+PlayMusic("music/wanderer.ogg")
+-- Should only be appended when Thursagan is found
+wyrmsun.playlist = { "music/knolls.ogg" }

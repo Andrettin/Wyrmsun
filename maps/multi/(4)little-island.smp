@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+-- File generated automatically from pudconvert.
+
+DefinePlayerTypes("person","computer","computer","computer")
+PresentMap("(unnamed)", 4, 128, 128, 1)

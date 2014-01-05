@@ -1,0 +1,84 @@
+b_o:
+/graphics/dwarf/units/dwarven_axefighter.png
+/graphics/dwarf/units/miner.png
+/graphics/dwarf/units/miner_with_gold.png
+/graphics/dwarf/units/miner_with_lumber.png
+/graphics/neutral/units/gnomish_caravan.png
+/graphics/neutral/units/gnomish_recruit.png
+/graphics/neutral/units/goblin_spearman.png
+/graphics/neutral/units/rat.png
+/graphics/neutral/units/rats.png
+
+Bos Wars Team:
+/graphics/missiles/explosion.png
+/graphics/missiles/green_cross.png
+/graphics/missiles/red_cross.png
+/graphics/ui/cursors/arrow_E.png
+/graphics/ui/cursors/arrow_N.png
+/graphics/ui/cursors/arrow_NE.png
+/graphics/ui/cursors/arrow_NW.png
+/graphics/ui/cursors/arrow_S.png
+/graphics/ui/cursors/arrow_SE.png
+/graphics/ui/cursors/arrow_SW.png
+/graphics/ui/cursors/arrow_W.png
+/graphics/ui/cursors/green.png
+/graphics/ui/cursors/red.png
+/graphics/ui/cursors/small_green_cross.png
+/graphics/ui/cursors/yellow.png
+
+DinkyDyeAussie:
+/graphics/ui/dwarf/640x480/buttonpanel.png
+/graphics/ui/dwarf/640x480/filler-right.png
+/graphics/ui/dwarf/640x480/resource.png
+/graphics/ui/dwarf/640x480/statusline.png
+/graphics/ui/dwarf/800x480/buttonpanel.png
+/graphics/ui/dwarf/800x480/filler-right.png
+/graphics/ui/dwarf/800x480/resource.png
+/graphics/ui/dwarf/800x480/statusline.png
+
+igoku:
+/graphics/dwarf/icons/boots.png (later modified by Jinn)
+/graphics/dwarf/icons/shield_1.png (later modified by Jinn)
+
+João Victor G. Costa (Jinn):
+/graphics/dwarf/buildings/barracks.png
+/graphics/dwarf/buildings/mushroom_farm.png
+/graphics/dwarf/buildings/town_hall.png
+/graphics/dwarf/icons/axe_1.png (modified from Ransom.00's icon)
+/graphics/dwarf/icons/boots.png (modified from igoku's icon)
+/graphics/dwarf/icons/dwarven_axefighter.png
+/graphics/dwarf/icons/dwarven_steelclad.png
+/graphics/dwarf/icons/miner.png (modified from igoku's icon)
+/graphics/dwarf/icons/shield_1.png
+/graphics/elf/icons/elven_swordsman.png
+/graphics/human/buildings/lumber_mill.png
+/graphics/neutral/buildings/gold_mine.png
+/graphics/neutral/buildings/land_construction_site.png
+/graphics/neutral/icons/build_basic_structure.png
+/graphics/neutral/icons/cancel.png
+/graphics/neutral/icons/gnomish_recruit.png
+/graphics/neutral/icons/goblin_spearman.png
+/graphics/neutral/icons/water_elemental.png
+/graphics/orc/icons/spearman.png
+/graphics/tileset/forest/neutral/icons/rat.png
+/graphics/tileset/forest/terrain/forest.png
+/graphics/tileset/wasteland/neutral/buildings/destroyed_site.png
+/graphics/tileset/wasteland/neutral/icons/rat.png
+/graphics/tileset/wasteland/terrain/wasteland.png
+/graphics/ui/cursors/magnifying_glass.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet.png
+/graphics/ui/dwarf/widgets/button-large-grayed.png
+/graphics/ui/dwarf/widgets/button-large-normal.png
+/graphics/ui/dwarf/widgets/button-large-pressed.png
+/graphics/ui/dwarf/widgets/button-small-grayed.png
+/graphics/ui/dwarf/widgets/button-small-normal.png
+/graphics/ui/dwarf/widgets/button-small-pressed.png
+
+Oray Studios:
+/graphics/ui/gold,wood,oil,mana.png
+
+Ransom.00:
+/graphics/dwarf/icons/axe_1.png (later modified by Jinn)
+
+Rick Elliot:
+/graphics/ui/cursors/cross.png

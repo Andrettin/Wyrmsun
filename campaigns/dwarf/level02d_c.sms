@@ -1,0 +1,43 @@
+--	Stratagus Map - Single player campaign
+
+Load("campaigns/dwarf/level02d_c2.sms")
+
+Briefing(
+  title,
+  objectives,
+  "../graphics/ui/dwarf/introscreen1.png",
+  "campaigns/dwarf/level02d.txt",
+  {}
+)
+
+-- FIXME: Check if units are freed.
+
+Triggers = [[
+AddTrigger(
+	function() return (GetNumUnitsAt(GetThisPlayer(), "any", {4, 1}, {5, 2}) > 0 and
+	GetNumUnitsAt(GetThisPlayer(), "any", {14, 2}, {15, 5}) > 0 and
+	GetNumUnitsAt(GetThisPlayer(), "any", {26, 21}, {27, 22}) > 0) end,
+	function() return ActionVictory() end)
+AddTrigger(
+	function() return true end,
+	function()
+  		SetDiplomacy(1, "enemy", 2)
+  		SetDiplomacy(2, "enemy", 1)
+	return false end)
+--AddTrigger(
+--  function() return GetNumOpponents(GetThisPlayer()) == 0 end,
+--  function() return ActionVictory() end)
+AddTrigger(
+  function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
+  function() return ActionDefeat() end)
+
+StandardTriggers()
+]]
+
+assert(loadstring(Triggers))()
+
+-- AI
+
+-- Map
+
+Load("campaigns/dwarf/level02d.sms")

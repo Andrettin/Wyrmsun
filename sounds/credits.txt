@@ -1,0 +1,42 @@
+Battle for Wesnoth Team:
+/sounds/buildings/town_hall.wav
+/sounds/dwarf/basic_voices/dead-1.wav
+/sounds/dwarf/basic_voices/dead-2.wav
+/sounds/goblin/basic_voices/goblin-die-1.wav
+/sounds/goblin/basic_voices/goblin-die-2.wav
+/sounds/misc/explosion.wav
+/sounds/misc/fanfare_short.wav
+/sounds/missiles/axe.wav
+/sounds/missiles/mace.wav
+/sounds/missiles/spear-1.wav
+/sounds/missiles/spear-2.wav
+/sounds/missiles/sword.wav
+/sounds/neutral/units/bat-flapping.wav
+/sounds/neutral/units/wose-hit.wav
+/sounds/ui/click.wav
+
+David Slimp:
+/sounds/buildings/gold_mine.wav
+
+Wolfgang Kohler:
+/sounds/buildings/lumbermill.wav
+/sounds/dwarf/basic_voices/acknowledge-1.wav
+/sounds/dwarf/basic_voices/acknowledge-2.wav
+/sounds/dwarf/basic_voices/ready.wav
+/sounds/dwarf/basic_voices/selected-1.wav
+/sounds/dwarf/basic_voices/selected-2.wav
+/sounds/goblin/basic_voices/acknowledge-1.wav
+/sounds/goblin/basic_voices/acknowledge-2.wav
+/sounds/goblin/basic_voices/acknowledge-3.wav
+/sounds/goblin/basic_voices/acknowledge-4.wav
+/sounds/goblin/basic_voices/ready.wav
+/sounds/goblin/basic_voices/selected-1.wav
+/sounds/goblin/basic_voices/selected-2.wav
+/sounds/goblin/basic_voices/selected-3.wav
+/sounds/goblin/basic_voices/selected-4.wav
+/sounds/misc/building_construction.wav
+/sounds/misc/burning.wav
+/sounds/misc/building_explosion/1.wav
+/sounds/misc/building_explosion/2.wav
+/sounds/ui/placement_error.wav
+/sounds/ui/placement_success.wav
