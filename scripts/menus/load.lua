@@ -1,6 +1,5 @@
 function LoadGame(s)
   LoadGameFile = nil
-  currentCampaign = nil
   local loop = true
 
   while (loop) do
@@ -15,24 +14,6 @@ function LoadGame(s)
 
   InitGameSettings()
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
-
-  if (GameResult == GameVictory) then
-    IncreaseCampaignState(currentRace, currentExp, currentState)
-  end
-
-  if currentCampaign ~= nil then
-    if GameResult == GameVictory then
-      position = position + 1
-    elseif (GameResult == GameDefeat) then
-    elseif (GameResult == GameDraw) then
-    elseif (GameResult == GameNoResult) then
-      return
-    else
-      RunCampaignSubmenu(currentCampaign, currentRace, currentExp) -- quit to menu
-      return
-    end
-    RunCampaign(currentCampaign)
-  end
 end
 
 function AddLoadGameItems(menu)

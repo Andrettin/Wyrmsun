@@ -37,10 +37,10 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "0.1.0"
+wyrmsun.Version = "0.1.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
-wyrmsun.Copyright = "Copyright (c) 2013 by Andre Novellino Gouvea"
+wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
 
 -------------------------------------------------------------------------------
 --  Config-Part
@@ -257,39 +257,83 @@ DwarvenNames = {"Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", 
 -------------------------------------------------------------------------------
 -- Trait variables
 
---DefineVariables(
+DefineVariables(
 --	"CharacterName", {Max = 255, Value = 0, Increase = 0, Enable = true},
 --	"Traits", {Max = 2, Value = 0, Increase = 0, Enable = true},
 --	"MaxTraits", {Max = 2, Value = 0, Increase = 0, Enable = true},
 --	"TraitResilient", {Max = 1, Value = 0, Increase = 0, Enable = true},
 --	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true}
---)
+	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true}
+)
+
+-------------------------------------------------------------------------------
+-- Player Objectives
+
+	Objectives = { {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
 
 -------------------------------------------------------------------------------
 --  Default triggers for single player
 --    (FIXME: must be combined with game types)
 
 function SinglePlayerTriggers()
---	if (GameSettings.GameType ~= 5) then
-		AddTrigger(
-			function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
-			function() return ActionDefeat() end
-		)
---	else
---		RevealMap()
---		SetFogOfWar(false)
---	end
+	AddTrigger(
+		function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
+		function() return ActionDefeat() end
+	)
 
 	AddTrigger(
+--		function() return GetNumRivals(GetThisPlayer()) == 0 end,
 		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function() return ActionVictory() end
 	)
 
+	for i=0,14 do
+		Objectives[i] = {"- Destroy the enemy"}
+  	end
+	
 	StandardTriggers()
+
+	if (not IsNetworkGame()) then
+		AssignPlayerFactions()
+
+		if (GameSettings.GameType == 0) then
+			for i=0,14 do
+				for j=0,14 do
+					if (i ~= j) then
+						SetDiplomacy(i, "neutral", j)
+						SetDiplomacy(j, "neutral", i)
+					end
+				end
+		  	end
+		end
+	end
+
+	-- for now events are limited to single player (as they seem to be causing issues with desyncs for multiplayer games
+	if (not IsNetworkGame() and EventsActivated == 0) then
+		EventTriggers()
+	end
 end
 
 function StandardTriggers()
 --	local RandomNumber = 0
+
+	-- set the graphics variation for individual units of certain unit types
+	AddTrigger(
+		function()
+			return true
+		end,
+		function()
+			local uncount = 0
+			uncount = GetUnits("any")
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
+--					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
+					SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+				end
+			end
+			return true
+		end
+	)
 
 	-- randomly pick a character name for the unit
 --	AddTrigger(
@@ -337,6 +381,90 @@ function StandardTriggers()
 --		end
 --	)
 end
+
+function AssignPlayerFactions()
+
+	if (PlayerFaction ~= "") then
+		SetPlayerData(GetThisPlayer(), "Name", PlayerFaction)
+	end
+
+	local RandomNumber = 0
+	local DwarvenFactions = GetCivilizationFactions("dwarf")
+	local faction_number = -1
+
+	-- remove faction names already in use
+	for j=0,14 do
+		if (GetPlayerData(j, "Name") ~= "" and GetPlayerData(j, "Name") ~= nil and GetPlayerData(j, "Name") ~= "Computer") then
+			if (GetPlayerData(j, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
+				table.foreachi(DwarvenFactions, function(k,v)
+					if (v == GetPlayerData(j, "Name")) then
+						faction_number = k
+					end
+				end)
+				if (faction_number ~= -1) then
+					table.remove(DwarvenFactions, faction_number)
+					faction_number = -1
+				end
+			end
+		end
+	end
+
+	
+	for i=0,14 do
+		if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
+				RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
+				SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
+				table.foreachi(DwarvenFactions, function(k,v)
+					if (v == DwarvenFactions[RandomNumber]) then
+						faction_number = k
+					end
+				end)
+				if (faction_number ~= -1) then
+					table.remove(DwarvenFactions, faction_number)
+				end
+			end
+		end
+	end
+end
+
+function GetCivilizationFactions(civilization)
+	if (civilization == "dwarf") then
+		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
+	elseif (civilization == "gnome") then
+		return {"Untersberg"}
+	end
+end
+
+function GetFactionExists(faction)
+	for i=0,14 do
+		if (GetPlayerData(i, "Name") == faction) then
+			return true
+		end
+	end
+	return false
+end
+
+function GetNumRivals(player)
+	local rival_count = 0
+	for i=0,14 do
+		if (player ~= i and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and GetPlayerData(i, "TotalNumUnits") > 0) then
+			rival_count = rival_count + 1
+		end
+	end
+	return rival_count
+end
+
+function GetNumPlayers()
+	local player_count = 0
+	for i=0,14 do
+		if (GetPlayerData(i, "TotalNumUnits") > 0) then
+			player_count = player_count + 1
+		end
+	end
+	return player_count
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------
@@ -395,8 +523,11 @@ local defaultPreferences = {
 	ShowMessages = true,
 	ShowOrders = 2,
 	Language = "English",
-	-- Campaigns
-	CampaignTheScepterOfFire = 1,
+	QuestsCompleted = {}, -- Quests Completed
+	TechnologyAcquired = {
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks"
+	},
+	LastVersionPlayed = "0.0.0",
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)
@@ -413,7 +544,7 @@ SetGroupKeys(wyr.preferences.GroupKeys)
 SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(wyr.preferences.LeaveStopScrolling)
-SetLocalPlayerName(wyr.preferences.PlayerName)
+SetLocalPlayerName("") -- Andrettin: in single-player games the local player shouldn't use his nick
 SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
 SetMinimapTerrain(wyr.preferences.MinimapWithTerrain)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
@@ -450,5 +581,6 @@ Load("scripts/ai.lua")
 Load("scripts/commands.lua")
 Load("scripts/cheats.lua")
 Load("scripts/map_generation.lua")
+Load("scripts/events.lua")
 
 DebugPrint("... ready!\n")

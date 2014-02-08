@@ -47,12 +47,19 @@ function AiLandAttack()
 		AiSet(AiBarracks(), 1)
 	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 16 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 6) then
+			AiSet(AiSoldier(), 16)
+		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
 			AiSet(AiSoldier(), 4)
 		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
 			AiSet(AiSoldier(), 1)
 		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 16 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 6) then
+			AiForce(1, {AiSoldier(), 12})
+			AiForce(0, {AiSoldier(), 4})
+			AiWaitForce(1)
+			AiAttackWithForce(1)
+		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
 			AiForce(1, {AiSoldier(), 3})
 			AiForce(0, {AiSoldier(), 1})
 			AiWaitForce(1)
@@ -65,6 +72,9 @@ function AiLandAttack()
 	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
 		AiSet(AiWorker(), 8)
+	end
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) < 6 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
+		AiSet(AiFarm(), 6)
 	end
 end
 

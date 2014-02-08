@@ -1,5 +1,4 @@
 -- Stratagus Map Presentation
--- File generated automatically from pudconvert V1.0
 
 DefinePlayerTypes("person","rescue-passive","computer")
 PresentMap("(unnamed)", 3, 34, 32, 1)

@@ -28,7 +28,6 @@
 --
 
 if (wyr.preferences.Language == "English") then
-	campaign_game_name = "~!Campaign Game"
 	single_player_game_name = "~!Single Player Game"
 	multi_player_game_name = "~!Multi Player Game"
 	title_load_game_name = "~!Load Game"
@@ -45,7 +44,7 @@ if (wyr.preferences.Language == "English") then
 	edit_map_name = "~!Edit Map"
 	load_name = "~!Load"
 	cancel_name = "~!Cancel"
-	select_scenario_name = "Select scenario"
+	select_scenario_name = "Select Scenario"
 	hotkey_select_scenario_name = "S~!elect Scenario"
 	units_name = "~<Units:~>"
 	
@@ -78,8 +77,10 @@ elseif (wyr.preferences.Language == "German") then
 --	dwarven_miner_name = "Miner"
 --	dwarven_axefighter_name = "Axefighter"
 	dwarven_town_hall_name = "Methalle"
+
+	dwarven_species_and_civilization_name = "Zwerg"
+	dwarven_civilization_name = "Zwerg"
 elseif (wyr.preferences.Language == "Portuguese") then
-	campaign_game_name = "Jogo de ~!Campanha"
 	single_player_game_name = "Jogo de Um Jogador"
 	multi_player_game_name = "Jogo ~!Multijogador"
 	title_load_game_name = "Carregar Jogo"
@@ -96,7 +97,7 @@ elseif (wyr.preferences.Language == "Portuguese") then
 	edit_map_name = "~!Editar Mapa"
 	load_name = "Carregar"
 	cancel_name = "~!Cancelar"
-	select_scenario_name = "Selecione cenário"
+	select_scenario_name = "Selecione Cenário"
 	hotkey_select_scenario_name = "S~!elecione Cenário"
 	units_name = "~<Unidades:~>"
 

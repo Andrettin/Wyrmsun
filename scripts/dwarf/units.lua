@@ -10,7 +10,7 @@
 --
 --      units.ccl - Define the dwarven unit-types.
 --
---      (c) Copyright 2001-2005 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -109,7 +109,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
-  Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
   Costs = {"time", 60, "gold", 600},
   Speed = 10,
@@ -137,7 +137,66 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
     "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
+DefineUnitType("unit-dwarven-scout", { Name = "Scout",
+  Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
+  Animations = "animations-dwarven-scout", Icon = "icon-dwarven-scout",
+  Costs = {"time", 70, "gold", 500, "wood", 50},
+  Speed = 10,
+  HitPoints = 40,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
+  BasicDamage = 3, PiercingDamage = 6, Missile = "missile-throwing-axe",
+  MaxAttackRange = 4,
+  Priority = 55,
+  Points = 60,
+  Demand = 1,
+--    Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+  LandUnit = true,
+  organic = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-dwarf-voices-acknowledge",
+--    "ready", "basic-dwarf-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-dwarf-voices-dead"} } )
+
+DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
+  Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
+  Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
+  Costs = {"time", 250, "gold", 900, "wood", 300},
+  Speed = 5,
+  HitPoints = 110,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {63, 63},
+  SightRange = 9, ComputerReactionRange = 11, PersonReactionRange = 9,
+  BasicDamage = 80, PiercingDamage = 0, Missile = "missile-dwarven-ballista-bolt",
+  MinAttackRange = 2, MaxAttackRange = 8,
+  Priority = 70,
+  Points = 100,
+  Demand = 1,
+  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanGroundAttack = true,
+  CanAttack = true,
+  CanTargetLand = true, CanTargetSea = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "ballista-acknowledge",
+--    "ready", "ballista-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "explosion"
+} } )
+
 UnitTypeFiles["unit-dwarven-town-hall"] = {
+  forest = "dwarf/buildings/town_hall.png",
   wasteland = "dwarf/buildings/town_hall.png"
 }
 
@@ -173,6 +232,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
     "dead", "building destroyed"} } )
 
 UnitTypeFiles["unit-dwarven-mushroom-farm"] = {
+  forest = "dwarf/buildings/mushroom_farm.png",
   wasteland = "dwarf/buildings/mushroom_farm.png"
 }
 
@@ -204,6 +264,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
     "dead", "building destroyed"} } )
 
 UnitTypeFiles["unit-dwarven-barracks"] = {
+  forest = "dwarf/buildings/barracks.png",
   wasteland = "dwarf/buildings/barracks.png"
 }
 
@@ -233,20 +294,45 @@ DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-------------------------------------
--- Heroes
-------------------------------------
-
 DefineUnitType("unit-rugnur", { Name = "Rugnur",
   Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
-  Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
+  Animations = "animations-rugnur", Icon = "icon-rugnur",
   Costs = {"time", 60, "gold", 600},
   Speed = 10,
-  HitPoints = 70,
+  HitPoints = 120,
   DrawLevel = 40,
   TileSize = {1, 1}, BoxSize = {31, 31},
-  SightRange = 5, ComputerReactionRange = 6, PersonReactionRange = 4,
-  Armor = 2, BasicDamage = 8, PiercingDamage = 4, Missile = "missile-none",
+  SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
+  Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 60,
+  Points = 50,
+  Demand = 1,
+--    Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true,
+  LandUnit = true,
+  organic = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-dwarf-voices-acknowledge",
+--    "ready", "basic-dwarf-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-dwarf-voices-dead"} } )
+
+DefineUnitType("unit-rugnur-older", { Name = "Rugnur",
+  Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+  Animations = "animations-rugnur", Icon = "icon-rugnur-older",
+  Costs = {"time", 60, "gold", 600},
+  Speed = 10,
+  HitPoints = 220,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 6, ComputerReactionRange = 8, PersonReactionRange = 6,
+  Armor = 8, BasicDamage = 15, PiercingDamage = 6, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 60,
   Points = 50,

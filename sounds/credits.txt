@@ -11,9 +11,11 @@ Battle for Wesnoth Team:
 /sounds/missiles/spear-1.wav
 /sounds/missiles/spear-2.wav
 /sounds/missiles/sword.wav
-/sounds/neutral/units/bat-flapping.wav
-/sounds/neutral/units/wose-hit.wav
+/sounds/missiles/throwing_axe_hit.wav
 /sounds/ui/click.wav
+
+b_o:
+/sounds/missiles/throwing_axe.wav
 
 David Slimp:
 /sounds/buildings/gold_mine.wav

@@ -1,6 +1,0 @@
--- Stratagus Map Presentation
--- File generated automatically from pudconvert V1.0
-
-DefinePlayerTypes("person","computer","computer")
-PresentMap("(unnamed)", 3, 56, 66, 1)
-DefineMapSetup("./campaigns/dwarf/level02d_c.sms")

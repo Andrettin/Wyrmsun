@@ -1,0 +1,4 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","computer","computer")
+PresentMap("Northern Lakes", 3, 128, 128, 1)

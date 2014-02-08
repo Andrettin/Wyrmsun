@@ -89,6 +89,8 @@ function RunKeystrokeHelpMenu()
 end
 
 local tips = {
+  "The best map to obtain your first major quest is Chaincolt Foothills.",
+  "Completing quests may reward you with technology points and unlock new maps.",
   "You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by \"double clicking\" on a unit.",
   "The more workers you have collecting resources, the faster your economy will grow.",
   "Building more than one barracks will let you train more units faster.",
@@ -107,7 +109,7 @@ local tips = {
 
   "Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 
-  "Know a useful tip?  Then add it here!",
+--  "Know a useful tip?  Then add it here!",
 }
 
 function RunTipsMenu()

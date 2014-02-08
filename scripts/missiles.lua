@@ -28,6 +28,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineMissileType("missile-throwing-axe",
+  { File = "missiles/throwing_axe.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
+  ImpactSound = "throwing-axe-hit",
+  DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0 } )
+
+DefineMissileType("missile-dwarven-ballista-bolt",
+  { File = "missiles/dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
+  DrawLevel = 50, ImpactSound = "explosion",
+  Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 2,
+--  ImpactMissile = "missile-impact", SplashFactor = 4 } )
+  SplashFactor = 4 } )
+
 --DefineMissileType("missile-small-fire",
 --  { File = "missiles/small_fire.png", Size = {32, 48}, Frames = 6, NumDirections = 1,
 --  DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 8, Range = 1 } )
@@ -37,8 +49,8 @@
 --  DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 8, Range = 1 } )
 
 DefineMissileType("missile-explosion",
-  { File = "missiles/explosion.png", Size = {64, 64}, Frames = 20, NumDirections = 1,
-  DrawLevel = 50, Class = "missile-class-stay", Sleep = 1, Speed = 16, Range = 1 } )
+  { File = "missiles/explosion.png", Size = {64, 64}, Frames = 22, NumDirections = 1,
+  DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
 
 DefineMissileType("missile-green-cross",
   { File = "missiles/green_cross.png", Size = {32, 32}, Frames = 4, NumDirections = 1,

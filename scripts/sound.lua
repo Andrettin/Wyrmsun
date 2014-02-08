@@ -155,8 +155,11 @@ MakeSound("spear-attack",
 	{"missiles/spear-1.wav",
 	"missiles/spear-2.wav"}
 )
+MakeSound("throwing-axe", "missiles/throwing_axe.wav")
+MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
 MakeSound("tree-chopping",
-	"neutral/units/wose-hit.wav"
+	{"misc/tree_chopping/tree-chopping-1.wav",
+	"misc/tree_chopping/tree-chopping-2.wav"}
 )
 SetSoundRange("tree-chopping", 32)
 

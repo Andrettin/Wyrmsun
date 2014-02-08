@@ -1,5 +1,4 @@
 -- Stratagus Map Setup
--- File generated automatically from pudconvert V1.0
 
 SetStartView(0, 6, 27)
 SetPlayerData(0, "Resources", "gold", 4000)

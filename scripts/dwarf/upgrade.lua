@@ -33,7 +33,8 @@
 function DefineAllowNormalDwarvenUnits(flags)
 	local units = {
 		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-dwarven-miner", "unit-dwarven-axefighter"
+		"unit-gnomish-worker",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-scout"
 	}
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, flags)
@@ -42,9 +43,11 @@ end
 
 function DefineAllowExtraDwarvenUnits(flags)
 	local units = {
+		"unit-dwarven-ballista",
 		"unit-dwarven-steelclad",
 		"unit-gnomish-recruit",
-		"unit-goblin-spearman"
+		"unit-goblin-spearman",
+		"unit-rugnur", "unit-rugnur-older"
 	}
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, flags)
@@ -55,3 +58,6 @@ InitFuncs:add(function()
 	DefineAllowNormalDwarvenUnits("AAAAAAAAAAAAAAAA")
 	DefineAllowExtraDwarvenUnits("FFFFFFFFFFFFFFFF")
 end)
+
+DefineDependency("unit-dwarven-scout",
+  {"unit-human-lumber-mill"})

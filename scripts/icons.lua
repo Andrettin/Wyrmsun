@@ -41,6 +41,20 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-repair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/repair.png"
+})
+
+DefineIcon({
+	Name = "icon-harvest",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/harvest.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},
 	Frame = 0,
@@ -59,6 +73,20 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "dwarf/icons/dwarven_steelclad.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-scout",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_scout.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-ballista",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_ballista.png"
 })
 
 DefineIcon({
@@ -104,6 +132,41 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-patrol-land",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/patrol_land.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-stand-ground",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/stand_ground.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-return-goods",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/return_goods.png"
+})
+
+DefineIcon({
+	Name = "icon-rugnur",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/rugnur.png"
+})
+
+DefineIcon({
+	Name = "icon-rugnur-older",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/rugnur_older.png"
+})
+
+DefineIcon({
 	Name = "icon-elven-swordsman",
 	Size = {46, 38},
 	Frame = 0,
@@ -143,6 +206,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/goblin_spearman.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-swordsman",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/goblin_swordsman.png"
 })
 
 DefineIcon({

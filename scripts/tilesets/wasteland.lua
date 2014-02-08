@@ -43,37 +43,37 @@ DefineTileset("name", "Wasteland",
     "removed-rock", 163, },
   "solid", { "unused",
     {}},								-- 000
-  "solid", { "light-water", "water",
+  "solid", { "shallow-water", "water",
     { 324, 325, 325, 326,   0, 324, 325, 325}},				-- 010
-  "solid", { "dark-water", "water",
+  "solid", { "deep-water", "water",
     { 327, 328, 328, 329,   0, 327, 328, 328}},				-- 020
-  "solid", { "light-dirt", "land", "no-building",
+  "solid", { "mud", "land", "no-building",
     { 330, 331, 332,   0, 333, 334, 335, 336, 337, 338, 334, 336}},	-- 030
-  "solid", { "dark-dirt", "land", "no-building",
+  "solid", { "dark-mud", "land", "no-building",
     { 339, 340, 341,   0, 342, 343, 344, 345, 342, 343, 340, 341}},	-- 040
-  "solid", { "light-ground", "land",
+  "solid", { "dry-mud", "land",
     { 346, 347, 348,   0, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360}},-- 050
-  "solid", { "dark-ground", "land",
+  "solid", { "dark-dry-mud", "land",
     { 261, 262, 263,   0, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372}},-- 060
-  "solid", { "forest", "land", "forest", "unpassable",
+  "solid", { "tree", "land", "forest", "unpassable",
     { 125, 125, 125}},							-- 070
-  "solid", { "rocks", "land", "rock", "unpassable",
+  "solid", { "rock", "land", "rock", "unpassable",
     { 162, 174, 175, 162}},						-- 080
-  "solid", { "human-closed-wall", "land", "human", "wall", "unpassable",
-    {  16,   0,  52,   0,  88}},					-- 090
-  "solid", { "orc-closed-wall", "land", "wall", "unpassable",
-    {  34,   0,  70,   0,  88}},					-- 0A0
-  "solid", { "human-open-wall", "land", "human", "wall", "unpassable",
-    {  33,   0,  69,   0, 101}},					-- 0B0
-  "solid", { "orc-open-wall", "land", "wall", "unpassable",
-    {  51,   0,  87,   0, 101}},					-- 0C0
+  "solid", { "unused",
+    {}},								-- 090
+  "solid", { "unused",
+    {}},								-- 0A0
+  "solid", { "unused",
+    {}},								-- 0B0
+  "solid", { "unused",
+    {}},								-- 0C0
   "solid", { "unused",
     {}},								-- 0D0
   "solid", { "unused",
     {}},								-- 0E0
   "solid", { "unused",
     {}},								-- 0F0
-  "mixed", { "dark-water", "light-water", "water",
+  "mixed", { "deep-water", "shallow-water", "water",
     { 296, 296},							-- 100
     { 297, 297},							-- 110
     { 298, 299, 300},							-- 120
@@ -90,7 +90,7 @@ DefineTileset("name", "Wasteland",
     { 322, 323},							-- 1D0
     {},									-- 1E0
     {}},								-- 1F0
-  "mixed", { "light-water", "light-dirt", "coast",
+  "mixed", { "shallow-water", "mud", "coast",
     { 201, 202},							-- 200
     { 203, 204},							-- 210
     { 205, 206, 207},							-- 220
@@ -107,7 +107,7 @@ DefineTileset("name", "Wasteland",
     { 229, 230},							-- 2D0
     {},									-- 2E0
     {}},								-- 2F0
-  "mixed", { "dark-dirt", "light-dirt", "land", "no-building",
+  "mixed", { "dark-mud", "mud", "land", "no-building",
     { 177, 177},							-- 300
     { 178, 178},							-- 310
     { 179, 180, 181},							-- 320
@@ -124,7 +124,7 @@ DefineTileset("name", "Wasteland",
     { 200, 200},							-- 3D0
     {},									-- 3E0
     {}},								-- 3F0
-  "mixed", { "rocks", "light-dirt", "land", "rock", "unpassable",
+  "mixed", { "rock", "mud", "land", "rock", "unpassable",
     { 147, 170},							-- 400
     { 139, 164},							-- 410
     { 161, 173, 137},							-- 420
@@ -141,7 +141,7 @@ DefineTileset("name", "Wasteland",
     { 142, 129},							-- 4D0
     {},									-- 4E0
     {}},								-- 4F0
-  "mixed", { "light-dirt", "light-ground", "land", "no-building",
+  "mixed", { "mud", "dry-mud", "land", "no-building",
     { 264, 265},							-- 500
     { 266, 267},							-- 510
     { 268, 269, 270},							-- 520
@@ -158,7 +158,7 @@ DefineTileset("name", "Wasteland",
     { 294, 295},							-- 5D0
     {},									-- 5E0
     {}},								-- 5F0
-  "mixed", { "dark-ground", "light-ground", "land",
+  "mixed", { "dark-dry-mud", "dry-mud", "land",
     { 233, 234},							-- 600
     { 235, 236},							-- 610
     { 237, 238, 239},							-- 620
@@ -175,7 +175,7 @@ DefineTileset("name", "Wasteland",
     { 260, 260},							-- 6D0
     {},									-- 6E0
     {}},								-- 6F0
-  "mixed", { "forest", "light-ground", "land", "forest", "unpassable",
+  "mixed", { "tree", "dry-mud", "land", "forest", "unpassable",
     { 110, 110},							-- 700
     { 102, 102},							-- 710
     { 124, 136},							-- 720
@@ -191,39 +191,7 @@ DefineTileset("name", "Wasteland",
     { 108, 132},							-- 7C0
     { 105, 105},							-- 7D0
     {},									-- 7E0
-    {}},								-- 7F0
-  "mixed", { "human-wall", "human-wall", "land", "human", "wall", "unpassable",
-    {  17,   0,  53,   0,  89},						-- 800
-    {  18,   0,  54,   0,  90},						-- 810
-    {  19,   0,  55,   0,  91},						-- 820
-    {  20,   0,  56,   0,  92},						-- 830
-    {  21,  22,   0,  57,  58,   0,  93,  95},				-- 840
-    {  23,   0,  59,   0,  94},						-- 850
-    {  24,   0,  60,   0,  93},						-- 860
-    {  25,   0,  61,   0,  96},						-- 870
-    {  26,   0,  62,   0,  97},						-- 880
-    {  27,  28,   0,  63,  64,   0,  98,  99},				-- 890
-    {  29,   0,  65,   0,  98},						-- 8A0
-    {  30,   0,  66,   0, 100},						-- 8B0
-    {  31,   0,  67,   0,  95},						-- 8C0
-    {  32,   0,  68,   0,  99},						-- 8D0
-    {},									-- 8E0
-    {}},								-- 8F0
-  "mixed", { "orc-wall", "orc-wall", "land", "wall", "unpassable",
-    {  35,   0,  71,   0,  89},						-- 900
-    {  36,   0,  72,   0,  90},						-- 910
-    {  37,   0,  73,   0,  91},						-- 920
-    {  38,   0,  74,   0,  92},						-- 930
-    {  39,  40,   0,  75,  76,   0,  93,  95},				-- 940
-    {  41,   0,  77,   0,  94},						-- 950
-    {  42,   0,  78,   0,  93},						-- 960
-    {  43,   0,  79,   0,  96},						-- 970
-    {  44,   0,  80,   0,  97},						-- 980
-    {  45,  46,   0,  81,  82,   0,  98,  99},				-- 990
-    {  47,   0,  83,   0,  98},						-- 9A0
-    {  48,   0,  84,   0, 100},						-- 9B0
-    {  49,   0,  85,   0,  95},						-- 9C0
-    {  50,   0,  86,   0,  99}}						-- 9D0
+    {}}									-- 7F0
   })
 
 BuildTilesetTables()

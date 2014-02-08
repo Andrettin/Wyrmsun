@@ -1,0 +1,4 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","computer")
+PresentMap("North-South Conflict", 2, 128, 128, 1)

@@ -1,0 +1,188 @@
+LoadTileModels("scripts/tilesets/wasteland.lua")
+
+CleanRawTiles()
+
+MapWidth = 64
+MapHeight = 64
+
+local RandomNumber = 0
+local RandomX = 0
+local RandomY = 0
+local Count = 0
+
+for x=0,(MapWidth - 1) do
+	for y=0,(MapHeight - 1) do
+		RawTiles[y+1][x+1] = "Land"
+	end
+end
+	
+SetMapBorders("Rock")
+
+	-- create initial water seeds
+	Count = 3
+	while (Count > 0) do
+		RandomX = SyncRand(MapWidth - 1)
+		RandomY = SyncRand(MapHeight - 1)
+		if (RawTile(RandomX, RandomY) == "Land") then
+			SetRawTile(RandomX, RandomY, "Water")
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
+				SetRawTile(RandomX - 1, RandomY - 1, "Water")
+				SetRawTile(RandomX - 1, RandomY, "Water")
+				SetRawTile(RandomX, RandomY - 1, "Water")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water")) then
+				SetRawTile(RandomX + 1, RandomY - 1, "Water")
+				SetRawTile(RandomX, RandomY - 1, "Water")
+				SetRawTile(RandomX + 1, RandomY, "Water")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
+				SetRawTile(RandomX + 1, RandomY + 1, "Water")
+				SetRawTile(RandomX + 1, RandomY, "Water")
+				SetRawTile(RandomX, RandomY + 1, "Water")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
+				SetRawTile(RandomX - 1, RandomY + 1, "Water")
+				SetRawTile(RandomX - 1, RandomY, "Water")
+				SetRawTile(RandomX, RandomY + 1, "Water")
+				Count = Count - 1
+			end
+		end
+	end
+
+-- expand water
+Count = 3
+while (Count > 0) do
+	RandomX = SyncRand(MapWidth - 1)
+	RandomY = SyncRand(MapHeight - 1)
+	if (RawTile(RandomX, RandomY) == "Water") then
+		RandomNumber = SyncRand(4)
+		if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
+			SetRawTile(RandomX - 1, RandomY - 1, "Water")
+			SetRawTile(RandomX - 1, RandomY, "Water")
+			SetRawTile(RandomX, RandomY - 1, "Water")
+			Count = Count - 1
+		elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water")) then
+			SetRawTile(RandomX + 1, RandomY - 1, "Water")
+			SetRawTile(RandomX, RandomY - 1, "Water")
+			SetRawTile(RandomX + 1, RandomY, "Water")
+			Count = Count - 1
+		elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
+			SetRawTile(RandomX + 1, RandomY + 1, "Water")
+			SetRawTile(RandomX + 1, RandomY, "Water")
+			SetRawTile(RandomX, RandomY + 1, "Water")
+			Count = Count - 1
+		elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
+			SetRawTile(RandomX - 1, RandomY + 1, "Water")
+			SetRawTile(RandomX - 1, RandomY, "Water")
+			SetRawTile(RandomX, RandomY + 1, "Water")
+			Count = Count - 1
+		end
+	end
+end
+
+
+-- convert buildable land tiles adjacent to water tiles into rough land
+for x=0,(MapWidth - 1) do
+	for y=0,(MapHeight - 1) do
+		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+			SetRawTile(x, y, "Rough")
+		end
+	end
+end
+
+GenerateRocks(32, 4096)
+	
+	-- create initial rough land seeds
+	Count = 3
+	while (Count > 0) do
+		RandomX = SyncRand(MapWidth - 1)
+		RandomY = SyncRand(MapHeight - 1)
+		if (RawTile(RandomX, RandomY) == "Land") then
+			SetRawTile(RandomX, RandomY, "Rough")
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
+				SetRawTile(RandomX - 1, RandomY - 1, "Rough")
+				SetRawTile(RandomX - 1, RandomY, "Rough")
+				SetRawTile(RandomX, RandomY - 1, "Rough")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough")) then
+				SetRawTile(RandomX + 1, RandomY - 1, "Rough")
+				SetRawTile(RandomX, RandomY - 1, "Rough")
+				SetRawTile(RandomX + 1, RandomY, "Rough")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
+				SetRawTile(RandomX + 1, RandomY + 1, "Rough")
+				SetRawTile(RandomX + 1, RandomY, "Rough")
+				SetRawTile(RandomX, RandomY + 1, "Rough")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
+				SetRawTile(RandomX - 1, RandomY + 1, "Rough")
+				SetRawTile(RandomX - 1, RandomY, "Rough")
+				SetRawTile(RandomX, RandomY + 1, "Rough")
+				Count = Count - 1
+			end
+		end
+	end
+
+	-- expand rough land
+	Count = 6
+	while (Count > 0) do
+		RandomX = SyncRand(MapWidth - 1)
+		RandomY = SyncRand(MapHeight - 1)
+		if (RawTile(RandomX, RandomY) == "Rough") then
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
+				SetRawTile(RandomX - 1, RandomY - 1, "Rough")
+				SetRawTile(RandomX - 1, RandomY, "Rough")
+				SetRawTile(RandomX, RandomY - 1, "Rough")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough")) then
+				SetRawTile(RandomX + 1, RandomY - 1, "Rough")
+				SetRawTile(RandomX, RandomY - 1, "Rough")
+				SetRawTile(RandomX + 1, RandomY, "Rough")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
+				SetRawTile(RandomX + 1, RandomY + 1, "Rough")
+				SetRawTile(RandomX + 1, RandomY, "Rough")
+				SetRawTile(RandomX, RandomY + 1, "Rough")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
+				SetRawTile(RandomX - 1, RandomY + 1, "Rough")
+				SetRawTile(RandomX - 1, RandomY, "Rough")
+				SetRawTile(RandomX, RandomY + 1, "Rough")
+				Count = Count - 1
+			end
+		end
+	end
+
+ApplyRawTiles()
+
+
+--SetStartView(0, 28, 46)
+SetPlayerData(0, "Resources", "gold", 10000)
+SetPlayerData(0, "Resources", "wood", 3000)
+SetPlayerData(0, "Resources", "oil", 1000)
+SetPlayerData(0, "RaceName", "dwarf")
+SetAiType(0, "land-attack")
+--SetStartView(1, 99, 81)
+SetPlayerData(1, "Resources", "gold", 10000)
+SetPlayerData(1, "Resources", "wood", 3000)
+SetPlayerData(1, "Resources", "oil", 1000)
+SetPlayerData(1, "RaceName", "dwarf")
+SetAiType(1, "land-attack")
+SetPlayerData(2, "Resources", "gold", 10000)
+SetPlayerData(2, "Resources", "wood", 3000)
+SetPlayerData(2, "Resources", "oil", 1000)
+SetPlayerData(2, "RaceName", "dwarf")
+SetAiType(2, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+-- create player units
+for i=0,mapinfo.nplayers do
+	local player_spawn_point = FindAppropriateSpawnPoint()
+	SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+	unit = CreateUnit("unit-dwarven-axefighter", i, {player_spawn_point[1], player_spawn_point[2]})
+	unit = CreateUnit("unit-dwarven-axefighter", i, {player_spawn_point[1], player_spawn_point[2]})
+	unit = CreateUnit("unit-dwarven-axefighter", i, {player_spawn_point[1], player_spawn_point[2]})
+end

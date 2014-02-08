@@ -34,6 +34,7 @@ table.foreach(UnitTypeFiles,
 
 -- Fix critters sounds and name
 local CritterNames = {
+	forest = rat_name,
 	wasteland = rat_name
 }
 

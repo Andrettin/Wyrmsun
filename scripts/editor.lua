@@ -28,7 +28,7 @@
 --
 
 --	Set which icons to display
-SetEditorSelectIcon("icon-dwarven-shield-1")
+SetEditorSelectIcon("icon-dwarven-patrol-land")
 SetEditorUnitsIcon("icon-dwarven-axefighter")
 
 
@@ -45,19 +45,26 @@ local editor_types = {
    "unit-dwarven-miner",
    "unit-dwarven-axefighter",
    "unit-dwarven-steelclad",
+   "unit-dwarven-scout",
+   "unit-dwarven-ballista",
 
    "unit-dwarven-town-hall",
    "unit-dwarven-mushroom-farm",
    "unit-dwarven-barracks",
 
+   "unit-rugnur",
+   "unit-rugnur-older",
+
 --- - - - - - - - - - - - - - - - - - -
 
+   "unit-gnomish-worker",
    "unit-gnomish-recruit",
    "unit-gnomish-caravan",
 
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-goblin-spearman",
+   "unit-greebo",
 
 --- - - - - - - - - - - - - - - - - - -
 

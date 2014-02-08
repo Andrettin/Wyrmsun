@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineButtonStyle("main", {
+DefineButtonStyle("main-dwarf", {
   Size = {128, 20},
   Font = "game",
   TextNormalColor = "yellow",
@@ -35,19 +35,19 @@ DefineButtonStyle("main", {
   TextAlign = "Center",
   TextPos = {64, 4},
   Default = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 4,
+    File = "ui/dwarf/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
   },
   Hover = {
     TextNormalColor = "white",
   },
   Clicked = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 5,
+    File = "ui/dwarf/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
     TextNormalColor = "white",
     TextPos = {66, 6},
   },
 })
 
-DefineButtonStyle("network", {
+DefineButtonStyle("network-dwarf", {
   Size = {80, 20},
   Font = "game",
   TextNormalColor = "yellow",
@@ -55,74 +55,15 @@ DefineButtonStyle("network", {
   TextAlign = "Center",
   TextPos = {40, 4},
   Default = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 7,
+    File = "ui/dwarf/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
   },
   Hover = {
     TextNormalColor = "white",
   },
   Clicked = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 8,
+    File = "ui/dwarf/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
     TextNormalColor = "white",
     TextPos = {42, 6},
-  },
-})
-
-DefineButtonStyle("gm-half", {
-  Size = {106, 28},
-  Font = "large",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
-  TextAlign = "Center",
-  TextPos = {53, 7},
-  Default = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 10,
-  },
-  Hover = {
-    TextNormalColor = "white",
-  },
-  Clicked = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 11,
-    TextNormalColor = "white",
-    TextPos = {55, 9},
-  },
-})
-
-DefineButtonStyle("gm-full", {
-  Size = {224, 28},
-  Font = "large",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
-  TextAlign = "Center",
-  TextPos = {112, 7},
-  Default = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 16,
-  },
-  Hover = {
-    TextNormalColor = "white",
-  },
-  Clicked = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 17,
-    TextNormalColor = "white",
-    TextPos = {114, 9},
-  },
-})
-
-DefineButtonStyle("folder", {
-  Size = {39, 22},
-  Font = "large",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
-  TextAlign = "Left",
-  TextPos = {44, 6},
-  Default = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 51,
-  },
-  Hover = {
-    TextNormalColor = "white",
-  },
-  Clicked = {
-    File = "ui/buttons_1.png", Size = {300, 144}, Frame = 52,
-    TextNormalColor = "white",
   },
 })
 

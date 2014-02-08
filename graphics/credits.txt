@@ -1,16 +1,28 @@
 b_o:
 /graphics/dwarf/units/dwarven_axefighter.png
+/graphics/dwarf/units/dwarven_ballista.png
+/graphics/dwarf/units/dwarven_scout.png
+/graphics/dwarf/units/dwarven_steelclad.png
+/graphics/dwarf/units/dwarven_steelclad_with_double_axe.png
 /graphics/dwarf/units/miner.png
 /graphics/dwarf/units/miner_with_gold.png
 /graphics/dwarf/units/miner_with_lumber.png
+/graphics/missiles/dwarven_ballista_bolt.png
+/graphics/missiles/throwing_axe.png
+/graphics/neutral/icons/goblin_swordsman.png
 /graphics/neutral/units/gnomish_caravan.png
 /graphics/neutral/units/gnomish_recruit.png
+/graphics/neutral/units/gnomish_worker.png
+/graphics/neutral/units/gnomish_worker_with_gold.png
+/graphics/neutral/units/gnomish_worker_with_lumber.png
 /graphics/neutral/units/goblin_spearman.png
+/graphics/neutral/units/goblin_swordsman.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rats.png
+/graphics/tileset/forest/terrain/forest.png (grass, grass-dirt transition and tree tiles)
+/graphics/ui/Credits_background.png
 
 Bos Wars Team:
-/graphics/missiles/explosion.png
 /graphics/missiles/green_cross.png
 /graphics/missiles/red_cross.png
 /graphics/ui/cursors/arrow_E.png
@@ -27,14 +39,6 @@ Bos Wars Team:
 /graphics/ui/cursors/yellow.png
 
 DinkyDyeAussie:
-/graphics/ui/dwarf/640x480/buttonpanel.png
-/graphics/ui/dwarf/640x480/filler-right.png
-/graphics/ui/dwarf/640x480/resource.png
-/graphics/ui/dwarf/640x480/statusline.png
-/graphics/ui/dwarf/800x480/buttonpanel.png
-/graphics/ui/dwarf/800x480/filler-right.png
-/graphics/ui/dwarf/800x480/resource.png
-/graphics/ui/dwarf/800x480/statusline.png
 
 igoku:
 /graphics/dwarf/icons/boots.png (later modified by Jinn)
@@ -47,25 +51,72 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/axe_1.png (modified from Ransom.00's icon)
 /graphics/dwarf/icons/boots.png (modified from igoku's icon)
 /graphics/dwarf/icons/dwarven_axefighter.png
+/graphics/dwarf/icons/dwarven_scout.png
 /graphics/dwarf/icons/dwarven_steelclad.png
 /graphics/dwarf/icons/miner.png (modified from igoku's icon)
+/graphics/dwarf/icons/patrol_land.png
+/graphics/dwarf/icons/return_goods.png
+/graphics/dwarf/icons/rugnur.png
+/graphics/dwarf/icons/rugnur_older.png
 /graphics/dwarf/icons/shield_1.png
+/graphics/dwarf/icons/stand_ground.png
 /graphics/elf/icons/elven_swordsman.png
 /graphics/human/buildings/lumber_mill.png
+/graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/icons/build_basic_structure.png
 /graphics/neutral/icons/cancel.png
 /graphics/neutral/icons/gnomish_recruit.png
 /graphics/neutral/icons/goblin_spearman.png
+/graphics/neutral/icons/harvest.png
+/graphics/neutral/icons/repair.png
 /graphics/neutral/icons/water_elemental.png
 /graphics/orc/icons/spearman.png
 /graphics/tileset/forest/neutral/icons/rat.png
-/graphics/tileset/forest/terrain/forest.png
+/graphics/tileset/forest/terrain/forest.png (dirt and water tiles)
 /graphics/tileset/wasteland/neutral/buildings/destroyed_site.png
 /graphics/tileset/wasteland/neutral/icons/rat.png
 /graphics/tileset/wasteland/terrain/wasteland.png
 /graphics/ui/cursors/magnifying_glass.png
+/graphics/ui/dwarf/buttonpanel_480.png
+/graphics/ui/dwarf/buttonpanel_600.png
+/graphics/ui/dwarf/buttonpanel_768.png
+/graphics/ui/dwarf/buttonpanel_800.png
+/graphics/ui/dwarf/buttonpanel_960.png
+/graphics/ui/dwarf/buttonpanel_1024.png
+/graphics/ui/dwarf/buttonpanel_1050.png
+/graphics/ui/dwarf/filler-right_480.png
+/graphics/ui/dwarf/filler-right_600.png
+/graphics/ui/dwarf/filler-right_768.png
+/graphics/ui/dwarf/filler-right_800.png
+/graphics/ui/dwarf/filler-right_960.png
+/graphics/ui/dwarf/filler-right_1024.png
+/graphics/ui/dwarf/filler-right_1050.png
+/graphics/ui/dwarf/infopanel.png
+/graphics/ui/dwarf/menubutton.png
+/graphics/ui/dwarf/minimap.png
+/graphics/ui/dwarf/panel_1.png
+/graphics/ui/dwarf/panel_2.png
+/graphics/ui/dwarf/panel_3.png
+/graphics/ui/dwarf/panel_4.png
+/graphics/ui/dwarf/panel_5.png
+/graphics/ui/dwarf/resource_640.png
+/graphics/ui/dwarf/resource_800.png
+/graphics/ui/dwarf/resource_1024.png
+/graphics/ui/dwarf/resource_1280.png
+/graphics/ui/dwarf/resource_1360.png
+/graphics/ui/dwarf/resource_1400.png
+/graphics/ui/dwarf/resource_1600.png
+/graphics/ui/dwarf/resource_1680.png
+/graphics/ui/dwarf/statusline_640.png
+/graphics/ui/dwarf/statusline_800.png
+/graphics/ui/dwarf/statusline_1024.png
+/graphics/ui/dwarf/statusline_1280.png
+/graphics/ui/dwarf/statusline_1360.png
+/graphics/ui/dwarf/statusline_1400.png
+/graphics/ui/dwarf/statusline_1600.png
+/graphics/ui/dwarf/statusline_1680.png
 /graphics/ui/dwarf/cursors/dwarven_gauntlet.png
 /graphics/ui/dwarf/widgets/button-large-grayed.png
 /graphics/ui/dwarf/widgets/button-large-normal.png
@@ -73,6 +124,10 @@ João Victor G. Costa (Jinn):
 /graphics/ui/dwarf/widgets/button-small-grayed.png
 /graphics/ui/dwarf/widgets/button-small-normal.png
 /graphics/ui/dwarf/widgets/button-small-pressed.png
+/graphics/ui/dwarf/widgets/button-thin-medium-normal.png
+/graphics/ui/dwarf/widgets/button-thin-medium-pressed.png
+/graphics/ui/dwarf/widgets/button-thin-small-normal.png
+/graphics/ui/dwarf/widgets/button-thin-small-pressed.png
 
 Oray Studios:
 /graphics/ui/gold,wood,oil,mana.png
@@ -82,3 +137,7 @@ Ransom.00:
 
 Rick Elliot:
 /graphics/ui/cursors/cross.png
+
+StumpyStrust:
+/graphics/missiles/explosion.png (later modified by Jinn)
+/graphics/ui/Menu_background_with_title.png

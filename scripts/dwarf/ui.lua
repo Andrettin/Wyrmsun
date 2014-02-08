@@ -94,10 +94,10 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("ui/dwarf/" .. Video.Width .. "x" .. Video.Height  .. "/filler-right.png", Video.Width - 16, 0)
-AddFiller("ui/dwarf/" .. Video.Width  .. "x" .. Video.Height .. "/resource.png", 176, 0)
-AddFiller("ui/dwarf/" .. Video.Width  .. "x" .. Video.Height .. "/statusline.png", 176, Video.Height - 16)
-AddFiller("ui/dwarf/" .. Video.Width .. "x" .. Video.Height .. "/buttonpanel.png", 0, 336)
+AddFiller("ui/dwarf/filler-right_" .. Video.Height .. ".png", Video.Width - 16, 0)
+AddFiller("ui/dwarf/resource_" .. Video.Width .. ".png", 176, 0)
+AddFiller("ui/dwarf/statusline_" .. Video.Width .. ".png", 176, Video.Height - 16)
+AddFiller("ui/dwarf/buttonpanel_" .. Video.Height .. ".png", 0, 336)
 AddFiller("ui/dwarf/menubutton.png", 0, 0)
 AddFiller("ui/dwarf/minimap.png", 0, 24)
 
@@ -282,7 +282,7 @@ UI.Resources[ScoreCost].TextY = 1
 UI.MenuButton.X = 24
 UI.MenuButton.Y = 2
 UI.MenuButton.Text = "Menu (~<F10~>)"
-UI.MenuButton.Style = FindButtonStyle("main")
+UI.MenuButton.Style = FindButtonStyle("main-dwarf")
 UI.MenuButton:SetCallback(
   function()
     if (Editor.Running == EditorNotRunning) then
@@ -295,12 +295,12 @@ UI.MenuButton:SetCallback(
 UI.NetworkMenuButton.X = 6
 UI.NetworkMenuButton.Y = 2
 UI.NetworkMenuButton.Text = "Menu"
-UI.NetworkMenuButton.Style = FindButtonStyle("network")
+UI.NetworkMenuButton.Style = FindButtonStyle("network-dwarf")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
 UI.NetworkDiplomacyButton.X = 90
 UI.NetworkDiplomacyButton.Y = 2
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("network")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-dwarf")
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 

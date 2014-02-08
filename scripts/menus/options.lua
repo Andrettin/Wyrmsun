@@ -191,49 +191,99 @@ function BuildOptionsMenu()
   local offy = (Video.Height - 352) / 2
   local checkTexture
   local b
+  local resolution_width_list
+  local resolution_height_list
+  local resolution_width = Video.Width
+  local resolution_height = Video.Height
 
   menu:addLabel("Global Options", offx + 176, offy + 1)
-  menu:addLabel("Video Resolution", offx + 16, offy + 34, Fonts["game"], false)
-
-  b = menu:addCheckBox("640 x 480", offx + 16, offy + 55 + 26*0,
-    function() SetVideoSize(640, 480) menu:stop(1) end)
-  if (Video.Width == 640) then b:setMarked(true) end
-  b = menu:addCheckBox("800 x 480", offx + 16, offy + 55 + 26*1,
-    function() SetVideoSize(800, 480) menu:stop(1) end)
-  if (Video.Width == 800 and Video.Height == 480) then b:setMarked(true) end
---  b = menu:addCheckBox("800 x 600", offx + 16, offy + 55 + 26*2,
---    function() SetVideoSize(800, 600) menu:stop(1) end)
---  if (Video.Width == 800 and Video.Height == 600) then b:setMarked(true) end
---  b = menu:addCheckBox("1024 x 768", offx + 16, offy + 55 + 26*3,
---    function() SetVideoSize(1024, 768) menu:stop(1) end)
---  if (Video.Width == 1024) then b:setMarked(true) end
---  b = menu:addCheckBox("1280 x 800", offx + 16, offy + 55 + 26*4,
---    function() SetVideoSize(1280, 800) menu:stop(1) end)
---  if (Video.Height == 800) then b:setMarked(true) end
---  b = menu:addCheckBox("1280 x 960", offx + 16, offy + 55 + 26*5,
---    function() SetVideoSize(1280, 960) menu:stop(1) end)
---  if (Video.Height == 960) then b:setMarked(true) end
---  b = menu:addCheckBox("1280 x 1024", offx + 16, offy + 55 + 26*6,
---    function() SetVideoSize(1280, 1024) menu:stop(1) end)
---  if (Video.Height == 1024) then b:setMarked(true) end
---  b = menu:addCheckBox("1400 x 1050", offx + 16, offy + 55 + 26*7,
---    function() SetVideoSize(1400, 1050) menu:stop(1) end)
---  if (Video.Width == 1400) then b:setMarked(true) end
---  b = menu:addCheckBox("1600 x 1200", offx + 16, offy + 55 + 26*8,
---    function() SetVideoSize(1600, 1200) menu:stop(1) end)
---  if (Video.Width == 1600) then b:setMarked(true) end
---  b = menu:addCheckBox("1680 x 1050", offx + 16, offy + 55 + 26*9,
---    function() SetVideoSize(1680, 1050) menu:stop(1) end)
---  if (Video.Width == 1680) then b:setMarked(true) end
-
-  menu:addLabel("Language", offx + 160, offy + 34, Fonts["game"], false)
-
-  b = menu:addCheckBox("English", offx + 160, offy + 55 + 26*0,
-    function()
-	wyr.preferences.Language = "English"
-	menu:stop(1)
+  menu:addLabel("Video Resolution Width", offx + 8, offy + 34, Fonts["game"], false)
+  resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1400", "1600", "1680"}, offx + 8, offy + 55 + 26*0,
+    function(dd)
+    	if (resolution_width_list:getSelected() == 0) then
+    		resolution_width = 640
+    	elseif (resolution_width_list:getSelected() == 1) then
+    		resolution_width = 800
+    	elseif (resolution_width_list:getSelected() == 2) then
+    		resolution_width = 1024
+    	elseif (resolution_width_list:getSelected() == 3) then
+    		resolution_width = 1280
+    	elseif (resolution_width_list:getSelected() == 4) then
+    		resolution_width = 1360
+    	elseif (resolution_width_list:getSelected() == 5) then
+    		resolution_width = 1400
+    	elseif (resolution_width_list:getSelected() == 6) then
+    		resolution_width = 1600
+    	elseif (resolution_width_list:getSelected() == 7) then
+    		resolution_width = 1680
+    	end
+  	SetVideoSize(resolution_width, resolution_height) menu:stop(1)
     end)
-  b:setMarked(wyr.preferences.Language == "English")
+  resolution_width_list:setSize(152, 20)
+  if (Video.Width == 640) then
+  	resolution_width_list:setSelected(0)
+  elseif (Video.Width == 800) then
+    	resolution_width_list:setSelected(1)
+  elseif (Video.Width == 1024) then
+    	resolution_width_list:setSelected(2)
+  elseif (Video.Width == 1280) then
+    	resolution_width_list:setSelected(3)
+  elseif (Video.Width == 1360) then
+    	resolution_width_list:setSelected(4)
+  elseif (Video.Width == 1400) then
+    	resolution_width_list:setSelected(5)
+  elseif (Video.Width == 1600) then
+    	resolution_width_list:setSelected(6)
+  elseif (Video.Width == 1680) then
+    	resolution_width_list:setSelected(7)
+  end
+
+  menu:addLabel("Video Resolution Height", offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
+  resolution_height_list = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + 16 + 152 + 24, offy + 55 + 26*0,
+    function(dd)
+    	if (resolution_height_list:getSelected() == 0) then
+    		resolution_height = 480
+    	elseif (resolution_height_list:getSelected() == 1) then
+    		resolution_height = 600
+    	elseif (resolution_height_list:getSelected() == 2) then
+    		resolution_height = 768
+    	elseif (resolution_height_list:getSelected() == 3) then
+    		resolution_height = 800
+    	elseif (resolution_height_list:getSelected() == 4) then
+    		resolution_height = 960
+    	elseif (resolution_height_list:getSelected() == 5) then
+    		resolution_height = 1024
+    	elseif (resolution_height_list:getSelected() == 6) then
+    		resolution_height = 1050
+    	end
+  	SetVideoSize(resolution_width, resolution_height) menu:stop(1)
+    end)
+  resolution_height_list:setSize(152, 20)
+  if (Video.Height == 480) then
+  	resolution_height_list:setSelected(0)
+  elseif (Video.Height == 600) then
+  	resolution_height_list:setSelected(1)
+  elseif (Video.Height == 768) then
+  	resolution_height_list:setSelected(2)
+  elseif (Video.Height == 800) then
+  	resolution_height_list:setSelected(3)
+  elseif (Video.Height == 960) then
+  	resolution_height_list:setSelected(4)
+  elseif (Video.Height == 1024) then
+  	resolution_height_list:setSelected(5)
+  elseif (Video.Height == 1050) then
+  	resolution_height_list:setSelected(6)
+  end
+
+--  menu:addLabel("Language", offx + 160, offy + 34, Fonts["game"], false)
+
+--  b = menu:addCheckBox("English", offx + 160, offy + 55 + 26*0,
+--    function()
+--	wyr.preferences.Language = "English"
+--	menu:stop(1)
+--    end)
+--  b:setMarked(wyr.preferences.Language == "English")
+
 --  b = menu:addCheckBox("Portuguese", offx + 160, offy + 55 + 26*1,
 --    function()
 --	wyr.preferences.Language = "Portuguese"
@@ -262,7 +312,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowOrders == 0) then b:setMarked(true) end
 
-  b = menu:addCheckBox("Disable Messages", offx + 160, offy + 55 + 26*9 + 14,
+  b = menu:addCheckBox("Disable Messages", offx + 160 + 24, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowMessages == true) then
 		wyr.preferences.ShowMessages = false
@@ -274,7 +324,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-  checkTexture = menu:addCheckBox("Set Maximum OpenGL Texture to 256", offx + 160, offy + 55 + 26*10 + 14,
+  checkTexture = menu:addCheckBox("Set Maximum OpenGL Texture to 256", offx + 160 + 24, offy + 55 + 26*10 + 14,
     function()
       if (checkTexture:isMarked()) then
         wyr.preferences.MaxOpenGLTexture = 256

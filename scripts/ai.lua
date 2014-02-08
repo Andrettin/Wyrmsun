@@ -55,15 +55,21 @@ DefineAiHelper(
   {"build", "unit-dwarven-miner",
   "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
   },
+  {"build", "unit-gnomish-worker",
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
+  },
   --
   -- Building can train which units.
   --
-  {"train", "unit-dwarven-town-hall", "unit-dwarven-miner"},
-  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
+  {"train", "unit-dwarven-town-hall", "unit-dwarven-miner", "unit-gnomish-worker"},
+  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-gnomish-recruit", "unit-goblin-spearman"},
   --
   -- Unit can repair which units.
   --
   {"repair", "unit-dwarven-miner",
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
+  },
+  {"repair", "unit-gnomish-worker",
   "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
   },
   --
@@ -73,6 +79,8 @@ DefineAiHelper(
   --
   -- Equivalence of units for the resource manager.
   --
+  {"unit-equiv", "unit-dwarven-miner",
+  "unit-gnomish-worker"},
   {"unit-equiv", "unit-dwarven-axefighter",
   "unit-dwarven-steelclad",
   "unit-gnomish-recruit", "unit-goblin-spearman"}
@@ -120,6 +128,15 @@ end
 function AiSoldier()
   if (AiGetRace() == race3) then
     return "unit-dwarven-axefighter"
+  end
+end
+
+--
+--  Shooter of the current race.
+--
+function AiShooter()
+  if (AiGetRace() == race3) then
+    return "unit-dwarven-scout"
   end
 end
 

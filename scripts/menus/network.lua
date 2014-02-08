@@ -123,7 +123,7 @@ function RunJoiningMapMenu(s)
 
   menu:writeLargeText("Map", sx, sy*3)
   menu:writeText("File:", sx, sy*3+30)
-  maptext = menu:writeText(NetworkMapName, sx+50, sy*3+30)
+  maptext = menu:writeText(string.sub(NetworkMapName, 15), sx+50, sy*3+30)
   menu:writeText("Players:", sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
   menu:writeText("Description:", sx, sy*3+70)
@@ -145,7 +145,7 @@ function RunJoiningMapMenu(s)
   race:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  local units = menu:addDropDown({"Map Default", "One Peasant Only"}, sx + 100, sy*11+25,
+  local units = menu:addDropDown({"Map Default", "One Worker Only"}, sx + 100, sy*11+25,
     function(dd) end)
   units:setSize(190, 20)
   units:setEnabled(false)
@@ -311,11 +311,11 @@ function RunServerMultiGameMenu(map, description, numplayers)
 
   menu:writeLargeText("Map", sx, sy*3)
   menu:writeText("File:", sx, sy*3+30)
-  maptext = menu:writeText(map, sx+50, sy*3+30)
+  maptext = menu:writeText(string.sub(map, 15), sx+50, sy*3+30)
   menu:writeText("Players:", sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
   menu:writeText("Description:", sx, sy*3+70)
-  descr = menu:writeText("Unknown map", sx+20, sy*3+90)
+  descr = menu:writeText(description, sx+20, sy*3+90)
 
   local function fowCb(dd)
     ServerSetupState.FogOfWar = bool2int(dd:isMarked())
@@ -341,7 +341,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   d:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  d = menu:addDropDown({"Map Default", "One Peasant Only"}, sx + 100, sy*11+25,
+  d = menu:addDropDown({"Map Default", "One Worker Only", "Town Hall + Workers"}, sx + 100, sy*11+25,
     function(dd)
       GameSettings.NumUnits = dd:getSelected()
       ServerSetupState.UnitsOption = GameSettings.NumUnits
@@ -395,7 +395,7 @@ function RunCreateMultiGameMenu(s)
   local menu
   local map = "No Map"
   local description = "No map"
-  local mapfile = "maps/multi/(2)nordische-seenplatte.smp"
+  local mapfile = "maps/skirmish/northern-lakes.smp"
   local numplayers = 3
   local sx = Video.Width / 20
   local sy = Video.Height / 20
@@ -403,7 +403,7 @@ function RunCreateMultiGameMenu(s)
   menu = WarMenu("Create MultiPlayer game")
 
   menu:writeText("File:", sx, sy*3+30)
-  maptext = menu:writeText(mapfile, sx+50, sy*3+30)
+  maptext = menu:writeText(string.sub(mapfile, 15), sx+50, sy*3+30)
   menu:writeText("Players:", sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
   menu:writeText("Description:", sx, sy*3+70)
@@ -421,20 +421,20 @@ function RunCreateMultiGameMenu(s)
   end
 
   Load(mapfile)
-  local browser = menu:addBrowser("maps/", "^.*%.smp%.?g?z?$", sx*10, sy*2+20, sx*8, sy*11)
+  local browser = menu:addBrowser("maps/skirmish/", "^.*%.smp%.?g?z?$", sx*10, sy*2+20, sx*8, sy*11)
   local function cb(s)
     mapfile = browser.path .. browser:getSelectedItem()
     Load(mapfile)
-    maptext:setCaption(mapfile)
+    maptext:setCaption(string.sub(mapfile, 15))
     maptext:adjustSize()
   end
   browser:setActionCallback(cb)
 
   menu:addFullButton("~!Create Game", "c", sx,  sy*11,
     function(s)
-      if (browser:getSelected() < 0) then
-        return
-      end
+--      if (browser:getSelected() < 0) then
+--        return
+--      end
       RunServerMultiGameMenu(mapfile, description, numplayers)
       menu:stop()
     end
@@ -492,7 +492,7 @@ function RunMultiPlayerGameMenu(s)
     end)
 
   menu:addFullButton(previous_menu_name, "p", 208 + offx, 320 + (36 * 2) + offy,
-    function() menu:stop() end)
+    function() SetLocalPlayerName("") menu:stop() end) -- Andrettin: in single-player games the local player shouldn't use his nick
 
   menu:run()
 

@@ -7,12 +7,12 @@ local function RunEditorNewMapMenu()
   local tilesets = { "wasteland"}
   local mapSizes = {"32", "64", "96", "128", "256"}
 
-  menu:addLabel("Map description :", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
+  menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
   local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
-  menu:addLabel("TileSet : ", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
+  menu:addLabel("Terrain:", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
   local dropDownTileset = menu:addDropDown(tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
 
-  menu:addLabel("Size :", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
+  menu:addLabel("Size:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
   local mapSizex = menu:addDropDown(mapSizes, offx + 208 + 50, offy + 104 + 32 * 3, function() end)
   mapSizex:setWidth(50)
   menu:addLabel("x", offx + 208 + 110, offy + 104 + 32 * 3, Fonts["game"], false)
@@ -43,10 +43,13 @@ local function RunEditorLoadMapMenu()
   local labelDescription
   local labelNbPlayer
   local labelMapSize
+  
+  -- Andrettin: added this so that special scenarios such as Chaincolt Foothills don't become selected by default
+  mapname = "maps/skirmish/northern-lakes.smp"
 
   -- update label content
   local function MapChanged()
-    labelMapName:setCaption("File      : " .. string.sub(mapname, 6))
+    labelMapName:setCaption("File      : " .. string.sub(mapname, 15))
     labelMapName:adjustSize()
 
     labelNbPlayer:setCaption("Players  : " .. mapinfo.nplayers)
@@ -131,7 +134,7 @@ function RunEditorSaveMenu()
   local t = menu:addTextInputField("game.smp",
     (384 - 300 - 18) / 2, 11 + 36, 318)
 
-  local browser = menu:addBrowser("maps", ".smp.gz$",
+  local browser = menu:addBrowser("maps/skirmish/", ".smp.gz$",
     (384 - 300 - 18) / 2, 11 + 36 + 22, 318, 126)
   local function cb(s)
     t:setText(browser:getSelectedItem())

@@ -1,0 +1,4 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","computer")
+PresentMap("Time for Decisions", 2, 128, 128, 1)

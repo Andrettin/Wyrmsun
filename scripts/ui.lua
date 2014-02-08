@@ -182,7 +182,7 @@ DefinePanelContents(
 
 -- Ressource Left
 	{ Pos = {88, 86}, Condition = {ShowOpponent = false, GiveResource = "only"},
-		More = {"FormattedText2", {Format = "%s Left:%d", Variable = "GiveResource",
+		More = {"FormattedText2", {Format = "%s Left: %d", Variable = "GiveResource",
 					Component1 = "Name", Component2 = "Value", Centered = true}}
 	},
 

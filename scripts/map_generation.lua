@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function GenerateRandomMap(width, height)
+function CleanRawTiles()
 	RawTiles = {
 		{"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""},
 		{"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""},
@@ -286,6 +286,115 @@ function GenerateRandomMap(width, height)
 		{"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""},
 		{"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 	}
+end
+
+function GenerateRocks(rock_seed_number, rock_expansions_number)
+	local RandomNumber = 0
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+
+	-- create initial rock seeds
+	Count = rock_seed_number
+	while (Count > 0) do
+		RandomX = SyncRand(MapWidth - 1)
+		RandomY = SyncRand(MapHeight - 1)
+		if (RawTile(RandomX, RandomY) == "Land") then
+			SetRawTile(RandomX, RandomY, "Rock")
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock")) then
+				SetRawTile(RandomX - 1, RandomY - 1, "Rock")
+				SetRawTile(RandomX - 1, RandomY, "Rock")
+				SetRawTile(RandomX, RandomY - 1, "Rock")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock")) then
+				SetRawTile(RandomX + 1, RandomY - 1, "Rock")
+				SetRawTile(RandomX, RandomY - 1, "Rock")
+				SetRawTile(RandomX + 1, RandomY, "Rock")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
+				SetRawTile(RandomX + 1, RandomY + 1, "Rock")
+				SetRawTile(RandomX + 1, RandomY, "Rock")
+				SetRawTile(RandomX, RandomY + 1, "Rock")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
+				SetRawTile(RandomX - 1, RandomY + 1, "Rock")
+				SetRawTile(RandomX - 1, RandomY, "Rock")
+				SetRawTile(RandomX, RandomY + 1, "Rock")
+				Count = Count - 1
+			end
+		end
+	end
+
+	-- expand rocks
+	Count = rock_expansions_number
+	while (Count > 0) do
+		RandomX = SyncRand(MapWidth - 1)
+		RandomY = SyncRand(MapHeight - 1)
+		if (RawTile(RandomX, RandomY) == "Rock") then
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock")) then
+				SetRawTile(RandomX - 1, RandomY - 1, "Rock")
+				SetRawTile(RandomX - 1, RandomY, "Rock")
+				SetRawTile(RandomX, RandomY - 1, "Rock")
+				Count = Count - 1
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock")) then
+				SetRawTile(RandomX + 1, RandomY - 1, "Rock")
+				SetRawTile(RandomX, RandomY - 1, "Rock")
+				SetRawTile(RandomX + 1, RandomY, "Rock")
+				Count = Count - 1
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
+				SetRawTile(RandomX + 1, RandomY + 1, "Rock")
+				SetRawTile(RandomX + 1, RandomY, "Rock")
+				SetRawTile(RandomX, RandomY + 1, "Rock")
+				Count = Count - 1
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
+				SetRawTile(RandomX - 1, RandomY + 1, "Rock")
+				SetRawTile(RandomX - 1, RandomY, "Rock")
+				SetRawTile(RandomX, RandomY + 1, "Rock")
+				Count = Count - 1
+			end
+		end
+	end
+
+	-- convert buildable land tiles adjacent to rock tiles into rough land
+	for x=0,(MapWidth - 1) do
+		for y=0,(MapHeight - 1) do
+			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+				SetRawTile(x, y, "Rough")
+			end
+		end
+	end
+end
+
+function SetMapBorders(tile_type)
+
+	for x=0,(MapWidth - 1) do
+		SetRawTile(x, 0, tile_type)
+		SetRawTile(x, 1, tile_type)
+		SetRawTile(x + 1, 0, tile_type)
+		SetRawTile(x + 1, 1, tile_type)
+
+		SetRawTile(x, MapHeight - 2, tile_type)
+		SetRawTile(x, MapHeight - 1, tile_type)
+		SetRawTile(x + 1, MapHeight - 2, tile_type)
+		SetRawTile(x + 1, MapHeight - 1, tile_type)
+	end
+	for y=0,(MapHeight - 1) do
+		SetRawTile(0, y, tile_type)
+		SetRawTile(0, y + 1, tile_type)
+		SetRawTile(1, y, tile_type)
+		SetRawTile(1, y + 1, tile_type)
+
+		SetRawTile(MapWidth - 2, y, tile_type)
+		SetRawTile(MapWidth - 2, y + 1, tile_type)
+		SetRawTile(MapWidth - 1, y, tile_type)
+		SetRawTile(MapWidth - 1, y + 1, tile_type)
+	end
+end
+
+function GenerateRandomMap(width, height)
+	CleanRawTiles()
 
 	MapWidth = width
 	MapHeight = height
@@ -302,7 +411,8 @@ function GenerateRandomMap(width, height)
 	end
 	
 	-- create initial water seeds
-	Count = (MapWidth * MapHeight) / 4096
+--	Count = (MapWidth * MapHeight) / 16384
+	Count = 1
 	while (Count > 0) do
 		RandomX = SyncRand(MapWidth - 1)
 		RandomY = SyncRand(MapHeight - 1)
@@ -374,78 +484,8 @@ function GenerateRandomMap(width, height)
 		end
 	end
 	
-	-- create initial rock seeds
-	Count = (MapWidth * MapHeight) / 2048
-	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
-		if (RawTile(RandomX, RandomY) == "Land") then
-			SetRawTile(RandomX, RandomY, "Rock")
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock")) then
-				SetRawTile(RandomX - 1, RandomY - 1, "Rock")
-				SetRawTile(RandomX - 1, RandomY, "Rock")
-				SetRawTile(RandomX, RandomY - 1, "Rock")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock")) then
-				SetRawTile(RandomX + 1, RandomY - 1, "Rock")
-				SetRawTile(RandomX, RandomY - 1, "Rock")
-				SetRawTile(RandomX + 1, RandomY, "Rock")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
-				SetRawTile(RandomX + 1, RandomY + 1, "Rock")
-				SetRawTile(RandomX + 1, RandomY, "Rock")
-				SetRawTile(RandomX, RandomY + 1, "Rock")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
-				SetRawTile(RandomX - 1, RandomY + 1, "Rock")
-				SetRawTile(RandomX - 1, RandomY, "Rock")
-				SetRawTile(RandomX, RandomY + 1, "Rock")
-				Count = Count - 1
-			end
-		end
-	end
+	GenerateRocks(((MapWidth * MapHeight) / 4096), ((MapWidth * MapHeight) / 2))
 
-	-- expand rocks
-	Count = (MapWidth * MapHeight) / 2
-	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
-		if (RawTile(RandomX, RandomY) == "Rock") then
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock")) then
-				SetRawTile(RandomX - 1, RandomY - 1, "Rock")
-				SetRawTile(RandomX - 1, RandomY, "Rock")
-				SetRawTile(RandomX, RandomY - 1, "Rock")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock")) then
-				SetRawTile(RandomX + 1, RandomY - 1, "Rock")
-				SetRawTile(RandomX, RandomY - 1, "Rock")
-				SetRawTile(RandomX + 1, RandomY, "Rock")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rock") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
-				SetRawTile(RandomX + 1, RandomY + 1, "Rock")
-				SetRawTile(RandomX + 1, RandomY, "Rock")
-				SetRawTile(RandomX, RandomY + 1, "Rock")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rock")) then
-				SetRawTile(RandomX - 1, RandomY + 1, "Rock")
-				SetRawTile(RandomX - 1, RandomY, "Rock")
-				SetRawTile(RandomX, RandomY + 1, "Rock")
-				Count = Count - 1
-			end
-		end
-	end
-
-	-- convert buildable land tiles adjacent to rock tiles into rough land
-	for x=0,(MapWidth - 1) do
-		for y=0,(MapHeight - 1) do
-			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
-				SetRawTile(x, y, "Rough")
-			end
-		end
-	end
-	
 	-- create initial rough land seeds
 	Count = (MapWidth * MapHeight) / 2048
 	while (Count > 0) do
@@ -577,13 +617,10 @@ function GenerateRandomMap(width, height)
 	-- create gold mines
 	Count = 6
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
-		if (RawTile(RandomX, RandomY) == "Land" and RawTile(RandomX, RandomY + 1) == "Land" and RawTile(RandomX, RandomY + 2) == "Land" and RawTile(RandomX + 1, RandomY) == "Land" and RawTile(RandomX + 1, RandomY + 1) == "Land" and RawTile(RandomX + 1, RandomY + 2) == "Land" and RawTile(RandomX + 2, RandomY) == "Land" and RawTile(RandomX + 2, RandomY + 1) == "Land" and RawTile(RandomX + 2, RandomY + 2) == "Land") then
-			unit = CreateUnit("unit-gold-mine", 15, {RandomX, RandomY})
-			SetResourcesHeld(unit, 150000)
-			Count = Count - 1
-		end
+		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint()
+		unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+		SetResourcesHeld(unit, 150000)
+		Count = Count - 1
 	end
 
 	-- create oil patches
@@ -597,6 +634,16 @@ function GenerateRandomMap(width, height)
 --			Count = Count - 1
 --		end
 --	end
+
+	-- create player units
+	for i=0,mapinfo.nplayers do
+		local player_spawn_point = FindAppropriatePlayerSpawnPoint()
+		SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+		unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+	end
+
+
+
 end
 
 function SetRawTile(x, y, tile_type)
@@ -1036,6 +1083,69 @@ function ApplyRawTiles()
 					end
 				end
 			end
+		end
+	end
+end
+
+function FindAppropriateSpawnPoint()
+	local location_found = false
+	while (location_found == false) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		
+		local unit_quantity = 0
+		for i=0,14 do
+			unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+		end
+		
+		if (unit_quantity < 1) then
+			location_found = true
+		end
+	end
+	return {RandomX, RandomY}
+end
+
+function FindAppropriatePlayerSpawnPoint()
+	local location_found = false
+	while (location_found == false) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		
+		local unit_quantity = 0
+		for i=0,14 do
+			unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+		end
+
+		local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+		
+		if (unit_quantity < 1 and gold_mine_quantity >= 1) then
+			location_found = true
+		end
+	end
+	return {RandomX, RandomY}
+end
+
+function FindAppropriateGoldMineSpawnPoint()
+	local location_found = false
+	while (location_found == false) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		
+		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
+		
+		if (RawTile(RandomX, RandomY) == "Land" and RawTile(RandomX, RandomY + 1) == "Land" and RawTile(RandomX, RandomY + 2) == "Land" and RawTile(RandomX + 1, RandomY) == "Land" and RawTile(RandomX + 1, RandomY + 1) == "Land" and RawTile(RandomX + 1, RandomY + 2) == "Land" and RawTile(RandomX + 2, RandomY) == "Land" and RawTile(RandomX + 2, RandomY + 1) == "Land" and RawTile(RandomX + 2, RandomY + 2) == "Land") then
+			if (unit_quantity < 1) then
+				location_found = true
+			end
+		end
+	end
+	return {RandomX, RandomY}
+end
+
+function FindUnusedPlayerSlot()
+	for i=0,14 do
+		if (GetPlayerData(i, "TotalNumUnits") == 0) then
+			return i
 		end
 	end
 end

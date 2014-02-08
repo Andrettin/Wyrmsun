@@ -27,6 +27,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+PlayerFaction = ""
+
 SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
 
 -- Global useful objects for menus  ----------
@@ -361,8 +363,10 @@ end
 Widget:setGlobalFont(Fonts["large"])
 
 
-DefaultObjectives = {"-Destroy the enemy"}
-Objectives = DefaultObjectives
+DefaultObjectives = {"- Destroy the enemy"}
+for i=0,14 do
+	Objectives[i] = DefaultObjectives
+end
 
 
 -- Define the different menus ----------
@@ -387,9 +391,13 @@ InitGameSettings()
 
 function RunMap(map, objective, fow, revealmap)
   if objective == nil then
-    Objectives = DefaultObjectives
+    for i=0,14 do
+      Objectives[i] = DefaultObjectives
+    end
   else
-    Objectives = objective
+    for i=0,14 do
+      Objectives[i] = objective
+    end
   end
   local loop = true
   while (loop) do
@@ -401,9 +409,6 @@ function RunMap(map, objective, fow, revealmap)
        RevealMap()
     end
     StartMap(map)
---    if (not IsNetworkGame()) then
---      SetDefaultPlayerNames()
---    end
     if GameResult ~= GameRestart then
       loop = false
     end
@@ -414,31 +419,7 @@ function RunMap(map, objective, fow, revealmap)
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
 end
 
-function SetDefaultPlayerNames()
--- Add player names according to player color
-
-	for i=0,7 do
-		if (GetPlayerData(i, "RaceName") == "dwarf") then
-			if (i == 0) then
-				SetPlayerData(i, "Name", "Lordship of Knalga")
-			elseif (i == 1) then
-				SetPlayerData(i, "Name", "Shorbear Clan")
-			elseif (i == 2) then
-				SetPlayerData(i, "Name", "Norlund Clan")
-			elseif (i == 3) then
-				SetPlayerData(i, "Name", "Shinsplitter Clan")
-			elseif (i == 5) then
-				SetPlayerData(i, "Name", "Lordship of Kal Kartha")
-			end
-		elseif  (GetPlayerData(i, "RaceName") == "orc") then
-			if (i == 1) then
-				SetPlayerData(i, "Name", "Bloody Sword Clan")
-			end
-		end
-	end
-end
-
-mapname = "maps/multi/(2)nordische-seenplatte.smp"
+mapname = "maps/skirmish/northern-lakes.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},
@@ -504,7 +485,7 @@ function RunSelectScenarioMenu()
 
   menu:addLabel(select_scenario_name, 176, 8)
 
-  local browser = menu:addBrowser("maps/", "^.*%.smp%.?g?z?$",
+  local browser = menu:addBrowser("maps/skirmish/", "^.*%.smp%.?g?z?$",
     24, 140, 300, 108, mapname)
 
   local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
@@ -537,7 +518,10 @@ function RunSinglePlayerGameMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
   local d
+  local world
+  local scenario
   local race
+  local faction
   local resources
   local opponents
   local numunits
@@ -545,20 +529,19 @@ function RunSinglePlayerGameMenu()
   local mapl
   local descriptionl
   local tilesetdd
+  local events
+
+  -- create the scenario list
+  local scenario_list = {}
 
   menu:addLabel("Scenario:", offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
   descriptionl = menu:addLabel("descriptionl", offx + 16 + 70, offy + 360, Fonts["game"], false)
 
-  menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 192)
-  menu:addFullButton(hotkey_select_scenario_name, "e", offx + 640 - 224 - 16, offy + 360 + 36*0,
+  menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
+  menu:addFullButton("~!Tech Tree", "t", offx + 640 - 224 - 16, offy + 360 + 36*0,
     function()
-      local oldmapname = mapname
-      RunSelectScenarioMenu()
-      if (mapname ~= oldmapname) then
-        GetMapInfo(mapname)
-        MapChanged()
-      end
+      RunTechTreeMenu(0)
     end)
   menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
@@ -566,51 +549,154 @@ function RunSinglePlayerGameMenu()
 
       GameSettings.Presets[0].Race = race:getSelected()
       GameSettings.Resources = resources:getSelected()
+      if (faction:getSelected() == 0) then
+        PlayerFaction = ""
+      elseif (race:getSelected() == 1) then
+        PlayerFaction = GetCivilizationFactions("dwarf")[faction:getSelected()]
+      end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
       GameSettings.GameType = gametype:getSelected() - 1
       GameSettings.Tileset = tilesetFilename[tilesetdd:getSelected() + 1]
+      EventsActivated = events:getSelected()
+	  
       RunMap(mapname)
       menu:stop()
     end)
   menu:addFullButton("~!Cancel Game", "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
 
-  menu:addLabel("~<Your Civilization:~>", offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
-  race = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, offx + 40, offy + 10 + 240,
-    function(dd) end)
+  menu:addLabel("~<World:~>", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
+  world = menu:addDropDown({"Earth", "Nidavellir", "Other"}, offx + 40, offy + 10 + 120,
+    function(dd) WorldChanged() end)
+  world:setSize(152, 20)
+  world:setSelected(1)
+
+  menu:addLabel("~<Map:~>", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+  scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
+    function(dd) ScenarioChanged() end)
+  scenario:setSize(152, 20)
+  scenario:setSelected(table.getn(scenario_list))
+
+  menu:addLabel("~<Your Civilization:~>", offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+  race = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, offx + 40, offy + 10 + 180,
+    function(dd) CivilizationChanged() end)
   race:setSize(152, 20)
 
-  menu:addLabel("~<Resources:~>", offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
-  resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, offx + 220, offy + 10 + 240,
+  menu:addLabel("~<Your Faction:~>", offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
+  faction = menu:addDropDown({"Map Default"}, offx + 220, offy + 10 + 180,
+    function(dd) end)
+  faction:setSize(152, 20)
+
+  menu:addLabel("~<Resources:~>", offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
+  resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, offx + 640 - 224 - 16, offy + 10 + 180,
     function(dd) end)
   resources:setSize(152, 20)
 
-  menu:addLabel(units_name, offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
-  numunits = menu:addDropDown({"Map Default", "One Peasant Only"}, offx + 640 - 224 - 16, offy + 10 + 240,
+  menu:addLabel(units_name, offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
+  numunits = menu:addDropDown({"Map Default", "One Worker Only", "Town Hall + Workers"}, offx + 40, offy + 10 + 240,
     function(dd) end)
-  numunits:setSize(190, 20)
+  numunits:setSize(152, 20)
 
   local opponents_list = {"Map Default", "1 Opponent", "2 Opponents",
     "3 Opponents", "4 Opponents", "5 Opponents", "6 Opponents", "7 Opponents"}
 
-  menu:addLabel("~<Opponents:~>", offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-  opponents = menu:addDropDown(opponents_list, offx + 40, offy + 10 + 300,
+  menu:addLabel("~<Opponents:~>", offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
+  opponents = menu:addDropDown(opponents_list, offx + 220, offy + 10 + 240,
     function(dd) end)
   opponents:setSize(152, 20)
 
-  menu:addLabel("~<Game Type:~>", offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
---  gametype = menu:addDropDown({"Use map settings", "Melee", "Free for all", "Top vs bottom", "Left vs right", "Man vs Machine", "Watcher"}, offx + 220, offy + 10 + 300,
-  gametype = menu:addDropDown({"Use map settings", "Melee", "Free for all", "Top vs bottom", "Left vs right", "Man vs Machine"}, offx + 220, offy + 10 + 300,
+  menu:addLabel("~<Game Type:~>", offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
+  gametype = menu:addDropDown({"Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"}, offx + 640 - 224 - 16, offy + 10 + 240,
     function(dd) end)
   gametype:setSize(152, 20)
 
-  menu:addLabel("~<Tileset:~>", offx + 640 - 224 - 16, offy + (10 + 300) - 20, Fonts["game"], false)
-  tilesetdd = menu:addDropDown({"Map Default", "Wasteland"}, offx + 640 - 224 - 16, offy + 10 + 300,
+  menu:addLabel("~<Terrain:~>", offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+  tilesetdd = menu:addDropDown({"Map Default", "Wasteland"}, offx + 40, offy + 10 + 300,
     function(dd) end)
   tilesetdd:setSize(152, 20)
 
+  menu:addLabel("~<Events:~>", offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
+  events = menu:addDropDown({"Activated", "Deactivated"}, offx + 220, offy + 10 + 300,
+    function(dd) end)
+  events:setSize(152, 20)
+
+  function WorldChanged()
+	scenario_list = {}
+	if (world:getSelected() == 0) then
+		table.insert(scenario_list, "Scandinavia")
+	elseif (world:getSelected() == 1) then
+--		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == true) then
+--			table.insert(scenario_list, "Caverns of Chaincolt")
+--		end
+		table.insert(scenario_list, "Chaincolt Foothills")
+	else
+		table.insert(scenario_list, "Central Park")
+		table.insert(scenario_list, "Little Island")
+		table.insert(scenario_list, "Looking Upwards")
+		table.insert(scenario_list, "Northern Lakes")
+		table.insert(scenario_list, "North-South Conflict")
+		table.insert(scenario_list, "Time for Decisions")
+		table.insert(scenario_list, "Custom Map")
+	end
+	scenario:setList(scenario_list)
+	scenario:setSize(152, 20)
+	scenario:setSelected(0)
+	ScenarioChanged()
+  end
+
+  function ScenarioChanged()
+	if (scenario_list[scenario:getSelected() + 1] == "Scandinavia") then
+		mapname = "maps/skirmish/scandinavia.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Caverns of Chaincolt") then
+		mapname = "maps/caverns-of-chaincolt.smp"
+		mapl:setCaption(string.sub(mapname, 6))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Chaincolt Foothills") then
+		mapname = "maps/chaincolt-foothills.smp"
+		mapl:setCaption(string.sub(mapname, 6))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Central Park") then
+		mapname = "maps/skirmish/central-park.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Little Island") then
+		mapname = "maps/skirmish/little-island.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Looking Upwards") then
+		mapname = "maps/skirmish/looking-upwards.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Northern Lakes") then
+		mapname = "maps/skirmish/northern-lakes.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "North-South Conflict") then
+		mapname = "maps/skirmish/north-south-conflict.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Time for Decisions") then
+		mapname = "maps/skirmish/time-for-decisions.smp"
+		mapl:setCaption(string.sub(mapname, 15))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Custom Map") then
+		local oldmapname = mapname
+		RunSelectScenarioMenu()
+		if (mapname ~= oldmapname) then
+			GetMapInfo(mapname)
+			MapChanged()
+		end
+		mapl:setCaption(string.sub(mapname, 15))
+	end
+	GetMapInfo(mapname)
+	MapChanged()
+  end
+
+  function CivilizationChanged()
+    local faction_list = {"Map Default"}
+    if (race:getSelected() == 1) then
+	    for i=1,table.getn(GetCivilizationFactions("dwarf")) do
+	      table.insert(faction_list, GetCivilizationFactions("dwarf")[i])
+	    end
+    end
+    faction:setList(faction_list)
+    faction:setSize(152, 20)
+  end
+
   function MapChanged()
-    mapl:setCaption(string.sub(mapname, 6))
     mapl:adjustSize()
 
     descriptionl:setCaption(mapinfo.description ..
@@ -622,10 +708,13 @@ function RunSinglePlayerGameMenu()
       table.insert(o, opponents_list[i])
     end
     opponents:setList(o)
+    opponents:setSize(152, 20)
   end
 
   GetMapInfo(mapname)
   MapChanged()
+
+  WorldChanged()
 
   menu:run()
 end
@@ -648,27 +737,59 @@ function BuildProgramStartMenu()
 
 
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
+  if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
+    wyr.preferences.LastVersionPlayed = wyrmsun.Version
+    SavePreferences()
+  end
 
-  menu:addFullButton(campaign_game_name, "c", offx + 208, offy + 104 + 36*0,
-    function() RunCampaignGameMenu(); menu:stop(1) end)
-  menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*1,
+  menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*0,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*2,
+  menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*1,
     function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(title_load_game_name, "l", offx + 208, offy + 104 + 36*3,
+  menu:addFullButton(title_load_game_name, "l", offx + 208, offy + 104 + 36*2,
     function() RunLoadGameMenu(); menu:stop(1) end)
-  menu:addFullButton(replay_game_name, "r", offx + 208, offy + 104 + 36*4,
+  menu:addFullButton(replay_game_name, "r", offx + 208, offy + 104 + 36*3,
     function() RunReplayGameMenu(); menu:stop(1) end)
-  menu:addFullButton(options_name, "o", offx + 208, offy + 104 + 36*5,
+  menu:addFullButton(options_name, "o", offx + 208, offy + 104 + 36*4,
     function() RunOptionsMenu(); menu:stop(1) end)
-  menu:addFullButton(map_editor_name, "e", offx + 208, offy + 104 + 36*6,
+  menu:addFullButton(map_editor_name, "e", offx + 208, offy + 104 + 36*5,
     function() RunEditorMenu(); menu:stop(1) end)
+  menu:addFullButton("Load Mo~!d", "d", offx + 208, offy + 104 + 36*6,
+    function() RunLoadModMenu(); menu:stop(1) end)
   menu:addFullButton(show_credits_name, "h", offx + 208, offy + 104 + 36*7, RunShowCreditsMenu)
 
   menu:addFullButton(exit_program_name, "x", offx + 208, offy + 104 + 36*8,
     function() menu:stop() end)
 
   return menu:run()
+end
+
+function RunLoadModMenu()
+  buttonStatut = 0
+  local menu = WarMenu(nil, panel(5), false)
+  menu:setSize(352, 352)
+  menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
+  menu:setDrawMenusUnder(true)
+
+  menu:addLabel("Load Mod", 176, 8)
+
+  local browser = menu:addBrowser("mods/", ".lua$",
+    24, 140, 300, 108)
+
+  local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
+
+  menu:addHalfButton("~!OK", "o", 48, 318,
+    function()
+      if (browser:getSelected() < 0) then
+        return
+      end
+      Load(browser.path .. browser:getSelectedItem())
+      menu:stop()
+    end)
+  menu:addHalfButton("~!Cancel", "c", 198, 318,
+    function() buttonStatut = 2; menu:stop() end)
+
+  menu:run()
 end
 
 LoadGameFile = nil
@@ -686,7 +807,6 @@ function RunProgramStartMenu()
 end
 
 
-Load("scripts/menus/campaign.lua")
 Load("scripts/menus/load.lua")
 Load("scripts/menus/save.lua")
 Load("scripts/menus/replay.lua")
@@ -700,6 +820,7 @@ Load("scripts/menus/endscenario.lua")
 Load("scripts/menus/diplomacy.lua")
 Load("scripts/menus/results.lua")
 Load("scripts/menus/network.lua")
+Load("scripts/menus/techtree.lua")
 
 function GameStarting()
   if (wyr.preferences.ShowTips and not IsReplayGame()) then

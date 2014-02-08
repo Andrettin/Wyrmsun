@@ -116,10 +116,35 @@ DefineAnimations("animations-destroyed-place", {
 --})
 
 --
+-- Gnomish Worker
+--
+
+DefineAnimations("animations-gnomish-worker", {
+  Still = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "label no-rotate", "wait 1",},
+  Move = {"unbreakable begin", "frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",},
+  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "attack", "sound mace-attack", "wait 5", "frame 45", "wait 3",
+    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
+  Harvest_wood = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
+    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
+  Repair = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "sound mace-attack", "wait 5", "frame 45", "wait 3",
+    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
+  Death = {"unbreakable begin", "frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
+    "frame 60", "unbreakable end", "wait 1",},
+})
+
+--
 -- Gnomish Recruit
 --
 
-local GnomishRecruitStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 3", "frame 65", "wait 3", "frame 60", "wait 3", "frame 65", "wait 3", "frame 60", "wait 3", "frame 65", "wait 3", "frame 0", "label no-rotate", "wait 1",}
+local GnomishRecruitStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
 local GnomishRecruitMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
     "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
     "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
@@ -161,7 +186,7 @@ DefineAnimations("animations-gnomish-caravan", {
 -- Goblin Spearman
 --
 
-local GoblinSpearmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 3", "frame 65", "wait 3", "frame 60", "wait 3", "frame 65", "wait 3", "frame 60", "wait 3", "frame 65", "wait 3", "frame 0", "label no-rotate", "wait 1",}
+local GoblinSpearmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
 local GoblinSpearmanMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
     "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
     "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",

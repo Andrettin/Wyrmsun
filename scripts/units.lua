@@ -226,6 +226,7 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
 
 
 UnitTypeFiles["unit-destroyed-2x2-place"] = {
+  forest = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
   wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
 }
 
@@ -246,6 +247,7 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 
 
 UnitTypeFiles["unit-destroyed-3x3-place"] = {
+  forest = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
   wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png"
 }
 
@@ -284,6 +286,7 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --  Sounds = {} } )
 
 UnitTypeFiles["unit-destroyed-4x4-place"] = {
+  forest = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
   wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png"
 }
 
@@ -319,12 +322,58 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 
 -- Gnomish units
 
+DefineUnitType("unit-gnomish-worker", { Name = "Gnomish Worker",
+  Image = {"file", "neutral/units/gnomish_worker.png", "size", {72, 72}},
+  DrawLevel = 19,
+  Animations = "animations-gnomish-worker", Icon = "icon-dwarven-miner",
+  Costs = {"time", 45, "gold", 400},
+  Speed = 10,
+  HitPoints = 30,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+  AutoRepairRange = 4,
+  BasicDamage = 3, PiercingDamage = 2, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 50,
+  Points = 30,
+  Demand = 1,
+--  Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "harvest",
+  CanAttack = true, RepairRange = 1,
+  CanTargetLand = true,
+  LandUnit = true,
+  Coward = true,
+  CanGatherResources = {
+   {"file-when-loaded", "neutral/units/gnomish_worker_with_gold.png",
+    "resource-id", "gold",
+--    "harvest-from-outside",
+    "resource-capacity", 100,
+    "wait-at-resource", 150,
+    "wait-at-depot", 150},
+   {"file-when-loaded", "neutral/units/gnomish_worker_with_lumber.png",
+    "resource-id", "wood",
+    "resource-capacity", 100,
+    "resource-step", 2,
+    "wait-at-resource", 24,
+    "wait-at-depot", 150,
+    "terrain-harvester"}},
+  organic = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-dwarf-voices-acknowledge",
+--    "ready", "basic-dwarf-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-dwarf-voices-dead"} } )
+
 DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
   Image = {"file", "neutral/units/gnomish_recruit.png", "size", {72, 72}},
   Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-recruit",
   Costs = {"time", 60, "gold", 600},
   Speed = 10,
-  HitPoints = 45,
+  HitPoints = 50,
   DrawLevel = 40,
   TileSize = {1, 1}, BoxSize = {31, 31},
   SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
@@ -376,7 +425,7 @@ DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
   Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
   Costs = {"time", 60, "gold", 600},
   Speed = 10,
-  HitPoints = 45,
+  HitPoints = 50,
   DrawLevel = 40,
   TileSize = {1, 1}, BoxSize = {31, 31},
   SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
@@ -400,7 +449,37 @@ DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
     "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
+DefineUnitType("unit-greebo", { Name = "Greebo",
+  Image = {"file", "neutral/units/goblin_swordsman.png", "size", {72, 72}},
+  Animations = "animations-goblin-spearman", Icon = "icon-goblin-swordsman",
+  Costs = {"time", 60, "gold", 600},
+  Speed = 10,
+  HitPoints = 100,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
+  Armor = 2, BasicDamage = 3, PiercingDamage = 6, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 60,
+  Points = 50,
+  Demand = 1,
+--    Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true,
+  LandUnit = true,
+  organic = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-goblin-voices-acknowledge",
+--    "ready", "basic-goblin-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-goblin-voices-dead"} } )
+
 UnitTypeFiles["unit-human-lumber-mill"] = {
+  forest = "human/buildings/lumber_mill.png",
   wasteland = "human/buildings/lumber_mill.png"
 }
 
