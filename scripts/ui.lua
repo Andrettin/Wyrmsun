@@ -88,7 +88,8 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Contents = {
 	{ Pos = {10, 48}, Condition = {ShowOpponent = false, HideNeutral = true},
-		More = {"LifeBar", {Variable = "HitPoints", Height = 7, Width = 45}}
+--		More = {"LifeBar", {Variable = "HitPoints", Height = 7, Width = 45}}
+		More = {"LifeBar", {Variable = "HitPoints", Height = 9, Width = 45}}
 	},
 	{ Pos = {34, 49}, Condition = {ShowOpponent = false, HideNeutral = true},
 		More = {"FormattedText2", {

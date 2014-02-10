@@ -433,6 +433,8 @@ function GetCivilizationFactions(civilization)
 		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 	elseif (civilization == "gnome") then
 		return {"Untersberg"}
+	else
+		return { }
 	end
 end
 
@@ -528,6 +530,7 @@ local defaultPreferences = {
 		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks"
 	},
 	LastVersionPlayed = "0.0.0",
+	BuildingsSelectableByRectangle = false,
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)

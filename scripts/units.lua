@@ -514,3 +514,10 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")
+
+if (wyr.preferences.BuildingsSelectableByRectangle == true) then
+	DefineUnitType("unit-dwarven-town-hall", { SelectableByRectangle = true } )
+	DefineUnitType("unit-dwarven-barracks", { SelectableByRectangle = true } )
+	DefineUnitType("unit-dwarven-mushroom-farm", { SelectableByRectangle = true } )
+	DefineUnitType("unit-human-lumber-mill", { SelectableByRectangle = true } )
+end

@@ -300,6 +300,25 @@ function BuildOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
 
+  b = menu:addCheckBox("Buildings Selectable by Rectangle", offx + 16, offy + 55 + 26*8 + 14,
+    function()
+	if (wyr.preferences.BuildingsSelectableByRectangle == true) then
+		wyr.preferences.BuildingsSelectableByRectangle = false
+		DefineUnitType("unit-dwarven-town-hall", { SelectableByRectangle = false } )
+		DefineUnitType("unit-dwarven-barracks", { SelectableByRectangle = false } )
+		DefineUnitType("unit-dwarven-mushroom-farm", { SelectableByRectangle = false } )
+		DefineUnitType("unit-human-lumber-mill", { SelectableByRectangle = false } )
+	else
+		wyr.preferences.BuildingsSelectableByRectangle = true
+		DefineUnitType("unit-dwarven-town-hall", { SelectableByRectangle = true } )
+		DefineUnitType("unit-dwarven-barracks", { SelectableByRectangle = true } )
+		DefineUnitType("unit-dwarven-mushroom-farm", { SelectableByRectangle = true } )
+		DefineUnitType("unit-human-lumber-mill", { SelectableByRectangle = true } )
+	end
+	menu:stop(1)
+    end)
+  if (wyr.preferences.BuildingsSelectableByRectangle == true) then b:setMarked(true) end
+
   b = menu:addCheckBox("Disable Pathlines", offx + 16, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowOrders == 2) then

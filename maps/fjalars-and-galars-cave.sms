@@ -9,152 +9,117 @@ local RandomNumber = 0
 local RandomX = 0
 local RandomY = 0
 local Count = 0
+local EntranceExists = false
 
 for x=0,(MapWidth - 1) do
 	for y=0,(MapHeight - 1) do
-		RawTiles[y+1][x+1] = "Land"
-	end
-end
-	
-SetMapBorders("Rock")
-
-	-- create initial water seeds
-	Count = 3
-	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
-		if (RawTile(RandomX, RandomY) == "Land") then
-			SetRawTile(RandomX, RandomY, "Water")
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
-				SetRawTile(RandomX - 1, RandomY - 1, "Water")
-				SetRawTile(RandomX - 1, RandomY, "Water")
-				SetRawTile(RandomX, RandomY - 1, "Water")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water")) then
-				SetRawTile(RandomX + 1, RandomY - 1, "Water")
-				SetRawTile(RandomX, RandomY - 1, "Water")
-				SetRawTile(RandomX + 1, RandomY, "Water")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
-				SetRawTile(RandomX + 1, RandomY + 1, "Water")
-				SetRawTile(RandomX + 1, RandomY, "Water")
-				SetRawTile(RandomX, RandomY + 1, "Water")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
-				SetRawTile(RandomX - 1, RandomY + 1, "Water")
-				SetRawTile(RandomX - 1, RandomY, "Water")
-				SetRawTile(RandomX, RandomY + 1, "Water")
-				Count = Count - 1
-			end
-		end
-	end
-
--- expand water
-Count = 3
-while (Count > 0) do
-	RandomX = SyncRand(MapWidth - 1)
-	RandomY = SyncRand(MapHeight - 1)
-	if (RawTile(RandomX, RandomY) == "Water") then
-		RandomNumber = SyncRand(4)
-		if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
-			SetRawTile(RandomX - 1, RandomY - 1, "Water")
-			SetRawTile(RandomX - 1, RandomY, "Water")
-			SetRawTile(RandomX, RandomY - 1, "Water")
-			Count = Count - 1
-		elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water")) then
-			SetRawTile(RandomX + 1, RandomY - 1, "Water")
-			SetRawTile(RandomX, RandomY - 1, "Water")
-			SetRawTile(RandomX + 1, RandomY, "Water")
-			Count = Count - 1
-		elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Water") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
-			SetRawTile(RandomX + 1, RandomY + 1, "Water")
-			SetRawTile(RandomX + 1, RandomY, "Water")
-			SetRawTile(RandomX, RandomY + 1, "Water")
-			Count = Count - 1
-		elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Water")) then
-			SetRawTile(RandomX - 1, RandomY + 1, "Water")
-			SetRawTile(RandomX - 1, RandomY, "Water")
-			SetRawTile(RandomX, RandomY + 1, "Water")
-			Count = Count - 1
-		end
+		SetRawTile(x, y, "Rock")
 	end
 end
 
+RawTiles[32][32] = "Eroder"
 
--- convert buildable land tiles adjacent to water tiles into rough land
-for x=0,(MapWidth - 1) do
-	for y=0,(MapHeight - 1) do
-		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
-			SetRawTile(x, y, "Rough")
+while (Count < 400 or EntranceExists == false) do
+	for x=0,(MapWidth - 1) do
+		for y=0,(MapHeight - 1) do
+			if ((x == 0 or x == 63 or y == 0 or y == 63) and RawTile(x, y) ~= "Rock") then
+				EntranceExists = true
+			end
+
+			if (RawTile(x, y) == "Eroder") then
+				RandomNumber = SyncRand(4)
+				if (RandomNumber == 0) then
+					SetRawTile(x, y - 1, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x, y - 2, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x, y, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x - 1, y - 1, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x + 1, y - 1, "Eroder")
+						end
+					end
+				elseif (RandomNumber == 1) then
+					SetRawTile(x, y + 1, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x, y, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x, y + 2, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x - 1, y + 1, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x + 1, y + 1, "Eroder")
+						end
+					end
+				elseif (RandomNumber == 2) then
+					SetRawTile(x - 1, y, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x - 1, y - 1, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x - 1, y + 1, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x - 2, y, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x, y, "Eroder")
+						end
+					end
+				elseif (RandomNumber == 3) then
+					SetRawTile(x + 1, y, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x + 1, y - 1, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x + 1, y + 1, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x, y, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x + 2, y, "Eroder")
+						end
+					end
+				end
+			end
 		end
 	end
 end
 
-GenerateRocks(32, 4096)
-	
-	-- create initial rough land seeds
-	Count = 3
-	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
-		if (RawTile(RandomX, RandomY) == "Land") then
-			SetRawTile(RandomX, RandomY, "Rough")
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
-				SetRawTile(RandomX - 1, RandomY - 1, "Rough")
-				SetRawTile(RandomX - 1, RandomY, "Rough")
-				SetRawTile(RandomX, RandomY - 1, "Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough")) then
-				SetRawTile(RandomX + 1, RandomY - 1, "Rough")
-				SetRawTile(RandomX, RandomY - 1, "Rough")
-				SetRawTile(RandomX + 1, RandomY, "Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
-				SetRawTile(RandomX + 1, RandomY + 1, "Rough")
-				SetRawTile(RandomX + 1, RandomY, "Rough")
-				SetRawTile(RandomX, RandomY + 1, "Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
-				SetRawTile(RandomX - 1, RandomY + 1, "Rough")
-				SetRawTile(RandomX - 1, RandomY, "Rough")
-				SetRawTile(RandomX, RandomY + 1, "Rough")
-				Count = Count - 1
-			end
-		end
-	end
 
-	-- expand rough land
-	Count = 6
-	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
-		if (RawTile(RandomX, RandomY) == "Rough") then
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
-				SetRawTile(RandomX - 1, RandomY - 1, "Rough")
-				SetRawTile(RandomX - 1, RandomY, "Rough")
-				SetRawTile(RandomX, RandomY - 1, "Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough")) then
-				SetRawTile(RandomX + 1, RandomY - 1, "Rough")
-				SetRawTile(RandomX, RandomY - 1, "Rough")
-				SetRawTile(RandomX + 1, RandomY, "Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Rough") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
-				SetRawTile(RandomX + 1, RandomY + 1, "Rough")
-				SetRawTile(RandomX + 1, RandomY, "Rough")
-				SetRawTile(RandomX, RandomY + 1, "Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Rough")) then
-				SetRawTile(RandomX - 1, RandomY + 1, "Rough")
-				SetRawTile(RandomX - 1, RandomY, "Rough")
-				SetRawTile(RandomX, RandomY + 1, "Rough")
-				Count = Count - 1
+Count = 0
+while (Count <= 3) do
+	Count = Count + 1
+	for x=0,(MapWidth - 1) do
+		for y=0,(MapHeight - 1) do
+			if (RawTile(x, y) == "Eroder") then
+				SetRawTile(x, y, "Land")
+			end
+
+			if (RawTile(x, y) == "Rock") then
+				if (RawTile(x + 1, y) ~= "Rock" and RawTile(x - 1, y) ~= "Rock") then
+					SetRawTile(x, y, "Land")
+				elseif (RawTile(x, y + 1) ~= "Rock" and RawTile(x, y - 1) ~= "Rock") then
+					SetRawTile(x, y, "Land")
+				end
 			end
 		end
 	end
+end
+
+GenerateRocks(0, 0)
 
 ApplyRawTiles()
 

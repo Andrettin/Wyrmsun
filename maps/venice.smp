@@ -2,4 +2,4 @@
 -- File generated automatically from pudconvert.
 
 DefinePlayerTypes("person","computer","nobody","nobody","computer","nobody","computer","computer")
-PresentMap("(unnamed)", 5, 128, 128, 1)
+PresentMap("Venice", 5, 128, 128, 1)

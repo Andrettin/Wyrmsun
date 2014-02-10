@@ -134,7 +134,9 @@ function EventTriggers()
 				"A goblin has been seen hoarding stolen loot some distance from here. Clearing this threat would have the added benefit of giving us the opportunity to add his gold to our coffers.",
 				player,
 				1,
-				"OK"
+				"OK",
+				"",
+				CGraphic:New("ui/goblin_swordsman.png")
 			)
 			return false
 		end
@@ -315,11 +317,14 @@ function EventTriggers()
 						gnomish_monarch_player = i
 					end
 				end
-				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2}) -- gnomish envoy who holds the ruby
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
+				if (mapinfo.description == "Chaincolt Foothills") then
+					ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
+				end
 				SetDiplomacy(gnomish_monarch_player, "allied", player)
 				SetDiplomacy(player, "allied", gnomish_monarch_player)
 				for i=0,14 do
@@ -393,6 +398,9 @@ function EventTriggers()
 						table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
 					end
 					SavePreferences()
+					if (mapinfo.description == "Chaincolt Foothills") then
+						ActionVictory()
+					end
 			  	end
 			end
 			local note = ""
@@ -499,7 +507,7 @@ function EventTriggers()
 	)
 end
 
-function Event(event_name, event_description, player, option_number, option_1_name, option_2_name)
+function Event(event_name, event_description, player, option_number, option_1_name, option_2_name, event_image)
 	if (GetThisPlayer() == player) then
 		SetGamePaused(true)
 		local menu = WarGameMenu(panel(5))
@@ -513,6 +521,12 @@ function Event(event_name, event_description, player, option_number, option_1_na
 		l:setLineWidth(324)
 		menu:add(l, 14, 70)
 		l:setCaption(event_description)
+
+		if (event_image ~= nil) then
+			event_image:Load()
+			local b = ImageWidget(event_image)
+			menu:add(b, 0, 0)
+		end
 
 		if (option_number >= 1) then
 			menu:addFullButton(option_1_name, "", 176 - (224 / 2), 352 - 40 * option_number,

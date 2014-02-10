@@ -21,6 +21,7 @@ b_o:
 /graphics/neutral/units/rats.png
 /graphics/tileset/forest/terrain/forest.png (grass, grass-dirt transition and tree tiles)
 /graphics/ui/Credits_background.png
+/graphics/ui/goblin_swordsman.png
 
 Bos Wars Team:
 /graphics/missiles/green_cross.png
@@ -37,8 +38,6 @@ Bos Wars Team:
 /graphics/ui/cursors/red.png
 /graphics/ui/cursors/small_green_cross.png
 /graphics/ui/cursors/yellow.png
-
-DinkyDyeAussie:
 
 igoku:
 /graphics/dwarf/icons/boots.png (later modified by Jinn)
