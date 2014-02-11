@@ -95,6 +95,8 @@ function RunShowCreditsMenu()
 	"  Joseph Simmons (turin)",
 	"  Lari Nieminen (zookeeper)",
 	"  Piotr Cychowski (Mist/cycholka)",
+	"Testing",
+	"  b_o",
 	"Patches",
 	"  Martin Renold",
 	"  Carlos Perello Marin",

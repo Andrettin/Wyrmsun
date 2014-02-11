@@ -164,7 +164,9 @@ unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 -- Bandits
 unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 61})
 unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {45, 67})
-unit = CreateUnit("unit-dwarven-axefighter", 2, {42, 60})
+unit = CreateUnit("unit-dwarven-steelclad", 2, {42, 60})
+unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
 
 unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 

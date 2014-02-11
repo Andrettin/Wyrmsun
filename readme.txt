@@ -43,6 +43,8 @@ https://launchpad.net/stratagus
 - Upon accepting the quest from the "Strike a Bargain?" event, the player now acquires a farm from the gnomish monarch. This effect is specific to the Chaincolt Foothills map.
 - It is now possible for events to have images.
 - The "Greebo's Shinies" now has a goblin swordsman event image (by b_o).
+- Receiving the "The Last Caravan has Arrived!" event while in the Chaincolt Foothills map will result in victory.
+- The "Strike a Bargain?" event now creates an extra Axefighter for the raider player in an alternate location, to make it more difficult to avoid the bandits at all while moving the caravans to your Mead Hall.
 
 * Factions
 - Added an option in the single player game menu to choose which faction of the civilization you want to play as (i.e. which dwarven clan). Right now, this affects which events you get, and in the future it may affect which units, buildings and upgrades are available to you.
@@ -57,6 +59,7 @@ https://launchpad.net/stratagus
 - Chaincolt Foothills: The player now begins with 400 gold and 200 lumber (previously it was 200 gold and 100 lumber), and AI starting resources have been changed accordingly.
 - Chaincolt Foothills: The player now begins with Rugnur instead of an Axefighter, and his survival is necessary for victory.
 - Chaincolt Foothills: The gnomes' starting worker is now a Gnomish Worker instead of a Dwarven Miner.
+- Chaincolt Foothills: The raider player now begins the scenario with a Steelclad instead of an Axefighter, and with two extra dwarven Scouts, to make it more difficult to destroy him just by using one gnomish recruit to lure the guard out of the raider player's town.
 
 * Miscellaneous
 - New explosion graphics (by StumpyStrust and Jinn).

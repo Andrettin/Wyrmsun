@@ -317,11 +317,11 @@ function EventTriggers()
 						gnomish_monarch_player = i
 					end
 				end
-				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2}) -- gnomish envoy who holds the ruby
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y - 2})
+				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 				if (mapinfo.description == "Chaincolt Foothills") then
 					ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
 				end
@@ -346,6 +346,8 @@ function EventTriggers()
 				unit = CreateUnit("unit-dwarven-axefighter", bandit_player, {bandit_x, bandit_y})
 				unit = CreateUnit("unit-dwarven-axefighter", bandit_player, {bandit_x, bandit_y})
 				unit = CreateUnit("unit-dwarven-axefighter", bandit_player, {bandit_x, bandit_y})
+
+				unit = CreateUnit("unit-dwarven-axefighter", bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
 			end
 			function EventOption2Effects()
 				local gnomish_monarch_player = i
@@ -378,7 +380,7 @@ function EventTriggers()
 	AddTrigger(
 		function()
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "UnitTypesCount", "unit-rugnur") == 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall")) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "UnitTypesCount", "unit-rugnur") == 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 					player = i
 					return true
 				end
