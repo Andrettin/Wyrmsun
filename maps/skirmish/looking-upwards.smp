@@ -1,4 +1,4 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer")
+DefinePlayerTypes("person","person")
 PresentMap("Looking Upwards", 2, 128, 128, 1)

@@ -1,4 +1,4 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer","computer","computer")
+DefinePlayerTypes("person","person","person","person")
 PresentMap("Little Island", 4, 128, 128, 1)

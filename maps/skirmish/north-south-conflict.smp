@@ -1,4 +1,4 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer")
+DefinePlayerTypes("person","person")
 PresentMap("North-South Conflict", 2, 128, 128, 1)

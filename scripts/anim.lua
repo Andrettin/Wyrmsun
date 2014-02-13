@@ -115,6 +115,11 @@ DefineAnimations("animations-destroyed-place", {
 --  Death = {"unbreakable begin", "frame 2", "wait 200", "frame 3", "wait 200", "frame 1", "unbreakable end", "wait 1", },
 --})
 
+DefineAnimations("animations-gold-sack", {
+  Still = BuildingStill,
+  Death = BuildingStill,
+})
+
 --
 -- Gnomish Worker
 --

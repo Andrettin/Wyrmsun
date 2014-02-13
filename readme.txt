@@ -45,6 +45,9 @@ https://launchpad.net/stratagus
 - The "Greebo's Shinies" now has a goblin swordsman event image (by b_o).
 - Receiving the "The Last Caravan has Arrived!" event while in the Chaincolt Foothills map will result in victory.
 - The "Strike a Bargain?" event now creates an extra Axefighter for the raider player in an alternate location, to make it more difficult to avoid the bandits at all while moving the caravans to your Mead Hall.
+- A random gnomish monarch name is now generated for the "Strike a Bargain?" event, and it is saved for later scenarios which follow that storyline.
+- The raider player's faction in the "Strike a Bargain?" event is now saved for later scenarios which follow that storyline.
+- Accepting the quest from the "Strike a Bargain?" event now not only makes the player and the gnomish monarch allied, but also gives them shared vision.
 
 * Factions
 - Added an option in the single player game menu to choose which faction of the civilization you want to play as (i.e. which dwarven clan). Right now, this affects which events you get, and in the future it may affect which units, buildings and upgrades are available to you.
@@ -60,6 +63,7 @@ https://launchpad.net/stratagus
 - Chaincolt Foothills: The player now begins with Rugnur instead of an Axefighter, and his survival is necessary for victory.
 - Chaincolt Foothills: The gnomes' starting worker is now a Gnomish Worker instead of a Dwarven Miner.
 - Chaincolt Foothills: The raider player now begins the scenario with a Steelclad instead of an Axefighter, and with two extra dwarven Scouts, to make it more difficult to destroy him just by using one gnomish recruit to lure the guard out of the raider player's town.
+- Fixed a bug that was making the Central Park, Looking Upwards, Northern Lakes, North-South Conflict and Time for Decisions maps be unplayable in multiplayer.
 
 * Miscellaneous
 - New explosion graphics (by StumpyStrust and Jinn).
@@ -80,6 +84,7 @@ https://launchpad.net/stratagus
 - New credits background by b_o.
 - Added Load Mod function to the main menu.
 - Added "Buildings Selectable by Rectangle" option to the options menu.
+- Dejavu Sans Bold 10 and Dejavu Sans Bold 12 fonts reworked by Jinn.
 
 * Units
 - The Gnomish Recruit and the Goblin Impaler now have 50 HP each (previously they had 45), so that they are better balanced against the Dwarven Axefighter.

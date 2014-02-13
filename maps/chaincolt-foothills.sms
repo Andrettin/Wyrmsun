@@ -116,18 +116,32 @@ table.foreachi(DwarvenFactions, function(k,v)
 end)
 table.remove(DwarvenFactions, faction_number)
 
+faction_number = -1
+
+table.foreachi(DwarvenFactions, function(k,v)
+	if (v == PlayerFaction) then
+		faction_number = k
+	end
+end)
+if (faction_number ~= -1) then
+	table.remove(DwarvenFactions, faction_number)
+end
+
 for i=0,2 do
 	if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
 		if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
-			RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
-			SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
-			table.foreachi(DwarvenFactions, function(k,v)
-				if (v == DwarvenFactions[RandomNumber]) then
-					faction_number = k
+			if (PlayerFaction == "" or i ~= GetThisPlayer()) then
+				faction_number = -1
+				RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
+				SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
+				table.foreachi(DwarvenFactions, function(k,v)
+					if (v == DwarvenFactions[RandomNumber]) then
+						faction_number = k
+					end
+				end)
+				if (faction_number ~= -1) then
+					table.remove(DwarvenFactions, faction_number)
 				end
-			end)
-			if (faction_number ~= -1) then
-				table.remove(DwarvenFactions, faction_number)
 			end
 		end
 	end

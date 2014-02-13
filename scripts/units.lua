@@ -176,6 +176,23 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
     "help", "gold-mine-help",
     "dead", "building destroyed"} } )
 
+--DefineUnitType("unit-purple-flowers", { Name = "Purple Flowers",
+--  Image = {"file", "neutral/decoration/purple_flowers.png", "size", {32, 32}},
+--  Animations = "animations-gold-sack", Icon = "icon-gold-mine",
+--  Speed = 0,
+--  HitPoints = 255,
+--  DrawLevel = 30,
+--  TileSize = {1, 1}, BoxSize = {31, 31},
+--  SightRange = 1,
+--  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+--  Priority = 0,
+--  Type = "land",
+--  IsNotSelectable = true,
+--  Decoration = true,
+--  NumDirections = 1,
+--  Sounds = {} }
+--)
+
 --DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 --  Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},
 --  Animations = "animations-human-dead-body", Icon = "icon-dwarven-miner",
@@ -203,6 +220,21 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
 --  Type = "naval",
 --  Vanishes = true,
 --  Sounds = {} } )
+
+DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
+  Image = {"file", "neutral/units/gold_sack.png", "size", {16, 14}},
+  Animations = "animations-gold-sack", Icon = "icon-gold-mine",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  GivesResource = "gold", CanHarvest = true,
+  Sounds = {} } )
 
 
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {

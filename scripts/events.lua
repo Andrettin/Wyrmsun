@@ -32,6 +32,9 @@ function EventTriggers()
 	-- based on elements from the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-rugnur", {0, 0}, {256, 256}) < 1) then
 				for i=0,14 do
 					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Resources", "gold") >= 1000 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 2 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1) then
@@ -65,6 +68,9 @@ function EventTriggers()
 	-- based on elements from the The Dragon scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			-- only appears if there is a dwarven settlement in existence
 			if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {256, 256}) >= 1) then
 				for i=0,14 do
@@ -107,6 +113,9 @@ function EventTriggers()
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented), and requires the existence of a sufficient number of farms which would be the origin of Greebo's loot
 			if ((SyncRand(100) + 1) <= 1 and wyrmsun.tileset == "wasteland" and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {256, 256}) >= 10) then
 				player = GetThisPlayer()
@@ -146,6 +155,9 @@ function EventTriggers()
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			for i=0,14 do
 				if (GetPlayerData(i, "Name") == "Greebo" and GetPlayerData(i, "TotalNumUnits") == 0) then
 					player = GetThisPlayer()
@@ -183,6 +195,9 @@ function EventTriggers()
 	-- based on Norse mythology
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			-- only appears if there is a dwarven settlement in existence; it also requires a number of dwarven farms, so that there is enough population to make Andvari's move to the wilderness (perhaps out of crowdedness) seem more plausible
 			-- requires 6 gold mines for the reason that the area should have a particularly high quantity of gold available for Andvari to be able to make his hoard
 			if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {256, 256}) >= 16 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {256, 256}) >= 6) then
@@ -253,6 +268,9 @@ function EventTriggers()
 	-- Andvari's Gold is Ours!
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			for i=0,14 do
 				if (GetPlayerData(i, "Name") == "Andvari" and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") == 0 and ThisPlayer:IsEnemy(Players[i])) then
 					player = GetThisPlayer()
@@ -290,6 +308,9 @@ function EventTriggers()
 	-- based on the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			if ((SyncRand(100) + 1) <= 10) then
 				for i=0,14 do
 					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-rugnur") == 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetFactionExists("Untersberg") and GetNumRivals(i) >= 2) then
@@ -311,12 +332,7 @@ function EventTriggers()
 		end,
 		function() 
 			function EventOption1Effects()
-				local gnomish_monarch_player = i
-				for i=0,14 do
-					if (GetPlayerData(i, "Name") == "Untersberg") then
-						gnomish_monarch_player = i
-					end
-				end
+				local gnomish_monarch_player = GetFactionPlayer("Untersberg")
 				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
 				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
@@ -326,7 +342,9 @@ function EventTriggers()
 					ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
 				end
 				SetDiplomacy(gnomish_monarch_player, "allied", player)
+				SetSharedVision(gnomish_monarch_player, true, player)
 				SetDiplomacy(player, "allied", gnomish_monarch_player)
+				SetSharedVision(player, true, gnomish_monarch_player)
 				for i=0,14 do
 					if (i ~= gnomish_monarch_player and i ~= player) then
 				  		SetDiplomacy(gnomish_monarch_player, "neutral", i)
@@ -350,12 +368,7 @@ function EventTriggers()
 				unit = CreateUnit("unit-dwarven-axefighter", bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
 			end
 			function EventOption2Effects()
-				local gnomish_monarch_player = i
-				for i=0,14 do
-					if (GetPlayerData(i, "Name") == "Untersberg") then
-						gnomish_monarch_player = i
-					end
-				end
+				local gnomish_monarch_player = GetFactionPlayer("Untersberg")
 				for i=0,14 do
 					if (i ~= gnomish_monarch_player) then
 				  		SetDiplomacy(gnomish_monarch_player, "neutral", i)
@@ -363,10 +376,15 @@ function EventTriggers()
 			  		end
 			  	end
 			end
+			local gnomish_monarch_player = GetFactionPlayer("Untersberg")
+			local gnomish_monarch_name = GetRandomCharacterName("gnome", "random", true)
+			wyr.preferences.TheScepterOfFireMonarch = gnomish_monarch_name
+			wyr.preferences.TheScepterOfFireRaiderFaction = GetPlayerData(bandit_player, "Name")
+			SavePreferences()
 			Event(
 				"Strike a Bargain?",
 --				"A gnomish monarch has come to an outpost of ours offering to make a bargain with us: he asks that we craft a scepter encrusted with the radiant Ruby of Fire for him. In return, he would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...\n\nNote: Completing this quest will unlock the Chaincolt Caverns map - when it is included in a coming version of Wyrmsun.",
-				"A gnomish monarch has come to an outpost of ours offering to make a bargain with us: he asks that we craft a scepter encrusted with the radiant Ruby of Fire for him. In return, he would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...",
+				"The gnomish monarch of " .. GetPlayerData(gnomish_monarch_player, "Name") .. ", " .. gnomish_monarch_name .. ", has come to an outpost of ours offering to make a bargain with us: " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " asks that we craft a scepter encrusted with the radiant Ruby of Fire for " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "object", false) .. ". In return, " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...",
 				player,
 				2,
 				"We'll accept the offer.",
@@ -379,6 +397,9 @@ function EventTriggers()
 	-- The Last Caravan has Arrived!
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "UnitTypesCount", "unit-rugnur") == 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 					player = i
@@ -424,6 +445,9 @@ function EventTriggers()
 	-- The Bargain has Failed
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			for i=0,14 do
 				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and (GetPlayerData(i, "UnitTypesCount", "unit-rugnur") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4)) then
 					player = i
@@ -455,6 +479,9 @@ function EventTriggers()
 	-- The Founding of Knalga
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			if ((SyncRand(100) + 1) <= 1) then
 				for i=0,14 do
 					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 5 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 20) then
@@ -483,6 +510,9 @@ function EventTriggers()
 	-- The Founding of Kal Kartha
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			if ((SyncRand(100) + 1) <= 1) then
 				for i=0,14 do
 					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Shorbear Clan") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 5 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 20) then
@@ -519,9 +549,9 @@ function Event(event_name, event_description, player, option_number, option_1_na
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
-		l:setSize(324, 176)
+		l:setSize(324, 192)
 		l:setLineWidth(324)
-		menu:add(l, 14, 70)
+		menu:add(l, 14, 48)
 		l:setCaption(event_description)
 
 		if (event_image ~= nil) then

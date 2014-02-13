@@ -17,6 +17,7 @@ b_o:
 /graphics/neutral/units/gnomish_worker_with_lumber.png
 /graphics/neutral/units/goblin_spearman.png
 /graphics/neutral/units/goblin_swordsman.png
+/graphics/neutral/units/gold_sack.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rats.png
 /graphics/tileset/forest/terrain/forest.png (grass, grass-dirt transition and tree tiles)

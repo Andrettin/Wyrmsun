@@ -70,7 +70,12 @@ local editor_types = {
 
    "unit-gold-mine",
 
-   "unit-critter"
+   "unit-critter",
+
+--- - - - - - - - - - - - - - - - - - -
+
+--   "unit-purple-flowers"
+
 }
 
 
