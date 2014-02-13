@@ -123,7 +123,7 @@ function RunJoiningMapMenu(s)
 
   menu:writeLargeText("Map", sx, sy*3)
   menu:writeText("File:", sx, sy*3+30)
-  maptext = menu:writeText(string.sub(NetworkMapName, 15), sx+50, sy*3+30)
+  maptext = menu:writeText(string.sub(NetworkMapName, 6), sx+50, sy*3+30)
   menu:writeText("Players:", sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
   menu:writeText("Description:", sx, sy*3+70)
@@ -145,7 +145,7 @@ function RunJoiningMapMenu(s)
   race:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  local units = menu:addDropDown({"Map Default", "One Worker Only"}, sx + 100, sy*11+25,
+  local units = menu:addDropDown({"Map Default", "One Worker Only", "Town Hall + Workers"}, sx + 100, sy*11+25,
     function(dd) end)
   units:setSize(190, 20)
   units:setEnabled(false)
@@ -311,7 +311,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 
   menu:writeLargeText("Map", sx, sy*3)
   menu:writeText("File:", sx, sy*3+30)
-  maptext = menu:writeText(string.sub(map, 15), sx+50, sy*3+30)
+  maptext = menu:writeText(string.sub(map, 6), sx+50, sy*3+30)
   menu:writeText("Players:", sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
   menu:writeText("Description:", sx, sy*3+70)
@@ -395,7 +395,7 @@ function RunCreateMultiGameMenu(s)
   local menu
   local map = "No Map"
   local description = "No map"
-  local mapfile = "maps/skirmish/northern-lakes.smp"
+  local mapfile = "maps/northern-lakes.smp"
   local numplayers = 3
   local sx = Video.Width / 20
   local sy = Video.Height / 20
@@ -403,7 +403,7 @@ function RunCreateMultiGameMenu(s)
   menu = WarMenu("Create MultiPlayer game")
 
   menu:writeText("File:", sx, sy*3+30)
-  maptext = menu:writeText(string.sub(mapfile, 15), sx+50, sy*3+30)
+  maptext = menu:writeText(string.sub(mapfile, 6), sx+50, sy*3+30)
   menu:writeText("Players:", sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
   menu:writeText("Description:", sx, sy*3+70)
@@ -421,11 +421,11 @@ function RunCreateMultiGameMenu(s)
   end
 
   Load(mapfile)
-  local browser = menu:addBrowser("maps/skirmish/", "^.*%.smp%.?g?z?$", sx*10, sy*2+20, sx*8, sy*11)
+  local browser = menu:addBrowser("maps/", "^.*%.smp%.?g?z?$", sx*10, sy*2+20, sx*8, sy*11)
   local function cb(s)
     mapfile = browser.path .. browser:getSelectedItem()
     Load(mapfile)
-    maptext:setCaption(string.sub(mapfile, 15))
+    maptext:setCaption(string.sub(mapfile, 6))
     maptext:adjustSize()
   end
   browser:setActionCallback(cb)

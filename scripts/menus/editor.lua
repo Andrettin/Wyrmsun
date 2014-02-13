@@ -45,7 +45,7 @@ local function RunEditorLoadMapMenu()
   local labelMapSize
   
   -- Andrettin: added this so that special scenarios such as Chaincolt Foothills don't become selected by default
-  mapname = "maps/skirmish/northern-lakes.smp"
+  mapname = "maps/northern-lakes.smp"
 
   -- update label content
   local function MapChanged()
@@ -134,7 +134,7 @@ function RunEditorSaveMenu()
   local t = menu:addTextInputField("game.smp",
     (384 - 300 - 18) / 2, 11 + 36, 318)
 
-  local browser = menu:addBrowser("maps/skirmish/", ".smp.gz$",
+  local browser = menu:addBrowser("maps/", ".smp.gz$",
     (384 - 300 - 18) / 2, 11 + 36 + 22, 318, 126)
   local function cb(s)
     t:setText(browser:getSelectedItem())

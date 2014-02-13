@@ -301,17 +301,6 @@ function SinglePlayerTriggers()
 
 	if (not IsNetworkGame()) then
 		AssignPlayerFactions()
-
-		if (GameSettings.GameType == 0) then
-			for i=0,14 do
-				for j=0,14 do
-					if (i ~= j) then
-						SetDiplomacy(i, "neutral", j)
-						SetDiplomacy(j, "neutral", i)
-					end
-				end
-		  	end
-		end
 	end
 
 	-- for now events are limited to single player (as they seem to be causing issues with desyncs for multiplayer games
@@ -653,7 +642,6 @@ local defaultPreferences = {
 		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks"
 	},
 	LastVersionPlayed = "0.0.0",
-	BuildingsSelectableByRectangle = false,
 	TheScepterOfFireMonarch = "",
 	TheScepterOfFireRaiderFaction = "",
 }

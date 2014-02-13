@@ -419,7 +419,7 @@ function RunMap(map, objective, fow, revealmap)
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
 end
 
-mapname = "maps/skirmish/northern-lakes.smp"
+mapname = "maps/northern-lakes.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},
@@ -485,7 +485,7 @@ function RunSelectScenarioMenu()
 
   menu:addLabel(select_scenario_name, 176, 8)
 
-  local browser = menu:addBrowser("maps/skirmish/", "^.*%.smp%.?g?z?$",
+  local browser = menu:addBrowser("maps/", "^.*%.smp%.?g?z?$",
     24, 140, 300, 108, mapname)
 
   local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
@@ -536,7 +536,7 @@ function RunSinglePlayerGameMenu()
 
   menu:addLabel("Scenario:", offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
-  descriptionl = menu:addLabel("descriptionl", offx + 16 + 70, offy + 360, Fonts["game"], false)
+  descriptionl = menu:addLabel("descriptionl", offx + 16 + 74, offy + 360, Fonts["game"], false)
 
   menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
   menu:addFullButton("~!Tech Tree", "t", offx + 640 - 224 - 16, offy + 360 + 36*0,
@@ -631,10 +631,12 @@ function RunSinglePlayerGameMenu()
 		table.insert(scenario_list, "Chaincolt Foothills")
 	else
 		table.insert(scenario_list, "Central Park")
+		table.insert(scenario_list, "Forgotten Forest")
 		table.insert(scenario_list, "Little Island")
 		table.insert(scenario_list, "Looking Upwards")
 		table.insert(scenario_list, "Northern Lakes")
 		table.insert(scenario_list, "North-South Conflict")
+		table.insert(scenario_list, "River Crossing")
 		table.insert(scenario_list, "Time for Decisions")
 		table.insert(scenario_list, "Custom Map")
 	end
@@ -646,8 +648,8 @@ function RunSinglePlayerGameMenu()
 
   function ScenarioChanged()
 	if (scenario_list[scenario:getSelected() + 1] == "Scandinavia") then
-		mapname = "maps/skirmish/scandinavia.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/scandinavia.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Caverns of Chaincolt") then
 		mapname = "maps/caverns-of-chaincolt.smp"
 		mapl:setCaption(string.sub(mapname, 6))
@@ -655,23 +657,29 @@ function RunSinglePlayerGameMenu()
 		mapname = "maps/chaincolt-foothills.smp"
 		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Central Park") then
-		mapname = "maps/skirmish/central-park.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/central-park.smp"
+		mapl:setCaption(string.sub(mapname, 6))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Forgotten Forest") then
+		mapname = "maps/forgotten-forest.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Little Island") then
-		mapname = "maps/skirmish/little-island.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/little-island.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Looking Upwards") then
-		mapname = "maps/skirmish/looking-upwards.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/looking-upwards.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Northern Lakes") then
-		mapname = "maps/skirmish/northern-lakes.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/northern-lakes.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "North-South Conflict") then
-		mapname = "maps/skirmish/north-south-conflict.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/north-south-conflict.smp"
+		mapl:setCaption(string.sub(mapname, 6))
+	elseif (scenario_list[scenario:getSelected() + 1] == "River Crossing") then
+		mapname = "maps/river-crossing.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Time for Decisions") then
-		mapname = "maps/skirmish/time-for-decisions.smp"
-		mapl:setCaption(string.sub(mapname, 15))
+		mapname = "maps/time-for-decisions.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Custom Map") then
 		local oldmapname = mapname
 		RunSelectScenarioMenu()
@@ -679,7 +687,7 @@ function RunSinglePlayerGameMenu()
 			GetMapInfo(mapname)
 			MapChanged()
 		end
-		mapl:setCaption(string.sub(mapname, 15))
+		mapl:setCaption(string.sub(mapname, 6))
 	end
 	GetMapInfo(mapname)
 	MapChanged()

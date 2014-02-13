@@ -1,4 +1,4 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer","computer")
-PresentMap("Chaincolt Foothills", 3, 56, 73, 1)
+DefinePlayerTypes("person","computer","person")
+PresentMap("Chaincolt Foothills", 2, 56, 73, 1)

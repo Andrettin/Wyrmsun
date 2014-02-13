@@ -1,4 +1,4 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer","computer")
+DefinePlayerTypes("person","computer","person")
 PresentMap("Caverns of Chaincolt", 3, 56, 66, 1)

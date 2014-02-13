@@ -64,6 +64,9 @@ https://launchpad.net/stratagus
 - Chaincolt Foothills: The gnomes' starting worker is now a Gnomish Worker instead of a Dwarven Miner.
 - Chaincolt Foothills: The raider player now begins the scenario with a Steelclad instead of an Axefighter, and with two extra dwarven Scouts, to make it more difficult to destroy him just by using one gnomish recruit to lure the guard out of the raider player's town.
 - Fixed a bug that was making the Central Park, Looking Upwards, Northern Lakes, North-South Conflict and Time for Decisions maps be unplayable in multiplayer.
+- Added the "Forgotten Forest" map by Kyran Jackson as a skirmish map.
+- Chaincolt Foothills is now playable in multiplayer.
+- Added the "River Crossing" map by Kyran Jackson as a skirmish map.
 
 * Miscellaneous
 - New explosion graphics (by StumpyStrust and Jinn).
@@ -83,7 +86,6 @@ https://launchpad.net/stratagus
 - New resolution heights available: 600, 768, 800, 960, 1024, 1050.
 - New credits background by b_o.
 - Added Load Mod function to the main menu.
-- Added "Buildings Selectable by Rectangle" option to the options menu.
 - Dejavu Sans Bold 10 and Dejavu Sans Bold 12 fonts reworked by Jinn.
 
 * Units

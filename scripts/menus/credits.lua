@@ -89,6 +89,7 @@ function RunShowCreditsMenu()
 	"Scenario Maps",
 	"  John Ericson",
 	"  Joseph Simmons (turin)",
+	"  Kyran Jackson",
 	"  Lari Nieminen (zookeeper)",
 	"Events and Quests",
 	"  Andre Novellino Gouvea (Andrettin)",
