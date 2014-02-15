@@ -68,6 +68,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/build_basic_structure.png
 /graphics/neutral/icons/cancel.png
 /graphics/neutral/icons/gnomish_recruit.png
+/graphics/neutral/icons/gnomish_worker.png
 /graphics/neutral/icons/goblin_spearman.png
 /graphics/neutral/icons/harvest.png
 /graphics/neutral/icons/repair.png

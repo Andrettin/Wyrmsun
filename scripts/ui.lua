@@ -73,13 +73,37 @@ DefineDecorations({Index = "ShadowFly", ShowOpponent = true, ShowWhenMax = true,
 local info_panel_x = 0
 local info_panel_y = 160
 
-local min_damage = Div(ActiveUnitVar("PiercingDamage"), 2)
--- added the effects of the Strong trait to the max damage display
---local max_damage = Add(Add(ActiveUnitVar("PiercingDamage"), ActiveUnitVar("BasicDamage")), Mul(1, GreaterThan(ActiveUnitVar("TraitStrong"), 0)))
-local max_damage = Add(ActiveUnitVar("PiercingDamage"), ActiveUnitVar("BasicDamage"))
+local min_damage = Div(
+	Add(
+		ActiveUnitVar("PiercingDamage"),
+		ActiveUnitVar("PiercingDamageBonus")
+	),
+	2
+)
+local max_damage = Add(
+	Add(
+		ActiveUnitVar("BasicDamage"),
+		ActiveUnitVar("BasicDamageBonus")
+	),
+	Add(
+		ActiveUnitVar("PiercingDamage"),
+		ActiveUnitVar("PiercingDamageBonus")
+	)
+)
+-- takes piercing damage bonuses into account for the "+X" damage bonus on the unit's panel
+--local damage_bonus = Add(
+--	Sub(
+--		ActiveUnitVar("PiercingDamage", "Value", "Type"),
+--		ActiveUnitVar("PiercingDamage", "Value", "Initial")
+--	),
+--	ActiveUnitVar("PiercingDamageBonus")
+--);
 local damage_bonus = Sub(ActiveUnitVar("PiercingDamage", "Value", "Type"),
 							ActiveUnitVar("PiercingDamage", "Value", "Initial"));
-
+local armor = Add(
+	ActiveUnitVar("Armor"),
+	ActiveUnitVar("ArmorBonus")
+)
 
 DefinePanelContents(
 -- Default presentation. ------------------------
@@ -278,16 +302,18 @@ DefinePanelContents(
 --		))}}
 --
 --	},
-	{ Pos = {114, 41},
-		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
-	},
+--	{ Pos = {114, 41},
+--		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
+--	},
 	{ Pos = {114, 56},
 		More = {"FormattedText2", {Centered = true,
 			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}
 	},
 	{ Pos = {47, 71}, Condition = {Armor = "only"},
-		More = {"Text", {
-					Text = "Armor: ", Variable = "Armor", Stat = true}}
+		More = {"Text", {Text = Concat("Armor: ", String(armor)
+								)}}
+--		More = {"Text", {
+--					Text = "Armor: ", Variable = "Armor", Stat = true}}
 	},
 	{ Pos = {54, 118}, Condition = {SightRange = "only"},
 		More = {"Text", {Text = "Sight: ", Variable = "SightRange", Stat = true}}

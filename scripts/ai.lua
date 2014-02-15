@@ -29,9 +29,6 @@
 
 --(define (ai:sleep) () #t)
 
---race2 = "orc"
-race3 = "dwarf"
-
 --=============================================================================
 --
 --  AI helper table, the AI must know where to build units,
@@ -90,7 +87,7 @@ DefineAiHelper(
 --  City-center of the current race.
 --
 function AiCityCenter()
-  if (AiGetRace() == race3) then
+  if (AiGetRace() == "dwarf") then
     return "unit-dwarven-town-hall"
   end
 end
@@ -99,7 +96,7 @@ end
 --  Worker of the current race.
 --
 function AiWorker()
-  if (AiGetRace() == race3) then
+  if (AiGetRace() == "dwarf") then
     return "unit-dwarven-miner"
   end
 end
@@ -108,7 +105,7 @@ end
 --  Farm of the current race.
 --
 function AiFarm()
-  if (AiGetRace() == race3) then
+  if (AiGetRace() == "dwarf") then
     return "unit-dwarven-mushroom-farm"
   end
 end
@@ -117,7 +114,7 @@ end
 --  Barracks of the current race.
 --
 function AiBarracks()
-  if (AiGetRace() == race3) then
+  if (AiGetRace() == "dwarf") then
     return "unit-dwarven-barracks"
   end
 end
@@ -126,7 +123,7 @@ end
 --  Soldier of the current race.
 --
 function AiSoldier()
-  if (AiGetRace() == race3) then
+  if (AiGetRace() == "dwarf") then
     return "unit-dwarven-axefighter"
   end
 end
@@ -135,7 +132,7 @@ end
 --  Shooter of the current race.
 --
 function AiShooter()
-  if (AiGetRace() == race3) then
+  if (AiGetRace() == "dwarf") then
     return "unit-dwarven-scout"
   end
 end

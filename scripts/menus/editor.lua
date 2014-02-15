@@ -49,7 +49,7 @@ local function RunEditorLoadMapMenu()
 
   -- update label content
   local function MapChanged()
-    labelMapName:setCaption("File      : " .. string.sub(mapname, 15))
+    labelMapName:setCaption("File      : " .. string.sub(mapname, 6))
     labelMapName:adjustSize()
 
     labelNbPlayer:setCaption("Players  : " .. mapinfo.nplayers)

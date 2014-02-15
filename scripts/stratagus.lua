@@ -262,14 +262,22 @@ DefineVariables(
 --	"Traits", {Max = 2, Value = 0, Increase = 0, Enable = true},
 --	"MaxTraits", {Max = 2, Value = 0, Increase = 0, Enable = true},
 --	"TraitResilient", {Max = 1, Value = 0, Increase = 0, Enable = true},
---	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true}
+--	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"Name",
 	"Ident",
 	"PosX",
 	"PosY",
+	"Level", {Max = 30, Value = 1, Increase = 0, Enable = true},
+--	"Points", {Max = 99999, Value = 25, Increase = 0, Enable = true},
+	"Xp",
+	"XpRequired", {Max = 43500, Value = 100, Increase = 0, Enable = true},
 	"RegenerationRate",
 	"ResourcesHeld",
-	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true}
+	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"StartingLevel", {Max = 30, Value = 1, Increase = 0, Enable = true}
 )
 
 -------------------------------------------------------------------------------
@@ -307,6 +315,15 @@ function SinglePlayerTriggers()
 	if (not IsNetworkGame() and EventsActivated == 0) then
 		EventTriggers()
 	end
+
+	-- setup starting level for units that begin at a level higher than 1
+--	local uncount = 0
+--	uncount = GetUnits("any")
+--	for unit1 = 1,table.getn(uncount) do 
+--		if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
+--			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")))
+--		end
+--	end
 end
 
 function StandardTriggers()
@@ -329,6 +346,23 @@ function StandardTriggers()
 			return true
 		end
 	)
+
+	-- increase unit level if it has enough experience
+--	AddTrigger(
+--		function()
+--			return true
+--		end,
+--		function()
+--			local uncount = 0
+--			uncount = GetUnits("any")
+--			for unit1 = 1,table.getn(uncount) do 
+--				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired")) then
+--					IncreaseUnitLevel(uncount[unit1], 1)
+--				end
+--			end
+--			return true
+--		end
+--	)
 
 	-- randomly pick a character name for the unit
 --	AddTrigger(
@@ -579,6 +613,30 @@ function GetCharacterNamePersonalPronoun(character_name, type, is_capitalized)
 	end
 end
 
+function IncreaseUnitLevel(unit, level_number)
+	while (level_number > 0) do
+		SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
+		SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * GetUnitVariable(unit, "Level")))
+--		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
+		level_number = level_number - 1
+		UpdateUnitBonuses(unit)
+	end
+end
+
+function UpdateUnitBonuses(unit)
+	local basic_damage_bonus = 0
+	local piercing_damage_bonus = 0
+	local armor_bonus = 0
+	if (GetUnitVariable(unit, "Level") > 1) then
+		basic_damage_bonus = basic_damage_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
+		piercing_damage_bonus = piercing_damage_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
+		armor_bonus = armor_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
+	end
+	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
+	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)
+	SetUnitVariable(unit, "ArmorBonus", armor_bonus)
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------
@@ -677,6 +735,68 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 Preference.ShowOrders = wyr.preferences.ShowOrders
 Preference.ShowMessages = wyr.preferences.ShowMessages
+
+-- New Damage Formula (takes level into account)
+SetDamageFormula(
+	Div(
+		Mul(
+			Add(
+				51,
+				Rand(50)
+			),
+			Add(
+				Max(
+					0,
+					Sub(
+						Div(
+							Mul(
+								Add(
+									AttackerVar("BasicDamage"),
+									AttackerVar("BasicDamageBonus")
+								),
+								Add(
+									100,
+									Mul(
+										100,
+										GreaterThan(
+											AttackerVar("Bloodlust"),
+											0
+										)
+									)
+								)
+							),
+							100
+						),
+						Add(
+							DefenderVar("Armor"),
+							DefenderVar("ArmorBonus")
+						)
+					)
+				),
+				Div(
+					Mul(
+						Add(
+							AttackerVar("PiercingDamage"),
+							AttackerVar("PiercingDamageBonus")
+						),
+						Add(
+							100,
+							Mul(
+								100,
+								GreaterThan(
+									AttackerVar("Bloodlust"),
+									0
+								)
+							)
+						)
+					),
+					100
+				)
+			)
+		),
+		100
+	)
+)
 
 --- Uses Stratagus Library path!
 Load("scripts/localization.lua")

@@ -61,7 +61,7 @@ https://launchpad.net/stratagus
 - Renamed the maps which had their names in German, translating their names to English.
 - Chaincolt Foothills: The player now begins with 400 gold and 200 lumber (previously it was 200 gold and 100 lumber), and AI starting resources have been changed accordingly.
 - Chaincolt Foothills: The player now begins with Rugnur instead of an Axefighter, and his survival is necessary for victory.
-- Chaincolt Foothills: The gnomes' starting worker is now a Gnomish Worker instead of a Dwarven Miner.
+- Chaincolt Foothills: The gnomes' starting worker is now a Gnomish Scavenger instead of a Dwarven Miner.
 - Chaincolt Foothills: The raider player now begins the scenario with a Steelclad instead of an Axefighter, and with two extra dwarven Scouts, to make it more difficult to destroy him just by using one gnomish recruit to lure the guard out of the raider player's town.
 - Fixed a bug that was making the Central Park, Looking Upwards, Northern Lakes, North-South Conflict and Time for Decisions maps be unplayable in multiplayer.
 - Added the "Forgotten Forest" map by Kyran Jackson as a skirmish map.
@@ -92,9 +92,10 @@ https://launchpad.net/stratagus
 - The Gnomish Recruit and the Goblin Impaler now have 50 HP each (previously they had 45), so that they are better balanced against the Dwarven Axefighter.
 - Dwarven Scout added as a NPC unit.
 - Dwarven Ballista added as a NPC unit.
-- Gnomish Worker added as a NPC unit.
+- Gnomish Scavenger added as a NPC unit.
 - Added new unit graphics for the Dwarven Steelclad.
 - Gnomish Recruit graphics have been updated.
+- The unit's "level" now no longer shows in its infopanel, since it was the same for all units and didn't serve any purpose.
 
 ############################################################
 # Credits

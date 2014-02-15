@@ -172,6 +172,7 @@ unit = CreateUnit("unit-dwarven-town-hall", 1, {7, 59})
 unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {6, 65})
 -- Gnomish king
 unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
+--IncreaseUnitLevel(unit, 2)
 
 unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 

@@ -100,11 +100,11 @@ function RunShowCreditsMenu()
 	"Testing",
 	"  b_o",
 	"  TaShadan",
-	"Patches",
+	"Stratagus Patches",
 	"  Martin Renold",
 	"  Carlos Perello Marin",
 	"  Pludov",
-	"Past Programmers",
+	"Past Stratagus Programmers",
 	"  Andreas 'Ari' Arens",
 	"  Lutz 'Johns' Sammer",
 	"  Edgar 'Froese' Toernig",
@@ -157,7 +157,7 @@ function RunShowCreditsMenu()
 	"  Dave Turner",
 	"  Ben Hines",
 	"  Kachalov Anton",
-	"Past Patch Contributors",
+	"Past Stratagus Patch Contributors",
 	"  Martin Hajduch",
 	"  Jeff Binder",
 	"  Ludovic",
@@ -195,7 +195,7 @@ function RunShowCreditsMenu()
 	"",
   }
 
-  local sw = ScrollingWidget(320, 275)
+  local sw = ScrollingWidget(328, 275)
   menu:add(sw, offx + 140, offy + 80)
   sw:setBackgroundColor(Color(0,0,0,0))
   sw:setActionCallback(function() sw:restart() end)

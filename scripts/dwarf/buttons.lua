@@ -151,7 +151,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
 --DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
 --  Action = "train-unit", Value = "unit-gnomish-worker",
 --  Allowed = "check-no-research",
---  Key = "w", Hint = "TRAIN GNOMISH ~!WORKER",
+--  Key = "s", Hint = "TRAIN GNOMISH ~!SCAVENGER",
 --  ForUnit = {"unit-dwarven-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",

@@ -188,6 +188,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-worker",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gnomish_worker.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-recruit",
 	Size = {46, 38},
 	Frame = 0,

@@ -1,0 +1,153 @@
+LoadTileModels("scripts/tilesets/wasteland.lua")
+
+CleanRawTiles()
+
+MapWidth = 69
+MapHeight = 93
+
+local RandomNumber = 0
+local RandomX = 0
+local RandomY = 0
+local Count = 0
+local EntranceExists = false
+
+for x=0,(MapWidth - 1) do
+	for y=0,(MapHeight - 1) do
+		SetRawTile(x, y, "Rock")
+	end
+end
+
+SetRawTile(34, 46, "Eroder")
+
+while (Count < 800 or EntranceExists == false) do
+	for x=0,(MapWidth - 1) do
+		for y=0,(MapHeight - 1) do
+			if ((x == 0 or x == 68 or y == 0 or y == 92) and RawTile(x, y) ~= "Rock") then
+				EntranceExists = true
+			end
+
+			if (RawTile(x, y) == "Eroder") then
+				RandomNumber = SyncRand(4)
+				if (RandomNumber == 0) then
+					SetRawTile(x, y - 1, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x, y - 2, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x, y, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x - 1, y - 1, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x + 1, y - 1, "Eroder")
+						end
+					end
+				elseif (RandomNumber == 1) then
+					SetRawTile(x, y + 1, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x, y, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x, y + 2, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x - 1, y + 1, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x + 1, y + 1, "Eroder")
+						end
+					end
+				elseif (RandomNumber == 2) then
+					SetRawTile(x - 1, y, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x - 1, y - 1, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x - 1, y + 1, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x - 2, y, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x, y, "Eroder")
+						end
+					end
+				elseif (RandomNumber == 3) then
+					SetRawTile(x + 1, y, "Eroder")
+					SetRawTile(x, y, "Land")
+					if (SyncRand(100) < 8) then
+						Count = Count + 1
+						RandomNumber = SyncRand(4)
+						if (RandomNumber == 0) then
+							SetRawTile(x + 1, y - 1, "Eroder")
+						elseif (RandomNumber == 1) then
+							SetRawTile(x + 1, y + 1, "Eroder")
+						elseif (RandomNumber == 2) then
+							SetRawTile(x, y, "Eroder")
+						elseif (RandomNumber == 3) then
+							SetRawTile(x + 2, y, "Eroder")
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+
+Count = 0
+while (Count <= 3) do
+	Count = Count + 1
+	for x=0,(MapWidth - 1) do
+		for y=0,(MapHeight - 1) do
+			if (RawTile(x, y) == "Eroder") then
+				SetRawTile(x, y, "Land")
+			end
+
+			if (RawTile(x, y) == "Rock") then
+				if (RawTile(x + 1, y) ~= "Rock" and RawTile(x - 1, y) ~= "Rock") then
+					SetRawTile(x, y, "Land")
+				elseif (RawTile(x, y + 1) ~= "Rock" and RawTile(x, y - 1) ~= "Rock") then
+					SetRawTile(x, y, "Land")
+				end
+			end
+		end
+	end
+end
+
+GenerateRocks(0, 0)
+
+ApplyRawTiles()
+
+
+--SetStartView(0, 28, 46)
+SetPlayerData(0, "Resources", "gold", 10000)
+SetPlayerData(0, "Resources", "wood", 3000)
+SetPlayerData(0, "Resources", "oil", 1000)
+SetPlayerData(0, "RaceName", "dwarf")
+SetAiType(0, "land-attack")
+--SetStartView(1, 99, 81)
+SetPlayerData(1, "Resources", "gold", 10000)
+SetPlayerData(1, "Resources", "wood", 3000)
+SetPlayerData(1, "Resources", "oil", 1000)
+SetPlayerData(1, "RaceName", "dwarf")
+SetAiType(1, "land-attack")
+SetPlayerData(2, "Resources", "gold", 10000)
+SetPlayerData(2, "Resources", "wood", 3000)
+SetPlayerData(2, "Resources", "oil", 1000)
+SetPlayerData(2, "RaceName", "dwarf")
+SetAiType(2, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+-- create player units
+for i=0,mapinfo.nplayers do
+	local player_spawn_point = FindAppropriateSpawnPoint()
+	SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+	unit = CreateUnit("unit-dwarven-axefighter", i, {player_spawn_point[1], player_spawn_point[2]})
+	unit = CreateUnit("unit-dwarven-axefighter", i, {player_spawn_point[1], player_spawn_point[2]})
+	unit = CreateUnit("unit-dwarven-axefighter", i, {player_spawn_point[1], player_spawn_point[2]})
+end

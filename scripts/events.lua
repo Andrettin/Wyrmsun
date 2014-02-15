@@ -48,6 +48,7 @@ function EventTriggers()
 		function() 
 			function EventOption1Effects()
 				unit = CreateUnit("unit-rugnur", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+--				IncreaseUnitLevel(unit, 1)
 				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") - 1000)
 			end
 			function EventOption2Effects()
@@ -89,8 +90,11 @@ function EventTriggers()
 				unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+--				IncreaseUnitLevel(unit, 1)
 				unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+--				IncreaseUnitLevel(unit, 1)
 				unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+--				IncreaseUnitLevel(unit, 1)
 				unit = CreateUnit("unit-dwarven-scout", player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				unit = CreateUnit("unit-dwarven-scout", player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") - 4800)
@@ -128,6 +132,7 @@ function EventTriggers()
 				local greebo_player = FindUnusedPlayerSlot()
 				Players[greebo_player].Type = PlayerComputer
 				unit = CreateUnit("unit-greebo", greebo_player, FindAppropriateSpawnPoint())
+--				IncreaseUnitLevel(unit, 1)
 				SetAiType(greebo_player, "passive")
 				for i=0,14 do
 					if (i ~= greebo_player) then
@@ -334,6 +339,7 @@ function EventTriggers()
 			function EventOption1Effects()
 				local gnomish_monarch_player = GetFactionPlayer("Untersberg")
 				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
+--				IncreaseUnitLevel(unit, 1)
 				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
@@ -377,7 +383,7 @@ function EventTriggers()
 			  	end
 			end
 			local gnomish_monarch_player = GetFactionPlayer("Untersberg")
-			local gnomish_monarch_name = GetRandomCharacterName("gnome", "random", true)
+			local gnomish_monarch_name = GetRandomCharacterName("gnome", "male", true)
 			wyr.preferences.TheScepterOfFireMonarch = gnomish_monarch_name
 			wyr.preferences.TheScepterOfFireRaiderFaction = GetPlayerData(bandit_player, "Name")
 			SavePreferences()
@@ -549,9 +555,9 @@ function Event(event_name, event_description, player, option_number, option_1_na
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
-		l:setSize(324, 192)
+		l:setSize(324, 208)
 		l:setLineWidth(324)
-		menu:add(l, 14, 48)
+		menu:add(l, 14, 40)
 		l:setCaption(event_description)
 
 		if (event_image ~= nil) then
