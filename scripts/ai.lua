@@ -52,21 +52,15 @@ DefineAiHelper(
   {"build", "unit-dwarven-miner",
   "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
   },
-  {"build", "unit-gnomish-worker",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
-  },
   --
   -- Building can train which units.
   --
-  {"train", "unit-dwarven-town-hall", "unit-dwarven-miner", "unit-gnomish-worker"},
-  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-gnomish-recruit", "unit-goblin-spearman"},
+  {"train", "unit-dwarven-town-hall", "unit-dwarven-miner"},
+  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-goblin-spearman"},
   --
   -- Unit can repair which units.
   --
   {"repair", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
-  },
-  {"repair", "unit-gnomish-worker",
   "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
   },
   --
@@ -76,65 +70,113 @@ DefineAiHelper(
   --
   -- Equivalence of units for the resource manager.
   --
-  {"unit-equiv", "unit-dwarven-miner",
-  "unit-gnomish-worker"},
   {"unit-equiv", "unit-dwarven-axefighter",
-  "unit-dwarven-steelclad",
-  "unit-gnomish-recruit", "unit-goblin-spearman"}
+  "unit-dwarven-steelclad"
+  }
+)
+
+--;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+--  * Race Gnome.
+--;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DefineAiHelper(
+  --
+  -- Unit can build which buildings.
+  --
+  {"build", "unit-gnomish-worker",
+  "unit-gnomish-farm", "unit-gnomish-barracks", "unit-gnomish-town-hall"
+  },
+  --
+  -- Building can train which units.
+  --
+  {"train", "unit-gnomish-town-hall", "unit-gnomish-worker"},
+  {"train", "unit-gnomish-barracks", "unit-gnomish-recruit"},
+  --
+  -- Unit can repair which units.
+  --
+  {"repair", "unit-gnomish-worker",
+  "unit-gnomish-farm", "unit-gnomish-barracks", "unit-gnomish-town-hall"
+  },
+  --
+  -- Reduce unit limits.
+  --
+  {"unit-limit", "unit-gnomish-farm", "food"}
 )
 
 --
 --  City-center of the current race.
 --
 function AiCityCenter()
-  if (AiGetRace() == "dwarf") then
-    return "unit-dwarven-town-hall"
-  end
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-town-hall"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-town-hall"
+	else
+		return "unit-dwarven-town-hall"
+	end
 end
 
 --
 --  Worker of the current race.
 --
 function AiWorker()
-  if (AiGetRace() == "dwarf") then
-    return "unit-dwarven-miner"
-  end
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-miner"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-worker"
+	else
+		return "unit-dwarven-miner"
+	end
 end
 
 --
 --  Farm of the current race.
 --
 function AiFarm()
-  if (AiGetRace() == "dwarf") then
-    return "unit-dwarven-mushroom-farm"
-  end
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-mushroom-farm"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-farm"
+	else
+		return "unit-dwarven-mushroom-farm"
+	end
 end
 
 --
 --  Barracks of the current race.
 --
 function AiBarracks()
-  if (AiGetRace() == "dwarf") then
-    return "unit-dwarven-barracks"
-  end
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-barracks"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-barracks"
+	else
+		return "unit-dwarven-barracks"
+	end
 end
 
 --
 --  Soldier of the current race.
 --
 function AiSoldier()
-  if (AiGetRace() == "dwarf") then
-    return "unit-dwarven-axefighter"
-  end
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-axefighter"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-recruit"
+	else
+		return "unit-dwarven-axefighter"
+	end
 end
 
 --
 --  Shooter of the current race.
 --
 function AiShooter()
-  if (AiGetRace() == "dwarf") then
-    return "unit-dwarven-scout"
-  end
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-scout"
+	else
+		return "unit-dwarven-scout"
+	end
 end
 
 --

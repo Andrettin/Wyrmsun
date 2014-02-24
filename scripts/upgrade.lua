@@ -29,11 +29,16 @@
 
 -- Load the different races
 Load("scripts/dwarf/upgrade.lua")
+Load("scripts/gnome/upgrade.lua")
+Load("scripts/goblin/upgrade.lua")
 
 function DefineAllowSpecialUnits(flags)
 	local units = {
 		"unit-critter", "unit-gold-mine",
-		"unit-gnomish-caravan",
+		"unit-mushroom", "unit-flowers", "unit-large-flower",
+		"unit-fern", "unit-twigs", "unit-log",
+		"unit-bones", "unit-wyrm-skeleton",
+		"unit-small-rocks",
 --		"unit-human-dead-body", "unit-dead-sea-body",
 		"unit-destroyed-2x2-place",
 		"unit-destroyed-3x3-place", "unit-destroyed-4x4-place"

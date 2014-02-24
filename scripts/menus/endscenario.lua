@@ -66,7 +66,7 @@ function RunExitConfirmMenu()
 
   menu:addLabel("Are you sure you", 128, 11)
   menu:addLabel("want to exit", 128, 11 + (24 * 1))
-  menu:addLabel("Stratagus?", 128, 11 + (24 * 2))
+  menu:addLabel("Wyrmsun?", 128, 11 + (24 * 2))
   menu:addFullButton("E~!xit Program", "x", 16, 11 + (24 * 3) + 29,
     function() Exit(0) end)
   menu:addFullButton("Cancel (~<Esc~>)", "escape", 16, 248,

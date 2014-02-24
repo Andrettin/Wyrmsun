@@ -119,7 +119,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
   Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 60,
-  Points = 50,
+  Points = 60,
   Demand = 1,
 --    Corpse = "unit-human-dead-body",
   Type = "land",
@@ -196,7 +196,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
 
 UnitTypeFiles["unit-dwarven-town-hall"] = {
   forest = "dwarf/buildings/town_hall.png",
-  wasteland = "dwarf/buildings/town_hall.png"
+  swamp = "dwarf/buildings/town_hall.png"
 }
 
 DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
@@ -232,12 +232,13 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
 
 UnitTypeFiles["unit-dwarven-mushroom-farm"] = {
   forest = "dwarf/buildings/mushroom_farm.png",
-  wasteland = "dwarf/buildings/mushroom_farm.png"
+  swamp = "dwarf/buildings/mushroom_farm.png"
 }
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name,
   Image = {"size", {64, 64}},
   Animations = "animations-building", Icon = "icon-dwarven-mushroom-farm",
+  NeutralMinimapColor = {192, 192, 192},
   Costs = {"time", 100, "gold", 500, "wood", 250},
   RepairHp = 4,
   RepairCosts = {"gold", 1, "wood", 1},
@@ -264,7 +265,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
 
 UnitTypeFiles["unit-dwarven-barracks"] = {
   forest = "dwarf/buildings/barracks.png",
-  wasteland = "dwarf/buildings/barracks.png"
+  swamp = "dwarf/buildings/barracks.png"
 }
 
 DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
@@ -352,3 +353,34 @@ DefineUnitType("unit-rugnur-older", { Name = "Rugnur",
 --    "ready", "basic-dwarf-voices-ready",
     "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
+
+DefineUnitType("unit-baglur", { Name = "Baglur",
+  Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+  Animations = "animations-baglur", Icon = "icon-baglur",
+  Costs = {"time", 60, "gold", 600},
+  Speed = 10,
+  HitPoints = 150,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
+  Armor = 4, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 60,
+  Points = 50,
+  Demand = 1,
+  StartingLevel = 2,
+--    Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true,
+  LandUnit = true,
+  organic = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-dwarf-voices-acknowledge",
+--    "ready", "basic-dwarf-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-dwarf-voices-dead"} } )
+

@@ -54,12 +54,16 @@ local editor_types = {
 
    "unit-rugnur",
    "unit-rugnur-older",
+   "unit-baglur",
 
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-gnomish-worker",
    "unit-gnomish-recruit",
    "unit-gnomish-caravan",
+   "unit-gnomish-town-hall",
+   "unit-gnomish-farm",
+   "unit-gnomish-barracks",
 
 --- - - - - - - - - - - - - - - - - - -
 
@@ -70,11 +74,20 @@ local editor_types = {
 
    "unit-gold-mine",
 
-   "unit-critter"
+   "unit-critter",
 
 --- - - - - - - - - - - - - - - - - - -
 
---   "unit-purple-flowers"
+   "unit-goblin-banner",
+   "unit-mushroom",
+   "unit-flowers",
+   "unit-large-flower",
+   "unit-fern",
+   "unit-twigs",
+   "unit-log",
+   "unit-small-rocks",
+   "unit-bones",
+   "unit-wyrm-skeleton"
 
 }
 

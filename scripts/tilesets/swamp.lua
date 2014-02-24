@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      wasteland.ccl - Define the wasteland tileset.
+--      swamp.ccl - Define the swamp tileset.
 --
 --      (c) Copyright 2000-2003 by Lutz Sammer and Jimmy Salmon
 --
@@ -32,8 +32,8 @@
 --
 --	(define-tileset ident class name image palette slots animations)
 --
-DefineTileset("name", "Wasteland",
-  "image", "tilesets/wasteland/terrain/wasteland.png",
+DefineTileset("name", "Swamp",
+  "image", "tilesets/swamp/terrain/swamp.png",
   -- Slots descriptions
   "slots", { "special", {
     "top-one-tree", 121, "mid-one-tree", 122, "bot-one-tree", 123,
@@ -196,6 +196,6 @@ DefineTileset("name", "Wasteland",
 
 BuildTilesetTables()
 
-wyrmsun.tileset = "wasteland"
+wyrmsun.tileset = "swamp"
 Load("scripts/scripts.lua")
 

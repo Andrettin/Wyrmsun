@@ -1,4 +1,4 @@
-LoadTileModels("scripts/tilesets/wasteland.lua")
+LoadTileModels("scripts/tilesets/swamp.lua")
 
 SetTile(112, 0, 0, 0)
 SetTile(113, 1, 0, 0)

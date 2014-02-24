@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "0.1.1"
+wyrmsun.Version = "0.1.2"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
 wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
@@ -139,7 +139,7 @@ SetDamageMissile("missile-hit")
 --  Uncomment next, to reveal the complete map.
 --RevealMap()
 
-SetFogOfWarGraphics("tilesets/wasteland/terrain/fogofwar.png")
+SetFogOfWarGraphics("tilesets/swamp/terrain/fogofwar.png")
 
 -------------------------------------------------------------------------------
 
@@ -178,20 +178,20 @@ DefinePlayerColorIndex(208, 4)
 DefinePlayerColors({
   "red", {{164, 0, 0}, {124, 0, 0}, {92, 4, 0}, {68, 4, 0}},
   "blue", {{12, 72, 204}, {4, 40, 160}, {0, 20, 116}, {0, 4, 76}},
-  "green", {{44, 180, 148}, {20, 132, 92}, {4, 84, 44}, {0, 40, 12}},
+  "green", {{24, 119, 23}, {2, 96, 1}, {2, 61, 1}, {9, 32, 9}},
   "violet", {{152, 72, 176}, {116, 44, 132}, {80, 24, 88}, {44, 8, 44}},
   "orange", {{248, 140, 20}, {200, 96, 16}, {152, 60, 16}, {108, 32, 12}},
   "black", {{40, 40, 60}, {28, 28, 44}, {20, 20, 32}, {12, 12, 20}},
-  "white", {{224, 224, 224}, {152, 152, 180}, {84, 84, 128}, {36, 40, 76}},
-  "yellow", {{252, 252, 72}, {228, 204, 40}, {204, 160, 16}, {180, 116, 0}},
-  "red", {{164, 0, 0}, {124, 0, 0}, {92, 4, 0}, {68, 4, 0}},
-  "blue", {{12, 72, 204}, {4, 40, 160}, {0, 20, 116}, {0, 4, 76}},
-  "green", {{44, 180, 148}, {20, 132, 92}, {4, 84, 44}, {0, 40, 12}},
-  "violet", {{152, 72, 176}, {116, 44, 132}, {80, 24, 88}, {44, 8, 44}},
-  "orange", {{248, 140, 20}, {200, 96, 16}, {152, 60, 16}, {108, 32, 12}},
-  "black", {{40, 40, 60}, {28, 28, 44}, {20, 20, 32}, {12, 12, 20}},
-  "white", {{224, 224, 224}, {152, 152, 180}, {84, 84, 128}, {36, 40, 76}},
-  "yellow", {{252, 252, 72}, {228, 204, 40}, {204, 160, 16}, {180, 116, 0}},
+  "white", {{162, 152, 182}, {118, 103, 141}, {78, 65, 105}, {38, 22, 65}},
+  "yellow", {{147, 164, 21}, {113, 126, 16}, {73, 83, 8}, {48, 53, 11}},
+  "pink", {{164, 21, 97}, {126, 16, 75}, {90, 12, 53}, {55, 0, 28}},
+  "cyan", {{75, 130, 155}, {35, 90, 115}, {11, 50, 69}, {0, 27, 41}},
+  "teal", {{44, 180, 148}, {20, 132, 92}, {4, 84, 44}, {0, 40, 12}},
+  "purple", {{148, 28, 150}, {121, 12, 122}, {87, 1, 88}, {54, 0, 54}},
+  "fire", {{241, 172, 0}, {222, 80, 22}, {185, 0, 0}, {111, 0, 0}},
+  "brown", {{170, 119, 0}, {134, 82, 0}, {98, 47, 0}, {70, 23, 15}},
+  "radioactive", {{248, 254, 1}, {154, 204, 5}, {103, 146, 4}, {51, 74, 2}},
+  "grey", {{116, 104, 99}, {97, 85, 80}, {74, 62, 57}, {48, 36, 31}},
 })
 
 --  If color-cycle-all is off (#f) only the tileset palette is color cycled.
@@ -277,7 +277,8 @@ DefineVariables(
 	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"StartingLevel", {Max = 30, Value = 1, Increase = 0, Enable = true}
+	"StartingLevel", {Max = 30, Value = 1, Increase = 0, Enable = true},
+	"LifeCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true}
 )
 
 -------------------------------------------------------------------------------
@@ -296,8 +297,12 @@ function SinglePlayerTriggers()
 	)
 
 	AddTrigger(
---		function() return GetNumRivals(GetThisPlayer()) == 0 end,
-		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
+--		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
+		function()
+			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer()], a_bargain_is_struck_objective_1) == false) then
+				return true
+			end
+		end,
 		function() return ActionVictory() end
 	)
 
@@ -305,6 +310,8 @@ function SinglePlayerTriggers()
 		Objectives[i] = {"- Destroy the enemy"}
   	end
 	
+	CreateDecorations()
+
 	StandardTriggers()
 
 	if (not IsNetworkGame()) then
@@ -316,7 +323,31 @@ function SinglePlayerTriggers()
 		EventTriggers()
 	end
 
-	-- setup starting level for units that begin at a level higher than 1
+	-- setup graphics variations
+	local uncount = 0
+	uncount = GetUnits("any")
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(2) + 1))
+			else
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+			end
+		end
+	end
+
 --	local uncount = 0
 --	uncount = GetUnits("any")
 --	for unit1 = 1,table.getn(uncount) do 
@@ -339,8 +370,41 @@ function StandardTriggers()
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
---					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-					SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(2) + 1))
+					else
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+					end
+				end
+
+				-- grow mushrooms
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
+					if (GameCycle >= GetUnitVariable(uncount[unit1], "LifeCycle") + 750) then
+						if (GetUnitVariable(uncount[unit1], "GraphicsVariation") < 13) then
+							SetUnitVariable(uncount[unit1], "GraphicsVariation", GetUnitVariable(uncount[unit1], "GraphicsVariation") + 1)
+						else
+							SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+						end
+						SetUnitVariable(uncount[unit1], "LifeCycle", GameCycle)
+					end
+					
+					local critter_quantity = GetNumUnitsAt(15, "unit-critter", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
+					if (critter_quantity > 0 and GetUnitVariable(uncount[unit1], "GraphicsVariation") < 8) then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", 13)
+						SetUnitVariable(uncount[unit1], "LifeCycle", GameCycle)
+					end
 				end
 			end
 			return true
@@ -440,6 +504,7 @@ function AssignPlayerFactions()
 
 	local RandomNumber = 0
 	local DwarvenFactions = GetCivilizationFactions("dwarf")
+	local GnomishFactions = GetCivilizationFactions("gnome")
 	local faction_number = -1
 
 	-- remove faction names already in use
@@ -453,6 +518,16 @@ function AssignPlayerFactions()
 				end)
 				if (faction_number ~= -1) then
 					table.remove(DwarvenFactions, faction_number)
+					faction_number = -1
+				end
+			elseif (GetPlayerData(j, "RaceName") == "gnome" and table.getn(GnomishFactions) > 0) then
+				table.foreachi(GnomishFactions, function(k,v)
+					if (v == GetPlayerData(j, "Name")) then
+						faction_number = k
+					end
+				end)
+				if (faction_number ~= -1) then
+					table.remove(GnomishFactions, faction_number)
 					faction_number = -1
 				end
 			end
@@ -472,6 +547,17 @@ function AssignPlayerFactions()
 				if (faction_number ~= -1) then
 					table.remove(DwarvenFactions, faction_number)
 				end
+			elseif (GetPlayerData(i, "RaceName") == "gnome" and table.getn(GnomishFactions) > 0) then
+				RandomNumber = SyncRand(table.getn(GnomishFactions)) + 1
+				SetPlayerData(i, "Name", GnomishFactions[RandomNumber])
+				table.foreachi(GnomishFactions, function(k,v)
+					if (v == GnomishFactions[RandomNumber]) then
+						faction_number = k
+					end
+				end)
+				if (faction_number ~= -1) then
+					table.remove(GnomishFactions, faction_number)
+				end
 			end
 		end
 	end
@@ -487,6 +573,15 @@ function GetCivilizationFactions(civilization)
 	end
 end
 
+function GetCivilizationExists(civilization)
+	for i=0,14 do
+		if (GetPlayerData(i, "RaceName") == civilization) then
+			return true
+		end
+	end
+	return false
+end
+
 function GetFactionExists(faction)
 	for i=0,14 do
 		if (GetPlayerData(i, "Name") == faction) then
@@ -494,6 +589,24 @@ function GetFactionExists(faction)
 		end
 	end
 	return false
+end
+
+function GetCivilizationPlayer(civilization)
+	local loop = true
+	local loop_count = 0
+	local civilization_player = nil
+	while (loop) do
+		civilization_player = SyncRand(GetNumPlayers())
+		if (GetPlayerData(civilization_player, "RaceName") == civilization) then
+			loop = false
+		end
+		loop_count = loop_count + 1
+
+		if (loop_count > 100) then
+			return false
+		end
+	end
+	return civilization_player
 end
 
 function GetFactionPlayer(faction)
@@ -508,7 +621,7 @@ end
 function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,14 do
-		if (player ~= i and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and GetPlayerData(i, "TotalNumUnits") > 0) then
+		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and GetPlayerData(i, "TotalNumUnits") > 0) then
 			rival_count = rival_count + 1
 		end
 	end
@@ -697,7 +810,8 @@ local defaultPreferences = {
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks"
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks"
 	},
 	LastVersionPlayed = "0.0.0",
 	TheScepterOfFireMonarch = "",

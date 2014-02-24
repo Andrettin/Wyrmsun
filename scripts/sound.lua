@@ -184,16 +184,20 @@ MakeSound("rat-dead", "neutral/units/rat-death.wav")
 DefineGameSounds(
 
   "placement-error", {"dwarf", placement_error},
+  "placement-error", {"gnome", placement_error},
 
   "placement-success", {"dwarf", placement_success},
+  "placement-success", {"gnome", placement_success},
 
   "click", sound_click,
 --  "transport-docking", transport_docking,
   "chat-message", sound_click,
 
   "building-construction", {"dwarf", building_construction},
+  "building-construction", {"gnome", building_construction},
 
 --  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
 
-  "rescue", {"dwarf", rescue}
+  "rescue", {"dwarf", rescue},
+  "rescue", {"gnome", rescue}
 )

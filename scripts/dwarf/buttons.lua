@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the dwarven civilization.
 --
---      (c) Copyright 2001-2003 by Vladi Belperchinov-Shabanski and Lutz Sammer
+--      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -38,138 +38,121 @@
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
   Action = "move",
-  Key = "m", Hint = "~!MOVE",
+  Key = "m", Hint = "~!Move",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
     "unit-goblin-spearman",
-    "unit-rugnur", "unit-rugnur-older",
+    "unit-rugnur", "unit-rugnur-older", "unit-baglur",
     "unit-critter",
     "dwarf-group"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
   Action = "stop",
-  Key = "s", Hint = "~!STOP",
+  Key = "s", Hint = "~!Stop",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
     "unit-goblin-spearman",
-    "unit-rugnur", "unit-rugnur-older",
+    "unit-rugnur", "unit-rugnur-older", "unit-baglur",
     "unit-critter",
     "dwarf-group"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
   Action = "attack",
-  Key = "a", Hint = "~!ATTACK",
+  Key = "a", Hint = "~!Attack",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit",
     "unit-goblin-spearman",
-    "unit-rugnur", "unit-rugnur-older",
+    "unit-rugnur", "unit-rugnur-older", "unit-baglur",
     "dwarf-group"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
   Action = "patrol",
-  Key = "p", Hint = "~!PATROL",
+  Key = "p", Hint = "~!Patrol",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 	"unit-dwarven-ballista",
 	"unit-gnomish-recruit", 
 	"unit-goblin-spearman",
-	"unit-rugnur", "unit-rugnur-older",
+	"unit-rugnur", "unit-rugnur-older", "unit-baglur",
 	"dwarf-group"
   } } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
   Action = "stand-ground",
-  Key = "t", Hint = "S~!TAND GROUND",
+  Key = "t", Hint = "S~!tand Ground",
   ForUnit = {
   	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 	"unit-dwarven-ballista",
 	"unit-gnomish-recruit", 
 	"unit-goblin-spearman",
-	"unit-rugnur", "unit-rugnur-older",
+	"unit-rugnur", "unit-rugnur-older", "unit-baglur",
 	"dwarf-group"} } )
 
 -- miner specific actions ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
   Action = "repair",
-  Key = "r", Hint = "~!REPAIR",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "r", Hint = "~!Repair",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Action = "harvest",
-  Key = "h", Hint = "~!HARVEST LUMBER/MINE GOLD",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "h", Hint = "~!Harvest Lumber/Mine Gold",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-return-goods",
   Action = "return-goods",
-  Key = "g", Hint = "RETURN WITH ~!GOODS",
+  Key = "g", Hint = "Return with ~!Goods",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
-  Key = "b", Hint = "~!BUILD BASIC STRUCTURE",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "b", Hint = "~!Build Basic Structure",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 -- simple buildings dwarf -----------------------------------------------------
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-town-hall",
   Action = "build", Value = "unit-dwarven-town-hall",
-  Key = "h", Hint = "BUILD MEAD ~!HALL",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "h", Hint = "Build Mead ~!Hall",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-mushroom-farm",
   Action = "build", Value = "unit-dwarven-mushroom-farm",
-  Key = "f", Hint = "BUILD MUSHROOM ~!FARM",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "f", Hint = "Build Mushroom ~!Farm",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-barracks",
   Action = "build", Value = "unit-dwarven-barracks",
-  Key = "w", Hint = "BUILD ~!WAR HALL",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "w", Hint = "Build ~!War Hall",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "\27", Hint = "~<ESC~> CANCEL",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  Key = "\27", Hint = "~<ESC~> Cancel",
+  ForUnit = {"unit-dwarven-miner"} } )
 
 -- buildings commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
   Action = "train-unit", Value = "unit-dwarven-miner",
-  Allowed = "check-no-research",
-  Key = "m", Hint = "TRAIN ~!MINER",
+  Key = "m", Hint = "Train ~!Miner",
   ForUnit = {"unit-dwarven-town-hall"} } )
-
---DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
---  Action = "train-unit", Value = "unit-gnomish-worker",
---  Allowed = "check-no-research",
---  Key = "s", Hint = "TRAIN GNOMISH ~!SCAVENGER",
---  ForUnit = {"unit-dwarven-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
   Action = "train-unit", Value = "unit-dwarven-axefighter",
-  Key = "a", Hint = "TRAIN ~!AXEFIGHTER",
+  Key = "a", Hint = "Train ~!Axefighter",
   ForUnit = {"unit-dwarven-barracks"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-scout",
   Action = "train-unit", Value = "unit-dwarven-scout",
-  Key = "s", Hint = "TRAIN ~!SCOUT",
-  ForUnit = {"unit-dwarven-barracks"} } )
-
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-recruit",
-  Action = "train-unit", Value = "unit-gnomish-recruit",
-  Key = "r", Hint = "TRAIN GNOMISH ~!RECRUIT",
-  ForUnit = {"unit-dwarven-barracks"} } )
-
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
-  Action = "train-unit", Value = "unit-goblin-spearman",
-  Key = "i", Hint = "TRAIN GOBLIN ~!IMPALER",
+  Key = "s", Hint = "Train ~!Scout",
   ForUnit = {"unit-dwarven-barracks"} } )

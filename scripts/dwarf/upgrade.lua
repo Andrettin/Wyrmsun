@@ -10,7 +10,7 @@
 --
 --      upgrade.ccl - Define the dwarven dependencies and upgrades.
 --
---      (c) Copyright 2001-2003 by Lutz Sammer
+--      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -33,21 +33,38 @@
 function DefineAllowNormalDwarvenUnits(flags)
 	local units = {
 		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-gnomish-worker",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-scout"
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-scout",
+		"unit-dwarven-ballista"
 	}
-	for i, unitName in ipairs(units) do
-		DefineAllow(unitName, flags)
+	-- Allow units for human players only if they have been acquired
+	if (flags == "AAAAAAAAAAAAAAAA" and (not IsNetworkGame())) then
+		for i, unitName in ipairs(units) do
+			local PlayerUnitFlag = {}
+			for i=0,15 do
+				if (GetPlayerData(i, "AiEnabled") == false) then
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == true) then
+						PlayerUnitFlag[i] = "A"
+					else
+						PlayerUnitFlag[i] = "F"
+					end
+				else
+					PlayerUnitFlag[i] = "A"
+				end
+			end
+			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
+			DefineAllow(unitName, flags)
+		end
+	else
+		for i, unitName in ipairs(units) do
+			DefineAllow(unitName, flags)
+		end
 	end
 end
 
 function DefineAllowExtraDwarvenUnits(flags)
 	local units = {
-		"unit-dwarven-ballista",
 		"unit-dwarven-steelclad",
-		"unit-gnomish-recruit",
-		"unit-goblin-spearman",
-		"unit-rugnur", "unit-rugnur-older"
+		"unit-rugnur", "unit-rugnur-older", "unit-baglur"
 	}
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, flags)

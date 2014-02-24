@@ -131,6 +131,17 @@ function HandleCheats(str)
       SetUnitMana(t[i], 255)
     end
 
+  elseif (str == "mead of poetry") then
+	local units = {
+		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-scout",
+		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
+		"unit-gnomish-worker", "unit-gnomish-recruit"
+	}
+	for i, unitName in ipairs(units) do
+		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
+	end
+
   else
     return false
   end

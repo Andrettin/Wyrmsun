@@ -32,6 +32,8 @@ UnitStill = {"frame 0", "wait 4", "random-goto 99 no-rotate", "random-rotate 1",
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
 
 Load("scripts/dwarf/anim.lua")
+Load("scripts/gnome/anim.lua")
+Load("scripts/goblin/anim.lua")
 
 
 DefineAnimations("animations-critter", {
@@ -115,97 +117,38 @@ DefineAnimations("animations-destroyed-place", {
 --  Death = {"unbreakable begin", "frame 2", "wait 200", "frame 3", "wait 200", "frame 1", "unbreakable end", "wait 1", },
 --})
 
+DefineAnimations("animations-decoration", {
+  Still = {
+	"if-var v.GraphicsVariation.Value == 1 variation_1",
+	"if-var v.GraphicsVariation.Value == 2 variation_2",
+	"if-var v.GraphicsVariation.Value == 3 variation_3",
+	"if-var v.GraphicsVariation.Value == 4 variation_4",
+	"if-var v.GraphicsVariation.Value == 5 variation_5",
+	"if-var v.GraphicsVariation.Value == 6 variation_6",
+	"if-var v.GraphicsVariation.Value == 7 variation_7",
+	"if-var v.GraphicsVariation.Value == 8 variation_8",
+	"if-var v.GraphicsVariation.Value == 9 variation_9",
+	"if-var v.GraphicsVariation.Value == 10 variation_10",
+	"if-var v.GraphicsVariation.Value == 11 variation_11",
+	"if-var v.GraphicsVariation.Value == 12 variation_12",
+	"if-var v.GraphicsVariation.Value == 13 variation_13",
+	"label variation_1", "frame 0", "goto end",
+	"label variation_2", "frame 1", "goto end",
+	"label variation_3", "frame 2", "goto end",
+	"label variation_4", "frame 3", "goto end",
+	"label variation_5", "frame 4", "goto end",
+	"label variation_6", "frame 5", "goto end",
+	"label variation_7", "frame 6", "goto end",
+	"label variation_8", "frame 7", "goto end",
+	"label variation_9", "frame 8", "goto end",
+	"label variation_10", "frame 9", "goto end",
+	"label variation_11", "frame 10", "goto end",
+	"label variation_12", "frame 11", "goto end",
+	"label variation_13", "frame 12", "goto end",
+	"label end", "wait 1",},
+})
+
 DefineAnimations("animations-gold-sack", {
   Still = BuildingStill,
   Death = BuildingStill,
-})
-
---
--- Gnomish Worker
---
-
-DefineAnimations("animations-gnomish-worker", {
-  Still = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "label no-rotate", "wait 1",},
-  Move = {"unbreakable begin", "frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",},
-  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "attack", "sound mace-attack", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
-  Harvest_wood = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
-  Repair = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "sound mace-attack", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
-  Death = {"unbreakable begin", "frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
-    "frame 60", "unbreakable end", "wait 1",},
-})
-
---
--- Gnomish Recruit
---
-
-local GnomishRecruitStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
-local GnomishRecruitMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
-local GnomishRecruitDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
-    "frame 55", "unbreakable end", "wait 1",}
-
-DefineAnimations("animations-gnomish-recruit", {
-  Still = GnomishRecruitStill,
-  Move = GnomishRecruitMove,
-  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "attack", "sound sword-attack", "wait 5", "frame 0", "wait 10",
-    "frame 0", "unbreakable end", "wait 1",},
-  Death = GnomishRecruitDeath,
-})
-
---
--- Gnomish Caravan
---
-
-DefineAnimations("animations-gnomish-caravan", {
-  Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
-  Move = {"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "unbreakable end", "wait 1",},
-  Death = {"unbreakable begin", "frame 10", "wait 3", "frame 15", "wait 3", "frame 20", "wait 3", "frame 25", "wait 100",
-    "frame 25", "unbreakable end", "wait 1",}
-})
-
---
--- Goblin Spearman
---
-
-local GoblinSpearmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
-local GoblinSpearmanMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
-local GoblinSpearmanDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
-    "frame 55", "unbreakable end", "wait 1",}
-
-DefineAnimations("animations-goblin-spearman", {
-  Still = GoblinSpearmanStill,
-  Move = GoblinSpearmanMove,
-  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "attack", "sound spear-attack", "wait 5", "frame 0", "wait 10",
-    "frame 0", "unbreakable end", "wait 1",},
-  Death = GoblinSpearmanDeath,
 })

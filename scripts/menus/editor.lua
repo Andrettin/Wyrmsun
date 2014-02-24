@@ -4,7 +4,7 @@ local function RunEditorNewMapMenu()
   local menu = WarMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
-  local tilesets = { "wasteland"}
+  local tilesets = { "swamp"}
   local mapSizes = {"32", "64", "96", "128", "256"}
 
   menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
@@ -45,7 +45,7 @@ local function RunEditorLoadMapMenu()
   local labelMapSize
   
   -- Andrettin: added this so that special scenarios such as Chaincolt Foothills don't become selected by default
-  mapname = "maps/northern-lakes.smp"
+  mapname = "maps/chaincolt-foothills.smp"
 
   -- update label content
   local function MapChanged()
@@ -217,7 +217,7 @@ function RunEditorPlayerProperties()
   local offxOil = 470
 
   local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
-  local racenames = {"dwarf"}
+  local racenames = {"dwarf", "gnome"}
   local ais = {"passive", "land-attack"}
 
   menu:addLabel("#", 15, 36)
@@ -319,7 +319,7 @@ function RunEditorMapProperties()
 
   menu:addLabel("Tileset : ", 45, 36 * 4, nil, false)
 
-  local list = { "Wasteland"}
+  local list = { "Swamp"}
   local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
   for i = 0,3 do
     if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)

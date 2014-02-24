@@ -10,16 +10,24 @@ function RunResultsMenu()
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
       background = dvictory
       PlayMusic("music/victory.ogg")
+    else
+      background = dvictory
+      PlayMusic("music/victory.ogg")
     end
   elseif (GameResult == GameDefeat) then
     result = "Defeat!"
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
       background = ddefeat
       PlayMusic("music/dwarf_defeat.ogg")
+    else
+      background = ddefeat
+      PlayMusic("music/dwarf_defeat.ogg")
     end
   elseif (GameResult == GameDraw) then
     result = "Draw!"
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+      background = ddefeat
+    else
       background = ddefeat
     end
   else

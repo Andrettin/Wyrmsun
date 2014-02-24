@@ -10,7 +10,7 @@
 --
 --      map_generation.lua - Defines the map generation scripts.
 --
---      (c) Copyright 2013 by Andre Novellino Gouvêa
+--      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -297,8 +297,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number)
 	-- create initial rock seeds
 	Count = rock_seed_number
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
 			SetRawTile(RandomX, RandomY, "Rock")
 			RandomNumber = SyncRand(4)
@@ -329,8 +329,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number)
 	-- expand rocks
 	Count = rock_expansions_number
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Rock") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rock")) then
@@ -358,8 +358,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number)
 	end
 
 	-- convert buildable land tiles adjacent to rock tiles into rough land
-	for x=0,(MapWidth - 1) do
-		for y=0,(MapHeight - 1) do
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 				SetRawTile(x, y, "Rough")
 			end
@@ -369,16 +369,16 @@ end
 
 function SetMapBorders(tile_type)
 
-	for x=0,(MapWidth - 1) do
+	for x=0,(Map.Info.MapWidth - 1) do
 		SetRawTile(x, 0, tile_type)
 		SetRawTile(x, 1, tile_type)
 		SetRawTile(x + 1, 0, tile_type)
 		SetRawTile(x + 1, 1, tile_type)
 
-		SetRawTile(x, MapHeight - 2, tile_type)
-		SetRawTile(x, MapHeight - 1, tile_type)
-		SetRawTile(x + 1, MapHeight - 2, tile_type)
-		SetRawTile(x + 1, MapHeight - 1, tile_type)
+		SetRawTile(x, Map.Info.MapHeight - 2, tile_type)
+		SetRawTile(x, Map.Info.MapHeight - 1, tile_type)
+		SetRawTile(x + 1, Map.Info.MapHeight - 2, tile_type)
+		SetRawTile(x + 1, Map.Info.MapHeight - 1, tile_type)
 	end
 	for y=0,(MapHeight - 1) do
 		SetRawTile(0, y, tile_type)
@@ -386,36 +386,32 @@ function SetMapBorders(tile_type)
 		SetRawTile(1, y, tile_type)
 		SetRawTile(1, y + 1, tile_type)
 
-		SetRawTile(MapWidth - 2, y, tile_type)
-		SetRawTile(MapWidth - 2, y + 1, tile_type)
-		SetRawTile(MapWidth - 1, y, tile_type)
-		SetRawTile(MapWidth - 1, y + 1, tile_type)
+		SetRawTile(Map.Info.MapWidth - 2, y, tile_type)
+		SetRawTile(Map.Info.MapWidth - 2, y + 1, tile_type)
+		SetRawTile(Map.Info.MapWidth - 1, y, tile_type)
+		SetRawTile(Map.Info.MapWidth - 1, y + 1, tile_type)
 	end
 end
 
 function GenerateRandomMap(width, height)
 	CleanRawTiles()
 
-	MapWidth = width
-	MapHeight = height
-
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
 
-	for x=0,(MapWidth - 1) do
-		for y=0,(MapHeight - 1) do
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
 			RawTiles[y+1][x+1] = "Land"
 		end
 	end
 	
 	-- create initial water seeds
---	Count = (MapWidth * MapHeight) / 16384
-	Count = 1
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 8192
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
 			SetRawTile(RandomX, RandomY, "Water")
 			RandomNumber = SyncRand(4)
@@ -444,10 +440,10 @@ function GenerateRandomMap(width, height)
 	end
 
 	-- expand water
-	Count = (MapWidth * MapHeight) * 2
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight)
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Water") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
@@ -476,21 +472,21 @@ function GenerateRandomMap(width, height)
 
 
 	-- convert buildable land tiles adjacent to water tiles into rough land
-	for x=0,(MapWidth - 1) do
-		for y=0,(MapHeight - 1) do
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
 				SetRawTile(x, y, "Rough")
 			end
 		end
 	end
 	
-	GenerateRocks(((MapWidth * MapHeight) / 4096), ((MapWidth * MapHeight) / 2))
+	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 4096), ((Map.Info.MapWidth * Map.Info.MapHeight) / 2))
 
 	-- create initial rough land seeds
-	Count = (MapWidth * MapHeight) / 2048
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 2048
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
 			SetRawTile(RandomX, RandomY, "Rough")
 			RandomNumber = SyncRand(4)
@@ -519,10 +515,10 @@ function GenerateRandomMap(width, height)
 	end
 
 	-- expand rough land
-	Count = (MapWidth * MapHeight) / 2
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 2
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Rough") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
@@ -550,10 +546,10 @@ function GenerateRandomMap(width, height)
 	end
 
 	-- create initial tree seeds
-	Count = (MapWidth * MapHeight) / 1024
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 1024
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
 			SetRawTile(RandomX, RandomY, "Tree")
 			RandomNumber = SyncRand(4)
@@ -582,10 +578,10 @@ function GenerateRandomMap(width, height)
 	end
 
 	-- expand trees
-	Count = (MapWidth * MapHeight) / 2
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 2
 	while (Count > 0) do
-		RandomX = SyncRand(MapWidth - 1)
-		RandomY = SyncRand(MapHeight - 1)
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Tree") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree")) then
@@ -615,7 +611,7 @@ function GenerateRandomMap(width, height)
 	ApplyRawTiles()
 
 	-- create gold mines
-	Count = 6
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 2048
 	while (Count > 0) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint()
 		unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
@@ -626,8 +622,8 @@ function GenerateRandomMap(width, height)
 	-- create oil patches
 --	Count = 2
 --	while (Count > 0) do
---		RandomX = SyncRand(MapWidth - 1)
---		RandomY = SyncRand(MapHeight - 1)
+--		RandomX = SyncRand(Map.Info.MapWidth)
+--		RandomY = SyncRand(Map.Info.MapHeight)
 --		if (RawTile(RandomX, RandomY) == "Water" and RawTile(RandomX, RandomY + 1) == "Water" and RawTile(RandomX, RandomY + 2) == "Water" and RawTile(RandomX + 1, RandomY) == "Water" and RawTile(RandomX + 1, RandomY + 1) == "Water" and RawTile(RandomX + 1, RandomY + 2) == "Water" and RawTile(RandomX + 2, RandomY) == "Water" and RawTile(RandomX + 2, RandomY + 1) == "Water" and RawTile(RandomX + 2, RandomY + 2) == "Water") then
 --			unit = CreateUnit("unit-oil-patch", 15, {RandomX, RandomY})
 --			SetResourcesHeld(unit, 30000)
@@ -635,38 +631,54 @@ function GenerateRandomMap(width, height)
 --		end
 --	end
 
-	-- create player units
-	for i=0,mapinfo.nplayers do
-		local player_spawn_point = FindAppropriatePlayerSpawnPoint()
-		SetStartView(i, player_spawn_point[1], player_spawn_point[2])
-		unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+	-- create critters
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 256
+	while (Count > 0) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		unit = CreateUnit("unit-critter", 15, {RandomX, RandomY})
+		Count = Count - 1
 	end
 
+	-- create player units
+	for i=0,14 do
+		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			local player_spawn_point = FindAppropriatePlayerSpawnPoint()
+			SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+			SetPlayerData(i, "Resources", "gold", 10000)
+			SetPlayerData(i, "Resources", "wood", 3000)
+			SetPlayerData(i, "Resources", "oil", 1000)
+			SetPlayerData(i, "RaceName", "dwarf")
+			SetAiType(i, "land-attack")
+			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+		end
+	end
 
+	SetPlayerData(15, "RaceName", "neutral")
 
 end
 
 function SetRawTile(x, y, tile_type)
-	if (x >= 0 and x < MapWidth and y >= 0 and y < MapHeight) then
+	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
 		RawTiles[y+1][x+1] = tile_type
 	end
 end
 
 function RawTile(x, y)
-	if (x >= 0 and x < MapWidth and y >= 0 and y < MapHeight) then
+	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
 		return RawTiles[y+1][x+1]
-	elseif (x < 0 and y >= 0 and y < MapHeight) then
+	elseif (x < 0 and y >= 0 and y < Map.Info.MapHeight) then
 		return RawTiles[y+1][0+1]
-	elseif (x >= MapWidth and y >= 0 and y < MapHeight) then
-		return RawTiles[y+1][MapWidth]
-	elseif (x >= 0 and x < MapWidth and y < 0) then
+	elseif (x >= Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
+		return RawTiles[y+1][Map.Info.MapWidth]
+	elseif (x >= 0 and x < Map.Info.MapWidth and y < 0) then
 		return RawTiles[0+1][x+1]
-	elseif (x >= 0 and x < MapWidth and y >= MapHeight) then
-		return RawTiles[MapHeight][x+1]
+	elseif (x >= 0 and x < Map.Info.MapWidth and y >= Map.Info.MapHeight) then
+		return RawTiles[Map.Info.MapHeight][x+1]
 	elseif (x < 0 and y < 0) then
 		return RawTiles[0+1][0+1]
-	elseif (x >= MapWidth and y < 0) then
-		return RawTiles[0+1][MapWidth]
+	elseif (x >= Map.Info.MapWidth and y < 0) then
+		return RawTiles[0+1][Map.Info.MapWidth]
 	else
 		return ""
 	end
@@ -674,8 +686,8 @@ end
 
 function ApplyRawTiles()
 	local RandomNumber = 0
-	for x=0,(MapWidth - 1) do
-		for y=0,(MapHeight - 1) do
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Water") then
 				if (RawTile(x, y + 1) ~= "Water" and RawTile(x, y - 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water") then
 					RandomNumber = SyncRand(3)
@@ -923,7 +935,12 @@ function ApplyRawTiles()
 				end
 			elseif (RawTile(x, y) == "Tree") then
 				if (RawTile(x, y + 1) ~= "Tree" and RawTile(x, y - 1) == "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x + 1, y) == "Tree") then
-					SetTile(1824, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1824, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1825, x, y, 0)
+					end
 				elseif (RawTile(x, y - 1) ~= "Tree" and RawTile(x, y + 1) == "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x + 1, y) == "Tree") then
 					RandomNumber = SyncRand(2)
 					if (RandomNumber == 0) then
@@ -932,27 +949,89 @@ function ApplyRawTiles()
 						SetTile(1969, x, y, 0)
 					end
 				elseif (RawTile(x + 1, y) ~= "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x, y - 1) == "Tree" and RawTile(x, y + 1) == "Tree") then
-					SetTile(1857, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1856, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1857, x, y, 0)
+					end
 				elseif (RawTile(x - 1, y) ~= "Tree" and RawTile(x + 1, y) == "Tree" and RawTile(x, y - 1) == "Tree" and RawTile(x, y + 1) == "Tree") then
-					SetTile(1936, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1936, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1937, x, y, 0)
+					end
 				elseif (RawTile(x, y - 1) ~= "Tree" and RawTile(x, y + 1) == "Tree" and RawTile(x - 1, y) ~= "Tree" and RawTile(x + 1, y) == "Tree") then
-					SetTile(1904, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1904, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1905, x, y, 0)
+					end
 				elseif (RawTile(x, y - 1) ~= "Tree" and RawTile(x, y + 1) == "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x + 1, y) ~= "Tree") then
-					SetTile(1841, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1840, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1841, x, y, 0)
+					end
 				elseif (RawTile(x, y + 1) ~= "Tree" and RawTile(x + 1, y) ~= "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x, y - 1) == "Tree") then
-					SetTile(1792, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1792, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1793, x, y, 0)
+					end
 				elseif (RawTile(x, y + 1) ~= "Tree" and RawTile(x - 1, y) ~= "Tree" and RawTile(x + 1, y) == "Tree" and RawTile(x, y - 1) == "Tree") then
-					SetTile(1809, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1808, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1809, x, y, 0)
+					end
 				elseif (RawTile(x + 1, y + 1) ~= "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					SetTile(1888, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1888, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1889, x, y, 0)
+					end
 				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) ~= "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					SetTile(1984, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1984, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1985, x, y, 0)
+					end
 				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) ~= "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					SetTile(1953, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1952, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1953, x, y, 0)
+					end
 				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) ~= "Tree") then
-					SetTile(2000, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(2000, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(2001, x, y, 0)
+					end
 				elseif (RawTile(x + 1, y + 1) ~= "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) ~= "Tree") then
-					SetTile(1873, x, y, 0)
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1872, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1873, x, y, 0)
+					end
+				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) ~= "Tree" and RawTile(x - 1, y + 1) ~= "Tree" and RawTile(x - 1, y - 1) == "Tree") then
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						SetTile(1920, x, y, 0)
+					elseif (RandomNumber == 1) then
+						SetTile(1921, x, y, 0)
+					end
 				else
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
@@ -1088,6 +1167,8 @@ function ApplyRawTiles()
 end
 
 function FindAppropriateSpawnPoint()
+	local RandomX = 0
+	local RandomY = 0
 	local location_found = false
 	while (location_found == false) do
 		RandomX = SyncRand(Map.Info.MapWidth)
@@ -1105,7 +1186,31 @@ function FindAppropriateSpawnPoint()
 	return {RandomX, RandomY}
 end
 
+function FindAppropriateTileTypeSpawnPoint(tile_type)
+	local RandomX = 0
+	local RandomY = 0
+	local location_found = false
+	while (location_found == false) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		
+		if (RawTile(RandomX - 1, RandomY) == tile_type or RawTile(RandomX + 1, RandomY) == tile_type or RawTile(RandomX, RandomY - 1) == tile_type or RawTile(RandomX, RandomY + 1) == tile_type) then
+			local unit_quantity = 0
+			for i=0,14 do
+				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			end
+
+			if (unit_quantity < 1) then
+				location_found = true
+			end
+		end
+	end
+	return {RandomX, RandomY}
+end
+
 function FindAppropriatePlayerSpawnPoint()
+	local RandomX = 0
+	local RandomY = 0
 	local location_found = false
 	while (location_found == false) do
 		RandomX = SyncRand(Map.Info.MapWidth)
@@ -1113,7 +1218,7 @@ function FindAppropriatePlayerSpawnPoint()
 		
 		local unit_quantity = 0
 		for i=0,14 do
-			unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 		end
 
 		local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
@@ -1126,6 +1231,8 @@ function FindAppropriatePlayerSpawnPoint()
 end
 
 function FindAppropriateGoldMineSpawnPoint()
+	local RandomX = 0
+	local RandomY = 0
 	local location_found = false
 	while (location_found == false) do
 		RandomX = SyncRand(Map.Info.MapWidth)
@@ -1148,4 +1255,57 @@ function FindUnusedPlayerSlot()
 			return i
 		end
 	end
+end
+
+function CreateDecorations()
+
+	local RandomNumber = 0
+
+	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256})
+	if (decoration_count == 0) then
+		for x=0,(Map.Info.MapWidth - 1) do
+			for y=0,(Map.Info.MapHeight - 1) do
+				if (RawTile(x, y) == "Land" or (RawTile(x, y) == "Rough" and RawTile(x, y + 1) ~= "Water" and RawTile(x + 1, y) ~= "Water" and RawTile(x - 1, y) ~= "Water" and RawTile(x, y - 1) ~= "Water")) then
+					if (SyncRand(50) == 0) then
+						RandomNumber = SyncRand(1000)
+						if (RandomNumber < 200) then
+							unit = CreateUnit("unit-mushroom", 15, {x, y})
+						elseif (RandomNumber >= 200 and RandomNumber < 300) then
+							unit = CreateUnit("unit-flowers", 15, {x, y})
+						elseif (RandomNumber >= 300 and RandomNumber < 400) then
+							unit = CreateUnit("unit-large-flower", 15, {x, y})
+						elseif (RandomNumber >= 400 and RandomNumber < 600) then
+							unit = CreateUnit("unit-small-rocks", 15, {x, y})
+						elseif (RandomNumber >= 600 and RandomNumber < 800) then
+							unit = CreateUnit("unit-twigs", 15, {x, y})
+						elseif (RandomNumber >= 800 and RandomNumber < 875) then
+							unit = CreateUnit("unit-fern", 15, {x, y})
+						elseif (RandomNumber >= 875 and RandomNumber < 900) then
+							unit = CreateUnit("unit-log", 15, {x, y})
+						elseif (RandomNumber >= 900 and RandomNumber < 999) then
+							unit = CreateUnit("unit-bones", 15, {x, y})
+						elseif (RandomNumber >= 999) then
+							unit = CreateUnit("unit-wyrm-skeleton", 15, {x, y})
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+function GetRawTileTypeCount(tile_type)
+
+	local tile_type_count = 0
+
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			if (RawTile(x, y) == tile_type) then
+				tile_type_count = tile_type_count + 1
+			end
+		end
+	end
+
+	return tile_type_count
+	
 end

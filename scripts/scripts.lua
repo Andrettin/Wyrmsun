@@ -35,7 +35,7 @@ table.foreach(UnitTypeFiles,
 -- Fix critters sounds and name
 local CritterNames = {
 	forest = rat_name,
-	wasteland = rat_name
+	swamp = rat_name
 }
 
 DefineUnitType("unit-critter", {
@@ -43,7 +43,7 @@ DefineUnitType("unit-critter", {
 })
 
 --local CritterSounds = {
---	wasteland = "pig-selected"
+--	swamp = "pig-selected"
 --}
 
 --MapSound("critter-selected", CritterSounds[wyrmsun.tileset])
@@ -55,6 +55,8 @@ Load("scripts/constructions.lua")
 
 if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 	Load("scripts/dwarf/ui.lua")
+elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+	Load("scripts/gnome/ui.lua")
 end
 
 StopMusic()

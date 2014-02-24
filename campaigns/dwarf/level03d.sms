@@ -20,7 +20,7 @@ SetPlayerData(2, "RaceName", "orc")
 SetAiType(2, "passive")
 SetPlayerData(15, "RaceName", "neutral")
 
-LoadTileModels("scripts/tilesets/wasteland.lua")
+LoadTileModels("scripts/tilesets/swamp.lua")
 
 MapWidth = 34
 MapHeight = 32

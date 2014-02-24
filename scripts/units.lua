@@ -108,7 +108,7 @@ DefineUnitType("unit-nothing-36", { Name = "Nothing 36",
   Sounds = {} } )
 
 --UnitTypeFiles["unit-critter"] = {
---  wasteland = "neutral/units/rat.png"
+--  swamp = "neutral/units/rat.png"
 --}
 
 DefineUnitType("unit-critter", { Name = "Critter",
@@ -144,7 +144,7 @@ DefineUnitType("unit-critter", { Name = "Critter",
 
 
 --UnitTypeFiles["unit-gold-mine"] = {
---  wasteland = "tilesets/wasteland/neutral/buildings/gold_mine.png"
+--  swamp = "tilesets/swamp/neutral/buildings/gold_mine.png"
 --}
 
 DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
@@ -176,22 +176,207 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
     "help", "gold-mine-help",
     "dead", "building destroyed"} } )
 
---DefineUnitType("unit-purple-flowers", { Name = "Purple Flowers",
---  Image = {"file", "neutral/decoration/purple_flowers.png", "size", {32, 32}},
---  Animations = "animations-gold-sack", Icon = "icon-gold-mine",
---  Speed = 0,
---  HitPoints = 255,
---  DrawLevel = 30,
---  TileSize = {1, 1}, BoxSize = {31, 31},
---  SightRange = 1,
---  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
---  Priority = 0,
---  Type = "land",
---  IsNotSelectable = true,
---  Decoration = true,
---  NumDirections = 1,
---  Sounds = {} }
---)
+DefineUnitType("unit-mushroom", { Name = "Mushroom",
+  Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-mushroom",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+UnitTypeFiles["unit-flowers"] = {
+	forest = "tilesets/forest/neutral/decorations/flowers.png",
+	swamp = "tilesets/swamp/neutral/decorations/flowers.png"
+}
+
+DefineUnitType("unit-flowers", { Name = "Flowers",
+  Image = {"size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-flowers",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+UnitTypeFiles["unit-large-flower"] = {
+	forest = "tilesets/forest/neutral/decorations/large_flower.png",
+	swamp = "tilesets/swamp/neutral/decorations/large_flower.png"
+}
+
+DefineUnitType("unit-large-flower", { Name = "Large Flower",
+  Image = {"size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-large-flower",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+UnitTypeFiles["unit-fern"] = {
+	forest = "tilesets/forest/neutral/decorations/fern.png",
+	swamp = "tilesets/swamp/neutral/decorations/fern.png"
+}
+
+DefineUnitType("unit-fern", { Name = "Fern",
+  Image = {"size", {48, 48}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-fern",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+DefineUnitType("unit-twigs", { Name = "Twigs",
+  Image = {"file", "neutral/decorations/twigs.png", "size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-twigs",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+DefineUnitType("unit-log", { Name = "Log",
+  Image = {"file", "neutral/decorations/log.png", "size", {56, 56}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-log",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  Sounds = {} }
+)
+
+DefineUnitType("unit-bones", { Name = "Bones",
+  Image = {"file", "neutral/decorations/bones.png", "size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-bones",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+DefineUnitType("unit-wyrm-skeleton", { Name = "Wyrm Skeleton",
+  Image = {"file", "neutral/decorations/wyrm_skeleton.png", "size", {128, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-wyrm-skeleton",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {4, 1}, BoxSize = {127, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  Sounds = {} }
+)
+
+DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
+  Image = {"file", "neutral/decorations/small_rocks.png", "size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-small-rocks",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
 
 --DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 --  Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},
@@ -238,7 +423,7 @@ DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
 
 
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
---  wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png"
+--  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 --}
 
 --DefineUnitType("unit-destroyed-1x1-place", { Name = "Destroyed 1x1 Place",
@@ -258,8 +443,8 @@ DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
 
 
 UnitTypeFiles["unit-destroyed-2x2-place"] = {
-  forest = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
-  wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
+  forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
+  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 }
 
 DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
@@ -279,8 +464,8 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 
 
 UnitTypeFiles["unit-destroyed-3x3-place"] = {
-  forest = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
-  wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png"
+  forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
+  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 }
 
 DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
@@ -299,7 +484,7 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
   Sounds = {} } )
 
 --UnitTypeFiles["unit-destroyed-3x3-place-water"] = {
---  wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png"
+--  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 --}
 
 --DefineUnitType("unit-destroyed-3x3-place-water", { Name = "Destroyed 3x3 Place Water",
@@ -318,8 +503,8 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --  Sounds = {} } )
 
 UnitTypeFiles["unit-destroyed-4x4-place"] = {
-  forest = "tilesets/wasteland/neutral/buildings/destroyed_site.png",
-  wasteland = "tilesets/wasteland/neutral/buildings/destroyed_site.png"
+  forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
+  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 }
 
 DefineUnitType("unit-destroyed-4x4-place", { Name = "Destroyed 4x4 Place",
@@ -352,168 +537,11 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
   DetectCloak = true,
   Sounds = {} } )
 
--- Gnomish units
-
-DefineUnitType("unit-gnomish-worker", { Name = "Gnomish Scavenger",
-  Image = {"file", "neutral/units/gnomish_worker.png", "size", {72, 72}},
-  DrawLevel = 19,
-  Animations = "animations-gnomish-worker", Icon = "icon-gnomish-worker",
-  Costs = {"time", 45, "gold", 400},
-  Speed = 10,
-  HitPoints = 30,
-  DrawLevel = 40,
-  TileSize = {1, 1}, BoxSize = {31, 31},
-  SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-  AutoRepairRange = 4,
-  BasicDamage = 3, PiercingDamage = 2, Missile = "missile-none",
-  MaxAttackRange = 1,
-  Priority = 50,
-  Points = 30,
-  Demand = 1,
---  Corpse = "unit-human-dead-body",
-  Type = "land",
-  RightMouseAction = "harvest",
-  CanAttack = true, RepairRange = 1,
-  CanTargetLand = true,
-  LandUnit = true,
-  Coward = true,
-  CanGatherResources = {
-   {"file-when-loaded", "neutral/units/gnomish_worker_with_gold.png",
-    "resource-id", "gold",
---    "harvest-from-outside",
-    "resource-capacity", 100,
-    "wait-at-resource", 150,
-    "wait-at-depot", 150},
-   {"file-when-loaded", "neutral/units/gnomish_worker_with_lumber.png",
-    "resource-id", "wood",
-    "resource-capacity", 100,
-    "resource-step", 2,
-    "wait-at-resource", 24,
-    "wait-at-depot", 150,
-    "terrain-harvester"}},
-  organic = true,
-  SelectableByRectangle = true,
-  Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
-    "dead", "basic-dwarf-voices-dead"} } )
-
-DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
-  Image = {"file", "neutral/units/gnomish_recruit.png", "size", {72, 72}},
-  Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-recruit",
-  Costs = {"time", 60, "gold", 600},
-  Speed = 10,
-  HitPoints = 50,
-  DrawLevel = 40,
-  TileSize = {1, 1}, BoxSize = {31, 31},
-  SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-  Armor = 2, BasicDamage = 3, PiercingDamage = 6, Missile = "missile-none",
-  MaxAttackRange = 1,
-  Priority = 60,
-  Points = 50,
-  Demand = 1,
---    Corpse = "unit-human-dead-body",
-  Type = "land",
-  RightMouseAction = "attack",
-  CanAttack = true,
-  CanTargetLand = true,
-  LandUnit = true,
-  organic = true,
-  SelectableByRectangle = true,
-  Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
-    "dead", "basic-dwarf-voices-dead"} } )
-
-DefineUnitType("unit-gnomish-caravan", { Name = gnomish_caravan_name,
-  Image = {"file", "neutral/units/gnomish_caravan.png", "size", {64, 64}},
-  Animations = "animations-gnomish-caravan", Icon = "icon-gnomish-caravan",
-  Costs = {"time", 250, "gold", 900, "wood", 300},
-  Speed = 5,
-  HitPoints = 110,
-  DrawLevel = 40,
-  TileSize = {1, 1}, BoxSize = {63, 63},
-  SightRange = 9, ComputerReactionRange = 11, PersonReactionRange = 9,
-  Priority = 70,
-  Points = 100,
-  Demand = 1,
-  Type = "land",
-  Coward = true,
-  RightMouseAction = "move",
-  SelectableByRectangle = true,
-  Sounds = {
-    "selected", "click",
---    "acknowledge", "ballista-acknowledge",
---    "ready", "ballista-ready",
-    "help", "basic-dwarf-voices-help",
-    "dead", "explosion"} } )
-
-DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
-  Image = {"file", "neutral/units/goblin_spearman.png", "size", {72, 72}},
-  Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
-  Costs = {"time", 60, "gold", 600},
-  Speed = 10,
-  HitPoints = 50,
-  DrawLevel = 40,
-  TileSize = {1, 1}, BoxSize = {31, 31},
-  SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-  Armor = 2, BasicDamage = 3, PiercingDamage = 6, Missile = "missile-none",
-  MaxAttackRange = 1,
-  Priority = 60,
-  Points = 50,
-  Demand = 1,
---    Corpse = "unit-human-dead-body",
-  Type = "land",
-  RightMouseAction = "attack",
-  CanAttack = true,
-  CanTargetLand = true,
-  LandUnit = true,
-  organic = true,
-  SelectableByRectangle = true,
-  Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-goblin-voices-acknowledge",
---    "ready", "basic-goblin-voices-ready",
-    "help", "basic-dwarf-voices-help",
-    "dead", "basic-goblin-voices-dead"} } )
-
-DefineUnitType("unit-greebo", { Name = "Greebo",
-  Image = {"file", "neutral/units/goblin_swordsman.png", "size", {72, 72}},
-  Animations = "animations-goblin-spearman", Icon = "icon-goblin-swordsman",
-  Costs = {"time", 60, "gold", 600},
-  Speed = 10,
-  HitPoints = 100,
-  DrawLevel = 40,
-  TileSize = {1, 1}, BoxSize = {31, 31},
-  SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
-  Armor = 2, BasicDamage = 3, PiercingDamage = 6, Missile = "missile-none",
-  MaxAttackRange = 1,
-  Priority = 60,
-  Points = 50,
-  Demand = 1,
-  StartingLevel = 2,
---    Corpse = "unit-human-dead-body",
-  Type = "land",
-  RightMouseAction = "attack",
-  CanAttack = true,
-  CanTargetLand = true,
-  LandUnit = true,
-  organic = true,
-  SelectableByRectangle = true,
-  Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-goblin-voices-acknowledge",
---    "ready", "basic-goblin-voices-ready",
-    "help", "basic-dwarf-voices-help",
-    "dead", "basic-goblin-voices-dead"} } )
+-- Human units
 
 UnitTypeFiles["unit-human-lumber-mill"] = {
   forest = "human/buildings/lumber_mill.png",
-  wasteland = "human/buildings/lumber_mill.png"
+  swamp = "human/buildings/lumber_mill.png"
 }
 
 DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
@@ -547,3 +575,5 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")
+Load("scripts/gnome/units.lua")
+Load("scripts/goblin/units.lua")

@@ -20,7 +20,7 @@ SetPlayerData(2, "RaceName", "dwarf")
 SetAiType(2, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
-LoadTileModels("scripts/tilesets/wasteland.lua")
+LoadTileModels("scripts/tilesets/swamp.lua")
 
 SetTile(32, 0, 0, 0)
 SetTile(33, 1, 0, 0)

@@ -10,7 +10,7 @@
 --
 --      wyr.lua - Wyrmsun compatibility level
 --
---      (c) Copyright 2001-2007 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,13 +28,21 @@
 --
 
 DefineRaceNames(
-  "race", {
-    "name", "dwarf",
-    "display", dwarven_civilization_name,
-    "visible"},
-  "race", {
-    "name", "neutral",
-    "display", "Neutral"})
+	"race", {
+		"name", "dwarf",
+		"display", dwarven_civilization_name,
+		"visible"
+	},
+	"race", {
+		"name", "gnome",
+		"display", "Gnome",
+		"visible"
+	},
+	"race", {
+		"name", "neutral",
+		"display", "Neutral"
+	}
+)
 
 
 
@@ -108,7 +116,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		-- FIXME: support multiplayer
 		if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
 			if (GameSettings.Presets[0].Race == 1) then
-					arg1 = "dwarf"
+				arg1 = "dwarf"
 			end
 		end
 	elseif (data == "Resources") then
@@ -187,6 +195,9 @@ if OldLoadTileModels == nil then
 end
 
 function LoadTileModels(tileset)
+
+  CleanRawTiles() -- to not create problems with maps that don't use raw tiles
+
   if (GameCycle ~= 0) then
     return OldLoadTileModels(tileset)
   end

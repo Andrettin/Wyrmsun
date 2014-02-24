@@ -1,4 +1,4 @@
-LoadTileModels("scripts/tilesets/wasteland.lua")
+LoadTileModels("scripts/tilesets/swamp.lua")
 
 CleanRawTiles()
 

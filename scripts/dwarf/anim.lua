@@ -10,8 +10,7 @@
 --
 --      anim.lua - The dwarf unit animation definitions.
 --
---      (c) Copyright 2000-2005 by Josh Cogliati, Lutz Sammer,
---                                 and Jimmy Salmon
+--      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -40,12 +39,18 @@ DefineAnimations("animations-dwarven-miner", {
     "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
     "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
     "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",},
+--  Move = {"unbreakable begin", "frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1", -- miner after movement speed boosting upgrade
+--    "frame 5", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+--    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
+--    "frame 0", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+--    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+--    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",},
   Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "sound mace-attack", "wait 5", "frame 45", "wait 3",
     "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
-  Harvest_wood = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+  Harvest_wood = {"unbreakable begin", "frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
     "frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
+    "frame 25", "wait 9", "frame 25", "unbreakable end", "wait 1",},
   Repair = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "sound mace-attack", "wait 5", "frame 45", "wait 3",
     "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
@@ -89,6 +94,21 @@ DefineAnimations("animations-rugnur", {
     "frame 300", "unbreakable end", "wait 1",},
   Death = {"unbreakable begin", "frame 345", "wait 3", "frame 350", "wait 3", "frame 355", "wait 100",
     "frame 355", "unbreakable end", "wait 1",},
+})
+
+DefineAnimations("animations-baglur", {
+  Still = {"frame 60", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",},
+  Move = {"unbreakable begin","frame 60", "move 3", "wait 2", "frame 65", "move 3", "wait 1",
+    "frame 65", "move 3", "wait 2", "frame 70", "move 2", "wait 1",
+    "frame 70", "move 3", "wait 1", "frame 60", "move 2", "wait 1",
+    "frame 60", "move 3", "wait 2", "frame 75", "move 3", "wait 1",
+    "frame 75", "move 3", "wait 2", "frame 80", "move 2", "wait 1",
+    "frame 80", "move 3", "wait 1", "frame 60", "move 2", "unbreakable end", "wait 1",},
+  Attack = {"unbreakable begin", "frame 85", "wait 3", "frame 90", "wait 3", "frame 95", "wait 3",
+    "frame 100", "attack", "sound axe-attack", "wait 5", "frame 60", "wait 10",
+    "frame 60", "unbreakable end", "wait 1",},
+  Death = {"unbreakable begin", "frame 105", "wait 3", "frame 110", "wait 3", "frame 115", "wait 100",
+    "frame 115", "unbreakable end", "wait 1",},
 })
 
 --

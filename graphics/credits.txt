@@ -3,24 +3,37 @@ b_o:
 /graphics/dwarf/units/dwarven_ballista.png
 /graphics/dwarf/units/dwarven_scout.png
 /graphics/dwarf/units/dwarven_steelclad.png
-/graphics/dwarf/units/dwarven_steelclad_with_double_axe.png
 /graphics/dwarf/units/miner.png
 /graphics/dwarf/units/miner_with_gold.png
 /graphics/dwarf/units/miner_with_lumber.png
+/graphics/gnome/units/gnomish_caravan.png
+/graphics/gnome/units/gnomish_recruit.png
+/graphics/gnome/units/gnomish_worker.png
+/graphics/gnome/units/gnomish_worker_with_gold.png
+/graphics/gnome/units/gnomish_worker_with_lumber.png
+/graphics/goblin/decorations/goblin_banner.png
+/graphics/goblin/icons/goblin_spearman.png
+/graphics/goblin/icons/goblin_swordsman.png
+/graphics/goblin/units/goblin_spearman.png
+/graphics/goblin/units/goblin_swordsman.png
 /graphics/missiles/dwarven_ballista_bolt.png
 /graphics/missiles/throwing_axe.png
-/graphics/neutral/icons/goblin_swordsman.png
-/graphics/neutral/units/gnomish_caravan.png
-/graphics/neutral/units/gnomish_recruit.png
-/graphics/neutral/units/gnomish_worker.png
-/graphics/neutral/units/gnomish_worker_with_gold.png
-/graphics/neutral/units/gnomish_worker_with_lumber.png
-/graphics/neutral/units/goblin_spearman.png
-/graphics/neutral/units/goblin_swordsman.png
+/graphics/neutral/decorations/bones.png
+/graphics/neutral/decorations/log.png
+/graphics/neutral/decorations/mushroom.png
+/graphics/neutral/decorations/small_rocks.png
+/graphics/neutral/decorations/twigs.png
+/graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/units/gold_sack.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rats.png
-/graphics/tileset/forest/terrain/forest.png (grass, grass-dirt transition and tree tiles)
+/graphics/tilesets/forest/neutral/decorations/fern.png
+/graphics/tilesets/forest/neutral/decorations/flowers.png
+/graphics/tilesets/forest/neutral/decorations/large_flower.png
+/graphics/tilesets/forest/terrain/forest.png (grass, grass-dirt transition and tree tiles)
+/graphics/tilesets/swamp/neutral/decorations/fern.png
+/graphics/tilesets/swamp/neutral/decorations/flowers.png
+/graphics/tilesets/swamp/neutral/decorations/large_flower.png
 /graphics/ui/Credits_background.png
 /graphics/ui/goblin_swordsman.png
 
@@ -49,6 +62,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/mushroom_farm.png
 /graphics/dwarf/buildings/town_hall.png
 /graphics/dwarf/icons/axe_1.png (modified from Ransom.00's icon)
+/graphics/dwarf/icons/baglur.png
 /graphics/dwarf/icons/boots.png (modified from igoku's icon)
 /graphics/dwarf/icons/dwarven_axefighter.png
 /graphics/dwarf/icons/dwarven_scout.png
@@ -61,24 +75,26 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/shield_1.png
 /graphics/dwarf/icons/stand_ground.png
 /graphics/elf/icons/elven_swordsman.png
+/graphics/gnome/buildings/barracks.png
+/graphics/gnome/buildings/farm.png
+/graphics/gnome/buildings/town_hall.png
+/graphics/gnome/icons/gnomish_recruit.png
+/graphics/gnome/icons/gnomish_worker.png
 /graphics/human/buildings/lumber_mill.png
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/icons/build_basic_structure.png
 /graphics/neutral/icons/cancel.png
-/graphics/neutral/icons/gnomish_recruit.png
-/graphics/neutral/icons/gnomish_worker.png
-/graphics/neutral/icons/goblin_spearman.png
 /graphics/neutral/icons/harvest.png
 /graphics/neutral/icons/repair.png
 /graphics/neutral/icons/water_elemental.png
 /graphics/orc/icons/spearman.png
-/graphics/tileset/forest/neutral/icons/rat.png
-/graphics/tileset/forest/terrain/forest.png (dirt and water tiles)
-/graphics/tileset/wasteland/neutral/buildings/destroyed_site.png
-/graphics/tileset/wasteland/neutral/icons/rat.png
-/graphics/tileset/wasteland/terrain/wasteland.png
+/graphics/tilesets/forest/neutral/icons/rat.png
+/graphics/tilesets/forest/terrain/forest.png (dirt and water tiles)
+/graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
+/graphics/tilesets/swamp/neutral/icons/rat.png
+/graphics/tilesets/swamp/terrain/swamp.png
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/dwarf/buttonpanel_480.png
 /graphics/ui/dwarf/buttonpanel_600.png

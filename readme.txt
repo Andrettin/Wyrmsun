@@ -24,6 +24,68 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.2
+-----------------------------------------------------------------------
+
+* Buildings
+- Added a Town Hall for the gnomes (graphics by Jinn).
+- Added a Farm for the gnomes (graphics by Jinn).
+- Added a Barracks for the gnomes (graphics by Jinn).
+
+* Events
+- The "Greebo's Shinies" event now requires the map to have a minimum amount of rocks in it, and Greebo spawns near a rock.
+- The "Andvari's Gold" event now requires the map to have a minimum amount of water in it, and Andvari spawns near water.
+- Added the "The Retired Warrior" event, which gives the hero Baglur to the player it triggers for.
+- If the player receives the quest from the "Strike a Bargain?" event, he can't win by destroying all enemies as long as he has the quest.
+- In the "Strike a Bargain?" event, the extra raider units are now generated for a secondary raider player, which is allied to the original raider player, but neutral to the gnomes. This was done to avoid the situation in the Chaincolt Foothills map where a gnomish scavenger goes to the mine near Rugnur's outpost with the extra raider units following him, resulting in a very early attack, destroying the red player.
+
+* Heroes
+- Added Baglur (dwarf) (icon graphics by Jinn).
+
+* Interface
+- Button text is no longer capitalized.
+- The borders of the in-game menus are now displayed in a prettier manner.
+- It is now possible to access the tech tree screen while playing a map.
+- The borders of buttons are now displayed in a prettier manner.
+- Clicking on units or building in the tech tree now brings up a panel with the description of that object.
+- The "Other" world option for the single player game setup has been replaced by the addition of the "Custom Map" map option regardless if "Earth" or "Nidavellir" have been selected as the current world.
+- Added a "Quests" screen accessible from the single player menu, so that the player can keep track of the quests which are available, and which ones are already completed.
+
+* Maps
+- A few maps (such as Chaincolt Foothills and Scandinavia) now have decoration units randomly generated in them.
+- Chaincolt Foothills: Slightly increased the amount of starting resources for all players.
+- Chaincolt Foothills: Choosing to play with the Shorbear Clan dwarven faction will make the human player be the green one instead of red.
+- Scandinavia: Added a neutral farm in the southeast of the map (you don't need to defeat it to win the scenario).
+- Scandinavia: The purple player now starts the scenario with two scouts.
+- It is now possible to choose to play randomly-generated maps (it takes a bit to generate it).
+- Chaincolt Foothills: The gnomish player's mead hall has been replaced with a gnomish town hall.
+- Chaincolt Foothills: The gnomish player's mushroom farm has been replaced with a gnomish farm.
+
+* Miscellaneous
+- Magnifying glass cursor now properly displays its black outline.
+- Player 3's color is now actually green, rather than the teal color it was previously (color tones suggested by Jinn). Player 11 remains teal.
+- Player 8's yellow color is now milder (previously it was rather bright) (color tones suggested by Jinn).
+- Player 7's and player 14's white color is now milder (previously it was rather bright) (color tones suggested by Jinn).
+- Player 14's color is now brown, rather than repeating player 6's black (color tones suggested by Jinn).
+- Player 16 (the neutral player)'s color is now grey, rather than repeating player 8's yellow (color tones suggested by Jinn).
+- Player 12's color is now purple, rather than repeating player 4's violet (color tones suggested by Jinn).
+- Player 10's color is now cyan, rather than repeating player 2's blue (color tones suggested by Jinn).
+- Player 9's color is now pink, rather than repeating player 1's red (color tones suggested by Jinn).
+- Player 13's color is now "fire", rather than repeating player 5's orange (color tones suggested by Jinn).
+- Player 15's color is now "radioactive", rather than repeating player 7's white (color tones suggested by Jinn).
+- Change the text for "Video Resolution Width" and "Video Resolution Height" to "Resolution Width" and "Resolution Height", because the former were trampling on each other.
+
+* Terrain
+- Added bones decoration unit (graphics by b_o).
+- Added flowers, large flower, goblin banner, log, fern, twigs and wyrm skeleton decoration units (graphics by b_o).
+- Added a mushroom decoration unit (graphics by b_o). This unit begins as a mushroom spore and grows over time; it will be eaten by rats if they get near it.
+- Wasteland tileset renamed to "Swamp".
+- Added small rocks decoration unit (graphics by b_o).
+
+* Units
+- The dwarven miner's lumber harvesting animation speed has been updated to reflect graphically the slower harvesting speed (relative to the gnomish scavenger) it already had de facto.
+
+-----------------------------------------------------------------------
 - 0.1.1
 -----------------------------------------------------------------------
 

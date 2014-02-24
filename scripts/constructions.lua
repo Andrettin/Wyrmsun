@@ -28,12 +28,12 @@
 --
 
 if (wyrmsun.tileset == nil) then
-  wyrmsun.tileset = "wasteland"
+  wyrmsun.tileset = "swamp"
 end
 
 local files = {
   forest = "neutral/buildings/land_construction_site.png",
-  wasteland = "neutral/buildings/land_construction_site.png"
+  swamp = "neutral/buildings/land_construction_site.png"
 }
 
 DefineConstruction("construction-none", {
@@ -54,7 +54,7 @@ DefineConstruction("construction-none", {
 
 local files = {
   forest = "neutral/buildings/land_construction_site.png",
-  wasteland = "neutral/buildings/land_construction_site.png"
+  swamp = "neutral/buildings/land_construction_site.png"
 }
 
 DefineConstruction("construction-land", {
@@ -75,7 +75,7 @@ DefineConstruction("construction-land", {
 
 local files = {
   forest = "neutral/buildings/land_construction_site.png",
-  wasteland = "neutral/buildings/land_construction_site.png"
+  swamp = "neutral/buildings/land_construction_site.png"
 }
 
 DefineConstruction("construction-land2", {

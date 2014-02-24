@@ -130,7 +130,7 @@ function RunPreferencesMenu()
   end
 
   local ckey = {}
-  ckey = menu:addCheckBox("Show command key", 16, 40 + 36 * 1,
+  ckey = menu:addCheckBox("Show Command Key", 16, 40 + 36 * 1,
     function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
   ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
 
@@ -147,18 +147,18 @@ function RunPreferencesMenu()
   l:adjustSize()
   menu:add(l, 230 - l:getWidth(), 40 + (36 * 3) + 6)
 
-  menu:addLabel("Mouse Scroll Speed", 16, 40 + (36 * 4), Fonts["small"], false)
+  menu:addLabel("Mouse Scroll Speed", 16, 40 + (36 * 4), Fonts["game"], false)
 
   local mousescrollspeed = {}
   mousescrollspeed = menu:addSlider(1, 10, 198, 18, 32, 40 + 36 * 4.5,
     function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
   mousescrollspeed:setValue(GetMouseScrollSpeed())
 
-  menu:addLabel("slow", 34, 40 + (36 * 4) + 6, Fonts["small"], false)
+  menu:addLabel("slow", 34, 40 + (36 * 5) + 6, Fonts["small"], false)
   local l = Label("fast")
   l:setFont(Fonts["small"])
   l:adjustSize()
-  menu:add(l, 230 - l:getWidth(), 40 + (36 * 4) + 6)
+  menu:add(l, 230 - l:getWidth(), 40 + (36 * 5) + 6)
 
   menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
     function()
@@ -197,7 +197,7 @@ function BuildOptionsMenu()
   local resolution_height = Video.Height
 
   menu:addLabel("Global Options", offx + 176, offy + 1)
-  menu:addLabel("Video Resolution Width", offx + 8, offy + 34, Fonts["game"], false)
+  menu:addLabel("Resolution Width", offx + 8, offy + 34, Fonts["game"], false)
   resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1400", "1600", "1680"}, offx + 8, offy + 55 + 26*0,
     function(dd)
     	if (resolution_width_list:getSelected() == 0) then
@@ -238,7 +238,7 @@ function BuildOptionsMenu()
     	resolution_width_list:setSelected(7)
   end
 
-  menu:addLabel("Video Resolution Height", offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
+  menu:addLabel("Resolution Height", offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
   resolution_height_list = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + 16 + 152 + 24, offy + 55 + 26*0,
     function(dd)
     	if (resolution_height_list:getSelected() == 0) then
@@ -373,6 +373,8 @@ function RunGameOptionsMenu()
     function() RunPreferencesMenu() end)
   menu:addFullButton("Diplomacy (~<F9~>)", "f9", 16, 40 + 36*2,
     function() RunDiplomacyMenu() end)
+  menu:addFullButton("~!Tech Tree", "t", 16, 40 + 36*3,
+    function() RunTechTreeMenu(0) end)
   menu:addFullButton("Previous (~<Esc~>)", "escape", 128 - (224 / 2), 288 - 40,
     function() menu:stop() end)
 

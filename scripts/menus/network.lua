@@ -395,7 +395,7 @@ function RunCreateMultiGameMenu(s)
   local menu
   local map = "No Map"
   local description = "No map"
-  local mapfile = "maps/northern-lakes.smp"
+  local mapfile = "maps/chaincolt-foothills.smp"
   local numplayers = 3
   local sx = Video.Width / 20
   local sy = Video.Height / 20

@@ -64,9 +64,11 @@ local dpanels = {
 }
 
 function panel(n)
-  if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-    return dpanels[n]
-  end
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		return dpanels[n]
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		return dpanels[n]
+	end
 end
 
 
@@ -114,12 +116,17 @@ function AddMenuHelpers(menu)
     b:setHotKey(hotkey)
     b:setActionCallback(callback)
     self:add(b, x, y)
+    b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
     return b
   end
 
   function menu:addFullButton(caption, hotkey, x, y, callback)
     local b = self:addImageButton(caption, hotkey, x, y, callback)
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+      b:setNormalImage(g_dbln)
+      b:setPressedImage(g_dblp)
+      b:setDisabledImage(g_dblg)
+    elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
       b:setNormalImage(g_dbln)
       b:setPressedImage(g_dblp)
       b:setDisabledImage(g_dblg)
@@ -135,6 +142,10 @@ function AddMenuHelpers(menu)
   function menu:addHalfButton(caption, hotkey, x, y, callback)
     local b = self:addImageButton(caption, hotkey, x, y, callback)
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+      b:setNormalImage(g_dbsn)
+      b:setPressedImage(g_dbsp)
+      b:setDisabledImage(g_dbsg)
+    elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
       b:setNormalImage(g_dbsn)
       b:setPressedImage(g_dbsp)
       b:setDisabledImage(g_dbsg)
@@ -419,7 +430,7 @@ function RunMap(map, objective, fow, revealmap)
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
 end
 
-mapname = "maps/northern-lakes.smp"
+mapname = "maps/chaincolt-foothills.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},
@@ -530,24 +541,29 @@ function RunSinglePlayerGameMenu()
   local descriptionl
   local tilesetdd
   local events
+  local person_player = 0
 
   -- create the scenario list
   local scenario_list = {}
 
-  menu:addLabel("Scenario:", offx + 16, offy + 360, Fonts["game"], false)
+  menu:addLabel("Map:", offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
-  descriptionl = menu:addLabel("descriptionl", offx + 16 + 74, offy + 360, Fonts["game"], false)
+  descriptionl = menu:addLabel("descriptionl", offx + 16 + 38, offy + 360, Fonts["game"], false)
 
   menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
-  menu:addFullButton("~!Tech Tree", "t", offx + 640 - 224 - 16, offy + 360 + 36*0,
+  menu:addFullButton("~!Quests", "q", offx + 640 - 224 - 16, offy + 360 + 36*0,
+    function()
+      RunQuestMenu()
+    end)
+  menu:addFullButton("~!Tech Tree", "t", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
       RunTechTreeMenu(0)
     end)
-  menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
+  menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*2,
     function()
-      local tilesetFilename = {nil, "wasteland.lua"};
+      local tilesetFilename = {nil, "swamp.lua"};
 
-      GameSettings.Presets[0].Race = race:getSelected()
+      GameSettings.Presets[person_player].Race = race:getSelected()
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then
         PlayerFaction = ""
@@ -563,10 +579,10 @@ function RunSinglePlayerGameMenu()
       RunMap(mapname)
       menu:stop()
     end)
-  menu:addFullButton("~!Cancel Game", "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
+  menu:addFullButton("~!Cancel Game", "c", offx + 640 - 224 - 16, offy + 360 + 36*3, function() menu:stop() end)
 
   menu:addLabel("~<World:~>", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
-  world = menu:addDropDown({"Earth", "Nidavellir", "Other"}, offx + 40, offy + 10 + 120,
+  world = menu:addDropDown({"Earth", "Nidavellir"}, offx + 40, offy + 10 + 120,
     function(dd) WorldChanged() end)
   world:setSize(152, 20)
   world:setSelected(1)
@@ -584,7 +600,7 @@ function RunSinglePlayerGameMenu()
 
   menu:addLabel("~<Your Faction:~>", offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
   faction = menu:addDropDown({"Map Default"}, offx + 220, offy + 10 + 180,
-    function(dd) end)
+    function(dd) FactionChanged() end)
   faction:setSize(152, 20)
 
   menu:addLabel("~<Resources:~>", offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
@@ -611,7 +627,7 @@ function RunSinglePlayerGameMenu()
   gametype:setSize(152, 20)
 
   menu:addLabel("~<Terrain:~>", offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-  tilesetdd = menu:addDropDown({"Map Default", "Wasteland"}, offx + 40, offy + 10 + 300,
+  tilesetdd = menu:addDropDown({"Map Default", "Swamp"}, offx + 40, offy + 10 + 300,
     function(dd) end)
   tilesetdd:setSize(152, 20)
 
@@ -629,17 +645,9 @@ function RunSinglePlayerGameMenu()
 --			table.insert(scenario_list, "Caverns of Chaincolt")
 --		end
 		table.insert(scenario_list, "Chaincolt Foothills")
-	else
-		table.insert(scenario_list, "Central Park")
-		table.insert(scenario_list, "Forgotten Forest")
-		table.insert(scenario_list, "Little Island")
-		table.insert(scenario_list, "Looking Upwards")
-		table.insert(scenario_list, "Northern Lakes")
-		table.insert(scenario_list, "North-South Conflict")
-		table.insert(scenario_list, "River Crossing")
-		table.insert(scenario_list, "Time for Decisions")
-		table.insert(scenario_list, "Custom Map")
 	end
+	table.insert(scenario_list, "Random Map")
+	table.insert(scenario_list, "Custom Map")
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
 	scenario:setSelected(0)
@@ -680,6 +688,9 @@ function RunSinglePlayerGameMenu()
 	elseif (scenario_list[scenario:getSelected() + 1] == "Time for Decisions") then
 		mapname = "maps/time-for-decisions.smp"
 		mapl:setCaption(string.sub(mapname, 6))
+	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map") then
+		mapname = "maps/random-map.smp"
+		mapl:setCaption(string.sub(mapname, 6))
 	elseif (scenario_list[scenario:getSelected() + 1] == "Custom Map") then
 		local oldmapname = mapname
 		RunSelectScenarioMenu()
@@ -702,6 +713,17 @@ function RunSinglePlayerGameMenu()
     end
     faction:setList(faction_list)
     faction:setSize(152, 20)
+  end
+
+  function FactionChanged()
+	if (scenario_list[scenario:getSelected() + 1] == "Chaincolt Foothills" and race:getSelected() == 1 and faction:getSelected() == 3) then
+		person_player = 2
+		for i=1,mapinfo.nplayers do
+			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
+				GameSettings.Presets[i-1].Type = PlayerComputer
+			end
+		end
+	end
   end
 
   function MapChanged()
@@ -746,8 +768,26 @@ function BuildProgramStartMenu()
 
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
-    wyr.preferences.LastVersionPlayed = wyrmsun.Version
-    SavePreferences()
+  	-- changes to the player's persistent data to update it to the latest game version should be done here
+	if (wyr.preferences.LastVersionPlayed == "0.1.0" or wyr.preferences.LastVersionPlayed == "0.1.1") then
+    		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-gnomish-worker") == false) then
+			table.insert(wyr.preferences.TechnologyAcquired, "unit-gnomish-worker")
+		end
+    		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-gnomish-recruit") == false) then
+			table.insert(wyr.preferences.TechnologyAcquired, "unit-gnomish-recruit")
+		end
+    		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-gnomish-town-hall") == false) then
+			table.insert(wyr.preferences.TechnologyAcquired, "unit-gnomish-town-hall")
+		end
+    		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-gnomish-farm") == false) then
+			table.insert(wyr.preferences.TechnologyAcquired, "unit-gnomish-farm")
+		end
+    		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-gnomish-barracks") == false) then
+			table.insert(wyr.preferences.TechnologyAcquired, "unit-gnomish-barracks")
+		end
+	end
+	wyr.preferences.LastVersionPlayed = wyrmsun.Version
+	SavePreferences()
   end
 
   menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*0,
@@ -829,6 +869,7 @@ Load("scripts/menus/diplomacy.lua")
 Load("scripts/menus/results.lua")
 Load("scripts/menus/network.lua")
 Load("scripts/menus/techtree.lua")
+Load("scripts/menus/quests.lua")
 
 function GameStarting()
   if (wyr.preferences.ShowTips and not IsReplayGame()) then
