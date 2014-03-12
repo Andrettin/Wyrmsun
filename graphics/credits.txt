@@ -34,6 +34,8 @@ b_o:
 /graphics/tilesets/swamp/neutral/decorations/fern.png
 /graphics/tilesets/swamp/neutral/decorations/flowers.png
 /graphics/tilesets/swamp/neutral/decorations/large_flower.png
+/graphics/ui/dwarf/resource_1366.png (modified from the resource bar graphics made by Jinn)
+/graphics/ui/dwarf/statusline_1366.png (modified from the statusline bar graphics made by Jinn)
 /graphics/ui/Credits_background.png
 /graphics/ui/goblin_swordsman.png
 
@@ -59,6 +61,7 @@ igoku:
 
 João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/barracks.png
+/graphics/dwarf/buildings/lumber_mill.png
 /graphics/dwarf/buildings/mushroom_farm.png
 /graphics/dwarf/buildings/town_hall.png
 /graphics/dwarf/icons/axe_1.png (modified from Ransom.00's icon)
@@ -74,6 +77,9 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/rugnur_older.png
 /graphics/dwarf/icons/shield_1.png
 /graphics/dwarf/icons/stand_ground.png
+/graphics/dwarf/icons/throwing_axe_1.png
+/graphics/dwarf/icons/throwing_axe_2.png
+/graphics/dwarf/icons/throwing_axe_3.png
 /graphics/elf/icons/elven_swordsman.png
 /graphics/gnome/buildings/barracks.png
 /graphics/gnome/buildings/farm.png
@@ -82,6 +88,7 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/icons/gnomish_worker.png
 /graphics/human/buildings/lumber_mill.png
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
+/graphics/neutral/buildings/glyph.png
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/icons/build_basic_structure.png

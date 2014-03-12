@@ -1,0 +1,54 @@
+LoadTileModels("scripts/tilesets/swamp.lua")
+
+CleanRawTiles()
+
+local RandomNumber = 0
+local RandomX = 0
+local RandomY = 0
+local Count = 0
+local EntranceExists = false
+
+for x=0,(Map.Info.MapWidth - 1) do
+	for y=0,(Map.Info.MapHeight - 1) do
+		SetRawTile(x, y, "Land")
+	end
+end
+
+SetMapBorders("Rock")
+
+GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land")
+
+GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64)
+
+GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+
+GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+ApplyRawTiles()
+
+CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+-- create player units
+for i=0,14 do
+	if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		local player_spawn_point = FindAppropriatePlayerSpawnPoint()
+		SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+		SetPlayerData(i, "Resources", "gold", 10000)
+		SetPlayerData(i, "Resources", "wood", 3000)
+		SetPlayerData(i, "Resources", "oil", 1000)
+		local possible_civilizations = {}
+		if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf"))) then
+			table.insert(possible_civilizations, "dwarf")
+		end
+		if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled")) then
+			table.insert(possible_civilizations, "gnome")
+		end
+		SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+		SetAiType(i, "land-attack")
+		unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+	end
+end
+
+SetPlayerData(15, "RaceName", "neutral")

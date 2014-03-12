@@ -1,4 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person","person")
-PresentMap("Time for Decisions", 2, 128, 128, 1)

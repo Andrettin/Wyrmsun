@@ -24,6 +24,61 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.3
+-----------------------------------------------------------------------
+
+* AI
+- The dwarven AI now uses Rugnur (both versions), Baglur, gnomish recruits, goblin spearmen and Greebo as it would use axefighters.
+
+* Buildings
+- Added a dwarven lumber mill.
+- The dwarven lumber mill can now be acquired in the tech tree screen for use in single player games (in multiplayer games it is always available).
+- Added a glyph "building" (graphics by Jinn).
+- Human lumber mills are now generated in the random forest, Aquitania and Scandinavia maps, belonging to the neutral player, and they can be "captured" by a player which places a unit adjacent to it (the lumber mill can be recaptured by another player if it is left alone).
+
+* Events
+- Since Rugnur and Baglur can now be hired at the barracks, the events which allowed the player to hire them have been removed.
+
+* Interface
+- Resolution width of 1366 is now available (thanks to b_o for modifying Jinn's dwarven UI to create the necessary UI components for the new resolution width).
+- Updated dwarven miner description in the tech tree screen to reflect their greater efficiency in mining gold, and lesser efficiency in harvesting lumber.
+
+* Heroes
+- Rugnur and Baglur can now be hired at the barracks, if the correct conditions are met. Naturally, only one of each of them may be hired per game.
+- Greebo's attack now correctly uses the sword sound (previously it was using the spear sound, although he wields a sword).
+
+* Maps
+- It is now possible to play a random cave map.
+- Improved random critter generation.
+- Gnomes now appear in random maps.
+- Random Map: Increased rock and water disperson, decreased rock, water and rough land quantity.
+- Random Map: Decreased random critter quantity generation.
+- A new Nidavellir map has been added: Brown Hills.
+- Chaincolt Foothills: Increased starting resource amounts.
+- Added the possibility to play symmetric random maps.
+- Added a new semi-randomized Earth map, Aquitania.
+- Removed maps like "Central Park" and etc. which didn't use Wyrmsun's raw tile system, because it was no longer practical to maintain them, and with the symmetric random maps they are no longer as necessary for balanced multiplayer games.
+- The Aquitania and Scandinavia maps now use the forest tileset.
+
+* Quests
+- Added information about the "A Bargain is Struck" quest's rewards when clicking its button in the quests submenu.
+
+* Terrain
+- The fern, flowers and large flower decoration units now display their proper icons.
+- The goblin banner decoration unit now has new graphics for a "death" animation, as well as for a wind-flapping animation (graphics by b_o).
+- The graphics of the bones and small rocks decoration units have been reworked by b_o.
+- Added forest tileset.
+
+* Units
+- The string of the dwarven ballista now rattles when it launches a bolt (graphics and animation code by b_o).
+- The dwarven scout can now be acquired in the tech tree screen for use in single player games (in multiplayer games they are always available).
+- The icon for the dwarven scout's attack button is now a throwing axe (appearance depends on throwing axe upgrades) (graphics by Jinn).
+- Fixed an error in the dwarven scout attack animation code.
+
+* Upgrades
+- Added two throwing axe upgrades for the dwarven scout (available at the dwarven lumber mill) (graphics by Jinn).
+
+-----------------------------------------------------------------------
 - 0.1.2
 -----------------------------------------------------------------------
 

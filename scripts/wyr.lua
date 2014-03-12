@@ -39,6 +39,11 @@ DefineRaceNames(
 		"visible"
 	},
 	"race", {
+		"name", "goblin",
+		"display", "Goblin",
+		"visible"
+	},
+	"race", {
 		"name", "neutral",
 		"display", "Neutral"
 	}
@@ -47,31 +52,49 @@ DefineRaceNames(
 
 
 if (OldCreateUnit == nil) then
-  OldCreateUnit = CreateUnit
+	OldCreateUnit = CreateUnit
 
-  local t = {
-  }
+	local t = {
+		{"unit-dwarven-town-hall", "unit-gnomish-town-hall"},
+		{"unit-dwarven-miner", "unit-gnomish-worker"},
+		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm"},
+		{"unit-dwarven-barracks", "unit-gnomish-barracks"},
+		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"}
+	}
 
-  DwarfEquivalent = {}
+	DwarvenEquivalent = {}
+	GnomishEquivalent = {}
+	GoblinEquivalent = {}
 
-  for i=1,table.getn(t) do
-    DwarfEquivalent[t[i][1]] = t[i][2]
-  end
+	for i=1,table.getn(t) do
+		DwarvenEquivalent[t[i][2]] = t[i][1]
+		GnomishEquivalent[t[i][1]] = t[i][2]
+		if (i == 5) then
+			DwarvenEquivalent[t[i][3]] = t[i][1]
+			GnomishEquivalent[t[i][3]] = t[i][2]
+		end
+		GoblinEquivalent[t[i][1]] = t[i][3]
+		GoblinEquivalent[t[i][2]] = t[i][3]
+	end
 end
 
 -- Convert a unit type to the equivalent for a different race
 function ConvertUnitType(unittype, race)
-  local equiv
+	local equiv
 
-  if (race == "dwarf") then
-    equiv = DwarfEquivalent[unittype]
-  end
+	if (race == "dwarf") then
+		equiv = DwarvenEquivalent[unittype]
+	elseif (race == "gnome") then
+		equiv = GnomishEquivalent[unittype]
+	elseif (race == "goblin") then
+		equiv = GoblinEquivalent[unittype]
+	end
 
-  if (equiv ~= nil) then
-    return equiv
-  else
-    return unittype
-  end
+	if (equiv ~= nil) then
+		return equiv
+	else
+		return unittype
+	end
 end
 
 -- Convert unit type to the player's race
@@ -117,6 +140,10 @@ function SetPlayerData(player, data, arg1, arg2)
 		if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
 			if (GameSettings.Presets[0].Race == 1) then
 				arg1 = "dwarf"
+			elseif (GameSettings.Presets[0].Race == 2) then
+				arg1 = "gnome"
+			elseif (GameSettings.Presets[0].Race == 3) then
+				arg1 = "goblin"
 			end
 		end
 	elseif (data == "Resources") then

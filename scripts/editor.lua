@@ -51,10 +51,11 @@ local editor_types = {
    "unit-dwarven-town-hall",
    "unit-dwarven-mushroom-farm",
    "unit-dwarven-barracks",
+   "unit-dwarven-lumber-mill",
 
-   "unit-rugnur",
-   "unit-rugnur-older",
-   "unit-baglur",
+   "unit-hero-rugnur",
+   "unit-hero-rugnur-older",
+   "unit-hero-baglur",
 
 --- - - - - - - - - - - - - - - - - - -
 
@@ -68,7 +69,7 @@ local editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-goblin-spearman",
-   "unit-greebo",
+   "unit-hero-greebo",
 
 --- - - - - - - - - - - - - - - - - - -
 
@@ -79,6 +80,7 @@ local editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-goblin-banner",
+   "unit-glyph",
    "unit-mushroom",
    "unit-flowers",
    "unit-large-flower",

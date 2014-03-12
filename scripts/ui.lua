@@ -80,14 +80,20 @@ local min_damage = Div(
 	),
 	2
 )
-local max_damage = Add(
+local max_damage = Sub(
 	Add(
-		ActiveUnitVar("BasicDamage"),
-		ActiveUnitVar("BasicDamageBonus")
+		Add(
+			ActiveUnitVar("BasicDamage"),
+			ActiveUnitVar("BasicDamageBonus")
+		),
+		Add(
+			ActiveUnitVar("PiercingDamage"),
+			ActiveUnitVar("PiercingDamageBonus")
+		)
 	),
-	Add(
-		ActiveUnitVar("PiercingDamage"),
-		ActiveUnitVar("PiercingDamageBonus")
+	Sub(
+		ActiveUnitVar("PiercingDamage", "Value", "Type"),
+		ActiveUnitVar("PiercingDamage", "Value", "Initial")
 	)
 )
 -- takes piercing damage bonuses into account for the "+X" damage bonus on the unit's panel
@@ -98,11 +104,25 @@ local max_damage = Add(
 --	),
 --	ActiveUnitVar("PiercingDamageBonus")
 --);
-local damage_bonus = Sub(ActiveUnitVar("PiercingDamage", "Value", "Type"),
-							ActiveUnitVar("PiercingDamage", "Value", "Initial"));
-local armor = Add(
-	ActiveUnitVar("Armor"),
-	ActiveUnitVar("ArmorBonus")
+local damage_bonus = Sub(
+	ActiveUnitVar("PiercingDamage", "Value", "Type"),
+	ActiveUnitVar("PiercingDamage", "Value", "Initial")
+)
+
+local armor = Sub(
+	Add(
+		ActiveUnitVar("Armor"),
+		ActiveUnitVar("ArmorBonus")
+	),
+	Sub(
+		ActiveUnitVar("Armor", "Value", "Type"),
+		ActiveUnitVar("Armor", "Value", "Initial")
+	)
+)
+
+local armor_bonus = Sub(
+	ActiveUnitVar("Armor", "Value", "Type"),
+	ActiveUnitVar("Armor", "Value", "Initial")
 )
 
 DefinePanelContents(
@@ -310,7 +330,9 @@ DefinePanelContents(
 			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}
 	},
 	{ Pos = {47, 71}, Condition = {Armor = "only"},
-		More = {"Text", {Text = Concat("Armor: ", String(armor)
+		More = {"Text", {Text = Concat("Armor: ", String(armor),
+			If(Equal(0, armor_bonus), "",
+			InverseVideo(Concat("+", String(armor_bonus)))) 
 								)}}
 --		More = {"Text", {
 --					Text = "Armor: ", Variable = "Armor", Stat = true}}

@@ -82,6 +82,9 @@ function AiLandAttack()
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
 		AiSet(AiBarracks(), 2)
 	end
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1) then
+		AiSet(AiLumberMill(), 1)
+	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
 		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 20) then
 			AiSet(AiWorker(), 20)

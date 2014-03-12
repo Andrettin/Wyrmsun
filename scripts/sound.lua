@@ -172,7 +172,7 @@ SetSoundRange("tree-chopping", 32)
     --	acknowledge sounds
     --	 ready sounds
     --	 selection sounds
-MapSound("human-lumber-mill-selected", "lumbermill")
+MapSound("lumber-mill-selected", "lumbermill")
     --	attack sounds
 
 MapSound("gold-mine-help", "basic-dwarf-voices-help")
@@ -185,9 +185,11 @@ DefineGameSounds(
 
   "placement-error", {"dwarf", placement_error},
   "placement-error", {"gnome", placement_error},
+  "placement-error", {"goblin", placement_error},
 
   "placement-success", {"dwarf", placement_success},
   "placement-success", {"gnome", placement_success},
+  "placement-success", {"goblin", placement_success},
 
   "click", sound_click,
 --  "transport-docking", transport_docking,
@@ -195,9 +197,11 @@ DefineGameSounds(
 
   "building-construction", {"dwarf", building_construction},
   "building-construction", {"gnome", building_construction},
+  "building-construction", {"goblin", building_construction},
 
 --  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
 
   "rescue", {"dwarf", rescue},
-  "rescue", {"gnome", rescue}
+  "rescue", {"gnome", rescue},
+  "rescue", {"goblin", rescue}
 )

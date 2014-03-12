@@ -1,0 +1,4 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "computer", "person", "person")
+PresentMap("Brown Hills", 1, 73, 116, 1)

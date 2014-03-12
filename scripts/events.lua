@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      events.lua - Define the menu for options.
+--      events.lua - Defines events.
 --
 --      (c) Copyright 2014 by Andre Novellino Gouvêa
 --
@@ -28,76 +28,6 @@
 --
 
 function EventTriggers()
-	-- Charge Rugnur with the Outpost?
-	-- based on elements from the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-rugnur", {0, 0}, {256, 256}) < 1) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Resources", "gold") >= 1000 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 2 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1) then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				unit = CreateUnit("unit-rugnur", player, {Players[player].StartPos.x, Players[player].StartPos.y})
---				IncreaseUnitLevel(unit, 1)
-				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") - 1000)
-			end
-			function EventOption2Effects()
-			end
-			Event(
-				"Charge Rugnur with the Outpost?",
-				"A young dwarf by the name of Rugnur seems to be an adequate choice for being in charge of our new border outpost. Do you wish to hire him for the job?",
-				player,
-				2,
-				"Yes (costs 1000 gold)",
-				"No"
-			)
-			return false
-		end
-	)
-
-	-- The Retired Warrior
-	-- based on elements from the Closing the Gates scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-baglur", {0, 0}, {256, 256}) < 1) then
-				for i=0,14 do
-					-- could require the player having towers, when those are included in the game
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "TotalKills") >= 25 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1) then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				unit = CreateUnit("unit-baglur", player, {Players[player].StartPos.x, Players[player].StartPos.y})
-			end
-			Event(
-				"The Retired Warrior",
-				"A veteran soldier called Baglur has decided to forsake his retirement and help us in our struggles. He is an expert in defensive combat.",
-				player,
-				1,
-				"OK"
-			)
-			return false
-		end
-	)
-
 	-- The Surghan Mercenaries
 	-- based on elements from the The Dragon scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 	AddTrigger(
@@ -169,7 +99,7 @@ function EventTriggers()
 					Players[greebo_player].Type = PlayerComputer
 					local greebo_spawnpoint = FindAppropriateTileTypeSpawnPoint("Rock")
 					unit = CreateUnit("unit-goblin-banner", greebo_player, greebo_spawnpoint)
-					unit = CreateUnit("unit-greebo", greebo_player, greebo_spawnpoint)
+					unit = CreateUnit("unit-hero-greebo", greebo_player, greebo_spawnpoint)
 	--				IncreaseUnitLevel(unit, 1)
 					SetAiType(greebo_player, "passive")
 					for i=0,14 do
@@ -202,7 +132,7 @@ function EventTriggers()
 					return false
 				end
 				for i=0,14 do
-					if (GetPlayerData(i, "Name") == "Greebo" and GetPlayerData(i, "UnitTypesCount", "unit-greebo") == 0) then
+					if (GetPlayerData(i, "Name") == "Greebo" and GetPlayerData(i, "UnitTypesCount", "unit-hero-greebo") == 0) then
 						player = GetThisPlayer()
 						return true
 					end
@@ -214,12 +144,7 @@ function EventTriggers()
 					SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
 					for i=0,14 do
 						if (GetPlayerData(i, "Name") ~= "Greebo") then
-							table.foreachi(Objectives[i], function(k,v)
-								if (v == "- Kill Greebo (optional)") then
-									local greebos_shinies_quest_number = k
-								end
-							end)
-							table.remove(Objectives[i], greebos_shinies_quest_number)
+							RemoveElementFromArray(Objectives[i], "- Kill Greebo (optional)")
 						end
 					end
 				end
@@ -330,12 +255,7 @@ function EventTriggers()
 					SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
 					for i=0,14 do
 						if (GetPlayerData(i, "Name") ~= "Andvari") then
-							table.foreachi(Objectives[i], function(k,v)
-								if (v == "- Destroy Andvari's Mushroom Farm (optional)") then
-									local andvaris_gold_quest_number = k
-									table.remove(Objectives[i], andvaris_gold_quest_number)
-								end
-							end)
+							RemoveElementFromArray(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
 						end
 					end
 				end
@@ -360,7 +280,7 @@ function EventTriggers()
 			end
 			if ((SyncRand(100) + 1) <= 10) then
 				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-rugnur") == 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") == 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
 						player = i
 
 						local loop = true
@@ -466,7 +386,7 @@ function EventTriggers()
 				return false
 			end
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "UnitTypesCount", "unit-rugnur") == 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+				if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") == 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 					player = i
 					return true
 				end
@@ -475,12 +395,7 @@ function EventTriggers()
 		end,
 		function() 
 			function EventOption1Effects()
-				table.foreachi(Objectives[player], function(k,v)
-					if (v == a_bargain_is_struck_objective_1) then
-						local a_bargain_is_struck_quest_number = k
-					end
-				end)
-				table.remove(Objectives[player], a_bargain_is_struck_quest_number)
+				RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
 			  	if (player == GetThisPlayer()) then
 					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 						table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -493,8 +408,7 @@ function EventTriggers()
 			end
 			local note = ""
 			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
---				note = "\n\nNote: You have gained 5 dwarven technology points, which can be used for acquiring new units, buildings and upgrades. Furthermore, when the Caverns of Chaincolt map is included in a coming version of the game, it will be already be unlocked for you to play."
-				note = "\n\nNote: You have gained 5 dwarven technology points. Furthermore, when the Caverns of Chaincolt map is included in a coming version of the game, it will be already be unlocked for you to play."
+				note = "\n\nNote: You have gained 2 dwarven technology points. Furthermore, when the Caverns of Chaincolt map is included in a coming version of the game, it will already be unlocked for you to play."
 			end
 			Event(
 				"The Last Caravan has Arrived!",
@@ -514,7 +428,7 @@ function EventTriggers()
 				return false
 			end
 			for i=0,14 do
-				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and (GetPlayerData(i, "UnitTypesCount", "unit-rugnur") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4)) then
+				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4)) then
 					player = i
 					return true
 				end
@@ -523,12 +437,7 @@ function EventTriggers()
 		end,
 		function() 
 			function EventOption1Effects()
-				table.foreachi(Objectives[player], function(k,v)
-					if (v == a_bargain_is_struck_objective_1) then
-						local a_bargain_is_struck_quest_number = k
-					end
-				end)
-				table.remove(Objectives[player], a_bargain_is_struck_quest_number)
+				RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
 			end
 			Event(
 				"The Bargain has Failed",
@@ -609,6 +518,14 @@ function EventTriggers()
 			if (GameCycle == 0) then
 				return false
 			end
+			if ((SyncRand(100) + 1) <= 1) then
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+						player = i
+						return true
+					end
+				end
+			end
 			return false
 		end,
 		function() 
@@ -630,6 +547,12 @@ function EventTriggers()
 		function()
 			if (GameCycle == 0) then
 				return false
+			end
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+					player = i
+					return true
+				end
 			end
 			return false
 		end,
@@ -653,6 +576,16 @@ function EventTriggers()
 			if (GameCycle == 0) then
 				return false
 			end
+			if ((SyncRand(100) + 1) <= 1) then
+				if (GetFactionExists("Denmark")) then
+					for i=0,14 do
+						if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+							player = i
+							return true
+						end
+					end
+				end
+			end
 			return false
 		end,
 		function() 
@@ -674,6 +607,12 @@ function EventTriggers()
 		function()
 			if (GameCycle == 0) then
 				return false
+			end
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+					player = i
+					return true
+				end
 			end
 			return false
 		end,
@@ -697,6 +636,14 @@ function EventTriggers()
 			if (GameCycle == 0) then
 				return false
 			end
+			if ((SyncRand(100) + 1) <= 1 and GetFactionExists("Gothland")) then
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+						player = i
+						return true
+					end
+				end
+			end
 			return false
 		end,
 		function() 
@@ -718,6 +665,16 @@ function EventTriggers()
 		function()
 			if (GameCycle == 0) then
 				return false
+			end
+			if (GetFactionExists("Varva")) then
+				if (GetPlayerData(GetFactionPlayer("Varva"), "TotalNumUnits") == 0) then
+					for i=0,14 do
+						if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+							player = i
+							return true
+						end
+					end
+				end
 			end
 			return false
 		end,
@@ -741,6 +698,14 @@ function EventTriggers()
 			if (GameCycle == 0) then
 				return false
 			end
+			if ((SyncRand(100) + 1) <= 1 and GetFactionExists("Finland")) then
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+						player = i
+						return true
+					end
+				end
+			end
 			return false
 		end,
 		function() 
@@ -762,6 +727,12 @@ function EventTriggers()
 		function()
 			if (GameCycle == 0) then
 				return false
+			end
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+					player = i
+					return true
+				end
 			end
 			return false
 		end,
@@ -785,6 +756,12 @@ function EventTriggers()
 			if (GameCycle == 0) then
 				return false
 			end
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
+					player = i
+					return true
+				end
+			end
 			return false
 		end,
 		function() 
@@ -795,7 +772,7 @@ function EventTriggers()
 			end
 			Event(
 				"The Golden Hanging",
-				"Our king has been found hanged by the very golden necklace which he had plundered from the Finns! Skjalv has been seen along with other captive Finns, taking to ships to return to her homeland...",
+				"Our king has been found hanged by the very golden necklace which he had plundered from the Finns! Skjalv has been seen along with other captive Finns, taking to ships to return to her homeland... We hope that at least the death of our king will sate the Finns' thirst for revenge.",
 				player,
 				1,
 				"OK"
@@ -828,7 +805,7 @@ function Event(event_name, event_description, player, option_number, option_1_na
 
 		if (option_number >= 1) then
 			menu:addFullButton(option_1_name, "", 176 - (224 / 2), 352 - 40 * option_number,
-				function()
+				function(s)
 					EventOption1Effects()
 					SetGamePaused(false)
 					menu:stop()
@@ -837,7 +814,7 @@ function Event(event_name, event_description, player, option_number, option_1_na
 
 		if (option_number >= 2) then
 			menu:addFullButton(option_2_name, "", 176 - (224 / 2), 352 - 40 * (option_number - 1),
-				function()
+				function(s)
 					EventOption2Effects()
 					SetGamePaused(false)
 					menu:stop()

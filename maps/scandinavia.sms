@@ -1,6 +1,6 @@
 -- Stratagus Map Setup
 
-LoadTileModels("scripts/tilesets/swamp.lua")
+LoadTileModels("scripts/tilesets/forest.lua")
 
 CleanRawTiles()
 
@@ -32790,7 +32790,7 @@ SetStartView(2, 105, 69)
 SetPlayerData(2, "Resources", "gold", 1200)
 SetPlayerData(2, "Resources", "wood", 1000)
 SetPlayerData(2, "Resources", "oil", 1000)
-SetPlayerData(2, "RaceName", "dwarf")
+SetPlayerData(2, "RaceName", "gnome")
 SetAiType(2, "land-attack")
 SetStartView(3, 34, 93)
 SetPlayerData(3, "Resources", "gold", 1500)
@@ -32799,7 +32799,7 @@ SetPlayerData(3, "Resources", "oil", 1000)
 SetPlayerData(3, "RaceName", "dwarf")
 SetAiType(3, "land-attack")
 SetStartView(4, 87, 123)
-SetPlayerData(4, "RaceName", "dwarf")
+SetPlayerData(4, "RaceName", "gnome")
 SetPlayerData(4, "Name", "Varva")
 SetAiType(4, "passive")
 SetPlayerData(15, "RaceName", "neutral")
@@ -32858,3 +32858,5 @@ unit = CreateUnit("unit-gnomish-farm", 4, {87, 123}) -- Varva farm (described in
 unit = CreateUnit("unit-critter", 15, {33, 117})
 unit = CreateUnit("unit-gold-mine", 15, {28, 125})
 SetResourcesHeld(unit, 65000)
+
+CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)

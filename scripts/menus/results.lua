@@ -4,7 +4,7 @@ local dvictory = "ui/dwarf/victory.png"
 function RunResultsMenu()
   local background
   local result
-
+  
   if (GameResult == GameVictory) then
     result = "Victory!"
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
@@ -58,7 +58,7 @@ function RunResultsMenu()
   menu:addLabel("Units", offx + 50, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Gold", offx + 230, offy + bottom_offset, Fonts["large"], true)
-  menu:addLabel("Wood", offx + 320, offy + bottom_offset, Fonts["large"], true)
+  menu:addLabel("Lumber", offx + 320, offy + bottom_offset, Fonts["large"], true)
 --  menu:addLabel("Oil", offx + 410, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Kills", offx + 500, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Razings", offx + 590, offy + bottom_offset, Fonts["large"], true)

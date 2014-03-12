@@ -198,7 +198,7 @@ function BuildOptionsMenu()
 
   menu:addLabel("Global Options", offx + 176, offy + 1)
   menu:addLabel("Resolution Width", offx + 8, offy + 34, Fonts["game"], false)
-  resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1400", "1600", "1680"}, offx + 8, offy + 55 + 26*0,
+  resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}, offx + 8, offy + 55 + 26*0,
     function(dd)
     	if (resolution_width_list:getSelected() == 0) then
     		resolution_width = 640
@@ -211,10 +211,12 @@ function BuildOptionsMenu()
     	elseif (resolution_width_list:getSelected() == 4) then
     		resolution_width = 1360
     	elseif (resolution_width_list:getSelected() == 5) then
-    		resolution_width = 1400
+    		resolution_width = 1366
     	elseif (resolution_width_list:getSelected() == 6) then
-    		resolution_width = 1600
+    		resolution_width = 1400
     	elseif (resolution_width_list:getSelected() == 7) then
+    		resolution_width = 1600
+    	elseif (resolution_width_list:getSelected() == 8) then
     		resolution_width = 1680
     	end
   	SetVideoSize(resolution_width, resolution_height) menu:stop(1)
@@ -230,12 +232,14 @@ function BuildOptionsMenu()
     	resolution_width_list:setSelected(3)
   elseif (Video.Width == 1360) then
     	resolution_width_list:setSelected(4)
-  elseif (Video.Width == 1400) then
+  elseif (Video.Width == 1366) then
     	resolution_width_list:setSelected(5)
-  elseif (Video.Width == 1600) then
+  elseif (Video.Width == 1400) then
     	resolution_width_list:setSelected(6)
-  elseif (Video.Width == 1680) then
+  elseif (Video.Width == 1600) then
     	resolution_width_list:setSelected(7)
+  elseif (Video.Width == 1680) then
+    	resolution_width_list:setSelected(8)
   end
 
   menu:addLabel("Resolution Height", offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
@@ -314,7 +318,7 @@ function BuildOptionsMenu()
 
   b = menu:addCheckBox("Disable Messages", offx + 160 + 24, offy + 55 + 26*9 + 14,
     function()
-	if (wyr.preferences.ShowMessages == true) then
+	if (wyr.preferences.ShowMessages) then
 		wyr.preferences.ShowMessages = false
 	else
 		wyr.preferences.ShowMessages = true
@@ -373,7 +377,9 @@ function RunGameOptionsMenu()
     function() RunPreferencesMenu() end)
   menu:addFullButton("Diplomacy (~<F9~>)", "f9", 16, 40 + 36*2,
     function() RunDiplomacyMenu() end)
-  menu:addFullButton("~!Tech Tree", "t", 16, 40 + 36*3,
+  menu:addFullButton("~!Quests", "q", 16, 40 + 36*3,
+    function() RunQuestMenu() end)
+  menu:addFullButton("~!Tech Tree", "t", 16, 40 + 36*4,
     function() RunTechTreeMenu(0) end)
   menu:addFullButton("Previous (~<Esc~>)", "escape", 128 - (224 / 2), 288 - 40,
     function() menu:stop() end)

@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "0.1.2"
+wyrmsun.Version = "0.1.3"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
 wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
@@ -265,10 +265,12 @@ DefineVariables(
 --	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"Name",
 	"Ident",
+	"Player",
 	"PosX",
 	"PosY",
 	"Level", {Max = 30, Value = 1, Increase = 0, Enable = true},
 --	"Points", {Max = 99999, Value = 25, Increase = 0, Enable = true},
+	"Points",
 	"Xp",
 	"XpRequired", {Max = 43500, Value = 100, Increase = 0, Enable = true},
 	"RegenerationRate",
@@ -318,8 +320,12 @@ function SinglePlayerTriggers()
 		AssignPlayerFactions()
 	end
 
+	DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
+	DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
+	DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
+
 	-- for now events are limited to single player (as they seem to be causing issues with desyncs for multiplayer games
-	if (not IsNetworkGame() and EventsActivated == 0) then
+	if (EventsActivated == 0) then
 		EventTriggers()
 	end
 
@@ -330,6 +336,8 @@ function SinglePlayerTriggers()
 		if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
@@ -363,6 +371,9 @@ function StandardTriggers()
 	-- set the graphics variation for individual units of certain unit types
 	AddTrigger(
 		function()
+			if (GameCycle == 0) then
+				return false
+			end
 			return true
 		end,
 		function()
@@ -372,6 +383,8 @@ function StandardTriggers()
 				if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
 					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
 					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
@@ -404,6 +417,102 @@ function StandardTriggers()
 					if (critter_quantity > 0 and GetUnitVariable(uncount[unit1], "GraphicsVariation") < 8) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", 13)
 						SetUnitVariable(uncount[unit1], "LifeCycle", GameCycle)
+					end
+				end
+
+				-- change 96x96 neutral building ownership depending on nearby player units
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mercenary-camp" or GetUnitVariable(uncount[unit1], "Ident") == "unit-human-lumber-mill") then
+					local mercenary_camp_player = 15
+					for i=0,14 do
+						if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+							if (mercenary_camp_player ~= 15) then
+								mercenary_camp_player = 16
+							else
+								mercenary_camp_player = i
+							end
+						end
+					end
+					if (mercenary_camp_player < 15) then
+						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), mercenary_camp_player)
+					end
+				end
+			end
+			return true
+		end
+	)
+
+	-- create extra Surghan Mercenaries if they have been hired
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			return true
+		end,
+		function() 
+			local uncount = 0
+			uncount = GetUnits("any")
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary") then
+					unit = CreateUnit("unit-surghan-mercenary", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-surghan-mercenary", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-surghan-mercenary", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					DefineAllow("unit-surghan-mercenary", "FFFFFFFFFFFFFFFF")
+					return false
+				end
+			end
+			return true
+		end
+	)
+
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			return true
+		end,
+		function() 
+			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) >= 1 or GetNumUnitsAt(-1, "unit-hero-rugnur-older", {0, 0}, {256, 256}) >= 1) then
+				-- make it impossible to hire a hero after he has already been hired by someone
+				DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
+				DefineAllow("unit-hero-rugnur-older", "FFFFFFFFFFFFFFFF")
+				return false
+			else
+				-- create Rugnur for an AI player if they fulfill the conditions
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 3 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "Resources", "gold") >= 1000) then
+						unit = CreateUnit("unit-hero-rugnur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 1000)
+						DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
+						DefineAllow("unit-hero-rugnur-older", "FFFFFFFFFFFFFFFF")
+						return false
+					end
+				end
+			end
+			return true
+		end
+	)
+
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			return true
+		end,
+		function() 
+			if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) >= 1) then
+				DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
+				return false
+			else
+				-- create Baglur for an AI player if they fulfill the conditions
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 2 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 12 and GetPlayerData(i, "Resources", "gold") >= 1200) then
+						unit = CreateUnit("unit-hero-baglur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 1200)
+						DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
+						return false
 					end
 				end
 			end
@@ -503,61 +612,12 @@ function AssignPlayerFactions()
 	end
 
 	local RandomNumber = 0
-	local DwarvenFactions = GetCivilizationFactions("dwarf")
-	local GnomishFactions = GetCivilizationFactions("gnome")
-	local faction_number = -1
-
-	-- remove faction names already in use
-	for j=0,14 do
-		if (GetPlayerData(j, "Name") ~= "" and GetPlayerData(j, "Name") ~= nil and GetPlayerData(j, "Name") ~= "Computer") then
-			if (GetPlayerData(j, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
-				table.foreachi(DwarvenFactions, function(k,v)
-					if (v == GetPlayerData(j, "Name")) then
-						faction_number = k
-					end
-				end)
-				if (faction_number ~= -1) then
-					table.remove(DwarvenFactions, faction_number)
-					faction_number = -1
-				end
-			elseif (GetPlayerData(j, "RaceName") == "gnome" and table.getn(GnomishFactions) > 0) then
-				table.foreachi(GnomishFactions, function(k,v)
-					if (v == GetPlayerData(j, "Name")) then
-						faction_number = k
-					end
-				end)
-				if (faction_number ~= -1) then
-					table.remove(GnomishFactions, faction_number)
-					faction_number = -1
-				end
-			end
-		end
-	end
 
 	for i=0,14 do
 		if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
-			if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
-				RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
-				SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
-				table.foreachi(DwarvenFactions, function(k,v)
-					if (v == DwarvenFactions[RandomNumber]) then
-						faction_number = k
-					end
-				end)
-				if (faction_number ~= -1) then
-					table.remove(DwarvenFactions, faction_number)
-				end
-			elseif (GetPlayerData(i, "RaceName") == "gnome" and table.getn(GnomishFactions) > 0) then
-				RandomNumber = SyncRand(table.getn(GnomishFactions)) + 1
-				SetPlayerData(i, "Name", GnomishFactions[RandomNumber])
-				table.foreachi(GnomishFactions, function(k,v)
-					if (v == GnomishFactions[RandomNumber]) then
-						faction_number = k
-					end
-				end)
-				if (faction_number ~= -1) then
-					table.remove(GnomishFactions, faction_number)
-				end
+			if (table.getn(GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName"))) > 0) then
+				RandomNumber = SyncRand(table.getn(GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName")))) + 1
+				SetPlayerData(i, "Name", GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName"))[RandomNumber])
 			end
 		end
 	end
@@ -571,6 +631,18 @@ function GetCivilizationFactions(civilization)
 	else
 		return { }
 	end
+end
+
+function GetCivilizationAvailableFactions(civilization)
+	local civilization_factions = GetCivilizationFactions(civilization)
+
+	-- remove faction names already in use
+	for i=0,14 do
+		if (table.getn(civilization_factions) > 0) then
+			RemoveElementFromArray(civilization_factions, GetPlayerData(i, "Name"))
+		end
+	end
+	return civilization_factions
 end
 
 function GetCivilizationExists(civilization)
@@ -591,6 +663,16 @@ function GetFactionExists(faction)
 	return false
 end
 
+function GetFactionForbiddenUnits(faction)
+	if (faction == "Shorbear Clan") then
+		return { "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur" }
+	elseif (faction == "Kal Kartha") then
+		return { "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur" }
+	else
+		return {}
+	end
+end
+
 function GetCivilizationPlayer(civilization)
 	local loop = true
 	local loop_count = 0
@@ -607,6 +689,16 @@ function GetCivilizationPlayer(civilization)
 		end
 	end
 	return civilization_player
+end
+
+function GetNumCivilizationPlayers(civilization)
+	local player_count = 0
+	for i=0,14 do
+		if (GetPlayerData(i, "TotalNumUnits") > 0 and GetPlayerData(i, "RaceName") == civilization) then
+			player_count = player_count + 1
+		end
+	end
+	return player_count
 end
 
 function GetFactionPlayer(faction)
@@ -666,6 +758,10 @@ function GetRandomCharacterName(civilization, gender, is_monarch)
 			else
 				character_names = { "Adalga" }
 			end
+		end
+	elseif (civilization == "goblin") then
+		if (gender == "male") then
+			character_names = { "Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd" }
 		end
 	end
 	random_character_name = character_names[SyncRand(table.getn(character_names)) + 1]
@@ -764,6 +860,17 @@ function GetArrayIncludes(array, item)
     return false
 end
 
+function RemoveElementFromArray(array, element)
+	local element_number = -1
+	table.foreachi(array, function(k,v)
+		if (v == element) then
+			element_number = k
+		end
+	end)
+	if (element_number ~= -1) then
+		table.remove(array, element_number)
+	end
+end
 
 
 local function CompleteMissingValues(table, defaultTable)
@@ -810,8 +917,9 @@ local defaultPreferences = {
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks"
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-hero-greebo"
 	},
 	LastVersionPlayed = "0.0.0",
 	TheScepterOfFireMonarch = "",

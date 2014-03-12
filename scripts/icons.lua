@@ -34,13 +34,6 @@ function DefineIcon(arg)
 end
 
 DefineIcon({
-	Name = "icon-gold-mine",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/gold_mine.png"
-})
-
-DefineIcon({
 	Name = "icon-repair",
 	Size = {46, 38},
 	Frame = 0,
@@ -83,13 +76,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-ballista",
-	Size = {46, 38},
-	Frame = 0,
-	File = "dwarf/icons/dwarven_ballista.png"
-})
-
-DefineIcon({
 	Name = "icon-dwarven-town-hall",
 	Size = {46, 38},
 	Frame = 0,
@@ -122,6 +108,27 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "dwarf/icons/shield_1.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-throwing-axe-1",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/throwing_axe_1.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-throwing-axe-2",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/throwing_axe_2.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-throwing-axe-3",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/throwing_axe_3.png"
 })
 
 DefineIcon({
@@ -188,34 +195,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-human-lumber-mill",
-	Size = {46, 38},
-	Frame = 0,
-	File = "human/icons/lumber_mill.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-town-hall",
-	Size = {46, 38},
-	Frame = 0,
-	File = "gnome/icons/town_hall.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-farm",
-	Size = {46, 38},
-	Frame = 0,
-	File = "gnome/icons/farm.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-barracks",
-	Size = {46, 38},
-	Frame = 0,
-	File = "gnome/icons/barracks.png"
-})
-
-DefineIcon({
 	Name = "icon-gnomish-worker",
 	Size = {46, 38},
 	Frame = 0,
@@ -227,13 +206,6 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "gnome/icons/gnomish_recruit.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-caravan",
-	Size = {46, 38},
-	Frame = 0,
-	File = "gnome/icons/gnomish_caravan.png"
 })
 
 DefineIcon({
@@ -271,65 +243,84 @@ DefineIcon({
 	File = "neutral/icons/build_basic_structure.png"
 })
 
--- Decorations
-
-DefineIcon({
-	Name = "icon-goblin-banner",
-	Size = {46, 38},
-	Frame = 0,
-	File = "goblin/icons/goblin_banner.png"
-})
-
-DefineIcon({
-	Name = "icon-mushroom",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/mushroom.png"
-})
-
-DefineIcon({
-	Name = "icon-twigs",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/twigs.png"
-})
-
-DefineIcon({
-	Name = "icon-log",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/log.png"
-})
-
-DefineIcon({
-	Name = "icon-small-rocks",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/small_rocks.png"
-})
-
-DefineIcon({
-	Name = "icon-bones",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/bones.png"
-})
-
-DefineIcon({
-	Name = "icon-wyrm-skeleton",
-	Size = {46, 38},
-	Frame = 0,
-	File = "neutral/icons/wyrm_skeleton.png"
-})
-
 -- tileset-dependent icons
 
-if (wyrmsun.tileset == "wasteland") then
+if (wyrmsun.tileset == "swamp") then
+	DefineIcon({
+		Name = "icon-gold-mine",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/gold_mine.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-ballista",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/dwarven_ballista.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-lumber-mill",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/lumber_mill.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-town-hall",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/town_hall.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-farm",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/farm.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-barracks",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/barracks.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-caravan",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
+	})
+
+	DefineIcon({
+		Name = "icon-human-lumber-mill",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/human/icons/lumber_mill.png"
+	})
+
 	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		Frame = 0,
 		File = "tilesets/swamp/neutral/icons/rat.png"
+	})
+
+	DefineIcon({
+		Name = "icon-glyph",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/glyph.png"
+	})
+
+	DefineIcon({
+		Name = "icon-goblin-banner",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/goblin/icons/goblin_banner.png"
 	})
 
 	DefineIcon({
@@ -352,39 +343,326 @@ if (wyrmsun.tileset == "wasteland") then
 		Frame = 0,
 		File = "tilesets/swamp/neutral/icons/flowers.png"
 	})
+
+	DefineIcon({
+		Name = "icon-mushroom",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/mushroom.png"
+	})
+
+	DefineIcon({
+		Name = "icon-twigs",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/twigs.png"
+	})
+
+	DefineIcon({
+		Name = "icon-log",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/log.png"
+	})
+
+	DefineIcon({
+		Name = "icon-small-rocks",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/small_rocks.png"
+	})
+
+	DefineIcon({
+		Name = "icon-bones",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/bones.png"
+	})
+
+	DefineIcon({
+		Name = "icon-wyrm-skeleton",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/wyrm_skeleton.png"
+	})
 elseif (wyrmsun.tileset == "forest") then
+	DefineIcon({
+		Name = "icon-gold-mine",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/gold_mine.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-ballista",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/dwarf/icons/dwarven_ballista.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-lumber-mill",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/dwarf/icons/lumber_mill.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-town-hall",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/gnome/icons/town_hall.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-farm",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/gnome/icons/farm.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-barracks",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/gnome/icons/barracks.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-caravan",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/gnome/icons/gnomish_caravan.png"
+	})
+
+	DefineIcon({
+		Name = "icon-human-lumber-mill",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/human/icons/lumber_mill.png"
+	})
+
 	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		Frame = 0,
 		File = "tilesets/forest/neutral/icons/rat.png"
 	})
-else	
+
 	DefineIcon({
-		Name = "icon-rat",
+		Name = "icon-glyph",
 		Size = {46, 38},
 		Frame = 0,
-		File = "tilesets/swamp/neutral/icons/rat.png"
+		File = "tilesets/forest/neutral/icons/glyph.png"
+	})
+
+	DefineIcon({
+		Name = "icon-goblin-banner",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/goblin/icons/goblin_banner.png"
 	})
 
 	DefineIcon({
 		Name = "icon-fern",
 		Size = {46, 38},
 		Frame = 0,
-		File = "neutral/icons/fern.png"
+		File = "tilesets/forest/neutral/icons/fern.png"
 	})
 	
 	DefineIcon({
 		Name = "icon-large-flower",
 		Size = {46, 38},
 		Frame = 0,
-		File = "neutral/icons/large_flower.png"
+		File = "tilesets/forest/neutral/icons/large_flower.png"
 	})
 
 	DefineIcon({
 		Name = "icon-flowers",
 		Size = {46, 38},
 		Frame = 0,
-		File = "neutral/icons/flowers.png"
+		File = "tilesets/forest/neutral/icons/flowers.png"
+	})
+
+	DefineIcon({
+		Name = "icon-mushroom",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/mushroom.png"
+	})
+
+	DefineIcon({
+		Name = "icon-twigs",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/twigs.png"
+	})
+
+	DefineIcon({
+		Name = "icon-log",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/log.png"
+	})
+
+	DefineIcon({
+		Name = "icon-small-rocks",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/small_rocks.png"
+	})
+
+	DefineIcon({
+		Name = "icon-bones",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/bones.png"
+	})
+
+	DefineIcon({
+		Name = "icon-wyrm-skeleton",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/wyrm_skeleton.png"
+	})
+else	
+	DefineIcon({
+		Name = "icon-gold-mine",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/gold_mine.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-ballista",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/dwarven_ballista.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-lumber-mill",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/lumber_mill.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-town-hall",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/town_hall.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-farm",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/farm.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-barracks",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/barracks.png"
+	})
+
+	DefineIcon({
+		Name = "icon-gnomish-caravan",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
+	})
+
+	DefineIcon({
+		Name = "icon-human-lumber-mill",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/human/icons/lumber_mill.png"
+	})
+
+	DefineIcon({
+		Name = "icon-rat",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/rat.png"
+	})
+
+	DefineIcon({
+		Name = "icon-glyph",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/glyph.png"
+	})
+
+	DefineIcon({
+		Name = "icon-goblin-banner",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/goblin/icons/goblin_banner.png"
+	})
+
+	DefineIcon({
+		Name = "icon-fern",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/fern.png"
+	})
+	
+	DefineIcon({
+		Name = "icon-large-flower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/large_flower.png"
+	})
+
+	DefineIcon({
+		Name = "icon-flowers",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/flowers.png"
+	})
+
+	DefineIcon({
+		Name = "icon-mushroom",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/mushroom.png"
+	})
+
+	DefineIcon({
+		Name = "icon-twigs",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/twigs.png"
+	})
+
+	DefineIcon({
+		Name = "icon-log",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/log.png"
+	})
+
+	DefineIcon({
+		Name = "icon-small-rocks",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/neutral/icons/small_rocks.png"
+	})
+
+	DefineIcon({
+		Name = "icon-bones",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/bones.png"
+	})
+
+	DefineIcon({
+		Name = "icon-wyrm-skeleton",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/neutral/icons/wyrm_skeleton.png"
 	})
 end

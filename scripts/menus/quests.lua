@@ -40,23 +40,37 @@ function RunQuestMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == true) then
-		addQuestIcon("A Bargain is Struck", menu, CGraphic:New("dwarf/icons/rugnur_grayed.png"),
-			"The gnomish monarch " .. wyr.preferences.TheScepterOfFireMonarch  .. " arrived at the small border outpost led by Rugnur, asking that his clan craft a scepter for him with a special ruby encrusted on it. Rugnur took the caravans with the advance payment to safety, along with an envoy holding the ruby.\n\nOptimal Map: Chaincolt Foothills",
-			offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 1))
-	else
-		addQuestIcon("A Bargain is Struck", menu, CGraphic:New("dwarf/icons/rugnur.png"),
-			"A gnomish monarch arrives at the small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nOptimal Map: Chaincolt Foothills",
-			offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 1))
-	end
+	addQuestIcon("A Bargain is Struck", menu, "dwarf/icons/rugnur",
+		"A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map.\n\nHint: The easiest way to obtain this quest is to play the Chaincolt Foothills map under default settings.",
+		offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 1))
 	
+--	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
+--		addQuestIcon("Closing the Gates", menu, "dwarf/icons/baglur",
+--			"With Baglur's aid, Rugnur has activated a series of glyphs, setting off an old mechanism and closing the gates to his clan's tunnels.\n\nOptimal Map: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points, Northern Wastelands Map.",
+--			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
+--	elseif (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and wyrmsun.Version == "0.1.4") then
+--		addQuestIcon("Closing the Gates", menu, "dwarf/icons/baglur",
+--			"Having retreated from the raiders' onslaught, Rugnur reaches the gates to his clan's tunnels.\n\nOptimal Map: Caverns of Chaincolt",
+--			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
+--	else
+--		addQuestIcon("Closing the Gates (Coming Soon)", menu, "dwarf/icons/baglur_transparent",
+--			"Having retreated from the raiders' onslaught, Rugnur reaches the gates to his clan's tunnels.\n\nHint: The easiest way to obtain this quest is to play the Caverns of Chaincolt map under default conditions.",
+--			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
+--	end
+
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
 	menu:run()
 end
 
-function addQuestIcon(quest, menu, questicon, quest_description, x, y)
+function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y)
+	local questicon
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
+		questicon = CGraphic:New(questicon_graphics .. "_grayed.png")
+	else
+		questicon = CGraphic:New(questicon_graphics .. ".png")
+	end
 	questicon:Load()
 	local b = ImageButton("")
 --	b:setHotKey("")

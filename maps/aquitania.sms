@@ -1,0 +1,83 @@
+LoadTileModels("scripts/tilesets/forest.lua")
+
+CleanRawTiles()
+
+for x=0,(Map.Info.MapWidth - 1) do
+	for y=0,(Map.Info.MapHeight - 1) do
+		SetRawTile(x, y, "Land")
+	end
+end
+	
+for y=0,(Map.Info.MapHeight - 1) do
+	SetRawTile(0, y, "Water")
+end
+
+for y=0,(112 - 1) do
+	SetRawTile(1, y, "Water")
+end
+
+for y=0,(96 - 1) do
+	SetRawTile(2, y, "Water")
+end
+
+for y=0,(80 - 1) do
+	SetRawTile(3, y, "Water")
+end
+
+for y=0,(80 - 1) do
+	SetRawTile(4, y, "Water")
+end
+
+for y=0,(64 - 1) do
+	SetRawTile(5, y, "Water")
+end
+
+for y=0,(48 - 1) do
+	SetRawTile(6, y, "Water")
+end
+
+for y=0,(32 - 1) do
+	SetRawTile(7, y, "Water")
+end
+
+for y=0,(16 - 1) do
+	SetRawTile(8, y, "Water")
+end
+
+GenerateWater(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16)
+
+GenerateWater(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 64) -- four major lakes: Lacanau, Cazaux et Sanguinet, Biscarrosse et Parentis and Aureilhan
+
+GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land")
+
+GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+
+GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, 0, 64, 0, 96)
+
+GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 12, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight) -- large coastal aquitainian forests
+
+GenerateTrees(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 64, 128, 0, 64) -- small forests in the northeast of aquitaine
+
+for x=64,(Map.Info.MapWidth - 1) do
+	for y=(Map.Info.MapHeight - 1),(Map.Info.MapHeight - 1) do
+		if (RawTile(x, y) == "Land") then
+			SetRawTile(x, y, "Tree")
+		end
+	end
+end
+
+GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 64, 128, 96, 128) -- pyrennee forests
+
+ApplyRawTiles()
+
+CreateDecorations()
+	
+CreateGoldMines(1, 50000, 16, 64, 64, Map.Info.MapHeight, false) -- gas deposit near Lacq
+
+CreateGoldMines(5, 50000, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+
+CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+CreatePlayers()

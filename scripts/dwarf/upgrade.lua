@@ -27,54 +27,40 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- NOTE: Save can generate this table.
+local upgrades = {
+	{"upgrade-dwarven-throwing-axe-1", "icon-dwarven-throwing-axe-2",
+		{   200,   300,   300,     0,     0,     0,     0}},
+	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3",
+		{   250,   900,   500,     0,     0,     0,     0}},
+}
 
--- Define Allows
-function DefineAllowNormalDwarvenUnits(flags)
-	local units = {
-		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-scout",
-		"unit-dwarven-ballista"
-	}
-	-- Allow units for human players only if they have been acquired
-	if (flags == "AAAAAAAAAAAAAAAA" and (not IsNetworkGame())) then
-		for i, unitName in ipairs(units) do
-			local PlayerUnitFlag = {}
-			for i=0,15 do
-				if (GetPlayerData(i, "AiEnabled") == false) then
-					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == true) then
-						PlayerUnitFlag[i] = "A"
-					else
-						PlayerUnitFlag[i] = "F"
-					end
-				else
-					PlayerUnitFlag[i] = "A"
-				end
-			end
-			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
-			DefineAllow(unitName, flags)
-		end
-	else
-		for i, unitName in ipairs(units) do
-			DefineAllow(unitName, flags)
-		end
+for i = 1,table.getn(upgrades) do
+	u = CUpgrade:New(upgrades[i][1])
+	u.Icon = Icons[upgrades[i][2]]
+	for j = 1,table.getn(upgrades[i][3]) do
+		u.Costs[j - 1] = upgrades[i][3][j]
 	end
 end
 
-function DefineAllowExtraDwarvenUnits(flags)
-	local units = {
-		"unit-dwarven-steelclad",
-		"unit-rugnur", "unit-rugnur-older", "unit-baglur"
-	}
-	for i, unitName in ipairs(units) do
-		DefineAllow(unitName, flags)
-	end
-end
+DefineModifier("upgrade-dwarven-throwing-axe-1",
+	{"PiercingDamage", 1},
+	{"apply-to", "unit-dwarven-scout"})
 
-InitFuncs:add(function()
-	DefineAllowNormalDwarvenUnits("AAAAAAAAAAAAAAAA")
-	DefineAllowExtraDwarvenUnits("FFFFFFFFFFFFFFFF")
-end)
+DefineModifier("upgrade-dwarven-throwing-axe-2",
+	{"PiercingDamage", 1},
+	{"apply-to", "unit-dwarven-scout"})
 
 DefineDependency("unit-dwarven-scout",
-  {"unit-human-lumber-mill"})
+	{"unit-dwarven-lumber-mill"})
+
+DefineDependency("upgrade-dwarven-throwing-axe-2",
+	{"upgrade-dwarven-throwing-axe-1"})
+
+DefineDependency("unit-dwarven-ballista",
+	{"unit-dwarven-lumber-mill"})
+
+DefineDependency("unit-hero-rugnur",
+	{"unit-dwarven-town-hall", 3, "unit-dwarven-barracks", "unit-dwarven-axefighter", 4})
+
+DefineDependency("unit-hero-baglur",
+	{"unit-dwarven-town-hall", "unit-dwarven-barracks", 2, "unit-dwarven-axefighter", 12})

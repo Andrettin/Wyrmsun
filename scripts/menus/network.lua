@@ -118,8 +118,10 @@ function RunJoiningMapMenu(s)
   local numplayers = 3
   local state
   local d
+  EventsActivated = 1 -- events deactivated since I haven't found a way yet to create a synchronized drop-down for them
 
-  menu = WarMenu("Joining game: Map")
+
+  menu = WarMenu("Joining Game: Map")
 
   menu:writeLargeText("Map", sx, sy*3)
   menu:writeText("File:", sx, sy*3+30)
@@ -129,11 +131,11 @@ function RunJoiningMapMenu(s)
   menu:writeText("Description:", sx, sy*3+70)
   descr = menu:writeText(description, sx+20, sy*3+90)
 
-  local fow = menu:addCheckBox("Fog of war", sx, sy*3+120, function() end)
+  local fow = menu:addCheckBox("Fog of War", sx, sy*3+120, function() end)
   fow:setMarked(true)
   ServerSetupState.FogOfWar = 1
   fow:setEnabled(false)
-  local revealmap = menu:addCheckBox("Reveal map", sx, sy*3+150, function() end)
+  local revealmap = menu:addCheckBox("Reveal Map", sx, sy*3+150, function() end)
   revealmap:setEnabled(false)
 
   menu:writeText("Civilization:", sx, sy*11)
@@ -306,6 +308,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local sy = Video.Height / 20
   local startgame
   local d
+  EventsActivated = 1 -- events deactivated since I haven't found a way yet to create a synchronized drop-down for them
 
   menu = WarMenu("Create MultiPlayer game")
 
@@ -322,14 +325,14 @@ function RunServerMultiGameMenu(map, description, numplayers)
     NetworkServerResyncClients()
     GameSettings.NoFogOfWar = not dd:isMarked()
   end
-  local fow = menu:addCheckBox("Fog of war", sx, sy*3+120, fowCb)
+  local fow = menu:addCheckBox("Fog of War", sx, sy*3+120, fowCb)
   fow:setMarked(true)
   local function revealMapCb(dd)
     ServerSetupState.RevealMap = bool2int(dd:isMarked())
     NetworkServerResyncClients()
     GameSettings.RevealMap = bool2int(dd:isMarked())
   end
-  local revealmap = menu:addCheckBox("Reveal map", sx, sy*3+150, revealMapCb)
+  local revealmap = menu:addCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
 
   menu:writeText("Civilization:", sx, sy*11)
   d = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, sx + 100, sy*11,

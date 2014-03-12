@@ -1,3 +1,0 @@
-LoadTileModels("scripts/tilesets/swamp.lua")
-
-GenerateRandomMap(128, 128)

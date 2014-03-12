@@ -93,64 +93,31 @@ SetStartView(2, 10, 7)
 SetPlayerData(2, "Resources", "gold", 0)
 SetPlayerData(2, "Resources", "wood", 0)
 SetPlayerData(2, "Resources", "oil", 0)
-SetPlayerData(2, "RaceName", "dwarf")
+SetPlayerData(2, "RaceName", "goblin")
 SetPlayerData(2, "Name", "Goblins")
 SetAiType(2, "passive")
 SetPlayerData(15, "RaceName", "neutral")
 
 local RandomNumber = 0
 local DwarvenFactions = GetCivilizationFactions("dwarf")
-local faction_number = -1
 
-table.foreachi(DwarvenFactions, function(k,v)
-	if (v == "Shorbear Clan") then
-		faction_number = k
-	end
-end)
-table.remove(DwarvenFactions, faction_number)
-
-faction_number = -1
-
-table.foreachi(DwarvenFactions, function(k,v)
-	if (v == PlayerFaction) then
-		faction_number = k
-	end
-end)
-if (faction_number ~= -1) then
-	table.remove(DwarvenFactions, faction_number)
-end
+RemoveElementFromArray(DwarvenFactions, "Shorbear Clan")
+RemoveElementFromArray(DwarvenFactions, PlayerFaction)
 
 if (GetArrayIncludes(DwarvenFactions, wyr.preferences.TheScepterOfFireRaiderFaction)) then
 
 	SetPlayerData(1, "Name", wyr.preferences.TheScepterOfFireRaiderFaction)
 
-	table.foreachi(DwarvenFactions, function(k,v)
-		if (v == wyr.preferences.TheScepterOfFireRaiderFaction) then
-			faction_number = k
-		end
-	end)
-	if (faction_number ~= -1) then
-		table.remove(DwarvenFactions, faction_number)
-	end
+	RemoveElementFromArray(DwarvenFactions, wyr.preferences.TheScepterOfFireRaiderFaction)
 end
-
-faction_number = -1
 
 for i=0,1 do
 	if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
 		if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
 			if (PlayerFaction == "" or i ~= GetThisPlayer()) then
-				faction_number = -1
 				RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
 				SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
-				table.foreachi(DwarvenFactions, function(k,v)
-					if (v == DwarvenFactions[RandomNumber]) then
-						faction_number = k
-					end
-				end)
-				if (faction_number ~= -1) then
-					table.remove(DwarvenFactions, faction_number)
-				end
+				RemoveElementFromArray(DwarvenFactions, DwarvenFactions[RandomNumber])
 			end
 		end
 	end
@@ -168,10 +135,10 @@ unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {48, 24})
 unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
 
 -- Rugnur
-unit = CreateUnit("unit-rugnur", 0, {35, 26})
+unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
 
 -- Baglur
-unit = CreateUnit("unit-baglur", 0, {36, 25})
+unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
 
 -- Guardsmen
 unit = CreateUnit("unit-dwarven-axefighter", 0, {20, 26})
@@ -204,9 +171,12 @@ unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
 unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
 unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
 
---unit = CreateUnit("unit-dwarven-glyph", 15, {4, 1})
---unit = CreateUnit("unit-dwarven-glyph", 15, {14, 2})
---unit = CreateUnit("unit-dwarven-glyph", 15, {26, 21})
+unit = CreateUnit("unit-glyph", 15, {5, 11})
+unit = CreateUnit("unit-glyph", 15, {38, 53})
+unit = CreateUnit("unit-glyph", 15, {28, 33})
+unit = CreateUnit("unit-glyph", 15, {15, 24})
+unit = CreateUnit("unit-glyph", 15, {23, 7})
+unit = CreateUnit("unit-glyph", 15, {51, 43})
 
 PlayMusic("music/battle.ogg")
 wyrmsun.playlist = { "music/the_city_falls.ogg" }

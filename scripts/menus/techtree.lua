@@ -27,41 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function addTechItemIcon(unit, menu, techicon, tech_description, x, y)
-	techicon:Load()
-	local b = ImageButton("")
---	b:setHotKey("")
-	b:setActionCallback(
-		function()
-			local tech_menu = WarGameMenu(panel(5))
-			tech_menu:setSize(352, 352)
-    			tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
-			tech_menu:addLabel(GetUnitTypeName(unit), 176, 11)
-			local tech_menu_image = ImageWidget(techicon)
-			tech_menu:add(tech_menu_image, 153, 48)
-
-			local l = MultiLineLabel()
-			l:setFont(Fonts["game"])
-			l:setSize(324, 208)
-			l:setLineWidth(324)
-			tech_menu:add(l, 14, 112)
-			l:setCaption(tech_description)
-			
-			tech_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
-				function()
-					tech_menu:stop()
-				end)
-			tech_menu:run()
-		end
-	)
-	menu:add(b, x, y)
-	b:setNormalImage(techicon)
-	b:setPressedImage(techicon)
-	b:setDisabledImage(techicon)
-	b:setSize(46, 38)
-	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	return b
-end
 
 function RunTechTreeMenu(civilization)
 
@@ -84,32 +49,177 @@ function RunTechTreeMenu(civilization)
 	civilization_dd:setSelected(civilization)
 	civilization_dd:setSize(152, 20)
 
-	if (civilization == 0) then -- if dwarf is selected
-		local tech_points = 0
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == true) then
-			tech_points = tech_points + 5
-		end
+	local tech_points = 0
 
-		menu:addLabel("Technology Points: " .. tech_points, offx + 32, offy + 212 + (36 * 4))
-		addTechItemIcon("unit-dwarven-miner", menu, CGraphic:New("dwarf/icons/miner.png"),
-			"Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts.",
+	if (civilization == 0) then -- if dwarf is selected
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
+			tech_points = tech_points + 2
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
+			tech_points = tech_points + 2
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")) then
+			tech_points = tech_points + 2
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials")) then
+			tech_points = tech_points + 2
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan")) then
+			tech_points = tech_points + 1
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Towards the Caves")) then
+			tech_points = tech_points + 1
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm")) then
+			tech_points = tech_points + 2
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Caverns of Flame")) then
+			tech_points = tech_points + 2
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-scout")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-2")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-ballista")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
+			tech_points = tech_points - 1
+		end
+	end
+
+	menu:addLabel("Technology Points: " .. tech_points, offx + 32, offy + 212 + (36 * 4))
+
+	function addTechItemIcon(unit, menu, techicon_graphics, tech_description, x, y)
+		local techicon
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit)) then
+			techicon = CGraphic:New(techicon_graphics .. ".png")
+		else
+			techicon = CGraphic:New(techicon_graphics .. "_transparent.png")
+		end
+		techicon:Load()
+		local b = ImageButton("")
+	--	b:setHotKey("")
+		b:setActionCallback(
+			function()
+				local tech_menu = WarGameMenu(panel(5))
+				tech_menu:setSize(352, 352)
+				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
+				local unit_name = ""
+				if (string.find(unit, "upgrade-") == nil) then
+					unit_name = GetUnitTypeName(unit)
+				else
+					if (unit == "upgrade-dwarven-throwing-axe-1") then
+						unit_name = "Sharp Throwing Axes"
+					elseif (unit == "upgrade-dwarven-throwing-axe-2") then
+						unit_name = "Bearded Throwing Axes"
+					end
+				end
+				tech_menu:addLabel(unit_name, 176, 11)
+				local tech_menu_image = ImageWidget(techicon)
+				tech_menu:add(tech_menu_image, 153, 48)
+
+				local l = MultiLineLabel()
+				l:setFont(Fonts["game"])
+				l:setSize(324, 208)
+				l:setLineWidth(324)
+				tech_menu:add(l, 14, 112)
+				l:setCaption(tech_description)
+
+				if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and tech_points > 0) then
+					tech_menu:addFullButton("~!Acquire", "a", 176 - (224 / 2), 352 - 40 * 2,
+						function()
+							table.insert(wyr.preferences.TechnologyAcquired, unit)
+							SavePreferences()
+							tech_menu:stop()
+							menu:stop()
+							RunTechTreeMenu(civilization_dd:getSelected())
+						end)
+				end
+				tech_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
+					function()
+						tech_menu:stop()
+					end)
+				tech_menu:run()
+			end
+		)
+		menu:add(b, x, y)
+		b:setNormalImage(techicon)
+		b:setPressedImage(techicon)
+		b:setDisabledImage(techicon)
+		b:setSize(46, 38)
+		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+		return b
+	end
+
+	if (civilization == 0) then -- if dwarf is selected
+		addTechItemIcon("unit-dwarven-miner", menu, "dwarf/icons/miner",
+			"Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources.",
 			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 1))
-		addTechItemIcon("unit-dwarven-town-hall", menu, CGraphic:New("dwarf/icons/town_hall.png"),
+		addTechItemIcon("unit-dwarven-town-hall", menu, "dwarf/icons/town_hall",
 			"The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge.",
 			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 2))
-		addTechItemIcon("unit-dwarven-mushroom-farm", menu, CGraphic:New("dwarf/icons/mushroom_farm.png"),
+		addTechItemIcon("unit-dwarven-mushroom-farm", menu, "dwarf/icons/mushroom_farm",
 			"For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities.",
 			offx + 23 + 4 + (54 * 6), offy + 10 + 4 + (46 * 2))
-		addTechItemIcon("unit-dwarven-barracks", menu, CGraphic:New("dwarf/icons/barracks.png"),
+		addTechItemIcon("unit-dwarven-barracks", menu, "dwarf/icons/barracks",
 			"The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
 			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 2))
-		addTechItemIcon("unit-dwarven-axefighter", menu, CGraphic:New("dwarf/icons/dwarven_axefighter.png"),
+		addTechItemIcon("unit-dwarven-axefighter", menu, "dwarf/icons/dwarven_axefighter",
 			"Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat.",
 			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 3))
+		addTechItemIcon("unit-dwarven-lumber-mill", menu, "tilesets/swamp/dwarf/icons/lumber_mill",
+			"The lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
+			offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 2))
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
+			addTechItemIcon("unit-dwarven-steelclad", menu, "dwarf/icons/dwarven_steelclad",
+				"The dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
+				offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 4))
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
+			addTechItemIcon("unit-dwarven-scout", menu, "dwarf/icons/dwarven_scout",
+				"Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities.",
+				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 3))
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-scout")) then
+			addTechItemIcon("upgrade-dwarven-throwing-axe-1", menu, "dwarf/icons/throwing_axe_2",
+				"As their woodworking craftsmanship progress, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts.",
+				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 4))
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
+			addTechItemIcon("upgrade-dwarven-throwing-axe-2", menu, "dwarf/icons/throwing_axe_3",
+				"The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts.",
+				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 5))
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
+			addTechItemIcon("unit-dwarven-ballista", menu, "dwarf/icons/dwarven_ballista",
+				"",
+				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 3))
+		end
 	end
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
 	menu:run()
+end
+
+function ResetTechnologiesAcquired()
+	wyr.preferences.TechnologyAcquired = {
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-hero-greebo"
+	}
+	SavePreferences()
 end

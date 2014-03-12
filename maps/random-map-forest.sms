@@ -1,0 +1,3 @@
+LoadTileModels("scripts/tilesets/forest.lua")
+
+GenerateRandomMap(128, 128, false)

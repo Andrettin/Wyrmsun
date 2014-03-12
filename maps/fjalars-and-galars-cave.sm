@@ -1,5 +1,0 @@
--- Stratagus Map Presentation
--- File generated automatically from pudconvert.
-
-DefinePlayerTypes("person","computer","computer")
-PresentMap("Fjalar's and Galar's Cave", 3, 64, 64, 1)

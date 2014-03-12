@@ -378,6 +378,30 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
   Sounds = {} }
 )
 
+DefineUnitType("unit-glyph", { Name = "Glyph",
+  Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-glyph",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  Building = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = false,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "gold-mine-acknowledge",
+--    "ready", "gold-mine-ready",
+--    "help", "gold-mine-help",
+    "dead", "building destroyed"} }
+)
+
 --DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 --  Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},
 --  Animations = "animations-human-dead-body", Icon = "icon-dwarven-miner",
@@ -546,6 +570,7 @@ UnitTypeFiles["unit-human-lumber-mill"] = {
 
 DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
   Image = {"size", {96, 96}},
+  NeutralMinimapColor = {192, 192, 192},
   Animations = "animations-building", Icon = "icon-human-lumber-mill",
   Costs = {"time", 150, "gold", 600, "wood", 450},
   RepairHp = 4,
@@ -566,7 +591,7 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
   Building = true, VisibleUnderFog = true,
   CanStore = {"wood"},
   Sounds = {
-    "selected", "human-lumber-mill-selected",
+    "selected", "lumber-mill-selected",
 --    "acknowledge", "elven-lumber-mill-acknowledge",
 --    "ready", "elven-lumber-mill-ready",
     "help", "basic-dwarf-voices-help",

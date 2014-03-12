@@ -50,18 +50,24 @@ DefineAiHelper(
   -- Unit can build which buildings.
   --
   {"build", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill"
   },
   --
   -- Building can train which units.
   --
   {"train", "unit-dwarven-town-hall", "unit-dwarven-miner"},
-  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-goblin-spearman"},
+  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-dwarven-ballista", "unit-goblin-spearman"},
+  --
+  -- Building can research which spells or upgrades.
+  --
+  {"research", "unit-dwarven-lumber-mill",
+  "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2"
+  },
   --
   -- Unit can repair which units.
   --
   {"repair", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall"
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill"
   },
   --
   -- Reduce unit limits.
@@ -71,7 +77,10 @@ DefineAiHelper(
   -- Equivalence of units for the resource manager.
   --
   {"unit-equiv", "unit-dwarven-axefighter",
-  "unit-dwarven-steelclad"
+  "unit-dwarven-steelclad",
+  "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+  "unit-gnomish-recruit",
+  "unit-goblin-spearman", "unit-hero-greebo"
   }
 )
 
@@ -156,6 +165,17 @@ function AiBarracks()
 end
 
 --
+--  Lumber mill of the current race.
+--
+function AiLumberMill()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-lumber-mill"
+	else
+		return "unit-dwarven-lumber-mill"
+	end
+end
+
+--
 --  Soldier of the current race.
 --
 function AiSoldier()
@@ -163,6 +183,8 @@ function AiSoldier()
 		return "unit-dwarven-axefighter"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-recruit"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-spearman"
 	else
 		return "unit-dwarven-axefighter"
 	end
@@ -176,6 +198,39 @@ function AiShooter()
 		return "unit-dwarven-scout"
 	else
 		return "unit-dwarven-scout"
+	end
+end
+
+--
+--  Upgrade missile 1 of the current race.
+--
+function AiUpgradeMissile1()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-throwing-axe-1"
+	else
+		return "upgrade-dwarven-throwing-axe-1"
+	end
+end
+
+--
+--  Upgrade missile 2 of the current race.
+--
+function AiUpgradeMissile2()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-throwing-axe-2"
+	else
+		return "upgrade-dwarven-throwing-axe-2"
+	end
+end
+
+--
+--  Shooter of the current race.
+--
+function AiCatapult()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-ballista"
+	else
+		return "unit-dwarven-ballista"
 	end
 end
 

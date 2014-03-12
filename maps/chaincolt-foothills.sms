@@ -2,9 +2,6 @@
 
 LoadTileModels("scripts/tilesets/swamp.lua")
 
-MapWidth = 56
-MapHeight = 73
-
 RawTiles = {
 	{"Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough"},
 	{"Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough"},
@@ -85,20 +82,20 @@ ApplyRawTiles()
 
 -- Player Setup
 SetStartView(0, 47, 10)
-SetPlayerData(0, "Resources", "gold", 500)
-SetPlayerData(0, "Resources", "wood", 250)
+SetPlayerData(0, "Resources", "gold", 1000)
+SetPlayerData(0, "Resources", "wood", 500)
 SetPlayerData(0, "Resources", "oil", 0)
 SetPlayerData(0, "RaceName", "dwarf")
 SetAiType(0, "land-attack")
 SetStartView(1, 7, 59)
-SetPlayerData(1, "Resources", "gold", 500)
-SetPlayerData(1, "Resources", "wood", 250)
+SetPlayerData(1, "Resources", "gold", 1000)
+SetPlayerData(1, "Resources", "wood", 500)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "gnome")
 SetAiType(1, "land-attack")
 SetStartView(2, 40, 61)
-SetPlayerData(2, "Resources", "gold", 250)
-SetPlayerData(2, "Resources", "wood", 125)
+SetPlayerData(2, "Resources", "gold", 500)
+SetPlayerData(2, "Resources", "wood", 250)
 SetPlayerData(2, "Resources", "oil", 0)
 SetPlayerData(2, "RaceName", "dwarf")
 SetAiType(2, "land-attack")
@@ -107,41 +104,17 @@ SetPlayerData(15, "RaceName", "neutral")
 if (not IsNetworkGame()) then
 	local RandomNumber = 0
 	local DwarvenFactions = GetCivilizationFactions("dwarf")
-	local faction_number = -1
 
-	table.foreachi(DwarvenFactions, function(k,v)
-		if (v == "Shorbear Clan") then
-			faction_number = k
-		end
-	end)
-	table.remove(DwarvenFactions, faction_number)
-
-	faction_number = -1
-
-	table.foreachi(DwarvenFactions, function(k,v)
-		if (v == PlayerFaction) then
-			faction_number = k
-		end
-	end)
-	if (faction_number ~= -1) then
-		table.remove(DwarvenFactions, faction_number)
-	end
+	RemoveElementFromArray(DwarvenFactions, "Shorbear Clan")
+	RemoveElementFromArray(DwarvenFactions, PlayerFaction)
 
 	for i=0,2 do
 		if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
 			if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
 				if (PlayerFaction == "" or i ~= GetThisPlayer()) then
-					faction_number = -1
 					RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
 					SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
-					table.foreachi(DwarvenFactions, function(k,v)
-						if (v == DwarvenFactions[RandomNumber]) then
-							faction_number = k
-						end
-					end)
-					if (faction_number ~= -1) then
-						table.remove(DwarvenFactions, faction_number)
-					end
+					RemoveElementFromArray(DwarvenFactions, DwarvenFactions[RandomNumber])
 				end
 			end
 		end
@@ -167,7 +140,7 @@ unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
 
 -- Rugnur
 if (GetPlayerData(0, "Name") ~= "Shorbear Clan") then -- Rugnur cannot belong to the Shorbear Clan
-	unit = CreateUnit("unit-rugnur", 0, {47, 10})
+	unit = CreateUnit("unit-hero-rugnur", 0, {47, 10})
 end
 
 -- Gnomish outpost
