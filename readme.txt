@@ -58,6 +58,7 @@ https://launchpad.net/stratagus
 - Units' level is now once again displayed, but depends on experience obtained.
 - Dwarven axefighters can now be upgraded to dwarven steelclads if they have reached level 2.
 - Dwarven steelclads now have 3 armor instead of the 2 they had previously.
+- Units other than axefighters and the first version of Rugnur get an increase in HP when leveling up.
 
 -----------------------------------------------------------------------
 - 0.1.3
