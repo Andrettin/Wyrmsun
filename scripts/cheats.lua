@@ -134,7 +134,8 @@ function HandleCheats(str)
   elseif (str == "mead of poetry") then
 	local units = {
 		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-scout",
+		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 		"unit-dwarven-ballista",
 		"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",

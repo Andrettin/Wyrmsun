@@ -42,7 +42,7 @@
 --
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---  * Race Dwarf.
+--  * Civilization Dwarf.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 DefineAiHelper(
@@ -50,13 +50,20 @@ DefineAiHelper(
   -- Unit can build which buildings.
   --
   {"build", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill"
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill",
+  "unit-dwarven-sentry-tower"
   },
   --
   -- Building can train which units.
   --
   {"train", "unit-dwarven-town-hall", "unit-dwarven-miner"},
   {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-dwarven-ballista", "unit-goblin-spearman"},
+  --
+  -- Unit or building can upgrade which upgrades.
+  --
+  {"upgrade", "unit-dwarven-sentry-tower",
+  "unit-dwarven-guard-tower"},
+  {"upgrade", "unit-dwarven-axefighter", "unit-dwarven-steelclad"},
   --
   -- Building can research which spells or upgrades.
   --
@@ -67,7 +74,8 @@ DefineAiHelper(
   -- Unit can repair which units.
   --
   {"repair", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill"
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill",
+  "unit-dwarven-sentry-tower", "unit-dwarven-guard-tower"
   },
   --
   -- Reduce unit limits.
@@ -85,7 +93,7 @@ DefineAiHelper(
 )
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---  * Race Gnome.
+--  * Civilization Gnome.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 DefineAiHelper(
@@ -113,7 +121,7 @@ DefineAiHelper(
 )
 
 --
---  City-center of the current race.
+--  City-center of the current civilization.
 --
 function AiCityCenter()
 	if (AiGetRace() == "dwarf") then
@@ -126,7 +134,7 @@ function AiCityCenter()
 end
 
 --
---  Worker of the current race.
+--  Worker of the current civilization.
 --
 function AiWorker()
 	if (AiGetRace() == "dwarf") then
@@ -139,7 +147,7 @@ function AiWorker()
 end
 
 --
---  Farm of the current race.
+--  Farm of the current civilization.
 --
 function AiFarm()
 	if (AiGetRace() == "dwarf") then
@@ -152,7 +160,7 @@ function AiFarm()
 end
 
 --
---  Barracks of the current race.
+--  Barracks of the current civilization.
 --
 function AiBarracks()
 	if (AiGetRace() == "dwarf") then
@@ -165,7 +173,7 @@ function AiBarracks()
 end
 
 --
---  Lumber mill of the current race.
+--  Lumber mill of the current civilization.
 --
 function AiLumberMill()
 	if (AiGetRace() == "dwarf") then
@@ -176,7 +184,7 @@ function AiLumberMill()
 end
 
 --
---  Soldier of the current race.
+--  Soldier of the current civilization.
 --
 function AiSoldier()
 	if (AiGetRace() == "dwarf") then
@@ -191,7 +199,18 @@ function AiSoldier()
 end
 
 --
---  Shooter of the current race.
+--  Veteran soldier of the current civilization.
+--
+function AiVeteranSoldier()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-steelclad"
+	else
+		return "unit-dwarven-steelclad"
+	end
+end
+
+--
+--  Shooter of the current civilization.
 --
 function AiShooter()
 	if (AiGetRace() == "dwarf") then
@@ -202,7 +221,7 @@ function AiShooter()
 end
 
 --
---  Upgrade missile 1 of the current race.
+--  Upgrade missile 1 of the current civilization.
 --
 function AiUpgradeMissile1()
 	if (AiGetRace() == "dwarf") then
@@ -213,7 +232,7 @@ function AiUpgradeMissile1()
 end
 
 --
---  Upgrade missile 2 of the current race.
+--  Upgrade missile 2 of the current civilization.
 --
 function AiUpgradeMissile2()
 	if (AiGetRace() == "dwarf") then
@@ -224,13 +243,35 @@ function AiUpgradeMissile2()
 end
 
 --
---  Shooter of the current race.
+--  Siege weapon of the current civilization.
 --
 function AiCatapult()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-ballista"
 	else
 		return "unit-dwarven-ballista"
+	end
+end
+
+--
+--  Watch Tower of the current civilization.
+--
+function AiWatchTower()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-sentry-tower"
+	else
+		return "unit-dwarven-sentry-tower"
+	end
+end
+
+--
+--  Guard Tower of the current civilization.
+--
+function AiGuardTower()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-guard-tower"
+	else
+		return "unit-dwarven-guard-tower"
 	end
 end
 

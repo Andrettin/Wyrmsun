@@ -52,6 +52,7 @@ if (CanAccessFile("ui/mana2.png")) then
 end
 DefineSprites({Name = "sprite-shadow", File = "missiles/unit_shadow.png", Offset = {3, 42}, Size = {32, 32}})
 DefineSprites({Name = "sprite-spell", File = "ui/bloodlust,haste,slow,invisible,shield.png", Offset = {1, 1}, Size = {16, 16}})
+DefineSprites({Name = "sprite-level-up", File = "ui/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
 
 DefineDecorations({Index = "Bloodlust", ShowOpponent = true,
@@ -66,6 +67,8 @@ DefineDecorations({Index = "UnholyArmor", ShowOpponent = true,
   Offset = {48, 0}, Method = {"static-sprite", {"sprite-spell", 4}}})
 DefineDecorations({Index = "ShadowFly", ShowOpponent = true, ShowWhenMax = true, ShowWhenNull = true,
   Offset = {0, 0}, Method = {"sprite", {"sprite-shadow"}}})
+DefineDecorations({Index = "LevelUp", ShowOpponent = false,
+  Offset = {16, 0}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 
 --
 --  Define Panels
@@ -322,9 +325,9 @@ DefinePanelContents(
 --		))}}
 --
 --	},
---	{ Pos = {114, 41},
---		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
---	},
+	{ Pos = {114, 41},
+		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
+	},
 	{ Pos = {114, 56},
 		More = {"FormattedText2", {Centered = true,
 			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}

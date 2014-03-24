@@ -56,6 +56,9 @@ DefineDependency("unit-dwarven-scout",
 DefineDependency("upgrade-dwarven-throwing-axe-2",
 	{"upgrade-dwarven-throwing-axe-1"})
 
+DefineDependency("unit-dwarven-guard-tower",
+  {"unit-dwarven-lumber-mill"})
+
 DefineDependency("unit-dwarven-ballista",
 	{"unit-dwarven-lumber-mill"})
 

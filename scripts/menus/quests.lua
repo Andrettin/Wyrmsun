@@ -41,22 +41,14 @@ function RunQuestMenu()
 	local offy = (Video.Height - 480) / 2
 	
 	addQuestIcon("A Bargain is Struck", menu, "dwarf/icons/rugnur",
-		"A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map.\n\nHint: The easiest way to obtain this quest is to play the Chaincolt Foothills map under default settings.",
+		"A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map, Baglur (Hero).\n\nHint: The easiest way to obtain this quest is to play the Chaincolt Foothills map under default settings.",
 		offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 1))
 	
---	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
---		addQuestIcon("Closing the Gates", menu, "dwarf/icons/baglur",
---			"With Baglur's aid, Rugnur has activated a series of glyphs, setting off an old mechanism and closing the gates to his clan's tunnels.\n\nOptimal Map: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points, Northern Wastelands Map.",
---			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
---	elseif (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and wyrmsun.Version == "0.1.4") then
---		addQuestIcon("Closing the Gates", menu, "dwarf/icons/baglur",
---			"Having retreated from the raiders' onslaught, Rugnur reaches the gates to his clan's tunnels.\n\nOptimal Map: Caverns of Chaincolt",
---			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
---	else
---		addQuestIcon("Closing the Gates (Coming Soon)", menu, "dwarf/icons/baglur_transparent",
---			"Having retreated from the raiders' onslaught, Rugnur reaches the gates to his clan's tunnels.\n\nHint: The easiest way to obtain this quest is to play the Caverns of Chaincolt map under default conditions.",
---			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
---	end
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
+		addQuestIcon("Closing the Gates", menu, "dwarf/icons/baglur",
+			"Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nRewards: 2 Dwarven Technology Points, Northern Wastelands Map (Coming Soon).\n\nHint: This quest can only be completed by playing the Caverns of Chaincolt map.",
+			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
+	end
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)

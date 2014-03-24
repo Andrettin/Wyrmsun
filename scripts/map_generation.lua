@@ -724,8 +724,6 @@ function CreateDecorations()
 end
 
 function CreatePlayers()
-	local RandomNumber = 0
-
 	-- create player units
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
@@ -743,6 +741,11 @@ function CreatePlayers()
 			end
 			SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 			SetAiType(i, "land-attack")
+			unit = CreateUnit("unit-dwarven-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
+			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
+			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
 			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
 		end
 	end

@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "0.1.3"
+wyrmsun.Version = "0.1.4"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
 wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
@@ -269,10 +269,12 @@ DefineVariables(
 	"PosX",
 	"PosY",
 	"Level", {Max = 30, Value = 1, Increase = 0, Enable = true},
---	"Points", {Max = 99999, Value = 25, Increase = 0, Enable = true},
-	"Points",
+	"BasePoints", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+--	"Points",
 	"Xp",
-	"XpRequired", {Max = 43500, Value = 100, Increase = 0, Enable = true},
+	"XpRequired", {Max = 43500, Value = 200, Increase = 0, Enable = true},
+	"LevelUp", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"RegenerationRate",
 	"ResourcesHeld",
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
@@ -342,27 +344,30 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-scout" or (GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(2) + 1))
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", 2)
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-older") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", 6)
 			else
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
 			end
 		end
+		if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
+			SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
+		end
+		if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
+			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
+		end
 	end
 
---	local uncount = 0
---	uncount = GetUnits("any")
---	for unit1 = 1,table.getn(uncount) do 
---		if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
---			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")))
---		end
---	end
 end
 
 function StandardTriggers()
@@ -389,14 +394,18 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-scout" or (GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(2) + 1))
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", 2)
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-older") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", 6)
 					else
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
 					end
@@ -435,6 +444,13 @@ function StandardTriggers()
 					if (mercenary_camp_player < 15) then
 						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), mercenary_camp_player)
 					end
+				end
+				
+				if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
+					SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
+				end
+				if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
+					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
 			end
 			return true
@@ -476,7 +492,6 @@ function StandardTriggers()
 			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) >= 1 or GetNumUnitsAt(-1, "unit-hero-rugnur-older", {0, 0}, {256, 256}) >= 1) then
 				-- make it impossible to hire a hero after he has already been hired by someone
 				DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
-				DefineAllow("unit-hero-rugnur-older", "FFFFFFFFFFFFFFFF")
 				return false
 			else
 				-- create Rugnur for an AI player if they fulfill the conditions
@@ -485,7 +500,6 @@ function StandardTriggers()
 						unit = CreateUnit("unit-hero-rugnur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 1000)
 						DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
-						DefineAllow("unit-hero-rugnur-older", "FFFFFFFFFFFFFFFF")
 						return false
 					end
 				end
@@ -521,21 +535,21 @@ function StandardTriggers()
 	)
 
 	-- increase unit level if it has enough experience
---	AddTrigger(
---		function()
---			return true
---		end,
---		function()
---			local uncount = 0
---			uncount = GetUnits("any")
---			for unit1 = 1,table.getn(uncount) do 
---				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired")) then
---					IncreaseUnitLevel(uncount[unit1], 1)
---				end
---			end
---			return true
---		end
---	)
+	AddTrigger(
+		function()
+			return true
+		end,
+		function()
+			local uncount = 0
+			uncount = GetUnits("any")
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired")) then
+					IncreaseUnitLevel(uncount[unit1], 1, true)
+				end
+			end
+			return true
+		end
+	)
 
 	-- randomly pick a character name for the unit
 --	AddTrigger(
@@ -627,7 +641,9 @@ function GetCivilizationFactions(civilization)
 	if (civilization == "dwarf") then
 		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 	elseif (civilization == "gnome") then
-		return {"Untersberg"}
+		return {"Gnomes"}
+	elseif (civilization == "goblin") then
+		return {"Goblins"}
 	else
 		return { }
 	end
@@ -822,13 +838,19 @@ function GetCharacterNamePersonalPronoun(character_name, type, is_capitalized)
 	end
 end
 
-function IncreaseUnitLevel(unit, level_number)
+function IncreaseUnitLevel(unit, level_number, advancement)
+	if (GetUnitVariable(unit, "Ident") ~= "unit-dwarven-axefighter" and GetUnitVariable(unit, "Ident") ~= "unit-hero-rugnur") then
+		advancement = false
+	end
 	while (level_number > 0) do
 		SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
-		SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * GetUnitVariable(unit, "Level")))
---		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
+		SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * (GetUnitVariable(unit, "Level") + 1)))
+		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
+		if (advancement) then
+			SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
+		end
 		level_number = level_number - 1
-		UpdateUnitBonuses(unit)
+--		UpdateUnitBonuses(unit)
 	end
 end
 
@@ -917,7 +939,7 @@ local defaultPreferences = {
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-hero-greebo"
 	},

@@ -659,23 +659,19 @@ function RunSinglePlayerGameMenu()
 	if (world:getSelected() == 0) then
 		table.insert(scenario_list, "Aquitania")
 		table.insert(scenario_list, "Scandinavia")
+		table.insert(scenario_list, "Random Map (Forest)")
+		table.insert(scenario_list, "Random Map (Symmetric Forest)")
 	elseif (world:getSelected() == 1) then
 		table.insert(scenario_list, "Brown Hills")
---		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
---			table.insert(scenario_list, "Caverns of Chaincolt")
---		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
+			table.insert(scenario_list, "Caverns of Chaincolt")
+		end
 		table.insert(scenario_list, "Chaincolt Foothills")
+		table.insert(scenario_list, "Random Map (Cave)")
+		table.insert(scenario_list, "Random Map (Swamp)")
+		table.insert(scenario_list, "Random Map (Symmetric Cave)")
+		table.insert(scenario_list, "Random Map (Symmetric Swamp)")
 	end
-	table.insert(scenario_list, "Random Map (Cave)")
-	if (world:getSelected() == 0) then
-		table.insert(scenario_list, "Random Map (Forest)")
-	end
-	table.insert(scenario_list, "Random Map (Swamp)")
-	table.insert(scenario_list, "Random Map (Symmetric Cave)")
-	if (world:getSelected() == 0) then
-		table.insert(scenario_list, "Random Map (Symmetric Forest)")
-	end
-	table.insert(scenario_list, "Random Map (Symmetric Swamp)")
 	table.insert(scenario_list, "Custom Map")
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
@@ -809,7 +805,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.1.3") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.1.4") then
 		ResetTechnologiesAcquired()
 	end
 	wyr.preferences.LastVersionPlayed = wyrmsun.Version

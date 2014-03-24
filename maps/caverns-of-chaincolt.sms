@@ -94,7 +94,6 @@ SetPlayerData(2, "Resources", "gold", 0)
 SetPlayerData(2, "Resources", "wood", 0)
 SetPlayerData(2, "Resources", "oil", 0)
 SetPlayerData(2, "RaceName", "goblin")
-SetPlayerData(2, "Name", "Goblins")
 SetAiType(2, "passive")
 SetPlayerData(15, "RaceName", "neutral")
 
@@ -140,13 +139,9 @@ unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
 -- Baglur
 unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
 
--- Guardsmen
-unit = CreateUnit("unit-dwarven-axefighter", 0, {20, 26})
-unit = CreateUnit("unit-dwarven-axefighter", 0, {25, 29})
-
---unit = CreateUnit("unit-dwarven-guard-tower", 0, {9, 15})
---unit = CreateUnit("unit-dwarven-guard-tower", 0, {12, 16})
---unit = CreateUnit("unit-dwarven-scout-tower", 0, {12, 16}) -- can also be guard tower
+unit = CreateUnit("unit-dwarven-guard-tower", 0, {16, 31})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also be guard tower
+unit = CreateUnit("unit-dwarven-guard-tower", 0, {22, 34})
 
 -- Goblins
 unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})

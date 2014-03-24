@@ -51,25 +51,4 @@ CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
--- create player units
-for i=0,14 do
-	if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-		local player_spawn_point = FindAppropriatePlayerSpawnPoint()
-		SetStartView(i, player_spawn_point[1], player_spawn_point[2])
-		SetPlayerData(i, "Resources", "gold", 10000)
-		SetPlayerData(i, "Resources", "wood", 3000)
-		SetPlayerData(i, "Resources", "oil", 1000)
-		local possible_civilizations = {}
-		if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf"))) then
-			table.insert(possible_civilizations, "dwarf")
-		end
-		if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled")) then
-			table.insert(possible_civilizations, "gnome")
-		end
-		SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
-		SetAiType(i, "land-attack")
-		unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
-	end
-end
-
-SetPlayerData(15, "RaceName", "neutral")
+CreatePlayers()

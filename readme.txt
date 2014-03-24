@@ -24,6 +24,42 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.4
+-----------------------------------------------------------------------
+
+* AI
+- The AI now properly builds lumber mills (thanks to the Stratagus team).
+
+* Buildings
+- Added two new buildings: the dwarven Sentry Tower and the dwarven Guard Tower.
+
+* Factions
+- The Gnomish faction is now called "Gnomes".
+
+* Heroes
+- Rugnur can now be upgraded to more powerful version if he has enough experience (he needs to be level 2).
+- Rugnur (both versions), Baglur and Greebo had their stats altered, bringing their HP down, but increasing their damage.
+- Baglur and the more experienced version of Rugnur now use the dwarven steelclad graphics.
+
+* Maps
+- Random maps now have a town hall and 5 workers as the default starting units.
+- The Caverns of Chaincolt map has been added.
+
+* Miscellaneous
+- Added a number of unused graphics to the game, (for instance, variations of the dwarven cursor), to provide modders with more assets to modify.
+- Taking screenshots in-game now functions properly (thanks to the Stratagus team).
+
+* Quest
+- The Closing the Gates quest has been added.
+
+* Units
+- Dwarven axefighters, dwarven steelclads, dwarven scouts and gnomish workers now have random hair variations.
+- Unit icons now properly display player color (thanks to the Stratagus team) (known issue: the player color displayed is that of the current player, instead of the unit's owner).
+- Units' level is now once again displayed, but depends on experience obtained.
+- Dwarven axefighters can now be upgraded to dwarven steelclads if they have reached level 2.
+- Dwarven steelclads now have 3 armor instead of the 2 they had previously.
+
+-----------------------------------------------------------------------
 - 0.1.3
 -----------------------------------------------------------------------
 

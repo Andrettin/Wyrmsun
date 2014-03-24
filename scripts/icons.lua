@@ -29,7 +29,7 @@
 
 function DefineIcon(arg)
 	local icon = CIcon:New(arg.Name)
-	icon.G = CGraphic:New(arg.File, arg.Size[1], arg.Size[2])
+	icon.G = CPlayerColorGraphic:New(arg.File, arg.Size[1], arg.Size[2])
 	icon.Frame = arg.Frame
 end
 
@@ -45,6 +45,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/harvest.png"
+})
+
+DefineIcon({
+	Name = "icon-attack-ground",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/attack_ground.png"
 })
 
 DefineIcon({
@@ -268,6 +275,20 @@ if (wyrmsun.tileset == "swamp") then
 	})
 
 	DefineIcon({
+		Name = "icon-dwarven-sentry-tower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/sentry_tower.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-guard-tower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/guard_tower.png"
+	})
+
+	DefineIcon({
 		Name = "icon-gnomish-town-hall",
 		Size = {46, 38},
 		Frame = 0,
@@ -408,6 +429,20 @@ elseif (wyrmsun.tileset == "forest") then
 	})
 
 	DefineIcon({
+		Name = "icon-dwarven-sentry-tower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/dwarf/icons/sentry_tower.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-guard-tower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/forest/dwarf/icons/guard_tower.png"
+	})
+
+	DefineIcon({
 		Name = "icon-gnomish-town-hall",
 		Size = {46, 38},
 		Frame = 0,
@@ -545,6 +580,20 @@ else
 		Size = {46, 38},
 		Frame = 0,
 		File = "tilesets/swamp/dwarf/icons/lumber_mill.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-sentry-tower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/sentry_tower.png"
+	})
+
+	DefineIcon({
+		Name = "icon-dwarven-guard-tower",
+		Size = {46, 38},
+		Frame = 0,
+		File = "tilesets/swamp/dwarf/icons/guard_tower.png"
 	})
 
 	DefineIcon({

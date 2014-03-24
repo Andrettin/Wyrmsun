@@ -56,6 +56,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
     "unit-goblin-spearman",
+    "unit-dwarven-guard-tower",
     "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
     "unit-critter",
     "dwarf-group"} } )
@@ -75,7 +76,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
   Action = "attack",
   Key = "a", Hint = "~!Attack",
   ForUnit = {
-    "unit-dwarven-scout"
+    "unit-dwarven-scout",
+    "unit-dwarven-guard-tower"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
@@ -116,6 +118,11 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
 	"unit-goblin-spearman",
 	"unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
 	"dwarf-group"} } )
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
+  Action = "attack-ground",
+  Key = "g", Hint = "Attack ~!Ground",
+  ForUnit = {"unit-dwarven-ballista", "dwarf-group"} } )
 
 -- miner specific actions ---------------------------------------------------
 
@@ -163,6 +170,11 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
   Key = "l", Hint = "Build ~!Lumber Mill",
   ForUnit = {"unit-dwarven-miner"} } )
 
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
+  Action = "build", Value = "unit-dwarven-sentry-tower",
+  Key = "t", Hint = "Build Sentry ~!Tower",
+  ForUnit = {"unit-dwarven-miner"} } )
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "\27", Hint = "~<ESC~> Cancel",
@@ -192,13 +204,13 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-scout",
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-rugnur",
   Action = "train-unit", Value = "unit-hero-rugnur",
-  Allowed = "check-single-research",
+  Allowed = "check-units-not", AllowArg = {"unit-hero-rugnur", "unit-hero-rugnur-older"},
   Key = "r", Hint = "Hire ~!Rugnur",
   ForUnit = {"unit-dwarven-barracks"} } )
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-baglur",
   Action = "train-unit", Value = "unit-hero-baglur",
-  Allowed = "check-single-research",
+  Allowed = "check-units-not", AllowArg = {"unit-hero-baglur"},
   Key = "g", Hint = "Hire ~!Baglur",
   ForUnit = {"unit-dwarven-barracks"} } )
 
@@ -222,3 +234,21 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
   Key = "r", Hint = "~!Research Bearded Throwing Axes",
   ForUnit = {"unit-dwarven-lumber-mill"} } )
 
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-steelclad",
+  Action = "upgrade-to", Value = "unit-dwarven-steelclad",
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "u", Hint = "~!Upgrade to Steelclad",
+  ForUnit = {"unit-dwarven-axefighter"} } )
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-rugnur-older",
+  Action = "upgrade-to", Value = "unit-hero-rugnur-older",
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "u", Hint = "~!Upgrade to Steelclad",
+  ForUnit = {"unit-hero-rugnur"} } )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
+  Action = "upgrade-to", Value = "unit-dwarven-guard-tower",
+  Key = "g", Hint = "Upgrade to ~!Guard Tower",
+  ForUnit = {"unit-dwarven-sentry-tower"} } )

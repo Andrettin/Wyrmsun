@@ -79,6 +79,12 @@ function RunTechTreeMenu(civilization)
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
 			tech_points = tech_points - 1
 		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower")) then
+			tech_points = tech_points - 1
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-guard-tower")) then
+			tech_points = tech_points - 1
+		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-scout")) then
 			tech_points = tech_points - 1
 		end
@@ -182,6 +188,14 @@ function RunTechTreeMenu(civilization)
 		addTechItemIcon("unit-dwarven-lumber-mill", menu, "tilesets/swamp/dwarf/icons/lumber_mill",
 			"The lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
 			offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 2))
+		addTechItemIcon("unit-dwarven-sentry-tower", menu, "tilesets/swamp/dwarf/icons/sentry_tower",
+			"In these towers, dwarves keep watch of threats approaching their settlements.",
+			offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 2))
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
+			addTechItemIcon("unit-dwarven-guard-tower", menu, "tilesets/swamp/dwarf/icons/guard_tower",
+				"Garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's defenses.",
+				offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 3))
+		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
 			addTechItemIcon("unit-dwarven-steelclad", menu, "dwarf/icons/dwarven_steelclad",
 				"The dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
@@ -217,9 +231,12 @@ end
 
 function ResetTechnologiesAcquired()
 	wyr.preferences.TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-hero-greebo"
 	}
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
+	end
 	SavePreferences()
 end

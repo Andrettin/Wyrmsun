@@ -47,27 +47,32 @@ function AiLandAttack()
 		AiSet(AiBarracks(), 1)
 	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 16 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
-			AiSet(AiSoldier(), 16)
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
+			AiSet(AiSoldier(), 12)
+			AiSet(AiShooter(), 4)
 		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
 			AiSet(AiSoldier(), 4)
 		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
 			AiSet(AiSoldier(), 1)
 		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 16 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
-			AiForce(1, {AiSoldier(), 12})
-			AiForce(0, {AiSoldier(), 4})
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
+			AiForce(1, {AiSoldier(), 9, AiShooter(), 3})
+			AiForce(0, {AiSoldier(), 3, AiShooter(), 1})
 			AiWaitForce(1)
 			AiAttackWithForce(1)
+			AiSet(AiSoldier(), 0)
+			AiSet(AiShooter(), 0)
 		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
 			AiForce(1, {AiSoldier(), 3})
 			AiForce(0, {AiSoldier(), 1})
 			AiWaitForce(1)
 			AiAttackWithForce(1)
+			AiSet(AiSoldier(), 0)
 		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
 			AiForce(1, {AiSoldier(), 1})
 			AiWaitForce(1)
 			AiAttackWithForce(1)
+			AiSet(AiSoldier(), 0)
 		end
 	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
@@ -79,13 +84,22 @@ function AiLandAttack()
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 6) then
 		AiSet(AiWorker(), 12)
 	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
-		AiSet(AiBarracks(), 2)
-	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1) then
 		AiSet(AiLumberMill(), 1)
 	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
+		AiSet(AiBarracks(), 2)
+	end
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) < 2) then
+		AiSet(AiWatchTower(), 2)
+	end
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWatchTower()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
+		AiUpgradeTo(AiGuardTower())
+	end
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
+		AiSet(AiWatchTower(), 0)
+	end
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
 		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 20) then
 			AiSet(AiWorker(), 20)
 		end

@@ -7,6 +7,7 @@ b_o:
 /graphics/dwarf/units/miner_with_gold.png
 /graphics/dwarf/units/miner_with_lumber.png
 /graphics/gnome/units/gnomish_caravan.png
+/graphics/gnome/units/gnomish_caravan_extra_1.png
 /graphics/gnome/units/gnomish_recruit.png
 /graphics/gnome/units/gnomish_worker.png
 /graphics/gnome/units/gnomish_worker_with_gold.png
@@ -61,8 +62,10 @@ igoku:
 
 João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/barracks.png
+/graphics/dwarf/buildings/guard_tower.png
 /graphics/dwarf/buildings/lumber_mill.png
 /graphics/dwarf/buildings/mushroom_farm.png
+/graphics/dwarf/buildings/sentry_tower.png
 /graphics/dwarf/buildings/town_hall.png
 /graphics/dwarf/icons/axe_1.png (modified from Ransom.00's icon)
 /graphics/dwarf/icons/baglur.png
@@ -87,14 +90,21 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/icons/gnomish_recruit.png
 /graphics/gnome/icons/gnomish_worker.png
 /graphics/human/buildings/lumber_mill.png
+/graphics/human/icons/soldier.png
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
 /graphics/neutral/buildings/glyph.png
+/graphics/neutral/buildings/glyph_player_color.png
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
+/graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/build_basic_structure.png
 /graphics/neutral/icons/cancel.png
+/graphics/neutral/icons/cancel_extra_1.png
+/graphics/neutral/icons/cancel_extra_2.png
 /graphics/neutral/icons/harvest.png
 /graphics/neutral/icons/repair.png
+/graphics/neutral/icons/repair_extra_1.png
+/graphics/neutral/icons/repair_extra_2.png
 /graphics/neutral/icons/water_elemental.png
 /graphics/orc/icons/spearman.png
 /graphics/tilesets/forest/neutral/icons/rat.png
@@ -142,6 +152,16 @@ João Victor G. Costa (Jinn):
 /graphics/ui/dwarf/statusline_1600.png
 /graphics/ui/dwarf/statusline_1680.png
 /graphics/ui/dwarf/cursors/dwarven_gauntlet.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_1.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_2.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_3.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_4.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_5.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_6.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_7.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_8.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_9.png
+/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_10.png
 /graphics/ui/dwarf/widgets/button-large-grayed.png
 /graphics/ui/dwarf/widgets/button-large-normal.png
 /graphics/ui/dwarf/widgets/button-large-pressed.png

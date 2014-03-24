@@ -280,7 +280,7 @@ function EventTriggers()
 			end
 			if ((SyncRand(100) + 1) <= 10) then
 				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") == 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
 						player = i
 
 						local loop = true
@@ -369,7 +369,7 @@ function EventTriggers()
 			Event(
 				"Strike a Bargain?",
 --				"A gnomish monarch has come to an outpost of ours offering to make a bargain with us: he asks that we craft a scepter encrusted with the radiant Ruby of Fire for him. In return, he would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...\n\nNote: Completing this quest will unlock the Chaincolt Caverns map - when it is included in a coming version of Wyrmsun.",
-				"The gnomish monarch of " .. GetPlayerData(gnomish_monarch_player, "Name") .. ", " .. gnomish_monarch_name .. ", has come to an outpost of ours offering to make a bargain with us: " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " asks that we craft a scepter encrusted with the radiant Ruby of Fire for " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "object", false) .. ". In return, " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...",
+				"The gnomish monarch " .. gnomish_monarch_name .. " has come to an outpost of ours offering to make a bargain with us: " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " asks that we craft a scepter encrusted with the radiant Ruby of Fire for " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "object", false) .. ". In return, " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...",
 				player,
 				2,
 				"We'll accept the offer.",
@@ -386,7 +386,7 @@ function EventTriggers()
 				return false
 			end
 			for i=0,14 do
-				if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") == 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+				if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 					player = i
 					return true
 				end
@@ -408,7 +408,7 @@ function EventTriggers()
 			end
 			local note = ""
 			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-				note = "\n\nNote: You have gained 2 dwarven technology points. Furthermore, when the Caverns of Chaincolt map is included in a coming version of the game, it will already be unlocked for you to play."
+				note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Caverns of Chaincolt map and to the hero Baglur."
 			end
 			Event(
 				"The Last Caravan has Arrived!",
@@ -428,7 +428,7 @@ function EventTriggers()
 				return false
 			end
 			for i=0,14 do
-				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4)) then
+				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and ((GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4)) then
 					player = i
 					return true
 				end
@@ -442,6 +442,109 @@ function EventTriggers()
 			Event(
 				"The Bargain has Failed",
 				"We have failed in our quest to craft the scepter for the gnomish monarch, and he has called off the deal.",
+				player,
+				1,
+				"OK"
+			)
+			return false
+		end
+	)
+
+	-- Closing the Gates
+	-- based on the Closing the Gates scenario of the Sceptre of Fire campaign from Battle for Wesnoth
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			if ((SyncRand(100) + 1) <= 10 and GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
+						player = i
+						return true
+					end
+				end
+			end
+			return false
+		end,
+		function() 
+			function EventOption1Effects()
+				table.insert(Objectives[player], "- Have one unit standing on each glyph at the same time")
+			end
+			Event(
+				"Closing the Gates",
+				"The " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders are striking with increasing numbers, vying to take the gnomish silver. The rascals are too numerous for us to defeat, but the veteran soldier Baglur has explained one way for us to prevent them from swarming into our cavernous home: by activating six glyphs, we can start the mechanism to close the massive stone gates. It has been a long time since they were last used, however, and by now a few Goblins lair in their surroundings.",
+				player,
+				1,
+				"OK"
+			)
+			return false
+		end
+	)
+
+	-- We are safe!
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			for i=0,14 do
+				if (GetArrayIncludes(Objectives[i], "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
+					player = i
+					return true
+				end
+			end
+			return false
+		end,
+		function() 
+			function EventOption1Effects()
+				RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
+			  	if (player == GetThisPlayer()) then
+					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
+						table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
+					end
+					SavePreferences()
+					if (mapinfo.description == "Caverns of Chaincolt") then
+						ActionVictory()
+					end
+			  	end
+			end
+			local note = ""
+			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
+				note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Northern Wastelands map (coming soon)."
+			end
+			Event(
+				"We are safe!",
+				"We have successfully closed the gates to our tunnels! Now we must seek the clans' elders to inform them of our situation..." .. note .. "",
+				player,
+				1,
+				"OK"
+			)
+			return false
+		end
+	)
+
+	-- The Bargain has Failed
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			for i=0,14 do
+				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], "- Have one unit standing on each glyph at the same time") and ((GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) < 1 or GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") < 1)) then
+					player = i
+					return true
+				end
+			end
+			return false
+		end,
+		function() 
+			function EventOption1Effects()
+				RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
+			end
+			Event(
+				"The Bargain has Failed",
+				"We have failed in our quest to craft the scepter for the gnomish monarch.",
 				player,
 				1,
 				"OK"
