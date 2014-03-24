@@ -839,15 +839,17 @@ function GetCharacterNamePersonalPronoun(character_name, type, is_capitalized)
 end
 
 function IncreaseUnitLevel(unit, level_number, advancement)
-	if (GetUnitVariable(unit, "Ident") ~= "unit-dwarven-axefighter" and GetUnitVariable(unit, "Ident") ~= "unit-hero-rugnur") then
-		advancement = false
-	end
 	while (level_number > 0) do
 		SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
 		SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * (GetUnitVariable(unit, "Level") + 1)))
 		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
 		if (advancement) then
-			SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
+			if ((GetUnitVariable(unit, "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(unit, "Ident") == "unit-hero-rugnur") and GetUnitVariable(unit, "LevelUp") < 1) then
+				SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
+			else
+				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") * 120 / 100, "Max")
+				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
+			end
 		end
 		level_number = level_number - 1
 --		UpdateUnitBonuses(unit)
