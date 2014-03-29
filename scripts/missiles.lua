@@ -28,6 +28,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineMissileType("missile-arrow",
+  { File = "missiles/throwing_axe.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
+  ImpactSound = "bow-hit",
+  DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0 } )
+
 DefineMissileType("missile-throwing-axe",
   { File = "missiles/throwing_axe.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
   ImpactSound = "throwing-axe-hit",

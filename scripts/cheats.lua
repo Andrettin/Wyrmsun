@@ -82,30 +82,30 @@ function HandleCheats(str)
   elseif (str == "hermes") then
     if (speedcheat) then
       speedcheat = false
-      for i = 1,table.getn(resources) do
-        SetSpeedResourcesHarvest(resources[i], 1)
-        SetSpeedResourcesReturn(resources[i], 1)
-      end
-      SetSpeedBuild(1)
-      SetSpeedTrain(1)
-      SetSpeedUpgrade(1)
-      SetSpeedResearch(1)
-      AddMessage("NO SO!")
+      for i = 0,PlayerMax - 1 do
+		  for j = 1,table.getn(resources) do
+			SetPlayerData(i, "SpeedResourcesHarvest", resources[j], GetPlayerData(i, "SpeedResourcesHarvest", resources[j]) / 10)
+			SetPlayerData(i, "SpeedResourcesReturn", resources[j], GetPlayerData(i, "SpeedResourcesReturn", resources[j]) / 10)
+		  end
+		  SetPlayerData(i, "SpeedBuild", GetPlayerData(i, "SpeedBuild") / 10)
+		  SetPlayerData(i, "SpeedTrain", GetPlayerData(i, "SpeedTrain") / 10)
+		  SetPlayerData(i, "SpeedUpgrade", GetPlayerData(i, "SpeedUpgrade") / 10)
+		  SetPlayerData(i, "SpeedResearch", GetPlayerData(i, "SpeedResearch") / 10)
+	  end
+      AddMessage(_("Faster disabled!"))
     else
       speedcheat = true
-      for i = 1,table.getn(resources) do
-        SetSpeedResourcesHarvest(resources[i], 10)
-        SetSpeedResourcesReturn(resources[i], 10)
-      end
-      SetSpeedBuild(10)
-      SetSpeedTrain(10)
-      SetSpeedUpgrade(10)
-      SetSpeedResearch(10)
-      for i = 1,table.getn(resources) do
-        SetPlayerData(GetThisPlayer(), "Resources", resources[i],
-          GetPlayerData(GetThisPlayer(), "Resources", resources[i]) + 32000)
-      end
-      AddMessage("SO!")
+	  for i = 0,PlayerMax - 1 do
+		  for j = 1,table.getn(resources) do
+			SetPlayerData(i, "SpeedResourcesHarvest", resources[j], GetPlayerData(i, "SpeedResourcesHarvest", resources[j]) * 10)
+			SetPlayerData(i, "SpeedResourcesReturn", resources[j], GetPlayerData(i, "SpeedResourcesReturn", resources[j]) * 10)
+		  end
+		  SetPlayerData(i, "SpeedBuild", GetPlayerData(i, "SpeedBuild") * 10)
+		  SetPlayerData(i, "SpeedTrain", GetPlayerData(i, "SpeedTrain") * 10)
+		  SetPlayerData(i, "SpeedUpgrade", GetPlayerData(i, "SpeedUpgrade") * 10)
+		  SetPlayerData(i, "SpeedResearch", GetPlayerData(i, "SpeedResearch") * 10)
+	  end
+      AddMessage(_("Faster enabled!"))
     end
 
   elseif (str == "hold off the goblin hordes") then
@@ -144,6 +144,9 @@ function HandleCheats(str)
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
 	end
+
+  elseif (str == "greebos arrows") then
+  	CreateUnit("unit-goblin-archer", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 
   else
     return false

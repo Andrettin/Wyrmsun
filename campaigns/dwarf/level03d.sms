@@ -1,0 +1,132 @@
+-- Stratagus Map Setup
+
+SetStartView(0, 6, 27)
+SetPlayerData(0, "Resources", "gold", 4000)
+SetPlayerData(0, "Resources", "wood", 0)
+SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "dwarf")
+SetAiType(0, "land-attack")
+SetStartView(1, 12, 120)
+SetPlayerData(1, "Resources", "gold", 12000)
+SetPlayerData(1, "Resources", "wood", 0)
+SetPlayerData(1, "Resources", "oil", 0)
+SetPlayerData(1, "RaceName", "dwarf")
+SetAiType(1, "passive")
+SetStartView(2, 75, 48)
+SetPlayerData(2, "Resources", "gold", 7000)
+SetPlayerData(2, "Resources", "wood", 0)
+SetPlayerData(2, "Resources", "oil", 0)
+SetPlayerData(2, "RaceName", "orc")
+SetAiType(2, "passive")
+SetPlayerData(15, "RaceName", "neutral")
+
+LoadTileModels("scripts/tilesets/swamp.lua")
+
+MapWidth = 34
+MapHeight = 32
+
+RawTiles = {
+	{"Land",  "Land",  "Tree",  "Tree",  "Land",  "Tree",  "Tree",  "Land",  "Land",  "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land"},
+	{"Land",  "Land",  "Tree",  "Tree",  "Land",  "Tree",  "Tree",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Rough", "Rough"},
+	{"Land",  "Land",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough"},
+	{"Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Tree",  "Tree"},
+	{"Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Water", "Water", "Water", "Rough", "Rough", "Water", "Water", "Rough", "Tree",  "Tree"},
+	{"Tree",  "Tree",  "Land",  "Land",  "Rough", "Rough", "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Rough", "Rough", "Water", "Water", "Water", "Water", "Rough", "Water", "Water", "Water", "Rough", "Land",  "Land"},
+	{"Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Land",  "Land",  "Rough", "Rough", "Water", "Water", "Water", "Rough", "Rough", "Rough", "Water", "Water", "Rough", "Rough", "Land",  "Land"},
+	{"Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Water", "Water", "Water", "Rough", "Rough", "Land",  "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land"},
+	{"Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Rough", "Rough", "Rough", "Rough", "Water", "Water", "Water", "Water", "Water", "Water", "Rough", "Rough", "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land"},
+	{"Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land"},
+	{"Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Tree",  "Tree",  "Rough", "Rough", "Rough", "Rough", "Rough", "Water", "Water", "Water", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Rough", "Water", "Water", "Water", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Tree",  "Tree",  "Tree"},
+	{"Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Rough", "Rough", "Water", "Water", "Water", "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Rough", "Rough", "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree"},
+	{"Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Rough", "Rough", "Water", "Water", "Water", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Rough", "Water", "Water", "Water", "Water", "Rough", "Tree",  "Tree",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Rough", "Rough", "Water", "Water", "Rough", "Rough", "Rough", "Water", "Water", "Rough", "Rough", "Rough", "Tree",  "Tree",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Rough", "Rough", "Water", "Water", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Tree",  "Tree",  "Tree",  "Rough", "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Water", "Water", "Rough", "Rough", "Rough", "Land",  "Land",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Water", "Water", "Rough", "Land",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Rough", "Rough"},
+	{"Rough", "Rough", "Rough", "Land",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Rough", "Rough"},
+	{"Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Land"},
+	{"Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rock",  "Rock",  "Rough", "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land"},
+	{"Land",  "Land",  "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land"},
+	{"Land",  "Land",  "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land"},
+	{"Land",  "Land",  "Rough", "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Land",  "Tree",  "Tree",  "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Land",  "Rough", "Rock",  "Rock",  "Rough", "Rough", "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Rough", "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rough", "Rock",  "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"}
+}
+
+ApplyRawTiles()
+
+-- Rugnur
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Baglur
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Kawn (Gryphon Rider)
+--unit = CreateUnit("unit-gryphon-rider", 0, {5, 28})
+
+-- Guardsmen from last mission
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Extra Guardsman from last mission
+unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 27})
+
+-- Enemies (originally randomly chosen from Wolves, Ogres, Trolls or Wose)
+unit = CreateUnit("unit-grunt", 2, {5, 5})
+unit = CreateUnit("unit-grunt", 2, {15, 15})
+unit = CreateUnit("unit-grunt", 2, {25, 25})
+unit = CreateUnit("unit-grunt", 2, {25, 10})
+
+unit = CreateUnit("unit-grunt", 2, {10, 10})
+unit = CreateUnit("unit-grunt", 2, {20, 20})
+unit = CreateUnit("unit-grunt", 2, {30, 30})
+
+unit = CreateUnit("unit-grunt", 2, {18, 6})
+unit = CreateUnit("unit-grunt", 2, {30, 7})
+
+unit = CreateUnit("unit-grunt", 2, {19, 31})
+unit = CreateUnit("unit-grunt", 2, {1, 21})
+unit = CreateUnit("unit-grunt", 2, {31, 21})
+unit = CreateUnit("unit-grunt", 2, {1, 15})
+
+-- Hard Difficulty
+--unit = CreateUnit("unit-grunt", 2, {30, 18})
+--unit = CreateUnit("unit-grunt", 2, {32, 1})
+
+-- Hardest Difficulty
+--unit = CreateUnit("unit-grunt", 2, {30, 18})
+--unit = CreateUnit("unit-grunt", 2, {20, 2})
+--unit = CreateUnit("unit-grunt", 2, {32, 1})
+--unit = CreateUnit("unit-grunt", 2, {32, 31})
+
+-- Thursagan
+local RandomNumber = 0
+RandomNumber = SyncRand(5) + 1
+if (RandomNumber == 1) then
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {2, 6})
+elseif (RandomNumber == 2) then
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {15, 2})
+elseif (RandomNumber == 3) then
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {27, 9})
+elseif (RandomNumber == 4) then
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {28, 16})
+elseif (RandomNumber == 5) then
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {29, 30})
+end
+
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {9, 21})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {13, 21})
+unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 24})
+
+PlayMusic("music/wanderer.ogg")
+-- Should only be appended when Thursagan is found
+wyrmsun.playlist = { "music/knolls.ogg" }

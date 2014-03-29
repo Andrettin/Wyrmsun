@@ -47,32 +47,34 @@ function AiLandAttack()
 		AiSet(AiBarracks(), 1)
 	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
-			AiSet(AiSoldier(), 12)
-			AiSet(AiShooter(), 4)
-		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
-			AiSet(AiSoldier(), 4)
-		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
-			AiSet(AiSoldier(), 1)
-		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
-			AiForce(1, {AiSoldier(), 9, AiShooter(), 3})
-			AiForce(0, {AiSoldier(), 3, AiShooter(), 1})
-			AiWaitForce(1)
-			AiAttackWithForce(1)
-			AiSet(AiSoldier(), 0)
-			AiSet(AiShooter(), 0)
-		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
-			AiForce(1, {AiSoldier(), 3})
-			AiForce(0, {AiSoldier(), 1})
-			AiWaitForce(1)
-			AiAttackWithForce(1)
-			AiSet(AiSoldier(), 0)
-		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
-			AiForce(1, {AiSoldier(), 1})
-			AiWaitForce(1)
-			AiAttackWithForce(1)
-			AiSet(AiSoldier(), 0)
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 4) then
+				AiSet(AiSoldier(), 12)
+				AiSet(AiShooter(), 4)
+			else
+				AiForce(1, {AiSoldier(), 9, AiShooter(), 3})
+				AiForce(0, {AiSoldier(), 3, AiShooter(), 1})
+				AiAttackWithForce(1)
+				AiSet(AiSoldier(), 0)
+				AiSet(AiShooter(), 0)
+			end
+		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 4) then
+				AiSet(AiSoldier(), 4)
+			else
+				AiForce(1, {AiSoldier(), 3})
+				AiForce(0, {AiSoldier(), 1})
+				AiAttackWithForce(1)
+				AiSet(AiSoldier(), 0)
+			end
+		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 1) then
+				AiSet(AiSoldier(), 1)
+			else
+				AiForce(1, {AiSoldier(), 1})
+				AiAttackWithForce(1)
+				AiSet(AiSoldier(), 0)
+			end
 		end
 	end
 	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then

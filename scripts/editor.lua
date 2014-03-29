@@ -71,6 +71,7 @@ local editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-goblin-spearman",
+   "unit-goblin-archer",
    "unit-hero-greebo",
 
 --- - - - - - - - - - - - - - - - - - -

@@ -393,7 +393,7 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
   Building = true,
   NumDirections = 1,
   Indestructible = 1,
-  VisibleUnderFog = false,
+  VisibleUnderFog = true,
   Sounds = {
     "selected", "click",
 --    "acknowledge", "gold-mine-acknowledge",

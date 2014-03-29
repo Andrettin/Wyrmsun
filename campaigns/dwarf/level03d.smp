@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","rescue-passive","computer")
+PresentMap("(unnamed)", 3, 34, 32, 1)
+DefineMapSetup("./campaigns/dwarf/level03d_c.sms")

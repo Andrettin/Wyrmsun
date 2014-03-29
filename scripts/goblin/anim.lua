@@ -74,16 +74,42 @@ DefineAnimations("animations-goblin-swordsman", {
 })
 
 --
+-- Goblin Archer
+--
+
+local GoblinArcherStill  = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
+	"label taunt", "frame 70", "wait 6", "frame 75", "wait 6", "frame 70", "wait 6", "frame 75", "wait 6", "frame 70", "wait 6", "frame 75", "wait 6", "frame 0",
+	"label no-rotate", "wait 1",}
+local GoblinArcherMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
+	"frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
+local GoblinArcherDeath = {"unbreakable begin", "frame 55", "wait 3", "frame 60", "wait 3", "frame 65", "wait 100",
+	"frame 65", "unbreakable end", "wait 1",}
+
+DefineAnimations("animations-goblin-archer", {
+	Still = GoblinArcherStill,
+	Move = GoblinArcherMove,
+	Attack = {"unbreakable begin", "frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
+		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50", "unbreakable end", "wait 1",},
+	Death = GoblinArcherDeath,
+})
+
+--
 -- Goblin Banner
 --
 
 DefineAnimations("animations-goblin-banner", {
-  Still = {
+  Still = { "label begin",
+	"if-var v.GraphicsVariation.Value == 0 set_variation",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
 	"if-var v.GraphicsVariation.Value == 2 variation_2",
-	"label variation_1", "frame 0", "wait 4", "random-goto 1 variation_1_flap", "random-goto 99 end",
+	"label set_variation", "random-goto 50 variation_1", "random-goto 50 variation_2", "goto begin",
+	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "wait 4", "random-goto 1 variation_1_flap", "random-goto 99 end",
 	"label variation_1_flap", "frame 1", "wait 6", "frame 0", "wait 6", "frame 2", "wait 6", "frame 0", "goto end",
-	"label variation_2", "frame 7", "wait 4", "random-goto 1 variation_2_flap", "random-goto 99 end",
+	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 7", "wait 4", "random-goto 1 variation_2_flap", "random-goto 99 end",
 	"label variation_2_flap", "frame 8", "wait 6", "frame 7", "wait 6", "frame 9", "wait 6", "frame 7", "goto end",
 	"label end", "wait 1",},
   Death = {

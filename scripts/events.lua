@@ -28,6 +28,9 @@
 --
 
 function EventTriggers()
+
+	Load("scripts/dwarf/scepter_of_fire_events.lua")
+
 	-- The Surghan Mercenaries
 	-- based on elements from the The Dragon scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 	AddTrigger(
@@ -48,29 +51,24 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-				unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
---				IncreaseUnitLevel(unit, 1)
-				unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
---				IncreaseUnitLevel(unit, 1)
-				unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
---				IncreaseUnitLevel(unit, 1)
-				unit = CreateUnit("unit-dwarven-scout", player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unit = CreateUnit("unit-dwarven-scout", player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") - 4800)
-			end
-			function EventOption2Effects()
-			end
 			Event(
 				"The Surghan Mercenaries",
 				"A group of hardened dwarven mercenaries are offering themselves for hire to us. Will you accept?",
 				player,
-				2,
-				"Yes (costs 4800 gold)",
-				"No"
+				{"~!Yes (costs 4800 gold)", "~!No"},
+				{function(s)
+					unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-axefighter", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-steelclad", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-scout", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unit = CreateUnit("unit-dwarven-scout", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") - 4800)
+				end,
+				function(s)
+				end}
 			)
 			return false
 		end
@@ -94,31 +92,29 @@ function EventTriggers()
 				return false
 			end,
 			function() 
-				function EventOption1Effects()
-					local greebo_player = FindUnusedPlayerSlot()
-					Players[greebo_player].Type = PlayerComputer
-					local greebo_spawnpoint = FindAppropriateTileTypeSpawnPoint("Rock")
-					unit = CreateUnit("unit-goblin-banner", greebo_player, greebo_spawnpoint)
-					unit = CreateUnit("unit-hero-greebo", greebo_player, greebo_spawnpoint)
-	--				IncreaseUnitLevel(unit, 1)
-					SetAiType(greebo_player, "passive")
-					for i=0,14 do
-						if (i ~= greebo_player) then
-							SetDiplomacy(greebo_player, "enemy", i)
-							SetDiplomacy(i, "enemy", greebo_player)
-							table.insert(Objectives[i], "- Kill Greebo (optional)")
-						end
-					end
-					SetPlayerData(greebo_player, "Name", "Greebo")
-				end
 				Event(
 					"Greebo's Shinies",
 					"A goblin has been seen hoarding stolen loot some distance from here. Clearing this threat would have the added benefit of giving us the opportunity to add his gold to our coffers.",
 					player,
-					1,
-					"OK",
-					"",
-					CGraphic:New("ui/goblin_swordsman.png")
+					{"~!OK"},
+					{function(s)
+						local greebo_player = FindUnusedPlayerSlot()
+						Players[greebo_player].Type = PlayerComputer
+						local greebo_spawnpoint = FindAppropriateTileTypeSpawnPoint("Rock")
+						unit = CreateUnit("unit-goblin-banner", greebo_player, greebo_spawnpoint)
+						unit = CreateUnit("unit-hero-greebo", greebo_player, greebo_spawnpoint)
+						SetAiType(greebo_player, "passive")
+						for i=0,14 do
+							if (i ~= greebo_player) then
+								SetDiplomacy(greebo_player, "enemy", i)
+								SetDiplomacy(i, "enemy", greebo_player)
+								table.insert(Objectives[i], "- Kill Greebo (optional)")
+							end
+						end
+						SetPlayerData(greebo_player, "Name", "Greebo")
+					end},
+					nil,
+					"ui/goblin_swordsman.png"
 				)
 				return false
 			end
@@ -140,20 +136,19 @@ function EventTriggers()
 				return false
 			end,
 			function() 
-				function EventOption1Effects()
-					SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
-					for i=0,14 do
-						if (GetPlayerData(i, "Name") ~= "Greebo") then
-							RemoveElementFromArray(Objectives[i], "- Kill Greebo (optional)")
-						end
-					end
-				end
 				Event(
 					"Greebo's End",
 					"The goblin looter is dead. We have acquired his stolen gold, although he didn't have much with him. Must be hard times.",
 					player,
-					1,
-					"OK (receive 400 gold)"
+					{"~!OK (receive 400 gold)"},
+					{function(s)
+						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
+						for i=0,14 do
+							if (GetPlayerData(i, "Name") ~= "Greebo") then
+								RemoveElementFromArray(Objectives[i], "- Kill Greebo (optional)")
+							end
+						end
+					end}
 				)
 				return false
 			end
@@ -178,59 +173,57 @@ function EventTriggers()
 				return false
 			end,
 			function() 
-				function EventOption1Effects()
-					local andvari_player = FindUnusedPlayerSlot()
-					Players[andvari_player].Type = PlayerComputer
-					local spawn_point = FindAppropriateTileTypeSpawnPoint("Water")
-					unit = CreateUnit("unit-dwarven-mushroom-farm", andvari_player, spawn_point)
-					unit = CreateUnit("unit-dwarven-axefighter", andvari_player, spawn_point)
-					SetAiType(andvari_player, "passive")
-					SetDiplomacy(andvari_player, "neutral", player)
-					SetDiplomacy(player, "neutral", andvari_player)
-					for i=0,14 do
-						if (i ~= andvari_player and i ~= player) then
-							if ((SyncRand(100) + 1) <= 50) then -- AI players randomly decide whether to be hostile to Andvari or not
-								SetDiplomacy(andvari_player, "neutral", i)
-								SetDiplomacy(i, "neutral", andvari_player)
-							else
-								SetDiplomacy(andvari_player, "enemy", i)
-								SetDiplomacy(i, "enemy", andvari_player)
-							end
-						end
-					end
-					SetPlayerData(andvari_player, "Name", "Andvari")
-				end
-				function EventOption2Effects()
-					local andvari_player = FindUnusedPlayerSlot()
-					Players[andvari_player].Type = PlayerComputer
-					local spawn_point = FindAppropriateTileTypeSpawnPoint("Water")
-					unit = CreateUnit("unit-dwarven-mushroom-farm", andvari_player, spawn_point)
-					unit = CreateUnit("unit-dwarven-axefighter", andvari_player, spawn_point)
-					SetAiType(andvari_player, "passive")
-					SetDiplomacy(andvari_player, "enemy", player)
-					SetDiplomacy(player, "enemy", andvari_player)
-					for i=0,14 do
-						if (i ~= andvari_player and i ~= player) then
-							if ((SyncRand(100) + 1) <= 50) then -- AI players randomly decide whether to be hostile to Andvari or not
-								SetDiplomacy(andvari_player, "neutral", i)
-								SetDiplomacy(i, "neutral", andvari_player)
-							else
-								SetDiplomacy(andvari_player, "enemy", i)
-								SetDiplomacy(i, "enemy", andvari_player)
-								table.insert(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
-							end
-						end
-					end
-					SetPlayerData(andvari_player, "Name", "Andvari")
-					table.insert(Objectives[player], "- Destroy Andvari's Mushroom Farm (optional)")
-				end
 				Event(
 					"Andvari's Gold",
 					"The dwarf Andvari, the son of Oin, has built a house for himself in the wilderness, where he lives in isolation. Lately we have discovered that he hides quite a bit of gold there... Some people are suggesting a raid against his home to add his gold to our treasury. Shall we extract a contribution from Andvari?",
 					player,
-					2,
-					"Leave him be.",
-					"Let's get the gold."
+					{"~!Leave him be.", "Let's ~!get the gold."},
+					{function(s)
+						local andvari_player = FindUnusedPlayerSlot()
+						Players[andvari_player].Type = PlayerComputer
+						local spawn_point = FindAppropriateTileTypeSpawnPoint("Water")
+						unit = CreateUnit("unit-dwarven-mushroom-farm", andvari_player, spawn_point)
+						unit = CreateUnit("unit-dwarven-axefighter", andvari_player, spawn_point)
+						SetAiType(andvari_player, "passive")
+						SetDiplomacy(andvari_player, "neutral", player)
+						SetDiplomacy(player, "neutral", andvari_player)
+						for i=0,14 do
+							if (i ~= andvari_player and i ~= player) then
+								if ((SyncRand(100) + 1) <= 50) then -- AI players randomly decide whether to be hostile to Andvari or not
+									SetDiplomacy(andvari_player, "neutral", i)
+									SetDiplomacy(i, "neutral", andvari_player)
+								else
+									SetDiplomacy(andvari_player, "enemy", i)
+									SetDiplomacy(i, "enemy", andvari_player)
+								end
+							end
+						end
+						SetPlayerData(andvari_player, "Name", "Andvari")
+					end,
+					function(s)
+						local andvari_player = FindUnusedPlayerSlot()
+						Players[andvari_player].Type = PlayerComputer
+						local spawn_point = FindAppropriateTileTypeSpawnPoint("Water")
+						unit = CreateUnit("unit-dwarven-mushroom-farm", andvari_player, spawn_point)
+						unit = CreateUnit("unit-dwarven-axefighter", andvari_player, spawn_point)
+						SetAiType(andvari_player, "passive")
+						SetDiplomacy(andvari_player, "enemy", player)
+						SetDiplomacy(player, "enemy", andvari_player)
+						for i=0,14 do
+							if (i ~= andvari_player and i ~= player) then
+								if ((SyncRand(100) + 1) <= 50) then -- AI players randomly decide whether to be hostile to Andvari or not
+									SetDiplomacy(andvari_player, "neutral", i)
+									SetDiplomacy(i, "neutral", andvari_player)
+								else
+									SetDiplomacy(andvari_player, "enemy", i)
+									SetDiplomacy(i, "enemy", andvari_player)
+									table.insert(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
+								end
+							end
+						end
+						SetPlayerData(andvari_player, "Name", "Andvari")
+						table.insert(Objectives[player], "- Destroy Andvari's Mushroom Farm (optional)")
+					end}
 				)
 				return false
 			end
@@ -251,308 +244,25 @@ function EventTriggers()
 				return false
 			end,
 			function() 
-				function EventOption1Effects()
-					SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
-					for i=0,14 do
-						if (GetPlayerData(i, "Name") ~= "Andvari") then
-							RemoveElementFromArray(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
-						end
-					end
-				end
 				Event(
 					"Andvari's Gold is Ours!",
 					"We have successfully raided Andvari's house and obtained his gold. We even found a ring which seems particularly valuable. Andvari spoke a curse upon us for getting the ring... Ramblings of an impoverished dwarf.",
 					player,
-					1,
-					"OK (receive 1200 gold)"
+					{"~!OK (receive 1200 gold)"},
+					{function(s)
+						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
+						for i=0,14 do
+							if (GetPlayerData(i, "Name") ~= "Andvari") then
+								RemoveElementFromArray(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
+							end
+						end
+					end}
 				)
 				return false
 			end
 		)
 	end
 	
-	-- Strike a Bargain?
-	-- based on the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 10) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
-						player = i
-
-						local loop = true
-						local loop_count = 0
-						while (loop) do
-							bandit_player = SyncRand(GetNumPlayers())
-							if (bandit_player ~= player and GetPlayerData(bandit_player, "Name") ~= "Shorbear Clan" and GetPlayerData(bandit_player, "RaceName") == "dwarf") then
-								loop = false
-							end
-							loop_count = loop_count + 1
-
-							if (loop_count > 100) then
-								return false
-							end
-						end
-
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				local gnomish_monarch_player = GetCivilizationPlayer("gnome")
-				unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
---				IncreaseUnitLevel(unit, 1)
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-				if (mapinfo.description == "Chaincolt Foothills") then
-					ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
-				end
-				SetDiplomacy(gnomish_monarch_player, "allied", player)
-				SetSharedVision(gnomish_monarch_player, true, player)
-				SetDiplomacy(player, "allied", gnomish_monarch_player)
-				SetSharedVision(player, true, gnomish_monarch_player)
-				for i=0,14 do
-					if (i ~= gnomish_monarch_player and i ~= player) then
-				  		SetDiplomacy(gnomish_monarch_player, "neutral", i)
-				  		SetDiplomacy(i, "neutral", gnomish_monarch_player)
-			  		end
-			  	end
-				table.insert(Objectives[player], a_bargain_is_struck_objective_1)
-
-				-- create bandits
-				local bandit_x = (Players[gnomish_monarch_player].StartPos.x + Players[player].StartPos.x) / 2
-				local bandit_y = (Players[gnomish_monarch_player].StartPos.y + Players[player].StartPos.y) / 2
-		  		SetDiplomacy(bandit_player, "enemy", gnomish_monarch_player)
-		  		SetDiplomacy(bandit_player, "enemy", player)
-		  		SetDiplomacy(gnomish_monarch_player, "enemy", bandit_player)
-		  		SetDiplomacy(player, "enemy", bandit_player)
-
-				local second_bandit_player = FindUnusedPlayerSlot()
-				Players[second_bandit_player].Type = PlayerComputer
-				unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-				unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-				unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-
-				unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
-
-				SetPlayerData(second_bandit_player, "Name", "Raiders")
-
-		  		SetDiplomacy(second_bandit_player, "neutral", gnomish_monarch_player)
-		  		SetDiplomacy(gnomish_monarch_player, "neutral", second_bandit_player)
-		  		SetDiplomacy(second_bandit_player, "enemy", player)
-		  		SetDiplomacy(player, "enemy", second_bandit_player)
-		  		SetDiplomacy(bandit_player, "allied", second_bandit_player)
-		  		SetDiplomacy(second_bandit_player, "allied", bandit_player)
-			end
-			function EventOption2Effects()
-				local gnomish_monarch_player = GetCivilizationPlayer("gnome")
-				for i=0,14 do
-					if (i ~= gnomish_monarch_player) then
-				  		SetDiplomacy(gnomish_monarch_player, "neutral", i)
-				  		SetDiplomacy(i, "neutral", gnomish_monarch_player)
-			  		end
-			  	end
-			end
-			local gnomish_monarch_player = GetCivilizationPlayer("gnome")
-			local gnomish_monarch_name = GetRandomCharacterName("gnome", "male", true)
-			wyr.preferences.TheScepterOfFireMonarch = gnomish_monarch_name
-			wyr.preferences.TheScepterOfFireRaiderFaction = GetPlayerData(bandit_player, "Name")
-			SavePreferences()
-			Event(
-				"Strike a Bargain?",
---				"A gnomish monarch has come to an outpost of ours offering to make a bargain with us: he asks that we craft a scepter encrusted with the radiant Ruby of Fire for him. In return, he would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...\n\nNote: Completing this quest will unlock the Chaincolt Caverns map - when it is included in a coming version of Wyrmsun.",
-				"The gnomish monarch " .. gnomish_monarch_name .. " has come to an outpost of ours offering to make a bargain with us: " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " asks that we craft a scepter encrusted with the radiant Ruby of Fire for " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "object", false) .. ". In return, " .. GetCharacterNamePersonalPronoun(gnomish_monarch_name, "subject", false) .. " would give us 10,000 pieces of silver for the job, with half of that being sent in advance. An envoy holding the Ruby would be sent as well.\n\nWe must be wary if we accept, though, as the " .. GetPlayerData(bandit_player, "Name") .. " is likely to try to raid the silver convoy...",
-				player,
-				2,
-				"We'll accept the offer.",
-				"No deal."
-			)
-			return false
-		end
-	)
-
-	-- The Last Caravan has Arrived!
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			for i=0,14 do
-				if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
-					player = i
-					return true
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
-			  	if (player == GetThisPlayer()) then
-					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-						table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-					end
-					SavePreferences()
-					if (mapinfo.description == "Chaincolt Foothills") then
-						ActionVictory()
-					end
-			  	end
-			end
-			local note = ""
-			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-				note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Caverns of Chaincolt map and to the hero Baglur."
-			end
-			Event(
-				"The Last Caravan has Arrived!",
-				"The last of the gnomish caravans has arrived in our settlement, and so did the gnomish envoy holding the ruby. We must now retreat to a more defensible position, for more raiders are sure to come..." .. note .. "",
-				player,
-				1,
-				"OK"
-			)
-			return false
-		end
-	)
-
-	-- The Bargain has Failed
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			for i=0,14 do
-				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and ((GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") < 1 or GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4)) then
-					player = i
-					return true
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
-			end
-			Event(
-				"The Bargain has Failed",
-				"We have failed in our quest to craft the scepter for the gnomish monarch, and he has called off the deal.",
-				player,
-				1,
-				"OK"
-			)
-			return false
-		end
-	)
-
-	-- Closing the Gates
-	-- based on the Closing the Gates scenario of the Sceptre of Fire campaign from Battle for Wesnoth
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 10 and GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				table.insert(Objectives[player], "- Have one unit standing on each glyph at the same time")
-			end
-			Event(
-				"Closing the Gates",
-				"The " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders are striking with increasing numbers, vying to take the gnomish silver. The rascals are too numerous for us to defeat, but the veteran soldier Baglur has explained one way for us to prevent them from swarming into our cavernous home: by activating six glyphs, we can start the mechanism to close the massive stone gates. It has been a long time since they were last used, however, and by now a few Goblins lair in their surroundings.",
-				player,
-				1,
-				"OK"
-			)
-			return false
-		end
-	)
-
-	-- We are safe!
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			for i=0,14 do
-				if (GetArrayIncludes(Objectives[i], "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
-					player = i
-					return true
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
-			  	if (player == GetThisPlayer()) then
-					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
-						table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
-					end
-					SavePreferences()
-					if (mapinfo.description == "Caverns of Chaincolt") then
-						ActionVictory()
-					end
-			  	end
-			end
-			local note = ""
-			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
-				note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Northern Wastelands map (coming soon)."
-			end
-			Event(
-				"We are safe!",
-				"We have successfully closed the gates to our tunnels! Now we must seek the clans' elders to inform them of our situation..." .. note .. "",
-				player,
-				1,
-				"OK"
-			)
-			return false
-		end
-	)
-
-	-- The Bargain has Failed
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			for i=0,14 do
-				if (i == GetThisPlayer() and GetArrayIncludes(Objectives[i], "- Have one unit standing on each glyph at the same time") and ((GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-older")) < 1 or GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") < 1)) then
-					player = i
-					return true
-				end
-			end
-			return false
-		end,
-		function() 
-			function EventOption1Effects()
-				RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
-			end
-			Event(
-				"The Bargain has Failed",
-				"We have failed in our quest to craft the scepter for the gnomish monarch.",
-				player,
-				1,
-				"OK"
-			)
-			return false
-		end
-	)
-
 	-- The Founding of Knalga
 	AddTrigger(
 		function()
@@ -570,15 +280,14 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-				SetPlayerData(player, "Name", "Knalga")
-			end
 			Event(
 				"The Founding of Knalga",
 				"Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a realm, the lordship of Knalga!",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+					SetPlayerData(player, "Name", "Knalga")
+				end}
 			)
 			return false
 		end
@@ -601,15 +310,14 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-				SetPlayerData(player, "Name", "Kal Kartha")
-			end
 			Event(
 				"The Founding of Kal Kartha",
 				"Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a realm, the lordship of Kal Kartha!",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+					SetPlayerData(player, "Name", "Kal Kartha")
+				end}
 			)
 			return false
 		end
@@ -632,14 +340,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"The Hall of Sigtun",
 				"Our people have wandered for long... they desire a permanent home. We should build a town hall and establish a permanent settlement.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -660,14 +367,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"The Hall of Sigtun has been Built",
 				"Our town hall has been built, paving the way for the creation of our first permanent settlement.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -692,14 +398,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"Fredfrode's Feast",
 				"The Danish ruler of Leidre, Fredfrode, has invited us to attend to a great feast in his domains. To do so, we must travel and reach his town hall.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -720,14 +425,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"Drowned in Mead",
 				"We arrived at Fredfrode's domains, however... during the evening, our chieftain Fjolne went out to the gallery and, upon finding a large vessel full of mead, sought to drink the stuff. He slipped his foot and fell into the vessel, drowning in mead and leaving Sweden to be ruled by his son, Swegde.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -750,14 +454,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"The King's Sparrow",
 				"Our king Dag, from the line of Swegde, has sent his trained sparrow to the land of the Goths, but the bird has failed to return... Upon inquiring about it, the king has learned that the bird had been killed at a farm called Varva, by a peasant who was angry that the bird was eating his grain. The king, furious at the loss of his sparrow, has given order for an army to be sent to the land of the Goths and plunder the farm.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -782,14 +485,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"Varva Burns",
 				"We have fulfilled the king's wishes and burnt down the farm of Varva... Unfortunately, the king Dag himself has died at the raid, killed by a serf. His son Agne will now be our king and lord.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -812,14 +514,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"Marauding Finland",
 				"Our king Agne desires to gather an army and sail forth to Finland to raid it. We have been told that a local chieftain called Froste is gathering the Finns to resist our attempt upon them. Let's get their riches!",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -840,14 +541,13 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-			end
 			Event(
 				"Finland is Plundered",
 				"We have raided Finland, and it is now time to get the riches which we have found back to Sweden. The king has gotten for himself a golden necklace which he keeps on him at all times. He's also taking Skjalv - Froste's daughter - back to Sweden, and has decided to marry the lady. Bring our forces back to one of our sentry towers.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+				end}
 			)
 			return false
 		end
@@ -868,24 +568,23 @@ function EventTriggers()
 			return false
 		end,
 		function() 
-			function EventOption1Effects()
-				if (mapinfo.description == "Finland") then
-					ActionVictory()
-				end
-			end
 			Event(
 				"The Golden Hanging",
 				"Our king has been found hanged by the very golden necklace which he had plundered from the Finns! Skjalv has been seen along with other captive Finns, taking to ships to return to her homeland... We hope that at least the death of our king will sate the Finns' thirst for revenge.",
 				player,
-				1,
-				"OK"
+				{"~!OK"},
+				{function(s)
+					if (mapinfo.description == "Finland") then
+						ActionVictory()
+					end
+				end}
 			)
 			return false
 		end
 	)
 end
 
-function Event(event_name, event_description, player, option_number, option_1_name, option_2_name, event_image)
+function Event(event_name, event_description, player, options, option_effects, event_icon, event_image)
 	if (GetThisPlayer() == player) then
 		SetGamePaused(true)
 		local menu = WarGameMenu(panel(5))
@@ -897,35 +596,45 @@ function Event(event_name, event_description, player, option_number, option_1_na
 		l:setFont(Fonts["game"])
 		l:setSize(324, 208)
 		l:setLineWidth(324)
-		menu:add(l, 14, 40)
+		if (event_image ~= nil and event_icon == nil) then
+			menu:add(l, 14, 40)
+		else
+			menu:add(l, 14, 112)
+		end
 		l:setCaption(event_description)
 
+		if (event_icon ~= nil) then
+			event_icon = CGraphic:New(event_icon)
+			event_icon:Load()
+			local b = ImageWidget(event_icon)
+			menu:add(b, 153, 48)
+		end
+
 		if (event_image ~= nil) then
+			event_image = CGraphic:New(event_image)
 			event_image:Load()
 			local b = ImageWidget(event_image)
 			menu:add(b, 0, 0)
 		end
 
-		if (option_number >= 1) then
-			menu:addFullButton(option_1_name, "", 176 - (224 / 2), 352 - 40 * option_number,
-				function(s)
-					EventOption1Effects()
-					SetGamePaused(false)
-					menu:stop()
-				end)
-		end
+		for i=1,table.getn(options) do
+			local option_hotkey = ""		
+			if (string.find(options[i], "~!") ~= nil) then
+				option_hotkey = string.sub(string.match(options[i], "~!%a"), 3)
+				option_hotkey = string.lower(option_hotkey)
+			end
 
-		if (option_number >= 2) then
-			menu:addFullButton(option_2_name, "", 176 - (224 / 2), 352 - 40 * (option_number - 1),
+			menu:addFullButton(options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
 				function(s)
-					EventOption2Effects()
 					SetGamePaused(false)
 					menu:stop()
-				end)
+					option_effects[i]()
+				end
+			)
 		end
 
 		menu:run(false)
 	else -- AIs choose the first option automatically
-		EventOption1Effects()
+		option_effects[1]()
 	end
 end

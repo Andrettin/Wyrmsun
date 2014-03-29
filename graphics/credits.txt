@@ -13,8 +13,8 @@ b_o:
 /graphics/gnome/units/gnomish_worker_with_gold.png
 /graphics/gnome/units/gnomish_worker_with_lumber.png
 /graphics/goblin/decorations/goblin_banner.png
-/graphics/goblin/icons/goblin_spearman.png
 /graphics/goblin/icons/goblin_swordsman.png
+/graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_spearman.png
 /graphics/goblin/units/goblin_swordsman.png
 /graphics/missiles/dwarven_ballista_bolt.png
@@ -31,7 +31,7 @@ b_o:
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
 /graphics/tilesets/forest/neutral/decorations/large_flower.png
-/graphics/tilesets/forest/terrain/forest.png (grass, grass-dirt transition and tree tiles)
+/graphics/tilesets/forest/terrain/forest.png (dark dirt, dark grass, grass, grass-dirt transition and tree tiles)
 /graphics/tilesets/swamp/neutral/decorations/fern.png
 /graphics/tilesets/swamp/neutral/decorations/flowers.png
 /graphics/tilesets/swamp/neutral/decorations/large_flower.png
@@ -89,6 +89,7 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/buildings/town_hall.png
 /graphics/gnome/icons/gnomish_recruit.png
 /graphics/gnome/icons/gnomish_worker.png
+/graphics/goblin/icons/goblin_spearman.png
 /graphics/human/buildings/lumber_mill.png
 /graphics/human/icons/soldier.png
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)

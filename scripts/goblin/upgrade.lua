@@ -27,5 +27,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDependency("unit-goblin-archer",
+	{"unit-dwarven-lumber-mill"})
+
 DefineDependency("unit-hero-greebo",
   {"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-goblin-spearman", 4})

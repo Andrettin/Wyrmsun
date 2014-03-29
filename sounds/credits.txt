@@ -7,6 +7,8 @@ Battle for Wesnoth Team:
 /sounds/misc/explosion.wav
 /sounds/misc/fanfare_short.wav
 /sounds/missiles/axe.wav
+/sounds/missiles/bow.wav
+/sounds/missiles/bow_hit.wav
 /sounds/missiles/mace.wav
 /sounds/missiles/spear-1.wav
 /sounds/missiles/spear-2.wav

@@ -155,6 +155,8 @@ MakeSound("spear-attack",
 	{"missiles/spear-1.wav",
 	"missiles/spear-2.wav"}
 )
+MakeSound("bow", "missiles/bow.wav")
+MakeSound("bow-hit", "missiles/bow_hit.wav")
 MakeSound("throwing-axe", "missiles/throwing_axe.wav")
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
 MakeSound("tree-chopping",

@@ -255,14 +255,12 @@ SetAllPlayersTotalUnitLimit(400)
 --DwarvenNames = {"Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"}
 
 -------------------------------------------------------------------------------
--- Trait variables
 
 DefineVariables(
 --	"CharacterName", {Max = 255, Value = 0, Increase = 0, Enable = true},
---	"Traits", {Max = 2, Value = 0, Increase = 0, Enable = true},
---	"MaxTraits", {Max = 2, Value = 0, Increase = 0, Enable = true},
---	"TraitResilient", {Max = 1, Value = 0, Increase = 0, Enable = true},
---	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true},
+	"Traits", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"TraitResilient", {Max = 1, Value = 0, Increase = 0, Enable = true},
+	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"Name",
 	"Ident",
 	"Player",
@@ -275,6 +273,7 @@ DefineVariables(
 	"Xp",
 	"XpRequired", {Max = 43500, Value = 200, Increase = 0, Enable = true},
 	"LevelUp", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"AttackRange",
 	"RegenerationRate",
 	"ResourcesHeld",
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
@@ -303,7 +302,7 @@ function SinglePlayerTriggers()
 	AddTrigger(
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
-			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer()], a_bargain_is_struck_objective_1) == false) then
+			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer()], a_bargain_is_struck_objective_1) == false and GetArrayIncludes(Objectives[GetThisPlayer()], "- Have one unit standing on each glyph at the same time") == false) then
 				return true
 			end
 		end,
@@ -344,20 +343,12 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-scout" or (GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(2) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", 2)
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-older") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", 6)
-			else
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
 			end
 		end
 		if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
@@ -371,7 +362,7 @@ function SinglePlayerTriggers()
 end
 
 function StandardTriggers()
---	local RandomNumber = 0
+	local RandomNumber = 0
 
 	-- set the graphics variation for individual units of certain unit types
 	AddTrigger(
@@ -394,20 +385,12 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-scout" or (GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-banner") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(2) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", 2)
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-older") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", 6)
-					else
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
 					end
 				end
 
@@ -452,6 +435,25 @@ function StandardTriggers()
 				if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
 					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
+--				if (GetUnitVariable(uncount[unit1],"Traits") < 1 and GetUnitBoolFlag(uncount[unit1], "organic")) then
+--					RandomNumber = SyncRand(2)
+--					if (RandomNumber == 0) then
+--						if (GetUnitVariable(uncount[unit1],"TraitResilient") < 1) then
+--							SetUnitVariable(uncount[unit1], "Traits", GetUnitVariable(uncount[unit1],"Traits") + 1)
+--							SetUnitVariable(uncount[unit1], "TraitResilient", 1)
+--							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + 4, "Max")
+--							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max"))
+--						end
+--					elseif (RandomNumber == 1) then
+--						if (GetUnitVariable(uncount[unit1],"TraitStrong") < 1) then
+--							SetUnitVariable(uncount[unit1], "Traits", GetUnitVariable(uncount[unit1],"Traits") + 1)
+--							SetUnitVariable(uncount[unit1], "TraitStrong", 1)
+--							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + 1, "Max")
+--							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max"))
+--						end
+--					end
+--					UpdateUnitBonuses(uncount[unit1])
+--				end
 			end
 			return true
 		end
@@ -569,34 +571,6 @@ function StandardTriggers()
 --		end
 --	)
 
-	-- add traits to units
---	AddTrigger(
---		function()
---			local uncount = 0
---			uncount = GetUnits("any")
---			for unit1 = 1,table.getn(uncount) do 
---				if (GetUnitVariable(uncount[unit1],"Traits") < GetUnitVariable(uncount[unit1],"MaxTraits")) then
---					RandomNumber = SyncRand(2)
---					if (RandomNumber == 0) then
---						if (GetUnitVariable(uncount[unit1],"TraitResilient") < 1) then
---							SetUnitVariable(uncount[unit1], "Traits", 1)
---							SetUnitVariable(uncount[unit1], "TraitResilient", 1)
---						end
---					elseif (RandomNumber == 1) then
---						if (GetUnitVariable(uncount[unit1],"TraitStrong") < 1) then
---							SetUnitVariable(uncount[unit1], "Traits", 1)
---							SetUnitVariable(uncount[unit1], "TraitStrong", 1)
---						end
---					end
---				end
---			end
---			return false
---		end,
---		function()
---			return true
---		end
---	)
-
 	-- give the player gold if a miner of his is next to a gold sack
 --	AddTrigger(
 --		function()
@@ -640,10 +614,14 @@ end
 function GetCivilizationFactions(civilization)
 	if (civilization == "dwarf") then
 		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
+	elseif (civilization == "elf") then
+		return {"Lintanir", "Ulfdalir", "Wesmere"}
 	elseif (civilization == "gnome") then
 		return {"Gnomes"}
 	elseif (civilization == "goblin") then
 		return {"Goblins"}
+	elseif (civilization == "orc") then
+		return {"Blackeye Clan", "Bloody Sword Clan"}
 	else
 		return { }
 	end
@@ -755,25 +733,13 @@ function GetRandomCharacterName(civilization, gender, is_monarch)
 	end
 	if (civilization == "dwarf") then
 		if (gender == "male") then
-			if (is_monarch) then
-				character_names = { "Angarthing", "Hamel", "Karrag", "Laurin", "Modsognir" }
-			else
-				character_names = { "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andvari", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Baglur", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Durstorn", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Hamel", "Karrag", "Laurin", "Modsognir", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Rugnur", "Thursagan", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus" }
-			end
+			character_names = { "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andvari", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Baglur", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Durstorn", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Hamel", "Karrag", "Laurin", "Modsognir", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Rugnur", "Thursagan", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus" }
 		end
 	elseif (civilization == "gnome") then
 		if (gender == "male") then
-			if (is_monarch) then
-				character_names = { "Bimbam", "Pypo", "Rubezahl" }
-			else
-				character_names = { "Bimbam", "Clavo", "Cravatu", "Kalutho", "Pypo", "Rubezahl" }
-			end
+			character_names = { "Bimbam", "Clavo", "Cravatu", "Kalutho", "Pypo", "Rubezahl" }
 		elseif (gender == "female") then
-			if (is_monarch) then
-				character_names = { "Adalga" }
-			else
-				character_names = { "Adalga" }
-			end
+			character_names = { "Adalga" }
 		end
 	elseif (civilization == "goblin") then
 		if (gender == "male") then
@@ -851,8 +817,12 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
 			end
 		end
+		if (GetUnitVariable(unit, "TraitResilient") > 0) then
+			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 1, "Max")
+			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
+		end
 		level_number = level_number - 1
---		UpdateUnitBonuses(unit)
+		UpdateUnitBonuses(unit)
 	end
 end
 
@@ -860,10 +830,12 @@ function UpdateUnitBonuses(unit)
 	local basic_damage_bonus = 0
 	local piercing_damage_bonus = 0
 	local armor_bonus = 0
-	if (GetUnitVariable(unit, "Level") > 1) then
-		basic_damage_bonus = basic_damage_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
-		piercing_damage_bonus = piercing_damage_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
-		armor_bonus = armor_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
+	if (GetUnitVariable(unit, "TraitStrong") > 0) then
+--		basic_damage_bonus = basic_damage_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
+--		armor_bonus = armor_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
+		if (GetUnitVariable(unit, "AttackRange") == 1) then
+			piercing_damage_bonus = piercing_damage_bonus + 1
+		end
 	end
 	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
 	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)
@@ -885,14 +857,16 @@ function GetArrayIncludes(array, item)
 end
 
 function RemoveElementFromArray(array, element)
-	local element_number = -1
-	table.foreachi(array, function(k,v)
-		if (v == element) then
-			element_number = k
+	if (GetArrayIncludes(array, element)) then
+		local element_number = -1
+		table.foreachi(array, function(k,v)
+			if (v == element) then
+				element_number = k
+			end
+		end)
+		if (element_number ~= -1) then
+			table.remove(array, element_number)
 		end
-	end)
-	if (element_number ~= -1) then
-		table.remove(array, element_number)
 	end
 end
 

@@ -32,11 +32,13 @@
 --
 
 DefineAnimations("animations-gnomish-worker", {
-  Still = {
+  Still = { "label begin",
+	"if-var v.GraphicsVariation.Value == 0 set_variation",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
 	"if-var v.GraphicsVariation.Value == 2 variation_2",
-	"label variation_1", "frame 0", "wait 4", "random-goto 1 variation_1_taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label variation_1_taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "goto no-rotate",
-	"label variation_2", "frame 95", "wait 4", "random-goto 1 variation_2_taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label variation_2_taunt", "frame 160", "wait 6", "frame 165", "wait 6", "frame 160", "wait 6", "frame 165", "wait 6", "frame 160", "wait 6", "frame 165", "wait 6", "frame 95", "goto no-rotate",
+	"label set_variation", "random-goto 50 variation_1", "random-goto 50 variation_2", "goto begin",
+	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "wait 4", "random-goto 1 variation_1_taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label variation_1_taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "goto no-rotate",
+	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 95", "wait 4", "random-goto 1 variation_2_taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label variation_2_taunt", "frame 160", "wait 6", "frame 165", "wait 6", "frame 160", "wait 6", "frame 165", "wait 6", "frame 160", "wait 6", "frame 165", "wait 6", "frame 95", "goto no-rotate",
 	"label no-rotate", "wait 1",},
   Move = {"unbreakable begin",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",

@@ -317,14 +317,14 @@ DefinePanelContents(
   Condition = {ShowOpponent = true, HideNeutral = true, Building = "false", Build = "false"},
   Contents = {
 -- Unit caracteristics
---	{ Pos = {60, 41}, Condition = {ShowOpponent = false},
---		More = {"Text", {Text =
---			If(GreaterThanOrEq(ActiveUnitVar("TraitResilient"), 1), "Trait: Resilient",
---			If(GreaterThanOrEq(ActiveUnitVar("TraitStrong"), 1), "Trait: Strong",
---			""
---		))}}
---
---	},
+	{ Pos = {54, 71}, Condition = {ShowOpponent = false},
+		More = {"Text", {Text =
+			If(GreaterThanOrEq(ActiveUnitVar("TraitResilient"), 1), "Trait: Resilient",
+			If(GreaterThanOrEq(ActiveUnitVar("TraitStrong"), 1), "Trait: Strong",
+			""
+		))}}
+
+	},
 	{ Pos = {114, 41},
 		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
 	},

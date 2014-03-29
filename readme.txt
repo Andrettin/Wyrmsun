@@ -24,6 +24,36 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.5
+-----------------------------------------------------------------------
+
+* Buildings
+- The openings in the Sentry Tower graphics have been updated (by Jinn).
+
+* Events
+- Event message buttons now support hotkeys.
+- Event messages now support icons being displayed, instead of only larger images.
+- Event messages now allow support for more than two options.
+
+* Maps
+- The Aquitania map generation script and the default random map generation script now create dark dirt and dark grass tiles.
+
+* Miscellaneous
+- The player now receives a warning message when new versions of Wyrmsun reset the allocation of technology points in the tech tree.
+- Glyphs are now visible under the fog of war.
+- The speed cheat ("hermes") now works (code by cybermind).
+
+* Quests
+- The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
+- Quest events have been reformulated to incorporate dialogues.
+
+* Terrain
+- Added Dark Dirt and Dark Grass tiles to the Forest tileset (graphics by b_o).
+
+* Units
+- Added Goblin Archer.
+
+-----------------------------------------------------------------------
 - 0.1.4
 -----------------------------------------------------------------------
 

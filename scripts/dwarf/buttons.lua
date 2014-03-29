@@ -43,7 +43,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
-    "unit-goblin-spearman",
+    "unit-goblin-spearman", "unit-goblin-archer",
     "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
     "unit-critter",
     "dwarf-group"} } )
@@ -55,7 +55,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
-    "unit-goblin-spearman",
+    "unit-goblin-spearman", "unit-goblin-archer",
     "unit-dwarven-guard-tower",
     "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
     "unit-critter",
@@ -77,7 +77,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
   Key = "a", Hint = "~!Attack",
   ForUnit = {
     "unit-dwarven-scout",
-    "unit-dwarven-guard-tower"
+    "unit-dwarven-guard-tower",
+    "unit-goblin-archer"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
@@ -103,7 +104,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 	"unit-dwarven-ballista",
 	"unit-gnomish-recruit", 
-	"unit-goblin-spearman",
+	"unit-goblin-spearman", "unit-goblin-archer",
 	"unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
 	"dwarf-group"
   } } )
@@ -115,7 +116,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
   	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 	"unit-dwarven-ballista",
 	"unit-gnomish-recruit", 
-	"unit-goblin-spearman",
+	"unit-goblin-spearman", "unit-goblin-archer",
 	"unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
 	"dwarf-group"} } )
 

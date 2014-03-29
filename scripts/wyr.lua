@@ -59,7 +59,8 @@ if (OldCreateUnit == nil) then
 		{"unit-dwarven-miner", "unit-gnomish-worker"},
 		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm"},
 		{"unit-dwarven-barracks", "unit-gnomish-barracks"},
-		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"}
+		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
+		{"unit-dwarven-scout", nil, "unit-goblin-archer"}
 	}
 
 	DwarvenEquivalent = {}
@@ -67,14 +68,24 @@ if (OldCreateUnit == nil) then
 	GoblinEquivalent = {}
 
 	for i=1,table.getn(t) do
-		DwarvenEquivalent[t[i][2]] = t[i][1]
-		GnomishEquivalent[t[i][1]] = t[i][2]
-		if (i == 5) then
+		if (i ~= 6) then
+			DwarvenEquivalent[t[i][2]] = t[i][1]
+		end
+		if (i == 5 or i == 6) then
 			DwarvenEquivalent[t[i][3]] = t[i][1]
+		end
+		if (i ~= 6) then
+			GnomishEquivalent[t[i][1]] = t[i][2]
+		end
+		if (i == 5) then
 			GnomishEquivalent[t[i][3]] = t[i][2]
 		end
-		GoblinEquivalent[t[i][1]] = t[i][3]
-		GoblinEquivalent[t[i][2]] = t[i][3]
+		if (i == 5 or i == 6) then
+			GoblinEquivalent[t[i][1]] = t[i][3]
+		end
+		if (i == 5) then
+			GoblinEquivalent[t[i][2]] = t[i][3]
+		end
 	end
 end
 

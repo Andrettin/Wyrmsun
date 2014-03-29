@@ -62,19 +62,21 @@ DefineAnimations("animations-dwarven-miner", {
 -- Dwarven Axefighter
 --
 
-local AxefighterStill = {
+local AxefighterStill = { "label begin",
+	"if-var v.GraphicsVariation.Value == 0 set_variation",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
 	"if-var v.GraphicsVariation.Value == 2 variation_2",
 	"if-var v.GraphicsVariation.Value == 3 variation_3",
 	"if-var v.GraphicsVariation.Value == 4 variation_4",
 	"if-var v.GraphicsVariation.Value == 5 variation_5",
 	"if-var v.GraphicsVariation.Value == 6 variation_6",
-	"label variation_1", "frame 0", "goto end",
-	"label variation_2", "frame 60", "goto end",
-	"label variation_3", "frame 120", "goto end",
-	"label variation_4", "frame 180", "goto end",
-	"label variation_5", "frame 240", "goto end",
-	"label variation_6", "frame 300", "goto end",
+	"label set_variation", "random-goto 16 variation_1", "random-goto 16 variation_2", "random-goto 16 variation_3", "random-goto 16 variation_4", "random-goto 16 variation_5", "random-goto 16 variation_6", "goto begin",
+	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "goto end",
+	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 60", "goto end",
+	"label variation_3", "set-var GraphicsVariation.Value = 3", "frame 120", "goto end",
+	"label variation_4", "set-var GraphicsVariation.Value = 4", "frame 180", "goto end",
+	"label variation_5", "set-var GraphicsVariation.Value = 5", "frame 240", "goto end",
+	"label variation_6", "set-var GraphicsVariation.Value = 6", "frame 300", "goto end",
 	"label end", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
 local AxefighterMove = {"unbreakable begin",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
@@ -166,19 +168,21 @@ DefineAnimations("animations-dwarven-axefighter", {
 -- Dwarven Steelclad
 --
 
-local SteelcladStill = {
+local SteelcladStill = { "label begin",
+	"if-var v.GraphicsVariation.Value == 0 set_variation",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
 	"if-var v.GraphicsVariation.Value == 2 variation_2",
 	"if-var v.GraphicsVariation.Value == 3 variation_3",
 	"if-var v.GraphicsVariation.Value == 4 variation_4",
 	"if-var v.GraphicsVariation.Value == 5 variation_5",
 	"if-var v.GraphicsVariation.Value == 6 variation_6",
-	"label variation_1", "frame 0", "goto end",
-	"label variation_2", "frame 120", "goto end",
-	"label variation_3", "frame 240", "goto end",
-	"label variation_4", "frame 360", "goto end",
-	"label variation_5", "frame 480", "goto end",
-	"label variation_6", "frame 600", "goto end",
+	"label set_variation", "random-goto 16 variation_1", "random-goto 16 variation_2", "random-goto 16 variation_3", "random-goto 16 variation_4", "random-goto 16 variation_5", "random-goto 16 variation_6", "goto begin",
+	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "goto end",
+	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 120", "goto end",
+	"label variation_3", "set-var GraphicsVariation.Value = 3", "frame 240", "goto end",
+	"label variation_4", "set-var GraphicsVariation.Value = 4", "frame 360", "goto end",
+	"label variation_5", "set-var GraphicsVariation.Value = 5", "frame 480", "goto end",
+	"label variation_6", "set-var GraphicsVariation.Value = 6", "frame 600", "goto end",
 	"label end", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
 local SteelcladMove = {"unbreakable begin",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
@@ -269,13 +273,15 @@ DefineAnimations("animations-dwarven-steelclad", {
 -- Dwarven Scout
 --
 
-local ScoutStill = {
+local ScoutStill = { "label begin",
+	"if-var v.GraphicsVariation.Value == 0 set_variation",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
 	"if-var v.GraphicsVariation.Value == 2 variation_2",
 	"if-var v.GraphicsVariation.Value == 3 variation_3",
-	"label variation_1", "frame 0", "goto end",
-	"label variation_2", "frame 60", "goto end",
-	"label variation_3", "frame 120", "goto end",
+	"label set_variation", "random-goto 33 variation_1", "random-goto 33 variation_2", "random-goto 33 variation_3", "goto begin",
+	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "goto end",
+	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 60", "goto end",
+	"label variation_3", "set-var GraphicsVariation.Value = 3", "frame 120", "goto end",
 	"label end", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
 local ScoutDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
     "frame 55", "unbreakable end", "wait 1",}

@@ -102,6 +102,7 @@ function DefineAllowExtraUnits(flags)
 		"unit-glyph",
 		"unit-gnomish-caravan",
 		"unit-goblin-spearman",
+		"unit-goblin-archer",
 		"unit-hero-greebo",
 		"unit-goblin-banner"
 	}

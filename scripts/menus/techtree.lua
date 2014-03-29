@@ -28,7 +28,7 @@
 --
 
 
-function RunTechTreeMenu(civilization)
+function RunTechTreeMenu(civilization_number)
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 	SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
@@ -46,63 +46,22 @@ function RunTechTreeMenu(civilization)
 	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
 	civilization_dd = menu:addDropDown({"Dwarf"}, offx + 244, offy + 10 + 15,
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
-	civilization_dd:setSelected(civilization)
+	civilization_dd:setSelected(civilization_number)
 	civilization_dd:setSize(152, 20)
 
 	local tech_points = 0
+	local civilization = ""
 
-	if (civilization == 0) then -- if dwarf is selected
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
-			tech_points = tech_points + 2
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
-			tech_points = tech_points + 2
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")) then
-			tech_points = tech_points + 2
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials")) then
-			tech_points = tech_points + 2
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan")) then
-			tech_points = tech_points + 1
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Towards the Caves")) then
-			tech_points = tech_points + 1
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm")) then
-			tech_points = tech_points + 2
-		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Caverns of Flame")) then
-			tech_points = tech_points + 2
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-guard-tower")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-scout")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-2")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-ballista")) then
-			tech_points = tech_points - 1
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
-			tech_points = tech_points - 1
-		end
+	if (civilization_number == 0) then
+		civilization = "dwarf"
+	end
+	
+	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
+		tech_points = tech_points + GetQuestTechnologyPoints(civilization, wyr.preferences.QuestsCompleted[i])
+	end
+
+	for i=1,table.getn(wyr.preferences.TechnologyAcquired) do
+		tech_points = tech_points - GetTechnologyPointCost(civilization, wyr.preferences.TechnologyAcquired[i])
 	end
 
 	menu:addLabel("Technology Points: " .. tech_points, offx + 32, offy + 212 + (36 * 4))
@@ -169,7 +128,7 @@ function RunTechTreeMenu(civilization)
 		return b
 	end
 
-	if (civilization == 0) then -- if dwarf is selected
+	if (civilization == "dwarf") then
 		addTechItemIcon("unit-dwarven-miner", menu, "dwarf/icons/miner",
 			"Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources.",
 			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 1))
@@ -239,4 +198,40 @@ function ResetTechnologiesAcquired()
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
 	end
 	SavePreferences()
+
+	local warning_menu = WarGameMenu(panel(2))
+	warning_menu:setSize(288, 256)
+	warning_menu:setPosition((Video.Width - warning_menu:getWidth()) / 2, (Video.Height - warning_menu:getHeight()) / 2)
+	warning_menu:addLabel("Warning", 144, 11)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(270, 128)
+	l:setLineWidth(270)
+	warning_menu:add(l, 14, 70)
+	l:setCaption("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points.")
+			
+	warning_menu:addFullButton("~!Close", "c", 32, 256 - 40,
+		function()
+			warning_menu:stop()
+		end)
+	warning_menu:run()
+end
+
+function GetQuestTechnologyPoints(civilization, quest)
+	if (civilization == "dwarf" and (quest == "A Bargain is Struck" or quest == "Closing the Gates" or quest == "Searching for the Runecrafter" or quest == "The Wyrm" or quest == "Caverns of Flame")) then
+		return 2
+	elseif (civilization == "dwarf" and (quest == "Hills of the Shorbear Clan" or quest == "Towards the Caves")) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function GetTechnologyPointCost(civilization, technology)
+	if (civilization == "dwarf" and (technology == "unit-dwarven-lumber-mill" or technology == "unit-dwarven-sentry-tower" or technology == "unit-dwarven-guard-tower" or technology == "unit-dwarven-scout" or technology == "upgrade-dwarven-throwing-axe-1" or technology == "upgrade-dwarven-throwing-axe-2" or technology == "unit-dwarven-blacksmith" or technology == "unit-dwarven-ballista" or technology == "unit-dwarven-stronghold")) then
+		return 1
+	else
+		return 0
+	end
 end

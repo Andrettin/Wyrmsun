@@ -50,7 +50,11 @@ GenerateWater(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 64) -- four major la
 
 GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land")
 
-GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+
+if (wyrmsun.tileset == "forest") then
+	GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+end
 
 GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, 0, 64, 0, 96)
 
@@ -67,6 +71,10 @@ for x=64,(Map.Info.MapWidth - 1) do
 end
 
 GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 64, 128, 96, 128) -- pyrennee forests
+
+if (wyrmsun.tileset == "forest") then
+	GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+end
 
 ApplyRawTiles()
 
