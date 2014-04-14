@@ -40,13 +40,12 @@ function HandleCheats(str)
     AddMessage("Wow -- I got jigsaw!")
 
   elseif (str == "otters ransom") then
-    SetPlayerData(GetThisPlayer(), "Resources", "gold",
-      GetPlayerData(GetThisPlayer(), "Resources", "gold") + 12000)
-    SetPlayerData(GetThisPlayer(), "Resources", "wood",
-      GetPlayerData(GetThisPlayer(), "Resources", "wood") + 5000)
-    SetPlayerData(GetThisPlayer(), "Resources", "oil",
-      GetPlayerData(GetThisPlayer(), "Resources", "oil") + 5000)
-    AddMessage("!!! :)")
+	for i = 0,PlayerMax - 1 do
+		SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") + 12000)
+		SetPlayerData(i, "Resources", "wood", GetPlayerData(i, "Resources", "wood") + 5000)
+		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 5000)
+	end
+	AddMessage("!!! :)")
 
   elseif (str == "showpath") then
     RevealMap()
@@ -137,7 +136,7 @@ function HandleCheats(str)
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 		"unit-dwarven-ballista",
-		"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
+		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit"
 	}
@@ -145,8 +144,8 @@ function HandleCheats(str)
 		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
 	end
 
-  elseif (str == "greebos arrows") then
-  	CreateUnit("unit-goblin-archer", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+--  elseif (str == "greebos arrows") then
+--  	CreateUnit("unit-goblin-archer", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 
   else
     return false

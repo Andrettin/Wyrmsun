@@ -46,6 +46,8 @@ wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
 --  Config-Part
 -------------------------------------------------------------------------------
 
+MapDirectories = {"maps/"}
+
 InitFuncs = {}
 function InitFuncs:add(f)
   table.insert(self, f)
@@ -199,8 +201,6 @@ DefinePlayerColors({
 SetColorCycleAll(true)
 ClearAllColorCyclingRange()
 AddColorCyclingRange(38, 47) -- water
-AddColorCyclingRange(205, 207) -- building
-AddColorCyclingRange(240, 244) -- icon
 
 -------------------------------------------------------------------------------
 
@@ -266,7 +266,7 @@ DefineVariables(
 	"Player",
 	"PosX",
 	"PosY",
-	"Level", {Max = 30, Value = 1, Increase = 0, Enable = true},
+	"Level", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"BasePoints", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 --	"Points",
@@ -281,7 +281,8 @@ DefineVariables(
 	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"StartingLevel", {Max = 30, Value = 1, Increase = 0, Enable = true},
-	"LifeCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true}
+	"LifeCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
 )
 
 -------------------------------------------------------------------------------
@@ -302,7 +303,7 @@ function SinglePlayerTriggers()
 	AddTrigger(
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
-			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer()], a_bargain_is_struck_objective_1) == false and GetArrayIncludes(Objectives[GetThisPlayer()], "- Have one unit standing on each glyph at the same time") == false) then
+			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer()], "- Destroy the enemy")) then
 				return true
 			end
 		end,
@@ -325,7 +326,7 @@ function SinglePlayerTriggers()
 	DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
 	DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
 
-	-- for now events are limited to single player (as they seem to be causing issues with desyncs for multiplayer games
+	-- for now events are limited to single player (as a way hasn't been found to create a synchronized option to enable or disable them in multiplayer)
 	if (EventsActivated == 0) then
 		EventTriggers()
 	end
@@ -432,9 +433,20 @@ function StandardTriggers()
 				if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
 					SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
 				end
+				
 				if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
 					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
+
+				if (not IsNetworkGame()) then
+					-- apply persistent hero levels
+					if (GetArrayIncludes(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")))) then
+						if (GetUnitVariable(uncount[unit1], "Level") < wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) + 1]) then
+							IncreaseUnitLevel(uncount[unit1], (wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) + 1] - GetUnitVariable(uncount[unit1], "Level")), true)
+						end
+					end
+				end
+
 --				if (GetUnitVariable(uncount[unit1],"Traits") < 1 and GetUnitBoolFlag(uncount[unit1], "organic")) then
 --					RandomNumber = SyncRand(2)
 --					if (RandomNumber == 0) then
@@ -454,6 +466,97 @@ function StandardTriggers()
 --					end
 --					UpdateUnitBonuses(uncount[unit1])
 --				end
+
+				-- make certain critters retaliate if people get too near
+				-- is not working (neutral player critters don't attack no matter what)
+--				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-critter") then
+--					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
+--					if (people_quantity > 0) then
+--						local nearby_uncount = 0
+--						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1)
+--						for unit2 = 1,table.getn(nearby_uncount) do 
+--							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
+--								OrderUnit("any", "unit-critter", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
+--							end
+--						end
+--					end
+--				end
+
+				-- gives gold if a unit is near a gold sack
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack") then
+					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+					if (people_quantity > 0) then
+						for i=0,14 do
+							if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) > 0) then
+								ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), i)
+							end
+						end
+						local nearby_uncount = 0
+						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0)
+						for unit2 = 1,table.getn(nearby_uncount) do 
+							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
+								Event(
+									"",
+									"You found 500 gold in the sack.",
+									GetUnitVariable(nearby_uncount[unit2], "Player"),
+									{"~!OK"},
+									{function(s)
+										DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+										PlaySound("gold-coins")
+										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
+									end}
+								)								
+							end
+						end
+					end
+				end
+
+				-- gives gold if a unit is near a gold chest
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
+					if (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 2) then
+						local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
+						if (people_quantity > 0) then
+							for i=0,14 do
+								if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1}) > 0) then
+									ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), i)
+								end
+							end
+							local nearby_uncount = 0
+							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1)
+							for unit2 = 1,table.getn(nearby_uncount) do 
+								if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
+									if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest") then
+										Event(
+											"",
+											"You found 1000 gold in the chest.",
+											GetUnitVariable(nearby_uncount[unit2], "Player"),
+											{"~!OK"},
+											{function(s)
+												SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+												PlaySound("gold-coins")
+												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 1000)											
+											end}
+										)
+									elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
+										Event(
+											"",
+											"You found 1000 gold in the chest, plus gems worth 500 gold.",
+											GetUnitVariable(nearby_uncount[unit2], "Player"),
+											{"~!OK"},
+											{function(s)
+												SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+												PlaySound("gold-coins")
+												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 1500)											
+											end}
+										)
+									end
+								end
+							end
+						end
+					elseif (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 1) then
+						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), 15)
+					end
+				end
 			end
 			return true
 		end
@@ -498,9 +601,9 @@ function StandardTriggers()
 			else
 				-- create Rugnur for an AI player if they fulfill the conditions
 				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 3 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "Resources", "gold") >= 1000) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 1 and GetPlayerData(i, "Resources", "gold") >= 750) then
 						unit = CreateUnit("unit-hero-rugnur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 1000)
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
 						DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
 						return false
 					end
@@ -524,13 +627,67 @@ function StandardTriggers()
 			else
 				-- create Baglur for an AI player if they fulfill the conditions
 				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 2 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 12 and GetPlayerData(i, "Resources", "gold") >= 1200) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4 and GetPlayerData(i, "Resources", "gold") >= 750) then
 						unit = CreateUnit("unit-hero-baglur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 1200)
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
 						DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
 						return false
 					end
 				end
+			end
+			return true
+		end
+	)
+
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			return true
+		end,
+		function() 
+			if (GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) >= 1) then
+				-- make it impossible to hire a hero after he has already been hired by someone
+				DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
+				return false
+--			else
+--				-- create Thursagan for an AI player if they fulfill the conditions
+--				for i=0,14 do
+--					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga" or GetPlayerData(i, "Name") == "Kal Kartha") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-blacksmith") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 2 and GetPlayerData(i, "Resources", "gold") >= 750) then
+--						unit = CreateUnit("unit-hero-thursagan", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+--						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
+--						DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
+--						return false
+--					end
+--				end
+			end
+			return true
+		end
+	)
+
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			return true
+		end,
+		function() 
+			if (GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) >= 1) then
+				-- make it impossible to hire a hero after he has already been hired by someone
+				DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
+				return false
+--			else
+--				-- create Durstorn for an AI player if they fulfill the conditions
+--				for i=0,14 do
+--					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 3 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "Resources", "gold") >= 750) then
+--						unit = CreateUnit("unit-hero-durstorn", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+--						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
+--						DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
+--						return false
+--					end
+--				end
 			end
 			return true
 		end
@@ -545,7 +702,7 @@ function StandardTriggers()
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired")) then
+				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false) then
 					IncreaseUnitLevel(uncount[unit1], 1, true)
 				end
 			end
@@ -622,6 +779,8 @@ function GetCivilizationFactions(civilization)
 		return {"Goblins"}
 	elseif (civilization == "orc") then
 		return {"Blackeye Clan", "Bloody Sword Clan"}
+	elseif (civilization == "troll") then
+		return {"Trolls"}
 	else
 		return { }
 	end
@@ -658,10 +817,18 @@ function GetFactionExists(faction)
 end
 
 function GetFactionForbiddenUnits(faction)
-	if (faction == "Shorbear Clan") then
-		return { "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur" }
+	if (faction == "Norlund Clan") then
+		return { "unit-goblin-spearman", "unit-goblin-archer" }
+	elseif (faction == "Shinsplitter Clan") then
+		return { "unit-goblin-spearman", "unit-goblin-archer" }
+	elseif (faction == "Shorbear Clan") then
+		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn" }
 	elseif (faction == "Kal Kartha") then
-		return { "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur" }
+		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-durstorn" }
+	elseif (faction == "Knalga") then
+		return { "unit-goblin-spearman", "unit-goblin-archer" }
+	elseif (faction == "Goblins") then
+		return { "unit-dwarven-axefighter", "unit-dwarven-scout" }
 	else
 		return {}
 	end
@@ -732,8 +899,9 @@ function GetRandomCharacterName(civilization, gender, is_monarch)
 		gender = genders[SyncRand(table.getn(genders)) + 1]
 	end
 	if (civilization == "dwarf") then
+		-- dwarven character names were taken from Norse mythology and Battle for Wesnoth
 		if (gender == "male") then
-			character_names = { "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andvari", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Baglur", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Durstorn", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Hamel", "Karrag", "Laurin", "Modsognir", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Rugnur", "Thursagan", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus" }
+			character_names = { "Ai", "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alberich", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Alf", "Alfrigg", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Althjof", "Alvis", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andvari", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Aurvang", "Austri", "Bafur", "Baglur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Brokk", "Dain", "Delling", "Dolgthvari", "Dori", "Draupnir", "Duf", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Durin", "Durstorn", "Dvalin", "Eggerich", "Eikinskjaldi", "Eitri", "Fal", "Fid", "Fili", "Fjalar", "Frag", "Frar", "Frosti", "Fundin", "Galar", "Gandalf", "Ginnar", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glinar", "Gloin", "Glomin", "Glonoin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Grerr", "Grimnir", "Hamel", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Ivaldi", "Jari", "Karrag", "Kili", "Kinan", "Kuhnar", "Laurin", "Lit", "Loni", "Mjodvitnir", "Modsognir", "Nabbi", "Nain", "Nar", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Neglur", "Nidi", "Niping", "Noiraran", "Nordri", "Nori", "Nyi", "Nyr", "Nyrad", "Oin", "Ori", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Radsvid", "Regin", "Rekk", "Relgorn", "Rugnur", "Rynan", "Skavid", "Skirfir", "Solblindi", "Sudri", "Sviar", "Sviur", "Theganli", "Thekk", "Thjodrorir", "Thorin", "Thrain", "Thror", "Thursagan", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus", "Ulrek", "Uni", "Vali", "Var", "Vegdrasil", "Vestri", "Vig", "Vindalf", "Vit" }
 		end
 	elseif (civilization == "gnome") then
 		if (gender == "male") then
@@ -805,24 +973,36 @@ function GetCharacterNamePersonalPronoun(character_name, type, is_capitalized)
 end
 
 function IncreaseUnitLevel(unit, level_number, advancement)
-	while (level_number > 0) do
-		SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
-		SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * (GetUnitVariable(unit, "Level") + 1)))
-		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
-		if (advancement) then
-			if ((GetUnitVariable(unit, "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(unit, "Ident") == "unit-hero-rugnur") and GetUnitVariable(unit, "LevelUp") < 1) then
-				SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
-			else
-				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") * 120 / 100, "Max")
-				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
+	if (unit ~= nil) then
+		while (level_number > 0) do
+			SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
+			SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * (GetUnitVariable(unit, "Level") + 1)))
+			SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
+			if (advancement) then
+				if ((GetUnitVariable(unit, "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(unit, "Ident") == "unit-hero-rugnur") and GetUnitVariable(unit, "LevelUp") < 1) then
+					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
+				else
+					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") * 120 / 100, "Max")
+				end
+			end
+			if (GetUnitVariable(unit, "TraitResilient") > 0) then
+				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 1, "Max")
+			end
+			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
+			level_number = level_number - 1
+			UpdateUnitBonuses(unit)
+		end
+
+		-- save the levels of heroes in a persistent manner
+		if (not IsNetworkGame()) then
+			-- apply persistent hero levels
+			if (GetArrayIncludes(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(unit, "Ident")))) then
+				if (GetUnitVariable(unit, "Level") > wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(unit, "Ident"))) + 1]) then
+					wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(unit, "Ident"))) + 1] = GetUnitVariable(unit, "Level")
+					SavePreferences()
+				end
 			end
 		end
-		if (GetUnitVariable(unit, "TraitResilient") > 0) then
-			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 1, "Max")
-			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
-		end
-		level_number = level_number - 1
-		UpdateUnitBonuses(unit)
 	end
 end
 
@@ -854,6 +1034,15 @@ function GetArrayIncludes(array, item)
         end
     end
     return false
+end
+
+function GetElementIndexFromArray(array, item)
+	for i=1,table.getn(array) do
+		if (array[i] == item) then
+			return i
+		end
+	end
+	return nil
 end
 
 function RemoveElementFromArray(array, element)
@@ -907,7 +1096,7 @@ local defaultPreferences = {
 	TipNumber = 0,
 	UseFancyBuildings = true,       --  Enable/disable fancy building (random mirroring buildings)
 	UseOpenGL = false,
-	VideoFullScreen = true,
+	VideoFullScreen = false,
 	VideoHeight = 600,
 	VideoWidth = 800,
 	ShowMessages = true,
@@ -915,13 +1104,15 @@ local defaultPreferences = {
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-hero-greebo"
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
 	},
 	LastVersionPlayed = "0.0.0",
 	TheScepterOfFireMonarch = "",
 	TheScepterOfFireRaiderFaction = "",
+	TheScepterOfFireMonarch = "",
+	HeroLevels = { "Rugnur", 1, "Baglur", 2, "Thursagan", 3, "Durstorn", 3, "Greebo", 2 }
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)
@@ -1037,6 +1228,7 @@ Load("scripts/ai.lua")
 Load("scripts/commands.lua")
 Load("scripts/cheats.lua")
 Load("scripts/map_generation.lua")
+Load("scripts/quests.lua")
 Load("scripts/events.lua")
 
 DebugPrint("... ready!\n")

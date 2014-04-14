@@ -267,6 +267,17 @@ DefineAnimations("animations-dwarven-steelclad", {
   	"frame 640", "attack", "sound axe-attack", "wait 5", "frame 600", "wait 10", "frame 600", "goto end",
 	"label end", "unbreakable end", "wait 1",},
   Death = SteelcladDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-equip-great-axe == 1 equip_great_axe",
+	"goto end",
+	"label equip_great_axe",
+	"set-var GreatAxe.Value = 2",
+	"set-var PiercingDamageBonus.Value += 2",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --

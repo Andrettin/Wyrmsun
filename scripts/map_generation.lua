@@ -843,8 +843,8 @@ function CreateDecorations()
 	local RandomNumber = 0
 
 	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256})
-	if (decoration_count == 0 and (GetRawTileTypeCount("Land") + GetRawTileTypeCount("Dark-Land") + GetRawTileTypeCount("Rough") + GetRawTileTypeCount("Dark-Rough")) > 0) then
-		Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
+	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
+	if (decoration_count == 0 and (GetRawTileTypeCount("Land") + GetRawTileTypeCount("Dark-Land") + GetRawTileTypeCount("Rough") + GetRawTileTypeCount("Dark-Rough")) > Count) then
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)

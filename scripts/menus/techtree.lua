@@ -63,7 +63,7 @@ function RunTechTreeMenu(civilization_number)
 	for i=1,table.getn(wyr.preferences.TechnologyAcquired) do
 		tech_points = tech_points - GetTechnologyPointCost(civilization, wyr.preferences.TechnologyAcquired[i])
 	end
-
+	
 	menu:addLabel("Technology Points: " .. tech_points, offx + 32, offy + 212 + (36 * 4))
 
 	function addTechItemIcon(unit, menu, techicon_graphics, tech_description, x, y)
@@ -86,9 +86,9 @@ function RunTechTreeMenu(civilization_number)
 					unit_name = GetUnitTypeName(unit)
 				else
 					if (unit == "upgrade-dwarven-throwing-axe-1") then
-						unit_name = "Sharp Throwing Axes"
+						unit_name = "Sharp Throwing Axe"
 					elseif (unit == "upgrade-dwarven-throwing-axe-2") then
-						unit_name = "Bearded Throwing Axes"
+						unit_name = "Bearded Throwing Axe"
 					end
 				end
 				tech_menu:addLabel(unit_name, 176, 11)
@@ -190,12 +190,25 @@ end
 
 function ResetTechnologiesAcquired()
 	wyr.preferences.TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-hero-rugnur", "unit-hero-rugnur-older",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-hero-greebo"
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
 	}
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-older")
+	end
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
+	end
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")) then
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan")
+	end
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan")) then
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-durstorn")
+	end
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Greebo's Shinies")) then
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-greebo")
 	end
 	SavePreferences()
 
@@ -219,13 +232,16 @@ function ResetTechnologiesAcquired()
 end
 
 function GetQuestTechnologyPoints(civilization, quest)
-	if (civilization == "dwarf" and (quest == "A Bargain is Struck" or quest == "Closing the Gates" or quest == "Searching for the Runecrafter" or quest == "The Wyrm" or quest == "Caverns of Flame")) then
-		return 2
-	elseif (civilization == "dwarf" and (quest == "Hills of the Shorbear Clan" or quest == "Towards the Caves")) then
-		return 1
-	else
-		return 0
+	for i = 1,table.getn(Quests) do
+		if (Quests[i][1] == quest) then
+			if (Quests[i][5] == civilization) then
+				return Quests[i][6]
+			else
+				return 0
+			end
+		end
 	end
+	return 0
 end
 
 function GetTechnologyPointCost(civilization, technology)

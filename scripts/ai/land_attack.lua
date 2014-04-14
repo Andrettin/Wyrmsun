@@ -28,88 +28,105 @@
 --
 
 function AiLandAttack()
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiCityCenter()) < 1) then
-		AiSet(AiCityCenter(), 1)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 1) then
-		AiSet(AiWorker(), 1)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) < 1) then
-		AiSet(AiFarm(), 1)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 4) then
-		AiSet(AiWorker(), 4)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) < 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 4) then
-		AiSet(AiFarm(), 3)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 1) then
-		AiSet(AiBarracks(), 1)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 4) then
-				AiSet(AiSoldier(), 12)
-				AiSet(AiShooter(), 4)
-			else
-				AiForce(1, {AiSoldier(), 9, AiShooter(), 3})
-				AiForce(0, {AiSoldier(), 3, AiShooter(), 1})
-				AiAttackWithForce(1)
-				AiSet(AiSoldier(), 0)
-				AiSet(AiShooter(), 0)
+	local loop_funcs = {
+		function() return AiSleep(AiGetSleepCycles()) end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiCityCenter()) >= 1) then
+				AiNeed(AiCityCenter())
 			end
-		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 4) then
-				AiSet(AiSoldier(), 4)
-			else
-				AiForce(1, {AiSoldier(), 3})
-				AiForce(0, {AiSoldier(), 1})
-				AiAttackWithForce(1)
-				AiSet(AiSoldier(), 0)
+			return false
+		end,
+		function() return AiSet(AiWorker(), 1) end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiCityCenter()) >= 1) then
+				AiWait(AiCityCenter())
 			end
-		elseif (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 1) then
-				AiSet(AiSoldier(), 1)
-			else
-				AiForce(1, {AiSoldier(), 1})
-				AiAttackWithForce(1)
-				AiSet(AiSoldier(), 0)
+			return false
+		end,
+		function() return AiWait(AiWorker()) end, -- start hangs if nothing available
+
+		function() return AiSet(AiWorker(), 4) end, -- 4
+
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
+				AiNeed(AiBarracks())
 			end
+			return false
+		end,
+		function() return AiSet(AiWorker(), 8) end, -- 8
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
+				AiWait(AiBarracks())
+			end
+			return false
+		end,
+
+		-- FAST AND FURIOUS
+		function() return AiForce(1, {AiSoldier(), 1}) end,
+		function() return AiWaitForce(1) end,
+		function() return AiAttackWithForce(1) end,
+
+		-- SECOND FAST ATTACK
+		function() return AiForce(1, {AiSoldier(), 4}) end,
+		function() return AiWaitForce(1) end,
+		function() return AiSet(AiWorker(), 12) end,
+		function() return AiAttackWithForce(1) end,
+
+		-- PREPARING FIRST SERIOUS ATTACK
+		function() return AiSet(AiBarracks(), 2) end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
+				AiNeed(AiLumberMill())
+			end
+			return false
+		end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
+				AiWait(AiLumberMill())
+			end
+			return false
+		end,
+
+		function() return AiForce(1, {AiSoldier(), 9, AiShooter(), 3}) end,
+		function() return AiForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
+		function() return AiSet(AiWorker(), 20) end,
+		function() return AiWaitForce(1) end,
+		function() return AiAttackWithForce(1) end,
+
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
+				AiNeed(AiWatchTower())
+			end
+			return false
+		end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
+				AiUpgradeTo(AiGuardTower())
+			end
+			return false
+		end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
+				AiNeed(AiWatchTower())
+			end
+			return false
+		end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
+				AiUpgradeTo(AiGuardTower())
+			end
+			return false
+		end,
+
+		function()
+			stratagus.gameData.AIState.loop_index[1 + AiPlayer()] = 0
+			return false
 		end
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 4 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
-		AiSet(AiWorker(), 8)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) < 6 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8) then
-		AiSet(AiFarm(), 6)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 8 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) >= 6) then
-		AiSet(AiWorker(), 12)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1) then
-		AiSet(AiLumberMill(), 1)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
-		AiSet(AiBarracks(), 2)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) < 2) then
-		AiSet(AiWatchTower(), 2)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWatchTower()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
-		AiUpgradeTo(AiGuardTower())
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
-		AiSet(AiWatchTower(), 0)
-	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 20) then
-			AiSet(AiWorker(), 20)
-		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiFarm()) < 10) then
-			AiSet(AiFarm(), 10)
-		end
+	}
+	return function()
+		return AiLoop(loop_funcs, stratagus.gameData.AIState.loop_index)
 	end
 end
 
-DefineAi("land-attack", "*", "land-attack", AiLandAttack)
+DefineAi("land-attack", "*", "land-attack", AiLandAttack())
 

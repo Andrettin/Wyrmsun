@@ -77,9 +77,15 @@ local info_panel_x = 0
 local info_panel_y = 160
 
 local min_damage = Div(
-	Add(
-		ActiveUnitVar("PiercingDamage"),
-		ActiveUnitVar("PiercingDamageBonus")
+	Sub(
+		Add(
+			ActiveUnitVar("PiercingDamage"),
+			ActiveUnitVar("PiercingDamageBonus")
+		),
+		Sub(
+			ActiveUnitVar("PiercingDamage", "Value", "Type"),
+			ActiveUnitVar("PiercingDamage", "Value", "Initial")
+		)
 	),
 	2
 )

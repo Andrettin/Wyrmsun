@@ -181,7 +181,13 @@ function AddMenuHelpers(menu)
     return bq
   end
 
-  function menu:addBrowser(path, filter, x, y, w, h, default)
+  function menu:addBrowser(path, filter, x, y, w, h, default, show_subfolders)
+    
+    -- Andrettin: make it so that it is possible to have a browser without showing subfolders
+    if (show_subfolders == nil) then
+    	show_subfolders = true
+    end
+    
     -- Create a list of all dirs and files in a directory
     local function listfiles(path)
       local dirlist = {}
@@ -189,10 +195,12 @@ function AddMenuHelpers(menu)
       local f
       local u = 1
 
-      local dirs = ListDirsInDirectory(path)
-      for i,f in ipairs(dirs) do
-        dirlist[u] = f .. "/"
-        u = u + 1
+      if (show_subfolders) then
+        local dirs = ListDirsInDirectory(path)
+        for i,f in ipairs(dirs) do
+          dirlist[u] = f .. "/"
+          u = u + 1
+        end
       end
 
       local fileslist = ListFilesInDirectory(path)
@@ -401,6 +409,8 @@ function InitGameSettings()
 end
 InitGameSettings()
 
+NextMap = ""
+
 function RunMap(map, objective, fow, revealmap)
   if objective == nil then
     for i=0,14 do
@@ -429,6 +439,14 @@ function RunMap(map, objective, fow, revealmap)
 
   InitGameSettings()
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+  
+  if (NextMap ~= "") then
+  	local current_next_map = NextMap
+  	NextMap = ""
+	GetMapInfo(current_next_map)
+	Load(current_next_map)
+	RunMap(current_next_map)
+  end
 end
 
 mapname = "maps/chaincolt-foothills.smp"
@@ -497,7 +515,7 @@ function RunSelectScenarioMenu()
 
   menu:addLabel(select_scenario_name, 176, 8)
 
-  local browser = menu:addBrowser("maps/", "^.*%.smp%.?g?z?$",
+  local browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
     24, 140, 300, 108, mapname)
 
   local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
@@ -525,6 +543,119 @@ function RunSelectScenarioMenu()
   menu:run()
 end
 
+function GetWorldMapTile(x, y)
+	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
+		return WorldMapTiles[y+1][x+1]
+	elseif (x < 0 and y >= 0 and y < table.getn(WorldMapTiles)) then
+		return WorldMapTiles[y+1][0+1]
+	elseif (x >= table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
+		return WorldMapTiles[y+1][table.getn(WorldMapTiles[1])]
+	elseif (x >= 0 and x < table.getn(WorldMapTiles[1]) and y < 0) then
+		return WorldMapTiles[0+1][x+1]
+	elseif (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= table.getn(WorldMapTiles)) then
+		return WorldMapTiles[table.getn(WorldMapTiles)][x+1]
+	elseif (x < 0 and y < 0) then
+		return WorldMapTiles[0+1][0+1]
+	elseif (x >= table.getn(WorldMapTiles[1]) and y < 0) then
+		return WorldMapTiles[0+1][table.getn(WorldMapTiles[1])]
+	elseif (x < 0 and y >= table.getn(WorldMapTiles)) then
+		return WorldMapTiles[table.getn(WorldMapTiles)][0+1]
+	elseif (x >= table.getn(WorldMapTiles[1]) and y >= table.getn(WorldMapTiles)) then
+		return WorldMapTiles[table.getn(WorldMapTiles)][table.getn(WorldMapTiles[1])]
+	else
+		return ""
+	end
+end
+
+function RunWorldMapMenu(world, maps)
+	buttonStatut = 0
+	local menu = WarMenu(nil, panel(5), false)
+	menu:setSize(352, 352)
+	menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
+	menu:setDrawMenusUnder(true)
+
+	menu:addLabel("Select Map", 176, 8)
+
+	Load("scripts/" .. string.lower(world) .. "_world_map.lua")
+
+	for x=0,9 do
+		for y=0,7 do
+			-- set map tile
+			if (GetWorldMapTile(x, y) == "DryMud") then
+				local world_map_tile = CGraphic:New("tilesets/overland/terrain/dry_mud.png")
+				world_map_tile:Load()
+				world_map_tile = ImageWidget(world_map_tile)
+				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
+			elseif (GetWorldMapTile(x, y) == "Rock") then
+				local world_map_tile = CGraphic:New("tilesets/overland/terrain/dry_mud.png")
+				world_map_tile:Load()
+				world_map_tile = ImageWidget(world_map_tile)
+				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
+				
+				if (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x - 1, y) == "Rock" and GetWorldMapTile(x + 1, y) == "Rock") then
+					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock_south.png")
+				elseif (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x, y - 1) == "Rock" and GetWorldMapTile(x - 1, y) ~= "Rock" and GetWorldMapTile(x + 1, y) ~= "Rock") then
+					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock_south_single.png")
+				elseif (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x, y - 1) ~= "Rock" and GetWorldMapTile(x - 1, y) ~= "Rock" and GetWorldMapTile(x + 1, y) ~= "Rock") then
+					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock_single.png")
+				else
+					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock.png")
+				end
+				world_map_tile:Load()
+				world_map_tile = ImageWidget(world_map_tile)
+				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
+			end
+		end
+	end
+
+	-- create sites in the world map from the information in the map files
+	for i=1,table.getn(maps) do
+		MapWorld = ""
+		MapRequiredQuest = ""
+		MapSiteType = ""
+		WorldMapPosition = {0, 0}
+		GetMapInfo(maps[i])
+		if (MapWorld == world and MapSiteType ~= "" and (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest))) then
+			local world_map_site_image
+			if (MapSiteType == "Dwarven Settlement") then
+				world_map_site_image = CGraphic:New("tilesets/overland/sites/dwarven_settlement.png")
+			elseif (MapSiteType == "Dwarven Outpost") then
+				world_map_site_image = CGraphic:New("tilesets/overland/sites/dwarven_outpost.png")
+			elseif (MapSiteType == "Dwarven Fortified Outpost") then
+				world_map_site_image = CGraphic:New("tilesets/overland/sites/dwarven_fortified_outpost.png")
+			elseif (MapSiteType == "Gnomish Settlement") then
+				world_map_site_image = CGraphic:New("tilesets/overland/sites/gnomish_settlement.png")
+			end
+			world_map_site_image:Load()
+
+			local world_map_site = ImageButton("")
+			world_map_site:setActionCallback(
+				function()
+					mapname = maps[i]
+					menu:stop()
+				end
+			)
+			menu:add(world_map_site, 16 + 32 * WorldMapPosition[1], 16 + 32 * (WorldMapPosition[2] + 1))
+			world_map_site:setNormalImage(world_map_site_image)
+			world_map_site:setPressedImage(world_map_site_image)
+			world_map_site:setDisabledImage(world_map_site_image)
+			world_map_site:setSize(32, 32)
+			world_map_site:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+		end
+	end
+
+	menu:addHalfButton("~!Random", "r", 48, 318,
+		function()
+			menu:stop()
+		end)
+	menu:addHalfButton("~!Cancel", "c", 198, 318,
+		function()
+			menu:stop()
+		end)
+
+	menu:run()
+end
+
 function RunSinglePlayerGameMenu()
   local menu = WarMenu()
   local offx = (Video.Width - 640) / 2
@@ -547,12 +678,68 @@ function RunSinglePlayerGameMenu()
   -- create the scenario and faction lists
   local scenario_list = {}
   local faction_list = {"Map Default"}
+  local world_list = { }
+  
+  local maps = {}
+
+  for map_directory=1,table.getn(MapDirectories) do
+	-- load the maps
+	local i
+	local f
+	local u = 1
+
+	-- list the subdirectories in the maps folder
+	local dirlist = {}
+	local dirs = ListDirsInDirectory(MapDirectories[map_directory])
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	-- get maps in the main maps folder
+	u = 1
+	local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
+	for i,f in ipairs(fileslist) do
+		if (string.find(f, "^.*%.smp%.?g?z?$")) then
+			maps[u] = MapDirectories[map_directory] .. f
+			u = u + 1
+		end
+	end
+
+	-- get maps in subdirectories of the maps folder
+	for i=1,table.getn(dirlist) do
+		fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[i])
+		for i,f in ipairs(fileslist) do
+			if (string.find(f, "^.*%.smp%.?g?z?$")) then
+				maps[u] = MapDirectories[map_directory] .. dirlist[i] .. f
+				u = u + 1
+			end
+		end
+	end
+
+	-- build the world list from world references in the maps
+	for i=1,table.getn(maps) do
+		MapWorld = ""
+		GetMapInfo(maps[i])
+		if (MapWorld ~= "" and GetArrayIncludes(world_list, MapWorld) == false) then
+			table.insert(world_list, MapWorld)
+		end
+	end
+
+  end
 
   menu:addLabel("Map:", offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
   descriptionl = menu:addLabel("descriptionl", offx + 16 + 38, offy + 360, Fonts["game"], false)
 
   menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
+--  menu:addFullButton("S~!elect Map", "e", offx + 640 - 224 - 16, offy + 360 + 36*-2,
+--    function()
+--      local oldmapname = mapname
+--      RunWorldMapMenu(world_list[world:getSelected() + 1], maps)
+--      GetMapInfo(mapname)
+--      MapChanged()
+--    end)
   menu:addFullButton("~!Quests", "q", offx + 640 - 224 - 16, offy + 360 + 36*-1,
     function()
       RunQuestMenu()
@@ -564,14 +751,21 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases
-	if (scenario_list[scenario:getSelected() + 1] == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan") then
+	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan") then
 		person_player = 2
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	elseif (scenario_list[scenario:getSelected() + 1] == "Brown Hills") then
+	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == "Shorbear Clan" or faction_list[faction:getSelected() + 1] == wyr.preferences.TheScepterOfFireRaiderFaction)) then
+		person_player = 1
+		for i=1,mapinfo.nplayers do
+			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
+				GameSettings.Presets[i-1].Type = PlayerComputer
+			end
+		end
+	elseif (mapinfo.description == "Brown Hills") then
 		person_player = 3
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
@@ -601,7 +795,7 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton("~!Cancel Game", "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
 
   menu:addLabel("~<World:~>", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
-  world = menu:addDropDown({"Earth", "Nidavellir"}, offx + 40, offy + 10 + 120,
+  world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
     function(dd) WorldChanged() end)
   world:setSize(152, 20)
   world:setSelected(1)
@@ -656,22 +850,17 @@ function RunSinglePlayerGameMenu()
 
   function WorldChanged()
 	scenario_list = {}
-	if (world:getSelected() == 0) then
-		table.insert(scenario_list, "Aquitania")
-		table.insert(scenario_list, "Scandinavia")
-		table.insert(scenario_list, "Random Map (Forest)")
-		table.insert(scenario_list, "Random Map (Symmetric Forest)")
-	elseif (world:getSelected() == 1) then
-		table.insert(scenario_list, "Brown Hills")
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
-			table.insert(scenario_list, "Caverns of Chaincolt")
+
+	for i=1,table.getn(maps) do
+		MapRequiredQuest = ""
+		GetMapInfo(maps[i])
+		if (MapWorld == world_list[world:getSelected() + 1]) then
+			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
+				table.insert(scenario_list, mapinfo.description)
+			end
 		end
-		table.insert(scenario_list, "Chaincolt Foothills")
-		table.insert(scenario_list, "Random Map (Cave)")
-		table.insert(scenario_list, "Random Map (Swamp)")
-		table.insert(scenario_list, "Random Map (Symmetric Cave)")
-		table.insert(scenario_list, "Random Map (Symmetric Swamp)")
 	end
+
 	table.insert(scenario_list, "Custom Map")
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
@@ -680,64 +869,15 @@ function RunSinglePlayerGameMenu()
   end
 
   function ScenarioChanged()
-	if (scenario_list[scenario:getSelected() + 1] == "Aquitania") then
-		mapname = "maps/aquitania.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Scandinavia") then
-		mapname = "maps/scandinavia.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Brown Hills") then
-		mapname = "maps/brown-hills.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Caverns of Chaincolt") then
-		mapname = "maps/caverns-of-chaincolt.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Chaincolt Foothills") then
-		mapname = "maps/chaincolt-foothills.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Central Park") then
-		mapname = "maps/central-park.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Forgotten Forest") then
-		mapname = "maps/forgotten-forest.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Little Island") then
-		mapname = "maps/little-island.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Looking Upwards") then
-		mapname = "maps/looking-upwards.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Northern Lakes") then
-		mapname = "maps/northern-lakes.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "North-South Conflict") then
-		mapname = "maps/north-south-conflict.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "River Crossing") then
-		mapname = "maps/river-crossing.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Time for Decisions") then
-		mapname = "maps/time-for-decisions.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map (Cave)") then
-		mapname = "maps/random-map-cave.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map (Forest)") then
-		mapname = "maps/random-map-forest.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map (Swamp)") then
-		mapname = "maps/random-map-swamp.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map (Symmetric Cave)") then
-		mapname = "maps/random-map-cave-symmetric.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map (Symmetric Forest)") then
-		mapname = "maps/random-map-forest-symmetric.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Random Map (Symmetric Swamp)") then
-		mapname = "maps/random-map-swamp-symmetric.smp"
-		mapl:setCaption(string.sub(mapname, 6))
-	elseif (scenario_list[scenario:getSelected() + 1] == "Custom Map") then
+	for i=1,table.getn(maps) do
+		GetMapInfo(maps[i])
+		if (mapinfo.description == scenario_list[scenario:getSelected() + 1]) then
+			mapname = maps[i]
+			mapl:setCaption(string.sub(mapname, 6))
+		end
+	end
+
+	if (scenario_list[scenario:getSelected() + 1] == "Custom Map") then
 		local oldmapname = mapname
 		RunSelectScenarioMenu()
 		if (mapname ~= oldmapname) then
@@ -763,6 +903,7 @@ function RunSinglePlayerGameMenu()
   end
 
   function MapChanged()
+    mapl:setCaption(string.sub(mapname, 6))
     mapl:adjustSize()
 
     descriptionl:setCaption(mapinfo.description ..
@@ -805,7 +946,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.1.4") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.4") then
 		ResetTechnologiesAcquired()
 	end
 	wyr.preferences.LastVersionPlayed = wyrmsun.Version
@@ -844,7 +985,7 @@ function RunLoadModMenu()
   menu:addLabel("Load Mod", 176, 8)
 
   local browser = menu:addBrowser("mods/", ".lua$",
-    24, 140, 300, 108)
+    24, 140, 300, 108, nil, false)
 
   local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
 

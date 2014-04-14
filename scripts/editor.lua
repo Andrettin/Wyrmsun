@@ -58,6 +58,8 @@ local editor_types = {
    "unit-hero-rugnur",
    "unit-hero-rugnur-older",
    "unit-hero-baglur",
+   "unit-hero-thursagan",
+   "unit-hero-durstorn",
 
 --- - - - - - - - - - - - - - - - - - -
 
@@ -77,6 +79,9 @@ local editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-gold-mine",
+   "unit-gold-sack",
+   "unit-gold-chest",
+   "unit-gold-and-gems-chest",
 
    "unit-critter",
 

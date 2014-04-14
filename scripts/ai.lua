@@ -57,7 +57,7 @@ DefineAiHelper(
   -- Building can train which units.
   --
   {"train", "unit-dwarven-town-hall", "unit-dwarven-miner"},
-  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-dwarven-ballista", "unit-goblin-spearman"},
+  {"train", "unit-dwarven-barracks", "unit-dwarven-axefighter", "unit-dwarven-scout", "unit-dwarven-ballista", "unit-goblin-spearman", "unit-goblin-archer"},
   --
   -- Unit or building can upgrade which upgrades.
   --
@@ -86,9 +86,12 @@ DefineAiHelper(
   --
   {"unit-equiv", "unit-dwarven-axefighter",
   "unit-dwarven-steelclad",
-  "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+  "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
   "unit-gnomish-recruit",
   "unit-goblin-spearman", "unit-hero-greebo"
+  },
+  {"unit-equiv", "unit-dwarven-scout",
+  "unit-goblin-archer"
   }
 )
 
@@ -215,8 +218,32 @@ end
 function AiShooter()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-scout"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-archer"
 	else
 		return "unit-dwarven-scout"
+	end
+end
+
+--
+--  Upgrade melee weapon 1 of the current civilization.
+--
+function AiUpgradeWeapon1()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-broad-axe"
+	else
+		return "upgrade-dwarven-broad-axe"
+	end
+end
+
+--
+--  Upgrade melee weapon 2 of the current civilization.
+--
+function AiUpgradeWeapon2()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-great-axe"
+	else
+		return "upgrade-dwarven-great-axe"
 	end
 end
 
@@ -330,3 +357,4 @@ end
 ReInitAiGameData()
 Load("scripts/ai/passive.lua")
 Load("scripts/ai/land_attack.lua")
+Load("scripts/ai/northern_wastelands_goblins.lua")

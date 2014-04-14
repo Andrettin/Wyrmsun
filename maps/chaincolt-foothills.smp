@@ -2,3 +2,6 @@
 
 DefinePlayerTypes("person","computer","person")
 PresentMap("Chaincolt Foothills", 2, 56, 73, 1)
+MapWorld = "Nidavellir"
+MapSiteType = "Dwarven Outpost"
+WorldMapPosition = {4, 2}

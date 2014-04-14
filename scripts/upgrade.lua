@@ -38,10 +38,11 @@ function DefineAllowNormalUnits(flags)
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 		"unit-dwarven-ballista",
-		"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
-		"unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur",
+		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
+		"unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-gnomish-worker", "unit-gnomish-recruit"
+		"unit-gnomish-worker", "unit-gnomish-recruit",
+		"unit-goblin-spearman", "unit-goblin-archer"
 	}
 	-- Allow units for human players only if they have been acquired
 	if ((flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") and (not IsNetworkGame())) then
@@ -101,8 +102,6 @@ function DefineAllowExtraUnits(flags)
 	local units = {
 		"unit-glyph",
 		"unit-gnomish-caravan",
-		"unit-goblin-spearman",
-		"unit-goblin-archer",
 		"unit-hero-greebo",
 		"unit-goblin-banner"
 	}

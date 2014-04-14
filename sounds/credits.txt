@@ -6,6 +6,7 @@ Battle for Wesnoth Team:
 /sounds/goblin/basic_voices/goblin-die-2.wav
 /sounds/misc/explosion.wav
 /sounds/misc/fanfare_short.wav
+/sounds/misc/gold_coins.wav
 /sounds/missiles/axe.wav
 /sounds/missiles/bow.wav
 /sounds/missiles/bow_hit.wav

@@ -111,6 +111,20 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-axe-2",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/axe_2.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-axe-3",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/axe_3.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-shield-1",
 	Size = {46, 38},
 	Frame = 0,
@@ -188,6 +202,20 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-thursagan",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/thursagan.png"
+})
+
+DefineIcon({
+	Name = "icon-durstorn",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/durstorn.png"
+})
+
+DefineIcon({
 	Name = "icon-elven-swordsman",
 	Size = {46, 38},
 	Frame = 0,
@@ -250,9 +278,23 @@ DefineIcon({
 	File = "neutral/icons/build_basic_structure.png"
 })
 
+DefineIcon({
+	Name = "icon-gold-sack",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gold_sack.png"
+})
+
+DefineIcon({
+	Name = "icon-chest",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/chest.png"
+})
+
 -- tileset-dependent icons
 
-if (wyrmsun.tileset == "swamp") then
+if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	DefineIcon({
 		Name = "icon-gold-mine",
 		Size = {46, 38},

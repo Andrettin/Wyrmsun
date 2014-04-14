@@ -28,6 +28,10 @@
 --
 
 local upgrades = {
+	{"upgrade-dwarven-broad-axe", "icon-dwarven-axe-2",
+		{   200,   500,   100,     0,     0,     0,     0}},
+	{"upgrade-dwarven-great-axe", "icon-dwarven-axe-3",
+		{   250,  1500,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-1", "icon-dwarven-throwing-axe-2",
 		{   200,   300,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3",
@@ -42,6 +46,20 @@ for i = 1,table.getn(upgrades) do
 	end
 end
 
+DefineModifier("upgrade-dwarven-broad-axe",
+	{"PiercingDamage", 2},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-older"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+)
+
+DefineModifier("upgrade-dwarven-great-axe",
+	{"PiercingDamage", 2},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-older"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+)
+
 DefineModifier("upgrade-dwarven-throwing-axe-1",
 	{"PiercingDamage", 1},
 	{"apply-to", "unit-dwarven-scout"})
@@ -53,6 +71,9 @@ DefineModifier("upgrade-dwarven-throwing-axe-2",
 DefineDependency("unit-dwarven-scout",
 	{"unit-dwarven-lumber-mill"})
 
+DefineDependency("upgrade-dwarven-great-axe",
+	{"upgrade-dwarven-broad-axe"})
+
 DefineDependency("upgrade-dwarven-throwing-axe-2",
 	{"upgrade-dwarven-throwing-axe-1"})
 
@@ -63,7 +84,7 @@ DefineDependency("unit-dwarven-ballista",
 	{"unit-dwarven-lumber-mill"})
 
 DefineDependency("unit-hero-rugnur",
-	{"unit-dwarven-town-hall", 3, "unit-dwarven-barracks", "unit-dwarven-axefighter", 4})
+	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-axefighter", 4, "unit-dwarven-steelclad", 1})
 
 DefineDependency("unit-hero-baglur",
-	{"unit-dwarven-town-hall", "unit-dwarven-barracks", 2, "unit-dwarven-axefighter", 12})
+	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-steelclad", 4})

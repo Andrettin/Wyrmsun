@@ -32,6 +32,7 @@ if (wyrmsun.tileset == nil) then
 end
 
 local files = {
+  dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
@@ -53,6 +54,7 @@ DefineConstruction("construction-none", {
 })
 
 local files = {
+  dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
@@ -74,6 +76,7 @@ DefineConstruction("construction-land", {
 })
 
 local files = {
+  dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
@@ -88,5 +91,27 @@ DefineConstruction("construction-land2", {
     Frame = 0},
    {Percent = 25,
     File = "construction",
+    Frame = 1}}
+})
+
+local files = {
+  dungeon = "neutral/buildings/land_construction_site.png",
+  forest = "neutral/buildings/land_construction_site.png",
+  swamp = "neutral/buildings/land_construction_site.png"
+}
+
+DefineConstruction("construction-wall", {
+  Files = {
+    File = files[wyrmsun.tileset],
+    Size = {32, 32}},
+  Constructions = {
+   {Percent = 0,
+    File = "construction",
+    Frame = 0},
+   {Percent = 25,
+    File = "construction",
+    Frame = 1},
+   {Percent = 50,
+    File = "main",
     Frame = 1}}
 })

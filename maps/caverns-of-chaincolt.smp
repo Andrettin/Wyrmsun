@@ -1,4 +1,8 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer","person")
-PresentMap("Caverns of Chaincolt", 3, 56, 66, 1)
+DefinePlayerTypes("person","person","computer")
+PresentMap("Caverns of Chaincolt", 2, 56, 66, 1)
+MapWorld = "Nidavellir"
+MapRequiredQuest = "A Bargain is Struck"
+MapSiteType = "Dwarven Fortified Outpost"
+WorldMapPosition = {4, 1}

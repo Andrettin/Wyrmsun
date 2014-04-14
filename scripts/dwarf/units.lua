@@ -195,13 +195,8 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
     "dead", "explosion"
 } } )
 
-UnitTypeFiles["unit-dwarven-town-hall"] = {
-  forest = "dwarf/buildings/town_hall.png",
-  swamp = "dwarf/buildings/town_hall.png"
-}
-
 DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
-  Image = {"size", {128, 128}},
+  Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
   Animations = "animations-building", Icon = "icon-dwarven-town-hall",
   Costs = {"time", 255, "gold", 1200, "wood", 800},
   RepairHp = 4,
@@ -231,13 +226,8 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-dwarven-mushroom-farm"] = {
-  forest = "dwarf/buildings/mushroom_farm.png",
-  swamp = "dwarf/buildings/mushroom_farm.png"
-}
-
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name,
-  Image = {"size", {64, 64}},
+  Image = {"file", "dwarf/buildings/mushroom_farm.png", "size", {64, 64}},
   Animations = "animations-building", Icon = "icon-dwarven-mushroom-farm",
   NeutralMinimapColor = {192, 192, 192},
   Costs = {"time", 100, "gold", 500, "wood", 250},
@@ -264,13 +254,8 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-dwarven-barracks"] = {
-  forest = "dwarf/buildings/barracks.png",
-  swamp = "dwarf/buildings/barracks.png"
-}
-
 DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
-  Image = {"size", {96, 96}},
+  Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-dwarven-barracks",
   Costs = {"time", 200, "gold", 700, "wood", 450},
   RepairHp = 4,
@@ -295,13 +280,8 @@ DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-dwarven-lumber-mill"] = {
-  forest = "dwarf/buildings/lumber_mill.png",
-  swamp = "dwarf/buildings/lumber_mill.png"
-}
-
 DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
-  Image = {"size", {96, 96}},
+  Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-dwarven-lumber-mill",
   Costs = {"time", 150, "gold", 600, "wood", 450},
   RepairHp = 4,
@@ -328,13 +308,8 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-dwarven-sentry-tower"] = {
-	forest = "dwarf/buildings/sentry_tower.png",
-	swamp = "dwarf/buildings/sentry_tower.png"
-}
-
 DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
-  Image = {"size", {64, 64}},
+  Image = {"file", "dwarf/buildings/sentry_tower.png", "size", {64, 64}},
   Animations = "animations-building", Icon = "icon-dwarven-sentry-tower",
   Costs = {"time", 60, "gold", 550, "wood", 200},
   RepairHp = 4,
@@ -361,13 +336,8 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-dwarven-guard-tower"] = {
-	forest = "dwarf/buildings/guard_tower.png",
-	swamp = "dwarf/buildings/guard_tower.png"
-}
-
 DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
-  Image = {"size", {64, 64}},
+  Image = {"file", "dwarf/buildings/guard_tower.png", "size", {64, 64}},
   Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
   Costs = {"time", 140, "gold", 500, "wood", 150},
   RepairHp = 4,
@@ -402,11 +372,11 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
   Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
   Costs = {"time", 0, "gold", 750},
   Speed = 10,
-  HitPoints = 100,
+  HitPoints = 60,
   DrawLevel = 40,
   TileSize = {1, 1}, BoxSize = {31, 31},
   SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-  Armor = 2, BasicDamage = 8, PiercingDamage = 4, Missile = "missile-none",
+  Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 60,
   BasePoints = 50,
@@ -420,6 +390,7 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
   organic = true,
   SelectableByRectangle = true,
   GraphicsVariation = 6,
+  CanCastSpell = {"spell-equip-great-axe"},
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
@@ -432,11 +403,11 @@ DefineUnitType("unit-hero-rugnur-older", { Name = "Rugnur",
   Animations = "animations-dwarven-steelclad", Icon = "icon-rugnur-older",
   Costs = {"time", 0},
   Speed = 10,
-  HitPoints = 125,
+  HitPoints = 75,
   DrawLevel = 40,
   TileSize = {1, 1}, BoxSize = {31, 31},
   SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-  Armor = 2, BasicDamage = 8, PiercingDamage = 4, Missile = "missile-none",
+  Armor = 3, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 60,
   BasePoints = 60,
@@ -451,6 +422,7 @@ DefineUnitType("unit-hero-rugnur-older", { Name = "Rugnur",
   organic = true,
   SelectableByRectangle = true,
   GraphicsVariation = 6,
+  CanCastSpell = {"spell-equip-great-axe"},
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
@@ -463,11 +435,11 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
   Animations = "animations-dwarven-steelclad", Icon = "icon-baglur",
   Costs = {"time", 0, "gold", 750},
   Speed = 10,
-  HitPoints = 125,
+  HitPoints = 75,
   DrawLevel = 40,
   TileSize = {1, 1}, BoxSize = {31, 31},
   SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-  Armor = 2, BasicDamage = 8, PiercingDamage = 4, Missile = "missile-none",
+  Armor = 3, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 60,
   BasePoints = 60,
@@ -482,6 +454,68 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
   organic = true,
   SelectableByRectangle = true,
   GraphicsVariation = 2,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-dwarf-voices-acknowledge",
+--    "ready", "basic-dwarf-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-dwarf-voices-dead"} } )
+
+DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
+  Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
+  Animations = "animations-dwarven-steelclad", Icon = "icon-thursagan",
+  Costs = {"time", 0, "gold", 750},
+  Speed = 10,
+  HitPoints = 75,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+  Armor = 3, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 60,
+  BasePoints = 60,
+  Demand = 1,
+  StartingLevel = 2,
+--    Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true,
+  LandUnit = true,
+  organic = true,
+  SelectableByRectangle = true,
+  GraphicsVariation = 2,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "basic-dwarf-voices-acknowledge",
+--    "ready", "basic-dwarf-voices-ready",
+    "help", "basic-dwarf-voices-help",
+    "dead", "basic-dwarf-voices-dead"} } )
+
+DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
+  Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
+  Animations = "animations-dwarven-steelclad", Icon = "icon-durstorn",
+  Costs = {"time", 0, "gold", 750},
+  Speed = 10,
+  HitPoints = 75,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+  Armor = 3, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 60,
+  BasePoints = 60,
+  Demand = 1,
+  StartingLevel = 2,
+--    Corpse = "unit-human-dead-body",
+  Type = "land",
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true,
+  LandUnit = true,
+  organic = true,
+  SelectableByRectangle = true,
+  GraphicsVariation = 6,
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",

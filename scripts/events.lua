@@ -42,7 +42,7 @@ function EventTriggers()
 			if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-town-hall", {0, 0}, {256, 256}) >= 1) then
 				for i=0,14 do
 					-- could require a dwarven stronghold or citadel when those buildings are included, so that the mercenaries only offer themselves to those who are well-established; triggers only if a player has seen enough battle (and thus has need of mercenaries) - in game terms, that means having 10 or more kills
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "Resources", "gold") >= 4800 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "TotalKills") >= 10) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "Resources", "gold") >= 4800 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4) then
 						player = i
 						return true
 					end
@@ -116,43 +116,88 @@ function EventTriggers()
 					nil,
 					"ui/goblin_swordsman.png"
 				)
-				return false
-			end
-		)
 
-		-- Greebo's End
-		-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
-		AddTrigger(
-			function()
-				if (GameCycle == 0) then
-					return false
-				end
-				for i=0,14 do
-					if (GetPlayerData(i, "Name") == "Greebo" and GetPlayerData(i, "UnitTypesCount", "unit-hero-greebo") == 0) then
-						player = GetThisPlayer()
-						return true
-					end
-				end
-				return false
-			end,
-			function() 
-				Event(
-					"Greebo's End",
-					"The goblin looter is dead. We have acquired his stolen gold, although he didn't have much with him. Must be hard times.",
-					player,
-					{"~!OK (receive 400 gold)"},
-					{function(s)
-						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
-						for i=0,14 do
-							if (GetPlayerData(i, "Name") ~= "Greebo") then
-								RemoveElementFromArray(Objectives[i], "- Kill Greebo (optional)")
+				-- Greebo's speech
+				AddTrigger(
+					function()
+						if (GetArrayIncludes(Objectives[GetThisPlayer()], "- Kill Greebo (optional)")) then
+							local uncount = 0
+							uncount = GetUnits(GetFactionPlayer("Greebo"))
+							for unit1 = 1,table.getn(uncount) do 
+								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-greebo") then
+									local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+									if (unit_quantity > 0) then
+										player = GetThisPlayer()
+										return true
+									end
+								end
 							end
 						end
-					end}
+						return false
+					end,
+					function()
+						if (GetPlayerData(player, "RaceName") == "dwarf") then
+							Event(
+								"Greebo",
+								"Greebo keeps shinies safe from nasty kobolds. And 'specially stinking dwarves.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								end},
+								"goblin/icons/goblin_swordsman.png"
+							)
+						elseif (GetPlayerData(player, "RaceName") == "gnome") then
+							Event(
+								"Greebo",
+								"Greebo keeps shinies safe from nasty kobolds. And 'specially stinking gnomes.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								end},
+								"goblin/icons/goblin_swordsman.png"
+							)
+						end
+
+						-- Greebo's End
+						-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
+						AddTrigger(
+							function()
+								if (GameCycle == 0) then
+									return false
+								end
+								for i=0,14 do
+									if (GetPlayerData(i, "Name") == "Greebo" and GetPlayerData(i, "UnitTypesCount", "unit-hero-greebo") == 0) then
+										player = GetThisPlayer()
+										return true
+									end
+								end
+								return false
+							end,
+							function() 
+								Event(
+									"Greebo's End",
+									"The goblin looter is dead. He doesn't seem to have much with him. Must be hard times.",
+									player,
+									{"~!OK"},
+									{function(s)
+										SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
+										for i=0,14 do
+											if (GetPlayerData(i, "Name") ~= "Greebo") then
+												RemoveElementFromArray(Objectives[i], "- Kill Greebo (optional)")
+											end
+										end
+									end}
+								)
+								return false
+							end
+						)
+						return false
+					end
 				)
 				return false
 			end
 		)
+
 	end
 
 	-- Andvari's Gold
@@ -177,7 +222,7 @@ function EventTriggers()
 					"Andvari's Gold",
 					"The dwarf Andvari, the son of Oin, has built a house for himself in the wilderness, where he lives in isolation. Lately we have discovered that he hides quite a bit of gold there... Some people are suggesting a raid against his home to add his gold to our treasury. Shall we extract a contribution from Andvari?",
 					player,
-					{"~!Leave him be.", "Let's ~!get the gold."},
+					{"~!Leave him be", "Let's ~!get the gold"},
 					{function(s)
 						local andvari_player = FindUnusedPlayerSlot()
 						Players[andvari_player].Type = PlayerComputer
@@ -596,7 +641,7 @@ function Event(event_name, event_description, player, options, option_effects, e
 		l:setFont(Fonts["game"])
 		l:setSize(324, 208)
 		l:setLineWidth(324)
-		if (event_image ~= nil and event_icon == nil) then
+		if (event_icon == nil) then
 			menu:add(l, 14, 40)
 		else
 			menu:add(l, 14, 112)

@@ -62,15 +62,15 @@ local GoblinSwordsmanMove = {"unbreakable begin","frame 0", "move 3", "wait 2", 
     "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
     "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
 local GoblinSwordsmanDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
-    "frame 55", "unbreakable end", "wait 1",}
+    "frame 55", "spawn-unit unit-gold-sack 0 0 5 15", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-swordsman", {
-  Still = GoblinSpearmanStill,
-  Move = GoblinSpearmanMove,
+  Still = GoblinSwordsmanStill,
+  Move = GoblinSwordsmanMove,
   Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "sound sword-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
-  Death = GoblinSpearmanDeath,
+  Death = GoblinSwordsmanDeath,
 })
 
 --

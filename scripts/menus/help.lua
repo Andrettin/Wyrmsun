@@ -109,6 +109,8 @@ local tips = {
 
   "Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 
+  "Attack a chest to open it.",
+
 --  "Know a useful tip?  Then add it here!",
 }
 

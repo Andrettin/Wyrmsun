@@ -4,7 +4,7 @@ local function RunEditorNewMapMenu()
   local menu = WarMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
-  local tilesets = { "forest", "swamp"}
+  local tilesets = { "dungeon", "forest", "swamp"}
   local mapSizes = {"32", "64", "96", "128", "256"}
 
   menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
@@ -44,9 +44,6 @@ local function RunEditorLoadMapMenu()
   local labelNbPlayer
   local labelMapSize
   
-  -- Andrettin: added this so that special scenarios such as Chaincolt Foothills don't become selected by default
-  mapname = "maps/chaincolt-foothills.smp"
-
   -- update label content
   local function MapChanged()
     labelMapName:setCaption("File      : " .. string.sub(mapname, 6))
@@ -134,7 +131,7 @@ function RunEditorSaveMenu()
   local t = menu:addTextInputField("game.smp",
     (384 - 300 - 18) / 2, 11 + 36, 318)
 
-  local browser = menu:addBrowser("maps/", ".smp.gz$",
+  local browser = menu:addBrowser(MapDirectories[1], ".smp.gz$",
     (384 - 300 - 18) / 2, 11 + 36 + 22, 318, 126)
   local function cb(s)
     t:setText(browser:getSelectedItem())
@@ -218,7 +215,7 @@ function RunEditorPlayerProperties()
 
   local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
   local racenames = {"dwarf", "gnome", "goblin"}
-  local ais = {"passive", "land-attack"}
+  local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
 
   menu:addLabel("#", 15, 36)
   menu:addLabel("Type", offxType, 36)
@@ -319,7 +316,7 @@ function RunEditorMapProperties()
 
   menu:addLabel("Tileset : ", 45, 36 * 4, nil, false)
 
-  local list = { "Forest", "Swamp"}
+  local list = { "Dungeon", "Forest", "Swamp"}
   local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
   for i = 0,3 do
     if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)

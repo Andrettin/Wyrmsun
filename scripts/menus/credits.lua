@@ -54,6 +54,7 @@ function RunShowCreditsMenu()
 	"  b_o",
 	"  igoku",
 	"  Joao Victor G. Costa (Jinn)",
+	"  Leo",
 	"  Oray Studios",
 	"  Ransom.00",
 	"Interface Art",

@@ -27,31 +27,64 @@ https://launchpad.net/stratagus
 - 0.1.5
 -----------------------------------------------------------------------
 
+* AI
+- The AI now properly attacks more than once.
+
 * Buildings
 - The openings in the Sentry Tower graphics have been updated (by Jinn).
+- Fixed an error which allowed guard towers to level up.
 
 * Events
 - Event message buttons now support hotkeys.
 - Event messages now support icons being displayed, instead of only larger images.
 - Event messages now allow support for more than two options.
+- Added a dialogue line for Greebo when he is found.
+- When Greebo dies now he drops a gold sack which gives gold to the player that gets it.
+
+* Heroes
+- Levels acquired with hero units are now saved across games (only in single player).
+- Baglur and steelclad Rugnur now correctly have the same amount of armor as steelclads (previously they had the same amount of armor as axefighters).
+- Added Durstorn (dwarf; not yet available for hiring normally; icon graphics by Leo).
+- Added Thursagan (dwarf; icon graphics by Leo).
+- Hero units now have the same base stats as their base units, as their persistent (and usually higher) levels already give them an edge.
+- Adjusted the requirements for Rugnur and Baglur to be available for hiring.
+- Baglur is now available for hiring after the completion of "Closing the Gates", while Rugnur is available for hiring after the completion of "A Bargain is Struck".
 
 * Maps
 - The Aquitania map generation script and the default random map generation script now create dark dirt and dark grass tiles.
+- In the Caverns of Chaincolt map, player 2 (blue) now starts with a dwarven steelclad instead of one of its axefighters.
+- In the Caverns of Chaincolt map, player 3 (green) is now hostile to all other players.
+- An error which made the Caverns of Chaincolt map unplayable in multiplayer has been fixed.
+- Maps now appear on the scenario list dynamically (use "MapWorld" within the map's .smp file to indicate which world's list it will appear on, and "MapRequiredQuest" to indicate which quest the map requires to be shown, if any). Maps can be placed either directly within the main maps folder, or in subfolders within it.
+- The world list in the single player game setup is now built dynamically from world references within maps.
+- When finishing the A Bargain is Struck quest in the Chaincolt Foothills map the player is now taken directly to the next quest's map (Caverns of Chaincolt).
+- Fixed one tile which was wrongly set to be dry mud, when it should be mud.
+- Added the Northern Wastelands map (Nidavellir).
 
 * Miscellaneous
 - The player now receives a warning message when new versions of Wyrmsun reset the allocation of technology points in the tech tree.
 - Glyphs are now visible under the fog of war.
 - The speed cheat ("hermes") now works (code by cybermind).
+- The resource cheat now benefits all players.
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
 - Quest events have been reformulated to incorporate dialogues.
+- Quest code has been improved.
+- Added the "Searching for the Runecrafter" quest.
 
 * Terrain
 - Added Dark Dirt and Dark Grass tiles to the Forest tileset (graphics by b_o).
 
 * Units
-- Added Goblin Archer.
+- Added Goblin Archer (graphics by b_o).
+- Leveling up now always restores HP to the max.
+- Added gold sack (gives 500 gold when touched; graphics by b_o).
+- Added gold chest (attack to open, gives 1000 gold; graphics by b_o).
+- Added gold and gems chest (attack to open, gives 1500 gold; graphics by b_o).
+
+* Upgrades
+- Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).
 
 -----------------------------------------------------------------------
 - 0.1.4

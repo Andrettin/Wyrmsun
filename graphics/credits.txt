@@ -1,4 +1,5 @@
 b_o:
+/graphics/dwarf/items/dwarven_helmet.png
 /graphics/dwarf/units/dwarven_axefighter.png
 /graphics/dwarf/units/dwarven_ballista.png
 /graphics/dwarf/units/dwarven_scout.png
@@ -18,6 +19,7 @@ b_o:
 /graphics/goblin/units/goblin_spearman.png
 /graphics/goblin/units/goblin_swordsman.png
 /graphics/missiles/dwarven_ballista_bolt.png
+/graphics/missiles/goblin_arrow.png
 /graphics/missiles/throwing_axe.png
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/log.png
@@ -25,9 +27,15 @@ b_o:
 /graphics/neutral/decorations/small_rocks.png
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
-/graphics/neutral/units/gold_sack.png
+/graphics/neutral/items/axe.png
+/graphics/neutral/items/chest.png
+/graphics/neutral/items/crown.png
+/graphics/neutral/items/goblet.png
+/graphics/neutral/items/gold_sack.png
+/graphics/neutral/items/key.png
+/graphics/neutral/items/scepter.png
 /graphics/neutral/units/rat.png
-/graphics/neutral/units/rats.png
+/graphics/tilesets/dungeon/terrain/dungeon.png
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
 /graphics/tilesets/forest/neutral/decorations/large_flower.png
@@ -67,7 +75,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/mushroom_farm.png
 /graphics/dwarf/buildings/sentry_tower.png
 /graphics/dwarf/buildings/town_hall.png
-/graphics/dwarf/icons/axe_1.png (modified from Ransom.00's icon)
+/graphics/dwarf/icons/axe_2.png (modified from Ransom.00's icon)
 /graphics/dwarf/icons/baglur.png
 /graphics/dwarf/icons/boots.png (modified from igoku's icon)
 /graphics/dwarf/icons/dwarven_axefighter.png
@@ -174,11 +182,17 @@ João Victor G. Costa (Jinn):
 /graphics/ui/dwarf/widgets/button-thin-small-normal.png
 /graphics/ui/dwarf/widgets/button-thin-small-pressed.png
 
+Leo:
+/graphics/dwarf/icons/axe_1.png
+/graphics/dwarf/icons/axe_3.png
+/graphics/dwarf/icons/durstorn.png
+/graphics/dwarf/icons/thursagan.png
+
 Oray Studios:
 /graphics/ui/gold,wood,oil,mana.png
 
 Ransom.00:
-/graphics/dwarf/icons/axe_1.png (later modified by Jinn)
+/graphics/dwarf/icons/axe_2.png (later modified by Jinn)
 
 Rick Elliot:
 /graphics/ui/cursors/cross.png

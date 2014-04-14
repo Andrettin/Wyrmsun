@@ -40,14 +40,13 @@ function RunQuestMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	addQuestIcon("A Bargain is Struck", menu, "dwarf/icons/rugnur",
-		"A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map, Baglur (Hero).\n\nHint: The easiest way to obtain this quest is to play the Chaincolt Foothills map under default settings.",
-		offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 1))
-	
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
-		addQuestIcon("Closing the Gates", menu, "dwarf/icons/baglur",
-			"Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nRewards: 2 Dwarven Technology Points, Northern Wastelands Map (Coming Soon).\n\nHint: This quest can only be completed by playing the Caverns of Chaincolt map.",
-			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 1))
+	local quest_x = 1
+	local quest_y = 1
+	for i = 1,table.getn(Quests) do
+		if (Quests[i][4] == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[i][4])) then
+			addQuestIcon(Quests[i][1], menu, Quests[i][2], Quests[i][3], offx + 23 + 4 + (54 * quest_x), offy + 10 + 4 + (46 * quest_y))
+		end
+		quest_x = quest_x + 1
 	end
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),

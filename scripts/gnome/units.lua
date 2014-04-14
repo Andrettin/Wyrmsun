@@ -131,13 +131,8 @@ DefineUnitType("unit-gnomish-caravan", { Name = gnomish_caravan_name,
     "help", "basic-dwarf-voices-help",
     "dead", "explosion"} } )
 
-UnitTypeFiles["unit-gnomish-town-hall"] = {
-  forest = "gnome/buildings/town_hall.png",
-  swamp = "gnome/buildings/town_hall.png"
-}
-
 DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
-  Image = {"size", {128, 128}},
+  Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
   Animations = "animations-building", Icon = "icon-gnomish-town-hall",
   Costs = {"time", 255, "gold", 1200, "wood", 800},
   RepairHp = 4,
@@ -167,13 +162,8 @@ DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-gnomish-farm"] = {
-  forest = "gnome/buildings/farm.png",
-  swamp = "gnome/buildings/farm.png"
-}
-
 DefineUnitType("unit-gnomish-farm", { Name = "Farm",
-  Image = {"size", {64, 64}},
+  Image = {"file", "gnome/buildings/farm.png", "size", {64, 64}},
   Animations = "animations-building", Icon = "icon-gnomish-farm",
   NeutralMinimapColor = {192, 192, 192},
   Costs = {"time", 100, "gold", 500, "wood", 250},
@@ -200,13 +190,8 @@ DefineUnitType("unit-gnomish-farm", { Name = "Farm",
     "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
-UnitTypeFiles["unit-gnomish-barracks"] = {
-  forest = "gnome/buildings/barracks.png",
-  swamp = "gnome/buildings/barracks.png"
-}
-
 DefineUnitType("unit-gnomish-barracks", { Name = "Barracks",
-  Image = {"size", {96, 96}},
+  Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-gnomish-barracks",
   Costs = {"time", 200, "gold", 700, "wood", 450},
   RepairHp = 4,

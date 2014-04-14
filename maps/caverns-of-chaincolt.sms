@@ -2,9 +2,6 @@
 
 LoadTileModels("scripts/tilesets/swamp.lua")
 
-MapWidth = 56
-MapHeight = 66
-
 RawTiles = {
 	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Land",  "Land",  "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
 	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rough", "Land",  "Land",  "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
@@ -122,6 +119,11 @@ for i=0,1 do
 	end
 end
 
+SetDiplomacy(0, "enemy", 2)
+SetDiplomacy(1, "enemy", 2)
+SetDiplomacy(2, "enemy", 0)
+SetDiplomacy(2, "enemy", 1)
+
 -- Gold Mines
 unit = CreateUnit("unit-gold-mine", 15, {2, 47})
 SetResourcesHeld(unit, 125000)
@@ -157,7 +159,7 @@ unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
 unit = CreateUnit("unit-dwarven-town-hall", 1, {11, 50})
 unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {16, 61})
 unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {7, 54})
-unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+unit = CreateUnit("unit-dwarven-steelclad", 1, {11, 50})
 unit = CreateUnit("unit-dwarven-miner", 1, {11, 50})
 
 -- Extra Bandits to make them not be easily defeatable at scenario begin

@@ -135,7 +135,7 @@ unit = CreateUnit("unit-gold-mine", 15, {4, 52})
 SetResourcesHeld(unit, 6250)
 
 unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {39, 21})
+unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
 unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
 
 -- Rugnur
@@ -162,4 +162,4 @@ unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
 unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 
 PlayMusic("music/knolls.ogg")
-wyrmsun.playlist = { "music/knolls.ogg", "music/loyalists.ogg", "music/breaking_the_chains.ogg" }
+wyrmsun.playlist = { "music/loyalists.ogg", "music/breaking_the_chains.ogg" }

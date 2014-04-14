@@ -82,6 +82,10 @@ local RatDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3
 DefineAnimations("animations-rat", {
   Still = RatStill,
   Move = RatMove,
+  Attack = {"unbreakable begin",
+  	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+  	"frame 40", "attack", "sound axe-attack", "wait 5", "frame 0", "wait 10", "frame 0",
+	"unbreakable end", "wait 1",},
   Death = RatDeath,
 })
 
@@ -151,4 +155,28 @@ DefineAnimations("animations-decoration", {
 DefineAnimations("animations-gold-sack", {
   Still = BuildingStill,
   Death = BuildingStill,
+})
+
+DefineAnimations("animations-gold-chest", {
+  Still = {
+	"if-var v.GraphicsVariation.Value == 0 variation_0",
+	"if-var v.GraphicsVariation.Value == 1 variation_1",
+	"if-var v.GraphicsVariation.Value == 2 variation_2",
+	"label variation_0", "frame 0", "if-var v.HitPoints.Percent < 100 open_chest", "goto end",
+	"label variation_1", "frame 1", "goto end",
+	"label variation_2", "frame 2", "goto end",
+	"label open_chest", "set-var GraphicsVariation.Value = 2", "goto end",
+	"label end", "wait 1",},
+})
+
+DefineAnimations("animations-gold-and-gems-chest", {
+  Still = {
+	"if-var v.GraphicsVariation.Value == 0 variation_0",
+	"if-var v.GraphicsVariation.Value == 1 variation_1",
+	"if-var v.GraphicsVariation.Value == 2 variation_2",
+	"label variation_0", "frame 0", "if-var v.HitPoints.Percent < 100 open_chest", "goto end",
+	"label variation_1", "frame 1", "goto end",
+	"label variation_2", "frame 3", "goto end",
+	"label open_chest", "set-var GraphicsVariation.Value = 2", "goto end",
+	"label end", "wait 1",},
 })

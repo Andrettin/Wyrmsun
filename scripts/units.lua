@@ -119,19 +119,18 @@ DefineUnitType("unit-critter", { Name = "Critter",
   HitPoints = 5,
   DrawLevel = 35,
   TileSize = {1, 1}, BoxSize = {31, 31},
-  SightRange = 2, ComputerReactionRange = 20, PersonReactionRange = 10,
-  BasicDamage = 80, PiercingDamage = 0,
---  Missile = "missile-critter-explosion",
+  SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+  BasicDamage = 1, PiercingDamage = 2, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 37,
   Points = 1,
   Demand = 1,
   Type = "land",
   RightMouseAction = "move",
+  CanAttack = true,
   CanTargetLand = true,
   LandUnit = true,
   RandomMovementProbability = 5,
---  ClicksToExplode = 10,
   organic = true,
   Coward = true,
   Sounds = {
@@ -198,6 +197,7 @@ DefineUnitType("unit-mushroom", { Name = "Mushroom",
 )
 
 UnitTypeFiles["unit-flowers"] = {
+	dungeon = "tilesets/swamp/neutral/decorations/flowers.png",
 	forest = "tilesets/forest/neutral/decorations/flowers.png",
 	swamp = "tilesets/swamp/neutral/decorations/flowers.png"
 }
@@ -224,6 +224,7 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 )
 
 UnitTypeFiles["unit-large-flower"] = {
+	dungeon = "tilesets/swamp/neutral/decorations/large_flower.png",
 	forest = "tilesets/forest/neutral/decorations/large_flower.png",
 	swamp = "tilesets/swamp/neutral/decorations/large_flower.png"
 }
@@ -250,6 +251,7 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 )
 
 UnitTypeFiles["unit-fern"] = {
+	dungeon = "tilesets/swamp/neutral/decorations/fern.png",
 	forest = "tilesets/forest/neutral/decorations/fern.png",
 	swamp = "tilesets/swamp/neutral/decorations/fern.png"
 }
@@ -431,8 +433,8 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
 --  Sounds = {} } )
 
 DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
-  Image = {"file", "neutral/units/gold_sack.png", "size", {16, 14}},
-  Animations = "animations-gold-sack", Icon = "icon-gold-mine",
+  Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
+  Animations = "animations-gold-sack", Icon = "icon-gold-sack",
   NeutralMinimapColor = {255, 255, 0},
   Speed = 0,
   HitPoints = 1,
@@ -442,9 +444,40 @@ DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
   BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
   Priority = 0,
   Type = "land",
-  GivesResource = "gold", CanHarvest = true,
+--  GivesResource = "gold", CanHarvest = true,
+  NumDirections = 1,  
+  NonSolid = true, 
   Sounds = {} } )
 
+DefineUnitType("unit-gold-chest", { Name = "Chest",
+  Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
+  Animations = "animations-gold-chest", Icon = "icon-chest",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 100,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  Sounds = {} } )
+
+DefineUnitType("unit-gold-and-gems-chest", { Name = "Chest",
+  Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
+  Animations = "animations-gold-and-gems-chest", Icon = "icon-chest",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 100,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  Sounds = {} } )
 
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
 --  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
@@ -467,6 +500,7 @@ DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
 
 
 UnitTypeFiles["unit-destroyed-2x2-place"] = {
+  dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 }
@@ -488,6 +522,7 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 
 
 UnitTypeFiles["unit-destroyed-3x3-place"] = {
+  dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 }
@@ -527,6 +562,7 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --  Sounds = {} } )
 
 UnitTypeFiles["unit-destroyed-4x4-place"] = {
+  dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 }
@@ -563,13 +599,8 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 
 -- Human units
 
-UnitTypeFiles["unit-human-lumber-mill"] = {
-  forest = "human/buildings/lumber_mill.png",
-  swamp = "human/buildings/lumber_mill.png"
-}
-
 DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
-  Image = {"size", {96, 96}},
+  Image = {"file", "human/buildings/lumber_mill.png", "size", {96, 96}},
   NeutralMinimapColor = {192, 192, 192},
   Animations = "animations-building", Icon = "icon-human-lumber-mill",
   Costs = {"time", 150, "gold", 600, "wood", 450},
@@ -602,3 +633,30 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 Load("scripts/dwarf/units.lua")
 Load("scripts/gnome/units.lua")
 Load("scripts/goblin/units.lua")
+
+DefineUnitType("unit-human-wall", { Name = "Wall",
+  Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
+  Animations = "animations-building", Icon = "icon-human-lumber-mill",
+  Costs = {"time", 30, "gold", 20, "wood", 10},
+  Construction = "construction-wall",
+  Speed = 0,
+  HitPoints = 40,
+  DrawLevel = 39,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0, AnnoyComputerFactor = 45,
+  Points = 1,
+--  Corpse = "unit-destroyed-1x1-place",
+  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  Building = true, VisibleUnderFog = true,
+  Sounds = {
+--    "selected", "human-wall-selected",
+--    "acknowledge", "human-wall-acknowledge",
+--    "ready", "human-wall-ready",
+--    "help", "basic human voices help 2",
+    "dead", "building destroyed"} } )
+
+-- Hardcoded unit-types, moved from Stratagus to games
+UnitTypeHumanWall = UnitTypeByIdent("unit-human-wall");

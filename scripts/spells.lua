@@ -44,3 +44,11 @@ DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-critter", {})
 
 -- And declare upgrade for dependency...
+
+DefineSpell("spell-equip-great-axe",
+	"showname", _("equip great axe"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"force-use-animation"
+)
