@@ -494,7 +494,7 @@ function StandardTriggers()
 						local nearby_uncount = 0
 						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0)
 						for unit2 = 1,table.getn(nearby_uncount) do 
-							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
+							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15 and GetUnitBoolFlag(nearby_uncount[unit2], "Decoration") == false) then
 								Event(
 									"",
 									"You found 500 gold in the sack.",
@@ -511,7 +511,13 @@ function StandardTriggers()
 					end
 				end
 
-				-- gives gold if a unit is near a gold chest
+				-- fixes wrong ownership transferrences due to the gold sack code
+				if (GetUnitVariable(uncount[unit1], "Player") ~= 15 and GetUnitBoolFlag(uncount[unit1], "Decoration") == true) then
+					if (GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) <= 1) then
+						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), 15)
+					end
+				end
+
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
 					if (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 2) then
 						local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
