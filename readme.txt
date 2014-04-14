@@ -49,6 +49,7 @@ https://launchpad.net/stratagus
 - Hero units now have the same base stats as their base units, as their persistent (and usually higher) levels already give them an edge.
 - Adjusted the requirements for Rugnur and Baglur to be available for hiring.
 - Baglur is now available for hiring after the completion of "Closing the Gates", while Rugnur is available for hiring after the completion of "A Bargain is Struck".
+- Greebo's eyes in his icon are now correctly no longer team-colored.
 
 * Maps
 - The Aquitania map generation script and the default random map generation script now create dark dirt and dark grass tiles.

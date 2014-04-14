@@ -1,5 +1,4 @@
 -- Stratagus Map Presentation
--- File generated automatically from pudconvert.
 
 DefinePlayerTypes("person","person","person","computer")
 PresentMap("Aquitania", 3, 128, 128, 1)

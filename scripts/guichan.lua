@@ -852,6 +852,7 @@ function RunSinglePlayerGameMenu()
 	scenario_list = {}
 
 	for i=1,table.getn(maps) do
+		MapWorld = ""
 		MapRequiredQuest = ""
 		GetMapInfo(maps[i])
 		if (MapWorld == world_list[world:getSelected() + 1]) then
