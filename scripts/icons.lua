@@ -292,6 +292,27 @@ DefineIcon({
 	File = "neutral/icons/chest.png"
 })
 
+DefineIcon({
+	Name = "icon-blue-potion",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/blue_potion.png"
+})
+
+DefineIcon({
+	Name = "icon-green-potion",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/green_potion.png"
+})
+
+DefineIcon({
+	Name = "icon-red-potion",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/red_potion.png"
+})
+
 -- tileset-dependent icons
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then

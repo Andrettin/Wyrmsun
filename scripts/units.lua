@@ -479,6 +479,38 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = "Chest",
   NumDirections = 1,  
   Sounds = {} } )
 
+DefineUnitType("unit-potion-of-healing", { Name = "Potion of Healing",
+  Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
+  Animations = "animations-red-potion", Icon = "icon-red-potion",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  NonSolid = true, 
+  Sounds = {} } )
+
+DefineUnitType("unit-potion-of-decay", { Name = "Potion of Decay",
+  Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
+  Animations = "animations-blue-potion", Icon = "icon-blue-potion",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  NonSolid = true, 
+  Sounds = {} } )
+
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
 --  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 --}

@@ -398,7 +398,7 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
     "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-rugnur-older", { Name = "Rugnur",
+DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
   Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-rugnur-older",
   Costs = {"time", 0},

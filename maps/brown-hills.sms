@@ -180,3 +180,6 @@ unit = CreateUnit("unit-dwarven-miner", 2, {64, 63})
 unit = CreateUnit("unit-dwarven-town-hall", 3, {19, 14})
 unit = CreateUnit("unit-dwarven-mushroom-farm", 3, {23, 20})
 unit = CreateUnit("unit-dwarven-miner", 3, {20, 16})
+
+unit = CreateUnit("unit-potion-of-healing", 15, {8, 51})
+unit = CreateUnit("unit-potion-of-healing", 15, {52, 96})

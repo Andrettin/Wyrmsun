@@ -648,6 +648,10 @@ function Event(event_name, event_description, player, options, option_effects, e
 		end
 		l:setCaption(event_description)
 
+		if (event_icon == "dwarf/icons/rugnur.png" and wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, "Rugnur") + 1] >= 2) then
+			event_icon = "dwarf/icons/rugnur_older.png"
+		end
+
 		if (event_icon ~= nil) then
 			event_icon = CGraphic:New(event_icon)
 			event_icon:Load()

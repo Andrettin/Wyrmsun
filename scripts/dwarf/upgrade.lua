@@ -49,14 +49,14 @@ end
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"PiercingDamage", 2},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-older"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 
 DefineModifier("upgrade-dwarven-great-axe",
 	{"PiercingDamage", 2},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-older"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 

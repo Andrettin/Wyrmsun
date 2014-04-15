@@ -51,6 +51,13 @@ https://launchpad.net/stratagus
 - Baglur is now available for hiring after the completion of "Closing the Gates", while Rugnur is available for hiring after the completion of "A Bargain is Struck".
 - Greebo's eyes in his icon are now correctly no longer team-colored.
 
+* Items
+- Added gold sack (gives 500 gold when touched; graphics by b_o).
+- Added gold chest (attack to open, gives 1000 gold; graphics by b_o).
+- Added gold and gems chest (attack to open, gives 1500 gold; graphics by b_o).
+- Added potion of healing (heals an injured unit if touched; graphics by b_o).
+- Added potion of decay (damages a unit if touched; graphics by b_o).
+
 * Maps
 - The Aquitania map generation script and the default random map generation script now create dark dirt and dark grass tiles.
 - In the Caverns of Chaincolt map, player 2 (blue) now starts with a dwarven steelclad instead of one of its axefighters.
@@ -61,12 +68,14 @@ https://launchpad.net/stratagus
 - When finishing the A Bargain is Struck quest in the Chaincolt Foothills map the player is now taken directly to the next quest's map (Caverns of Chaincolt).
 - Fixed one tile which was wrongly set to be dry mud, when it should be mud.
 - Added the Northern Wastelands map (Nidavellir).
+- Added two potions of healing to the Brown Hills map.
 
 * Miscellaneous
 - The player now receives a warning message when new versions of Wyrmsun reset the allocation of technology points in the tech tree.
 - Glyphs are now visible under the fog of war.
 - The speed cheat ("hermes") now works (code by cybermind).
 - The resource cheat now benefits all players.
+- Added a button to reset the tech tree.
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
@@ -80,9 +89,6 @@ https://launchpad.net/stratagus
 * Units
 - Added Goblin Archer (graphics by b_o).
 - Leveling up now always restores HP to the max.
-- Added gold sack (gives 500 gold when touched; graphics by b_o).
-- Added gold chest (attack to open, gives 1000 gold; graphics by b_o).
-- Added gold and gems chest (attack to open, gives 1500 gold; graphics by b_o).
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).

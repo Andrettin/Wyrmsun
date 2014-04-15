@@ -56,7 +56,7 @@ local editor_types = {
    "unit-dwarven-guard-tower",
 
    "unit-hero-rugnur",
-   "unit-hero-rugnur-older",
+   "unit-hero-rugnur-steelclad",
    "unit-hero-baglur",
    "unit-hero-thursagan",
    "unit-hero-durstorn",
@@ -82,6 +82,8 @@ local editor_types = {
    "unit-gold-sack",
    "unit-gold-chest",
    "unit-gold-and-gems-chest",
+   "unit-potion-of-healing",
+   "unit-potion-of-decay",
 
    "unit-critter",
 

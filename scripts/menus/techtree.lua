@@ -182,6 +182,12 @@ function RunTechTreeMenu(civilization_number)
 		end
 	end
 
+	menu:addFullButton("~!Reset Tech Tree", "r", offx + 208, offy + 212 + (36 * 5),
+		function()
+			ResetTechnologiesAcquired()
+			menu:stop()
+			RunTechTreeMenu(civilization_dd:getSelected())
+		end)
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
@@ -196,7 +202,7 @@ function ResetTechnologiesAcquired()
 	}
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-older")
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
 	end
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
@@ -211,24 +217,6 @@ function ResetTechnologiesAcquired()
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-greebo")
 	end
 	SavePreferences()
-
-	local warning_menu = WarGameMenu(panel(2))
-	warning_menu:setSize(288, 256)
-	warning_menu:setPosition((Video.Width - warning_menu:getWidth()) / 2, (Video.Height - warning_menu:getHeight()) / 2)
-	warning_menu:addLabel("Warning", 144, 11)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(270, 128)
-	l:setLineWidth(270)
-	warning_menu:add(l, 14, 70)
-	l:setCaption("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points.")
-			
-	warning_menu:addFullButton("~!Close", "c", 32, 256 - 40,
-		function()
-			warning_menu:stop()
-		end)
-	warning_menu:run()
 end
 
 function GetQuestTechnologyPoints(civilization, quest)

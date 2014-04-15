@@ -33,6 +33,7 @@ b_o:
 /graphics/neutral/items/goblet.png
 /graphics/neutral/items/gold_sack.png
 /graphics/neutral/items/key.png
+/graphics/neutral/items/potion.png
 /graphics/neutral/items/scepter.png
 /graphics/neutral/units/rat.png
 /graphics/tilesets/dungeon/terrain/dungeon.png

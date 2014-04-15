@@ -947,8 +947,26 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.4") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0") then
 		ResetTechnologiesAcquired()
+
+		local warning_menu = WarGameMenu(panel(2))
+		warning_menu:setSize(288, 256)
+		warning_menu:setPosition((Video.Width - warning_menu:getWidth()) / 2, (Video.Height - warning_menu:getHeight()) / 2)
+		warning_menu:addLabel("Warning", 144, 11)
+
+		local l = MultiLineLabel()
+		l:setFont(Fonts["game"])
+		l:setSize(270, 128)
+		l:setLineWidth(270)
+		warning_menu:add(l, 14, 70)
+		l:setCaption("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points.")
+
+		warning_menu:addFullButton("~!Close", "c", 32, 256 - 40,
+			function()
+				warning_menu:stop()
+			end)
+		warning_menu:run()
 	end
 	wyr.preferences.LastVersionPlayed = wyrmsun.Version
 	SavePreferences()

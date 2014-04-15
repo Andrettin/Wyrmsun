@@ -165,7 +165,7 @@ DefineAnimations("animations-gold-chest", {
 	"label variation_0", "frame 0", "if-var v.HitPoints.Percent < 100 open_chest", "goto end",
 	"label variation_1", "frame 1", "goto end",
 	"label variation_2", "frame 2", "goto end",
-	"label open_chest", "set-var GraphicsVariation.Value = 2", "goto end",
+	"label open_chest", "sound open-chest", "set-var GraphicsVariation.Value = 2", "goto end",
 	"label end", "wait 1",},
 })
 
@@ -177,6 +177,37 @@ DefineAnimations("animations-gold-and-gems-chest", {
 	"label variation_0", "frame 0", "if-var v.HitPoints.Percent < 100 open_chest", "goto end",
 	"label variation_1", "frame 1", "goto end",
 	"label variation_2", "frame 3", "goto end",
-	"label open_chest", "set-var GraphicsVariation.Value = 2", "goto end",
+	"label open_chest", "sound open-chest", "set-var GraphicsVariation.Value = 2", "goto end",
 	"label end", "wait 1",},
+})
+
+DefineAnimations("animations-green-potion", {
+  Still = BuildingStill,
+  Death = BuildingStill,
+})
+
+DefineAnimations("animations-red-potion", {
+  Still = {
+	"frame 1",
+	"wait 4",
+	"frame 1",
+	"wait 1",},
+  Death = {
+	"frame 1",
+	"wait 4",
+	"frame 1",
+	"wait 1",},
+})
+
+DefineAnimations("animations-blue-potion", {
+  Still = {
+	"frame 2",
+	"wait 4",
+	"frame 2",
+	"wait 1",},
+  Death = {
+	"frame 2",
+	"wait 4",
+	"frame 2",
+	"wait 1",},
 })

@@ -86,7 +86,7 @@ DefineAiHelper(
   --
   {"unit-equiv", "unit-dwarven-axefighter",
   "unit-dwarven-steelclad",
-  "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+  "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
   "unit-gnomish-recruit",
   "unit-goblin-spearman", "unit-hero-greebo"
   },

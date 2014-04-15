@@ -482,8 +482,8 @@ function StandardTriggers()
 --					end
 --				end
 
-				-- gives gold if a unit is near a gold sack
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack") then
+				-- gives gold if a unit is on a gold sack or heals if on a healing potion
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay") then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
 						for i=0,14 do
@@ -495,29 +495,57 @@ function StandardTriggers()
 						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0)
 						for unit2 = 1,table.getn(nearby_uncount) do 
 							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15 and GetUnitBoolFlag(nearby_uncount[unit2], "Decoration") == false) then
-								Event(
-									"",
-									"You found 500 gold in the sack.",
-									GetUnitVariable(nearby_uncount[unit2], "Player"),
-									{"~!OK"},
-									{function(s)
-										DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-										PlaySound("gold-coins")
-										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
-									end}
-								)								
+								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack") then
+									Event(
+										"",
+										"You found 500 gold in the sack.",
+										GetUnitVariable(nearby_uncount[unit2], "Player"),
+										{"~!OK"},
+										{function(s)
+											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+											PlaySound("gold-coins")
+											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
+										end}
+									)								
+								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
+									PlaySound("potion")
+									Event(
+										"",
+										"As the potion is guzzled, a feeling of well-being overwhelms the drinker.",
+										GetUnitVariable(nearby_uncount[unit2], "Player"),
+										{"~!OK"},
+										{function(s)
+											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max"))
+										end}
+									)								
+								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay") then
+									PlaySound("potion")
+									Event(
+										"",
+										"As the potion is guzzled, the poor drinker realizes that there is something really bad in it.",
+										GetUnitVariable(nearby_uncount[unit2], "Player"),
+										{"~!OK"},
+										{function(s)
+											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") * 90 / 100)
+										end}
+									)								
+								end
+								break
 							end
 						end
 					end
 				end
 
-				-- fixes wrong ownership transferrences due to the gold sack code
-				if (GetUnitVariable(uncount[unit1], "Player") ~= 15 and GetUnitBoolFlag(uncount[unit1], "Decoration") == true) then
+				-- fixes temporary ownership transferrences due to the gold sack code
+				if (GetUnitVariable(uncount[unit1], "Player") ~= 15 and (GetUnitBoolFlag(uncount[unit1], "Decoration") == true or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing")) then
 					if (GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) <= 1) then
 						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), 15)
 					end
 				end
 
+				-- gives gold if a unit is near a gold chest
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
 					if (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 2) then
 						local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
@@ -556,6 +584,7 @@ function StandardTriggers()
 											end}
 										)
 									end
+       									break
 								end
 							end
 						end
@@ -600,7 +629,7 @@ function StandardTriggers()
 			return true
 		end,
 		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) >= 1 or GetNumUnitsAt(-1, "unit-hero-rugnur-older", {0, 0}, {256, 256}) >= 1) then
+			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) >= 1 or GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) >= 1) then
 				-- make it impossible to hire a hero after he has already been hired by someone
 				DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
 				return false
@@ -733,27 +762,6 @@ function StandardTriggers()
 --			return true
 --		end
 --	)
-
-	-- give the player gold if a miner of his is next to a gold sack
---	AddTrigger(
---		function()
---			return true
---		end,
---		function()
---			local uncount = 0
---			uncount = GetUnits(15)
---			for unit1 = 1,table.getn(uncount) do 
---				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack") then
---					local worker_quantity = GetNumUnitsAt(0, "unit-dwarven-miner", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
---					if (worker_quantity > 0) then
---						SetPlayerData(0, "Resources", "gold", GetPlayerData(0, "Resources", "gold") + GetUnitVariable(uncount[unit1],"ResourcesHeld"))
---						SetUnitVariable(uncount[unit1], "HitPoints", 0)
---					end
---				end
---			end
---			return true
---		end
---	)
 end
 
 function AssignPlayerFactions()
@@ -828,9 +836,9 @@ function GetFactionForbiddenUnits(faction)
 	elseif (faction == "Shinsplitter Clan") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Shorbear Clan") then
-		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn" }
+		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn" }
 	elseif (faction == "Kal Kartha") then
-		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-older", "unit-hero-baglur", "unit-hero-durstorn" }
+		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-durstorn" }
 	elseif (faction == "Knalga") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Goblins") then

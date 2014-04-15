@@ -166,6 +166,8 @@ MakeSound("tree-chopping",
 SetSoundRange("tree-chopping", 32)
 
 MakeSound("gold-coins", "misc/gold_coins.wav")
+MakeSound("open-chest", "misc/open_chest.wav")
+MakeSound("potion", "misc/potion.wav")
 ------------------------------------------------------------------------------
 --	Define selection sound groups.
 

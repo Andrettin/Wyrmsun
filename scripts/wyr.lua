@@ -113,7 +113,7 @@ function CreateUnit(unittype, player, pos)
 
   -- if Rugnur has a persistent level of 2 or higher, create him as his older version already
   if (unittype == "unit-hero-rugnur" and wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, "Rugnur") + 1] >= 2) then
-	unittype = "unit-hero-rugnur-older"
+	unittype = "unit-hero-rugnur-steelclad"
   end  
 
   if (GameCycle ~= 0) then
