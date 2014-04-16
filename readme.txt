@@ -33,6 +33,7 @@ https://launchpad.net/stratagus
 * Buildings
 - The openings in the Sentry Tower graphics have been updated (by Jinn).
 - Fixed an error which allowed guard towers to level up.
+- Added the dwarven blacksmith (graphics by Leo).
 
 * Events
 - Event message buttons now support hotkeys.
@@ -57,6 +58,7 @@ https://launchpad.net/stratagus
 - Added gold and gems chest (attack to open, gives 1500 gold; graphics by b_o).
 - Added potion of healing (heals an injured unit if touched; graphics by b_o).
 - Added potion of decay (damages a unit if touched; graphics by b_o).
+- Added gold coins (gives 100 gold when touched; graphics by b_o).
 
 * Maps
 - The Aquitania map generation script and the default random map generation script now create dark dirt and dark grass tiles.
@@ -89,6 +91,11 @@ https://launchpad.net/stratagus
 * Units
 - Added Goblin Archer (graphics by b_o).
 - Leveling up now always restores HP to the max.
+- Removed the display of a unit's kills, as there was not enough space for it in the interface (the numbers were appearing outside of the interface if they had too many digits).
+- It is no longer possible to see an enemy unit's XP by selecting it.
+- The ballista is now buildable.
+- Dwarven axefighters now require a blacksmith in order to be able to upgrade to dwarven steelclads.
+- Dwarven steelclads now have graphics showing a double axe if the second dwarven melee axe upgrade has been researched (graphics by b_o).
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).

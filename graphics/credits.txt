@@ -31,6 +31,7 @@ b_o:
 /graphics/neutral/items/chest.png
 /graphics/neutral/items/crown.png
 /graphics/neutral/items/goblet.png
+/graphics/neutral/items/gold_coins.png
 /graphics/neutral/items/gold_sack.png
 /graphics/neutral/items/key.png
 /graphics/neutral/items/potion.png
@@ -184,6 +185,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/dwarf/widgets/button-thin-small-pressed.png
 
 Leo:
+/graphics/dwarf/buildings/blacksmith.png
 /graphics/dwarf/icons/axe_1.png
 /graphics/dwarf/icons/axe_3.png
 /graphics/dwarf/icons/durstorn.png

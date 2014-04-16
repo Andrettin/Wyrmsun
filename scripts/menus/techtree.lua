@@ -89,6 +89,10 @@ function RunTechTreeMenu(civilization_number)
 						unit_name = "Sharp Throwing Axe"
 					elseif (unit == "upgrade-dwarven-throwing-axe-2") then
 						unit_name = "Bearded Throwing Axe"
+					elseif (unit == "upgrade-dwarven-broad-axe") then
+						unit_name = "Broad Axe"
+					elseif (unit == "upgrade-dwarven-great-axe") then
+						unit_name = "Great Axe"
 					end
 				end
 				tech_menu:addLabel(unit_name, 176, 11)
@@ -147,19 +151,22 @@ function RunTechTreeMenu(civilization_number)
 		addTechItemIcon("unit-dwarven-lumber-mill", menu, "tilesets/swamp/dwarf/icons/lumber_mill",
 			"The lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
 			offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 2))
+		addTechItemIcon("unit-dwarven-blacksmith", menu, "dwarf/icons/blacksmith",
+			"Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers.",
+			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 2))
 		addTechItemIcon("unit-dwarven-sentry-tower", menu, "tilesets/swamp/dwarf/icons/sentry_tower",
-			"In these towers, dwarves keep watch of threats approaching their settlements.",
+			"In these towers dwarves keep watch of threats approaching their settlements.",
 			offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 2))
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
 			addTechItemIcon("unit-dwarven-guard-tower", menu, "tilesets/swamp/dwarf/icons/guard_tower",
 				"Garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's defenses.",
 				offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 3))
 		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
-			addTechItemIcon("unit-dwarven-steelclad", menu, "dwarf/icons/dwarven_steelclad",
-				"The dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
-				offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 4))
-		end
+--		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
+--			addTechItemIcon("unit-dwarven-steelclad", menu, "dwarf/icons/dwarven_steelclad",
+--				"The dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
+--				offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 4))
+--		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
 			addTechItemIcon("unit-dwarven-scout", menu, "dwarf/icons/dwarven_scout",
 				"Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities.",
@@ -175,10 +182,20 @@ function RunTechTreeMenu(civilization_number)
 				"The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts.",
 				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 5))
 		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
-			addTechItemIcon("unit-dwarven-ballista", menu, "dwarf/icons/dwarven_ballista",
-				"",
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
+			addTechItemIcon("upgrade-dwarven-broad-axe", menu, "dwarf/icons/axe_2",
+				"Dwarven blacksmiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.",
 				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 3))
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-broad-axe")) then
+			addTechItemIcon("upgrade-dwarven-great-axe", menu, "dwarf/icons/axe_3",
+				"Further innovations in dwarven smithing allows axes to be made sturdier, and often to carry double blades.",
+				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 4))
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
+			addTechItemIcon("unit-dwarven-ballista", menu, "tilesets/swamp/dwarf/icons/dwarven_ballista",
+				"Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",
+				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 3))
 		end
 	end
 
@@ -233,7 +250,7 @@ function GetQuestTechnologyPoints(civilization, quest)
 end
 
 function GetTechnologyPointCost(civilization, technology)
-	if (civilization == "dwarf" and (technology == "unit-dwarven-lumber-mill" or technology == "unit-dwarven-sentry-tower" or technology == "unit-dwarven-guard-tower" or technology == "unit-dwarven-scout" or technology == "upgrade-dwarven-throwing-axe-1" or technology == "upgrade-dwarven-throwing-axe-2" or technology == "unit-dwarven-blacksmith" or technology == "unit-dwarven-ballista" or technology == "unit-dwarven-stronghold")) then
+	if (civilization == "dwarf" and (technology == "unit-dwarven-lumber-mill" or technology == "unit-dwarven-sentry-tower" or technology == "unit-dwarven-guard-tower" or technology == "unit-dwarven-scout" or technology == "upgrade-dwarven-throwing-axe-1" or technology == "upgrade-dwarven-throwing-axe-2" or technology == "unit-dwarven-blacksmith" or technology == "unit-dwarven-ballista" or technology == "unit-dwarven-stronghold" or technology == "upgrade-dwarven-broad-axe" or technology == "upgrade-dwarven-great-axe")) then
 		return 1
 	else
 		return 0

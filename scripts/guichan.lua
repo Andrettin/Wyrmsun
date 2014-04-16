@@ -383,7 +383,7 @@ Widget:setGlobalFont(Fonts["large"])
 
 
 DefaultObjectives = {"- Destroy the enemy"}
-for i=0,14 do
+for i=1,15 do
 	Objectives[i] = DefaultObjectives
 end
 
@@ -403,6 +403,7 @@ function InitGameSettings()
 	GameSettings.Terrain = -1
 	GameSettings.GameType = -1
 	GameSettings.NoFogOfWar = false
+	GameSettings.Inside = false
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
 	EventsActivated = 0
@@ -413,11 +414,11 @@ NextMap = ""
 
 function RunMap(map, objective, fow, revealmap)
   if objective == nil then
-    for i=0,14 do
+    for i=1,15 do
       Objectives[i] = DefaultObjectives
     end
   else
-    for i=0,14 do
+    for i=1,15 do
       Objectives[i] = objective
     end
   end

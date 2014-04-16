@@ -91,7 +91,6 @@ SetPlayerData(1, "Resources", "wood", 0)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "goblin")
 SetAiType(1, "northern-wastelands-goblins")
-SetStartView(2, 10, 7)
 SetPlayerData(2, "Resources", "gold", 0)
 SetPlayerData(2, "Resources", "wood", 0)
 SetPlayerData(2, "Resources", "oil", 0)
@@ -144,15 +143,20 @@ end
 -- Put Thursagan's home in one of five random locations
 RandomNumber = SyncRand(5)
 if (RandomNumber == 0) then
-	unit = CreateUnit("unit-dwarven-lumber-mill", 2, {11, 15})
+	SetStartView(2, 11, 15)
+	unit = CreateUnit("unit-dwarven-blacksmith", 2, {11, 15})
 elseif (RandomNumber == 1) then
-	unit = CreateUnit("unit-dwarven-lumber-mill", 2, {20, 3})
+	SetStartView(2, 20, 3)
+	unit = CreateUnit("unit-dwarven-blacksmith", 2, {20, 3})
 elseif (RandomNumber == 2) then
-	unit = CreateUnit("unit-dwarven-lumber-mill", 2, {51, 13})
+	SetStartView(2, 51, 13)
+	unit = CreateUnit("unit-dwarven-blacksmith", 2, {51, 13})
 elseif (RandomNumber == 3) then
-	unit = CreateUnit("unit-dwarven-lumber-mill", 2, {47, 43})
+	SetStartView(2, 47, 43)
+	unit = CreateUnit("unit-dwarven-blacksmith", 2, {47, 43})
 elseif (RandomNumber == 4) then
-	unit = CreateUnit("unit-dwarven-lumber-mill", 2, {50, 63})
+	SetStartView(2, 50, 63)
+	unit = CreateUnit("unit-dwarven-blacksmith", 2, {50, 63})
 end
 
 function NorthernWastelandsEnemy(enemy_x, enemy_y)

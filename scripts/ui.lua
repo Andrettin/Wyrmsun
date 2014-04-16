@@ -334,9 +334,13 @@ DefinePanelContents(
 	{ Pos = {114, 41},
 		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
 	},
-	{ Pos = {114, 56},
-		More = {"FormattedText2", {Centered = true,
-			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}
+--	{ Pos = {114, 56},
+--		More = {"FormattedText2", {Centered = true,
+--			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}
+--	},
+	{ Pos = {114, 56}, Condition = {ShowOpponent = false, HideNeutral = true},
+		More = {"FormattedText", {Centered = true,
+			Variable = "Xp", Format = "XP: ~<%d~>"}}
 	},
 	{ Pos = {47, 71}, Condition = {Armor = "only"},
 		More = {"Text", {Text = Concat("Armor: ", String(armor),

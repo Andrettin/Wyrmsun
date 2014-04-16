@@ -108,7 +108,7 @@ function EventTriggers()
 							if (i ~= greebo_player) then
 								SetDiplomacy(greebo_player, "enemy", i)
 								SetDiplomacy(i, "enemy", greebo_player)
-								table.insert(Objectives[i], "- Kill Greebo (optional)")
+								table.insert(Objectives[i + 1], "- Kill Greebo (optional)")
 							end
 						end
 						SetPlayerData(greebo_player, "Name", "Greebo")
@@ -120,7 +120,7 @@ function EventTriggers()
 				-- Greebo's speech
 				AddTrigger(
 					function()
-						if (GetArrayIncludes(Objectives[GetThisPlayer()], "- Kill Greebo (optional)")) then
+						if (GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Kill Greebo (optional)")) then
 							local uncount = 0
 							uncount = GetUnits(GetFactionPlayer("Greebo"))
 							for unit1 = 1,table.getn(uncount) do 
@@ -183,7 +183,7 @@ function EventTriggers()
 										SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
 										for i=0,14 do
 											if (GetPlayerData(i, "Name") ~= "Greebo") then
-												RemoveElementFromArray(Objectives[i], "- Kill Greebo (optional)")
+												RemoveElementFromArray(Objectives[i + 1], "- Kill Greebo (optional)")
 											end
 										end
 									end}
@@ -262,12 +262,12 @@ function EventTriggers()
 								else
 									SetDiplomacy(andvari_player, "enemy", i)
 									SetDiplomacy(i, "enemy", andvari_player)
-									table.insert(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
+									table.insert(Objectives[i + 1], "- Destroy Andvari's Mushroom Farm (optional)")
 								end
 							end
 						end
 						SetPlayerData(andvari_player, "Name", "Andvari")
-						table.insert(Objectives[player], "- Destroy Andvari's Mushroom Farm (optional)")
+						table.insert(Objectives[player + 1], "- Destroy Andvari's Mushroom Farm (optional)")
 					end}
 				)
 				return false
@@ -298,7 +298,7 @@ function EventTriggers()
 						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
 						for i=0,14 do
 							if (GetPlayerData(i, "Name") ~= "Andvari") then
-								RemoveElementFromArray(Objectives[i], "- Destroy Andvari's Mushroom Farm (optional)")
+								RemoveElementFromArray(Objectives[i + 1], "- Destroy Andvari's Mushroom Farm (optional)")
 							end
 						end
 					end}

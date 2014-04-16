@@ -47,6 +47,7 @@ function RunShowCreditsMenu()
 	"  b_o",
 	"Building Art",
 	"  Joao Victor G. Costa (Jinn)",
+	"  Leo",
 	"Tile Art",
 	"  b_o",
 	"  Joao Victor G. Costa (Jinn)",

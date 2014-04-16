@@ -104,6 +104,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-blacksmith",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/blacksmith.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-axe-1",
 	Size = {46, 38},
 	Frame = 0,
@@ -276,6 +283,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/build_basic_structure.png"
+})
+
+DefineIcon({
+	Name = "icon-gold-coins",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gold_coins.png"
 })
 
 DefineIcon({

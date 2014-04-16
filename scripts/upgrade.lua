@@ -34,7 +34,8 @@ Load("scripts/goblin/upgrade.lua")
 
 function DefineAllowNormalUnits(flags)
 	local units = {
-		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill",
+		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 		"unit-dwarven-ballista",

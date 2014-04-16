@@ -217,13 +217,13 @@ AddTrigger(
 																											unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																											if (mapinfo.description == "Chaincolt Foothills") then
 																												ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
-																												RemoveElementFromArray(Objectives[player], "- Destroy the enemy")
+																												RemoveElementFromArray(Objectives[player + 1], "- Destroy the enemy")
 																											end
 																											SetDiplomacy(gnomish_monarch_player, "allied", player)
 																											SetSharedVision(gnomish_monarch_player, true, player)
 																											SetDiplomacy(player, "allied", gnomish_monarch_player)
 																											SetSharedVision(player, true, gnomish_monarch_player)
-																											table.insert(Objectives[player], a_bargain_is_struck_objective_1)
+																											table.insert(Objectives[player + 1], a_bargain_is_struck_objective_1)
 																										end},
 																										"gnome/icons/gnomish_recruit.png"
 																									)
@@ -316,7 +316,7 @@ AddTrigger(
 					return false
 				end
 				for i=0,14 do
-					if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1)) then
+					if (GetArrayIncludes(Objectives[i + 1], a_bargain_is_struck_objective_1)) then
 						player = i
 						return true
 					end
@@ -439,7 +439,7 @@ AddTrigger(
 							return false
 						end
 						for i=0,14 do
-							if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+							if (GetArrayIncludes(Objectives[i + 1], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 								player = i
 								return true
 							end
@@ -464,7 +464,7 @@ AddTrigger(
 										player,
 										{"~!Continue"},
 										{function(s)
-											RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
+											RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
 											if (player == GetThisPlayer()) then
 												if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 													table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -493,7 +493,7 @@ AddTrigger(
 							return false
 						end
 						for i=0,14 do
-							if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+							if (GetArrayIncludes(Objectives[i + 1], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
 								player = i
 								return true
 							end
@@ -512,7 +512,7 @@ AddTrigger(
 								player,
 								{"~!Continue"},
 								{function(s)
-									RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
+									RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
 									if (player == GetThisPlayer()) then
 										if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 											table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -549,7 +549,7 @@ AddTrigger(
 						end
 						for i=0,14 do
 							-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
-							if ((SyncRand(100) + 1) <= 10 and GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+							if ((SyncRand(100) + 1) <= 10 and GetArrayIncludes(Objectives[i + 1], a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 								player = i
 								return true
 							end
@@ -557,7 +557,7 @@ AddTrigger(
 						return false
 					end,
 					function() 
-						RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
+						RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
 						if (player == GetThisPlayer()) then
 							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 								table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -579,7 +579,7 @@ AddTrigger(
 							return false
 						end
 						for i=0,14 do
-							if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
+							if (GetArrayIncludes(Objectives[i + 1], a_bargain_is_struck_objective_1) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
 								player = i
 								return true
 							end
@@ -593,7 +593,7 @@ AddTrigger(
 							player,
 							{"~!Continue"},
 							{function(s)
-								RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
+								RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
 								if (mapinfo.description == "Chaincolt Foothills") then
 									ActionDefeat()
 								end
@@ -618,16 +618,16 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((GetArrayIncludes(Objectives[GetThisPlayer()], a_bargain_is_struck_objective_1) or GetArrayIncludes(Objectives[GetThisPlayer()], "- Have one unit standing on each glyph at the same time") or GetArrayIncludes(Objectives[GetThisPlayer()], "- Find Thursagan and bring him to your Mead Hall")) and (GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-rugnur-steelclad")) < 1) then
+		if ((GetArrayIncludes(Objectives[GetThisPlayer() + 1], a_bargain_is_struck_objective_1) or GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Have one unit standing on each glyph at the same time") or GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Find Thursagan and bring him to your Mead Hall")) and (GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-rugnur-steelclad")) < 1) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function() 
-		RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
-		RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
-		RemoveElementFromArray(Objectives[player], "- Find Thursagan and bring him to your Mead Hall")
+		RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
+		RemoveElementFromArray(Objectives[player + 1], "- Have one unit standing on each glyph at the same time")
+		RemoveElementFromArray(Objectives[player + 1], "- Find Thursagan and bring him to your Mead Hall")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
 			ActionDefeat()
 		end
@@ -641,15 +641,15 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((GetArrayIncludes(Objectives[GetThisPlayer()], a_bargain_is_struck_objective_1) or GetArrayIncludes(Objectives[GetThisPlayer()], "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+		if ((GetArrayIncludes(Objectives[GetThisPlayer() + 1], a_bargain_is_struck_objective_1) or GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function()
-		RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
-		RemoveElementFromArray(Objectives[player], "- Find Thursagan and bring him to your Mead Hall")
+		RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
+		RemoveElementFromArray(Objectives[player + 1], "- Find Thursagan and bring him to your Mead Hall")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands") then
 			ActionDefeat()
 		end
@@ -665,7 +665,7 @@ AddTrigger(
 --		end
 --		for i=0,14 do
 --			-- maybe could check here if the gnomish player has a gnomish recruit with level 3 instead (although perhaps it could be bad for performance)?
---			if (GetArrayIncludes(Objectives[i], a_bargain_is_struck_objective_1) and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+--			if (GetArrayIncludes(Objectives[i + 1], a_bargain_is_struck_objective_1) and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 --				player = i
 --				return true
 --			end
@@ -673,7 +673,7 @@ AddTrigger(
 --		return false
 --	end,
 --	function() 
---		RemoveElementFromArray(Objectives[player], a_bargain_is_struck_objective_1)
+--		RemoveElementFromArray(Objectives[player + 1], a_bargain_is_struck_objective_1)
 --		if (mapinfo.description == "Chaincolt Foothills") then
 --			ActionDefeat()
 --		end
@@ -822,9 +822,9 @@ AddTrigger(
 																						player,
 																						{"~!Continue"},
 																						{function(s)
-																							table.insert(Objectives[player], "- Have one unit standing on each glyph at the same time")
+																							table.insert(Objectives[player + 1], "- Have one unit standing on each glyph at the same time")
 																							if (mapinfo.description == "Caverns of Chaincolt") then
-																								RemoveElementFromArray(Objectives[player], "- Destroy the enemy")
+																								RemoveElementFromArray(Objectives[player + 1], "- Destroy the enemy")
 																							end
 																							KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
 																						end},
@@ -898,7 +898,7 @@ AddTrigger(
 					return false
 				end
 				for i=0,14 do
-					if (GetArrayIncludes(Objectives[i], "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
+					if (GetArrayIncludes(Objectives[i + 1], "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
 						player = i
 						return true
 					end
@@ -1102,7 +1102,7 @@ AddTrigger(
 																																				player,
 																																				{"~!Continue"},
 																																				{function(s)
-																																					RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
+																																					RemoveElementFromArray(Objectives[player + 1], "- Have one unit standing on each glyph at the same time")
 																																					if (player == GetThisPlayer()) then
 																																						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
 																																							table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
@@ -1221,15 +1221,15 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((GetArrayIncludes(Objectives[GetThisPlayer()], "- Have one unit standing on each glyph at the same time") or GetArrayIncludes(Objectives[GetThisPlayer()], "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-baglur") < 1) then
+		if ((GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Have one unit standing on each glyph at the same time") or GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-baglur") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function() 
-		RemoveElementFromArray(Objectives[player], "- Have one unit standing on each glyph at the same time")
-		RemoveElementFromArray(Objectives[player], "- Find Thursagan and bring him to your Mead Hall")
+		RemoveElementFromArray(Objectives[player + 1], "- Have one unit standing on each glyph at the same time")
+		RemoveElementFromArray(Objectives[player + 1], "- Find Thursagan and bring him to your Mead Hall")
 		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
 			ActionDefeat()
 		end
@@ -1295,9 +1295,9 @@ AddTrigger(
 									unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
 									IncreaseUnitLevel(unit, 1, true)
 									if (mapinfo.description == "Northern Wastelands") then
-										RemoveElementFromArray(Objectives[player], "- Destroy the enemy")
+										RemoveElementFromArray(Objectives[player + 1], "- Destroy the enemy")
 									end
-									table.insert(Objectives[player], "- Find Thursagan and bring him to your Mead Hall")
+									table.insert(Objectives[player + 1], "- Find Thursagan and bring him to your Mead Hall")
 								end},
 								"dwarf/icons/baglur.png"
 							)
@@ -1345,7 +1345,178 @@ AddTrigger(
 				return false
 			end
 		)
+		
+		AddTrigger(
+			function()
+				for i=0,14 do
+					if (GetArrayIncludes(Objectives[i + 1], "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-blacksmith")) then
+						local uncount = 0
+						uncount = GetUnits(GetFactionPlayer("Thursagan"))
+						for unit1 = 1,table.getn(uncount) do 
+							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-blacksmith") then
+								if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+									player = i
+									return true
+								end
+							end
+						end
+					end
+				end
+				return false
+			end,
+			function()
+				unit = CreateUnit("unit-hero-thursagan", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
+				Event(
+					"Thursagan",
+					"What do ye people want?! Leave me alone!",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Rugnur",
+						"Old sage, we come with a message from Lord Durstorn. He asks ye to come back to the city.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Thursagan",
+							"Ha! That fool thinks he can order me around. Why does he want me to go back, anyway?",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Baglur",
+								"We have entered into a bargain with a gnomish king to craft a scepter for him.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Thursagan",
+									"Oh, and now I suppose Durstorn wants me to craft it, eh? Well I'm not going to.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Rugnur",
+										"Ye don't want to make a scepter imbued with the mighty ruby of fire? Very well, yer choice is made.",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Thursagan",
+											"The ruby of fire, what is that, some worthless gnomish gem?",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Baglur",
+												"It is a gnomish gem, but it is also supposedly the most flawless precious stone ever seen.",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Thursagan",
+													"Oh, really? And what does the gnomish king want us to do with it?",
+													player,
+													{"~!Continue"},
+													{function(s)
+													Event(
+														"Rugnur",
+														"Cut it and insert it into a scepter, creating a powerful symbol of the gnomish monarchy.",
+														player,
+														{"~!Continue"},
+														{function(s)
+														Event(
+															"Thursagan",
+															"I see. Fine then, I will help you craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
+															player,
+															{"~!Continue"},
+															{function(s)
+															Event(
+																"Baglur",
+																"Good. Now, there are still wild animals and goblins here... We have to get back into the caves.",
+																player,
+																{"~!Continue"},
+																{function(s)
+																	NorthernWastelandsEnemy(32, 69)
+																	NorthernWastelandsEnemy(2, 47)
+																	NorthernWastelandsEnemy(52, 47)
+																	NorthernWastelandsEnemy(2, 33)
+																end},
+																"dwarf/icons/baglur.png"
+															)
+															end},
+															"dwarf/icons/thursagan.png"
+														)
+														end},
+														"dwarf/icons/rugnur.png"
+													)
+													end},
+													"dwarf/icons/thursagan.png"
+												)
+												end},
+												"dwarf/icons/baglur.png"
+											)
+											end},
+											"dwarf/icons/thursagan.png"
+										)
+										end},
+										"dwarf/icons/rugnur.png"
+									)
+									end},
+									"dwarf/icons/thursagan.png"
+								)
+								end},
+								"dwarf/icons/baglur.png"
+							)
+							end},
+							"dwarf/icons/thursagan.png"
+						)
+						end},
+						"dwarf/icons/rugnur.png"
+					)
+					end},
+					"dwarf/icons/thursagan.png"
+				)
 
+				AddTrigger(
+					function()
+						for i=0,14 do
+							if (GetArrayIncludes(Objectives[i + 1], "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-town-hall")) then
+								player = i
+								return true
+							end
+						end
+						return false
+					end,
+					function()
+						Event(
+							"Thursagan",
+							"Well, now we are near the caves again! Come on, back south, to the city.",
+							player,
+							{"~!Continue"},
+							{function(s)
+								RemoveElementFromArray(Objectives[player + 1], "- Find Thursagan and bring him to your Mead Hall")
+								if (player == GetThisPlayer()) then
+									if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") == false) then
+										table.insert(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")
+									end
+									SavePreferences()
+									if (mapinfo.description == "Northern Wastelands") then
+--										NextMap = "maps/eastern-mines.smp"
+										ActionVictory()
+									end
+								end
+							end},
+							"dwarf/icons/thursagan.png"
+						)
+
+						return false
+					end
+				)
+				return false
+			end
+		)
 		return false
 	end
 )

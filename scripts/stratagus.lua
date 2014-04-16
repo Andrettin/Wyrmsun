@@ -280,7 +280,7 @@ DefineVariables(
 	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"StartingLevel", {Max = 30, Value = 1, Increase = 0, Enable = true},
+	"StartingLevel",
 	"LifeCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
 )
@@ -303,14 +303,14 @@ function SinglePlayerTriggers()
 	AddTrigger(
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
-			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer()], "- Destroy the enemy")) then
+			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Destroy the enemy")) then
 				return true
 			end
 		end,
 		function() return ActionVictory() end
 	)
 
-	for i=0,14 do
+	for i=1,15 do
 		Objectives[i] = {"- Destroy the enemy"}
   	end
 	
@@ -359,7 +359,6 @@ function SinglePlayerTriggers()
 			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 		end
 	end
-
 end
 
 function StandardTriggers()
@@ -483,7 +482,7 @@ function StandardTriggers()
 --				end
 
 				-- gives gold if a unit is on a gold sack or heals if on a healing potion
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay") then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
 						for i=0,14 do
@@ -505,6 +504,18 @@ function StandardTriggers()
 											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 											PlaySound("gold-coins")
 											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
+										end}
+									)								
+								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins") then
+									Event(
+										"",
+										"You found 100 gold.",
+										GetUnitVariable(nearby_uncount[unit2], "Player"),
+										{"~!OK"},
+										{function(s)
+											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+											PlaySound("gold-coins")
+											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 100)
 										end}
 									)								
 								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then

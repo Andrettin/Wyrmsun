@@ -50,7 +50,8 @@ DefineAiHelper(
   -- Unit can build which buildings.
   --
   {"build", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill",
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall",
+  "unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
   "unit-dwarven-sentry-tower"
   },
   --
@@ -70,11 +71,15 @@ DefineAiHelper(
   {"research", "unit-dwarven-lumber-mill",
   "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2"
   },
+  {"research", "unit-dwarven-blacksmith",
+  "upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe"
+  },
   --
   -- Unit can repair which units.
   --
   {"repair", "unit-dwarven-miner",
-  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall", "unit-dwarven-lumber-mill",
+  "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-town-hall",
+  "unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
   "unit-dwarven-sentry-tower", "unit-dwarven-guard-tower"
   },
   --
@@ -183,6 +188,17 @@ function AiLumberMill()
 		return "unit-dwarven-lumber-mill"
 	else
 		return "unit-dwarven-lumber-mill"
+	end
+end
+
+--
+--  Blacksmith of the current civilization.
+--
+function AiBlacksmith()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-blacksmith"
+	else
+		return "unit-dwarven-blacksmith"
 	end
 end
 

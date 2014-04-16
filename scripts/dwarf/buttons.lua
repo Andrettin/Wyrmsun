@@ -190,6 +190,11 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
   Key = "l", Hint = "Build ~!Lumber Mill",
   ForUnit = {"unit-dwarven-miner"} } )
 
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-blacksmith",
+  Action = "build", Value = "unit-dwarven-blacksmith",
+  Key = "s", Hint = "Build Black~!smith",
+  ForUnit = {"unit-dwarven-miner"} } )
+
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
   Action = "build", Value = "unit-dwarven-sentry-tower",
   Key = "t", Hint = "Build Sentry ~!Tower",
@@ -254,17 +259,17 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-durstorn",
 
 -- Researches ---------------------------------------------------------
 
---DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-2",
---  Action = "research", Value = "upgrade-dwarven-broad-axe",
---  Allowed = "check-single-research",
---  Key = "r", Hint = "~!Research Broad Axe",
---  ForUnit = {"unit-dwarven-blacksmith"} } )
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-2",
+  Action = "research", Value = "upgrade-dwarven-broad-axe",
+  Allowed = "check-single-research",
+  Key = "r", Hint = "~!Research Broad Axe",
+  ForUnit = {"unit-dwarven-blacksmith"} } )
 
---DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-3",
---  Action = "research", Value = "upgrade-dwarven-great-axe",
---  Allowed = "check-single-research",
---  Key = "r", Hint = "~!Research Great Axe",
---  ForUnit = {"unit-dwarven-blacksmith"} } )
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-3",
+  Action = "research", Value = "upgrade-dwarven-great-axe",
+  Allowed = "check-single-research",
+  Key = "r", Hint = "~!Research Great Axe",
+  ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
   Action = "research", Value = "upgrade-dwarven-throwing-axe-1",

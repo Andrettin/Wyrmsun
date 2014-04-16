@@ -60,11 +60,11 @@ DefineTileset("name", "Dungeon",
   "solid", { "unused",
     {}},								-- 080
   "solid", { "human-closed-wall", "land", "human", "wall", "unpassable",
-    {  11,   0,  11,   0, 464}},						-- 090
+    {  11,   0,  11,   0, 464}},					-- 090
   "solid", { "unused",
     {}},								-- 0A0
   "solid", { "human-open-wall", "land", "human", "wall", "unpassable",
-    {  17,   0,  17,   0, 464}},						-- 0B0
+    {  17,   0,  17,   0, 464}},					-- 0B0
   "solid", { "unused",
     {}},								-- 0C0
   "solid", { "unused",

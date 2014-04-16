@@ -78,10 +78,16 @@ DefineDependency("upgrade-dwarven-throwing-axe-2",
 	{"upgrade-dwarven-throwing-axe-1"})
 
 DefineDependency("unit-dwarven-guard-tower",
-  {"unit-dwarven-lumber-mill"})
+	{"unit-dwarven-lumber-mill"})
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-lumber-mill"})
+	{"unit-dwarven-blacksmith", "unit-dwarven-lumber-mill"})
+
+DefineDependency("unit-dwarven-steelclad",
+	{"unit-dwarven-blacksmith"})
+
+DefineDependency("unit-hero-rugnur-steelclad",
+	{"unit-dwarven-blacksmith"})
 
 DefineDependency("unit-hero-rugnur",
 	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-axefighter", 4, "unit-dwarven-steelclad", 1})

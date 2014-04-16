@@ -432,6 +432,22 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
 --  Vanishes = true,
 --  Sounds = {} } )
 
+DefineUnitType("unit-gold-coins", { Name = "Gold Coins",
+  Image = {"file", "neutral/items/gold_coins.png", "size", {12, 13}},
+  Animations = "animations-gold-sack", Icon = "icon-gold-coins",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  NonSolid = true, 
+  Sounds = {} } )
+
 DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
   Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
   Animations = "animations-gold-sack", Icon = "icon-gold-sack",

@@ -61,6 +61,10 @@ function AiLandAttack()
 			return false
 		end,
 
+		function() return AiSet(AiBlacksmith(), 1) end,
+		function() return AiResearch(AiUpgradeWeapon1()) end,
+		function() return AiResearch(AiUpgradeWeapon2()) end,
+
 		-- FAST AND FURIOUS
 		function() return AiForce(1, {AiSoldier(), 1}) end,
 		function() return AiWaitForce(1) end,
@@ -87,9 +91,12 @@ function AiLandAttack()
 			return false
 		end,
 
+		function() return AiResearch(AiUpgradeMissile1()) end,
+
 		function() return AiForce(1, {AiSoldier(), 9, AiShooter(), 3}) end,
 		function() return AiForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
 		function() return AiSet(AiWorker(), 20) end,
+		function() return AiUpgradeTo(AiVeteranSoldier()) end,
 		function() return AiWaitForce(1) end,
 		function() return AiAttackWithForce(1) end,
 

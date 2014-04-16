@@ -188,6 +188,7 @@ function RunJoiningMapMenu(s)
     GameSettings.NumUnits = ServerSetupState.UnitsOption
     resources:setSelected(ServerSetupState.ResourcesOption)
     GameSettings.Resources = ServerSetupState.ResourcesOption
+    GameSettings.Inside = int2bool(ServerSetupState.Inside)
     updatePlayersList()
     state = GetNetworkState()
     -- FIXME: don't use numbers
@@ -366,6 +367,8 @@ function RunServerMultiGameMenu(map, description, numplayers)
   NetworkMapName = map
   NetworkInitServerConnect(numplayers)
   ServerSetupState.FogOfWar = 1
+  ServerSetupState.Inside = 0
+  GameSettings.Inside = false
   startgame = menu:addFullButton("~!Start Game", "s", sx * 11,  sy*14,
     function(s)
       SetFogOfWar(fow:isMarked())

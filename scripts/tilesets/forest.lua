@@ -59,12 +59,12 @@ DefineTileset("name", "Forest",
     { 125, 125, 125}},							-- 070
   "solid", { "rock", "land", "rock", "unpassable",
     { 162, 174, 175, 162}},						-- 080
-  "solid", { "unused",
-    {}},								-- 090
+  "solid", { "unused-human-closed-wall", "land", "human", "wall", "unpassable",
+    {  11,   0,  11,   0, 464}},					-- 090
   "solid", { "unused",
     {}},								-- 0A0
-  "solid", { "unused",
-    {}},								-- 0B0
+  "solid", { "unused-human-open-wall", "land", "human", "wall", "unpassable",
+    {  17,   0,  17,   0, 464}},					-- 0B0
   "solid", { "unused",
     {}},								-- 0C0
   "solid", { "unused",
@@ -191,7 +191,24 @@ DefineTileset("name", "Forest",
     { 108, 108},							-- 7C0
     { 105, 105},							-- 7D0
     {},									-- 7E0
-    {}}									-- 7F0
+    {}},								-- 7F0
+  "mixed", { "human-wall", "dark-grass", "land", "human", "wall", "unpassable",
+    {  17,   0,  17,   0,  464},					-- 800
+    {  11,   0,  11,   0,  464},					-- 810
+    {  17,   0,  17,   0,  464},					-- 820
+    {  11,   0,  11,   0,  464},					-- 830
+    {  17,  17,   0,  17,  17,   0,  464,  464},			-- 840
+    {  11,   0,  11,   0,  464},					-- 850
+    {  17,   0,  17,   0,  464},					-- 860
+    {  11,   0,  11,   0,  464},					-- 870
+    {  17,   0,  17,   0,  464},					-- 880
+    {  11,  11,   0,  11,  11,   0,  464,  464},			-- 890
+    {  17,   0,  17,   0,  464},					-- 8A0
+    {  11,   0,  11,   0,  464},					-- 8B0
+    {  17,   0,  17,   0,  464},					-- 8C0
+    {  11,   0,  11,   0,  464},					-- 8D0
+    {},									-- 8E0
+    {}}									-- 8F0
   })
 
 BuildTilesetTables()

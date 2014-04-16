@@ -114,6 +114,7 @@ DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
+  IsNotSelectable = true, -- FIXME: remove this line when goblin archers get an icon of their own
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-goblin-voices-acknowledge",
