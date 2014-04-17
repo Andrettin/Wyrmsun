@@ -40,6 +40,7 @@ function DefineAllowNormalUnits(flags)
 		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 		"unit-dwarven-ballista",
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
+		"upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
@@ -114,7 +115,7 @@ end
 function DefineAllowSpecialUnits(flags)
 	local units = {
 		"unit-critter", "unit-gold-mine",
-		"unit-mushroom", "unit-flowers", "unit-large-flower",
+		"unit-mushroom", "unit-mushroom-patch", "unit-flowers", "unit-large-flower",
 		"unit-fern", "unit-twigs", "unit-log",
 		"unit-bones", "unit-wyrm-skeleton",
 		"unit-small-rocks",

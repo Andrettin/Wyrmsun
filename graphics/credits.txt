@@ -24,10 +24,13 @@ b_o:
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/log.png
 /graphics/neutral/decorations/mushroom.png
+/graphics/neutral/decorations/mushrooms.png
 /graphics/neutral/decorations/small_rocks.png
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/items/axe.png
+/graphics/neutral/items/carrots.png
+/graphics/neutral/items/cheese.png
 /graphics/neutral/items/chest.png
 /graphics/neutral/items/crown.png
 /graphics/neutral/items/goblet.png
@@ -189,6 +192,7 @@ Leo:
 /graphics/dwarf/icons/axe_1.png
 /graphics/dwarf/icons/axe_3.png
 /graphics/dwarf/icons/durstorn.png
+/graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/thursagan.png
 
 Oray Studios:

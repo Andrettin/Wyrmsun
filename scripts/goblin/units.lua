@@ -59,7 +59,7 @@ DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
     "selected", "click",
 --    "acknowledge", "basic-goblin-voices-acknowledge",
 --    "ready", "basic-goblin-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-hero-greebo", { Name = "Greebo",
@@ -89,7 +89,7 @@ DefineUnitType("unit-hero-greebo", { Name = "Greebo",
     "selected", "click",
 --    "acknowledge", "basic-goblin-voices-acknowledge",
 --    "ready", "basic-goblin-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
@@ -119,7 +119,7 @@ DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
     "selected", "click",
 --    "acknowledge", "basic-goblin-voices-acknowledge",
 --    "ready", "basic-goblin-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-goblin-banner", { Name = "Goblin Banner",

@@ -76,7 +76,7 @@ DefineUnitType("unit-gnomish-worker", { Name = "Gnomish Scavenger",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
@@ -105,7 +105,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-gnomish-caravan", { Name = gnomish_caravan_name,
@@ -128,7 +128,7 @@ DefineUnitType("unit-gnomish-caravan", { Name = gnomish_caravan_name,
     "selected", "click",
 --    "acknowledge", "ballista-acknowledge",
 --    "ready", "ballista-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "explosion"} } )
 
 DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
@@ -159,7 +159,7 @@ DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
     "selected", "town-hall-selected",
 --    "acknowledge", "town-hall-acknowledge",
 --    "ready", "town-hall-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-gnomish-farm", { Name = "Farm",
@@ -187,7 +187,7 @@ DefineUnitType("unit-gnomish-farm", { Name = "Farm",
     "selected", "click",
 --    "acknowledge", "farm-acknowledge",
 --    "ready", "farm-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-gnomish-barracks", { Name = "Barracks",
@@ -213,5 +213,5 @@ DefineUnitType("unit-gnomish-barracks", { Name = "Barracks",
     "selected", "click",
 --    "acknowledge", "barracks-acknowledge",
 --    "ready", "barracks-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )

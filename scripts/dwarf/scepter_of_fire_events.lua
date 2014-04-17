@@ -454,13 +454,9 @@ AddTrigger(
 							{"~!Continue"},
 							{function(s)
 								if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
-									local note = ""
-									if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-										note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Caverns of Chaincolt map and to the hero Baglur."
-									end
 									Event(
 										wyr.preferences.TheScepterOfFireMonarch,
-										"All the silver is there too. Proceed with the task, Rugnur!" .. note,
+										"All the silver is there too. Proceed with the task, Rugnur!",
 										player,
 										{"~!Continue"},
 										{function(s)
@@ -501,14 +497,10 @@ AddTrigger(
 						return false
 					end,
 					function() 
-						local note = ""
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-							note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Caverns of Chaincolt map and to the hero Baglur."
-						end
 						if (IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 							Event(
 								"Rugnur",
-								"That's the last caravan! We will commence work immediately." .. note,
+								"That's the last caravan! We will commence work immediately.",
 								player,
 								{"~!Continue"},
 								{function(s)
@@ -906,10 +898,6 @@ AddTrigger(
 				return false
 			end,
 			function() 
-				local note = ""
-				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
-					note = "\n\nNote: You have gained 2 dwarven technology points, as well as access to the Northern Wastelands map (coming soon)."
-				end
 				Event(
 					"Rugnur",
 					"We have everyone positioned on the glyphs! What do we do now?",
@@ -936,7 +924,7 @@ AddTrigger(
 								{function(s)
 								Event(
 									"Rugnur",
-									"Well, now I should go down to the city and report. I'm late already..." .. note,
+									"Well, now I should go down to the city and report. I'm late already...",
 									player,
 									{"~!Continue"},
 									{function(s)
@@ -1438,10 +1426,27 @@ AddTrigger(
 																player,
 																{"~!Continue"},
 																{function(s)
+																	PlayMusic("music/knolls.ogg")
 																	NorthernWastelandsEnemy(32, 69)
 																	NorthernWastelandsEnemy(2, 47)
 																	NorthernWastelandsEnemy(52, 47)
 																	NorthernWastelandsEnemy(2, 33)
+																	AddTrigger(
+																		function()
+																			if (GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Find Thursagan and bring him to your Mead Hall") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-thursagan") < 1) then
+																				player = GetThisPlayer()
+																				return true
+																			end
+																			return false
+																		end,
+																		function() 
+																			RemoveElementFromArray(Objectives[player + 1], "- Find Thursagan and bring him to your Mead Hall")
+																			if (mapinfo.description == "Northern Wastelands") then
+																				ActionDefeat()
+																			end
+																			return false
+																		end
+																	)
 																end},
 																"dwarf/icons/baglur.png"
 															)

@@ -137,7 +137,7 @@ DefineUnitType("unit-critter", { Name = "Critter",
     "selected", "click",
 --    "acknowledge", "critter-acknowledge",
 --    "ready", "critter-ready",
-    "help", "critter-help",
+--    "help", "critter-help",
     "dead", "rat-dead" }
 } )
 
@@ -172,11 +172,32 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
     "selected", "gold-mine-selected",
 --    "acknowledge", "gold-mine-acknowledge",
 --    "ready", "gold-mine-ready",
-    "help", "gold-mine-help",
+--    "help", "gold-mine-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-mushroom", { Name = "Mushroom",
   Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},
+  NeutralMinimapColor = {128, 128, 0},
+  Animations = "animations-decoration", Icon = "icon-mushroom",
+  Speed = 0,
+  HitPoints = 0,
+  DrawLevel = 5,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 0,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  IsNotSelectable = true,
+  Decoration = true,
+  NumDirections = 1,
+  Indestructible = 1,
+  VisibleUnderFog = true,
+  NonSolid = true, 
+  Sounds = {} }
+)
+
+DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
+  Image = {"file", "neutral/decorations/mushrooms.png", "size", {32, 32}},
   NeutralMinimapColor = {128, 128, 0},
   Animations = "animations-decoration", Icon = "icon-mushroom",
   Speed = 0,
@@ -527,6 +548,38 @@ DefineUnitType("unit-potion-of-decay", { Name = "Potion of Decay",
   NonSolid = true, 
   Sounds = {} } )
 
+DefineUnitType("unit-cheese", { Name = "Cheese",
+  Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
+  Animations = "animations-gold-sack", Icon = "icon-cheese",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  NonSolid = true, 
+  Sounds = {} } )
+
+DefineUnitType("unit-carrots", { Name = "Carrots",
+  Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
+  Animations = "animations-gold-sack", Icon = "icon-carrots",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  NonSolid = true, 
+  Sounds = {} } )
+
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
 --  swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 --}
@@ -673,7 +726,7 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
     "selected", "lumber-mill-selected",
 --    "acknowledge", "elven-lumber-mill-acknowledge",
 --    "ready", "elven-lumber-mill-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 

@@ -27,6 +27,8 @@ https://launchpad.net/stratagus
 - 0.1.5
 -----------------------------------------------------------------------
 
+- Wyrmsun upgraded to the latest version of the Stratagus engine. Persistent and save game data are now stored in the game's folder itself. If you have data saved from earlier versions, copy it from $USER_NAME/AppData/Roaming/Stratagus/wyr/ to /Wyrmsun/wyr/
+
 * AI
 - The AI now properly attacks more than once.
 
@@ -59,6 +61,8 @@ https://launchpad.net/stratagus
 - Added potion of healing (heals an injured unit if touched; graphics by b_o).
 - Added potion of decay (damages a unit if touched; graphics by b_o).
 - Added gold coins (gives 100 gold when touched; graphics by b_o).
+- Added cheese (heals 3 HP when touched; graphics by b_o).
+- Added carrots (heals 3 HP when touched; graphics by b_o).
 
 * Maps
 - The Aquitania map generation script and the default random map generation script now create dark dirt and dark grass tiles.
@@ -99,6 +103,7 @@ https://launchpad.net/stratagus
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).
+- Added two shield upgrades for the dwarves (graphics by Leo).
 
 -----------------------------------------------------------------------
 - 0.1.4

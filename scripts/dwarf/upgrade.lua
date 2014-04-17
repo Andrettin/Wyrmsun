@@ -32,6 +32,10 @@ local upgrades = {
 		{   200,   500,   100,     0,     0,     0,     0}},
 	{"upgrade-dwarven-great-axe", "icon-dwarven-axe-3",
 		{   250,  1500,   300,     0,     0,     0,     0}},
+	{"upgrade-dwarven-shield-1", "icon-dwarven-shield-2",
+		{   200,   300,   300,     0,     0,     0,     0}},
+	{"upgrade-dwarven-shield-2", "icon-dwarven-shield-3",
+		{   250,   900,   500,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-1", "icon-dwarven-throwing-axe-2",
 		{   200,   300,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3",
@@ -60,6 +64,20 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 
+DefineModifier("upgrade-dwarven-shield-1",
+	{"Armor", 2},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+)
+
+DefineModifier("upgrade-dwarven-shield-2",
+	{"Armor", 2},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+)
+
 DefineModifier("upgrade-dwarven-throwing-axe-1",
 	{"PiercingDamage", 1},
 	{"apply-to", "unit-dwarven-scout"})
@@ -73,6 +91,9 @@ DefineDependency("unit-dwarven-scout",
 
 DefineDependency("upgrade-dwarven-great-axe",
 	{"upgrade-dwarven-broad-axe"})
+
+DefineDependency("upgrade-dwarven-shield-2",
+	{"upgrade-dwarven-shield-1"})
 
 DefineDependency("upgrade-dwarven-throwing-axe-2",
 	{"upgrade-dwarven-throwing-axe-1"})

@@ -61,6 +61,24 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
     "unit-critter",
     "dwarf-group"} } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
+  Action = "stop",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-1"},
+  Key = "s", Hint = "~!Stop",
+  ForUnit = {
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
+    } } )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
+  Action = "stop",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-2"},
+  Key = "s", Hint = "~!Stop",
+  ForUnit = {
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
+    } } )
+
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
   Action = "attack",
   Key = "a", Hint = "~!Attack",
@@ -269,6 +287,18 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-3",
   Action = "research", Value = "upgrade-dwarven-great-axe",
   Allowed = "check-single-research",
   Key = "r", Hint = "~!Research Great Axe",
+  ForUnit = {"unit-dwarven-blacksmith"} } )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
+  Action = "research", Value = "upgrade-dwarven-shield-1",
+  Allowed = "check-single-research",
+  Key = "r", Hint = "~!Research Heater Shield",
+  ForUnit = {"unit-dwarven-blacksmith"} } )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
+  Action = "research", Value = "upgrade-dwarven-shield-2",
+  Allowed = "check-single-research",
+  Key = "r", Hint = "~!Research Thrymgjol Shield",
   ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",

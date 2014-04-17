@@ -139,6 +139,20 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-shield-2",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/shield_2.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-shield-3",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/shield_2.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-throwing-axe-1",
 	Size = {46, 38},
 	Frame = 0,
@@ -325,6 +339,20 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/red_potion.png"
+})
+
+DefineIcon({
+	Name = "icon-cheese",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/cheese.png"
+})
+
+DefineIcon({
+	Name = "icon-carrots",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/carrots.png"
 })
 
 -- tileset-dependent icons

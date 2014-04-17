@@ -86,6 +86,8 @@ local editor_types = {
    "unit-gold-and-gems-chest",
    "unit-potion-of-healing",
    "unit-potion-of-decay",
+   "unit-cheese",
+   "unit-carrots",
 
    "unit-critter",
 
@@ -94,6 +96,7 @@ local editor_types = {
    "unit-goblin-banner",
    "unit-glyph",
    "unit-mushroom",
+   "unit-mushroom-patch",
    "unit-flowers",
    "unit-large-flower",
    "unit-fern",

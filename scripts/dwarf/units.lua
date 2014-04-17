@@ -75,7 +75,7 @@ DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
@@ -104,7 +104,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
@@ -134,7 +134,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
 --    "selected", "basic-dwarf-voices-selected",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-scout", { Name = "Scout",
@@ -163,7 +163,7 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
@@ -191,7 +191,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
     "selected", "click",
 --    "acknowledge", "ballista-acknowledge",
 --    "ready", "ballista-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "explosion"
 } } )
 
@@ -223,7 +223,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
     "selected", "town-hall-selected",
 --    "acknowledge", "town-hall-acknowledge",
 --    "ready", "town-hall-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name,
@@ -251,7 +251,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
     "selected", "click",
 --    "acknowledge", "farm-acknowledge",
 --    "ready", "farm-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
@@ -277,7 +277,7 @@ DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
     "selected", "click",
 --    "acknowledge", "barracks-acknowledge",
 --    "ready", "barracks-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
@@ -305,7 +305,7 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
     "selected", "lumber-mill-selected",
 --    "acknowledge", "dwarven-lumber-mill-acknowledge",
 --    "ready", "dwarven-lumber-mill-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-blacksmith", { Name = "Blacksmith",
@@ -332,7 +332,7 @@ DefineUnitType("unit-dwarven-blacksmith", { Name = "Blacksmith",
 --    "selected", "lumber-mill-selected",
 --    "acknowledge", "dwarven-lumber-mill-acknowledge",
 --    "ready", "dwarven-lumber-mill-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
@@ -360,7 +360,7 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
     "selected", "click",
 --    "acknowledge", "dwarven-sentry-tower-acknowledge",
 --    "ready", "dwarven-sentry-tower-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
@@ -391,7 +391,7 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
     "selected", "click",
 --    "acknowledge", "dwarven-sentry-tower-acknowledge",
 --    "ready", "dwarven-sentry-tower-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
@@ -422,7 +422,7 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
@@ -454,7 +454,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-baglur", { Name = "Baglur",
@@ -485,7 +485,7 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
@@ -516,7 +516,7 @@ DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
@@ -547,6 +547,6 @@ DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",
 --    "ready", "basic-dwarf-voices-ready",
-    "help", "basic-dwarf-voices-help",
+--    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 

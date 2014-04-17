@@ -842,7 +842,7 @@ function CreateDecorations()
 	local Count = 0
 	local RandomNumber = 0
 
-	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256})
+	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-mushroom-patch", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256})
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
 	if (decoration_count == 0 and (GetRawTileTypeCount("Land") + GetRawTileTypeCount("Dark-Land") + GetRawTileTypeCount("Rough") + GetRawTileTypeCount("Dark-Rough")) > Count) then
 		while (Count > 0) do
@@ -851,7 +851,7 @@ function CreateDecorations()
 			if ((RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 				RandomNumber = SyncRand(1000)
 				if (RandomNumber < 200) then
-					unit = CreateUnit("unit-mushroom", 15, {RandomX, RandomY})
+					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 200 and RandomNumber < 300) then
 					unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 300 and RandomNumber < 400) then

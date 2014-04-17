@@ -340,7 +340,7 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
@@ -381,7 +381,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
 					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
@@ -395,7 +395,7 @@ function StandardTriggers()
 				end
 
 				-- grow mushrooms
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 					if (GameCycle >= GetUnitVariable(uncount[unit1], "LifeCycle") + 750) then
 						if (GetUnitVariable(uncount[unit1], "GraphicsVariation") < 13) then
 							SetUnitVariable(uncount[unit1], "GraphicsVariation", GetUnitVariable(uncount[unit1], "GraphicsVariation") + 1)
@@ -482,7 +482,7 @@ function StandardTriggers()
 --				end
 
 				-- gives gold if a unit is on a gold sack or heals if on a healing potion
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay" or GetUnitVariable(uncount[unit1], "Ident") == "unit-cheese" or GetUnitVariable(uncount[unit1], "Ident") == "unit-carrots") then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
 						for i=0,14 do
@@ -517,7 +517,7 @@ function StandardTriggers()
 											PlaySound("gold-coins")
 											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 100)
 										end}
-									)								
+									)
 								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
 									PlaySound("potion")
 									Event(
@@ -541,6 +541,28 @@ function StandardTriggers()
 											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") * 90 / 100)
 										end}
+									)
+								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-cheese" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
+									Event(
+										"",
+										"A delicious piece of cheese refreshes the eater.",
+										GetUnitVariable(nearby_uncount[unit2], "Player"),
+										{"~!OK"},
+										{function(s)
+											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + 3)
+										end}
+									)								
+								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-carrots" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
+									Event(
+										"",
+										"Delicious carrots refresh the eater.",
+										GetUnitVariable(nearby_uncount[unit2], "Player"),
+										{"~!OK"},
+										{function(s)
+											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + 3)
+										end}
 									)								
 								end
 								break
@@ -550,7 +572,7 @@ function StandardTriggers()
 				end
 
 				-- fixes temporary ownership transferrences due to the gold sack code
-				if (GetUnitVariable(uncount[unit1], "Player") ~= 15 and (GetUnitBoolFlag(uncount[unit1], "Decoration") == true or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing")) then
+				if (GetUnitVariable(uncount[unit1], "Player") ~= 15 and (GetUnitBoolFlag(uncount[unit1], "Decoration") == true or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-cheese" or GetUnitVariable(uncount[unit1], "Ident") == "unit-carrots")) then
 					if (GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) <= 1) then
 						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), 15)
 					end

@@ -72,7 +72,8 @@ DefineAiHelper(
   "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2"
   },
   {"research", "unit-dwarven-blacksmith",
-  "upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe"
+  "upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe",
+  "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2"
   },
   --
   -- Unit can repair which units.
@@ -260,6 +261,28 @@ function AiUpgradeWeapon2()
 		return "upgrade-dwarven-great-axe"
 	else
 		return "upgrade-dwarven-great-axe"
+	end
+end
+
+--
+--  Upgrade shield 1 of the current civilization.
+--
+function AiUpgradeShield1()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-shield-1"
+	else
+		return "upgrade-dwarven-shield-1"
+	end
+end
+
+--
+--  Upgrade shield 2 of the current civilization.
+--
+function AiUpgradeShield2()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-shield-2"
+	else
+		return "upgrade-dwarven-shield-2"
 	end
 end
 

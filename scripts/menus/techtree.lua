@@ -54,6 +54,7 @@ function RunTechTreeMenu(civilization_number)
 
 	if (civilization_number == 0) then
 		civilization = "dwarf"
+		tech_points = 6
 	end
 	
 	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
@@ -93,6 +94,10 @@ function RunTechTreeMenu(civilization_number)
 						unit_name = "Broad Axe"
 					elseif (unit == "upgrade-dwarven-great-axe") then
 						unit_name = "Great Axe"
+					elseif (unit == "upgrade-dwarven-shield-1") then
+						unit_name = "Heater Shield"
+					elseif (unit == "upgrade-dwarven-shield-2") then
+						unit_name = "Thrymgjol Shield"
 					end
 				end
 				tech_menu:addLabel(unit_name, 176, 11)
@@ -186,16 +191,25 @@ function RunTechTreeMenu(civilization_number)
 			addTechItemIcon("upgrade-dwarven-broad-axe", menu, "dwarf/icons/axe_2",
 				"Dwarven blacksmiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.",
 				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 3))
+
+			addTechItemIcon("upgrade-dwarven-shield-1", menu, "dwarf/icons/shield_2",
+				"Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.",
+				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 3))
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-broad-axe")) then
 			addTechItemIcon("upgrade-dwarven-great-axe", menu, "dwarf/icons/axe_3",
 				"Further innovations in dwarven smithing allows axes to be made sturdier, and often to carry double blades.",
 				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 4))
 		end
+--		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-shield-1")) then
+--			addTechItemIcon("upgrade-dwarven-shield-2", menu, "dwarf/icons/shield_2",
+--				"As shield-making techniques improved, the creation of thrymgjol shields became possible, further enhancing the degree of protection available for the dwarven soldiery. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.",
+--				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 4))
+--		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
 			addTechItemIcon("unit-dwarven-ballista", menu, "tilesets/swamp/dwarf/icons/dwarven_ballista",
 				"Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",
-				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 3))
+				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 3))
 		end
 	end
 
@@ -250,7 +264,7 @@ function GetQuestTechnologyPoints(civilization, quest)
 end
 
 function GetTechnologyPointCost(civilization, technology)
-	if (civilization == "dwarf" and (technology == "unit-dwarven-lumber-mill" or technology == "unit-dwarven-sentry-tower" or technology == "unit-dwarven-guard-tower" or technology == "unit-dwarven-scout" or technology == "upgrade-dwarven-throwing-axe-1" or technology == "upgrade-dwarven-throwing-axe-2" or technology == "unit-dwarven-blacksmith" or technology == "unit-dwarven-ballista" or technology == "unit-dwarven-stronghold" or technology == "upgrade-dwarven-broad-axe" or technology == "upgrade-dwarven-great-axe")) then
+	if (civilization == "dwarf" and string.find(technology, "dwarven-") ~= nil) then
 		return 1
 	else
 		return 0

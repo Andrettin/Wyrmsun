@@ -96,6 +96,16 @@ DefineAnimations("animations-building", {
   Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
 })
 
+DefineAnimations("animations-farm", {
+  Still = BuildingStill,
+  Research = BuildingStill,
+  Train = BuildingStill,
+  Death = {"unbreakable begin", "label begin", "random-goto 33 drop_cheese", "random-goto 33 drop_carrots", "random-goto 33 end", "goto begin",
+  "label drop_cheese", "spawn-unit unit-cheese 0 0 5 15", "goto end",
+  "label drop_carrots", "spawn-unit unit-carrots 0 0 5 15", "goto end",
+  "label end", "unbreakable end", "wait 1",}
+})
+
 DefineAnimations("animations-gold-mine", {
   Still = {"label start", "if-var v.ResourceActive.Value >= 1 active",
 			"frame 0", "wait 4", "frame 0", "wait 1", "goto start",

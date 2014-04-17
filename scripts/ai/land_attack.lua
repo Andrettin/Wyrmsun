@@ -43,7 +43,12 @@ function AiLandAttack()
 			end
 			return false
 		end,
-		function() return AiWait(AiWorker()) end, -- start hangs if nothing available
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 1) then
+				AiWait(AiWorker())
+			end
+			return false
+		end,
 
 		function() return AiSet(AiWorker(), 4) end, -- 4
 
@@ -61,9 +66,16 @@ function AiLandAttack()
 			return false
 		end,
 
-		function() return AiSet(AiBlacksmith(), 1) end,
-		function() return AiResearch(AiUpgradeWeapon1()) end,
-		function() return AiResearch(AiUpgradeWeapon2()) end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBlacksmith()) >= 1) then
+				AiSet(AiBlacksmith(), 1)
+				AiResearch(AiUpgradeWeapon1())
+				AiResearch(AiUpgradeShield1())
+				AiResearch(AiUpgradeWeapon2())
+				AiResearch(AiUpgradeShield2())
+			end
+			return false
+		end,
 
 		-- FAST AND FURIOUS
 		function() return AiForce(1, {AiSoldier(), 1}) end,
@@ -87,11 +99,11 @@ function AiLandAttack()
 		function()
 			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
 				AiWait(AiLumberMill())
+				AiResearch(AiUpgradeMissile1())
+				AiResearch(AiUpgradeMissile2())
 			end
 			return false
 		end,
-
-		function() return AiResearch(AiUpgradeMissile1()) end,
 
 		function() return AiForce(1, {AiSoldier(), 9, AiShooter(), 3}) end,
 		function() return AiForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
@@ -124,6 +136,8 @@ function AiLandAttack()
 			end
 			return false
 		end,
+
+		function() return true end,
 
 		function()
 			stratagus.gameData.AIState.loop_index[1 + AiPlayer()] = 0
