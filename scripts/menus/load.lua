@@ -20,7 +20,7 @@ function LoadGame(s)
   RunResultsMenu()
 
   InitGameSettings()
-  SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 end
 
 function AddLoadGameItems(menu)

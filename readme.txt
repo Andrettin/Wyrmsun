@@ -36,6 +36,7 @@ https://launchpad.net/stratagus
 - The openings in the Sentry Tower graphics have been updated (by Jinn).
 - Fixed an error which allowed guard towers to level up.
 - Added the dwarven blacksmith (graphics by Leo).
+- The gnomish farm now sometimes drops cheese or carrots when destroyed.
 
 * Events
 - Event message buttons now support hotkeys.
@@ -82,6 +83,7 @@ https://launchpad.net/stratagus
 - The speed cheat ("hermes") now works (code by cybermind).
 - The resource cheat now benefits all players.
 - Added a button to reset the tech tree.
+- Added graphics for gnomish menu buttons, also used for the main menu (graphics by Jinn).
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
@@ -91,6 +93,7 @@ https://launchpad.net/stratagus
 
 * Terrain
 - Added Dark Dirt and Dark Grass tiles to the Forest tileset (graphics by b_o).
+- Added a Dungeon tileset (graphics by b_o).
 
 * Units
 - Added Goblin Archer (graphics by b_o).

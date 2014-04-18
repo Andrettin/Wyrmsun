@@ -186,6 +186,16 @@ João Victor G. Costa (Jinn):
 /graphics/ui/dwarf/widgets/button-thin-medium-pressed.png
 /graphics/ui/dwarf/widgets/button-thin-small-normal.png
 /graphics/ui/dwarf/widgets/button-thin-small-pressed.png
+/graphics/ui/gnome/widgets/button-large-grayed.png
+/graphics/ui/gnome/widgets/button-large-normal.png
+/graphics/ui/gnome/widgets/button-large-pressed.png
+/graphics/ui/gnome/widgets/button-small-grayed.png
+/graphics/ui/gnome/widgets/button-small-normal.png
+/graphics/ui/gnome/widgets/button-small-pressed.png
+/graphics/ui/gnome/widgets/button-thin-medium-normal.png
+/graphics/ui/gnome/widgets/button-thin-medium-pressed.png
+/graphics/ui/gnome/widgets/button-thin-small-normal.png
+/graphics/ui/gnome/widgets/button-thin-small-pressed.png
 
 Leo:
 /graphics/dwarf/buildings/blacksmith.png
@@ -193,6 +203,7 @@ Leo:
 /graphics/dwarf/icons/axe_3.png
 /graphics/dwarf/icons/durstorn.png
 /graphics/dwarf/icons/shield_2.png
+/graphics/dwarf/icons/shield_3.png
 /graphics/dwarf/icons/thursagan.png
 
 Oray Studios:

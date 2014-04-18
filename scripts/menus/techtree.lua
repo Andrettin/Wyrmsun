@@ -31,7 +31,7 @@
 function RunTechTreeMenu(civilization_number)
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")
@@ -55,7 +55,12 @@ function RunTechTreeMenu(civilization_number)
 	if (civilization_number == 0) then
 		civilization = "dwarf"
 		tech_points = 6
+		SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+	elseif (civilization_number == 1) then
+		civilization = "gnome"
+		tech_points = 5
 	end
+	SetPlayerData(GetThisPlayer(), "RaceName", civilization)
 	
 	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
 		tech_points = tech_points + GetQuestTechnologyPoints(civilization, wyr.preferences.QuestsCompleted[i])
@@ -201,11 +206,11 @@ function RunTechTreeMenu(civilization_number)
 				"Further innovations in dwarven smithing allows axes to be made sturdier, and often to carry double blades.",
 				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 4))
 		end
---		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-shield-1")) then
---			addTechItemIcon("upgrade-dwarven-shield-2", menu, "dwarf/icons/shield_2",
---				"As shield-making techniques improved, the creation of thrymgjol shields became possible, further enhancing the degree of protection available for the dwarven soldiery. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.",
---				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 4))
---		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-shield-1")) then
+			addTechItemIcon("upgrade-dwarven-shield-2", menu, "dwarf/icons/shield_3",
+				"As shield-making techniques improved, the creation of thrymgjol shields became possible, further enhancing the degree of protection available for the dwarven soldiery. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.",
+				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 4))
+		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
 			addTechItemIcon("unit-dwarven-ballista", menu, "tilesets/swamp/dwarf/icons/dwarven_ballista",
 				"Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",

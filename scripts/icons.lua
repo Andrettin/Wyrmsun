@@ -149,7 +149,7 @@ DefineIcon({
 	Name = "icon-dwarven-shield-3",
 	Size = {46, 38},
 	Frame = 0,
-	File = "dwarf/icons/shield_2.png"
+	File = "dwarf/icons/shield_3.png"
 })
 
 DefineIcon({

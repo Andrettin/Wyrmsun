@@ -67,6 +67,46 @@ DefineButtonStyle("network-dwarf", {
   },
 })
 
+DefineButtonStyle("main-gnome", {
+  Size = {128, 20},
+  Font = "game",
+  TextNormalColor = "yellow",
+  TextReverseColor = "white",
+  TextAlign = "Center",
+  TextPos = {64, 4},
+  Default = {
+    File = "ui/gnome/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
+  },
+  Hover = {
+    TextNormalColor = "white",
+  },
+  Clicked = {
+    File = "ui/gnome/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
+    TextNormalColor = "white",
+    TextPos = {66, 6},
+  },
+})
+
+DefineButtonStyle("network-gnome", {
+  Size = {80, 20},
+  Font = "game",
+  TextNormalColor = "yellow",
+  TextReverseColor = "white",
+  TextAlign = "Center",
+  TextPos = {40, 4},
+  Default = {
+    File = "ui/gnome/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+  },
+  Hover = {
+    TextNormalColor = "white",
+  },
+  Clicked = {
+    File = "ui/gnome/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+    TextNormalColor = "white",
+    TextPos = {42, 6},
+  },
+})
+
 DefineButtonStyle("icon", {
   Size = {46, 38},
   Font = "game",
@@ -92,4 +132,3 @@ DefineButtonStyle("icon", {
     },
   },
 })
-

@@ -461,7 +461,7 @@ function RunMultiPlayerGameMenu(s)
 
   local function FixMusic()
     wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-    SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+    SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
     if not (IsMusicPlaying()) then
         PlayMusic("music/legends_of_the_north.ogg")

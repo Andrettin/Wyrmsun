@@ -164,7 +164,7 @@ DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
 
 DefineUnitType("unit-gnomish-farm", { Name = "Farm",
   Image = {"file", "gnome/buildings/farm.png", "size", {64, 64}},
-  Animations = "animations-building", Icon = "icon-gnomish-farm",
+  Animations = "animations-farm", Icon = "icon-gnomish-farm",
   NeutralMinimapColor = {192, 192, 192},
   Costs = {"time", 100, "gold", 500, "wood", 250},
   RepairHp = 4,

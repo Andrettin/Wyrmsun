@@ -29,7 +29,7 @@
 
 PlayerFaction = ""
 
-SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 -- Global useful objects for menus  ----------
 dark = Color(38, 38, 78)
@@ -54,6 +54,20 @@ g_dbsp = CGraphic:New("ui/dwarf/widgets/button-small-pressed.png")
 g_dbsp:Load()
 g_dbsg = CGraphic:New("ui/dwarf/widgets/button-small-grayed.png")
 g_dbsg:Load()
+
+g_gbln = CGraphic:New("ui/gnome/widgets/button-large-normal.png")
+g_gbln:Load()
+g_gblp = CGraphic:New("ui/gnome/widgets/button-large-pressed.png")
+g_gblp:Load()
+g_gblg = CGraphic:New("ui/gnome/widgets/button-large-grayed.png")
+g_gblg:Load()
+
+g_gbsn = CGraphic:New("ui/gnome/widgets/button-small-normal.png")
+g_gbsn:Load()
+g_gbsp = CGraphic:New("ui/gnome/widgets/button-small-pressed.png")
+g_gbsp:Load()
+g_gbsg = CGraphic:New("ui/gnome/widgets/button-small-grayed.png")
+g_gbsg:Load()
 
 local dpanels = {
   "ui/dwarf/panel_1.png",
@@ -127,9 +141,9 @@ function AddMenuHelpers(menu)
       b:setPressedImage(g_dblp)
       b:setDisabledImage(g_dblg)
     elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-      b:setNormalImage(g_dbln)
-      b:setPressedImage(g_dblp)
-      b:setDisabledImage(g_dblg)
+      b:setNormalImage(g_gbln)
+      b:setPressedImage(g_gblp)
+      b:setDisabledImage(g_gblg)
     else
       b:setNormalImage(g_dbln)
       b:setPressedImage(g_dblp)
@@ -146,9 +160,9 @@ function AddMenuHelpers(menu)
       b:setPressedImage(g_dbsp)
       b:setDisabledImage(g_dbsg)
     elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-      b:setNormalImage(g_dbsn)
-      b:setPressedImage(g_dbsp)
-      b:setDisabledImage(g_dbsg)
+      b:setNormalImage(g_gbsn)
+      b:setPressedImage(g_gbsp)
+      b:setDisabledImage(g_gbsg)
     else
       b:setNormalImage(g_dbsn)
       b:setPressedImage(g_dbsp)
@@ -930,7 +944,7 @@ end
 
 function BuildProgramStartMenu()
   wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-  SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
   if not (IsMusicPlaying()) then
     PlayMusic("music/legends_of_the_north.ogg")
@@ -948,7 +962,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5") then
 		ResetTechnologiesAcquired()
 
 		local warning_menu = WarGameMenu(panel(2))

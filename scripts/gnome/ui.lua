@@ -282,7 +282,7 @@ UI.Resources[ScoreCost].TextY = 1
 UI.MenuButton.X = 24
 UI.MenuButton.Y = 2
 UI.MenuButton.Text = "Menu (~<F10~>)"
-UI.MenuButton.Style = FindButtonStyle("main-dwarf")
+UI.MenuButton.Style = FindButtonStyle("main-gnome")
 UI.MenuButton:SetCallback(
   function()
     if (Editor.Running == EditorNotRunning) then
@@ -295,12 +295,12 @@ UI.MenuButton:SetCallback(
 UI.NetworkMenuButton.X = 6
 UI.NetworkMenuButton.Y = 2
 UI.NetworkMenuButton.Text = "Menu"
-UI.NetworkMenuButton.Style = FindButtonStyle("network-dwarf")
+UI.NetworkMenuButton.Style = FindButtonStyle("network-gnome")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
 UI.NetworkDiplomacyButton.X = 90
 UI.NetworkDiplomacyButton.Y = 2
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-dwarf")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-gnome")
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
