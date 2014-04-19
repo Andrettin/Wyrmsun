@@ -95,6 +95,7 @@ local editor_types = {
 
    "unit-goblin-banner",
    "unit-glyph",
+   "unit-stairs",
    "unit-mushroom",
    "unit-mushroom-patch",
    "unit-flowers",

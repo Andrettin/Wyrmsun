@@ -84,6 +84,7 @@ https://launchpad.net/stratagus
 - The resource cheat now benefits all players.
 - Added a button to reset the tech tree.
 - Added graphics for gnomish menu buttons, also used for the main menu (graphics by Jinn).
+- Added a stairs unit (graphics modified by b_o from those here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
@@ -96,17 +97,17 @@ https://launchpad.net/stratagus
 - Added a Dungeon tileset (graphics by b_o).
 
 * Units
-- Added Goblin Archer (graphics by b_o).
+- Added Goblin Archer (unit graphics by b_o and icon by Jinn).
 - Leveling up now always restores HP to the max.
 - Removed the display of a unit's kills, as there was not enough space for it in the interface (the numbers were appearing outside of the interface if they had too many digits).
 - It is no longer possible to see an enemy unit's XP by selecting it.
 - The ballista is now buildable.
-- Dwarven axefighters now require a blacksmith in order to be able to upgrade to dwarven steelclads.
 - Dwarven steelclads now have graphics showing a double axe if the second dwarven melee axe upgrade has been researched (graphics by b_o).
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).
 - Added two shield upgrades for the dwarves (graphics by Leo).
+- Changed the hotkey for the throwing axe upgrades from R to T.
 
 -----------------------------------------------------------------------
 - 0.1.4

@@ -851,19 +851,31 @@ function CreateDecorations()
 			if ((RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 				RandomNumber = SyncRand(1000)
 				if (RandomNumber < 200) then
-					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
+					if (wyrmsun.tileset ~= "dungeon") then
+						unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
+					end
 				elseif (RandomNumber >= 200 and RandomNumber < 300) then
-					unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})
+					if (wyrmsun.tileset ~= "dungeon") then
+						unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})
+					end
 				elseif (RandomNumber >= 300 and RandomNumber < 400) then
-					unit = CreateUnit("unit-large-flower", 15, {RandomX, RandomY})
+					if (wyrmsun.tileset ~= "dungeon") then
+						unit = CreateUnit("unit-large-flower", 15, {RandomX, RandomY})
+					end
 				elseif (RandomNumber >= 400 and RandomNumber < 600) then
 					unit = CreateUnit("unit-small-rocks", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 600 and RandomNumber < 800) then
-					unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
+					if (wyrmsun.tileset ~= "dungeon") then
+						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
+					end
 				elseif (RandomNumber >= 800 and RandomNumber < 875) then
-					unit = CreateUnit("unit-fern", 15, {RandomX, RandomY})
+					if (wyrmsun.tileset ~= "dungeon") then
+						unit = CreateUnit("unit-fern", 15, {RandomX, RandomY})
+					end
 				elseif (RandomNumber >= 875 and RandomNumber < 900) then
-					unit = CreateUnit("unit-log", 15, {RandomX, RandomY})
+					if (wyrmsun.tileset ~= "dungeon") then
+						unit = CreateUnit("unit-log", 15, {RandomX, RandomY})
+					end
 				elseif (RandomNumber >= 900 and RandomNumber < 999) then
 					unit = CreateUnit("unit-bones", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 999) then
@@ -1019,21 +1031,21 @@ end
 function RawTile(x, y)
 	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
 		return RawTiles[y+1][x+1]
-	elseif (x < 0 and y >= 0 and y < Map.Info.MapHeight) then
+	elseif (x < 0 and y >= 0 and y < Map.Info.MapHeight and RawTiles[y+1][0+1] ~= "Wall") then
 		return RawTiles[y+1][0+1]
-	elseif (x >= Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
+	elseif (x >= Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight and RawTiles[y+1][Map.Info.MapWidth] ~= "Wall") then
 		return RawTiles[y+1][Map.Info.MapWidth]
-	elseif (x >= 0 and x < Map.Info.MapWidth and y < 0) then
+	elseif (x >= 0 and x < Map.Info.MapWidth and y < 0 and RawTiles[0+1][x+1] ~= "Wall") then
 		return RawTiles[0+1][x+1]
-	elseif (x >= 0 and x < Map.Info.MapWidth and y >= Map.Info.MapHeight) then
+	elseif (x >= 0 and x < Map.Info.MapWidth and y >= Map.Info.MapHeight and RawTiles[Map.Info.MapHeight][x+1] ~= "Wall") then
 		return RawTiles[Map.Info.MapHeight][x+1]
-	elseif (x < 0 and y < 0) then
+	elseif (x < 0 and y < 0 and RawTiles[0+1][0+1] ~= "Wall") then
 		return RawTiles[0+1][0+1]
-	elseif (x >= Map.Info.MapWidth and y < 0) then
+	elseif (x >= Map.Info.MapWidth and y < 0 and RawTiles[0+1][Map.Info.MapWidth] ~= "Wall") then
 		return RawTiles[0+1][Map.Info.MapWidth]
-	elseif (x < 0 and y >= Map.Info.MapHeight) then
+	elseif (x < 0 and y >= Map.Info.MapHeight and RawTiles[Map.Info.MapHeight][0+1] ~= "Wall") then
 		return RawTiles[Map.Info.MapHeight][0+1]
-	elseif (x >= Map.Info.MapWidth and y >= Map.Info.MapHeight) then
+	elseif (x >= Map.Info.MapWidth and y >= Map.Info.MapHeight and RawTiles[Map.Info.MapHeight][Map.Info.MapWidth] ~= "Wall") then
 		return RawTiles[Map.Info.MapHeight][Map.Info.MapWidth]
 	else
 		return ""
@@ -1751,6 +1763,8 @@ function ApplyRawTiles()
 						SetTile(131, x, y, 0)
 					end
 				end
+			elseif (RawTile(x, y) == "Wall") then
+				SetTile(176, x, y, 40)
 			end
 		end
 	end

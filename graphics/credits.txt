@@ -21,6 +21,7 @@ b_o:
 /graphics/missiles/dwarven_ballista_bolt.png
 /graphics/missiles/goblin_arrow.png
 /graphics/missiles/throwing_axe.png
+/graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/log.png
 /graphics/neutral/decorations/mushroom.png
@@ -40,7 +41,7 @@ b_o:
 /graphics/neutral/items/potion.png
 /graphics/neutral/items/scepter.png
 /graphics/neutral/units/rat.png
-/graphics/tilesets/dungeon/terrain/dungeon.png
+/graphics/tilesets/dungeon/terrain/dungeon.png (floor tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
 /graphics/tilesets/forest/neutral/decorations/large_flower.png
@@ -102,6 +103,8 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/buildings/town_hall.png
 /graphics/gnome/icons/gnomish_recruit.png
 /graphics/gnome/icons/gnomish_worker.png
+/graphics/goblin/icons/goblin_archer.png
+/graphics/goblin/icons/goblin_assassin.png
 /graphics/goblin/icons/goblin_spearman.png
 /graphics/human/buildings/lumber_mill.png
 /graphics/human/icons/soldier.png

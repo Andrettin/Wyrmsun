@@ -425,6 +425,7 @@ end
 InitGameSettings()
 
 NextMap = ""
+NextMapDirect = false
 
 function RunMap(map, objective, fow, revealmap)
   if objective == nil then
@@ -450,7 +451,10 @@ function RunMap(map, objective, fow, revealmap)
       loop = false
     end
   end
-  RunResultsMenu(s)
+  if (NextMapDirect == false) then
+	  RunResultsMenu(s)
+  end
+  NextMapDirect = false
 
   InitGameSettings()
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")

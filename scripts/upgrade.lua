@@ -119,6 +119,7 @@ function DefineAllowSpecialUnits(flags)
 		"unit-fern", "unit-twigs", "unit-log",
 		"unit-bones", "unit-wyrm-skeleton",
 		"unit-small-rocks",
+		"unit-stairs",
 --		"unit-human-dead-body", "unit-dead-sea-body",
 		"unit-destroyed-2x2-place",
 		"unit-destroyed-3x3-place", "unit-destroyed-4x4-place"

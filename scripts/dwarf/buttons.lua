@@ -280,37 +280,37 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-durstorn",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-2",
   Action = "research", Value = "upgrade-dwarven-broad-axe",
   Allowed = "check-single-research",
-  Key = "r", Hint = "~!Research Broad Axe",
+  Key = "a", Hint = "Research Broad ~!Axe",
   ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-3",
   Action = "research", Value = "upgrade-dwarven-great-axe",
   Allowed = "check-single-research",
-  Key = "r", Hint = "~!Research Great Axe",
+  Key = "a", Hint = "Research Great ~!Axe",
   ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
   Action = "research", Value = "upgrade-dwarven-shield-1",
   Allowed = "check-single-research",
-  Key = "r", Hint = "~!Research Heater Shield",
+  Key = "s", Hint = "Research Heater ~!Shield",
   ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
   Action = "research", Value = "upgrade-dwarven-shield-2",
   Allowed = "check-single-research",
-  Key = "r", Hint = "~!Research Thrymgjol Shield",
+  Key = "s", Hint = "Research Thrymgjol ~!Shield",
   ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
   Action = "research", Value = "upgrade-dwarven-throwing-axe-1",
   Allowed = "check-single-research",
-  Key = "r", Hint = "~!Research Sharp Throwing Axe",
+  Key = "t", Hint = "Research Sharp ~!Throwing Axe",
   ForUnit = {"unit-dwarven-lumber-mill"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
   Action = "research", Value = "upgrade-dwarven-throwing-axe-2",
   Allowed = "check-single-research",
-  Key = "r", Hint = "~!Research Bearded Throwing Axe",
+  Key = "t", Hint = "~!Research Bearded ~!Throwing Axe",
   ForUnit = {"unit-dwarven-lumber-mill"} } )
 
 -- Upgrades ---------------------------------------------------------

@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","computer")
+PresentMap("Fjalar's and Galar's Hall", 3, 64, 64, 1)
+MapWorld = "Nidavellir"

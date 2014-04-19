@@ -314,6 +314,12 @@ function SinglePlayerTriggers()
 		Objectives[i] = {"- Destroy the enemy"}
   	end
 	
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		Load("scripts/dwarf/ui.lua")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		Load("scripts/gnome/ui.lua")
+	end
+
 	CreateDecorations()
 
 	StandardTriggers()
@@ -364,7 +370,6 @@ end
 function StandardTriggers()
 	local RandomNumber = 0
 
-	-- set the graphics variation for individual units of certain unit types
 	AddTrigger(
 		function()
 			if (GameCycle == 0) then
@@ -376,6 +381,8 @@ function StandardTriggers()
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
+
+				-- set the graphics variation for individual units of certain unit types
 				if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
 					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))

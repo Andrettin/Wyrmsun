@@ -155,11 +155,11 @@ function SetPlayerData(player, data, arg1, arg2)
 	if (data == "RaceName") then
 		-- FIXME: support multiplayer
 		if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-			if (GameSettings.Presets[0].Race == 1) then
+			if (GameSettings.Presets[player].Race == 1) then
 				arg1 = "dwarf"
-			elseif (GameSettings.Presets[0].Race == 2) then
+			elseif (GameSettings.Presets[player].Race == 2) then
 				arg1 = "gnome"
-			elseif (GameSettings.Presets[0].Race == 3) then
+			elseif (GameSettings.Presets[player].Race == 3) then
 				arg1 = "goblin"
 			end
 		end

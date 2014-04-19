@@ -272,6 +272,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-archer",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/goblin_archer.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-swordsman",
 	Size = {46, 38},
 	Frame = 0,
