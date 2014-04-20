@@ -225,6 +225,10 @@ while (Count > 0) do
 	Count = Count - 1
 end
 
+GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+ApplyRawTiles()
+
 -- create items
 RandomX = 0
 RandomY = 0
@@ -284,9 +288,6 @@ end
 --		end
 --	end
 --end
-
-
-ApplyRawTiles()
 
 SetStartView(0, 32, 32)
 SetPlayerData(0, "RaceName", "dwarf")
