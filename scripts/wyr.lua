@@ -178,7 +178,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		elseif (arg1 == "oil") then
 			arg2 = res[3]
 		elseif (arg1 == "coal") then
-			arg2 = res[4]
+			arg2 = res[6]
 		end
 	end
 

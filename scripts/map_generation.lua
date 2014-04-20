@@ -851,9 +851,7 @@ function CreateDecorations()
 			if ((RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 				RandomNumber = SyncRand(1000)
 				if (RandomNumber < 200) then
-					if (wyrmsun.tileset ~= "dungeon") then
-						unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
-					end
+					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 200 and RandomNumber < 300) then
 					if (wyrmsun.tileset ~= "dungeon") then
 						unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})

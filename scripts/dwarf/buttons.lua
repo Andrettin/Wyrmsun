@@ -240,10 +240,10 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-scout",
   Key = "s", Hint = "Train ~!Scout",
   ForUnit = {"unit-dwarven-barracks"} } )
 
---DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
---  Action = "train-unit", Value = "unit-dwarven-ballista",
---  Key = "b", Hint = "Build ~!Ballista",
---  ForUnit = {"unit-dwarven-barracks"} } )
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
+  Action = "train-unit", Value = "unit-dwarven-ballista",
+  Key = "b", Hint = "Build ~!Ballista",
+  ForUnit = {"unit-dwarven-barracks"} } )
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-rugnur",
   Action = "train-unit", Value = "unit-hero-rugnur",

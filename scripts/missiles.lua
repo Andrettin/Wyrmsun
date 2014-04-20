@@ -42,8 +42,11 @@ DefineMissileType("missile-dwarven-ballista-bolt",
   { File = "missiles/dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
   DrawLevel = 50, ImpactSound = "explosion",
   Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 2,
---  ImpactMissile = "missile-impact", SplashFactor = 4 } )
-  SplashFactor = 4 } )
+  ImpactMissile = "missile-impact", SplashFactor = 4 } )
+
+DefineMissileType("missile-impact",
+  { File = "missiles/siege_projectile_impact.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
+  DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
 
 --DefineMissileType("missile-small-fire",
 --  { File = "missiles/small_fire.png", Size = {32, 48}, Frames = 6, NumDirections = 1,

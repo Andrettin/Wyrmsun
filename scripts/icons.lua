@@ -362,6 +362,13 @@ DefineIcon({
 	File = "neutral/icons/carrots.png"
 })
 
+DefineIcon({
+	Name = "icon-coal-mine",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/coal_mine.png"
+})
+
 -- tileset-dependent icons
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then

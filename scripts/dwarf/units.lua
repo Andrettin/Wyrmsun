@@ -68,7 +68,13 @@ DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
     "resource-step", 2,
     "wait-at-resource", 29,
     "wait-at-depot", 150,
-    "terrain-harvester"}},
+    "terrain-harvester"},
+   {"file-when-loaded", "dwarf/units/miner_with_gold.png",
+    "resource-id", "coal",
+    "resource-capacity", 100,
+    "wait-at-resource", 120,
+    "wait-at-depot", 150}
+  },
   organic = true,
   SelectableByRectangle = true,
   Sounds = {
@@ -215,10 +221,11 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
   ExplodeWhenKilled = "missile-explosion",
   Type = "land",
   Building = true, VisibleUnderFog = true,
-  BuildingRules = { { "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"}
-					}
-				  },
-  CanStore = {"wood", "gold"},
+  BuildingRules = {
+  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"} },
+  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+  },
+  CanStore = {"wood", "gold", "coal"},
   Sounds = {
     "selected", "town-hall-selected",
 --    "acknowledge", "town-hall-acknowledge",

@@ -281,7 +281,8 @@ DefineVariables(
 	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"StartingLevel",
-	"LifeCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
 )
 
@@ -346,16 +347,18 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
+				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
+				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
 			end
 		end
 		if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
@@ -388,8 +391,6 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
 					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(13) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
@@ -398,24 +399,27 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
+						SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
 					end
 				end
 
 				-- grow mushrooms
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-					if (GameCycle >= GetUnitVariable(uncount[unit1], "LifeCycle") + 750) then
-						if (GetUnitVariable(uncount[unit1], "GraphicsVariation") < 13) then
-							SetUnitVariable(uncount[unit1], "GraphicsVariation", GetUnitVariable(uncount[unit1], "GraphicsVariation") + 1)
+					if (GameCycle >= GetUnitVariable(uncount[unit1], "LastCycle") + 750) then
+						if (GetUnitVariable(uncount[unit1], "LifeStage") < 13) then
+							SetUnitVariable(uncount[unit1], "LifeStage", GetUnitVariable(uncount[unit1], "LifeStage") + 1)
 						else
-							SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+							SetUnitVariable(uncount[unit1], "LifeStage", 1)
 						end
-						SetUnitVariable(uncount[unit1], "LifeCycle", GameCycle)
+						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
 					end
 					
 					local critter_quantity = GetNumUnitsAt(15, "unit-critter", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
-					if (critter_quantity > 0 and GetUnitVariable(uncount[unit1], "GraphicsVariation") < 8) then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", 13)
-						SetUnitVariable(uncount[unit1], "LifeCycle", GameCycle)
+					if (critter_quantity > 0 and GetUnitVariable(uncount[unit1], "LifeStage") < 8) then
+						SetUnitVariable(uncount[unit1], "LifeStage", 13)
+						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
 					end
 				end
 

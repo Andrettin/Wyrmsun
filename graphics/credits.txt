@@ -70,6 +70,10 @@ Bos Wars Team:
 /graphics/ui/cursors/small_green_cross.png
 /graphics/ui/cursors/yellow.png
 
+Cuzco:
+/graphics/missiles/siege_projectile_impact.png (later modified by Jinn)
+/graphics/ui/Menu_background_with_title.png
+
 igoku:
 /graphics/dwarf/icons/boots.png (later modified by Jinn)
 /graphics/dwarf/icons/shield_1.png (later modified by Jinn)
@@ -109,6 +113,8 @@ João Victor G. Costa (Jinn):
 /graphics/human/buildings/lumber_mill.png
 /graphics/human/icons/soldier.png
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
+/graphics/missiles/siege_projectile_impact.png (modified from Cuzco's graphics)
+/graphics/neutral/buildings/coal_mine.png
 /graphics/neutral/buildings/glyph.png
 /graphics/neutral/buildings/glyph_player_color.png
 /graphics/neutral/buildings/gold_mine.png
@@ -220,4 +226,3 @@ Rick Elliot:
 
 StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
-/graphics/ui/Menu_background_with_title.png

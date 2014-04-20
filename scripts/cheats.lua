@@ -44,6 +44,7 @@ function HandleCheats(str)
 		SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") + 12000)
 		SetPlayerData(i, "Resources", "wood", GetPlayerData(i, "Resources", "wood") + 5000)
 		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 5000)
+--		SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 5000)
 	end
 	AddMessage("!!! :)")
 

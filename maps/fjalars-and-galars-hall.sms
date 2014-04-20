@@ -225,6 +225,42 @@ while (Count > 0) do
 	Count = Count - 1
 end
 
+-- create items
+RandomX = 0
+RandomY = 0
+--Count = 8
+Count = 4
+while (Count > 0) do
+	RandomX = SyncRand(Map.Info.MapWidth)
+	RandomY = SyncRand(Map.Info.MapHeight)
+	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
+		local adjacent_floor_tiles = 0
+		for x=(RandomX - 1),(RandomX + 1) do
+			for y=(RandomY - 1),(RandomY + 1) do
+				if (RawTile(x, y) == "Land") then
+					adjacent_floor_tiles = adjacent_floor_tiles + 1
+				end
+			end
+		end
+		if (adjacent_floor_tiles >= 8) then
+--			RandomNumber = SyncRand(5)
+			RandomNumber = SyncRand(2) + 3
+			if (RandomNumber == 0) then
+				unit = CreateUnit("unit-gold-sack", 15, {RandomX, RandomY})
+			elseif (RandomNumber == 1) then
+				unit = CreateUnit("unit-gold-chest", 15, {RandomX, RandomY})
+			elseif (RandomNumber == 2) then
+				unit = CreateUnit("unit-gold-and-gems-chest", 15, {RandomX, RandomY})
+			elseif (RandomNumber == 3) then
+				unit = CreateUnit("unit-potion-of-healing", 15, {RandomX, RandomY})
+			elseif (RandomNumber == 4) then
+				unit = CreateUnit("unit-potion-of-decay", 15, {RandomX, RandomY})
+			end
+			Count = Count - 1
+		end
+	end
+end
+
 -- create stairs
 --RandomX = 0
 --RandomY = 0

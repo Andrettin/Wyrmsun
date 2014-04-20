@@ -80,6 +80,7 @@ local editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-gold-mine",
+   "unit-coal-mine",
    "unit-gold-coins",
    "unit-gold-sack",
    "unit-gold-chest",

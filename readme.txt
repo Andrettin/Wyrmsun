@@ -37,6 +37,7 @@ https://launchpad.net/stratagus
 - Fixed an error which allowed guard towers to level up.
 - Added the dwarven blacksmith (graphics by Leo).
 - The gnomish farm now sometimes drops cheese or carrots when destroyed.
+- Added coal mine (graphics by Jinn).
 
 * Events
 - Event message buttons now support hotkeys.
@@ -85,6 +86,8 @@ https://launchpad.net/stratagus
 - Added a button to reset the tech tree.
 - Added graphics for gnomish menu buttons, also used for the main menu (graphics by Jinn).
 - Added a stairs unit (graphics modified by b_o from those here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+- Added explosion impact effect graphics for siege weapon projectiles (graphics by Jinn and Cuzco).
+- New background art (by Cuzco)
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
@@ -95,6 +98,7 @@ https://launchpad.net/stratagus
 * Terrain
 - Added Dark Dirt and Dark Grass tiles to the Forest tileset (graphics by b_o).
 - Added a Dungeon tileset (graphics by b_o).
+- Mushrooms now come in three new colors as well: brown, green and yellow (graphics by b_o).
 
 * Units
 - Added Goblin Archer (unit graphics by b_o and icon by Jinn).
