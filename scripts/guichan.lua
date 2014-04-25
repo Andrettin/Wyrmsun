@@ -805,7 +805,11 @@ function RunSinglePlayerGameMenu()
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
       GameSettings.GameType = gametype:getSelected() - 1
-      GameSettings.Tileset = tilesetFilename[tilesetdd:getSelected() + 1]
+      if (mapinfo.description ~= "Fjalar's and Galar's Hall" and mapinfo.description ~= "Hall of Lyr") then -- somewhat ugly way to make it so dungeon maps aren't set to use other tilesets (this is because the other tilesets have no walls yet, so it would cause issues)
+      	GameSettings.Tileset = tilesetFilename[tilesetdd:getSelected() + 1]
+      else
+      	GameSettings.Tileset = nil
+      end
       EventsActivated = events:getSelected()
 	  
       RunMap(mapname)

@@ -140,7 +140,6 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
 	"unit-dwarven-ballista",
-	"unit-gnomish-recruit", 
 	"unit-goblin-spearman", "unit-goblin-archer",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 	"dwarf-group"

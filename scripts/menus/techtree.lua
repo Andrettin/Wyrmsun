@@ -156,7 +156,7 @@ function RunTechTreeMenu(civilization_number)
 			"The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
 			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 2))
 		addTechItemIcon("unit-dwarven-axefighter", menu, "dwarf/icons/dwarven_axefighter",
-			"Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat.",
+			"Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to gather to purchase steel armor for themselves at the local blacksmith.",
 			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 3))
 		addTechItemIcon("unit-dwarven-lumber-mill", menu, "tilesets/swamp/dwarf/icons/lumber_mill",
 			"The lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",

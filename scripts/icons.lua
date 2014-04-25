@@ -265,6 +265,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-patrol-land",
+	Size = {46, 38},
+	Frame = 0,
+	File = "gnome/icons/patrol_land.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-spearman",
 	Size = {46, 38},
 	Frame = 0,

@@ -261,11 +261,11 @@ UI.Resources[2].TextY = 1
 --UI.Resources[6].TextY = 1
 
 -- Hide Coal (should not show up in normal scenarios)
-if (UI.Resources[4].G) then
-	UI.Resources[4].G = nil
+if (UI.Resources[6].G) then
+	UI.Resources[6].G = nil
 end
-UI.Resources[4].TextX = -1
-UI.Resources[4].TextY = -1
+UI.Resources[6].TextX = -1
+UI.Resources[6].TextY = -1
 
 -- food
 if (CanAccessFile("ui/food.png")) then

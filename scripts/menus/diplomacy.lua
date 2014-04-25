@@ -14,7 +14,7 @@ function RunDiplomacyMenu()
   local j = 0
 
   for i=0,14 do
-    if (Players[i].Type ~= PlayerNobody and ThisPlayer.Index ~= i) then
+    if (Players[i].Type ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and ThisPlayer.Index ~= i) then
       j = j + 1
 
       local l = Label(Players[i].Name)

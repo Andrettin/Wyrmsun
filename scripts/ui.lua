@@ -78,10 +78,7 @@ local info_panel_y = 160
 
 local min_damage = Div(
 	Sub(
-		Add(
-			ActiveUnitVar("PiercingDamage"),
-			ActiveUnitVar("PiercingDamageBonus")
-		),
+		ActiveUnitVar("PiercingDamage"),
 		Sub(
 			ActiveUnitVar("PiercingDamage", "Value", "Type"),
 			ActiveUnitVar("PiercingDamage", "Value", "Initial")
@@ -95,10 +92,7 @@ local max_damage = Sub(
 			ActiveUnitVar("BasicDamage"),
 			ActiveUnitVar("BasicDamageBonus")
 		),
-		Add(
-			ActiveUnitVar("PiercingDamage"),
-			ActiveUnitVar("PiercingDamageBonus")
-		)
+		ActiveUnitVar("PiercingDamage")
 	),
 	Sub(
 		ActiveUnitVar("PiercingDamage", "Value", "Type"),
@@ -106,32 +100,32 @@ local max_damage = Sub(
 	)
 )
 -- takes piercing damage bonuses into account for the "+X" damage bonus on the unit's panel
---local damage_bonus = Add(
---	Sub(
---		ActiveUnitVar("PiercingDamage", "Value", "Type"),
---		ActiveUnitVar("PiercingDamage", "Value", "Initial")
---	),
---	ActiveUnitVar("PiercingDamageBonus")
---);
-local damage_bonus = Sub(
-	ActiveUnitVar("PiercingDamage", "Value", "Type"),
-	ActiveUnitVar("PiercingDamage", "Value", "Initial")
-)
+local damage_bonus = Add(
+	Sub(
+		ActiveUnitVar("PiercingDamage", "Value", "Type"),
+		ActiveUnitVar("PiercingDamage", "Value", "Initial")
+	),
+	ActiveUnitVar("PiercingDamageBonus")
+);
+--local damage_bonus = Sub(
+--	ActiveUnitVar("PiercingDamage", "Value", "Type"),
+--	ActiveUnitVar("PiercingDamage", "Value", "Initial")
+--)
 
 local armor = Sub(
-	Add(
-		ActiveUnitVar("Armor"),
-		ActiveUnitVar("ArmorBonus")
-	),
+	ActiveUnitVar("Armor"),
 	Sub(
 		ActiveUnitVar("Armor", "Value", "Type"),
 		ActiveUnitVar("Armor", "Value", "Initial")
 	)
 )
 
-local armor_bonus = Sub(
-	ActiveUnitVar("Armor", "Value", "Type"),
-	ActiveUnitVar("Armor", "Value", "Initial")
+local armor_bonus = Add(
+	Sub(
+		ActiveUnitVar("Armor", "Value", "Type"),
+		ActiveUnitVar("Armor", "Value", "Initial")
+	),
+	ActiveUnitVar("ArmorBonus")
 )
 
 DefinePanelContents(

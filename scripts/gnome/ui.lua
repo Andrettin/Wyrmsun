@@ -252,12 +252,13 @@ UI.Resources[2].TextY = 1
 --UI.Resources[3].TextX = 176 + 150 + 18
 --UI.Resources[3].TextY = 1
 
--- Hide Coal (should not show up in normal scenarios)
-if (UI.Resources[4].G) then
-	UI.Resources[4].G = nil
-end
-UI.Resources[4].TextX = -1
-UI.Resources[4].TextY = -1
+-- coal
+--UI.Resources[6].G = CGraphic:New("ui/ore,stone,coal.png", 14, 14)
+--UI.Resources[6].IconFrame = 2
+--UI.Resources[6].IconX = 176 + 150
+--UI.Resources[6].IconY = 0
+--UI.Resources[6].TextX = 176 + 150 + 18
+--UI.Resources[6].TextY = 1
 
 -- food
 if (CanAccessFile("ui/food.png")) then

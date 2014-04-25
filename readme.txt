@@ -49,12 +49,13 @@ https://launchpad.net/stratagus
 * Heroes
 - Levels acquired with hero units are now saved across games (only in single player).
 - Baglur and steelclad Rugnur now correctly have the same amount of armor as steelclads (previously they had the same amount of armor as axefighters).
-- Added Durstorn (dwarf; not yet available for hiring normally; icon graphics by Leo).
+- Added Durstorn (dwarf; icon graphics by Leo).
 - Added Thursagan (dwarf; icon graphics by Leo).
 - Hero units now have the same base stats as their base units, as their persistent (and usually higher) levels already give them an edge.
 - Adjusted the requirements for Rugnur and Baglur to be available for hiring.
 - Baglur is now available for hiring after the completion of "Closing the Gates", while Rugnur is available for hiring after the completion of "A Bargain is Struck".
 - Greebo's eyes in his icon are now correctly no longer team-colored.
+- Given that hero levels are now persistent, their costs were significantly increase to compensate for that (each of them costs 5250 now).
 
 * Items
 - Added gold sack (gives 500 gold when touched; graphics by b_o).
@@ -77,6 +78,7 @@ https://launchpad.net/stratagus
 - Fixed one tile which was wrongly set to be dry mud, when it should be mud.
 - Added the Northern Wastelands map (Nidavellir).
 - Added two potions of healing to the Brown Hills map.
+- Added the Hall of Lyr map (Nidavellir, uses dungeon tileset).
 
 * Miscellaneous
 - The player now receives a warning message when new versions of Wyrmsun reset the allocation of technology points in the tech tree.
@@ -107,6 +109,7 @@ https://launchpad.net/stratagus
 - It is no longer possible to see an enemy unit's XP by selecting it.
 - The ballista is now buildable.
 - Dwarven steelclads now have graphics showing a double axe if the second dwarven melee axe upgrade has been researched (graphics by b_o).
+- Added a gnomish patrol button for gnomish military units (graphics by Jinn).
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).

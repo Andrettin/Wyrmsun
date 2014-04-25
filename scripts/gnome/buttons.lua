@@ -34,6 +34,16 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
+-- general commands -------------------------------
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
+  Action = "patrol",
+  Key = "p", Hint = "~!Patrol",
+  ForUnit = {
+	"unit-gnomish-recruit", 
+	"gnome-group"
+  } } )
+
 -- worker specific actions ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",

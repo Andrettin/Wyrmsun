@@ -169,7 +169,8 @@ DefineDefaultResourceNames(
 
 DefineDefaultResourceAmounts(
   "gold", 100000,
-  "oil", 50000)
+  "oil", 50000,
+  "coal", 50000)
 
 DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1)
 
@@ -283,6 +284,7 @@ DefineVariables(
 	"StartingLevel",
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+	"CriticalStrikeChance", {Max = 100, Value = 0, Increase = 0, Enable = true},
 	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
 )
 
@@ -680,9 +682,9 @@ function StandardTriggers()
 			else
 				-- create Rugnur for an AI player if they fulfill the conditions
 				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 1 and GetPlayerData(i, "Resources", "gold") >= 750) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 1 and GetPlayerData(i, "Resources", "gold") >= 5250) then
 						unit = CreateUnit("unit-hero-rugnur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
 						DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
 						return false
 					end
@@ -706,9 +708,9 @@ function StandardTriggers()
 			else
 				-- create Baglur for an AI player if they fulfill the conditions
 				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4 and GetPlayerData(i, "Resources", "gold") >= 750) then
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4 and GetPlayerData(i, "Resources", "gold") >= 5250) then
 						unit = CreateUnit("unit-hero-baglur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
 						DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
 						return false
 					end
@@ -730,16 +732,16 @@ function StandardTriggers()
 				-- make it impossible to hire a hero after he has already been hired by someone
 				DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
 				return false
---			else
---				-- create Thursagan for an AI player if they fulfill the conditions
---				for i=0,14 do
---					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga" or GetPlayerData(i, "Name") == "Kal Kartha") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-blacksmith") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 2 and GetPlayerData(i, "Resources", "gold") >= 750) then
---						unit = CreateUnit("unit-hero-thursagan", i, {Players[i].StartPos.x, Players[i].StartPos.y})
---						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
---						DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
---						return false
---					end
---				end
+			else
+				-- create Thursagan for an AI player if they fulfill the conditions
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(i, "Name")), "unit-hero-thursagan") == false and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-blacksmith") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4 and GetPlayerData(i, "Resources", "gold") >= 5250) then
+						unit = CreateUnit("unit-hero-thursagan", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
+						DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
+						return false
+					end
+				end
 			end
 			return true
 		end
@@ -757,16 +759,16 @@ function StandardTriggers()
 				-- make it impossible to hire a hero after he has already been hired by someone
 				DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
 				return false
---			else
---				-- create Durstorn for an AI player if they fulfill the conditions
---				for i=0,14 do
---					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 3 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "Resources", "gold") >= 750) then
---						unit = CreateUnit("unit-hero-durstorn", i, {Players[i].StartPos.x, Players[i].StartPos.y})
---						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 750)
---						DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
---						return false
---					end
---				end
+			else
+				-- create Durstorn for an AI player if they fulfill the conditions
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(i, "Name")), "unit-hero-durstorn") == false and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 12 and GetPlayerData(i, "Resources", "gold") >= 5250) then
+						unit = CreateUnit("unit-hero-durstorn", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
+						DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
+						return false
+					end
+				end
 			end
 			return true
 		end
@@ -884,6 +886,8 @@ function GetFactionForbiddenUnits(faction)
 	elseif (faction == "Kal Kartha") then
 		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-durstorn" }
 	elseif (faction == "Knalga") then
+		return { "unit-goblin-spearman", "unit-goblin-archer" }
+	elseif (faction == "Lyr") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Goblins") then
 		return { "unit-dwarven-axefighter", "unit-dwarven-scout" }
@@ -1209,19 +1213,46 @@ Preference.ShowMessages = wyr.preferences.ShowMessages
 SetDamageFormula(
 	Div(
 		Mul(
-			Add(
-				51,
-				Rand(50)
-			),
-			Add(
-				Max(
-					0,
-					Sub(
+			Div(
+				Mul(
+					Add(
+						51,
+						Rand(50)
+					),
+					Add(
+						Max(
+							0,
+							Sub(
+								Div(
+									Mul(
+										Add(
+											AttackerVar("BasicDamage"),
+											AttackerVar("BasicDamageBonus")
+										),
+										Add(
+											100,
+											Mul(
+												100,
+												GreaterThan(
+													AttackerVar("Bloodlust"),
+													0
+												)
+											)
+										)
+									),
+									100
+								),
+								Add(
+									DefenderVar("Armor"),
+									DefenderVar("ArmorBonus")
+								)
+							)
+						),
 						Div(
 							Mul(
 								Add(
-									AttackerVar("BasicDamage"),
-									AttackerVar("BasicDamageBonus")
+									AttackerVar("PiercingDamage"),
+									AttackerVar("PiercingDamageBonus")
 								),
 								Add(
 									100,
@@ -1235,31 +1266,19 @@ SetDamageFormula(
 								)
 							),
 							100
-						),
-						Add(
-							DefenderVar("Armor"),
-							DefenderVar("ArmorBonus")
 						)
 					)
 				),
-				Div(
-					Mul(
-						Add(
-							AttackerVar("PiercingDamage"),
-							AttackerVar("PiercingDamageBonus")
-						),
-						Add(
-							100,
-							Mul(
-								100,
-								GreaterThan(
-									AttackerVar("Bloodlust"),
-									0
-								)
-							)
-						)
-					),
-					100
+				100
+			),
+			Add(
+				100,
+				Mul(
+					100,
+					LessThan(
+						Rand(100),
+						AttackerVar("CriticalStrikeChance")
+					)
 				)
 			)
 		),

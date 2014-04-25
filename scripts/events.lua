@@ -29,6 +29,7 @@
 
 function EventTriggers()
 
+	Load("scripts/dwarf/events.lua")
 	Load("scripts/dwarf/scepter_of_fire_events.lua")
 
 	-- The Surghan Mercenaries

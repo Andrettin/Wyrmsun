@@ -164,7 +164,8 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
   Type = "land",
   Building = true, VisibleUnderFog = true,
   BuildingRules = {
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"}}
+	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"}},
+	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
   },
 
   GivesResource = "gold", CanHarvest = true,

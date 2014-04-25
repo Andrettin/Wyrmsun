@@ -431,15 +431,22 @@ end
 ApplyRawTiles()
 
 SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Name", "Fjalar and Galar")
 SetAiType(0, "passive")
-SetStartView(1, 32, 32)
 SetPlayerData(1, "RaceName", "dwarf")
-SetPlayerData(1, "Name", "Thjodrorir")
 SetAiType(1, "passive")
-SetPlayerData(2, "RaceName", "neutral")
-SetPlayerData(2, "Name", "Hall Dwellers")
+SetPlayerData(2, "RaceName", "dwarf")
+SetPlayerData(2, "Name", "Lyran Guards")
 SetAiType(2, "passive")
+SetPlayerData(3, "RaceName", "neutral")
+SetPlayerData(3, "Name", "Lyran Citizens")
+SetAiType(3, "passive")
+
+SetDiplomacy(0, "enemy", 1)
+SetDiplomacy(0, "enemy", 2)
+SetDiplomacy(1, "enemy", 0)
+SetDiplomacy(1, "enemy", 2)
+SetDiplomacy(2, "enemy", 0)
+SetDiplomacy(2, "enemy", 1)
 
 -- create items
 RandomX = 0
@@ -495,7 +502,7 @@ end
 --	end
 --end
 
--- create Fjalar and Galar
+-- create player 1's dwarves
 Count = 1
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
@@ -513,8 +520,28 @@ while (Count > 0) do
 			if (adjacent_floor_tiles >= 8) then
 				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					SetStartView(0, RandomX, RandomY)
-					unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
-					unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
+					local hero_count = 2
+					local loops = 0
+					while (hero_count > 0) do
+						RandomNumber = SyncRand(100)
+						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur") or 0 ~= GetThisPlayer())) then
+							unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-baglur") or 0 ~= GetThisPlayer())) then
+							unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan") or 0 ~= GetThisPlayer())) then
+							unit = CreateUnit("unit-hero-thursagan", 0, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-durstorn") or 0 ~= GetThisPlayer())) then
+							unit = CreateUnit("unit-hero-durstorn", 0, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (loops > 20) then -- used if the player has no available heroes
+							unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						end
+						loops = loops + 1
+					end
 					Count = Count - 1
 				end
 			end
@@ -522,51 +549,40 @@ while (Count > 0) do
 	end
 end
 
--- create Thjodrorir
+-- create player 2's dwarves
 Count = 1
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
 	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
 		if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
-			if (GetNumUnitsAt(0, "any", {RandomX - 24, RandomY - 24}, {RandomX + 24, RandomY + 24}) < 1) then
-				local adjacent_floor_tiles = 0
-				for x=(RandomX - 1),(RandomX + 1) do
-					for y=(RandomY - 1),(RandomY + 1) do
-						if (RawTile(x, y) == "Land") then
-							adjacent_floor_tiles = adjacent_floor_tiles + 1
-						end
+			local adjacent_floor_tiles = 0
+			for x=(RandomX - 1),(RandomX + 1) do
+				for y=(RandomY - 1),(RandomY + 1) do
+					if (RawTile(x, y) == "Land") then
+						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
 				end
-				if (adjacent_floor_tiles >= 8) then
+			end
+			if (adjacent_floor_tiles >= 8) then
+				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					SetStartView(1, RandomX, RandomY)
-					unit = CreateUnit("unit-dwarven-steelclad", 1, {RandomX, RandomY})
-
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
-						Count = Count - 1
-					elseif (RandomNumber == 1) then
-						unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
-						Count = Count - 1
-					end
-
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
-						Count = Count - 1
-					elseif (RandomNumber == 1) then
-						unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
-						Count = Count - 1
-					end
-
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
-						Count = Count - 1
-					elseif (RandomNumber == 1) then
-						unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
-						Count = Count - 1
+					local hero_count = 2
+					while (hero_count > 0) do
+						RandomNumber = SyncRand(100)
+						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-rugnur", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-baglur", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-thursagan", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-durstorn", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						end
 					end
 					Count = Count - 1
 				end
@@ -575,19 +591,19 @@ while (Count > 0) do
 	end
 end
 
--- create Thjodrorir's guards
-Count = 8
+-- create hostile creeps
+Count = 16
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
 	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
-		if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
+		if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 			RandomNumber = SyncRand(2)
 			if (RandomNumber == 0) then
-				unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
+				unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
 				Count = Count - 1
 			elseif (RandomNumber == 1) then
-				unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
+				unit = CreateUnit("unit-dwarven-scout", 2, {RandomX, RandomY})
 				Count = Count - 1
 			end
 		end
@@ -614,9 +630,9 @@ while (Count > 0) do
 					if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 						RandomNumber = SyncRand(100)
 						if (RandomNumber < 95) then
-							unit = CreateUnit("unit-dwarven-miner", 2, {RandomX, RandomY})
+							unit = CreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY})
 						else
-							unit = CreateUnit("unit-gnomish-worker", 2, {RandomX, RandomY}) -- There is a small chance that a dweller of Fjalar's and Galar's hall will be a gnome instead of a dwarf
+							unit = CreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- There is a small chance that a dweller of Fjalar's and Galar's hall will be a gnome instead of a dwarf
 						end
 						Count = Count - 1
 					end
