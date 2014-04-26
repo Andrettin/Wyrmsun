@@ -452,10 +452,33 @@ function StandardTriggers()
 				end
 
 				if (not IsNetworkGame()) then
-					-- apply persistent hero levels
-					if (GetArrayIncludes(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")))) then
-						if (GetUnitVariable(uncount[unit1], "Level") < wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) + 1]) then
-							IncreaseUnitLevel(uncount[unit1], (wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) + 1] - GetUnitVariable(uncount[unit1], "Level")), true)
+					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
+						for key, value in pairs(wyr.preferences.Heroes) do
+							if (wyr.preferences.Heroes[key].name == GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) then
+								-- apply persistent hero levels
+								if (GetUnitVariable(uncount[unit1], "Level") < wyr.preferences.Heroes[key].level) then
+									IncreaseUnitLevel(uncount[unit1], (wyr.preferences.Heroes[key].level - GetUnitVariable(uncount[unit1], "Level")), true)
+								end
+
+								-- load upgrades
+								if (GetUnitVariable(uncount[unit1], "CriticalStrike") < 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")) then
+									SetUnitVariable(uncount[unit1], "CriticalStrike", 2)
+									SetUnitVariable(uncount[unit1], "CriticalStrikeChance", 15)
+									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
+								end
+
+								-- save upgrades
+								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
+									if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
+										SavePreferences()
+									end
+									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad")
+										SavePreferences()
+									end
+								end
+							end
 						end
 					end
 				end
@@ -1096,11 +1119,12 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 
 		-- save the levels of heroes in a persistent manner
 		if (not IsNetworkGame()) then
-			-- apply persistent hero levels
-			if (GetArrayIncludes(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(unit, "Ident")))) then
-				if (GetUnitVariable(unit, "Level") > wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(unit, "Ident"))) + 1]) then
-					wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, GetUnitTypeName(GetUnitVariable(unit, "Ident"))) + 1] = GetUnitVariable(unit, "Level")
-					SavePreferences()
+			for key, value in pairs(wyr.preferences.Heroes) do
+				if (wyr.preferences.Heroes[key].name == GetUnitTypeName(GetUnitVariable(unit, "Ident"))) then
+					if (GetUnitVariable(unit, "Level") > wyr.preferences.Heroes[key].level) then
+						wyr.preferences.Heroes[key].level = GetUnitVariable(unit, "Level")
+						SavePreferences()
+					end
 				end
 			end
 		end
@@ -1213,7 +1237,38 @@ local defaultPreferences = {
 	TheScepterOfFireMonarch = "",
 	TheScepterOfFireRaiderFaction = "",
 	TheScepterOfFireMonarch = "",
-	HeroLevels = { "Rugnur", 1, "Baglur", 2, "Thursagan", 3, "Durstorn", 3, "Greebo", 2 }
+	Heroes = {
+		Rugnur = {
+			name = "Rugnur",
+			level = 1,
+			upgrades = {},
+			items = {}
+		},
+		Baglur = {
+			name = "Baglur",
+			level = 2,
+			upgrades = { "unit-dwarven-steelclad" },
+			items = {}
+		},
+		Thursagan = {
+			name = "Thursagan",
+			level = 3,
+			upgrades = { "unit-dwarven-steelclad" },
+			items = {}
+		},
+		Durstorn = {
+			name = "Durstorn",
+			level = 3,
+			upgrades = { "unit-dwarven-steelclad" },
+			items = {}
+		},
+		Greebo = {
+			name = "Greebo",
+			level = 2,
+			upgrades = {},
+			items = {}
+		}
+	}
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)

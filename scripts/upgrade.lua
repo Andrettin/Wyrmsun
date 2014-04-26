@@ -44,7 +44,8 @@ function DefineAllowNormalUnits(flags)
 		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
-		"unit-goblin-spearman", "unit-goblin-archer"
+		"unit-goblin-spearman", "unit-goblin-archer",
+		"unit-potion-of-healing"
 	}
 	-- Allow units for human players only if they have been acquired
 	if ((flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") and (not IsNetworkGame())) then

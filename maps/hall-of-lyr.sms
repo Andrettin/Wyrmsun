@@ -524,21 +524,37 @@ while (Count > 0) do
 					local loops = 0
 					while (hero_count > 0) do
 						RandomNumber = SyncRand(100)
-						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur") or 0 ~= GetThisPlayer())) then
-							unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
-							hero_count = hero_count - 1
-						elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-baglur") or 0 ~= GetThisPlayer())) then
-							unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
-							hero_count = hero_count - 1
-						elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan") or 0 ~= GetThisPlayer())) then
-							unit = CreateUnit("unit-hero-thursagan", 0, {RandomX, RandomY})
-							hero_count = hero_count - 1
-						elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-durstorn") or 0 ~= GetThisPlayer())) then
-							unit = CreateUnit("unit-hero-durstorn", 0, {RandomX, RandomY})
-							hero_count = hero_count - 1
-						elseif (loops > 20) then -- used if the player has no available heroes
-							unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
-							hero_count = hero_count - 1
+						if (not IsNetworkGame()) then
+							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-baglur") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-thursagan", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-durstorn") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-durstorn", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (loops > 20) then -- used if the player has no available heroes
+								unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							end
+						else
+							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-thursagan", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-durstorn", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							end
 						end
 						loops = loops + 1
 					end

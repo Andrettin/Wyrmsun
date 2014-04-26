@@ -56,6 +56,7 @@ https://launchpad.net/stratagus
 - Baglur is now available for hiring after the completion of "Closing the Gates", while Rugnur is available for hiring after the completion of "A Bargain is Struck".
 - Greebo's eyes are now correctly no longer team-colored in his icon.
 - Given that hero levels are now persistent, their costs were significantly increase to compensate for that (each of them costs 5250 now).
+- Level-up upgrades chosen with hero units are now persistent.
 
 * Items
 - Added gold sack (gives 500 gold when touched; graphics by b_o).

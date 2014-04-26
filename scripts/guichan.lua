@@ -995,6 +995,19 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
+  -- this updates old HeroLevels persistent values to the new Heroes persistent array
+  if (wyr.preferences.HeroLevels ~= nil) then
+	for i=1,table.getn(wyr.preferences.HeroLevels) do
+		for key, value in pairs(wyr.preferences.Heroes) do
+			if (wyr.preferences.HeroLevels[i] == wyr.preferences.Heroes[key].name) then
+				wyr.preferences.Heroes[key].level = wyr.preferences.HeroLevels[i + 1]
+			end
+		end
+	end
+	wyr.preferences.HeroLevels = nil
+	SavePreferences()
+  end
+
   menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*0,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
   menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*1,

@@ -349,3 +349,10 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Allowed = "check-unit-variable", AllowArg = {"GreatAxe", "Value", "==", "2"},
 --  Key = "a", Hint = "~!Attack",
 --  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
+
+-- Item Purchase ---------------------------------------------------------
+
+--DefineButton( { Pos = 3, Level = 0, Icon = "icon-red-potion",
+--  Action = "train-unit", Value = "unit-potion-of-healing",
+--  Key = "p", Hint = "Buy ~!Potion of Healing",
+--  ForUnit = {"unit-dwarven-blacksmith"} } )

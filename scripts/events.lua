@@ -649,7 +649,7 @@ function Event(event_name, event_description, player, options, option_effects, e
 		end
 		l:setCaption(event_description)
 
-		if (event_icon == "dwarf/icons/rugnur.png" and wyr.preferences.HeroLevels[GetElementIndexFromArray(wyr.preferences.HeroLevels, "Rugnur") + 1] >= 2) then
+		if (event_icon == "dwarf/icons/rugnur.png" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
 			event_icon = "dwarf/icons/rugnur_older.png"
 		end
 
