@@ -520,7 +520,7 @@ while (Count > 0) do
 			if (adjacent_floor_tiles >= 8) then
 				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					SetStartView(0, RandomX, RandomY)
-					local hero_count = 2
+					local hero_count = 1
 					local loops = 0
 					while (hero_count > 0) do
 						RandomNumber = SyncRand(100)
@@ -565,9 +565,9 @@ while (Count > 0) do
 				end
 			end
 			if (adjacent_floor_tiles >= 8) then
-				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1 and GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 					SetStartView(1, RandomX, RandomY)
-					local hero_count = 2
+					local hero_count = 1
 					while (hero_count > 0) do
 						RandomNumber = SyncRand(100)
 						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1) then

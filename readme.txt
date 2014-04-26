@@ -54,7 +54,7 @@ https://launchpad.net/stratagus
 - Hero units now have the same base stats as their base units, as their persistent (and usually higher) levels already give them an edge.
 - Adjusted the requirements for Rugnur and Baglur to be available for hiring.
 - Baglur is now available for hiring after the completion of "Closing the Gates", while Rugnur is available for hiring after the completion of "A Bargain is Struck".
-- Greebo's eyes in his icon are now correctly no longer team-colored.
+- Greebo's eyes are now correctly no longer team-colored in his icon.
 - Given that hero levels are now persistent, their costs were significantly increase to compensate for that (each of them costs 5250 now).
 
 * Items
@@ -78,7 +78,7 @@ https://launchpad.net/stratagus
 - Fixed one tile which was wrongly set to be dry mud, when it should be mud.
 - Added the Northern Wastelands map (Nidavellir).
 - Added two potions of healing to the Brown Hills map.
-- Added the Hall of Lyr map (Nidavellir, uses dungeon tileset).
+- Added the Hall of Lyr map (Nidavellir, uses dungeon tileset). In this map, you get one random hero, and use them to clear the hall of its guards (green). The map is also usable in multiplayer, as the (hostile and playable) blue player receives one random hero as well.
 
 * Miscellaneous
 - The player now receives a warning message when new versions of Wyrmsun reset the allocation of technology points in the tech tree.
@@ -110,6 +110,8 @@ https://launchpad.net/stratagus
 - The ballista is now buildable.
 - Dwarven steelclads now have graphics showing a double axe if the second dwarven melee axe upgrade has been researched (graphics by b_o).
 - Added a gnomish patrol button for gnomish military units (graphics by Jinn).
+- When units level up, they now have the choice of learning Critical Strike (gives a chance to cause double damage when attacking; graphics by Jinn).
+- Dwarven axefighters now need a blacksmith to be built in order to upgrade to steelclads.
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).

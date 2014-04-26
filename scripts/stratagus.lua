@@ -285,6 +285,7 @@ DefineVariables(
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CriticalStrikeChance", {Max = 100, Value = 0, Increase = 0, Enable = true},
+	"CriticalStrike", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
 	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
 )
 
@@ -953,6 +954,36 @@ function GetNumPlayers()
 	return player_count
 end
 
+function GetUnitTypeLevelUpUpgrades(unit_type)
+	if (unit_type == "unit-dwarven-axefighter") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-dwarven-steelclad") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-dwarven-scout") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-gnomish-recruit") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-goblin-spearman") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-goblin-archer") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-hero-rugnur") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-hero-rugnur-steelclad") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-hero-baglur") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-hero-thursagan") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-hero-durstorn") then
+		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-hero-greebo") then
+		return { "upgrade-critical-strike" }
+	else
+		return {}
+	end
+end
+
 function GetRandomCharacterName(civilization, gender, is_monarch)
 	local random_character_name = ""
 	local character_names = {}
@@ -1041,10 +1072,18 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 			SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * (GetUnitVariable(unit, "Level") + 1)))
 			SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
 			if (advancement) then
-				if ((GetUnitVariable(unit, "Ident") == "unit-dwarven-axefighter" or GetUnitVariable(unit, "Ident") == "unit-hero-rugnur") and GetUnitVariable(unit, "LevelUp") < 1) then
-					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
-				else
-					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") * 120 / 100, "Max")
+				SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
+				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-critical-strike") and GetUnitVariable(unit, "CriticalStrike") < 1) then
+					if (GetPlayerData(GetUnitVariable(unit, "Player"), "AiEnabled")) then -- if is an AI unit, apply upgrade directly
+						SetUnitVariable(unit, "CriticalStrike", 2)
+						SetUnitVariable(unit, "CriticalStrikeChance", 15)
+						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
+					else
+						SetUnitVariable(unit, "CriticalStrike", 1)
+					end
+				elseif ((GetUnitVariable(unit, "Ident") ~= "unit-dwarven-axefighter" and GetUnitVariable(unit, "Ident") ~= "unit-hero-rugnur") or GetUnitVariable(unit, "LevelUp") > 1) then
+					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
+					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
 				end
 			end
 			if (GetUnitVariable(unit, "TraitResilient") > 0) then

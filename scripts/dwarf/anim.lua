@@ -162,6 +162,18 @@ DefineAnimations("animations-dwarven-axefighter", {
 	"label end", "unbreakable end", "wait 1",},
   Upgrade = { "set-var LevelUp.Value -= 1", "wait 1",},
   Death = AxefighterDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
+	"goto end",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --
@@ -334,11 +346,12 @@ DefineAnimations("animations-dwarven-steelclad", {
 	"label end", "unbreakable end", "wait 1",},
   Death = SteelcladDeath,
   SpellCast = {"unbreakable begin",
-	"if-var s_spell-equip-great-axe == 1 equip_great_axe",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
 	"goto end",
-	"label equip_great_axe",
-	"set-var GreatAxe.Value = 2",
-	"set-var PiercingDamageBonus.Value += 2",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
 	"goto end",
 	"label end",
 	"attack",
@@ -406,6 +419,18 @@ DefineAnimations("animations-dwarven-scout", {
 	"frame 120", "wait 43", "frame 120", "goto end",
 	"label end", "unbreakable end", "wait 1",},
   Death = ScoutDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
+	"goto end",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --

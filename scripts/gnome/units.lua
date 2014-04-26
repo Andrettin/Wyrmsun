@@ -101,6 +101,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
+  CanCastSpell = {"spell-learn-critical-strike"},
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",

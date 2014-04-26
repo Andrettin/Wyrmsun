@@ -55,6 +55,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-critical-strike",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/critical_strike.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},
 	Frame = 0,

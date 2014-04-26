@@ -48,6 +48,18 @@ DefineAnimations("animations-goblin-spearman", {
     "frame 40", "attack", "sound spear-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
   Death = GoblinSpearmanDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
+	"goto end",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --
@@ -71,6 +83,18 @@ DefineAnimations("animations-goblin-swordsman", {
     "frame 40", "attack", "sound sword-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
   Death = GoblinSwordsmanDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
+	"goto end",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --
@@ -95,6 +119,18 @@ DefineAnimations("animations-goblin-archer", {
 	Attack = {"unbreakable begin", "frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
 		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50", "unbreakable end", "wait 1",},
 	Death = GoblinArcherDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
+	"goto end",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --

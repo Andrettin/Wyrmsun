@@ -64,3 +64,17 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-build",
   Key = "\27", Hint = "~<ESC~> Cancel Construction",
   ForUnit = {"cancel-build"} } )
+
+-- Level-Up Upgrades ------------------------------------------------------
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-critical-strike",
+  Action = "cast-spell", Value = "spell-learn-critical-strike",
+  Allowed = "check-unit-variable", AllowArg = {"CriticalStrike", "Value", "==", "1"},
+  Key = "c", Hint = "Learn ~!Critical Strike",
+  ForUnit = {
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+    "unit-gnomish-recruit",
+    "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+    "unit-hero-greebo"
+  } } )

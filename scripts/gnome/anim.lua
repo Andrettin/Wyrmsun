@@ -125,6 +125,18 @@ DefineAnimations("animations-gnomish-recruit", {
     "frame 40", "attack", "sound sword-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
   Death = GnomishRecruitDeath,
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-learn-critical-strike == 1 learn_critical_strike",
+	"goto end",
+	"label learn_critical_strike",
+	"set-var CriticalStrike.Value = 2",
+	"set-var CriticalStrikeChance.Value += 15",
+	"set-var LevelUp.Value -= 1",
+	"goto end",
+	"label end",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
 })
 
 --

@@ -52,3 +52,11 @@ DefineSpell("spell-equip-great-axe",
 	"target", "self",
 	"force-use-animation"
 )
+
+DefineSpell("spell-learn-critical-strike",
+	"showname", _("learn critical strike"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"force-use-animation"
+)
