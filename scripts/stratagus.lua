@@ -285,6 +285,7 @@ DefineVariables(
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CriticalStrikeChance", {Max = 100, Value = 0, Increase = 0, Enable = true},
+	"AxeMastery", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
 	"CriticalStrike", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
 	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
 )
@@ -451,6 +452,17 @@ function StandardTriggers()
 					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
 
+				-- deactivate upgrade possibilities if level-ups are spent
+				if (GetUnitVariable(uncount[unit1], "LevelUp") <= 0) then
+					if (GetUnitVariable(uncount[unit1], "AxeMastery") == 1) then
+						SetUnitVariable(uncount[unit1], "AxeMastery", 0)
+					end
+
+					if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 1) then
+						SetUnitVariable(uncount[unit1], "CriticalStrike", 0)
+					end
+				end
+
 				if (not IsNetworkGame()) then
 					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
 						for key, value in pairs(wyr.preferences.Heroes) do
@@ -461,6 +473,12 @@ function StandardTriggers()
 								end
 
 								-- load upgrades
+								if (GetUnitVariable(uncount[unit1], "AxeMastery") < 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")) then
+									SetUnitVariable(uncount[unit1], "AxeMastery", 2)
+									UpdateUnitBonuses(uncount[unit1])
+									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
+								end
+
 								if (GetUnitVariable(uncount[unit1], "CriticalStrike") < 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")) then
 									SetUnitVariable(uncount[unit1], "CriticalStrike", 2)
 									SetUnitVariable(uncount[unit1], "CriticalStrikeChance", 15)
@@ -469,6 +487,10 @@ function StandardTriggers()
 
 								-- save upgrades
 								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
+									if (GetUnitVariable(uncount[unit1], "AxeMastery") == 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")
+										SavePreferences()
+									end
 									if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
 										SavePreferences()
@@ -979,9 +1001,9 @@ end
 
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-steelclad") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-gnomish-recruit") then
@@ -991,15 +1013,15 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	elseif (unit_type == "unit-goblin-archer") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-rugnur") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-rugnur-steelclad") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-baglur") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-thursagan") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-durstorn") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-greebo") then
 		return { "upgrade-critical-strike" }
 	else
@@ -1096,17 +1118,26 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 			SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
 			if (advancement) then
 				SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
+				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-axe-mastery") and GetUnitVariable(unit, "AxeMastery") < 1) then
+					SetUnitVariable(unit, "AxeMastery", 1)
+				end
+
 				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-critical-strike") and GetUnitVariable(unit, "CriticalStrike") < 1) then
-					if (GetPlayerData(GetUnitVariable(unit, "Player"), "AiEnabled")) then -- if is an AI unit, apply upgrade directly
+					SetUnitVariable(unit, "CriticalStrike", 1)
+				end
+
+				if (GetPlayerData(GetUnitVariable(unit, "Player"), "AiEnabled")) then -- if is an AI unit, apply upgrade already
+					if (GetUnitVariable(unit, "AxeMastery") == 1) then
+						SetUnitVariable(unit, "AxeMastery", 2)
+						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
+					elseif (GetUnitVariable(unit, "CriticalStrike") == 1) then
 						SetUnitVariable(unit, "CriticalStrike", 2)
 						SetUnitVariable(unit, "CriticalStrikeChance", 15)
 						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
-					else
-						SetUnitVariable(unit, "CriticalStrike", 1)
+					elseif ((GetUnitVariable(unit, "Ident") ~= "unit-dwarven-axefighter" and GetUnitVariable(unit, "Ident") ~= "unit-hero-rugnur") or GetUnitVariable(unit, "LevelUp") > 1) then
+						SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
+						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
 					end
-				elseif ((GetUnitVariable(unit, "Ident") ~= "unit-dwarven-axefighter" and GetUnitVariable(unit, "Ident") ~= "unit-hero-rugnur") or GetUnitVariable(unit, "LevelUp") > 1) then
-					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
-					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
 				end
 			end
 			if (GetUnitVariable(unit, "TraitResilient") > 0) then
@@ -1141,6 +1172,9 @@ function UpdateUnitBonuses(unit)
 		if (GetUnitVariable(unit, "AttackRange") == 1) then
 			piercing_damage_bonus = piercing_damage_bonus + 1
 		end
+	end
+	if (GetUnitVariable(unit, "AxeMastery") >= 2) then -- if has Axe Mastery, grant +2 piercing damage
+		piercing_damage_bonus = piercing_damage_bonus + 2
 	end
 	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
 	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)

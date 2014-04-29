@@ -122,6 +122,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/icons/attack_ground.png
+/graphics/neutral/icons/axe_mastery.png
 /graphics/neutral/icons/build_basic_structure.png
 /graphics/neutral/icons/cancel.png
 /graphics/neutral/icons/cancel_extra_1.png

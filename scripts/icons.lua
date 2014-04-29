@@ -55,6 +55,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-axe-mastery",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/axe_mastery.png"
+})
+
+DefineIcon({
 	Name = "icon-critical-strike",
 	Size = {46, 38},
 	Frame = 0,
@@ -318,6 +325,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/build_basic_structure.png"
+})
+
+DefineIcon({
+	Name = "icon-stairs",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/stairs.png"
 })
 
 DefineIcon({

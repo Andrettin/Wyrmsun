@@ -113,6 +113,9 @@ https://launchpad.net/stratagus
 - Added a gnomish patrol button for gnomish military units (graphics by Jinn).
 - When units level up, they now have the choice of learning Critical Strike (gives a chance to cause double damage when attacking; graphics by Jinn).
 - Dwarven axefighters now need a blacksmith to be built in order to upgrade to steelclads.
+- New level-up upgrade: Axe Mastery (for dwarven axefighters and dwarven steelclads).
+- Improved level-up upgrade code.
+- Increased the armor of dwarven steelclads from 3 to 4.
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).
