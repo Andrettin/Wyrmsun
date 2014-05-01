@@ -28,68 +28,102 @@
 --
 
 Quests = {
-	{ "A Bargain is Struck", -- name
-		"dwarf/icons/rugnur", -- icon
-		"A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map, Rugnur (Hero).", -- description
-		"", -- required quest
-		"dwarf", -- civilization
-		2, -- technology point reward
-		"Chaincolt Foothills"
+	ABargainIsStruck = {
+		Name = "A Bargain is Struck",
+		Icon = "dwarf/icons/rugnur",
+		Description = "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map, Rugnur (Hero).",
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Chaincolt Foothills",
+		X = 1,
+		Y = 1
 	},
-	{ "Closing the Gates",
-		"dwarf/icons/baglur",
-		"Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points, Northern Wastelands Map, Baglur (Hero).",
-		"A Bargain is Struck",
-		"dwarf",
-		2,
-		"Caverns of Chaincolt"
+	ClosingTheGates = {
+		Name = "Closing the Gates",
+		Icon = "dwarf/icons/baglur",
+		Description = "Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points, Northern Wastelands Map, Baglur (Hero).",
+		RequiredQuest = "A Bargain is Struck",
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Caverns of Chaincolt",
+		X = 2,
+		Y = 1
 	},
-	{ "Searching for the Runecrafter",
-		"dwarf/icons/thursagan",
-		"Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands\n\nRewards: 2 Dwarven Technology Points, Eastern Mines Map (Coming Soon), Thursagan (Hero).",
-		"Closing the Gates",
-		"dwarf",
-		2,
-		"Northern Wastelands"
+	SearchingForTheRunecrafter = {
+		Name = "Searching for the Runecrafter",
+		Icon = "dwarf/icons/thursagan",
+		Description = "Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands\n\nRewards: 2 Dwarven Technology Points, Eastern Mines Map (Coming Soon), Thursagan (Hero).",
+		RequiredQuest = "Closing the Gates",
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Northern Wastelands",
+		X = 3,
+		Y = 1
 	},
-	{ "Gathering Materials",
-		"dwarf/icons/miner",
-		"\n\nMap: Eastern Mines\n\nRewards: 2 Dwarven Technology Points, Shorbear Hills Map (Coming Soon).",
-		"Searching for the Runecrafter (Coming Soon)", -- added the "(Coming Soon)" here to prevent the quest from showing up before it's ready
-		"dwarf",
-		2,
-		"Eastern Mines"
+	GatheringMaterials = {
+		Name = "Gathering Materials",
+		Icon = "dwarf/icons/miner",
+		Description = "\n\nMap: Eastern Mines\n\nRewards: 2 Dwarven Technology Points, Shorbear Hills Map (Coming Soon).",
+		RequiredQuest = "Searching for the Runecrafter (Coming Soon)", -- added the "(Coming Soon)" here to prevent the quest from showing up before it's ready
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Eastern Mines",
+		X = 4,
+		Y = 1
 	},
-	{ "Hills of the Shorbear Clan",
-		"dwarf/icons/durstorn",
-		"\n\nMap: Shorbear Hills\n\nRewards: 1 Dwarven Technology Point, Durstorn (Hero).",
-		"Gathering Materials",
-		"dwarf",
-		1,
-		"Shorbear Hills"
+	HillsOfTheShorbearClan = {
+		Name = "Hills of the Shorbear Clan",
+		Icon = "dwarf/icons/durstorn",
+		Description = "\n\nMap: Shorbear Hills\n\nRewards: 1 Dwarven Technology Point, Durstorn (Hero).",
+		RequiredQuest = "Gathering Materials",
+		Civilization = "dwarf",
+		TechnologyPoints = 1,
+		Map = "Shorbear Hills",
+		X = 5,
+		Y = 1
 	},
-	{ "Towards the Caves",
-		"dwarf/icons/rugnur_older",
-		"\n\nMap: Shorbear Hills\n\nRewards: 1 Dwarven Technology Point.",
-		"Hills of the Shorbear Clan",
-		"dwarf",
-		1,
-		"Shorbear Hills"
+	TowardsTheCaves = {
+		Name = "Towards the Caves",
+		Icon = "dwarf/icons/rugnur_older",
+		Description = "\n\nMap: Shorbear Hills\n\nRewards: 1 Dwarven Technology Point.",
+		RequiredQuest = "Hills of the Shorbear Clan",
+		Civilization = "dwarf",
+		TechnologyPoints = 1,
+		Map = "Shorbear Hills",
+		X = 6,
+		Y = 1
 	},
-	{ "The Wyrm",
-		"neutral/icons/wyrm",
-		"\n\nMap: Wyrm's Lair\n\nRewards: 2 Dwarven Technology Points.",
-		"Towards the Caves",
-		"dwarf",
-		2,
-		"Wyrm's Lair"
+	TheWyrm = {
+		Name = "The Wyrm",
+		Icon = "neutral/icons/wyrm",
+		Description = "\n\nMap: Wyrm's Lair\n\nRewards: 2 Dwarven Technology Points.",
+		RequiredQuest = "Towards the Caves",
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Wyrm's Lair",
+		X = 7,
+		Y = 1
 	},
-	{ "Caverns of Flame",
-		"dwarf/icons/blacksmith",
-		"\n\nMap: Caverns of Flame\n\nRewards: 2 Dwarven Technology Points.",
-		"The Wyrm",
-		"dwarf",
-		2,
-		"Caverns of Flame"
+	CavernsOfFlame = {
+		Name = "Caverns of Flame",
+		Icon = "dwarf/icons/scepter_of_fire",
+		Description = "\n\nMap: Caverns of Flame\n\nRewards: 2 Dwarven Technology Points.",
+		RequiredQuest = "The Wyrm",
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Caverns of Flame",
+		X = 8,
+		Y = 1
+	},
+	TheMeadOfPoetry = {
+		Name = "The Mead of Poetry",
+		Icon = "dwarf/icons/alchemy",
+		Description = "\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points, Fjalar (Hero), Galar (Hero), Thjodrorir (Hero).",
+		RequiredTechnology = "upgrade-dwarven-alchemy",
+		Civilization = "dwarf",
+		TechnologyPoints = 2,
+		Map = "Fjalar's and Galar's Hall",
+		X = 9,
+		Y = 1
 	}
 }

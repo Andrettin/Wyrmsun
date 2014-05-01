@@ -481,7 +481,7 @@ function StandardTriggers()
 
 								if (GetUnitVariable(uncount[unit1], "CriticalStrike") < 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")) then
 									SetUnitVariable(uncount[unit1], "CriticalStrike", 2)
-									SetUnitVariable(uncount[unit1], "CriticalStrikeChance", 15)
+									UpdateUnitBonuses(uncount[unit1])
 									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
 								end
 
@@ -1125,20 +1125,6 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-critical-strike") and GetUnitVariable(unit, "CriticalStrike") < 1) then
 					SetUnitVariable(unit, "CriticalStrike", 1)
 				end
-
-				if (GetPlayerData(GetUnitVariable(unit, "Player"), "AiEnabled")) then -- if is an AI unit, apply upgrade already
-					if (GetUnitVariable(unit, "AxeMastery") == 1) then
-						SetUnitVariable(unit, "AxeMastery", 2)
-						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
-					elseif (GetUnitVariable(unit, "CriticalStrike") == 1) then
-						SetUnitVariable(unit, "CriticalStrike", 2)
-						SetUnitVariable(unit, "CriticalStrikeChance", 15)
-						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
-					elseif ((GetUnitVariable(unit, "Ident") ~= "unit-dwarven-axefighter" and GetUnitVariable(unit, "Ident") ~= "unit-hero-rugnur") or GetUnitVariable(unit, "LevelUp") > 1) then
-						SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
-						SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
-					end
-				end
 			end
 			if (GetUnitVariable(unit, "TraitResilient") > 0) then
 				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 1, "Max")
@@ -1175,6 +1161,9 @@ function UpdateUnitBonuses(unit)
 	end
 	if (GetUnitVariable(unit, "AxeMastery") >= 2) then -- if has Axe Mastery, grant +2 piercing damage
 		piercing_damage_bonus = piercing_damage_bonus + 2
+	end
+	if (GetUnitVariable(unit, "CriticalStrike") >= 2) then
+		SetUnitVariable(unit, "CriticalStrikeChance", 15)
 	end
 	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
 	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)

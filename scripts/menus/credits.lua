@@ -53,6 +53,7 @@ function RunShowCreditsMenu()
 	"  Francois Beerten",
 	"  Frank Loeffler",
 	"  igoku",
+	"  Mikodrak",
 	"  Oray Studios",
 	"  Paolo D'Inca",
 	"  Ransom.00",

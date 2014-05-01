@@ -114,8 +114,11 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/icons/goblin_spearman.png
 /graphics/human/buildings/lumber_mill.png
 /graphics/human/icons/soldier.png
+/graphics/missiles/big_fire.png (modified from Mikodrak's graphics)
+/graphics/missiles/big_fire_extra_1.png (modified from Mikodrak's graphics)
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
 /graphics/missiles/siege_projectile_impact.png (modified from Cuzco's graphics)
+/graphics/missiles/small_fire.png (modified from Mikodrak's graphics)
 /graphics/neutral/buildings/coal_mine.png
 /graphics/neutral/buildings/glyph.png
 /graphics/neutral/buildings/glyph_player_color.png
@@ -218,6 +221,12 @@ Leo:
 /graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/shield_3.png
 /graphics/dwarf/icons/thursagan.png
+
+Mikodrak:
+/graphics/missiles/big_fire.png (later modified by Jinn)
+/graphics/missiles/big_fire_extra_1.png (later modified by Jinn)
+/graphics/missiles/small_fire.png (later modified by Jinn)
+
 
 Oray Studios:
 /graphics/ui/gold,wood,oil,mana.png

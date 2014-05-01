@@ -256,10 +256,10 @@ function ResetTechnologiesAcquired()
 end
 
 function GetQuestTechnologyPoints(civilization, quest)
-	for i = 1,table.getn(Quests) do
-		if (Quests[i][1] == quest) then
-			if (Quests[i][5] == civilization) then
-				return Quests[i][6]
+	for key, value in pairs(Quests) do
+		if (Quests[key].Name == quest) then
+			if (Quests[key].Civilization == civilization) then
+				return Quests[key].TechnologyPoints
 			else
 				return 0
 			end

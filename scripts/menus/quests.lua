@@ -40,13 +40,12 @@ function RunQuestMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	local quest_x = 1
-	local quest_y = 1
-	for i = 1,table.getn(Quests) do
-		if (Quests[i][4] == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[i][4])) then
-			addQuestIcon(Quests[i][1], menu, Quests[i][2], Quests[i][3], offx + 23 + 4 + (54 * quest_x), offy + 10 + 4 + (46 * quest_y))
+	for key, value in pairs(Quests) do
+		if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
+			if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
+				addQuestIcon(Quests[key].Name, menu, Quests[key].Icon, Quests[key].Description, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * Quests[key].Y))
+			end
 		end
-		quest_x = quest_x + 1
 	end
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),

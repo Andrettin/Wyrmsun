@@ -42,6 +42,7 @@ DefineVariables("Mana", {Max = 255, Value = 84, Increase = 1, Enable = false}, "
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-critter", {})
+DefineUnitType("unit-dwarven-steelclad", {})
 
 -- And declare upgrade for dependency...
 
@@ -58,7 +59,15 @@ DefineSpell("spell-learn-axe-mastery",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
-	"force-use-animation"
+	"action", {
+		{"adjust-variable", {AxeMastery = {Value = 2}}},
+		{"adjust-variable", {PiercingDamageBonus = {AddValue = 2}}},
+		{"adjust-variable", {LevelUp = {AddValue = -1}}}
+	},
+	"condition", {
+		"AxeMastery", {MinValue = 0, MaxValue = 2}
+	},
+	"ai-cast", {}
 )
 
 DefineSpell("spell-learn-critical-strike",
@@ -66,5 +75,13 @@ DefineSpell("spell-learn-critical-strike",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
-	"force-use-animation"
+	"action", {
+		{"adjust-variable", {CriticalStrike = {Value = 2}}},
+		{"adjust-variable", {CriticalStrikeChance = {AddValue = 15}}},
+		{"adjust-variable", {LevelUp = {AddValue = -1}}}
+	},
+	"condition", {
+		"CriticalStrike", {MinValue = 0, MaxValue = 2}
+	},
+	"ai-cast", {}
 )

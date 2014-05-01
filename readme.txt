@@ -91,6 +91,7 @@ https://launchpad.net/stratagus
 - Added a stairs unit (graphics modified by b_o from those here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 - Added explosion impact effect graphics for siege weapon projectiles (graphics by Jinn and Cuzco).
 - New background art (by Cuzco)
+- Added fire effects for when buildings are damaged (graphics by Jinn and Mikodrak).
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.

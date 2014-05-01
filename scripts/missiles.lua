@@ -48,13 +48,13 @@ DefineMissileType("missile-impact",
   { File = "missiles/siege_projectile_impact.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
   DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
 
---DefineMissileType("missile-small-fire",
---  { File = "missiles/small_fire.png", Size = {32, 48}, Frames = 6, NumDirections = 1,
---  DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 8, Range = 1 } )
+DefineMissileType("missile-small-fire",
+  { File = "missiles/small_fire.png", Size = {32, 48}, Frames = 10, NumDirections = 1,
+  DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 16, Range = 1 } )
 
---DefineMissileType("missile-big-fire",
---  { File = "missiles/big_fire.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
---  DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 8, Range = 1 } )
+DefineMissileType("missile-big-fire",
+  { File = "missiles/big_fire.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
+  DrawLevel = 45, Class = "missile-class-fire", Sleep = 2, Speed = 16, Range = 1 } )
 
 DefineMissileType("missile-explosion",
   { File = "missiles/explosion.png", Size = {64, 64}, Frames = 22, NumDirections = 1,
@@ -81,10 +81,7 @@ DefineMissileType("missile-hit",
   Class = "missile-class-hit", Sleep = 1, Speed = 1, Range = 16 } )
 
 DefineBurningBuilding(
---  {"percent", 0, "missile", "missile-big-fire"},
---  {"percent", 50, "missile", "missile-small-fire"},
---  {"percent", 75 } -- no missile
-  {"percent", 0 },
-  {"percent", 50 },
+  {"percent", 0, "missile", "missile-big-fire"},
+  {"percent", 50, "missile", "missile-small-fire"},
   {"percent", 75 } -- no missile
 )
