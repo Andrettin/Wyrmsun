@@ -54,7 +54,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"Galar",
-				"Aye. Something he suspects. His personal guards are on alert should strange movements happen in the night, and they might even go so far as to strike down anyone who acts suspiciously. But Thjodrorir does not even imagine the depth of our betrayal!",
+				"Aye. Thievery he suspects. His personal guards are on alert should strange movements happen in the night, and they might even go so far as to strike down anyone who acts suspiciously. But Thjodrorir does not even imagine the depth of our betrayal!",
 				player,
 				{"~!Continue"},
 				{function(s)

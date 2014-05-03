@@ -54,7 +54,7 @@ DefineMissileType("missile-small-fire",
 
 DefineMissileType("missile-big-fire",
   { File = "missiles/big_fire.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
-  DrawLevel = 45, Class = "missile-class-fire", Sleep = 2, Speed = 16, Range = 1 } )
+  DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 16, Range = 1 } )
 
 DefineMissileType("missile-explosion",
   { File = "missiles/explosion.png", Size = {64, 64}, Frames = 22, NumDirections = 1,

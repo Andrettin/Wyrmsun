@@ -339,14 +339,14 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
 
 --DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-axe-3",
---  Action = "cast-spell", Value = "spell-equip-great-axe",
---  Allowed = "check-unit-variable", AllowArg = {"GreatAxe", "Value", "==", "1"},
---  Key = "e", Hint = "~!Equip Great Axe",
+--  Action = "cast-spell", Value = "spell-equip-axe-of-perun",
+--  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "1"},
+--  Key = "e", Hint = "~!Equip Toporik",
 --  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
 
 --DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
 --  Action = "attack",
---  Allowed = "check-unit-variable", AllowArg = {"GreatAxe", "Value", "==", "2"},
+--  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "2"},
 --  Key = "a", Hint = "~!Attack",
 --  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
 

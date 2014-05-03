@@ -46,12 +46,19 @@ DefineUnitType("unit-dwarven-steelclad", {})
 
 -- And declare upgrade for dependency...
 
-DefineSpell("spell-equip-great-axe",
-	"showname", _("equip great axe"),
+DefineSpell("spell-equip-axe-of-perun",
+	"showname", _("equip toporik"),
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
-	"force-use-animation"
+	"action", {
+		{"adjust-variable", {AxeOfPerun = {Value = 2}}},
+		{"adjust-variable", {PiercingDamageBonus = {AddValue = 2}}}
+	},
+	"condition", {
+		"AxeOfPerun", {MinValue = 0, MaxValue = 2}
+	},
+	"ai-cast", {}
 )
 
 DefineSpell("spell-learn-axe-mastery",

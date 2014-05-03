@@ -391,7 +391,7 @@ while (Count > 0 or FeastHallArea == nil) do
 	end
 end
 
-Count = 20
+Count = 24
 
 while (Count > 0) do
 	for x=0,(Map.Info.MapWidth - 1) do

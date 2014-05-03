@@ -78,9 +78,24 @@ function AiLandAttack()
 		end,
 
 		-- FAST AND FURIOUS
-		function() return AiForce(1, {AiSoldier(), 1}) end,
-		function() return AiWaitForce(1) end,
-		function() return AiAttackWithForce(1) end,
+		function()
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
+				AiForce(1, {AiSoldier(), 1})
+			end
+			return false
+		end,
+		function()
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
+				AiWaitForce(1)
+			end
+			return false
+		end,
+		function()
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1) then
+				AiAttackWithForce(1)
+			end
+			return false
+		end,
 
 		-- SECOND FAST ATTACK
 		function() return AiForce(1, {AiSoldier(), 4}) end,

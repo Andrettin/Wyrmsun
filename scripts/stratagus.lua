@@ -281,13 +281,13 @@ DefineVariables(
 	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"StartingLevel",
+	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CriticalStrikeChance", {Max = 100, Value = 0, Increase = 0, Enable = true},
 	"AxeMastery", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
 	"CriticalStrike", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
-	"GreatAxe", {Max = 2, Value = 0, Increase = 0, Enable = true}
+	"AxeOfPerun", {Max = 2, Value = 0, Increase = 0, Enable = true} -- 0 = not owned, 1 = owned, 2 = equipped
 )
 
 -------------------------------------------------------------------------------
@@ -1001,7 +1001,7 @@ end
 
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
+		return { "upgrade-dwarven-steelclad", "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-steelclad") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
@@ -1125,6 +1125,12 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-critical-strike") and GetUnitVariable(unit, "CriticalStrike") < 1) then
 					SetUnitVariable(unit, "CriticalStrike", 1)
 				end
+
+				-- if the unit's level is greater than the availability of level-up upgrades for it, increase its HP instead
+				if (GetUnitVariable(unit, "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident"))) + GetUnitVariable(unit, "StartingLevel")) then
+					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
+					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
+				end
 			end
 			if (GetUnitVariable(unit, "TraitResilient") > 0) then
 				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 1, "Max")
@@ -1159,11 +1165,16 @@ function UpdateUnitBonuses(unit)
 			piercing_damage_bonus = piercing_damage_bonus + 1
 		end
 	end
+	-- bonuses from abilities
 	if (GetUnitVariable(unit, "AxeMastery") >= 2) then -- if has Axe Mastery, grant +2 piercing damage
 		piercing_damage_bonus = piercing_damage_bonus + 2
 	end
 	if (GetUnitVariable(unit, "CriticalStrike") >= 2) then
 		SetUnitVariable(unit, "CriticalStrikeChance", 15)
+	end
+	-- bonuses from equipment
+	if (GetUnitVariable(unit, "AxeOfPerun") >= 2) then
+		piercing_damage_bonus = piercing_damage_bonus + 2
 	end
 	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
 	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)
