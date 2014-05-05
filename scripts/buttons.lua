@@ -67,7 +67,19 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
 
 -- Level-Up Upgrades ------------------------------------------------------
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-axe-mastery",
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
+  Action = "button", Value = 1,
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "l", Hint = "Choose ~!Level-Up Upgrade",
+  ForUnit = {
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+    "unit-gnomish-recruit",
+    "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+    "unit-hero-greebo"
+  } } )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
   Action = "cast-spell", Value = "spell-learn-axe-mastery",
   Allowed = "check-unit-variable", AllowArg = {"AxeMastery", "Value", "==", "1"},
   Key = "x", Hint = "Learn A~!xe Mastery (+2 damage)",
@@ -76,10 +88,21 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-axe-mastery",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
   } } )
 
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-critical-strike",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
   Action = "cast-spell", Value = "spell-learn-critical-strike",
   Allowed = "check-unit-variable", AllowArg = {"CriticalStrike", "Value", "==", "1"},
   Key = "c", Hint = "Learn ~!Critical Strike (chance to deal double damage)",
+  ForUnit = {
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+    "unit-gnomish-recruit",
+    "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+    "unit-hero-greebo"
+  } } )
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+  Action = "button", Value = 0,
+  Key = "\27", Hint = "~<ESC~> Cancel",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
     "unit-gnomish-recruit",

@@ -463,6 +463,13 @@ function StandardTriggers()
 					end
 				end
 
+				-- fix starting level for upgraded units
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-steelclad") then
+					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 1) then
+						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
+					end
+				end
+
 				if (not IsNetworkGame()) then
 					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
 						for key, value in pairs(wyr.preferences.Heroes) do

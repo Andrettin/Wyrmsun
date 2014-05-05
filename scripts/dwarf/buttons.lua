@@ -314,13 +314,13 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-steelclad",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
   Action = "upgrade-to", Value = "unit-dwarven-steelclad",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = "~!Upgrade to Steelclad",
   ForUnit = {"unit-dwarven-axefighter"} } )
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-rugnur-older",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-rugnur-older",
   Action = "upgrade-to", Value = "unit-hero-rugnur-steelclad",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = "~!Upgrade to Steelclad",

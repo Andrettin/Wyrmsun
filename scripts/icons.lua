@@ -55,6 +55,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-level-up",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/level_up.png"
+})
+
+DefineIcon({
 	Name = "icon-axe-mastery",
 	Size = {46, 38},
 	Frame = 0,

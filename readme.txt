@@ -92,6 +92,7 @@ https://launchpad.net/stratagus
 - Added explosion impact effect graphics for siege weapon projectiles (graphics by Jinn and Cuzco).
 - New background art (by Cuzco)
 - Added fire effects for when buildings are damaged (graphics by Jinn and Mikodrak).
+- Level-up upgrades are now in a submenu.
 
 * Quests
 - The gnomish envoy and the gnomish king in the A Bargain is Struck quest now begin at the 2nd and 3rd level of experience, respectively.
