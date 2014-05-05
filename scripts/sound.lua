@@ -145,6 +145,9 @@ MakeSound("building destroyed",
 MakeSound("axe-attack",
 	"missiles/axe.wav"
 )
+MakeSound("fist-attack",
+	"missiles/fist.wav"
+)
 MakeSound("mace-attack",
 	"missiles/mace.wav"
 )

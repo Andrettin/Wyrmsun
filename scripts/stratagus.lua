@@ -568,13 +568,13 @@ function StandardTriggers()
 								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins") then
 									Event(
 										"",
-										"You found 100 gold.",
+										"You found 25 gold.",
 										GetUnitVariable(nearby_uncount[unit2], "Player"),
 										{"~!OK"},
 										{function(s)
 											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 											PlaySound("gold-coins")
-											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 100)
+											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 25)
 										end}
 									)
 								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
