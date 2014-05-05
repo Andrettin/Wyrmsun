@@ -40,6 +40,7 @@ b_o:
 /graphics/neutral/items/key.png
 /graphics/neutral/items/potion.png
 /graphics/neutral/items/scepter.png
+/graphics/neutral/units/gryphon.png
 /graphics/neutral/units/rat.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/tilesets/forest/neutral/decorations/fern.png

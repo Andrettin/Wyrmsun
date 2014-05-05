@@ -46,6 +46,18 @@ DefineUnitType("unit-dwarven-steelclad", {})
 
 -- And declare upgrade for dependency...
 
+DefineSpell("spell-unarmed-attack",
+	"showname", _("unarmed attack"),
+	"manacost", 0,
+	"range", 1,
+	"target", "unit",
+	"action", {
+		{"adjust-vitals", "hit-points", -6, "max-multi-cast", 1}
+	},
+	"autocast", {"range", 1, "condition", {"alliance", "false"}},
+	"ai-cast", {"range", 1, "condition", {"alliance", "false"}}
+)
+
 DefineSpell("spell-equip-axe-of-perun",
 	"showname", _("equip toporik"),
 	"manacost", 0,

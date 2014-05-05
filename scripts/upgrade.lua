@@ -115,7 +115,7 @@ end
 
 function DefineAllowSpecialUnits(flags)
 	local units = {
-		"unit-critter",
+		"unit-critter", "unit-gryphon",
 		"unit-gold-mine", "unit-coal-mine",
 		"unit-mushroom", "unit-mushroom-patch", "unit-flowers", "unit-large-flower",
 		"unit-fern", "unit-twigs", "unit-log",

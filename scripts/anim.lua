@@ -89,6 +89,28 @@ DefineAnimations("animations-rat", {
   Death = RatDeath,
 })
 
+--
+-- Gryphon
+--
+
+local GryphonStill = {"frame 0", "wait 6", "frame 5", "wait 6", "frame 10", "wait 6",
+    "frame 15", "wait 6",}
+local GryphonMove = {"unbreakable begin", "frame 0", "wait 1", "frame 0", "move 3", "wait 1",
+    "frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 2", "wait 1", "frame 5", "move 3", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 10", "move 3", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 1", "frame 0", "move 3", "unbreakable end", "wait 1",}
+local GryphonDeath = {"unbreakable begin", "frame 35", "wait 5", "frame 40", "wait 5", "frame 45", "wait 5",
+    "frame 50", "wait 5", "frame 55", "wait 5", "frame 60", "wait 5",
+    "frame 60", "unbreakable end", "wait 1",}
+
+DefineAnimations("animations-gryphon", {
+  Still = GryphonStill,
+  Move = GryphonMove,
+  Death = GryphonDeath,
+})
+
 DefineAnimations("animations-building", {
   Still = BuildingStill,
   Research = BuildingStill,

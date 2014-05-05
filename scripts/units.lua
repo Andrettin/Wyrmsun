@@ -142,6 +142,43 @@ DefineUnitType("unit-critter", { Name = "Critter",
 } )
 
 
+DefineUnitType("unit-gryphon", { Name = "Gryphon",
+  Image = {"file", "neutral/units/gryphon_rider.png", "size", {100, 100}},
+  DrawLevel = 45,
+  Animations = "animations-gryphon", Icon = "icon-rat",
+  Speed = 14,
+  HitPoints = 60,
+  DrawLevel = 60,
+  TileSize = {2, 2}, BoxSize = {63, 63},
+  SightRange = 6, ComputerReactionRange = 8, PersonReactionRange = 6,
+  Armor = 0, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  MaxAttackRange = 1,
+  Priority = 65,
+  Points = 150,
+  Demand = 1,
+  Type = "fly",
+--  ShadowFly = {Value = 1, Enable = true}, -- deactivated the shadow because it was appearing on top of the unit
+  RightMouseAction = "move",
+  CanAttack = true,
+  CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+  AirUnit = true,
+  DetectCloak = true,
+  RandomMovementProbability = 1,
+  organic = true,
+  Coward = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "critter-acknowledge",
+--    "ready", "critter-ready",
+--    "help", "critter-help",
+    "dead", "rat-dead" }
+--    "selected", "gryphon-rider-selected",
+--    "acknowledge", "gryphon-rider-acknowledge",
+--    "ready", "gryphon-rider-ready",
+--    "help", "basic human voices help 1",
+--    "dead", "basic human voices dead"}
+  } )
+
 --UnitTypeFiles["unit-gold-mine"] = {
 --  swamp = "tilesets/swamp/neutral/buildings/gold_mine.png"
 --}

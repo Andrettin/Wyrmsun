@@ -117,6 +117,7 @@ https://launchpad.net/stratagus
 - New level-up upgrade: Axe Mastery (for dwarven axefighters and dwarven steelclads).
 - Improved level-up upgrade code.
 - Increased the armor of dwarven steelclads from 3 to 4.
+- Added Gryphon (unit graphics by b_o).
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).

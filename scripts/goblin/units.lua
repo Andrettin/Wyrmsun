@@ -85,7 +85,7 @@ DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
-  CanCastSpell = {"spell-learn-critical-strike"},
+  CanCastSpell = {"spell-unarmed-attack", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-goblin-voices-acknowledge",

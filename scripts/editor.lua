@@ -91,6 +91,7 @@ local editor_types = {
    "unit-carrots",
 
    "unit-critter",
+   "unit-gryphon",
 
 --- - - - - - - - - - - - - - - - - - -
 

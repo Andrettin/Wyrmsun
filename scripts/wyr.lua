@@ -87,10 +87,22 @@ if (OldCreateUnit == nil) then
 			GoblinEquivalent[t[i][2]] = t[i][3]
 		end
 	end
+
+	t = {
+--		{"unit-critter", "unit-gryphon"}
+	}
+
+	ForestEquivalent = {}
+	SwampEquivalent = {}
+
+	for i=1,table.getn(t) do
+		ForestEquivalent[t[i][2]] = t[i][1]
+		SwampEquivalent[t[i][1]] = t[i][2]
+	end
 end
 
 -- Convert a unit type to the equivalent for a different race
-function ConvertUnitType(unittype, race)
+function ConvertUnitType(unittype, race, terrain)
 	local equiv
 
 	if (race == "dwarf") then
@@ -99,6 +111,12 @@ function ConvertUnitType(unittype, race)
 		equiv = GnomishEquivalent[unittype]
 	elseif (race == "goblin") then
 		equiv = GoblinEquivalent[unittype]
+	end
+
+	if (terrain == "forest") then
+		equiv = ForestEquivalent[unittype]
+	elseif (terrain == "swamp") then
+		equiv = SwampEquivalent[unittype]
 	end
 
 	if (equiv ~= nil) then
@@ -126,15 +144,15 @@ function CreateUnit(unittype, player, pos)
   end
 
   -- Leave neutral the way it is
-  if (player == 15) then
-    return OldCreateUnit(unittype, player, pos)
-  end
+--  if (player == 15) then
+--    return OldCreateUnit(unittype, player, pos)
+--  end
 
   if (Players[player].Type == PlayerNobody) then
     return nil
   end
 
-  unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"))
+  unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 
   return OldCreateUnit(unittype, player, pos)
 end
@@ -188,14 +206,14 @@ function SetPlayerData(player, data, arg1, arg2)
 	if (data == "RaceName") then
 		if (GameSettings.NumUnits == 1) then
 			if (player ~= 15 and Players[player].Type ~= PlayerNobody) then
-				local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"))
+				local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 			end
 		elseif (GameSettings.NumUnits == 2) then
 			if (player ~= 15 and Players[player].Type ~= PlayerNobody) then
-				local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"))
+				local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"))
+				unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})

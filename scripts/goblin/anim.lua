@@ -104,7 +104,14 @@ DefineAnimations("animations-goblin-archer", {
 		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50", "unbreakable end", "wait 1",},
 	Death = GoblinArcherDeath,
   SpellCast = {"unbreakable begin",
-	"attack",
+	"if-var s_spell-unarmed-attack == 1 unarmed_attack",
+	"goto end",
+	"label unarmed_attack",
+	"frame 80", "wait 3", "frame 85", "wait 3", "frame 90", "wait 3",
+	"frame 95", "attack", "sound sword-attack", "wait 5", "frame 0", "wait 10",
+	"frame 0",
+	"goto end",
+	"label end",
 	"unbreakable end",
 	"wait 1",}
 })
