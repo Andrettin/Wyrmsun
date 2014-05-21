@@ -80,11 +80,11 @@ DefineModifier("upgrade-dwarven-shield-2",
 
 DefineModifier("upgrade-dwarven-throwing-axe-1",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-dwarven-scout"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineModifier("upgrade-dwarven-throwing-axe-2",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-dwarven-scout"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineDependency("unit-dwarven-scout",
 	{"unit-dwarven-lumber-mill"})

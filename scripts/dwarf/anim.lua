@@ -437,6 +437,35 @@ DefineAnimations("animations-dwarven-ballista", {
 })
 
 --
+-- Gryphon Rider
+--
+
+local GryphonRiderStill = {"frame 0", "wait 6", "frame 5", "wait 6", "frame 10", "wait 6",
+    "frame 15", "wait 6",}
+local GryphonRiderMove = {"unbreakable begin", "frame 0", "wait 1", "frame 0", "move 3", "wait 1",
+    "frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 2", "wait 1", "frame 5", "move 3", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 10", "move 3", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 1", "frame 0", "move 3", "unbreakable end", "wait 1",}
+local GryphonRiderDeath = {"unbreakable begin", "frame 35", "wait 5", "frame 40", "wait 5", "frame 45", "wait 5",
+    "frame 50", "wait 5", "frame 55", "wait 5", "frame 60", "wait 5",
+    "frame 60", "unbreakable end", "wait 1",}
+
+DefineAnimations("animations-dwarven-gryphon-rider", {
+  Still = GryphonRiderStill,
+  Move = GryphonRiderMove,
+  Attack = {"unbreakable begin", "frame 0", "wait 6", "frame 5", "wait 6",
+    "frame 10", "wait 6", "frame 15", "wait 6", "frame 15", "wait 1",
+    "frame 20", "wait 6", "frame 25", "wait 6",
+    "frame 30", "attack", "sound throwing-axe", "wait 8",
+    "frame 0", "wait 6", "frame 5", "wait 6", "frame 10", "wait 6",
+    "frame 15", "wait 6",
+    "frame 0", "unbreakable end", "wait 1", },
+  Death = GryphonRiderDeath,
+})
+
+--
 -- Dwarven Guard Tower
 --
 

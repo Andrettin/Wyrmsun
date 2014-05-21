@@ -141,17 +141,16 @@ DefineUnitType("unit-critter", { Name = "Critter",
     "dead", "rat-dead" }
 } )
 
-
 DefineUnitType("unit-gryphon", { Name = "Gryphon",
-  Image = {"file", "neutral/units/gryphon_rider.png", "size", {100, 100}},
+  Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
   DrawLevel = 45,
-  Animations = "animations-gryphon", Icon = "icon-rat",
+  Animations = "animations-gryphon", Icon = "icon-gryphon",
   Speed = 14,
   HitPoints = 60,
   DrawLevel = 60,
   TileSize = {2, 2}, BoxSize = {63, 63},
   SightRange = 6, ComputerReactionRange = 8, PersonReactionRange = 6,
-  Armor = 0, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Armor = 0, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
   MaxAttackRange = 1,
   Priority = 65,
   Points = 150,
@@ -165,18 +164,13 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
   DetectCloak = true,
   RandomMovementProbability = 1,
   organic = true,
-  Coward = true,
+  Coward = false,
   Sounds = {
     "selected", "click",
 --    "acknowledge", "critter-acknowledge",
---    "ready", "critter-ready",
+    "ready", "gryphon-ready",
 --    "help", "critter-help",
-    "dead", "rat-dead" }
---    "selected", "gryphon-rider-selected",
---    "acknowledge", "gryphon-rider-acknowledge",
---    "ready", "gryphon-rider-ready",
---    "help", "basic human voices help 1",
---    "dead", "basic human voices dead"}
+    "dead", "gryphon-dead" }
   } )
 
 --UnitTypeFiles["unit-gold-mine"] = {
@@ -656,6 +650,22 @@ DefineUnitType("unit-cheese", { Name = "Cheese",
 DefineUnitType("unit-carrots", { Name = "Carrots",
   Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
   Animations = "animations-gold-sack", Icon = "icon-carrots",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 1,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  NonSolid = true, 
+  Sounds = {} } )
+
+DefineUnitType("unit-gryphon-feather", { Name = "Gryphon Feather",
+  Image = {"file", "neutral/items/gryphon_feather.png", "size", {28, 26}},
+  Animations = "animations-gold-sack", Icon = "icon-gryphon-feather",
   NeutralMinimapColor = {255, 255, 0},
   Speed = 0,
   HitPoints = 1,

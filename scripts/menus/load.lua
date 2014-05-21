@@ -4,7 +4,6 @@ function LoadGame(s)
 
   while (loop) do
     InitGameVariables()
-    Load("scripts/quests.lua")
     CleanRawTiles()
     local this_player_objectives = Objectives
     Objectives = { {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }

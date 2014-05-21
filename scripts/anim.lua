@@ -108,6 +108,11 @@ local GryphonDeath = {"unbreakable begin", "frame 35", "wait 5", "frame 40", "wa
 DefineAnimations("animations-gryphon", {
   Still = GryphonStill,
   Move = GryphonMove,
+  Attack = {"unbreakable begin", "frame 0", "wait 6", "frame 5", "wait 6",
+    "frame 10", "wait 6", "frame 15", "wait 6", "frame 15", "wait 1",
+    "frame 20", "wait 6", "frame 25", "wait 6",
+    "frame 30", "attack", "sound claw-attack", "wait 8",
+    "frame 0", "unbreakable end", "wait 1", },
   Death = GryphonDeath,
 })
 

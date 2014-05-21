@@ -204,6 +204,38 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
     "dead", "explosion"
 } } )
 
+DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
+  Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
+  DrawLevel = 45,
+  Animations = "animations-dwarven-gryphon-rider", Icon = "icon-gryphon",
+  Costs = {"time", 250, "gold", 1750, "wood", 750},
+  Speed = 10,
+  HitPoints = 100,
+  DrawLevel = 60,
+  TileSize = {2, 2}, BoxSize = {63, 63},
+  SightRange = 6, ComputerReactionRange = 8, PersonReactionRange = 6,
+  Armor = 0, BasicDamage = 4, PiercingDamage = 8, Missile = "missile-throwing-axe",
+  MaxAttackRange = 4,
+  Priority = 65,
+  Points = 150,
+  Demand = 1,
+  Type = "fly",
+--  ShadowFly = {Value = 1, Enable = true}, -- deactivated the shadow because it was appearing on top of the unit
+  RightMouseAction = "attack",
+  CanAttack = true,
+  CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+  AirUnit = true,
+  DetectCloak = true,
+  organic = true,
+  SelectableByRectangle = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "critter-acknowledge",
+    "ready", "gryphon-ready",
+--    "help", "critter-help",
+    "dead", "gryphon-dead"
+} } )
+
 DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
   Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
   Animations = "animations-building", Icon = "icon-dwarven-town-hall",

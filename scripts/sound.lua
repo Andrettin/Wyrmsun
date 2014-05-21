@@ -145,6 +145,9 @@ MakeSound("building destroyed",
 MakeSound("axe-attack",
 	"missiles/axe.wav"
 )
+MakeSound("claw-attack",
+	"missiles/claws.wav"
+)
 MakeSound("fist-attack",
 	"missiles/fist.wav"
 )
@@ -185,7 +188,15 @@ MapSound("lumber-mill-selected", "lumbermill")
 
 MapSound("gold-mine-help", "basic-dwarf-voices-help")
 MapSound("critter-help", "basic-dwarf-voices-help")
-MakeSound("rat-dead", "neutral/units/rat-death.wav")
+MakeSound("rat-dead", "neutral/rat_death.wav")
+MakeSound("gryphon-ready", {
+	"neutral/gryphon/gryphon_shriek_1.wav",
+	"neutral/gryphon/gryphon_shriek_2.wav"
+})
+MakeSound("gryphon-dead", {
+	"neutral/gryphon/gryphon_death_1.wav",
+	"neutral/gryphon/gryphon_death_2.wav"
+})
 
 --	Define sounds used by game
 --

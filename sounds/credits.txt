@@ -12,12 +12,17 @@ Battle for Wesnoth Team:
 /sounds/missiles/axe.wav
 /sounds/missiles/bow.wav
 /sounds/missiles/bow_hit.wav
+/sounds/missiles/claws.wav
 /sounds/missiles/fist.wav
 /sounds/missiles/mace.wav
 /sounds/missiles/spear-1.wav
 /sounds/missiles/spear-2.wav
 /sounds/missiles/sword.wav
 /sounds/missiles/throwing_axe_hit.wav
+/sounds/neutral/gryphon/gryphon_death_1.wav
+/sounds/neutral/gryphon/gryphon_death_2.wav
+/sounds/neutral/gryphon/gryphon_shriek_1.wav
+/sounds/neutral/gryphon/gryphon_shriek_2.wav
 /sounds/ui/click.wav
 
 b_o:

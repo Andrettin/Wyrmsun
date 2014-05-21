@@ -54,6 +54,9 @@ DefineSpell("spell-unarmed-attack",
 	"action", {
 		{"adjust-vitals", "hit-points", -6, "max-multi-cast", 1}
 	},
+	"condition", {
+		"AirUnit", "false"
+	},
 	"autocast", {"range", 1, "condition", {"alliance", "false"}},
 	"ai-cast", {"range", 1, "condition", {"alliance", "false"}}
 )

@@ -320,6 +320,17 @@ function AiCatapult()
 end
 
 --
+--  Flying rider of the current race.
+--
+function AiFlyingRider()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-gryphon-rider"
+	else
+		return "unit-dwarven-gryphon-rider"
+	end
+end
+
+--
 --  Watch Tower of the current civilization.
 --
 function AiWatchTower()

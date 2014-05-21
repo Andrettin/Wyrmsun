@@ -1016,6 +1016,8 @@ function BuildProgramStartMenu()
     function() RunLoadGameMenu(); menu:stop(1) end)
   menu:addFullButton(replay_game_name, "r", offx + 208, offy + 104 + 36*3,
     function() RunReplayGameMenu(); menu:stop(1) end)
+--  menu:addFullButton("~!Achievements", "a", offx + 208, offy + 104 + 36*3,
+--    function() RunAchievementsMenu(); menu:stop(1) end)
   menu:addFullButton(options_name, "o", offx + 208, offy + 104 + 36*4,
     function() RunOptionsMenu(); menu:stop(1) end)
   menu:addFullButton(map_editor_name, "e", offx + 208, offy + 104 + 36*5,
@@ -1088,6 +1090,7 @@ Load("scripts/menus/results.lua")
 Load("scripts/menus/network.lua")
 Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
+Load("scripts/menus/achievements.lua")
 
 function GameStarting()
   if (wyr.preferences.ShowTips and not IsReplayGame()) then

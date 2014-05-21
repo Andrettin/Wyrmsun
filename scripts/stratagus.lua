@@ -1013,6 +1013,8 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
 		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-dwarven-gryphon-rider") then
+		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-gnomish-recruit") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-goblin-spearman") then
@@ -1274,6 +1276,7 @@ local defaultPreferences = {
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
 	},
+	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",
 	TheScepterOfFireMonarch = "",
 	TheScepterOfFireRaiderFaction = "",
@@ -1442,5 +1445,6 @@ Load("scripts/cheats.lua")
 Load("scripts/map_generation.lua")
 Load("scripts/quests.lua")
 Load("scripts/events.lua")
+Load("scripts/achievements.lua")
 
 DebugPrint("... ready!\n")

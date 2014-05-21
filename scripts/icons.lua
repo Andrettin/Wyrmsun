@@ -104,6 +104,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-gryphon-rider",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gryphon.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-town-hall",
 	Size = {46, 38},
 	Frame = 0,
@@ -335,6 +342,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gryphon",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gryphon.png"
+})
+
+DefineIcon({
 	Name = "icon-stairs",
 	Size = {46, 38},
 	Frame = 0,
@@ -395,6 +409,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/carrots.png"
+})
+
+DefineIcon({
+	Name = "icon-gryphon-feather",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gryphon_feather.png"
 })
 
 DefineIcon({

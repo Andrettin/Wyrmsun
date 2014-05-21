@@ -47,6 +47,7 @@ local editor_types = {
    "unit-dwarven-steelclad",
    "unit-dwarven-scout",
    "unit-dwarven-ballista",
+   "unit-dwarven-gryphon-rider",
 
    "unit-dwarven-town-hall",
    "unit-dwarven-mushroom-farm",
@@ -89,6 +90,7 @@ local editor_types = {
    "unit-potion-of-decay",
    "unit-cheese",
    "unit-carrots",
+   "unit-gryphon-feather",
 
    "unit-critter",
    "unit-gryphon",
