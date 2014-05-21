@@ -34,6 +34,32 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
+-- worker specific actions ---------------------------------------------------
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
+  Action = "repair",
+  Key = "r", Hint = "~!Repair",
+  ForUnit = {"unit-goblin-worker"} } )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
+  Action = "harvest",
+  Key = "h", Hint = "~!Harvest Lumber/Mine Gold",
+  ForUnit = {"unit-goblin-worker"} } )
+
+-- build basic/advanced structs -----------------------------------------------
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
+  Action = "button", Value = 1,
+  Key = "b", Hint = "~!Build Basic Structure",
+  ForUnit = {"unit-goblin-worker"} } )
+
+-- simple buildings gnome -----------------------------------------------------
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+  Action = "button", Value = 0,
+  Key = "\27", Hint = "~<ESC~> Cancel",
+  ForUnit = {"unit-goblin-worker"} } )
+
 -- buildings commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",

@@ -19,6 +19,9 @@ b_o:
 /graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_spearman.png
 /graphics/goblin/units/goblin_swordsman.png
+/graphics/goblin/units/goblin_worker.png
+/graphics/goblin/units/goblin_worker_with_gold.png
+/graphics/goblin/units/goblin_worker_with_lumber.png
 /graphics/missiles/dwarven_ballista_bolt.png
 /graphics/missiles/goblin_arrow.png
 /graphics/missiles/throwing_axe.png

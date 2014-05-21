@@ -56,7 +56,7 @@ if (OldCreateUnit == nil) then
 
 	local t = {
 		{"unit-dwarven-town-hall", "unit-gnomish-town-hall"},
-		{"unit-dwarven-miner", "unit-gnomish-worker"},
+		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
 		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm"},
 		{"unit-dwarven-barracks", "unit-gnomish-barracks"},
 		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
@@ -71,19 +71,19 @@ if (OldCreateUnit == nil) then
 		if (i ~= 6) then
 			DwarvenEquivalent[t[i][2]] = t[i][1]
 		end
-		if (i == 5 or i == 6) then
+		if (i == 2 or i == 5 or i == 6) then
 			DwarvenEquivalent[t[i][3]] = t[i][1]
 		end
 		if (i ~= 6) then
 			GnomishEquivalent[t[i][1]] = t[i][2]
 		end
-		if (i == 5) then
+		if (i == 2 or i == 5) then
 			GnomishEquivalent[t[i][3]] = t[i][2]
 		end
-		if (i == 5 or i == 6) then
+		if (i == 2 or i == 5 or i == 6) then
 			GoblinEquivalent[t[i][1]] = t[i][3]
 		end
-		if (i == 5) then
+		if (i == 2 or i == 5) then
 			GoblinEquivalent[t[i][2]] = t[i][3]
 		end
 	end
@@ -113,9 +113,9 @@ function ConvertUnitType(unittype, race, terrain)
 		equiv = GoblinEquivalent[unittype]
 	end
 
-	if (terrain == "forest") then
+	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then
 		equiv = ForestEquivalent[unittype]
-	elseif (terrain == "swamp") then
+	elseif (terrain == "swamp" and SwampEquivalent[unittype] ~= nil) then
 		equiv = SwampEquivalent[unittype]
 	end
 

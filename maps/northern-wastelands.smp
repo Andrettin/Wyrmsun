@@ -1,6 +1,6 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer","neutral")
+DefinePlayerTypes("person","computer","neutral","rescue-passive")
 PresentMap("Northern Wastelands", 1, 56, 71, 1)
 MapWorld = "Nidavellir"
 MapRequiredQuest = "Closing the Gates"

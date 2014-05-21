@@ -1233,7 +1233,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") and GetFactionExists("Thursagan")) then
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") and GetFactionExists("Thursagan") and GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Find Thursagan and bring him to your Mead Hall") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -1333,7 +1333,110 @@ AddTrigger(
 				return false
 			end
 		)
+
+		-- Find Gryphon Riders
+		AddTrigger(
+			function()
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
+						local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+						if (unit_quantity > 0) then
+							player = GetThisPlayer()
+							return true
+						end
+					end
+				end
+				return false
+			end,
+			function()
+				Event(
+					"Gryphon Rider",
+					"We'd like to speak with ye.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Gnomish Envoy",
+						"Aah! What is that?!",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Baglur",
+							"Is that... is that a gryphon?",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Gryphon Rider",
+								"Aye. Will ye speak with us now?",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Rugnur",
+									"What do ye want, gryphon rider?",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Gryphon Rider",
+										"Are ye looking for a runemaster?",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Rugnur",
+											"Well, um, aye. Why, can ye help us?",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Gryphon Rider",
+												"Aye. If ye kill the goblins, we'll help ye.",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Baglur",
+													"Sure, we'll help ye fight goblins.",
+													player,
+													{"~!Continue"},
+													{function(s)
+													end},
+													"dwarf/icons/baglur.png"
+												)
+												end},
+												"dwarf/icons/dwarven_scout.png"
+											)
+											end},
+											"dwarf/icons/rugnur.png"
+										)
+										end},
+										"dwarf/icons/dwarven_scout.png"
+									)
+									end},
+									"dwarf/icons/rugnur.png"
+								)
+								end},
+								"dwarf/icons/dwarven_scout.png"
+							)
+							end},
+							"dwarf/icons/baglur.png"
+						)
+						end},
+						"gnome/icons/gnomish_recruit.png"
+					)
+					end},
+					"dwarf/icons/dwarven_scout.png"
+				)
+				return false
+			end
+		)
 		
+		-- if Thursagan's smithy is found by a gryphon rider
 		AddTrigger(
 			function()
 				for i=0,14 do
@@ -1342,7 +1445,49 @@ AddTrigger(
 						uncount = GetUnits(GetFactionPlayer("Thursagan"))
 						for unit1 = 1,table.getn(uncount) do 
 							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-blacksmith") then
-								if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+								if (GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+									player = i
+									return true
+								end
+							end
+						end
+					end
+				end
+				return false
+			end,
+			function()
+				Event(
+					"Thursagan",
+					"Go away, ye birds! Or I shall burn ye out of the air!",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Baglur",
+						"He doesn't want to talk to the gryphon riders, apparently. I think we'll have to get someone there he will talk to...",
+						player,
+						{"~!Continue"},
+						{function(s)
+						end},
+						"dwarf/icons/baglur.png"
+					)
+					end},
+					"dwarf/icons/thursagan.png"
+				)
+				return false
+			end
+		)
+
+		-- if Thursagan's smithy is found by a non-gryphon rider
+		AddTrigger(
+			function()
+				for i=0,14 do
+					if (GetArrayIncludes(Objectives[i + 1], "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-blacksmith")) then
+						local uncount = 0
+						uncount = GetUnits(GetFactionPlayer("Thursagan"))
+						for unit1 = 1,table.getn(uncount) do 
+							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-blacksmith") then
+								if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
 									player = i
 									return true
 								end
@@ -1525,4 +1670,5 @@ AddTrigger(
 		return false
 	end
 )
+
 end

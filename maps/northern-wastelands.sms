@@ -97,6 +97,10 @@ SetPlayerData(2, "Resources", "oil", 0)
 SetPlayerData(2, "RaceName", "dwarf")
 SetAiType(2, "passive")
 SetPlayerData(2, "Name", "Thursagan")
+SetPlayerData(3, "RaceName", "dwarf")
+SetAiType(3, "passive")
+SetPlayerData(3, "Name", "Gryphon Riders")
+SetStartView(3, 2, 35)
 SetPlayerData(15, "RaceName", "neutral")
 
 local RandomNumber = 0
@@ -159,6 +163,10 @@ elseif (RandomNumber == 4) then
 	unit = CreateUnit("unit-dwarven-blacksmith", 2, {50, 63})
 end
 
+-- create gryphon riders
+unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
+unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
+
 function NorthernWastelandsEnemy(enemy_x, enemy_y)
 	RandomNumber = SyncRand(2)
 	if (RandomNumber == 0) then
@@ -167,6 +175,21 @@ function NorthernWastelandsEnemy(enemy_x, enemy_y)
 		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
 	end
 
+	RandomNumber = SyncRand(2)
+	if (RandomNumber == 0) then
+		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+	elseif (RandomNumber == 1) then
+		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+	end
+
+	RandomNumber = SyncRand(2)
+	if (RandomNumber == 0) then
+		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+	elseif (RandomNumber == 1) then
+		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+	end
+
+	-- added two more goblins per group, as it was too easy to find Thursagan
 	RandomNumber = SyncRand(2)
 	if (RandomNumber == 0) then
 		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})

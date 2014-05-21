@@ -150,6 +150,8 @@ function AiWorker()
 		return "unit-dwarven-miner"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-worker"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-worker"
 	else
 		return "unit-dwarven-miner"
 	end

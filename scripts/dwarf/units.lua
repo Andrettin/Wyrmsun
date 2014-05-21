@@ -228,6 +228,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
   DetectCloak = true,
   organic = true,
   SelectableByRectangle = true,
+  CanCastSpell = {"spell-learn-critical-strike"},
   Sounds = {
     "selected", "click",
 --    "acknowledge", "critter-acknowledge",

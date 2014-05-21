@@ -43,7 +43,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
-    "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
     "dwarf-group"} } )
@@ -55,7 +55,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
-    "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-dwarven-guard-tower",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
@@ -86,7 +86,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit",
-    "unit-goblin-spearman",
+    "unit-goblin-worker", "unit-goblin-spearman",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
     "dwarf-group"} } )
@@ -176,7 +176,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-return-goods",
   Action = "return-goods",
   Key = "g", Hint = "Return with ~!Goods",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker" } } )
 
 -- build basic/advanced structs -----------------------------------------------
 
