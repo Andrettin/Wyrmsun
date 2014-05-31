@@ -788,7 +788,7 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases
-	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan") then
+	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan" and (opponents:getSelected() == 0 or opponents:getSelected() >= 2)) then
 		person_player = 2
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
@@ -802,7 +802,7 @@ function RunSinglePlayerGameMenu()
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	elseif (mapinfo.description == "Brown Hills") then
+	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3)) then
 		person_player = 3
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
