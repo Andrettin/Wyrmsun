@@ -120,6 +120,7 @@ https://launchpad.net/stratagus
 - Increased the armor of dwarven steelclads from 3 to 4.
 - Added Gryphon (unit graphics by b_o and icon by Jinn).
 - Added dwarven Gryphon Rider (unit graphics by b_o).
+- Added Goblin Worker (unit graphics by b_o and icon by Jinn).
 
 * Upgrades
 - Added two melee axe upgrades for the dwarves (stone axe and great axe graphics by Leo).

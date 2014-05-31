@@ -67,7 +67,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
   Key = "i", Hint = "Train Goblin ~!Impaler",
   ForUnit = {"unit-dwarven-barracks"} } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-spearman",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-archer",
   Action = "train-unit", Value = "unit-goblin-archer",
   Key = "a", Hint = "Train ~!Archer",
   ForUnit = {"unit-dwarven-barracks"} } )

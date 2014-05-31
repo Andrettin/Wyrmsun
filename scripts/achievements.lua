@@ -31,7 +31,7 @@ Achievements = {
 	SafePassage = {
 		Name = "Safe Passage",
 		Icon = "dwarf/icons/dwarven_steelclad",
-		Description = "Kill the raider leader during the A Bargain is Struck quest.",
+		Description = "Destroy the raiders during the A Bargain is Struck quest.",
 		X = 1,
 		Y = 1
 	},

@@ -57,8 +57,8 @@ DefineSpell("spell-unarmed-attack",
 	"condition", {
 		"AirUnit", "false"
 	},
-	"autocast", {"range", 1, "condition", {"alliance", "false"}},
-	"ai-cast", {"range", 1, "condition", {"alliance", "false"}}
+	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only"}},
+	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only"}}
 )
 
 DefineSpell("spell-equip-axe-of-perun",

@@ -107,7 +107,7 @@ DefineIcon({
 	Name = "icon-dwarven-gryphon-rider",
 	Size = {46, 38},
 	Frame = 0,
-	File = "neutral/icons/gryphon.png"
+	File = "dwarf/icons/gryphon_rider.png"
 })
 
 DefineIcon({
@@ -297,6 +297,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "gnome/icons/patrol_land.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-worker",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/goblin_worker.png"
 })
 
 DefineIcon({

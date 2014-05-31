@@ -5,11 +5,6 @@ function LoadGame(s)
   while (loop) do
     InitGameVariables()
     CleanRawTiles()
-    local this_player_objectives = Objectives
-    Objectives = { {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
-    for i=1,15 do
-	Objectives[i] = {"- Destroy the enemy"}
-    end
     StartSavedGame(s)
     if (GameResult ~= GameRestart) then
       loop = false

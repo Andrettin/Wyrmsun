@@ -36,7 +36,7 @@
 DefineUnitType("unit-goblin-worker", { Name = "Goblin Worker",
   Image = {"file", "goblin/units/goblin_worker.png", "size", {72, 72}},
   DrawLevel = 19,
-  Animations = "animations-gnomish-worker", Icon = "icon-goblin-spearman",
+  Animations = "animations-gnomish-worker", Icon = "icon-goblin-worker",
   Costs = {"time", 45, "gold", 400},
   Speed = 10,
   HitPoints = 30,

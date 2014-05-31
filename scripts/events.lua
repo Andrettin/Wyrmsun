@@ -109,7 +109,7 @@ function EventTriggers()
 							if (i ~= greebo_player) then
 								SetDiplomacy(greebo_player, "enemy", i)
 								SetDiplomacy(i, "enemy", greebo_player)
-								table.insert(Objectives[i + 1], "- Kill Greebo (optional)")
+								AddPlayerObjective(i, "- Kill Greebo (optional)")
 							end
 						end
 						SetPlayerData(greebo_player, "Name", "Greebo")
@@ -121,7 +121,7 @@ function EventTriggers()
 				-- Greebo's speech
 				AddTrigger(
 					function()
-						if (GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Kill Greebo (optional)")) then
+						if (PlayerHasObjective(GetThisPlayer(), "- Kill Greebo (optional)")) then
 							local uncount = 0
 							uncount = GetUnits(GetFactionPlayer("Greebo"))
 							for unit1 = 1,table.getn(uncount) do 
@@ -184,7 +184,7 @@ function EventTriggers()
 										SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 400)
 										for i=0,14 do
 											if (GetPlayerData(i, "Name") ~= "Greebo") then
-												RemoveElementFromArray(Objectives[i + 1], "- Kill Greebo (optional)")
+												RemovePlayerObjective(i, "- Kill Greebo (optional)")
 											end
 										end
 									end}
@@ -263,12 +263,12 @@ function EventTriggers()
 								else
 									SetDiplomacy(andvari_player, "enemy", i)
 									SetDiplomacy(i, "enemy", andvari_player)
-									table.insert(Objectives[i + 1], "- Destroy Andvari's Mushroom Farm (optional)")
+									AddPlayerObjective(i, "- Destroy Andvari's Mushroom Farm (optional)")
 								end
 							end
 						end
 						SetPlayerData(andvari_player, "Name", "Andvari")
-						table.insert(Objectives[player + 1], "- Destroy Andvari's Mushroom Farm (optional)")
+						AddPlayerObjective(player, "- Destroy Andvari's Mushroom Farm (optional)")
 					end}
 				)
 				return false
@@ -299,7 +299,7 @@ function EventTriggers()
 						SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 1200)
 						for i=0,14 do
 							if (GetPlayerData(i, "Name") ~= "Andvari") then
-								RemoveElementFromArray(Objectives[i + 1], "- Destroy Andvari's Mushroom Farm (optional)")
+								RemovePlayerObjective(i, "- Destroy Andvari's Mushroom Farm (optional)")
 							end
 						end
 					end}
@@ -628,6 +628,36 @@ function EventTriggers()
 			return false
 		end
 	)
+
+	if (mapinfo.description == "East Prussia") then
+		-- The Fall of the Island Fortress briefing; information source: Norman Davies, "Vanished Kingdoms", p. 343
+		AddTrigger(
+			function()
+				if (GameCycle == 0) then
+					return false
+				end
+				for i=0,14 do
+					if (GetPlayerData(i, "RaceName") == "teuton") then
+						player = i
+						return true
+					end
+				end
+				return false
+			end,
+			function() 
+				Event(
+					"",
+					"Our Order has made many advances towards the east over the years, and now the time has come for us to consolidate our hold over the land of the Prusai. Their island fortress of Elk stands in our way. It shall fall to our hands!",
+					player,
+					{"~!OK"},
+					{function(s)
+						AddPlayerObjective(player, "- Destroy the Prusai fortress of Elk")
+					end}
+				)
+				return false
+			end
+		)
+	end
 end
 
 function Event(event_name, event_description, player, options, option_effects, event_icon, event_image)

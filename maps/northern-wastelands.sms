@@ -165,7 +165,7 @@ end
 
 -- create gryphon riders
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
-unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
+unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {0, 34})
 
 function NorthernWastelandsEnemy(enemy_x, enemy_y)
 	RandomNumber = SyncRand(2)

@@ -71,9 +71,9 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 							if (mapinfo.description == "Fjalar's and Galar's Hall") then
-								RemoveElementFromArray(Objectives[player + 1], "- Destroy the enemy")
+								RemovePlayerObjective(player, "- Destroy the enemy")
 							end
-							table.insert(Objectives[player + 1], "- Find Thjodrorir and slay him")
+							AddPlayerObjective(player, "- Find Thjodrorir and slay him")
 						end},
 						"dwarf/icons/dwarven_steelclad.png"
 					)

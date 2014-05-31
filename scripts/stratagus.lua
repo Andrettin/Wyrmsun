@@ -291,9 +291,9 @@ DefineVariables(
 )
 
 -------------------------------------------------------------------------------
--- Player Objectives
+-- Custom Player Data (i.e. Objectives)
 
-	Objectives = { {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
+	CustomPlayerData = { Player1 = { Number = 0, Objectives = {} }, Player2 = { Number = 1, Objectives = {} }, Player3 = { Number = 2, Objectives = {} }, Player4 = { Number = 3, Objectives = {} }, Player5 = { Number = 4, Objectives = {} }, Player6 = { Number = 5, Objectives = {} }, Player7 = { Number = 6, Objectives = {} }, Player8 = { Number = 7, Objectives = {} }, Player9 = { Number = 8, Objectives = {} }, Player10 = { Number = 9, Objectives = {} }, Player11 = { Number = 10, Objectives = {} }, Player12 = { Number = 11, Objectives = {} }, Player13 = { Number = 12, Objectives = {} }, Player14 = { Number = 13, Objectives = {} }, Player15 = { Number = 14, Objectives = {} }, Player16 = { Number = 15, Objectives = {} } }
 
 -------------------------------------------------------------------------------
 --  Default triggers for single player
@@ -308,17 +308,13 @@ function SinglePlayerTriggers()
 	AddTrigger(
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
-			if (GetNumRivals(GetThisPlayer()) == 0 and GetArrayIncludes(Objectives[GetThisPlayer() + 1], "- Destroy the enemy")) then
+			if (GetNumRivals(GetThisPlayer()) == 0 and PlayerHasObjective(GetThisPlayer(), "- Destroy the enemy")) then
 				return true
 			end
 		end,
 		function() return ActionVictory() end
 	)
 
-	for i=1,15 do
-		Objectives[i] = {"- Destroy the enemy"}
-  	end
-	
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 		Load("scripts/dwarf/ui.lua")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
@@ -1188,6 +1184,40 @@ function UpdateUnitBonuses(unit)
 	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
 	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)
 	SetUnitVariable(unit, "ArmorBonus", armor_bonus)
+end
+
+function AddPlayerObjective(player, objective)
+	for key, value in pairs(CustomPlayerData) do
+		if (CustomPlayerData[key].Number == player) then
+			table.insert(CustomPlayerData[key].Objectives, objective)
+		end
+	end
+end
+
+function RemovePlayerObjective(player, objective)
+	for key, value in pairs(CustomPlayerData) do
+		if (CustomPlayerData[key].Number == player) then
+			RemoveElementFromArray(CustomPlayerData[key].Objectives, objective)
+		end
+	end
+end
+
+function PlayerHasObjective(player, objective)
+	for key, value in pairs(CustomPlayerData) do
+		if (CustomPlayerData[key].Number == player) then
+			return GetArrayIncludes(CustomPlayerData[key].Objectives, objective)
+		end
+	end
+	return false
+end
+
+function GetPlayerObjectives(player)
+	for key, value in pairs(CustomPlayerData) do
+		if (CustomPlayerData[key].Number == player) then
+			return CustomPlayerData[key].Objectives
+		end
+	end
+	return nil
 end
 
 -------------------------------------------------------------------------------

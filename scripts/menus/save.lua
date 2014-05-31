@@ -1,7 +1,5 @@
 function RunSaveGame(name, menu)
-  Quests = {}
   RawTiles = {}
-  Objectives = Objectives[GetThisPlayer() + 1]
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))
     confirm:resize(300,120)

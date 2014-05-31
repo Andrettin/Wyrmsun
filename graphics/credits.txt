@@ -97,6 +97,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/dwarven_axefighter.png
 /graphics/dwarf/icons/dwarven_scout.png
 /graphics/dwarf/icons/dwarven_steelclad.png
+/graphics/dwarf/icons/gryphon_rider.png
 /graphics/dwarf/icons/miner.png (modified from igoku's icon)
 /graphics/dwarf/icons/patrol_land.png
 /graphics/dwarf/icons/return_goods.png
@@ -118,6 +119,7 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/icons/goblin_archer.png
 /graphics/goblin/icons/goblin_assassin.png
 /graphics/goblin/icons/goblin_spearman.png
+/graphics/goblin/icons/goblin_worker.png
 /graphics/human/buildings/lumber_mill.png
 /graphics/human/icons/soldier.png
 /graphics/missiles/big_fire.png (modified from Mikodrak's graphics)
