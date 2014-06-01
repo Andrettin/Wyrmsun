@@ -24,6 +24,16 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.5a
+-----------------------------------------------------------------------
+
+* Maps
+- Fixed a bug where choosing to have a lower number of opponents would cause a crash with certain maps (such as Brown Hills).
+
+* Units
+- Added graphics variations for the gryphon and the rat(graphics by b_o).
+
+-----------------------------------------------------------------------
 - 0.1.5
 -----------------------------------------------------------------------
 
