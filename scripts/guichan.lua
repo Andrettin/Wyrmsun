@@ -788,21 +788,21 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases
-	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan" and (opponents:getSelected() == 0 or opponents:getSelected() >= 2)) then
+	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan" and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
 		person_player = 2
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == "Shorbear Clan" or faction_list[faction:getSelected() + 1] == wyr.preferences.TheScepterOfFireRaiderFaction)) then
+	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == "Shorbear Clan" or faction_list[faction:getSelected() + 1] == wyr.preferences.TheScepterOfFireRaiderFaction) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
 		person_player = 1
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3)) then
+	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3) and mapinfo.nplayers >= 4 and mapinfo.playertypes[4] == "person") then
 		person_player = 3
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
@@ -912,8 +912,9 @@ function RunSinglePlayerGameMenu()
 
   function ScenarioChanged()
 	for i=1,table.getn(maps) do
+		MapWorld = ""
 		GetMapInfo(maps[i])
-		if (mapinfo.description == scenario_list[scenario:getSelected() + 1]) then
+		if (mapinfo.description == scenario_list[scenario:getSelected() + 1] and MapWorld == world_list[world:getSelected() + 1]) then
 			mapname = maps[i]
 			mapl:setCaption(string.sub(mapname, 6))
 		end
