@@ -58,6 +58,8 @@ if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 	Load("scripts/dwarf/ui.lua")
 elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
 	Load("scripts/gnome/ui.lua")
+elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+	Load("scripts/goblin/ui.lua")
 end
 
 StopMusic()
