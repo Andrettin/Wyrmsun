@@ -203,7 +203,7 @@ function RunEditorPlayerProperties()
   local sizeY = 480
 
   menu:resize(sizeX, sizeY)
-  menu:addLabel("Players properties", sizeX / 2, 11)
+  menu:addLabel("Player Properties", sizeX / 2, 11)
 
   local offxPlayer = 15
   local offxType = 70
@@ -303,9 +303,9 @@ function RunEditorMapProperties()
   local sizeY = 256
 
   menu:resize(sizeX, sizeY)
-  menu:addLabel("Map properties", sizeX / 2, 11)
+  menu:addLabel("Map Properties", sizeX / 2, 11)
 
-  menu:addLabel("Map descritption : ", 45, 11 + 36, nil, false)
+  menu:addLabel("Map Name: ", 45, 11 + 36, nil, false)
   local desc = menu:addTextInputField(Map.Info.Description, 15, 36 * 2, 350)
 
   menu:addLabel("Size    : " .. Map.Info.MapWidth .. " x " .. Map.Info.MapHeight, 45, 36 * 3, nil, false)

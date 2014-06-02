@@ -29,9 +29,14 @@ https://launchpad.net/stratagus
 
 * Maps
 - Fixed a bug where choosing to have a lower number of opponents would cause a crash with certain maps (such as Brown Hills).
+- Fixed some issues which happened when a custom map used the same name in the PresentMap function in its SMP file as an existing map.
+
+* Miscellaneous
+- Fixed a couple of strings in the editor.
 
 * Units
-- Added graphics variations for the gryphon and the rat(graphics by b_o).
+- Added graphics variations for the gryphon and the rat (graphics by b_o).
+- Ballista graphics have been updated (by b_o).
 
 -----------------------------------------------------------------------
 - 0.1.5
