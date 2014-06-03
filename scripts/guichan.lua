@@ -890,7 +890,21 @@ function RunSinglePlayerGameMenu()
 		GetMapInfo(maps[i])
 		if (MapWorld == world_list[world:getSelected() + 1]) then
 			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
-				table.insert(scenario_list, mapinfo.description)
+				local incomplete_quest_present = false
+				for key, value in pairs(Quests) do
+					if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
+						if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
+							if (Quests[key].Map == mapinfo.description and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
+								incomplete_quest_present = true
+							end
+						end
+					end
+				end
+--				if (incomplete_quest_present) then
+--					table.insert(scenario_list, mapinfo.description .. "(!)")
+--				else
+					table.insert(scenario_list, mapinfo.description)
+--				end
 			end
 		end
 	end
@@ -981,7 +995,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5" and wyr.preferences.LastVersionPlayed ~= "0.1.5a") then
 		ResetTechnologiesAcquired()
 
 		local warning_menu = WarGameMenu(panel(2))
