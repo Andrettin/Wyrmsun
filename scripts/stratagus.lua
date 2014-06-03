@@ -315,6 +315,16 @@ function SinglePlayerTriggers()
 		function() return ActionVictory() end
 	)
 
+	for key, value in pairs(CustomPlayerData) do
+		for i=1,table.getn(CustomPlayerData[key].Objectives) do
+			table.remove(CustomPlayerData[key].Objectives, i)
+		end
+	end
+  
+	for key, value in pairs(CustomPlayerData) do
+		CustomPlayerData[key].Objectives = {"- Destroy the enemy"}
+	end
+
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 		Load("scripts/dwarf/ui.lua")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
@@ -355,7 +365,6 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then

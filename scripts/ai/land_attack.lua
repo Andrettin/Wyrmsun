@@ -68,12 +68,21 @@ function AiLandAttack()
 
 		function()
 			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBlacksmith()) >= 1) then
-				AiSet(AiBlacksmith(), 1)
-				AiResearch(AiUpgradeWeapon1())
-				AiResearch(AiUpgradeShield1())
-				AiResearch(AiUpgradeWeapon2())
-				AiResearch(AiUpgradeShield2())
+				AiNeed(AiBlacksmith())
 			end
+			return false
+		end,
+		function()
+			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBlacksmith()) >= 1) then
+				AiWait(AiBlacksmith())
+			end
+			return false
+		end,
+		function()
+			AiResearch(AiUpgradeWeapon1())
+			AiResearch(AiUpgradeShield1())
+			AiResearch(AiUpgradeWeapon2())
+			AiResearch(AiUpgradeShield2())
 			return false
 		end,
 
@@ -114,18 +123,25 @@ function AiLandAttack()
 		function()
 			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
 				AiWait(AiLumberMill())
-				AiResearch(AiUpgradeMissile1())
-				AiResearch(AiUpgradeMissile2())
 			end
 			return false
 		end,
 
-		function() return AiForce(1, {AiSoldier(), 9, AiShooter(), 3}) end,
+		function()
+			AiResearch(AiUpgradeMissile1())				
+			AiResearch(AiUpgradeMissile2())
+			return false
+		end,
+
+		function() return AiForce(2, {AiSoldier(), 9, AiShooter(), 3}) end,
 		function() return AiForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
+		function()
+			AiUpgradeTo(AiVeteranSoldier())
+			return false
+		end,
+		function() return AiWaitForce(2) end,
+		function() return AiAttackWithForce(2) end,
 		function() return AiSet(AiWorker(), 20) end,
-		function() return AiUpgradeTo(AiVeteranSoldier()) end,
-		function() return AiWaitForce(1) end,
-		function() return AiAttackWithForce(1) end,
 
 		function()
 			if not (GetPlayerData(AiPlayer(), "UnitTypesCount", AiGuardTower()) >= 2) then

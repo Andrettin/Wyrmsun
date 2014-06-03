@@ -27,16 +27,25 @@ https://launchpad.net/stratagus
 - 0.1.5a
 -----------------------------------------------------------------------
 
+* AI
+- Made some improvements to the default AI.
+
 * Maps
 - Fixed a bug where choosing to have a lower number of opponents would cause a crash with certain maps (such as Brown Hills).
 - Fixed some issues which happened when a custom map used the same name in the PresentMap function in its SMP file as an existing map.
+- A few gryphons are now generated in the Northern Wastelands map.
 
 * Miscellaneous
 - Fixed a couple of strings in the editor.
+- Fixed an issue where it would be impossible to win on maps with the default objectives.
+- Fixed a game restart related issue for maps with special objectives.
 
 * Units
 - Added graphics variations for the gryphon and the rat (graphics by b_o).
 - Ballista graphics have been updated (by b_o).
+- Gryphons now correctly use the same minimap color as critters.
+- Fixed an issue where a unit's graphics variation would only be applied after it finished moving, if a rally point had been set for its training building.
+- Improved unit graphics variation application code, as well as carrot/cheese drop code for gnomish farms.
 
 -----------------------------------------------------------------------
 - 0.1.5

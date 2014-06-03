@@ -439,21 +439,13 @@ function RunMap(map, objective, fow, revealmap)
   end
   
   if objective == nil then
-    for i=0,14 do
 	for key, value in pairs(CustomPlayerData) do
-		if (CustomPlayerData[key].Number == i) then
-			CustomPlayerData[key].Objectives = DefaultObjectives
-		end
+		CustomPlayerData[key].Objectives = DefaultObjectives
 	end
-    end
   else
-    for i=0,14 do
 	for key, value in pairs(CustomPlayerData) do
-		if (CustomPlayerData[key].Number == i) then
-			CustomPlayerData[key].Objectives = objective
-		end
+		CustomPlayerData[key].Objectives = objective
 	end
-    end
   end
   local loop = true
   while (loop) do

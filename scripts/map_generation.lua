@@ -835,6 +835,29 @@ function CreateCritters(critter_number)
 	end
 end
 
+function CreateGryphons(gryphon_number)
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+
+	Count = gryphon_number
+	while (Count > 0) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		if (RawTile(RandomX, RandomY) == "Rock") then -- gryphons appear preferentially on mountainous parts
+			local unit_quantity = 0
+			for i=0,14 do
+				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			end
+
+			if (unit_quantity < 1) then -- gryphons don't like much being near inhabited areas
+				unit = CreateUnit("unit-gryphon", 15, {RandomX, RandomY})
+				Count = Count - 1
+			end
+		end
+	end
+end
+
 function CreateDecorations()
 
 	local RandomX = 0

@@ -241,7 +241,7 @@ DefineAnimations("animations-farm", {
   Still = BuildingStill,
   Research = BuildingStill,
   Train = BuildingStill,
-  Death = {"unbreakable begin", "label begin", "random-goto 33 end", "random-goto 33 drop_cheese", "random-goto 33 drop_carrots", "goto begin",
+  Death = {"unbreakable begin", "random-goto 50 end", "random-goto 50 drop_cheese", "goto drop_carrots",
   "label drop_cheese", "spawn-unit unit-cheese 0 0 5 15", "goto end",
   "label drop_carrots", "spawn-unit unit-carrots 0 0 5 15", "goto end",
   "label end", "unbreakable end", "wait 1",}

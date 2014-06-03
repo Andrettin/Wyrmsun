@@ -121,11 +121,11 @@ DefineAnimations("animations-goblin-archer", {
 --
 
 DefineAnimations("animations-goblin-banner", {
-  Still = { "label begin",
+  Still = {
 	"if-var v.GraphicsVariation.Value == 0 set_variation",
 	"if-var v.GraphicsVariation.Value == 1 variation_1",
 	"if-var v.GraphicsVariation.Value == 2 variation_2",
-	"label set_variation", "random-goto 50 variation_1", "random-goto 50 variation_2", "goto begin",
+	"label set_variation", "random-goto 50 variation_1", "goto variation_2",
 	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "wait 4", "random-goto 1 variation_1_flap", "random-goto 99 end",
 	"label variation_1_flap", "frame 1", "wait 6", "frame 0", "wait 6", "frame 2", "wait 6", "frame 0", "goto end",
 	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 7", "wait 4", "random-goto 1 variation_2_flap", "random-goto 99 end",
