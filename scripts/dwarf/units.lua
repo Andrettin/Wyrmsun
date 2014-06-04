@@ -78,9 +78,9 @@ DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
   organic = true,
   SelectableByRectangle = true,
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "dwarven-miner-acknowledge",
+    "ready", "dwarven-miner-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -108,9 +108,9 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-axefighter-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -139,9 +139,9 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
---    "selected", "basic-dwarf-voices-selected",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-steelclad-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -169,9 +169,9 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-scout-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -199,7 +199,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
   Sounds = {
     "selected", "click",
 --    "acknowledge", "ballista-acknowledge",
---    "ready", "ballista-ready",
+    "ready", "dwarven-ballista-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "explosion"
 } } )
@@ -230,9 +230,9 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "critter-acknowledge",
-    "ready", "gryphon-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-gryphon-rider-ready",
 --    "help", "critter-help",
     "dead", "gryphon-dead"
 } } )
@@ -463,9 +463,9 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
   GraphicsVariation = 6,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-axefighter-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -495,9 +495,9 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
   GraphicsVariation = 6,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-steelclad-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -527,9 +527,9 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
   GraphicsVariation = 2,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-steelclad-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -559,9 +559,9 @@ DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
   GraphicsVariation = 2,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-steelclad-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
@@ -591,9 +591,9 @@ DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
   GraphicsVariation = 6,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-dwarf-voices-acknowledge",
---    "ready", "basic-dwarf-voices-ready",
+    "selected", "basic-dwarf-voices-selected-group",
+    "acknowledge", "basic-dwarf-voices-acknowledge",
+    "ready", "dwarven-steelclad-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 

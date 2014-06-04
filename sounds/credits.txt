@@ -26,6 +26,36 @@ Battle for Wesnoth Team:
 /sounds/ui/click.wav
 
 b_o:
+/sounds/dwarf/axefighter/axefighter-ready.wav
+/sounds/dwarf/ballista/ballista-ready.wav
+/sounds/dwarf/basic_voices/acknowledge-1.wav
+/sounds/dwarf/basic_voices/acknowledge-2.wav
+/sounds/dwarf/basic_voices/acknowledge-3.wav
+/sounds/dwarf/basic_voices/acknowledge-4.wav
+/sounds/dwarf/basic_voices/acknowledge-5.wav
+/sounds/dwarf/basic_voices/acknowledge-6.wav
+/sounds/dwarf/basic_voices/acknowledge-7.wav
+/sounds/dwarf/basic_voices/annoy1.wav
+/sounds/dwarf/basic_voices/annoy2.wav
+/sounds/dwarf/basic_voices/annoy3.wav
+/sounds/dwarf/basic_voices/annoy4.wav
+/sounds/dwarf/basic_voices/ready.wav
+/sounds/dwarf/basic_voices/selected-1.wav
+/sounds/dwarf/basic_voices/selected-2.wav
+/sounds/dwarf/basic_voices/selected-3.wav
+/sounds/dwarf/basic_voices/selected-4.wav
+/sounds/dwarf/basic_voices/selected-5.wav
+/sounds/dwarf/gryphon_rider/gryphon-rider-ready.wav
+/sounds/dwarf/miner/miner-acknowledge-1.wav
+/sounds/dwarf/miner/miner-acknowledge-2.wav
+/sounds/dwarf/miner/miner-acknowledge-3.wav
+/sounds/dwarf/miner/miner-acknowledge-4.wav
+/sounds/dwarf/miner/miner-acknowledge-5.wav
+/sounds/dwarf/miner/miner-acknowledge-6.wav
+/sounds/dwarf/miner/miner-acknowledge-7.wav
+/sounds/dwarf/miner/miner-ready.wav
+/sounds/dwarf/scout/scout-ready.wav
+/sounds/dwarf/steelclad/steelclad-ready.wav
 /sounds/missiles/throwing_axe.wav
 
 David Slimp:
@@ -33,11 +63,6 @@ David Slimp:
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav
-/sounds/dwarf/basic_voices/acknowledge-1.wav
-/sounds/dwarf/basic_voices/acknowledge-2.wav
-/sounds/dwarf/basic_voices/ready.wav
-/sounds/dwarf/basic_voices/selected-1.wav
-/sounds/dwarf/basic_voices/selected-2.wav
 /sounds/goblin/basic_voices/acknowledge-1.wav
 /sounds/goblin/basic_voices/acknowledge-2.wav
 /sounds/goblin/basic_voices/acknowledge-3.wav

@@ -63,17 +63,52 @@ sound_click = MakeSound("click", "ui/click.wav")
 MakeSound("basic-dwarf-voices-ready", "dwarf/basic_voices/ready.wav")
 MakeSound("basic-dwarf-voices-selected", {
 	"dwarf/basic_voices/selected-1.wav",
-	"dwarf/basic_voices/selected-2.wav"
+	"dwarf/basic_voices/selected-2.wav",
+	"dwarf/basic_voices/selected-3.wav",
+	"dwarf/basic_voices/selected-4.wav",
+	"dwarf/basic_voices/selected-5.wav"
 })
+MakeSound("basic-dwarf-voices-annoyed", {
+	"dwarf/basic_voices/annoy1.wav",
+	"dwarf/basic_voices/annoy2.wav",
+	"dwarf/basic_voices/annoy3.wav",
+	"dwarf/basic_voices/annoy4.wav"
+})
+MakeSoundGroup("basic-dwarf-voices-selected-group",
+	"basic-dwarf-voices-selected", "basic-dwarf-voices-annoyed")
 MakeSound("basic-dwarf-voices-acknowledge", {
 	"dwarf/basic_voices/acknowledge-1.wav",
-	"dwarf/basic_voices/acknowledge-2.wav"
+	"dwarf/basic_voices/acknowledge-2.wav",
+	"dwarf/basic_voices/acknowledge-3.wav",
+	"dwarf/basic_voices/acknowledge-4.wav",
+	"dwarf/basic_voices/acknowledge-5.wav",
+	"dwarf/basic_voices/acknowledge-6.wav",
+	"dwarf/basic_voices/acknowledge-7.wav"
 })
 MakeSound("basic-dwarf-voices-help", "misc/fanfare_short.wav")
 MakeSound("basic-dwarf-voices-dead", {
 	"dwarf/basic_voices/dead-1.wav",
 	"dwarf/basic_voices/dead-2.wav"
 })
+
+------------------------------------------------------------------------------
+--	Define unit-specific dwarf sounds.
+--
+MakeSound("dwarven-miner-acknowledge", {
+	"dwarf/miner/miner-acknowledge-1.wav",
+	"dwarf/miner/miner-acknowledge-2.wav",
+	"dwarf/miner/miner-acknowledge-3.wav",
+	"dwarf/miner/miner-acknowledge-4.wav",
+	"dwarf/miner/miner-acknowledge-5.wav",
+	"dwarf/miner/miner-acknowledge-6.wav",
+	"dwarf/miner/miner-acknowledge-7.wav"
+})
+MakeSound("dwarven-miner-ready", "dwarf/miner/miner-ready.wav")
+MakeSound("dwarven-axefighter-ready", "dwarf/axefighter/axefighter-ready.wav")
+MakeSound("dwarven-ballista-ready", "dwarf/ballista/ballista-ready.wav")
+MakeSound("dwarven-gryphon-rider-ready", "dwarf/gryphon_rider/gryphon-rider-ready.wav")
+MakeSound("dwarven-scout-ready", "dwarf/scout/scout-ready.wav")
+MakeSound("dwarven-steelclad-ready", "dwarf/steelclad/steelclad-ready.wav")
 
 ------------------------------------------------------------------------------
 --	Define simple goblin sounds.
