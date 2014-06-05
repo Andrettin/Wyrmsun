@@ -57,7 +57,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "\27", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = "~<ESC~> Cancel",
   ForUnit = {"unit-goblin-worker"} } )
 
 -- buildings commands ---------------------------------------------------------

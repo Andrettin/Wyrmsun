@@ -69,6 +69,24 @@ g_gbsp:Load()
 g_gbsg = CGraphic:New("ui/gnome/widgets/button-small-grayed.png")
 g_gbsg:Load()
 
+g_dcheckbox_off = CGraphic:New("ui/dwarf/widgets/radio-normal-unselected.png")
+g_dcheckbox_off:Load()
+g_dcheckbox_off2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-unselected.png")
+g_dcheckbox_off2:Load()
+g_dcheckbox_on = CGraphic:New("ui/dwarf/widgets/radio-normal-selected.png")
+g_dcheckbox_on:Load()
+g_dcheckbox_on2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-selected.png")
+g_dcheckbox_on2:Load()
+
+g_dradio_off = CGraphic:New("ui/dwarf/widgets/radio-normal-unselected.png")
+g_dradio_off:Load()
+g_dradio_off2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-unselected.png")
+g_dradio_off2:Load()
+g_dradio_on = CGraphic:New("ui/dwarf/widgets/radio-normal-selected.png")
+g_dradio_on:Load()
+g_dradio_on2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-selected.png")
+g_dradio_on2:Load()
+
 local dpanels = {
   "ui/dwarf/panel_1.png",
   "ui/dwarf/panel_2.png",
@@ -327,6 +345,29 @@ function AddMenuHelpers(menu)
     return b
   end
 
+  function menu:addImageCheckBox(caption, x, y, callback) -- DinkyDyeAussie's new function
+	local b = ImageCheckBox(caption)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	-- new functions to display checkbox graphics
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setUncheckedNormalImage(g_dcheckbox_off)
+		b:setUncheckedPressedImage(g_dcheckbox_off2)
+		b:setCheckedNormalImage(g_dcheckbox_on)
+		b:setCheckedPressedImage(g_dcheckbox_on2)
+	else
+		b:setUncheckedNormalImage(g_dcheckbox_off)
+		b:setUncheckedPressedImage(g_dcheckbox_off2)
+		b:setCheckedNormalImage(g_dcheckbox_on)
+		b:setCheckedPressedImage(g_dcheckbox_on2)
+	end
+	if (callback ~= nil) then b:setActionCallback(function(s) callback(b, s) end) end
+	b:setFont(Fonts["game"])
+	self:add(b, x - 1, y - 1) -- reduced by 1 because the images are bigger than they are supposed to be, as they are graphics for radio buttons
+	return b
+  end
+  
   function menu:addRadioButton(caption, group, x, y, callback)
     local b = RadioButton(caption, group)
     b:setBaseColor(dark)
@@ -337,6 +378,28 @@ function AddMenuHelpers(menu)
     return b
   end
 
+ function menu:addImageRadioButton(caption, group, x, y, callback)
+	local b = ImageRadioButton(caption, group)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setUncheckedNormalImage(g_dradio_off)
+		b:setUncheckedPressedImage(g_dradio_off2)
+		b:setCheckedNormalImage(g_dradio_on)
+		b:setCheckedPressedImage(g_dradio_on2)
+	else
+		b:setUncheckedNormalImage(g_dradio_off)
+		b:setUncheckedPressedImage(g_dradio_off2)
+		b:setCheckedNormalImage(g_dradio_on)
+		b:setCheckedPressedImage(g_dradio_on2)
+	end
+	b:setFont(Fonts["game"])
+	b:setActionCallback(callback)
+	self:add(b, x, y)
+	return b
+  end
+  
   function menu:addDropDown(list, x, y, callback)
     local dd = DropDownWidget()
     dd:setFont(Fonts["game"])
@@ -900,11 +963,11 @@ function RunSinglePlayerGameMenu()
 						end
 					end
 				end
---				if (incomplete_quest_present) then
---					table.insert(scenario_list, mapinfo.description .. "(!)")
---				else
+				if (incomplete_quest_present) then
+					table.insert(scenario_list, "~<" .. mapinfo.description .. "~>")
+				else
 					table.insert(scenario_list, mapinfo.description)
---				end
+				end
 			end
 		end
 	end
@@ -995,7 +1058,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5" and wyr.preferences.LastVersionPlayed ~= "0.1.5a") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5" and wyr.preferences.LastVersionPlayed ~= "0.1.5a" and wyr.preferences.LastVersionPlayed ~= "0.1.5b") then
 		ResetTechnologiesAcquired()
 
 		local warning_menu = WarGameMenu(panel(2))

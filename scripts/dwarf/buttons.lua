@@ -219,7 +219,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "\27", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = "~<ESC~> Cancel",
   ForUnit = {"unit-dwarven-miner"} } )
 
 -- Building Commands ---------------------------------------------------------

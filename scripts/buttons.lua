@@ -47,22 +47,22 @@ Load("scripts/goblin/buttons.lua")
 
 DefineButton( { Pos = 9, Level = 9, Icon = "icon-cancel",
   Action = "cancel",
-  Key = "\27", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = "~<ESC~> Cancel",
   ForUnit = {"*"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-upgrade",
-  Key = "\27", Hint = "~<ESC~> Cancel Upgrade",
+  Key = "escape", Hint = "~<ESC~> Cancel Upgrade",
   ForUnit = {"cancel-upgrade"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-train-unit",
-  Key = "\27", Hint = "~<ESC~> Cancel Unit Training",
+  Key = "escape", Hint = "~<ESC~> Cancel Unit Training",
   ForUnit = {"*"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-build",
-  Key = "\27", Hint = "~<ESC~> Cancel Construction",
+  Key = "escape", Hint = "~<ESC~> Cancel Construction",
   ForUnit = {"cancel-build"} } )
 
 -- Level-Up Upgrades ------------------------------------------------------
@@ -102,7 +102,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "\27", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = "~<ESC~> Cancel",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
     "unit-gnomish-recruit",

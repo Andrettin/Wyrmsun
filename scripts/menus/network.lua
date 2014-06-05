@@ -131,11 +131,11 @@ function RunJoiningMapMenu(s)
   menu:writeText("Description:", sx, sy*3+70)
   descr = menu:writeText(description, sx+20, sy*3+90)
 
-  local fow = menu:addCheckBox("Fog of War", sx, sy*3+120, function() end)
+  local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, function() end)
   fow:setMarked(true)
   ServerSetupState.FogOfWar = 1
   fow:setEnabled(false)
-  local revealmap = menu:addCheckBox("Reveal Map", sx, sy*3+150, function() end)
+  local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, function() end)
   revealmap:setEnabled(false)
 
   menu:writeText("Civilization:", sx, sy*11)
@@ -173,7 +173,7 @@ function RunJoiningMapMenu(s)
   local function readycb(dd)
      LocalSetupState.Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
   end
-  menu:addCheckBox("~!Ready", sx*11,  sy*14, readycb)
+  menu:addImageCheckBox("~!Ready", sx*11,  sy*14, readycb)
 
   local updatePlayersList = addPlayersList(menu, numplayers)
 
@@ -326,14 +326,14 @@ function RunServerMultiGameMenu(map, description, numplayers)
     NetworkServerResyncClients()
     GameSettings.NoFogOfWar = not dd:isMarked()
   end
-  local fow = menu:addCheckBox("Fog of War", sx, sy*3+120, fowCb)
+  local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, fowCb)
   fow:setMarked(true)
   local function revealMapCb(dd)
     ServerSetupState.RevealMap = bool2int(dd:isMarked())
     NetworkServerResyncClients()
     GameSettings.RevealMap = bool2int(dd:isMarked())
   end
-  local revealmap = menu:addCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
+  local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
 
   menu:writeText("Civilization:", sx, sy*11)
   d = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, sx + 100, sy*11,

@@ -24,8 +24,16 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
-- 0.1.6
+- 0.1.5b
 -----------------------------------------------------------------------
+
+* Maps
+- Names of maps with incomplete quests now show up with their colors reversed, in order to make it easier for the player to identify which maps to play to complete the remaining quests.
+- The correct portrait is now used in dialogues for the gryphon riders in the Searching for the Runecrafter quest (previously the scout portrait was used).
+
+* Miscellaneous
+- Cancel buttons in submenus in the unit interface are now correctly hotkeyed to the "Esc" key.
+- Added graphics for checkboxes for the dwarves (by Jinn).
 
 * Units
 - Dwarven units now have voice sounds for when being selected, when acknowledging an order and when ready after training (sounds by b_o).

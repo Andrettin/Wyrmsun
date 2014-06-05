@@ -1437,19 +1437,19 @@ AddTrigger(
 													"dwarf/icons/baglur.png"
 												)
 												end},
-												"dwarf/icons/dwarven_scout.png"
+												"dwarf/icons/gryphon_rider.png"
 											)
 											end},
 											"dwarf/icons/rugnur.png"
 										)
 										end},
-										"dwarf/icons/dwarven_scout.png"
+										"dwarf/icons/gryphon_rider.png"
 									)
 									end},
 									"dwarf/icons/rugnur.png"
 								)
 								end},
-								"dwarf/icons/dwarven_scout.png"
+								"dwarf/icons/gryphon_rider.png"
 							)
 							end},
 							"dwarf/icons/baglur.png"
@@ -1458,7 +1458,7 @@ AddTrigger(
 						"gnome/icons/gnomish_recruit.png"
 					)
 					end},
-					"dwarf/icons/dwarven_scout.png"
+					"dwarf/icons/gryphon_rider.png"
 				)
 				return false
 			end

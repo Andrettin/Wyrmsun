@@ -59,7 +59,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   menu:addCentered(b, offx + 218, offy + 36 * 2 + 6)
 
   local effectscheckbox = {}
-  effectscheckbox = menu:addCheckBox("Enabled", offx + 240, offy + 36 * 1.5,
+  effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 1.5,
     function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
   effectscheckbox:setMarked(IsEffectsEnabled())
   effectscheckbox:adjustSize()
@@ -91,7 +91,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   menu:addCentered(b, offx + 218, offy + 36 * 4 + 6)
 
   local musiccheckbox = {}
-  musiccheckbox = menu:addCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
+  musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
     function() SetMusicEnabled(musiccheckbox:isMarked()); MusicStopped() end)
   musiccheckbox:setMarked(IsMusicEnabled())
   musiccheckbox:adjustSize();
@@ -122,7 +122,7 @@ function RunPreferencesMenu()
   menu:addLabel("Preferences", 128, 11)
 
   local fog = {}
-  fog = menu:addCheckBox("Fog of War", 16, 40 + 36 * 0,
+  fog = menu:addImageCheckBox("Fog of War", 16, 40 + 36 * 0,
     function() SetFogOfWar(fog:isMarked()) end)
   fog:setMarked(GetFogOfWar())
   if (IsReplayGame() or IsNetworkGame()) then
@@ -130,7 +130,7 @@ function RunPreferencesMenu()
   end
 
   local ckey = {}
-  ckey = menu:addCheckBox("Show Command Key", 16, 40 + 36 * 1,
+  ckey = menu:addImageCheckBox("Show Command Key", 16, 40 + 36 * 1,
     function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
   ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
 
@@ -281,21 +281,21 @@ function BuildOptionsMenu()
 
 --  menu:addLabel("Language", offx + 160, offy + 34, Fonts["game"], false)
 
---  b = menu:addCheckBox("English", offx + 160, offy + 55 + 26*0,
+--  b = menu:addImageCheckBox("English", offx + 160, offy + 55 + 26*0,
 --    function()
 --	wyr.preferences.Language = "English"
 --	menu:stop(1)
 --    end)
 --  b:setMarked(wyr.preferences.Language == "English")
 
---  b = menu:addCheckBox("Portuguese", offx + 160, offy + 55 + 26*1,
+--  b = menu:addImageCheckBox("Portuguese", offx + 160, offy + 55 + 26*1,
 --    function()
 --	wyr.preferences.Language = "Portuguese"
 --	menu:stop(1)
 --    end)
 --  b:setMarked(wyr.preferences.Language == "Portuguese")
 
-  b = menu:addCheckBox("Full Screen", offx + 16, offy + 55 + 26*10 + 14,
+  b = menu:addImageCheckBox("Full Screen", offx + 16, offy + 55 + 26*10 + 14,
     function()
       ToggleFullScreen()
       wyr.preferences.VideoFullScreen = Video.FullScreen
@@ -304,7 +304,7 @@ function BuildOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
 
-  b = menu:addCheckBox("Disable Pathlines", offx + 16, offy + 55 + 26*9 + 14,
+  b = menu:addImageCheckBox("Disable Pathlines", offx + 16, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowOrders == 2) then
 		wyr.preferences.ShowOrders = 0
@@ -316,7 +316,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowOrders == 0) then b:setMarked(true) end
 
-  b = menu:addCheckBox("Disable Messages", offx + 160 + 24, offy + 55 + 26*9 + 14,
+  b = menu:addImageCheckBox("Disable Messages", offx + 160 + 24, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowMessages) then
 		wyr.preferences.ShowMessages = false
@@ -328,7 +328,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-  checkTexture = menu:addCheckBox("Set Maximum OpenGL Texture to 256", offx + 160 + 24, offy + 55 + 26*10 + 14,
+  checkTexture = menu:addImageCheckBox("Set Maximum OpenGL Texture to 256", offx + 160 + 24, offy + 55 + 26*10 + 14,
     function()
       if (checkTexture:isMarked()) then
         wyr.preferences.MaxOpenGLTexture = 256
@@ -340,7 +340,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.MaxOpenGLTexture == 128) then checkTexture:setMarked(true) end
 
-  checkOpenGL = menu:addCheckBox("Use OpenGL / OpenGL ES 1.1 (restart required)", offx + 16, offy + 55 + 26*11 + 14,
+  checkOpenGL = menu:addImageCheckBox("Use OpenGL / OpenGL ES 1.1 (restart required)", offx + 16, offy + 55 + 26*11 + 14,
     function()
 --TODO: Add function for immediately change state of OpenGL
       wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
