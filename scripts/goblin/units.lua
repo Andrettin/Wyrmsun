@@ -73,9 +73,9 @@ DefineUnitType("unit-goblin-worker", { Name = "Goblin Worker",
   organic = true,
   SelectableByRectangle = true,
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-goblin-voices-acknowledge",
---    "ready", "basic-goblin-voices-ready",
+    "selected", "basic-goblin-voices-selected-group",
+    "acknowledge", "basic-goblin-voices-acknowledge",
+    "ready", "goblin-worker-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
@@ -103,9 +103,9 @@ DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-goblin-voices-acknowledge",
---    "ready", "basic-goblin-voices-ready",
+    "selected", "basic-goblin-voices-selected-group",
+    "acknowledge", "basic-goblin-voices-acknowledge",
+    "ready", "goblin-impaler-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
@@ -133,9 +133,9 @@ DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
   SelectableByRectangle = true,
   CanCastSpell = {"spell-unarmed-attack", "spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-goblin-voices-acknowledge",
---    "ready", "basic-goblin-voices-ready",
+    "selected", "basic-goblin-voices-selected-group",
+    "acknowledge", "basic-goblin-voices-acknowledge",
+    "ready", "goblin-archer-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
@@ -164,9 +164,9 @@ DefineUnitType("unit-hero-greebo", { Name = "Greebo",
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-critical-strike"},
   Sounds = {
-    "selected", "click",
---    "acknowledge", "basic-goblin-voices-acknowledge",
---    "ready", "basic-goblin-voices-ready",
+    "selected", "basic-goblin-voices-selected-group",
+    "acknowledge", "basic-goblin-voices-acknowledge",
+    "ready", "goblin-impaler-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 

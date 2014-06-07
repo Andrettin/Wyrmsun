@@ -38,25 +38,27 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   menu:add(b, offx + 16, offy + 36 * 1)
 
   -- FIXME: disable if effects turned off
-  local soundslider = Slider(0, 255)
+  local soundslider = {}
+  -- slider button to decrease slider value
+  soundslider = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 1.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
+		
+  -- slider button to increase slider value
+  soundslider = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 1.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
+		
+  -- slider itself
+  soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 1.5, function() SetEffectsVolume(soundslider:getValue()) end)
+
   soundslider:setValue(GetEffectsVolume())
-  soundslider:setActionCallback(function() SetEffectsVolume(soundslider:getValue()) end)
-  soundslider:setWidth(198)
-  soundslider:setHeight(18)
-  soundslider:setBaseColor(dark)
-  soundslider:setForegroundColor(clear)
-  soundslider:setBackgroundColor(clear)
-  menu:add(soundslider, offx + 32, offy + 36 * 1.5)
 
   b = Label("min")
-  b:setFont(CFont:Get("game"))
+  b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 44, offy + 36 * 2 + 6)
+  menu:addCentered(b, offx + 32, offy + 36 * 2 + 6)
 
   b = Label("max")
-  b:setFont(CFont:Get("game"))
+  b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 218, offy + 36 * 2 + 6)
+  menu:addCentered(b, offx + 224, offy + 36 * 2 + 6)
 
   local effectscheckbox = {}
   effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 1.5,
@@ -70,25 +72,28 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   menu:add(b, offx + 16, offy + 36 * 3)
 
   -- FIXME: disable if music turned off
-  local musicslider = Slider(0, 255)
+  local musicslider = {}
+  -- slider button to decrease slider value
+  musicslider = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
+		
+  -- slider button to decrease slider value
+  musicslider = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
+		
+  -- slider itself
+  musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetMusicVolume(musicslider:getValue()) end)
+		
+  -- set the value so the game saves it
   musicslider:setValue(GetMusicVolume())
-  musicslider:setActionCallback(function() SetMusicVolume(musicslider:getValue()) end)
-  musicslider:setWidth(198)
-  musicslider:setHeight(18)
-  musicslider:setBaseColor(dark)
-  musicslider:setForegroundColor(clear)
-  musicslider:setBackgroundColor(clear)
-  menu:add(musicslider, offx + 32, offy + 36 * 3.5)
 
   b = Label("min")
-  b:setFont(CFont:Get("game"))
+  b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 44, offy + 36 * 4 + 6)
+  menu:addCentered(b, offx + 32, offy + 36 * 4 + 6)
 
   b = Label("max")
-  b:setFont(CFont:Get("game"))
+  b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 218, offy + 36 * 4 + 6)
+  menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
 
   local musiccheckbox = {}
   musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
@@ -137,28 +142,44 @@ function RunPreferencesMenu()
   menu:addLabel("Game Speed", 16, 40 + 36 * 2, Fonts["game"], false)
 
   local gamespeed = {}
-  gamespeed = menu:addSlider(15, 75, 198, 18, 32, 40 + 36 * 2.5,
-    function() SetGameSpeed(gamespeed:getValue()) end)
+  -- slider button to decrease slider value
+  gamespeed = menu:addImageLeftSliderButton("", nil, 21, 40 + 36 * 2.5, function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
+		
+  -- slider button to decrease slider value
+  gamespeed = menu:addImageRightSliderButton("", nil, 213, 40 + 36 * 2.5, function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
+		
+  -- slider itself
+  gamespeed = menu:addImageSlider(15, 75, 172, 18, 41, 40 + 36 * 2.5, function() SetGameSpeed(gamespeed:getValue()) end)
+		
+  -- set the value so the game saves it
   gamespeed:setValue(GetGameSpeed())
 
-  menu:addLabel("slow", 34, 40 + (36 * 3) + 6, Fonts["small"], false)
+  menu:addLabel("slow", 22, 40 + (36 * 3) + 6, Fonts["small"], false)
   local l = Label("fast")
   l:setFont(Fonts["small"])
   l:adjustSize()
-  menu:add(l, 230 - l:getWidth(), 40 + (36 * 3) + 6)
+  menu:add(l, 234 - l:getWidth(), 40 + (36 * 3) + 6)
 
   menu:addLabel("Mouse Scroll Speed", 16, 40 + (36 * 4), Fonts["game"], false)
 
   local mousescrollspeed = {}
-  mousescrollspeed = menu:addSlider(1, 10, 198, 18, 32, 40 + 36 * 4.5,
-    function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+  -- slider button to decrease slider value
+  mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21, 40 + 36 * 4.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+		
+  -- slider button to decrease slider value		
+  mousescrollspeed = menu:addImageRightSliderButton("", nil, 213, 40 + 36 * 4.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+		
+  -- slider itself
+  mousescrollspeed = menu:addImageSlider(1, 10, 172, 18, 41, 40 + 36 * 4.5, function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+		
+  -- set the value so the game saves it
   mousescrollspeed:setValue(GetMouseScrollSpeed())
 
-  menu:addLabel("slow", 34, 40 + (36 * 5) + 6, Fonts["small"], false)
+  menu:addLabel("slow", 22, 40 + (36 * 5) + 6, Fonts["small"], false)
   local l = Label("fast")
   l:setFont(Fonts["small"])
   l:adjustSize()
-  menu:add(l, 230 - l:getWidth(), 40 + (36 * 5) + 6)
+  menu:add(l, 234 - l:getWidth(), 40 + (36 * 5) + 6)
 
   menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
     function()

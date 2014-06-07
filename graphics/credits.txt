@@ -222,10 +222,16 @@ João Victor G. Costa (Jinn):
 /graphics/ui/gnome/widgets/button-thin-medium-pressed.png
 /graphics/ui/gnome/widgets/button-thin-small-normal.png
 /graphics/ui/gnome/widgets/button-thin-small-pressed.png
+/graphics/ui/gnome/widgets/hslider-bar-normal.png
+/graphics/ui/gnome/widgets/left-arrow-normal.png
+/graphics/ui/gnome/widgets/left-arrow-pressed.png
 /graphics/ui/dwarf/widgets/radio-normal-selected.png
 /graphics/ui/dwarf/widgets/radio-normal-unselected.png
 /graphics/ui/dwarf/widgets/radio-pressed-selected.png
 /graphics/ui/dwarf/widgets/radio-pressed-unselected.png
+/graphics/ui/gnome/widgets/right-arrow-normal.png
+/graphics/ui/gnome/widgets/right-arrow-pressed.png
+/graphics/ui/gnome/widgets/slider-knob.png
 
 Leo:
 /graphics/dwarf/buildings/blacksmith.png

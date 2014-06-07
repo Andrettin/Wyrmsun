@@ -87,6 +87,26 @@ g_dradio_on:Load()
 g_dradio_on2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-selected.png")
 g_dradio_on2:Load()
 
+-- right slider arrows for dwarf
+g_drslider_n = CGraphic:New("ui/dwarf/widgets/right-arrow-normal.png")
+g_drslider_n:Load()
+g_drslider_p = CGraphic:New("ui/dwarf/widgets/right-arrow-pressed.png")
+g_drslider_p:Load()
+
+-- left slider arrows for dwarf
+g_dlslider_n = CGraphic:New("ui/dwarf/widgets/left-arrow-normal.png")
+g_dlslider_n:Load()
+g_dlslider_p = CGraphic:New("ui/dwarf/widgets/left-arrow-pressed.png")
+g_dlslider_p:Load()
+
+-- slider marker - so we know the value of the option we're trying to change
+g_dmarker = CGraphic:New("ui/dwarf/widgets/slider-knob.png")
+g_dmarker:Load()
+
+-- slider background image
+g_dslider = CGraphic:New("ui/dwarf/widgets/hslider-bar-normal.png")
+g_dslider:Load()
+
 local dpanels = {
   "ui/dwarf/panel_1.png",
   "ui/dwarf/panel_2.png",
@@ -199,6 +219,57 @@ function AddMenuHelpers(menu)
     b:setActionCallback(function(s) callback(b, s) end)
     self:add(b, x, y)
     return b
+  end
+
+  function menu:addImageLeftSliderButton(caption, hotkey, x, y, callback)
+	local b = self:addImageButton(caption, hotkey, x, y, callback)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setNormalImage(g_dlslider_n)
+		b:setPressedImage(g_dlslider_p)
+	else
+		b:setNormalImage(g_dlslider_n)
+		b:setPressedImage(g_dlslider_p)
+	end
+	b:setSize(20, 19)
+	b:setBorderSize(0)
+	return b
+  end
+  
+  function menu:addImageSlider(min, max, w, h, x, y, callback)
+	local b = ImageSlider(min, max)
+	-- New Slider Functions
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setMarkerImage(g_dmarker)
+		b:setBackgroundImage(g_dslider)
+	else
+		b:setMarkerImage(g_dmarker)
+		b:setBackgroundImage(g_dslider)
+	end
+	b:setSize(w, h)
+	b:setActionCallback(function(s) callback(b, s) end)
+	self:add(b, x, y)
+	b:setBorderSize(0)
+	return b
+  end
+  
+  function menu:addImageRightSliderButton(caption, hotkey, x, y, callback)
+	local b = self:addImageButton(caption, hotkey, x, y, callback)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setNormalImage(g_drslider_n)
+		b:setPressedImage(g_drslider_p)
+	else
+		b:setNormalImage(g_drslider_n)
+		b:setPressedImage(g_drslider_p)
+	end	  
+	b:setSize(20, 19)
+	b:setBorderSize(0)
+	return b
   end
 
   function menu:addListBox(x, y, w, h, list)

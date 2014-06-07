@@ -113,23 +113,58 @@ MakeSound("dwarven-steelclad-ready", "dwarf/steelclad/steelclad-ready.wav")
 ------------------------------------------------------------------------------
 --	Define simple goblin sounds.
 --
-MakeSound("basic-goblin-voices-ready", "goblin/basic_voices/ready.wav")
 MakeSound("basic-goblin-voices-selected", {
-	"goblin/basic_voices/selected-1.wav",
-	"goblin/basic_voices/selected-2.wav",
-	"goblin/basic_voices/selected-3.wav",
-	"goblin/basic_voices/selected-4.wav"
+	"goblin/basic_voices/selected-01.wav",
+	"goblin/basic_voices/selected-02.wav",
+	"goblin/basic_voices/selected-03.wav",
+	"goblin/basic_voices/selected-04.wav",
+	"goblin/basic_voices/selected-05.wav",
+	"goblin/basic_voices/selected-06.wav",
+	"goblin/basic_voices/selected-07.wav",
+	"goblin/basic_voices/selected-08.wav",
+	"goblin/basic_voices/selected-09.wav",
+	"goblin/basic_voices/selected-10.wav",
+	"goblin/basic_voices/selected-11.wav",
+	"goblin/basic_voices/selected-12.wav"
 })
+MakeSound("basic-goblin-voices-annoyed", {
+	"goblin/basic_voices/annoy-01.wav",
+	"goblin/basic_voices/annoy-02.wav",
+	"goblin/basic_voices/annoy-03.wav",
+	"goblin/basic_voices/annoy-04.wav",
+	"goblin/basic_voices/annoy-05.wav",
+	"goblin/basic_voices/annoy-06.wav"
+})
+MakeSoundGroup("basic-goblin-voices-selected-group",
+	"basic-goblin-voices-selected", "basic-goblin-voices-annoyed")
 MakeSound("basic-goblin-voices-acknowledge", {
-	"goblin/basic_voices/acknowledge-1.wav",
-	"goblin/basic_voices/acknowledge-2.wav",
-	"goblin/basic_voices/acknowledge-3.wav",
-	"goblin/basic_voices/acknowledge-4.wav"
+	"goblin/basic_voices/acknowledge-01.wav",
+	"goblin/basic_voices/acknowledge-02.wav",
+	"goblin/basic_voices/acknowledge-03.wav",
+	"goblin/basic_voices/acknowledge-04.wav",
+	"goblin/basic_voices/acknowledge-05.wav",
+	"goblin/basic_voices/acknowledge-06.wav",
+	"goblin/basic_voices/acknowledge-07.wav",
+	"goblin/basic_voices/acknowledge-08.wav",
+	"goblin/basic_voices/acknowledge-09.wav",
+	"goblin/basic_voices/acknowledge-10.wav",
+	"goblin/basic_voices/acknowledge-11.wav"
 })
 MakeSound("basic-goblin-voices-dead", {
 	"goblin/basic_voices/goblin-die-1.wav",
 	"goblin/basic_voices/goblin-die-2.wav"
 })
+
+------------------------------------------------------------------------------
+--	Define unit-specific goblin sounds.
+--
+MakeSound("goblin-worker-ready", {
+	"goblin/worker/goblin-worker-ready-1.wav",
+	"goblin/worker/goblin-worker-ready-2.wav"
+})
+MakeSound("goblin-impaler-ready", "goblin/impaler/goblin-impaler-ready.wav")
+MakeSound("goblin-archer-ready", "goblin/archer/goblin-archer-ready.wav")
+MakeSound("goblin-shaman-ready", "goblin/shaman/goblin-shaman-ready.wav")
 
 ------------------------------------------------------------------------------
 --	Define simple misc sounds.

@@ -43,6 +43,7 @@ function RunShowCreditsMenu()
 	"  Russell Smith",
 	"  Pali Rohar",
 	"  Andre Novellino Gouvea (Andrettin)",
+	"  DinkyDyeAussie",
 	"Graphics and Artwork",
 	"  b_o",
 	"  Joao Victor G. Costa (Jinn)",

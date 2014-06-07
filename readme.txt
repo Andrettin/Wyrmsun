@@ -24,6 +24,20 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.6
+-----------------------------------------------------------------------
+
+- Wyrmsun updated to the latest version of the Stratagus engine (thanks to cybermind for making it available).
+
+* Miscellaneous
+- Added slider graphics for the dwarves (graphics by Jinn and code based on DinkyDyeAussie's).
+
+* Units
+- Goblin worker graphics updated (by b_o).
+- Dwarven ballista graphics updated (by b_o).
+- Goblin units now have voice sounds for when being selected, when acknowledging an order and when ready after training (sounds by b_o).
+
+-----------------------------------------------------------------------
 - 0.1.5b
 -----------------------------------------------------------------------
 
