@@ -151,7 +151,7 @@ DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
   Corpse = "unit-destroyed-4x4-place",
   ExplodeWhenKilled = "missile-explosion",
   Type = "land",
-  Building = true, VisibleUnderFog = true,
+  Building = true, VisibleUnderFog = true, Center = true, WoodImprove = true,
   BuildingRules = {
   	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"} },
   	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }

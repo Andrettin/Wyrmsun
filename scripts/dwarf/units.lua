@@ -256,7 +256,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
   Corpse = "unit-destroyed-4x4-place",
   ExplodeWhenKilled = "missile-explosion",
   Type = "land",
-  Building = true, VisibleUnderFog = true,
+  Building = true, VisibleUnderFog = true, Center = true, WoodImprove = true,
   BuildingRules = {
   	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"} },
   	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
@@ -342,7 +342,7 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
   Corpse = "unit-destroyed-3x3-place",
   ExplodeWhenKilled = "missile-explosion",
   Type = "land",
-  Building = true, VisibleUnderFog = true,
+  Building = true, VisibleUnderFog = true, WoodImprove = true,
   CanStore = {"wood"},
   Sounds = {
     "selected", "lumber-mill-selected",

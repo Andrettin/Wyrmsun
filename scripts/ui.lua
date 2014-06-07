@@ -134,11 +134,10 @@ DefinePanelContents(
   Ident = "panel-general-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Contents = {
-	{ Pos = {10, 48}, Condition = {ShowOpponent = false, HideNeutral = true},
---		More = {"LifeBar", {Variable = "HitPoints", Height = 7, Width = 45}}
-		More = {"LifeBar", {Variable = "HitPoints", Height = 9, Width = 45}}
+	{ Pos = {8, 51}, Condition = {ShowOpponent = false, HideNeutral = true},
+		More = {"LifeBar", {Variable = "HitPoints", Height = 7, Width = 50}}
 	},
-	{ Pos = {34, 49}, Condition = {ShowOpponent = false, HideNeutral = true},
+	{ Pos = {35, 61}, Condition = {ShowOpponent = false, HideNeutral = true},
 		More = {"FormattedText2", {
 			Font = "small", Variable = "HitPoints", Format = "%d/%d",
 			Component1 = "Value", Component2 = "Max", Centered = true}}
@@ -235,10 +234,10 @@ DefinePanelContents(
 	},
 
 -- Construction
-	{ Pos = {12, 153}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
-		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 18}}
+	{ Pos = {12, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
+		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 14, Border = false}}
 	},
-	{ Pos = {50, 156}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
+	{ Pos = {50, 153}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"Text", "% Complete"}},
 	{ Pos = {107, 78}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"Icon", {Unit = "Worker"}}}
@@ -249,8 +248,7 @@ DefinePanelContents(
   {
   Ident = "panel-building-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
-  Condition = {ShowOpponent = false, HideNeutral = true, Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
--- FIXME more condition. not town hall.
+  Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
   Contents = {
 -- Food building
 	{ Pos = {16, 71}, More = {"Text", "Usage"} },
@@ -260,6 +258,50 @@ DefinePanelContents(
 										InverseVideo(String(ActiveUnitVar("Demand", "Max"))),
 										String(ActiveUnitVar("Demand", "Max")) ))}}
     }
+
+  } },
+  -- Center
+  {
+  Ident = "panel-center-contents",
+  Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
+  Condition = {ShowOpponent = false, HideNeutral = true, Center = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
+  Contents = {
+	{ Pos = {16, 86}, More = {"Text", "Production"} },
+	{ Pos = {32, 102}, More = { "Text", {Text = Concat("Gold: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100)))),
+										"" ))}}
+    },
+	{ Pos = {32, 118}, Condition = {WoodImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100)))),
+										"" ))}}
+    },
+	{ Pos = {84, 134}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
+										"" ))}}
+    },
+
+  } },
+  --res inmprovement
+   {
+  Ident = "panel-resimrove-contents",
+  Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
+  Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+  Contents = {
+	{ Pos = {16, 86}, Condition = {WoodImprove = "only"}, More = {"Text", "Production"} },
+	{ Pos = {16, 86}, Condition = {OilImprove = "only"}, More = {"Text", "Production"} },
+	{ Pos = {32, 102}, Condition = {WoodImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100)))),
+										"" ))}}
+    },
+	{ Pos = {84, 102}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
+										"" ))}}
+    },
 
   } },
 -- All own unit -----------------
@@ -281,25 +323,25 @@ DefinePanelContents(
 					Text = "Range: ", Variable = "AttackRange" , Stat = true}}
 	},
 -- Research
-	{ Pos = {12, 153}, Condition = {Research = "only"},
-		More = {"CompleteBar", {Variable = "Research", Width = 152, Height = 18}}
+	{ Pos = {12, 152}, Condition = {Research = "only"},
+		More = {"CompleteBar", {Variable = "Research", Width = 152, Height = 14, Border = false}}
 	},
 	{ Pos = {16, 86}, Condition = {Research = "only"}, More = {"Text", "Researching:"}},
-	{ Pos = {50, 156}, Condition = {Research = "only"}, More = {"Text", "% Complete"}},
+	{ Pos = {50, 153}, Condition = {Research = "only"}, More = {"Text", "% Complete"}},
 -- Training
-	{ Pos = {12, 153}, Condition = {Training = "only"},
-		More = {"CompleteBar", {Variable = "Training", Width = 152, Height = 18}}
+	{ Pos = {12, 152}, Condition = {Training = "only"},
+		More = {"CompleteBar", {Variable = "Training", Width = 152, Height = 14, Border = false}}
 	},
-	{ Pos = {50, 156}, Condition = {Training = "only"}, More = {"Text", "% Complete"}},
+	{ Pos = {50, 153}, Condition = {Training = "only"}, More = {"Text", "% Complete"}},
 -- Upgrading To
-	{ Pos = {12, 153}, Condition = {UpgradeTo = "only"},
-		More = {"CompleteBar", {Variable = "UpgradeTo", Width = 152, Height = 18}}
+	{ Pos = {12, 152}, Condition = {UpgradeTo = "only"},
+		More = {"CompleteBar", {Variable = "UpgradeTo", Width = 152, Height = 14, Border = false}}
 	},
-	{ Pos = {37,  86}, More = {"Text", "Upgrading:"}, Condition = {UpgradeTo = "only"} },
-	{ Pos = {50, 156}, More = {"Text", "% Complete"}, Condition = {UpgradeTo = "only"} },
+	{ Pos = {23,  86}, More = {"Text", "Upgrading:"}, Condition = {UpgradeTo = "only"} },
+	{ Pos = {50, 153}, More = {"Text", "% Complete"}, Condition = {UpgradeTo = "only"} },
 -- Mana
 	{ Pos = {16, 148}, Condition = {Mana = "only"},
-		More = {"CompleteBar", {Variable = "Mana", Height = 16, Width = 140, Border = true}}
+		More = {"CompleteBar", {Variable = "Mana", Height = 16, Width = 140, Border = false}}
 	},
 	{ Pos = {86, 150}, More = {"Text", {Variable = "Mana"}}, Condition = {Mana = "only"} },
 -- Resource Carry

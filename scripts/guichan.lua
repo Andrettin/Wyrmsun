@@ -173,41 +173,47 @@ function AddMenuHelpers(menu)
   end
 
   function menu:addFullButton(caption, hotkey, x, y, callback)
-    local b = self:addImageButton(caption, hotkey, x, y, callback)
-    if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-      b:setNormalImage(g_dbln)
-      b:setPressedImage(g_dblp)
-      b:setDisabledImage(g_dblg)
-    elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-      b:setNormalImage(g_gbln)
-      b:setPressedImage(g_gblp)
-      b:setDisabledImage(g_gblg)
-    else
-      b:setNormalImage(g_dbln)
-      b:setPressedImage(g_dblp)
-      b:setDisabledImage(g_dblg)
-    end
-    b:setSize(224, 28)
-    return b
+	local b = self:addImageButton(caption, hotkey, x, y, callback)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setNormalImage(g_dbln)
+		b:setPressedImage(g_dblp)
+		b:setDisabledImage(g_dblg)
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		b:setNormalImage(g_gbln)
+		b:setPressedImage(g_gblp)
+		b:setDisabledImage(g_gblg)
+	else
+		b:setNormalImage(g_dbln)
+		b:setPressedImage(g_dblp)
+		b:setDisabledImage(g_dblg)
+	end
+	b:setSize(224, 28)
+	return b
   end
 
   function menu:addHalfButton(caption, hotkey, x, y, callback)
-    local b = self:addImageButton(caption, hotkey, x, y, callback)
-    if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-      b:setNormalImage(g_dbsn)
-      b:setPressedImage(g_dbsp)
-      b:setDisabledImage(g_dbsg)
-    elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-      b:setNormalImage(g_gbsn)
-      b:setPressedImage(g_gbsp)
-      b:setDisabledImage(g_gbsg)
-    else
-      b:setNormalImage(g_dbsn)
-      b:setPressedImage(g_dbsp)
-      b:setDisabledImage(g_dbsg)
-    end
-    b:setSize(106, 28)
-    return b
+	local b = self:addImageButton(caption, hotkey, x, y, callback)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		b:setNormalImage(g_dbsn)
+		b:setPressedImage(g_dbsp)
+		b:setDisabledImage(g_dbsg)
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		b:setNormalImage(g_gbsn)
+		b:setPressedImage(g_gbsp)
+		b:setDisabledImage(g_gbsg)
+	else
+		b:setNormalImage(g_dbsn)
+		b:setPressedImage(g_dbsp)
+		b:setDisabledImage(g_dbsg)
+	end
+	b:setSize(106, 28)
+	return b
   end
 
   function menu:addSlider(min, max, w, h, x, y, callback)

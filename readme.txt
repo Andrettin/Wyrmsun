@@ -29,13 +29,19 @@ https://launchpad.net/stratagus
 
 - Wyrmsun updated to the latest version of the Stratagus engine (thanks to cybermind for making it available).
 
+* Building
+- Resource processing improvements are now correctly displayed on the interface of town hall and lumber mill type buildings.
+
 * Miscellaneous
 - Added slider graphics for the dwarves (graphics by Jinn and code based on DinkyDyeAussie's).
+- Buttons in the unit interface now correctly display frames and shift when clicked (thanks to cybermind and DinkyDyeAussie).
+- The infopanel is now correctly displayed (thanks to cybermind and DinkyDyeAussie).
 
 * Units
 - Goblin worker graphics updated (by b_o).
 - Dwarven ballista graphics updated (by b_o).
 - Goblin units now have voice sounds for when being selected, when acknowledging an order and when ready after training (sounds by b_o).
+- Gryphon damage and HP increased.
 
 -----------------------------------------------------------------------
 - 0.1.5b
