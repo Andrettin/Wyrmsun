@@ -450,11 +450,13 @@ DefineAnimations("animations-gold-and-gems-chest", {
 })
 
 DefineAnimations("animations-barrel", {
-  Still = BuildingStill,
-  Death = {"unbreakable begin", "random-goto 66 end", "random-goto 66 drop_potion_of_healing", "goto drop_potion_of_decay",
-  "label drop_potion_of_healing", "spawn-unit unit-potion-of-healing 0 0 5 15", "goto end",
-  "label drop_potion_of_decay", "spawn-unit unit-potion-of-decay 0 0 5 15", "goto end",
-  "label end", "unbreakable end", "wait 1",}
+	Still = BuildingStill,
+	Death = {"unbreakable begin",
+	"frame 1", "wait 3", "frame 2", "wait 3", "frame 3", "wait 3", "frame 4", "wait 3", "frame 5", "wait 100", "frame 5", 
+	"random-goto 66 end", "random-goto 66 drop_potion_of_healing", "goto drop_potion_of_decay",
+	"label drop_potion_of_healing", "spawn-unit unit-potion-of-healing 0 0 5 15", "goto end",
+	"label drop_potion_of_decay", "spawn-unit unit-potion-of-decay 0 0 5 15", "goto end",
+	"label end", "unbreakable end", "wait 1",}
 })
 
 DefineAnimations("animations-green-potion", {
