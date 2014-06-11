@@ -384,6 +384,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-barrel",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/barrel.png"
+})
+
+DefineIcon({
 	Name = "icon-blue-potion",
 	Size = {46, 38},
 	Frame = 0,

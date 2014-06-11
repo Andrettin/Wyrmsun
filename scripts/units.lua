@@ -196,8 +196,8 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
   Type = "land",
   Building = true, VisibleUnderFog = true,
   BuildingRules = {
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"}},
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
+	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
   },
 
   GivesResource = "gold", CanHarvest = true,
@@ -226,8 +226,8 @@ DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
   Type = "land",
   Building = true, VisibleUnderFog = true,
   BuildingRules = {
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"}},
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
+	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
   },
 
   GivesResource = "coal", CanHarvest = true,
@@ -583,7 +583,9 @@ DefineUnitType("unit-gold-chest", { Name = "Chest",
   Priority = 0,
   Type = "land",
   NumDirections = 1,  
-  Sounds = {} } )
+  Sounds = {
+    "selected", "click",
+    "dead", "building destroyed"} } )
 
 DefineUnitType("unit-gold-and-gems-chest", { Name = "Chest",
   Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
@@ -598,7 +600,26 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = "Chest",
   Priority = 0,
   Type = "land",
   NumDirections = 1,  
-  Sounds = {} } )
+  Sounds = {
+    "selected", "click",
+    "dead", "building destroyed"} } )
+
+DefineUnitType("unit-barrel", { Name = "Barrel",
+  Image = {"file", "neutral/items/barrel.png", "size", {32, 32}},
+  Animations = "animations-barrel", Icon = "icon-barrel",
+  NeutralMinimapColor = {255, 255, 0},
+  Speed = 0,
+  HitPoints = 10,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  NumDirections = 1,  
+  Sounds = {
+    "selected", "click",
+    "dead", "building destroyed"} } )
 
 DefineUnitType("unit-potion-of-healing", { Name = "Potion of Healing",
   Image = {"file", "neutral/items/potion.png", "size", {16, 16}},

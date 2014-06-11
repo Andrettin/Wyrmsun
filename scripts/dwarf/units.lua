@@ -258,8 +258,8 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
   Type = "land",
   Building = true, VisibleUnderFog = true, Center = true, WoodImprove = true,
   BuildingRules = {
-  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"} },
-  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+  	"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
   },
   CanStore = {"wood", "gold", "coal"},
   Sounds = {

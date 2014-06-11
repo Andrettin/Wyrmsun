@@ -187,7 +187,7 @@ DefineUnitType("unit-goblin-banner", { Name = "Goblin Banner",
   IsNotSelectable = true,
   Building = true,
   Sounds = {
---    "selected", "click",
+    "selected", "click",
 --    "acknowledge", "gold-mine-acknowledge",
 --    "ready", "gold-mine-ready",
 --    "help", "gold-mine-help",

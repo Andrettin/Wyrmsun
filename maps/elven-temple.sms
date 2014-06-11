@@ -444,11 +444,11 @@ Count = 12
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
-	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
+	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 		local adjacent_floor_tiles = 0
 		for x=(RandomX - 1),(RandomX + 1) do
 			for y=(RandomY - 1),(RandomY + 1) do
-				if (RawTile(x, y) == "Land") then
+				if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
 					adjacent_floor_tiles = adjacent_floor_tiles + 1
 				end
 			end
@@ -474,11 +474,11 @@ end
 --while (Count > 0) do
 --	RandomX = SyncRand(Map.Info.MapWidth)
 --	RandomY = SyncRand(Map.Info.MapHeight)
---	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
+--	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 --		local adjacent_floor_tiles = 0
 --		for x=(RandomX - 1),(RandomX + 1) do
 --			for y=(RandomY - 1),(RandomY + 1) do
---				if (RawTile(x, y) == "Land") then
+--				if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
 --					adjacent_floor_tiles = adjacent_floor_tiles + 1
 --				end
 --			end
@@ -496,12 +496,12 @@ Count = 1
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
-	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
+	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 		if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 			local adjacent_floor_tiles = 0
 			for x=(RandomX - 1),(RandomX + 1) do
 				for y=(RandomY - 1),(RandomY + 1) do
-					if (RawTile(x, y) == "Land") then
+					if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
 						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
 				end
@@ -559,7 +559,7 @@ Count = 16
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
-	if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
+	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 		if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 			RandomNumber = SyncRand(1)
 			if (RandomNumber == 0) then

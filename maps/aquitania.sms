@@ -80,11 +80,11 @@ ApplyRawTiles()
 
 CreateDecorations()
 	
-CreateGoldMines(1, 50000, 16, 64, 64, Map.Info.MapHeight, false) -- gas deposit near Lacq
+CreateGoldMines(1, 50000, 16, 64, 64 - 2, Map.Info.MapHeight - 2, false) -- gas deposit near Lacq
 
-CreateGoldMines(5, 50000, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+CreateGoldMines(5, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 
-CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 

@@ -153,8 +153,8 @@ DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
   Type = "land",
   Building = true, VisibleUnderFog = true, Center = true, WoodImprove = true,
   BuildingRules = {
-  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"} },
-  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+  	"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
   },
   CanStore = {"wood", "gold", "coal"},
   Sounds = {

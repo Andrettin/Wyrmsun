@@ -27,21 +27,28 @@ https://launchpad.net/stratagus
 - 0.1.6
 -----------------------------------------------------------------------
 
-- Wyrmsun updated to the latest version of the Stratagus engine (thanks to cybermind for making it available).
+- Wyrmsun updated to the latest version of the Stratagus engine (thanks to cybermind for helping me compile it).
 
-* Building
+* Buildings
 - Resource processing improvements are now correctly displayed on the interface of town hall and lumber mill type buildings.
+- Town halls now properly can't be build too close to gold or coal mines.
+
+* Maps
+- Improved random map generation so that starting town halls won't be placed too close to gold mines.
 
 * Miscellaneous
 - Added slider graphics for the dwarves (graphics by Jinn and code based on DinkyDyeAussie's).
 - Buttons in the unit interface now correctly display frames and shift when clicked (thanks to cybermind and DinkyDyeAussie).
 - The infopanel is now correctly displayed (thanks to cybermind and DinkyDyeAussie).
+- Added a Lua function that returns the name of a tile's terrain.
+- Added a Lua function that returns whether a tile's terrain has a certain flag.
 
 * Units
 - Goblin worker graphics updated (by b_o).
 - Dwarven ballista graphics updated (by b_o).
 - Goblin units now have voice sounds for when being selected, when acknowledging an order and when ready after training (sounds by b_o).
 - Gryphon damage and HP increased.
+- Added barrel (appears in dungeon maps and may drop potions).
 
 -----------------------------------------------------------------------
 - 0.1.5b

@@ -47,7 +47,7 @@ end
 
 ApplyRawTiles()
 
-CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, true)
+CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, true)
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 

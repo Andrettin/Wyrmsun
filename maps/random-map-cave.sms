@@ -26,7 +26,7 @@ GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidt
 
 ApplyRawTiles()
 
-CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 

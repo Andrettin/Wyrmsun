@@ -828,7 +828,7 @@ function CreateCritters(critter_number)
 	while (Count > 0) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
-		if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") then
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			unit = CreateUnit("unit-critter", 15, {RandomX, RandomY})
 			Count = Count - 1
 		end
@@ -844,7 +844,7 @@ function CreateGryphons(gryphon_number)
 	while (Count > 0) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
-		if (RawTile(RandomX, RandomY) == "Rock") then -- gryphons appear preferentially on mountainous parts
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
 			local unit_quantity = 0
 			for i=0,14 do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
@@ -867,11 +867,11 @@ function CreateDecorations()
 
 	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-mushroom-patch", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256})
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
-	if (decoration_count == 0 and (GetRawTileTypeCount("Land") + GetRawTileTypeCount("Dark-Land") + GetRawTileTypeCount("Rough") + GetRawTileTypeCount("Dark-Rough")) > Count) then
+	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
-			if ((RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough") and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 				RandomNumber = SyncRand(1000)
 				if (RandomNumber < 200) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
@@ -1019,10 +1019,10 @@ function GenerateRandomMap(width, height, symmetric)
 
 	CreateDecorations()
 	
-	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, symmetric)
+	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 
 	if (wyrmsun.tileset == "forest") then
-		CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, symmetric)
+		CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	end
 
 	-- create oil patches
@@ -1799,7 +1799,7 @@ function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		
-		if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough" or RawTile(RandomX, RandomY) == "") then
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			local unit_quantity = 0
 			for i=0,14 do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
@@ -1821,7 +1821,7 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		
-		if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "Rough" or RawTile(RandomX, RandomY) == "Dark-Rough" or RawTile(RandomX, RandomY) == "") then
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			if (RawTile(RandomX - 1, RandomY) == tile_type or RawTile(RandomX + 1, RandomY) == tile_type or RawTile(RandomX, RandomY - 1) == tile_type or RawTile(RandomX, RandomY + 1) == tile_type or RawTile(RandomX - 2, RandomY) == tile_type or RawTile(RandomX + 2, RandomY) == tile_type or RawTile(RandomX, RandomY - 2) == tile_type or RawTile(RandomX, RandomY + 2) == tile_type) then
 				local unit_quantity = 0
 				for i=0,14 do
@@ -1843,18 +1843,19 @@ function FindAppropriatePlayerSpawnPoint()
 	local RandomY = 0
 	local location_found = false
 	while (location_found == false) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(Map.Info.MapWidth - 3)
+		RandomY = SyncRand(Map.Info.MapHeight - 3)
 		
-		if (RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land" or RawTile(RandomX, RandomY) == "") then
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "land") and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "no-building") == false) then
 			local unit_quantity = 0
 			for i=0,14 do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 			end
 
 			local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			local close_gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
-			if (unit_quantity < 1 and gold_mine_quantity >= 1) then
+			if (unit_quantity < 1 and gold_mine_quantity >= 1 and close_gold_mine_quantity < 1) then
 				location_found = true
 			end
 		end
@@ -1877,7 +1878,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 		
 		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 24, RandomY - 24}, {RandomX + 24, RandomY + 24})
 		
-		if ((RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Dark-Land") and (RawTile(RandomX, RandomY + 2) == "Land" or RawTile(RandomX, RandomY + 2) == "Dark-Land") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Dark-Land") and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Dark-Land") and (RawTile(RandomX + 1, RandomY + 2) == "Land" or RawTile(RandomX + 1, RandomY + 2) == "Dark-Land") and (RawTile(RandomX + 2, RandomY) == "Land" or RawTile(RandomX + 2, RandomY) == "Dark-Land") and (RawTile(RandomX + 2, RandomY + 1) == "Land" or RawTile(RandomX + 2, RandomY + 1) == "Dark-Land") and (RawTile(RandomX + 2, RandomY + 2) == "Land" or RawTile(RandomX + 2, RandomY + 2) == "Dark-Land")) then
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
 			if (unit_quantity < 1) then
 				location_found = true
 			end
@@ -1894,7 +1895,7 @@ function FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		
-		if ((RawTile(RandomX, RandomY) == "Land" or RawTile(RandomX, RandomY) == "Dark-Land") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Dark-Land") and (RawTile(RandomX, RandomY + 2) == "Land" or RawTile(RandomX, RandomY + 2) == "Dark-Land") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Dark-Land") and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Dark-Land") and (RawTile(RandomX + 1, RandomY + 2) == "Land" or RawTile(RandomX + 1, RandomY + 2) == "Dark-Land") and (RawTile(RandomX + 2, RandomY) == "Land" or RawTile(RandomX + 2, RandomY) == "Dark-Land") and (RawTile(RandomX + 2, RandomY + 1) == "Land" or RawTile(RandomX + 2, RandomY + 1) == "Dark-Land") and (RawTile(RandomX + 2, RandomY + 2) == "Land" or RawTile(RandomX + 2, RandomY + 2) == "Dark-Land")) then
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
 			local unit_quantity = 0
 			for i=0,14 do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
@@ -1918,18 +1919,18 @@ function FindUnusedPlayerSlot()
 	end
 end
 
-function GetRawTileTypeCount(tile_type)
+function GetTileTerrainFlagCount(flag)
 
-	local tile_type_count = 0
+	local tile_flag_count = 0
 
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
-			if (RawTile(x, y) == tile_type) then
-				tile_type_count = tile_type_count + 1
+			if (GetTileTerrainHasFlag(x, y, flag)) then
+				tile_flag_count = tile_flag_count + 1
 			end
 		end
 	end
 
-	return tile_type_count
+	return tile_flag_count
 	
 end

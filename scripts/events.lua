@@ -79,7 +79,7 @@ function EventTriggers()
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented)
 	-- Greebo inhabits a cave, so he can only appear in the map if there is a sufficient number of rocks in it
-	if (wyrmsun.tileset == "swamp" and GetRawTileTypeCount("Rock") >= 1024) then
+	if (wyrmsun.tileset == "swamp" and GetTileTerrainFlagCount("rock") >= 1024) then
 		AddTrigger(
 			function()
 				if (GameCycle == 0) then
@@ -204,7 +204,7 @@ function EventTriggers()
 	-- Andvari's Gold
 	-- based on Norse mythology
 	-- Andvari lives near a waterfall, so he can only appear in the map if there is a sufficient number of water in it
-	if (GetRawTileTypeCount("Water") >= 1024) then
+	if (GetTileTerrainFlagCount("water") >= 1024) then
 		AddTrigger(
 			function()
 				if (GameCycle == 0) then

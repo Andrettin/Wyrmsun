@@ -34,6 +34,7 @@ b_o:
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/items/axe.png
+/graphics/neutral/items/barrel.png
 /graphics/neutral/items/carrots.png
 /graphics/neutral/items/cheese.png
 /graphics/neutral/items/chest.png
