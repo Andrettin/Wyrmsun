@@ -24,10 +24,13 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
-- 0.1.6
+- 0.1.5c
 -----------------------------------------------------------------------
 
 - Wyrmsun updated to the latest version of the Stratagus engine (thanks to cybermind for helping me compile it).
+
+* AI
+- Fixed a bug which caused the AI to get stuck and do nothing.
 
 * Buildings
 - Resource processing improvements are now correctly displayed on the interface of town hall and lumber mill type buildings.
@@ -35,6 +38,7 @@ https://launchpad.net/stratagus
 
 * Maps
 - Improved random map generation so that starting town halls won't be placed too close to gold mines.
+- Fixed an important bug which caused the wrong map to be loaded if the map's quest had not yet been completed.
 
 * Miscellaneous
 - Added slider graphics for the dwarves (graphics by Jinn and code based on DinkyDyeAussie's).
@@ -49,6 +53,7 @@ https://launchpad.net/stratagus
 - Goblin units now have voice sounds for when being selected, when acknowledging an order and when ready after training (sounds by b_o).
 - Gryphon damage and HP increased.
 - Added barrel (appears in dungeon maps and may drop potions).
+- Added graphics for the dwarven miner when carrying coal (graphics by b_o and modified by Jinn).
 
 -----------------------------------------------------------------------
 - 0.1.5b

@@ -42,6 +42,7 @@ function RunShowCreditsMenu()
 	"  Joris Dauphin",
 	"  Russell Smith",
 	"  Pali Rohar",
+	"  cybermind",
 	"  Andre Novellino Gouvea (Andrettin)",
 	"  DinkyDyeAussie",
 	"Graphics and Artwork",

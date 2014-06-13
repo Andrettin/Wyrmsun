@@ -1,5 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person","computer")
-PresentMap("Elven Temple", 1, 64, 64, 1)
-MapWorld = "Unknown"

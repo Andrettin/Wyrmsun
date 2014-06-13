@@ -109,6 +109,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/throwing_axe_1.png
 /graphics/dwarf/icons/throwing_axe_2.png
 /graphics/dwarf/icons/throwing_axe_3.png
+/graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
 /graphics/elf/icons/elven_swordsman.png
 /graphics/gnome/buildings/barracks.png
 /graphics/gnome/buildings/farm.png

@@ -252,8 +252,8 @@ DefinePanelContents(
   Contents = {
 -- Food building
 	{ Pos = {16, 71}, More = {"Text", "Usage"} },
-	{ Pos = {58, 86}, More = {"Text", {Text = "Supply : ", Variable = "Supply", Component = "Max"}} },
-	{ Pos = {51, 102}, More = { "Text", {Text = Concat("Demand : ",
+	{ Pos = {58, 86}, More = {"Text", {Text = "Supply: ", Variable = "Supply", Component = "Max"}} },
+	{ Pos = {51, 102}, More = { "Text", {Text = Concat("Demand: ",
 									If(GreaterThan(ActiveUnitVar("Demand", "Max"), ActiveUnitVar("Supply", "Max")),
 										InverseVideo(String(ActiveUnitVar("Demand", "Max"))),
 										String(ActiveUnitVar("Demand", "Max")) ))}}

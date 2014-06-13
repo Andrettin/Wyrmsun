@@ -1060,7 +1060,7 @@ function RunSinglePlayerGameMenu()
 	for i=1,table.getn(maps) do
 		MapWorld = ""
 		GetMapInfo(maps[i])
-		if (mapinfo.description == scenario_list[scenario:getSelected() + 1] and MapWorld == world_list[world:getSelected() + 1]) then
+		if ((mapinfo.description == scenario_list[scenario:getSelected() + 1] or "~<" .. mapinfo.description .. "~>" == scenario_list[scenario:getSelected() + 1]) and MapWorld == world_list[world:getSelected() + 1]) then
 			mapname = maps[i]
 			mapl:setCaption(string.sub(mapname, 6))
 		end
@@ -1135,7 +1135,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5" and wyr.preferences.LastVersionPlayed ~= "0.1.5a" and wyr.preferences.LastVersionPlayed ~= "0.1.5b") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5" and wyr.preferences.LastVersionPlayed ~= "0.1.5a" and wyr.preferences.LastVersionPlayed ~= "0.1.5b" and wyr.preferences.LastVersionPlayed ~= "0.1.5c") then
 		ResetTechnologiesAcquired()
 
 		local warning_menu = WarGameMenu(panel(2))

@@ -1,0 +1,4 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "person", "person", "person")
+PresentMap("Eastern Mines", 4, 70, 93, 1)
