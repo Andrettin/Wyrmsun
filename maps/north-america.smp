@@ -1,0 +1,7 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "computer", "person", "person")
+PresentMap("North America", 3, 116, 100, 1)
+MapWorld = "Earth"
+
+-- Map by Rob Best, licensed under the GPLv2 and included in FreeCiv

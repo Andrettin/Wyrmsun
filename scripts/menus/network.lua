@@ -118,7 +118,6 @@ function RunJoiningMapMenu(s)
   local numplayers = 3
   local state
   local d
-  EventsActivated = 1 -- events deactivated since I haven't found a way yet to create a synchronized drop-down for them
 
 
   menu = WarMenu("Joining Game: Map")
@@ -309,7 +308,6 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local sy = Video.Height / 20
   local startgame
   local d
-  EventsActivated = 1 -- events deactivated since I haven't found a way yet to create a synchronized drop-down for them
 
   menu = WarMenu("Create MultiPlayer game")
 

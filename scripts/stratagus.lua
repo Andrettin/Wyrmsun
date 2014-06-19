@@ -359,9 +359,10 @@ function SinglePlayerTriggers()
 	DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
 	DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
 	DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
+	ApplyTechLevels()
 
-	-- for now events are limited to single player (as a way hasn't been found to create a synchronized option to enable or disable them in multiplayer)
-	if (EventsActivated == 0) then
+	-- for now events are limited to single player
+	if (not IsNetworkGame()) then
 		EventTriggers()
 	end
 

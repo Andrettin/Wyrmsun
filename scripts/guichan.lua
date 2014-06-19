@@ -564,7 +564,7 @@ function InitGameSettings()
 	GameSettings.Inside = false
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
-	EventsActivated = 0
+	TechLevel = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 end
 InitGameSettings()
 
@@ -840,9 +840,8 @@ function RunSinglePlayerGameMenu()
   local gametype
   local mapl
   local descriptionl
-  local tilesetdd
-  local events
   local person_player = 0
+  local tech_level
 
   -- create the scenario and faction lists
   local scenario_list = {}
@@ -934,13 +933,13 @@ function RunSinglePlayerGameMenu()
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3) and mapinfo.nplayers >= 4 and mapinfo.playertypes[4] == "person") then
-		person_player = 3
-		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
-				GameSettings.Presets[i-1].Type = PlayerComputer
-			end
-		end
+--	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3) and mapinfo.nplayers >= 4 and mapinfo.playertypes[4] == "person") then
+--		person_player = 3
+--		for i=1,mapinfo.nplayers do
+--			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
+--				GameSettings.Presets[i-1].Type = PlayerComputer
+--			end
+--		end
 	end
 
       local tilesetFilename = {nil, "forest.lua", "swamp.lua"};
@@ -955,12 +954,7 @@ function RunSinglePlayerGameMenu()
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
       GameSettings.GameType = gametype:getSelected() - 1
-      if (mapinfo.description ~= "Fjalar's and Galar's Hall" and mapinfo.description ~= "Hall of Lyr") then -- somewhat ugly way to make it so dungeon maps aren't set to use other tilesets (this is because the other tilesets have no walls yet, so it would cause issues)
-      	GameSettings.Tileset = tilesetFilename[tilesetdd:getSelected() + 1]
-      else
-      	GameSettings.Tileset = nil
-      end
-      EventsActivated = events:getSelected()
+      TechLevel[person_player + 1] = tech_level:getSelected() - 1
 	  
       RunMap(mapname)
       menu:stop()
@@ -1011,15 +1005,10 @@ function RunSinglePlayerGameMenu()
     function(dd) end)
   gametype:setSize(152, 20)
 
-  menu:addLabel("~<Terrain:~>", offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-  tilesetdd = menu:addDropDown({"Map Default", "Forest", "Swamp"}, offx + 40, offy + 10 + 300,
+  menu:addLabel("~<Tech Level:~>", offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+  tech_level = menu:addDropDown({"Map Default", "Agrarian (Bronze)", "Agrarian (Iron)"}, offx + 40, offy + 10 + 300,
     function(dd) end)
-  tilesetdd:setSize(152, 20)
-
-  menu:addLabel("~<Events:~>", offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
-  events = menu:addDropDown({"Activated", "Deactivated"}, offx + 220, offy + 10 + 300,
-    function(dd) end)
-  events:setSize(152, 20)
+  tech_level:setSize(152, 20)
 
   function WorldChanged()
 	scenario_list = {}

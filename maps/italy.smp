@@ -1,0 +1,7 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "person")
+PresentMap("Italy", 2, 100, 100, 1)
+MapWorld = "Earth"
+
+-- Map by Paolo Sammicheli, licensed under the GPLv2 and included in FreeCiv

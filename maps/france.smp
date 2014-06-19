@@ -1,0 +1,7 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "computer", "person", "person")
+PresentMap("France", 3, 140, 90, 1)
+MapWorld = "Earth"
+
+-- Map by Mathieu Roy, licensed under the GPLv2 and included in FreeCiv

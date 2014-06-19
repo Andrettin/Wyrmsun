@@ -24,6 +24,28 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.6
+-----------------------------------------------------------------------
+
+* Maps
+- Added Iberia map by Miguel Farah F., from FreeCiv.
+- Added France map by Mathieu Roy, from FreeCiv.
+- Added Italy map by Paolo Sammicheli, from FreeCiv.
+- Added British Isles map by Martin McMahon, from FreeCiv.
+- Added North America map by Rob Best, from FreeCiv.
+
+* Miscellaneous
+- The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.
+- The option of having events activated or deactivated has been removed, as it didn't serve enough of a purpose to justify the space it occupied.
+- Added the option of choosing your starting tech level in the single player game setup. Other players will use the same tech level as you, unless the map otherwise specifies. The two tech levels available are "Agrarian (Bronze)" (start as usual) and "Agrarian (Iron)" (start with level 1 weapon and shield upgrades researched, if you have acquired the upgrades in the tech tree).
+
+* Quests
+- Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
+
+* Units
+- Dwarven ballistas and gnomish caravans are now repairable.
+
+-----------------------------------------------------------------------
 - 0.1.5c
 -----------------------------------------------------------------------
 

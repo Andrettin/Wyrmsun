@@ -30,7 +30,11 @@
 function EventTriggers()
 
 	Load("scripts/dwarf/events.lua")
-	Load("scripts/dwarf/scepter_of_fire_events.lua")
+
+	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0) then
+		Load("scripts/dwarf/scepter_of_fire_events.lua")
+		Load("scripts/gnome/events.lua")
+	end
 
 	-- The Surghan Mercenaries
 	-- based on elements from the The Dragon scenario of the Sceptre of Fire campaign from Battle for Wesnoth

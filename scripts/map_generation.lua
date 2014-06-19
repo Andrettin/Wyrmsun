@@ -1934,3 +1934,188 @@ function GetTileTerrainFlagCount(flag)
 	return tile_flag_count
 	
 end
+
+function AdjustRawMapTileIrregularities()
+	local Count = 4
+	while (Count > 0) do
+		for x=0,(Map.Info.MapWidth - 1) do
+			for y=0,(Map.Info.MapHeight - 1) do
+				if (RawTile(x, y) == "Rock") then
+					local adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) ~= "Rock") then
+							adjacent_tiles = adjacent_tiles + 1
+						end
+					end
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) ~= "Rock") then
+							adjacent_tiles = adjacent_tiles + 1
+						end
+					end
+					if (adjacent_tiles >= 3) then
+						SetRawTile(x, y, "Rough")
+					end
+				elseif (RawTile(x, y) == "Water") then
+					local horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) ~= "Water") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					local vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) ~= "Water") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Rough")
+					end 
+				elseif (RawTile(x, y) == "Rough") then
+					local horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) == "Water") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					local vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) == "Water") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Water")
+					end 
+
+					horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) == "Rock") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) == "Rock") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Rock")
+					end 
+
+					horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) == "Tree") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) == "Tree") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Tree")
+					end 
+
+					horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) ~= "Rough") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) ~= "Rough") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Land")
+					end 
+				elseif (RawTile(x, y) == "Tree") then
+					local horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) ~= "Tree") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					local vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) ~= "Tree") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Land")
+					end 
+				elseif (RawTile(x, y) == "Land") then
+					local horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) == "Water") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					local vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) == "Water") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Water")
+					end 
+
+					horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) == "Rock") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) == "Rock") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Rock")
+					end 
+
+					horizontal_adjacent_tiles = 0
+					for adjacent_x=(x - 1),(x + 1) do
+						if (RawTile(adjacent_x, y) == "Tree") then
+							horizontal_adjacent_tiles = horizontal_adjacent_tiles + 1
+						end
+					end
+					vertical_adjacent_tiles = 0
+					for adjacent_y=(y - 1),(y + 1) do
+						if (RawTile(x, adjacent_y) == "Tree") then
+							vertical_adjacent_tiles = vertical_adjacent_tiles + 1
+						end
+					end
+					if (horizontal_adjacent_tiles >= 2 or vertical_adjacent_tiles >= 2) then
+						SetRawTile(x, y, "Tree")
+					end 
+				end
+			end
+		end
+
+		for x=0,(Map.Info.MapWidth - 1) do
+			for y=0,(Map.Info.MapHeight - 1) do
+				-- convert buildable land tiles adjacent to water tiles into rough land
+				if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+					SetRawTile(x, y, "Rough")
+				end
+
+				-- convert buildable land tiles adjacent to rock tiles into rough land
+				if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+					SetRawTile(x, y, "Rough")
+				end
+			end
+		end
+		Count = Count - 1
+	end
+end

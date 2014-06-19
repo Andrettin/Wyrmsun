@@ -133,3 +133,23 @@ function DefineAllowSpecialUnits(flags)
 end
 
 InitFuncs:add(function() DefineAllowSpecialUnits("AAAAAAAAAAAAAAAA") end)
+
+function ApplyTechLevels()
+	for i=0,15 do
+		if (TechLevel[i + 1] == -1 and i ~= GetThisPlayer()) then
+			TechLevel[i + 1] = TechLevel[GetThisPlayer() + 1]
+		end
+	end
+
+	local bronze_upgrades = {
+		"upgrade-dwarven-broad-axe", "upgrade-dwarven-throwing-axe-1",
+		"upgrade-dwarven-shield-1"
+	}
+	for i, unitName in ipairs(bronze_upgrades) do
+		for j=0,15 do
+			if (TechLevel[j + 1] >= 1 and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
+				AcquireUpgrade(j, unitName)
+			end
+		end
+	end
+end
