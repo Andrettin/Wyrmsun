@@ -149,6 +149,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/repair_extra_2.png
 /graphics/neutral/icons/water_elemental.png
 /graphics/orc/icons/spearman.png
+/graphics/tilesets/cave/terrain/cave.png
 /graphics/tilesets/forest/neutral/icons/rat.png
 /graphics/tilesets/forest/terrain/forest.png (dirt and water tiles)
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
@@ -261,3 +262,10 @@ Rick Elliot:
 
 StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
+
+Veneteaou:
+/graphics/tilesets/world/terrain/hills_inner.png
+/graphics/tilesets/world/terrain/hills_outer.png
+/graphics/tilesets/world/terrain/mountains_inner.png
+/graphics/tilesets/world/terrain/mountains_outer.png
+/graphics/tilesets/world/terrain/plains.png

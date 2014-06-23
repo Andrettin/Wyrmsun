@@ -876,25 +876,25 @@ function CreateDecorations()
 				if (RandomNumber < 200) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 200 and RandomNumber < 300) then
-					if (wyrmsun.tileset ~= "dungeon") then
+					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})
 					end
 				elseif (RandomNumber >= 300 and RandomNumber < 400) then
-					if (wyrmsun.tileset ~= "dungeon") then
+					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-large-flower", 15, {RandomX, RandomY})
 					end
 				elseif (RandomNumber >= 400 and RandomNumber < 600) then
 					unit = CreateUnit("unit-small-rocks", 15, {RandomX, RandomY})
 				elseif (RandomNumber >= 600 and RandomNumber < 800) then
-					if (wyrmsun.tileset ~= "dungeon") then
+					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
 					end
 				elseif (RandomNumber >= 800 and RandomNumber < 875) then
-					if (wyrmsun.tileset ~= "dungeon") then
+					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-fern", 15, {RandomX, RandomY})
 					end
 				elseif (RandomNumber >= 875 and RandomNumber < 900) then
-					if (wyrmsun.tileset ~= "dungeon") then
+					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-log", 15, {RandomX, RandomY})
 					end
 				elseif (RandomNumber >= 900 and RandomNumber < 999) then

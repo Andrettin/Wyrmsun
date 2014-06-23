@@ -32,6 +32,7 @@ if (wyrmsun.tileset == nil) then
 end
 
 local files = {
+  cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
@@ -54,6 +55,7 @@ DefineConstruction("construction-none", {
 })
 
 local files = {
+  cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
@@ -76,6 +78,7 @@ DefineConstruction("construction-land", {
 })
 
 local files = {
+  cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
@@ -95,6 +98,7 @@ DefineConstruction("construction-land2", {
 })
 
 local files = {
+  cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"

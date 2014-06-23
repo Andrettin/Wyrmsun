@@ -1,5 +1,11 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","person","person","computer")
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person","person","person","computer")
+elseif (Attacker == GrandStrategyFaction) then
+	DefinePlayerTypes("person","computer","nobody","nobody")
+else
+	DefinePlayerTypes("computer","person","nobody","nobody")
+end
 PresentMap("Random Map (Swamp)", 3, 128, 128, 1)
 MapWorld = "Nidavellir"

@@ -123,8 +123,10 @@ if (not IsNetworkGame()) then
 	AssignPlayerFactions()
 end
 
-SetDiplomacy(0, "neutral", 1)
-SetDiplomacy(1, "neutral", 0)
+if (GrandStrategy == false) then
+	SetDiplomacy(0, "neutral", 1)
+	SetDiplomacy(1, "neutral", 0)
+end
 
 -- Gold Mines
 unit = CreateUnit("unit-gold-mine", 15, {35, 8})
@@ -146,9 +148,11 @@ end
 -- Gnomish outpost
 unit = CreateUnit("unit-gnomish-town-hall", 1, {7, 59})
 unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
--- Gnomish king
-unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
-IncreaseUnitLevel(unit, 2, true)
+if (GetPlayerData(1, "RaceName") == "gnome") then -- only create the gnomish king if player 1 actually are gnomes
+	-- Gnomish king
+	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
+	IncreaseUnitLevel(unit, 2, true)
+end
 
 unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 

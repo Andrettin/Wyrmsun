@@ -181,6 +181,34 @@ function SetPlayerData(player, data, arg1, arg2)
 				arg1 = "goblin"
 			end
 		end
+		
+		if (GrandStrategy) then
+			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
+				arg1 = GetFactionFromName(GrandStrategyFaction).Civilization
+			end
+
+			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
+				if (GrandStrategyFaction == Attacker and Defender ~= "") then
+					arg1 = GetFactionFromName(Defender).Civilization
+				elseif (GrandStrategyFaction == Defender and Attacker ~= "") then
+					arg1 = GetFactionFromName(Attacker).Civilization
+				end
+			end
+		end
+	elseif (data == "Name") then
+		if (GrandStrategy) then
+			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
+				arg1 = GrandStrategyFaction
+			end
+
+			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
+				if (GrandStrategyFaction == Attacker and Defender ~= "") then
+					arg1 = Defender
+				elseif (GrandStrategyFaction == Defender and Attacker ~= "") then
+					arg1 = Attacker
+				end
+			end
+		end
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
 			res = {2000, 1000, 1000, 0, 0, 1000}

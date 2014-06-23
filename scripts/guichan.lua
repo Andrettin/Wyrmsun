@@ -28,6 +28,8 @@
 --
 
 PlayerFaction = ""
+GrandStrategy = false
+
 
 SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
@@ -751,24 +753,24 @@ function RunWorldMapMenu(world, maps)
 		for y=0,7 do
 			-- set map tile
 			if (GetWorldMapTile(x, y) == "DryMud") then
-				local world_map_tile = CGraphic:New("tilesets/overland/terrain/dry_mud.png")
+				local world_map_tile = CGraphic:New("tilesets/world/terrain/dry_mud.png")
 				world_map_tile:Load()
 				world_map_tile = ImageWidget(world_map_tile)
 				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
 			elseif (GetWorldMapTile(x, y) == "Rock") then
-				local world_map_tile = CGraphic:New("tilesets/overland/terrain/dry_mud.png")
+				local world_map_tile = CGraphic:New("tilesets/world/terrain/dry_mud.png")
 				world_map_tile:Load()
 				world_map_tile = ImageWidget(world_map_tile)
 				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
 				
 				if (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x - 1, y) == "Rock" and GetWorldMapTile(x + 1, y) == "Rock") then
-					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock_south.png")
+					world_map_tile = CGraphic:New("tilesets/world/terrain/rock_south.png")
 				elseif (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x, y - 1) == "Rock" and GetWorldMapTile(x - 1, y) ~= "Rock" and GetWorldMapTile(x + 1, y) ~= "Rock") then
-					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock_south_single.png")
+					world_map_tile = CGraphic:New("tilesets/world/terrain/rock_south_single.png")
 				elseif (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x, y - 1) ~= "Rock" and GetWorldMapTile(x - 1, y) ~= "Rock" and GetWorldMapTile(x + 1, y) ~= "Rock") then
-					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock_single.png")
+					world_map_tile = CGraphic:New("tilesets/world/terrain/rock_single.png")
 				else
-					world_map_tile = CGraphic:New("tilesets/overland/terrain/rock.png")
+					world_map_tile = CGraphic:New("tilesets/world/terrain/rock.png")
 				end
 				world_map_tile:Load()
 				world_map_tile = ImageWidget(world_map_tile)
@@ -787,13 +789,13 @@ function RunWorldMapMenu(world, maps)
 		if (MapWorld == world and MapSiteType ~= "" and (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest))) then
 			local world_map_site_image
 			if (MapSiteType == "Dwarven Settlement") then
-				world_map_site_image = CGraphic:New("tilesets/overland/sites/dwarven_settlement.png")
+				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_settlement.png")
 			elseif (MapSiteType == "Dwarven Outpost") then
-				world_map_site_image = CGraphic:New("tilesets/overland/sites/dwarven_outpost.png")
+				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_outpost.png")
 			elseif (MapSiteType == "Dwarven Fortified Outpost") then
-				world_map_site_image = CGraphic:New("tilesets/overland/sites/dwarven_fortified_outpost.png")
+				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_fortified_outpost.png")
 			elseif (MapSiteType == "Gnomish Settlement") then
-				world_map_site_image = CGraphic:New("tilesets/overland/sites/gnomish_settlement.png")
+				world_map_site_image = CGraphic:New("tilesets/world/sites/gnomish_settlement.png")
 			end
 			world_map_site_image:Load()
 
@@ -847,6 +849,8 @@ function RunSinglePlayerGameMenu()
   local scenario_list = {}
   local faction_list = {"Map Default"}
   local world_list = { }
+  
+  GrandStrategy = false
   
   local maps = {}
 
@@ -941,8 +945,6 @@ function RunSinglePlayerGameMenu()
 --			end
 --		end
 	end
-
-      local tilesetFilename = {nil, "forest.lua", "swamp.lua"};
 
       GameSettings.Presets[person_player].Race = race:getSelected()
       GameSettings.Resources = resources:getSelected()
@@ -1162,6 +1164,8 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
+--  menu:addFullButton("~!Grand Strategy Game", "g", offx + 208, offy + 104 + 36*-1,
+--    function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
   menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*0,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
   menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*1,
@@ -1245,6 +1249,7 @@ Load("scripts/menus/network.lua")
 Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
 Load("scripts/menus/achievements.lua")
+Load("scripts/menus/grand_strategy.lua")
 
 function GameStarting()
   if (wyr.preferences.ShowTips and not IsReplayGame()) then

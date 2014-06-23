@@ -281,6 +281,7 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 )
 
 UnitTypeFiles["unit-flowers"] = {
+	cave = "tilesets/swamp/neutral/decorations/flowers.png",
 	dungeon = "tilesets/swamp/neutral/decorations/flowers.png",
 	forest = "tilesets/forest/neutral/decorations/flowers.png",
 	swamp = "tilesets/swamp/neutral/decorations/flowers.png"
@@ -308,6 +309,7 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 )
 
 UnitTypeFiles["unit-large-flower"] = {
+	cave = "tilesets/swamp/neutral/decorations/large_flower.png",
 	dungeon = "tilesets/swamp/neutral/decorations/large_flower.png",
 	forest = "tilesets/forest/neutral/decorations/large_flower.png",
 	swamp = "tilesets/swamp/neutral/decorations/large_flower.png"
@@ -335,6 +337,7 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 )
 
 UnitTypeFiles["unit-fern"] = {
+	cave = "tilesets/swamp/neutral/decorations/fern.png",
 	dungeon = "tilesets/swamp/neutral/decorations/fern.png",
 	forest = "tilesets/forest/neutral/decorations/fern.png",
 	swamp = "tilesets/swamp/neutral/decorations/fern.png"
@@ -722,6 +725,7 @@ DefineUnitType("unit-gryphon-feather", { Name = "Gryphon Feather",
 
 
 UnitTypeFiles["unit-destroyed-2x2-place"] = {
+  cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png",
@@ -744,6 +748,7 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 
 
 UnitTypeFiles["unit-destroyed-3x3-place"] = {
+  cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
@@ -784,6 +789,7 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --  Sounds = {} } )
 
 UnitTypeFiles["unit-destroyed-4x4-place"] = {
+  cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
   swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"

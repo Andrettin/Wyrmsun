@@ -42,6 +42,9 @@ https://launchpad.net/stratagus
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
 
+* Terrain
+- Added cave tileset, which right now has only buildable land and unbuildable land tiles (graphics by Jinn).
+
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.
 

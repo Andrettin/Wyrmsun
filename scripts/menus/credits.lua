@@ -64,6 +64,7 @@ function RunShowCreditsMenu()
 	"  StumpyStrust",
 	"  Tina Petersen Jensen",
 	"  TimberDragon",
+	"  Veneteaou",
 	"Sound Effects",
 	"  b_o",
 	"  Corey Woodworth (woodwizzle)",

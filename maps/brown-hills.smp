@@ -1,6 +1,12 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person", "computer", "person", "person")
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person", "computer", "person", "person")
+elseif (Attacker == GrandStrategyFaction) then
+	DefinePlayerTypes("nobody", "computer", "nobody", "person")
+else
+	DefinePlayerTypes("nobody", "person", "nobody", "computer")
+end
 PresentMap("Brown Hills", 3, 73, 116, 1)
 MapWorld = "Nidavellir"
 MapSiteType = "Gnomish Settlement"

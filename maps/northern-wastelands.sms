@@ -76,6 +76,8 @@ RawTiles = {
 	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rough", "Rough", "Rock",  "Rock",  "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Tree",  "Tree",  "Land",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree",  "Tree"}
 }
 
+SetRawTile(47, 21, "Tree")
+
 ApplyRawTiles()
 
 -- Player Setup

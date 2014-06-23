@@ -31,7 +31,7 @@ function EventTriggers()
 
 	Load("scripts/dwarf/events.lua")
 
-	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0) then
+	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0 and GrandStrategy == false) then
 		Load("scripts/dwarf/scepter_of_fire_events.lua")
 		Load("scripts/gnome/events.lua")
 	end
@@ -180,7 +180,7 @@ function EventTriggers()
 							end,
 							function() 
 								Event(
-									"Greebo's End",
+									"",
 									"The goblin looter is dead. He doesn't seem to have much with him. Must be hard times.",
 									player,
 									{"~!OK"},

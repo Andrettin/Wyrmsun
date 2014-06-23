@@ -177,3 +177,9 @@ unit = CreateUnit("unit-glyph", 15, {51, 43})
 
 PlayMusic("music/battle.ogg")
 wyrmsun.playlist = { "music/the_city_falls.ogg" }
+
+if (GrandStrategy) then
+	if (GetArrayIncludes(WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings, "unit-dwarven-blacksmith")) then
+		unit = CreateUnit("unit-dwarven-blacksmith", 0, {38, 21})
+	end
+end
