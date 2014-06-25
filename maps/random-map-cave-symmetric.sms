@@ -14,7 +14,7 @@ for x=0,(Map.Info.MapWidth - 1) do
 	end
 end
 
-SetMapBorders("Rock")
+SetMapBorders("Rock", true)
 
 GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land")
 

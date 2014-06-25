@@ -1,4 +1,6 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person", "person", "person", "person")
-PresentMap("Eastern Mines", 4, 70, 93, 1)
+PresentMap("Eastern Mines", 4, 80, 80, 1)
+MapWorld = "Nidavellir"
+MapRequiredQuest = "Searching for the Runecrafter"

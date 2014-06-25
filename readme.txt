@@ -28,11 +28,12 @@ https://launchpad.net/stratagus
 -----------------------------------------------------------------------
 
 * Maps
-- Added Iberia map by Miguel Farah F., from FreeCiv.
-- Added France map by Mathieu Roy, from FreeCiv.
-- Added Italy map by Paolo Sammicheli, from FreeCiv.
-- Added British Isles map by Martin McMahon, from FreeCiv.
-- Added North America map by Rob Best, from FreeCiv.
+- Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
+- Added France map (Earth) by Mathieu Roy, from FreeCiv.
+- Added Italy map (Earth) by Paolo Sammicheli, from FreeCiv.
+- Added British Isles map (Earth) by Martin McMahon, from FreeCiv.
+- Added North America map (Earth) by Rob Best, from FreeCiv.
+- Added Eastern Mines map (Nidavellir).
 
 * Miscellaneous
 - The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.

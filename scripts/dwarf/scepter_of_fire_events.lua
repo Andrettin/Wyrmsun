@@ -1814,7 +1814,7 @@ AddTrigger(
 																															end
 																															SavePreferences()
 																															if (mapinfo.description == "Northern Wastelands") then
-																						--										NextMap = "maps/eastern-mines.smp"
+																																NextMap = "maps/eastern-mines.smp"
 																																ActionVictory()
 																															end
 																														end
@@ -1894,6 +1894,249 @@ AddTrigger(
 			end
 		)
 		return false
+	end
+)
+end
+
+if (mapinfo.description == "Eastern Mines") then
+-- Gathering Materials initial dialogue
+-- based on the Gathering Materials scenario of the Sceptre of Fire campaign from Battle for Wesnoth
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") and PlayerHasObjective(GetThisPlayer(), "- Mine 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-mine", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {256, 256}) >= 2) then
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Rugnur",
+			"Well, these are the eastern mines. Goblins live here, be prepared to fight them; also be prepared to spend quite some time here - mining can take a while.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Thursagan",
+				"For me to make the artifact Pypo wants, I need a special type of gold. I do not know where it was found, but Baglur said these mines were the source of it.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Baglur",
+					"Also, the only coal that wi' melt this gold is here.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Rugnur",
+						"So we're down here to, what, mine this gold and coal? That should be easy enough.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Thursagan",
+							"Aye, although we will have to hire the miners - they don't work for free. But beware, there are goblins and such down here...",
+							player,
+							{"~!Continue"},
+							{function(s)
+								if (mapinfo.description == "Eastern Mines") then
+									RemovePlayerObjective(player, "- Destroy the enemy")
+								end
+								AddPlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+								AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
+							end},
+							"dwarf/icons/thursagan.png"
+						)
+						end},
+						"dwarf/icons/rugnur.png"
+					)
+					end},
+					"dwarf/icons/baglur.png"
+				)
+				end},
+				"dwarf/icons/thursagan.png"
+			)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle > 3000) then
+			for i=0,14 do
+				if (PlayerHasObjective(i, "- Mine 10000 gold and 20000 coal")) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		if (GetPlayerData(player, "UnitTypesCount", "unit-dwarven-miner") < 1) then
+			Event(
+				"Thursagan",
+				"Don't forget to recruit the miners. Our warriors can clear the tunnels of goblins and worse, but once we find the gold and coal we need the miners to acquire it.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				end},
+				"dwarf/icons/thursagan.png"
+			)
+		end
+		return false
+	end
+)
+
+-- coal found
+AddTrigger(
+	function()
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-coal-mine") then
+				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"Here is some of the coal that we need! Bring the miners to take it!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+-- gold found
+AddTrigger(
+	function()
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-mine") then
+				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"Here is a mine of the precious gold! Send the miners this way.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Mine 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"That's the last load of coal we need.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (GetPlayerData(i, "Resources", "gold") >= 10000) then
+					Event(
+						"Thursagan",
+						"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
+						player,
+						{"~!Continue"},
+						{function(s)
+							RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+							if (player == GetThisPlayer()) then
+								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
+									table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
+								end
+								SavePreferences()
+								if (mapinfo.description == "Eastern Mines") then
+--									NextMap = "maps/shorbear-hills.smp"
+									ActionVictory()
+								end
+							end
+						end},
+						"dwarf/icons/thursagan.png"
+					)
+				end
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Mine 10000 gold and 20000 coal") and GetPlayerData(i, "Resources", "coal") >= 20000 and GetPlayerData(i, "Resources", "gold") >= 10000) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Thursagan",
+			"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+				if (player == GetThisPlayer()) then
+					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
+						table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
+					end
+					SavePreferences()
+					if (mapinfo.description == "Eastern Mines") then
+--						NextMap = "maps/shorbear-hills.smp"
+						ActionVictory()
+					end
+				end
+			end},
+			"dwarf/icons/thursagan.png"
+		)
 	end
 )
 

@@ -1,4 +1,5 @@
 function RunSaveGame(name, menu)
+  HexTiles = {}
   RawTiles = {}
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))
