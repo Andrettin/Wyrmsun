@@ -68,6 +68,7 @@ local editor_types = {
    "unit-gnomish-worker",
    "unit-gnomish-recruit",
    "unit-gnomish-caravan",
+
    "unit-gnomish-town-hall",
    "unit-gnomish-farm",
    "unit-gnomish-barracks",
@@ -77,6 +78,9 @@ local editor_types = {
    "unit-goblin-worker",
    "unit-goblin-spearman",
    "unit-goblin-archer",
+
+   "unit-goblin-town-hall",
+
    "unit-hero-greebo",
 
 --- - - - - - - - - - - - - - - - - - -

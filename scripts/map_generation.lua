@@ -1121,7 +1121,7 @@ function ApplyRawTiles()
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Water") then
-				if (RawTile(x, y + 1) ~= "Water" and RawTile(x, y - 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water") then
+				if (RawTile(x, y + 1) ~= "Water" and RawTile(x, y - 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water" and RawTile(x - 1, y - 1) == "Water" and RawTile(x + 1, y - 1) == "Water") then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(544, x, y, 0)
@@ -1130,7 +1130,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(546, x, y, 0)
 					end
-				elseif (RawTile(x, y - 1) ~= "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water") then
+				elseif (RawTile(x, y - 1) ~= "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water" and RawTile(x - 1, y + 1) == "Water" and RawTile(x + 1, y + 1) == "Water") then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(688, x, y, 0)
@@ -1139,7 +1139,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(690, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y) ~= "Water" and RawTile(x - 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x, y + 1) == "Water") then
+				elseif (RawTile(x + 1, y) ~= "Water" and RawTile(x - 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y - 1) == "Water" and RawTile(x - 1, y + 1) == "Water") then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(576, x, y, 0)
@@ -1148,7 +1148,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(578, x, y, 0)
 					end
-				elseif (RawTile(x - 1, y) ~= "Water" and RawTile(x + 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x, y + 1) == "Water") then
+				elseif (RawTile(x - 1, y) ~= "Water" and RawTile(x + 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x, y + 1) == "Water" and RawTile(x + 1, y - 1) == "Water" and RawTile(x + 1, y + 1) == "Water") then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(656, x, y, 0)
@@ -1157,28 +1157,28 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(658, x, y, 0)
 					end
-				elseif (RawTile(x, y - 1) ~= "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) ~= "Water" and RawTile(x + 1, y) == "Water") then
+				elseif ((RawTile(x, y - 1) ~= "Water" or RawTile(x - 1, y) ~= "Water") and RawTile(x, y + 1) == "Water" and RawTile(x + 1, y) == "Water" and RawTile(x + 1, y + 1) == "Water") then
 					RandomNumber = SyncRand(2)
 					if (RandomNumber == 0) then
 						SetTile(624, x, y, 0)
 					elseif (RandomNumber == 1) then
 						SetTile(625, x, y, 0)
 					end
-				elseif (RawTile(x, y - 1) ~= "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) ~= "Water") then
+				elseif ((RawTile(x, y - 1) ~= "Water" or RawTile(x + 1, y) ~= "Water") and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) == "Water") then
 					RandomNumber = SyncRand(2)
 					if (RandomNumber == 0) then
 						SetTile(560, x, y, 0)
 					elseif (RandomNumber == 1) then
 						SetTile(561, x, y, 0)
 					end
-				elseif (RawTile(x, y + 1) ~= "Water" and RawTile(x + 1, y) ~= "Water" and RawTile(x - 1, y) == "Water" and RawTile(x, y - 1) == "Water") then
+				elseif ((RawTile(x, y + 1) ~= "Water" or RawTile(x + 1, y) ~= "Water") and RawTile(x - 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x - 1, y - 1) == "Water") then
 					RandomNumber = SyncRand(2)
 					if (RandomNumber == 0) then
 						SetTile(512, x, y, 0)
 					elseif (RandomNumber == 1) then
 						SetTile(513, x, y, 0)
 					end
-				elseif (RawTile(x, y + 1) ~= "Water" and RawTile(x - 1, y) ~= "Water" and RawTile(x + 1, y) == "Water" and RawTile(x, y - 1) == "Water") then
+				elseif ((RawTile(x, y + 1) ~= "Water" or RawTile(x - 1, y) ~= "Water") and RawTile(x + 1, y) == "Water" and RawTile(x, y - 1) == "Water") then
 					RandomNumber = SyncRand(2)
 					if (RandomNumber == 0) then
 						SetTile(528, x, y, 0)
@@ -1919,7 +1919,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 			RandomY = SyncRand(max_y - min_y) + min_y
 		end
 		
-		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
 			if (unit_quantity < 1) then
@@ -2426,8 +2426,8 @@ end
 
 function ConvertHexTiles()
 	local hex_indent = false
-	for y=0,(table.getn(HexTiles) - 1) do
-		for x=0,(table.getn(HexTiles[1]) - 1) do
+	for x=0,(table.getn(HexTiles[1]) - 1) do
+		for y=0,(table.getn(HexTiles) - 1) do
 			if (hex_indent == false) then
 				SetRawTile(x * 2, y * 2, HexTiles[y+1][x+1])
 				SetRawTile((x * 2) + 1, y * 2, HexTiles[y+1][x+1])

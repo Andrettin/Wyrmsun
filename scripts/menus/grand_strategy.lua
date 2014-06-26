@@ -67,7 +67,69 @@ function RunGrandStrategyGameSetupMenu()
 			Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			GrandStrategyFaction = faction_list[faction:getSelected() + 1]
 			SetPlayerData(GetThisPlayer(), "RaceName", GetFactionFromName(GrandStrategyFaction).Civilization)
+			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
+			-- add resource quantities to factions that don't have that set up
+			for key, value in pairs(Factions) do
+				if (Factions[key].Gold == nil) then
+					Factions[key]["Gold"] = 10000
+				end
+				if (Factions[key].Commodities == nil) then
+					Factions[key]["Commodities"] = {}
+				end
+				if (Factions[key].Commodities.Lumber == nil) then
+					Factions[key].Commodities["Lumber"] = 2400
+				end
+			end
+			
+			-- initialize province variables
+			for key, value in pairs(WorldMapProvinces) do
+				if (WorldMapProvinces[key].Units == nil) then
+					WorldMapProvinces[key]["Units"] = {}
+				end
+				if (WorldMapProvinces[key].UnderConstructionUnits == nil) then
+					WorldMapProvinces[key]["UnderConstructionUnits"] = {}
+				end
+				if (WorldMapProvinces[key].MovingUnits == nil) then
+					WorldMapProvinces[key]["MovingUnits"] = {}
+				end
+				if (WorldMapProvinces[key].AttackingUnits == nil) then
+					WorldMapProvinces[key]["AttackingUnits"] = {}
+				end
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					if (WorldMapProvinces[key].Units[gsunit_key] == nil) then
+						WorldMapProvinces[key].Units[gsunit_key] = 0
+					end
+					if (WorldMapProvinces[key].UnderConstructionUnits[gsunit_key] == nil) then
+						WorldMapProvinces[key].UnderConstructionUnits[gsunit_key] = 0
+					end
+					if (WorldMapProvinces[key].MovingUnits[gsunit_key] == nil) then
+						WorldMapProvinces[key].MovingUnits[gsunit_key] = 0
+					end
+					if (WorldMapProvinces[key].AttackingUnits[gsunit_key] == nil) then
+						WorldMapProvinces[key].AttackingUnits[gsunit_key] = 0
+					end
+				end
+				if (WorldMapProvinces[key].AttackedBy == nil) then
+					WorldMapProvinces[key]["AttackedBy"] = ""
+				end
+			end
+
+			SelectedUnits = {}
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				SelectedUnits[gsunit_key] = 0
+			end
+
+			-- set all non-setup unit costs to 0, to avoid a nil value
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				if (GrandStrategyUnits[gsunit_key].Costs.Gold == nil) then
+					GrandStrategyUnits[gsunit_key].Costs["Gold"] = 0
+				end
+				if (GrandStrategyUnits[gsunit_key].Costs.Lumber == nil) then
+					GrandStrategyUnits[gsunit_key].Costs["Lumber"] = 0
+				end
+			end
+
 			RunGrandStrategyGame()
 			menu:stop()
 		end)
@@ -95,8 +157,8 @@ function RunGrandStrategyGameSetupMenu()
 		if (tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3)) >= 29) then
 			faction_list = {"Norlund Clan", "Shinsplitter Clan"}
 		end
-		if (tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3)) >= 400) then
-			faction_list = {"Knalga", "Shinsplitter Clan"}
+		if (tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3)) >= 550) then
+			faction_list = {"Kal Kartha", "Knalga", "Shinsplitter Clan"}
 		end
 		faction:setList(faction_list)
 		faction:setSize(152, 20)
@@ -111,102 +173,10 @@ function RunGrandStrategyGame()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	AddUIElement("ui/dwarf/minimap.png", 0, 24)
+	DrawOnScreenTiles()
+	DrawGrandStrategyInterface()
+	DrawMinimap()
 	
-	RedrawOnScreenTiles()
-	
-	for key, value in pairs(WorldMapProvinces) do
-		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
-			-- draw the province's tiles on the minimap
-			if (WorldMapProvinces[key].Owner ~= "") then
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
-			else
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_white.png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
-			end
-		end
-	end
-
-	for key, value in pairs(WorldMapWaterProvinces) do
-		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
-			DrawWorldMapMinimapTile("tilesets/world/terrain/ocean.png", WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2])
-		end
-	end
-
-	AddUIElement("ui/dwarf/infopanel.png", 0, 160)
-
-	AddUIElement("ui/dwarf/resource_" .. Video.Width .. ".png", 176, 0)
-
-	AddUIElement("ui/dwarf/buttonpanel_" .. Video.Height .. ".png", 0, 336)
-	AddUIElement("ui/dwarf/menubutton.png", 0, 0)
-
-	GrandStrategyMenu:addLabel(GrandStrategyFaction .. ", " .. GrandStrategyYear .. " AD", 88, 6, Fonts["game"], true)
-	if (SelectedProvince ~= nil) then
-		if (SelectedProvince.Owner ~= "" and SelectedProvince.Owner ~= "Ocean") then
-			GrandStrategyMenu:addLabel(SelectedProvince.Name .. ",", 88, 171, Fonts["game"], true)
-			GrandStrategyMenu:addLabel(SelectedProvince.Owner, 88, 185, Fonts["game"], true)
-		else
-			GrandStrategyMenu:addLabel(SelectedProvince.Name, 88, 171, Fonts["game"], true)
-		end
-
-		if (CanAttackProvince(SelectedProvince, GrandStrategyFaction)) then
-			-- add an attack button for enemy provinces
-			local b = GrandStrategyMenu:addImageButton("~!Attack!", "a", 24, 340, function()
-				AttackProvince(SelectedProvince)
-			end)
-			b:setBaseColor(Color(0,0,0,0))
-			b:setForegroundColor(Color(0,0,0,0))
-			b:setBackgroundColor(Color(0,0,0,0))
-			if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-				local normal_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-normal.png")
-				normal_end_turn_button:Load()
-				local pressed_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-pressed.png")
-				pressed_end_turn_button:Load()
-				b:setNormalImage(normal_end_turn_button)
-				b:setPressedImage(pressed_end_turn_button)
-				b:setDisabledImage(normal_end_turn_button)
-			elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-				local normal_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-normal.png")
-				normal_end_turn_button:Load()
-				local pressed_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-pressed.png")
-				pressed_end_turn_button:Load()
-				b:setNormalImage(normal_end_turn_button)
-				b:setPressedImage(pressed_end_turn_button)
-				b:setDisabledImage(normal_end_turn_button)
-			end
-			b:setSize(128, 20)
-			b:setFont(Fonts["game"])
-		end
-	end
-
-	-- add an end turn button
-	if (true == false) then -- disable end turn button for now because nothing happens with the passage of turn (i.e. no production) other than attacking provinces, and that is better done by just having attacks result in a turn change
-	local b = GrandStrategyMenu:addImageButton("~!End Turn", "e", 24, Video.Height - 22 - 16, function()
-		EndTurn()
-	end)
-	b:setBaseColor(Color(0,0,0,0))
-	b:setForegroundColor(Color(0,0,0,0))
-	b:setBackgroundColor(Color(0,0,0,0))
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		local normal_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-normal.png")
-		normal_end_turn_button:Load()
-		local pressed_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-pressed.png")
-		pressed_end_turn_button:Load()
-		b:setNormalImage(normal_end_turn_button)
-		b:setPressedImage(pressed_end_turn_button)
-		b:setDisabledImage(normal_end_turn_button)
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		local normal_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-normal.png")
-		normal_end_turn_button:Load()
-		local pressed_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-pressed.png")
-		pressed_end_turn_button:Load()
-		b:setNormalImage(normal_end_turn_button)
-		b:setPressedImage(pressed_end_turn_button)
-		b:setDisabledImage(normal_end_turn_button)
-	end
-	b:setSize(128, 20)
-	b:setFont(Fonts["game"])
-	end
-
 	-- add a pseudo-button to bring up the menu
 	GrandStrategyMenu:addButton("", "f10", 0, 0,
 		function()
@@ -230,7 +200,7 @@ function RunGrandStrategyGame()
 			if (WorldMapOffsetY > 0) then
 				WorldMapOffsetY = WorldMapOffsetY - 1;
 			end
-			RedrawOnScreenTiles()
+			DrawOnScreenTiles()
 		end,
 	{0, 0})
 	GrandStrategyMenu:addButton("", "down", 0, 0,
@@ -238,7 +208,7 @@ function RunGrandStrategyGame()
 			if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
 				WorldMapOffsetY = WorldMapOffsetY + 1;
 			end
-			RedrawOnScreenTiles()
+			DrawOnScreenTiles()
 		end,
 	{0, 0})
 
@@ -247,7 +217,7 @@ function RunGrandStrategyGame()
 			if (WorldMapOffsetX > 0) then
 				WorldMapOffsetX = WorldMapOffsetX - 1;
 			end
-			RedrawOnScreenTiles()
+			DrawOnScreenTiles()
 		end,
 	{0, 0})
 	GrandStrategyMenu:addButton("", "right", 0, 0,
@@ -255,7 +225,7 @@ function RunGrandStrategyGame()
 			if (WorldMapOffsetX < table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
 				WorldMapOffsetX = WorldMapOffsetX + 1;
 			end
-			RedrawOnScreenTiles()
+			DrawOnScreenTiles()
 		end,
 	{0, 0})
 
@@ -264,11 +234,52 @@ end
 
 function EndTurn()
 	GrandStrategyYear = GrandStrategyYear + 1;
-	GrandStrategyMenu:stop();
-	RunGrandStrategyGame()
+	local attack_happened = false
+
+	-- AI moves
+	for key, value in pairs(Factions) do
+		if (Factions[key].Name ~= GrandStrategyFaction and GetFactionNumProvinces(Factions[key].Name) > 0) then
+			AIDoTurn(Factions[key])
+		end
+	end
+
+	-- collect resources
+	for i=1,table.getn(WorldMapResources.Gold) do
+		local resource_owner = GetFactionFromName(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner)
+		if (resource_owner ~= nil) then
+			resource_owner.Gold = resource_owner.Gold + 200
+		end
+	end
+	for i=1,table.getn(WorldMapResources.Lumber) do
+		local resource_owner = GetFactionFromName(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner)
+		if (resource_owner ~= nil) then
+			resource_owner.Commodities.Lumber = resource_owner.Commodities.Lumber + 100
+		end
+	end
+
+	-- train units
+	for key, value in pairs(WorldMapProvinces) do
+		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+			WorldMapProvinces[key].Units[gsunit_key] = WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key] + WorldMapProvinces[key].MovingUnits[gsunit_key]
+			WorldMapProvinces[key].UnderConstructionUnits[gsunit_key] = 0
+			WorldMapProvinces[key].MovingUnits[gsunit_key] = 0
+		end
+		if (WorldMapProvinces[key].AttackedBy ~= "") then
+			AttackProvince(WorldMapProvinces[key], WorldMapProvinces[key].AttackedBy)
+			WorldMapProvinces[key].AttackedBy = ""
+			attack_happened = true
+		end
+	end
+
+	if (attack_happened) then
+		DrawMinimap()
+	end
+
+	DrawGrandStrategyInterface()
+	DrawOnScreenTiles()
 end
 
-function AttackProvince(province)
+function AttackProvince(province, faction)
 	local province_map = province.Maps[SyncRand(table.getn(province.Maps)) + 1]
 	local maps = {}
 	for map_directory=1,table.getn(MapDirectories) do
@@ -310,15 +321,40 @@ function AttackProvince(province)
 		for i=1,table.getn(maps) do
 			GetMapInfo(maps[i])
 			if (mapinfo.description == province_map) then
-				Attacker = GrandStrategyFaction
-				Defender = province.Owner
+				Attacker = faction
+				if (province.Owner ~= "") then
+					Defender = province.Owner
+				else
+					Defender = province.Name
+				end
+				AttackingUnits = province.AttackingUnits
+				AttackedProvince = province
 				RunMap(maps[i])
+
+				local victorious_player = ""
+				if (GameResult == GameVictory) then
+					victorious_player = GrandStrategyFaction
+				elseif (Attacker == GrandStrategyFaction) then
+					victorious_player = Defender
+				elseif (Defender == GrandStrategyFaction) then
+					victorious_player = Attacker
+				end
+				-- set the new unit quantity to the surviving units of the victorious side
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					AttackingUnits[gsunit_key] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+				end
+
+				province.Owner = victorious_player
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					province.Units[gsunit_key] = AttackingUnits[gsunit_key]
+				end
+				for gsunit_key, gsunit_value in pairs(province.AttackingUnits) do
+					province.AttackingUnits[gsunit_key] = 0
+				end
 				Attacker = ""
 				Defender = ""
-				if (GameResult == GameVictory) then
-					province.Owner = GrandStrategyFaction
-				end
-				EndTurn();
+				AttackingUnits = nil
+				AttackedProvince = nil
 			end
 		end
 	end
@@ -341,23 +377,47 @@ function CalculateProvinceBorderTiles()
 	end
 end
 
+function CalculateTileProvinces()
+	TileProvinces = nil
+	TileProvinces = {}
+	
+	for y=1,(table.getn(WorldMapTiles)) do
+		TileProvinces[y] = {}
+		for x=1,table.getn(WorldMapTiles[1]) do
+			TileProvinces[y][x] = ""
+		end
+	end
+
+	for x=1,table.getn(WorldMapTiles[1]) do
+		for y=1,table.getn(WorldMapTiles) do
+			for key, value in pairs(WorldMapProvinces) do
+				for i=1,table.getn(WorldMapProvinces[key].Tiles) do
+					if ((WorldMapProvinces[key].Tiles[i][1] + 1) == x and (WorldMapProvinces[key].Tiles[i][2] + 1) == y) then
+						TileProvinces[y][x] = key
+					end
+				end
+			end
+			for key, value in pairs(WorldMapWaterProvinces) do
+				for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
+					if ((WorldMapWaterProvinces[key].Tiles[i][1] + 1) == x and (WorldMapWaterProvinces[key].Tiles[i][2] + 1) == y) then
+						TileProvinces[y][x] = key
+					end
+				end
+			end
+		end
+	end
+end
+
 function GetTileProvince(x, y)
 	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		for key, value in pairs(WorldMapProvinces) do
-			for i=1,table.getn(WorldMapProvinces[key].Tiles) do
-				if (WorldMapProvinces[key].Tiles[i][1] == x and WorldMapProvinces[key].Tiles[i][2] == y) then
-					return WorldMapProvinces[key]
-				end
-			end
+		local tile_province = TileProvinces[y + 1][x + 1]
+		if (WorldMapProvinces[tile_province] ~= nil) then
+			return WorldMapProvinces[tile_province]
+		elseif (WorldMapWaterProvinces[tile_province] ~= nil) then
+			return WorldMapWaterProvinces[tile_province]
+		else
+			return nil
 		end
-		for key, value in pairs(WorldMapWaterProvinces) do
-			for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
-				if (WorldMapWaterProvinces[key].Tiles[i][1] == x and WorldMapWaterProvinces[key].Tiles[i][2] == y) then
-					return WorldMapWaterProvinces[key]
-				end
-			end
-		end
-		return nil
 	else
 		return nil
 	end
@@ -369,10 +429,21 @@ function GetFactionFromName(faction)
 			return Factions[key]
 		end
 	end
+	return nil
+end
+
+function GetFactionNumProvinces(faction)
+	local province_count = 0
+	for key, value in pairs(WorldMapProvinces) do
+		if (WorldMapProvinces[key].Owner == faction) then
+			province_count = province_count + 1
+		end
+	end
+	return province_count
 end
 
 function CanAttackProvince(province, faction)
-	if (province.Owner == faction or province.Owner == "Ocean") then
+	if (province.Owner == faction or province.Owner == "Ocean" or (province.AttackedBy ~= "" and province.AttackedBy ~= faction)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false
 	end
 	
@@ -489,6 +560,7 @@ function RunGrandStrategySaveMenu()
 
 			wyr.preferences.GrandStrategySaveGames[name] = {
 				SavedWorldMapTiles = WorldMapTiles,
+				SavedWorldMapResources = WorldMapResources,
 				SavedWorldMapProvinces = WorldMapProvinces,
 				SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
 				SavedFactions = Factions
@@ -531,9 +603,11 @@ function RunGrandStrategyLoadGameMenu()
 				return
 			end
 			WorldMapTiles = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
+			WorldMapResources = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
 			WorldMapProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
 			WorldMapWaterProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
 			Factions = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
+			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
 			menu:stop()
 			GrandStrategyMenu:stop();
@@ -556,9 +630,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 			function()
-				SelectedProvince = GetTileProvince(tile_x, tile_y)
-				GrandStrategyMenu:stop();
-				RunGrandStrategyGame()
+				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
 		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
@@ -574,9 +647,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
 			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
-					SelectedProvince = GetTileProvince(tile_x, tile_y)
-					GrandStrategyMenu:stop();
-					RunGrandStrategyGame()
+					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+					DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 				end
 			)
 			GrandStrategyMenu:add(OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
@@ -589,9 +661,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
 			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
-					SelectedProvince = GetTileProvince(tile_x, tile_y)
-					GrandStrategyMenu:stop();
-					RunGrandStrategyGame()
+					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+					DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 				end
 			)
 			GrandStrategyMenu:add(OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
@@ -604,9 +675,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
 			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
-					SelectedProvince = GetTileProvince(tile_x, tile_y)
-					GrandStrategyMenu:stop();
-					RunGrandStrategyGame()
+					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+					DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 				end
 			)
 			GrandStrategyMenu:add(OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
@@ -619,9 +689,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
 			OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
-					SelectedProvince = GetTileProvince(tile_x, tile_y)
-					GrandStrategyMenu:stop();
-					RunGrandStrategyGame()
+					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+					DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 				end
 			)
 			GrandStrategyMenu:add(OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
@@ -637,9 +706,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("")
 		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 			function()
-				SelectedProvince = GetTileProvince(tile_x, tile_y)
-				GrandStrategyMenu:stop();
-				RunGrandStrategyGame()
+				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
 		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
@@ -680,50 +748,102 @@ function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 		end
 	end
 
-	local minimap_tile = CGraphic:New(file)
-	minimap_tile:Load()
-	b = ImageButton("")
-	b:setActionCallback(
-		function()
-			WorldMapOffsetX = math.floor(tile_x - (((Video.Width - 16 - 176) / 64) / 2))
-			if (WorldMapOffsetX < 0) then
-				WorldMapOffsetX = 0
-			elseif (WorldMapOffsetX > table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
-				WorldMapOffsetX = table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)
-			end
+	if ((table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) or (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0)) then
+		local minimap_tile = CGraphic:New(file)
+		minimap_tile:Load()
+		MinimapTiles[tile_y + 1][tile_x + 1] = ImageButton("")
+		MinimapTiles[tile_y + 1][tile_x + 1]:setActionCallback(
+			function()
+				WorldMapOffsetX = math.floor(tile_x - (((Video.Width - 16 - 176) / 64) / 2))
+				if (WorldMapOffsetX < 0) then
+					WorldMapOffsetX = 0
+				elseif (WorldMapOffsetX > table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
+					WorldMapOffsetX = table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)
+				end
 
-			WorldMapOffsetY = math.floor(tile_y - (((Video.Height - 16 - 16) / 64) / 2))
-			if (WorldMapOffsetY < 0) then
-				WorldMapOffsetY = 0
-			elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
-				WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)
-			end
+				WorldMapOffsetY = math.floor(tile_y - (((Video.Height - 16 - 16) / 64) / 2))
+				if (WorldMapOffsetY < 0) then
+					WorldMapOffsetY = 0
+				elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
+					WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)
+				end
 
-			GrandStrategyMenu:stop()
-			RunGrandStrategyGame()
+				DrawOnScreenTiles()
+			end
+		)
+		if (table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) then
+			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], 24 + minimap_offset_x + minimap_tile_size_x * tile_x, 26 + minimap_offset_y + minimap_tile_size_y * tile_y)
+		elseif (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0) then -- if one of the sides of the map is larger than 128, then only draw minimap tiles for one of every four tiles
+			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], 24 + minimap_offset_x + minimap_tile_size_x * (tile_x / 2), 26 + minimap_offset_y + minimap_tile_size_y * (tile_y / 2))
 		end
-	)
-	if (table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) then
-		GrandStrategyMenu:add(b, 24 + minimap_offset_x + minimap_tile_size_x * tile_x, 26 + minimap_offset_y + minimap_tile_size_y * tile_y)
-	elseif (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0) then -- if one of the sides of the map is larger than 128, then only draw minimap tiles for one of every four tiles
-		GrandStrategyMenu:add(b, 24 + minimap_offset_x + minimap_tile_size_x * (tile_x / 2), 26 + minimap_offset_y + minimap_tile_size_y * (tile_y / 2))
+		MinimapTiles[tile_y + 1][tile_x + 1]:setNormalImage(minimap_tile)
+		MinimapTiles[tile_y + 1][tile_x + 1]:setPressedImage(minimap_tile)
+		MinimapTiles[tile_y + 1][tile_x + 1]:setDisabledImage(minimap_tile)
+		MinimapTiles[tile_y + 1][tile_x + 1]:setSize(minimap_tile_size_x, minimap_tile_size_y)
+		MinimapTiles[tile_y + 1][tile_x + 1]:setBorderSize(0)
+		MinimapTiles[tile_y + 1][tile_x + 1]:setBaseColor(Color(0,0,0,0))
+		MinimapTiles[tile_y + 1][tile_x + 1]:setForegroundColor(Color(0,0,0,0))
+		MinimapTiles[tile_y + 1][tile_x + 1]:setBackgroundColor(Color(0,0,0,0))
 	end
-	b:setNormalImage(minimap_tile)
-	b:setPressedImage(minimap_tile)
-	b:setDisabledImage(minimap_tile)
-	b:setSize(minimap_tile_size_x, minimap_tile_size_y)
-	b:setBorderSize(0)
 end
 
 -- draw UI
 function AddUIElement(file, x, y)
 	local ui_element = CGraphic:New(file)
 	ui_element:Load()
-	ui_element = ImageWidget(ui_element)
-	GrandStrategyMenu:add(ui_element, x, y)
+	UIElements[table.getn(UIElements) + 1] = ImageWidget(ui_element)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
 end
 
-function RedrawOnScreenTiles()
+function AddGrandStrategyLabel(text, x, y, font, center)
+	GrandStrategyLabels[table.getn(GrandStrategyLabels) + 1] = Label(text)
+	if (font == nil) then font = Fonts["large"] end
+	GrandStrategyLabels[table.getn(GrandStrategyLabels)]:setFont(font)
+	GrandStrategyLabels[table.getn(GrandStrategyLabels)]:adjustSize()
+	if (center == nil or center == true) then -- center text by default
+		x = x - GrandStrategyLabels[table.getn(GrandStrategyLabels)]:getWidth() / 2
+	end
+	GrandStrategyMenu:add(GrandStrategyLabels[table.getn(GrandStrategyLabels)], x, y)
+
+	return GrandStrategyLabels[table.getn(GrandStrategyLabels)]
+end
+
+function AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
+	UIElements[table.getn(UIElements) + 1] = ImageButton(caption)
+	UIElements[table.getn(UIElements)]:setHotKey(hotkey)
+	UIElements[table.getn(UIElements)]:setActionCallback(callback)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+	return UIElements[table.getn(UIElements)]
+end
+
+function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
+	UIElements[table.getn(UIElements) + 1] = ImageButton("")
+	UIElements[table.getn(UIElements)]:setHotKey("")
+	UIElements[table.getn(UIElements)]:setActionCallback(
+		function()
+			TrainUnit(SelectedProvince, grand_strategy_unit_key)
+			DrawGrandStrategyInterface()
+		end
+	)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+
+--	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
+	local unit_icon = CGraphic:New(GrandStrategyUnits[grand_strategy_unit_key].Icon)
+	unit_icon:Load()
+	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setSize(46, 38)
+	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
+	
+	return UIElements[table.getn(UIElements)]
+end
+
+function DrawOnScreenTiles()
 	if (OnScreenTiles ~= nil) then
 		for i=1,table.getn(OnScreenTiles) do
 			for j=1,table.getn(OnScreenTiles[i]) do
@@ -786,12 +906,27 @@ function RedrawOnScreenTiles()
 			-- set map tile terrain
 			if (GetWorldMapTile(x, y) == "DkPl") then
 				DrawWorldMapTile("tilesets/world/terrain/plains.png", x, y)
+			elseif (GetWorldMapTile(x, y) == "ScFr") then
+				DrawWorldMapTile("tilesets/world/terrain/scrub_forest_outer.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Hill") then
 				DrawWorldMapTile("tilesets/world/terrain/hills_outer.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Mntn") then
 				DrawWorldMapTile("tilesets/world/terrain/mountains_outer.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Watr") then
 				DrawWorldMapTile("tilesets/world/terrain/ocean.png", x, y)
+			end
+		end
+	end
+
+	-- draw resources
+	for key, value in pairs(WorldMapResources) do
+		for i=1,table.getn(WorldMapResources[key]) do
+			local resource_site_graphics = ""
+			if (key == "Gold") then
+				resource_site_graphics = "tilesets/world/sites/gold_mine.png"
+			end
+			if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+				DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
 			end
 		end
 	end
@@ -838,12 +973,26 @@ function RedrawOnScreenTiles()
 
 
 		-- draw province settlement
-		if (WorldMapProvinces[key].Owner ~= "") then
-			if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+			if (WorldMapProvinces[key].Owner ~= "") then
 				if (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "dwarf") then
 					DrawWorldMapTile("tilesets/world/sites/dwarven_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				elseif (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "gnome") then
 					DrawWorldMapTile("tilesets/world/sites/gnomish_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+				end
+				
+			end
+
+			if (WorldMapProvinces[key].AttackedBy == GrandStrategyFaction) then
+				-- draw symbol that the province is being attacked by the human player if that is the case
+				DrawWorldMapTile("tilesets/world/sites/attack.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+			elseif (WorldMapProvinces[key].Owner == GrandStrategyFaction) then
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					if (WorldMapProvinces[key].MovingUnits[gsunit_key] > 0) then
+						-- draw symbol that troops are moving to the province
+						DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+						break
+					end
 				end
 			end
 		end
@@ -868,4 +1017,245 @@ function RedrawOnScreenTiles()
 	ui_element:Load()
 	UIStatusLine = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIStatusLine, 176, Video.Height - 16)
+end
+
+function DrawGrandStrategyInterface()
+	if (UIElements ~= nil) then
+		for i=1,table.getn(UIElements) do
+			GrandStrategyMenu:remove(UIElements[i])
+		end
+	end
+	
+	if (GrandStrategyLabels ~= nil) then
+		for i=1,table.getn(GrandStrategyLabels) do
+			GrandStrategyMenu:remove(GrandStrategyLabels[i])
+		end
+	end
+
+	UIElements = nil
+	UIElements = {}
+
+	GrandStrategyLabels = nil
+	GrandStrategyLabels = {}
+
+	AddUIElement("ui/dwarf/infopanel.png", 0, 160)
+
+	AddUIElement("ui/dwarf/resource_" .. Video.Width .. ".png", 176, 0)
+
+	AddUIElement("ui/dwarf/buttonpanel_" .. Video.Height .. ".png", 0, 336)
+	AddUIElement("ui/dwarf/menubutton.png", 0, 0)
+
+	AddGrandStrategyLabel(GrandStrategyFaction .. ", " .. GrandStrategyYear .. " AD", 88, 6, Fonts["game"], true)
+	
+	-- add resource quantities
+	AddUIElement("ui/gold.png", 176, 0)
+	AddGrandStrategyLabel(GetFactionFromName(GrandStrategyFaction).Gold, 176 + 18, 1, Fonts["game"], false)
+	AddUIElement("ui/lumber.png", 176 + 75, 0)
+	AddGrandStrategyLabel(GetFactionFromName(GrandStrategyFaction).Commodities.Lumber, 176 + 75 + 18, 1, Fonts["game"], false)
+	
+	if (SelectedProvince ~= nil) then
+		if (SelectedProvince.Owner ~= "" and SelectedProvince.Owner ~= "Ocean") then
+			AddGrandStrategyLabel(SelectedProvince.Name .. ",", 88, 171, Fonts["game"], true)
+			AddGrandStrategyLabel(SelectedProvince.Owner, 88, 185, Fonts["game"], true)
+		else
+			AddGrandStrategyLabel(SelectedProvince.Name, 88, 171, Fonts["game"], true)
+		end
+
+		-- add buttons for training military units if is an owned province
+		if (SelectedProvince.Owner == GrandStrategyFaction) then
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				if (GrandStrategyUnits[gsunit_key].Civilization == GetFactionFromName(GrandStrategyFaction).Civilization) then
+					local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
+					local icon_offset_y = 340 + (GrandStrategyUnits[gsunit_key].Y * (47 + 19 + 4))
+
+					AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, gsunit_key)
+					if (SelectedProvince.UnderConstructionUnits[gsunit_key] > 0) then
+						AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
+					else
+						AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
+					end
+					
+					-- add unit selection arrows
+					local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
+						if (SelectedUnits[gsunit_key] > 0) then
+							SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] - 1
+							DrawGrandStrategyInterface()
+						end
+					end)
+					b:setBaseColor(Color(0,0,0,0))
+					b:setForegroundColor(Color(0,0,0,0))
+					b:setBackgroundColor(Color(0,0,0,0))
+					if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+						b:setNormalImage(g_dlslider_n)
+						b:setPressedImage(g_dlslider_p)
+					else
+						b:setNormalImage(g_dlslider_n)
+						b:setPressedImage(g_dlslider_p)
+					end
+
+					local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
+						if (SelectedUnits[gsunit_key] < SelectedProvince.Units[gsunit_key]) then
+							SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] + 1
+							DrawGrandStrategyInterface()
+						end
+					end)
+					b:setBaseColor(Color(0,0,0,0))
+					b:setForegroundColor(Color(0,0,0,0))
+					b:setBackgroundColor(Color(0,0,0,0))
+					if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+						b:setNormalImage(g_drslider_n)
+						b:setPressedImage(g_drslider_p)
+					else
+						b:setNormalImage(g_drslider_n)
+						b:setPressedImage(g_drslider_p)
+					end
+
+					AddGrandStrategyLabel("~<" .. SelectedUnits[gsunit_key] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true)
+				end
+			end
+		end
+	end
+
+	-- add an end turn button
+	local b = AddGrandStrategyImageButton("~!End Turn", "e", 24, Video.Height - 22 - 16, function()
+		EndTurn()
+	end)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		local normal_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-normal.png")
+		normal_end_turn_button:Load()
+		local pressed_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-pressed.png")
+		pressed_end_turn_button:Load()
+		b:setNormalImage(normal_end_turn_button)
+		b:setPressedImage(pressed_end_turn_button)
+		b:setDisabledImage(normal_end_turn_button)
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		local normal_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-normal.png")
+		normal_end_turn_button:Load()
+		local pressed_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-pressed.png")
+		pressed_end_turn_button:Load()
+		b:setNormalImage(normal_end_turn_button)
+		b:setPressedImage(pressed_end_turn_button)
+		b:setDisabledImage(normal_end_turn_button)
+	end
+	b:setSize(128, 20)
+	b:setFont(Fonts["game"])
+end
+
+function DrawMinimap()
+	if (UIMinimap ~= nil) then
+		GrandStrategyMenu:remove(UIMinimap)
+	end
+
+	if (MinimapTiles ~= nil) then
+		for i=1,table.getn(MinimapTiles) do
+			for j=1,table.getn(MinimapTiles[i]) do
+				if (MinimapTiles[i][j] ~= nil) then
+					GrandStrategyMenu:remove(MinimapTiles[i][j])
+				end
+			end
+		end
+	end
+	
+	MinimapTiles = nil
+	MinimapTiles = {}
+	
+	for y=1,(table.getn(WorldMapTiles)) do
+		MinimapTiles[y] = {}
+	end
+	
+	local ui_element = CGraphic:New("ui/dwarf/minimap.png")
+	ui_element:Load()
+	UIMinimap = ImageWidget(ui_element)
+	GrandStrategyMenu:add(UIMinimap, 0, 24)
+
+	for key, value in pairs(WorldMapProvinces) do
+		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
+			-- draw the province's tiles on the minimap
+			if (WorldMapProvinces[key].Owner ~= "") then
+				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
+			else
+				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_white.png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
+			end
+		end
+	end
+
+	for key, value in pairs(WorldMapWaterProvinces) do
+		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
+			DrawWorldMapMinimapTile("tilesets/world/terrain/ocean.png", WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2])
+		end
+	end
+end
+
+function SetSelectedProvince(province)
+	if (province ~= SelectedProvince) then
+
+		-- if the player has units selected and then selects an attackable province, set those units to attack the province
+		if (CanAttackProvince(province, GrandStrategyFaction)) then
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				if (SelectedUnits[gsunit_key] > 0) then
+					province.AttackedBy = GrandStrategyFaction
+					province.AttackingUnits[gsunit_key] = province.AttackingUnits[gsunit_key] + SelectedUnits[gsunit_key]
+					SelectedProvince.Units[gsunit_key] = SelectedProvince.Units[gsunit_key] - SelectedUnits[gsunit_key]
+					
+					-- draw symbol that the province is being attacked by the human player
+					DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
+				end
+			end
+		elseif (SelectedProvince ~= nil and SelectedProvince.Owner == province.Owner) then
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				if (SelectedUnits[gsunit_key] > 0) then
+					province.MovingUnits[gsunit_key] = SelectedUnits[gsunit_key]
+					SelectedProvince.Units[gsunit_key] = SelectedProvince.Units[gsunit_key] - SelectedUnits[gsunit_key]
+
+					-- draw symbol that troops are moving to the province
+					DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
+				end
+			end
+		end
+
+		SelectedProvince = province
+		SelectedUnits = nil
+		SelectedUnits = {}
+		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+			SelectedUnits[gsunit_key] = 0
+		end
+		DrawGrandStrategyInterface()
+	end
+end
+
+function AIDoTurn(ai_faction)
+	local desired_infantry_per_province = 10
+	local desired_archers_per_province = 4
+	for key, value in pairs(WorldMapProvinces) do
+		if (WorldMapProvinces[key].Owner == ai_faction.Name) then
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				if (GrandStrategyUnits[gsunit_key].Civilization == ai_faction.Civilization) then
+					if (GrandStrategyUnits[gsunit_key].Type == "Infantry") then
+						for i=1,desired_infantry_per_province do
+							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_infantry_per_province and ai_faction.Gold >= GrandStrategyUnits[gsunit_key].Costs.Gold and ai_faction.Commodities.Lumber >= GrandStrategyUnits[gsunit_key].Costs.Lumber) then
+								TrainUnit(WorldMapProvinces[key], gsunit_key)
+							end
+						end
+					elseif (GrandStrategyUnits[gsunit_key].Type == "Archer") then
+						for i=1,desired_archers_per_province do
+							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_archers_per_province and ai_faction.Gold >= GrandStrategyUnits[gsunit_key].Costs.Gold and ai_faction.Commodities.Lumber >= GrandStrategyUnits[gsunit_key].Costs.Lumber) then
+								TrainUnit(WorldMapProvinces[key], gsunit_key)
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+function TrainUnit(province, grand_strategy_unit_key)
+	if (GetFactionFromName(province.Owner).Gold >= GrandStrategyUnits[grand_strategy_unit_key].Costs.Gold and GetFactionFromName(province.Owner).Commodities.Lumber >= GrandStrategyUnits[grand_strategy_unit_key].Costs.Lumber) then
+		province.UnderConstructionUnits[grand_strategy_unit_key] = province.UnderConstructionUnits[grand_strategy_unit_key] + 1
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GrandStrategyUnits[grand_strategy_unit_key].Costs.Gold
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GrandStrategyUnits[grand_strategy_unit_key].Costs.Lumber
+	end
 end

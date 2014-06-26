@@ -44,6 +44,7 @@ function DefineAllowNormalUnits(flags)
 		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
+		"unit-goblin-town-hall",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-potion-of-healing"
 	}
@@ -52,19 +53,19 @@ function DefineAllowNormalUnits(flags)
 		for i, unitName in ipairs(units) do
 			local PlayerUnitFlag = {}
 			local PlayerHeroUnitMax = {}
-			for i=0,15 do
-				if ((GetPlayerData(i, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(i, "Name")), unitName)) then
-					PlayerUnitFlag[i] = "F"
+			for j=0,15 do
+				if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Name")), unitName)) then
+					PlayerUnitFlag[j] = "F"
 				elseif (flags == "RRRRRRRRRRRRRRRR" and string.find(unitName, "upgrade-") ~= nil) then
-					PlayerUnitFlag[i] = "R"
+					PlayerUnitFlag[j] = "R"
 				else
-					PlayerUnitFlag[i] = "A"
+					PlayerUnitFlag[j] = "A"
 				end
 				if (string.find(unitName, "unit-hero-") ~= nil) then
-					if ((GetPlayerData(i, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(i, "Name")), unitName)) then
-						PlayerHeroUnitMax[i] = 0
+					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Name")), unitName)) then
+						PlayerHeroUnitMax[j] = 0
 					else
-						PlayerHeroUnitMax[i] = 1
+						PlayerHeroUnitMax[j] = 1
 					end
 				end
 			end

@@ -53,7 +53,12 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Key = "b", Hint = "~!Build Basic Structure",
   ForUnit = {"unit-goblin-worker"} } )
 
--- simple buildings gnome -----------------------------------------------------
+-- simple buildings goblin -----------------------------------------------------
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-town-hall",
+  Action = "build", Value = "unit-goblin-town-hall",
+  Key = "h", Hint = "Build Town ~!Hall",
+  ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
@@ -61,6 +66,11 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   ForUnit = {"unit-goblin-worker"} } )
 
 -- buildings commands ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-worker",
+  Action = "train-unit", Value = "unit-goblin-worker",
+  Key = "w", Hint = "Train Goblin ~!Worker",
+  ForUnit = {"unit-goblin-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
   Action = "train-unit", Value = "unit-goblin-spearman",

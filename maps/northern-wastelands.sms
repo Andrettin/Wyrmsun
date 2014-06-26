@@ -87,7 +87,16 @@ SetPlayerData(0, "Resources", "wood", 500)
 SetPlayerData(0, "Resources", "oil", 0)
 SetPlayerData(0, "RaceName", "dwarf")
 SetAiType(0, "land-attack")
-SetStartView(1, 11, 50)
+RandomNumber = SyncRand(4)
+if (RandomNumber == 0) then
+	SetStartView(1, 8, 11)
+elseif (RandomNumber == 1) then
+	SetStartView(1, 25, 33)
+elseif (RandomNumber == 2) then
+	SetStartView(1, 40, 53)
+elseif (RandomNumber == 3) then
+	SetStartView(1, 42, 22)
+end
 SetPlayerData(1, "Resources", "gold", 0)
 SetPlayerData(1, "Resources", "wood", 0)
 SetPlayerData(1, "Resources", "oil", 0)

@@ -300,6 +300,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-town-hall",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/town_hall.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-worker",
 	Size = {46, 38},
 	Frame = 0,

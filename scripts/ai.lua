@@ -62,6 +62,8 @@ function AiCityCenter()
 		return "unit-dwarven-town-hall"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-town-hall"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-town-hall"
 	else
 		return "unit-dwarven-town-hall"
 	end

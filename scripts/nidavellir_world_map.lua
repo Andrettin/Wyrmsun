@@ -1,14 +1,14 @@
 
 WorldMapTiles = {
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "DkPl", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "ScFr", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "DkPl", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "Mntn", "Mntn", "Mntn", "Hill", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "Mntn", "Mntn", "Hill", "Mntn", "Hill", "Hill", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "Hill", "Hill", "DkPl", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "Hill", "Mntn", "Mntn", "Mntn", "Hill", "Hill", "Hill", "Hill", "DkPl", "Watr", "Watr", "Watr", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "Mntn", "Mntn", "Hill", "Hill", "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Hill", "Hill", "DkPl", "Watr", "Watr", "Watr", "Watr", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Hill", "Hill", "DkPl", "Watr", "Watr", "Watr", "Watr", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "ScFr", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "Watr", "Watr", "Watr", "Watr", "Watr", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "DkPl", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Watr", "Watr", "Watr", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "DkPl", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "DkPl", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Watr", "Watr", "Watr", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "DkPl", "Hill", "ScFr", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "Mntn", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Mntn", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "Hill", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     ""},
@@ -17,7 +17,7 @@ WorldMapTiles = {
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "Hill", "DkPl", "DkPl", "Hill", "Hill", "Hill", "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "",     "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "ScFr", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
@@ -50,6 +50,11 @@ WorldMapTiles = {
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""}
 }
 
+WorldMapResources = {
+	Gold = { {30, 12}, {32, 13}, {35, 10}, {34, 14}, {39, 6}, {46, 5} },
+	Lumber = { {15, 1}, {30, 17}, {42, 8}, {44, 6} }
+}
+
 WorldMapProvinces = {
 	BrownHills = {
 		Name = "Brown Hills",
@@ -65,11 +70,15 @@ WorldMapProvinces = {
 		Owner = "Norlund Clan",
 		SettlementLocation = {30, 13},
 		SettlementBuildings = {"unit-dwarven-town-hall", "unit-dwarven-blacksmith"},
-		Maps = {"Caverns of Chaincolt", "Chaincolt Foothills"}
+		Maps = {"Caverns of Chaincolt", "Chaincolt Foothills"},
+		Units = {
+			DwarvenAxefighter = 10, -- Rugnur, Baglur, 4 Dwarven Guardsmen (5 if easy mode), Durstorn, Neglur, Glinar, Kuhnar, Theganli
+			DwarvenScout = 1 -- Noiraran
+		}
 	},
 	CavernsOfFlame = {
 		Name = "Caverns of Flame",
-		Tiles = { {39, 2}, {39, 3}, {39, 4}, {39, 9}, {40, 1}, {40, 2}, {40, 3}, {40, 4}, {40, 5}, {40, 6}, {40, 7}, {40, 8}, {40, 9}, {41, 1}, {41, 2}, {41, 3}, {41, 4}, {41, 5}, {41, 6}, {41, 7}, {41, 8}, {41, 9}, {42, 1}, {42, 2}, {42, 3}, {42, 4}, {42, 5}, {42, 6}, {42, 7}, {42, 8}, {42, 9}, {43, 1}, {43, 2}, {43, 3}, {43, 4}, {43, 5}, {43, 6}, {43, 7}, {44, 1}, {44, 2}, {44, 3}, {44, 4}, {44, 5}, {44, 6}, {44, 7}, {45, 1}, {45, 2}, {45, 3}, {45, 4}, {45, 5}, {45, 6}, {46, 1}, {46, 2}, {46, 3}, {46, 4}, {46, 5}, {46, 6}, {46, 7}, {47, 1}, {47, 2}, {47, 3}, {47, 4}, {47, 5}, {47, 6}, {47, 7}, {47, 8}, {47, 9}, {48, 1}, {48, 2}, {48, 3}, {48, 4}, {48, 5}, {48, 6}, {48, 7}, {48, 8}, {48, 9}, {49, 1}, {49, 2}, {49, 3}, {49, 4}, {49, 5}, {49, 6}, {49, 7}, {49, 8}, {49, 9}, {49, 10}, {50, 1}, {50, 2}, {50, 3}, {50, 4}, {50, 5}, {50, 6}, {50, 7}, {50, 8}, {50, 9}, {50, 10}, {50, 11}, {51, 3}, {51, 4}, {51, 5}, {51, 6}, {51, 7}, {51, 8}, {51, 9}, {51, 10}, {51, 11}, {52, 4}, {52, 5}, {52, 6}, {52, 7}, {52, 8}, {52, 9}, {52, 10}, {52, 11}, {52, 12}, {53, 4}, {53, 5}, {53, 6}, {53, 7}, {53, 8}, {53, 9}, {53, 10}, {53, 11}, {53, 12}, {54, 6}, {54, 7}, {54, 8}, {54, 9}, {54, 10}, {54, 11}, {54, 12}, {55, 7}, {55, 8}, {55, 9}, {55, 10}, {55, 11}, {55, 12}, {56, 12} },
+		Tiles = { {39, 2}, {39, 3}, {39, 4}, {39, 9}, {40, 1}, {40, 2}, {40, 3}, {40, 4}, {40, 5}, {40, 6}, {40, 7}, {40, 8}, {40, 9}, {41, 1}, {41, 2}, {41, 3}, {41, 4}, {41, 5}, {41, 6}, {41, 7}, {41, 8}, {41, 9}, {42, 1}, {42, 2}, {42, 3}, {42, 4}, {42, 5}, {42, 6}, {42, 7}, {43, 1}, {43, 2}, {43, 3}, {43, 6} },
 		Owner = "",
 		SettlementLocation = {41, 6},
 		SettlementBuildings = {"unit-dwarven-blacksmith"}, -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
@@ -101,7 +110,7 @@ WorldMapProvinces = {
 	},
 	HighPass = {
 		Name = "High Pass",
-		Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {40, 13}, {40, 14}, {41, 10}, {41, 11}, {41, 12}, {41, 13}, {41, 14}, {42, 10}, {42, 11}, {42, 12}, {42, 13}, {42, 14}, {43, 8}, {43, 9}, {43, 10}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 8}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 7}, {45, 8}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 8}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 10}, {48, 11}, {48, 12}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 11}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {49, 18}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {50, 18}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {51, 18}, {51, 19}, {51, 20}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {52, 18}, {52, 19}, {52, 20}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {53, 17}, {53, 18}, {53, 19}, {53, 20}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {54, 17}, {54, 18}, {54, 19}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {55, 17}, {55, 18}, {55, 19}, {56, 13}, {56, 14}, {56, 15}, {56, 16}, {56, 17}, {56, 18} },
+		Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {40, 13}, {40, 14}, {41, 10}, {41, 11}, {41, 12}, {41, 13}, {41, 14}, {42, 11}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 10}, {48, 11}, {48, 12}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 11}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {49, 18}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {50, 18}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {51, 18}, {51, 19}, {51, 20}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {52, 18}, {52, 19}, {52, 20}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {53, 17}, {53, 18}, {53, 19}, {53, 20}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {54, 17}, {54, 18}, {54, 19}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {55, 17}, {55, 18}, {55, 19}, {56, 13}, {56, 14}, {56, 15}, {56, 16}, {56, 17}, {56, 18} },
 		Owner = "",
 		SettlementLocation = {40, 12},
 		SettlementBuildings = {},
@@ -115,13 +124,25 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Maps = {"Random Map (Swamp)"}
 	},
+	KalKartha = {
+		Name = "Kal Kartha",
+		Tiles = { {42, 8}, {42, 9}, {42, 10}, {43, 4}, {43, 5}, {43, 7}, {43, 8}, {43, 9}, {43, 10}, {44, 1}, {44, 2}, {44, 3}, {44, 4}, {44, 5}, {44, 6}, {44, 7}, {44, 8}, {45, 1}, {45, 2}, {45, 3}, {45, 4}, {45, 5}, {45, 6}, {45, 7}, {45, 8}, {46, 1}, {46, 2}, {46, 3}, {46, 4}, {46, 5}, {46, 6}, {46, 7}, {46, 8}, {47, 1}, {47, 2}, {47, 3}, {47, 4}, {47, 5}, {47, 6}, {47, 7}, {47, 8}, {47, 9}, {48, 1}, {48, 2}, {48, 3}, {48, 4}, {48, 5}, {48, 6}, {48, 7}, {48, 8}, {48, 9}, {49, 1}, {49, 2}, {49, 3}, {49, 4}, {49, 5}, {49, 6}, {49, 7}, {49, 8}, {49, 9}, {49, 10}, {50, 1}, {50, 2}, {50, 3}, {50, 4}, {50, 5}, {50, 6}, {50, 7}, {50, 8}, {50, 9}, {50, 10}, {50, 11}, {51, 3}, {51, 4}, {51, 5}, {51, 6}, {51, 7}, {51, 8}, {51, 9}, {51, 10}, {51, 11}, {52, 4}, {52, 5}, {52, 6}, {52, 7}, {52, 8}, {52, 9}, {52, 10}, {52, 11}, {52, 12}, {53, 4}, {53, 5}, {53, 6}, {53, 7}, {53, 8}, {53, 9}, {53, 10}, {53, 11}, {53, 12}, {54, 6}, {54, 7}, {54, 8}, {54, 9}, {54, 10}, {54, 11}, {54, 12}, {55, 7}, {55, 8}, {55, 9}, {55, 10}, {55, 11}, {55, 12}, {56, 12} },
+		Owner = "",
+		SettlementLocation = {45, 5},
+		SettlementBuildings = {},
+		Maps = {"Random Map (Swamp)"}
+	},
 	NorthernWastelands = {
 		Name = "Northern Wastelands",
 		Tiles = { {12, 3}, {12, 4}, {13, 3}, {13, 4}, {14, 2}, {14, 3}, {14, 4}, {15, 1}, {15, 2}, {15, 3}, {15, 4}, {16, 1}, {16, 2}, {16, 3}, {16, 4}, {16, 5}, {16, 6}, {17, 1}, {17, 2}, {17, 3}, {17, 4}, {17, 5}, {17, 6}, {17, 7}, {18, 1}, {18, 2}, {18, 3}, {18, 4}, {18, 5}, {18, 7}, {18, 8}, {19, 1}, {19, 2}, {19, 3}, {19, 4}, {19, 7}, {20, 1}, {20, 2}, {20, 3}, {21, 1}, {21, 2}, {21, 3}, {22, 3} },
 		Owner = "",
 		SettlementLocation = {14, 2},
 		SettlementBuildings = {"unit-dwarven-blacksmith"},
-		Maps = {"Northern Wastelands"}
+		Maps = {"Northern Wastelands"},
+		Units = {
+			GoblinImpaler = SyncRand(65) + 1,
+			GoblinArcher = SyncRand(65) + 1
+		}
 	},
 	ShorbearHills = {
 		Name = "Shorbear Hills",
@@ -129,7 +150,10 @@ WorldMapProvinces = {
 		Owner = "Shorbear Clan",
 		SettlementLocation = {33, 15},
 		SettlementBuildings = {"unit-dwarven-town-hall", "unit-dwarven-blacksmith"},
-		Maps = {"Random Map (Swamp)"}
+		Maps = {"Random Map (Swamp)"},
+		Units = {
+			DwarvenAxefighter = 1 -- Glonoin
+		}
 	},
 	SouthernTunnels = {
 		Name = "Southern Tunnels",
@@ -137,7 +161,7 @@ WorldMapProvinces = {
 		Owner = "Shinsplitter Clan",
 		SettlementLocation = {32, 14},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"}
+		Maps = {"Random Map (Cave)"}
 	}
 }
 
@@ -154,23 +178,39 @@ Factions = {
 	Gnomes = {
 		Name = "Gnomes",
 		Civilization = "gnome",
-		Color = "blue"
+		Color = "blue",
+		Gold = 7500,
+		Commodities = {
+			Lumber = 3750 -- half of the gold value
+		}
 	},
 	-- Dwarven clans
 	NorlundClan = {
 		Name = "Norlund Clan",
 		Civilization = "dwarf",
-		Color = "red"
+		Color = "red",
+		Gold = 3000,
+		Commodities = {
+			Lumber = 1500 -- half of the gold value
+		}
 	},
 	ShinsplitterClan = {
 		Name = "Shinsplitter Clan",
 		Civilization = "dwarf",
-		Color = "green"
+		Color = "green",
+		Gold = 7500,
+		Commodities = {
+			Lumber = 3750 -- half of the gold value
+		}
 	},
 	ShorbearClan = {
 		Name = "Shorbear Clan",
 		Civilization = "dwarf",
-		Color = "blue"
+		Color = "blue",
+		Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
+		Commodities = {
+			Lumber = 4500 -- half of the gold value
+		}
 	},
 	-- Dwarven polities
 	KalKartha = {
@@ -192,6 +232,8 @@ Factions = {
 
 if (GrandStrategyYear >= 27) then
 	RemoveElementFromArray(WorldMapProvinces.NorthernWastelands.SettlementBuildings, "unit-dwarven-blacksmith") -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
+	WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
 
 if (GrandStrategyYear >= 29) then
@@ -202,11 +244,13 @@ if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	RemoveElementFromArray(WorldMapProvinces.ShorbearHills.SettlementBuildings, "unit-dwarven-town-hall")
 	RemoveElementFromArray(WorldMapProvinces.ShorbearHills.SettlementBuildings, "unit-dwarven-blacksmith")
+	WorldMapProvinces.ShorbearHills.Units.DwarvenAxefighter = 0
 end
 
 if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.CavernsOfChaincolt.Owner = "Knalga" -- The Lordship of Knalga was founded around 400 AD
 	WorldMapProvinces.SouthernTunnels.Owner = "Knalga"
+	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
 end
 
 if (GrandStrategyYear >= 500) then

@@ -16,7 +16,10 @@ by Andre Novellino Gouvêa (Andrettin)
 
 The Stratagus engine, as well as all of the code, artwork, music and storylines included in Wyrmsun are distributed under the GPLv2 license. See the license.txt file for the text of the GPLv2.
 
-For the Stratagus engine source code, see:
+Wyrmsun uses a modified version of the Stratagus engine source code, and its source code can be found here:
+https://github.com/Andrettin/Wyrmgus
+
+For the source code of the Stratagus engine itself, see:
 https://launchpad.net/stratagus
 
 ############################################################
@@ -26,6 +29,9 @@ https://launchpad.net/stratagus
 -----------------------------------------------------------------------
 - 0.1.6
 -----------------------------------------------------------------------
+
+* Buildings
+- Added Goblin Town Hall (graphics by Leo).
 
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
@@ -42,6 +48,7 @@ https://launchpad.net/stratagus
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
+- The gnomish king is now called "Pypo I", instead of having his name be randomly generated.
 
 * Terrain
 - Added cave tileset, which right now has only buildable land and unbuildable land tiles (graphics by Jinn).

@@ -139,6 +139,38 @@ DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-goblin-voices-dead"} } )
 
+DefineUnitType("unit-goblin-town-hall", { Name = "Town Hall",
+  Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
+  Animations = "animations-building", Icon = "icon-goblin-town-hall",
+  Costs = {"time", 255, "gold", 1200, "wood", 800},
+  RepairHp = 4,
+  RepairCosts = {"gold", 1, "wood", 1},
+  Construction = "construction-land",
+  Speed = 0,
+  HitPoints = 1200,
+  DrawLevel = 20,
+  TileSize = {4, 4}, BoxSize = {126, 126},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 35, AnnoyComputerFactor = 45,
+  Points = 200,
+  Supply = 1,
+  Corpse = "unit-destroyed-4x4-place",
+  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  Building = true, VisibleUnderFog = true, Center = true, WoodImprove = true,
+  BuildingRules = {
+  	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+  	"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+  },
+  CanStore = {"wood", "gold", "coal"},
+  Sounds = {
+    "selected", "town-hall-selected",
+--    "acknowledge", "town-hall-acknowledge",
+--    "ready", "town-hall-ready",
+--    "help", "basic-dwarf-voices-help",
+    "dead", "building destroyed"} } )
+
 DefineUnitType("unit-hero-greebo", { Name = "Greebo",
   Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
   Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
@@ -193,3 +225,35 @@ DefineUnitType("unit-goblin-banner", { Name = "Goblin Banner",
 --    "help", "gold-mine-help",
     "dead", "building destroyed"} }
 )
+
+
+
+
+
+
+GrandStrategyUnits["GoblinImpaler"] = {
+	Name = GetUnitTypeName("unit-goblin-spearman") .. "s",
+	UnitType = "unit-goblin-spearman",
+	Icon = "goblin/icons/goblin_spearman.png",
+	Civilization = "goblin",
+	Type = "Infantry",
+	Costs = {
+		Gold = 600
+	},
+	X = 0,
+	Y = 0
+}
+
+GrandStrategyUnits["GoblinArcher"] = {
+	Name = GetUnitTypeName("unit-goblin-archer") .. "s",
+	UnitType = "unit-goblin-archer",
+	Icon = "goblin/icons/goblin_archer.png",
+	Civilization = "goblin",
+	Type = "Archer",
+	Costs = {
+		Gold = 500,
+		Lumber = 50
+	},
+	X = 1,
+	Y = 0
+}

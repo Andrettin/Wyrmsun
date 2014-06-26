@@ -1123,7 +1123,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Copyright, offx + 320, (Video.Height - 90) + 18*4, Fonts["small"])
 
 
-  menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-1)
+  menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-2)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
 	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.5" and wyr.preferences.LastVersionPlayed ~= "0.1.5a" and wyr.preferences.LastVersionPlayed ~= "0.1.5b" and wyr.preferences.LastVersionPlayed ~= "0.1.5c") then
@@ -1164,8 +1164,8 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
---  menu:addFullButton("~!Grand Strategy Game", "g", offx + 208, offy + 104 + 36*-1,
---    function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
+  menu:addFullButton("~!Grand Strategy Game", "g", offx + 208, offy + 104 + 36*-1,
+    function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
   menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*0,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
   menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*1,

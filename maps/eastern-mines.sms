@@ -52,7 +52,7 @@ ConvertHexTiles()
 
 SetMapBorders("Rock", false)
 
-GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "")
+GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "")
 
 for x=0,(Map.Info.MapWidth - 1) do
 	for y=0,(Map.Info.MapHeight - 1) do
@@ -136,13 +136,13 @@ if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= 
 	unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
 end
 
-unit = CreateUnit("unit-dwarven-town-hall", 1, {59, 53})
+unit = CreateUnit("unit-goblin-town-hall", 1, {59, 53})
 unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
 
-unit = CreateUnit("unit-dwarven-town-hall", 2, {55, 29})
+unit = CreateUnit("unit-goblin-town-hall", 2, {55, 29})
 unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
 
-unit = CreateUnit("unit-dwarven-town-hall", 3, {35, 17})
+unit = CreateUnit("unit-goblin-town-hall", 3, {35, 17})
 unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
 
 CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)

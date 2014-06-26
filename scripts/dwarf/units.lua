@@ -599,3 +599,77 @@ DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
 --    "help", "basic-dwarf-voices-help",
     "dead", "basic-dwarf-voices-dead"} } )
 
+
+
+
+-- define the units for the grand strategy mode (cost is defined here again because it may differ from the unit's RTS cost, as the grand strategy mode can contain more resource types
+
+GrandStrategyUnits["DwarvenAxefighter"] = {
+	Name = GetUnitTypeName("unit-dwarven-axefighter") .. "s",
+	UnitType = "unit-dwarven-axefighter",
+	Icon = "dwarf/icons/dwarven_axefighter.png",
+	Civilization = "dwarf",
+	Type = "Infantry",
+	Costs = {
+		Gold = 600
+	},
+	X = 0,
+	Y = 0
+}
+
+GrandStrategyUnits["DwarvenScout"] = {
+	Name = GetUnitTypeName("unit-dwarven-scout") .. "s",
+	UnitType = "unit-dwarven-scout",
+	Icon = "dwarf/icons/dwarven_scout.png",
+	Civilization = "dwarf",
+	Type = "Archer",
+	Costs = {
+		Gold = 500,
+		Lumber = 50
+	},
+	X = 1,
+	Y = 0
+}
+
+GrandStrategyUnits["DwarvenGryphonRider"] = {
+	Name = GetUnitTypeName("unit-dwarven-gryphon-rider") .. "s",
+	UnitType = "unit-dwarven-gryphon-rider",
+	Icon = "dwarf/icons/gryphon_rider.png",
+	Civilization = "dwarf",
+	Type = "Flying Rider",
+	Costs = {
+		Gold = 1750,
+		Lumber = 750
+	},
+	X = 2,
+	Y = 0
+}
+
+-- GS buildings
+GrandStrategyBuildings["DwarvenMeadHall"] = {
+	Name = GetUnitTypeName("unit-dwarven-town-hall"),
+	UnitType = "unit-dwarven-town-hall",
+	Icon = "dwarf/icons/town_hall.png",
+	Civilization = "dwarf",
+	Type = "Town Hall",
+	Costs = {
+		Gold = 1200,
+		Lumber = 800
+	},
+	X = 0,
+	Y = 0
+}
+
+GrandStrategyBuildings["DwarvenBlacksmith"] = {
+	Name = GetUnitTypeName("unit-dwarven-blacksmith"),
+	UnitType = "unit-dwarven-blacksmith",
+	Icon = "dwarf/icons/blacksmith.png",
+	Civilization = "dwarf",
+	Type = "Blacksmith",
+	Costs = {
+		Gold = 900,
+		Lumber = 500
+	},
+	X = 0,
+	Y = 0
+}

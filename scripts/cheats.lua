@@ -141,7 +141,9 @@ function HandleCheats(str)
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
 		"upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-gnomish-worker", "unit-gnomish-recruit"
+		"unit-gnomish-worker", "unit-gnomish-recruit",
+		"unit-goblin-town-hall",
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer"
 	}
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")

@@ -55,7 +55,7 @@ if (OldCreateUnit == nil) then
 	OldCreateUnit = CreateUnit
 
 	local t = {
-		{"unit-dwarven-town-hall", "unit-gnomish-town-hall"},
+		{"unit-dwarven-town-hall", "unit-gnomish-town-hall", "unit-goblin-town-hall"},
 		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
 		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm"},
 		{"unit-dwarven-barracks", "unit-gnomish-barracks"},
@@ -71,19 +71,19 @@ if (OldCreateUnit == nil) then
 		if (i ~= 6) then
 			DwarvenEquivalent[t[i][2]] = t[i][1]
 		end
-		if (i == 2 or i == 5 or i == 6) then
+		if (i <= 2 or i == 5 or i == 6) then
 			DwarvenEquivalent[t[i][3]] = t[i][1]
 		end
 		if (i ~= 6) then
 			GnomishEquivalent[t[i][1]] = t[i][2]
 		end
-		if (i == 2 or i == 5) then
+		if (i <= 2 or i == 5) then
 			GnomishEquivalent[t[i][3]] = t[i][2]
 		end
-		if (i == 2 or i == 5 or i == 6) then
+		if (i <= 2 or i == 5 or i == 6) then
 			GoblinEquivalent[t[i][1]] = t[i][3]
 		end
-		if (i == 2 or i == 5) then
+		if (i <= 2 or i == 5) then
 			GoblinEquivalent[t[i][2]] = t[i][3]
 		end
 	end
@@ -138,8 +138,8 @@ function CreateUnit(unittype, player, pos)
     return OldCreateUnit(unittype, player, pos)
   end
 
-  -- Don't add any units in 1 worker only mode or in 5 workers only mode
-  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2) and player ~= 15) then
+  -- Don't add any units in 1 worker only mode or in 5 workers only mode, and don't add scenario units if in a grand strategy game
+  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2 or GrandStrategy) and player ~= 15) then
     return
   end
 
@@ -188,9 +188,9 @@ function SetPlayerData(player, data, arg1, arg2)
 			end
 
 			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
-				if (GrandStrategyFaction == Attacker and Defender ~= "") then
+				if (GrandStrategyFaction == Attacker and GetFactionFromName(Defender) ~= nil) then
 					arg1 = GetFactionFromName(Defender).Civilization
-				elseif (GrandStrategyFaction == Defender and Attacker ~= "") then
+				elseif (GrandStrategyFaction == Defender and GetFactionFromName(Attacker) ~= nil) then
 					arg1 = GetFactionFromName(Attacker).Civilization
 				end
 			end
@@ -247,6 +247,23 @@ function SetPlayerData(player, data, arg1, arg2)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+			end
+		end
+	end
+	if (data == "Name") then
+		if (GrandStrategy and AttackingUnits ~= nil) then
+			if (player ~= 15 and Players[player].Type ~= PlayerNobody) then
+				for gsunit_key, gsunit_value in pairs(AttackingUnits) do
+					if (arg1 == Attacker) then
+						for i=1,AttackingUnits[gsunit_key] do
+							OldCreateUnit(GrandStrategyUnits[gsunit_key].UnitType, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+						end
+					elseif (arg1 == Defender) then
+						for i=1,AttackedProvince.Units[gsunit_key] do
+							OldCreateUnit(GrandStrategyUnits[gsunit_key].UnitType, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+						end
+					end
+				end
 			end
 		end
 	end

@@ -197,7 +197,8 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
   Building = true, VisibleUnderFog = true,
   BuildingRules = {
 	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
+	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+	"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
   },
 
   GivesResource = "gold", CanHarvest = true,
@@ -227,7 +228,8 @@ DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
   Building = true, VisibleUnderFog = true,
   BuildingRules = {
 	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"}}
+	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+	"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
   },
 
   GivesResource = "coal", CanHarvest = true,
@@ -856,6 +858,9 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 --    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
+-- initialize the grand strategy unit variable
+GrandStrategyUnits = {}
+GrandStrategyBuildings = {}
 
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")

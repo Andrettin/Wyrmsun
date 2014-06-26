@@ -61,9 +61,6 @@ AddTrigger(
 	end,
 	function() 
 		local gnomish_monarch_player = GetCivilizationPlayer("gnome")
-		local gnomish_monarch_name = GetRandomCharacterName("gnome", "male", true)
-		wyr.preferences.TheScepterOfFireMonarch = gnomish_monarch_name
-		SavePreferences()
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
 			"Rugnur",
@@ -72,7 +69,7 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				gnomish_monarch_name,
+				"Pypo I",
 				"We come to make a bargain with you.",
 				player,
 				{"~!Listen to him", "~!Up axes!"},
@@ -84,7 +81,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					Event(
-						gnomish_monarch_name,
+						"Pypo I",
 						"Have you heard of the Ruby of Fire?",
 						player,
 						{"~!Continue"},
@@ -96,7 +93,7 @@ AddTrigger(
 							{"~!Continue"},
 							{function(s)
 							Event(
-								gnomish_monarch_name,
+								"Pypo I",
 								"Correct. However, we have a problem with it.",
 								player,
 								{"~!Continue"},
@@ -108,7 +105,7 @@ AddTrigger(
 									{"~!Continue"},
 									{function(s)
 									Event(
-										gnomish_monarch_name,
+										"Pypo I",
 										"The stone is very atypical. To cut and insert it would require more skill than my best craftsmen have...",
 										player,
 										{"~!Continue"},
@@ -120,7 +117,7 @@ AddTrigger(
 											{"~!Continue"},
 											{function(s)
 											Event(
-												gnomish_monarch_name,
+												"Pypo I",
 												"I want you to craft it into a mighty artifact, that will embody the power of my will and be a symbol of the legitimacy of my rule.",
 												player,
 												{"~!Continue"},
@@ -132,7 +129,7 @@ AddTrigger(
 													{"~!Continue"},
 													{function(s)
 													Event(
-														gnomish_monarch_name,
+														"Pypo I",
 														"If you are not authorized to make a deal, send out someone who is, and I will bargain with him.",
 														player,
 														{"~!Continue"},
@@ -144,7 +141,7 @@ AddTrigger(
 															{"~!Continue"},
 															{function(s)
 															Event(
-																gnomish_monarch_name,
+																"Pypo I",
 																"I can always take my offer to another tribe more friendly to its potential patrons. You are not the only smiths in these lands!",
 																player,
 																{"~!Discuss his offer", "~!No deal"},
@@ -156,7 +153,7 @@ AddTrigger(
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		gnomish_monarch_name,
+																		"Pypo I",
 																		"Five thousand pieces of silver.",
 																		player,
 																		{"~!Continue"},
@@ -168,7 +165,7 @@ AddTrigger(
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				gnomish_monarch_name,
+																				"Pypo I",
 																				"Ten thousand.",
 																				player,
 																				{"~!Continue"},
@@ -180,7 +177,7 @@ AddTrigger(
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						gnomish_monarch_name,
+																						"Pypo I",
 																						"Then no deal. I'll gather my things and go to another dwarven clan now.",
 																						player,
 																						{"~!Continue"},
@@ -192,7 +189,7 @@ AddTrigger(
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								gnomish_monarch_name,
+																								"Pypo I",
 																								"I want you to make it into a scepter, a scepter of fire.",
 																								player,
 																								{"~!Continue"},
@@ -204,7 +201,7 @@ AddTrigger(
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										gnomish_monarch_name,
+																										"Pypo I",
 																										"Very well. I have the silver here, ready to ship, and I will send someone over with the stone itself. He will stay with you as you make the scepter, and make sure you are going to get it done on time. I expect it done before my reign as king is ended.",
 																										player,
 																										{"~!Continue"},
@@ -457,7 +454,7 @@ AddTrigger(
 							{function(s)
 								if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
 									Event(
-										wyr.preferences.TheScepterOfFireMonarch,
+										"Pypo I",
 										"All the silver is there too. Proceed with the task, Rugnur!",
 										player,
 										{"~!Continue"},
@@ -582,7 +579,7 @@ AddTrigger(
 					end,
 					function() 
 						Event(
-							wyr.preferences.TheScepterOfFireMonarch,
+							"Pypo I",
 							"You just let a caravan, with my money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
 							player,
 							{"~!Continue"},
@@ -915,7 +912,7 @@ AddTrigger(
 						{function(s)
 						Event(
 							closing_the_gates_raider_leader_name,
-							"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give " .. wyr.preferences.TheScepterOfFireMonarch .. " back his jewel. And when ye do, we will be ready for ye.",
+							"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give Pypo back his jewel. And when ye do, we will be ready for ye.",
 							player,
 							{"~!Continue"},
 							{function(s)
@@ -969,7 +966,7 @@ AddTrigger(
 															{function(s)
 															Event(
 																"Rugnur",
-																"Hey, Durstorn, have we started yet? King " .. wyr.preferences.TheScepterOfFireMonarch .. " came by just now, wanted to talk to ye...",
+																"Hey, Durstorn, have we started yet? King Pypo came by just now, wanted to talk to ye...",
 																player,
 																{"~!Continue"},
 																{function(s)
@@ -993,7 +990,7 @@ AddTrigger(
 																			{function(s)
 																			Event(
 																				"Baglur",
-																				"I think ye'd better let me explain. The gnomish king " .. wyr.preferences.TheScepterOfFireMonarch .. " came to the gate. Then we had to close it, which took considerable time.",
+																				"I think ye'd better let me explain. The gnomish king Pypo I came to the gate. Then we had to close it, which took considerable time.",
 																				player,
 																				{"~!Continue"},
 																				{function(s)
@@ -1059,7 +1056,7 @@ AddTrigger(
 																														{function(s)
 																														Event(
 																															"Durstorn",
-																															"Aye. He is the only one I know of who could craft the scepter the way " .. wyr.preferences.TheScepterOfFireMonarch .. " wants it. And he has nothing to do; he will be fine with wasting 25 years of his life on this task.",
+																															"Aye. He is the only one I know of who could craft the scepter the way Pypo wants it. And he has nothing to do; he will be fine with wasting 25 years of his life on this task.",
 																															player,
 																															{"~!Continue"},
 																															{function(s)
@@ -1736,7 +1733,7 @@ AddTrigger(
 																	{function(s)
 																	Event(
 																		"Rugnur",
-																		"Uh, technically it's " .. wyr.preferences.TheScepterOfFireMonarch .. "'s, and I think that if Thursagan needs to see it to plan this scepter, we must allow it.",
+																		"Uh, technically it's Pypo's, and I think that if Thursagan needs to see it to plan this scepter, we must allow it.",
 																		player,
 																		{"~!Continue"},
 																		{function(s)
