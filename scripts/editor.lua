@@ -115,8 +115,10 @@ local editor_types = {
    "unit-log",
    "unit-small-rocks",
    "unit-bones",
-   "unit-wyrm-skeleton"
-
+   "unit-wyrm-skeleton",
+   "unit-floor-decoration",
+   "unit-outer-wall-decoration",
+   "unit-inner-wall-decoration"
 }
 
 

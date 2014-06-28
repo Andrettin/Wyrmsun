@@ -27,9 +27,12 @@ b_o:
 /graphics/missiles/throwing_axe.png
 /graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/bones.png
+/graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/neutral/decorations/inner_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/log.png
 /graphics/neutral/decorations/mushroom.png
 /graphics/neutral/decorations/mushrooms.png
+/graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/small_rocks.png
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
@@ -273,3 +276,4 @@ Veneteaou:
 /graphics/tilesets/world/terrain/mountains_inner.png
 /graphics/tilesets/world/terrain/mountains_outer.png
 /graphics/tilesets/world/terrain/plains.png
+/graphics/tilesets/world/terrain/scrub_forest_outer.png

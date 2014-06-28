@@ -39,8 +39,8 @@ DefineTileset("name", "Cave",
     "top-one-tree", 121, "mid-one-tree", 122, "bot-one-tree", 123,
     "removed-tree", 126,
     "growing-tree", { -1, -1, },
-    "top-one-rock", 158, "mid-one-rock", 159, "bot-one-rock", 160,
-    "removed-rock", 163, },
+    "top-one-rock", 173, "mid-one-rock", 174, "bot-one-rock", 175,
+    "removed-rock", 152, },
   "solid", { "unused",
     {}},								-- 000
   "solid", { "unused",
@@ -57,8 +57,8 @@ DefineTileset("name", "Cave",
     {}},								-- 060
   "solid", { "unused",
     {}},								-- 070
-  "solid", { "unused",
-    {}},								-- 080
+  "solid", { "cave-wall", "land", "air-unit", "rock", "unpassable",
+    { 151, 151, 151, 151}},						-- 080
   "solid", { "unused",
     {}},								-- 090
   "solid", { "unused",
@@ -124,21 +124,21 @@ DefineTileset("name", "Cave",
     { 200, 200},							-- 3D0
     {},									-- 3E0
     {}},								-- 3F0
-  "mixed", { "cave-wall", "rockbound-cave-floor", "land", "rock", "unpassable",
-    { 147, 170},							-- 400
-    { 139, 164},							-- 410
-    { 161, 173, 137},							-- 420
-    { 144, 168},							-- 430
-    { 146, 169, 127},							-- 440
-    { 151, 172},							-- 450
-    { 148, 134},							-- 460
-    { 141, 166},							-- 470
-    { 150, 171},							-- 480
-    { 140, 165, 138},							-- 490
-    { 149, 130},							-- 4A0
-    { 143, 167, 176},							-- 4B0
-    { 145, 131},							-- 4C0
-    { 142, 129},							-- 4D0
+  "mixed", { "cave-wall", "rockbound-cave-floor", "land", "air-unit", "rock", "unpassable",
+    { 136, 159, 172},							-- 400
+    { 128, 153, 171},							-- 410
+    { 150, 162, 167},							-- 420
+    { 133, 157, 170},							-- 430
+    { 135, 158, 168},							-- 440
+    { 140, 161},							-- 450
+    { 137, 137},							-- 460
+    { 130, 155, 169},							-- 470
+    { 139, 160},							-- 480
+    { 129, 141, 154},						-- 490
+    { 138, 138},							-- 4A0
+    { 132, 156, 166},							-- 4B0
+    { 134, 134},							-- 4C0
+    { 131, 131},							-- 4D0
     {},									-- 4E0
     {}},								-- 4F0
   "mixed", { "rockbound-cave-floor", "cave-floor", "land", "no-building",

@@ -36,7 +36,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Chaincolt Foothills",
 		X = 1,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	ClosingTheGates = {
 		Name = "Closing the Gates",
@@ -47,7 +48,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Caverns of Chaincolt",
 		X = 2,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	SearchingForTheRunecrafter = {
 		Name = "Searching for the Runecrafter",
@@ -58,7 +60,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Northern Wastelands",
 		X = 3,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	GatheringMaterials = {
 		Name = "Gathering Materials",
@@ -69,7 +72,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Eastern Mines",
 		X = 4,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	HillsOfTheShorbearClan = {
 		Name = "Hills of the Shorbear Clan",
@@ -80,7 +84,8 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "Shorbear Hills",
 		X = 5,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	TowardsTheCaves = {
 		Name = "Towards the Caves",
@@ -91,7 +96,8 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "Shorbear Hills",
 		X = 6,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	TheWyrm = {
 		Name = "The Wyrm",
@@ -102,7 +108,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Wyrm's Lair",
 		X = 7,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	CavernsOfFlame = {
 		Name = "Caverns of Flame",
@@ -113,7 +120,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Caverns of Flame",
 		X = 8,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	},
 	TheMeadOfPoetry = {
 		Name = "The Mead of Poetry",
@@ -124,6 +132,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Fjalar's and Galar's Hall",
 		X = 9,
-		Y = 1
+		Y = 1,
+		PlayerColor = "red"
 	}
 }

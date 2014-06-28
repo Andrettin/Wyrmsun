@@ -446,6 +446,27 @@ DefineIcon({
 	File = "neutral/icons/coal_mine.png"
 })
 
+DefineIcon({
+	Name = "icon-inner-wall-decoration",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/inner_wall_decoration.png"
+})
+
+DefineIcon({
+	Name = "icon-outer-wall-decoration",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/outer_wall_decoration.png"
+})
+
+DefineIcon({
+	Name = "icon-floor-decoration",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/floor_decoration.png"
+})
+
 -- tileset-dependent icons
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then

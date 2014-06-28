@@ -61,7 +61,9 @@ WorldMapProvinces = {
 		Tiles = { {25, 26}, {26, 25} },
 		Owner = "Gnomes",
 		SettlementLocation = {25, 26},
-		SettlementBuildings = {"unit-gnomish-town-hall"},
+		SettlementBuildings = {
+--			"unit-gnomish-town-hall"
+		},
 		Maps = {"Brown Hills"}
 	},
 	CavernsOfChaincolt = {
@@ -69,7 +71,11 @@ WorldMapProvinces = {
 		Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
 		Owner = "Norlund Clan",
 		SettlementLocation = {30, 13},
-		SettlementBuildings = {"unit-dwarven-town-hall", "unit-dwarven-blacksmith"},
+		SettlementBuildings = {
+			DwarvenMeadHall = 2,
+			DwarvenWarHall = 2, -- has capability to train warriors
+			DwarvenBlacksmith = 2 -- Durstorn has runesmiths under his employ
+		},
 		Maps = {"Caverns of Chaincolt", "Chaincolt Foothills"},
 		Units = {
 			DwarvenAxefighter = 10, -- Rugnur, Baglur, 4 Dwarven Guardsmen (5 if easy mode), Durstorn, Neglur, Glinar, Kuhnar, Theganli
@@ -81,7 +87,9 @@ WorldMapProvinces = {
 		Tiles = { {39, 2}, {39, 3}, {39, 4}, {39, 9}, {40, 1}, {40, 2}, {40, 3}, {40, 4}, {40, 5}, {40, 6}, {40, 7}, {40, 8}, {40, 9}, {41, 1}, {41, 2}, {41, 3}, {41, 4}, {41, 5}, {41, 6}, {41, 7}, {41, 8}, {41, 9}, {42, 1}, {42, 2}, {42, 3}, {42, 4}, {42, 5}, {42, 6}, {42, 7}, {43, 1}, {43, 2}, {43, 3}, {43, 6} },
 		Owner = "",
 		SettlementLocation = {41, 6},
-		SettlementBuildings = {"unit-dwarven-blacksmith"}, -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
+		SettlementBuildings = {
+			DwarvenBlacksmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
+		},
 		Maps = {"Random Map (Cave)"}
 	},
 	EasternMines = {
@@ -137,7 +145,9 @@ WorldMapProvinces = {
 		Tiles = { {12, 3}, {12, 4}, {13, 3}, {13, 4}, {14, 2}, {14, 3}, {14, 4}, {15, 1}, {15, 2}, {15, 3}, {15, 4}, {16, 1}, {16, 2}, {16, 3}, {16, 4}, {16, 5}, {16, 6}, {17, 1}, {17, 2}, {17, 3}, {17, 4}, {17, 5}, {17, 6}, {17, 7}, {18, 1}, {18, 2}, {18, 3}, {18, 4}, {18, 5}, {18, 7}, {18, 8}, {19, 1}, {19, 2}, {19, 3}, {19, 4}, {19, 7}, {20, 1}, {20, 2}, {20, 3}, {21, 1}, {21, 2}, {21, 3}, {22, 3} },
 		Owner = "",
 		SettlementLocation = {14, 2},
-		SettlementBuildings = {"unit-dwarven-blacksmith"},
+		SettlementBuildings = {
+			DwarvenBlacksmith = 2 -- Thursagan's smithy
+		},
 		Maps = {"Northern Wastelands"},
 		Units = {
 			GoblinImpaler = SyncRand(65) + 1,
@@ -149,7 +159,11 @@ WorldMapProvinces = {
 		Tiles = { {31, 16}, {31, 17}, {31, 18}, {32, 15}, {32, 16}, {32, 17}, {32, 18}, {32, 19}, {33, 14}, {33, 15}, {33, 16}, {33, 17}, {33, 18}, {33, 19}, {34, 14}, {34, 15}, {34, 16}, {34, 17} },
 		Owner = "Shorbear Clan",
 		SettlementLocation = {33, 15},
-		SettlementBuildings = {"unit-dwarven-town-hall", "unit-dwarven-blacksmith"},
+		SettlementBuildings = {
+			DwarvenMeadHall = 2,
+			DwarvenWarHall = 2, -- has capability to train warriors
+			DwarvenBlacksmith = 2 -- renowned skilled crafters
+		},
 		Maps = {"Random Map (Swamp)"},
 		Units = {
 			DwarvenAxefighter = 1 -- Glonoin
@@ -160,7 +174,10 @@ WorldMapProvinces = {
 		Tiles = { {31, 14}, {32, 13}, {32, 14}, {33, 12}, {33, 13}, {34, 12}, {34, 13}, {35, 13} },
 		Owner = "Shinsplitter Clan",
 		SettlementLocation = {32, 14},
-		SettlementBuildings = {},
+		SettlementBuildings = {
+			DwarvenMeadHall = 2,
+			DwarvenWarHall = 2 -- has capability to train warriors
+		},
 		Maps = {"Random Map (Cave)"}
 	}
 }
@@ -231,7 +248,7 @@ Factions = {
 }
 
 if (GrandStrategyYear >= 27) then
-	RemoveElementFromArray(WorldMapProvinces.NorthernWastelands.SettlementBuildings, "unit-dwarven-blacksmith") -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
@@ -242,8 +259,8 @@ end
 
 if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
-	RemoveElementFromArray(WorldMapProvinces.ShorbearHills.SettlementBuildings, "unit-dwarven-town-hall")
-	RemoveElementFromArray(WorldMapProvinces.ShorbearHills.SettlementBuildings, "unit-dwarven-blacksmith")
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenMeadHall = 0
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenBlacksmith = 0
 	WorldMapProvinces.ShorbearHills.Units.DwarvenAxefighter = 0
 end
 

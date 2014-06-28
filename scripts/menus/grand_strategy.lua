@@ -67,6 +67,7 @@ function RunGrandStrategyGameSetupMenu()
 			Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			GrandStrategyFaction = faction_list[faction:getSelected() + 1]
 			SetPlayerData(GetThisPlayer(), "RaceName", GetFactionFromName(GrandStrategyFaction).Civilization)
+			InterfaceState = "Province"
 			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
 			-- add resource quantities to factions that don't have that set up
@@ -113,6 +114,14 @@ function RunGrandStrategyGameSetupMenu()
 				if (WorldMapProvinces[key].AttackedBy == nil) then
 					WorldMapProvinces[key]["AttackedBy"] = ""
 				end
+				if (WorldMapProvinces[key].SettlementBuildings == nil) then
+					WorldMapProvinces[key]["SettlementBuildings"] = {}
+				end
+				for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+					if (WorldMapProvinces[key].SettlementBuildings[gsunit_key] == nil) then
+						WorldMapProvinces[key].SettlementBuildings[gsunit_key] = 0 -- 0 = not built, 1 = under construction, 2 = built
+					end
+				end
 			end
 
 			SelectedUnits = {}
@@ -127,6 +136,17 @@ function RunGrandStrategyGameSetupMenu()
 				end
 				if (GrandStrategyUnits[gsunit_key].Costs.Lumber == nil) then
 					GrandStrategyUnits[gsunit_key].Costs["Lumber"] = 0
+				end
+			end
+			for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+				if (GrandStrategyBuildings[gsunit_key].Costs.Gold == nil) then
+					GrandStrategyBuildings[gsunit_key].Costs["Gold"] = 0
+				end
+				if (GrandStrategyBuildings[gsunit_key].Costs.Lumber == nil) then
+					GrandStrategyBuildings[gsunit_key].Costs["Lumber"] = 0
+				end
+				if (GrandStrategyBuildings[gsunit_key].RequiredBuildings == nil) then
+					GrandStrategyBuildings[gsunit_key]["RequiredBuildings"] = {}
 				end
 			end
 
@@ -253,17 +273,28 @@ function EndTurn()
 	for i=1,table.getn(WorldMapResources.Lumber) do
 		local resource_owner = GetFactionFromName(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner)
 		if (resource_owner ~= nil) then
-			resource_owner.Commodities.Lumber = resource_owner.Commodities.Lumber + 100
+			if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Lumber Mill")) then
+				resource_owner.Commodities.Lumber = resource_owner.Commodities.Lumber + 125
+			else
+				resource_owner.Commodities.Lumber = resource_owner.Commodities.Lumber + 100
+			end
 		end
 	end
 
-	-- train units
 	for key, value in pairs(WorldMapProvinces) do
+		-- construct buildings and train units
+		for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+			if (WorldMapProvinces[key].SettlementBuildings[gsunit_key] == 1) then
+				WorldMapProvinces[key].SettlementBuildings[gsunit_key] = 2
+			end
+		end
 		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 			WorldMapProvinces[key].Units[gsunit_key] = WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key] + WorldMapProvinces[key].MovingUnits[gsunit_key]
 			WorldMapProvinces[key].UnderConstructionUnits[gsunit_key] = 0
 			WorldMapProvinces[key].MovingUnits[gsunit_key] = 0
 		end
+		
+		-- effect attacks
 		if (WorldMapProvinces[key].AttackedBy ~= "") then
 			AttackProvince(WorldMapProvinces[key], WorldMapProvinces[key].AttackedBy)
 			WorldMapProvinces[key].AttackedBy = ""
@@ -329,22 +360,39 @@ function AttackProvince(province, faction)
 				end
 				AttackingUnits = province.AttackingUnits
 				AttackedProvince = province
-				RunMap(maps[i])
-
+				
 				local victorious_player = ""
-				if (GameResult == GameVictory) then
-					victorious_player = GrandStrategyFaction
-				elseif (Attacker == GrandStrategyFaction) then
-					victorious_player = Defender
-				elseif (Defender == GrandStrategyFaction) then
-					victorious_player = Attacker
-				end
-				-- set the new unit quantity to the surviving units of the victorious side
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					AttackingUnits[gsunit_key] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+
+				if (Attacker == GrandStrategyFaction or Defender == GrandStrategyFaction) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
+					RunMap(maps[i])
+
+					if (GameResult == GameVictory) then
+						victorious_player = GrandStrategyFaction
+					elseif (Attacker == GrandStrategyFaction) then
+						victorious_player = Defender
+					elseif (Defender == GrandStrategyFaction) then
+						victorious_player = Attacker
+					end
+
+					-- set the new unit quantity to the surviving units of the victorious side
+					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+						AttackingUnits[gsunit_key] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+					end
+				else
+					if (GetProvinceAttackerMilitaryScore(province) > GetProvinceMilitaryScore(province)) then -- if military score is the same, then defenders win
+						victorious_player = Attacker
+					else
+						victorious_player = Defender
+						for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+							AttackingUnits[gsunit_key] = province.Units[gsunit_key]
+						end
+					end
 				end
 
-				province.Owner = victorious_player
+				if (victorious_player == Attacker) then
+					province.Owner = victorious_player
+				end
+				
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 					province.Units[gsunit_key] = AttackingUnits[gsunit_key]
 				end
@@ -442,19 +490,19 @@ function GetFactionNumProvinces(faction)
 	return province_count
 end
 
-function CanAttackProvince(province, faction)
+function CanAttackProvince(province, faction, province_from)
 	if (province.Owner == faction or province.Owner == "Ocean" or (province.AttackedBy ~= "" and province.AttackedBy ~= faction)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false
 	end
 	
-	for i=1,table.getn(province.Tiles) do
-		if (GetTileProvince(province.Tiles[i][1] - 1, province.Tiles[i][2]) ~= nil and GetTileProvince(province.Tiles[i][1] - 1, province.Tiles[i][2]).Owner == faction) then
+	for i=1,table.getn(province.BorderTiles) do
+		if (GetTileProvince(province.BorderTiles[i][1] - 1, province.BorderTiles[i][2]) == province_from) then
 			return true
-		elseif (GetTileProvince(province.Tiles[i][1] + 1, province.Tiles[i][2]) ~= nil and GetTileProvince(province.Tiles[i][1] + 1, province.Tiles[i][2]).Owner == faction) then
+		elseif (GetTileProvince(province.BorderTiles[i][1] + 1, province.BorderTiles[i][2]) == province_from) then
 			return true
-		elseif (GetTileProvince(province.Tiles[i][1], province.Tiles[i][2] - 1) ~= nil and GetTileProvince(province.Tiles[i][1], province.Tiles[i][2] - 1).Owner == faction) then
+		elseif (GetTileProvince(province.BorderTiles[i][1], province.BorderTiles[i][2] - 1) == province_from) then
 			return true
-		elseif (GetTileProvince(province.Tiles[i][1], province.Tiles[i][2] + 1) ~= nil and GetTileProvince(province.Tiles[i][1], province.Tiles[i][2] + 1).Owner == faction) then
+		elseif (GetTileProvince(province.BorderTiles[i][1], province.BorderTiles[i][2] + 1) == province_from) then
 			return true
 		end
 	end
@@ -519,10 +567,10 @@ function RunGrandStrategyQuitToMenuConfirmMenu()
 	menu:addFullButton("~!Quit to Menu", "q", 16, 11 + (24 * 3) + 29,
 		function()
 			StopMusic();
-			GrandStrategy = false
-			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 			GrandStrategyMenu:stop() 
-			menu:stop()
+			menu:stopAll()
+			ClearGrandStrategyVariables()
+			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
 	menu:addFullButton("Cancel (~<Esc~>)", "escape", 16, 248,
 		function() menu:stop() end)
@@ -724,6 +772,24 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	end
 end
 
+function DrawSettlement(file, tile_x, tile_y, playercolor)
+	local world_map_tile = CPlayerColorGraphic:New(file)
+	world_map_tile:Load()
+	OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", playercolor)
+	OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
+		function()
+			SetSelectedProvince(GetTileProvince(tile_x, tile_y))
+			DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
+		end
+	)
+	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+	OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
+	OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
+	OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
+	OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
+	OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
+end
+
 function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 	-- draw tile in the minimap
 	local minimap_tile_size_x = 1
@@ -810,19 +876,34 @@ end
 
 function AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
 	UIElements[table.getn(UIElements) + 1] = ImageButton(caption)
-	UIElements[table.getn(UIElements)]:setHotKey(hotkey)
+	if (hotkey ~= "") then
+		UIElements[table.getn(UIElements)]:setHotKey(hotkey)
+	end
 	UIElements[table.getn(UIElements)]:setActionCallback(callback)
 	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
 	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	return UIElements[table.getn(UIElements)]
 end
 
-function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
-	UIElements[table.getn(UIElements) + 1] = ImageButton("")
-	UIElements[table.getn(UIElements)]:setHotKey("")
+function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
+	local b
+	local unit_icon
+	if (SelectedProvince.SettlementBuildings[grand_strategy_building_key] < 2) then -- if not built, make icon gray
+		b = ImageButton("")
+		unit_icon = CGraphic:New(string.sub(GrandStrategyBuildings[grand_strategy_building_key].Icon, 0, -5) .. "_grayed.png", 46, 38)
+	else
+		b = PlayerColorImageButton("", GetFactionFromName(GrandStrategyFaction).Color)
+		unit_icon = CPlayerColorGraphic:New(GrandStrategyBuildings[grand_strategy_building_key].Icon, 46, 38)
+	end
+	unit_icon:Load()
+	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
-			TrainUnit(SelectedProvince, grand_strategy_unit_key)
+			if (SelectedProvince.SettlementBuildings[grand_strategy_building_key] < 1) then
+				BuildStructure(SelectedProvince, grand_strategy_building_key)
+			elseif (SelectedProvince.SettlementBuildings[grand_strategy_building_key] >= 2) then
+				UseBuilding(SelectedProvince, grand_strategy_building_key)
+			end
 			DrawGrandStrategyInterface()
 		end
 	)
@@ -832,7 +913,29 @@ function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
 --	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
 --	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
 --	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	local unit_icon = CGraphic:New(GrandStrategyUnits[grand_strategy_unit_key].Icon)
+	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setSize(46, 38)
+	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
+	
+	return UIElements[table.getn(UIElements)]
+end
+
+function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
+	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionFromName(GrandStrategyFaction).Color)
+	UIElements[table.getn(UIElements)]:setActionCallback(
+		function()
+			DrawGrandStrategyInterface()
+		end
+	)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+
+--	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
+	local unit_icon = CPlayerColorGraphic:New(GrandStrategyUnits[grand_strategy_unit_key].Icon, 46, 38)
 	unit_icon:Load()
 	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
 	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
@@ -976,6 +1079,7 @@ function DrawOnScreenTiles()
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
 			if (WorldMapProvinces[key].Owner ~= "") then
 				if (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "dwarf") then
+--					DrawSettlement("tilesets/world/sites/dwarven_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2], GetFactionFromName(WorldMapProvinces[key].Owner).Color)
 					DrawWorldMapTile("tilesets/world/sites/dwarven_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				elseif (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "gnome") then
 					DrawWorldMapTile("tilesets/world/sites/gnomish_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
@@ -1061,57 +1165,140 @@ function DrawGrandStrategyInterface()
 			AddGrandStrategyLabel(SelectedProvince.Name, 88, 171, Fonts["game"], true)
 		end
 
-		-- add buttons for training military units if is an owned province
+		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting
 		if (SelectedProvince.Owner == GrandStrategyFaction) then
-			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-				if (GrandStrategyUnits[gsunit_key].Civilization == GetFactionFromName(GrandStrategyFaction).Civilization) then
-					local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
-					local icon_offset_y = 340 + (GrandStrategyUnits[gsunit_key].Y * (47 + 19 + 4))
+			if (InterfaceState == "Province") then
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or SelectedProvince.Units[gsunit_key] > 0) then
+						local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
+						local icon_offset_y = 340 + (GrandStrategyUnits[gsunit_key].Y * (47 + 19 + 4))
 
-					AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, gsunit_key)
-					if (SelectedProvince.UnderConstructionUnits[gsunit_key] > 0) then
-						AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
-					else
-						AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
-					end
-					
-					-- add unit selection arrows
-					local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
-						if (SelectedUnits[gsunit_key] > 0) then
-							SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] - 1
-							DrawGrandStrategyInterface()
+						AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, gsunit_key)
+						if (SelectedProvince.UnderConstructionUnits[gsunit_key] > 0) then
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
+						else
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
 						end
-					end)
-					b:setBaseColor(Color(0,0,0,0))
-					b:setForegroundColor(Color(0,0,0,0))
-					b:setBackgroundColor(Color(0,0,0,0))
-					if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-						b:setNormalImage(g_dlslider_n)
-						b:setPressedImage(g_dlslider_p)
-					else
-						b:setNormalImage(g_dlslider_n)
-						b:setPressedImage(g_dlslider_p)
-					end
 
-					local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
-						if (SelectedUnits[gsunit_key] < SelectedProvince.Units[gsunit_key]) then
-							SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] + 1
-							DrawGrandStrategyInterface()
+						-- add unit selection arrows
+						local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
+							if (SelectedUnits[gsunit_key] > 0) then
+								SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] - 1
+								DrawGrandStrategyInterface()
+							end
+						end)
+						b:setBaseColor(Color(0,0,0,0))
+						b:setForegroundColor(Color(0,0,0,0))
+						b:setBackgroundColor(Color(0,0,0,0))
+						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+							b:setNormalImage(g_dlslider_n)
+							b:setPressedImage(g_dlslider_p)
+						else
+							b:setNormalImage(g_dlslider_n)
+							b:setPressedImage(g_dlslider_p)
 						end
-					end)
-					b:setBaseColor(Color(0,0,0,0))
-					b:setForegroundColor(Color(0,0,0,0))
-					b:setBackgroundColor(Color(0,0,0,0))
-					if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-						b:setNormalImage(g_drslider_n)
-						b:setPressedImage(g_drslider_p)
-					else
-						b:setNormalImage(g_drslider_n)
-						b:setPressedImage(g_drslider_p)
-					end
 
-					AddGrandStrategyLabel("~<" .. SelectedUnits[gsunit_key] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true)
+						local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
+							if (SelectedUnits[gsunit_key] < SelectedProvince.Units[gsunit_key]) then
+								SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] + 1
+								DrawGrandStrategyInterface()
+							end
+						end)
+						b:setBaseColor(Color(0,0,0,0))
+						b:setForegroundColor(Color(0,0,0,0))
+						b:setBackgroundColor(Color(0,0,0,0))
+						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+							b:setNormalImage(g_drslider_n)
+							b:setPressedImage(g_drslider_p)
+						else
+							b:setNormalImage(g_drslider_n)
+							b:setPressedImage(g_drslider_p)
+						end
+
+						AddGrandStrategyLabel("~<" .. SelectedUnits[gsunit_key] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true)
+					end
 				end
+
+				for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+					if (IsBuildingAvailable(SelectedProvince, gsunit_key)) then
+						local icon_offset_x = 9 + (GrandStrategyBuildings[gsunit_key].X * 56)
+						local icon_offset_y = 340 + (GrandStrategyBuildings[gsunit_key].Y * 47)
+
+						AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, gsunit_key)
+
+						if (SelectedProvince.SettlementBuildings[gsunit_key] == 1) then -- if is under construction, apply under construction graphics
+							AddUIElement("neutral/icons/build_basic_structure_transparent_background.png", icon_offset_x, icon_offset_y)
+						end
+					end
+				end
+			elseif (InterfaceState == "Recruit") then
+				AddGrandStrategyLabel("Recruit Units", 88, 213, Fonts["game"], true)
+				
+				-- add units buttons for training
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key)) then
+						local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
+						local icon_offset_y = 340 + ((GrandStrategyUnits[gsunit_key].Y - 1) * (47 + 19 + 4))
+
+						AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, gsunit_key)
+						if (SelectedProvince.UnderConstructionUnits[gsunit_key] > 0) then
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
+						else
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true)
+						end
+
+						-- add unit training arrows
+						local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
+							TrainUnitCancel(SelectedProvince, gsunit_key)
+							DrawGrandStrategyInterface()
+						end)
+						b:setBaseColor(Color(0,0,0,0))
+						b:setForegroundColor(Color(0,0,0,0))
+						b:setBackgroundColor(Color(0,0,0,0))
+						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+							b:setNormalImage(g_dlslider_n)
+							b:setPressedImage(g_dlslider_p)
+						else
+							b:setNormalImage(g_dlslider_n)
+							b:setPressedImage(g_dlslider_p)
+						end
+
+						local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
+							TrainUnit(SelectedProvince, gsunit_key)
+							DrawGrandStrategyInterface()
+						end)
+						b:setBaseColor(Color(0,0,0,0))
+						b:setForegroundColor(Color(0,0,0,0))
+						b:setBackgroundColor(Color(0,0,0,0))
+						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+							b:setNormalImage(g_drslider_n)
+							b:setPressedImage(g_drslider_p)
+						else
+							b:setNormalImage(g_drslider_n)
+							b:setPressedImage(g_drslider_p)
+						end
+
+						AddGrandStrategyLabel("~<" .. SelectedProvince.UnderConstructionUnits[gsunit_key] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true)
+					end
+				end
+
+				-- add a button to go back to the main province interface
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
+					InterfaceState = "Province"
+					DrawGrandStrategyInterface()
+				end)
+				b:setBaseColor(Color(0,0,0,0))
+				b:setForegroundColor(Color(0,0,0,0))
+				b:setBackgroundColor(Color(0,0,0,0))
+				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+					b:setNormalImage(g_dbtn)
+					b:setPressedImage(g_dbtp)
+				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+					b:setNormalImage(g_gbtn)
+					b:setPressedImage(g_gbtp)
+				end
+				b:setSize(128, 20)
+				b:setFont(Fonts["game"])
 			end
 		end
 	end
@@ -1124,21 +1311,11 @@ function DrawGrandStrategyInterface()
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		local normal_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-normal.png")
-		normal_end_turn_button:Load()
-		local pressed_end_turn_button = CGraphic:New("ui/dwarf/widgets/button-thin-medium-pressed.png")
-		pressed_end_turn_button:Load()
-		b:setNormalImage(normal_end_turn_button)
-		b:setPressedImage(pressed_end_turn_button)
-		b:setDisabledImage(normal_end_turn_button)
+		b:setNormalImage(g_dbtn)
+		b:setPressedImage(g_dbtp)
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		local normal_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-normal.png")
-		normal_end_turn_button:Load()
-		local pressed_end_turn_button = CGraphic:New("ui/gnome/widgets/button-thin-medium-pressed.png")
-		pressed_end_turn_button:Load()
-		b:setNormalImage(normal_end_turn_button)
-		b:setPressedImage(pressed_end_turn_button)
-		b:setDisabledImage(normal_end_turn_button)
+		b:setNormalImage(g_gbtn)
+		b:setPressedImage(g_gbtp)
 	end
 	b:setSize(128, 20)
 	b:setFont(Fonts["game"])
@@ -1193,7 +1370,7 @@ function SetSelectedProvince(province)
 	if (province ~= SelectedProvince) then
 
 		-- if the player has units selected and then selects an attackable province, set those units to attack the province
-		if (CanAttackProvince(province, GrandStrategyFaction)) then
+		if (SelectedProvince ~= nil  and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
 			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 				if (SelectedUnits[gsunit_key] > 0) then
 					province.AttackedBy = GrandStrategyFaction
@@ -1227,21 +1404,62 @@ function SetSelectedProvince(province)
 end
 
 function AIDoTurn(ai_faction)
-	local desired_infantry_per_province = 10
-	local desired_archers_per_province = 4
+
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].Owner == ai_faction.Name) then
+			local desired_infantry_in_province = 10
+			local desired_archers_in_province = 6
+			local desired_catapults_in_province = 1
+			
+			for second_key, second_value in pairs(WorldMapProvinces) do
+				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
+					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key]) < GetProvinceMilitaryScore(WorldMapProvinces[key])) then
+						if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction.Name, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+							WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
+							for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+								WorldMapProvinces[second_key].AttackingUnits[gsunit_key] = WorldMapProvinces[key].Units[gsunit_key]
+								WorldMapProvinces[key].Units[gsunit_key] = 0
+							end
+						end
+					elseif (GetProvinceMilitaryScore(WorldMapProvinces[second_key]) > 0) then
+						desired_infantry_in_province = math.floor(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key]) * 3 / 2) / 960) -- 960 is the military score of the default desired military units in a province
+						desired_archers_in_province = math.floor(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key]) * 3 / 2) / 960)
+						desired_catapults_in_province = math.floor(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key]) * 3 / 2) / 960)
+					end
+				end
+			end
+
+			for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+				if (CanBuildStructure(WorldMapProvinces[key], gsunit_key)) then
+					if (GrandStrategyBuildings[gsunit_key].Type == "Town Hall") then
+						BuildStructure(WorldMapProvinces[key], gsunit_key)
+					elseif (GrandStrategyBuildings[gsunit_key].Type == "Barracks") then
+						BuildStructure(WorldMapProvinces[key], gsunit_key)
+					elseif (GrandStrategyBuildings[gsunit_key].Type == "Lumber Mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber"))) then
+						BuildStructure(WorldMapProvinces[key], gsunit_key)
+					elseif (GrandStrategyBuildings[gsunit_key].Type == "Blacksmith" and ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "Lumber Mill")) then -- it only makes sense to build blacksmiths at the moment to make ballistas available, and those can only be built if a barracks and a lumber mill are present
+						BuildStructure(WorldMapProvinces[key], gsunit_key)
+					end
+				end
+			end
+
 			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-				if (GrandStrategyUnits[gsunit_key].Civilization == ai_faction.Civilization) then
+				if (IsUnitAvailableForTraining(WorldMapProvinces[key], gsunit_key)) then
 					if (GrandStrategyUnits[gsunit_key].Type == "Infantry") then
-						for i=1,desired_infantry_per_province do
-							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_infantry_per_province and ai_faction.Gold >= GrandStrategyUnits[gsunit_key].Costs.Gold and ai_faction.Commodities.Lumber >= GrandStrategyUnits[gsunit_key].Costs.Lumber) then
+						for i=1,desired_infantry_in_province do
+							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_infantry_in_province and CanTrainUnit(WorldMapProvinces[key], gsunit_key)) then
 								TrainUnit(WorldMapProvinces[key], gsunit_key)
 							end
 						end
 					elseif (GrandStrategyUnits[gsunit_key].Type == "Archer") then
-						for i=1,desired_archers_per_province do
-							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_archers_per_province and ai_faction.Gold >= GrandStrategyUnits[gsunit_key].Costs.Gold and ai_faction.Commodities.Lumber >= GrandStrategyUnits[gsunit_key].Costs.Lumber) then
+						for i=1,desired_archers_in_province do
+							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], gsunit_key)) then
+								TrainUnit(WorldMapProvinces[key], gsunit_key)
+							end
+						end
+					elseif (GrandStrategyUnits[gsunit_key].Type == "Catapult") then
+						for i=1,desired_catapults_in_province do
+							if ((WorldMapProvinces[key].Units[gsunit_key] + WorldMapProvinces[key].UnderConstructionUnits[gsunit_key]) < desired_catapults_in_province and CanTrainUnit(WorldMapProvinces[key], gsunit_key)) then
 								TrainUnit(WorldMapProvinces[key], gsunit_key)
 							end
 						end
@@ -1252,10 +1470,177 @@ function AIDoTurn(ai_faction)
 	end
 end
 
+function IsBuildingAvailable(province, grand_strategy_unit_key)
+	if (GrandStrategyBuildings[grand_strategy_unit_key].Civilization ~= GetFactionFromName(province.Owner).Civilization) then
+		return false
+	end
+
+	local has_required_buildings = true
+	if (table.getn(GrandStrategyBuildings[grand_strategy_unit_key].RequiredBuildings) > 0) then
+		for i=1,table.getn(GrandStrategyBuildings[grand_strategy_unit_key].RequiredBuildings) do
+			if (province.SettlementBuildings[GrandStrategyBuildings[grand_strategy_unit_key].RequiredBuildings[i]] < 2) then
+				has_required_buildings = false
+			end
+		end
+	end
+	if (has_required_buildings == false) then
+		return false
+	end
+	
+	return true
+end
+
+function CanBuildStructure(province, grand_strategy_unit_key)
+	if (province.SettlementBuildings[grand_strategy_unit_key] == 2) then -- can't build if already built
+		return false
+	end
+
+	if (GetFactionFromName(province.Owner).Gold < GrandStrategyBuildings[grand_strategy_unit_key].Costs.Gold or GetFactionFromName(province.Owner).Commodities.Lumber < GrandStrategyBuildings[grand_strategy_unit_key].Costs.Lumber) then
+		return false
+	end
+	
+	return IsBuildingAvailable(province, grand_strategy_unit_key)
+end
+
+function BuildStructure(province, grand_strategy_building_key)
+	if (GetFactionFromName(province.Owner).Gold >= GrandStrategyBuildings[grand_strategy_building_key].Costs.Gold and GetFactionFromName(province.Owner).Commodities.Lumber >= GrandStrategyBuildings[grand_strategy_building_key].Costs.Lumber) then
+		province.SettlementBuildings[grand_strategy_building_key] = 1
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GrandStrategyBuildings[grand_strategy_building_key].Costs.Gold
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GrandStrategyBuildings[grand_strategy_building_key].Costs.Lumber
+	end
+end
+
+function CanTrainUnit(province, grand_strategy_unit_key)
+	if (GetFactionFromName(province.Owner).Gold < GrandStrategyUnits[grand_strategy_unit_key].Costs.Gold or GetFactionFromName(province.Owner).Commodities.Lumber < GrandStrategyUnits[grand_strategy_unit_key].Costs.Lumber) then
+		return false
+	end
+
+	return IsUnitAvailableForTraining(province, grand_strategy_unit_key)
+end
+
+function IsUnitAvailableForTraining(province, grand_strategy_unit_key)
+	if (GrandStrategyUnits[grand_strategy_unit_key].Civilization ~= GetFactionFromName(province.Owner).Civilization) then
+		return false
+	end
+
+	local has_required_buildings = true
+	if (table.getn(GrandStrategyUnits[grand_strategy_unit_key].RequiredBuildings) > 0) then
+		for i=1,table.getn(GrandStrategyUnits[grand_strategy_unit_key].RequiredBuildings) do
+			if (province.SettlementBuildings[GrandStrategyUnits[grand_strategy_unit_key].RequiredBuildings[i]] < 2) then
+				has_required_buildings = false
+			end
+		end
+	end
+	if (has_required_buildings == false) then
+		return false
+	end
+	
+	return true
+end
+
 function TrainUnit(province, grand_strategy_unit_key)
-	if (GetFactionFromName(province.Owner).Gold >= GrandStrategyUnits[grand_strategy_unit_key].Costs.Gold and GetFactionFromName(province.Owner).Commodities.Lumber >= GrandStrategyUnits[grand_strategy_unit_key].Costs.Lumber) then
+	if (CanTrainUnit(province, grand_strategy_unit_key)) then
 		province.UnderConstructionUnits[grand_strategy_unit_key] = province.UnderConstructionUnits[grand_strategy_unit_key] + 1
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GrandStrategyUnits[grand_strategy_unit_key].Costs.Gold
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GrandStrategyUnits[grand_strategy_unit_key].Costs.Lumber
 	end
+end
+
+function TrainUnitCancel(province, grand_strategy_unit_key)
+	if (province.UnderConstructionUnits[grand_strategy_unit_key] >= 1) then
+		province.UnderConstructionUnits[grand_strategy_unit_key] = province.UnderConstructionUnits[grand_strategy_unit_key] - 1
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GrandStrategyUnits[grand_strategy_unit_key].Costs.Gold
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GrandStrategyUnits[grand_strategy_unit_key].Costs.Lumber
+	end
+end
+
+function UseBuilding(province, grand_strategy_building_key)
+	if (GrandStrategyBuildings[grand_strategy_building_key].Type == "Barracks") then
+		InterfaceState = "Recruit"
+	end
+end
+
+function ClearGrandStrategyVariables()
+	GrandStrategy = false
+	WorldMapOffsetX = nil
+	WorldMapOffsetY = nil
+	GrandStrategyYear = nil
+	GrandStrategyFaction = nil
+	SelectedProvince = nil
+	Attacker = nil
+	Defender = nil
+	Factions = nil
+	WorldMapProvinces = nil
+	SelectedUnits = nil
+	SelectedProvince = nil
+	AttackingUnits = nil
+	AttackedProvince = nil
+	TileProvinces = nil
+	InterfaceState = nil
+
+	OnScreenTiles = nil
+	OnScreenBorderWestTiles = nil
+	OnScreenBorderEastTiles = nil
+	OnScreenBorderNorthTiles = nil
+	OnScreenBorderSouthTiles = nil
+	OnScreenSites = nil
+	UIFillerRight = nil
+	UIStatusLine = nil
+
+	UIElements = nil
+	GrandStrategyLabels = nil
+
+	UIMinimap = nil
+	MinimapTiles = nil
+
+	GrandStrategyMenu = nil
+end
+
+function ProvinceHasBuildingType(province, building_type)
+	for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+		if (GrandStrategyBuildings[gsunit_key].Type == building_type and IsBuildingAvailable(province, gsunit_key) and province.SettlementBuildings[gsunit_key] == 2) then
+			return true
+		end
+	end
+	return false
+end
+
+function ProvinceHasResource(province, resource)
+	for i=1,table.getn(province.Tiles) do
+		for j=1,table.getn(WorldMapResources[resource]) do
+			if (province.Tiles[i][1] == WorldMapResources[resource][j][1] and province.Tiles[i][2] == WorldMapResources[resource][j][2]) then
+				return true
+			end
+		end
+	end
+
+	return false
+end
+
+function GetProvinceMilitaryScore(province)
+	local military_score = 0
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (GrandStrategyUnits[gsunit_key].Type == "Infantry") then
+			military_score = military_score + (province.Units[gsunit_key] * 50)
+		elseif (GrandStrategyUnits[gsunit_key].Type == "Archer") then
+			military_score = military_score + (province.Units[gsunit_key] * 60)
+		elseif (GrandStrategyUnits[gsunit_key].Type == "Catapult") then
+			military_score = military_score + (province.Units[gsunit_key] * 100)
+		end
+	end
+	return military_score
+end
+
+function GetProvinceAttackerMilitaryScore(province)
+	local military_score = 0
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (GrandStrategyUnits[gsunit_key].Type == "Infantry") then
+			military_score = military_score + (province.AttackingUnits[gsunit_key] * 50)
+		elseif (GrandStrategyUnits[gsunit_key].Type == "Archer") then
+			military_score = military_score + (province.AttackingUnits[gsunit_key] * 60)
+		elseif (GrandStrategyUnits[gsunit_key].Type == "Catapult") then
+			military_score = military_score + (province.AttackingUnits[gsunit_key] * 100)
+		end
+	end
+	return military_score
 end

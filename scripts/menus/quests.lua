@@ -43,7 +43,7 @@ function RunQuestMenu()
 	for key, value in pairs(Quests) do
 		if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
 			if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-				addQuestIcon(Quests[key].Name, menu, Quests[key].Icon, Quests[key].Description, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * Quests[key].Y))
+				addQuestIcon(Quests[key].Name, menu, Quests[key].Icon, Quests[key].Description, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * Quests[key].Y), Quests[key].PlayerColor)
 			end
 		end
 	end
@@ -54,16 +54,18 @@ function RunQuestMenu()
 	menu:run()
 end
 
-function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y)
+function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y, playercolor)
 	local questicon
+	local b
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
 		questicon = CGraphic:New(questicon_graphics .. "_grayed.png")
+		questicon:Load()
+		b = ImageButton("")
 	else
-		questicon = CGraphic:New(questicon_graphics .. ".png")
+		questicon = CPlayerColorGraphic:New(questicon_graphics .. ".png")
+		questicon:Load()
+		b = PlayerColorImageButton("", playercolor)
 	end
-	questicon:Load()
-	local b = ImageButton("")
---	b:setHotKey("")
 	b:setActionCallback(
 		function()
 			local quest_menu = WarGameMenu(panel(5))

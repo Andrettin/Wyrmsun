@@ -123,6 +123,7 @@ function DefineAllowSpecialUnits(flags)
 		"unit-bones", "unit-wyrm-skeleton",
 		"unit-small-rocks",
 		"unit-stairs",
+		"unit-outer-wall-decoration", "unit-inner-wall-decoration", "unit-floor-decoration",
 		"unit-gold-coins", "unit-gold-sack", "unit-gold-chest", "unit-gold-and-gems-chest", "unit-barrel",
 --		"unit-human-dead-body", "unit-dead-sea-body",
 		"unit-destroyed-2x2-place",

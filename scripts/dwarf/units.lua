@@ -614,7 +614,8 @@ GrandStrategyUnits["DwarvenAxefighter"] = {
 		Gold = 600
 	},
 	X = 0,
-	Y = 0
+	Y = 0,
+	RequiredBuildings = { "DwarvenWarHall" }
 }
 
 GrandStrategyUnits["DwarvenScout"] = {
@@ -628,7 +629,23 @@ GrandStrategyUnits["DwarvenScout"] = {
 		Lumber = 50
 	},
 	X = 1,
-	Y = 0
+	Y = 0,
+	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill" }
+}
+
+GrandStrategyUnits["DwarvenBallista"] = {
+	Name = GetUnitTypeName("unit-dwarven-ballista") .. "s",
+	UnitType = "unit-dwarven-ballista",
+	Icon = "tilesets/swamp/dwarf/icons/dwarven_ballista.png",
+	Civilization = "dwarf",
+	Type = "Catapult",
+	Costs = {
+		Gold = 900,
+		Lumber = 300
+	},
+	X = 2,
+	Y = 0,
+	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenBlacksmith" }
 }
 
 GrandStrategyUnits["DwarvenGryphonRider"] = {
@@ -641,8 +658,9 @@ GrandStrategyUnits["DwarvenGryphonRider"] = {
 		Gold = 1750,
 		Lumber = 750
 	},
-	X = 2,
-	Y = 0
+	X = 0,
+	Y = 1,
+	RequiredBuildings = { "DwarvenWarHall" }
 }
 
 -- GS buildings
@@ -657,7 +675,37 @@ GrandStrategyBuildings["DwarvenMeadHall"] = {
 		Lumber = 800
 	},
 	X = 0,
-	Y = 0
+	Y = -2
+}
+
+GrandStrategyBuildings["DwarvenWarHall"] = {
+	Name = GetUnitTypeName("unit-dwarven-barracks"),
+	UnitType = "unit-dwarven-barracks",
+	Icon = "dwarf/icons/barracks.png",
+	Civilization = "dwarf",
+	Type = "Barracks",
+	Costs = {
+		Gold = 700,
+		Lumber = 450
+	},
+	X = 1,
+	Y = -2,
+	RequiredBuildings = { "DwarvenMeadHall" }
+}
+
+GrandStrategyBuildings["DwarvenLumberMill"] = {
+	Name = GetUnitTypeName("unit-dwarven-lumber-mill"),
+	UnitType = "unit-dwarven-lumber-mill",
+	Icon = "tilesets/swamp/dwarf/icons/lumber_mill.png",
+	Civilization = "dwarf",
+	Type = "Lumber Mill",
+	Costs = {
+		Gold = 600,
+		Lumber = 450
+	},
+	X = 2,
+	Y = -2,
+	RequiredBuildings = { "DwarvenMeadHall" }
 }
 
 GrandStrategyBuildings["DwarvenBlacksmith"] = {
@@ -671,5 +719,6 @@ GrandStrategyBuildings["DwarvenBlacksmith"] = {
 		Lumber = 500
 	},
 	X = 0,
-	Y = 0
+	Y = -1,
+	RequiredBuildings = { "DwarvenMeadHall" }
 }

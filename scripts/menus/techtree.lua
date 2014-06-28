@@ -72,16 +72,18 @@ function RunTechTreeMenu(civilization_number)
 	
 	menu:addLabel("Technology Points: " .. tech_points, offx + 32, offy + 212 + (36 * 4))
 
-	function addTechItemIcon(unit, menu, techicon_graphics, tech_description, x, y)
+	function addTechItemIcon(unit, menu, techicon_graphics, tech_description, x, y, playercolor)
 		local techicon
+		local b
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit)) then
-			techicon = CGraphic:New(techicon_graphics .. ".png")
+			techicon = CPlayerColorGraphic:New(techicon_graphics .. ".png")
+			techicon:Load()
+			b = PlayerColorImageButton("", playercolor)
 		else
 			techicon = CGraphic:New(techicon_graphics .. "_transparent.png")
+			techicon:Load()
+			b = ImageButton("")
 		end
-		techicon:Load()
-		local b = ImageButton("")
-	--	b:setHotKey("")
 		b:setActionCallback(
 			function()
 				local tech_menu = WarGameMenu(panel(5))
@@ -143,78 +145,79 @@ function RunTechTreeMenu(civilization_number)
 	end
 
 	if (civilization == "dwarf") then
+		local playercolor = "red"
 		addTechItemIcon("unit-dwarven-miner", menu, "dwarf/icons/miner",
 			"Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources.",
-			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 1))
+			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 1), playercolor)
 		addTechItemIcon("unit-dwarven-town-hall", menu, "dwarf/icons/town_hall",
 			"The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge.",
-			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 2))
+			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 2), playercolor)
 		addTechItemIcon("unit-dwarven-mushroom-farm", menu, "dwarf/icons/mushroom_farm",
 			"For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities.",
-			offx + 23 + 4 + (54 * 6), offy + 10 + 4 + (46 * 2))
+			offx + 23 + 4 + (54 * 6), offy + 10 + 4 + (46 * 2), playercolor)
 		addTechItemIcon("unit-dwarven-barracks", menu, "dwarf/icons/barracks",
 			"The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
-			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 2))
+			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 2), playercolor)
 		addTechItemIcon("unit-dwarven-axefighter", menu, "dwarf/icons/dwarven_axefighter",
 			"Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to gather to purchase steel armor for themselves at the local blacksmith.",
-			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 3))
+			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 3), playercolor)
 		addTechItemIcon("unit-dwarven-lumber-mill", menu, "tilesets/swamp/dwarf/icons/lumber_mill",
 			"The lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
-			offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 2))
+			offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 2), playercolor)
 		addTechItemIcon("unit-dwarven-blacksmith", menu, "dwarf/icons/blacksmith",
 			"Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers.",
-			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 2))
+			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 2), playercolor)
 		addTechItemIcon("unit-dwarven-sentry-tower", menu, "tilesets/swamp/dwarf/icons/sentry_tower",
 			"In these towers dwarves keep watch of threats approaching their settlements.",
-			offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 2))
+			offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 2), playercolor)
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
 			addTechItemIcon("unit-dwarven-guard-tower", menu, "tilesets/swamp/dwarf/icons/guard_tower",
 				"Garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's defenses.",
-				offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 3))
+				offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 3), playercolor)
 		end
 --		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
 --			addTechItemIcon("unit-dwarven-steelclad", menu, "dwarf/icons/dwarven_steelclad",
 --				"The dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
---				offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 4))
+--				offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 4), playercolor)
 --		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
 			addTechItemIcon("unit-dwarven-scout", menu, "dwarf/icons/dwarven_scout",
 				"Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities.",
-				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 3))
+				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 3), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-scout")) then
 			addTechItemIcon("upgrade-dwarven-throwing-axe-1", menu, "dwarf/icons/throwing_axe_2",
 				"As their woodworking craftsmanship progress, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts.",
-				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 4))
+				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 4), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
 			addTechItemIcon("upgrade-dwarven-throwing-axe-2", menu, "dwarf/icons/throwing_axe_3",
 				"The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts.",
-				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 5))
+				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 5), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
 			addTechItemIcon("upgrade-dwarven-broad-axe", menu, "dwarf/icons/axe_2",
 				"Dwarven blacksmiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.",
-				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 3))
+				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 3), playercolor)
 
 			addTechItemIcon("upgrade-dwarven-shield-1", menu, "dwarf/icons/shield_2",
 				"Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.",
-				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 3))
+				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 3), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-broad-axe")) then
 			addTechItemIcon("upgrade-dwarven-great-axe", menu, "dwarf/icons/axe_3",
 				"Further innovations in dwarven smithing allows axes to be made sturdier, and often to carry double blades.",
-				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 4))
+				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 4), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-shield-1")) then
 			addTechItemIcon("upgrade-dwarven-shield-2", menu, "dwarf/icons/shield_3",
 				"As shield-making techniques improved, the creation of thrymgjol shields became possible, further enhancing the degree of protection available for the dwarven soldiery. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.",
-				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 4))
+				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 4), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-blacksmith")) then
 			addTechItemIcon("unit-dwarven-ballista", menu, "tilesets/swamp/dwarf/icons/dwarven_ballista",
 				"Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",
-				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 3))
+				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 3), playercolor)
 		end
 	end
 

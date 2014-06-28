@@ -30,6 +30,8 @@ https://launchpad.net/stratagus
 - 0.1.6
 -----------------------------------------------------------------------
 
+- Added an experimental "Grand Strategy Mode" available from the main menu. In it, the player leads a country or tribe, and gather resources and produces units at the strategic map level, while battles are fought through RTS maps.
+
 * Buildings
 - Added Goblin Town Hall (graphics by Leo).
 
@@ -45,13 +47,15 @@ https://launchpad.net/stratagus
 - The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.
 - The option of having events activated or deactivated has been removed, as it didn't serve enough of a purpose to justify the space it occupied.
 - Added the option of choosing your starting tech level in the single player game setup. Other players will use the same tech level as you, unless the map otherwise specifies. The two tech levels available are "Agrarian (Bronze)" (start as usual) and "Agrarian (Iron)" (start with level 1 weapon and shield upgrades researched, if you have acquired the upgrades in the tech tree).
+- Quests and acquired technologies in the tech tree and quest screens now appear player-colored (usually red for dwarves).
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
 - The gnomish king is now called "Pypo I", instead of having his name be randomly generated.
 
 * Terrain
-- Added cave tileset, which right now has only buildable land and unbuildable land tiles (graphics by Jinn).
+- Added cave tileset, with cave floor (buildable land), rockbound cave floor (unbuildable land) and cave wall tiles (rock) (graphics by Jinn).
+- New wall and floor tiles for the dungeon tileset, as well as decorations for them (graphics made by b_o by modifying those found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles).
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.

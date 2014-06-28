@@ -910,37 +910,55 @@ function CreateDecorations()
 				RandomNumber = SyncRand(1000)
 				if (RandomNumber < 200) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
+					Count = Count - 1
 				elseif (RandomNumber >= 200 and RandomNumber < 300) then
 					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})
+						Count = Count - 1
 					end
 				elseif (RandomNumber >= 300 and RandomNumber < 400) then
 					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-large-flower", 15, {RandomX, RandomY})
+						Count = Count - 1
 					end
 				elseif (RandomNumber >= 400 and RandomNumber < 600) then
 					unit = CreateUnit("unit-small-rocks", 15, {RandomX, RandomY})
+					Count = Count - 1
 				elseif (RandomNumber >= 600 and RandomNumber < 800) then
 					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
+						Count = Count - 1
+					elseif (wyrmsun.tileset == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor") then
+						unit = CreateUnit("unit-floor-decoration", 15, {RandomX, RandomY})
+						Count = Count - 1
 					end
 				elseif (RandomNumber >= 800 and RandomNumber < 875) then
 					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-fern", 15, {RandomX, RandomY})
+						Count = Count - 1
 					end
 				elseif (RandomNumber >= 875 and RandomNumber < 900) then
 					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-log", 15, {RandomX, RandomY})
+						Count = Count - 1
 					end
 				elseif (RandomNumber >= 900 and RandomNumber < 999) then
 					unit = CreateUnit("unit-bones", 15, {RandomX, RandomY})
+					Count = Count - 1
 				elseif (RandomNumber >= 999) then
 					if (wyrmsun.tileset == "swamp") then
 						unit = CreateUnit("unit-wyrm-skeleton", 15, {RandomX, RandomY})
+						Count = Count - 1
 					else
 						unit = CreateUnit("unit-bones", 15, {RandomX, RandomY})
+						Count = Count - 1
 					end
 				end
+			elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+				unit = CreateUnit("unit-outer-wall-decoration", 15, {RandomX, RandomY})
+				Count = Count - 1
+			elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-open-wall" and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+				unit = CreateUnit("unit-inner-wall-decoration", 15, {RandomX, RandomY})
 				Count = Count - 1
 			end
 		end
@@ -1828,7 +1846,29 @@ function ApplyRawTiles()
 					end
 				end
 			elseif (RawTile(x, y) == "Wall") then
-				SetTile(176, x, y, 40)
+				if (RawTile(x, y + 1) ~= "Wall") then
+					RandomNumber = SyncRand(4)
+					if (RandomNumber == 0) then
+						SetTile(144, x, y, 40)
+					elseif (RandomNumber == 1) then
+						SetTile(145, x, y, 40)
+					elseif (RandomNumber == 2) then
+						SetTile(146, x, y, 40)
+					elseif (RandomNumber == 3) then
+						SetTile(147, x, y, 40)
+					end
+				else
+					RandomNumber = SyncRand(4)
+					if (RandomNumber == 0) then
+						SetTile(176, x, y, 40)
+					elseif (RandomNumber == 1) then
+						SetTile(177, x, y, 40)
+					elseif (RandomNumber == 2) then
+						SetTile(178, x, y, 40)
+					elseif (RandomNumber == 3) then
+						SetTile(179, x, y, 40)
+					end
+				end
 			end
 		end
 	end

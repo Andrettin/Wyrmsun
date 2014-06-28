@@ -109,6 +109,17 @@ g_dmarker:Load()
 g_dslider = CGraphic:New("ui/dwarf/widgets/hslider-bar-normal.png")
 g_dslider:Load()
 
+-- thin medium button
+g_dbtn = CGraphic:New("ui/dwarf/widgets/button-thin-medium-normal.png")
+g_dbtn:Load()
+g_dbtp = CGraphic:New("ui/dwarf/widgets/button-thin-medium-pressed.png")
+g_dbtp:Load()
+
+g_gbtn = CGraphic:New("ui/gnome/widgets/button-thin-medium-normal.png")
+g_gbtn:Load()
+g_gbtp = CGraphic:New("ui/gnome/widgets/button-thin-medium-pressed.png")
+g_gbtp:Load()
+
 local dpanels = {
   "ui/dwarf/panel_1.png",
   "ui/dwarf/panel_2.png",
