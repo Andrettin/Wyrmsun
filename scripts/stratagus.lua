@@ -360,6 +360,17 @@ function SinglePlayerTriggers()
 	DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
 	DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
 	ApplyTechLevels()
+	if (GrandStrategy) then
+		for i=0,14 do
+			if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
+				for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do -- if in grand strategy mode, apply upgrades researched
+					if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[gsunit_key] == 2) then
+						AcquireUpgrade(i, GrandStrategyTechnologies[gsunit_key].UpgradeType)
+					end
+				end
+			end
+		end
+	end
 
 	-- for now events are limited to single player
 	if (not IsNetworkGame()) then
@@ -910,7 +921,7 @@ function GetCivilizationFactions(civilization)
 	elseif (civilization == "elf") then
 		return {"Lintanir", "Ulfdalir", "Wesmere"}
 	elseif (civilization == "gnome") then
-		return {"Gnomes"}
+		return {"Untersberg"}
 	elseif (civilization == "goblin") then
 		return {"Goblins"}
 	elseif (civilization == "orc") then

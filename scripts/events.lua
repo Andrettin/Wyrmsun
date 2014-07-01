@@ -718,7 +718,7 @@ function Event(event_name, event_description, player, options, option_effects, e
 		end
 
 		menu:run(false)
-	else -- AIs choose the first option automatically
-		option_effects[1]()
+	else -- AIs choose a random option
+		option_effects[SyncRand(table.getn(option_effects)) + 1]()
 	end
 end

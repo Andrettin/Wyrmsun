@@ -19,20 +19,20 @@ WorldMapTiles = {
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "",     "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "ScFr", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Mntn", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Mntn", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Hill", "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "Hill", "Hill", "ScFr", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Mntn", "Mntn", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Mntn", "Mntn", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "DkPl", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "DkPl", "DkPl", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "Hill", "Hill", "Hill", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "DkPl", "DkPl", "DkPl", "Hill", "Hill", "DkPl", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
@@ -51,24 +51,34 @@ WorldMapTiles = {
 }
 
 WorldMapResources = {
-	Gold = { {30, 12}, {32, 13}, {35, 10}, {34, 14}, {39, 6}, {46, 5} },
-	Lumber = { {15, 1}, {30, 17}, {42, 8}, {44, 6} }
+	Gold = {
+		{22, 29}, -- location of the Troll Hole in the Brown Hills
+		{30, 12}, 
+		{32, 13}, 
+		{35, 10}, 
+		{34, 14}, 
+		{39, 6}, 
+		{46, 5} 
+	},
+	Lumber = { 
+	}
 }
 
 WorldMapProvinces = {
 	BrownHills = {
 		Name = "Brown Hills",
-		Tiles = { {25, 26}, {26, 25} },
-		Owner = "Gnomes",
+		Tiles = { {18, 29}, {18, 30}, {19, 28}, {19, 29}, {19, 30}, {20, 28}, {20, 29}, {20, 30}, {20, 31}, {20, 32}, {21, 28}, {21, 29}, {21, 30}, {21, 31}, {21, 32}, {22, 25}, {22, 26}, {22, 27}, {22, 28}, {22, 29}, {22, 30}, {22, 31}, {22, 32}, {23, 25}, {23, 26}, {23, 27}, {23, 28}, {23, 29}, {23, 30}, {23, 31}, {23, 32}, {24, 24}, {24, 25}, {24, 26}, {24, 27}, {24, 28}, {24, 29}, {24, 30}, {24, 31}, {24, 32}, {25, 24}, {25, 25}, {25, 26}, {25, 27}, {25, 28}, {25, 29}, {25, 30}, {25, 31}, {25, 32}, {26, 24}, {26, 25}, {26, 26}, {26, 27}, {26, 28}, {26, 29}, {26, 30}, {26, 31}, {27, 26}, {27, 27}, {27, 28}, {27, 29}, {27, 30}, {28, 28}, {29, 28} },
+		Owner = "Untersberg",
 		SettlementLocation = {25, 26},
 		SettlementBuildings = {
---			"unit-gnomish-town-hall"
+			GnomishTownHall = 2,
+			GnomishBarracks = 2 -- has capability to train soldiers
 		},
 		Maps = {"Brown Hills"}
 	},
 	CavernsOfChaincolt = {
 		Name = "Caverns of Chaincolt",
-		Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
+		Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {29, 19}, {29, 20}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {30, 20}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
 		Owner = "Norlund Clan",
 		SettlementLocation = {30, 13},
 		SettlementBuildings = {
@@ -90,7 +100,10 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenBlacksmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 		},
-		Maps = {"Random Map (Cave)"}
+		Maps = {"Random Map (Cave)"},
+		Units = { -- starting units in the Caverns of Flame scenario
+			GoblinImpaler = 10 -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
+		}
 	},
 	EasternMines = {
 		Name = "Eastern Mines",
@@ -98,15 +111,21 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {38, 7},
 		SettlementBuildings = {},
-		Maps = {"Eastern Mines"}
+		Maps = {"Eastern Mines"},
+		Units = {
+			GoblinImpaler = 3 -- three starting chieftains in the Gathering Materials scenario
+		}
 	},
 	GryphonMountain = {
 		Name = "Gryphon Mountain",
-		Tiles = { {27, 24}, {29, 23} },
+		Tiles = { {24, 22}, {24, 23}, {25, 20}, {25, 21}, {25, 22}, {25, 23}, {26, 20}, {26, 21}, {26, 22}, {26, 23}, {27, 20}, {27, 21}, {27, 22}, {27, 23}, {27, 24}, {27, 25}, {28, 20}, {28, 21}, {28, 22}, {28, 23}, {28, 24}, {28, 25}, {28, 26}, {28, 27}, {29, 21}, {29, 22}, {29, 23}, {29, 24}, {29, 25}, {29, 26}, {29, 27}, {30, 21}, {30, 23}, {30, 24}, {30, 25}, {30, 26}, {30, 27}, {31, 23}, {31, 24}, {31, 25}, {31, 26}, {32, 23}, {32, 24} },
 		Owner = "",
 		SettlementLocation = {29, 23},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"}
+		Maps = {"Random Map (Swamp)"},
+		Units = { -- wild units in the Gryphon Mountain scenario
+			DwarvenGryphonRider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
+		}
 	},
 	Heartfangs = {
 		Name = "Heartfangs",
@@ -122,7 +141,11 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {40, 12},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"}
+		Maps = {"Random Map (Swamp)"},
+		Units = { -- wild units in the High Pass scenario
+			GoblinImpaler = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
+			DwarvenGryphonRider = 1 -- Kaara
+		}
 	},
 	HighbrookPass = {
 		Name = "Highbrook Pass",
@@ -130,7 +153,10 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {35, 11},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"}
+		Maps = {"Random Map (Swamp)"},
+		Units = { -- starting units in the Settling Disputes scenario
+			GoblinImpaler = 4 -- one troll, two young ogres, one ogre
+		}
 	},
 	KalKartha = {
 		Name = "Kal Kartha",
@@ -149,9 +175,9 @@ WorldMapProvinces = {
 			DwarvenBlacksmith = 2 -- Thursagan's smithy
 		},
 		Maps = {"Northern Wastelands"},
-		Units = {
-			GoblinImpaler = SyncRand(65) + 1,
-			GoblinArcher = SyncRand(65) + 1
+		Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
+			GoblinImpaler = 26,
+			GoblinArcher = 13
 		}
 	},
 	ShorbearHills = {
@@ -192,9 +218,11 @@ WorldMapWaterProvinces = {
 }
 
 Factions = {
-	Gnomes = {
-		Name = "Gnomes",
+	Untersberg = {
+		Name = "Untersberg",
 		Civilization = "gnome",
+		Type = "Polity",
+		Title = "Kingdom",
 		Color = "blue",
 		Gold = 7500,
 		Commodities = {
@@ -205,6 +233,7 @@ Factions = {
 	NorlundClan = {
 		Name = "Norlund Clan",
 		Civilization = "dwarf",
+		Type = "Tribe",
 		Color = "red",
 		Gold = 3000,
 		Commodities = {
@@ -214,6 +243,7 @@ Factions = {
 	ShinsplitterClan = {
 		Name = "Shinsplitter Clan",
 		Civilization = "dwarf",
+		Type = "Tribe",
 		Color = "green",
 		Gold = 7500,
 		Commodities = {
@@ -223,6 +253,7 @@ Factions = {
 	ShorbearClan = {
 		Name = "Shorbear Clan",
 		Civilization = "dwarf",
+		Type = "Tribe",
 		Color = "blue",
 		Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 		Commodities = {
@@ -233,16 +264,22 @@ Factions = {
 	KalKartha = {
 		Name = "Kal Kartha",
 		Civilization = "dwarf",
+		Type = "Polity",
+		Title = "Lordship",
 		Color = "blue" -- should be black
 	},
 	Knalga = {
 		Name = "Knalga",
 		Civilization = "dwarf",
+		Type = "Polity",
+		Title = "Lordship",
 		Color = "red"
 	},
 	Lyr = {
 		Name = "Lyr",
 		Civilization = "dwarf",
+		Type = "Polity",
+		Title = "Lordship",
 		Color = "green"
 	}
 }
@@ -267,9 +304,23 @@ end
 if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.CavernsOfChaincolt.Owner = "Knalga" -- The Lordship of Knalga was founded around 400 AD
 	WorldMapProvinces.SouthernTunnels.Owner = "Knalga"
+
 	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
+	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenMeadHall = 2
+	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenWarHall = 2
 end
 
 if (GrandStrategyYear >= 500) then
 	WorldMapProvinces.HighbrookPass.Owner = "Shinsplitter Clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
+	WorldMapProvinces.HighbrookPass.SettlementBuildings.DwarvenMeadHall = 2
+	WorldMapProvinces.HighbrookPass.Units.GoblinImpaler = 0
+	WorldMapProvinces.HighbrookPass.Units["DwarvenAxefighter"] = 7 -- six dwarven ulfserkers, Stalrag
+end
+
+if (GrandStrategyYear >= 535) then
+	WorldMapProvinces.HighbrookPass.SettlementBuildings.DwarvenWarHall = 2 -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
+end
+
+if (GrandStrategyYear >= 550) then
+	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenBlacksmith = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
 end

@@ -956,3 +956,22 @@ DefineUnitType("unit-human-wall", { Name = "Wall",
 
 -- Hardcoded unit-types, moved from Stratagus to games
 UnitTypeHumanWall = UnitTypeByIdent("unit-human-wall");
+
+
+
+
+
+
+GrandStrategyUnits["Gryphon"] = {
+	Name = GetUnitTypeName("unit-gryphon") .. "s",
+	UnitType = "unit-gryphon",
+	Icon = "neutral/icons/gryphon.png",
+	Civilization = "neutral",
+	Type = "Predator",
+	Costs = {
+	},
+	X = 0,
+	Y = 0,
+	RequiredBuildings = { },
+	InterfaceState = ""
+}

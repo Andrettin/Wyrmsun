@@ -121,3 +121,105 @@ DefineDependency("unit-hero-thursagan",
 
 DefineDependency("unit-hero-durstorn",
 	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-steelclad", 12})
+
+
+
+
+GrandStrategyTechnologies["DwarvenBroadAxe"] = {
+	Name = "Broad Axe",
+	UpgradeType = "upgrade-dwarven-broad-axe",
+	Icon = "dwarf/icons/axe_2.png",
+	Civilization = "dwarf",
+	Type = "Melee Weapon Upgrade I",
+	Costs = {
+		Gold = 500,
+		Lumber = 100
+	},
+	X = 0,
+	Y = -2,
+	RequiredBuildings = { "DwarvenBlacksmith" },
+	InterfaceState = "Blacksmith"
+}
+
+GrandStrategyTechnologies["DwarvenGreatAxe"] = {
+	Name = "Great Axe",
+	UpgradeType = "upgrade-dwarven-great-axe",
+	Icon = "dwarf/icons/axe_3.png",
+	Civilization = "dwarf",
+	Type = "Melee Weapon Upgrade II",
+	Costs = {
+		Gold = 1500,
+		Lumber = 300
+	},
+	X = 0,
+	Y = -2,
+	RequiredBuildings = { "DwarvenBlacksmith" },
+	RequiredTechnologies = { "DwarvenBroadAxe" },
+	InterfaceState = "Blacksmith"
+}
+
+GrandStrategyTechnologies["DwarvenHeaterShield"] = {
+	Name = "Heater Shield",
+	UpgradeType = "upgrade-dwarven-shield-1",
+	Icon = "dwarf/icons/shield_2.png",
+	Civilization = "dwarf",
+	Type = "Shield Upgrade I",
+	Costs = {
+		Gold = 300,
+		Lumber = 300
+	},
+	X = 1,
+	Y = -2,
+	RequiredBuildings = { "DwarvenBlacksmith" },
+	InterfaceState = "Blacksmith"
+}
+
+GrandStrategyTechnologies["DwarvenThrymgjolShield"] = {
+	Name = "Thrymgjol Shield",
+	UpgradeType = "upgrade-dwarven-shield-2",
+	Icon = "dwarf/icons/shield_3.png",
+	Civilization = "dwarf",
+	Type = "Shield Upgrade II",
+	Costs = {
+		Gold = 900,
+		Lumber = 500
+	},
+	X = 1,
+	Y = -2,
+	RequiredBuildings = { "DwarvenBlacksmith" },
+	RequiredTechnologies = { "DwarvenHeaterShield" },
+	InterfaceState = "Blacksmith"
+}
+
+GrandStrategyTechnologies["DwarvenSharpThrowingAxe"] = {
+	Name = "Sharp Throwing Axe",
+	UpgradeType = "upgrade-dwarven-throwing-axe-1",
+	Icon = "dwarf/icons/throwing_axe_2.png",
+	Civilization = "dwarf",
+	Type = "Ranged Projectiles Upgrade I",
+	Costs = {
+		Gold = 300,
+		Lumber = 300
+	},
+	X = 0,
+	Y = -2,
+	RequiredBuildings = { "DwarvenLumberMill" },
+	InterfaceState = "Lumber Mill"
+}
+
+GrandStrategyTechnologies["DwarvenBeardedThrowingAxe"] = {
+	Name = "Bearded Throwing Axe",
+	UpgradeType = "upgrade-dwarven-throwing-axe-2",
+	Icon = "dwarf/icons/throwing_axe_3.png",
+	Civilization = "dwarf",
+	Type = "Ranged Projectiles Upgrade II",
+	Costs = {
+		Gold = 900,
+		Lumber = 500
+	},
+	X = 0,
+	Y = -2,
+	RequiredBuildings = { "DwarvenLumberMill" },
+	RequiredTechnologies = { "DwarvenSharpThrowingAxe" },
+	InterfaceState = "Lumber Mill"
+}

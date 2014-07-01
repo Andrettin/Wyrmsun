@@ -615,7 +615,8 @@ GrandStrategyUnits["DwarvenAxefighter"] = {
 	},
 	X = 0,
 	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall" }
+	RequiredBuildings = { "DwarvenWarHall" },
+	InterfaceState = "Barracks"
 }
 
 GrandStrategyUnits["DwarvenScout"] = {
@@ -630,7 +631,8 @@ GrandStrategyUnits["DwarvenScout"] = {
 	},
 	X = 1,
 	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill" }
+	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill" },
+	InterfaceState = "Barracks"
 }
 
 GrandStrategyUnits["DwarvenBallista"] = {
@@ -645,7 +647,8 @@ GrandStrategyUnits["DwarvenBallista"] = {
 	},
 	X = 2,
 	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenBlacksmith" }
+	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenBlacksmith" },
+	InterfaceState = "Barracks"
 }
 
 GrandStrategyUnits["DwarvenGryphonRider"] = {
@@ -660,7 +663,8 @@ GrandStrategyUnits["DwarvenGryphonRider"] = {
 	},
 	X = 0,
 	Y = 1,
-	RequiredBuildings = { "DwarvenWarHall" }
+	RequiredBuildings = { "DwarvenWarHall" },
+	InterfaceState = "Aviary"
 }
 
 -- GS buildings

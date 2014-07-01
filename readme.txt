@@ -35,6 +35,9 @@ https://launchpad.net/stratagus
 * Buildings
 - Added Goblin Town Hall (graphics by Leo).
 
+* Factions
+- The Gnomish faction is now again called "Untersberg".
+
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
 - Added France map (Earth) by Mathieu Roy, from FreeCiv.
@@ -48,6 +51,7 @@ https://launchpad.net/stratagus
 - The option of having events activated or deactivated has been removed, as it didn't serve enough of a purpose to justify the space it occupied.
 - Added the option of choosing your starting tech level in the single player game setup. Other players will use the same tech level as you, unless the map otherwise specifies. The two tech levels available are "Agrarian (Bronze)" (start as usual) and "Agrarian (Iron)" (start with level 1 weapon and shield upgrades researched, if you have acquired the upgrades in the tech tree).
 - Quests and acquired technologies in the tech tree and quest screens now appear player-colored (usually red for dwarves).
+- The buttons in the quest and tech tree screens now have frames like the in-game buttons.
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.

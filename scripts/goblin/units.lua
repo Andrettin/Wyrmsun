@@ -257,3 +257,18 @@ GrandStrategyUnits["GoblinArcher"] = {
 	X = 1,
 	Y = 0
 }
+
+-- GS buildings
+GrandStrategyBuildings["GoblinTownHall"] = {
+	Name = GetUnitTypeName("unit-goblin-town-hall"),
+	UnitType = "unit-goblin-town-hall",
+	Icon = "goblin/icons/town_hall.png",
+	Civilization = "goblin",
+	Type = "Town Hall",
+	Costs = {
+		Gold = 1200,
+		Lumber = 800
+	},
+	X = 0,
+	Y = -2
+}

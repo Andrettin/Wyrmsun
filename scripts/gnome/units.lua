@@ -219,3 +219,55 @@ DefineUnitType("unit-gnomish-barracks", { Name = "Barracks",
 --    "ready", "barracks-ready",
 --    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
+
+
+
+
+
+
+
+
+GrandStrategyUnits["GnomishRecruit"] = {
+	Name = GetUnitTypeName("unit-gnomish-recruit") .. "s",
+	UnitType = "unit-gnomish-recruit",
+	Icon = "gnome/icons/gnomish_recruit.png",
+	Civilization = "gnome",
+	Type = "Infantry",
+	Costs = {
+		Gold = 600
+	},
+	X = 0,
+	Y = 0,
+	RequiredBuildings = { "GnomishBarracks" },
+	InterfaceState = "Barracks"
+}
+
+-- GS buildings
+GrandStrategyBuildings["GnomishTownHall"] = {
+	Name = GetUnitTypeName("unit-gnomish-town-hall"),
+	UnitType = "unit-gnomish-town-hall",
+	Icon = "tilesets/swamp/gnome/icons/town_hall.png",
+	Civilization = "gnome",
+	Type = "Town Hall",
+	Costs = {
+		Gold = 1200,
+		Lumber = 800
+	},
+	X = 0,
+	Y = -2
+}
+
+GrandStrategyBuildings["GnomishBarracks"] = {
+	Name = GetUnitTypeName("unit-gnomish-barracks"),
+	UnitType = "unit-gnomish-barracks",
+	Icon = "tilesets/swamp/gnome/icons/barracks.png",
+	Civilization = "gnome",
+	Type = "Barracks",
+	Costs = {
+		Gold = 700,
+		Lumber = 450
+	},
+	X = 1,
+	Y = -2,
+	RequiredBuildings = { "GnomishTownHall" }
+}

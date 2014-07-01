@@ -51,7 +51,7 @@ b_o:
 /graphics/neutral/items/scepter.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/rat.png
-/graphics/tilesets/dungeon/terrain/dungeon.png (floor tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/tilesets/dungeon/terrain/dungeon.png (floor and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
 /graphics/tilesets/forest/neutral/decorations/large_flower.png
@@ -153,6 +153,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/water_elemental.png
 /graphics/orc/icons/spearman.png
 /graphics/tilesets/cave/terrain/cave.png
+/graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles)
 /graphics/tilesets/forest/neutral/icons/rat.png
 /graphics/tilesets/forest/terrain/forest.png (dirt and water tiles)
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png

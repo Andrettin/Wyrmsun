@@ -95,5 +95,6 @@ function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y, 
 	b:setDisabledImage(questicon)
 	b:setSize(46, 38)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+	b:setFrame(true)
 	return b
 end

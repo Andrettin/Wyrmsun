@@ -269,6 +269,20 @@ function SetPlayerData(player, data, arg1, arg2)
 	end
 end
 
+-- override normal AI setting when in grand strategy mode
+if (OldSetAiType == nil) then
+  OldSetAiType = SetAiType
+end
+
+-- Override with game settings
+function SetAiType(player, arg)
+	if (GrandStrategy) then
+		arg = "grand-strategy-battle"
+	end
+
+	OldSetAiType(player, arg)
+end
+
 if (OldDefinePlayerTypes == nil) then
 	OldDefinePlayerTypes = DefinePlayerTypes
 end
