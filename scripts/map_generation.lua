@@ -671,7 +671,7 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 	end
 end
 
-function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expansions_number, min_x, max_x, min_y, max_y)
+function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expansions_number, min_x, max_x, min_y, max_y, base_tile_type)
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -682,27 +682,27 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 	while (Count > 0) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
-		if (RawTile(RandomX, RandomY) == "Rough") then
+		if (RawTile(RandomX, RandomY) == base_tile_type) then
 			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Rough" or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == "Rough" or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == "Rough" or RawTile(RandomX, RandomY - 1) == "Dark-Rough")) then
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough")) then
 				SetRawTile(RandomX, RandomY, "Dark-Rough")
 				SetRawTile(RandomX - 1, RandomY - 1, "Dark-Rough")
 				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
 				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
 				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Rough" or RawTile(RandomX + 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == "Rough" or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == "Rough" or RawTile(RandomX + 1, RandomY) == "Dark-Rough")) then
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == base_tile_type or RawTile(RandomX + 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough")) then
 				SetRawTile(RandomX, RandomY, "Dark-Rough")
 				SetRawTile(RandomX + 1, RandomY - 1, "Dark-Rough")
 				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
 				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
 				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Rough" or RawTile(RandomX + 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == "Rough" or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == "Rough" or RawTile(RandomX, RandomY + 1) == "Dark-Rough")) then
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == base_tile_type or RawTile(RandomX + 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough")) then
 				SetRawTile(RandomX, RandomY, "Dark-Rough")
 				SetRawTile(RandomX + 1, RandomY + 1, "Dark-Rough")
 				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
 				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
 				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Rough" or RawTile(RandomX - 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == "Rough" or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == "Rough" or RawTile(RandomX, RandomY + 1) == "Dark-Rough")) then
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == base_tile_type or RawTile(RandomX - 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough")) then
 				SetRawTile(RandomX, RandomY, "Dark-Rough")
 				SetRawTile(RandomX - 1, RandomY + 1, "Dark-Rough")
 				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
@@ -719,22 +719,22 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Dark-Rough") then
 			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Rough" or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == "Rough" or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == "Rough" or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough")) then
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough")) then
 				SetRawTile(RandomX - 1, RandomY - 1, "Dark-Rough")
 				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
 				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
 				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Rough" or RawTile(RandomX + 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == "Rough" or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == "Rough" or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough")) then
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == base_tile_type or RawTile(RandomX + 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough")) then
 				SetRawTile(RandomX + 1, RandomY - 1, "Dark-Rough")
 				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
 				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
 				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Rough" or RawTile(RandomX + 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == "Rough" or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == "Rough" or RawTile(RandomX, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == base_tile_type or RawTile(RandomX + 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
 				SetRawTile(RandomX + 1, RandomY + 1, "Dark-Rough")
 				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
 				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
 				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Rough" or RawTile(RandomX - 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == "Rough" or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == "Rough" or RawTile(RandomX, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == base_tile_type or RawTile(RandomX - 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
 				SetRawTile(RandomX - 1, RandomY + 1, "Dark-Rough")
 				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
 				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
@@ -744,11 +744,13 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 	end
 
 
-	-- convert buildable land tiles adjacent to dark rough land tiles into rough land
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
-			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Dark-Rough" or RawTile(x, y - 1) == "Dark-Rough" or RawTile(x - 1, y) == "Dark-Rough" or RawTile(x + 1, y) == "Dark-Rough" or RawTile(x - 1, y - 1) == "Dark-Rough" or RawTile(x + 1, y - 1) == "Dark-Rough" or RawTile(x - 1, y + 1) == "Dark-Rough" or RawTile(x + 1, y + 1) == "Dark-Rough")) then
-				SetRawTile(x, y, "Rough")
+	if (base_tile_type == "Rough") then
+		-- convert buildable land tiles adjacent to dark rough land tiles into rough land
+		for x=0,(Map.Info.MapWidth - 1) do
+			for y=0,(Map.Info.MapHeight - 1) do
+				if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Dark-Rough" or RawTile(x, y - 1) == "Dark-Rough" or RawTile(x - 1, y) == "Dark-Rough" or RawTile(x + 1, y) == "Dark-Rough" or RawTile(x - 1, y - 1) == "Dark-Rough" or RawTile(x + 1, y - 1) == "Dark-Rough" or RawTile(x - 1, y + 1) == "Dark-Rough" or RawTile(x + 1, y + 1) == "Dark-Rough")) then
+					SetRawTile(x, y, "Rough")
+				end
 			end
 		end
 	end
@@ -1045,7 +1047,7 @@ function GenerateRandomMap(width, height, symmetric)
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
 	if (wyrmsun.tileset == "forest") then
-		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
 	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
@@ -1138,123 +1140,166 @@ function ApplyRawTiles()
 	local RandomNumber = 0
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
+			local solid_slot = 0
+			local mixed_slot = 0
 			if (RawTile(x, y) == "Water") then
-				if (RawTile(x, y + 1) ~= "Water" and RawTile(x, y - 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water" and RawTile(x - 1, y - 1) == "Water" and RawTile(x + 1, y - 1) == "Water") then
+				solid_slot = 1
+				mixed_slot = 2
+			elseif (RawTile(x, y) == "Rough") then
+				solid_slot = 3
+				mixed_slot = 5
+			elseif (RawTile(x, y) == "Dark-Rough") then
+				solid_slot = 4
+				mixed_slot = 3
+			elseif (RawTile(x, y) == "Land") then
+				solid_slot = 5
+			elseif (RawTile(x, y) == "Dark-Land") then
+				solid_slot = 6
+				mixed_slot = 6
+			elseif (RawTile(x, y) == "Tree") then
+				solid_slot = 7
+				mixed_slot = 7
+			elseif (RawTile(x, y) == "Rock") then
+				solid_slot = 8
+				mixed_slot = 4
+			end
+			if (RawTile(x, y) == "Water" or RawTile(x, y) == "Dark-Rough" or RawTile(x, y) == "Land" or RawTile(x, y) == "Dark-Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Rock") then
+				if (mixed_slot ~= 0 and RawTile(x, y + 1) ~= RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y)) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(544, x, y, 0)
+						SetTile(mixed_slot * 256 + 2 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(545, x, y, 0)
+						SetTile(mixed_slot * 256 + 2 * 16 + 1, x, y, 0)
 					elseif (RandomNumber == 2) then
-						SetTile(546, x, y, 0)
+						SetTile(mixed_slot * 256 + 2 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x, y - 1) ~= "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) == "Water" and RawTile(x + 1, y) == "Water" and RawTile(x - 1, y + 1) == "Water" and RawTile(x + 1, y + 1) == "Water") then
+				elseif (mixed_slot ~= 0 and RawTile(x, y - 1) ~= RawTile(x, y) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y + 1) == RawTile(x, y)) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(688, x, y, 0)
+						SetTile(mixed_slot * 256 + 11 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(689, x, y, 0)
+						SetTile(mixed_slot * 256 + 11 * 16 + 1, x, y, 0)
 					elseif (RandomNumber == 2) then
-						SetTile(690, x, y, 0)
+						SetTile(mixed_slot * 256 + 11 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y) ~= "Water" and RawTile(x - 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y - 1) == "Water" and RawTile(x - 1, y + 1) == "Water") then
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y) ~= RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y)) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(576, x, y, 0)
+						SetTile(mixed_slot * 256 + 4 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(577, x, y, 0)
+						SetTile(mixed_slot * 256 + 4 * 16 + 1, x, y, 0)
 					elseif (RandomNumber == 2) then
-						SetTile(578, x, y, 0)
+						SetTile(mixed_slot * 256 + 4 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x - 1, y) ~= "Water" and RawTile(x + 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x, y + 1) == "Water" and RawTile(x + 1, y - 1) == "Water" and RawTile(x + 1, y + 1) == "Water") then
+				elseif (mixed_slot ~= 0 and RawTile(x - 1, y) ~= RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x + 1, y + 1) == RawTile(x, y)) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(656, x, y, 0)
+						SetTile(mixed_slot * 256 + 9 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(657, x, y, 0)
+						SetTile(mixed_slot * 256 + 9 * 16 + 1, x, y, 0)
 					elseif (RandomNumber == 2) then
-						SetTile(658, x, y, 0)
+						SetTile(mixed_slot * 256 + 9 * 16 + 2, x, y, 0)
 					end
-				elseif ((RawTile(x, y - 1) ~= "Water" or RawTile(x - 1, y) ~= "Water") and RawTile(x, y + 1) == "Water" and RawTile(x + 1, y) == "Water" and RawTile(x + 1, y + 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and (RawTile(x, y - 1) ~= RawTile(x, y) or RawTile(x - 1, y) ~= RawTile(x, y)) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x + 1, y + 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(624, x, y, 0)
+						SetTile(mixed_slot * 256 + 7 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(625, x, y, 0)
+						SetTile(mixed_slot * 256 + 7 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 7 * 16 + 2, x, y, 0)
 					end
-				elseif ((RawTile(x, y - 1) ~= "Water" or RawTile(x + 1, y) ~= "Water") and RawTile(x, y + 1) == "Water" and RawTile(x - 1, y) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and (RawTile(x, y - 1) ~= RawTile(x, y) or RawTile(x + 1, y) ~= RawTile(x, y)) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(560, x, y, 0)
+						SetTile(mixed_slot * 256 + 3 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(561, x, y, 0)
+						SetTile(mixed_slot * 256 + 3 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 3 * 16 + 2, x, y, 0)
 					end
-				elseif ((RawTile(x, y + 1) ~= "Water" or RawTile(x + 1, y) ~= "Water") and RawTile(x - 1, y) == "Water" and RawTile(x, y - 1) == "Water" and RawTile(x - 1, y - 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and (RawTile(x, y + 1) ~= RawTile(x, y) or RawTile(x + 1, y) ~= RawTile(x, y)) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(512, x, y, 0)
+						SetTile(mixed_slot * 256 + 0 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(513, x, y, 0)
+						SetTile(mixed_slot * 256 + 0 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 0 * 16 + 2, x, y, 0)
 					end
-				elseif ((RawTile(x, y + 1) ~= "Water" or RawTile(x - 1, y) ~= "Water") and RawTile(x + 1, y) == "Water" and RawTile(x, y - 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and (RawTile(x, y + 1) ~= RawTile(x, y) or RawTile(x - 1, y) ~= RawTile(x, y)) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(528, x, y, 0)
+						SetTile(mixed_slot * 256 + 1 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(529, x, y, 0)
+						SetTile(mixed_slot * 256 + 1 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 1 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y + 1) ~= "Water" and RawTile(x + 1, y - 1) == "Water" and RawTile(x - 1, y + 1) == "Water" and RawTile(x - 1, y - 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) ~= RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(608, x, y, 0)
+						SetTile(mixed_slot * 256 + 6 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(609, x, y, 0)
+						SetTile(mixed_slot * 256 + 6 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 6 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y + 1) == "Water" and RawTile(x + 1, y - 1) ~= "Water" and RawTile(x - 1, y + 1) == "Water" and RawTile(x - 1, y - 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) ~= RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(704, x, y, 0)
+						SetTile(mixed_slot * 256 + 12 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(705, x, y, 0)
+						SetTile(mixed_slot * 256 + 12 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 12 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y + 1) == "Water" and RawTile(x + 1, y - 1) == "Water" and RawTile(x - 1, y + 1) ~= "Water" and RawTile(x - 1, y - 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) ~= RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(672, x, y, 0)
+						SetTile(mixed_slot * 256 + 10 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(673, x, y, 0)
+						SetTile(mixed_slot * 256 + 10 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 10 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y + 1) == "Water" and RawTile(x + 1, y - 1) == "Water" and RawTile(x - 1, y + 1) == "Water" and RawTile(x - 1, y - 1) ~= "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) ~= RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(720, x, y, 0)
+						SetTile(mixed_slot * 256 + 13 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(721, x, y, 0)
+						SetTile(mixed_slot * 256 + 13 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 13 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y + 1) ~= "Water" and RawTile(x + 1, y - 1) == "Water" and RawTile(x - 1, y + 1) == "Water" and RawTile(x - 1, y - 1) ~= "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) ~= RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) ~= RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(592, x, y, 0)
+						SetTile(mixed_slot * 256 + 5 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(593, x, y, 0)
+						SetTile(mixed_slot * 256 + 5 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 5 * 16 + 2, x, y, 0)
 					end
-				elseif (RawTile(x + 1, y + 1) == "Water" and RawTile(x + 1, y - 1) ~= "Water" and RawTile(x - 1, y + 1) ~= "Water" and RawTile(x - 1, y - 1) == "Water") then
-					RandomNumber = SyncRand(2)
+				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) ~= RawTile(x, y) and RawTile(x - 1, y + 1) ~= RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
-						SetTile(640, x, y, 0)
+						SetTile(mixed_slot * 256 + 8 * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(641, x, y, 0)
+						SetTile(mixed_slot * 256 + 8 * 16 + 1, x, y, 0)
+					elseif (RandomNumber == 2) then
+						SetTile(mixed_slot * 256 + 8 * 16 + 2, x, y, 0)
 					end
 				else
 					RandomNumber = SyncRand(4)
 					if (RandomNumber == 0) then
-						SetTile(16, x, y, 0)
+						SetTile(solid_slot * 16, x, y, 0)
 					elseif (RandomNumber == 1) then
-						SetTile(17, x, y, 0)
+						SetTile(solid_slot * 16 + 1, x, y, 0)
 					elseif (RandomNumber == 2) then
-						SetTile(18, x, y, 0)
+						SetTile(solid_slot * 16 + 2, x, y, 0)
 					elseif (RandomNumber == 3) then
-						SetTile(19, x, y, 0)
+						SetTile(solid_slot * 16 + 3, x, y, 0)
 					end
 				end
 			elseif (RawTile(x, y) == "Rough") then
@@ -1372,477 +1417,6 @@ function ApplyRawTiles()
 						SetTile(49, x, y, 0)
 					elseif (RandomNumber == 2) then
 						SetTile(50, x, y, 0)
-					end
-				end
-			elseif (RawTile(x, y) == "Dark-Rough") then
-				if (RawTile(x, y + 1) ~= "Dark-Rough" and RawTile(x, y - 1) == "Dark-Rough" and RawTile(x - 1, y) == "Dark-Rough" and RawTile(x + 1, y) == "Dark-Rough" and RawTile(x - 1, y - 1) == "Dark-Rough" and RawTile(x + 1, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(800, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(801, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(802, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Dark-Rough" and RawTile(x, y + 1) == "Dark-Rough" and RawTile(x - 1, y) == "Dark-Rough" and RawTile(x + 1, y) == "Dark-Rough" and RawTile(x - 1, y + 1) == "Dark-Rough" and RawTile(x + 1, y + 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(944, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(945, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(946, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y) ~= "Dark-Rough" and RawTile(x - 1, y) == "Dark-Rough" and RawTile(x, y - 1) == "Dark-Rough" and RawTile(x, y + 1) == "Dark-Rough" and RawTile(x - 1, y - 1) == "Dark-Rough" and RawTile(x - 1, y + 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(832, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(833, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(834, x, y, 0)
-					end
-				elseif (RawTile(x - 1, y) ~= "Dark-Rough" and RawTile(x + 1, y) == "Dark-Rough" and RawTile(x, y - 1) == "Dark-Rough" and RawTile(x, y + 1) == "Dark-Rough" and RawTile(x + 1, y - 1) == "Dark-Rough" and RawTile(x + 1, y + 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(912, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(913, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(914, x, y, 0)
-					end
-				elseif ((RawTile(x, y - 1) ~= "Dark-Rough" or RawTile(x - 1, y) ~= "Dark-Rough") and RawTile(x, y + 1) == "Dark-Rough" and RawTile(x + 1, y) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(880, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(881, x, y, 0)
-					end
-				elseif ((RawTile(x, y - 1) ~= "Dark-Rough" or RawTile(x + 1, y) ~= "Dark-Rough") and RawTile(x, y + 1) == "Dark-Rough" and RawTile(x - 1, y) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(816, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(817, x, y, 0)
-					end
-				elseif ((RawTile(x, y + 1) ~= "Dark-Rough" or RawTile(x + 1, y) ~= "Dark-Rough") and RawTile(x - 1, y) == "Dark-Rough" and RawTile(x, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(768, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(769, x, y, 0)
-					end
-				elseif ((RawTile(x, y + 1) ~= "Dark-Rough" or RawTile(x - 1, y) ~= "Dark-Rough") and RawTile(x + 1, y) == "Dark-Rough" and RawTile(x, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(784, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(785, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Dark-Rough" and RawTile(x + 1, y - 1) == "Dark-Rough" and RawTile(x - 1, y + 1) == "Dark-Rough" and RawTile(x - 1, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(864, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(865, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Rough" and RawTile(x + 1, y - 1) ~= "Dark-Rough" and RawTile(x - 1, y + 1) == "Dark-Rough" and RawTile(x - 1, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(960, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(961, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Rough" and RawTile(x + 1, y - 1) == "Dark-Rough" and RawTile(x - 1, y + 1) ~= "Dark-Rough" and RawTile(x - 1, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(928, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(929, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Rough" and RawTile(x + 1, y - 1) == "Dark-Rough" and RawTile(x - 1, y + 1) == "Dark-Rough" and RawTile(x - 1, y - 1) ~= "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(976, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(977, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Dark-Rough" and RawTile(x + 1, y - 1) == "Dark-Rough" and RawTile(x - 1, y + 1) == "Dark-Rough" and RawTile(x - 1, y - 1) ~= "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(848, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(849, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Rough" and RawTile(x + 1, y - 1) ~= "Dark-Rough" and RawTile(x - 1, y + 1) ~= "Dark-Rough" and RawTile(x - 1, y - 1) == "Dark-Rough") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(896, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(897, x, y, 0)
-					end
-				else
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(64, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(65, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(66, x, y, 0)
-					end
-				end
-			elseif (RawTile(x, y) == "Land") then
-				RandomNumber = SyncRand(3)
-				if (RandomNumber == 0) then
-					SetTile(80, x, y, 0)
-				elseif (RandomNumber == 1) then
-					SetTile(81, x, y, 0)
-				elseif (RandomNumber == 2) then
-					SetTile(82, x, y, 0)
-				end
-			elseif (RawTile(x, y) == "Dark-Land") then
-				if (RawTile(x, y + 1) ~= "Dark-Land" and RawTile(x, y - 1) == "Dark-Land" and RawTile(x - 1, y) == "Dark-Land" and RawTile(x + 1, y) == "Dark-Land") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1568, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1569, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1570, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Dark-Land" and RawTile(x, y + 1) == "Dark-Land" and RawTile(x - 1, y) == "Dark-Land" and RawTile(x + 1, y) == "Dark-Land") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1712, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1713, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1714, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y) ~= "Dark-Land" and RawTile(x - 1, y) == "Dark-Land" and RawTile(x, y - 1) == "Dark-Land" and RawTile(x, y + 1) == "Dark-Land") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1600, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1601, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1602, x, y, 0)
-					end
-				elseif (RawTile(x - 1, y) ~= "Dark-Land" and RawTile(x + 1, y) == "Dark-Land" and RawTile(x, y - 1) == "Dark-Land" and RawTile(x, y + 1) == "Dark-Land") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1680, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1681, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1682, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Dark-Land" and RawTile(x, y + 1) == "Dark-Land" and RawTile(x - 1, y) ~= "Dark-Land" and RawTile(x + 1, y) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1648, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1649, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Dark-Land" and RawTile(x, y + 1) == "Dark-Land" and RawTile(x - 1, y) == "Dark-Land" and RawTile(x + 1, y) ~= "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1584, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1585, x, y, 0)
-					end
-				elseif (RawTile(x, y + 1) ~= "Dark-Land" and RawTile(x + 1, y) ~= "Dark-Land" and RawTile(x - 1, y) == "Dark-Land" and RawTile(x, y - 1) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1536, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1537, x, y, 0)
-					end
-				elseif (RawTile(x, y + 1) ~= "Dark-Land" and RawTile(x - 1, y) ~= "Dark-Land" and RawTile(x + 1, y) == "Dark-Land" and RawTile(x, y - 1) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1552, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1553, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Dark-Land" and RawTile(x + 1, y - 1) == "Dark-Land" and RawTile(x - 1, y + 1) == "Dark-Land" and RawTile(x - 1, y - 1) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1632, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1633, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Land" and RawTile(x + 1, y - 1) ~= "Dark-Land" and RawTile(x - 1, y + 1) == "Dark-Land" and RawTile(x - 1, y - 1) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1728, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1729, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Land" and RawTile(x + 1, y - 1) == "Dark-Land" and RawTile(x - 1, y + 1) ~= "Dark-Land" and RawTile(x - 1, y - 1) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1696, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1697, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Land" and RawTile(x + 1, y - 1) == "Dark-Land" and RawTile(x - 1, y + 1) == "Dark-Land" and RawTile(x - 1, y - 1) ~= "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1744, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1745, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Dark-Land" and RawTile(x + 1, y - 1) == "Dark-Land" and RawTile(x - 1, y + 1) == "Dark-Land" and RawTile(x - 1, y - 1) ~= "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1616, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1617, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Dark-Land" and RawTile(x + 1, y - 1) ~= "Dark-Land" and RawTile(x - 1, y + 1) ~= "Dark-Land" and RawTile(x - 1, y - 1) == "Dark-Land") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1664, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1665, x, y, 0)
-					end
-				else
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(96, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(97, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(98, x, y, 0)
-					end
-				end
-			elseif (RawTile(x, y) == "Tree") then
-				if (RawTile(x, y + 1) ~= "Tree" and RawTile(x, y - 1) == "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x + 1, y) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1824, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1825, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Tree" and RawTile(x, y + 1) == "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x + 1, y) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1968, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1969, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y) ~= "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x, y - 1) == "Tree" and RawTile(x, y + 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1856, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1857, x, y, 0)
-					end
-				elseif (RawTile(x - 1, y) ~= "Tree" and RawTile(x + 1, y) == "Tree" and RawTile(x, y - 1) == "Tree" and RawTile(x, y + 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1936, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1937, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Tree" and RawTile(x, y + 1) == "Tree" and RawTile(x - 1, y) ~= "Tree" and RawTile(x + 1, y) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1904, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1905, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Tree" and RawTile(x, y + 1) == "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x + 1, y) ~= "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1840, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1841, x, y, 0)
-					end
-				elseif (RawTile(x, y + 1) ~= "Tree" and RawTile(x + 1, y) ~= "Tree" and RawTile(x - 1, y) == "Tree" and RawTile(x, y - 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1792, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1793, x, y, 0)
-					end
-				elseif (RawTile(x, y + 1) ~= "Tree" and RawTile(x - 1, y) ~= "Tree" and RawTile(x + 1, y) == "Tree" and RawTile(x, y - 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1808, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1809, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1888, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1889, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) ~= "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1984, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1985, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) ~= "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1952, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1953, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) ~= "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(2000, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(2001, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Tree" and RawTile(x + 1, y - 1) == "Tree" and RawTile(x - 1, y + 1) == "Tree" and RawTile(x - 1, y - 1) ~= "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1872, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1873, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Tree" and RawTile(x + 1, y - 1) ~= "Tree" and RawTile(x - 1, y + 1) ~= "Tree" and RawTile(x - 1, y - 1) == "Tree") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1920, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1921, x, y, 0)
-					end
-				else
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(112, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(113, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(114, x, y, 0)
-					end
-				end
-			elseif (RawTile(x, y) == "Rock") then
-				if (RawTile(x, y + 1) ~= "Rock" and RawTile(x, y - 1) == "Rock" and RawTile(x - 1, y) == "Rock" and RawTile(x + 1, y) == "Rock" and RawTile(x - 1, y - 1) == "Rock" and RawTile(x + 1, y - 1) == "Rock") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1056, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1057, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1058, x, y, 0)
-					end
-				elseif (RawTile(x, y - 1) ~= "Rock" and RawTile(x, y + 1) == "Rock" and RawTile(x - 1, y) == "Rock" and RawTile(x + 1, y) == "Rock" and RawTile(x - 1, y + 1) == "Rock" and RawTile(x + 1, y + 1) == "Rock") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1200, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1201, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1202, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y) ~= "Rock" and RawTile(x - 1, y) == "Rock" and RawTile(x, y - 1) == "Rock" and RawTile(x, y + 1) == "Rock" and RawTile(x - 1, y - 1) == "Rock" and RawTile(x - 1, y + 1) == "Rock") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1088, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1089, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1090, x, y, 0)
-					end
-				elseif (RawTile(x - 1, y) ~= "Rock" and RawTile(x + 1, y) == "Rock" and RawTile(x, y - 1) == "Rock" and RawTile(x, y + 1) == "Rock" and RawTile(x + 1, y - 1) == "Rock" and RawTile(x + 1, y + 1) == "Rock") then
-					RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						SetTile(1168, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1169, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(1170, x, y, 0)
-					end
-				elseif ((RawTile(x, y - 1) ~= "Rock" or RawTile(x - 1, y) ~= "Rock") and RawTile(x, y + 1) == "Rock" and RawTile(x + 1, y) == "Rock" and RawTile(x + 1, y + 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1136, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1137, x, y, 0)
-					end
-				elseif ((RawTile(x, y - 1) ~= "Rock" or RawTile(x + 1, y) ~= "Rock") and RawTile(x, y + 1) == "Rock" and RawTile(x - 1, y) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1072, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1073, x, y, 0)
-					end
-				elseif ((RawTile(x, y + 1) ~= "Rock" or RawTile(x + 1, y) ~= "Rock") and RawTile(x - 1, y) == "Rock" and RawTile(x, y - 1) == "Rock" and RawTile(x - 1, y - 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1024, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1025, x, y, 0)
-					end
-				elseif ((RawTile(x, y + 1) ~= "Rock" or RawTile(x - 1, y) ~= "Rock") and RawTile(x + 1, y) == "Rock" and RawTile(x, y - 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1040, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1041, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Rock" and RawTile(x + 1, y - 1) == "Rock" and RawTile(x - 1, y + 1) == "Rock" and RawTile(x - 1, y - 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1120, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1121, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Rock" and RawTile(x + 1, y - 1) ~= "Rock" and RawTile(x - 1, y + 1) == "Rock" and RawTile(x - 1, y - 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1216, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1217, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Rock" and RawTile(x + 1, y - 1) == "Rock" and RawTile(x - 1, y + 1) ~= "Rock" and RawTile(x - 1, y - 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1184, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1185, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Rock" and RawTile(x + 1, y - 1) == "Rock" and RawTile(x - 1, y + 1) == "Rock" and RawTile(x - 1, y - 1) ~= "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1232, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1233, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) ~= "Rock" and RawTile(x + 1, y - 1) == "Rock" and RawTile(x - 1, y + 1) == "Rock" and RawTile(x - 1, y - 1) ~= "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1104, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1105, x, y, 0)
-					end
-				elseif (RawTile(x + 1, y + 1) == "Rock" and RawTile(x + 1, y - 1) ~= "Rock" and RawTile(x - 1, y + 1) ~= "Rock" and RawTile(x - 1, y - 1) == "Rock") then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						SetTile(1152, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(1153, x, y, 0)
-					end
-				else
-					RandomNumber = SyncRand(4)
-					if (RandomNumber == 0) then
-						SetTile(128, x, y, 0)
-					elseif (RandomNumber == 1) then
-						SetTile(129, x, y, 0)
-					elseif (RandomNumber == 2) then
-						SetTile(130, x, y, 0)
-					elseif (RandomNumber == 3) then
-						SetTile(131, x, y, 0)
 					end
 				end
 			elseif (RawTile(x, y) == "Wall") then

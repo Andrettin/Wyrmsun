@@ -420,15 +420,41 @@ while (Count > 0) do
 end
 
 GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Land")
 
--- remove gold pile tiles from feast hall
+-- remove gold pile and random rug tiles from feast hall
 for x=FeastHallArea[1][1],FeastHallArea[2][1] do
 	for y=FeastHallArea[1][2],FeastHallArea[2][2] do
 		SetRawTile(x, y, "Land")
 	end
 end
 
+for x=FeastHallArea[1][1] + 1,FeastHallArea[2][1] - 1 do -- create a big rug in the middle of the feast hall
+	for y=FeastHallArea[1][2] + 1,FeastHallArea[2][2] - 1 do
+		SetRawTile(x, y, "Dark-Rough")
+	end
+end
+
 ApplyRawTiles()
+
+for x=FeastHallArea[1][1] + 2,FeastHallArea[2][1] - 2 do -- make sure only non-damaged rug tiles are used for the feast hall's rug
+	for y=FeastHallArea[1][2] + 2,FeastHallArea[2][2] - 2 do
+		SetTile(64, x, y, 0)
+	end
+end
+
+CreateDecorations()
+
+-- remove mushrooms, rocks and other such things from the feast hall
+local uncount = 0
+uncount = GetUnits("any")
+for unit1 = 1,table.getn(uncount) do 
+	if (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks" or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+		if (GetUnitVariable(uncount[unit1],"PosX") >= FeastHallArea[1][1] and GetUnitVariable(uncount[unit1],"PosX") <= FeastHallArea[2][1] and GetUnitVariable(uncount[unit1],"PosY") >= FeastHallArea[1][2] and GetUnitVariable(uncount[unit1],"PosY") <= FeastHallArea[2][2]) then
+			KillUnitAt(GetUnitVariable(uncount[unit1], "Ident"), 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+		end
+	end
+end
 
 SetPlayerData(0, "RaceName", "dwarf")
 SetAiType(0, "passive")

@@ -60,6 +60,7 @@ https://launchpad.net/stratagus
 * Terrain
 - Added cave tileset, with cave floor (buildable land), rockbound cave floor (unbuildable land) and cave wall tiles (rock) (graphics by Jinn).
 - New wall and floor tiles for the dungeon tileset, as well as decorations for them (graphics made by b_o by modifying those found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles).
+- Added rug tiles for the dungeon tileset (graphics by b_o).
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.
