@@ -236,6 +236,7 @@ GrandStrategyUnits["GnomishRecruit"] = {
 	Costs = {
 		Gold = 600
 	},
+	Upkeep = 25,
 	X = 0,
 	Y = 0,
 	RequiredBuildings = { "GnomishBarracks" },

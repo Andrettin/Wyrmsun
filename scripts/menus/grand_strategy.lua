@@ -34,7 +34,7 @@ function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
 	WorldMapOffsetY = 0
 	GrandStrategyYear = 25
-	GrandStrategyFaction = ""
+	GrandStrategyFaction = nil
 	SelectedProvince = nil
 	Attacker = ""
 	Defender = ""
@@ -65,8 +65,8 @@ function RunGrandStrategyGameSetupMenu()
 		function()
 			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
 			Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
-			GrandStrategyFaction = faction_list[faction:getSelected() + 1]
-			SetPlayerData(GetThisPlayer(), "RaceName", GetFactionFromName(GrandStrategyFaction).Civilization)
+			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
+			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 			InterfaceState = "Province"
 			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
@@ -89,6 +89,7 @@ function RunGrandStrategyGameSetupMenu()
 						Factions[key].Technologies[gsunit_key] = 0
 					end
 				end
+
 				-- initialize the diplomacy variables
 				if (Factions[key].Diplomacy == nil) then
 					Factions[key]["Diplomacy"] = {}
@@ -97,6 +98,14 @@ function RunGrandStrategyGameSetupMenu()
 					if (Factions[key].Diplomacy[second_key] == nil) then
 						Factions[key].Diplomacy[second_key] = "Peace" -- at peace by default
 					end
+				end
+
+				-- initialize the trade variables
+				if (Factions[key].Trade == nil) then
+					Factions[key]["Trade"] = {}
+				end
+				if (Factions[key].Trade.Lumber == nil) then
+					Factions[key].Trade["Lumber"] = 0
 				end
 			end
 			
@@ -139,7 +148,7 @@ function RunGrandStrategyGameSetupMenu()
 						WorldMapProvinces[key].SettlementBuildings[gsunit_key] = 0 -- 0 = not built, 1 = under construction, 2 = built
 					end
 				end
-				if (WorldMapProvinces[key].Owner == GrandStrategyFaction) then
+				if (WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 					CenterMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 			end
@@ -157,11 +166,17 @@ function RunGrandStrategyGameSetupMenu()
 				if (GrandStrategyUnits[gsunit_key].Costs.Lumber == nil) then
 					GrandStrategyUnits[gsunit_key].Costs["Lumber"] = 0
 				end
+				if (GrandStrategyUnits[gsunit_key].Upkeep == nil) then
+					GrandStrategyUnits[gsunit_key].Upkeep = 0
+				end
 				if (GrandStrategyUnits[gsunit_key].RequiredBuildings == nil) then
 					GrandStrategyUnits[gsunit_key]["RequiredBuildings"] = {}
 				end
 				if (GrandStrategyUnits[gsunit_key].InterfaceState == nil) then
 					GrandStrategyUnits[gsunit_key]["InterfaceState"] = ""
+				end
+				if (GrandStrategyUnits[gsunit_key].AdvancesFrom == nil) then
+					GrandStrategyUnits[gsunit_key]["AdvancesFrom"] = ""
 				end
 			end
 			for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
@@ -192,6 +207,20 @@ function RunGrandStrategyGameSetupMenu()
 					GrandStrategyTechnologies[gsunit_key]["InterfaceState"] = ""
 				end
 			end
+
+			-- add lumber resource location to forest tiles
+			for x=0,table.getn(WorldMapTiles[1]) - 1 do
+				for y=0,table.getn(WorldMapTiles) - 1 do
+					if (GetWorldMapTile(x, y) == "ScFr") then
+						if (TileHasResource(x, y, "Lumber") == false) then
+							table.insert(WorldMapResources.Lumber, {x, y})
+						end
+					end
+				end
+			end
+
+			CalculateFactionIncomes()
+			CalculateFactionUpkeeps()
 
 			RunGrandStrategyGame()
 			menu:stop()
@@ -306,34 +335,41 @@ function EndTurn()
 
 	-- AI moves
 	for key, value in pairs(Factions) do
-		if (Factions[key].Name ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key].Name) > 0) then
+		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key].Name) > 0) then
 			AIDoTurn(Factions[key])
 		end
 	end
 
-	-- collect resources
-	for i=1,table.getn(WorldMapResources.Gold) do
-		local resource_owner = GetFactionFromName(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner)
-		if (resource_owner ~= nil and ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "Town Hall")) then
-			resource_owner.Gold = resource_owner.Gold + 200
-		end
-	end
-	for i=1,table.getn(WorldMapResources.Lumber) do
-		local resource_owner = GetFactionFromName(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner)
-		if (resource_owner ~= nil and ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Town Hall")) then
-			if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Lumber Mill")) then
-				resource_owner.Commodities.Lumber = resource_owner.Commodities.Lumber + 125
-			else
-				resource_owner.Commodities.Lumber = resource_owner.Commodities.Lumber + 100
+	-- collect resources and perform trade
+	for key, value in pairs(Factions) do
+		Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
+		Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
+
+		if (Factions[key].Trade.Lumber < 0) then -- if wants to import lumber
+			for second_key, second_value in pairs(Factions) do
+				if (Factions[second_key].Trade.Lumber > 0) then -- if second faction wants to export lumber
+					PerformTrade(Factions[key], Factions[second_key], "Lumber")
+				end
+			end
+		elseif (Factions[key].Trade.Lumber > 0) then -- if wants to export lumber
+			for second_key, second_value in pairs(Factions) do
+				if (Factions[second_key].Trade.Lumber < 0) then -- if second faction wants to import lumber
+					PerformTrade(Factions[second_key], Factions[key], "Lumber")
+				end
 			end
 		end
 	end
 
 	for key, value in pairs(WorldMapProvinces) do
+		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
+	
 		-- construct buildings and train units
 		for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
 			if (WorldMapProvinces[key].SettlementBuildings[gsunit_key] == 1) then
 				WorldMapProvinces[key].SettlementBuildings[gsunit_key] = 2
+				if (GrandStrategyBuildings[gsunit_key].Type == "Town Hall" or GrandStrategyBuildings[gsunit_key].Type == "Lumber Mill") then
+					CalculateFactionIncomes()
+				end
 			end
 		end
 		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
@@ -362,6 +398,12 @@ function EndTurn()
 		end
 	end
 
+	CalculateFactionUpkeeps()
+
+	for key, value in pairs(Factions) do
+		Factions[key].Gold = Factions[key].Gold - Factions[key].Upkeep
+	end
+
 	if (attack_happened) then
 		DrawMinimap()
 	end
@@ -371,15 +413,14 @@ function EndTurn()
 
 	-- AI diplomacy
 	for key, value in pairs(Factions) do
-		if (Factions[key].Name ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key].Name) > 0) then
+		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key].Name) > 0) then
 			AIDoDiplomacy(Factions[key])
 		end
 	end
 	
 	-- if AI has responded to a peace offer of the human player, send a message telling the result
-	local faction_from_name = GetFactionFromName(GrandStrategyFaction)
 	for key, value in pairs(Factions) do
-		if (faction_from_name.Diplomacy[key] == "Peace Offer Accepted") then
+		if (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Accepted") then
 			local menu = WarGrandStrategyGameMenu(panel(1))
 
 			menu:addLabel("Peace Offer Accepted!", 128, 11)
@@ -393,14 +434,12 @@ function EndTurn()
 
 			menu:addFullButton("~!OK", "o", 16, 248,
 				function()
-					faction_from_name.Diplomacy[key] = "Peace"
+					GrandStrategyFaction.Diplomacy[key] = "Peace"
 					menu:stop()
-					GrandStrategyMenu:stop();
-					RunGrandStrategyGame()
 				end)
 
 			menu:run()
-		elseif (faction_from_name.Diplomacy[key] == "Peace Offer Rejected") then
+		elseif (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Rejected") then
 			local menu = WarGrandStrategyGameMenu(panel(1))
 
 			menu:addLabel("Peace Offer Rejected!", 128, 11)
@@ -414,17 +453,15 @@ function EndTurn()
 
 			menu:addFullButton("~!OK", "o", 16, 248,
 				function()
-					faction_from_name.Diplomacy[key] = "War"
+					GrandStrategyFaction.Diplomacy[key] = "War"
 					menu:stop()
-					GrandStrategyMenu:stop();
-					RunGrandStrategyGame()
 				end)
 
 			menu:run()
 		end
 	end
 
-	if (GetFactionProvinceCount(GrandStrategyFaction) == 0) then -- if player lost all provinces, end game
+	if (GetFactionProvinceCount(GrandStrategyFaction.Name) == 0) then -- if player lost all provinces, end game
 		GrandStrategyMenu:stop()
 		ClearGrandStrategyVariables()
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -486,20 +523,28 @@ function AttackProvince(province, faction)
 				
 				local victorious_player = ""
 
-				if (Attacker == GrandStrategyFaction or Defender == GrandStrategyFaction) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
+				if (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
+					local person_player_found = false
+					local computer_player_found = false
+					for i=1,mapinfo.nplayers do
+						if (mapinfo.playertypes[i] == "person" and person_player_found == false) then
+							person_player_found = true
+						elseif (mapinfo.playertypes[i] == "person" and person_player_found == true and computer_player_found == false) then
+							computer_player_found = true
+						elseif (mapinfo.playertypes[i] == "computer" and computer_player_found == false) then
+							computer_player_found = true
+						elseif (mapinfo.playertypes[i] == "person" or mapinfo.playertypes[i] == "computer") then
+							GameSettings.Presets[i-1].Type = PlayerNobody
+						end
+					end
 					RunMap(maps[i])
 
 					if (GameResult == GameVictory) then
-						victorious_player = GrandStrategyFaction
-					elseif (Attacker == GrandStrategyFaction) then
+						victorious_player = GrandStrategyFaction.Name
+					elseif (Attacker == GrandStrategyFaction.Name) then
 						victorious_player = Defender
-					elseif (Defender == GrandStrategyFaction) then
+					elseif (Defender == GrandStrategyFaction.Name) then
 						victorious_player = Attacker
-					end
-
-					-- set the new unit quantity to the surviving units of the victorious side
-					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-						AttackingUnits[gsunit_key] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 					end
 				else
 					if (GetMilitaryScore(province, true) > GetMilitaryScore(province, false)) then -- if military score is the same, then defenders win
@@ -516,7 +561,10 @@ function AttackProvince(province, faction)
 				end
 
 				if (victorious_player == Attacker) then
-					province.Owner = victorious_player
+					AcquireProvince(province, victorious_player)
+					if (Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
+						InterfaceState = "Province"
+					end
 				end
 				
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
@@ -529,29 +577,64 @@ function AttackProvince(province, faction)
 					local defender_faction_key = GetFactionKeyFromName(Defender)
 					for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
 						Factions[key].Diplomacy[defender_faction_key] = "Peace"
+						Factions[defender_faction_key].Diplomacy[key] = "Peace"
 					end
 				end
 				Attacker = ""
 				Defender = ""
 				AttackingUnits = nil
 				AttackedProvince = nil
+				break
 			end
 		end
 	end
 end
 
+function AcquireProvince(province, faction)
+	province.Owner = faction
+	
+	-- replace existent buildings from other civilizations with buildings of own civilization
+	for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
+		if (province.SettlementBuildings[gsunit_key] == 2 and GrandStrategyBuildings[gsunit_key].Civilization ~= GetFactionFromName(faction).Civilization) then
+			province.SettlementBuildings[gsunit_key] = 0 -- remove building from other civilization
+			for second_gsunit_key, second_gsunit_value in pairs(GrandStrategyBuildings) do -- if there is an equivalent building of the acquirer's civilization, create it
+				if (GrandStrategyBuildings[second_gsunit_key].Civilization == GetFactionFromName(faction).Civilization and GrandStrategyBuildings[second_gsunit_key].Type == GrandStrategyBuildings[gsunit_key].Type) then
+					province.SettlementBuildings[second_gsunit_key] = 2
+				end
+			end
+		elseif (province.SettlementBuildings[gsunit_key] == 1) then -- under construction buildings get canceled
+			province.SettlementBuildings[gsunit_key] = 0
+		end
+	end
+	
+	CalculateFactionIncomes()
+end
+
 function CalculateProvinceBorderTiles()
 	for key, value in pairs(WorldMapProvinces) do
 		WorldMapProvinces[key]["BorderTiles"] = {}
+		WorldMapProvinces[key]["BorderProvinces"] = {}
 		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name)
+				end
 			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name)
+				end
 			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
 				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name) == false) then
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name)
+				end
 			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
 				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name) == false) then
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)
+				end
 			end
 		end
 	end
@@ -583,6 +666,47 @@ function CalculateTileProvinces()
 						TileProvinces[y][x] = key
 					end
 				end
+			end
+		end
+	end
+end
+
+function CalculateFactionIncomes()
+	for key, value in pairs(Factions) do
+		Factions[key]["Income"] = nil
+		Factions[key]["Income"] = {}
+		Factions[key].Income["Gold"] = 0
+		Factions[key].Income["Lumber"] = 0
+
+		-- collect resources
+		for i=1,table.getn(WorldMapResources.Gold) do
+			if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "Town Hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner) then
+				Factions[key].Income.Gold = Factions[key].Income.Gold + 200
+			end
+		end
+		for i=1,table.getn(WorldMapResources.Lumber) do
+			if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Town Hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner) then
+				if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Lumber Mill")) then
+					Factions[key].Income.Lumber = Factions[key].Income.Lumber + 125
+				else
+					Factions[key].Income.Lumber = Factions[key].Income.Lumber + 100
+				end
+			end
+		end
+	end
+end
+
+function CalculateFactionUpkeeps()
+	for key, value in pairs(Factions) do
+		Factions[key]["Upkeep"] = 0
+	end
+	
+	for key, value in pairs(WorldMapProvinces) do
+		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
+	
+		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do			
+			if (province_owner ~= nil) then -- pay upkeep for military units
+				province_owner.Upkeep = province_owner.Upkeep + WorldMapProvinces[key].Units[gsunit_key] * GrandStrategyUnits[gsunit_key].Upkeep
 			end
 		end
 	end
@@ -642,7 +766,6 @@ function GetFactionBuildingTypeCount(faction, building_type)
 end
 
 function FactionHasTechnologyType(faction, technology_type)
-	faction = GetFactionFromName(faction)
 	for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do
 		if (GrandStrategyTechnologies[gsunit_key].Type == technology_type and faction.Technologies[gsunit_key] == 2) then
 			return true
@@ -652,12 +775,12 @@ function FactionHasTechnologyType(faction, technology_type)
 end
 
 function CanAttackProvince(province, faction, province_from)
-	if (province.Owner == faction or province.Owner == "Ocean" or (province.AttackedBy ~= "" and province.AttackedBy ~= faction)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
+	if (province.Owner == faction.Name or province.Owner == "Ocean" or (province.AttackedBy ~= "" and province.AttackedBy ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false
 	end
 	
 	-- if is at peace, can't attack
-	if (province.Owner ~= "" and GetFactionFromName(province_from.Owner).Diplomacy[GetFactionKeyFromName(province.Owner)] ~= "War") then
+	if (province.Owner ~= "" and faction.Diplomacy[GetFactionKeyFromName(province.Owner)] ~= "War") then
 		return false
 	end
 
@@ -669,14 +792,8 @@ function CanAttackProvince(province, faction, province_from)
 end
 
 function ProvinceHasBorderWith(province, province_to)
-	for i=1,table.getn(province_to.BorderTiles) do
-		if (GetTileProvince(province_to.BorderTiles[i][1] - 1, province_to.BorderTiles[i][2]) == province) then
-			return true
-		elseif (GetTileProvince(province_to.BorderTiles[i][1] + 1, province_to.BorderTiles[i][2]) == province) then
-			return true
-		elseif (GetTileProvince(province_to.BorderTiles[i][1], province_to.BorderTiles[i][2] - 1) == province) then
-			return true
-		elseif (GetTileProvince(province_to.BorderTiles[i][1], province_to.BorderTiles[i][2] + 1) == province) then
+	for i=1,table.getn(province.BorderProvinces) do
+		if (province.BorderProvinces[i] == province_to.Name) then
 			return true
 		end
 	end
@@ -758,7 +875,7 @@ function RunGrandStrategySaveMenu()
 
 	menu:addLabel("Save Game", 384 / 2, 11)
 
-	local default_name = GrandStrategyFaction
+	local default_name = GrandStrategyFaction.Name
 	local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
 	table.foreachi(t, function(k,v) default_name = string.gsub(default_name, v, "") end)
 	
@@ -778,10 +895,11 @@ function RunGrandStrategySaveMenu()
 
 			for key, value in pairs(WorldMapProvinces) do
 				WorldMapProvinces[key].BorderTiles = nil
+				WorldMapProvinces[key].BorderProvinces = nil
 			end
 
 			wyr.preferences.GrandStrategySaveGames[name] = {
-				SavedGrandStrategyFaction = GrandStrategyFaction,
+				SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 				SavedGrandStrategyYear = GrandStrategyYear,
 				SavedWorldMapTiles = WorldMapTiles,
 				SavedWorldMapResources = WorldMapResources,
@@ -790,6 +908,7 @@ function RunGrandStrategySaveMenu()
 				SavedFactions = Factions
 			}
 			SavePreferences()
+			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
     			menu:stop()
 			GrandStrategyMenu:stop();
@@ -826,18 +945,18 @@ function RunGrandStrategyLoadGameMenu()
 			if (saved_games:getSelected() < 0) then
 				return
 			end
-			GrandStrategyFaction = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFaction
 			GrandStrategyYear = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
 			WorldMapTiles = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
 			WorldMapResources = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
 			WorldMapProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
 			WorldMapWaterProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
 			Factions = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
+			GrandStrategyFaction = GetFactionFromName(wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
 			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
 
 			for key, value in pairs(WorldMapProvinces) do -- center map on a province of the loaded player's faction
-				if (WorldMapProvinces[key].Owner == GrandStrategyFaction) then
+				if (WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 					CenterMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 			end
@@ -1120,7 +1239,7 @@ function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(GrandStrategyBuildings[grand_strategy_building_key].Icon, 0, -5) .. "_grayed.png", 46, 38)
 	else
-		b = PlayerColorImageButton("", GetFactionFromName(GrandStrategyFaction).Color)
+		b = PlayerColorImageButton("", GrandStrategyFaction.Color)
 		unit_icon = CPlayerColorGraphic:New(GrandStrategyBuildings[grand_strategy_building_key].Icon, 46, 38)
 	end
 	unit_icon:Load()
@@ -1191,7 +1310,7 @@ function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
 end
 
 function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
-	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionFromName(GrandStrategyFaction).Color)
+	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GrandStrategyFaction.Color)
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			DrawGrandStrategyInterface()
@@ -1210,7 +1329,14 @@ function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
 	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
 	UIElements[table.getn(UIElements)]:setSize(46, 38)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
-	UIElements[table.getn(UIElements)]:setTooltip("You have " .. SelectedProvince.Units[grand_strategy_unit_key] .. " " .. GrandStrategyUnits[grand_strategy_unit_key].Name .. " regiments in " .. SelectedProvince.Name)
+
+	local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[grand_strategy_unit_key].Civilization, "Veteran " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
+	local veterans = 0
+	if (veteran_unit_type_key ~= "") then
+		veterans = SelectedProvince.Units[veteran_unit_type_key]
+	end
+
+	UIElements[table.getn(UIElements)]:setTooltip("You have " .. SelectedProvince.Units[grand_strategy_unit_key] + veterans .. " " .. GrandStrategyUnits[grand_strategy_unit_key].Name .. " regiments in " .. SelectedProvince.Name)
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -1219,18 +1345,18 @@ function AddGrandStrategyTechnologyButton(x, y, grand_strategy_technology_key)
 	local b
 	local unit_icon
 	
-	if (GetFactionFromName(GrandStrategyFaction).Technologies[grand_strategy_technology_key] == 1) then -- if already being researched, make icon gray
+	if (GrandStrategyFaction.Technologies[grand_strategy_technology_key] == 1) then -- if already being researched, make icon gray
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(GrandStrategyTechnologies[grand_strategy_technology_key].Icon, 0, -5) .. "_grayed.png", 46, 38)
 	else
-		b = PlayerColorImageButton("", GetFactionFromName(GrandStrategyFaction).Color)
+		b = PlayerColorImageButton("", GrandStrategyFaction.Color)
 		unit_icon = CPlayerColorGraphic:New(GrandStrategyTechnologies[grand_strategy_technology_key].Icon, 46, 38)
 	end
 	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
-			if (GetFactionFromName(GrandStrategyFaction).Technologies[grand_strategy_technology_key] < 1) then
+			if (GrandStrategyFaction.Technologies[grand_strategy_technology_key] < 1) then
 				ResearchTechnology(SelectedProvince, grand_strategy_technology_key)
 			else
 				CancelResearchTechnology(SelectedProvince, grand_strategy_technology_key)
@@ -1271,7 +1397,7 @@ function AddGrandStrategyTechnologyButton(x, y, grand_strategy_technology_key)
 		cost_tooltip = cost_tooltip .. ")"
 	end
 
-	if (GetFactionFromName(GrandStrategyFaction).Technologies[grand_strategy_technology_key] == 1) then
+	if (GrandStrategyFaction.Technologies[grand_strategy_technology_key] == 1) then
 		UIElements[table.getn(UIElements)]:setTooltip(GrandStrategyTechnologies[grand_strategy_technology_key].Name .. " being researched")
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Research " .. GrandStrategyTechnologies[grand_strategy_technology_key].Name .. cost_tooltip)
@@ -1346,10 +1472,6 @@ function DrawOnScreenTiles()
 				DrawWorldMapTile("tilesets/world/terrain/plains.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "ScFr") then
 				DrawWorldMapTile("tilesets/world/terrain/scrub_forest_outer.png", x, y)
-				-- add lumber resource here if not specified already
-				if (TileHasResource(x, y, "Lumber") == false) then
-					table.insert(WorldMapResources.Lumber, {x, y})
-				end
 			elseif (GetWorldMapTile(x, y) == "Hill") then
 				DrawWorldMapTile("tilesets/world/terrain/hills_outer.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Mntn") then
@@ -1426,10 +1548,10 @@ function DrawOnScreenTiles()
 				
 			end
 
-			if (WorldMapProvinces[key].AttackedBy == GrandStrategyFaction) then
+			if (WorldMapProvinces[key].AttackedBy == GrandStrategyFaction.Name) then
 				-- draw symbol that the province is being attacked by the human player if that is the case
 				DrawWorldMapTile("tilesets/world/sites/attack.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-			elseif (WorldMapProvinces[key].Owner == GrandStrategyFaction) then
+			elseif (WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 					if (WorldMapProvinces[key].MovingUnits[gsunit_key] > 0) then
 						-- draw symbol that troops are moving to the province
@@ -1488,13 +1610,27 @@ function DrawGrandStrategyInterface()
 	AddUIElement("ui/dwarf/buttonpanel_" .. Video.Height .. ".png", 0, 336)
 	AddUIElement("ui/dwarf/menubutton.png", 0, 0)
 
-	AddGrandStrategyLabel(GrandStrategyFaction .. ", " .. GrandStrategyYear .. " AD", 88, 6, Fonts["game"], true, false)
+	AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GrandStrategyYear .. " AD", 88, 6, Fonts["game"], true, false)
 	
 	-- add resource quantities
+
+	local gold_income = ""
+	if (GrandStrategyFaction.Income.Gold < GrandStrategyFaction.Upkeep) then
+		gold_income = GrandStrategyFaction.Income.Gold - GrandStrategyFaction.Upkeep
+	elseif (GrandStrategyFaction.Income.Gold > GrandStrategyFaction.Upkeep) then
+		gold_income = "+" .. GrandStrategyFaction.Income.Gold - GrandStrategyFaction.Upkeep
+	end
+
 	AddUIElement("ui/gold.png", 176, 0)
-	AddGrandStrategyLabel(GetFactionFromName(GrandStrategyFaction).Gold, 176 + 18, 1, Fonts["game"], false, false)
-	AddUIElement("ui/lumber.png", 176 + 75, 0)
-	AddGrandStrategyLabel(GetFactionFromName(GrandStrategyFaction).Commodities.Lumber, 176 + 75 + 18, 1, Fonts["game"], false, false)
+	AddGrandStrategyLabel(GrandStrategyFaction.Gold .. gold_income, 176 + 18, 1, Fonts["game"], false, false)
+
+	local lumber_income = ""
+	if (GrandStrategyFaction.Income.Lumber > 0) then
+		lumber_income = "+" .. GrandStrategyFaction.Income.Lumber
+	end
+
+	AddUIElement("ui/lumber.png", 176 + 100, 0)
+	AddGrandStrategyLabel(GrandStrategyFaction.Commodities.Lumber .. lumber_income, 176 + 100 + 18, 1, Fonts["game"], false, false)
 	
 	if (SelectedProvince ~= nil) then
 		local province_name_text = SelectedProvince.Name
@@ -1509,23 +1645,32 @@ function DrawGrandStrategyInterface()
 		AddGrandStrategyLabel(province_name_text, 4, 171, Fonts["game"], true, true)
 
 		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting
-		if (SelectedProvince.Owner == GrandStrategyFaction) then
+		if (SelectedProvince.Owner == GrandStrategyFaction.Name) then
 			if (InterfaceState == "Province") then
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or SelectedProvince.Units[gsunit_key] > 0) then
+					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
+					local veterans = 0
+					if (veteran_unit_type_key ~= "") then
+						veterans = SelectedProvince.Units[veteran_unit_type_key]
+					end
+
+					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or (SelectedProvince.Units[gsunit_key] + veterans > 0 and GrandStrategyUnits[gsunit_key].InterfaceState ~= "")) then
 						local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
 						local icon_offset_y = 340 + (GrandStrategyUnits[gsunit_key].Y * (47 + 19 + 4))
 
 						AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, gsunit_key)
 						if (SelectedProvince.UnderConstructionUnits[gsunit_key] > 0) then
-							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] + veterans .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 						else
-							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 						end
 
 						-- add unit selection arrows
 						local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
-							if (SelectedUnits[gsunit_key] > 0) then
+							if (veteran_unit_type_key ~= "" and SelectedUnits[veteran_unit_type_key] > 0) then -- deselect veterans first and select them last
+								SelectedUnits[veteran_unit_type_key] = SelectedUnits[veteran_unit_type_key] - 1
+								DrawGrandStrategyInterface()
+							elseif (SelectedUnits[gsunit_key] > 0) then
 								SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] - 1
 								DrawGrandStrategyInterface()
 							end
@@ -1546,6 +1691,9 @@ function DrawGrandStrategyInterface()
 							if (SelectedUnits[gsunit_key] < SelectedProvince.Units[gsunit_key]) then
 								SelectedUnits[gsunit_key] = SelectedUnits[gsunit_key] + 1
 								DrawGrandStrategyInterface()
+							elseif (veteran_unit_type_key ~= "" and SelectedUnits[veteran_unit_type_key] < SelectedProvince.Units[veteran_unit_type_key]) then
+								SelectedUnits[veteran_unit_type_key] = SelectedUnits[veteran_unit_type_key] + 1
+								DrawGrandStrategyInterface()
 							end
 						end)
 						b:setBaseColor(Color(0,0,0,0))
@@ -1560,7 +1708,11 @@ function DrawGrandStrategyInterface()
 						end
 						b:setTooltip("Select one ".. GrandStrategyUnits[gsunit_key].Name .. " regiment")
 
-						AddGrandStrategyLabel("~<" .. SelectedUnits[gsunit_key] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+						local selected_veterans = 0
+						if (veteran_unit_type_key ~= "") then
+							selected_veterans = SelectedUnits[veteran_unit_type_key]
+						end
+						AddGrandStrategyLabel("~<" .. SelectedUnits[gsunit_key] + selected_veterans .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 					end
 				end
 
@@ -1577,8 +1729,49 @@ function DrawGrandStrategyInterface()
 					end
 				end
 			elseif (InterfaceState == "Town Hall") then
-				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GetFactionFromName(GrandStrategyFaction).Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GrandStrategyFaction.Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
 				
+				AddUIElement("ui/lumber.png", 9, 246 + 3)
+
+				-- add trade bid/offer arrows
+				local b = AddGrandStrategyImageButton("", "", 112 - 2 - 24, 246, function()
+					if (GrandStrategyFaction.Gold >= math.abs((GrandStrategyFaction.Trade.Lumber - 100) * GetCommodityPrice("Lumber") / 100)) then
+						GrandStrategyFaction.Trade.Lumber = GrandStrategyFaction.Trade.Lumber - 100
+					end
+					DrawGrandStrategyInterface()
+				end)
+				b:setBaseColor(Color(0,0,0,0))
+				b:setForegroundColor(Color(0,0,0,0))
+				b:setBackgroundColor(Color(0,0,0,0))
+				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+					b:setNormalImage(g_dlslider_n)
+					b:setPressedImage(g_dlslider_p)
+				else
+					b:setNormalImage(g_dlslider_n)
+					b:setPressedImage(g_dlslider_p)
+				end
+				b:setTooltip("Bid 100 Lumber")
+
+				local b = AddGrandStrategyImageButton("", "", 112 + 2 + 46 - 20, 246, function()
+					if (GrandStrategyFaction.Commodities.Lumber >= GrandStrategyFaction.Trade.Lumber + 100) then
+						GrandStrategyFaction.Trade.Lumber = GrandStrategyFaction.Trade.Lumber + 100
+					end
+					DrawGrandStrategyInterface()
+				end)
+				b:setBaseColor(Color(0,0,0,0))
+				b:setForegroundColor(Color(0,0,0,0))
+				b:setBackgroundColor(Color(0,0,0,0))
+				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+					b:setNormalImage(g_drslider_n)
+					b:setPressedImage(g_drslider_p)
+				else
+					b:setNormalImage(g_drslider_n)
+					b:setPressedImage(g_drslider_p)
+				end
+				b:setTooltip("Offer 100 Lumber")
+
+				AddGrandStrategyLabel("~<" .. GrandStrategyFaction.Trade.Lumber .. "~>", 112 + 24 - 12, 246 + 2, Fonts["game"], true, false)
+
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
 					InterfaceState = "Province"
@@ -1597,19 +1790,25 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Barracks") then
-				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GetFactionFromName(GrandStrategyFaction).Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GrandStrategyFaction.Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
 				
 				-- add units buttons for training
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
+					local veterans = 0
+					if (veteran_unit_type_key ~= "") then
+						veterans = SelectedProvince.Units[veteran_unit_type_key]
+					end
+
 					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) and GrandStrategyUnits[gsunit_key].InterfaceState == InterfaceState) then
 						local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
 						local icon_offset_y = 340 + ((GrandStrategyUnits[gsunit_key].Y - 1) * (47 + 19 + 4))
 
 						AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, gsunit_key)
 						if (SelectedProvince.UnderConstructionUnits[gsunit_key] > 0) then
-							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] + veterans .. "+" .. SelectedProvince.UnderConstructionUnits[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 						else
-							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedProvince.Units[gsunit_key] + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 						end
 
 						-- add unit training arrows
@@ -1689,7 +1888,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Lumber Mill") then
-				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GetFactionFromName(GrandStrategyFaction).Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GrandStrategyFaction.Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
 				
 				for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do
 					if (GrandStrategyTechnologies[gsunit_key].InterfaceState == InterfaceState and IsTechnologyAvailable(SelectedProvince, gsunit_key)) then
@@ -1718,7 +1917,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Blacksmith") then
-				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GetFactionFromName(GrandStrategyFaction).Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GrandStrategyFaction.Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
 				
 				for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do
 					if (GrandStrategyTechnologies[gsunit_key].InterfaceState == InterfaceState and IsTechnologyAvailable(SelectedProvince, gsunit_key)) then
@@ -1748,12 +1947,12 @@ function DrawGrandStrategyInterface()
 				b:setFont(Fonts["game"])
 			end
 		elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
-			if (GetFactionFromName(GrandStrategyFaction).Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "War") then
+			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "War") then
 				AddGrandStrategyLabel("At War with Us", 4, 213, Fonts["game"], true, true)
 
 				-- add a button for offering peace
 				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", 24, 340, function()
-					OfferPeace(GrandStrategyFaction, SelectedProvince.Owner)
+					OfferPeace(GrandStrategyFaction.Name, SelectedProvince.Owner)
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -1768,12 +1967,12 @@ function DrawGrandStrategyInterface()
 				end
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
-			elseif (GetFactionFromName(GrandStrategyFaction).Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
+			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
 				AddGrandStrategyLabel("At War with Us (Peace Offered)", 4, 213, Fonts["game"], true, true)
 			else
 				-- add a button for declaring war
 				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", 24, 340, function()
-					DeclareWar(GrandStrategyFaction, SelectedProvince.Owner)
+					DeclareWar(GrandStrategyFaction.Name, SelectedProvince.Owner)
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -1859,10 +2058,10 @@ function SetSelectedProvince(province)
 	if (province ~= SelectedProvince) then
 
 		-- if the player has units selected and then selects an attackable province, set those units to attack the province
-		if (SelectedProvince ~= nil and SelectedProvince.Owner == GrandStrategyFaction and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
+		if (SelectedProvince ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
 			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 				if (SelectedUnits[gsunit_key] > 0) then
-					province.AttackedBy = GrandStrategyFaction
+					province.AttackedBy = GrandStrategyFaction.Name
 					province.AttackingUnits[gsunit_key] = province.AttackingUnits[gsunit_key] + SelectedUnits[gsunit_key]
 					SelectedProvince.Units[gsunit_key] = SelectedProvince.Units[gsunit_key] - SelectedUnits[gsunit_key]
 					
@@ -1870,7 +2069,7 @@ function SetSelectedProvince(province)
 					DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
 				end
 			end
-		elseif (SelectedProvince ~= nil and SelectedProvince.Owner == province.Owner and SelectedProvince.Owner == GrandStrategyFaction) then
+		elseif (SelectedProvince ~= nil and SelectedProvince.Owner == province.Owner and SelectedProvince.Owner == GrandStrategyFaction.Name) then
 			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 				if (SelectedUnits[gsunit_key] > 0) then
 					province.MovingUnits[gsunit_key] = province.MovingUnits[gsunit_key] + SelectedUnits[gsunit_key]
@@ -1882,7 +2081,7 @@ function SetSelectedProvince(province)
 			end
 		end
 
-		if (province ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.Owner ~= GrandStrategyFaction) then -- if is owned by a foreign faction, use diplomacy interface, if is a self owned province or an empty one, use the normal province interface
+		if (province ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.Owner ~= GrandStrategyFaction.Name) then -- if is owned by a foreign faction, use diplomacy interface, if is a self owned province or an empty one, use the normal province interface
 			InterfaceState = "Diplomacy"
 		else
 			InterfaceState = "Province"
@@ -1938,26 +2137,31 @@ function AIDoTurn(ai_faction)
 			local desired_infantry_in_province = 10
 			local desired_archers_in_province = 6
 			local desired_catapults_in_province = 1
-			
+
+			local borders_foreign = false
+
 			for second_key, second_value in pairs(WorldMapProvinces) do
-				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
-					if ((GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 225% or greater of that of the province to be attacked
-						if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction.Name, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
-							WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
-							for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-								WorldMapProvinces[second_key].AttackingUnits[gsunit_key] = WorldMapProvinces[key].Units[gsunit_key] - (WorldMapProvinces[key].Units[gsunit_key] * 4 / 9) -- leave 4/9ths of the province's forces as a defense
-								WorldMapProvinces[key].Units[gsunit_key] = WorldMapProvinces[key].Units[gsunit_key] * 4 / 9
+				if (ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key])) then
+					if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
+						borders_foreign = true
+						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+							if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+								WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
+								for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+									WorldMapProvinces[second_key].AttackingUnits[gsunit_key] = WorldMapProvinces[key].Units[gsunit_key] - round(WorldMapProvinces[key].Units[gsunit_key] * 1 / 4) -- leave 1/3rd of the province's forces as a defense
+									WorldMapProvinces[key].Units[gsunit_key] = round(WorldMapProvinces[key].Units[gsunit_key] * 1 / 4)
+								end
 							end
+						elseif (GetMilitaryScore(WorldMapProvinces[second_key], false) > 0) then
+							desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
+							desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
+							desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
 						end
-					elseif (GetMilitaryScore(WorldMapProvinces[second_key], false) > 0) then
-						desired_infantry_in_province = math.floor(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
-						desired_archers_in_province = math.floor(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
-						desired_catapults_in_province = math.floor(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
 					end
 				end
 			end
 
-			if (GetFactionBuildingTypeCount(ai_faction.Name, "Town Hall") < GetFactionProvinceCount(ai_faction.Name)) then -- don't build any military units if a province is lacking a town hall
+			if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction.Name, "Town Hall") < GetFactionProvinceCount(ai_faction.Name) or (ai_faction.Income.Gold - ai_faction.Upkeep) < 100) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small
 				desired_infantry_in_province = 0
 				desired_archers_in_province = 0
 				desired_catapults_in_province = 0
@@ -1984,9 +2188,39 @@ function AIDoTurn(ai_faction)
 							end
 						end
 					end
+
+				end
+
+				if (borders_foreign == false and WorldMapProvinces[key].Units[gsunit_key] > 0) then -- if this province borders no foreign provinces but has units in the province, move them out
+					for second_key, second_value in pairs(WorldMapProvinces) do
+						if (WorldMapProvinces[second_key].Owner == ai_faction.Name) then
+							local second_province_borders_foreign = false
+							for third_key, third_value in pairs(WorldMapProvinces) do
+								if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name and ProvinceHasBorderWith(WorldMapProvinces[second_key], WorldMapProvinces[third_key])) then
+									second_province_borders_foreign = true
+									break
+								end
+							end
+							if (second_province_borders_foreign) then
+								WorldMapProvinces[second_key].MovingUnits[gsunit_key] = WorldMapProvinces[second_key].MovingUnits[gsunit_key] + WorldMapProvinces[key].Units[gsunit_key]
+								WorldMapProvinces[key].Units[gsunit_key] = 0
+								break
+							end
+						end
+					end
 				end
 			end
 		end
+	end
+
+	ai_faction.Trade.Lumber = 0
+	-- do trade
+	if (ai_faction.Commodities.Lumber < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
+		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber - (800 - ai_faction.Commodities.Lumber)
+	elseif (ai_faction.Commodities.Lumber > 800 * 2 and ai_faction.Income.Lumber > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
+		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 2)
+	elseif (ai_faction.Commodities.Lumber > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
+		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 4)
 	end
 end
 
@@ -1995,8 +2229,8 @@ function AIDoDiplomacy(ai_faction)
 		if (WorldMapProvinces[key].Owner == ai_faction.Name) then
 			for second_key, second_value in pairs(WorldMapProvinces) do
 				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
-					if ((GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and (GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 9 / 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 225% or greater of that of the province to be attacked
+					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+						if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 3 / 2) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 						end
 					end
@@ -2009,7 +2243,7 @@ end
 function AIConsiderOffers(ai_faction)
 	for key, value in pairs(Factions) do
 		if (ai_faction.Diplomacy[key] == "Peace Offered") then
-			if ((GetFactionMilitaryScore(ai_faction.Name) * 3 / 2) < GetFactionMilitaryScore(Factions[key].Name)) then -- only accept peace if enemy's forces are 50% greater than own forces
+			if (round(GetFactionMilitaryScore(ai_faction.Name) * 3 / 2) < GetFactionMilitaryScore(Factions[key].Name)) then -- only accept peace if enemy's forces are 50% greater than own forces
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
 			else
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, false)
@@ -2286,6 +2520,7 @@ function GetMilitaryScore(province, attacker)
 	local catapult_military_score_bonus = 0
 	local flying_rider_military_score_bonus = 0
 	if (faction ~= "" and faction ~= "Ocean") then
+		faction = GetFactionFromName(faction)
 		if (FactionHasTechnologyType(faction, "Melee Weapon Upgrade I")) then
 			infantry_military_score_bonus = infantry_military_score_bonus + 10
 		end
@@ -2312,6 +2547,8 @@ function GetMilitaryScore(province, attacker)
 	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 		if (GrandStrategyUnits[gsunit_key].Type == "Infantry") then
 			military_score = military_score + (units[gsunit_key] * (50 + infantry_military_score_bonus))
+		elseif (GrandStrategyUnits[gsunit_key].Type == "Veteran Infantry") then
+			military_score = military_score + (units[gsunit_key] * (60 + infantry_military_score_bonus))
 		elseif (GrandStrategyUnits[gsunit_key].Type == "Archer") then
 			military_score = military_score + (units[gsunit_key] * (60 + archer_military_score_bonus))
 		elseif (GrandStrategyUnits[gsunit_key].Type == "Catapult") then
@@ -2323,13 +2560,31 @@ function GetMilitaryScore(province, attacker)
 	return military_score
 end
 
+function GetCivilizationUnitTypeName(civilization, unit_type)
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (GrandStrategyUnits[gsunit_key].Civilization == civilization and GrandStrategyUnits[gsunit_key].Type == unit_type) then
+			return GrandStrategyUnits[gsunit_key].Name
+		end
+	end
+	return unit_type
+end
+
+function GetCivilizationUnitTypeKey(civilization, unit_type)
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (GrandStrategyUnits[gsunit_key].Civilization == civilization and GrandStrategyUnits[gsunit_key].Type == unit_type) then
+			return gsunit_key
+		end
+	end
+	return ""
+end
+
 function GetCivilizationBuildingTypeName(civilization, building_type)
 	for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
 		if (GrandStrategyBuildings[gsunit_key].Civilization == civilization and GrandStrategyBuildings[gsunit_key].Type == building_type) then
 			return GrandStrategyBuildings[gsunit_key].Name
 		end
 	end
-	return "Barracks"
+	return building_type
 end
 
 function CenterMapOnTile(tile_x, tile_y)
@@ -2354,7 +2609,7 @@ function DeclareWar(faction_from, faction_to)
 		GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "War"
 	end
 
-	if (faction_to == GrandStrategyFaction) then -- if the player was declared war on, notify him
+	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
 		local menu = WarGrandStrategyGameMenu(panel(1))
 
 		menu:addLabel("War Declared!", 128, 11)
@@ -2381,7 +2636,7 @@ function OfferPeace(faction_from, faction_to)
 		GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "Peace Offered"
 	end
 
-	if (faction_to == GrandStrategyFaction) then -- if the player was declared war on, notify him
+	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
 		local menu = WarGrandStrategyGameMenu(panel(1))
 
 		menu:addLabel("Peace Offered", 128, 11)
@@ -2397,15 +2652,11 @@ function OfferPeace(faction_from, faction_to)
 			function()
 				RespondPeaceOffer(faction_from, faction_to, true)
 				menu:stop()
-				GrandStrategyMenu:stop();
-				RunGrandStrategyGame()
 			end)
 		menu:addFullButton("~!Reject", "r", 16, 248 - (36 * 0),
 			function()
 				RespondPeaceOffer(faction_from, faction_to, false)
 				menu:stop()
-				GrandStrategyMenu:stop();
-				RunGrandStrategyGame()
 			end)
 
 		menu:run()
@@ -2414,7 +2665,7 @@ end
 
 function RespondPeaceOffer(faction_from, faction_to, accept)
 	if (accept) then
-		if (faction_from == GrandStrategyFaction) then
+		if (faction_from == GrandStrategyFaction.Name) then
 			GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "Peace Offer Accepted"
 			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "Peace"
 		else
@@ -2422,7 +2673,7 @@ function RespondPeaceOffer(faction_from, faction_to, accept)
 			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "Peace"
 		end
 	else
-		if (faction_from == GrandStrategyFaction) then
+		if (faction_from == GrandStrategyFaction.Name) then
 			GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "Peace Offer Rejected"
 			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "War"
 		else
@@ -2479,7 +2730,7 @@ function WarGrandStrategyGameMenu(background)
 end
 
 function GrandStrategyEvent(event_name, event_description, faction, options, option_effects, event_icon, event_image)
-	if (faction == GrandStrategyFaction) then
+	if (faction == GrandStrategyFaction.Name) then
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
 
@@ -2528,5 +2779,34 @@ function GrandStrategyEvent(event_name, event_description, faction, options, opt
 		menu:run()
 	else -- AIs choose a random option
 		option_effects[SyncRand(table.getn(option_effects)) + 1]()
+	end
+end
+
+function GetCommodityPrice(commodity)
+	if (commodity == "Lumber") then
+		return 100 -- price for every 100 lumber
+	end
+	return 0
+end
+
+function PerformTrade(importer_faction, exporter_faction, commodity)
+	if (math.abs(importer_faction.Trade[commodity]) > exporter_faction.Trade[commodity]) then
+		importer_faction.Commodities[commodity] = importer_faction.Commodities[commodity] + exporter_faction.Trade[commodity]
+		exporter_faction.Commodities[commodity] = exporter_faction.Commodities[commodity] - exporter_faction.Trade[commodity]
+
+		importer_faction.Gold = importer_faction.Gold - (exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
+		exporter_faction.Gold = exporter_faction.Gold + (exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
+
+		importer_faction.Trade[commodity] = importer_faction.Trade[commodity] + exporter_faction.Trade[commodity]
+		exporter_faction.Trade[commodity] = 0
+	else
+		importer_faction.Commodities[commodity] = importer_faction.Commodities[commodity] + math.abs(importer_faction.Trade[commodity])
+		exporter_faction.Commodities[commodity] = exporter_faction.Commodities[commodity] - math.abs(importer_faction.Trade[commodity])
+
+		importer_faction.Gold = importer_faction.Gold - (math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
+		exporter_faction.Gold = exporter_faction.Gold + (math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
+
+		exporter_faction.Trade[commodity] = exporter_faction.Trade[commodity] + importer_faction.Trade[commodity]
+		importer_faction.Trade[commodity] = 0
 	end
 end

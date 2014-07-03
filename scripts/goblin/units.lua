@@ -240,6 +240,7 @@ GrandStrategyUnits["GoblinImpaler"] = {
 	Costs = {
 		Gold = 600
 	},
+	Upkeep = 25,
 	X = 0,
 	Y = 0
 }
@@ -254,6 +255,7 @@ GrandStrategyUnits["GoblinArcher"] = {
 		Gold = 500,
 		Lumber = 50
 	},
+	Upkeep = 25,
 	X = 1,
 	Y = 0
 }

@@ -2,7 +2,7 @@
 
 if (GrandStrategy == false) then
 	DefinePlayerTypes("person","computer","neutral","rescue-passive")
-elseif (Attacker == GrandStrategyFaction) then
+elseif (Attacker == GrandStrategyFaction.Name) then
 	DefinePlayerTypes("person","computer","nobody","nobody")
 else
 	DefinePlayerTypes("computer","person","nobody","nobody")

@@ -184,13 +184,13 @@ function SetPlayerData(player, data, arg1, arg2)
 		
 		if (GrandStrategy) then
 			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GetFactionFromName(GrandStrategyFaction).Civilization
+				arg1 = GrandStrategyFaction.Civilization
 			end
 
 			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
-				if (GrandStrategyFaction == Attacker and GetFactionFromName(Defender) ~= nil) then
+				if (GrandStrategyFaction.Name == Attacker and GetFactionFromName(Defender) ~= nil) then
 					arg1 = GetFactionFromName(Defender).Civilization
-				elseif (GrandStrategyFaction == Defender and GetFactionFromName(Attacker) ~= nil) then
+				elseif (GrandStrategyFaction.Name == Defender and GetFactionFromName(Attacker) ~= nil) then
 					arg1 = GetFactionFromName(Attacker).Civilization
 				end
 			end
@@ -198,13 +198,13 @@ function SetPlayerData(player, data, arg1, arg2)
 	elseif (data == "Name") then
 		if (GrandStrategy) then
 			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-				arg1 = GrandStrategyFaction
+				arg1 = GrandStrategyFaction.Name
 			end
 
 			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
-				if (GrandStrategyFaction == Attacker and Defender ~= "") then
+				if (GrandStrategyFaction.Name == Attacker and Defender ~= "") then
 					arg1 = Defender
-				elseif (GrandStrategyFaction == Defender and Attacker ~= "") then
+				elseif (GrandStrategyFaction.Name == Defender and Attacker ~= "") then
 					arg1 = Attacker
 				end
 			end
@@ -252,7 +252,7 @@ function SetPlayerData(player, data, arg1, arg2)
 	end
 	if (data == "Name") then
 		if (GrandStrategy and AttackingUnits ~= nil) then
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody) then
+			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 				for gsunit_key, gsunit_value in pairs(AttackingUnits) do
 					if (arg1 == Attacker) then
 						for i=1,AttackingUnits[gsunit_key] do

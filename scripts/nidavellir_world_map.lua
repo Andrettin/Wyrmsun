@@ -74,7 +74,10 @@ WorldMapProvinces = {
 			GnomishTownHall = 2,
 			GnomishBarracks = 2 -- has capability to train soldiers
 		},
-		Maps = {"Brown Hills"}
+		Maps = {"Brown Hills"},
+		Units = {
+			GnomishRecruit = 2 -- Pypo I and his envoy
+		}
 	},
 	CavernsOfChaincolt = {
 		Name = "Caverns of Chaincolt",
@@ -88,8 +91,10 @@ WorldMapProvinces = {
 		},
 		Maps = {"Caverns of Chaincolt", "Chaincolt Foothills"},
 		Units = {
-			DwarvenAxefighter = 10, -- Rugnur, Baglur, 4 Dwarven Guardsmen (5 if easy mode), Durstorn, Neglur, Glinar, Kuhnar, Theganli
-			DwarvenScout = 1 -- Noiraran
+--			DwarvenAxefighter = 5, -- Rugnur, 4 Dwarven Guardsmen (5 if easy mode)
+--			DwarvenSteelclad = 6, -- Baglur, Durstorn, Neglur, Glinar, Kuhnar, Theganli
+--			DwarvenScout = 1 -- Noiraran
+			DwarvenAxefighter = 4 -- 4 Dwarven Guardsmen (5 if easy mode)
 		}
 	},
 	CavernsOfFlame = {
@@ -137,7 +142,7 @@ WorldMapProvinces = {
 	},
 	HighPass = {
 		Name = "High Pass",
-		Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {40, 13}, {40, 14}, {41, 10}, {41, 11}, {41, 12}, {41, 13}, {41, 14}, {42, 11}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 10}, {48, 11}, {48, 12}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 11}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {49, 18}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {50, 18}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {51, 18}, {51, 19}, {51, 20}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {52, 18}, {52, 19}, {52, 20}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {53, 17}, {53, 18}, {53, 19}, {53, 20}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {54, 17}, {54, 18}, {54, 19}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {55, 17}, {55, 18}, {55, 19}, {56, 13}, {56, 14}, {56, 15}, {56, 16}, {56, 17}, {56, 18} },
+		Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {40, 13}, {40, 14}, {41, 10}, {41, 11}, {41, 12}, {41, 13}, {41, 14}, {42, 11}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {48, 10}, {48, 11}, {48, 12}, {49, 11} },
 		Owner = "",
 		SettlementLocation = {40, 12},
 		SettlementBuildings = {},
@@ -163,6 +168,14 @@ WorldMapProvinces = {
 		Tiles = { {42, 8}, {42, 9}, {42, 10}, {43, 4}, {43, 5}, {43, 7}, {43, 8}, {43, 9}, {43, 10}, {44, 1}, {44, 2}, {44, 3}, {44, 4}, {44, 5}, {44, 6}, {44, 7}, {44, 8}, {45, 1}, {45, 2}, {45, 3}, {45, 4}, {45, 5}, {45, 6}, {45, 7}, {45, 8}, {46, 1}, {46, 2}, {46, 3}, {46, 4}, {46, 5}, {46, 6}, {46, 7}, {46, 8}, {47, 1}, {47, 2}, {47, 3}, {47, 4}, {47, 5}, {47, 6}, {47, 7}, {47, 8}, {47, 9}, {48, 1}, {48, 2}, {48, 3}, {48, 4}, {48, 5}, {48, 6}, {48, 7}, {48, 8}, {48, 9}, {49, 1}, {49, 2}, {49, 3}, {49, 4}, {49, 5}, {49, 6}, {49, 7}, {49, 8}, {49, 9}, {49, 10}, {50, 1}, {50, 2}, {50, 3}, {50, 4}, {50, 5}, {50, 6}, {50, 7}, {50, 8}, {50, 9}, {50, 10}, {50, 11}, {51, 3}, {51, 4}, {51, 5}, {51, 6}, {51, 7}, {51, 8}, {51, 9}, {51, 10}, {51, 11}, {52, 4}, {52, 5}, {52, 6}, {52, 7}, {52, 8}, {52, 9}, {52, 10}, {52, 11}, {52, 12}, {53, 4}, {53, 5}, {53, 6}, {53, 7}, {53, 8}, {53, 9}, {53, 10}, {53, 11}, {53, 12}, {54, 6}, {54, 7}, {54, 8}, {54, 9}, {54, 10}, {54, 11}, {54, 12}, {55, 7}, {55, 8}, {55, 9}, {55, 10}, {55, 11}, {55, 12}, {56, 12} },
 		Owner = "",
 		SettlementLocation = {45, 5},
+		SettlementBuildings = {},
+		Maps = {"Random Map (Swamp)"}
+	},
+	Lyr = {
+		Name = "Lyr",
+		Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {49, 18}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {50, 18}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {51, 18}, {51, 19}, {51, 20}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {52, 18}, {52, 19}, {52, 20}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {53, 17}, {53, 18}, {53, 19}, {53, 20}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {54, 17}, {54, 18}, {54, 19}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {55, 17}, {55, 18}, {55, 19}, {56, 13}, {56, 14}, {56, 15}, {56, 16}, {56, 17}, {56, 18} },
+		Owner = "",
+		SettlementLocation = {52, 18},
 		SettlementBuildings = {},
 		Maps = {"Random Map (Swamp)"}
 	},
@@ -192,7 +205,7 @@ WorldMapProvinces = {
 		},
 		Maps = {"Random Map (Swamp)"},
 		Units = {
-			DwarvenAxefighter = 1 -- Glonoin
+			DwarvenSteelclad = 1 -- Glonoin
 		}
 	},
 	SouthernTunnels = {
@@ -286,7 +299,7 @@ Factions = {
 
 if (GrandStrategyYear >= 27) then
 	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
-	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
+--	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
 
@@ -308,6 +321,12 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
 	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenMeadHall = 2
 	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenWarHall = 2
+
+	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
+	WorldMapProvinces.Lyr.SettlementBuildings.DwarvenMeadHall = 2
+	WorldMapProvinces.Lyr.SettlementBuildings.DwarvenWarHall = 2
+	WorldMapProvinces.Lyr.Maps = nil
+	WorldMapProvinces.Lyr.Maps = {"Hall of Lyr"}
 end
 
 if (GrandStrategyYear >= 500) then

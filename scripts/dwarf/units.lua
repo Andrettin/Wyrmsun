@@ -613,10 +613,28 @@ GrandStrategyUnits["DwarvenAxefighter"] = {
 	Costs = {
 		Gold = 600
 	},
+	Upkeep = 25,
 	X = 0,
 	Y = 0,
 	RequiredBuildings = { "DwarvenWarHall" },
 	InterfaceState = "Barracks"
+}
+
+GrandStrategyUnits["DwarvenSteelclad"] = {
+	Name = GetUnitTypeName("unit-dwarven-steelclad") .. "s",
+	UnitType = "unit-dwarven-steelclad",
+	Icon = "dwarf/icons/dwarven_steelclad.png",
+	Civilization = "dwarf",
+	Type = "Veteran Infantry",
+	Costs = {
+		Gold = 600
+	},
+	Upkeep = 25,
+	X = 0,
+	Y = 0,
+	RequiredBuildings = { "DwarvenWarHall" },
+	InterfaceState = "",
+	AdvancesFrom = "DwarvenAxefighter"
 }
 
 GrandStrategyUnits["DwarvenScout"] = {
@@ -629,6 +647,7 @@ GrandStrategyUnits["DwarvenScout"] = {
 		Gold = 500,
 		Lumber = 50
 	},
+	Upkeep = 25,
 	X = 1,
 	Y = 0,
 	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill" },
@@ -645,6 +664,7 @@ GrandStrategyUnits["DwarvenBallista"] = {
 		Gold = 900,
 		Lumber = 300
 	},
+	Upkeep = 50,
 	X = 2,
 	Y = 0,
 	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenBlacksmith" },
@@ -661,6 +681,7 @@ GrandStrategyUnits["DwarvenGryphonRider"] = {
 		Gold = 1750,
 		Lumber = 750
 	},
+	Upkeep = 50,
 	X = 0,
 	Y = 1,
 	RequiredBuildings = { "DwarvenWarHall" },

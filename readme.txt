@@ -16,7 +16,7 @@ by Andre Novellino Gouvêa (Andrettin)
 
 The Stratagus engine, as well as all of the code, artwork, music and storylines included in Wyrmsun are distributed under the GPLv2 license. See the license.txt file for the text of the GPLv2.
 
-Wyrmsun uses a modified version of the Stratagus engine source code, and its source code can be found here:
+Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus
 
 For the source code of the Stratagus engine itself, see:
