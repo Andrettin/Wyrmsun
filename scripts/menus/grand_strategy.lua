@@ -70,6 +70,13 @@ function RunGrandStrategyGameSetupMenu()
 			InterfaceState = "Province"
 			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
+
+			-- initialize commodity variables
+			GrandStrategyCommodities = nil
+			GrandStrategyCommodities = {}
+			GrandStrategyCommodities["Lumber"] = {}
+			GrandStrategyCommodities.Lumber["Price"] = 100
+
 			-- add resource quantities to factions that don't have that set up
 			for key, value in pairs(Factions) do
 				if (Factions[key].Gold == nil) then
@@ -360,6 +367,18 @@ function EndTurn()
 		end
 	end
 
+	-- check whether offers or bids have been greater, and change the commodity's price accordingly (disabled for now since the trade system isn't robust enough yet to not make lumber become worthless over time)
+--	local remaining_wanted_trade_lumber = 0
+--	for key, value in pairs(Factions) do
+--		remaining_wanted_trade_lumber = remaining_wanted_trade_lumber + Factions[key].Trade.Lumber
+--	end
+--	
+--	if (remaining_wanted_trade_lumber > 0 and GrandStrategyCommodities.Lumber.Price > 1) then -- more offers than bids
+--		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price - 1
+--	elseif (remaining_wanted_trade_lumber < 0) then -- more bids than offers
+--		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price + 1
+--	end
+
 	for key, value in pairs(WorldMapProvinces) do
 		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
 	
@@ -402,6 +421,37 @@ function EndTurn()
 
 	for key, value in pairs(Factions) do
 		Factions[key].Gold = Factions[key].Gold - Factions[key].Upkeep
+	end
+
+	local disbanding_happened = false
+	-- disband units if gold is on the negative and upkeep is higher than income
+	for key, value in pairs(Factions) do
+		if (Factions[key].Gold < 0 and Factions[key].Upkeep > Factions[key].Income.Gold) then
+			disbanding_happened = true
+			local disband_quota = Factions[key].Upkeep - Factions[key].Income.Gold
+			for province_key, province_value in pairs(WorldMapProvinces) do
+				if (WorldMapProvinces[province_key].Owner == Factions[key].Name) then
+					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+						if (WorldMapProvinces[province_key].Units[gsunit_key] > 0) then
+							if (disband_quota > WorldMapProvinces[province_key].Units[gsunit_key] * GrandStrategyUnits[gsunit_key].Upkeep) then
+								disband_quota = disband_quota - WorldMapProvinces[province_key].Units[gsunit_key] * GrandStrategyUnits[gsunit_key].Upkeep
+								WorldMapProvinces[province_key].Units[gsunit_key] = 0
+							else
+								WorldMapProvinces[province_key].Units[gsunit_key] = WorldMapProvinces[province_key].Units[gsunit_key] - math.floor(disband_quota / GrandStrategyUnits[gsunit_key].Upkeep)
+								disband_quota = disband_quota - math.floor(disband_quota / GrandStrategyUnits[gsunit_key].Upkeep) * GrandStrategyUnits[gsunit_key].Upkeep
+							end
+						end
+					end
+				end
+				if (disband_quota == 0) then
+					break
+				end
+			end
+		end
+	end
+
+	if (disbanding_happened) then
+		CalculateFactionUpkeeps()
 	end
 
 	if (attack_happened) then
@@ -579,6 +629,7 @@ function AttackProvince(province, faction)
 						Factions[key].Diplomacy[defender_faction_key] = "Peace"
 						Factions[defender_faction_key].Diplomacy[key] = "Peace"
 					end
+					Factions[defender_faction_key].Trade.Lumber = 0 -- remove offers and bids from the eliminated faction
 				end
 				Attacker = ""
 				Defender = ""
@@ -893,11 +944,6 @@ function RunGrandStrategySaveMenu()
 			local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
 			table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
 
-			for key, value in pairs(WorldMapProvinces) do
-				WorldMapProvinces[key].BorderTiles = nil
-				WorldMapProvinces[key].BorderProvinces = nil
-			end
-
 			wyr.preferences.GrandStrategySaveGames[name] = {
 				SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 				SavedGrandStrategyYear = GrandStrategyYear,
@@ -905,11 +951,11 @@ function RunGrandStrategySaveMenu()
 				SavedWorldMapResources = WorldMapResources,
 				SavedWorldMapProvinces = WorldMapProvinces,
 				SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
-				SavedFactions = Factions
+				SavedFactions = Factions,
+				SavedGrandStrategyCommodities = GrandStrategyCommodities
 			}
 			SavePreferences()
 			CalculateTileProvinces()
-			CalculateProvinceBorderTiles()
     			menu:stop()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
@@ -952,8 +998,8 @@ function RunGrandStrategyLoadGameMenu()
 			WorldMapWaterProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
 			Factions = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
+			GrandStrategyCommodities = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
 			CalculateTileProvinces()
-			CalculateProvinceBorderTiles()
 
 			for key, value in pairs(WorldMapProvinces) do -- center map on a province of the loaded player's faction
 				if (WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
@@ -1735,7 +1781,7 @@ function DrawGrandStrategyInterface()
 
 				-- add trade bid/offer arrows
 				local b = AddGrandStrategyImageButton("", "", 112 - 2 - 24, 246, function()
-					if (GrandStrategyFaction.Gold >= math.abs((GrandStrategyFaction.Trade.Lumber - 100) * GetCommodityPrice("Lumber") / 100)) then
+					if (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade.Lumber - 100) * GetCommodityPrice("Lumber") / 100) then
 						GrandStrategyFaction.Trade.Lumber = GrandStrategyFaction.Trade.Lumber - 100
 					end
 					DrawGrandStrategyInterface()
@@ -1750,7 +1796,11 @@ function DrawGrandStrategyInterface()
 					b:setNormalImage(g_dlslider_n)
 					b:setPressedImage(g_dlslider_p)
 				end
-				b:setTooltip("Bid 100 Lumber")
+				if (GrandStrategyFaction.Trade.Lumber <= 0) then
+					b:setTooltip("Increase bid of Lumber by 100")
+				else
+					b:setTooltip("Decrease offer of Lumber by 100")
+				end
 
 				local b = AddGrandStrategyImageButton("", "", 112 + 2 + 46 - 20, 246, function()
 					if (GrandStrategyFaction.Commodities.Lumber >= GrandStrategyFaction.Trade.Lumber + 100) then
@@ -1768,7 +1818,11 @@ function DrawGrandStrategyInterface()
 					b:setNormalImage(g_drslider_n)
 					b:setPressedImage(g_drslider_p)
 				end
-				b:setTooltip("Offer 100 Lumber")
+				if (GrandStrategyFaction.Trade.Lumber >= 0) then
+					b:setTooltip("Increase offer of Lumber by 100")
+				else
+					b:setTooltip("Decrease bid of Lumber by 100")
+				end
 
 				AddGrandStrategyLabel("~<" .. GrandStrategyFaction.Trade.Lumber .. "~>", 112 + 24 - 12, 246 + 2, Fonts["game"], true, false)
 
@@ -2441,6 +2495,7 @@ function ClearGrandStrategyVariables()
 	AttackedProvince = nil
 	TileProvinces = nil
 	InterfaceState = nil
+	GrandStrategyCommodities = nil
 
 	OnScreenTiles = nil
 	OnScreenBorderWestTiles = nil
@@ -2784,7 +2839,7 @@ end
 
 function GetCommodityPrice(commodity)
 	if (commodity == "Lumber") then
-		return 100 -- price for every 100 lumber
+		return GrandStrategyCommodities.Lumber.Price -- price for every 100 lumber
 	end
 	return 0
 end
@@ -2794,8 +2849,8 @@ function PerformTrade(importer_faction, exporter_faction, commodity)
 		importer_faction.Commodities[commodity] = importer_faction.Commodities[commodity] + exporter_faction.Trade[commodity]
 		exporter_faction.Commodities[commodity] = exporter_faction.Commodities[commodity] - exporter_faction.Trade[commodity]
 
-		importer_faction.Gold = importer_faction.Gold - (exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
-		exporter_faction.Gold = exporter_faction.Gold + (exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
+		importer_faction.Gold = importer_faction.Gold - round(exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
+		exporter_faction.Gold = exporter_faction.Gold + round(exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
 
 		importer_faction.Trade[commodity] = importer_faction.Trade[commodity] + exporter_faction.Trade[commodity]
 		exporter_faction.Trade[commodity] = 0
@@ -2803,8 +2858,8 @@ function PerformTrade(importer_faction, exporter_faction, commodity)
 		importer_faction.Commodities[commodity] = importer_faction.Commodities[commodity] + math.abs(importer_faction.Trade[commodity])
 		exporter_faction.Commodities[commodity] = exporter_faction.Commodities[commodity] - math.abs(importer_faction.Trade[commodity])
 
-		importer_faction.Gold = importer_faction.Gold - (math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
-		exporter_faction.Gold = exporter_faction.Gold + (math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
+		importer_faction.Gold = importer_faction.Gold - round(math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
+		exporter_faction.Gold = exporter_faction.Gold + round(math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
 
 		exporter_faction.Trade[commodity] = exporter_faction.Trade[commodity] + importer_faction.Trade[commodity]
 		importer_faction.Trade[commodity] = 0
