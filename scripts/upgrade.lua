@@ -39,11 +39,11 @@ function DefineAllowNormalUnits(flags)
 		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
 		"upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
-		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
 		"unit-goblin-town-hall",
@@ -119,7 +119,7 @@ end
 function DefineAllowSpecialUnits(flags)
 	local units = {
 		"unit-critter", "unit-gryphon",
-		"unit-gold-mine", "unit-coal-mine",
+		"unit-gold-mine", "unit-coal-mine", "unit-wood-pile",
 		"unit-mushroom", "unit-mushroom-patch", "unit-flowers", "unit-large-flower",
 		"unit-fern", "unit-twigs", "unit-log",
 		"unit-bones", "unit-wyrm-skeleton",

@@ -45,6 +45,7 @@ local editor_types = {
    "unit-dwarven-miner",
    "unit-dwarven-axefighter",
    "unit-dwarven-steelclad",
+   "unit-dwarven-thane",
    "unit-dwarven-scout",
    "unit-dwarven-ballista",
    "unit-dwarven-gryphon-rider",
@@ -59,7 +60,9 @@ local editor_types = {
 
    "unit-hero-rugnur",
    "unit-hero-rugnur-steelclad",
+   "unit-hero-rugnur-thane",
    "unit-hero-baglur",
+   "unit-hero-baglur-thane",
    "unit-hero-thursagan",
    "unit-hero-durstorn",
 
@@ -87,6 +90,7 @@ local editor_types = {
 
    "unit-gold-mine",
    "unit-coal-mine",
+   "unit-wood-pile",
    "unit-gold-coins",
    "unit-gold-sack",
    "unit-gold-chest",

@@ -31,7 +31,7 @@ function EventTriggers()
 
 	Load("scripts/dwarf/events.lua")
 
-	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0 and GrandStrategy == false) then
+	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0 and (GrandStrategy == false or GrandStrategyEventMap)) then
 		Load("scripts/dwarf/scepter_of_fire_events.lua")
 		Load("scripts/gnome/events.lua")
 	end
@@ -313,66 +313,6 @@ function EventTriggers()
 		)
 	end
 	
-	-- The Founding of Knalga
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 1) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 5 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 20) then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			Event(
-				"The Founding of Knalga",
-				"Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a realm, the lordship of Knalga!",
-				player,
-				{"~!OK"},
-				{function(s)
-					SetPlayerData(player, "Name", "Knalga")
-				end}
-			)
-			return false
-		end
-	)
-
-	-- The Founding of Kal Kartha
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			if ((SyncRand(100) + 1) <= 1) then
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Shorbear Clan") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 5 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-mushroom-farm") >= 20) then
-						player = i
-						return true
-					end
-				end
-			end
-			return false
-		end,
-		function() 
-			Event(
-				"The Founding of Kal Kartha",
-				"Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a realm, the lordship of Kal Kartha!",
-				player,
-				{"~!OK"},
-				{function(s)
-					SetPlayerData(player, "Name", "Kal Kartha")
-				end}
-			)
-			return false
-		end
-	)
-
 	-- The Hall of Sigtun
 	AddTrigger(
 		function()
@@ -683,7 +623,7 @@ function Event(event_name, event_description, player, options, option_effects, e
 		end
 		l:setCaption(event_description)
 
-		if (event_icon == "dwarf/icons/rugnur.png" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
+		if (event_icon == "dwarf/icons/rugnur.png" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
 			event_icon = "dwarf/icons/rugnur_older.png"
 		end
 
@@ -718,7 +658,8 @@ function Event(event_name, event_description, player, options, option_effects, e
 		end
 
 		menu:run(false)
-	else -- AIs choose a random option
-		option_effects[SyncRand(table.getn(option_effects)) + 1]()
+	else -- AIs always choose the first option
+--		option_effects[SyncRand(table.getn(option_effects)) + 1]()
+		option_effects[1]()
 	end
 end

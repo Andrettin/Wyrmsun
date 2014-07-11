@@ -556,10 +556,10 @@ while (Count > 0) do
 					while (hero_count > 0) do
 						RandomNumber = SyncRand(100)
 						if (not IsNetworkGame()) then
-							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur") or 0 ~= GetThisPlayer())) then
+							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur") or 0 ~= GetThisPlayer())) then
 								unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
 								hero_count = hero_count - 1
-							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-baglur") or 0 ~= GetThisPlayer())) then
+							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-baglur") or 0 ~= GetThisPlayer())) then
 								unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
 								hero_count = hero_count - 1
 							elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan") or 0 ~= GetThisPlayer())) then
@@ -573,10 +573,10 @@ while (Count > 0) do
 								hero_count = hero_count - 1
 							end
 						else
-							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1) then
+							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
 								unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
 								hero_count = hero_count - 1
-							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1) then
+							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
 								unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
 								hero_count = hero_count - 1
 							elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
@@ -617,10 +617,10 @@ while (Count > 0) do
 					local hero_count = 1
 					while (hero_count > 0) do
 						RandomNumber = SyncRand(100)
-						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) < 1 and GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) < 1) then
+						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
 							unit = CreateUnit("unit-hero-rugnur", 1, {RandomX, RandomY})
 							hero_count = hero_count - 1
-						elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) < 1) then
+						elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
 							unit = CreateUnit("unit-hero-baglur", 1, {RandomX, RandomY})
 							hero_count = hero_count - 1
 						elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then

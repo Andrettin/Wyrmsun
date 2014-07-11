@@ -1,12 +1,6 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
-	DefinePlayerTypes("person","computer","neutral","rescue-passive")
-elseif (Attacker == GrandStrategyFaction.Name) then
-	DefinePlayerTypes("person","computer","nobody","nobody")
-else
-	DefinePlayerTypes("computer","person","nobody","nobody")
-end
+DefinePlayerTypes("person","computer","neutral","rescue-passive")
 PresentMap("Northern Wastelands", 1, 56, 71, 1)
 MapWorld = "Nidavellir"
 MapRequiredQuest = "Closing the Gates"

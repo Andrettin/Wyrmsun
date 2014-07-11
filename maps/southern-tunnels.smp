@@ -1,0 +1,7 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "nobody", "nobody", "person")
+PresentMap("Southern Tunnels", 2, 84, 64, 1)
+MapWorld = "Nidavellir"
+MapAttacker = 0
+MapDefender = 3

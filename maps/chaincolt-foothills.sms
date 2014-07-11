@@ -82,88 +82,135 @@ ApplyRawTiles()
 
 -- Player Setup
 SetStartView(0, 47, 10)
+SetPlayerData(0, "RaceName", "dwarf")
+SetPlayerData(0, "Name", "Norlund Clan")
 SetPlayerData(0, "Resources", "gold", 1000)
 SetPlayerData(0, "Resources", "wood", 500)
 SetPlayerData(0, "Resources", "oil", 0)
-SetPlayerData(0, "RaceName", "dwarf")
 SetAiType(0, "land-attack")
 SetStartView(1, 7, 59)
+SetPlayerData(1, "RaceName", "gnome")
+SetPlayerData(1, "Name", "Untersberg")
 SetPlayerData(1, "Resources", "gold", 1000)
 SetPlayerData(1, "Resources", "wood", 500)
 SetPlayerData(1, "Resources", "oil", 0)
-SetPlayerData(1, "RaceName", "gnome")
 SetAiType(1, "land-attack")
 SetStartView(2, 40, 61)
+SetPlayerData(2, "RaceName", "dwarf")
+SetPlayerData(2, "Name", "Shinsplitter Clan")
 SetPlayerData(2, "Resources", "gold", 500)
 SetPlayerData(2, "Resources", "wood", 250)
 SetPlayerData(2, "Resources", "oil", 0)
-SetPlayerData(2, "RaceName", "dwarf")
 SetAiType(2, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
-if (not IsNetworkGame()) then
-	local RandomNumber = 0
-	local DwarvenFactions = GetCivilizationFactions("dwarf")
+if (GrandStrategy == false or GrandStrategyEventMap) then
+	SetDiplomacy(0, "neutral", 1)
+	SetDiplomacy(0, "neutral", 2)
+	SetDiplomacy(1, "neutral", 0)
+	SetDiplomacy(1, "neutral", 2)
+	SetDiplomacy(2, "neutral", 0)
+	SetDiplomacy(2, "neutral", 1)
+end
 
-	RemoveElementFromArray(DwarvenFactions, "Shorbear Clan")
-	RemoveElementFromArray(DwarvenFactions, PlayerFaction)
+if (GrandStrategy == false) then
+	-- Gold Mines
+	unit = CreateUnit("unit-gold-mine", 15, {35, 8})
+	SetResourcesHeld(unit, 12500)
+	unit = CreateUnit("unit-gold-mine", 15, {43, 54})
+	SetResourcesHeld(unit, 25000)
+	unit = CreateUnit("unit-gold-mine", 15, {4, 52})
+	SetResourcesHeld(unit, 6250)
 
-	for i=0,2 do
-		if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
-			if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
-				if (PlayerFaction == "" or i ~= GetThisPlayer()) then
-					RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
-					SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
-					RemoveElementFromArray(DwarvenFactions, DwarvenFactions[RandomNumber])
-				end
+	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
+	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
+
+	-- Rugnur
+	if (GetPlayerData(0, "Name") ~= "Shorbear Clan") then -- Rugnur cannot belong to the Shorbear Clan
+		unit = CreateUnit("unit-hero-rugnur", 0, {47, 10})
+	end
+
+	-- Gnomish outpost
+	unit = CreateUnit("unit-gnomish-town-hall", 1, {7, 59})
+	unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
+	if (GetPlayerData(1, "RaceName") == "gnome") then -- only create the gnomish king if player 1 actually are gnomes
+		-- Gnomish king
+		unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
+		IncreaseUnitLevel(unit, 2, true)
+	end
+
+	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
+
+	-- Bandits
+	unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 61})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {45, 67})
+	unit = CreateUnit("unit-dwarven-steelclad", 2, {42, 60})
+	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+
+	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+elseif (GrandStrategyEventMap) then
+	SetAiType(0, "grand-strategy-battle")
+	SetAiType(1, "grand-strategy-battle")
+	SetAiType(2, "grand-strategy-battle")
+
+	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
+
+	local units_to_be_created = {}
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		units_to_be_created[gsunit_key] = 0
+		units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] / 3)
+		WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] - units_to_be_created[gsunit_key]
+	end
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (units_to_be_created[gsunit_key] > 0) then
+			for i=1,units_to_be_created[gsunit_key] do
+				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			end
 		end
 	end
 
-	AssignPlayerFactions()
-end
-
-if (GrandStrategy == false) then
-	SetDiplomacy(0, "neutral", 1)
-	SetDiplomacy(1, "neutral", 0)
-end
-
--- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {35, 8})
-SetResourcesHeld(unit, 12500)
-unit = CreateUnit("unit-gold-mine", 15, {43, 54})
-SetResourcesHeld(unit, 25000)
-unit = CreateUnit("unit-gold-mine", 15, {4, 52})
-SetResourcesHeld(unit, 6250)
-
-unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
-unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
-
--- Rugnur
-if (GetPlayerData(0, "Name") ~= "Shorbear Clan") then -- Rugnur cannot belong to the Shorbear Clan
+	-- Rugnur
 	unit = CreateUnit("unit-hero-rugnur", 0, {47, 10})
-end
 
--- Gnomish outpost
-unit = CreateUnit("unit-gnomish-town-hall", 1, {7, 59})
-unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
-if (GetPlayerData(1, "RaceName") == "gnome") then -- only create the gnomish king if player 1 actually are gnomes
+	-- Gnomish outpost
+--	unit = CreateUnit("unit-gnomish-farm", 1, {8, 60})
+	unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
+
 	-- Gnomish king
-	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
-	IncreaseUnitLevel(unit, 2, true)
+--	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
+--	IncreaseUnitLevel(unit, 2, true)
+
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		units_to_be_created[gsunit_key] = 0
+		units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.BrownHills.Units[gsunit_key] / 5)
+		WorldMapProvinces.BrownHills.Units[gsunit_key] = WorldMapProvinces.BrownHills.Units[gsunit_key] - units_to_be_created[gsunit_key]
+	end
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (units_to_be_created[gsunit_key] > 0) then
+			for i=1,units_to_be_created[gsunit_key] do
+				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+			end
+		end
+	end
+
+	-- Shinsplitter Clan
+
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		units_to_be_created[gsunit_key] = 0
+		units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.SouthernTunnels.Units[gsunit_key] / 3)
+		WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] - units_to_be_created[gsunit_key]
+	end
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (units_to_be_created[gsunit_key] > 0) then
+			for i=1,units_to_be_created[gsunit_key] do
+				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+			end
+		end
+	end
 end
-
-unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
-
--- Bandits
-unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 61})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {45, 67})
-unit = CreateUnit("unit-dwarven-steelclad", 2, {42, 60})
-unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
-unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
-
-unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 
 PlayMusic("music/knolls.ogg")
 wyrmsun.playlist = { "music/loyalists.ogg", "music/breaking_the_chains.ogg" }

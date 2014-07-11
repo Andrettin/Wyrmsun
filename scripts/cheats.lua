@@ -109,7 +109,7 @@ function HandleCheats(str)
     end
 
   elseif (str == "hold off the goblin hordes") then
-	if (GrandStrategy) then
+	if (GrandStrategy and GrandStrategyEventMap == false) then
 		-- set the new unit quantity to the surviving units of the victorious side
 		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 			AttackingUnits[gsunit_key] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
@@ -132,7 +132,7 @@ function HandleCheats(str)
     ActionVictory()
 
   elseif (str == "ragnarok") then
-	if (GrandStrategy) then
+	if (GrandStrategy and GrandStrategyEventMap == false) then
 		local victorious_player = ""
 		if (Attacker == GrandStrategyFaction.Name) then
 			victorious_player = Defender
@@ -183,7 +183,8 @@ function HandleCheats(str)
 		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-scout",
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
 		"upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",

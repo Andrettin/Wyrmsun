@@ -62,7 +62,8 @@ local end_loop_funcs = {
 }
 
 local land_funcs = {
-  function() return AiSleep(AiGetSleepCycles()) end,
+--  function() return AiSleep(AiGetSleepCycles()) end,
+  function() return AiSleep(100) end, -- 100 cycles, reasonable amount of time before the AI begins attacking - also important for scenarios, so the AI doesn't attack right away, allowing for diplomacy to be set at a dialogue in the beginning of the scenario
 --  function() return AiNeed(AiCityCenter()) end,
 --  function() return AiSet(AiWorker(), 1) end,
 --  function() return AiWait(AiCityCenter()) end,

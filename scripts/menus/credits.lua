@@ -83,6 +83,7 @@ function RunShowCreditsMenu()
 	"  Timothy Pinkham (TimothyP)",
 	"Maps",
 	"  David White (Sirp)",
+	"  Eric S. Raymond (ESR)", -- Northern Rebirth maps and scenarios
 	"  John Ericson",
 	"  Joseph Simmons (turin)",
 	"  Kyran Jackson",
@@ -92,6 +93,7 @@ function RunShowCreditsMenu()
 	"  Miguel Farah F.",
 	"  Paolo Sammicheli",
 	"  Rob Best",
+	"  Taurus", -- Northern Rebirth maps and scenarios
 	"Events and Quests",
 	"  Andre Novellino Gouvea (Andrettin)",
 	"  Asa Swain",

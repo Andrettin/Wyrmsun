@@ -293,10 +293,11 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	-- create initial rock seeds
 	Count = rock_seed_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < rock_seed_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == base_tile_type) then
@@ -327,11 +328,14 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
+
+	WhileCount = 0
 
 	-- expand rocks
 	Count = rock_expansions_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < rock_expansions_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Rock") then
@@ -358,6 +362,7 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 
 	-- convert buildable land tiles adjacent to rock tiles into rough land
@@ -375,10 +380,11 @@ function GenerateWater(water_seed_number, water_expansions_number)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	-- create initial water seeds
 	Count = water_seed_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < water_seed_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
@@ -409,11 +415,14 @@ function GenerateWater(water_seed_number, water_expansions_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
+
+	WhileCount = 0
 
 	-- expand water
 	Count = water_expansions_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < water_expansions_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Water") then
@@ -440,6 +449,7 @@ function GenerateWater(water_seed_number, water_expansions_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 
 	-- convert buildable land tiles adjacent to water tiles into rough land
@@ -457,10 +467,11 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	-- create initial rough land seeds
 	Count = rough_land_seed_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < rough_land_seed_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
@@ -491,11 +502,14 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
+
+	WhileCount = 0
 
 	-- expand rough land
 	Count = rough_land_expansions_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < rough_land_expansions_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Rough") then
@@ -522,6 +536,7 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -530,10 +545,11 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	-- create initial tree seeds
 	Count = tree_seed_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < tree_seed_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Land") then
@@ -564,11 +580,14 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
+
+	WhileCount = 0
 
 	-- expand trees
 	Count = tree_expansions_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < tree_expansions_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Tree") then
@@ -595,6 +614,7 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -902,7 +922,7 @@ function CreateDecorations()
 	local Count = 0
 	local RandomNumber = 0
 
-	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-mushroom-patch", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256})
+	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
 	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
 		while (Count > 0) do
@@ -1082,7 +1102,9 @@ function GenerateRandomMap(width, height, symmetric)
 
 	CreateDecorations()
 	
-	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+	if (GrandStrategy == false) then
+		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+	end
 
 	if (wyrmsun.tileset == "forest") then
 		CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
@@ -1138,6 +1160,7 @@ end
 
 function ApplyRawTiles()
 	local RandomNumber = 0
+
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
 			local solid_slot = 0
@@ -1512,7 +1535,7 @@ function FindAppropriatePlayerSpawnPoint()
 			local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 			local close_gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
-			if (unit_quantity < 1 and gold_mine_quantity >= 1 and close_gold_mine_quantity < 1) then
+			if (unit_quantity < 1 and (gold_mine_quantity >= 1 or GrandStrategy) and close_gold_mine_quantity < 1) then
 				location_found = true
 			end
 		end
@@ -1593,6 +1616,21 @@ function GetTileTerrainFlagCount(flag)
 end
 
 function AdjustRawMapTileIrregularities()
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			if (RawTile(x, y) == "Mush") then
+				SetRawTile(x, y, "Land")
+				if (SyncRand(4) <= 2) then
+					unit = CreateUnit("unit-mushroom-patch", 15, {x, y})
+				end
+			elseif (RawTile(x, y) == "Tree" and wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
+				SetRawTile(x, y, "Land")
+				unit = CreateUnit("unit-wood-pile", 15, {x, y})
+				SetResourcesHeld(unit, 100)
+			end
+		end
+	end
+
 	local Count = 4
 	while (Count > 0) do
 		for x=0,(Map.Info.MapWidth - 1) do
@@ -2052,6 +2090,9 @@ function ConvertHexTiles()
 				SetRawTile((x * 2) + 1, (y * 2) - 1, HexTiles[y+1][x+1])
 				SetRawTile(x * 2, y * 2, HexTiles[y+1][x+1])
 				SetRawTile((x * 2) + 1, y * 2, HexTiles[y+1][x+1])
+
+				SetRawTile(x * 2, (y * 2) + 1, HexTiles[y+1][x+1]) -- this is here so the last tiles of indented converted hexes don't end up being blank
+				SetRawTile((x * 2) + 1, (y * 2) + 1, HexTiles[y+1][x+1])
 			end
 		end
 		if (hex_indent == false) then

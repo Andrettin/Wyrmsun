@@ -52,29 +52,29 @@ end
 
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"PiercingDamage", 2},
-	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"}, {"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 
 DefineModifier("upgrade-dwarven-great-axe",
 	{"PiercingDamage", 2},
-	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"}, {"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 
 DefineModifier("upgrade-dwarven-shield-1",
 	{"Armor", 2},
-	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"}, {"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 
 DefineModifier("upgrade-dwarven-shield-2",
 	{"Armor", 2},
-	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-baglur"},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
+	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"}, {"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
 	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
 )
 
@@ -107,7 +107,16 @@ DefineDependency("unit-dwarven-ballista",
 DefineDependency("unit-dwarven-steelclad",
 	{"unit-dwarven-blacksmith"})
 
+DefineDependency("unit-dwarven-thane",
+	{"unit-dwarven-blacksmith"})
+
 DefineDependency("unit-hero-rugnur-steelclad",
+	{"unit-dwarven-blacksmith"})
+
+DefineDependency("unit-hero-rugnur-thane",
+	{"unit-dwarven-blacksmith"})
+
+DefineDependency("unit-hero-baglur-thane",
 	{"unit-dwarven-blacksmith"})
 
 DefineDependency("unit-hero-rugnur",

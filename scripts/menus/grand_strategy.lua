@@ -29,6 +29,8 @@
 
 Attacker = ""
 Defender = ""
+GrandStrategyEventMap = false
+EventFaction = nil
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -144,6 +146,14 @@ function RunGrandStrategyGameSetupMenu()
 						WorldMapProvinces[key].AttackingUnits[gsunit_key] = 0
 					end
 				end
+				if (WorldMapProvinces[key].Heroes == nil) then
+					WorldMapProvinces[key]["Heroes"] = {}
+				end
+				for gsunit_key, gsunit_value in pairs(GrandStrategyHeroes) do
+					if (WorldMapProvinces[key].Heroes[gsunit_key] == nil) then
+						WorldMapProvinces[key].Heroes[gsunit_key] = false
+					end
+				end
 				if (WorldMapProvinces[key].AttackedBy == nil) then
 					WorldMapProvinces[key]["AttackedBy"] = ""
 				end
@@ -184,6 +194,12 @@ function RunGrandStrategyGameSetupMenu()
 				end
 				if (GrandStrategyUnits[gsunit_key].AdvancesFrom == nil) then
 					GrandStrategyUnits[gsunit_key]["AdvancesFrom"] = ""
+				end
+				if (GrandStrategyUnits[gsunit_key].X == nil) then
+					GrandStrategyUnits[gsunit_key].X = 0
+				end
+				if (GrandStrategyUnits[gsunit_key].Y == nil) then
+					GrandStrategyUnits[gsunit_key].Y = 0
 				end
 			end
 			for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
@@ -228,7 +244,7 @@ function RunGrandStrategyGameSetupMenu()
 
 			CalculateFactionIncomes()
 			CalculateFactionUpkeeps()
-
+			
 			RunGrandStrategyGame()
 			menu:stop()
 		end)
@@ -348,6 +364,9 @@ function EndTurn()
 	end
 
 	-- collect resources and perform trade
+	local player_trade_preferences = {}
+	player_trade_preferences["Lumber"] = GrandStrategyFaction.Trade.Lumber
+
 	for key, value in pairs(Factions) do
 		Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
 		Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
@@ -366,6 +385,16 @@ function EndTurn()
 			end
 		end
 	end
+	
+	-- keep human player's trading preferences
+	if (player_trade_preferences.Lumber > 0 and GrandStrategyFaction.Commodities.Lumber < player_trade_preferences.Lumber) then
+		player_trade_preferences.Lumber = GrandStrategyFaction.Commodities.Lumber
+	elseif (player_trade_preferences.Lumber < 0 and GrandStrategyFaction.Gold < 0) then
+		player_trade_preferences.Lumber = 0
+	elseif (player_trade_preferences.Lumber < 0 and GrandStrategyFaction.Gold < player_trade_preferences.Lumber * -1 * GetCommodityPrice("Lumber") / 100) then
+		player_trade_preferences.Lumber = math.floor(GrandStrategyFaction.Gold / GetCommodityPrice("Lumber") * 100) * -1
+	end
+	GrandStrategyFaction.Trade.Lumber = player_trade_preferences.Lumber
 
 	-- check whether offers or bids have been greater, and change the commodity's price accordingly (disabled for now since the trade system isn't robust enough yet to not make lumber become worthless over time)
 --	local remaining_wanted_trade_lumber = 0
@@ -454,12 +483,19 @@ function EndTurn()
 		CalculateFactionUpkeeps()
 	end
 
-	if (attack_happened) then
-		DrawMinimap()
-	end
+	DoEvents()
 
-	DrawGrandStrategyInterface()
-	DrawOnScreenTiles()
+--	if (math.fmod(GrandStrategyYear, 10) == 0) then -- every ten turns, end and restart the menu, to increase performance
+--		GrandStrategyMenu:stop();
+--		RunGrandStrategyGame()
+--	else
+		if (attack_happened) then
+			DrawMinimap()
+		end
+
+		DrawGrandStrategyInterface()
+		DrawOnScreenTiles()
+--	end
 
 	-- AI diplomacy
 	for key, value in pairs(Factions) do
@@ -558,6 +594,8 @@ function AttackProvince(province, faction)
 
 		-- run a map if it shares a name with the randomly chosen map for the province
 		for i=1,table.getn(maps) do
+			MapAttacker = nil
+			MapDefender = nil
 			GetMapInfo(maps[i])
 			if (mapinfo.description == province_map) then
 				Attacker = faction
@@ -574,17 +612,33 @@ function AttackProvince(province, faction)
 				local victorious_player = ""
 
 				if (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
-					local person_player_found = false
-					local computer_player_found = false
-					for i=1,mapinfo.nplayers do
-						if (mapinfo.playertypes[i] == "person" and person_player_found == false) then
-							person_player_found = true
-						elseif (mapinfo.playertypes[i] == "person" and person_player_found == true and computer_player_found == false) then
-							computer_player_found = true
-						elseif (mapinfo.playertypes[i] == "computer" and computer_player_found == false) then
-							computer_player_found = true
-						elseif (mapinfo.playertypes[i] == "person" or mapinfo.playertypes[i] == "computer") then
-							GameSettings.Presets[i-1].Type = PlayerNobody
+					if (MapAttacker ~= nil and MapDefender ~= nil) then
+						for i=1,mapinfo.nplayers do
+							if (i == MapAttacker + 1) then
+								if (Defender == GrandStrategyFaction.Name) then
+									GameSettings.Presets[i-1].Type = PlayerComputer
+								end
+							elseif (i == MapDefender + 1) then
+								if (Attacker == GrandStrategyFaction.Name) then
+									GameSettings.Presets[i-1].Type = PlayerComputer
+								end
+							else
+								GameSettings.Presets[i-1].Type = PlayerNobody
+							end
+						end
+					else
+						local person_player_found = false
+						local computer_player_found = false
+						for i=1,mapinfo.nplayers do
+							if (mapinfo.playertypes[i] == "person" and person_player_found == false) then
+								person_player_found = true
+							elseif (mapinfo.playertypes[i] == "person" and person_player_found == true and computer_player_found == false) then
+								computer_player_found = true
+							elseif (mapinfo.playertypes[i] == "computer" and computer_player_found == false) then
+								computer_player_found = true
+							elseif (mapinfo.playertypes[i] == "person" or mapinfo.playertypes[i] == "computer") then
+								GameSettings.Presets[i-1].Type = PlayerNobody
+							end
 						end
 					end
 					RunMap(maps[i])
@@ -668,21 +722,30 @@ function CalculateProvinceBorderTiles()
 		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
+				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
+				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
+				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			end
+
+			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name)
 				end
-			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
-				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			end
+			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name)
 				end
-			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
-				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			end
+			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name)
 				end
-			elseif (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
-				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
+			end
+			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)
 				end
@@ -756,7 +819,7 @@ function CalculateFactionUpkeeps()
 		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
 	
 		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do			
-			if (province_owner ~= nil) then -- pay upkeep for military units
+			if (province_owner ~= nil and GrandStrategyUnits[gsunit_key].Civilization == province_owner.Civilization) then -- pay upkeep for military units
 				province_owner.Upkeep = province_owner.Upkeep + WorldMapProvinces[key].Units[gsunit_key] * GrandStrategyUnits[gsunit_key].Upkeep
 			end
 		end
@@ -782,6 +845,15 @@ function GetFactionFromName(faction)
 	for key, value in pairs(Factions) do
 		if (Factions[key].Name == faction) then
 			return Factions[key]
+		end
+	end
+	return nil
+end
+
+function GetProvinceFromName(province_name)
+	for key, value in pairs(WorldMapProvinces) do
+		if (WorldMapProvinces[key].Name == province_name) then
+			return WorldMapProvinces[key]
 		end
 	end
 	return nil
@@ -952,10 +1024,10 @@ function RunGrandStrategySaveMenu()
 				SavedWorldMapProvinces = WorldMapProvinces,
 				SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
 				SavedFactions = Factions,
-				SavedGrandStrategyCommodities = GrandStrategyCommodities
+				SavedGrandStrategyCommodities = GrandStrategyCommodities,
+				SavedGrandStrategyEvents = GrandStrategyEvents
 			}
 			SavePreferences()
-			CalculateTileProvinces()
     			menu:stop()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
@@ -999,6 +1071,7 @@ function RunGrandStrategyLoadGameMenu()
 			Factions = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
 			GrandStrategyCommodities = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
+			GrandStrategyEvents = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyEvents
 			CalculateTileProvinces()
 
 			for key, value in pairs(WorldMapProvinces) do -- center map on a province of the loaded player's faction
@@ -1335,7 +1408,7 @@ function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
 	
 	local building_function_tooltip = ""
 	if (GrandStrategyBuildings[grand_strategy_building_key].Type == "Town Hall") then
---		building_function_tooltip = " (allows the harvesting of the province's resources)"
+		building_function_tooltip = " (allows trading resources for gold)"
 	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Barracks") then
 		building_function_tooltip = " (recruits units)"
 	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Lumber Mill") then
@@ -1700,7 +1773,7 @@ function DrawGrandStrategyInterface()
 						veterans = SelectedProvince.Units[veteran_unit_type_key]
 					end
 
-					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or (SelectedProvince.Units[gsunit_key] + veterans > 0 and GrandStrategyUnits[gsunit_key].InterfaceState ~= "")) then
+					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or (SelectedProvince.Units[gsunit_key] + veterans > 0 and GrandStrategyUnits[gsunit_key].InterfaceState ~= "" and GrandStrategyUnits[gsunit_key].Civilization == GrandStrategyFaction.Civilization)) then
 						local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
 						local icon_offset_y = 340 + (GrandStrategyUnits[gsunit_key].Y * (47 + 19 + 4))
 
@@ -2284,7 +2357,7 @@ function AIDoDiplomacy(ai_faction)
 			for second_key, second_value in pairs(WorldMapProvinces) do
 				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
 					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 3 / 2) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+						if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 9 / 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 225% or greater of that of the province to be attacked
 							DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 						end
 					end
@@ -2480,6 +2553,7 @@ end
 
 function ClearGrandStrategyVariables()
 	GrandStrategy = false
+	GrandStrategyEventMap = false	
 	WorldMapOffsetX = nil
 	WorldMapOffsetY = nil
 	GrandStrategyYear = nil
@@ -2496,6 +2570,8 @@ function ClearGrandStrategyVariables()
 	TileProvinces = nil
 	InterfaceState = nil
 	GrandStrategyCommodities = nil
+	GrandStrategyEvents = nil
+	EventFaction = nil
 
 	OnScreenTiles = nil
 	OnScreenBorderWestTiles = nil
@@ -2784,12 +2860,50 @@ function WarGrandStrategyGameMenu(background)
 	return menu
 end
 
-function GrandStrategyEvent(event_name, event_description, faction, options, option_effects, event_icon, event_image)
-	if (faction == GrandStrategyFaction.Name) then
+function CanTriggerEvent(faction, event)
+	if (event.TriggeredOnly ~= nil and event.TriggeredOnly == true) then
+		return false
+	end
+	
+	if (event.Civilization ~= nil and event.Civilization ~= faction.Civilization) then
+		return false
+	end
+	
+	if (event.Faction ~= nil and Factions[event.Faction] ~= faction) then
+		return false
+	end
+	
+	if (event.FactionType ~= nil and event.FactionType ~= faction.Type) then
+		return false
+	end
+	
+	if (event.Provinces ~= nil) then
+		for key, value in pairs(WorldMapProvinces) do
+			if (event.Provinces[key] ~= nil and (WorldMapProvinces[key].Owner == faction.Name) ~= event.Provinces[key]) then
+				return false
+			end
+		end
+	end
+	
+	if (event.Provinces ~= nil and event.Heroes ~= nil) then
+		for key, value in pairs(WorldMapProvinces) do
+			for gsunit_key, gsunit_value in pairs(GrandStrategyHeroes) do
+				if (event.Provinces[key] ~= nil and event.Heroes[gsunit_key] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and WorldMapProvinces[key].Heroes[gsunit_key] ~= event.Heroes[gsunit_key]) then
+					return false
+				end
+			end
+		end
+	end
+
+	return true
+end
+
+function GrandStrategyEvent(faction, event)
+	if (faction == GrandStrategyFaction) then
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
 
-		menu:addLabel(event_name, 176, 11)
+		menu:addLabel(event.Name, 176, 11)
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
@@ -2800,7 +2914,7 @@ function GrandStrategyEvent(event_name, event_description, faction, options, opt
 		else
 			menu:add(l, 14, 112)
 		end
-		l:setCaption(event_description)
+		l:setCaption(event.Description)
 
 		if (event_icon ~= nil) then
 			event_icon = CGraphic:New(event_icon)
@@ -2816,24 +2930,32 @@ function GrandStrategyEvent(event_name, event_description, faction, options, opt
 			menu:add(b, 0, 0)
 		end
 
-		for i=1,table.getn(options) do
+		for i=1,table.getn(event.Options) do
 			local option_hotkey = ""		
-			if (string.find(options[i], "~!") ~= nil) then
-				option_hotkey = string.sub(string.match(options[i], "~!%a"), 3)
+			if (string.find(event.Options[i], "~!") ~= nil) then
+				option_hotkey = string.sub(string.match(event.Options[i], "~!%a"), 3)
 				option_hotkey = string.lower(option_hotkey)
 			end
 
-			menu:addFullButton(options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
+			menu:addFullButton(event.Options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event.Options) - (i - 1)),
 				function(s)
 					menu:stop()
-					option_effects[i]()
+					event.OptionEffects[i]()
 				end
 			)
 		end
 
 		menu:run()
 	else -- AIs choose a random option
-		option_effects[SyncRand(table.getn(option_effects)) + 1]()
+		event.OptionEffects[SyncRand(table.getn(event.OptionEffects)) + 1]()
+	end
+	
+	if (event.Persistent == nil or event.Persistent == false) then
+		for event_key, event_value in pairs(GrandStrategyEvents) do
+			if (GrandStrategyEvents[event_key].Name == event.Name) then
+				GrandStrategyEvents[event_key] = nil
+			end
+		end
 	end
 end
 
@@ -2864,4 +2986,49 @@ function PerformTrade(importer_faction, exporter_faction, commodity)
 		exporter_faction.Trade[commodity] = exporter_faction.Trade[commodity] + importer_faction.Trade[commodity]
 		importer_faction.Trade[commodity] = 0
 	end
+end
+
+function DoEvents()
+	-- process events
+	for key, value in pairs(Factions) do
+		for event_key, event_value in pairs(GrandStrategyEvents) do
+			if (CanTriggerEvent(Factions[key], GrandStrategyEvents[event_key])) then
+				EventFaction = Factions[key]
+				GrandStrategyEvent(Factions[key], GrandStrategyEvents[event_key])
+				break -- only one event per faction per turn
+			end
+		end
+	end
+end
+
+function FormFaction(old_faction, new_faction)
+	local old_faction_key = GetFactionKeyFromName(old_faction.Name)	
+	local new_faction_key = GetFactionKeyFromName(new_faction.Name)	
+
+	for key, value in pairs(WorldMapProvinces) do
+		if (WorldMapProvinces[key].Owner == old_faction.Name) then
+			AcquireProvince(WorldMapProvinces[key], new_faction.Name)
+		end
+	end
+	
+	new_faction.Gold = old_faction.Gold
+	new_faction.Commodities = old_faction.Commodities
+	new_faction.Technologies = old_faction.Technologies
+	new_faction.Trade = old_faction.Trade
+
+	for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
+		Factions[key].Diplomacy[new_faction_key] = Factions[key].Diplomacy[old_faction_key]
+		Factions[new_faction_key].Diplomacy[key] = Factions[old_faction_key].Diplomacy[key]
+		
+		Factions[key].Diplomacy[old_faction_key] = "Peace"
+		Factions[old_faction_key].Diplomacy[key] = "Peace"
+	end
+
+	if (GrandStrategyFaction == old_faction) then
+		GrandStrategyFaction = new_faction
+	end
+
+	DrawMinimap()
+	DrawGrandStrategyInterface()
+	DrawOnScreenTiles()
 end

@@ -1,15 +1,10 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
-	DefinePlayerTypes("person","person","computer")
-elseif (Attacker == GrandStrategyFaction.Name) then
-	DefinePlayerTypes("computer","person","nobody")
-else
-	DefinePlayerTypes("person","computer","nobody")
-end
+DefinePlayerTypes("person","person","computer")
 PresentMap("Caverns of Chaincolt", 2, 56, 66, 1)
 MapWorld = "Nidavellir"
 MapRequiredQuest = "A Bargain is Struck"
 MapSiteType = "Dwarven Fortified Outpost"
 WorldMapPosition = {4, 1}
-
+MapAttacker = 1
+MapDefender = 0

@@ -130,8 +130,12 @@ end
 function CreateUnit(unittype, player, pos)
 
   -- if Rugnur has a persistent level of 2 or higher, create him as his older version already
-  if (unittype == "unit-hero-rugnur" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
+  if ((unittype == "unit-hero-rugnur" or unittype == "unit-hero-rugnur-steelclad")and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
+	unittype = "unit-hero-rugnur-thane"
+  elseif (unittype == "unit-hero-rugnur" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
 	unittype = "unit-hero-rugnur-steelclad"
+  elseif (unittype == "unit-hero-baglur" and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
+	unittype = "unit-hero-baglur-thane"
   end  
 
   if (GameCycle ~= 0) then
@@ -139,7 +143,7 @@ function CreateUnit(unittype, player, pos)
   end
 
   -- Don't add any units in 1 worker only mode or in 5 workers only mode, and don't add scenario units if in a grand strategy game
-  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2 or GrandStrategy) and player ~= 15) then
+  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2 or GrandStrategy) and player ~= 15 and GrandStrategyEventMap == false) then
     return
   end
 
@@ -187,7 +191,7 @@ function SetPlayerData(player, data, arg1, arg2)
 				arg1 = GrandStrategyFaction.Civilization
 			end
 
-			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
+			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
 				if (GrandStrategyFaction.Name == Attacker and GetFactionFromName(Defender) ~= nil) then
 					arg1 = GetFactionFromName(Defender).Civilization
 				elseif (GrandStrategyFaction.Name == Defender and GetFactionFromName(Attacker) ~= nil) then
@@ -201,7 +205,7 @@ function SetPlayerData(player, data, arg1, arg2)
 				arg1 = GrandStrategyFaction.Name
 			end
 
-			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player) then
+			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
 				if (GrandStrategyFaction.Name == Attacker and Defender ~= "") then
 					arg1 = Defender
 				elseif (GrandStrategyFaction.Name == Defender and Attacker ~= "") then
@@ -218,9 +222,21 @@ function SetPlayerData(player, data, arg1, arg2)
 			res = {10000, 5000, 5000, 0, 0, 5000}
 		end
 		if (arg1 == "gold") then
-			arg2 = res[1]
+			if (GrandStrategy == false) then
+				arg2 = res[1]
+			elseif (GrandStrategyEventMap and GetFactionFromName(GetPlayerData(player, "Name")) ~= nil) then
+				arg2 = GetFactionFromName(GetPlayerData(player, "Name")).Gold
+			else
+				arg2 = 0
+			end
 		elseif (arg1 == "wood") then
-			arg2 = res[2]
+			if (GrandStrategy == false) then
+				arg2 = res[2]
+			elseif (GrandStrategyEventMap and GetFactionFromName(GetPlayerData(player, "Name")) ~= nil) then
+				arg2 = GetFactionFromName(GetPlayerData(player, "Name")).Commodities.Lumber
+			else
+				arg2 = 0
+			end
 		elseif (arg1 == "oil") then
 			arg2 = res[3]
 		elseif (arg1 == "coal") then
@@ -251,7 +267,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		end
 	end
 	if (data == "Name") then
-		if (GrandStrategy and AttackingUnits ~= nil) then
+		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 				for gsunit_key, gsunit_value in pairs(AttackingUnits) do
 					if (arg1 == Attacker) then
@@ -276,7 +292,7 @@ end
 
 -- Override with game settings
 function SetAiType(player, arg)
-	if (GrandStrategy) then
+	if (GrandStrategy and GrandStrategyEventMap == false) then
 		arg = "grand-strategy-battle"
 	end
 

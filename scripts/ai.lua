@@ -159,6 +159,17 @@ function AiVeteranSoldier()
 end
 
 --
+--  Hero soldier of the current civilization.
+--
+function AiHeroSoldier()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-thane"
+	else
+		return "unit-dwarven-thane"
+	end
+end
+
+--
 --  Shooter of the current civilization.
 --
 function AiShooter()

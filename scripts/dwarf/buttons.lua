@@ -40,11 +40,11 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
   Action = "move",
   Key = "m", Hint = "~!Move",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
     "unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
     "dwarf-group"} } )
 
@@ -52,12 +52,12 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
   Action = "stop",
   Key = "s", Hint = "~!Stop",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout", "unit-dwarven-miner",
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
     "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
     "unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-dwarven-guard-tower",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
     "dwarf-group"} } )
 
@@ -66,8 +66,8 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-1"},
   Key = "s", Hint = "~!Stop",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
     } } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
@@ -75,19 +75,19 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-2"},
   Key = "s", Hint = "~!Stop",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
     } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
   Action = "attack",
   Key = "a", Hint = "~!Attack",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-miner",
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-miner",
     "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit",
     "unit-goblin-worker", "unit-goblin-spearman",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
     "dwarf-group"} } )
 
@@ -96,8 +96,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-2",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-broad-axe"},
   Key = "a", Hint = "~!Attack",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
     } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
@@ -105,8 +105,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-great-axe"},
   Key = "a", Hint = "~!Attack",
   ForUnit = {
-    "unit-dwarven-axefighter", "unit-dwarven-steelclad",
-    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn"
+    "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+    "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
     } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
@@ -138,10 +138,10 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
   Action = "patrol",
   Key = "p", Hint = "~!Patrol",
   ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
 	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 	"unit-goblin-spearman", "unit-goblin-archer",
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"dwarf-group"
   } } )
 
@@ -149,11 +149,11 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = "S~!tand Ground",
   ForUnit = {
-  	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-scout",
+  	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
 	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 	"unit-gnomish-recruit", 
 	"unit-goblin-spearman", "unit-goblin-archer",
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"dwarf-group"} } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
@@ -246,13 +246,13 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-rugnur",
   Action = "train-unit", Value = "unit-hero-rugnur",
-  Allowed = "check-units-not", AllowArg = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"},
+  Allowed = "check-units-not", AllowArg = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"},
   Key = "r", Hint = "Hire ~!Rugnur",
   ForUnit = {"unit-dwarven-barracks"} } )
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-baglur",
   Action = "train-unit", Value = "unit-hero-baglur",
-  Allowed = "check-units-not", AllowArg = {"unit-hero-baglur"},
+  Allowed = "check-units-not", AllowArg = {"unit-hero-baglur", "unit-hero-baglur-thane"},
   Key = "g", Hint = "Hire ~!Baglur",
   ForUnit = {"unit-dwarven-barracks"} } )
 
@@ -320,11 +320,29 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
   Key = "u", Hint = "~!Upgrade to Steelclad",
   ForUnit = {"unit-dwarven-axefighter"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-rugnur-older",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
   Action = "upgrade-to", Value = "unit-hero-rugnur-steelclad",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = "~!Upgrade to Steelclad",
   ForUnit = {"unit-hero-rugnur"} } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
+  Action = "upgrade-to", Value = "unit-dwarven-thane",
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "u", Hint = "~!Upgrade to Thane",
+  ForUnit = {"unit-dwarven-steelclad"} } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-rugnur-older",
+  Action = "upgrade-to", Value = "unit-hero-rugnur-thane",
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "u", Hint = "~!Upgrade to Thane",
+  ForUnit = {"unit-hero-rugnur-steelclad"} } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
+  Action = "upgrade-to", Value = "unit-hero-baglur-thane",
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "u", Hint = "~!Upgrade to Thane",
+  ForUnit = {"unit-hero-baglur"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
   Action = "upgrade-to", Value = "unit-dwarven-guard-tower",
@@ -336,19 +354,19 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
 --  Action = "button", Value = 1,
 --  Key = "o", Hint = "~!Open Inventory",
---  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
+--  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
 
 --DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-axe-3",
 --  Action = "cast-spell", Value = "spell-equip-axe-of-perun",
 --  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "1"},
 --  Key = "e", Hint = "~!Equip Toporik",
---  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
+--  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
 
 --DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
 --  Action = "attack",
 --  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "2"},
 --  Key = "a", Hint = "~!Attack",
---  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad"} } )
+--  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
 
 -- Item Purchase ---------------------------------------------------------
 

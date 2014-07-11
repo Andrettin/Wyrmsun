@@ -36,7 +36,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
 				player = i
 				
 				-- this check is necessary to see if there is a viable raider player (so that the game doesn't crash if the only other dwarven clan are the Shorbear)
@@ -208,10 +208,30 @@ AddTrigger(
 																										{function(s)
 																											unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
 																											IncreaseUnitLevel(unit, 1, true)
+																											if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																												-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																												OrderUnit(player, "unit-gnomish-recruit", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																											end
 																											unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																											if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																												-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																												OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																											end
 																											unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																											if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																												-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																												OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																											end
 																											unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																											if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																												-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																												OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																											end
 																											unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																											if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																												-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																												OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																											end
 																											if (mapinfo.description == "Chaincolt Foothills") then
 																												ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
 																												RemovePlayerObjective(player, "- Destroy the enemy")
@@ -258,6 +278,9 @@ AddTrigger(
 																	SetDiplomacy(gnomish_monarch_player, "neutral", player)
 																	SetDiplomacy(player, "neutral", gnomish_monarch_player)
 																	KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
+																	if (GrandStrategy) then -- if is grand strategy, end map now if no agreement was reached
+																		ActionDraw()
+																	end
 																end},
 																"gnome/icons/gnomish_recruit.png"
 															)
@@ -300,7 +323,14 @@ AddTrigger(
 					SetSharedVision(player, false, gnomish_monarch_player)
 					SetDiplomacy(gnomish_monarch_player, "enemy", player)
 					SetDiplomacy(player, "enemy", gnomish_monarch_player)
+
+					Players[GetFactionPlayer("Shinsplitter Clan")].Type = PlayerNeutral
+
 					KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
+					if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Untersberg if Rugnur decided to attack the gnomish monarch
+						Factions.NorlundClan.Diplomacy.Untersberg = "War"
+						Factions.Untersberg.Diplomacy.NorlundClan = "War"
+					end
 				end},
 				"gnome/icons/gnomish_recruit.png"
 			)
@@ -342,46 +372,51 @@ AddTrigger(
 				SavePreferences()
 				unit = CreateUnit("unit-revealer", player, {Players[bandit_player].StartPos.x, Players[bandit_player].StartPos.y})
 				local raider_leader_name = GetRandomCharacterName("dwarf", "male", false)
+				
+				local event_player = player
+				if (GetThisPlayer() == bandit_player) then
+					event_player = bandit_player
+				end
 				Event(
 					"Gnomish Envoy",
 					"That's right. I'll be coming over along with the silver.",
-					player,
+					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						raider_leader_name,
 						"Hey! Ye can't do that - this road belongs to the " .. wyr.preferences.TheScepterOfFireRaiderFaction .. ". We're not letting ye transport gold and jewels on it without paying a toll.",
-						player,
+						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							"Rugnur",
 							"What are ye talking about?! This road has always been open to all.",
-							player,
+							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
 								raider_leader_name,
 								"Aye, we have allowed people to use it, but it is our road.",
-								player,
+								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
 									"Rugnur",
 									"Not true! This is " .. GetPlayerData(player, "Name") .. " land; if anything, it's our road!",
-									player,
+									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
 										raider_leader_name,
 										"Nevertheless, if ye try to move yer caravans here ye have to pay the toll, or face our wrath!",
-										player,
+										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
 											"Rugnur",
 											"Very well. " .. raider_leader_name .. ", I have no problem with slaying ye if ye stand in our way. I advise ye to leave the shipment alone, but not doing so is yer choice.",
-											player,
+											event_player,
 											{"~!Continue"},
 											{function(s)
 												-- create bandits
@@ -394,11 +429,13 @@ AddTrigger(
 
 												local second_bandit_player = FindUnusedPlayerSlot()
 												Players[second_bandit_player].Type = PlayerComputer
-												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
-												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+												if (GrandStrategy == false) then
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 
-												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+												end
 
 												SetPlayerData(second_bandit_player, "Name", "Raiders")
 
@@ -409,6 +446,11 @@ AddTrigger(
 												SetDiplomacy(bandit_player, "allied", second_bandit_player)
 												SetDiplomacy(second_bandit_player, "allied", bandit_player)
 												KillUnitAt("unit-revealer", player, 2, {0, 0}, {256, 256})
+												if (GrandStrategy) then
+													Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+													Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
+													Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+												end
 											end},
 											"dwarf/icons/rugnur.png"
 										)
@@ -438,7 +480,7 @@ AddTrigger(
 							return false
 						end
 						for i=0,14 do
-							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 								player = i
 								return true
 							end
@@ -460,14 +502,26 @@ AddTrigger(
 										{"~!Continue"},
 										{function(s)
 											RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-											if (player == GetThisPlayer()) then
+											if (player == GetThisPlayer() and GrandStrategy == false) then
 												if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 													table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
+													table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
+													table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
+													table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 												end
 												SavePreferences()
-												if (mapinfo.description == "Chaincolt Foothills") then
+											end
+											if (mapinfo.description == "Chaincolt Foothills") then
+												if (GrandStrategy == false) then
 													NextMap = "maps/caverns-of-chaincolt.smp"
+												end
+												if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 													ActionVictory()
+												else
+													ActionDefeat()
+												end
+												if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+													Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 												end
 											end
 										end},
@@ -488,7 +542,7 @@ AddTrigger(
 							return false
 						end
 						for i=0,14 do
-							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
 								player = i
 								return true
 							end
@@ -504,14 +558,26 @@ AddTrigger(
 								{"~!Continue"},
 								{function(s)
 									RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-									if (player == GetThisPlayer()) then
+									if (player == GetThisPlayer() and GrandStrategy == false) then
 										if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 											table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
+											table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
+											table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
+											table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 										end
 										SavePreferences()
-										if (mapinfo.description == "Chaincolt Foothills") then
+									end
+									if (mapinfo.description == "Chaincolt Foothills") then
+										if (GrandStrategy == false) then
 											NextMap = "maps/caverns-of-chaincolt.smp"
+										end
+										if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 											ActionVictory()
+										else
+											ActionDefeat()
+										end
+										if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+											Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 										end
 									end
 								end},
@@ -540,7 +606,7 @@ AddTrigger(
 						end
 						for i=0,14 do
 							-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
-							if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+							if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 								player = i
 								return true
 							end
@@ -549,14 +615,26 @@ AddTrigger(
 					end,
 					function() 
 						RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-						if (player == GetThisPlayer()) then
+						if (player == GetThisPlayer() and GrandStrategy == false) then
 							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 								table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
+								table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
+								table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
+								table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 							end
 							SavePreferences()
-							if (mapinfo.description == "Chaincolt Foothills") then
+						end
+						if (mapinfo.description == "Chaincolt Foothills") then
+							if (GrandStrategy == false) then
 								NextMap = "maps/caverns-of-chaincolt.smp"
+							end
+							if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 								ActionVictory()
+							else
+								ActionDefeat()
+							end
+							if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+								Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 							end
 						end
 						return false
@@ -578,19 +656,47 @@ AddTrigger(
 						return false
 					end,
 					function() 
+						local event_player = player
+						if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
+							event_player = GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)
+						end
 						Event(
 							"Pypo I",
 							"You just let a caravan, with my money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
-							player,
+							event_player,
 							{"~!Continue"},
 							{function(s)
 								RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
 								if (mapinfo.description == "Chaincolt Foothills") then
-									ActionDefeat()
+									if (GetThisPlayer() == player) then
+										ActionDefeat()
+									end
 								end
 							end},
 							"gnome/icons/gnomish_recruit.png"
 						)
+						return false
+					end
+				)
+
+				-- If all caravans have been destroyed, then the raiders win, if they are human-controlled
+				AddTrigger(
+					function()
+						if (GameCycle == 0) then
+							return false
+						end
+						if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-gnomish-caravan") == 0) then
+							return true
+						end
+						return false
+					end,
+					function() 
+						if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
+							if (GrandStrategy) then
+								Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+							end
+							ActionVictory()
+						end
 						return false
 					end
 				)
@@ -609,8 +715,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall")) and (GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-rugnur-steelclad")) < 1) then
-			player = GetThisPlayer()
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -620,7 +726,21 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
-			ActionDefeat()
+			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+				ActionDefeat()
+				if (GrandStrategy) then
+					if (PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
+						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+					end
+					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
+						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
+						WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
+					end
+				end
+			end
 		end
 		return false
 	end
@@ -643,6 +763,9 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands") then
 			ActionDefeat()
+			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
+				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+			end
 		end
 		return false
 	end
@@ -667,6 +790,9 @@ AddTrigger(
 --		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
 --		if (mapinfo.description == "Chaincolt Foothills") then
 --			ActionDefeat()
+--			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
+--				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+--			end
 --		end
 --		return false
 --	end
@@ -682,7 +808,7 @@ AddTrigger(
 		end
 		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and GetFactionExists(wyr.preferences.TheScepterOfFireRaiderFaction)) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
 					player = i
 					return true
 				end
@@ -691,126 +817,136 @@ AddTrigger(
 		return false
 	end,
 	function() 
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
+		end
 		closing_the_gates_raider_leader_name = GetRandomCharacterName("dwarf", "male", false) -- new raider leader, name should be different from the one in A Bargain is Struck
 		unit = CreateUnit("unit-revealer", player, {Players[GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)].StartPos.x, Players[GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)].StartPos.y})
 		Event(
 			"Rugnur",
 			"These " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders are right behind me! We have to go warn the council of this attack...!",
-			player,
+			event_player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"Gnomish Envoy",
 				"Here - I'll go warn the council. You stay here and fight.",
-				player,
+				event_player,
 				{"~!Continue"},
 				{function(s)
 				Event(
 					"Rugnur",
 					"Aye, that sounds good. I'll stay here and try to defend the gates...",
-					player,
+					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						closing_the_gates_raider_leader_name,
 						"I see ye have sent a messenger to the city. Good idea, but will it really help? We have more troops and more provisions, and we are going to enter those caves and kill ye!",
-						player,
+						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							"Rugnur",
 							"(Gulp)",
-							player,
+							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
 								closing_the_gates_raider_leader_name,
 								"Ha! I thought as much. Well then, surrender!",
-								player,
+								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
 									"Rugnur",
 									"Um... on what terms?",
-									player,
+									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
 										closing_the_gates_raider_leader_name,
 										"Unconditional.",
-										player,
+										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
 											"Baglur",
 											"Wait! Rugnur, dinna' they tell ye anything when ye took command here?!",
-											player,
+											event_player,
 											{"~!Continue"},
 											{function(s)
 											Event(
 												"Rugnur",
 												"Not really. This was supposedly a time of peace. Who are ye?",
-												player,
+												event_player,
 												{"~!Continue"},
 												{function(s)
 												Event(
 													"Baglur",
 													"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders... Well, listen here. This entrance to the city can be closed. There's a gate. If we can close it, the raiders will no' be able to enter. And ye raiders; begone from here!",
-													player,
+													event_player,
 													{"~!Continue"},
 													{function(s)
+													local possible_options
+													if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+														possible_options = {"~!Listen to Baglur", "~!Surrender (Defeat)"}
+													else
+														possible_options = {"~!Continue"}
+													end
 													Event(
 														closing_the_gates_raider_leader_name,
 														"Cease yer meddling, old dwarf! Rugnur is in charge here, and it is he who will bargain with us.",
-														player,
-														{"~!Listen to Baglur", "~!Surrender (Defeat)"},
+														event_player,
+														possible_options,
 														{function(s)
 														Event(
 															"Rugnur",
 															"Baglur, how do ye close the gates?",
-															player,
+															event_player,
 															{"~!Continue"},
 															{function(s)
 															Event(
 																"Baglur",
 																"Och, well that's the difficulty. It's an impregnable gate, made from thick layers of solid rock. Almost indestructible. But that means it can only be closed by a special mechanism. Ye need to position a warrior on each of the six glyphs. When all are occupied, the gates wi' close. Then the raiders will be shut out of the caves forever, at least through this entrance.",
-																player,
+																event_player,
 																{"~!Continue"},
 																{function(s)
 																Event(
 																	"Rugnur",
 																	"Don't we have troops positioned near these glyphs, to unlock them?",
-																	player,
+																	event_player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
 																		"Baglur",
 																		"Och, well, no. Lately goblins have been more in charge of those caves where the glyphs are than we dwarves have.",
-																		player,
+																		event_player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
 																			"Rugnur",
 																			"Well, where are they located?",
-																			player,
+																			event_player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
 																				"Baglur",
 																				"Two are down a side passage in the northwest, another two are in a similar location in the southeast, and two are right next to the front gate.",
-																				player,
+																				event_player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
 																					closing_the_gates_raider_leader_name,
 																					"Have ye made up yer mind yet about surrendering? If ye will not give up, prepare for battle!",
-																					player,
+																					event_player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
 																						"Rugnur",
 																						"Ye may be more powerful than us, but I doubt even ye can blast through our stonecraft. We refuse - now let's close these gates!",
-																						player,
+																						event_player,
 																						{"~!Continue"},
 																						{function(s)
 																							AddPlayerObjective(player, "- Have one unit standing on each glyph at the same time")
@@ -890,36 +1026,40 @@ AddTrigger(
 					return false
 				end
 				for i=0,14 do
-					if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
+					if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
 						player = i
 						return true
 					end
 				end
 				return false
 			end,
-			function() 
+			function()
+				local event_player = player
+				if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+					event_player = GetFactionPlayer("Shinsplitter Clan")
+				end
 				Event(
 					"Rugnur",
 					"We have everyone positioned on the glyphs! What do we do now?",
-					player,
+					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"Baglur",
 						"Just watch. The gates wi' close very soon. Then the raiders outside - and, unfortunately, our clansfolk who are still out there - wi' become irrelevant.",
-						player,
+						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							closing_the_gates_raider_leader_name,
 							"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give Pypo back his jewel. And when ye do, we will be ready for ye.",
-							player,
+							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
 								"Baglur",
 								"If that is what ye choose to do, fine, but be prepared to wait for many years.",
-								player,
+								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
@@ -1091,15 +1231,22 @@ AddTrigger(
 																																				{"~!Continue"},
 																																				{function(s)
 																																					RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
-																																					if (player == GetThisPlayer()) then
+																																					if (player == GetThisPlayer() and GrandStrategy == false) then
 																																						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
 																																							table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
 																																							table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
+																																							table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur-thane")
 																																						end
 																																						SavePreferences()
-																																						if (mapinfo.description == "Caverns of Chaincolt") then
+																																					end
+																																					if (mapinfo.description == "Caverns of Chaincolt") then
+																																						if (GrandStrategy == false) then
 																																							NextMap = "maps/northern-wastelands.smp"
+																																						end
+																																						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 																																							ActionVictory()
+																																						else
+																																							ActionDefeat()
 																																						end
 																																					end
 																																				end},
@@ -1199,6 +1346,34 @@ AddTrigger(
 				return false
 			end
 		)
+
+		-- If the Norlund Clan's mead hall has been destroyed, then the Shinsplitters manage to get the gold and win
+		AddTrigger(
+			function()
+				if (GameCycle == 0) then
+					return false
+				end
+				if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-town-hall") == 0) then
+					return true
+				end
+				return false
+			end,
+			function() 
+				if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+					if (GrandStrategy) then
+						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
+						WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
+					end
+					ActionVictory()
+				else
+					ActionDefeat()
+				end
+				return false
+			end
+		)
 		return false
 	end
 )
@@ -1210,8 +1385,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-baglur") < 1) then
-			player = GetThisPlayer()
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -1220,7 +1395,18 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
-			ActionDefeat()
+			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+				ActionDefeat()
+				if (GrandStrategy) then
+					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
+						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
+						WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
+					end
+				end
+			end
 		end
 		return false
 	end
@@ -1234,9 +1420,9 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") and GetFactionExists("Thursagan") and PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") == false) then
+		if (GetFactionExists("Thursagan") and PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -1281,8 +1467,10 @@ AddTrigger(
 								player,
 								{"~!Continue"},
 								{function(s)
-									unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
-									IncreaseUnitLevel(unit, 1, true)
+									if (GrandStrategy == false) then
+										unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
+										IncreaseUnitLevel(unit, 1, true)
+									end
 									if (mapinfo.description == "Northern Wastelands") then
 										RemovePlayerObjective(player, "- Destroy the enemy")
 									end
@@ -1804,16 +1992,20 @@ AddTrigger(
 																													{"~!Continue"},
 																													{function(s)
 																														RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-																														if (player == GetThisPlayer()) then
+																														if (player == GetThisPlayer() and GrandStrategy == false) then
 																															if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") == false) then
 																																table.insert(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")
 																																table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan")
 																															end
 																															SavePreferences()
-																															if (mapinfo.description == "Northern Wastelands") then
+																														end
+																														if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
+																															if (GrandStrategy == false) then
 																																NextMap = "maps/eastern-mines.smp"
-																																ActionVictory()
+																															else
+																																WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0
 																															end
+																															ActionVictory()
 																														end
 																													end},
 																													"dwarf/icons/thursagan.png"
@@ -1906,7 +2098,7 @@ AddTrigger(
 		end
 		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") and PlayerHasObjective(GetThisPlayer(), "- Mine 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-mine", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {256, 256}) >= 2) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -2082,15 +2274,17 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 							RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-							if (player == GetThisPlayer()) then
+							if (player == GetThisPlayer() and GrandStrategy == false) then
 								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
 									table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
 								end
 								SavePreferences()
-								if (mapinfo.description == "Eastern Mines") then
+							end
+							if (mapinfo.description == "Eastern Mines" and player == GetFactionPlayer("Norlund Clan")) then
+								if (GrandStrategy == false) then
 --									NextMap = "maps/shorbear-hills.smp"
-									ActionVictory()
 								end
+								ActionVictory()
 							end
 						end},
 						"dwarf/icons/thursagan.png"
@@ -2121,15 +2315,17 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-				if (player == GetThisPlayer()) then
+				if (player == GetThisPlayer() and GrandStrategy == false) then
 					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
 						table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
 					end
 					SavePreferences()
-					if (mapinfo.description == "Eastern Mines") then
+				end
+				if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+					if (GrandStrategy == false) then
 --						NextMap = "maps/shorbear-hills.smp"
-						ActionVictory()
 					end
+					ActionVictory()
 				end
 			end},
 			"dwarf/icons/thursagan.png"

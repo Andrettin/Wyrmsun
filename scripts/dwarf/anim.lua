@@ -358,6 +358,7 @@ DefineAnimations("animations-dwarven-steelclad", {
   	"label variation_6_great_axe", "frame 685", "wait 3", "frame 690", "wait 3", "frame 695", "wait 3",
   	"frame 700", "attack", "sound axe-attack", "wait 5", "frame 660", "wait 10", "frame 660", "goto end",
 	"label end", "unbreakable end", "wait 1",},
+  Upgrade = { "set-var LevelUp.Value -= 1", "wait 1",},
   Death = SteelcladDeath,
   SpellCast = {"unbreakable begin",
 	"attack",

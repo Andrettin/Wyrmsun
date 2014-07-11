@@ -75,75 +75,115 @@ ApplyRawTiles()
 
 -- Player Setup
 SetStartView(0, 35, 26)
+SetPlayerData(0, "RaceName", "dwarf")
+SetPlayerData(0, "Name", "Norlund Clan")
 SetPlayerData(0, "Resources", "gold", 1000)
 SetPlayerData(0, "Resources", "wood", 500)
 SetPlayerData(0, "Resources", "oil", 0)
-SetPlayerData(0, "RaceName", "dwarf")
 SetAiType(0, "land-attack")
 SetStartView(1, 11, 50)
+SetPlayerData(1, "RaceName", "dwarf")
+SetPlayerData(1, "Name", "Shinsplitter Clan")
 SetPlayerData(1, "Resources", "gold", 3500)
 SetPlayerData(1, "Resources", "wood", 1750)
 SetPlayerData(1, "Resources", "oil", 0)
-SetPlayerData(1, "RaceName", "dwarf")
 SetAiType(1, "land-attack")
 SetStartView(2, 10, 7)
+SetPlayerData(2, "RaceName", "goblin")
+SetPlayerData(2, "Name", "Goblins")
 SetPlayerData(2, "Resources", "gold", 0)
 SetPlayerData(2, "Resources", "wood", 0)
 SetPlayerData(2, "Resources", "oil", 0)
-SetPlayerData(2, "RaceName", "goblin")
 SetAiType(2, "passive")
 SetPlayerData(15, "RaceName", "neutral")
-
-local RandomNumber = 0
-local DwarvenFactions = GetCivilizationFactions("dwarf")
-
-RemoveElementFromArray(DwarvenFactions, "Shorbear Clan")
-RemoveElementFromArray(DwarvenFactions, PlayerFaction)
-
-if (GetArrayIncludes(DwarvenFactions, wyr.preferences.TheScepterOfFireRaiderFaction)) then
-
-	SetPlayerData(1, "Name", wyr.preferences.TheScepterOfFireRaiderFaction)
-
-	RemoveElementFromArray(DwarvenFactions, wyr.preferences.TheScepterOfFireRaiderFaction)
-end
-
-for i=0,1 do
-	if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
-		if (GetPlayerData(i, "RaceName") == "dwarf" and table.getn(DwarvenFactions) > 0) then
-			if (PlayerFaction == "" or i ~= GetThisPlayer()) then
-				RandomNumber = SyncRand(table.getn(DwarvenFactions)) + 1
-				SetPlayerData(i, "Name", DwarvenFactions[RandomNumber])
-				RemoveElementFromArray(DwarvenFactions, DwarvenFactions[RandomNumber])
-			end
-		end
-	end
-end
 
 SetDiplomacy(0, "enemy", 2)
 SetDiplomacy(1, "enemy", 2)
 SetDiplomacy(2, "enemy", 0)
 SetDiplomacy(2, "enemy", 1)
 
--- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {2, 47})
-SetResourcesHeld(unit, 125000)
-unit = CreateUnit("unit-gold-mine", 15, {29, 20})
-SetResourcesHeld(unit, 12500)
+if (GrandStrategy == false) then
+	-- Gold Mines
+	unit = CreateUnit("unit-gold-mine", 15, {2, 47})
+	SetResourcesHeld(unit, 125000)
+	unit = CreateUnit("unit-gold-mine", 15, {29, 20})
+	SetResourcesHeld(unit, 12500)
 
--- Knalgan outpost
-unit = CreateUnit("unit-dwarven-town-hall", 0, {35, 26})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {48, 24})
-unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
+	-- Knalgan outpost
+	unit = CreateUnit("unit-dwarven-town-hall", 0, {35, 26})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {48, 24})
+	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
 
--- Rugnur
-unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
+	-- Rugnur
+	unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
 
--- Baglur
-unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
+	-- Baglur
+	unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
 
-unit = CreateUnit("unit-dwarven-guard-tower", 0, {16, 31})
-unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also be guard tower
-unit = CreateUnit("unit-dwarven-guard-tower", 0, {22, 34})
+	unit = CreateUnit("unit-dwarven-guard-tower", 0, {16, 31})
+	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also be guard tower
+	unit = CreateUnit("unit-dwarven-guard-tower", 0, {22, 34})
+
+	-- Bandits
+	unit = CreateUnit("unit-dwarven-town-hall", 1, {11, 50})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {16, 61})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {7, 54})
+	unit = CreateUnit("unit-dwarven-steelclad", 1, {11, 50})
+	unit = CreateUnit("unit-dwarven-miner", 1, {11, 50})
+
+	-- Extra Bandits to make them not be easily defeatable at scenario begin
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+elseif (GrandStrategyEventMap) then
+	SetAiType(0, "grand-strategy-battle")
+	SetAiType(1, "grand-strategy-battle")
+
+	-- Knalgan outpost
+	unit = CreateUnit("unit-dwarven-town-hall", 0, {35, 26})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {48, 24})
+
+	-- Rugnur
+	unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
+
+	-- Baglur
+	unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
+
+	unit = CreateUnit("unit-dwarven-guard-tower", 0, {16, 31})
+	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also be guard tower
+	unit = CreateUnit("unit-dwarven-guard-tower", 0, {22, 34})
+
+	local units_to_be_created = {}
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		units_to_be_created[gsunit_key] = 0
+		if (gsunit_key ~= "GnomishRecruit") then -- the gnomish recruit doesn't appear in this mission
+			units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] / 1) -- must have every unit in there, since otherwise it will be impossible to win
+		end
+		WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] - units_to_be_created[gsunit_key]
+	end
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (units_to_be_created[gsunit_key] > 0) then
+			for i=1,units_to_be_created[gsunit_key] do
+				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			end
+		end
+	end
+
+	-- Shinsplitters
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		units_to_be_created[gsunit_key] = 0
+		units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.SouthernTunnels.Units[gsunit_key] / 2)
+		WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] - units_to_be_created[gsunit_key]
+	end
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		if (units_to_be_created[gsunit_key] > 0) then
+			for i=1,units_to_be_created[gsunit_key] do
+				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+			end
+		end
+	end
+end
 
 -- Goblins
 unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
@@ -154,19 +194,6 @@ unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
-
--- Bandits
-unit = CreateUnit("unit-dwarven-town-hall", 1, {11, 50})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {16, 61})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {7, 54})
-unit = CreateUnit("unit-dwarven-steelclad", 1, {11, 50})
-unit = CreateUnit("unit-dwarven-miner", 1, {11, 50})
-
--- Extra Bandits to make them not be easily defeatable at scenario begin
-unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
-unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
-unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
-unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
 
 unit = CreateUnit("unit-glyph", 15, {5, 11})
 unit = CreateUnit("unit-glyph", 15, {38, 53})
@@ -179,7 +206,7 @@ PlayMusic("music/battle.ogg")
 wyrmsun.playlist = { "music/the_city_falls.ogg" }
 
 if (GrandStrategy) then
-	if (GetArrayIncludes(WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings, "unit-dwarven-blacksmith")) then
+	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.DwarvenBlacksmith == 2) then
 		unit = CreateUnit("unit-dwarven-blacksmith", 0, {38, 21})
 	end
 end

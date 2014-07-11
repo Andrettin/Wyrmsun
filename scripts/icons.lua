@@ -447,6 +447,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-wood-pile",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wood_pile.png"
+})
+
+DefineIcon({
 	Name = "icon-inner-wall-decoration",
 	Size = {46, 38},
 	Frame = 0,

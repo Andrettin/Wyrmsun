@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "0.1.5c"
+wyrmsun.Version = "0.1.6"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
 wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
@@ -318,7 +318,7 @@ function SinglePlayerTriggers()
 	AddTrigger(
 		function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
 		function()
-			if (GrandStrategy) then
+			if (GrandStrategy and GrandStrategyEventMap == false) then
 				local victorious_player = ""
 				if (Attacker == GrandStrategyFaction.Name) then
 					victorious_player = Defender
@@ -357,7 +357,7 @@ function SinglePlayerTriggers()
 			end
 		end,
 		function()
-			if (GrandStrategy) then
+			if (GrandStrategy and GrandStrategyEventMap == false) then
 				-- set the new unit quantity to the surviving units of the victorious side
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 					AttackingUnits[gsunit_key] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
@@ -441,7 +441,7 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-wood-pile") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
@@ -484,7 +484,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones") then
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-wood-pile") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
@@ -554,6 +554,11 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
 					end
 				end
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
+					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 2) then
+						SetUnitVariable(uncount[unit1], "StartingLevel", 3)
+					end
+				end
 
 				if (not IsNetworkGame()) then
 					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
@@ -589,6 +594,10 @@ function StandardTriggers()
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad")
+										SavePreferences()
+									end
+									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "thane") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane")
 										SavePreferences()
 									end
 								end
@@ -813,7 +822,7 @@ function StandardTriggers()
 			return true
 		end,
 		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) >= 1 or GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) >= 1) then
+			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) >= 1) then
 				-- make it impossible to hire a hero after he has already been hired by someone
 				DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
 				return false
@@ -840,7 +849,7 @@ function StandardTriggers()
 			return true
 		end,
 		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) >= 1) then
+			if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) >= 1) then
 				DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
 				return false
 			else
@@ -1020,9 +1029,9 @@ function GetFactionForbiddenUnits(faction)
 	elseif (faction == "Shinsplitter Clan") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Shorbear Clan") then
-		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn" }
+		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn" }
 	elseif (faction == "Kal Kartha") then
-		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-baglur", "unit-hero-durstorn" }
+		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-durstorn" }
 	elseif (faction == "Knalga") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Lyr") then
@@ -1092,9 +1101,11 @@ function GetNumPlayers()
 end
 
 function GetUnitTypeLevelUpUpgrades(unit_type)
-	if (unit_type == "unit-dwarven-axefighter") then
+	if (unit_type == "unit-dwarven-axefighter" or unit_type == "unit-hero-rugnur") then
 		return { "upgrade-dwarven-steelclad", "upgrade-axe-mastery", "upgrade-critical-strike" }
-	elseif (unit_type == "unit-dwarven-steelclad") then
+	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
+		return { "upgrade-dwarven-thane", "upgrade-axe-mastery", "upgrade-critical-strike" }
+	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
 		return { "upgrade-critical-strike" }
@@ -1106,16 +1117,6 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-goblin-archer") then
 		return { "upgrade-critical-strike" }
-	elseif (unit_type == "unit-hero-rugnur") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
-	elseif (unit_type == "unit-hero-rugnur-steelclad") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
-	elseif (unit_type == "unit-hero-baglur") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
-	elseif (unit_type == "unit-hero-thursagan") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
-	elseif (unit_type == "unit-hero-durstorn") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-greebo") then
 		return { "upgrade-critical-strike" }
 	else
@@ -1413,7 +1414,7 @@ local defaultPreferences = {
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
 	},
@@ -1436,13 +1437,13 @@ local defaultPreferences = {
 		Thursagan = {
 			name = "Thursagan",
 			level = 3,
-			upgrades = { "unit-dwarven-steelclad" },
+			upgrades = { "unit-dwarven-steelclad", "unit-dwarven-thane" },
 			items = {}
 		},
 		Durstorn = {
 			name = "Durstorn",
 			level = 3,
-			upgrades = { "unit-dwarven-steelclad" },
+			upgrades = { "unit-dwarven-steelclad", "unit-dwarven-thane" },
 			items = {}
 		},
 		Greebo = {

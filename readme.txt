@@ -44,7 +44,8 @@ https://launchpad.net/stratagus
 - Added Italy map (Earth) by Paolo Sammicheli, from FreeCiv.
 - Added British Isles map (Earth) by Martin McMahon, from FreeCiv.
 - Added North America map (Earth) by Rob Best, from FreeCiv.
-- Added Eastern Mines map (Nidavellir).
+- Added Eastern Mines map (Nidavellir), from Battle for Wesnoth.
+- Added Southern Tunnels map (Nidavellir), from Battle for Wesnoth.
 
 * Miscellaneous
 - The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.
@@ -61,9 +62,11 @@ https://launchpad.net/stratagus
 - Added cave tileset, with cave floor (buildable land), rockbound cave floor (unbuildable land) and cave wall tiles (rock) (graphics by Jinn).
 - New wall and floor tiles for the dungeon tileset, as well as decorations for them (graphics made by b_o by modifying those found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles).
 - Added rug tiles for the dungeon tileset (graphics by b_o).
+- Added wood pile object, replaces trees as the source of lumber in cave and dungeon maps (graphics by Jinn).
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.
+- Added dwarven Thane (unit graphics by b_o).
 
 -----------------------------------------------------------------------
 - 0.1.5c

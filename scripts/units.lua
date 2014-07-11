@@ -240,6 +240,31 @@ DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
 --    "help", "gold-mine-help",
     "dead", "building destroyed"} } )
 
+DefineUnitType("unit-wood-pile", { Name = "Wood Pile",
+  Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},
+  Animations = "animations-decoration", Icon = "icon-wood-pile",
+  NeutralMinimapColor = {128, 0, 0},
+  Costs = {"time", 150},
+  Speed = 0,
+  HitPoints = 25500,
+  DrawLevel = 40,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+--  Corpse = "unit-destroyed-3x3-place",
+--  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  Building = true, VisibleUnderFog = true,
+  GivesResource = "wood", CanHarvest = true,
+  Sounds = {
+--    "selected", "gold-mine-selected",
+--    "acknowledge", "gold-mine-acknowledge",
+--    "ready", "gold-mine-ready",
+--    "help", "gold-mine-help",
+--    "dead", "building destroyed"
+  } } )
+
 DefineUnitType("unit-mushroom", { Name = "Mushroom",
   Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},
   NeutralMinimapColor = {128, 128, 0},
@@ -924,6 +949,7 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 -- initialize the grand strategy unit variable
 GrandStrategyUnits = {}
 GrandStrategyBuildings = {}
+GrandStrategyHeroes = {}
 
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")

@@ -54,7 +54,7 @@ function RunTechTreeMenu(civilization_number)
 
 	if (civilization_number == 0) then
 		civilization = "dwarf"
-		tech_points = 6
+		tech_points = 7
 		SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
 	elseif (civilization_number == 1) then
 		civilization = "gnome"
@@ -236,16 +236,18 @@ end
 
 function ResetTechnologiesAcquired()
 	wyr.preferences.TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
 	}
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 	end
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
+		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur-thane")
 	end
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")) then
 		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan")
