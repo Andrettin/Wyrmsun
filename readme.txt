@@ -34,6 +34,7 @@ https://launchpad.net/stratagus
 
 * Buildings
 - Added Goblin Town Hall (graphics by Leo).
+- Added Goblin Mess Hall (graphics by Leo).
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".
@@ -59,7 +60,7 @@ https://launchpad.net/stratagus
 - The gnomish king is now called "Pypo I", instead of having his name be randomly generated.
 
 * Terrain
-- Added cave tileset, with cave floor (buildable land), rockbound cave floor (unbuildable land) and cave wall tiles (rock) (graphics by Jinn).
+- Added cave tileset (graphics by Jinn).
 - New wall and floor tiles for the dungeon tileset, as well as decorations for them (graphics made by b_o by modifying those found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles).
 - Added rug tiles for the dungeon tileset (graphics by b_o).
 - Added wood pile object, replaces trees as the source of lumber in cave and dungeon maps (graphics by Jinn).

@@ -83,6 +83,7 @@ local editor_types = {
    "unit-goblin-archer",
 
    "unit-goblin-town-hall",
+   "unit-goblin-mess-hall",
 
    "unit-hero-greebo",
 

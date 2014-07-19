@@ -735,6 +735,23 @@ GrandStrategyUnits["DwarvenSteelclad"] = {
 	AdvancesFrom = "DwarvenAxefighter"
 }
 
+GrandStrategyUnits["DwarvenThane"] = {
+	Name = GetUnitTypeName("unit-dwarven-thane") .. "s",
+	UnitType = "unit-dwarven-thane",
+	Icon = "dwarf/icons/dwarven_steelclad.png",
+	Civilization = "dwarf",
+	Type = "Heroic Infantry",
+	Costs = {
+		Gold = 600
+	},
+	Upkeep = 25,
+	X = 0,
+	Y = 0,
+	RequiredBuildings = { "DwarvenWarHall" },
+	InterfaceState = "",
+	AdvancesFrom = "DwarvenSteelclad"
+}
+
 GrandStrategyUnits["DwarvenScout"] = {
 	Name = GetUnitTypeName("unit-dwarven-scout") .. "s",
 	UnitType = "unit-dwarven-scout",

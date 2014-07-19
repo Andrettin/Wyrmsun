@@ -174,6 +174,7 @@ WorldMapProvinces = {
 		Units = { -- starting units in the Settling Disputes scenario
 			DwarvenAxefighter = 0,
 			DwarvenSteelclad = 0,
+			DwarvenThane = 0,
 			GoblinImpaler = 4, -- one troll, two young ogres, one ogre
 			GoblinArcher = 2 -- two liches
 		}
@@ -186,6 +187,9 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Maps = {"Random Map (Swamp)"},
 		Units = { -- some wild gnomes from the Forbidden Forest to stop too early expansion into this province
+			DwarvenAxefighter = 0,
+			DwarvenSteelclad = 0,
+			DwarvenThane = 0,
 			GnomishRecruit = 4
 		}
 	},
@@ -229,7 +233,7 @@ WorldMapProvinces = {
 		},
 		Maps = {"Random Map (Swamp)"},
 		Units = {
-			DwarvenSteelclad = 1 -- Glonoin
+			DwarvenThane = 1 -- Glonoin
 		}
 	},
 	SouthernTunnels = {
@@ -243,7 +247,8 @@ WorldMapProvinces = {
 		},
 		Maps = {"Southern Tunnels"},
 		Units = {
-			DwarvenSteelclad = 8 -- Glildur, Glindur, Lyndar, Gaenlar, Glinan, Kalnar, Crintil, Aendan
+			DwarvenSteelclad = 3, -- Glildur, Glindur, Kalnar
+			DwarvenThane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
 		}
 	}
 }
@@ -623,6 +628,7 @@ if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenMeadHall = 0
 	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenBlacksmith = 0
 	WorldMapProvinces.ShorbearHills.Units.DwarvenAxefighter = 0
+	WorldMapProvinces.ShorbearHills.Units.DwarvenThane = 0
 end
 
 if (GrandStrategyYear >= 40) then
@@ -653,11 +659,12 @@ if (GrandStrategyYear >= 500) then
 	WorldMapProvinces.HighbrookPass.Units.GoblinImpaler = 0
 	WorldMapProvinces.HighbrookPass.Units.GoblinArcher = 0
 	WorldMapProvinces.HighbrookPass.Units.DwarvenAxefighter = 6 -- six dwarven ulfserkers
-	WorldMapProvinces.HighbrookPass.Units.DwarvenSteelclad = 1 -- Stalrag
+	WorldMapProvinces.HighbrookPass.Units.DwarvenThane = 1 -- Stalrag
 end
 
 if (GrandStrategyYear >= 534) then
-	WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = 5 -- Hamel, 4 Dwarven Stalwarts
+	WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = 4 -- 4 Dwarven Stalwarts
+	WorldMapProvinces.SouthernTunnels.Units.DwarvenThane = 1 -- Hamel
 end
 
 if (GrandStrategyYear >= 535) then
@@ -668,5 +675,6 @@ if (GrandStrategyYear >= 550) then
 	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenBlacksmith = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
 
 	WorldMapProvinces.KalKartha.Units.DwarvenAxefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
-	WorldMapProvinces.KalKartha.Units.DwarvenSteelclad = 4 -- Karrag and Dulcatulos, 2 Masked Steelclads in Karrag's court
+	WorldMapProvinces.KalKartha.Units.DwarvenSteelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court
+	WorldMapProvinces.KalKartha.Units.DwarvenThane = 4 -- Karrag
 end

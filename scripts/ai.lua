@@ -105,6 +105,8 @@ function AiBarracks()
 		return "unit-dwarven-barracks"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-barracks"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-mess-hall"
 	else
 		return "unit-dwarven-barracks"
 	end
@@ -159,9 +161,9 @@ function AiVeteranSoldier()
 end
 
 --
---  Hero soldier of the current civilization.
+--  Heroic soldier of the current civilization.
 --
-function AiHeroSoldier()
+function AiHeroicSoldier()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-thane"
 	else

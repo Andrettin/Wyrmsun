@@ -52,12 +52,13 @@ function RunGrandStrategyGameSetupMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	local world_list = {"Nidavellir"}
+	local world_list = {"Earth", "Nidavellir"}
+--	local world_list = {"Nidavellir"}
 	local world
 	local date_list = {"25 AD", "40 AD", "550 AD"}
 	local date
 	local faction
-	local faction_list = {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
+	local faction_list = {}
 
 	GrandStrategy = true
 
@@ -257,9 +258,8 @@ function RunGrandStrategyGameSetupMenu()
 
 	menu:addLabel("~<World:~>", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
 	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
-		function(dd) end)
+		function(dd) DateChanged() end)
 	world:setSize(152, 20)
-	world:setSelected(0)
 
 	menu:addLabel("~<Date:~>", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
 	date = menu:addDropDown(date_list, offx + 220, offy + 10 + 120,
@@ -285,6 +285,8 @@ function RunGrandStrategyGameSetupMenu()
 		faction:setSize(152, 20)
 		faction:setSelected(0)
 	end
+
+	DateChanged()
 
 	menu:run()
 end
@@ -748,6 +750,43 @@ function CalculateProvinceBorderTiles()
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)
+				end
+			end
+		end
+	end
+
+	for key, value in pairs(WorldMapWaterProvinces) do
+		WorldMapWaterProvinces[key]["BorderTiles"] = {}
+		WorldMapWaterProvinces[key]["BorderProvinces"] = {}
+		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
+			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
+				table.insert(WorldMapWaterProvinces[key].BorderTiles, {WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2]})
+			elseif (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
+				table.insert(WorldMapWaterProvinces[key].BorderTiles, {WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2]})
+			elseif (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= WorldMapWaterProvinces[key]) then
+				table.insert(WorldMapWaterProvinces[key].BorderTiles, {WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2]})
+			elseif (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= WorldMapWaterProvinces[key]) then
+				table.insert(WorldMapWaterProvinces[key].BorderTiles, {WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2]})
+			end
+
+			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name) == false) then
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name)
+				end
+			end
+			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name) == false) then
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name)
+				end
+			end
+			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= WorldMapWaterProvinces[key]) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name) == false) then
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name)
+				end
+			end
+			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= WorldMapWaterProvinces[key]) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name) == false) then
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name)
 				end
 			end
 		end
@@ -1449,10 +1488,14 @@ function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
 	UIElements[table.getn(UIElements)]:setSize(46, 38)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
-	local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[grand_strategy_unit_key].Civilization, "Veteran " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
 	local veterans = 0
+	local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[grand_strategy_unit_key].Civilization, "Veteran " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
 	if (veteran_unit_type_key ~= "") then
-		veterans = SelectedProvince.Units[veteran_unit_type_key]
+		veterans = veterans + SelectedProvince.Units[veteran_unit_type_key]
+	end
+	local hero_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[grand_strategy_unit_key].Civilization, "Heroic " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
+	if (hero_unit_type_key ~= "") then
+		veterans = veterans + SelectedProvince.Units[hero_unit_type_key]
 	end
 
 	UIElements[table.getn(UIElements)]:setTooltip("You have " .. SelectedProvince.Units[grand_strategy_unit_key] + veterans .. " " .. GrandStrategyUnits[grand_strategy_unit_key].Name .. " regiments in " .. SelectedProvince.Name)
@@ -1682,6 +1725,31 @@ function DrawOnScreenTiles()
 		end
 	end
 
+	-- draw borders between water provinces
+	for key, value in pairs(WorldMapWaterProvinces) do
+		for i=1,table.getn(WorldMapWaterProvinces[key].BorderTiles) do
+			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+				local west_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] - 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
+				local east_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] + 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
+				local north_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2] - 1)
+				local south_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2] + 1)
+
+				if (west_tile_province ~= WorldMapWaterProvinces[key] and (west_tile_province == nil or west_tile_province.Owner == "Ocean")) then
+					DrawWorldMapTile("tilesets/world/terrain/province_border_west.png", WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2])
+				end
+				if (east_tile_province ~= WorldMapWaterProvinces[key] and (east_tile_province == nil or east_tile_province.Owner == "Ocean")) then
+					DrawWorldMapTile("tilesets/world/terrain/province_border_east.png", WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2])
+				end
+				if (north_tile_province ~= WorldMapWaterProvinces[key] and (north_tile_province == nil or north_tile_province.Owner == "Ocean")) then
+					DrawWorldMapTile("tilesets/world/terrain/province_border_north.png", WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2])
+				end
+				if (south_tile_province ~= WorldMapWaterProvinces[key] and (south_tile_province == nil or south_tile_province.Owner == "Ocean")) then
+					DrawWorldMapTile("tilesets/world/terrain/province_border_south.png", WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2])
+				end
+			end
+		end
+	end
+
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
 		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64)) do
@@ -1767,10 +1835,14 @@ function DrawGrandStrategyInterface()
 		if (SelectedProvince.Owner == GrandStrategyFaction.Name) then
 			if (InterfaceState == "Province") then
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
 					local veterans = 0
+					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
 					if (veteran_unit_type_key ~= "") then
-						veterans = SelectedProvince.Units[veteran_unit_type_key]
+						veterans = veterans + SelectedProvince.Units[veteran_unit_type_key]
+					end
+					local hero_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Heroic " .. GrandStrategyUnits[gsunit_key].Type)
+					if (hero_unit_type_key ~= "") then
+						veterans = veterans + SelectedProvince.Units[hero_unit_type_key]
 					end
 
 					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or (SelectedProvince.Units[gsunit_key] + veterans > 0 and GrandStrategyUnits[gsunit_key].InterfaceState ~= "" and GrandStrategyUnits[gsunit_key].Civilization == GrandStrategyFaction.Civilization)) then
@@ -1786,7 +1858,10 @@ function DrawGrandStrategyInterface()
 
 						-- add unit selection arrows
 						local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
-							if (veteran_unit_type_key ~= "" and SelectedUnits[veteran_unit_type_key] > 0) then -- deselect veterans first and select them last
+							if (hero_unit_type_key ~= "" and SelectedUnits[hero_unit_type_key] > 0) then -- deselect heroes first and select them last
+								SelectedUnits[hero_unit_type_key] = SelectedUnits[hero_unit_type_key] - 1
+								DrawGrandStrategyInterface()
+							elseif (veteran_unit_type_key ~= "" and SelectedUnits[veteran_unit_type_key] > 0) then -- deselect veterans second and select them second last
 								SelectedUnits[veteran_unit_type_key] = SelectedUnits[veteran_unit_type_key] - 1
 								DrawGrandStrategyInterface()
 							elseif (SelectedUnits[gsunit_key] > 0) then
@@ -1813,6 +1888,9 @@ function DrawGrandStrategyInterface()
 							elseif (veteran_unit_type_key ~= "" and SelectedUnits[veteran_unit_type_key] < SelectedProvince.Units[veteran_unit_type_key]) then
 								SelectedUnits[veteran_unit_type_key] = SelectedUnits[veteran_unit_type_key] + 1
 								DrawGrandStrategyInterface()
+							elseif (hero_unit_type_key ~= "" and SelectedUnits[hero_unit_type_key] < SelectedProvince.Units[hero_unit_type_key]) then
+								SelectedUnits[hero_unit_type_key] = SelectedUnits[hero_unit_type_key] + 1
+								DrawGrandStrategyInterface()
 							end
 						end)
 						b:setBaseColor(Color(0,0,0,0))
@@ -1829,7 +1907,10 @@ function DrawGrandStrategyInterface()
 
 						local selected_veterans = 0
 						if (veteran_unit_type_key ~= "") then
-							selected_veterans = SelectedUnits[veteran_unit_type_key]
+							selected_veterans = selected_veterans + SelectedUnits[veteran_unit_type_key]
+						end
+						if (hero_unit_type_key ~= "") then
+							selected_veterans = selected_veterans + SelectedUnits[hero_unit_type_key]
 						end
 						AddGrandStrategyLabel("~<" .. SelectedUnits[gsunit_key] + selected_veterans .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 					end
@@ -1921,10 +2002,14 @@ function DrawGrandStrategyInterface()
 				
 				-- add units buttons for training
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
 					local veterans = 0
+					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
 					if (veteran_unit_type_key ~= "") then
-						veterans = SelectedProvince.Units[veteran_unit_type_key]
+						veterans = veterans + SelectedProvince.Units[veteran_unit_type_key]
+					end
+					local hero_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Heroic " .. GrandStrategyUnits[gsunit_key].Type)
+					if (hero_unit_type_key ~= "") then
+						veterans = veterans + SelectedProvince.Units[hero_unit_type_key]
 					end
 
 					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) and GrandStrategyUnits[gsunit_key].InterfaceState == InterfaceState) then
@@ -2679,7 +2764,9 @@ function GetMilitaryScore(province, attacker)
 		if (GrandStrategyUnits[gsunit_key].Type == "Infantry") then
 			military_score = military_score + (units[gsunit_key] * (50 + infantry_military_score_bonus))
 		elseif (GrandStrategyUnits[gsunit_key].Type == "Veteran Infantry") then
-			military_score = military_score + (units[gsunit_key] * (60 + infantry_military_score_bonus))
+			military_score = military_score + (units[gsunit_key] * (75 + infantry_military_score_bonus))
+		elseif (GrandStrategyUnits[gsunit_key].Type == "Heroic Infantry") then
+			military_score = military_score + (units[gsunit_key] * (100 + infantry_military_score_bonus))
 		elseif (GrandStrategyUnits[gsunit_key].Type == "Archer") then
 			military_score = military_score + (units[gsunit_key] * (60 + archer_military_score_bonus))
 		elseif (GrandStrategyUnits[gsunit_key].Type == "Catapult") then

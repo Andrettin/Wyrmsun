@@ -1184,12 +1184,12 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
-  menu:addFullButton("~!Grand Strategy Game", "g", offx + 208, offy + 104 + 36*-1,
-    function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
-  menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*0,
+  menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*-1,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*1,
+  menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*0,
     function() RunMultiPlayerGameMenu(); menu:stop(1) end)
+  menu:addFullButton("~!Grand Strategy Game", "g", offx + 208, offy + 104 + 36*1,
+    function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
   menu:addFullButton(title_load_game_name, "l", offx + 208, offy + 104 + 36*2,
     function() RunLoadGameMenu(); menu:stop(1) end)
   menu:addFullButton(replay_game_name, "r", offx + 208, offy + 104 + 36*3,

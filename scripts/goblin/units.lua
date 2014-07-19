@@ -171,6 +171,32 @@ DefineUnitType("unit-goblin-town-hall", { Name = "Town Hall",
 --    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
+DefineUnitType("unit-goblin-mess-hall", { Name = "Mess Hall",
+  Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
+  Animations = "animations-building", Icon = "icon-goblin-mess-hall",
+  Costs = {"time", 200, "gold", 700, "wood", 450},
+  RepairHp = 4,
+  RepairCosts = {"gold", 1, "wood", 1},
+  Construction = "construction-land",
+  Speed = 0,
+  HitPoints = 800,
+  DrawLevel = 20,
+  TileSize = {3, 3}, BoxSize = {95, 95},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 30, AnnoyComputerFactor = 35,
+  Points = 160,
+  Corpse = "unit-destroyed-3x3-place",
+  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  Building = true, VisibleUnderFog = true,
+  Sounds = {
+    "selected", "click",
+--    "acknowledge", "barracks-acknowledge",
+--    "ready", "barracks-ready",
+--    "help", "basic-dwarf-voices-help",
+    "dead", "building destroyed"} } )
+
 DefineUnitType("unit-hero-greebo", { Name = "Greebo",
   Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
   Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
@@ -242,7 +268,9 @@ GrandStrategyUnits["GoblinImpaler"] = {
 	},
 	Upkeep = 25,
 	X = 0,
-	Y = 0
+	Y = 0,
+	RequiredBuildings = { "GoblinMessHall" },
+	InterfaceState = "Barracks"
 }
 
 GrandStrategyUnits["GoblinArcher"] = {
@@ -257,7 +285,10 @@ GrandStrategyUnits["GoblinArcher"] = {
 	},
 	Upkeep = 25,
 	X = 1,
-	Y = 0
+	Y = 0,
+--	RequiredBuildings = { "GoblinMessHall", "DwarvenLumberMill" },
+	RequiredBuildings = { "GoblinMessHall" },
+	InterfaceState = "Barracks"
 }
 
 -- GS buildings
@@ -273,4 +304,19 @@ GrandStrategyBuildings["GoblinTownHall"] = {
 	},
 	X = 0,
 	Y = -2
+}
+
+GrandStrategyBuildings["GoblinMessHall"] = {
+	Name = GetUnitTypeName("unit-goblin-mess-hall"),
+	UnitType = "unit-goblin-mess-hall",
+	Icon = "goblin/icons/mess_hall.png",
+	Civilization = "goblin",
+	Type = "Barracks",
+	Costs = {
+		Gold = 700,
+		Lumber = 450
+	},
+	X = 1,
+	Y = -2,
+	RequiredBuildings = { "GoblinTownHall" }
 }

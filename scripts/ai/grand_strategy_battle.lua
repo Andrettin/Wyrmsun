@@ -81,7 +81,7 @@ local land_funcs = {
 --  function() return AiResearch(AiUpgradeShield2()) end,
 
 -- FAST AND FURIOUS
-  function() return AiForce(1, {AiSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()), AiVeteranSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiVeteranSoldier()), AiShooter(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()), AiCatapult(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiCatapult()), AiFlyingRider(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiFlyingRider())}, true) end,
+  function() return AiForce(1, {AiSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()), AiVeteranSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiVeteranSoldier()), AiHeroicSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiHeroicSoldier()), AiShooter(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()), AiCatapult(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiCatapult()), AiFlyingRider(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiFlyingRider())}, true) end,
   function() return AiWaitForce(1) end,
   function() return AiAttackWithForce(1) end,
 

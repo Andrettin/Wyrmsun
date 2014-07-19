@@ -60,6 +60,11 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-town-hall",
   Key = "h", Hint = "Build Town ~!Hall",
   ForUnit = {"unit-goblin-worker"} } )
 
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-mess-hall",
+  Action = "build", Value = "unit-goblin-mess-hall",
+  Key = "m", Hint = "Build ~!Mess Hall",
+  ForUnit = {"unit-goblin-worker"} } )
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = "~<ESC~> Cancel",
@@ -69,15 +74,15 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-worker",
   Action = "train-unit", Value = "unit-goblin-worker",
-  Key = "w", Hint = "Train Goblin ~!Worker",
+  Key = "w", Hint = "Train ~!Worker",
   ForUnit = {"unit-goblin-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
   Action = "train-unit", Value = "unit-goblin-spearman",
-  Key = "i", Hint = "Train Goblin ~!Impaler",
-  ForUnit = {"unit-dwarven-barracks"} } )
+  Key = "i", Hint = "Train ~!Impaler",
+  ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-archer",
   Action = "train-unit", Value = "unit-goblin-archer",
   Key = "a", Hint = "Train ~!Archer",
-  ForUnit = {"unit-dwarven-barracks"} } )
+  ForUnit = {"unit-goblin-mess-hall"} } )

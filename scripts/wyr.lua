@@ -58,7 +58,7 @@ if (OldCreateUnit == nil) then
 		{"unit-dwarven-town-hall", "unit-gnomish-town-hall", "unit-goblin-town-hall"},
 		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
 		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm"},
-		{"unit-dwarven-barracks", "unit-gnomish-barracks"},
+		{"unit-dwarven-barracks", "unit-gnomish-barracks", "unit-goblin-mess-hall"},
 		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
 		{"unit-dwarven-scout", nil, "unit-goblin-archer"}
 	}
@@ -68,22 +68,22 @@ if (OldCreateUnit == nil) then
 	GoblinEquivalent = {}
 
 	for i=1,table.getn(t) do
-		if (i ~= 6) then
+		if (t[i][2] ~= nil and t[i][1] ~= nil) then
 			DwarvenEquivalent[t[i][2]] = t[i][1]
 		end
-		if (i <= 2 or i == 5 or i == 6) then
+		if (t[i][3] ~= nil and t[i][1] ~= nil) then
 			DwarvenEquivalent[t[i][3]] = t[i][1]
 		end
-		if (i ~= 6) then
+		if (t[i][1] ~= nil and t[i][2] ~= nil) then
 			GnomishEquivalent[t[i][1]] = t[i][2]
 		end
-		if (i <= 2 or i == 5) then
+		if (t[i][3] ~= nil and t[i][2] ~= nil) then
 			GnomishEquivalent[t[i][3]] = t[i][2]
 		end
-		if (i <= 2 or i == 5 or i == 6) then
+		if (t[i][1] ~= nil and t[i][3] ~= nil) then
 			GoblinEquivalent[t[i][1]] = t[i][3]
 		end
-		if (i <= 2 or i == 5) then
+		if (t[i][2] ~= nil and t[i][3] ~= nil) then
 			GoblinEquivalent[t[i][2]] = t[i][3]
 		end
 	end
