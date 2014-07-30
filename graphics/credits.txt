@@ -161,6 +161,10 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
 /graphics/tilesets/swamp/neutral/icons/rat.png
 /graphics/tilesets/swamp/terrain/swamp.png
+/graphics/tilesets/world/terrain/dark_plains.png
+/graphics/tilesets/world/terrain/hills.png
+/graphics/tilesets/world/terrain/mountains.png
+/graphics/tilesets/world/terrain/plains.png
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/dwarf/buttonpanel_480.png
 /graphics/ui/dwarf/buttonpanel_600.png
@@ -250,6 +254,7 @@ Leo:
 /graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/shield_3.png
 /graphics/dwarf/icons/thursagan.png
+/graphics/goblin/buildings/farm.png
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
 
@@ -275,9 +280,5 @@ StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
 
 Veneteaou:
-/graphics/tilesets/world/terrain/hills_inner.png
-/graphics/tilesets/world/terrain/hills_outer.png
-/graphics/tilesets/world/terrain/mountains_inner.png
-/graphics/tilesets/world/terrain/mountains_outer.png
-/graphics/tilesets/world/terrain/plains.png
+/graphics/tilesets/world/terrain/ocean.png
 /graphics/tilesets/world/terrain/scrub_forest_outer.png

@@ -30,11 +30,12 @@ https://launchpad.net/stratagus
 - 0.1.6
 -----------------------------------------------------------------------
 
-- Added an experimental "Grand Strategy Mode" available from the main menu. In it, the player leads a country or tribe, and gather resources and produces units at the strategic map level, while battles are fought through RTS maps.
+- Added the new "Grand Strategy Mode", available from the main menu. In it, the player leads a country or tribe, and gather resources and produces units at the strategic map level, while battles are fought through RTS maps.
 
 * Buildings
 - Added Goblin Town Hall (graphics by Leo).
 - Added Goblin Mess Hall (graphics by Leo).
+- Added Goblin Farm (graphics by Leo).
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".

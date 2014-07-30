@@ -31,6 +31,7 @@ Attacker = ""
 Defender = ""
 GrandStrategyEventMap = false
 EventFaction = nil
+GrandStrategyWorld = ""
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -52,8 +53,8 @@ function RunGrandStrategyGameSetupMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	local world_list = {"Earth", "Nidavellir"}
---	local world_list = {"Nidavellir"}
+--	local world_list = {"Earth", "Nidavellir"}
+	local world_list = {"Nidavellir"}
 	local world
 	local date_list = {"25 AD", "40 AD", "550 AD"}
 	local date
@@ -272,6 +273,7 @@ function RunGrandStrategyGameSetupMenu()
 	faction:setSize(152, 20)
 
 	function DateChanged()
+		GrandStrategyWorld = world_list[world:getSelected() + 1]
 		GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
 		Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 
@@ -1058,6 +1060,7 @@ function RunGrandStrategySaveMenu()
 			wyr.preferences.GrandStrategySaveGames[name] = {
 				SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 				SavedGrandStrategyYear = GrandStrategyYear,
+				SavedGrandStrategyWorld = GrandStrategyWorld,
 				SavedWorldMapTiles = WorldMapTiles,
 				SavedWorldMapResources = WorldMapResources,
 				SavedWorldMapProvinces = WorldMapProvinces,
@@ -1103,6 +1106,7 @@ function RunGrandStrategyLoadGameMenu()
 				return
 			end
 			GrandStrategyYear = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
+			GrandStrategyWorld = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
 			WorldMapTiles = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
 			WorldMapResources = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
 			WorldMapProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
@@ -1149,7 +1153,9 @@ end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
 	local tooltip = ""
-	if (GetWorldMapTile(tile_x, tile_y) == "DkPl") then
+	if (GetWorldMapTile(tile_x, tile_y) == "Plns") then
+		tooltip = "Plains"
+	elseif (GetWorldMapTile(tile_x, tile_y) == "DkPl") then
 		tooltip = "Dark Plains"
 	elseif (GetWorldMapTile(tile_x, tile_y) == "ScFr") then
 		tooltip = "Scrub Forest"
@@ -1161,7 +1167,11 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		tooltip = "Water"
 	end
 	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "Town Hall")) then
-		tooltip = "Settlement (" .. tooltip .. ")"
+		if (GetTileProvince(tile_x, tile_y).SettlementName ~= nil) then
+			tooltip = "Settlement of " .. GetTileProvince(tile_x, tile_y).SettlementName .. " (" .. tooltip .. ")"
+		else
+			tooltip = "Settlement (" .. tooltip .. ")"
+		end
 	elseif (TileHasResource(tile_x, tile_y, "Gold")) then
 		tooltip = "Gold Mine (" .. tooltip .. ")"
 	end
@@ -1174,6 +1184,18 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	tooltip = tooltip .. " (" .. tile_x .. ", " .. tile_y .. ")"
 
 	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
+		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn") then
+			local world_map_tile
+			if (GrandStrategyWorld == "Nidavellir") then
+				world_map_tile = CGraphic:New("tilesets/world/terrain/dark_plains.png")
+			else
+				world_map_tile = CGraphic:New("tilesets/world/terrain/plains.png")
+			end
+			world_map_tile:Load()
+			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageWidget(world_map_tile) -- not really a site, but it is more expedient to use this method
+			GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 176 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+		end
+
 		local world_map_tile = CGraphic:New(file)
 		world_map_tile:Load()
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
@@ -1630,14 +1652,16 @@ function DrawOnScreenTiles()
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
 		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64)) do
 			-- set map tile terrain
-			if (GetWorldMapTile(x, y) == "DkPl") then
+			if (GetWorldMapTile(x, y) == "Plns") then
 				DrawWorldMapTile("tilesets/world/terrain/plains.png", x, y)
+			elseif (GetWorldMapTile(x, y) == "DkPl") then
+				DrawWorldMapTile("tilesets/world/terrain/dark_plains.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "ScFr") then
 				DrawWorldMapTile("tilesets/world/terrain/scrub_forest_outer.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Hill") then
-				DrawWorldMapTile("tilesets/world/terrain/hills_outer.png", x, y)
+				DrawWorldMapTile("tilesets/world/terrain/hills.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Mntn") then
-				DrawWorldMapTile("tilesets/world/terrain/mountains_outer.png", x, y)
+				DrawWorldMapTile("tilesets/world/terrain/mountains.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Watr") then
 				DrawWorldMapTile("tilesets/world/terrain/ocean.png", x, y)
 			end

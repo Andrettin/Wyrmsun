@@ -188,3 +188,11 @@ end
 
 StopMusic()
 MusicStopped()
+
+if (wyrmsun.tileset == "cave") then -- ugly way to make sure the cave water appears properly
+	ClearAllColorCyclingRange()
+	AddColorCyclingRange(38, 46) -- water
+else
+	ClearAllColorCyclingRange()
+	AddColorCyclingRange(38, 47) -- water
+end

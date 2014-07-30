@@ -203,6 +203,11 @@ elseif (GrandStrategyEventMap) then
 		units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.SouthernTunnels.Units[gsunit_key] / 3)
 		WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] - units_to_be_created[gsunit_key]
 	end
+	-- if there is at least one steelclad in the Southern Tunnels, make sure that it is used for the raid
+	if (units_to_be_created.DwarvenSteelclad < 1 and WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad >= 1) then
+		units_to_be_created.DwarvenSteelclad = 1
+		WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad - 1
+	end
 	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 		if (units_to_be_created[gsunit_key] > 0) then
 			for i=1,units_to_be_created[gsunit_key] do

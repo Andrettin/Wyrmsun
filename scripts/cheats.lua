@@ -190,7 +190,7 @@ function HandleCheats(str)
 		"upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
-		"unit-goblin-town-hall", "unit-goblin-mess-hall",
+		"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer"
 	}
 	for i, unitName in ipairs(units) do

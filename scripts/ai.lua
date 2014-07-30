@@ -92,6 +92,8 @@ function AiFarm()
 		return "unit-dwarven-mushroom-farm"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-farm"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-farm"
 	else
 		return "unit-dwarven-mushroom-farm"
 	end

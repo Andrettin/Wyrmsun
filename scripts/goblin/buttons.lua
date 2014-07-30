@@ -60,6 +60,11 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-town-hall",
   Key = "h", Hint = "Build Town ~!Hall",
   ForUnit = {"unit-goblin-worker"} } )
 
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-farm",
+  Action = "build", Value = "unit-goblin-farm",
+  Key = "f", Hint = "Build ~!Farm",
+  ForUnit = {"unit-goblin-worker"} } )
+
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-mess-hall",
   Action = "build", Value = "unit-goblin-mess-hall",
   Key = "m", Hint = "Build ~!Mess Hall",

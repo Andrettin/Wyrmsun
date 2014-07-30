@@ -616,11 +616,11 @@ function Event(event_name, event_description, player, options, option_effects, e
 		l:setFont(Fonts["game"])
 		l:setSize(324, 208)
 		l:setLineWidth(324)
-		if (event_icon == nil) then
-			menu:add(l, 14, 40)
-		else
+--		if (event_icon == nil) then
+--			menu:add(l, 14, 40)
+--		else
 			menu:add(l, 14, 112)
-		end
+--		end
 		l:setCaption(event_description)
 
 		if (event_icon == "dwarf/icons/rugnur.png" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then

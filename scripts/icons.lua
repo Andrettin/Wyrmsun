@@ -314,6 +314,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-farm",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/farm.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-worker",
 	Size = {46, 38},
 	Frame = 0,
