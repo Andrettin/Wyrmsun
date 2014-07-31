@@ -55,6 +55,8 @@ https://launchpad.net/stratagus
 - Added the option of choosing your starting tech level in the single player game setup. Other players will use the same tech level as you, unless the map otherwise specifies. The two tech levels available are "Agrarian (Bronze)" (start as usual) and "Agrarian (Iron)" (start with level 1 weapon and shield upgrades researched, if you have acquired the upgrades in the tech tree).
 - Quests and acquired technologies in the tech tree and quest screens now appear player-colored (usually red for dwarves).
 - The buttons in the quest and tech tree screens now have frames like the in-game buttons.
+- Gold coins now give 5 gold, while gold sacks give 100 and gold chests 500 (previously the quantities were 25, 500 and 1000, respectively).
+- Fixed a bug which caused heroes not to begin with the extra HP they should have, if they had a level higher than the quantity of upgrades available.
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.

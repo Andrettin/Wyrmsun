@@ -143,6 +143,9 @@ elseif (GrandStrategyEventMap) then
 	-- Knalgan outpost
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {35, 26})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {48, 24})
+	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26}) -- so that there are usually enough people to be put in the glyphs; FIXME: when workers are implemented in grand strategy mode, this should be replaced with adding a portion of the province's miners
+	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
+	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
 
 	-- Rugnur
 	unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})

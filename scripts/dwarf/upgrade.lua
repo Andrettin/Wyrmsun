@@ -113,12 +113,6 @@ DefineDependency("unit-dwarven-thane",
 DefineDependency("unit-hero-rugnur-steelclad",
 	{"unit-dwarven-blacksmith"})
 
-DefineDependency("unit-hero-rugnur-thane",
-	{"unit-dwarven-blacksmith"})
-
-DefineDependency("unit-hero-baglur-thane",
-	{"unit-dwarven-blacksmith"})
-
 DefineDependency("unit-hero-rugnur",
 	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-axefighter", 4, "unit-dwarven-steelclad", 1})
 

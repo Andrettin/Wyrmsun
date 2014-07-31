@@ -582,6 +582,11 @@ function StandardTriggers()
 									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
 								end
 
+								if (GetUnitVariable(uncount[unit1], "LevelUp") > 0 and GetUnitVariable(uncount[unit1], "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) + GetUnitVariable(uncount[unit1], "StartingLevel")) then
+									SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + (15 * GetUnitVariable(uncount[unit1], "LevelUp")), "Max")
+									SetUnitVariable(uncount[unit1], "LevelUp", 0)
+								end
+
 								-- save upgrades
 								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
 									if (GetUnitVariable(uncount[unit1], "AxeMastery") == 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
@@ -657,25 +662,25 @@ function StandardTriggers()
 								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack") then
 									Event(
 										"",
-										"You found 500 gold in the sack.",
+										"You found 100 gold in the sack.",
 										GetUnitVariable(nearby_uncount[unit2], "Player"),
 										{"~!OK"},
 										{function(s)
 											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 											PlaySound("gold-coins")
-											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
+											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 100)
 										end}
 									)								
 								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins") then
 									Event(
 										"",
-										"You found 25 gold.",
+										"You found 5 gold.",
 										GetUnitVariable(nearby_uncount[unit2], "Player"),
 										{"~!OK"},
 										{function(s)
 											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 											PlaySound("gold-coins")
-											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 25)
+											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 5)
 										end}
 									)
 								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
@@ -755,25 +760,25 @@ function StandardTriggers()
 									if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest") then
 										Event(
 											"",
-											"You found 1000 gold in the chest.",
+											"You found 500 gold in the chest.",
 											GetUnitVariable(nearby_uncount[unit2], "Player"),
 											{"~!OK"},
 											{function(s)
 												SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
 												PlaySound("gold-coins")
-												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 1000)											
+												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
 											end}
 										)
 									elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
 										Event(
 											"",
-											"You found 1000 gold in the chest, plus gems worth 500 gold.",
+											"You found 500 gold in the chest, plus gems worth 250 gold.",
 											GetUnitVariable(nearby_uncount[unit2], "Player"),
 											{"~!OK"},
 											{function(s)
 												SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
 												PlaySound("gold-coins")
-												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 1500)											
+												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 750)
 											end}
 										)
 									end
