@@ -1213,10 +1213,18 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setTooltip(tooltip)
 	elseif (string.find(file, "border") ~= nil) then -- different method for border graphics
-		local world_map_tile = CGraphic:New(file)
+		local b
+		local world_map_tile
+		if (string.find(file, "national") ~= nil) then
+			b = PlayerColorImageButton("", GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Color)
+			world_map_tile = CPlayerColorGraphic:New(file)
+		else
+			world_map_tile = CGraphic:New(file)
+			b = ImageButton("")
+		end
 		world_map_tile:Load()
 		if (string.find(file, "west") ~= nil) then
-			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
+			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = b
 			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
 					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
@@ -1231,7 +1239,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
 			OnScreenBorderWestTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setTooltip(tooltip)
 		elseif (string.find(file, "east") ~= nil) then
-			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
+			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = b
 			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
 					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
@@ -1246,7 +1254,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
 			OnScreenBorderEastTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setTooltip(tooltip)
 		elseif (string.find(file, "north") ~= nil) then
-			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
+			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = b
 			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
 					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
@@ -1261,7 +1269,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
 			OnScreenBorderNorthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setTooltip(tooltip)
 		elseif (string.find(file, "south") ~= nil) then
-			OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
+			OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = b
 			OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 				function()
 					SetSelectedProvince(GetTileProvince(tile_x, tile_y))
@@ -1344,9 +1352,17 @@ function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 	end
 
 	if ((table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) or (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0)) then
-		local minimap_tile = CGraphic:New(file)
+		local minimap_tile
+		local b
+		if (GetTileProvince(tile_x, tile_y).Owner ~= "" and GetTileProvince(tile_x, tile_y).Owner ~= "Ocean") then
+			b = PlayerColorImageButton("", GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Color)
+			minimap_tile = CPlayerColorGraphic:New(file)
+		else
+			b = ImageButton("")
+			minimap_tile = CGraphic:New(file)
+		end
 		minimap_tile:Load()
-		MinimapTiles[tile_y + 1][tile_x + 1] = ImageButton("")
+		MinimapTiles[tile_y + 1][tile_x + 1] = b
 		MinimapTiles[tile_y + 1][tile_x + 1]:setActionCallback(
 			function()
 				CenterMapOnTile(tile_x, tile_y)
@@ -1692,28 +1708,28 @@ function DrawOnScreenTiles()
 
 				if (west_tile_province ~= WorldMapProvinces[key] and (west_tile_province == nil or west_tile_province.Owner ~= "Ocean")) then
 					if (WorldMapProvinces[key].Owner ~= "" and (west_tile_province == nil or west_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
-						DrawWorldMapTile("tilesets/world/terrain/province_border_west_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
+						DrawWorldMapTile("tilesets/world/terrain/province_national_border_west.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_west.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
 				end
 				if (east_tile_province ~= WorldMapProvinces[key] and (east_tile_province == nil or east_tile_province.Owner ~= "Ocean")) then
 					if (WorldMapProvinces[key].Owner ~= "" and (east_tile_province == nil or east_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
-						DrawWorldMapTile("tilesets/world/terrain/province_border_east_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
+						DrawWorldMapTile("tilesets/world/terrain/province_national_border_east.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_east.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
 				end
 				if (north_tile_province ~= WorldMapProvinces[key] and (north_tile_province == nil or north_tile_province.Owner ~= "Ocean")) then
 					if (WorldMapProvinces[key].Owner ~= "" and (north_tile_province == nil or north_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
-						DrawWorldMapTile("tilesets/world/terrain/province_border_north_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
+						DrawWorldMapTile("tilesets/world/terrain/province_national_border_north.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_north.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
 				end
 				if (south_tile_province ~= WorldMapProvinces[key] and (south_tile_province == nil or south_tile_province.Owner ~= "Ocean")) then
 					if (WorldMapProvinces[key].Owner ~= "" and (south_tile_province == nil or south_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
-						DrawWorldMapTile("tilesets/world/terrain/province_border_south_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
+						DrawWorldMapTile("tilesets/world/terrain/province_national_border_south.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_south.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
@@ -2276,7 +2292,7 @@ function DrawMinimap()
 		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
 			-- draw the province's tiles on the minimap
 			if (WorldMapProvinces[key].Owner ~= "") then
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_" .. GetFactionFromName(WorldMapProvinces[key].Owner).Color .. ".png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
+				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile.png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
 			else
 				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_white.png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
 			end
@@ -3021,7 +3037,7 @@ function GrandStrategyEvent(faction, event)
 		l:setSize(324, 208)
 		l:setLineWidth(324)
 		if (event_icon == nil) then
-			menu:add(l, 14, 40)
+			menu:add(l, 14, 76)
 		else
 			menu:add(l, 14, 112)
 		end

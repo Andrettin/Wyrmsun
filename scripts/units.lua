@@ -133,6 +133,19 @@ DefineUnitType("unit-critter", { Name = "Critter",
   RandomMovementProbability = 5,
   organic = true,
   Coward = true,
+  Variations = {
+	{
+		"variation-id", "dark-gray-fur"
+	},
+	{
+		"variation-id", "light-gray-fur",
+		"file", "neutral/units/rat_light_gray_fur.png"
+	},
+	{
+		"variation-id", "black-fur",
+		"file", "neutral/units/rat_black_fur.png"
+	}
+  },
   Sounds = {
     "selected", "click",
 --    "acknowledge", "critter-acknowledge",
@@ -166,6 +179,15 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
   RandomMovementProbability = 1,
   organic = true,
   Coward = false,
+  Variations = {
+	{
+		"variation-id", "brown-feathers"
+	},
+	{
+		"variation-id", "blue-feathers",
+		"file", "neutral/units/gryphon_blue_feathers.png"
+	}
+  },
   Sounds = {
     "selected", "click",
 --    "acknowledge", "critter-acknowledge",

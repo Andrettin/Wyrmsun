@@ -70,7 +70,10 @@ https://launchpad.net/stratagus
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.
-- Added dwarven Thane (unit graphics by b_o).
+- Added dwarven Thane (unit graphics by b_o and icon by Jinn).
+- Units' graphic variations can now be defined in the unit type's definition
+- Brown-haired dwarven axefighters, steelclads and thanes now use a brown-haired icon as well.
+- Orange-haired dwarven scouts can now randomly get an icon variation (braided beard).
 
 -----------------------------------------------------------------------
 - 0.1.5c

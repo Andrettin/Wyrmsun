@@ -320,13 +320,13 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
   Key = "u", Hint = "~!Upgrade to Steelclad",
   ForUnit = {"unit-dwarven-axefighter"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad-brown-hair",
   Action = "upgrade-to", Value = "unit-hero-rugnur-steelclad",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = "~!Upgrade to Steelclad",
   ForUnit = {"unit-hero-rugnur"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-thane",
   Action = "upgrade-to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = "~!Upgrade to Thane",
@@ -338,7 +338,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-rugnur-older",
   Key = "u", Hint = "~!Upgrade to Thane",
   ForUnit = {"unit-hero-rugnur-steelclad"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-thane",
   Action = "upgrade-to", Value = "unit-hero-baglur-thane",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = "~!Upgrade to Thane",

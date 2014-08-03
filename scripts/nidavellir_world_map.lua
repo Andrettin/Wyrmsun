@@ -283,7 +283,7 @@ Factions = {
 		Name = "Norlund Clan",
 		Civilization = "dwarf",
 		Type = "Tribe",
-		Color = "red",
+		Color = "orange",
 		Gold = 3000,
 		Commodities = {
 			Lumber = 1500 -- half of the gold value
@@ -303,7 +303,7 @@ Factions = {
 		Name = "Shorbear Clan",
 		Civilization = "dwarf",
 		Type = "Tribe",
-		Color = "blue",
+		Color = "cyan",
 		Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 		Commodities = {
 			Lumber = 4500 -- half of the gold value
@@ -315,7 +315,7 @@ Factions = {
 		Civilization = "dwarf",
 		Type = "Polity",
 		Title = "Lordship",
-		Color = "blue" -- should be black
+		Color = "black"
 	},
 	Knalga = {
 		Name = "Knalga",
@@ -329,7 +329,7 @@ Factions = {
 		Civilization = "dwarf",
 		Type = "Polity",
 		Title = "Lordship",
-		Color = "green"
+		Color = "teal"
 	}
 }
 

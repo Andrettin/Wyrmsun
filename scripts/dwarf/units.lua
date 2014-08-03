@@ -108,6 +108,33 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
   organic = true,
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
+  Variations = {
+	{
+		"variation-id", "red-hair"
+	},
+	{
+		"variation-id", "gray-hair",
+		"file", "dwarf/units/dwarven_axefighter_gray_hair.png"
+	},
+	{
+		"variation-id", "orange-hair",
+		"file", "dwarf/units/dwarven_axefighter_orange_hair.png"
+	},
+	{
+		"variation-id", "blond-hair",
+		"file", "dwarf/units/dwarven_axefighter_blond_hair.png"
+	},
+	{
+		"variation-id", "black-hair",
+		"file", "dwarf/units/dwarven_axefighter_black_hair.png",
+		"icon", "icon-dwarven-axefighter-brown-hair"
+	},
+	{
+		"variation-id", "brown-hair",
+		"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
+		"icon", "icon-dwarven-axefighter-brown-hair"
+	}
+  },
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
     "acknowledge", "basic-dwarf-voices-acknowledge",
@@ -139,6 +166,33 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
   organic = true,
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
+  Variations = {
+	{
+		"variation-id", "red-hair"
+	},
+	{
+		"variation-id", "gray-hair",
+		"file", "dwarf/units/dwarven_steelclad_gray_hair.png"
+	},
+	{
+		"variation-id", "orange-hair",
+		"file", "dwarf/units/dwarven_steelclad_orange_hair.png"
+	},
+	{
+		"variation-id", "blond-hair",
+		"file", "dwarf/units/dwarven_steelclad_blond_hair.png"
+	},
+	{
+		"variation-id", "black-hair",
+		"file", "dwarf/units/dwarven_steelclad_black_hair.png",
+		"icon", "icon-dwarven-steelclad-brown-hair"
+	},
+	{
+		"variation-id", "brown-hair",
+		"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
+		"icon", "icon-dwarven-steelclad-brown-hair"
+	}
+  },
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
     "acknowledge", "basic-dwarf-voices-acknowledge",
@@ -148,7 +202,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
 
 DefineUnitType("unit-dwarven-thane", { Name = "Thane",
   Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
-  Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
+  Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-thane",
   Costs = {"time", 0},
   Speed = 10,
   HitPoints = 90,
@@ -170,6 +224,33 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
   organic = true,
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
+  Variations = {
+	{
+		"variation-id", "red-hair"
+	},
+	{
+		"variation-id", "gray-hair",
+		"file", "dwarf/units/thane_gray_hair.png"
+	},
+	{
+		"variation-id", "orange-hair",
+		"file", "dwarf/units/thane_orange_hair.png"
+	},
+	{
+		"variation-id", "blond-hair",
+		"file", "dwarf/units/thane_blond_hair.png"
+	},
+	{
+		"variation-id", "black-hair",
+		"file", "dwarf/units/thane_black_hair.png",
+		"icon", "icon-dwarven-thane-brown-hair"
+	},
+	{
+		"variation-id", "brown-hair",
+		"file", "dwarf/units/thane_brown_hair.png",
+		"icon", "icon-dwarven-thane-brown-hair"
+	}
+  },
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
     "acknowledge", "basic-dwarf-voices-acknowledge",
@@ -200,6 +281,23 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
   organic = true,
   SelectableByRectangle = true,
   CanCastSpell = {"spell-learn-critical-strike"},
+  Variations = {
+	{
+		"variation-id", "orange-hair-and-short-beard"
+	},
+	{
+		"variation-id", "orange-hair-and-braided-beard",
+		"icon", "icon-dwarven-scout-braided-beard"
+	},
+	{
+		"variation-id", "blond-hair",
+		"file", "dwarf/units/dwarven_scout_blond_hair.png"
+	},
+	{
+		"variation-id", "gray-hair",
+		"file", "dwarf/units/dwarven_scout_gray_hair.png"
+	}
+  },
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
     "acknowledge", "basic-dwarf-voices-acknowledge",
@@ -473,7 +571,7 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
-  Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/dwarven_axefighter_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
   Costs = {"time", 0, "gold", 5250},
   Speed = 10,
@@ -494,7 +592,6 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
-  GraphicsVariation = 6,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
@@ -504,7 +601,7 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
-  Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-rugnur",
   Costs = {"time", 0},
   Speed = 10,
@@ -526,7 +623,6 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
-  GraphicsVariation = 6,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
@@ -536,7 +632,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
-  Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
   Costs = {"time", 0},
   Speed = 10,
@@ -558,7 +654,6 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
-  GraphicsVariation = 6,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
@@ -568,7 +663,7 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-baglur", { Name = "Baglur",
-  Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/dwarven_steelclad_gray_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-baglur",
   Costs = {"time", 0, "gold", 5250},
   Speed = 10,
@@ -590,7 +685,6 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
-  GraphicsVariation = 2,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
@@ -600,7 +694,7 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
-  Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
   Costs = {"time", 0},
   Speed = 10,
@@ -622,7 +716,6 @@ DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
-  GraphicsVariation = 2,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
@@ -632,7 +725,7 @@ DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
-  Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-thursagan",
   Costs = {"time", 0, "gold", 5250},
   Speed = 10,
@@ -654,8 +747,6 @@ DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
---  GraphicsVariation = 2,
-  GraphicsVariation = 1,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",
@@ -665,7 +756,7 @@ DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
-  Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-durstorn",
   Costs = {"time", 0, "gold", 5250},
   Speed = 10,
@@ -687,8 +778,6 @@ DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
   LandUnit = true,
   organic = true,
   SelectableByRectangle = true,
---  GraphicsVariation = 6,
-  GraphicsVariation = 1,
   CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
   Sounds = {
     "selected", "basic-dwarf-voices-selected-group",

@@ -1,14 +1,31 @@
 b_o:
 /graphics/dwarf/items/dwarven_helmet.png
 /graphics/dwarf/units/dwarven_axefighter.png
+/graphics/dwarf/units/dwarven_axefighter_black_hair.png
+/graphics/dwarf/units/dwarven_axefighter_blond_hair.png
+/graphics/dwarf/units/dwarven_axefighter_brown_hair.png
+/graphics/dwarf/units/dwarven_axefighter_gray_hair.png
+/graphics/dwarf/units/dwarven_axefighter_orange_hair.png
 /graphics/dwarf/units/dwarven_ballista.png
 /graphics/dwarf/units/dwarven_scout.png
+/graphics/dwarf/units/dwarven_scout_blond_hair.png
+/graphics/dwarf/units/dwarven_scout_gray_hair.png
 /graphics/dwarf/units/dwarven_steelclad.png
+/graphics/dwarf/units/dwarven_steelclad_black_hair.png
+/graphics/dwarf/units/dwarven_steelclad_blond_hair.png
+/graphics/dwarf/units/dwarven_steelclad_brown_hair.png
+/graphics/dwarf/units/dwarven_steelclad_gray_hair.png
+/graphics/dwarf/units/dwarven_steelclad_orange_hair.png
 /graphics/dwarf/units/gryphon_rider.png
 /graphics/dwarf/units/miner.png
 /graphics/dwarf/units/miner_with_gold.png
 /graphics/dwarf/units/miner_with_lumber.png
 /graphics/dwarf/units/thane.png
+/graphics/dwarf/units/thane_black_hair.png
+/graphics/dwarf/units/thane_blond_hair.png
+/graphics/dwarf/units/thane_brown_hair.png
+/graphics/dwarf/units/thane_gray_hair.png
+/graphics/dwarf/units/thane_orange_hair.png
 /graphics/gnome/units/gnomish_caravan.png
 /graphics/gnome/units/gnomish_caravan_extra_1.png
 /graphics/gnome/units/gnomish_recruit.png
@@ -51,7 +68,10 @@ b_o:
 /graphics/neutral/items/potion.png
 /graphics/neutral/items/scepter.png
 /graphics/neutral/units/gryphon.png
+/graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/rat.png
+/graphics/neutral/units/rat_black_fur.png
+/graphics/neutral/units/rat_light_gray_fur.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
@@ -100,8 +120,11 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/baglur.png
 /graphics/dwarf/icons/boots.png (modified from igoku's icon)
 /graphics/dwarf/icons/dwarven_axefighter.png
+/graphics/dwarf/icons/dwarven_axefighter_brown_hair.png
 /graphics/dwarf/icons/dwarven_scout.png
+/graphics/dwarf/icons/dwarven_scout_braided_beard.png
 /graphics/dwarf/icons/dwarven_steelclad.png
+/graphics/dwarf/icons/dwarven_steelclad_brown_hair.png
 /graphics/dwarf/icons/gryphon_rider.png
 /graphics/dwarf/icons/miner.png (modified from igoku's icon)
 /graphics/dwarf/icons/patrol_land.png
@@ -110,6 +133,8 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/rugnur_older.png
 /graphics/dwarf/icons/shield_1.png
 /graphics/dwarf/icons/stand_ground.png
+/graphics/dwarf/icons/thane.png
+/graphics/dwarf/icons/thane_brown_hair.png
 /graphics/dwarf/icons/throwing_axe_1.png
 /graphics/dwarf/icons/throwing_axe_2.png
 /graphics/dwarf/icons/throwing_axe_3.png
