@@ -54,6 +54,7 @@ b_o:
 /graphics/neutral/decorations/small_rocks.png
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
+/graphics/neutral/icons/gryphon_blue_feathers.png (modified from the gryphon icon made by Jinn)
 /graphics/neutral/items/axe.png
 /graphics/neutral/items/barrel.png
 /graphics/neutral/items/carrots.png

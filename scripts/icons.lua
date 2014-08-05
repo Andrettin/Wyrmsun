@@ -412,6 +412,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gryphon-blue-feathers",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/gryphon_blue_feathers.png"
+})
+
+DefineIcon({
 	Name = "icon-stairs",
 	Size = {46, 38},
 	Frame = 0,

@@ -72,8 +72,9 @@ https://launchpad.net/stratagus
 - Dwarven ballistas and gnomish caravans are now repairable.
 - Added dwarven Thane (unit graphics by b_o and icon by Jinn).
 - Units' graphic variations can now be defined in the unit type's definition
-- Brown-haired dwarven axefighters, steelclads and thanes now use a brown-haired icon as well.
-- Orange-haired dwarven scouts can now randomly get an icon variation (braided beard).
+- Brown-haired dwarven axefighters, steelclads and thanes now use a brown-haired icon as well (graphics by Jinn).
+- Orange-haired dwarven scouts can now randomly get an icon variation (braided beard) (graphic by Jinn).
+- Blue-feathered gryphons now have a blue-feathered icon to match (modification of the gryphon icon by b_o).
 
 -----------------------------------------------------------------------
 - 0.1.5c
