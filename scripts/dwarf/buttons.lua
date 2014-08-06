@@ -244,30 +244,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
   Key = "b", Hint = "Build ~!Ballista",
   ForUnit = {"unit-dwarven-barracks"} } )
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-rugnur",
-  Action = "train-unit", Value = "unit-hero-rugnur",
-  Allowed = "check-units-not", AllowArg = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"},
-  Key = "r", Hint = "Hire ~!Rugnur",
-  ForUnit = {"unit-dwarven-barracks"} } )
-
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-baglur",
-  Action = "train-unit", Value = "unit-hero-baglur",
-  Allowed = "check-units-not", AllowArg = {"unit-hero-baglur", "unit-hero-baglur-thane"},
-  Key = "g", Hint = "Hire ~!Baglur",
-  ForUnit = {"unit-dwarven-barracks"} } )
-
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-thursagan",
-  Action = "train-unit", Value = "unit-hero-thursagan",
-  Allowed = "check-units-not", AllowArg = {"unit-hero-thursagan"},
-  Key = "t", Hint = "Hire ~!Thursagan",
-  ForUnit = {"unit-dwarven-barracks"} } )
-
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-durstorn",
-  Action = "train-unit", Value = "unit-hero-durstorn",
-  Allowed = "check-units-not", AllowArg = {"unit-hero-durstorn"},
-  Key = "d", Hint = "Hire ~!Durstorn",
-  ForUnit = {"unit-dwarven-barracks"} } )
-
 --DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-steelclad",
 --  Action = "train-unit", Value = "unit-dwarven-steelclad",
 --  Allowed = "check-single-research",

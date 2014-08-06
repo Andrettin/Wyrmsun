@@ -107,23 +107,8 @@ DefineDependency("unit-dwarven-ballista",
 DefineDependency("unit-dwarven-steelclad",
 	{"unit-dwarven-blacksmith"})
 
-DefineDependency("unit-dwarven-thane",
-	{"unit-dwarven-blacksmith"})
-
 DefineDependency("unit-hero-rugnur-steelclad",
 	{"unit-dwarven-blacksmith"})
-
-DefineDependency("unit-hero-rugnur",
-	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-axefighter", 4, "unit-dwarven-steelclad", 1})
-
-DefineDependency("unit-hero-baglur",
-	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-steelclad", 4})
-
-DefineDependency("unit-hero-thursagan",
-	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-steelclad", 4, "unit-dwarven-blacksmith"})
-
-DefineDependency("unit-hero-durstorn",
-	{"unit-dwarven-town-hall", "unit-dwarven-barracks", "unit-dwarven-steelclad", 12})
 
 
 

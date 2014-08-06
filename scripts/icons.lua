@@ -90,10 +90,31 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-axefighter-black-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_axefighter_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-axefighter-blond-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_axefighter_blond_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-axefighter-brown-hair",
 	Size = {46, 38},
 	Frame = 0,
 	File = "dwarf/icons/dwarven_axefighter_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-axefighter-gray-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_axefighter_gray_hair.png"
 })
 
 DefineIcon({
@@ -104,10 +125,31 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-steelclad-black-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_steelclad_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-steelclad-blond-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_steelclad_blond_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-steelclad-brown-hair",
 	Size = {46, 38},
 	Frame = 0,
 	File = "dwarf/icons/dwarven_steelclad_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-steelclad-gray-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_steelclad_gray_hair.png"
 })
 
 DefineIcon({
@@ -118,10 +160,31 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-thane-black-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/thane_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-thane-blond-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/thane_blond_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-thane-brown-hair",
 	Size = {46, 38},
 	Frame = 0,
 	File = "dwarf/icons/thane_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-thane-gray-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/thane_gray_hair.png"
 })
 
 DefineIcon({
@@ -136,6 +199,34 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "dwarf/icons/dwarven_scout_braided_beard.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-scout-blond-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_scout_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-scout-blond-hair-braided-beard",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_scout_blond_hair_braided_beard.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-scout-gray-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_scout_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-scout-gray-hair-braided-beard",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/dwarven_scout_gray_hair_braided_beard.png"
 })
 
 DefineIcon({

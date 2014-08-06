@@ -1,5 +1,18 @@
 b_o:
 /graphics/dwarf/items/dwarven_helmet.png
+/graphics/dwarf/icons/dwarven_axefighter_black_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_axefighter_blond_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_axefighter_gray_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_scout_blond_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_scout_blond_hair_braided_beard.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_scout_gray_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_scout_gray_hair_braided_beard.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_steelclad_black_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_steelclad_blond_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/dwarven_steelclad_gray_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/thane_black_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/thane_blond_hair.png (modified from the icon made by Jinn)
+/graphics/dwarf/icons/thane_gray_hair.png (modified from the icon made by Jinn)
 /graphics/dwarf/units/dwarven_axefighter.png
 /graphics/dwarf/units/dwarven_axefighter_black_hair.png
 /graphics/dwarf/units/dwarven_axefighter_blond_hair.png

@@ -40,6 +40,10 @@ https://launchpad.net/stratagus
 * Factions
 - The Gnomish faction is now again called "Untersberg".
 
+* Heroes
+- Fixed a bug which caused heroes not to begin with the extra HP they should have, if they had a level higher than the quantity of upgrades available.
+- Heroes are no longer hireable.
+
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
 - Added France map (Earth) by Mathieu Roy, from FreeCiv.
@@ -56,7 +60,6 @@ https://launchpad.net/stratagus
 - Quests and acquired technologies in the tech tree and quest screens now appear player-colored (usually red for dwarves).
 - The buttons in the quest and tech tree screens now have frames like the in-game buttons.
 - Gold coins now give 5 gold, while gold sacks give 100 and gold chests 500 (previously the quantities were 25, 500 and 1000, respectively).
-- Fixed a bug which caused heroes not to begin with the extra HP they should have, if they had a level higher than the quantity of upgrades available.
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
@@ -73,8 +76,10 @@ https://launchpad.net/stratagus
 - Added dwarven Thane (unit graphics by b_o and icon by Jinn).
 - Units' graphic variations can now be defined in the unit type's definition
 - Brown-haired dwarven axefighters, steelclads and thanes now use a brown-haired icon as well (graphics by Jinn).
-- Orange-haired dwarven scouts can now randomly get an icon variation (braided beard) (graphic by Jinn).
-- Blue-feathered gryphons now have a blue-feathered icon to match (modification of the gryphon icon by b_o).
+- Dwarven scouts can now randomly get an icon variation (braided beard) (graphic by Jinn).
+- Blue-feathered gryphons now have a blue-feathered icon to match (modification by b_o of the gryphon icon).
+- Black-haired, blond-haired and gray-haired dwarven axefighters, steelclads and thanes now have an appropriately colored icon to match (modification by b_o of the axefighter, steelclad and thane icons).
+- Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o of the scout and scout with braided beard icons).
 
 -----------------------------------------------------------------------
 - 0.1.5c

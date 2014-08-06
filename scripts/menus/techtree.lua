@@ -240,24 +240,6 @@ function ResetTechnologiesAcquired()
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
 	}
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck")) then
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
-	end
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates")) then
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur-thane")
-	end
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")) then
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan")
-	end
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan")) then
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-durstorn")
-	end
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Greebo's Shinies")) then
-		table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-greebo")
-	end
 	SavePreferences()
 end
 

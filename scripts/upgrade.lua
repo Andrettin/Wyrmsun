@@ -43,7 +43,6 @@ function DefineAllowNormalUnits(flags)
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2",
 		"upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
-		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
 		"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm",

@@ -819,113 +819,6 @@ function StandardTriggers()
 		end
 	)
 
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) >= 1) then
-				-- make it impossible to hire a hero after he has already been hired by someone
-				DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
-				return false
-			else
-				-- create Rugnur for an AI player if they fulfill the conditions
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-axefighter") >= 4 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 1 and GetPlayerData(i, "Resources", "gold") >= 5250) then
-						unit = CreateUnit("unit-hero-rugnur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
-						DefineAllow("unit-hero-rugnur", "FFFFFFFFFFFFFFFF")
-						return false
-					end
-				end
-			end
-			return true
-		end
-	)
-
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) >= 1) then
-				DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
-				return false
-			else
-				-- create Baglur for an AI player if they fulfill the conditions
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4 and GetPlayerData(i, "Resources", "gold") >= 5250) then
-						unit = CreateUnit("unit-hero-baglur", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
-						DefineAllow("unit-hero-baglur", "FFFFFFFFFFFFFFFF")
-						return false
-					end
-				end
-			end
-			return true
-		end
-	)
-
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) >= 1) then
-				-- make it impossible to hire a hero after he has already been hired by someone
-				DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
-				return false
-			else
-				-- create Thursagan for an AI player if they fulfill the conditions
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(i, "Name")), "unit-hero-thursagan") == false and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-blacksmith") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 4 and GetPlayerData(i, "Resources", "gold") >= 5250) then
-						unit = CreateUnit("unit-hero-thursagan", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
-						DefineAllow("unit-hero-thursagan", "FFFFFFFFFFFFFFFF")
-						return false
-					end
-				end
-			end
-			return true
-		end
-	)
-
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function() 
-			if (GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) >= 1) then
-				-- make it impossible to hire a hero after he has already been hired by someone
-				DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
-				return false
-			else
-				-- create Durstorn for an AI player if they fulfill the conditions
-				for i=0,14 do
-					if (GetPlayerData(i, "RaceName") == "dwarf" and GetPlayerData(i, "AiEnabled") and GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(i, "Name")), "unit-hero-durstorn") == false and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-barracks") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-steelclad") >= 12 and GetPlayerData(i, "Resources", "gold") >= 5250) then
-						unit = CreateUnit("unit-hero-durstorn", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") - 5250)
-						DefineAllow("unit-hero-durstorn", "FFFFFFFFFFFFFFFF")
-						return false
-					end
-				end
-			end
-			return true
-		end
-	)
-
 	-- increase unit level if it has enough experience
 	AddTrigger(
 		function()
@@ -1034,15 +927,15 @@ function GetFactionForbiddenUnits(faction)
 	elseif (faction == "Shinsplitter Clan") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Shorbear Clan") then
-		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn" }
+		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Kal Kartha") then
-		return { "unit-goblin-spearman", "unit-goblin-archer", "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-durstorn" }
+		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Knalga") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Lyr") then
 		return { "unit-goblin-spearman", "unit-goblin-archer" }
 	elseif (faction == "Goblins") then
-		return { "unit-dwarven-axefighter", "unit-dwarven-scout" }
+		return {}
 	else
 		return {}
 	end

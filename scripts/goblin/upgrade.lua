@@ -29,6 +29,3 @@
 
 DefineDependency("unit-goblin-archer",
 	{"unit-dwarven-lumber-mill"})
-
-DefineDependency("unit-hero-greebo",
-  {"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-spearman", 4})

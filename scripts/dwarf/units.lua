@@ -114,7 +114,8 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
 	},
 	{
 		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_axefighter_gray_hair.png"
+		"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
+		"icon", "icon-dwarven-axefighter-gray-hair"
 	},
 	{
 		"variation-id", "orange-hair",
@@ -122,12 +123,13 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
 	},
 	{
 		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_axefighter_blond_hair.png"
+		"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
+		"icon", "icon-dwarven-axefighter-blond-hair"
 	},
 	{
 		"variation-id", "black-hair",
 		"file", "dwarf/units/dwarven_axefighter_black_hair.png",
-		"icon", "icon-dwarven-axefighter-brown-hair"
+		"icon", "icon-dwarven-axefighter-black-hair"
 	},
 	{
 		"variation-id", "brown-hair",
@@ -172,7 +174,8 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
 	},
 	{
 		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_steelclad_gray_hair.png"
+		"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
+		"icon", "icon-dwarven-steelclad-gray-hair"
 	},
 	{
 		"variation-id", "orange-hair",
@@ -180,12 +183,13 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
 	},
 	{
 		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_steelclad_blond_hair.png"
+		"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
+		"icon", "icon-dwarven-steelclad-blond-hair"
 	},
 	{
 		"variation-id", "black-hair",
 		"file", "dwarf/units/dwarven_steelclad_black_hair.png",
-		"icon", "icon-dwarven-steelclad-brown-hair"
+		"icon", "icon-dwarven-steelclad-black-hair"
 	},
 	{
 		"variation-id", "brown-hair",
@@ -230,7 +234,8 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
 	},
 	{
 		"variation-id", "gray-hair",
-		"file", "dwarf/units/thane_gray_hair.png"
+		"file", "dwarf/units/thane_gray_hair.png",
+		"icon", "icon-dwarven-thane-gray-hair"
 	},
 	{
 		"variation-id", "orange-hair",
@@ -238,12 +243,13 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
 	},
 	{
 		"variation-id", "blond-hair",
-		"file", "dwarf/units/thane_blond_hair.png"
+		"file", "dwarf/units/thane_blond_hair.png",
+		"icon", "icon-dwarven-thane-blond-hair"
 	},
 	{
 		"variation-id", "black-hair",
 		"file", "dwarf/units/thane_black_hair.png",
-		"icon", "icon-dwarven-thane-brown-hair"
+		"icon", "icon-dwarven-thane-black-hair"
 	},
 	{
 		"variation-id", "brown-hair",
@@ -283,19 +289,31 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
   CanCastSpell = {"spell-learn-critical-strike"},
   Variations = {
 	{
-		"variation-id", "orange-hair-and-short-beard"
+		"variation-id", "orange-hair-short-beard"
 	},
 	{
-		"variation-id", "orange-hair-and-braided-beard",
+		"variation-id", "orange-hair-braided-beard",
 		"icon", "icon-dwarven-scout-braided-beard"
 	},
 	{
-		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_scout_blond_hair.png"
+		"variation-id", "blond-hair-short-beard",
+		"file", "dwarf/units/dwarven_scout_blond_hair.png",
+		"icon", "icon-dwarven-scout-blond-hair"
 	},
 	{
-		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_scout_gray_hair.png"
+		"variation-id", "blond-hair-braided-beard",
+		"file", "dwarf/units/dwarven_scout_blond_hair.png",
+		"icon", "icon-dwarven-scout-blond-hair-braided-beard"
+	},
+	{
+		"variation-id", "gray-hair-short-beard",
+		"file", "dwarf/units/dwarven_scout_gray_hair.png",
+		"icon", "icon-dwarven-scout-gray-hair"
+	},
+	{
+		"variation-id", "gray-hair-braided-beard",
+		"file", "dwarf/units/dwarven_scout_gray_hair.png",
+		"icon", "icon-dwarven-scout-gray-hair-braided-beard"
 	}
   },
   Sounds = {
