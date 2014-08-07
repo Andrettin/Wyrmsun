@@ -39,6 +39,7 @@ b_o:
 /graphics/dwarf/units/thane_brown_hair.png
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
+/graphics/gnome/icons/gnomish_worker_gray_hair.png (modified from the icon made by Jinn)
 /graphics/gnome/units/gnomish_caravan.png
 /graphics/gnome/units/gnomish_caravan_extra_1.png
 /graphics/gnome/units/gnomish_recruit.png

@@ -72,6 +72,18 @@ DefineUnitType("unit-gnomish-worker", { Name = "Gnomish Scavenger",
     "terrain-harvester"}},
   organic = true,
   SelectableByRectangle = true,
+  Variations = {
+	{
+		"variation-id", "blond-hair"
+	},
+	{
+		"variation-id", "gray-hair",
+		"icon", "icon-gnomish-worker-gray-hair"
+--		"file", "gnome/units/gnomish_worker.png"
+--		"gold-file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
+--		"wood-file-when-loaded", "gnome/units/gnomish_worker_with_lumber.png"
+	}
+  },
   Sounds = {
     "selected", "click",
 --    "acknowledge", "basic-dwarf-voices-acknowledge",

@@ -412,6 +412,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-worker-gray-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "gnome/icons/gnomish_worker_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-recruit",
 	Size = {46, 38},
 	Frame = 0,

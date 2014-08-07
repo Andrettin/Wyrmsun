@@ -292,6 +292,7 @@ DefineVariables(
 	"AttackRange",
 	"RegenerationRate",
 	"ResourcesHeld",
+	"Variation", {Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},

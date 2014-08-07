@@ -80,6 +80,7 @@ https://launchpad.net/stratagus
 - Blue-feathered gryphons now have a blue-feathered icon to match (modification by b_o of the gryphon icon).
 - Black-haired, blond-haired and gray-haired dwarven axefighters, steelclads and thanes now have an appropriately colored icon to match (modification by b_o of the axefighter, steelclad and thane icons).
 - Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o of the scout and scout with braided beard icons).
+- Gray-haired gnomish workers now have an appropriately colored icon to match (modification by b_o of the gnomish worker icon).
 
 -----------------------------------------------------------------------
 - 0.1.5c
