@@ -36,6 +36,7 @@ https://launchpad.net/stratagus
 - Added Goblin Town Hall (graphics by Leo).
 - Added Goblin Mess Hall (graphics by Leo).
 - Added Goblin Farm (graphics by Leo).
+- Added Goblin Lumber Mill (graphics by Leo).
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".

@@ -28,4 +28,4 @@
 --
 
 DefineDependency("unit-goblin-archer",
-	{"unit-dwarven-lumber-mill"})
+	{"unit-goblin-lumber-mill"})

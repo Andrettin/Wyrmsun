@@ -72,6 +72,14 @@ DefineUnitType("unit-goblin-worker", { Name = "Goblin Worker",
     "terrain-harvester"}},
   organic = true,
   SelectableByRectangle = true,
+  Variations = {
+	{
+		"variation-id", "bald"
+	},
+	{
+		"variation-id", "spiky-hair"
+	}
+  },
   Sounds = {
     "selected", "basic-goblin-voices-selected-group",
     "acknowledge", "basic-goblin-voices-acknowledge",
@@ -225,6 +233,34 @@ DefineUnitType("unit-goblin-mess-hall", { Name = "Mess Hall",
 --    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
+DefineUnitType("unit-goblin-lumber-mill", { Name = "Lumber Mill",
+  Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
+  Animations = "animations-building", Icon = "icon-goblin-lumber-mill",
+  Costs = {"time", 150, "gold", 600, "wood", 450},
+  RepairHp = 4,
+  RepairCosts = {"gold", 1, "wood", 1},
+  ImproveProduction = {"wood", 25},
+  Construction = "construction-land",
+  Speed = 0,
+  HitPoints = 600,
+  DrawLevel = 20,
+  TileSize = {3, 3}, BoxSize = {95, 95},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 25, AnnoyComputerFactor = 15,
+  Points = 150,
+  Corpse = "unit-destroyed-3x3-place",
+  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  Building = true, VisibleUnderFog = true, WoodImprove = true,
+  CanStore = {"wood"},
+  Sounds = {
+    "selected", "lumber-mill-selected",
+--    "acknowledge", "dwarven-lumber-mill-acknowledge",
+--    "ready", "dwarven-lumber-mill-ready",
+--    "help", "basic-dwarf-voices-help",
+    "dead", "building destroyed"} } )
+
 DefineUnitType("unit-hero-greebo", { Name = "Greebo",
   Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
   Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
@@ -272,6 +308,14 @@ DefineUnitType("unit-goblin-banner", { Name = "Goblin Banner",
   VisibleUnderFog = true,
   IsNotSelectable = true,
   Building = true,
+  Variations = {
+	{
+		"variation-id", "no-skull"
+	},
+	{
+		"variation-id", "skull"
+	}
+  },
   Sounds = {
     "selected", "click",
 --    "acknowledge", "gold-mine-acknowledge",
@@ -314,8 +358,7 @@ GrandStrategyUnits["GoblinArcher"] = {
 	Upkeep = 25,
 	X = 1,
 	Y = 0,
---	RequiredBuildings = { "GoblinMessHall", "DwarvenLumberMill" },
-	RequiredBuildings = { "GoblinMessHall" },
+	RequiredBuildings = { "GoblinMessHall", "GoblinLumberMill" },
 	InterfaceState = "Barracks"
 }
 
@@ -345,6 +388,21 @@ GrandStrategyBuildings["GoblinMessHall"] = {
 		Lumber = 450
 	},
 	X = 1,
+	Y = -2,
+	RequiredBuildings = { "GoblinTownHall" }
+}
+
+GrandStrategyBuildings["GoblinLumberMill"] = {
+	Name = GetUnitTypeName("unit-goblin-lumber-mill"),
+	UnitType = "unit-goblin-lumber-mill",
+	Icon = "goblin/icons/lumber_mill.png",
+	Civilization = "goblin",
+	Type = "Lumber Mill",
+	Costs = {
+		Gold = 600,
+		Lumber = 450
+	},
+	X = 2,
 	Y = -2,
 	RequiredBuildings = { "GoblinTownHall" }
 }

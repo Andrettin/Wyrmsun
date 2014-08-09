@@ -56,9 +56,10 @@ if (OldCreateUnit == nil) then
 
 	local t = {
 		{"unit-dwarven-town-hall", "unit-gnomish-town-hall", "unit-goblin-town-hall"},
-		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
 		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm", "unit-goblin-farm"},
 		{"unit-dwarven-barracks", "unit-gnomish-barracks", "unit-goblin-mess-hall"},
+		{"unit-dwarven-lumber-mill", nil, "unit-goblin-lumber-mill"},
+		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
 		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
 		{"unit-dwarven-scout", nil, "unit-goblin-archer"}
 	}

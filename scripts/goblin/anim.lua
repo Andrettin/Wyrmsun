@@ -122,19 +122,17 @@ DefineAnimations("animations-goblin-archer", {
 
 DefineAnimations("animations-goblin-banner", {
   Still = {
-	"if-var v.GraphicsVariation.Value == 0 set_variation",
-	"if-var v.GraphicsVariation.Value == 1 variation_1",
-	"if-var v.GraphicsVariation.Value == 2 variation_2",
-	"label set_variation", "random-goto 50 variation_1", "goto variation_2",
-	"label variation_1", "set-var GraphicsVariation.Value = 1", "frame 0", "wait 4", "random-goto 1 variation_1_flap", "random-goto 99 end",
+	"if-var v.Variation.Value == 0 variation_1",
+	"if-var v.Variation.Value == 1 variation_2",
+	"label variation_1", "frame 0", "wait 4", "random-goto 1 variation_1_flap", "random-goto 99 end",
 	"label variation_1_flap", "frame 1", "wait 6", "frame 0", "wait 6", "frame 2", "wait 6", "frame 0", "goto end",
-	"label variation_2", "set-var GraphicsVariation.Value = 2", "frame 7", "wait 4", "random-goto 1 variation_2_flap", "random-goto 99 end",
+	"label variation_2", "frame 7", "wait 4", "random-goto 1 variation_2_flap", "random-goto 99 end",
 	"label variation_2_flap", "frame 8", "wait 6", "frame 7", "wait 6", "frame 9", "wait 6", "frame 7", "goto end",
 	"label end", "wait 1",},
   Death = {
 	"unbreakable begin",
-	"if-var v.GraphicsVariation.Value == 1 variation_1",
-	"if-var v.GraphicsVariation.Value == 2 variation_2",
+	"if-var v.Variation.Value == 0 variation_1",
+	"if-var v.Variation.Value == 1 variation_2",
 	"label variation_1", "frame 3", "wait 3", "frame 4", "wait 3", "frame 5", "wait 3", "frame 6", "wait 100", "frame 6", "goto end",
 	"label variation_2", "frame 10", "wait 3", "frame 11", "wait 3", "frame 12", "wait 3", "frame 13", "wait 100", "frame 13", "goto end",
 	"label end", "unbreakable end", "wait 1",},

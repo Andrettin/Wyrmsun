@@ -120,6 +120,8 @@ end
 function AiLumberMill()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-lumber-mill"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-lumber-mill"
 	else
 		return "unit-dwarven-lumber-mill"
 	end

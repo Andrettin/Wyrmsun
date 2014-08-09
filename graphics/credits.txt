@@ -295,6 +295,7 @@ Leo:
 /graphics/dwarf/icons/shield_3.png
 /graphics/dwarf/icons/thursagan.png
 /graphics/goblin/buildings/farm.png
+/graphics/goblin/buildings/lumber_mill.png
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
 
