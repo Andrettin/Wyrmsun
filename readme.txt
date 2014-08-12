@@ -61,6 +61,7 @@ https://launchpad.net/stratagus
 - Quests and acquired technologies in the tech tree and quest screens now appear player-colored (usually red for dwarves).
 - The buttons in the quest and tech tree screens now have frames like the in-game buttons.
 - Gold coins now give 5 gold, while gold sacks give 100 and gold chests 500 (previously the quantities were 25, 500 and 1000, respectively).
+- Goblins can now appear in random maps.
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
@@ -82,6 +83,9 @@ https://launchpad.net/stratagus
 - Black-haired, blond-haired and gray-haired dwarven axefighters, steelclads and thanes now have an appropriately colored icon to match (modification by b_o of the axefighter, steelclad and thane icons).
 - Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o of the scout and scout with braided beard icons).
 - Gray-haired gnomish workers now have an appropriately colored icon to match (modification by b_o of the gnomish worker icon).
+- Added Surghan Mercenary (special dwarven steelclad) (icon by Leo).
+- Fixed a bug which caused goblin archers controlled by the human player to not use their unarmed attack.
+- Added goblin War Machine (graphics by b_o).
 
 -----------------------------------------------------------------------
 - 0.1.5c

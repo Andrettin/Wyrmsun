@@ -34,6 +34,13 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
+-- general commands -- almost all", "units have it -------------------------------
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
+  Action = "attack-ground",
+  Key = "g", Hint = "Attack ~!Ground",
+  ForUnit = {"unit-goblin-war-machine", "goblin-group"} } )
+
 -- worker specific actions ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
@@ -95,4 +102,9 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-archer",
   Action = "train-unit", Value = "unit-goblin-archer",
   Key = "a", Hint = "Train ~!Archer",
+  ForUnit = {"unit-goblin-mess-hall"} } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-war-machine",
+  Action = "train-unit", Value = "unit-goblin-war-machine",
+  Key = "m", Hint = "Build War ~!Machine",
   ForUnit = {"unit-goblin-mess-hall"} } )

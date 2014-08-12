@@ -260,6 +260,8 @@ end
 function AiCatapult()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-ballista"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-war-machine"
 	else
 		return "unit-dwarven-ballista"
 	end

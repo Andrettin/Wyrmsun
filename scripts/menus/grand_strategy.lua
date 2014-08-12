@@ -1184,7 +1184,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	tooltip = tooltip .. " (" .. tile_x .. ", " .. tile_y .. ")"
 
 	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
-		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn") then
+		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "ScFr") then
 			local world_map_tile
 			if (GrandStrategyWorld == "Nidavellir") then
 				world_map_tile = CGraphic:New("tilesets/world/terrain/dark_plains.png")
@@ -1673,7 +1673,7 @@ function DrawOnScreenTiles()
 			elseif (GetWorldMapTile(x, y) == "DkPl") then
 				DrawWorldMapTile("tilesets/world/terrain/dark_plains.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "ScFr") then
-				DrawWorldMapTile("tilesets/world/terrain/scrub_forest_outer.png", x, y)
+				DrawWorldMapTile("tilesets/world/terrain/scrub_forest.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Hill") then
 				DrawWorldMapTile("tilesets/world/terrain/hills.png", x, y)
 			elseif (GetWorldMapTile(x, y) == "Mntn") then
@@ -2301,7 +2301,7 @@ function DrawMinimap()
 
 	for key, value in pairs(WorldMapWaterProvinces) do
 		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
-			DrawWorldMapMinimapTile("tilesets/world/terrain/ocean.png", WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2])
+			DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_ocean.png", WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2])
 		end
 	end
 end

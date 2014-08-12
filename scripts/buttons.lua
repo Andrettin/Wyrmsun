@@ -76,6 +76,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
     "unit-gnomish-recruit",
     "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-surghan-mercenary-steelclad",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
@@ -86,6 +87,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
   Key = "x", Hint = "Learn A~!xe Mastery (+2 damage)",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+    "unit-surghan-mercenary-steelclad",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
   } } )
 
@@ -98,6 +100,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
     "unit-gnomish-recruit",
     "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-surghan-mercenary-steelclad",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
@@ -110,6 +113,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
     "unit-gnomish-recruit",
     "unit-goblin-spearman", "unit-goblin-archer",
+    "unit-surghan-mercenary-steelclad",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )

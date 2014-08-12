@@ -117,6 +117,40 @@ DefineAnimations("animations-goblin-archer", {
 })
 
 --
+-- Goblin War Machine
+--
+
+DefineAnimations("animations-goblin-war-machine", {
+  Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
+  Move = {"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+    "frame 0", "move 2", "unbreakable end", "wait 1",},	
+  Attack = {"unbreakable begin", "frame 15", "attack", "sound catapult-attack","wait 4",
+    "frame 10", "wait 4", "frame 15", "wait 3", "frame 10", "wait 2", "frame 15", "wait 2",
+    "frame 10", "wait 30", "frame 15", "wait 4", "frame 15", "wait 100", "frame 0", "wait 50", "frame 0", "unbreakable end", "wait 1",},
+  SpellCast = {"unbreakable begin",
+	"if-var s_spell-war-machine-spear-attack == 1 spear_attack",
+	"goto end",
+	"label spear_attack",
+	"frame 0", "wait 8",
+	"frame 20", "wait 2",
+	"attack", "sound spear-attack",
+	"frame 25", "wait 6",
+	"frame 20", "wait 2",
+	"frame 0", "wait 6",
+	"goto end",
+	"label end",
+	"unbreakable end",
+	"wait 1",}
+})
+
+--
 -- Goblin Banner
 --
 

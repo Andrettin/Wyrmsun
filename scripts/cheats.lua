@@ -191,7 +191,7 @@ function HandleCheats(str)
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
 		"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer"
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine"
 	}
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")

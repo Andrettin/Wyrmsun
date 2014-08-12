@@ -46,7 +46,7 @@ function DefineAllowNormalUnits(flags)
 		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit",
 		"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
 		"unit-potion-of-healing"
 	}
 	-- Allow units for human players only if they have been acquired

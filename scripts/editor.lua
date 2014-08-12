@@ -58,6 +58,8 @@ local editor_types = {
    "unit-dwarven-sentry-tower",
    "unit-dwarven-guard-tower",
 
+   "unit-surghan-mercenary-steelclad",
+
    "unit-hero-rugnur",
    "unit-hero-rugnur-steelclad",
    "unit-hero-rugnur-thane",
@@ -81,6 +83,7 @@ local editor_types = {
    "unit-goblin-worker",
    "unit-goblin-spearman",
    "unit-goblin-archer",
+   "unit-goblin-war-machine",
 
    "unit-goblin-town-hall",
    "unit-goblin-farm",

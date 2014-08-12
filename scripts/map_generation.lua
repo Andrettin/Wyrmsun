@@ -1003,6 +1003,9 @@ function CreatePlayers()
 			if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled")) then
 				table.insert(possible_civilizations, "gnome")
 			end
+			if (GetNumCivilizationPlayers("goblin") < table.getn(GetCivilizationFactions("goblin")) and GetPlayerData(i, "AiEnabled")) then
+				table.insert(possible_civilizations, "goblin")
+			end
 			SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 			SetAiType(i, "land-attack")
 			unit = CreateUnit("unit-dwarven-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
@@ -1159,6 +1162,21 @@ function RawTile(x, y)
 end
 
 function ApplyRawTiles()
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			if (RawTile(x, y) == "Mush") then
+				SetRawTile(x, y, "Land")
+				if (SyncRand(4) <= 2) then
+					unit = CreateUnit("unit-mushroom-patch", 15, {x, y})
+				end
+			elseif (RawTile(x, y) == "Tree" and wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
+				SetRawTile(x, y, "Land")
+				unit = CreateUnit("unit-wood-pile", 15, {x, y})
+				SetResourcesHeld(unit, 100)
+			end
+		end
+	end
+
 	local RandomNumber = 0
 
 	for x=0,(Map.Info.MapWidth - 1) do

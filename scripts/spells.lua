@@ -61,6 +61,23 @@ DefineSpell("spell-unarmed-attack",
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only"}}
 )
 
+DefineSpell("spell-war-machine-spear-attack",
+	"showname", _("war machine spear attack"),
+	"manacost", 0,
+	"range", 1,
+	"target", "unit",
+	"action", {
+		{"demolish", "range", 1, "damage", 6, "damage-self", false},
+	},
+	"condition", {
+		"alliance", "false",
+		"opponent", "only",
+		"AirUnit", "false"
+	},
+	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only"}},
+	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only"}}
+)
+
 DefineSpell("spell-equip-axe-of-perun",
 	"showname", _("equip toporik"),
 	"manacost", 0,

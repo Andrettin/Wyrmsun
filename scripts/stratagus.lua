@@ -447,7 +447,6 @@ function SinglePlayerTriggers()
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
 				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
 			end
 		end
@@ -489,9 +488,6 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-						SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
 					end
 				end
 
@@ -1002,7 +998,7 @@ end
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter" or unit_type == "unit-hero-rugnur") then
 		return { "upgrade-dwarven-steelclad", "upgrade-axe-mastery", "upgrade-critical-strike" }
-	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
+	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
 		return { "upgrade-dwarven-thane", "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }

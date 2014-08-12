@@ -356,6 +356,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-surghan-mercenary-steelclad",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/surghan_mercenary_steelclad.png"
+})
+
+DefineIcon({
 	Name = "icon-rugnur",
 	Size = {46, 38},
 	Frame = 0,
@@ -487,6 +494,14 @@ DefineIcon({
 	Frame = 0,
 	File = "goblin/icons/goblin_swordsman.png"
 })
+
+DefineIcon({
+	Name = "icon-goblin-war-machine",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/goblin_war_machine.png"
+})
+
 
 DefineIcon({
 	Name = "icon-water-elemental",

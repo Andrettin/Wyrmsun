@@ -51,6 +51,7 @@ b_o:
 /graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_spearman.png
 /graphics/goblin/units/goblin_swordsman.png
+/graphics/goblin/units/goblin_war_machine.png
 /graphics/goblin/units/goblin_worker.png
 /graphics/goblin/units/goblin_worker_with_gold.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
@@ -293,6 +294,7 @@ Leo:
 /graphics/dwarf/icons/durstorn.png
 /graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/shield_3.png
+/graphics/dwarf/icons/surghan_mercenary_steelclad.png
 /graphics/dwarf/icons/thursagan.png
 /graphics/goblin/buildings/farm.png
 /graphics/goblin/buildings/lumber_mill.png

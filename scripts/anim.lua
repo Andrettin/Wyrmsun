@@ -199,10 +199,10 @@ DefineAnimations("animations-decoration", {
 
 DefineAnimations("animations-mushroom-patch", {
   Still = {
-	"if-var v.GraphicsVariation.Value == 1 variation_1",
-	"if-var v.GraphicsVariation.Value == 2 variation_2",
-	"if-var v.GraphicsVariation.Value == 3 variation_3",
-	"if-var v.GraphicsVariation.Value == 4 variation_4",
+	"if-var v.Variation.Value == 0 variation_1",
+	"if-var v.Variation.Value == 1 variation_2",
+	"if-var v.Variation.Value == 2 variation_3",
+	"if-var v.Variation.Value == 3 variation_4",
 	"label variation_1",
 	"if-var v.LifeStage.Value == 1 variation_1_stage_1",
 	"if-var v.LifeStage.Value == 2 variation_1_stage_2",

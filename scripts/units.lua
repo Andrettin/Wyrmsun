@@ -306,6 +306,20 @@ DefineUnitType("unit-mushroom", { Name = "Mushroom",
   Indestructible = 1,
   VisibleUnderFog = true,
   NonSolid = true, 
+  Variations = {
+	{
+		"variation-id", "red"
+	},
+	{
+		"variation-id", "orange"
+	},
+	{
+		"variation-id", "green"
+	},
+	{
+		"variation-id", "yellow"
+	}
+  },
   Sounds = {} }
 )
 
@@ -327,6 +341,20 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
   Indestructible = 1,
   VisibleUnderFog = true,
   NonSolid = true, 
+  Variations = {
+	{
+		"variation-id", "red"
+	},
+	{
+		"variation-id", "orange"
+	},
+	{
+		"variation-id", "green"
+	},
+	{
+		"variation-id", "yellow"
+	}
+  },
   Sounds = {} }
 )
 
