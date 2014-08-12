@@ -61,7 +61,8 @@ if (OldCreateUnit == nil) then
 		{"unit-dwarven-lumber-mill", nil, "unit-goblin-lumber-mill"},
 		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
 		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
-		{"unit-dwarven-scout", nil, "unit-goblin-archer"}
+		{"unit-dwarven-scout", nil, "unit-goblin-archer"},
+		{"unit-dwarven-ballista", nil, "unit-goblin-war-machine"}
 	}
 
 	DwarvenEquivalent = {}
