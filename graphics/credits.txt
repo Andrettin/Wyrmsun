@@ -55,8 +55,10 @@ b_o:
 /graphics/goblin/units/goblin_worker.png
 /graphics/goblin/units/goblin_worker_with_gold.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
+/graphics/missiles/catapult_flaming_rock.png
 /graphics/missiles/dwarven_ballista_bolt.png
 /graphics/missiles/goblin_arrow.png
+/graphics/missiles/gobtoss.png
 /graphics/missiles/throwing_axe.png
 /graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/bones.png
