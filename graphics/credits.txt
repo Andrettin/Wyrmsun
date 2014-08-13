@@ -49,6 +49,7 @@ b_o:
 /graphics/goblin/decorations/goblin_banner.png
 /graphics/goblin/icons/goblin_swordsman.png
 /graphics/goblin/units/goblin_archer.png
+/graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png
 /graphics/goblin/units/goblin_spearman.png
 /graphics/goblin/units/goblin_swordsman.png
 /graphics/goblin/units/goblin_war_machine.png

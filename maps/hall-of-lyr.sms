@@ -52,9 +52,10 @@ local RandomY = 0
 local Count = 64
 local SuitableArea = true
 local FeastHallArea = nil
+local WhileCount = 0
 
 -- dungeon generation algorithm inspired by Mike Anderson's code for Tyrant, which was released under the GPLv2 license
-while (Count > 0 or FeastHallArea == nil) do
+while ((Count > 0 or FeastHallArea == nil) and WhileCount < 64 * 100) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
 	if (RawTile(RandomX, RandomY) == "Wall" and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Land")) then
@@ -389,6 +390,7 @@ while (Count > 0 or FeastHallArea == nil) do
 			end
 		end
 	end
+	WhileCount = WhileCount + 1
 end
 
 Count = 24

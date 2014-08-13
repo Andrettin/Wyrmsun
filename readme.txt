@@ -84,8 +84,9 @@ https://launchpad.net/stratagus
 - Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o of the scout and scout with braided beard icons).
 - Gray-haired gnomish workers now have an appropriately colored icon to match (modification by b_o of the gnomish worker icon).
 - Added Surghan Mercenary (special dwarven steelclad) (icon by Leo).
-- Fixed a bug which caused goblin archers controlled by the human player to not use their unarmed attack.
+- Fixed a bug which caused goblin archers controlled by the human player to not use their secondary melee attack.
 - Added goblin War Machine (graphics by b_o).
+- Goblin archers now use a dagger instead of punching when doing their secondary melee attack.
 
 -----------------------------------------------------------------------
 - 0.1.5c

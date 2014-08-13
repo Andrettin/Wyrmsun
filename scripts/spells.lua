@@ -46,8 +46,8 @@ DefineUnitType("unit-dwarven-steelclad", {})
 
 -- And declare upgrade for dependency...
 
-DefineSpell("spell-unarmed-attack",
-	"showname", _("unarmed attack"),
+DefineSpell("spell-secondary-melee-attack",
+	"showname", _("secondary melee attack"),
 	"manacost", 0,
 	"range", 1,
 	"target", "unit",

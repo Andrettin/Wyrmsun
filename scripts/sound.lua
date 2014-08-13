@@ -218,6 +218,9 @@ MakeSound("axe-attack",
 MakeSound("claw-attack",
 	"missiles/claws.wav"
 )
+MakeSound("dagger-attack",
+	"missiles/dagger.wav"
+)
 MakeSound("fist-attack",
 	"missiles/fist.wav"
 )

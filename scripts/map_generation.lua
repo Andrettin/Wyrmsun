@@ -623,10 +623,11 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	-- create initial dark land seeds
 	Count = dark_land_seed_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < dark_land_seed_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Land") then
@@ -657,11 +658,14 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
+
+	WhileCount = 0
 
 	-- expand dark land
 	Count = dark_land_expansions_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < dark_land_expansions_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Dark-Land") then
@@ -688,6 +692,7 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -696,10 +701,11 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	-- create initial dark rough land seeds
 	Count = dark_rough_land_seed_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < dark_rough_land_seed_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == base_tile_type) then
@@ -730,11 +736,14 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
+
+	WhileCount = 0
 
 	-- expand dark rough land
 	Count = dark_rough_land_expansions_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < dark_rough_land_expansions_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Dark-Rough") then
@@ -761,6 +770,7 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 
 
@@ -1169,7 +1179,7 @@ function ApplyRawTiles()
 				if (SyncRand(4) <= 2) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {x, y})
 				end
-			elseif (RawTile(x, y) == "Tree" and wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
+			elseif (RawTile(x, y) == "Tree" and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon")) then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
 				SetResourcesHeld(unit, 100)
