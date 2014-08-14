@@ -126,7 +126,8 @@ function DefineAllowSpecialUnits(flags)
 		"unit-stairs",
 		"unit-outer-wall-decoration", "unit-inner-wall-decoration", "unit-floor-decoration",
 		"unit-gold-coins", "unit-gold-sack", "unit-gold-chest", "unit-gold-and-gems-chest", "unit-barrel",
---		"unit-human-dead-body", "unit-dead-sea-body",
+		"unit-dwarven-dead-body", "unit-gnomish-dead-body", "unit-goblin-dead-body",
+--		"unit-dead-sea-body",
 		"unit-destroyed-2x2-place",
 		"unit-destroyed-3x3-place", "unit-destroyed-4x4-place"
 	}

@@ -1,0 +1,7 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "person", "person", "person")
+PresentMap("North Italy", 2, 128, 160, 1)
+MapWorld = "Earth"
+
+-- Map by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv

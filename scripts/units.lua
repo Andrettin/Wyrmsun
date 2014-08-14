@@ -507,7 +507,7 @@ DefineUnitType("unit-bones", { Name = "Bones",
 DefineUnitType("unit-wyrm-skeleton", { Name = "Wyrm Skeleton",
   Image = {"file", "neutral/decorations/wyrm_skeleton.png", "size", {128, 32}},
   NeutralMinimapColor = {128, 128, 0},
-  Animations = "animations-decoration", Icon = "icon-wyrm-skeleton",
+  Animations = "animations-building", Icon = "icon-wyrm-skeleton",
   Speed = 0,
   HitPoints = 0,
   DrawLevel = 5,
@@ -521,6 +521,15 @@ DefineUnitType("unit-wyrm-skeleton", { Name = "Wyrm Skeleton",
   NumDirections = 1,
   Indestructible = 1,
   VisibleUnderFog = true,
+  Variations = {
+	{
+		"variation-id", "non-horned"
+	},
+	{
+		"variation-id", "horned",
+		"file", "neutral/decorations/wyrm_skeleton_horned.png"
+	}
+  },
   Sounds = {} }
 )
 
@@ -653,19 +662,47 @@ DefineUnitType("unit-floor-decoration", { Name = "Floor Decoration",
   Sounds = {} }
 )
 
---DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
---  Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},
---  Animations = "animations-human-dead-body", Icon = "icon-dwarven-miner",
---  Speed = 0,
---  HitPoints = 255,
---  DrawLevel = 30,
---  TileSize = {1, 1}, BoxSize = {31, 31},
---  SightRange = 1,
---  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
---  Priority = 0,
---  Type = "land",
---  Vanishes = true,
---  Sounds = {} } )
+DefineUnitType("unit-dwarven-dead-body", { Name = "Dead Body",
+  Image = {"file", "neutral/units/dwarven_corpse.png", "size", {72, 72}},
+  Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
+  Speed = 0,
+  HitPoints = 255,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  Vanishes = true,
+  Sounds = {} } )
+
+DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
+  Image = {"file", "neutral/units/gnomish_and_goblin_corpses.png", "size", {72, 72}},
+  Animations = "animations-gnomish-dead-body", Icon = "icon-dwarven-miner",
+  Speed = 0,
+  HitPoints = 255,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  Vanishes = true,
+  Sounds = {} } )
+
+DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
+  Image = {"file", "neutral/units/gnomish_and_goblin_corpses.png", "size", {72, 72}},
+  Animations = "animations-goblin-dead-body", Icon = "icon-dwarven-miner",
+  Speed = 0,
+  HitPoints = 255,
+  DrawLevel = 30,
+  TileSize = {1, 1}, BoxSize = {31, 31},
+  SightRange = 1,
+  BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 0,
+  Type = "land",
+  Vanishes = true,
+  Sounds = {} } )
 
 --DefineUnitType("unit-dead-sea-body", { Name = "Dead Body",
 --  Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},

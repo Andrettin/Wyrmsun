@@ -48,11 +48,12 @@ https://launchpad.net/stratagus
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
 - Added France map (Earth) by Mathieu Roy, from FreeCiv.
-- Added Italy map (Earth) by Paolo Sammicheli, from FreeCiv.
 - Added British Isles map (Earth) by Martin McMahon, from FreeCiv.
 - Added North America map (Earth) by Rob Best, from FreeCiv.
 - Added Eastern Mines map (Nidavellir), from Battle for Wesnoth.
 - Added Southern Tunnels map (Nidavellir), from Battle for Wesnoth.
+- Added North Italy map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- Added South Italy map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 
 * Miscellaneous
 - The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.
@@ -62,6 +63,8 @@ https://launchpad.net/stratagus
 - The buttons in the quest and tech tree screens now have frames like the in-game buttons.
 - Gold coins now give 5 gold, while gold sacks give 100 and gold chests 500 (previously the quantities were 25, 500 and 1000, respectively).
 - Goblins can now appear in random maps.
+- Dwarves, gnomes and goblin now leave decaying bodies after they die (graphics by Jinn).
+- The wyrm skeleton now has a non-horned variation (graphics by b_o).
 
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
@@ -78,15 +81,16 @@ https://launchpad.net/stratagus
 - Added dwarven Thane (unit graphics by b_o and icon by Jinn).
 - Units' graphic variations can now be defined in the unit type's definition
 - Brown-haired dwarven axefighters, steelclads and thanes now use a brown-haired icon as well (graphics by Jinn).
-- Dwarven scouts can now randomly get an icon variation (braided beard) (graphic by Jinn).
-- Blue-feathered gryphons now have a blue-feathered icon to match (modification by b_o of the gryphon icon).
-- Black-haired, blond-haired and gray-haired dwarven axefighters, steelclads and thanes now have an appropriately colored icon to match (modification by b_o of the axefighter, steelclad and thane icons).
-- Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o of the scout and scout with braided beard icons).
-- Gray-haired gnomish workers now have an appropriately colored icon to match (modification by b_o of the gnomish worker icon).
+- Gray-haired gnomish workers now have an appropriately colored icon to match (modification by b_o and Jinn of the gnomish worker icon).
 - Added Surghan Mercenary (special dwarven steelclad) (icon by Leo).
 - Fixed a bug which caused goblin archers controlled by the human player to not use their secondary melee attack.
 - Added goblin War Machine (graphics by b_o).
 - Goblin archers now use a dagger instead of punching when doing their secondary melee attack.
+- The dwarven gryphon rider and the gnomish scavenger icons have been reworked (by Jinn).
+- Dwarven scouts can now randomly get an icon variation (braided beard) (graphic by Jinn).
+- Blue-feathered gryphons now have a blue-feathered icon to match (modification by b_o and Jinn of the gryphon icon).
+- Black-haired, blond-haired and gray-haired dwarven axefighters, steelclads and thanes now have an appropriately colored icon to match (modification by b_o and Jinn of the axefighter, steelclad and thane icons).
+- Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o and Jinn of the scout and scout with braided beard icons).
 
 -----------------------------------------------------------------------
 - 0.1.5c
