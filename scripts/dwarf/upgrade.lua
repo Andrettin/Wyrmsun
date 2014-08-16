@@ -40,6 +40,10 @@ local upgrades = {
 		{   200,   300,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3",
 		{   250,   900,   500,     0,     0,     0,     0}},
+	{"upgrade-dwarven-ballista-bolt-1", "icon-dwarven-ballista-bolt-2",
+		{   250,  1500,     0,     0,     0,     0,     0}},
+	{"upgrade-dwarven-ballista-bolt-2", "icon-dwarven-ballista-bolt-2",
+		{   250,  4000,     0,     0,     0,     0,     0}},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -90,6 +94,14 @@ DefineModifier("upgrade-dwarven-throwing-axe-2",
 	{"PiercingDamage", 1},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
+DefineModifier("upgrade-dwarven-ballista-bolt-1",
+	{"PiercingDamage", 15},
+	{"apply-to", "unit-dwarven-ballista"})
+
+DefineModifier("upgrade-dwarven-ballista-bolt-2",
+	{"PiercingDamage", 15},
+	{"apply-to", "unit-dwarven-ballista"})
+
 DefineDependency("unit-dwarven-scout",
 	{"unit-dwarven-lumber-mill"})
 
@@ -101,6 +113,12 @@ DefineDependency("upgrade-dwarven-shield-2",
 
 DefineDependency("upgrade-dwarven-throwing-axe-2",
 	{"upgrade-dwarven-throwing-axe-1"})
+
+DefineDependency("upgrade-dwarven-ballista-bolt-1",
+	{"unit-dwarven-lumber-mill"})
+
+DefineDependency("upgrade-dwarven-ballista-bolt-2",
+	{"upgrade-dwarven-ballista-bolt-1", "unit-dwarven-lumber-mill"})
 
 DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill"})

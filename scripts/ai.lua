@@ -255,6 +255,28 @@ function AiUpgradeMissile2()
 end
 
 --
+--  Siege weapon upgrade 1 of the current civilization.
+--
+function AiUpgradeSiegeProjectile1()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-ballista-bolt-1"
+	else
+		return "upgrade-dwarven-ballista-bolt-1"
+	end
+end
+
+--
+--  Siege weapon upgrade 1 of the current civilization.
+--
+function AiUpgradeSiegeProjectile2()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-ballista-bolt-2"
+	else
+		return "upgrade-dwarven-ballista-bolt-2"
+	end
+end
+
+--
 --  Siege weapon of the current civilization.
 --
 function AiCatapult()

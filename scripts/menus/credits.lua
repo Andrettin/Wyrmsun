@@ -84,6 +84,7 @@ function RunShowCreditsMenu()
 	"Maps",
 	"  David White (Sirp)",
 	"  Eric S. Raymond (ESR)", -- Northern Rebirth maps and scenarios
+	"  GM1530",
 	"  John Ericson",
 	"  Joseph Simmons (turin)",
 	"  Kyran Jackson",

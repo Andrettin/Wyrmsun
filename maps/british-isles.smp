@@ -1,7 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person", "person", "nobody", "person")
-PresentMap("British Isles", 3, 73, 81, 1)
-MapWorld = "Earth"
-
--- Map by Martin McMahon, licensed under the GPLv2 and included in FreeCiv

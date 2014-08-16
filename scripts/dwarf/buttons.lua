@@ -88,9 +88,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
   Key = "a", Hint = "~!Attack",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-miner",
-    "unit-dwarven-ballista",
     "unit-gnomish-worker", "unit-gnomish-recruit",
-    "unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-war-machine",
+    "unit-goblin-worker", "unit-goblin-spearman",
     "unit-surghan-mercenary-steelclad",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-critter", "unit-gryphon",
@@ -139,6 +138,29 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
   Key = "a", Hint = "~!Attack",
   ForUnit = {
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider"
+  } } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-1",
+  Action = "attack",
+  Key = "a", Hint = "~!Attack",
+  ForUnit = {
+    "unit-dwarven-ballista", "unit-goblin-war-machine"
+  } } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
+  Action = "attack",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-ballista-bolt-1"},
+  Key = "a", Hint = "~!Attack",
+  ForUnit = {
+    "unit-dwarven-ballista"
+  } } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
+  Action = "attack",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-ballista-bolt-2"},
+  Key = "a", Hint = "~!Attack",
+  ForUnit = {
+    "unit-dwarven-ballista"
   } } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
@@ -283,6 +305,18 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
   Action = "research", Value = "upgrade-dwarven-shield-2",
   Allowed = "check-single-research",
   Key = "s", Hint = "Research Thrymgjol ~!Shield",
+  ForUnit = {"unit-dwarven-blacksmith"} } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
+  Action = "research", Value = "upgrade-dwarven-ballista-bolt-1",
+  Allowed = "check-single-research",
+  Key = "b", Hint = "Research Broadhead Ballista ~!Bolt",
+  ForUnit = {"unit-dwarven-blacksmith"} } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
+  Action = "research", Value = "upgrade-dwarven-ballista-bolt-2",
+  Allowed = "check-single-research",
+  Key = "b", Hint = "Research Bodkin Ballista ~!Bolt",
   ForUnit = {"unit-dwarven-blacksmith"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",

@@ -105,6 +105,10 @@ function RunTechTreeMenu(civilization_number)
 						unit_name = "Heater Shield"
 					elseif (unit == "upgrade-dwarven-shield-2") then
 						unit_name = "Thrymgjol Shield"
+					elseif (unit == "upgrade-dwarven-ballista-bolt-1") then
+						unit_name = "Broadhead Ballista Bolt"
+					elseif (unit == "upgrade-dwarven-ballista-bolt-2") then
+						unit_name = "Bodkin Ballista Bolt"
 					end
 				end
 				tech_menu:addLabel(unit_name, 176, 11)
@@ -219,6 +223,16 @@ function RunTechTreeMenu(civilization_number)
 			addTechItemIcon("unit-dwarven-ballista", menu, "tilesets/swamp/dwarf/icons/dwarven_ballista",
 				"Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",
 				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 3), playercolor)
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-ballista")) then
+			addTechItemIcon("upgrade-dwarven-ballista-bolt-1", menu, "dwarf/icons/ballista_bolt_2",
+				"While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas.",
+				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 4), playercolor)
+		end
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-ballista-bolt-1")) then
+			addTechItemIcon("upgrade-dwarven-ballista-bolt-2", menu, "dwarf/icons/ballista_bolt_2",
+				"Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th bodkin ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.",
+				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 5), playercolor)
 		end
 	end
 

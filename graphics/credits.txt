@@ -316,6 +316,8 @@ Leo:
 /graphics/dwarf/buildings/blacksmith.png
 /graphics/dwarf/icons/axe_1.png
 /graphics/dwarf/icons/axe_3.png
+/graphics/dwarf/icons/ballista_bolt_1.png
+/graphics/dwarf/icons/ballista_bolt_2.png
 /graphics/dwarf/icons/durstorn.png
 /graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/shield_3.png
