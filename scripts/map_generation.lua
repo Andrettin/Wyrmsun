@@ -1263,7 +1263,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 7 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and (RawTile(x, y - 1) ~= RawTile(x, y) or RawTile(x + 1, y) ~= RawTile(x, y)) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and (RawTile(x, y - 1) ~= RawTile(x, y) or RawTile(x + 1, y) ~= RawTile(x, y)) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y)) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 3 * 16, x, y, 0)

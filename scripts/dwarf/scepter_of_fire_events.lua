@@ -513,7 +513,7 @@ AddTrigger(
 											end
 											if (mapinfo.description == "Chaincolt Foothills") then
 												if (GrandStrategy == false) then
-													NextMap = "maps/caverns-of-chaincolt.smp"
+													NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
 												end
 												if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 													ActionVictory()
@@ -569,7 +569,7 @@ AddTrigger(
 									end
 									if (mapinfo.description == "Chaincolt Foothills") then
 										if (GrandStrategy == false) then
-											NextMap = "maps/caverns-of-chaincolt.smp"
+											NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
 										end
 										if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 											ActionVictory()
@@ -626,7 +626,7 @@ AddTrigger(
 						end
 						if (mapinfo.description == "Chaincolt Foothills") then
 							if (GrandStrategy == false) then
-								NextMap = "maps/caverns-of-chaincolt.smp"
+								NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
 							end
 							if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 								ActionVictory()
@@ -1241,7 +1241,7 @@ AddTrigger(
 																																					end
 																																					if (mapinfo.description == "Caverns of Chaincolt") then
 																																						if (GrandStrategy == false) then
-																																							NextMap = "maps/northern-wastelands.smp"
+																																							NextMap = "maps/nidavellir/northern-wastelands.smp"
 																																						end
 																																						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 																																							ActionVictory()
@@ -2001,7 +2001,7 @@ AddTrigger(
 																														end
 																														if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
 																															if (GrandStrategy == false) then
-																																NextMap = "maps/eastern-mines.smp"
+																																NextMap = "maps/nidavellir/eastern-mines.smp"
 																															else
 																																WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0
 																															end
@@ -2282,7 +2282,7 @@ AddTrigger(
 							end
 							if (mapinfo.description == "Eastern Mines" and player == GetFactionPlayer("Norlund Clan")) then
 								if (GrandStrategy == false) then
---									NextMap = "maps/shorbear-hills.smp"
+--									NextMap = "maps/nidavellir/shorbear-hills.smp"
 								end
 								ActionVictory()
 							end
@@ -2323,7 +2323,7 @@ AddTrigger(
 				end
 				if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 					if (GrandStrategy == false) then
---						NextMap = "maps/shorbear-hills.smp"
+--						NextMap = "maps/nidavellir/shorbear-hills.smp"
 					end
 					ActionVictory()
 				end

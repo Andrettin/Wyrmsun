@@ -233,3 +233,34 @@ GrandStrategyTechnologies["DwarvenBeardedThrowingAxe"] = {
 	RequiredTechnologies = { "DwarvenSharpThrowingAxe" },
 	InterfaceState = "Lumber Mill"
 }
+
+GrandStrategyTechnologies["DwarvenBroadheadBallistaBolt"] = {
+	Name = "Broadhead Ballista Bolt",
+	UpgradeType = "upgrade-dwarven-ballista-bolt-1",
+	Icon = "dwarf/icons/ballista_bolt_2.png",
+	Civilization = "dwarf",
+	Type = "Siege Projectiles Upgrade I",
+	Costs = {
+		Gold = 1500
+	},
+	X = 2,
+	Y = -2,
+	RequiredBuildings = { "DwarvenBlacksmith", "DwarvenLumberMill" },
+	InterfaceState = "Blacksmith"
+}
+
+GrandStrategyTechnologies["DwarvenBodkinBallistaBolt"] = {
+	Name = "Bodkin Ballista Bolt",
+	UpgradeType = "upgrade-dwarven-ballista-bolt-2",
+	Icon = "dwarf/icons/ballista_bolt_3.png",
+	Civilization = "dwarf",
+	Type = "Siege Projectiles Upgrade II",
+	Costs = {
+		Gold = 4000
+	},
+	X = 2,
+	Y = -2,
+	RequiredBuildings = { "DwarvenBlacksmith", "DwarvenLumberMill" },
+	RequiredTechnologies = { "DwarvenBroadheadBallistaBolt" },
+	InterfaceState = "Blacksmith"
+}

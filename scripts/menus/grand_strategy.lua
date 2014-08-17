@@ -586,21 +586,21 @@ function AttackProvince(province, faction)
 		end
 
 		-- get maps in subdirectories of the maps folder
-		for i=1,table.getn(dirlist) do
-			fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[i])
+		for j=1,table.getn(dirlist) do
+			fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
 			for i,f in ipairs(fileslist) do
 				if (string.find(f, "^.*%.smp%.?g?z?$")) then
-					maps[u] = MapDirectories[map_directory] .. dirlist[i] .. f
+					maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
 					u = u + 1
 				end
 			end
 		end
 
 		-- run a map if it shares a name with the randomly chosen map for the province
-		for i=1,table.getn(maps) do
+		for j=1,table.getn(maps) do
 			MapAttacker = nil
 			MapDefender = nil
-			GetMapInfo(maps[i])
+			GetMapInfo(maps[j])
 			if (mapinfo.description == province_map) then
 				Attacker = faction
 				local empty_province = false
@@ -617,35 +617,35 @@ function AttackProvince(province, faction)
 
 				if (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
 					if (MapAttacker ~= nil and MapDefender ~= nil) then
-						for i=1,mapinfo.nplayers do
-							if (i == MapAttacker + 1) then
+						for k=1,mapinfo.nplayers do
+							if (k == MapAttacker + 1) then
 								if (Defender == GrandStrategyFaction.Name) then
-									GameSettings.Presets[i-1].Type = PlayerComputer
+									GameSettings.Presets[k-1].Type = PlayerComputer
 								end
-							elseif (i == MapDefender + 1) then
+							elseif (k == MapDefender + 1) then
 								if (Attacker == GrandStrategyFaction.Name) then
-									GameSettings.Presets[i-1].Type = PlayerComputer
+									GameSettings.Presets[k-1].Type = PlayerComputer
 								end
 							else
-								GameSettings.Presets[i-1].Type = PlayerNobody
+								GameSettings.Presets[k-1].Type = PlayerNobody
 							end
 						end
 					else
 						local person_player_found = false
 						local computer_player_found = false
-						for i=1,mapinfo.nplayers do
-							if (mapinfo.playertypes[i] == "person" and person_player_found == false) then
+						for k=1,mapinfo.nplayers do
+							if (mapinfo.playertypes[k] == "person" and person_player_found == false) then
 								person_player_found = true
-							elseif (mapinfo.playertypes[i] == "person" and person_player_found == true and computer_player_found == false) then
+							elseif (mapinfo.playertypes[k] == "person" and person_player_found == true and computer_player_found == false) then
 								computer_player_found = true
-							elseif (mapinfo.playertypes[i] == "computer" and computer_player_found == false) then
+							elseif (mapinfo.playertypes[k] == "computer" and computer_player_found == false) then
 								computer_player_found = true
-							elseif (mapinfo.playertypes[i] == "person" or mapinfo.playertypes[i] == "computer") then
-								GameSettings.Presets[i-1].Type = PlayerNobody
+							elseif (mapinfo.playertypes[k] == "person" or mapinfo.playertypes[k] == "computer") then
+								GameSettings.Presets[k-1].Type = PlayerNobody
 							end
 						end
 					end
-					RunMap(maps[i])
+					RunMap(maps[j])
 
 					if (GameResult == GameVictory) then
 						victorious_player = GrandStrategyFaction.Name
@@ -1491,7 +1491,7 @@ function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
 	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Lumber Mill") then
 		building_function_tooltip = " (researches projectile upgrades)"
 	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Blacksmith") then
-		building_function_tooltip = " (researches melee weapon and shield upgrades)"
+		building_function_tooltip = " (researches melee weapon, shield and siege upgrades)"
 	end
 	if (SelectedProvince.SettlementBuildings[grand_strategy_building_key] == 2) then
 		UIElements[table.getn(UIElements)]:setTooltip("Use " .. GrandStrategyBuildings[grand_strategy_building_key].Name .. building_function_tooltip)
@@ -2796,6 +2796,12 @@ function GetMilitaryScore(province, attacker)
 		if (FactionHasTechnologyType(faction, "Ranged Projectiles Upgrade II")) then
 			archer_military_score_bonus = archer_military_score_bonus + 10
 			flying_rider_military_score_bonus = flying_rider_military_score_bonus + 10
+		end
+		if (FactionHasTechnologyType(faction, "Siege Projectiles Upgrade I")) then
+			catapult_military_score_bonus = catapult_military_score_bonus + 10
+		end
+		if (FactionHasTechnologyType(faction, "Siege Projectiles Upgrade II")) then
+			catapult_military_score_bonus = catapult_military_score_bonus + 10
 		end
 	end
 

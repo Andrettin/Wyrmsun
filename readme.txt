@@ -55,6 +55,7 @@ https://launchpad.net/stratagus
 - Added South Italy map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Added Southern Central Europe map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Added Southern Great Britain map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- Added Central Great Britain map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 
 * Miscellaneous
 - The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.

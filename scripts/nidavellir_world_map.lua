@@ -349,8 +349,8 @@ GrandStrategyEvents = {
 				GameSettings.Presets[2].Type = PlayerComputer
 
 				GrandStrategyEventMap = true
-				GetMapInfo("maps/chaincolt-foothills.smp")
-				RunMap("maps/chaincolt-foothills.smp")
+				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
+				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
@@ -392,8 +392,8 @@ GrandStrategyEvents = {
 				GameSettings.Presets[1].Type = PlayerComputer
 
 				GrandStrategyEventMap = true
-				GetMapInfo("maps/chaincolt-foothills.smp")
-				RunMap("maps/chaincolt-foothills.smp")
+				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
+				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
@@ -427,8 +427,8 @@ GrandStrategyEvents = {
 				GameSettings.Presets[1].Type = PlayerComputer
 
 				GrandStrategyEventMap = true
-				GetMapInfo("maps/caverns-of-chaincolt.smp")
-				RunMap("maps/caverns-of-chaincolt.smp")
+				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
+				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
@@ -476,8 +476,8 @@ GrandStrategyEvents = {
 				GameSettings.Presets[0].Type = PlayerComputer
 
 				GrandStrategyEventMap = true
-				GetMapInfo("maps/caverns-of-chaincolt.smp")
-				RunMap("maps/caverns-of-chaincolt.smp")
+				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
+				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
@@ -523,8 +523,8 @@ GrandStrategyEvents = {
 		OptionEffects = {function(s)
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEventMap = true
-				GetMapInfo("maps/northern-wastelands.smp")
-				RunMap("maps/northern-wastelands.smp")
+				GetMapInfo("maps/nidavellir/northern-wastelands.smp")
+				RunMap("maps/nidavellir/northern-wastelands.smp")
 				GrandStrategyEventMap = false
 
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do

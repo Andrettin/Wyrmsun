@@ -230,7 +230,7 @@ function RunTechTreeMenu(civilization_number)
 				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 4), playercolor)
 		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-ballista-bolt-1")) then
-			addTechItemIcon("upgrade-dwarven-ballista-bolt-2", menu, "dwarf/icons/ballista_bolt_2",
+			addTechItemIcon("upgrade-dwarven-ballista-bolt-2", menu, "dwarf/icons/ballista_bolt_3",
 				"Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th bodkin ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.",
 				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 5), playercolor)
 		end

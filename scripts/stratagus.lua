@@ -920,21 +920,21 @@ end
 
 function GetFactionForbiddenUnits(faction)
 	if (faction == "Norlund Clan") then
-		return { "unit-goblin-spearman", "unit-goblin-archer" }
+		return { }
 	elseif (faction == "Shinsplitter Clan") then
-		return { "unit-goblin-spearman", "unit-goblin-archer" }
+		return { }
 	elseif (faction == "Shorbear Clan") then
-		return { "unit-goblin-spearman", "unit-goblin-archer" }
+		return { }
 	elseif (faction == "Kal Kartha") then
-		return { "unit-goblin-spearman", "unit-goblin-archer" }
+		return { }
 	elseif (faction == "Knalga") then
-		return { "unit-goblin-spearman", "unit-goblin-archer" }
+		return { }
 	elseif (faction == "Lyr") then
-		return { "unit-goblin-spearman", "unit-goblin-archer" }
+		return { }
 	elseif (faction == "Goblins") then
-		return {}
+		return { }
 	else
-		return {}
+		return { }
 	end
 end
 

@@ -52,9 +52,10 @@ local RandomY = 0
 local Count = 64
 local SuitableArea = true
 local FeastHallArea = nil
+local WhileCount = 0
 
 -- dungeon generation algorithm inspired by Mike Anderson's code for Tyrant, which was released under the GPLv2 license
-while (Count > 0 or FeastHallArea == nil) do
+while ((Count > 0 or FeastHallArea == nil) and WhileCount < 64 * 100) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
 	if (RawTile(RandomX, RandomY) == "Wall" and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Land")) then
@@ -389,6 +390,7 @@ while (Count > 0 or FeastHallArea == nil) do
 			end
 		end
 	end
+	WhileCount = WhileCount + 1
 end
 
 Count = 24
@@ -457,15 +459,22 @@ for unit1 = 1,table.getn(uncount) do
 end
 
 SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Name", "Fjalar and Galar")
 SetAiType(0, "passive")
-SetStartView(1, 32, 32)
 SetPlayerData(1, "RaceName", "dwarf")
-SetPlayerData(1, "Name", "Thjodrorir")
 SetAiType(1, "passive")
-SetPlayerData(2, "RaceName", "neutral")
-SetPlayerData(2, "Name", "Hall Dwellers")
+SetPlayerData(2, "RaceName", "dwarf")
+SetPlayerData(2, "Name", "Lyran Guards")
 SetAiType(2, "passive")
+SetPlayerData(3, "RaceName", "neutral")
+SetPlayerData(3, "Name", "Lyran Citizens")
+SetAiType(3, "passive")
+
+SetDiplomacy(0, "enemy", 1)
+SetDiplomacy(0, "enemy", 2)
+SetDiplomacy(1, "enemy", 0)
+SetDiplomacy(1, "enemy", 2)
+SetDiplomacy(2, "enemy", 0)
+SetDiplomacy(2, "enemy", 1)
 
 -- create items
 RandomX = 0
@@ -526,7 +535,7 @@ end
 --	end
 --end
 
--- create Fjalar and Galar
+-- create player 1's dwarves
 Count = 1
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
@@ -544,8 +553,44 @@ while (Count > 0) do
 			if (adjacent_floor_tiles >= 8) then
 				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					SetStartView(0, RandomX, RandomY)
-					unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
-					unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
+					local hero_count = 1
+					local loops = 0
+					while (hero_count > 0) do
+						RandomNumber = SyncRand(100)
+						if (not IsNetworkGame()) then
+							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-baglur") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-thursagan", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1 and (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-hero-durstorn") or 0 ~= GetThisPlayer())) then
+								unit = CreateUnit("unit-hero-durstorn", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (loops > 20) then -- used if the player has no available heroes
+								unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							end
+						else
+							if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-rugnur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-baglur", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-thursagan", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
+								unit = CreateUnit("unit-hero-durstorn", 0, {RandomX, RandomY})
+								hero_count = hero_count - 1
+							end
+						end
+						loops = loops + 1
+					end
 					Count = Count - 1
 				end
 			end
@@ -553,51 +598,40 @@ while (Count > 0) do
 	end
 end
 
--- create Thjodrorir
+-- create player 2's dwarves
 Count = 1
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
 	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 		if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
-			if (GetNumUnitsAt(0, "any", {RandomX - 24, RandomY - 24}, {RandomX + 24, RandomY + 24}) < 1) then
-				local adjacent_floor_tiles = 0
-				for x=(RandomX - 1),(RandomX + 1) do
-					for y=(RandomY - 1),(RandomY + 1) do
-						if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
-							adjacent_floor_tiles = adjacent_floor_tiles + 1
-						end
+			local adjacent_floor_tiles = 0
+			for x=(RandomX - 1),(RandomX + 1) do
+				for y=(RandomY - 1),(RandomY + 1) do
+					if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
 				end
-				if (adjacent_floor_tiles >= 8) then
+			end
+			if (adjacent_floor_tiles >= 8) then
+				if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1 and GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 					SetStartView(1, RandomX, RandomY)
-					unit = CreateUnit("unit-dwarven-steelclad", 1, {RandomX, RandomY})
-
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
-						Count = Count - 1
-					elseif (RandomNumber == 1) then
-						unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
-						Count = Count - 1
-					end
-
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
-						Count = Count - 1
-					elseif (RandomNumber == 1) then
-						unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
-						Count = Count - 1
-					end
-
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
-						Count = Count - 1
-					elseif (RandomNumber == 1) then
-						unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
-						Count = Count - 1
+					local hero_count = 1
+					while (hero_count > 0) do
+						RandomNumber = SyncRand(100)
+						if (RandomNumber < 25 and GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-rugnur", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 50 and GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-baglur", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 75 and GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-thursagan", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						elseif (RandomNumber < 100 and GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
+							unit = CreateUnit("unit-hero-durstorn", 1, {RandomX, RandomY})
+							hero_count = hero_count - 1
+						end
 					end
 					Count = Count - 1
 				end
@@ -606,19 +640,19 @@ while (Count > 0) do
 	end
 end
 
--- create Thjodrorir's guards
-Count = 8
+-- create hostile creeps
+Count = 16
 while (Count > 0) do
 	RandomX = SyncRand(Map.Info.MapWidth)
 	RandomY = SyncRand(Map.Info.MapHeight)
 	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
-		if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
+		if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 			RandomNumber = SyncRand(2)
 			if (RandomNumber == 0) then
-				unit = CreateUnit("unit-dwarven-axefighter", 1, {RandomX, RandomY})
+				unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
 				Count = Count - 1
 			elseif (RandomNumber == 1) then
-				unit = CreateUnit("unit-dwarven-scout", 1, {RandomX, RandomY})
+				unit = CreateUnit("unit-dwarven-scout", 2, {RandomX, RandomY})
 				Count = Count - 1
 			end
 		end
@@ -645,9 +679,9 @@ while (Count > 0) do
 					if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 						RandomNumber = SyncRand(100)
 						if (RandomNumber < 95) then
-							unit = CreateUnit("unit-dwarven-miner", 2, {RandomX, RandomY})
+							unit = CreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY})
 						else
-							unit = CreateUnit("unit-gnomish-worker", 2, {RandomX, RandomY}) -- There is a small chance that a dweller of Fjalar's and Galar's hall will be a gnome instead of a dwarf
+							unit = CreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- There is a small chance that a dweller of Fjalar's and Galar's hall will be a gnome instead of a dwarf
 						end
 						Count = Count - 1
 					end
@@ -672,7 +706,7 @@ end
 --			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-stairs") then
 --				local people_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 --				if (people_quantity > 0) then
---					NextMap = "maps/fjalars-and-galars-hall.smp"
+--					NextMap = "maps/nidavellir/fjalars-and-galars-hall.smp"
 --					NextMapDirect = true
 --					ActionVictory()					
 --				end

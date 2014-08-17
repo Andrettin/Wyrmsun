@@ -631,7 +631,7 @@ function RunMap(map, objective, fow, revealmap)
   end
 end
 
-mapname = "maps/chaincolt-foothills.smp"
+mapname = "maps/nidavellir/chaincolt-foothills.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},
@@ -890,11 +890,11 @@ function RunSinglePlayerGameMenu()
 	end
 
 	-- get maps in subdirectories of the maps folder
-	for i=1,table.getn(dirlist) do
-		fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[i])
+	for j=1,table.getn(dirlist) do
+		fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "^.*%.smp%.?g?z?$")) then
-				maps[u] = MapDirectories[map_directory] .. dirlist[i] .. f
+				maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
 				u = u + 1
 			end
 		end

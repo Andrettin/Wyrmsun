@@ -342,6 +342,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-ballista-bolt-3",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/ballista_bolt_3.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-boots",
 	Size = {46, 38},
 	Frame = 0,
