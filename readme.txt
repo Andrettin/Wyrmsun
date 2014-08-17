@@ -69,6 +69,10 @@ https://launchpad.net/stratagus
 - The dwarven ballista's attack button is now a ballista bolt (previously it used the dwarven level 1 axe) (graphics by Leo).
 - Added two dwarven ballista bolt upgrades (graphics by Leo).
 
+* Modding
+- Tileset tile size now can properly be changed.
+- Added "GetUnitTypeData" lua function for getting characteristics from unit types; this function works much in the same way as the "GetPlayerData" function.
+
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
 - The gnomish king is now called "Pypo I", instead of having his name be randomly generated.
@@ -86,7 +90,7 @@ https://launchpad.net/stratagus
 - Units' graphic variations can now be defined in the unit type's definition
 - Brown-haired dwarven axefighters, steelclads and thanes now use a brown-haired icon as well (graphics by Jinn).
 - Gray-haired gnomish workers now have an appropriately colored icon to match (modification by b_o and Jinn of the gnomish worker icon).
-- Added Surghan Mercenary (special dwarven steelclad) (icon by Leo).
+- Added Surghan Mercenary (special dwarven steelclad) (icons by Leo).
 - Fixed a bug which caused goblin archers controlled by the human player to not use their secondary melee attack.
 - Added goblin War Machine (graphics by b_o).
 - Goblin archers now use a dagger instead of punching when doing their secondary melee attack.

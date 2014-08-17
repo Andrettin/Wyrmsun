@@ -323,6 +323,7 @@ Leo:
 /graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/shield_3.png
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png
+/graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
 /graphics/goblin/buildings/farm.png
 /graphics/goblin/buildings/lumber_mill.png

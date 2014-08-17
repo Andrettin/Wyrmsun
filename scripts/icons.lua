@@ -384,6 +384,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-surghan-mercenary-thane",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/surghan_mercenary_thane.png"
+})
+
+DefineIcon({
 	Name = "icon-rugnur",
 	Size = {46, 38},
 	Frame = 0,

@@ -59,6 +59,7 @@ local editor_types = {
    "unit-dwarven-guard-tower",
 
    "unit-surghan-mercenary-steelclad",
+   "unit-surghan-mercenary-thane",
 
    "unit-hero-rugnur",
    "unit-hero-rugnur-steelclad",
