@@ -33,6 +33,7 @@ b_o:
 /graphics/dwarf/units/miner.png
 /graphics/dwarf/units/miner_with_gold.png
 /graphics/dwarf/units/miner_with_lumber.png
+/graphics/dwarf/units/rugnur.png
 /graphics/dwarf/units/thane.png
 /graphics/dwarf/units/thane_black_hair.png
 /graphics/dwarf/units/thane_blond_hair.png

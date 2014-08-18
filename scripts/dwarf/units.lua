@@ -661,7 +661,7 @@ DefineUnitType("unit-surghan-mercenary-thane", { Name = "Surghan Mercenary",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
-  Image = {"file", "dwarf/units/dwarven_axefighter_brown_hair.png", "size", {72, 72}},
+  Image = {"file", "dwarf/units/rugnur.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
   Costs = {"time", 0},
   Speed = GetUnitTypeData("unit-dwarven-axefighter", "Speed"),

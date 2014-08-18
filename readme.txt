@@ -44,6 +44,7 @@ https://launchpad.net/stratagus
 * Heroes
 - Fixed a bug which caused heroes not to begin with the extra HP they should have, if they had a level higher than the quantity of upgrades available.
 - Heroes are no longer hireable.
+- Added special graphics for Rugnur (axefighter) (graphics by b_o).
 
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
