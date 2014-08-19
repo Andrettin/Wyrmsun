@@ -662,7 +662,7 @@ AddTrigger(
 						end
 						Event(
 							"Pypo I",
-							"You just let a caravan, with my money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
+							"You just let a caravan, with ~<my~> money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
 							event_player,
 							{"~!Continue"},
 							{function(s)
@@ -715,7 +715,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -725,6 +725,7 @@ AddTrigger(
 		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
+		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
@@ -1070,7 +1071,7 @@ AddTrigger(
 									{function(s)
 									Event(
 										"",
-										"(Later in the dwarven city...)",
+										"(Later in the dwarven citadel...)",
 										player,
 										{"~!Continue"},
 										{function(s)
@@ -1385,7 +1386,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1394,6 +1395,7 @@ AddTrigger(
 	function() 
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
+		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
@@ -1861,7 +1863,7 @@ AddTrigger(
 							{function(s)
 							Event(
 								"",
-								"(Later in the dwarven city...)",
+								"(Later in the dwarven citadel...)",
 								player,
 								{"~!Continue"},
 								{function(s)
@@ -2133,7 +2135,7 @@ AddTrigger(
 						{function(s)
 						Event(
 							"Thursagan",
-							"Aye, although we will have to hire the miners - they don't work for free. But beware, there are goblins and such down here...",
+							"Aye. But beware, there are goblins and such down here...",
 							player,
 							{"~!Continue"},
 							{function(s)
@@ -2273,19 +2275,314 @@ AddTrigger(
 						player,
 						{"~!Continue"},
 						{function(s)
-							RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-							if (player == GetThisPlayer() and GrandStrategy == false) then
-								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
-									table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
-								end
-								SavePreferences()
-							end
-							if (mapinfo.description == "Eastern Mines" and player == GetFactionPlayer("Norlund Clan")) then
-								if (GrandStrategy == false) then
---									NextMap = "maps/nidavellir/shorbear-hills.smp"
-								end
-								ActionVictory()
-							end
+						Event(
+							"",
+							"(Later in the dwarven citadel...)",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Durstorn",
+								"So, ye have returned. I assume ye have obtained the required materials? My jeweler Theganli has spent the last two years buying jewels from some of the northern clans. So now go to the forge and make your scepter. What do ye need to annoy me for?",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Thursagan",
+									"We don't. Not everything is about ye. We need to talk to Theganli.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Durstorn",
+										"That makes sense, I guess ye would want to plan the scepter's design... what in particular do ye want him to do?",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Thursagan",
+											"I need to make the plans for the scepter, then have him cut the ruby to match them.",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Durstorn",
+												"Yer going to cut the jewel?! Are ye insane?",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Rugnur",
+													"What are ye talking about, sir? Ye knew all along the jewel would have to be cut to make the scepter out of.",
+													player,
+													{"~!Continue"},
+													{function(s)
+													Event(
+														"Durstorn",
+														"Oh... right, right. Fine. Theganli?",
+														player,
+														{"~!Continue"},
+														{function(s)
+														Event(
+															"Kuhnar",
+															"He's in his shop, in the southern tunnel.",
+															player,
+															{"~!Continue"},
+															{function(s)
+															Event(
+																"Durstorn",
+																"Whatever. Kuhnar, go, summon him here.",
+																player,
+																{"~!Continue"},
+																{function(s)
+																Event(
+																	"Kuhnar",
+																	"Theganli! Come out of there, Durstorn orders ye to come to the citadel.",
+																	player,
+																	{"~!Continue"},
+																	{function(s)
+																	Event(
+																		"Theganli",
+																		"I'm coming... coming... stop pounding on the door...",
+																		player,
+																		{"~!Continue"},
+																		{function(s)
+																		Event(
+																			"Thursagan",
+																			"He doesn't need to come here, I'll take the jewel to his shop. He'll need his tools anyway.",
+																			player,
+																			{"~!Continue"},
+																			{function(s)
+																			Event(
+																				"Thursagan",
+																				"Well, Theganli, what do ye think of this jewel?",
+																				player,
+																				{"~!Continue"},
+																				{function(s)
+																				Event(
+																					"Theganli",
+																					"Uh, um, aye, aye, very impressive jewel, impressive, aye...",
+																					player,
+																					{"~!Continue"},
+																					{function(s)
+																					Event(
+																						"Thursagan",
+																						"Do ye think ye could cut it in the manner my plans specify?",
+																						player,
+																						{"~!Continue"},
+																						{function(s)
+																						Event(
+																							"Theganli",
+																							"Well, uh, um, maybe... maybe... it will be hard... let me see...",
+																							player,
+																							{"~!Continue"},
+																							{function(s)
+																							Event(
+																								"Thursagan",
+																								"Very well. See what ye can do.",
+																								player,
+																								{"~!Continue"},
+																								{function(s)
+																								Event(
+																									"",
+																									"(Theganli spent many months cutting the jewels that would go into the Scepter of Fire, and the Ruby of Fire he attempted last. But he could not cut it.)",
+																									player,
+																									{"~!Continue"},
+																									{function(s)
+																									Event(
+																										"Durstorn",
+																										"Well, do you have anything yet?!",
+																										player,
+																										{"~!Continue"},
+																										{function(s)
+																										Event(
+																											"Theganli",
+																											"Ah, well, uh, no... no, not yet... unfortunately... it seems... it can't be cut... or scratched... or damaged at all... at least not by my tools...",
+																											player,
+																											{"~!Continue"},
+																											{function(s)
+																											Event(
+																												"Thursagan",
+																												"So what do ye propose we do? We need this jewel cut in a very specific way to make sure... well, it doesn't matter why.",
+																												player,
+																												{"~!Continue"},
+																												{function(s)
+																												Event(
+																													"Theganli",
+																													"Well... maybe... the Shorbear clan? They have good tools... aye, aye, they do...",
+																													player,
+																													{"~!Continue"},
+																													{function(s)
+																													Event(
+																														"Rugnur",
+																														"Who are they?",
+																														player,
+																														{"~!Continue"},
+																														{function(s)
+																														Event(
+																															"Theganli",
+																															"Another group... of dwarves... live south of here... above ground... aye... best jewelers I know of... have special tools... tools, aye...",
+																															player,
+																															{"~!Continue"},
+																															{function(s)
+																															Event(
+																																"Durstorn",
+																																"Well, Rugnur, what are ye waiting for? Go down and get these tools from them, and carve the jewel!",
+																																player,
+																																{"~!Continue"},
+																																{function(s)
+																																Event(
+																																	"Baglur",
+																																	"We can't just go in there and take their property. We'll have to buy, or rent, it from them.",
+																																	player,
+																																	{"~!Continue"},
+																																	{function(s)
+																																	Event(
+																																		"Durstorn",
+																																		"Fine. Go rent it from them.",
+																																		player,
+																																		{"~!Continue"},
+																																		{function(s)
+																																		Event(
+																																			"Rugnur",
+																																			"Very well. We'll go south now.",
+																																			player,
+																																			{"~!Continue"},
+																																			{function(s)
+																																			Event(
+																																				"Durstorn",
+																																				"Wait! Last time ye made a bargain by yerself ye lost us five thousand pieces of silver. I'm going with ye this time!",
+																																				player,
+																																				{"~!Continue"},
+																																				{function(s)
+																																				Event(
+																																					"Kuhnar",
+																																					"Are ye sure that is wise, lord?",
+																																					player,
+																																					{"~!Continue"},
+																																					{function(s)
+																																					Event(
+																																						"Durstorn",
+																																						"Of course! To be safe, though, ye and Noiraran are going to come with us.",
+																																						player,
+																																						{"~!Continue"},
+																																						{function(s)
+																																						Event(
+																																							"Kuhnar",
+																																							"Aye sir... (~<Sigh~>)",
+																																							player,
+																																							{"~!Continue"},
+																																							{function(s)
+																																								RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+																																								if (player == GetThisPlayer() and GrandStrategy == false) then
+																																									if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
+																																										table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
+																																									end
+																																									SavePreferences()
+																																								end
+																																								if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+																																									if (GrandStrategy == false) then
+																																				--						NextMap = "maps/nidavellir/shorbear-hills.smp"
+																																									end
+																																									ActionVictory()
+																																								end
+																																							end},
+																																							"dwarf/icons/dwarven_steelclad.png"
+																																						)
+																																						end},
+																																						"dwarf/icons/durstorn.png"
+																																					)
+																																					end},
+																																					"dwarf/icons/dwarven_steelclad.png"
+																																				)
+																																				end},
+																																				"dwarf/icons/durstorn.png"
+																																			)
+																																			end},
+																																			"dwarf/icons/rugnur.png"
+																																		)
+																																		end},
+																																		"dwarf/icons/durstorn.png"
+																																	)
+																																	end},
+																																	"dwarf/icons/baglur.png"
+																																)
+																																end},
+																																"dwarf/icons/durstorn.png"
+																															)
+																															end},
+																															"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																														)
+																														end},
+																														"dwarf/icons/rugnur.png"
+																													)
+																													end},
+																													"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																												)
+																												end},
+																												"dwarf/icons/thursagan.png"
+																											)
+																											end},
+																											"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																										)
+																										end},
+																										"dwarf/icons/durstorn.png"
+																									)
+																									end}
+																								)
+																								end},
+																								"dwarf/icons/thursagan.png"
+																							)
+																							end},
+																							"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																						)
+																						end},
+																						"dwarf/icons/thursagan.png"
+																					)
+																					end},
+																					"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																				)
+																				end},
+																				"dwarf/icons/thursagan.png"
+																			)
+																			end},
+																			"dwarf/icons/thursagan.png"
+																		)
+																		end},
+																		"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																	)
+																	end},
+																	"dwarf/icons/dwarven_steelclad.png"
+																)
+																end},
+																"dwarf/icons/durstorn.png"
+															)
+															end},
+															"dwarf/icons/dwarven_steelclad.png"
+														)
+														end},
+														"dwarf/icons/durstorn.png"
+													)
+													end},
+													"dwarf/icons/rugnur.png"
+												)
+												end},
+												"dwarf/icons/durstorn.png"
+											)
+											end},
+											"dwarf/icons/thursagan.png"
+										)
+										end},
+										"dwarf/icons/durstorn.png"
+									)
+									end},
+									"dwarf/icons/thursagan.png"
+								)
+								end},
+								"dwarf/icons/durstorn.png"
+							)
+							end}
+						)
 						end},
 						"dwarf/icons/thursagan.png"
 					)
@@ -2314,23 +2611,340 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-				if (player == GetThisPlayer() and GrandStrategy == false) then
-					if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
-						table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
-					end
-					SavePreferences()
-				end
-				if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-					if (GrandStrategy == false) then
---						NextMap = "maps/nidavellir/shorbear-hills.smp"
-					end
-					ActionVictory()
-				end
+			Event(
+				"",
+				"(Later in the dwarven citadel...)",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Durstorn",
+					"So, ye have returned. I assume ye have obtained the required materials? My jeweler Theganli has spent the last two years buying jewels from some of the northern clans. So now go to the forge and make your scepter. What do ye need to annoy me for?",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Thursagan",
+						"We don't. Not everything is about ye. We need to talk to Theganli.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Durstorn",
+							"That makes sense, I guess ye would want to plan the scepter's design... what in particular do ye want him to do?",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Thursagan",
+								"I need to make the plans for the scepter, then have him cut the ruby to match them.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Durstorn",
+									"Yer going to cut the jewel?! Are ye insane?",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Rugnur",
+										"What are ye talking about, sir? Ye knew all along the jewel would have to be cut to make the scepter out of.",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Durstorn",
+											"Oh... right, right. Fine. Theganli?",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Kuhnar",
+												"He's in his shop, in the southern tunnel.",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Durstorn",
+													"Whatever. Kuhnar, go, summon him here.",
+													player,
+													{"~!Continue"},
+													{function(s)
+													Event(
+														"Kuhnar",
+														"Theganli! Come out of there, Durstorn orders ye to come to the citadel.",
+														player,
+														{"~!Continue"},
+														{function(s)
+														Event(
+															"Theganli",
+															"I'm coming... coming... stop pounding on the door...",
+															player,
+															{"~!Continue"},
+															{function(s)
+															Event(
+																"Thursagan",
+																"He doesn't need to come here, I'll take the jewel to his shop. He'll need his tools anyway.",
+																player,
+																{"~!Continue"},
+																{function(s)
+																Event(
+																	"Thursagan",
+																	"Well, Theganli, what do ye think of this jewel?",
+																	player,
+																	{"~!Continue"},
+																	{function(s)
+																	Event(
+																		"Theganli",
+																		"Uh, um, aye, aye, very impressive jewel, impressive, aye...",
+																		player,
+																		{"~!Continue"},
+																		{function(s)
+																		Event(
+																			"Thursagan",
+																			"Do ye think ye could cut it in the manner my plans specify?",
+																			player,
+																			{"~!Continue"},
+																			{function(s)
+																			Event(
+																				"Theganli",
+																				"Well, uh, um, maybe... maybe... it will be hard... let me see...",
+																				player,
+																				{"~!Continue"},
+																				{function(s)
+																				Event(
+																					"Thursagan",
+																					"Very well. See what ye can do.",
+																					player,
+																					{"~!Continue"},
+																					{function(s)
+																					Event(
+																						"",
+																						"(Theganli spent many months cutting the jewels that would go into the Scepter of Fire, and the Ruby of Fire he attempted last. But he could not cut it.)",
+																						player,
+																						{"~!Continue"},
+																						{function(s)
+																						Event(
+																							"Durstorn",
+																							"Well, do you have anything yet?!",
+																							player,
+																							{"~!Continue"},
+																							{function(s)
+																							Event(
+																								"Theganli",
+																								"Ah, well, uh, no... no, not yet... unfortunately... it seems... it can't be cut... or scratched... or damaged at all... at least not by my tools...",
+																								player,
+																								{"~!Continue"},
+																								{function(s)
+																								Event(
+																									"Thursagan",
+																									"So what do ye propose we do? We need this jewel cut in a very specific way to make sure... well, it doesn't matter why.",
+																									player,
+																									{"~!Continue"},
+																									{function(s)
+																									Event(
+																										"Theganli",
+																										"Well... maybe... the Shorbear clan? They have good tools... aye, aye, they do...",
+																										player,
+																										{"~!Continue"},
+																										{function(s)
+																										Event(
+																											"Rugnur",
+																											"Who are they?",
+																											player,
+																											{"~!Continue"},
+																											{function(s)
+																											Event(
+																												"Theganli",
+																												"Another group... of dwarves... live south of here... above ground... aye... best jewelers I know of... have special tools... tools, aye...",
+																												player,
+																												{"~!Continue"},
+																												{function(s)
+																												Event(
+																													"Durstorn",
+																													"Well, Rugnur, what are ye waiting for? Go down and get these tools from them, and carve the jewel!",
+																													player,
+																													{"~!Continue"},
+																													{function(s)
+																													Event(
+																														"Baglur",
+																														"We can't just go in there and take their property. We'll have to buy, or rent, it from them.",
+																														player,
+																														{"~!Continue"},
+																														{function(s)
+																														Event(
+																															"Durstorn",
+																															"Fine. Go rent it from them.",
+																															player,
+																															{"~!Continue"},
+																															{function(s)
+																															Event(
+																																"Rugnur",
+																																"Very well. We'll go south now.",
+																																player,
+																																{"~!Continue"},
+																																{function(s)
+																																Event(
+																																	"Durstorn",
+																																	"Wait! Last time ye made a bargain by yerself ye lost us five thousand pieces of silver. I'm going with ye this time!",
+																																	player,
+																																	{"~!Continue"},
+																																	{function(s)
+																																	Event(
+																																		"Kuhnar",
+																																		"Are ye sure that is wise, lord?",
+																																		player,
+																																		{"~!Continue"},
+																																		{function(s)
+																																		Event(
+																																			"Durstorn",
+																																			"Of course! To be safe, though, ye and Noiraran are going to come with us.",
+																																			player,
+																																			{"~!Continue"},
+																																			{function(s)
+																																			Event(
+																																				"Kuhnar",
+																																				"Aye sir... (~<Sigh~>)",
+																																				player,
+																																				{"~!Continue"},
+																																				{function(s)
+																																					RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+																																					if (player == GetThisPlayer() and GrandStrategy == false) then
+																																						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") == false) then
+																																							table.insert(wyr.preferences.QuestsCompleted, "Gathering Materials")
+																																						end
+																																						SavePreferences()
+																																					end
+																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+																																						if (GrandStrategy == false) then
+																																	--						NextMap = "maps/nidavellir/shorbear-hills.smp"
+																																						end
+																																						ActionVictory()
+																																					end
+																																				end},
+																																				"dwarf/icons/dwarven_steelclad.png"
+																																			)
+																																			end},
+																																			"dwarf/icons/durstorn.png"
+																																		)
+																																		end},
+																																		"dwarf/icons/dwarven_steelclad.png"
+																																	)
+																																	end},
+																																	"dwarf/icons/durstorn.png"
+																																)
+																																end},
+																																"dwarf/icons/rugnur.png"
+																															)
+																															end},
+																															"dwarf/icons/durstorn.png"
+																														)
+																														end},
+																														"dwarf/icons/baglur.png"
+																													)
+																													end},
+																													"dwarf/icons/durstorn.png"
+																												)
+																												end},
+																												"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																											)
+																											end},
+																											"dwarf/icons/rugnur.png"
+																										)
+																										end},
+																										"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																									)
+																									end},
+																									"dwarf/icons/thursagan.png"
+																								)
+																								end},
+																								"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																							)
+																							end},
+																							"dwarf/icons/durstorn.png"
+																						)
+																						end}
+																					)
+																					end},
+																					"dwarf/icons/thursagan.png"
+																				)
+																				end},
+																				"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																			)
+																			end},
+																			"dwarf/icons/thursagan.png"
+																		)
+																		end},
+																		"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																	)
+																	end},
+																	"dwarf/icons/thursagan.png"
+																)
+																end},
+																"dwarf/icons/thursagan.png"
+															)
+															end},
+															"dwarf/icons/dwarven_steelclad_gray_hair.png"
+														)
+														end},
+														"dwarf/icons/dwarven_steelclad.png"
+													)
+													end},
+													"dwarf/icons/durstorn.png"
+												)
+												end},
+												"dwarf/icons/dwarven_steelclad.png"
+											)
+											end},
+											"dwarf/icons/durstorn.png"
+										)
+										end},
+										"dwarf/icons/rugnur.png"
+									)
+									end},
+									"dwarf/icons/durstorn.png"
+								)
+								end},
+								"dwarf/icons/thursagan.png"
+							)
+							end},
+							"dwarf/icons/durstorn.png"
+						)
+						end},
+						"dwarf/icons/thursagan.png"
+					)
+					end},
+					"dwarf/icons/durstorn.png"
+				)
+				end}
+			)
 			end},
 			"dwarf/icons/thursagan.png"
 		)
 	end
 )
-
 end
+
+-- If Thursagan dies, any quests of the Scepter of Fire campaign currently being pursued fail
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan") < 1) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
+			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+				ActionDefeat()
+			end
+		end
+		return false
+	end
+)

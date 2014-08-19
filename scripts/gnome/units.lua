@@ -34,6 +34,8 @@
 --
 
 DefineUnitType("unit-gnomish-worker", { Name = "Gnomish Scavenger",
+  Class = "worker",
+  Civilization = "gnome",
   Image = {"file", "gnome/units/gnomish_worker.png", "size", {72, 72}},
   DrawLevel = 19,
   Animations = "animations-gnomish-worker", Icon = "icon-gnomish-worker",
@@ -92,6 +94,8 @@ DefineUnitType("unit-gnomish-worker", { Name = "Gnomish Scavenger",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
+  Class = "infantry",
+  Civilization = "gnome",
   Image = {"file", "gnome/units/gnomish_recruit.png", "size", {72, 72}},
   Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-recruit",
   Costs = {"time", 60, "gold", 600},
@@ -122,6 +126,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = gnomish_recruit_name,
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-gnomish-caravan", { Name = gnomish_caravan_name,
+  Civilization = "gnome",
   Image = {"file", "gnome/units/gnomish_caravan.png", "size", {64, 64}},
   Animations = "animations-gnomish-caravan", Icon = "icon-gnomish-caravan",
   Costs = {"time", 250, "gold", 900, "wood", 300},
@@ -147,6 +152,8 @@ DefineUnitType("unit-gnomish-caravan", { Name = gnomish_caravan_name,
     "dead", "explosion"} } )
 
 DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
+  Class = "town-hall",
+  Civilization = "gnome",
   Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
   Animations = "animations-building", Icon = "icon-gnomish-town-hall",
   Costs = {"time", 255, "gold", 1200, "wood", 800},
@@ -179,6 +186,8 @@ DefineUnitType("unit-gnomish-town-hall", { Name = "Town Hall",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-gnomish-farm", { Name = "Farm",
+  Class = "farm",
+  Civilization = "gnome",
   Image = {"file", "gnome/buildings/farm.png", "size", {64, 64}},
   Animations = "animations-farm", Icon = "icon-gnomish-farm",
   NeutralMinimapColor = {192, 192, 192},
@@ -207,6 +216,8 @@ DefineUnitType("unit-gnomish-farm", { Name = "Farm",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-gnomish-barracks", { Name = "Barracks",
+  Class = "barracks",
+  Civilization = "gnome",
   Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-gnomish-barracks",
   Costs = {"time", 200, "gold", 700, "wood", 450},

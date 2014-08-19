@@ -35,23 +35,9 @@ Load("scripts/gnome/upgrade.lua")
 Load("scripts/goblin/upgrade.lua")
 
 function DefineAllowNormalUnits(flags)
-	local units = {
-		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
-		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
-		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
-		"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
-		"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-gnomish-worker", "unit-gnomish-recruit",
-		"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
-		"unit-potion-of-healing"
-	}
 	-- Allow units for human players only if they have been acquired
 	if ((flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") and (not IsNetworkGame())) then
-		for i, unitName in ipairs(units) do
+		for i, unitName in ipairs(Units) do
 			local PlayerUnitFlag = {}
 			local PlayerHeroUnitMax = {}
 			for j=0,15 do
@@ -77,7 +63,7 @@ function DefineAllowNormalUnits(flags)
 			end
 		end
 	else
-		for i, unitName in ipairs(units) do
+		for i, unitName in ipairs(Units) do
 			if (flags == "RRRRRRRRRRRRRRRR" and string.find(unitName, "upgrade-") == nil) then
 				DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
 			else

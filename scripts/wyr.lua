@@ -55,42 +55,6 @@ if (OldCreateUnit == nil) then
 	OldCreateUnit = CreateUnit
 
 	local t = {
-		{"unit-dwarven-town-hall", "unit-gnomish-town-hall", "unit-goblin-town-hall"},
-		{"unit-dwarven-mushroom-farm", "unit-gnomish-farm", "unit-goblin-farm"},
-		{"unit-dwarven-barracks", "unit-gnomish-barracks", "unit-goblin-mess-hall"},
-		{"unit-dwarven-lumber-mill", nil, "unit-goblin-lumber-mill"},
-		{"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker"},
-		{"unit-dwarven-axefighter", "unit-gnomish-recruit", "unit-goblin-spearman"},
-		{"unit-dwarven-scout", nil, "unit-goblin-archer"},
-		{"unit-dwarven-ballista", nil, "unit-goblin-war-machine"}
-	}
-
-	DwarvenEquivalent = {}
-	GnomishEquivalent = {}
-	GoblinEquivalent = {}
-
-	for i=1,table.getn(t) do
-		if (t[i][2] ~= nil and t[i][1] ~= nil) then
-			DwarvenEquivalent[t[i][2]] = t[i][1]
-		end
-		if (t[i][3] ~= nil and t[i][1] ~= nil) then
-			DwarvenEquivalent[t[i][3]] = t[i][1]
-		end
-		if (t[i][1] ~= nil and t[i][2] ~= nil) then
-			GnomishEquivalent[t[i][1]] = t[i][2]
-		end
-		if (t[i][3] ~= nil and t[i][2] ~= nil) then
-			GnomishEquivalent[t[i][3]] = t[i][2]
-		end
-		if (t[i][1] ~= nil and t[i][3] ~= nil) then
-			GoblinEquivalent[t[i][1]] = t[i][3]
-		end
-		if (t[i][2] ~= nil and t[i][3] ~= nil) then
-			GoblinEquivalent[t[i][2]] = t[i][3]
-		end
-	end
-
-	t = {
 --		{"unit-critter", "unit-gryphon"}
 	}
 
@@ -104,15 +68,15 @@ if (OldCreateUnit == nil) then
 end
 
 -- Convert a unit type to the equivalent for a different race
-function ConvertUnitType(unittype, race, terrain)
+function ConvertUnitType(unittype, civilization, terrain)
 	local equiv
 
-	if (race == "dwarf") then
-		equiv = DwarvenEquivalent[unittype]
-	elseif (race == "gnome") then
-		equiv = GnomishEquivalent[unittype]
-	elseif (race == "goblin") then
-		equiv = GoblinEquivalent[unittype]
+	if (civilization ~= GetUnitTypeData(unittype, "Civilization")) then
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unittype, "Class") == GetUnitTypeData(unitName, "Class")) then
+				return unitName
+			end
+		end
 	end
 
 	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then

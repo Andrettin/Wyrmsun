@@ -28,30 +28,33 @@
 --
 
 local upgrades = {
-	{"upgrade-dwarven-broad-axe", "icon-dwarven-axe-2",
+	{"upgrade-dwarven-broad-axe", "icon-dwarven-axe-2", "melee-weapon-1",
 		{   200,   500,   100,     0,     0,     0,     0}},
-	{"upgrade-dwarven-great-axe", "icon-dwarven-axe-3",
+	{"upgrade-dwarven-great-axe", "icon-dwarven-axe-3", "melee-weapon-2",
 		{   250,  1500,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-shield-1", "icon-dwarven-shield-2",
+	{"upgrade-dwarven-shield-1", "icon-dwarven-shield-2", "bronze-shield",
 		{   200,   300,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-shield-2", "icon-dwarven-shield-3",
+	{"upgrade-dwarven-shield-2", "icon-dwarven-shield-3", "iron-shield",
 		{   250,   900,   500,     0,     0,     0,     0}},
-	{"upgrade-dwarven-throwing-axe-1", "icon-dwarven-throwing-axe-2",
+	{"upgrade-dwarven-throwing-axe-1", "icon-dwarven-throwing-axe-2", "ranged-projectiles-1",
 		{   200,   300,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3",
+	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3", "ranged-projectiles-2",
 		{   250,   900,   500,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-1", "icon-dwarven-ballista-bolt-2",
+	{"upgrade-dwarven-ballista-bolt-1", "icon-dwarven-ballista-bolt-2", "siege-projectiles-1",
 		{   250,  1500,     0,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-2", "icon-dwarven-ballista-bolt-2",
+	{"upgrade-dwarven-ballista-bolt-2", "icon-dwarven-ballista-bolt-2", "siege-projectiles-2",
 		{   250,  4000,     0,     0,     0,     0,     0}},
 }
 
 for i = 1,table.getn(upgrades) do
 	u = CUpgrade:New(upgrades[i][1])
 	u.Icon = Icons[upgrades[i][2]]
-	for j = 1,table.getn(upgrades[i][3]) do
-		u.Costs[j - 1] = upgrades[i][3][j]
+	u.Class = upgrades[i][3]
+	u.Civilization = "dwarf"
+	for j = 1,table.getn(upgrades[i][4]) do
+		u.Costs[j - 1] = upgrades[i][4][j]
 	end
+	u.Icon = Icons[upgrades[i][2]]
 end
 
 DefineModifier("upgrade-dwarven-broad-axe",

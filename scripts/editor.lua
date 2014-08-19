@@ -90,6 +90,7 @@ local editor_types = {
    "unit-goblin-farm",
    "unit-goblin-mess-hall",
    "unit-goblin-lumber-mill",
+   "unit-goblin-blacksmith",
 
    "unit-hero-greebo",
 

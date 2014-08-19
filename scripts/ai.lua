@@ -133,6 +133,8 @@ end
 function AiBlacksmith()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-blacksmith"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-blacksmith"
 	else
 		return "unit-dwarven-blacksmith"
 	end

@@ -29,6 +29,20 @@
 
 UnitTypeFiles = {}
 
+Units = {
+	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+	"unit-dwarven-lumber-mill", "unit-dwarven-blacksmith",
+	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
+	"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
+	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
+	"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
+	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
+	"unit-gnomish-worker", "unit-gnomish-recruit",
+	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-blacksmith",
+	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine"
+}
+
 -- Load the animations for the units.
 Load("scripts/anim.lua")
 

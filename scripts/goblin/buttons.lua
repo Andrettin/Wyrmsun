@@ -82,6 +82,11 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
   Key = "l", Hint = "Build ~!Lumber Mill",
   ForUnit = {"unit-goblin-worker"} } )
 
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-blacksmith",
+  Action = "build", Value = "unit-goblin-blacksmith",
+  Key = "g", Hint = "Build Fu~!gla Forge",
+  ForUnit = {"unit-goblin-worker"} } )
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = "~<ESC~> Cancel",

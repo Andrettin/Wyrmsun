@@ -34,6 +34,8 @@
 --
 
 DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
+  Class = "worker",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
   Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
   Costs = {"time", 45, "gold", 400},
@@ -86,6 +88,8 @@ DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
+  Class = "infantry",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
   Costs = {"time", 60, "gold", 600},
@@ -145,6 +149,8 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
+  Class = "veteran-infantry",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-dwarven-steelclad",
   Costs = {"time", 0},
@@ -205,6 +211,8 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-thane", { Name = "Thane",
+  Class = "heroic-infantry",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-thane",
   Costs = {"time", 0},
@@ -265,6 +273,8 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-scout", { Name = "Scout",
+  Class = "archer",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
   Animations = "animations-dwarven-scout", Icon = "icon-dwarven-scout",
   Costs = {"time", 70, "gold", 500, "wood", 50},
@@ -324,6 +334,8 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
+  Class = "siege-engine",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
   Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
   Costs = {"time", 250, "gold", 900, "wood", 300},
@@ -355,6 +367,8 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
 } } )
 
 DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
+  Class = "flying-rider",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
   DrawLevel = 45,
   Animations = "animations-dwarven-gryphon-rider", Icon = "icon-dwarven-gryphon-rider",
@@ -388,6 +402,8 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
 } } )
 
 DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
+  Class = "town-hall",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
   Animations = "animations-building", Icon = "icon-dwarven-town-hall",
   Costs = {"time", 255, "gold", 1200, "wood", 800},
@@ -420,6 +436,8 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name,
+  Class = "farm",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/mushroom_farm.png", "size", {64, 64}},
   Animations = "animations-building", Icon = "icon-dwarven-mushroom-farm",
   NeutralMinimapColor = {192, 192, 192},
@@ -448,6 +466,8 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
+  Class = "barracks",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-dwarven-barracks",
   Costs = {"time", 200, "gold", 700, "wood", 450},
@@ -474,6 +494,8 @@ DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
+  Class = "lumber-mill",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-dwarven-lumber-mill",
   Costs = {"time", 150, "gold", 600, "wood", 450},
@@ -502,6 +524,8 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-blacksmith", { Name = "Blacksmith",
+  Class = "blacksmith",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/blacksmith.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-dwarven-blacksmith",
 --  Costs = {"time", 200, "gold", 800, "wood", 450, "oil", 100},
@@ -530,6 +554,8 @@ DefineUnitType("unit-dwarven-blacksmith", { Name = "Blacksmith",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
+  Class = "watch-tower",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/sentry_tower.png", "size", {64, 64}},
   Animations = "animations-building", Icon = "icon-dwarven-sentry-tower",
   Costs = {"time", 60, "gold", 550, "wood", 200},
@@ -558,6 +584,8 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
+  Class = "guard-tower",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/buildings/guard_tower.png", "size", {64, 64}},
   Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
   Costs = {"time", 140, "gold", 500, "wood", 150},
@@ -589,6 +617,7 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = "Surghan Mercenary",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-surghan-mercenary-steelclad",
   Costs = {"time", 0},
@@ -625,6 +654,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = "Surghan Mercenary",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-surghan-mercenary-thane", { Name = "Surghan Mercenary",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-thane",
   Costs = {"time", 0},
@@ -661,6 +691,7 @@ DefineUnitType("unit-surghan-mercenary-thane", { Name = "Surghan Mercenary",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/rugnur.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
   Costs = {"time", 0},
@@ -696,6 +727,7 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-rugnur",
   Costs = {"time", 0},
@@ -732,6 +764,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
   Costs = {"time", 0},
@@ -768,6 +801,7 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-baglur", { Name = "Baglur",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/dwarven_steelclad_gray_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-steelclad", Icon = "icon-baglur",
   Costs = {"time", 0},
@@ -804,6 +838,7 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
   Costs = {"time", 0},
@@ -840,6 +875,7 @@ DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-thursagan",
   Costs = {"time", 0},
@@ -876,6 +912,7 @@ DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
     "dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
+  Civilization = "dwarf",
   Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
   Animations = "animations-dwarven-axefighter", Icon = "icon-durstorn",
   Costs = {"time", 0},

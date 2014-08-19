@@ -34,6 +34,8 @@
 --
 
 DefineUnitType("unit-goblin-worker", { Name = "Goblin Worker",
+  Class = "worker",
+  Civilization = "goblin",
   Image = {"file", "goblin/units/goblin_worker.png", "size", {72, 72}},
   DrawLevel = 19,
   Animations = "animations-gnomish-worker", Icon = "icon-goblin-worker",
@@ -88,6 +90,8 @@ DefineUnitType("unit-goblin-worker", { Name = "Goblin Worker",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
+  Class = "infantry",
+  Civilization = "goblin",
   Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
   Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
   Costs = {"time", 60, "gold", 600},
@@ -118,6 +122,8 @@ DefineUnitType("unit-goblin-spearman", { Name = "Goblin Impaler",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
+  Class = "archer",
+  Civilization = "goblin",
   Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
   Animations = "animations-goblin-archer", Icon = "icon-goblin-archer",
   Costs = {"time", 70, "gold", 500, "wood", 50},
@@ -149,6 +155,8 @@ DefineUnitType("unit-goblin-archer", { Name = "Goblin Archer",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-goblin-war-machine", { Name = "War Machine",
+  Class = "siege-engine",
+  Civilization = "goblin",
   Image = {"file", "goblin/units/goblin_war_machine.png", "size", {72, 72}},
   Animations = "animations-goblin-war-machine", Icon = "icon-goblin-war-machine",
   Costs = {"time", 250, "gold", 900, "wood", 300},
@@ -182,6 +190,8 @@ DefineUnitType("unit-goblin-war-machine", { Name = "War Machine",
 } } )
 
 DefineUnitType("unit-goblin-town-hall", { Name = "Town Hall",
+  Class = "town-hall",
+  Civilization = "goblin",
   Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
   Animations = "animations-building", Icon = "icon-goblin-town-hall",
   Costs = {"time", 255, "gold", 1200, "wood", 800},
@@ -214,6 +224,8 @@ DefineUnitType("unit-goblin-town-hall", { Name = "Town Hall",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-goblin-farm", { Name = "Farm",
+  Class = "farm",
+  Civilization = "goblin",
   Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
   Animations = "animations-farm", Icon = "icon-goblin-farm",
   NeutralMinimapColor = {192, 192, 192},
@@ -242,6 +254,8 @@ DefineUnitType("unit-goblin-farm", { Name = "Farm",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-goblin-mess-hall", { Name = "Mess Hall",
+  Class = "barracks",
+  Civilization = "goblin",
   Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-goblin-mess-hall",
   Costs = {"time", 200, "gold", 700, "wood", 450},
@@ -268,6 +282,8 @@ DefineUnitType("unit-goblin-mess-hall", { Name = "Mess Hall",
     "dead", "building destroyed"} } )
 
 DefineUnitType("unit-goblin-lumber-mill", { Name = "Lumber Mill",
+  Class = "lumber-mill",
+  Civilization = "goblin",
   Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
   Animations = "animations-building", Icon = "icon-goblin-lumber-mill",
   Costs = {"time", 150, "gold", 600, "wood", 450},
@@ -295,7 +311,38 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = "Lumber Mill",
 --    "help", "basic-dwarf-voices-help",
     "dead", "building destroyed"} } )
 
+DefineUnitType("unit-goblin-blacksmith", { Name = "Fugla Forge",
+  Class = "blacksmith",
+  Civilization = "goblin",
+  Image = {"file", "goblin/buildings/blacksmith.png", "size", {96, 96}},
+  Animations = "animations-building", Icon = "icon-goblin-blacksmith",
+--  Costs = {"time", 200, "gold", 800, "wood", 450, "oil", 100},
+  Costs = {"time", 200, "gold", 900, "wood", 500},
+  RepairHp = 4,
+--  RepairCosts = {"gold", 1, "wood", 1, "oil", 1},
+  RepairCosts = {"gold", 1, "wood", 1},
+  Construction = "construction-land",
+  Speed = 0,
+  HitPoints = 775,
+  DrawLevel = 20,
+  TileSize = {3, 3}, BoxSize = {95, 95},
+  SightRange = 1,
+  Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+  Priority = 15, AnnoyComputerFactor = 20,
+  Points = 170,
+  Corpse = "unit-destroyed-3x3-place",
+  ExplodeWhenKilled = "missile-explosion",
+  Type = "land",
+  Building = true, VisibleUnderFog = true,
+  Sounds = {
+--    "selected", "lumber-mill-selected",
+--    "acknowledge", "dwarven-lumber-mill-acknowledge",
+--    "ready", "dwarven-lumber-mill-ready",
+--    "help", "basic-dwarf-voices-help",
+    "dead", "building destroyed"} } )
+
 DefineUnitType("unit-hero-greebo", { Name = "Greebo",
+  Civilization = "goblin",
   Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
   Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
   Costs = {"time", 0, "gold", 5250},
@@ -327,6 +374,7 @@ DefineUnitType("unit-hero-greebo", { Name = "Greebo",
     "dead", "basic-goblin-voices-dead"} } )
 
 DefineUnitType("unit-goblin-banner", { Name = "Goblin Banner",
+  Civilization = "goblin",
   Image = {"file", "goblin/decorations/goblin_banner.png", "size", {32, 32}},
   NeutralMinimapColor = {128, 128, 0},
   Animations = "animations-goblin-banner", Icon = "icon-goblin-banner",
@@ -396,6 +444,24 @@ GrandStrategyUnits["GoblinArcher"] = {
 	InterfaceState = "Barracks"
 }
 
+GrandStrategyUnits["GoblinWarMachine"] = {
+	Name = GetUnitTypeName("unit-goblin-war-machine") .. "s",
+	UnitType = "unit-goblin-war-machine",
+	Icon = "goblin/icons/goblin_war_machine.png",
+	Civilization = "goblin",
+	Type = "Catapult",
+	Costs = {
+		Gold = 900,
+		Lumber = 300
+	},
+	Upkeep = 50,
+	X = 2,
+	Y = 0,
+	RequiredBuildings = { "GoblinMessHall", "GoblinLumberMill", "GoblinBlacksmith" },
+	InterfaceState = "Barracks"
+}
+
+
 -- GS buildings
 GrandStrategyBuildings["GoblinTownHall"] = {
 	Name = GetUnitTypeName("unit-goblin-town-hall"),
@@ -438,5 +504,20 @@ GrandStrategyBuildings["GoblinLumberMill"] = {
 	},
 	X = 2,
 	Y = -2,
+	RequiredBuildings = { "GoblinTownHall" }
+}
+
+GrandStrategyBuildings["GoblinBlacksmith"] = {
+	Name = GetUnitTypeName("unit-goblin-blacksmith"),
+	UnitType = "unit-goblin-blacksmith",
+	Icon = "goblin/icons/blacksmith.png",
+	Civilization = "goblin",
+	Type = "Blacksmith",
+	Costs = {
+		Gold = 900,
+		Lumber = 500
+	},
+	X = 0,
+	Y = -1,
 	RequiredBuildings = { "GoblinTownHall" }
 }

@@ -37,6 +37,7 @@ https://launchpad.net/stratagus
 - Added Goblin Mess Hall (graphics by Leo).
 - Added Goblin Farm (graphics by Leo).
 - Added Goblin Lumber Mill (graphics by Leo).
+- Added Goblin Fugla Forge (graphics by Jinn).
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".
@@ -69,6 +70,7 @@ https://launchpad.net/stratagus
 - Dwarves, gnomes and goblin now leave decaying bodies after they die (graphics by Jinn).
 - The dwarven ballista's attack button is now a ballista bolt (previously it used the dwarven level 1 axe) (graphics by Leo).
 - Added two dwarven ballista bolt upgrades (graphics by Leo).
+- Fixed bug which caused the "Units" button in the editor to sometimes not display the correct player color.
 
 * Modding
 - Tileset tile size now can properly be changed.
@@ -77,6 +79,7 @@ https://launchpad.net/stratagus
 * Quests
 - Quest-related events no longer appear if the "Resources", "Units", "Opponents" or "Game Type" options are not set to "Map Default" in the single player game setup.
 - The gnomish king is now called "Pypo I", instead of having his name be randomly generated.
+- Added the "Gathering Materials" quest.
 
 * Terrain
 - Added cave tileset (graphics by Jinn).
