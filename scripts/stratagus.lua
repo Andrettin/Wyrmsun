@@ -997,9 +997,9 @@ end
 
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter" or unit_type == "unit-hero-rugnur") then
-		return { "upgrade-dwarven-steelclad", "upgrade-axe-mastery", "upgrade-critical-strike" }
+		return { "upgrade-dwarven-steelclad" }
 	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
-		return { "upgrade-dwarven-thane", "upgrade-axe-mastery", "upgrade-critical-strike" }
+		return { "upgrade-dwarven-thane" }
 	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
@@ -1226,6 +1226,38 @@ function GetElementIndexFromArray(array, item)
 		end
 	end
 	return nil
+end
+
+function GetTableKeyIndex(table, desired_key, f)
+	local count = 1
+	for key, value in pairsByKeys(table, f) do
+		if (key == desired_key) then
+			return count
+		end
+		count = count + 1
+	end
+
+	return nil
+end
+
+function GetTableIndexKey(table, index, f)
+	local count = 1
+	for key, value in pairsByKeys(table, f) do
+		if (count == index) then
+			return key
+		end
+		count = count + 1
+	end
+
+	return nil
+end
+
+function GetTableSize(table)
+	local count = 0
+	for key in pairs(table) do
+		count = count + 1
+	end
+	return count
 end
 
 function RemoveElementFromArray(array, element)

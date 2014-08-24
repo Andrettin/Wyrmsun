@@ -213,7 +213,7 @@ PlayMusic("music/battle.ogg")
 wyrmsun.playlist = { "music/the_city_falls.ogg" }
 
 if (GrandStrategy) then
-	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.DwarvenBlacksmith == 2) then
-		unit = CreateUnit("unit-dwarven-blacksmith", 0, {38, 21})
+	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.DwarvenSmith == 2) then
+		unit = CreateUnit("unit-dwarven-smith", 0, {38, 21})
 	end
 end

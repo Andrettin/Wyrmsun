@@ -124,6 +124,23 @@ DefineAnimations("animations-gryphon", {
   Death = GryphonDeath,
 })
 
+DefineAnimations("animations-wyrm", {
+   Still = {"frame 0", "wait 4", "frame 0", "wait 1", },
+   Move = {"unbreakable begin",
+	"frame 0", "move 4", "wait 3",
+	"frame 5", "move 4", "wait 3",
+	"frame 10", "move 4", "wait 3",
+	"frame 15", "move 4", "wait 3",
+	"frame 20", "move 4", "wait 3",
+	"frame 25", "move 4", "wait 3",
+	"frame 30", "move 4", "wait 3",
+	"frame 35", "move 4", "wait 2", "unbreakable end", "wait 1",},
+   Attack = {"unbreakable begin", "frame 0", "attack", "sound claw-attack",
+	"wait 127", "frame 0", "wait 102", "frame 0", "unbreakable end", "wait 1",},
+   Death = {"unbreakable begin", "frame 5", "wait 50", "frame 10",
+	"wait 50", "frame 10", "unbreakable end", "wait 1",},
+})
+
 DefineAnimations("animations-building", {
   Still = BuildingStill,
   Research = BuildingStill,

@@ -258,10 +258,10 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-blacksmith",
+	Name = "icon-dwarven-smith",
 	Size = {46, 38},
 	Frame = 0,
-	File = "dwarf/icons/blacksmith.png"
+	File = "dwarf/icons/smith.png"
 })
 
 DefineIcon({
@@ -496,10 +496,10 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-goblin-blacksmith",
+	Name = "icon-goblin-smith",
 	Size = {46, 38},
 	Frame = 0,
-	File = "goblin/icons/blacksmith.png"
+	File = "goblin/icons/smith.png"
 })
 
 DefineIcon({
@@ -524,10 +524,10 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-goblin-swordsman",
+	Name = "icon-greebo",
 	Size = {46, 38},
 	Frame = 0,
-	File = "goblin/icons/goblin_swordsman.png"
+	File = "goblin/icons/greebo.png"
 })
 
 DefineIcon({

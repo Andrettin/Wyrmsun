@@ -128,15 +128,15 @@ function AiLumberMill()
 end
 
 --
---  Blacksmith of the current civilization.
+--  Smith of the current civilization.
 --
-function AiBlacksmith()
+function AiSmith()
 	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-blacksmith"
+		return "unit-dwarven-smith"
 	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-blacksmith"
+		return "unit-goblin-smith"
 	else
-		return "unit-dwarven-blacksmith"
+		return "unit-dwarven-smith"
 	end
 end
 

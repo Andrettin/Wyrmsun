@@ -28,33 +28,51 @@
 --
 
 local upgrades = {
-	{"upgrade-dwarven-broad-axe", "icon-dwarven-axe-2", "melee-weapon-1",
+	{"upgrade-dwarven-broad-axe", "Broad Axe", "icon-dwarven-axe-2", "melee-weapon-1",
+		"Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads and Thanes.",
+		"",
 		{   200,   500,   100,     0,     0,     0,     0}},
-	{"upgrade-dwarven-great-axe", "icon-dwarven-axe-3", "melee-weapon-2",
+	{"upgrade-dwarven-great-axe", "Great Axe", "icon-dwarven-axe-3", "melee-weapon-2",
+		"Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads and Thanes.",
+		"",
 		{   250,  1500,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-shield-1", "icon-dwarven-shield-2", "bronze-shield",
+	{"upgrade-dwarven-shield-1", "Heater Shield", "icon-dwarven-shield-2", "bronze-shield",
+		"Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads and Thanes.",
+		"",
 		{   200,   300,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-shield-2", "icon-dwarven-shield-3", "iron-shield",
+	{"upgrade-dwarven-shield-2", "Thrymgjol Shield", "icon-dwarven-shield-3", "iron-shield",
+		"As shield-making techniques improved, the creation of thrymgjol shields became possible, further enhancing the degree of protection available for the dwarven soldiery. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads and Thanes.",
+		"The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are described in the ~<Svipdagsmol~> of Norse mythology.",
 		{   250,   900,   500,     0,     0,     0,     0}},
-	{"upgrade-dwarven-throwing-axe-1", "icon-dwarven-throwing-axe-2", "ranged-projectiles-1",
+	{"upgrade-dwarven-throwing-axe-1", "Sharp Throwing Axe", "icon-dwarven-throwing-axe-2", "ranged-projectiles-1",
+		"As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders.",
+		"",
 		{   200,   300,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-throwing-axe-2", "icon-dwarven-throwing-axe-3", "ranged-projectiles-2",
+	{"upgrade-dwarven-throwing-axe-2", "Bearded Throwing Axe", "icon-dwarven-throwing-axe-3", "ranged-projectiles-2",
+		"The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders.",
+		"",
 		{   250,   900,   500,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-1", "icon-dwarven-ballista-bolt-2", "siege-projectiles-1",
+	{"upgrade-dwarven-ballista-bolt-1", "Broadhead Ballista Bolt", "icon-dwarven-ballista-bolt-2", "siege-projectiles-1",
+		"While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas.",
+		"",
 		{   250,  1500,     0,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-2", "icon-dwarven-ballista-bolt-2", "siege-projectiles-2",
+	{"upgrade-dwarven-ballista-bolt-2", "Bodkin Ballista Bolt", "icon-dwarven-ballista-bolt-3", "siege-projectiles-2",
+		"Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th bodkin ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.",
+		"",
 		{   250,  4000,     0,     0,     0,     0,     0}},
 }
 
 for i = 1,table.getn(upgrades) do
 	u = CUpgrade:New(upgrades[i][1])
-	u.Icon = Icons[upgrades[i][2]]
-	u.Class = upgrades[i][3]
+	u.Name = upgrades[i][2]
+	u.Icon = Icons[upgrades[i][3]]
+	u.Class = upgrades[i][4]
 	u.Civilization = "dwarf"
-	for j = 1,table.getn(upgrades[i][4]) do
-		u.Costs[j - 1] = upgrades[i][4][j]
+	u.Description = upgrades[i][5]
+	u.Background = upgrades[i][6]
+	for j = 1,table.getn(upgrades[i][7]) do
+		u.Costs[j - 1] = upgrades[i][7][j]
 	end
-	u.Icon = Icons[upgrades[i][2]]
 end
 
 DefineModifier("upgrade-dwarven-broad-axe",
@@ -127,13 +145,13 @@ DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill"})
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-blacksmith", "unit-dwarven-lumber-mill"})
+	{"unit-dwarven-smith", "unit-dwarven-lumber-mill"})
 
-DefineDependency("unit-dwarven-steelclad",
-	{"unit-dwarven-blacksmith"})
+--DefineDependency("unit-dwarven-steelclad",
+--	{"unit-dwarven-smith"})
 
-DefineDependency("unit-hero-rugnur-steelclad",
-	{"unit-dwarven-blacksmith"})
+--DefineDependency("unit-hero-rugnur-steelclad",
+--	{"unit-dwarven-smith"})
 
 
 
@@ -150,8 +168,8 @@ GrandStrategyTechnologies["DwarvenBroadAxe"] = {
 	},
 	X = 0,
 	Y = -2,
-	RequiredBuildings = { "DwarvenBlacksmith" },
-	InterfaceState = "Blacksmith"
+	RequiredBuildings = { "DwarvenSmith" },
+	InterfaceState = "Smith"
 }
 
 GrandStrategyTechnologies["DwarvenGreatAxe"] = {
@@ -166,9 +184,9 @@ GrandStrategyTechnologies["DwarvenGreatAxe"] = {
 	},
 	X = 0,
 	Y = -2,
-	RequiredBuildings = { "DwarvenBlacksmith" },
+	RequiredBuildings = { "DwarvenSmith" },
 	RequiredTechnologies = { "DwarvenBroadAxe" },
-	InterfaceState = "Blacksmith"
+	InterfaceState = "Smith"
 }
 
 GrandStrategyTechnologies["DwarvenHeaterShield"] = {
@@ -183,8 +201,8 @@ GrandStrategyTechnologies["DwarvenHeaterShield"] = {
 	},
 	X = 1,
 	Y = -2,
-	RequiredBuildings = { "DwarvenBlacksmith" },
-	InterfaceState = "Blacksmith"
+	RequiredBuildings = { "DwarvenSmith" },
+	InterfaceState = "Smith"
 }
 
 GrandStrategyTechnologies["DwarvenThrymgjolShield"] = {
@@ -199,9 +217,9 @@ GrandStrategyTechnologies["DwarvenThrymgjolShield"] = {
 	},
 	X = 1,
 	Y = -2,
-	RequiredBuildings = { "DwarvenBlacksmith" },
+	RequiredBuildings = { "DwarvenSmith" },
 	RequiredTechnologies = { "DwarvenHeaterShield" },
-	InterfaceState = "Blacksmith"
+	InterfaceState = "Smith"
 }
 
 GrandStrategyTechnologies["DwarvenSharpThrowingAxe"] = {
@@ -248,8 +266,8 @@ GrandStrategyTechnologies["DwarvenBroadheadBallistaBolt"] = {
 	},
 	X = 2,
 	Y = -2,
-	RequiredBuildings = { "DwarvenBlacksmith", "DwarvenLumberMill" },
-	InterfaceState = "Blacksmith"
+	RequiredBuildings = { "DwarvenSmith", "DwarvenLumberMill" },
+	InterfaceState = "Smith"
 }
 
 GrandStrategyTechnologies["DwarvenBodkinBallistaBolt"] = {
@@ -263,7 +281,7 @@ GrandStrategyTechnologies["DwarvenBodkinBallistaBolt"] = {
 	},
 	X = 2,
 	Y = -2,
-	RequiredBuildings = { "DwarvenBlacksmith", "DwarvenLumberMill" },
+	RequiredBuildings = { "DwarvenSmith", "DwarvenLumberMill" },
 	RequiredTechnologies = { "DwarvenBroadheadBallistaBolt" },
-	InterfaceState = "Blacksmith"
+	InterfaceState = "Smith"
 }

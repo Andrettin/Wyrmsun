@@ -1171,19 +1171,6 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
-  -- this updates old HeroLevels persistent values to the new Heroes persistent array
-  if (wyr.preferences.HeroLevels ~= nil) then
-	for i=1,table.getn(wyr.preferences.HeroLevels) do
-		for key, value in pairs(wyr.preferences.Heroes) do
-			if (wyr.preferences.HeroLevels[i] == wyr.preferences.Heroes[key].name) then
-				wyr.preferences.Heroes[key].level = wyr.preferences.HeroLevels[i + 1]
-			end
-		end
-	end
-	wyr.preferences.HeroLevels = nil
-	SavePreferences()
-  end
-
   menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*-1,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
   menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*0,
@@ -1202,9 +1189,11 @@ function BuildProgramStartMenu()
     function() RunEditorMenu(); menu:stop(1) end)
   menu:addFullButton("Load Mo~!d", "d", offx + 208, offy + 104 + 36*6,
     function() RunLoadModMenu(); menu:stop(1) end)
-  menu:addFullButton(show_credits_name, "h", offx + 208, offy + 104 + 36*7, RunShowCreditsMenu)
+  menu:addFullButton("En~!cyclopedia", "c", offx + 208, offy + 104 + 36*7,
+    function() RunEncyclopediaMenu(); menu:stop(1) end)
+  menu:addFullButton(show_credits_name, "h", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
 
-  menu:addFullButton(exit_program_name, "x", offx + 208, offy + 104 + 36*8,
+  menu:addFullButton(exit_program_name, "x", offx + 208, offy + 104 + 36*9,
     function() menu:stop() end)
 
   return menu:run()
@@ -1270,6 +1259,7 @@ Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
 Load("scripts/menus/achievements.lua")
 Load("scripts/menus/grand_strategy.lua")
+Load("scripts/menus/encyclopedia.lua")
 
 function GameStarting()
   if (wyr.preferences.ShowTips and not IsReplayGame()) then

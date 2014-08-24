@@ -54,7 +54,7 @@ local editor_types = {
    "unit-dwarven-mushroom-farm",
    "unit-dwarven-barracks",
    "unit-dwarven-lumber-mill",
-   "unit-dwarven-blacksmith",
+   "unit-dwarven-smith",
    "unit-dwarven-sentry-tower",
    "unit-dwarven-guard-tower",
 
@@ -90,7 +90,7 @@ local editor_types = {
    "unit-goblin-farm",
    "unit-goblin-mess-hall",
    "unit-goblin-lumber-mill",
-   "unit-goblin-blacksmith",
+   "unit-goblin-smith",
 
    "unit-hero-greebo",
 

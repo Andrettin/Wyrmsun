@@ -87,7 +87,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenMeadHall = 2,
 			DwarvenWarHall = 2, -- has capability to train warriors
-			DwarvenBlacksmith = 2 -- Durstorn has runesmiths under his employ
+			DwarvenSmith = 2 -- Durstorn has runesmiths under his employ
 		},
 		Maps = {"Caverns of Chaincolt", "Chaincolt Foothills"},
 		Units = {
@@ -110,7 +110,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {41, 6},
 		SettlementBuildings = {
-			DwarvenBlacksmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
+			DwarvenSmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 		},
 		Maps = {"Random Map (Cave)"},
 		Units = { -- starting units in the Caverns of Flame scenario
@@ -212,7 +212,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {14, 2},
 		SettlementBuildings = {
-			DwarvenBlacksmith = 2 -- Thursagan's smithy
+			DwarvenSmith = 2 -- Thursagan's smithy
 		},
 		Maps = {"Northern Wastelands"},
 		Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
@@ -232,7 +232,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenMeadHall = 2,
 			DwarvenWarHall = 2, -- has capability to train warriors
-			DwarvenBlacksmith = 2 -- renowned skilled crafters
+			DwarvenSmith = 2 -- renowned skilled crafters
 		},
 		Maps = {"Random Map (Swamp)"},
 		Units = {
@@ -551,7 +551,60 @@ GrandStrategyEvents = {
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-				WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0
+				WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0
+				WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler = WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler / 2 -- halve enemies in the northern wastelands
+				WorldMapProvinces.NorthernWastelands.Units.GoblinArcher = WorldMapProvinces.NorthernWastelands.Units.GoblinArcher / 2
+				WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
+			end
+		end}
+	},
+	GatheringMaterials = {
+		Name = "Gathering Materials",
+		Description = "Those who went to the eastern mines were brave indeed. They were infested with goblins and other vile creatures, who thrived in the dark and gloom of the caves. And braver still were Rugnur and his companions, who had to spend two years in those tunnels. For mining is a lengthy business. But they could for the most part avoid the enemy. They only once had to venture into the very heart of the goblins' territory.",
+		Civilization = "dwarf",
+		Faction = "NorlundClan",
+		Provinces = {
+			CavernsOfChaincolt = true
+		},
+		Units = {
+			GnomishRecruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+		},
+		Heroes = {
+			Rugnur = true,
+			Baglur = true,
+			Thursagan = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEventMap = true
+				GetMapInfo("maps/nidavellir/eastern-mines.smp")
+				RunMap("maps/nidavellir/eastern-mines.smp")
+				GrandStrategyEventMap = false
+
+				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+					WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+					WorldMapProvinces.EasternMines.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(3, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+				end
+				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+				else
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+				end
+				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+				else
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+				end
+				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
+				else
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = false
+				end
+			end
+			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
+				Factions.NorlundClan.Commodities["Coal"] = 20000
+				WorldMapProvinces.EasternMines.Units.GoblinImpaler = WorldMapProvinces.EasternMines.Units.GoblinImpaler
 				WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler = WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler / 2 -- halve enemies in the northern wastelands
 				WorldMapProvinces.NorthernWastelands.Units.GoblinArcher = WorldMapProvinces.NorthernWastelands.Units.GoblinArcher / 2
 				WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
@@ -618,7 +671,7 @@ if (GrandStrategyYear >= 27) then
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
 	WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
@@ -630,7 +683,7 @@ end
 if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenMeadHall = 0
-	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenBlacksmith = 0
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenSmith = 0
 	WorldMapProvinces.ShorbearHills.Units.DwarvenAxefighter = 0
 	WorldMapProvinces.ShorbearHills.Units.DwarvenThane = 0
 end
@@ -676,7 +729,7 @@ if (GrandStrategyYear >= 535) then
 end
 
 if (GrandStrategyYear >= 550) then
-	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenBlacksmith = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
+	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenSmith = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
 
 	WorldMapProvinces.KalKartha.Units.DwarvenAxefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
 	WorldMapProvinces.KalKartha.Units.DwarvenSteelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court

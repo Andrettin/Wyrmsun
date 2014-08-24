@@ -38,6 +38,7 @@ https://launchpad.net/stratagus
 - Added Goblin Farm (graphics by Leo).
 - Added Goblin Lumber Mill (graphics by Leo).
 - Added Goblin Fugla Forge (graphics by Jinn).
+- Renamed the Blacksmith to "Smith".
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".
@@ -46,6 +47,7 @@ https://launchpad.net/stratagus
 - Fixed a bug which caused heroes not to begin with the extra HP they should have, if they had a level higher than the quantity of upgrades available.
 - Heroes are no longer hireable.
 - Added special graphics for Rugnur (axefighter) (graphics by b_o).
+- Greebo's icon and UI image have been updated (by b_o).
 
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
@@ -58,6 +60,7 @@ https://launchpad.net/stratagus
 - Added Southern Central Europe map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Added Southern Great Britain map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Added Central Great Britain map (Earth) by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- In the Brown Hills map, player 1 is now Gnomish, and player 2 Goblin. Furthermore, the two gnomish players are allied, while the goblin player is an enemy both to the dwarven and to the gnomish players.
 
 * Miscellaneous
 - The option of choosing the tileset has been removed from the single player game setup, as the different tilesets are not exactly interchangeable.
@@ -71,6 +74,7 @@ https://launchpad.net/stratagus
 - The dwarven ballista's attack button is now a ballista bolt (previously it used the dwarven level 1 axe) (graphics by Leo).
 - Added two dwarven ballista bolt upgrades (graphics by Leo).
 - Fixed bug which caused the "Units" button in the editor to sometimes not display the correct player color.
+- Added "Encyclopedia" screen (accessible from the main menu), where one can read more about the units, buildings and technologies represented in the game.
 
 * Modding
 - Tileset tile size now can properly be changed.
@@ -103,6 +107,8 @@ https://launchpad.net/stratagus
 - Blue-feathered gryphons now have a blue-feathered icon to match (modification by b_o and Jinn of the gryphon icon).
 - Black-haired, blond-haired and gray-haired dwarven axefighters, steelclads and thanes now have an appropriately colored icon to match (modification by b_o and Jinn of the axefighter, steelclad and thane icons).
 - Blond-haired and gray-haired dwarven scouts now have an appropriately colored icon to match (modification by b_o and Jinn of the scout and scout with braided beard icons).
+- Dwarven axefighters no longer require a blacksmith to upgrade to a steelclad.
+- Units that can upgrade to a better unit type no longer can acquire upgrade abilities (i.e. steelclads no longer can acquire "axe mastery"; instead, they must first upgrade to a thane, and in their next level up they will be able to learn "axe mastery").
 
 -----------------------------------------------------------------------
 - 0.1.5c

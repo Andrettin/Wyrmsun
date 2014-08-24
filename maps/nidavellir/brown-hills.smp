@@ -1,6 +1,6 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person", "computer", "person", "person")
+DefinePlayerTypes("computer", "computer", "computer", "person")
 PresentMap("Brown Hills", 3, 73, 116, 1)
 MapWorld = "Nidavellir"
 MapSiteType = "Gnomish Settlement"

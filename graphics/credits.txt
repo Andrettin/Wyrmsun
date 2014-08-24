@@ -48,7 +48,7 @@ b_o:
 /graphics/gnome/units/gnomish_worker_with_gold.png
 /graphics/gnome/units/gnomish_worker_with_lumber.png
 /graphics/goblin/decorations/goblin_banner.png
-/graphics/goblin/icons/goblin_swordsman.png
+/graphics/goblin/icons/greebo.png
 /graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png
 /graphics/goblin/units/goblin_spearman.png
@@ -93,6 +93,7 @@ b_o:
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rat_black_fur.png
 /graphics/neutral/units/rat_light_gray_fur.png
+/graphics/neutral/units/wyrm.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
@@ -185,7 +186,7 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
 /graphics/gnome/icons/patrol_land.png
 /graphics/gnome/icons/patrol_land_extra_1.png
-/graphics/goblin/buildings/blacksmith.png
+/graphics/goblin/buildings/smith.png
 /graphics/goblin/icons/goblin_archer.png
 /graphics/goblin/icons/goblin_assassin.png
 /graphics/goblin/icons/goblin_spearman.png
@@ -229,6 +230,9 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
 /graphics/tilesets/swamp/neutral/icons/rat.png
 /graphics/tilesets/swamp/terrain/swamp.png
+/graphics/tilesets/world/sites/dwarven_settlement.png
+/graphics/tilesets/world/sites/gnomish_settlement.png
+/graphics/tilesets/world/sites/kal_karthan_settlement.png
 /graphics/tilesets/world/terrain/dark_plains.png
 /graphics/tilesets/world/terrain/hills.png
 /graphics/tilesets/world/terrain/mountains.png
@@ -315,7 +319,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/gnome/widgets/slider-knob.png
 
 Leo:
-/graphics/dwarf/buildings/blacksmith.png
+/graphics/dwarf/buildings/smith.png
 /graphics/dwarf/icons/axe_1.png
 /graphics/dwarf/icons/axe_3.png
 /graphics/dwarf/icons/ballista_bolt_1.png

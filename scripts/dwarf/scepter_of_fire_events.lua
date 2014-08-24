@@ -505,9 +505,6 @@ AddTrigger(
 											if (player == GetThisPlayer() and GrandStrategy == false) then
 												if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 													table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-													table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
-													table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
-													table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 												end
 												SavePreferences()
 											end
@@ -561,9 +558,6 @@ AddTrigger(
 									if (player == GetThisPlayer() and GrandStrategy == false) then
 										if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 											table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-											table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
-											table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
-											table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 										end
 										SavePreferences()
 									end
@@ -618,9 +612,6 @@ AddTrigger(
 						if (player == GetThisPlayer() and GrandStrategy == false) then
 							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 								table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-								table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur")
-								table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-steelclad")
-								table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-rugnur-thane")
 							end
 							SavePreferences()
 						end
@@ -726,7 +717,7 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
+		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -1235,8 +1226,6 @@ AddTrigger(
 																																					if (player == GetThisPlayer() and GrandStrategy == false) then
 																																						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
 																																							table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
-																																							table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur")
-																																							table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-baglur-thane")
 																																						end
 																																						SavePreferences()
 																																					end
@@ -1396,7 +1385,7 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
+		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -1655,11 +1644,11 @@ AddTrigger(
 		AddTrigger(
 			function()
 				for i=0,14 do
-					if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-blacksmith")) then
+					if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
 						local uncount = 0
 						uncount = GetUnits(GetFactionPlayer("Thursagan"))
 						for unit1 = 1,table.getn(uncount) do 
-							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-blacksmith") then
+							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
 								if (GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
 									player = i
 									return true
@@ -1697,11 +1686,11 @@ AddTrigger(
 		AddTrigger(
 			function()
 				for i=0,14 do
-					if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-blacksmith")) then
+					if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
 						local uncount = 0
 						uncount = GetUnits(GetFactionPlayer("Thursagan"))
 						for unit1 = 1,table.getn(uncount) do 
-							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-blacksmith") then
+							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
 								if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
 									player = i
 									return true
@@ -1997,7 +1986,6 @@ AddTrigger(
 																														if (player == GetThisPlayer() and GrandStrategy == false) then
 																															if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") == false) then
 																																table.insert(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")
-																																table.insert(wyr.preferences.TechnologyAcquired, "unit-hero-thursagan")
 																															end
 																															SavePreferences()
 																														end
@@ -2005,7 +1993,7 @@ AddTrigger(
 																															if (GrandStrategy == false) then
 																																NextMap = "maps/nidavellir/eastern-mines.smp"
 																															else
-																																WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenBlacksmith = 0
+																																WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0
 																															end
 																															ActionVictory()
 																														end
@@ -2480,6 +2468,10 @@ AddTrigger(
 																																									end
 																																									SavePreferences()
 																																								end
+																																								if (GrandStrategy) then
+																																									--Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 10000
+																																									Factions.NorlundClan.Commodities["Coal"] = 20000
+																																								end
 																																								if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																									if (GrandStrategy == false) then
 																																				--						NextMap = "maps/nidavellir/shorbear-hills.smp"
@@ -2816,6 +2808,10 @@ AddTrigger(
 																																						end
 																																						SavePreferences()
 																																					end
+																																					if (GrandStrategy) then
+																																						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 10000
+																																						Factions.NorlundClan.Commodities["Coal"] = 20000
+																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																						if (GrandStrategy == false) then
 																																	--						NextMap = "maps/nidavellir/shorbear-hills.smp"
@@ -2940,7 +2936,7 @@ AddTrigger(
 	end,
 	function() 
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands") then
+		if (mapinfo.description == "Eastern Mines") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end

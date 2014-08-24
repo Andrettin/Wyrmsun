@@ -1285,9 +1285,17 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenBorderSouthTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setTooltip(tooltip)
 		end
 	elseif (string.find(file, "sites") ~= nil) then -- different method for site graphics
-		local world_map_tile = CGraphic:New(file)
+		local world_map_tile
+		local b
+		if (string.find(file, "settlement") ~= nil) then
+			world_map_tile = CPlayerColorGraphic:New(file)
+			b = PlayerColorImageButton("", GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Color)
+		else
+			world_map_tile = CGraphic:New(file)
+			b = ImageButton("")
+		end
 		world_map_tile:Load()
-		OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("")
+		OnScreenSites[table.getn(OnScreenSites) + 1] = b
 		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 			function()
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
@@ -1490,8 +1498,8 @@ function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
 		building_function_tooltip = " (recruits units)"
 	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Lumber Mill") then
 		building_function_tooltip = " (researches projectile upgrades)"
-	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Blacksmith") then
-		building_function_tooltip = " (researches melee weapon, shield and siege upgrades)"
+	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Smith") then
+		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
 	end
 	if (SelectedProvince.SettlementBuildings[grand_strategy_building_key] == 2) then
 		UIElements[table.getn(UIElements)]:setTooltip("Use " .. GrandStrategyBuildings[grand_strategy_building_key].Name .. building_function_tooltip)
@@ -1741,13 +1749,19 @@ function DrawOnScreenTiles()
 		-- draw province settlement
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
 			if (WorldMapProvinces[key].Owner ~= "" and ProvinceHasBuildingType(WorldMapProvinces[key], "Town Hall")) then
-				if (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "dwarf") then
---					DrawSettlement("tilesets/world/sites/dwarven_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2], GetFactionFromName(WorldMapProvinces[key].Owner).Color)
-					DrawWorldMapTile("tilesets/world/sites/dwarven_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+				local settlement_graphics = ""
+				if (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
+					if (ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks")) then
+						settlement_graphics = "tilesets/world/sites/dwarven_settlement_with_barracks.png"
+					else
+						settlement_graphics = "tilesets/world/sites/dwarven_settlement.png"
+					end
 				elseif (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "gnome") then
-					DrawWorldMapTile("tilesets/world/sites/gnomish_settlement.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+					settlement_graphics = "tilesets/world/sites/gnomish_settlement.png"
+				elseif (WorldMapProvinces[key].Owner == "Kal Kartha") then
+					settlement_graphics = "tilesets/world/sites/kal_karthan_settlement.png"
 				end
-				
+				DrawWorldMapTile(settlement_graphics, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])				
 			end
 
 			if (WorldMapProvinces[key].AttackedBy == GrandStrategyFaction.Name) then
@@ -2168,7 +2182,7 @@ function DrawGrandStrategyInterface()
 				end
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "Blacksmith") then
+			elseif (InterfaceState == "Smith") then
 				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GrandStrategyFaction.Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
 				
 				for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do
@@ -2374,7 +2388,7 @@ function AIDoTurn(ai_faction)
 					elseif (GrandStrategyBuildings[gsunit_key].Type == "Lumber Mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction.Name, "Lumber Mill") == 0)) then
 						BuildStructure(WorldMapProvinces[key], gsunit_key)
 						break
-					elseif (GrandStrategyBuildings[gsunit_key].Type == "Blacksmith" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "Lumber Mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "Blacksmith") == 0)) then -- it only makes sense to build more than one blacksmith if it is to make ballistas available in a province
+					elseif (GrandStrategyBuildings[gsunit_key].Type == "Smith" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "Lumber Mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "Smith") == 0)) then -- it only makes sense to build more than one smith if it is to make ballistas available in a province
 						BuildStructure(WorldMapProvinces[key], gsunit_key)
 						break
 					end
