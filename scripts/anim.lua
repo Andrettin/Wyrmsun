@@ -139,7 +139,7 @@ DefineAnimations("animations-wyrm", {
 	"frame 35", "move 4", "wait 2", "unbreakable end", "wait 1",},
   Attack = {"unbreakable begin",
   	"frame 40", "wait 3", "frame 45", "wait 3", "frame 50", "wait 3",
-  	"frame 55", "attack", "sound claw-attack", "wait 3", "frame 60", "wait 3", "frame 65", "wait 5", "frame 0", "wait 10", "frame 0",
+  	"frame 55", "attack", "sound claw-attack", "wait 3", "frame 60", "wait 3", "frame 65", "wait 5", "frame 65", "wait 29",
 	"unbreakable end", "wait 1",},
    Death = {"unbreakable begin", "frame 5", "wait 50", "frame 10",
 	"wait 50", "frame 10", "unbreakable end", "wait 1",},
