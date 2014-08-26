@@ -281,7 +281,7 @@ end
 --
 --  Siege weapon of the current civilization.
 --
-function AiCatapult()
+function AiSiegeWeapon()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-ballista"
 	elseif (AiGetRace() == "goblin") then
@@ -379,5 +379,6 @@ end
 ReInitAiGameData()
 Load("scripts/ai/passive.lua")
 Load("scripts/ai/land_attack.lua")
+Load("scripts/ai/land_attack_agrarian_bronze.lua")
 Load("scripts/ai/northern_wastelands_goblins.lua")
 Load("scripts/ai/grand_strategy_battle.lua")

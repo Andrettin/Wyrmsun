@@ -125,13 +125,26 @@ end
 
 function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon
+	local civilization
 	if (string.find(unit_name, "upgrade-") == nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
+		civilization = GetUnitTypeData(unit_name, "Civilization")
 	else
 		encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
+		civilization = CUpgrade:Get(unit_name).Civilization
 	end
 	encyclopedia_icon:Load()
-	local b = PlayerColorImageButton("", "red")
+	local playercolor
+	if (civilization == "dwarf") then
+		playercolor = "red"
+	elseif (civilization == "gnome") then
+		playercolor = "blue"
+	elseif (civilization == "goblin") then
+		playercolor = "teal"
+	else
+		playercolor = "gray"
+	end
+	local b = PlayerColorImageButton("", playercolor)
 	b:setActionCallback(
 		function()
 			wyrmsun.playlist = { "music/legends_of_the_north.ogg" }

@@ -559,144 +559,100 @@ function EndTurn()
 end
 
 function AttackProvince(province, faction)
-	local province_map = province.Maps[SyncRand(table.getn(province.Maps)) + 1]
-	local maps = {}
-	for map_directory=1,table.getn(MapDirectories) do
-		-- load the maps
-		local i
-		local f
-		local u = 1
+	MapAttacker = nil
+	MapDefender = nil
+	GetMapInfo(province.Map)
+	Attacker = faction
+	local empty_province = false
+	if (province.Owner ~= "") then
+		Defender = province.Owner
+	else
+		Defender = province.Name
+		empty_province = true
+	end
+	AttackingUnits = province.AttackingUnits
+	AttackedProvince = province
+	
+	local victorious_player = ""
 
-		-- list the subdirectories in the maps folder
-		local dirlist = {}
-		local dirs = ListDirsInDirectory(MapDirectories[map_directory])
-		for i,f in ipairs(dirs) do
-			dirlist[u] = f .. "/"
-			u = u + 1
-		end
-
-		-- get maps in the main maps folder
-		u = 1
-		local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
-		for i,f in ipairs(fileslist) do
-			if (string.find(f, "^.*%.smp%.?g?z?$")) then
-				maps[u] = MapDirectories[map_directory] .. f
-				u = u + 1
-			end
-		end
-
-		-- get maps in subdirectories of the maps folder
-		for j=1,table.getn(dirlist) do
-			fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
-			for i,f in ipairs(fileslist) do
-				if (string.find(f, "^.*%.smp%.?g?z?$")) then
-					maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
-					u = u + 1
-				end
-			end
-		end
-
-		-- run a map if it shares a name with the randomly chosen map for the province
-		for j=1,table.getn(maps) do
-			MapAttacker = nil
-			MapDefender = nil
-			GetMapInfo(maps[j])
-			if (mapinfo.description == province_map) then
-				Attacker = faction
-				local empty_province = false
-				if (province.Owner ~= "") then
-					Defender = province.Owner
-				else
-					Defender = province.Name
-					empty_province = true
-				end
-				AttackingUnits = province.AttackingUnits
-				AttackedProvince = province
-				
-				local victorious_player = ""
-
-				if (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
-					if (MapAttacker ~= nil and MapDefender ~= nil) then
-						for k=1,mapinfo.nplayers do
-							if (k == MapAttacker + 1) then
-								if (Defender == GrandStrategyFaction.Name) then
-									GameSettings.Presets[k-1].Type = PlayerComputer
-								end
-							elseif (k == MapDefender + 1) then
-								if (Attacker == GrandStrategyFaction.Name) then
-									GameSettings.Presets[k-1].Type = PlayerComputer
-								end
-							else
-								GameSettings.Presets[k-1].Type = PlayerNobody
-							end
-						end
-					else
-						local person_player_found = false
-						local computer_player_found = false
-						for k=1,mapinfo.nplayers do
-							if (mapinfo.playertypes[k] == "person" and person_player_found == false) then
-								person_player_found = true
-							elseif (mapinfo.playertypes[k] == "person" and person_player_found == true and computer_player_found == false) then
-								computer_player_found = true
-							elseif (mapinfo.playertypes[k] == "computer" and computer_player_found == false) then
-								computer_player_found = true
-							elseif (mapinfo.playertypes[k] == "person" or mapinfo.playertypes[k] == "computer") then
-								GameSettings.Presets[k-1].Type = PlayerNobody
-							end
-						end
+	if (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
+		if (MapAttacker ~= nil and MapDefender ~= nil) then
+			for k=1,mapinfo.nplayers do
+				if (k == MapAttacker + 1) then
+					if (Defender == GrandStrategyFaction.Name) then
+						GameSettings.Presets[k-1].Type = PlayerComputer
 					end
-					RunMap(maps[j])
-
-					if (GameResult == GameVictory) then
-						victorious_player = GrandStrategyFaction.Name
-					elseif (Attacker == GrandStrategyFaction.Name) then
-						victorious_player = Defender
-					elseif (Defender == GrandStrategyFaction.Name) then
-						victorious_player = Attacker
+				elseif (k == MapDefender + 1) then
+					if (Attacker == GrandStrategyFaction.Name) then
+						GameSettings.Presets[k-1].Type = PlayerComputer
 					end
 				else
-					if (GetMilitaryScore(province, true) > GetMilitaryScore(province, false)) then -- if military score is the same, then defenders win
-						victorious_player = Attacker
-						for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-							AttackingUnits[gsunit_key] = AttackingUnits[gsunit_key] - math.floor(AttackingUnits[gsunit_key] * GetMilitaryScore(province, false) / GetMilitaryScore(province, true)) -- formula for calculating units belonging to the victorious player that were killed
-						end
-					else
-						victorious_player = Defender
-						for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-							AttackingUnits[gsunit_key] = province.Units[gsunit_key] - math.floor(province.Units[gsunit_key] * GetMilitaryScore(province, true) / GetMilitaryScore(province, false))
-						end
-					end
+					GameSettings.Presets[k-1].Type = PlayerNobody
 				end
+			end
+		else
+			local person_player_found = false
+			local computer_player_found = false
+			for k=1,mapinfo.nplayers do
+				if (mapinfo.playertypes[k] == "person" and person_player_found == false) then
+					person_player_found = true
+				elseif (mapinfo.playertypes[k] == "person" and person_player_found == true and computer_player_found == false) then
+					computer_player_found = true
+				elseif (mapinfo.playertypes[k] == "computer" and computer_player_found == false) then
+					computer_player_found = true
+				elseif (mapinfo.playertypes[k] == "person" or mapinfo.playertypes[k] == "computer") then
+					GameSettings.Presets[k-1].Type = PlayerNobody
+				end
+			end
+		end
+		RunMap(province.Map)
 
-				if (victorious_player == Attacker) then
-					AcquireProvince(province, victorious_player)
-					if (Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
-						InterfaceState = "Province"
-					end
-				end
-				
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					province.Units[gsunit_key] = AttackingUnits[gsunit_key]
-				end
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					province.AttackingUnits[gsunit_key] = 0
-				end
-				if (empty_province == false and GetFactionProvinceCount(Defender) == 0) then
-					local defender_faction_key = GetFactionKeyFromName(Defender)
-					for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
-						Factions[key].Diplomacy[defender_faction_key] = "Peace"
-						Factions[defender_faction_key].Diplomacy[key] = "Peace"
-					end
-					Factions[defender_faction_key].Trade.Lumber = 0 -- remove offers and bids from the eliminated faction
-				end
-				Attacker = ""
-				Defender = ""
-				AttackingUnits = nil
-				AttackedProvince = nil
-				break
+		if (GameResult == GameVictory) then
+			victorious_player = GrandStrategyFaction.Name
+		elseif (Attacker == GrandStrategyFaction.Name) then
+			victorious_player = Defender
+		elseif (Defender == GrandStrategyFaction.Name) then
+			victorious_player = Attacker
+		end
+	else
+		if (GetMilitaryScore(province, true) > GetMilitaryScore(province, false)) then -- if military score is the same, then defenders win
+			victorious_player = Attacker
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				AttackingUnits[gsunit_key] = AttackingUnits[gsunit_key] - math.floor(AttackingUnits[gsunit_key] * GetMilitaryScore(province, false) / GetMilitaryScore(province, true)) -- formula for calculating units belonging to the victorious player that were killed
+			end
+		else
+			victorious_player = Defender
+			for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+				AttackingUnits[gsunit_key] = province.Units[gsunit_key] - math.floor(province.Units[gsunit_key] * GetMilitaryScore(province, true) / GetMilitaryScore(province, false))
 			end
 		end
 	end
+
+	if (victorious_player == Attacker) then
+		AcquireProvince(province, victorious_player)
+		if (Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
+			InterfaceState = "Province"
+		end
+	end
+				
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		province.Units[gsunit_key] = AttackingUnits[gsunit_key]
+	end
+	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
+		province.AttackingUnits[gsunit_key] = 0
+	end
+	if (empty_province == false and GetFactionProvinceCount(Defender) == 0) then
+		local defender_faction_key = GetFactionKeyFromName(Defender)
+		for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
+			Factions[key].Diplomacy[defender_faction_key] = "Peace"
+			Factions[defender_faction_key].Diplomacy[key] = "Peace"
+		end
+		Factions[defender_faction_key].Trade.Lumber = 0 -- remove offers and bids from the eliminated faction
+	end
+	Attacker = ""
+	Defender = ""
+	AttackingUnits = nil
+	AttackedProvince = nil
 end
 
 function AcquireProvince(province, faction)

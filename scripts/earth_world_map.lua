@@ -147,7 +147,7 @@ WorldMapProvinces = {
 		SettlementLocation = {131, 29}, -- Vienna
 		SettlementBuildings = {
 		},
-		Maps = {"Random Map (Forest)"},
+		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
 		}
 	},
@@ -161,7 +161,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenMeadHall = 2
 		},
-		Maps = {"Random Map (Forest)"},
+		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
 		}
 	},
@@ -172,7 +172,7 @@ WorldMapProvinces = {
 		SettlementLocation = {126, 34},
 		SettlementBuildings = {
 		},
-		Maps = {"Random Map (Forest)"},
+		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
 		}
 	},
@@ -184,7 +184,7 @@ WorldMapProvinces = {
 		SettlementLocation = {129, 34}, -- Rome
 		SettlementBuildings = {
 		},
-		Maps = {"Italy"},
+		Map = "maps/earth/north-italy.smp",
 		Units = {
 		}
 	},
@@ -196,7 +196,7 @@ WorldMapProvinces = {
 --		SettlementLocation = {130, 34}, -- Naples
 --		SettlementBuildings = {
 --		},
---		Maps = {"Random Map (Forest)"},
+--		Map = "maps/earth/south-italy.smp",
 --		Units = {
 --		}
 --	},
@@ -208,7 +208,7 @@ WorldMapProvinces = {
 --		SettlementLocation = {129, 34}, -- Rome
 --		SettlementBuildings = {
 --		},
---		Maps = {"Random Map (Forest)"},
+--		Map = "maps/earth/north-italy.smp",
 --		Units = {
 --		}
 --	},
@@ -219,7 +219,7 @@ WorldMapProvinces = {
 --		SettlementLocation = {126, 36},
 --		SettlementBuildings = {
 --		},
---		Maps = {"Random Map (Forest)"},
+--		Map = "maps/earth/north-italy.smp",
 --		Units = {
 --		}
 --	},
@@ -231,7 +231,7 @@ WorldMapProvinces = {
 --		SettlementLocation = {129, 37}, -- Palermo
 --		SettlementBuildings = {
 --		},
---		Maps = {"Random Map (Forest)"},
+--		Map = "maps/earth/south-italy.smp",
 --		Units = {
 --		}
 --	},
@@ -243,7 +243,7 @@ WorldMapProvinces = {
 		SettlementLocation = {125, 30}, -- Bern
 		SettlementBuildings = {
 		},
-		Maps = {"Random Map (Forest)"},
+		Map = "maps/earth/southern-central-europe.smp",
 		Units = {
 		}
 	}

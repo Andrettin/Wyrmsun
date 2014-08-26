@@ -74,7 +74,7 @@ WorldMapProvinces = {
 			GnomishTownHall = 2,
 			GnomishBarracks = 2 -- has capability to train soldiers
 		},
-		Maps = {"Brown Hills"},
+		Map = "maps/nidavellir/brown-hills.smp",
 		Units = {
 			GnomishRecruit = 2 -- Pypo I and his envoy
 		}
@@ -89,7 +89,7 @@ WorldMapProvinces = {
 			DwarvenWarHall = 2, -- has capability to train warriors
 			DwarvenSmith = 2 -- Durstorn has runesmiths under his employ
 		},
-		Maps = {"Caverns of Chaincolt", "Chaincolt Foothills"},
+		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 		Units = {
 --			DwarvenAxefighter = 5, -- Rugnur, 4 Dwarven Guardsmen (5 if easy mode)
 --			DwarvenSteelclad = 6, -- Baglur, Durstorn, Neglur, Glinar, Kuhnar, Theganli
@@ -112,9 +112,10 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenSmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 		},
-		Maps = {"Random Map (Cave)"},
+		Map = "maps/random_maps/random-map-cave.smp",
 		Units = { -- starting units in the Caverns of Flame scenario
-			GoblinImpaler = 10 -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
+			GoblinImpaler = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
+			GoblinWarMachine = 1
 		}
 	},
 	EasternMines = {
@@ -123,7 +124,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {38, 7},
 		SettlementBuildings = {},
-		Maps = {"Eastern Mines"},
+		Map = "maps/nidavellir/eastern-mines.smp",
 		Units = {
 --			GoblinImpaler = 3 -- three starting chieftains in the Gathering Materials scenario
 			GoblinImpaler = 9 -- three starting chieftains in the Gathering Materials scenario, plus 2 goblins for each tribe to prevent too early expansion into this province
@@ -135,7 +136,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {29, 23},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- wild units in the Gryphon Mountain scenario
 			DwarvenGryphonRider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
 		}
@@ -146,7 +147,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {23, 11},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild dwarves to stop too early expansion into this province
 			DwarvenAxefighter = 4,
 			DwarvenScout = 3
@@ -158,7 +159,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {40, 12},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- wild units in the High Pass scenario
 			GoblinImpaler = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
 			DwarvenGryphonRider = 1 -- Kaara
@@ -170,7 +171,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {35, 11},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- starting units in the Settling Disputes scenario
 			DwarvenAxefighter = 0,
 			DwarvenSteelclad = 0,
@@ -186,7 +187,7 @@ WorldMapProvinces = {
 		SettlementName = "Kal Kartha",
 		SettlementLocation = {45, 5},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild gnomes from the Forbidden Forest to stop too early expansion into this province
 			DwarvenAxefighter = 0,
 			DwarvenSteelclad = 0,
@@ -201,7 +202,7 @@ WorldMapProvinces = {
 		SettlementName = "Lyr",
 		SettlementLocation = {52, 18},
 		SettlementBuildings = {},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild dwarves to stop too early expansion into this province
 			DwarvenAxefighter = 4
 		}
@@ -214,7 +215,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenSmith = 2 -- Thursagan's smithy
 		},
-		Maps = {"Northern Wastelands"},
+		Map = "maps/nidavellir/northern-wastelands.smp",
 		Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
 			GoblinImpaler = 26,
 			GoblinArcher = 13
@@ -234,7 +235,7 @@ WorldMapProvinces = {
 			DwarvenWarHall = 2, -- has capability to train warriors
 			DwarvenSmith = 2 -- renowned skilled crafters
 		},
-		Maps = {"Random Map (Swamp)"},
+		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = {
 			DwarvenThane = 1 -- Glonoin
 		}
@@ -249,7 +250,7 @@ WorldMapProvinces = {
 			DwarvenMeadHall = 2,
 			DwarvenWarHall = 2 -- has capability to train warriors
 		},
-		Maps = {"Southern Tunnels"},
+		Map = "maps/nidavellir/southern-tunnels.smp",
 		Units = {
 			DwarvenSteelclad = 3, -- Glildur, Glindur, Kalnar
 			DwarvenThane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
@@ -652,8 +653,8 @@ GrandStrategyEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Lyr)
-			WorldMapProvinces.Lyr.Maps = nil
-			WorldMapProvinces.Lyr.Maps = {"Hall of Lyr"}
+			WorldMapProvinces.Lyr.Map = nil
+			WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
 		end}
 	}
 }
@@ -706,8 +707,8 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
 	WorldMapProvinces.Lyr.SettlementBuildings.DwarvenMeadHall = 2
 	WorldMapProvinces.Lyr.SettlementBuildings.DwarvenWarHall = 2
-	WorldMapProvinces.Lyr.Maps = nil
-	WorldMapProvinces.Lyr.Maps = {"Hall of Lyr"}
+	WorldMapProvinces.Lyr.Map = nil
+	WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
 end
 
 if (GrandStrategyYear >= 500) then

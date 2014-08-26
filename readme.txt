@@ -23,6 +23,12 @@ For the source code of the Stratagus engine itself, see:
 https://launchpad.net/stratagus
 
 ############################################################
+# Installation Instructions
+############################################################
+
+To install Wyrmsun, just extract the contents of the archive to the desired location (i.e. C:\Program Files\).
+
+############################################################
 # Changelog
 ############################################################
 
@@ -30,7 +36,7 @@ https://launchpad.net/stratagus
 - 0.1.6
 -----------------------------------------------------------------------
 
-- Added the new "Grand Strategy Mode", available from the main menu. In it, the player leads a country or tribe, and gather resources and produces units at the strategic map level, while battles are fought through RTS maps.
+- Added the new "Grand Strategy Mode", available from the main menu. In it, the player leads a country or tribe, and gather resources and produces units at the strategic map level, while battles are fought through RTS maps. Please note that there are still a few crashes with the mode I haven't been able to solve yet, and as such it is a good idea to save often.
 
 * Buildings
 - Added Goblin Town Hall (graphics by Leo).

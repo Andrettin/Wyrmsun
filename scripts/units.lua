@@ -568,13 +568,13 @@ DefineUnitType("unit-wyrm-skeleton", { Name = "Wyrm Skeleton",
 	Indestructible = 1,
 	VisibleUnderFog = true,
 	Variations = {
-	{
-		"variation-id", "non-horned"
-	},
-	{
-		"variation-id", "horned",
-		"file", "neutral/decorations/wyrm_skeleton_horned.png"
-	}
+		{
+			"variation-id", "non-horned"
+		},
+		{
+			"variation-id", "horned",
+			"file", "neutral/decorations/wyrm_skeleton_horned.png"
+		}
 	},
 	Sounds = {} }
 )
