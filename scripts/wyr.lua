@@ -73,7 +73,9 @@ function ConvertUnitType(unittype, civilization, terrain)
 
 	if (civilization ~= GetUnitTypeData(unittype, "Civilization")) then
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unittype, "Class") == GetUnitTypeData(unitName, "Class")) then
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") ~= "" and GetUnitTypeData(unittype, "Class") ~= "") then
+				if (GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unittype, "Class") == GetUnitTypeData(unitName, "Class")) then
+				end
 				return unitName
 			end
 		end

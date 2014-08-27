@@ -61,7 +61,16 @@ function RunEncyclopediaMenu()
 	menu:addFullButton("~!Technologies", "t", offx + 208, offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("technologies") end)
 
-	menu:addFullButton("Te~!xts", "x", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton("~!Heroes", "h", offx + 208, offy + 104 + 36*2,
+		function() RunEncyclopediaUnitsMenu("heroes") end)
+
+--	menu:addFullButton("~!Factions", "f", offx + 208, offy + 104 + 36*3,
+--		function() RunEncyclopediaTextsMenu() end)
+
+	menu:addFullButton("~!Worlds", "w", offx + 208, offy + 104 + 36*3,
+		function() RunEncyclopediaWorldsMenu() end)
+
+	menu:addFullButton("Te~!xts", "x", offx + 208, offy + 104 + 36*4,
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
@@ -87,7 +96,7 @@ function RunEncyclopediaUnitsMenu(state)
 	local icon_y = 0
 	for i, unitName in ipairs(Units) do
 		if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
-			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings")) then
+			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "-hero-") ~= nil) == (state == "heroes")) then
 				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
@@ -115,6 +124,8 @@ function RunEncyclopediaUnitsMenu(state)
 		menu:addLabel("~<Encyclopedia: Buildings~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "technologies") then
 		menu:addLabel("~<Encyclopedia: Technologies~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "heroes") then
+		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
 	end
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
@@ -521,5 +532,85 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 10),
 		function() encyclopedia_entry_menu:stop(); end)
 
+	encyclopedia_entry_menu:run()
+end
+
+function RunEncyclopediaWorldsMenu()
+
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*-2)
+
+	local world_y = -1
+	for world_key, world_value in pairsByKeys(Worlds) do
+		menu:addFullButton(Worlds[world_key].Name, "", offx + 208, offy + 104 + 36*world_y,
+			function() OpenEncyclopediaWorldEntry(world_key); end)
+		world_y = world_y + 1
+	end
+
+	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+
+end
+
+function OpenEncyclopediaWorldEntry(world_key)
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local encyclopedia_entry_menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	encyclopedia_entry_menu:addLabel("~<" .. Worlds[world_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local description = ""
+	local background = ""
+	if (Worlds[world_key].Description ~= "") then
+		description = "Description: " .. Worlds[world_key].Description
+	end
+	if (Worlds[world_key].Background ~= "") then
+		background = "\n\nBackground: " .. Worlds[world_key].Background
+	end
+	l:setCaption(description .. background)
+			
+	-- add buttons of texts related to the subject matter of the entry
+	local chapter_y = 8
+	for text_key, text_value in pairs(Texts) do
+		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
+			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+				if (GetTableSize(Texts[text_key].Chapters) > 1) then
+					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_key, chapter_key); end)
+				else
+					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_key); end)
+				end
+				chapter_y = chapter_y - 1
+			end
+		end
+	end
+
+	encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+		function() encyclopedia_entry_menu:stop(); end)
 	encyclopedia_entry_menu:run()
 end

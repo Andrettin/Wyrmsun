@@ -316,7 +316,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
   Action = "research", Value = "upgrade-dwarven-ballista-bolt-2",
   Allowed = "check-single-research",
-  Key = "b", Hint = "Research Bodkin Ballista ~!Bolt",
+  Key = "b", Hint = "Research Penetrating Ballista ~!Bolt",
   ForUnit = {"unit-dwarven-smith"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",

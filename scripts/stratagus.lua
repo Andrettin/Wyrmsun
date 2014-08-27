@@ -1512,6 +1512,7 @@ Load("scripts/commands.lua")
 Load("scripts/cheats.lua")
 Load("scripts/map_generation.lua")
 Load("scripts/quests.lua")
+Load("scripts/worlds.lua")
 Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 

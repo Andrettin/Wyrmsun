@@ -56,8 +56,8 @@ local upgrades = {
 		"While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas.",
 		"",
 		{   250,  1500,     0,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-2", "Bodkin Ballista Bolt", "icon-dwarven-ballista-bolt-3", "siege-projectiles-2",
-		"Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th bodkin ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.",
+	{"upgrade-dwarven-ballista-bolt-2", "Penetrating Ballista Bolt", "icon-dwarven-ballista-bolt-3", "siege-projectiles-2",
+		"Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.",
 		"",
 		{   250,  4000,     0,     0,     0,     0,     0}},
 }
@@ -270,8 +270,8 @@ GrandStrategyTechnologies["DwarvenBroadheadBallistaBolt"] = {
 	InterfaceState = "Smith"
 }
 
-GrandStrategyTechnologies["DwarvenBodkinBallistaBolt"] = {
-	Name = "Bodkin Ballista Bolt",
+GrandStrategyTechnologies["DwarvenPenetratingBallistaBolt"] = {
+	Name = "Penetrating Ballista Bolt",
 	UpgradeType = "upgrade-dwarven-ballista-bolt-2",
 	Icon = "dwarf/icons/ballista_bolt_3.png",
 	Civilization = "dwarf",

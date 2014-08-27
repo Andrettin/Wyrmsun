@@ -46,13 +46,13 @@ DefineUnitType("unit-dwarven-steelclad", {})
 
 -- And declare upgrade for dependency...
 
-DefineSpell("spell-secondary-melee-attack",
-	"showname", _("secondary melee attack"),
+DefineSpell("spell-dagger-attack",
+	"showname", _("dagger attack"),
 	"manacost", 0,
 	"range", 1,
 	"target", "unit",
 	"action", {
-		{"adjust-vitals", "hit-points", -6, "max-multi-cast", 1}
+		{"adjust-vitals", "hit-points", -4, "max-multi-cast", 1}
 	},
 	"condition", {
 		"AirUnit", "false"
@@ -67,7 +67,7 @@ DefineSpell("spell-war-machine-spear-attack",
 	"range", 1,
 	"target", "unit",
 	"action", {
-		{"demolish", "range", 1, "damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
+		{"demolish", "range", 1, "basic-damage", 3, "piercing-damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
 	},
 	"condition", {
 		"alliance", "false",

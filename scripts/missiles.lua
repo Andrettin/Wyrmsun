@@ -50,7 +50,7 @@ DefineMissileType("missile-catapult-flaming-rock",
   DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
   ImpactMissile = "missile-impact", SplashFactor = 4 } )
   
-DefineMissileType("missile-tossed-goblin",
+DefineMissileType("missile-thrown-goblin",
    { File = "missiles/gobtoss.png", Size = {32, 32}, Frames = 40, NumDirections = 9,
    ImpactSound = "explosion",
    DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 6, Range = 2,

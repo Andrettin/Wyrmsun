@@ -62,6 +62,7 @@ b_o:
 /graphics/missiles/goblin_arrow.png
 /graphics/missiles/gobtoss.png
 /graphics/missiles/throwing_axe.png
+/graphics/missiles/throwing_dagger.png
 /graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
