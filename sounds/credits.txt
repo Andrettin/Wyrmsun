@@ -10,6 +10,7 @@ Battle for Wesnoth Team:
 /sounds/misc/open_chest.wav
 /sounds/misc/potion.wav
 /sounds/missiles/axe.wav
+/sounds/missiles/bite.wav
 /sounds/missiles/bow.wav
 /sounds/missiles/bow_hit.wav
 /sounds/missiles/claws.wav
@@ -20,6 +21,7 @@ Battle for Wesnoth Team:
 /sounds/missiles/spear-2.wav
 /sounds/missiles/sword.wav
 /sounds/missiles/throwing_axe_hit.wav
+/sounds/neutral/drake_death.wav
 /sounds/neutral/gryphon/gryphon_death_1.wav
 /sounds/neutral/gryphon/gryphon_death_2.wav
 /sounds/neutral/gryphon/gryphon_shriek_1.wav

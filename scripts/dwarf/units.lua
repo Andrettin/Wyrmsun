@@ -115,33 +115,33 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
 	organic = true,
 	SelectableByRectangle = true,
 	Variations = {
-	{
-		"variation-id", "red-hair"
-	},
-	{
-		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
-		"icon", "icon-dwarven-axefighter-gray-hair"
-	},
-	{
-		"variation-id", "orange-hair",
-		"file", "dwarf/units/dwarven_axefighter_orange_hair.png"
-	},
-	{
-		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
-		"icon", "icon-dwarven-axefighter-blond-hair"
-	},
-	{
-		"variation-id", "black-hair",
-		"file", "dwarf/units/dwarven_axefighter_black_hair.png",
-		"icon", "icon-dwarven-axefighter-black-hair"
-	},
-	{
-		"variation-id", "brown-hair",
-		"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
-		"icon", "icon-dwarven-axefighter-brown-hair"
-	}
+		{
+			"variation-id", "red-hair"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
+			"icon", "icon-dwarven-axefighter-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_axefighter_orange_hair.png"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
+			"icon", "icon-dwarven-axefighter-blond-hair"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_axefighter_black_hair.png",
+			"icon", "icon-dwarven-axefighter-black-hair"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
+			"icon", "icon-dwarven-axefighter-brown-hair"
+		}
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -304,33 +304,33 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
 	SelectableByRectangle = true,
 	CanCastSpell = {"spell-learn-critical-strike"},
 	Variations = {
-	{
-		"variation-id", "orange-hair-short-beard"
-	},
-	{
-		"variation-id", "orange-hair-braided-beard",
-		"icon", "icon-dwarven-scout-braided-beard"
-	},
-	{
-		"variation-id", "blond-hair-short-beard",
-		"file", "dwarf/units/dwarven_scout_blond_hair.png",
-		"icon", "icon-dwarven-scout-blond-hair"
-	},
-	{
-		"variation-id", "blond-hair-braided-beard",
-		"file", "dwarf/units/dwarven_scout_blond_hair.png",
-		"icon", "icon-dwarven-scout-blond-hair-braided-beard"
-	},
-	{
-		"variation-id", "gray-hair-short-beard",
-		"file", "dwarf/units/dwarven_scout_gray_hair.png",
-		"icon", "icon-dwarven-scout-gray-hair"
-	},
-	{
-		"variation-id", "gray-hair-braided-beard",
-		"file", "dwarf/units/dwarven_scout_gray_hair.png",
-		"icon", "icon-dwarven-scout-gray-hair-braided-beard"
-	}
+		{
+			"variation-id", "orange-hair-short-beard"
+		},
+		{
+			"variation-id", "orange-hair-braided-beard",
+			"icon", "icon-dwarven-scout-braided-beard"
+		},
+		{
+			"variation-id", "blond-hair-short-beard",
+			"file", "dwarf/units/dwarven_scout_blond_hair.png",
+			"icon", "icon-dwarven-scout-blond-hair"
+		},
+		{
+			"variation-id", "blond-hair-braided-beard",
+			"file", "dwarf/units/dwarven_scout_blond_hair.png",
+			"icon", "icon-dwarven-scout-blond-hair-braided-beard"
+		},
+		{
+			"variation-id", "gray-hair-short-beard",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-dwarven-scout-gray-hair"
+		},
+		{
+			"variation-id", "gray-hair-braided-beard",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-dwarven-scout-gray-hair-braided-beard"
+		}
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",

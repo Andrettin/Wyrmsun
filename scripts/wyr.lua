@@ -75,17 +75,17 @@ function ConvertUnitType(unittype, civilization, terrain)
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") ~= "" and GetUnitTypeData(unittype, "Class") ~= "") then
 				if (GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unittype, "Class") == GetUnitTypeData(unitName, "Class")) then
+					return unitName
 				end
-				return unitName
 			end
 		end
 	end
 
-	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then
-		equiv = ForestEquivalent[unittype]
-	elseif (terrain == "swamp" and SwampEquivalent[unittype] ~= nil) then
-		equiv = SwampEquivalent[unittype]
-	end
+--	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then
+--		equiv = ForestEquivalent[unittype]
+--	elseif (terrain == "swamp" and SwampEquivalent[unittype] ~= nil) then
+--		equiv = SwampEquivalent[unittype]
+--	end
 
 	if (equiv ~= nil) then
 		return equiv

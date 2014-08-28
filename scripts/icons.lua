@@ -433,10 +433,24 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-orc-spearman",
+	Name = "icon-orc-spearthrower",
 	Size = {46, 38},
 	Frame = 0,
-	File = "orc/icons/spearman.png"
+	File = "orc/icons/spearthrower.png"
+})
+
+DefineIcon({
+	Name = "icon-orc-sea-orc",
+	Size = {46, 38},
+	Frame = 0,
+	File = "orc/icons/sea_orc.png"
+})
+
+DefineIcon({
+	Name = "icon-orc-shaman",
+	Size = {46, 38},
+	Frame = 0,
+	File = "orc/icons/shaman.png"
 })
 
 DefineIcon({
@@ -524,6 +538,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-war-machine",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/goblin_war_machine.png"
+})
+
+DefineIcon({
 	Name = "icon-greebo",
 	Size = {46, 38},
 	Frame = 0,
@@ -531,12 +552,11 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-goblin-war-machine",
+	Name = "icon-kobold-footpad",
 	Size = {46, 38},
 	Frame = 0,
-	File = "goblin/icons/goblin_war_machine.png"
+	File = "kobold/icons/kobold_footpad.png"
 })
-
 
 DefineIcon({
 	Name = "icon-water-elemental",

@@ -152,6 +152,10 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		playercolor = "blue"
 	elseif (civilization == "goblin") then
 		playercolor = "teal"
+	elseif (civilization == "elf") then
+		playercolor = "teal"
+	elseif (civilization == "orc") then
+		playercolor = "red"
 	else
 		playercolor = "gray"
 	end

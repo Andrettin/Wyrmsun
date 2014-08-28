@@ -41,6 +41,8 @@ Units = {
 	"unit-gnomish-worker", "unit-gnomish-recruit",
 	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smith",
 	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
+	"unit-elven-swordsman",
+	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-gryphon", "unit-wyrm",
 	"unit-hero-rugnur", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo"
@@ -241,7 +243,7 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
 --		"help", "critter-help",
-		"dead", "gryphon-dead" }
+		"dead", "drake-dead" }
 } )
 
 --UnitTypeFiles["unit-gold-mine"] = {
@@ -1051,7 +1053,7 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 	DetectCloak = true,
 	Sounds = {} } )
 
--- Human units
+-- Other civilizations' units
 
 DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 	Image = {"file", "human/buildings/lumber_mill.png", "size", {96, 96}},
@@ -1081,6 +1083,143 @@ DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
 --		"ready", "elven-lumber-mill-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
+
+DefineUnitType("unit-elven-swordsman", { Name = "Elven Swordsman",
+	Class = "infantry",
+	Civilization = "elf",
+	Description = "Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield.",
+	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-elven-swordsman",
+	Costs = {"time", 60, "gold", 600},
+	Speed = 10,
+	HitPoints = 60,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+	Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 60,
+	BasePoints = 50,
+	Demand = 1,
+--	Corpse = "unit-dwarven-dead-body",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	Sounds = {
+--		"selected", "basic-dwarf-voices-selected-group",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+--		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
+DefineUnitType("unit-orc-spearthrower", { Name = "Orc Spearthrower",
+	Class = "archer",
+	Civilization = "orc",
+	Description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone.",
+	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
+	Animations = "animations-dwarven-scout", Icon = "icon-orc-spearthrower",
+	Costs = {"time", 70, "gold", 500, "wood", 50},
+	Speed = 10,
+	HitPoints = 40,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
+	BasicDamage = 3, PiercingDamage = 6, Missile = "missile-throwing-axe",
+	MaxAttackRange = 4,
+	Priority = 55,
+	BasePoints = 60,
+	Demand = 1,
+	Corpse = "unit-dwarven-dead-body",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	CanCastSpell = {"spell-learn-critical-strike"},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"ready", "dwarven-scout-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"} } )
+
+DefineUnitType("unit-orc-sea-orc", { Name = "Sea Orc",
+	Class = "marine-infantry",
+	Civilization = "orc",
+	Description = "While often viewed as inferior to their land-loving counterparts, Sea Orcs represent a great leap for all orcs as they have adapted to aquatic environments. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness.",
+	Background = "In the Battle for Wesnoth, sea orcs appear in \"the Bay of Pearls\" scenario of the Heir to the Throne campaign.",
+	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-orc-sea-orc",
+	Costs = {"time", 60, "gold", 600},
+	Speed = 10,
+	HitPoints = 60,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+	Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 60,
+	BasePoints = 50,
+	Demand = 1,
+--	Corpse = "unit-dwarven-dead-body",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	Sounds = {
+--		"selected", "basic-dwarf-voices-selected-group",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+--		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
+DefineUnitType("unit-orc-shaman", { Name = "Orc Shaman",
+	Class = "priest",
+	Civilization = "orc",
+	Description = "Orc shamans are the guardians of orcish magic. Respected among orcish tribes, they form the Orcish Council, which makes important decisions for the whole orcish community and arbitrates the many conflicts that arise between tribes of this argumentative race.",
+	Background = "In the Battle for Wesnoth, orcish shamans play an important role in the story of the Son of the Black Eye campaign.",
+	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-orc-shaman",
+	Costs = {"time", 60, "gold", 600},
+	Speed = 10,
+	HitPoints = 60,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+	Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 60,
+	BasePoints = 50,
+	Demand = 1,
+--	Corpse = "unit-dwarven-dead-body",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	Sounds = {
+--		"selected", "basic-dwarf-voices-selected-group",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+--		"dead", "basic-dwarf-voices-dead"
+	}
+} )
 
 -- initialize the grand strategy unit variable
 GrandStrategyUnits = {}
