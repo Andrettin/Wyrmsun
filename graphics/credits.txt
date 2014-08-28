@@ -76,6 +76,7 @@ b_o:
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/decorations/wyrm_skeleton_horned.png
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
+/graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
 /graphics/neutral/items/axe.png
 /graphics/neutral/items/barrel.png
 /graphics/neutral/items/carrots.png
@@ -91,6 +92,7 @@ b_o:
 /graphics/neutral/items/scepter.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
+/graphics/neutral/units/gryphon_gray_feathers.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rat_black_fur.png
 /graphics/neutral/units/rat_light_gray_fur.png
@@ -239,7 +241,21 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/dark_plains.png
 /graphics/tilesets/world/terrain/hills.png
 /graphics/tilesets/world/terrain/mountains.png
+/graphics/tilesets/world/terrain/ocean.png
+/graphics/tilesets/world/terrain/ocean_east.png
+/graphics/tilesets/world/terrain/ocean_north.png
+/graphics/tilesets/world/terrain/ocean_northeast_inner.png
+/graphics/tilesets/world/terrain/ocean_northeast_outer.png
+/graphics/tilesets/world/terrain/ocean_northwest_inner.png
+/graphics/tilesets/world/terrain/ocean_northwest_outer.png
+/graphics/tilesets/world/terrain/ocean_south.png
+/graphics/tilesets/world/terrain/ocean_southeast_inner.png
+/graphics/tilesets/world/terrain/ocean_southeast_outer.png
+/graphics/tilesets/world/terrain/ocean_southwest_inner.png
+/graphics/tilesets/world/terrain/ocean_southwest_outer.png
+/graphics/tilesets/world/terrain/ocean_west.png
 /graphics/tilesets/world/terrain/plains.png
+/graphics/tilesets/world/terrain/scrub_forest.png
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/dwarf/buttonpanel_480.png
 /graphics/ui/dwarf/buttonpanel_600.png

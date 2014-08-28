@@ -1140,7 +1140,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	tooltip = tooltip .. " (" .. tile_x .. ", " .. tile_y .. ")"
 
 	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
-		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "ScFr") then
+		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "ScFr" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil) then
 			local world_map_tile
 			if (GrandStrategyWorld == "Nidavellir") then
 				world_map_tile = CGraphic:New("tilesets/world/terrain/dark_plains.png")
@@ -1632,18 +1632,56 @@ function DrawOnScreenTiles()
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
 		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64)) do
 			-- set map tile terrain
+			local tile_image = ""
 			if (GetWorldMapTile(x, y) == "Plns") then
-				DrawWorldMapTile("tilesets/world/terrain/plains.png", x, y)
+				tile_image = "tilesets/world/terrain/plains.png"
 			elseif (GetWorldMapTile(x, y) == "DkPl") then
-				DrawWorldMapTile("tilesets/world/terrain/dark_plains.png", x, y)
+				tile_image = "tilesets/world/terrain/dark_plains.png"
 			elseif (GetWorldMapTile(x, y) == "ScFr") then
-				DrawWorldMapTile("tilesets/world/terrain/scrub_forest.png", x, y)
+				tile_image = "tilesets/world/terrain/scrub_forest.png"
 			elseif (GetWorldMapTile(x, y) == "Hill") then
-				DrawWorldMapTile("tilesets/world/terrain/hills.png", x, y)
+				tile_image = "tilesets/world/terrain/hills.png"
 			elseif (GetWorldMapTile(x, y) == "Mntn") then
-				DrawWorldMapTile("tilesets/world/terrain/mountains.png", x, y)
+				tile_image = "tilesets/world/terrain/mountains.png"
 			elseif (GetWorldMapTile(x, y) == "Watr") then
-				DrawWorldMapTile("tilesets/world/terrain/ocean.png", x, y)
+				tile_image = "tilesets/world/terrain/ocean"
+				if (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_north"
+				elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_south"
+				elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_west"
+				elseif (GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_east"
+				elseif ((GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) or GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northwest_outer"
+				elseif ((GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) or GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y)) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northeast_outer"
+				elseif ((GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) or GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_southwest_outer"
+				elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_southeast_outer"
+				elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northwest_inner"
+				elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northeast_inner"
+				elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_southwest_inner"
+				elseif (GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_southeast_inner"
+				elseif (GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northwest_southeast_inner"
+				elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northeast_southwest_inner"
+				elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_south_northeast_inner"
+				elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y)) then
+					tile_image = tile_image .. "_northeast_southeast_outer"
+				end
+				tile_image = tile_image .. ".png"
+			end
+			if (tile_image ~= "") then
+				DrawWorldMapTile(tile_image, x, y)
 			end
 		end
 	end

@@ -207,6 +207,11 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
 			"variation-id", "blue-feathers",
 			"file", "neutral/units/gryphon_blue_feathers.png",
 			"icon", "icon-gryphon-blue-feathers"
+		},
+		{
+			"variation-id", "gray-feathers",
+			"file", "neutral/units/gryphon_gray_feathers.png",
+			"icon", "icon-gryphon-gray-feathers"
 		}
 	},
 	Sounds = {
