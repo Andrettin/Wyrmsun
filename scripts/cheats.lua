@@ -46,7 +46,7 @@ function HandleCheats(str)
 		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 5000)
 		SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 5000)
 	end
-	AddMessage("!!! :)")
+	AddMessage("Resources increased!")
 
   elseif (str == "showpath") then
     RevealMap()
@@ -165,11 +165,11 @@ function HandleCheats(str)
     if (godcheat) then
       godcheat = false
       SetGodMode(false)
-      AddMessage("God Mode OFF")
+      AddMessage("God Mode Off")
     else
       godcheat = true
       SetGodMode(true)
-      AddMessage("God Mode ON")
+      AddMessage("God Mode On")
     end
 
   elseif (str == "fill mana") then

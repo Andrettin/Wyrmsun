@@ -787,7 +787,13 @@ DefineUnitType("unit-gold-coins", { Name = "Gold Coins",
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
-	Sounds = {} } )
+	GivesResource = "gold",
+	StartingResources = 5,
+	Sounds = {
+		"selected", "click",
+		"dead", "gold-coins"
+	} 
+} )
 
 DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
 	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
@@ -804,7 +810,13 @@ DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
 --	GivesResource = "gold", CanHarvest = true,
 	NumDirections = 1,	
 	Item = true,
-	Sounds = {} } )
+	GivesResource = "gold",
+	StartingResources = 100,
+	Sounds = {
+		"selected", "click",
+		"dead", "gold-coins"
+	} 
+} )
 
 DefineUnitType("unit-gold-chest", { Name = "Chest",
 	Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
@@ -869,9 +881,14 @@ DefineUnitType("unit-potion-of-healing", { Name = "Potion of Healing",
 	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
-	NumDirections = 1,	
+	NumDirections = 1,
 	Item = true,
-	Sounds = {} } )
+	HitPointHealing = 45,
+	Sounds = {
+		"selected", "click",
+		"dead", "potion"
+	} 
+} )
 
 DefineUnitType("unit-potion-of-decay", { Name = "Potion of Decay",
 	Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
@@ -887,7 +904,12 @@ DefineUnitType("unit-potion-of-decay", { Name = "Potion of Decay",
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
-	Sounds = {} } )
+	HitPointHealing = -15,
+	Sounds = {
+		"selected", "click",
+		"dead", "potion"
+	} 
+} )
 
 DefineUnitType("unit-cheese", { Name = "Cheese",
 	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
@@ -903,6 +925,7 @@ DefineUnitType("unit-cheese", { Name = "Cheese",
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
+	HitPointHealing = 3,
 	Sounds = {} } )
 
 DefineUnitType("unit-carrots", { Name = "Carrots",
@@ -919,6 +942,7 @@ DefineUnitType("unit-carrots", { Name = "Carrots",
 	Type = "land",
 	NumDirections = 1,	
 	Item = true, 
+	HitPointHealing = 3,
 	Sounds = {} } )
 
 DefineUnitType("unit-gryphon-feather", { Name = "Gryphon Feather",

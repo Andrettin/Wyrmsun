@@ -55,6 +55,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added special graphics for Rugnur (axefighter) (graphics by b_o).
 - Greebo's icon and UI image have been updated (by b_o).
 
+* Items
+- When items are used, now they display a message instead of a dialogue.
+- Improved item code.
+
 * Maps
 - Added Iberia map (Earth) by Miguel Farah F., from FreeCiv.
 - Added France map (Earth) by Mathieu Roy, from FreeCiv.
@@ -81,6 +85,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added two dwarven ballista bolt upgrades (graphics by Leo).
 - Fixed bug which caused the "Units" button in the editor to sometimes not display the correct player color.
 - Added "Encyclopedia" screen (accessible from the main menu), where one can read more about the units, buildings and technologies represented in the game.
+- Removed many messages which were a bit too superfluous (i.e. a message whenever a unit were trained).
 
 * Modding
 - Tileset tile size now can properly be changed.

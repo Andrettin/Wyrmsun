@@ -83,7 +83,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
   Action = "cast-spell", Value = "spell-learn-axe-mastery",
-  Allowed = "check-unit-variable", AllowArg = {"AxeMastery", "Value", "==", "1"},
+  Allowed = "check-unit-variable", AllowArg = {"AxeMastery", "Value", "<", "1", "LevelUp", "Value", ">=", "1"},
   Key = "x", Hint = "Learn A~!xe Mastery (+2 damage)",
   ForUnit = {
     "unit-dwarven-thane",
@@ -93,7 +93,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
   Action = "cast-spell", Value = "spell-learn-critical-strike",
-  Allowed = "check-unit-variable", AllowArg = {"CriticalStrike", "Value", "==", "1"},
+  Allowed = "check-unit-variable", AllowArg = {"CriticalStrike", "Value", "<", "1", "LevelUp", "Value", ">=", "1"},
   Key = "c", Hint = "Learn ~!Critical Strike (chance to deal double damage)",
   ForUnit = {
     "unit-dwarven-thane",

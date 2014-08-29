@@ -301,8 +301,8 @@ DefineVariables(
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CriticalStrikeChance", {Max = 100, Value = 0, Increase = 0, Enable = true},
-	"AxeMastery", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
-	"CriticalStrike", {Max = 2, Value = 0, Increase = 0, Enable = true}, -- 0 = unavailable, 1 = available, 2 = learned
+	"AxeMastery", {Max = 1, Value = 0, Increase = 0, Enable = true},
+	"CriticalStrike", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"AxeOfPerun", {Max = 2, Value = 0, Increase = 0, Enable = true} -- 0 = not owned, 1 = owned, 2 = equipped
 )
 
@@ -534,17 +534,6 @@ function StandardTriggers()
 					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
 
-				-- deactivate upgrade possibilities if level-ups are spent
-				if (GetUnitVariable(uncount[unit1], "LevelUp") <= 0) then
-					if (GetUnitVariable(uncount[unit1], "AxeMastery") == 1) then
-						SetUnitVariable(uncount[unit1], "AxeMastery", 0)
-					end
-
-					if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 1) then
-						SetUnitVariable(uncount[unit1], "CriticalStrike", 0)
-					end
-				end
-
 				-- fix starting level for upgraded units
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-steelclad") then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 1) then
@@ -567,14 +556,14 @@ function StandardTriggers()
 								end
 
 								-- load upgrades
-								if (GetUnitVariable(uncount[unit1], "AxeMastery") < 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")) then
-									SetUnitVariable(uncount[unit1], "AxeMastery", 2)
+								if (GetUnitVariable(uncount[unit1], "AxeMastery") < 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")) then
+									SetUnitVariable(uncount[unit1], "AxeMastery", 1)
 									UpdateUnitBonuses(uncount[unit1])
 									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
 								end
 
-								if (GetUnitVariable(uncount[unit1], "CriticalStrike") < 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")) then
-									SetUnitVariable(uncount[unit1], "CriticalStrike", 2)
+								if (GetUnitVariable(uncount[unit1], "CriticalStrike") < 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")) then
+									SetUnitVariable(uncount[unit1], "CriticalStrike", 1)
 									UpdateUnitBonuses(uncount[unit1])
 									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
 								end
@@ -586,11 +575,11 @@ function StandardTriggers()
 
 								-- save upgrades
 								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
-									if (GetUnitVariable(uncount[unit1], "AxeMastery") == 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
+									if (GetUnitVariable(uncount[unit1], "AxeMastery") == 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")
 										SavePreferences()
 									end
-									if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 2 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
+									if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
 										SavePreferences()
 									end
@@ -634,7 +623,7 @@ function StandardTriggers()
 --					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
 --					if (people_quantity > 0) then
 --						local nearby_uncount = 0
---						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1)
+--						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, true)
 --						for unit2 = 1,table.getn(nearby_uncount) do 
 --							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
 --								OrderUnit("any", "unit-critter", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
@@ -643,92 +632,41 @@ function StandardTriggers()
 --					end
 --				end
 
-				-- gives gold if a unit is on a gold sack or heals if on a healing potion
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay" or GetUnitVariable(uncount[unit1], "Ident") == "unit-cheese" or GetUnitVariable(uncount[unit1], "Ident") == "unit-carrots") then
+				-- process items if stepped upon
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Item")) then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
-						for i=0,14 do
-							if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) > 0) then
-								ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), i)
-							end
-						end
 						local nearby_uncount = 0
-						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0)
+						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, false)
 						for unit2 = 1,table.getn(nearby_uncount) do 
-							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15 and GetUnitBoolFlag(nearby_uncount[unit2], "Decoration") == false) then
-								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-sack") then
-									Event(
-										"",
-										"You found 100 gold in the sack.",
-										GetUnitVariable(nearby_uncount[unit2], "Player"),
-										{"~!OK"},
-										{function(s)
-											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-											PlaySound("gold-coins")
-											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 100)
-										end}
-									)								
-								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-coins") then
-									Event(
-										"",
-										"You found 5 gold.",
-										GetUnitVariable(nearby_uncount[unit2], "Player"),
-										{"~!OK"},
-										{function(s)
-											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-											PlaySound("gold-coins")
-											SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 5)
-										end}
-									)
-								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
-									PlaySound("potion")
-									Event(
-										"",
-										"As the potion is guzzled, a feeling of well-being overwhelms the drinker.",
-										GetUnitVariable(nearby_uncount[unit2], "Player"),
-										{"~!OK"},
-										{function(s)
-											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max"))
-										end}
-									)								
-								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-decay") then
-									PlaySound("potion")
-									Event(
-										"",
-										"As the potion is guzzled, the poor drinker realizes that there is something really bad in it.",
-										GetUnitVariable(nearby_uncount[unit2], "Player"),
-										{"~!OK"},
-										{function(s)
-											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") * 90 / 100)
-										end}
-									)
-								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-cheese" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
-									Event(
-										"",
-										"A delicious piece of cheese refreshes the eater.",
-										GetUnitVariable(nearby_uncount[unit2], "Player"),
-										{"~!OK"},
-										{function(s)
-											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + 3)
-										end}
-									)								
-								elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-carrots" and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
-									Event(
-										"",
-										"Delicious carrots refresh the eater.",
-										GetUnitVariable(nearby_uncount[unit2], "Player"),
-										{"~!OK"},
-										{function(s)
-											DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-											SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + 3)
-										end}
-									)								
+							if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource") ~= "" and GetUnitVariable(uncount[unit1], "ResourcesHeld") > 0) then
+								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+									AddMessage("Gained " .. GetUnitVariable(uncount[unit1], "ResourcesHeld") .. " " .. GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"))
 								end
-								break
+								
+								SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"), GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource")) + GetUnitVariable(uncount[unit1], "ResourcesHeld"))
+								
+								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") > 0 and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
+								local hp_healed = 0
+								if ((GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")) < GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) then
+									hp_healed = GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")
+								else
+									hp_healed = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")
+								end
+								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+									AddMessage("Healed " .. hp_healed .. " HP")
+								end
+								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_healed)
+								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") < 0) then
+								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+									AddMessage("Suffered " .. (-1 * GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) .. " HP loss")
+								end
+								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
+								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 							end
+							break
 						end
 					end
 				end
@@ -751,7 +689,7 @@ function StandardTriggers()
 								end
 							end
 							local nearby_uncount = 0
-							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1)
+							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, true)
 							for unit2 = 1,table.getn(nearby_uncount) do 
 								if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
 									if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest") then
@@ -1108,14 +1046,6 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 			SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
 			if (advancement) then
 				SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
-				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-axe-mastery") and GetUnitVariable(unit, "AxeMastery") < 1) then
-					SetUnitVariable(unit, "AxeMastery", 1)
-				end
-
-				if (GetArrayIncludes(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident")), "upgrade-critical-strike") and GetUnitVariable(unit, "CriticalStrike") < 1) then
-					SetUnitVariable(unit, "CriticalStrike", 1)
-				end
-
 				-- if the unit's level is greater than the availability of level-up upgrades for it, increase its HP instead
 				if (GetUnitVariable(unit, "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident"))) + GetUnitVariable(unit, "StartingLevel")) then
 					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
@@ -1156,10 +1086,10 @@ function UpdateUnitBonuses(unit)
 		end
 	end
 	-- bonuses from abilities
-	if (GetUnitVariable(unit, "AxeMastery") >= 2) then -- if has Axe Mastery, grant +2 piercing damage
+	if (GetUnitVariable(unit, "AxeMastery") >= 1) then -- if has Axe Mastery, grant +2 piercing damage
 		piercing_damage_bonus = piercing_damage_bonus + 2
 	end
-	if (GetUnitVariable(unit, "CriticalStrike") >= 2) then
+	if (GetUnitVariable(unit, "CriticalStrike") >= 1) then
 		SetUnitVariable(unit, "CriticalStrikeChance", 15)
 	end
 	-- bonuses from equipment

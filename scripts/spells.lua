@@ -93,18 +93,20 @@ DefineSpell("spell-equip-axe-of-perun",
 	"ai-cast", {}
 )
 
+-- Ability Learning "Spells"
+
 DefineSpell("spell-learn-axe-mastery",
 	"showname", _("learn axe mastery"),
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
 	"action", {
-		{"adjust-variable", {AxeMastery = {Value = 2}}},
+		{"adjust-variable", {AxeMastery = {Value = 1}}},
 		{"adjust-variable", {PiercingDamageBonus = {AddValue = 2}}},
 		{"adjust-variable", {LevelUp = {AddValue = -1}}}
 	},
 	"condition", {
-		"AxeMastery", {MinValue = 0, MaxValue = 2}
+		"LevelUp", {MinValue = 0, MaxValue = 2}
 	},
 	"ai-cast", {}
 )
@@ -115,12 +117,12 @@ DefineSpell("spell-learn-critical-strike",
 	"range", 0,
 	"target", "self",
 	"action", {
-		{"adjust-variable", {CriticalStrike = {Value = 2}}},
+		{"adjust-variable", {CriticalStrike = {Value = 1}}},
 		{"adjust-variable", {CriticalStrikeChance = {AddValue = 15}}},
 		{"adjust-variable", {LevelUp = {AddValue = -1}}}
 	},
 	"condition", {
-		"CriticalStrike", {MinValue = 0, MaxValue = 2}
+		"LevelUp", {MinValue = 0, MaxValue = 2}
 	},
 	"ai-cast", {}
 )
