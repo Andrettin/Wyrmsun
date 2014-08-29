@@ -33,16 +33,16 @@ InitFuncs:add(function()
 end)
 
 function HandleCheats(str)
-  local resources = { "gold", "wood", "oil", "ore", "stone", "coal" }
+  local resources = { "gold", "lumber", "oil", "ore", "stone", "coal" }
 
   if (str == "im a lumberjack and its ok") then
-    SetSpeedResourcesHarvest("wood", 52 / 2)
+    SetSpeedResourcesHarvest("lumber", 52 / 2)
     AddMessage("Wow -- I got jigsaw!")
 
   elseif (str == "otters ransom") then
 	for i = 0,PlayerMax - 1 do
 		SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") + 12000)
-		SetPlayerData(i, "Resources", "wood", GetPlayerData(i, "Resources", "wood") + 5000)
+		SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 5000)
 		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 5000)
 		SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 5000)
 	end

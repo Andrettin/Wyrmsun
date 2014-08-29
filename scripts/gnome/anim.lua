@@ -68,7 +68,7 @@ DefineAnimations("animations-gnomish-worker", {
   	"frame 135", "attack", "sound mace-attack", "wait 5", "frame 140", "wait 3",
   	"frame 120", "wait 7", "frame 120", "goto end",
 	"label end", "unbreakable end", "wait 1",},
-  Harvest_wood = {"unbreakable begin",
+  Harvest_lumber = {"unbreakable begin",
 	"if-var v.Variation.Value == 0 variation_1",
 	"if-var v.Variation.Value == 1 variation_2", 
 	"label variation_1",

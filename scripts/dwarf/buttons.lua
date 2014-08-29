@@ -204,7 +204,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Key = "h", Hint = "~!Harvest Lumber/Mine Gold",
   ForUnit = {"unit-dwarven-miner"} } )
 
-DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-return-goods",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-return-goods",
   Action = "return-goods",
   Key = "g", Hint = "Return with ~!Goods",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker" } } )

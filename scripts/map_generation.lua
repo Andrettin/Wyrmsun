@@ -1005,7 +1005,7 @@ function CreatePlayers()
 			local player_spawn_point = FindAppropriatePlayerSpawnPoint()
 			SetStartView(i, player_spawn_point[1], player_spawn_point[2])
 			SetPlayerData(i, "Resources", "gold", 10000)
-			SetPlayerData(i, "Resources", "wood", 3000)
+			SetPlayerData(i, "Resources", "lumber", 3000)
 			SetPlayerData(i, "Resources", "oil", 1000)
 			local possible_civilizations = {}
 			if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf"))) then

@@ -116,6 +116,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven axefighters no longer require a blacksmith to upgrade to a steelclad.
 - Units that can upgrade to a better unit type no longer can acquire upgrade abilities (i.e. steelclads no longer can acquire "axe mastery"; instead, they must first upgrade to a thane, and in their next level up they will be able to learn "axe mastery").
 - Added gray-feathered variation for the gryphon (graphics by b_o).
+- Added two new graphic variations for the gryphon rider (graphics by b_o).
 
 -----------------------------------------------------------------------
 - 0.1.5c

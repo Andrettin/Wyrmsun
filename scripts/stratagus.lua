@@ -59,7 +59,7 @@ function InitGameVariables()
   end
 end
 
-DefineBoolFlags("Center", "WoodImprove", "OilImprove")
+DefineBoolFlags("Center", "LumberImprove", "OilImprove")
 
 --  Edit the next sections to get your look and feel.
 --  Note, some of those values are overridden by user preferences,
@@ -165,10 +165,10 @@ DefineDefaultIncomes(
   0, 100, 100, 100, 100, 100, 100)
 
 DefineDefaultActions(
-  "stop", "mine", "chop", "drill", "mine", "mine", "mine")
+  "stop", "mine", "gather", "drill", "mine", "mine", "mine")
 
 DefineDefaultResourceNames(
-  "time", "gold", "wood", "oil", "ore", "stone", "coal")
+  "time", "gold", "lumber", "oil", "ore", "stone", "coal")
 
 DefineDefaultResourceAmounts(
   "gold", 100000,
@@ -227,9 +227,9 @@ AddColorCyclingRange(38, 47) -- water
 --  Decrease the time in a gold deposit by this factor.
 --SetSpeedResourcesReturn("gold", 10)
 --  Decrease the time for chopping a tree by this factor.
---SetSpeedResourcesHarvest("wood", 10)
---  Decrease the time in a wood deposit by this factor.
---SetSpeedResourcesReturn("wood", 10)
+--SetSpeedResourcesHarvest("lumber", 10)
+--  Decrease the time in a lumber deposit by this factor.
+--SetSpeedResourcesReturn("lumber", 10)
 --  Decrease the time for haul oil by this factor.
 --SetSpeedResourcesHarvest("oil", 10)
 --  Decrease the time in an oil deposit by this factor.

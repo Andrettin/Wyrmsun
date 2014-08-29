@@ -88,7 +88,7 @@ function RunResultsMenu()
       menu:addLabel(GetPlayerData(i, "TotalResources", "gold"), offx + 190 + 40,
         offy + bottom_offset + description_offset + line_spacing * c + 5,
         Fonts["large"], true)
-      menu:addLabel(GetPlayerData(i, "TotalResources", "wood"), offx + 280 + 40,
+      menu:addLabel(GetPlayerData(i, "TotalResources", "lumber"), offx + 280 + 40,
         offy + bottom_offset + description_offset + line_spacing * c + 5,
         Fonts["large"], true)
 --      menu:addLabel(GetPlayerData(i, "TotalResources", "oil"), offx + 370 + 40,

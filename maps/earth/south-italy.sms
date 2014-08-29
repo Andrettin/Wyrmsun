@@ -178,12 +178,12 @@ ApplyRawTiles()
 -- Player Setup
 SetStartView(0, 44, 38) -- Naples
 SetPlayerData(0, "Resources", "gold", 2000)
-SetPlayerData(0, "Resources", "wood", 1000)
+SetPlayerData(0, "Resources", "lumber", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
 SetPlayerData(0, "RaceName", "dwarf")
 SetStartView(1, 86, 37) -- Bari
 SetPlayerData(1, "Resources", "gold", 2000)
-SetPlayerData(1, "Resources", "wood", 1000)
+SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "dwarf")
 SetAiType(1, "land-attack")

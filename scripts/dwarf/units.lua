@@ -67,7 +67,7 @@ DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
 		"wait-at-resource", 120,
 		"wait-at-depot", 150},
 	 {"file-when-loaded", "dwarf/units/miner_with_lumber.png",
-		"resource-id", "wood",
+		"resource-id", "lumber",
 		"harvest-from-outside",
 		"resource-capacity", 100,
 		"resource-step", 2,
@@ -177,33 +177,33 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
 	organic = true,
 	SelectableByRectangle = true,
 	Variations = {
-	{
-		"variation-id", "red-hair"
-	},
-	{
-		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
-		"icon", "icon-dwarven-steelclad-gray-hair"
-	},
-	{
-		"variation-id", "orange-hair",
-		"file", "dwarf/units/dwarven_steelclad_orange_hair.png"
-	},
-	{
-		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
-		"icon", "icon-dwarven-steelclad-blond-hair"
-	},
-	{
-		"variation-id", "black-hair",
-		"file", "dwarf/units/dwarven_steelclad_black_hair.png",
-		"icon", "icon-dwarven-steelclad-black-hair"
-	},
-	{
-		"variation-id", "brown-hair",
-		"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
-		"icon", "icon-dwarven-steelclad-brown-hair"
-	}
+		{
+			"variation-id", "red-hair"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
+			"icon", "icon-dwarven-steelclad-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_steelclad_orange_hair.png"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
+			"icon", "icon-dwarven-steelclad-blond-hair"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
+			"icon", "icon-dwarven-steelclad-black-hair"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
+			"icon", "icon-dwarven-steelclad-brown-hair"
+		}
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -241,33 +241,33 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
 	SelectableByRectangle = true,
 	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
 	Variations = {
-	{
-		"variation-id", "red-hair"
-	},
-	{
-		"variation-id", "gray-hair",
-		"file", "dwarf/units/thane_gray_hair.png",
-		"icon", "icon-dwarven-thane-gray-hair"
-	},
-	{
-		"variation-id", "orange-hair",
-		"file", "dwarf/units/thane_orange_hair.png"
-	},
-	{
-		"variation-id", "blond-hair",
-		"file", "dwarf/units/thane_blond_hair.png",
-		"icon", "icon-dwarven-thane-blond-hair"
-	},
-	{
-		"variation-id", "black-hair",
-		"file", "dwarf/units/thane_black_hair.png",
-		"icon", "icon-dwarven-thane-black-hair"
-	},
-	{
-		"variation-id", "brown-hair",
-		"file", "dwarf/units/thane_brown_hair.png",
-		"icon", "icon-dwarven-thane-brown-hair"
-	}
+		{
+			"variation-id", "red-hair"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/thane_gray_hair.png",
+			"icon", "icon-dwarven-thane-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/thane_orange_hair.png"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/thane_blond_hair.png",
+			"icon", "icon-dwarven-thane-blond-hair"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/thane_black_hair.png",
+			"icon", "icon-dwarven-thane-black-hair"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/thane_brown_hair.png",
+			"icon", "icon-dwarven-thane-brown-hair"
+		}
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -283,7 +283,7 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
 	Background = "In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-scout",
-	Costs = {"time", 70, "gold", 500, "wood", 50},
+	Costs = {"time", 70, "gold", 500, "lumber", 50},
 	Speed = 10,
 	HitPoints = 40,
 	DrawLevel = 40,
@@ -345,9 +345,9 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
 	Description = "Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",
 	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
 	Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
-	Costs = {"time", 250, "gold", 900, "wood", 300},
+	Costs = {"time", 250, "gold", 900, "lumber", 300},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Speed = 5,
 	HitPoints = 110,
 	DrawLevel = 40,
@@ -380,7 +380,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
 	Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
 	DrawLevel = 45,
 	Animations = "animations-dwarven-gryphon-rider", Icon = "icon-dwarven-gryphon-rider",
-	Costs = {"time", 250, "gold", 1750, "wood", 750},
+	Costs = {"time", 250, "gold", 1750, "lumber", 750},
 	Speed = 10,
 	HitPoints = 100,
 	DrawLevel = 60,
@@ -401,6 +401,19 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
 	organic = true,
 	SelectableByRectangle = true,
 	CanCastSpell = {"spell-learn-critical-strike"},
+	Variations = {
+		{
+			"variation-id", "black-hair-brown-feathers"
+		},
+		{
+			"variation-id", "brown-hair-blue-feathers",
+			"file", "dwarf/units/gryphon_rider_brown_hair_blue_feathers.png",
+		},
+		{
+			"variation-id", "red-hair-gray-feathers",
+			"file", "dwarf/units/gryphon_rider_red_hair_gray_feathers.png",
+		}
+	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -416,9 +429,9 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
 	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the ~<Voluspo~> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the ~<Svipdagsmol~>.",
 	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-dwarven-town-hall",
-	Costs = {"time", 255, "gold", 1200, "wood", 800},
+	Costs = {"time", 255, "gold", 1200, "lumber", 800},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 1200,
@@ -432,12 +445,12 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
 	Corpse = "unit-destroyed-4x4-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	Building = true, VisibleUnderFog = true, Center = true, WoodImprove = true,
+	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true,
 	BuildingRules = {
 		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
 		"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
 	},
-	CanStore = {"wood", "gold", "coal"},
+	CanStore = {"lumber", "gold", "coal"},
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -452,9 +465,9 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
 	Image = {"file", "dwarf/buildings/mushroom_farm.png", "size", {64, 64}},
 	Animations = "animations-building", Icon = "icon-dwarven-mushroom-farm",
 	NeutralMinimapColor = {192, 192, 192},
-	Costs = {"time", 100, "gold", 500, "wood", 250},
+	Costs = {"time", 100, "gold", 500, "lumber", 250},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 400,
@@ -482,9 +495,9 @@ DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
 	Description = "The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
 	Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-dwarven-barracks",
-	Costs = {"time", 200, "gold", 700, "wood", 450},
+	Costs = {"time", 200, "gold", 700, "lumber", 450},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 800,
@@ -512,10 +525,10 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
 	Background = "In Germanic mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>.",
 	Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-dwarven-lumber-mill",
-	Costs = {"time", 150, "gold", 600, "wood", 450},
+	Costs = {"time", 150, "gold", 600, "lumber", 450},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
-	ImproveProduction = {"wood", 25},
+	RepairCosts = {"gold", 1, "lumber", 1},
+	ImproveProduction = {"lumber", 25},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 600,
@@ -528,8 +541,8 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
 	Corpse = "unit-destroyed-3x3-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	Building = true, VisibleUnderFog = true, WoodImprove = true,
-	CanStore = {"wood"},
+	Building = true, VisibleUnderFog = true, LumberImprove = true,
+	CanStore = {"lumber"},
 	Sounds = {
 		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -544,11 +557,11 @@ DefineUnitType("unit-dwarven-smith", { Name = "Smith",
 	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem.",
 	Image = {"file", "dwarf/buildings/smith.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-dwarven-smith",
---	Costs = {"time", 200, "gold", 800, "wood", 450, "oil", 100},
-	Costs = {"time", 200, "gold", 900, "wood", 500},
+--	Costs = {"time", 200, "gold", 800, "lumber", 450, "oil", 100},
+	Costs = {"time", 200, "gold", 900, "lumber", 500},
 	RepairHp = 4,
---	RepairCosts = {"gold", 1, "wood", 1, "oil", 1},
-	RepairCosts = {"gold", 1, "wood", 1},
+--	RepairCosts = {"gold", 1, "lumber", 1, "oil", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 775,
@@ -575,9 +588,9 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
 	Description = "In these towers dwarves keep watch of threats approaching their settlements.",
 	Image = {"file", "dwarf/buildings/sentry_tower.png", "size", {64, 64}},
 	Animations = "animations-building", Icon = "icon-dwarven-sentry-tower",
-	Costs = {"time", 60, "gold", 550, "wood", 200},
+	Costs = {"time", 60, "gold", 550, "lumber", 200},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 100,
@@ -606,9 +619,9 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
 	Description = "Garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's defenses.",
 	Image = {"file", "dwarf/buildings/guard_tower.png", "size", {64, 64}},
 	Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
-	Costs = {"time", 140, "gold", 500, "wood", 150},
+	Costs = {"time", 140, "gold", 500, "lumber", 150},
 	RepairHp = 4,
-	RepairCosts = {"gold", 1, "wood", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 130,

@@ -197,7 +197,7 @@ function SetPlayerData(player, data, arg1, arg2)
 			else
 				arg2 = 0
 			end
-		elseif (arg1 == "wood") then
+		elseif (arg1 == "lumber") then
 			if (GrandStrategy == false) then
 				arg2 = res[2]
 			elseif (GrandStrategyEventMap and GetFactionFromName(GetPlayerData(player, "Name")) ~= nil) then

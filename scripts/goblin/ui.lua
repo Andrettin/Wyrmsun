@@ -231,7 +231,7 @@ UI.Resources[1].IconY = 0
 UI.Resources[1].TextX = 176 + 0 + 18
 UI.Resources[1].TextY = 1
 
--- wood
+-- lumber
 UI.Resources[2].G = CGraphic:New("ui/lumber.png", 14, 14)
 UI.Resources[2].IconFrame = 0
 UI.Resources[2].IconX = 176 + 75

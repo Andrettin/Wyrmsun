@@ -272,9 +272,9 @@ DefinePanelContents(
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100)))),
 										"" ))}}
     },
-	{ Pos = {32, 118}, Condition = {WoodImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100)))),
+	{ Pos = {32, 118}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
 	{ Pos = {84, 134}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
@@ -290,11 +290,11 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
-	{ Pos = {16, 86}, Condition = {WoodImprove = "only"}, More = {"Text", "Production"} },
+	{ Pos = {16, 86}, Condition = {LumberImprove = "only"}, More = {"Text", "Production"} },
 	{ Pos = {16, 86}, Condition = {OilImprove = "only"}, More = {"Text", "Production"} },
-	{ Pos = {32, 102}, Condition = {WoodImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "wood"), 100)))),
+	{ Pos = {32, 102}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
 	{ Pos = {84, 102}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
