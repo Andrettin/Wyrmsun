@@ -186,9 +186,13 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			l:setSize(Video.Width - 64, Video.Height / 2)
 			l:setLineWidth(Video.Width - 64)
 			encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*1)
+			local civilization = ""
 			local description = ""
 			local background = ""
 			if (string.find(unit_name, "upgrade-") == nil) then
+				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
+					civilization = "Civilization: " .. CapitalizeString(GetUnitTypeData(unit_name, "Civilization")) .. "\n\n"
+				end
 				if (GetUnitTypeData(unit_name, "Description") ~= "") then
 					description = "Description: " .. GetUnitTypeData(unit_name, "Description")
 				end
@@ -196,6 +200,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 					background = "\n\nBackground: " .. GetUnitTypeData(unit_name, "Background")
 				end
 			else
+				if (CUpgrade:Get(unit_name).Civilization ~= "") then
+					civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
+				end
 				if (CUpgrade:Get(unit_name).Description ~= "") then
 					description = "Description: " .. CUpgrade:Get(unit_name).Description
 				end
@@ -203,7 +210,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 					background = "\n\nBackground: " .. CUpgrade:Get(unit_name).Background
 				end
 			end
-			l:setCaption(description .. background)
+			l:setCaption(civilization .. description .. background)
 			
 			-- add buttons of texts related to the subject matter of the entry
 			local chapter_y = 8

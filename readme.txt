@@ -102,6 +102,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added rug tiles for the dungeon tileset (graphics by b_o).
 - Added wood pile object, replaces trees as the source of lumber in cave and dungeon maps (graphics by Jinn).
 - The wyrm skeleton now has a non-horned variation (graphics by b_o).
+- Decorations no longer show as points on the minimap.
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.

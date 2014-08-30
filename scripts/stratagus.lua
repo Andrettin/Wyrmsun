@@ -1226,6 +1226,13 @@ function round(num)
 	return math.floor(num + 0.5)
 end
 
+-------------------------------------------------------------------------------
+--  String Functions
+-------------------------------------------------------------------------------
+
+function CapitalizeString(str)
+    return (str:gsub("^%l", string.upper))
+end
 
 local function CompleteMissingValues(table, defaultTable)
  for key, defaultValue in pairs(defaultTable) do

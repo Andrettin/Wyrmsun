@@ -660,10 +660,10 @@ function AcquireProvince(province, faction)
 	
 	-- replace existent buildings from other civilizations with buildings of own civilization
 	for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
-		if (province.SettlementBuildings[gsunit_key] == 2 and GrandStrategyBuildings[gsunit_key].Civilization ~= GetFactionFromName(faction).Civilization) then
+		if (province.SettlementBuildings[gsunit_key] == 2 and GetUnitTypeData(GrandStrategyBuildings[gsunit_key].UnitType, "Civilization") ~= GetFactionFromName(faction).Civilization) then
 			province.SettlementBuildings[gsunit_key] = 0 -- remove building from other civilization
 			for second_gsunit_key, second_gsunit_value in pairs(GrandStrategyBuildings) do -- if there is an equivalent building of the acquirer's civilization, create it
-				if (GrandStrategyBuildings[second_gsunit_key].Civilization == GetFactionFromName(faction).Civilization and GrandStrategyBuildings[second_gsunit_key].Type == GrandStrategyBuildings[gsunit_key].Type) then
+				if (GetUnitTypeData(GrandStrategyBuildings[second_gsunit_key].UnitType, "Civilization") == GetFactionFromName(faction).Civilization and GrandStrategyBuildings[second_gsunit_key].Type == GrandStrategyBuildings[gsunit_key].Type) then
 					province.SettlementBuildings[second_gsunit_key] = 2
 				end
 			end
@@ -816,7 +816,7 @@ function CalculateFactionUpkeeps()
 		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
 	
 		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do			
-			if (province_owner ~= nil and GrandStrategyUnits[gsunit_key].Civilization == province_owner.Civilization) then -- pay upkeep for military units
+			if (province_owner ~= nil and GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization") == province_owner.Civilization) then -- pay upkeep for military units
 				province_owner.Upkeep = province_owner.Upkeep + WorldMapProvinces[key].Units[gsunit_key] * GrandStrategyUnits[gsunit_key].Upkeep
 			end
 		end
@@ -1491,11 +1491,11 @@ function AddGrandStrategyUnitButton(x, y, grand_strategy_unit_key)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
 	local veterans = 0
-	local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[grand_strategy_unit_key].Civilization, "Veteran " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
+	local veteran_unit_type_key = GetCivilizationUnitTypeKey(GetUnitTypeData(GrandStrategyUnits[grand_strategy_unit_key].UnitType, "Civilization"), "Veteran " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
 	if (veteran_unit_type_key ~= "") then
 		veterans = veterans + SelectedProvince.Units[veteran_unit_type_key]
 	end
-	local hero_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[grand_strategy_unit_key].Civilization, "Heroic " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
+	local hero_unit_type_key = GetCivilizationUnitTypeKey(GetUnitTypeData(GrandStrategyUnits[grand_strategy_unit_key].UnitType, "Civilization"), "Heroic " .. GrandStrategyUnits[grand_strategy_unit_key].Type)
 	if (hero_unit_type_key ~= "") then
 		veterans = veterans + SelectedProvince.Units[hero_unit_type_key]
 	end
@@ -1884,16 +1884,16 @@ function DrawGrandStrategyInterface()
 			if (InterfaceState == "Province") then
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 					local veterans = 0
-					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
+					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization"), "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
 					if (veteran_unit_type_key ~= "") then
 						veterans = veterans + SelectedProvince.Units[veteran_unit_type_key]
 					end
-					local hero_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Heroic " .. GrandStrategyUnits[gsunit_key].Type)
+					local hero_unit_type_key = GetCivilizationUnitTypeKey(GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization"), "Heroic " .. GrandStrategyUnits[gsunit_key].Type)
 					if (hero_unit_type_key ~= "") then
 						veterans = veterans + SelectedProvince.Units[hero_unit_type_key]
 					end
 
-					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or (SelectedProvince.Units[gsunit_key] + veterans > 0 and GrandStrategyUnits[gsunit_key].InterfaceState ~= "" and GrandStrategyUnits[gsunit_key].Civilization == GrandStrategyFaction.Civilization)) then
+					if (IsUnitAvailableForTraining(SelectedProvince, gsunit_key) or (SelectedProvince.Units[gsunit_key] + veterans > 0 and GrandStrategyUnits[gsunit_key].InterfaceState ~= "" and GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization") == GrandStrategyFaction.Civilization)) then
 						local icon_offset_x = 9 + (GrandStrategyUnits[gsunit_key].X * 56)
 						local icon_offset_y = 340 + (GrandStrategyUnits[gsunit_key].Y * (47 + 19 + 4))
 
@@ -2051,11 +2051,11 @@ function DrawGrandStrategyInterface()
 				-- add units buttons for training
 				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 					local veterans = 0
-					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
+					local veteran_unit_type_key = GetCivilizationUnitTypeKey(GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization"), "Veteran " .. GrandStrategyUnits[gsunit_key].Type)
 					if (veteran_unit_type_key ~= "") then
 						veterans = veterans + SelectedProvince.Units[veteran_unit_type_key]
 					end
-					local hero_unit_type_key = GetCivilizationUnitTypeKey(GrandStrategyUnits[gsunit_key].Civilization, "Heroic " .. GrandStrategyUnits[gsunit_key].Type)
+					local hero_unit_type_key = GetCivilizationUnitTypeKey(GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization"), "Heroic " .. GrandStrategyUnits[gsunit_key].Type)
 					if (hero_unit_type_key ~= "") then
 						veterans = veterans + SelectedProvince.Units[hero_unit_type_key]
 					end
@@ -2513,7 +2513,7 @@ function AIConsiderOffers(ai_faction)
 end
 
 function IsBuildingAvailable(province, grand_strategy_unit_key)
-	if (province.Owner ~= "" and province.Owner ~= "Ocean" and GrandStrategyBuildings[grand_strategy_unit_key].Civilization ~= GetFactionFromName(province.Owner).Civilization) then
+	if (province.Owner ~= "" and province.Owner ~= "Ocean" and GetUnitTypeData(GrandStrategyBuildings[grand_strategy_unit_key].UnitType, "Civilization") ~= GetFactionFromName(province.Owner).Civilization) then
 		return false
 	end
 
@@ -2575,7 +2575,7 @@ function CanTrainUnit(province, grand_strategy_unit_key)
 end
 
 function IsUnitAvailableForTraining(province, grand_strategy_unit_key)
-	if (GrandStrategyUnits[grand_strategy_unit_key].Civilization ~= GetFactionFromName(province.Owner).Civilization) then
+	if (GetUnitTypeData(GrandStrategyUnits[grand_strategy_unit_key].UnitType, "Civilization") ~= GetFactionFromName(province.Owner).Civilization) then
 		return false
 	end
 	
@@ -2834,7 +2834,7 @@ end
 
 function GetCivilizationUnitTypeName(civilization, unit_type)
 	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-		if (GrandStrategyUnits[gsunit_key].Civilization == civilization and GrandStrategyUnits[gsunit_key].Type == unit_type) then
+		if (GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization") == civilization and GrandStrategyUnits[gsunit_key].Type == unit_type) then
 			return GrandStrategyUnits[gsunit_key].Name
 		end
 	end
@@ -2843,7 +2843,7 @@ end
 
 function GetCivilizationUnitTypeKey(civilization, unit_type)
 	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-		if (GrandStrategyUnits[gsunit_key].Civilization == civilization and GrandStrategyUnits[gsunit_key].Type == unit_type) then
+		if (GetUnitTypeData(GrandStrategyUnits[gsunit_key].UnitType, "Civilization") == civilization and GrandStrategyUnits[gsunit_key].Type == unit_type) then
 			return gsunit_key
 		end
 	end
@@ -2852,7 +2852,7 @@ end
 
 function GetCivilizationBuildingTypeName(civilization, building_type)
 	for gsunit_key, gsunit_value in pairs(GrandStrategyBuildings) do
-		if (GrandStrategyBuildings[gsunit_key].Civilization == civilization and GrandStrategyBuildings[gsunit_key].Type == building_type) then
+		if (GetUnitTypeData(GrandStrategyBuildings[gsunit_key].UnitType, "Civilization") == civilization and GrandStrategyBuildings[gsunit_key].Type == building_type) then
 			return GrandStrategyBuildings[gsunit_key].Name
 		end
 	end
