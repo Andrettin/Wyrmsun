@@ -226,38 +226,70 @@ Texts = {
 
 					"138. Now are Hor's words | spoken in the hall,\nKind for the kindred of men,\nCursed for the kindred of giants:\nHail to the speaker, | and to him who learns!\nProfit be his who has them!\nHail to them who hearken!\n\n~<* * *~>\n\n139. I ween that I hung | on the windy tree,\nHung there for nights full nine;\nWith the spear I was wounded, | and offered I was\nTo Othin, myself to myself,\nOn the tree that none | may ever know\nWhat root beneath it runs.\n\n[138. In the manuscript this stanza comes at the end of the entire poem, following stanza 165. Most recent editors have followed Muellenhoff in shifting it to this position, as it appears to conclude the passage introduced by the somewhat similar stanza 111.\n\n139. With this stanza begins the most confusing part of the ~<Hovamol~>: the group of eight stanzas leading up to the Ljothatal, or list of charms. Certain paper manuscripts have before this stanza a title: \"Othin's Tale of the Runes.\" Apparently stanzas 139, 140 and 142 are fragments of an account of how Othin obtained the runes; 141 is erroneously inserted from some version of the magic mead story (cf. stanzas 104-110); and stanzas 143, 144, 145, and 146 are from miscellaneous sources, all, however, dealing with the general subject of runes. With stanza 147 a clearly continuous passage begins once more. ~<The windy tree~>: the ash Yggdrasil (literally \"the Horse of Othin,\" so called be cause of this story), on which Othin, in order to win the magic runes, hanged himself as an offering to himself, and wounded himself with his own spear. Lines 5 and 6 have presumably been borrowed from ~<Svipdagsmol~>, 30.]", -- had to replace "ü" with "ue"
 
-					"",
+					"140. None made me happy | with loaf or horn,\nAnd there below I looked;\nI took up the runes, | shrieking I took them,\nAnd forthwith back I fell.\n\n141. Nine mighty songs | I got from the son\nOf Bolthorn, Bestla's father;\nAnd a drink I got | of the goodly mead\nPoured out from Othroerir.\n\n142. Then began I to thrive, | and wisdom to get,\nI grew and well I was;\nEach word led me on | to another word,\nEach deed to another deed.\n\n143. Runes shalt thou find, | and fateful signs,\nThat the king of singers colored,\nAnd the mighty gods have made;\n\n[141. This stanza, interrupting as it does the account of Othin's winning the runes, appears to be an interpolation. The meaning of the stanza is most obscure. Bolthorn was Othin's grandfather, and Bestla his mother. We do not know the name of the uncle here mentioned, but it has been suggested that this son of Bolthorn was Mimir (cf. ~<Voluspo~>, 27 and note, and 47 and note). In any case, the nine magic songs which he learned from his uncle seem to have enabled him to win the magic mead (cf. stanzas 104-110). Concerning ~<Othroerir~>, here used as the name of the vessel containing the mead, cf. stanza 107 and note.\n\n143. This and the following stanza belong together, and in many editions appear as a single stanza. They presumably come from some lost poem on the authorship of the runes. Lines 2 and 3 follow line 4 in the manuscript; the transposition was suggested by Bugge. ~<The~> ~<king~> ~<of~> ~<singers~>: Othin. The magic signs (runes) were commonly carved in wood, then colored red.]", -- had to replace "ö"s with "oe"
 
-					"",
+					"Full strong the signs, | full mighty the signs\nThat the ruler of gods doth write.\n\n144. Othin for the gods, | Dain for the elves,\nAnd Dvalin for the dwarfs,\nAlsvith for giants | and all mankind,\nAnd some myself I wrote.\n\n145. Knowest how one shall write, | knowest how one shall rede?\nKnowest how one shall tint, | knowest how one makes trial?\nKnowest how one shall ask, | knowest how one shall offer?\nKnowest how one shall send, | knowest how one shall sacrifice?\n\n[144. ~<Dain~> and ~<Dvalin~>: dwarfs; cf. ~<Voluspo~>, 14, and note. Dain, however, may here be one of the elves rather than the dwarf of that name. The two names also appear together in ~<Grimnismol~>, 33, where they are applied to two of the four harts that nibble at the topmost twigs of Yggdrasil. ~<Alsvith~> (\"the All Wise\") appears nowhere else as a giant's name. ~<Myself~>: Othin. We have no further information concerning the list of those who wrote the runes for the various races, and these four lines seem like a confusion of names in the rather hazy mind of some reciter.\n\n145. This Malahattr stanza appears to be a regular religious formula, concerned less with the runes which one \"writes\" and \"tints\" (cf. stanza 79) than with the prayers which one \"asks\" and the sacrifices which one \"offers\" and \"sends.\" Its origin is wholly uncertain, but it is clearly an interpolation here. In the manuscript the phrase \"knowest?\" is abbreviated after the first line.]",
 
-					"",
+					"146. Better no prayer | than too big an offering,\nBy thy getting measure thy gift;\nBetter is none | than too big a sacrifice,\n. . . . . . . . . .\nSo Thund of old wrote | ere man's race began,\nWhere he rose on high | when home he came.\n\n~<* * *~>\n\n147. The songs I know | that king's wives know not,\nNor men that are sons of men;\nThe first is called help, | and help it can bring thee\nIn sorrow and pain and sickness.\n\n148. A second I know, | that men shall need\nWho leechcraft long to use;\n. . . . . . . . . .\n. . . . . . . . . .\n\n[146. This stanza as translated here follows the manuscript reading, except in assuming a gap between lines 3 and 5. In Vigfusson and Powell's ~<Corpus~> ~<Poeticum~> ~<Boreale~> the first three lines have somehow been expanded into eight. The last two lines are almost certainly misplaced; Bugge suggests that they belong at the end of stanza 144. ~<Thund~>: another name for Othin. ~<When~> ~<home~> ~<he~> ~<came~>: presumably after obtaining the runes as described in stanzas 139 and 140.\n\n147. With this stanza begins the ~<Ljothatal~>, or list of charms. The magic songs themselves are not given, but in each case the peculiar application of the charm is explained. The passage, which is certainly approximately complete as far as it goes, runs to the end of the poem. In the manuscript and in most editions line 4 falls into two half-lines, running:\n\n\"In sickness and pain | and every sorrow.\"\n]",
 
-					"",
+					"149. A third I know, | if great is my need\nOf fetters to hold my foe;\nBlunt do I make | mine enemy's blade,\nNor bites his sword or staff.\n\n150. A fourth I know, | if men shall fasten\nBonds on my bended legs;\nSo great is the charm | that forth I may go,\nThe fetters spring from my feet,\nBroken the bonds from my hands.\n\n151. A fifth I know, | if I see from afar\nAn arrow fly 'gainst the folk;\nIt flies not so swift | that I stop it not,\nIf ever my eyes behold it.\n\n152. A sixth I know, | if harm one seeks\nWith a sapling's roots to send me;\nThe hero himself | who wreaks his hate\nShall taste the ill ere I.\n\n153. A seventh I know, | if I see in flames\nThe hall o'er my comrades' heads;\nIt burns not so wide | that I will not quench it,\nI know that song to sing.\n\n[148. ~<Second~>, etc., appear in the manuscript as Roman numerals. The manuscript indicates no gap after line 2.\n\n152. The sending of a root with runes written thereon was an excellent way of causing death. So died the Icelandic hero Grettir the Strong.]",
 
-					"",
+					"154. An eighth I know, | that is to all\nOf greatest good to learn;\nWhen hatred grows | among heroes' sons,\nI soon can set it right.\n\n155. A ninth I know, | if need there comes\nTo shelter my ship on the flood;\nThe wind I calm | upon the waves,\nAnd the sea I put to sleep.\n\n156. A tenth I know, | what time I see\nHouse-riders flying on high;\nSo can I work | that wildly they go,\nShowing their true shapes,\nHence to their own homes.\n\n157. An eleventh I know, | if needs I must lead\nTo the fight my long-loved friends;\nI sing in the shields, | and in strength they go\nWhole to the field of fight,\nWhole from the field of fight,\nAnd whole they come thence home.\n\n158. A twelfth I know, | if high on a tree\nI see a hanged man swing;\n\n[156. ~<House-riders~>: witches, who ride by night on the roofs of houses, generally in the form of wild beasts. Possibly one of the last two lines is spurious.\n\n157. The last line looks like an unwarranted addition, and line 4 may likewise be spurious.\n\n158. Lines 4-5 are probably expanded from a single line.]",
 
-					"",
+					"So do I write | and color the runes\nThat forth he fares,\nAnd to me talks.\n\n159. A thirteenth I know, | if a thane full young\nWith water I sprinkle well;\nHe shall not fall, | though he fares mid the host,\nNor sink beneath the swords.\n\n160. A fourteenth I know, | if fain I would name\nTo men the mighty gods;\nAll know I well | of the gods and elves,\nFew be the fools know this.\n\n161. A fifteenth I know, | that before the doors\nOf Delling sang Thjothroerir the dwarf;\nMight he sang for the gods, | and glory for elves,\nAnd wisdom for Hroptatyr wise.\n\n162. A sixteenth I know, | if I seek delight\nTo win from a maiden wise;\nThe mind I turn | of the white-armed maid,\nAnd thus change all her thoughts.\n\n[159. The sprinkling of a child with water was an established custom long before Christianity brought its conception of baptism.\n\n161. This stanza, according to Muellenhoff, was the original conclusion of the poem, the phrase \"a fifteenth\" being inserted only after stanzas 162-165 had crept in. ~<Delling~>: a seldom mentioned god who married Not (Night). Their son was Dag (Day). ~<Thjothroerir~>: not mentioned elsewhere. ~<Hroptatyr~>: Othin.]", -- had to replace "ö"s with "oe"s and "ü" with "ue"
 
+					"163. A seventeenth I know, | so that seldom shall go\nA maiden young from me;\n. . . . . . . . . .\n. . . . . . . . . .\n\n164. Long these songs | thou shalt, Loddfafnir,\nSeek in vain to sing;\nYet good it were | if thou mightest get them,\nWell, if thou wouldst them learn,\nHelp, if thou hadst them.\n\n165. An eighteenth I know, | that ne'er will I tell\nTo maiden or wife of man,--\nThe best is what none | but one's self doth know,\nSo comes the end of the songs,--\nSave only to her | in whose arms I lie,\nOr who else my sister is.\n\n[163. Some editors have combined these two lines with stanza 164. Others have assumed that the gap follows the first half-line, making \"so that-from me\" the end of the stanza.\n\n164. This stanza is almost certainly an interpolation, and seems to have been introduced after the list of charms and the ~<Loddfafnismol~> (stanzas 111-138) were combined in a single poem, for there is no other apparent excuse for the reference to Loddfafnir at this point. The words \"if thou mightest get them\" are a conjectural emendation.\n\n165. This stanza is almost totally obscure. The third and fourth lines look like interpolations.]"
+				}
+			},
+			Grimnismol = {
+				Title = "Grimnismol",
+				Introduction = false,
+				Index = 6,
+				Text = {
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
 					"",
-
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
 					""
 				}
 			},

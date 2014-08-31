@@ -277,21 +277,12 @@ DefineVariables(
 	"Traits", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"TraitResilient", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true},
-	"Name",
-	"Ident",
-	"Player",
-	"PosX",
-	"PosY",
 	"Level", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"BasePoints", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 --	"Points",
-	"Xp",
 	"XpRequired", {Max = 43500, Value = 200, Increase = 0, Enable = true},
 	"LevelUp", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"AttackRange",
-	"RegenerationRate",
-	"ResourcesHeld",
 	"Variation", {Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
@@ -300,7 +291,6 @@ DefineVariables(
 	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
-	"CriticalStrikeChance", {Max = 100, Value = 0, Increase = 0, Enable = true},
 	"AxeMastery", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"CriticalStrike", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"AxeOfPerun", {Max = 2, Value = 0, Increase = 0, Enable = true} -- 0 = not owned, 1 = owned, 2 = equipped
@@ -510,7 +500,7 @@ function StandardTriggers()
 				end
 
 				-- change 96x96 neutral building ownership depending on nearby player units
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mercenary-camp" or GetUnitVariable(uncount[unit1], "Ident") == "unit-human-lumber-mill") then
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Capturable")) then
 					local mercenary_camp_player = 15
 					for i=0,14 do
 						if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
@@ -522,7 +512,7 @@ function StandardTriggers()
 						end
 					end
 					if (mercenary_camp_player < 15) then
-						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), mercenary_camp_player)
+						ChangeUnitOwner(uncount[unit1], mercenary_camp_player)
 					end
 				end
 				
@@ -671,13 +661,6 @@ function StandardTriggers()
 					end
 				end
 
-				-- fixes temporary ownership transferrences due to the gold sack code
-				if (GetUnitVariable(uncount[unit1], "Player") ~= 15 and (GetUnitBoolFlag(uncount[unit1], "Decoration") == true or GetUnitVariable(uncount[unit1], "Ident") == "unit-potion-of-healing" or GetUnitVariable(uncount[unit1], "Ident") == "unit-cheese" or GetUnitVariable(uncount[unit1], "Ident") == "unit-carrots")) then
-					if (GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) <= 1) then
-						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), 15)
-					end
-				end
-
 				-- gives gold if a unit is near a gold chest
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
 					if (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 2) then
@@ -685,7 +668,7 @@ function StandardTriggers()
 						if (people_quantity > 0) then
 							for i=0,14 do
 								if (GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1}) > 0) then
-									ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), i)
+									ChangeUnitOwner(uncount[unit1], i)
 								end
 							end
 							local nearby_uncount = 0
@@ -722,7 +705,7 @@ function StandardTriggers()
 							end
 						end
 					elseif (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 1) then
-						ChangeUnitsOwner({GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "Player"), 15)
+						ChangeUnitOwner(uncount[unit1], 15)
 					end
 				end
 			end
@@ -742,11 +725,11 @@ function StandardTriggers()
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary") then
-					unit = CreateUnit("unit-surghan-mercenary", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-surghan-mercenary", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-surghan-mercenary", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					DefineAllow("unit-surghan-mercenary", "FFFFFFFFFFFFFFFF")
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") then
+					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					DefineAllow("unit-surghan-mercenary-steelclad", "FFFFFFFFFFFFFFFF")
 					return false
 				end
 			end
@@ -1042,6 +1025,10 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 	if (unit ~= nil) then
 		while (level_number > 0) do
 			SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
+			if (GetUnitVariable(unit, "Xp", "Max") < GetUnitVariable(unit, "XpRequired")) then
+				SetUnitVariable(unit, "Xp", GetUnitVariable(unit, "XpRequired"), "Max")
+				SetUnitVariable(unit, "Xp", GetUnitVariable(unit, "Xp", "Max"))
+			end
 			SetUnitVariable(unit, "XpRequired", GetUnitVariable(unit, "XpRequired") + (100 * (GetUnitVariable(unit, "Level") + 1)))
 			SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + 25 + (5 * (GetUnitVariable(unit, "Level") + 1)))
 			if (advancement) then
@@ -1449,7 +1436,6 @@ Load("scripts/commands.lua")
 Load("scripts/cheats.lua")
 Load("scripts/map_generation.lua")
 Load("scripts/quests.lua")
-Load("scripts/worlds.lua")
 Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 

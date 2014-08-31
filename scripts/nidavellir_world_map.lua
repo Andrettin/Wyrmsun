@@ -335,6 +335,7 @@ Factions = {
 }
 
 GrandStrategyEvents = {
+	--[[
 	StrikeABargain = {
 		Name = "Strike a Bargain?",
 		Description = "The gnomish king Pypo I has arrived with an army behind him near a small border outpost of ours in the Chaincolt Foothills, which is under the charge of a young dwarf named Rugnur.",
@@ -612,6 +613,7 @@ GrandStrategyEvents = {
 			end
 		end}
 	},
+	--]]
 	TheFoundingOfKnalga = {
 		Name = "The Founding of Knalga",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Knalga!",

@@ -42,7 +42,7 @@ local upgrades = {
 		{   200,   300,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-shield-2", "Thrymgjol Shield", "icon-dwarven-shield-3", "iron-shield",
 		"As shield-making techniques improved, the creation of thrymgjol shields became possible, further enhancing the degree of protection available for the dwarven soldiery. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads and Thanes.",
-		"The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are described in the ~<Svipdagsmol~> of Norse mythology.",
+		"The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology.",
 		{   250,   900,   500,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-1", "Sharp Throwing Axe", "icon-dwarven-throwing-axe-2", "ranged-projectiles-1",
 		"As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders.",

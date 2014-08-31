@@ -45,6 +45,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Goblin Lumber Mill (graphics by Leo).
 - Added Goblin Fugla Forge (graphics by Jinn).
 - Renamed the Blacksmith to "Smith".
+- Fixed issue which caused workers to be converted along with the neutral human lumber mill.
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".
@@ -54,6 +55,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Heroes are no longer hireable.
 - Added special graphics for Rugnur (axefighter) (graphics by b_o).
 - Greebo's icon and UI image have been updated (by b_o).
+- Heroes now begin scenarios with the experience necessary to be at the level they are on (previously they always began with 0 experience).
 
 * Items
 - When items are used, now they display a message instead of a dialogue.

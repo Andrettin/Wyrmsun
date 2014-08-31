@@ -133,8 +133,9 @@ function RunTechTreeMenu(civilization_number)
 		return b
 	end
 
+	local playercolor
 	if (civilization == "dwarf") then
-		local playercolor = "red"
+		playercolor = "red"
 		addTechItemIcon("unit-dwarven-miner", menu, "dwarf/icons/miner",
 			GetUnitTypeData("unit-dwarven-miner", "Description"),
 			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 1), playercolor)

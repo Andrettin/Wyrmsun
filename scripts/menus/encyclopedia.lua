@@ -38,6 +38,7 @@ end
 function RunEncyclopediaMenu()
 
 	Load("scripts/texts.lua")
+	Load("scripts/worlds.lua")
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -74,7 +75,7 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
-		function() Texts = nil; menu:stop(); end)
+		function() Texts = nil; Worlds = nil; menu:stop(); end)
 
 	menu:run()
 end
@@ -284,13 +285,24 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	local title = encyclopedia_entry_menu:addLabel("~<" .. Texts[text_key].Title .. "~>", offx + 320, offy + 104 + 36*-4, nil, true)
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 0
+	else
+		height_offset = 2
+	end
+	local title = encyclopedia_entry_menu:addLabel("~<" .. Texts[text_key].Title .. "~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	title:setAlignment(MultiLineLabel.CENTER)
 
 	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
+	if (Video.Height >= 600) then
+		l:setFont(Fonts["game"])
+	else
+		l:setFont(Fonts["small"])
+	end
 	l:setSize(Video.Width - 64, Video.Height - 96)
 	l:setLineWidth(Video.Width - 64)
-	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*-3)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*(-3 + height_offset))
 	
 	local current_chapter
 	local current_chapter_number
@@ -339,7 +351,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 
 	local chapter_buttons = {}
 	
-	encyclopedia_entry_menu:addFullButton("Pre~!vious Page", "v", offx + 208 - 224 - 2, offy + 104 + (36 * 10),
+	encyclopedia_entry_menu:addFullButton("Pre~!vious Page", "v", offx + 208 - 224 - 2, offy + 104 + (36 * (10 - height_offset)),
 		function()
 			if (current_chapter == "Cover") then
 			elseif (current_chapter == "Contents") then
@@ -391,7 +403,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 					local chapter_y = -3
 					for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
 						if (Texts[text_key].Chapters[chapter_key].Index > 0) then
-							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * (chapter_y + height_offset)),
 								function()
 									for i=1,table.getn(chapter_buttons) do
 										encyclopedia_entry_menu:remove(chapter_buttons[i])
@@ -436,7 +448,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 			end
 		end
 	)
-	encyclopedia_entry_menu:addFullButton("~!Next Page", "n", offx + 208 + 224 + 2, offy + 104 + (36 * 10),
+	encyclopedia_entry_menu:addFullButton("~!Next Page", "n", offx + 208 + 224 + 2, offy + 104 + (36 * (10 - height_offset)),
 		function()
 			if (current_chapter == "Cover") then
 				current_chapter = "Contents"
@@ -450,7 +462,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 					local chapter_y = -3
 					for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
 						if (Texts[text_key].Chapters[chapter_key].Index > 0) then
-							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * (chapter_y + height_offset)),
 								function()
 									for i=1,table.getn(chapter_buttons) do
 										encyclopedia_entry_menu:remove(chapter_buttons[i])
@@ -540,7 +552,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 		end
 	)
 
-	encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 10),
+	encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * (10 - height_offset)),
 		function() encyclopedia_entry_menu:stop(); end)
 
 	encyclopedia_entry_menu:run()

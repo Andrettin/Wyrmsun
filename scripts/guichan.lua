@@ -727,23 +727,23 @@ end
 
 function GetWorldMapTile(x, y)
 	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		return WorldMapTiles[y+1][x+1]
+		return string.sub(WorldMapTiles[y+1][x+1], 1, 4)
 	elseif (x < 0 and y >= 0 and y < table.getn(WorldMapTiles)) then
-		return WorldMapTiles[y+1][0+1]
+		return string.sub(WorldMapTiles[y+1][0+1], 1, 4)
 	elseif (x >= table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		return WorldMapTiles[y+1][table.getn(WorldMapTiles[1])]
+		return string.sub(WorldMapTiles[y+1][table.getn(WorldMapTiles[1])], 1, 4)
 	elseif (x >= 0 and x < table.getn(WorldMapTiles[1]) and y < 0) then
-		return WorldMapTiles[0+1][x+1]
+		return string.sub(WorldMapTiles[0+1][x+1], 1, 4)
 	elseif (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= table.getn(WorldMapTiles)) then
-		return WorldMapTiles[table.getn(WorldMapTiles)][x+1]
+		return string.sub(WorldMapTiles[table.getn(WorldMapTiles)][x+1], 1, 4)
 	elseif (x < 0 and y < 0) then
-		return WorldMapTiles[0+1][0+1]
+		return string.sub(WorldMapTiles[0+1][0+1], 1, 4)
 	elseif (x >= table.getn(WorldMapTiles[1]) and y < 0) then
-		return WorldMapTiles[0+1][table.getn(WorldMapTiles[1])]
+		return string.sub(WorldMapTiles[0+1][table.getn(WorldMapTiles[1])], 1, 4)
 	elseif (x < 0 and y >= table.getn(WorldMapTiles)) then
-		return WorldMapTiles[table.getn(WorldMapTiles)][0+1]
+		return string.sub(WorldMapTiles[table.getn(WorldMapTiles)][0+1], 1, 4)
 	elseif (x >= table.getn(WorldMapTiles[1]) and y >= table.getn(WorldMapTiles)) then
-		return WorldMapTiles[table.getn(WorldMapTiles)][table.getn(WorldMapTiles[1])]
+		return string.sub(WorldMapTiles[table.getn(WorldMapTiles)][table.getn(WorldMapTiles[1])], 1, 4)
 	else
 		return ""
 	end
