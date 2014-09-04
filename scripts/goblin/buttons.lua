@@ -113,3 +113,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-war-machine",
   Action = "train-unit", Value = "unit-goblin-war-machine",
   Key = "m", Hint = "Build War ~!Machine",
   ForUnit = {"unit-goblin-mess-hall"} } )
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-worker",
+  Action = "train-unit", Value = "unit-goblin-glider",
+  Key = "g", Hint = "Build ~!Glider",
+  ForUnit = {"unit-goblin-mess-hall"} } )

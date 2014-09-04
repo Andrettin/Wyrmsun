@@ -41,5 +41,12 @@ Achievements = {
 		Description = "Forge the Scepter of Fire.",
 		X = 2,
 		Y = 1
+	},
+	RugnursBravery = {
+		Name = "Rugnur's Bravery",
+		Icon = "dwarf/icons/rugnur_older",
+		Description = "Upgrade Rugnur to a Thane.",
+		X = 3,
+		Y = 1
 	}
 }

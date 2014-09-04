@@ -45,11 +45,11 @@ local upgrades = {
 		"The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology.",
 		{   250,   900,   500,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-1", "Sharp Throwing Axe", "icon-dwarven-throwing-axe-2", "ranged-projectiles-1",
-		"As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders.",
+		"As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts, Gryphon Riders and Guard Towers.",
 		"",
 		{   200,   300,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-throwing-axe-2", "Bearded Throwing Axe", "icon-dwarven-throwing-axe-3", "ranged-projectiles-2",
-		"The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders.",
+		"The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts, Gryphon Riders and Guard Towers.",
 		"",
 		{   250,   900,   500,     0,     0,     0,     0}},
 	{"upgrade-dwarven-ballista-bolt-1", "Broadhead Ballista Bolt", "icon-dwarven-ballista-bolt-2", "siege-projectiles-1",
@@ -109,11 +109,11 @@ DefineModifier("upgrade-dwarven-shield-2",
 
 DefineModifier("upgrade-dwarven-throwing-axe-1",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}, {"apply-to", "unit-dwarven-guard-tower"})
 
 DefineModifier("upgrade-dwarven-throwing-axe-2",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}, {"apply-to", "unit-dwarven-guard-tower"})
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
 	{"PiercingDamage", 15},

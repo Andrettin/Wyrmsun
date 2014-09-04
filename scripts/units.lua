@@ -40,10 +40,11 @@ Units = {
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-gnomish-worker", "unit-gnomish-recruit",
 	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smith",
-	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
+	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider",
+	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
-	"unit-gryphon", "unit-wyrm",
+	"unit-slime", "unit-gryphon", "unit-wyrm",
 	"unit-hero-rugnur", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo"
 }
@@ -126,10 +127,6 @@ DefineUnitType("unit-nothing-36", { Name = "Nothing 36",
 	Type = "land",
 	Sounds = {} } )
 
---UnitTypeFiles["unit-critter"] = {
---	swamp = "neutral/units/rat.png"
---}
-
 DefineUnitType("unit-critter", { Name = "Critter",
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
@@ -152,18 +149,19 @@ DefineUnitType("unit-critter", { Name = "Critter",
 	RandomMovementProbability = 5,
 	organic = true,
 	Coward = true,
+	Fauna = true,
 	Variations = {
-	{
-		"variation-id", "dark-gray-fur"
-	},
-	{
-		"variation-id", "light-gray-fur",
-		"file", "neutral/units/rat_light_gray_fur.png"
-	},
-	{
-		"variation-id", "black-fur",
-		"file", "neutral/units/rat_black_fur.png"
-	}
+		{
+			"variation-id", "dark-gray-fur"
+		},
+		{
+			"variation-id", "light-gray-fur",
+			"file", "neutral/units/rat_light_gray_fur.png"
+		},
+		{
+			"variation-id", "black-fur",
+			"file", "neutral/units/rat_black_fur.png"
+		}
 	},
 	Sounds = {
 		"selected", "click",
@@ -195,10 +193,9 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	AirUnit = true,
-	DetectCloak = true,
 	RandomMovementProbability = 1,
 	organic = true,
-	Coward = false,
+	Fauna = true,
 	Variations = {
 		{
 			"variation-id", "brown-feathers"
@@ -243,12 +240,93 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
+	RandomMovementProbability = 1,
+	Fauna = true,
+	Variations = {
+		{
+			"variation-id", "green-scales"
+		},
+		{
+			"variation-id", "blue-scales",
+			"file", "neutral/units/wyrm_blue_scales.png"
+		},
+		{
+			"variation-id", "cyan-scales",
+			"file", "neutral/units/wyrm_cyan_scales.png"
+		},
+		{
+			"variation-id", "purple-scales",
+			"file", "neutral/units/wyrm_purple_scales.png"
+		},
+		{
+			"variation-id", "red-scales",
+			"file", "neutral/units/wyrm_red_scales.png"
+		},
+		{
+			"variation-id", "yellow-scales",
+			"file", "neutral/units/wyrm_yellow_scales.png"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
 --		"help", "critter-help",
 		"dead", "drake-dead" }
+} )
+
+DefineUnitType("unit-slime", { Name = "Slime",
+--	Description = "Slimes are amorphous organic beings. Little is known about their composition, except that they are acidic to the touch.",
+	Image = {"file", "neutral/units/slime_small.png", "size", {32, 32}},
+	Animations = "animations-slime", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 15,
+	DrawLevel = 35,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	Armor = 10,
+	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, PiercingDamage = 2, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	LandUnit = true,
+	RandomMovementProbability = 1,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Variations = {
+		{
+			"variation-id", "green"
+		},
+		{
+			"variation-id", "red",
+			"file", "neutral/units/slime_small_red.png"
+		},
+		{
+			"variation-id", "brown",
+			"file", "neutral/units/slime_small_brown.png"
+		},
+		{
+			"variation-id", "blue",
+			"file", "neutral/units/slime_small_blue.png"
+		},
+		{
+			"variation-id", "teal",
+			"file", "neutral/units/slime_small_teal.png"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "critter-acknowledge",
+--		"ready", "critter-ready",
+--		"help", "critter-help",
+		"dead", "slime-dead" }
 } )
 
 --UnitTypeFiles["unit-gold-mine"] = {
@@ -274,11 +352,10 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuildingRules = {
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-	"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
+		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+		"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+		"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
 	},
-
 	GivesResource = "gold", CanHarvest = true,
 	Sounds = {
 		"selected", "gold-mine-selected",
@@ -305,11 +382,10 @@ DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuildingRules = {
-	{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-	"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-	"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
+		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+		"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+		"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
 	},
-
 	GivesResource = "coal", CanHarvest = true,
 	Sounds = {
 		"selected", "gold-mine-selected",
@@ -361,18 +437,18 @@ DefineUnitType("unit-mushroom", { Name = "Mushroom",
 	VisibleUnderFog = true,
 	NonSolid = true, 
 	Variations = {
-	{
-		"variation-id", "red"
-	},
-	{
-		"variation-id", "orange"
-	},
-	{
-		"variation-id", "green"
-	},
-	{
-		"variation-id", "yellow"
-	}
+		{
+			"variation-id", "red"
+		},
+		{
+			"variation-id", "orange"
+		},
+		{
+			"variation-id", "green"
+		},
+		{
+			"variation-id", "yellow"
+		}
 	},
 	Sounds = {} }
 )
@@ -395,18 +471,18 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 	VisibleUnderFog = true,
 	NonSolid = true, 
 	Variations = {
-	{
-		"variation-id", "red"
-	},
-	{
-		"variation-id", "orange"
-	},
-	{
-		"variation-id", "green"
-	},
-	{
-		"variation-id", "yellow"
-	}
+		{
+			"variation-id", "red"
+		},
+		{
+			"variation-id", "orange"
+		},
+		{
+			"variation-id", "green"
+		},
+		{
+			"variation-id", "yellow"
+		}
 	},
 	Sounds = {} }
 )
@@ -913,6 +989,7 @@ DefineUnitType("unit-cheese", { Name = "Cheese",
 	NumDirections = 1,	
 	Item = true,
 	HitPointHealing = 3,
+	Food = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-carrots", { Name = "Carrots",
@@ -930,6 +1007,7 @@ DefineUnitType("unit-carrots", { Name = "Carrots",
 	NumDirections = 1,	
 	Item = true, 
 	HitPointHealing = 3,
+	Food = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-gryphon-feather", { Name = "Gryphon Feather",
@@ -1171,7 +1249,7 @@ DefineUnitType("unit-orc-spearthrower", { Name = "Orc Spearthrower",
 DefineUnitType("unit-orc-sea-orc", { Name = "Sea Orc",
 	Class = "marine-infantry",
 	Civilization = "orc",
-	Description = "While often viewed as inferior to their land-loving counterparts, Sea Orcs represent a great leap for all orcs as they have adapted to aquatic environments. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness.",
+	Description = "While often viewed as inferior to their land-loving counterparts, sea orcs represent a great leap for all orcs as they have adapted to aquatic environments. These orcs use their ships to raid the coasts of the Eelhome Sea. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness.",
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-orc-sea-orc",
 	Costs = {"time", 60, "gold", 600},
@@ -1245,6 +1323,7 @@ GrandStrategyHeroes = {}
 Load("scripts/dwarf/units.lua")
 Load("scripts/gnome/units.lua")
 Load("scripts/goblin/units.lua")
+Load("scripts/kobold/units.lua")
 
 DefineUnitType("unit-human-wall", { Name = "Wall",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
@@ -1273,16 +1352,10 @@ DefineUnitType("unit-human-wall", { Name = "Wall",
 -- Hardcoded unit-types, moved from Stratagus to games
 UnitTypeHumanWall = UnitTypeByIdent("unit-human-wall");
 
-
-
-
-
-
 GrandStrategyUnits["Gryphon"] = {
 	Name = GetUnitTypeName("unit-gryphon") .. "s",
 	UnitType = "unit-gryphon",
 	Icon = "neutral/icons/gryphon.png",
-	Civilization = "neutral",
 	Type = "Predator",
 	Costs = {
 	},

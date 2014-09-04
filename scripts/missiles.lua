@@ -50,6 +50,12 @@ DefineMissileType("missile-catapult-flaming-rock",
   DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
   ImpactMissile = "missile-impact", SplashFactor = 4 } )
   
+DefineMissileType("missile-slime-glob",
+  { File = "missiles/slime_glob.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
+  ImpactSound = "squishy-hit",
+  DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
+  ImpactMissile = "missile-impact-slime", SplashFactor = 4 } )
+  
 DefineMissileType("missile-thrown-goblin",
    { File = "missiles/gobtoss.png", Size = {32, 32}, Frames = 40, NumDirections = 9,
    ImpactSound = "explosion",
@@ -59,6 +65,10 @@ DefineMissileType("missile-thrown-goblin",
 DefineMissileType("missile-impact",
   { File = "missiles/siege_projectile_impact.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
   DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
+
+DefineMissileType("missile-impact-slime",
+  { File = "missiles/siege_projectile_impact_slime.png", Size = {32, 32}, Frames = 3, NumDirections = 1,
+  DrawLevel = 50, Class = "missile-class-stay", Sleep = 4, Speed = 16, Range = 1 } )
 
 DefineMissileType("missile-small-fire",
   { File = "missiles/small_fire.png", Size = {32, 48}, Frames = 10, NumDirections = 1,

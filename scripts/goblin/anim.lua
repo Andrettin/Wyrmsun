@@ -150,6 +150,25 @@ DefineAnimations("animations-goblin-war-machine", {
 })
 
 --
+-- Goblin Glider
+--
+ 
+DefineAnimations("animations-goblin-glider", {
+   Still = {"frame 0", "wait 4", "frame 5", "wait 4",},
+   Move = {"unbreakable begin", "frame 0", "move 4", "wait 2", "frame 0",  
+	"move 3", "wait 1",
+	"frame 0", "move 3", "wait 1", "frame 0", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 1", "frame 5", "move 4", "wait 2",
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 0", "move 3", "wait 1", "frame 0", "move 3", "unbreakable end",  
+	"wait 1",},
+   Attack = {"unbreakable begin", "frame 0", "unbreakable end", "wait 1",},
+   Death = {"unbreakable begin", "frame 10", "wait 3", "frame 15", "wait 5",
+	"frame 20", "wait 5",  "unbreakable end", "wait 1",}
+})
+ 
+
+--
 -- Goblin Banner
 --
 

@@ -144,7 +144,7 @@ SetDamageMissile("missile-hit")
 --  Uncomment next, to reveal the complete map.
 --RevealMap()
 
-SetFogOfWarGraphics("tilesets/swamp/terrain/fogofwar.png")
+SetFogOfWarGraphics("tilesets/fogofwar.png")
 
 -------------------------------------------------------------------------------
 
@@ -655,6 +655,8 @@ function StandardTriggers()
 								end
 								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
 								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
+							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna")) then -- make animals eat food items
+								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 							end
 							break
 						end
@@ -676,29 +678,15 @@ function StandardTriggers()
 							for unit2 = 1,table.getn(nearby_uncount) do 
 								if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
 									if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest") then
-										Event(
-											"",
-											"You found 500 gold in the chest.",
-											GetUnitVariable(nearby_uncount[unit2], "Player"),
-											{"~!OK"},
-											{function(s)
-												SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
-												PlaySound("gold-coins")
-												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
-											end}
-										)
+										AddMessage("You found 500 gold in the chest.")
+										SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+										PlaySound("gold-coins")
+										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 500)
 									elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-and-gems-chest") then
-										Event(
-											"",
-											"You found 500 gold in the chest, plus gems worth 250 gold.",
-											GetUnitVariable(nearby_uncount[unit2], "Player"),
-											{"~!OK"},
-											{function(s)
-												SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
-												PlaySound("gold-coins")
-												SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 750)
-											end}
-										)
+										AddMessage("You found 500 gold in the chest, plus gems worth 250 gold.")
+										SetUnitVariable(uncount[unit1], "GraphicsVariation", 1)
+										PlaySound("gold-coins")
+										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 750)
 									end
        									break
 								end

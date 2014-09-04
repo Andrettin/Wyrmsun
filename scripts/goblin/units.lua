@@ -1,30 +1,30 @@
---			 _________ __								 __
---			/	 _____//	|_____________ _/	|______		 ____	__ __	______
---			\_____	\\	 __\_	__ \__	\\	 __\__	\	 / ___\|	|	\/	___/
---			/				\|	|	|	| \// __ \|	|	/ __ \_/ /_/	>	|	/\___ \
---		 /_______	/|__|	|__|	(____	/__| (____	/\___	/|____//____	>
---						 \/									\/					\//_____/						\/
---	______________________													 ______________________
---												T H E	 W A R	 B E G I N S
---				 Stratagus - A free fantasy real time strategy game engine
+--       _________ __                 __
+--      /   _____//  |_____________ _/  |______     ____  __ __  ______
+--      \_____  \\   __\_  __ \__  \\   __\__  \   / ___\|  |  \/  ___/
+--      /        \|  |  |  | \// __ \|  |  / __ \_/ /_/  >  |  /\___ \
+--     /_______  /|__|  |__|  (____  /__| (____  /\___  /|____//____  >
+--             \/                  \/          \//_____/            \/
+--  ______________________                           ______________________
+--                        T H E   W A R   B E G I N S
+--         Stratagus - A free fantasy real time strategy game engine
 --
---			units.ccl - Define the goblin unit-types.
+--      units.ccl - Define the goblin unit-types.
 --
---			(c) Copyright 2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2014 by Andre Novellino Gouvêa
 --
---			This program is free software; you can redistribute it and/or modify
---			it under the terms of the GNU General Public License as published by
---			the Free Software Foundation; either version 2 of the License, or
---			(at your option) any later version.
+--      This program is free software; you can redistribute it and/or modify
+--      it under the terms of the GNU General Public License as published by
+--      the Free Software Foundation; either version 2 of the License, or
+--      (at your option) any later version.
 --
---			This program is distributed in the hope that it will be useful,
---			but WITHOUT ANY WARRANTY; without even the implied warranty of
---			MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
---			GNU General Public License for more details.
+--      This program is distributed in the hope that it will be useful,
+--      but WITHOUT ANY WARRANTY; without even the implied warranty of
+--      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--      GNU General Public License for more details.
 --
---			You should have received a copy of the GNU General Public License
---			along with this program; if not, write to the Free Software
---			Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA	02111-1307	USA
+--      You should have received a copy of the GNU General Public License
+--      along with this program; if not, write to the Free Software
+--      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
 --=============================================================================
@@ -192,6 +192,39 @@ DefineUnitType("unit-goblin-war-machine", { Name = "War Machine",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "explosion"
 } } )
+
+DefineUnitType("unit-goblin-glider", { Name = "Glider",
+	Class = "glider",
+	Civilization = "goblin",
+	Image = {"file", "goblin/units/glider.png", "size", {100, 100}},
+	Animations = "animations-goblin-glider", Icon = "icon-goblin-worker",
+	Costs = {"time", 65, "gold", 500, "lumber", 100},
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 14,
+	HitPoints = 20,
+	DrawLevel = 60,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 9, ComputerReactionRange = 19, PersonReactionRange = 15,
+	Armor = 2, Missile = "missile-none",
+	Priority = 40,
+	Points = 40,
+	Demand = 1,
+	Type = "fly",
+--	Corpse = "unit-goblin-dead-body",
+--	ShadowFly = {Value = 1, Enable = true}, -- deactivated the shadow because it was appearing on top of the unit
+	RightMouseAction = "move",
+	AirUnit = true,
+	DetectCloak = true,
+	Coward = true,
+	SelectableByRectangle = true,
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+--		"ready", "goblin-archer-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-goblin-voices-dead"}
+} )
+ 
 
 DefineUnitType("unit-goblin-town-hall", { Name = "Town Hall",
 	Class = "town-hall",

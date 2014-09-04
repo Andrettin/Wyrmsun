@@ -231,3 +231,5 @@ NorthernWastelandsEnemy(40, 53) --NorthernWastelandsEnemy(42, 54)
 NorthernWastelandsEnemy(42, 22)
 
 PlayMusic("music/wanderer.ogg")
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

@@ -55,7 +55,7 @@ if (OldCreateUnit == nil) then
 	OldCreateUnit = CreateUnit
 
 	local t = {
---		{"unit-critter", "unit-gryphon"}
+--		{"unit-critter", "unit-slime"}
 	}
 
 	ForestEquivalent = {}
@@ -81,11 +81,11 @@ function ConvertUnitType(unittype, civilization, terrain)
 		end
 	end
 
---	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then
---		equiv = ForestEquivalent[unittype]
---	elseif (terrain == "swamp" and SwampEquivalent[unittype] ~= nil) then
---		equiv = SwampEquivalent[unittype]
---	end
+	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then
+		equiv = ForestEquivalent[unittype]
+	elseif (terrain == "swamp" and SwampEquivalent[unittype] ~= nil) then
+		equiv = SwampEquivalent[unittype]
+	end
 
 	if (equiv ~= nil) then
 		return equiv

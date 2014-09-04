@@ -32,3 +32,6 @@ DefineDependency("unit-goblin-archer",
 
 DefineDependency("unit-goblin-war-machine",
 	{"unit-goblin-smith", "unit-goblin-lumber-mill"})
+
+DefineDependency("unit-goblin-glider",
+	{"unit-goblin-lumber-mill"})

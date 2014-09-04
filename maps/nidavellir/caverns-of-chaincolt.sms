@@ -217,3 +217,5 @@ if (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-smith", 0, {38, 21})
 	end
 end
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

@@ -172,3 +172,5 @@ UI.Resources[6].IconX = 176 + 150
 UI.Resources[6].IconY = 0
 UI.Resources[6].TextX = 176 + 150 + 18
 UI.Resources[6].TextY = 1
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

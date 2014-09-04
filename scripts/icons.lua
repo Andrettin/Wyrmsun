@@ -237,6 +237,20 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-gryphon-rider-brown-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/gryphon_rider_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-gryphon-rider-red-hair",
+	Size = {46, 38},
+	Frame = 0,
+	File = "dwarf/icons/gryphon_rider_red_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-town-hall",
 	Size = {46, 38},
 	Frame = 0,

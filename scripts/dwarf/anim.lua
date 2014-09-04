@@ -146,10 +146,10 @@ local ScoutDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait
 DefineAnimations("animations-dwarven-scout", {
   Still = UnitStill,
   Move = {"unbreakable begin",
-	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
 	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
 	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-	"frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+	"frame 0", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
 	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
 	"frame 20", "move 3", "wait 1", "frame 0", "move 2",
 	"unbreakable end", "wait 1",},

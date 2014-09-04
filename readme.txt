@@ -46,6 +46,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Goblin Fugla Forge (graphics by Jinn).
 - Renamed the Blacksmith to "Smith".
 - Fixed issue which caused workers to be converted along with the neutral human lumber mill.
+- The dwarven guard tower now benefits from throwing axe upgrades (the tower's initial damage has been reduced accordingly, so that the damage when fully upgraded is the same as the normal damage was previously).
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".
@@ -88,6 +89,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed bug which caused the "Units" button in the editor to sometimes not display the correct player color.
 - Added "Encyclopedia" screen (accessible from the main menu), where one can read more about the units, buildings and technologies represented in the game.
 - Removed many messages which were a bit too superfluous (i.e. a message whenever a unit were trained).
+- The fog of war can now have graphic variations.
 
 * Modding
 - Tileset tile size now can properly be changed.
@@ -105,6 +107,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added wood pile object, replaces trees as the source of lumber in cave and dungeon maps (graphics by Jinn).
 - The wyrm skeleton now has a non-horned variation (graphics by b_o).
 - Decorations no longer show as points on the minimap.
+- Added new fog of war graphics (by Jinn).
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.
@@ -125,6 +128,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Units that can upgrade to a better unit type no longer can acquire upgrade abilities (i.e. steelclads no longer can acquire "axe mastery"; instead, they must first upgrade to a thane, and in their next level up they will be able to learn "axe mastery").
 - Added gray-feathered variation for the gryphon (graphics by b_o).
 - Added two new graphic variations for the gryphon rider (graphics by b_o).
+- Added Wyrm (unit graphics by b_o and icon by Leo).
+- The dwarven Scout now moves slightly faster.
+- Animals now eat food items.
+- Added Slime, which functions as fauna for swamp and cave maps (graphics by b_o).
+- Red-haired dwarven axefighter, steelclad and thane graphics updated (by b_o).
+- Added goblin glider (graphics by b_o).
 
 -----------------------------------------------------------------------
 - 0.1.5c

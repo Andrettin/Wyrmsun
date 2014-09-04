@@ -84,9 +84,46 @@ DefineAnimations("animations-rat", {
   Move = RatMove,
   Attack = {"unbreakable begin",
 	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-	"frame 40", "attack", "sound axe-attack", "wait 5", "frame 0", "wait 10", "frame 0",
+	"frame 40", "attack", "sound bite-attack", "wait 5", "frame 0", "wait 10", "frame 0",
 	"unbreakable end", "wait 1",},
   Death = RatDeath,
+})
+
+--
+-- Slime
+--
+
+local SlimeStill = {
+	"exact-frame 0", "wait 6", "exact-frame 1", "wait 6", "exact-frame 2", "wait 6",
+}
+local SlimeMove = {"unbreakable begin",
+	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 1", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 2", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2",
+	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 1", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 2", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 1",
+	"exact-frame 0", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 1", "move 1", "wait 2",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 2", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 1",
+	"unbreakable end", "wait 1",}
+local SlimeDeath = {"unbreakable begin",
+	"exact-frame 3", "wait 5", "exact-frame 4", "wait 5", "exact-frame 5", "wait 5",
+	"unbreakable end", "wait 1",}
+
+DefineAnimations("animations-slime", {
+  Still = SlimeStill,
+  Move = SlimeMove,
+  Death = SlimeDeath,
 })
 
 --
@@ -126,7 +163,7 @@ DefineAnimations("animations-gryphon", {
 
 DefineAnimations("animations-wyrm", {
 	Still = {"frame 0", "wait 4", "random-goto 1 idle_animation", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
-		"label idle_animation","frame 0", "wait 6", "frame 95", "wait 6", "frame 100", "wait 6", "frame 95", "wait 6", "frame 0", "wait 6",
+		"label idle_animation","frame 0", "wait 6", "frame 105", "wait 6", "frame 110", "wait 6", "frame 105", "wait 6", "frame 0", "wait 6",
 		"label no-rotate", "wait 1",},
 	Move = {"unbreakable begin",
 		"frame 0", "move 4", "wait 3",
@@ -147,9 +184,11 @@ DefineAnimations("animations-wyrm", {
 		"frame 70", "wait 5",
 		"frame 75", "wait 5",
 		"frame 80", "wait 5",
-		"frame 85", "wait 10",
-		"frame 90","wait 70", "unbreakable end", "wait 1",},
- })
+		"frame 85", "wait 5",
+		"frame 90", "wait 10",
+		"frame 95", "wait 70",
+		"frame 100","wait 80", "unbreakable end", "wait 1",},
+})
 
 DefineAnimations("animations-building", {
   Still = BuildingStill,

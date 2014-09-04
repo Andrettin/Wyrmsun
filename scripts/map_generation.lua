@@ -892,12 +892,18 @@ function CreateCritters(critter_number)
 	local RandomY = 0
 	local Count = 0
 	-- create critters
+	local critter_unit_type
+	if (wyrmsun.tileset == "forest") then
+		critter_unit_type = "unit-critter"
+	elseif (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
+		critter_unit_type = "unit-slime"
+	end
 	Count = critter_number
 	while (Count > 0) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
-			unit = CreateUnit("unit-critter", 15, {RandomX, RandomY})
+			unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
 			Count = Count - 1
 		end
 	end
@@ -1137,6 +1143,10 @@ function GenerateRandomMap(width, height, symmetric)
 --	end
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+	if (wyrmsun.tileset == "swamp") then
+		CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
+	end
 
 	CreatePlayers()
 

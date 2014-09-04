@@ -29,7 +29,7 @@
 
 -- For documentation see stratagus/doc/ccl/ccl.html
 
-DefineBoolFlags("isundead", "organic", "hero", "volatile", "Capturable")
+DefineBoolFlags("isundead", "organic", "hero", "volatile", "Capturable", "Food", "Fauna")
 
 --
 --  Speed     : just drawing

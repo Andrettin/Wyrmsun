@@ -303,6 +303,17 @@ function AiFlyingRider()
 end
 
 --
+--  Flying rider of the current race.
+--
+function AiGlider()
+	if (AiGetRace() == "goblin") then
+		return "unit-goblin-glider"
+	else
+		return "unit-goblin-glider"
+	end
+end
+
+--
 --  Watch Tower of the current civilization.
 --
 function AiWatchTower()

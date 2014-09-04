@@ -230,12 +230,15 @@ MakeSound("fist-attack",
 MakeSound("mace-attack",
 	"missiles/mace.wav"
 )
-MakeSound("sword-attack",
-	"missiles/sword.wav"
-)
 MakeSound("spear-attack",
 	{"missiles/spear-1.wav",
 	"missiles/spear-2.wav"}
+)
+MakeSound("squishy-hit",
+	"missiles/squishy_hit.wav"
+)
+MakeSound("sword-attack",
+	"missiles/sword.wav"
 )
 MakeSound("bow", "missiles/bow.wav")
 MakeSound("bow-hit", "missiles/bow_hit.wav")
@@ -274,6 +277,7 @@ MakeSound("gryphon-dead", {
 	"neutral/gryphon/gryphon_death_1.wav",
 	"neutral/gryphon/gryphon_death_2.wav"
 })
+MakeSound("slime-dead", "neutral/squishy_death.wav")
 
 --	Define sounds used by game
 --

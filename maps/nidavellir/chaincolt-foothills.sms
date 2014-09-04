@@ -219,3 +219,5 @@ end
 
 PlayMusic("music/knolls.ogg")
 wyrmsun.playlist = { "music/loyalists.ogg", "music/breaking_the_chains.ogg" }
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

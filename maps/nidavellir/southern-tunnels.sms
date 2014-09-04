@@ -254,3 +254,5 @@ unit = CreateUnit("unit-dwarven-sentry-tower", 3, {51, 48})
 PlayMusic("music/knolls.ogg")
 --wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/revelation.ogg" }
 wyrmsun.playlist = { "music/knalgan_theme.ogg" }
+
+CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
