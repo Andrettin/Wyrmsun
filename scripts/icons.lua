@@ -615,6 +615,20 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-wyrm",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-light-green-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_light_green_scales.png"
+})
+
+DefineIcon({
 	Name = "icon-stairs",
 	Size = {46, 38},
 	Frame = 0,

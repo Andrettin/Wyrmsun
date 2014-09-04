@@ -220,8 +220,9 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
 } )
 
 DefineUnitType("unit-wyrm", { Name = "Wyrm",
+	Description = "These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
-	Animations = "animations-wyrm", Icon = "icon-dwarven-axefighter",
+	Animations = "animations-wyrm", Icon = "icon-wyrm",
 	Costs = {"time", 250, "gold", 2500},
 	Speed = 10,
 	HitPoints = 150,
@@ -239,7 +240,7 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 	CanTargetLand = true,
 	LandUnit = true,
 	organic = true,
-	SelectableByRectangle = true,
+--	SelectableByRectangle = true,
 	RandomMovementProbability = 1,
 	Fauna = true,
 	Variations = {
@@ -252,7 +253,8 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 		},
 		{
 			"variation-id", "cyan-scales",
-			"file", "neutral/units/wyrm_cyan_scales.png"
+			"file", "neutral/units/wyrm_cyan_scales.png",
+			"icon", "icon-wyrm-light-green-scales"
 		},
 		{
 			"variation-id", "purple-scales",
@@ -297,6 +299,7 @@ DefineUnitType("unit-slime", { Name = "Slime",
 --	CanTargetLand = true,
 	LandUnit = true,
 	RandomMovementProbability = 1,
+	NumDirections = 1,
 	organic = true,
 	Coward = true,
 	Fauna = true,

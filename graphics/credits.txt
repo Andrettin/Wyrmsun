@@ -410,6 +410,8 @@ Leo:
 /graphics/goblin/buildings/lumber_mill.png
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
+/graphics/neutral/icons/wyrm.png
+/graphics/neutral/icons/wyrm_light_green_scales.png
 
 Mikodrak:
 /graphics/missiles/big_fire.png (later modified by Jinn)
@@ -433,5 +435,4 @@ StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
 
 Veneteaou:
-/graphics/tilesets/world/terrain/ocean.png
-/graphics/tilesets/world/terrain/scrub_forest_outer.png
+/graphics/tilesets/world/terrain/province_tile_ocean.png
