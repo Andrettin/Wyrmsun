@@ -198,20 +198,8 @@ DefinePlayerColors({
   "fire", {{241, 172, 0}, {222, 80, 22}, {185, 0, 0}, {111, 0, 0}},
   "brown", {{170, 119, 0}, {134, 82, 0}, {98, 47, 0}, {70, 23, 15}},
   "radioactive", {{248, 254, 1}, {154, 204, 5}, {103, 146, 4}, {51, 74, 2}},
-  "grey", {{116, 104, 99}, {97, 85, 80}, {74, 62, 57}, {48, 36, 31}},
+  "gray", {{116, 104, 99}, {97, 85, 80}, {74, 62, 57}, {48, 36, 31}},
 })
-
---DefineHairColorIndex(212, 4)
-
---DefineHairColors({
---  "red", {{208, 0, 0}, {160, 0, 0}, {116, 0, 0}, {92, 0, 0}},
---  "grey", {{124, 140, 148}, {92, 116, 128}, {68, 92, 108}, {48, 72, 88}},
---  "orange", {{248, 140, 20}, {200, 96, 16}, {152, 60, 16}, {108, 32, 12}},
---  "blond", {{228, 204, 40}, {204, 160, 16}, {180, 116, 0}, {124, 84, 8}},
---  "black", {{40, 40, 60}, {28, 28, 44}, {20, 20, 32}, {12, 12, 20}},
---  "brown", {{124, 84, 8}, {96, 56, 0}, {72, 44, 4}, {48, 32, 0}},
---  "blue", {{208, 0, 0}, {160, 0, 0}, {116, 0, 0}, {92, 0, 0}},
---})
 
 --  If color-cycle-all is off (#f) only the tileset palette is color cycled.
 -- Otherwise (#t) all palettes are color cycled.
@@ -513,6 +501,11 @@ function StandardTriggers()
 						end
 					end
 					if (mercenary_camp_player < 15) then
+					for i=-1,3 do
+						for j=-1,3 do
+							OrderUnit(mercenary_camp_player, "units", {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, "move")
+						end
+					end
 						ChangeUnitOwner(uncount[unit1], mercenary_camp_player)
 					end
 				end
@@ -695,6 +688,19 @@ function StandardTriggers()
 						end
 					elseif (GetUnitVariable(uncount[unit1], "GraphicsVariation") == 1) then
 						ChangeUnitOwner(uncount[unit1], 15)
+					end
+				end
+				
+				-- move gliders
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and -1 == GetUnitVariable(uncount[unit1],"TargetPosX") and -1 == GetUnitVariable(uncount[unit1],"TargetPosY")) then
+					if (GameCycle >= GetUnitVariable(uncount[unit1], "LastCycle") + 175) then
+						local target_x = GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16
+						local target_y = GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16
+						if (target_x >= 0 and target_x < Map.Info.MapWidth and target_y >= 0 and target_y < Map.Info.MapHeight) then
+							OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16, GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16}, "move")
+
+							SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
+						end
 					end
 				end
 			end

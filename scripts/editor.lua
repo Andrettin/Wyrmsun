@@ -85,7 +85,7 @@ local editor_types = {
    "unit-goblin-spearman",
    "unit-goblin-archer",
    "unit-goblin-war-machine",
-   "unit-goblin-glider",
+--   "unit-goblin-glider",
 
    "unit-goblin-town-hall",
    "unit-goblin-farm",
@@ -112,7 +112,7 @@ local editor_types = {
    "unit-gryphon-feather",
 
    "unit-critter",
-   "unit-slime",
+--   "unit-slime",
    "unit-gryphon",
    "unit-wyrm",
 

@@ -1178,7 +1178,13 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		local b
 		local world_map_tile
 		if (string.find(file, "national") ~= nil) then
-			b = PlayerColorImageButton("", GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Color)
+			local playercolor
+			if (GetTileProvince(tile_x, tile_y).Owner ~= "") then
+				playercolor = GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Color
+			else
+				playercolor = "gray"
+			end
+			b = PlayerColorImageButton("", playercolor)
 			world_map_tile = CPlayerColorGraphic:New(file)
 		else
 			world_map_tile = CGraphic:New(file)
@@ -1737,28 +1743,28 @@ function DrawOnScreenTiles()
 				local south_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2] + 1)
 
 				if (west_tile_province ~= WorldMapProvinces[key] and (west_tile_province == nil or west_tile_province.Owner ~= "Ocean")) then
-					if (WorldMapProvinces[key].Owner ~= "" and (west_tile_province == nil or west_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
+					if ((west_tile_province == nil or west_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
 						DrawWorldMapTile("tilesets/world/terrain/province_national_border_west.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_west.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
 				end
 				if (east_tile_province ~= WorldMapProvinces[key] and (east_tile_province == nil or east_tile_province.Owner ~= "Ocean")) then
-					if (WorldMapProvinces[key].Owner ~= "" and (east_tile_province == nil or east_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
+					if ((east_tile_province == nil or east_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
 						DrawWorldMapTile("tilesets/world/terrain/province_national_border_east.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_east.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
 				end
 				if (north_tile_province ~= WorldMapProvinces[key] and (north_tile_province == nil or north_tile_province.Owner ~= "Ocean")) then
-					if (WorldMapProvinces[key].Owner ~= "" and (north_tile_province == nil or north_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
+					if ((north_tile_province == nil or north_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
 						DrawWorldMapTile("tilesets/world/terrain/province_national_border_north.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_north.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					end
 				end
 				if (south_tile_province ~= WorldMapProvinces[key] and (south_tile_province == nil or south_tile_province.Owner ~= "Ocean")) then
-					if (WorldMapProvinces[key].Owner ~= "" and (south_tile_province == nil or south_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
+					if ((south_tile_province == nil or south_tile_province.Owner ~= WorldMapProvinces[key].Owner)) then
 						DrawWorldMapTile("tilesets/world/terrain/province_national_border_south.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])
 					else
 						DrawWorldMapTile("tilesets/world/terrain/province_border_south.png", WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2])

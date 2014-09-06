@@ -932,6 +932,29 @@ function CreateGryphons(gryphon_number)
 	end
 end
 
+function CreateWyrms(wyrm_number)
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+
+	Count = wyrm_number
+	while (Count > 0) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+			local unit_quantity = 0
+			for i=0,14 do
+				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
+			end
+
+			if (unit_quantity < 1) then -- wyrms shouldn't start near a settlement, or the player will be destroyed
+				unit = CreateUnit("unit-wyrm", 15, {RandomX, RandomY})
+				Count = Count - 1
+			end
+		end
+	end
+end
+
 function CreateDecorations()
 
 	local RandomX = 0
@@ -1150,6 +1173,9 @@ function GenerateRandomMap(width, height, symmetric)
 
 	CreatePlayers()
 
+--	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
+--		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
+--	end
 end
 
 function SetRawTile(x, y, tile_type)

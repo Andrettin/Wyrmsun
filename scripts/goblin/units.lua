@@ -216,7 +216,8 @@ DefineUnitType("unit-goblin-glider", { Name = "Glider",
 	AirUnit = true,
 	DetectCloak = true,
 	Coward = true,
-	SelectableByRectangle = true,
+--	SelectableByRectangle = true, -- until it gets an icon
+	IsNotSelectable = true, -- until it gets an icon
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",

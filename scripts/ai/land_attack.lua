@@ -112,6 +112,7 @@ local land_funcs = {
 
   function() return AiNeed(AiLumberMill()) end,
   function() return AiWait(AiLumberMill()) end,
+  function() return AiSet(AiGlider(), 1) end,
 -- function() return AiUpgradeTo(AiBestCityCenter()) end,
 -- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
  function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 2, AiSiegeWeapon(), 0}) end,

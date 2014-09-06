@@ -44,8 +44,8 @@ if (wyr.preferences.Language == "English") then
 	edit_map_name = "~!Edit Map"
 	load_name = "~!Load"
 	cancel_name = "~!Cancel"
-	select_scenario_name = "Select Scenario"
-	hotkey_select_scenario_name = "S~!elect Scenario"
+	select_scenario_name = "Select Map"
+	hotkey_select_scenario_name = "S~!elect Map"
 	units_name = "~<Units:~>"
 	
 --	dwarven_species_and_civilization_name = "Dwarf - Knalgan"
@@ -97,8 +97,8 @@ elseif (wyr.preferences.Language == "Portuguese") then
 	edit_map_name = "~!Editar Mapa"
 	load_name = "Carregar"
 	cancel_name = "~!Cancelar"
-	select_scenario_name = "Selecione Cenário"
-	hotkey_select_scenario_name = "S~!elecione Cenário"
+	select_scenario_name = "Selecione Mapa"
+	hotkey_select_scenario_name = "S~!elecione Mapa"
 	units_name = "~<Unidades:~>"
 
 --	dwarven_species_and_civilization_name = "Anão - Gnalgano"

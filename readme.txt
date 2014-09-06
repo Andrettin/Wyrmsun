@@ -45,8 +45,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Goblin Lumber Mill (graphics by Leo).
 - Added Goblin Fugla Forge (graphics by Jinn).
 - Renamed the Blacksmith to "Smith".
-- Fixed issue which caused workers to be converted along with the neutral human lumber mill.
+- Fixed an issue which caused workers to be converted along with the neutral human lumber mill.
 - The dwarven guard tower now benefits from throwing axe upgrades (the tower's initial damage has been reduced accordingly, so that the damage when fully upgraded is the same as the normal damage was previously).
+- Fixed an issue which caused the AI to keep attacking human lumber mills that previously were owned by enemies but that they took control over.
 
 * Factions
 - The Gnomish faction is now again called "Untersberg".
@@ -108,6 +109,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The wyrm skeleton now has a non-horned variation (graphics by b_o).
 - Decorations no longer show as points on the minimap.
 - Added new fog of war graphics (by Jinn).
+- The issue where decorations appeared in the info panel when the cursor hovered over them has been fixed.
 
 * Units
 - Dwarven ballistas and gnomish caravans are now repairable.
@@ -446,7 +448,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Player 8's yellow color is now milder (previously it was rather bright) (color tones suggested by Jinn).
 - Player 7's and player 14's white color is now milder (previously it was rather bright) (color tones suggested by Jinn).
 - Player 14's color is now brown, rather than repeating player 6's black (color tones suggested by Jinn).
-- Player 16 (the neutral player)'s color is now grey, rather than repeating player 8's yellow (color tones suggested by Jinn).
+- Player 16 (the neutral player)'s color is now gray, rather than repeating player 8's yellow (color tones suggested by Jinn).
 - Player 12's color is now purple, rather than repeating player 4's violet (color tones suggested by Jinn).
 - Player 10's color is now cyan, rather than repeating player 2's blue (color tones suggested by Jinn).
 - Player 9's color is now pink, rather than repeating player 1's red (color tones suggested by Jinn).

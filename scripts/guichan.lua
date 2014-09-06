@@ -908,8 +908,8 @@ function RunSinglePlayerGameMenu()
 			table.insert(world_list, MapWorld)
 		end
 	end
-
   end
+  table.sort(world_list)
 
   menu:addLabel("Map:", offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)

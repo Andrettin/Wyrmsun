@@ -106,7 +106,7 @@ DefineSpell("spell-learn-axe-mastery",
 		{"adjust-variable", {LevelUp = {AddValue = -1}}}
 	},
 	"condition", {
-		"LevelUp", {MinValue = 0, MaxValue = 2}
+		"LevelUp", {MinValue = 0}
 	},
 	"ai-cast", {}
 )
@@ -122,7 +122,7 @@ DefineSpell("spell-learn-critical-strike",
 		{"adjust-variable", {LevelUp = {AddValue = -1}}}
 	},
 	"condition", {
-		"LevelUp", {MinValue = 0, MaxValue = 2}
+		"LevelUp", {MinValue = 0}
 	},
 	"ai-cast", {}
 )
