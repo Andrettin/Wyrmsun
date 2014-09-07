@@ -26,11 +26,25 @@ https://launchpad.net/stratagus
 # Installation Instructions
 ############################################################
 
-To install Wyrmsun, just extract the contents of the archive to the desired location (i.e. C:\Program Files\).
+To install Wyrmsun, just extract the contents of the archive to the desired location (i.e. C:\Program Files\). When updating from a previous version, delete all subfolders and files except for the "wyr" folder and its contents. Then extract the contents of the archive to the location where Wyrmsun is installed.
 
 ############################################################
 # Changelog
 ############################################################
+
+-----------------------------------------------------------------------
+- 0.1.7
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Added a couple of new hints.
+- Added Jotunheim description to the encyclopedia.
+
+* Units
+- The player now receives a message notification when a unit levels up.
+- Added water elemental description to the encyclopedia.
+- Slimes now have an icon (graphics by Leo); as a result, they are now selectable and appear in the encyclopedia.
+- New wyrm icons have been added (graphics by Leo); the previous wyrm icon is now used as a variation icon of the green-scaled wyrm.
 
 -----------------------------------------------------------------------
 - 0.1.6

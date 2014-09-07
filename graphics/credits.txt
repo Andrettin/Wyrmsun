@@ -403,6 +403,11 @@ Leo:
 /graphics/dwarf/icons/kobold_footpad.png
 /graphics/dwarf/icons/shield_2.png
 /graphics/dwarf/icons/shield_3.png
+/graphics/dwarf/icons/slime.png
+/graphics/dwarf/icons/slime_blue.png
+/graphics/dwarf/icons/slime_brown.png
+/graphics/dwarf/icons/slime_red.png
+/graphics/dwarf/icons/slime_teal.png
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png
 /graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
@@ -411,7 +416,13 @@ Leo:
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
 /graphics/neutral/icons/wyrm.png
-/graphics/neutral/icons/wyrm_light_green_scales.png
+/graphics/neutral/icons/wyrm_blue_scales.png
+/graphics/neutral/icons/wyrm_cyan_scales.png
+/graphics/neutral/icons/wyrm_purple_scales.png
+/graphics/neutral/icons/wyrm_red_scales.png
+/graphics/neutral/icons/wyrm_vicious.png
+/graphics/neutral/icons/wyrm_vicious_light_green_scales.png
+/graphics/neutral/icons/wyrm_yellow_scales.png
 
 Mikodrak:
 /graphics/missiles/big_fire.png (later modified by Jinn)

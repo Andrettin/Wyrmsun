@@ -594,6 +594,41 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-slime",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/slime.png"
+})
+
+DefineIcon({
+	Name = "icon-slime-blue",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/slime_blue.png"
+})
+
+DefineIcon({
+	Name = "icon-slime-brown",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/slime_brown.png"
+})
+
+DefineIcon({
+	Name = "icon-slime-red",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/slime_red.png"
+})
+
+DefineIcon({
+	Name = "icon-slime-teal",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/slime_teal.png"
+})
+
+DefineIcon({
 	Name = "icon-gryphon",
 	Size = {46, 38},
 	Frame = 0,
@@ -622,10 +657,52 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-wyrm-light-green-scales",
+	Name = "icon-wyrm-vicious",
 	Size = {46, 38},
 	Frame = 0,
-	File = "neutral/icons/wyrm_light_green_scales.png"
+	File = "neutral/icons/wyrm_vicious.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-vicious-light-green-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_vicious_light_green_scales.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-blue-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_blue_scales.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-cyan-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_cyan_scales.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-purple-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_purple_scales.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-red-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_red_scales.png"
+})
+
+DefineIcon({
+	Name = "icon-wyrm-yellow-scales",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/wyrm_yellow_scales.png"
 })
 
 DefineIcon({

@@ -109,6 +109,9 @@ local tips = {
   "Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 
   "Attack a chest to open it.",
+  "Place a unit on top of a potion of healing or food item to heal it.",
+  "When a unit levels up, an exclamation point appears over it, and it can upgrade to a new unit type or acquire new abilities.",
+  "Slimes are harmless.",
 
 --  "Know a useful tip?  Then add it here!",
 }

@@ -44,7 +44,7 @@ Units = {
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
-	"unit-slime", "unit-gryphon", "unit-wyrm",
+	"unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-hero-rugnur", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo"
 }
@@ -249,25 +249,33 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 			"variation-id", "green-scales"
 		},
 		{
+			"variation-id", "green-scales-vicious",
+			"icon", "icon-wyrm-vicious"
+		},
+		{
 			"variation-id", "blue-scales",
-			"file", "neutral/units/wyrm_blue_scales.png"
+			"file", "neutral/units/wyrm_blue_scales.png",
+			"icon", "icon-wyrm-blue-scales"
 		},
 		{
 			"variation-id", "cyan-scales",
 			"file", "neutral/units/wyrm_cyan_scales.png",
-			"icon", "icon-wyrm-light-green-scales"
+			"icon", "icon-wyrm-cyan-scales"
 		},
 		{
 			"variation-id", "purple-scales",
-			"file", "neutral/units/wyrm_purple_scales.png"
+			"file", "neutral/units/wyrm_purple_scales.png",
+			"icon", "icon-wyrm-purple-scales"
 		},
 		{
 			"variation-id", "red-scales",
-			"file", "neutral/units/wyrm_red_scales.png"
+			"file", "neutral/units/wyrm_red_scales.png",
+			"icon", "icon-wyrm-red-scales"
 		},
 		{
 			"variation-id", "yellow-scales",
-			"file", "neutral/units/wyrm_yellow_scales.png"
+			"file", "neutral/units/wyrm_yellow_scales.png",
+			"icon", "icon-wyrm-yellow-scales"
 		}
 	},
 	Sounds = {
@@ -279,9 +287,9 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 } )
 
 DefineUnitType("unit-slime", { Name = "Slime",
---	Description = "Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch.",
+	Description = "Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch.",
 	Image = {"file", "neutral/units/slime_small.png", "size", {32, 32}},
-	Animations = "animations-slime", Icon = "icon-rat",
+	Animations = "animations-slime", Icon = "icon-slime",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 3,
 	HitPoints = 15,
@@ -298,7 +306,6 @@ DefineUnitType("unit-slime", { Name = "Slime",
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
-	IsNotSelectable = true, -- until it gets an icon
 	LandUnit = true,
 	RandomMovementProbability = 1,
 	NumDirections = 1,
@@ -311,19 +318,23 @@ DefineUnitType("unit-slime", { Name = "Slime",
 		},
 		{
 			"variation-id", "red",
-			"file", "neutral/units/slime_small_red.png"
+			"file", "neutral/units/slime_small_red.png",
+			"icon", "icon-slime-red"
 		},
 		{
 			"variation-id", "brown",
-			"file", "neutral/units/slime_small_brown.png"
+			"file", "neutral/units/slime_small_brown.png",
+			"icon", "icon-slime-brown"
 		},
 		{
 			"variation-id", "blue",
-			"file", "neutral/units/slime_small_blue.png"
+			"file", "neutral/units/slime_small_blue.png",
+			"icon", "icon-slime-blue"
 		},
 		{
 			"variation-id", "teal",
-			"file", "neutral/units/slime_small_teal.png"
+			"file", "neutral/units/slime_small_teal.png",
+			"icon", "icon-slime-teal"
 		}
 	},
 	Sounds = {
@@ -1316,6 +1327,36 @@ DefineUnitType("unit-orc-shaman", { Name = "Orc Shaman",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
 --		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
+DefineUnitType("unit-water-elemental", { Name = "Water Elemental",
+	Description = "These creatures inhabit the warmer parts of the world of Niflheim. Although in many respects they act like a living being, they seem to be nearly entirely made out of water, putting in doubt just what they really are.",
+	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-water-elemental",
+	Costs = {"time", 70, "gold", 500, "lumber", 50},
+	Speed = 8,
+	HitPoints = 60,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {36, 36},
+	SightRange = 3, ComputerReactionRange = 5, PersonReactionRange = 3,
+	BasicDamage = 8, PiercingDamage = 4, Missile = "missile-none",
+	MaxAttackRange = 3,
+	Priority = 63,
+	BasePoints = 100,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	LandUnit = true,
+	SelectableByRectangle = true,
+	Sounds = {
+--		"selected", "basic-dwarf-voices-selected-group",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "slime-dead"
 	}
 } )
 

@@ -112,7 +112,7 @@ local editor_types = {
    "unit-gryphon-feather",
 
    "unit-critter",
---   "unit-slime",
+   "unit-slime",
    "unit-gryphon",
    "unit-wyrm",
 

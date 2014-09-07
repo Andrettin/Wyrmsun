@@ -38,6 +38,11 @@ Worlds = {
 		Description = "The lush world of Alfheim is inhabited by elves and trolls. Its forests are characterized by the beautiful golden foliage of the fairlimbed trees, which are much adored by the elves. The planet orbits a star known as Fairwheel, and is in turn orbited by a moon called Timeteller.",
 		Background = "Alfheim was the world of the light elves in Norse mythology. In the ~<Alvissmol~> it is mentioned that elves' term for \"wood\" is \"fair-limbed\". In that same poem, \"the Teller of Time\" is said to be the elves' term for the moon, and \"Fair Wheel\" their term for the sun. The ~<Grimnismol~> mentions that Alfheim was given to the Norse god Freyr by the other deities."
 	},
+	Jotunheim = {
+		Name = "Jotunheim",
+		Description = "The world of Jotunheim is home to orcs, ogres, ettins and other brutal races. The environment is hostile, and orcs often have to be wary, lest a roc descend upon them and devour the green creatures. Jotunheim's sun is called Everbright, and its single moon is known as the Rapid Traveller.",
+		Background = "Jotunheim was the world of the giants in Norse mythology. The ~<Alvissmol~> mentions that the giants call the sun \"Ever-Bright\", and the moon \"Rapid Traveller\"."
+	},
 	Nidavellir = {
 		Name = "Nidavellir",
 		Description = "The dark plains and mountains of Nidavellir are home to the dwarves, gnomes, goblins and kobolds. Of these diminutive races, the gnomes established the first civilization, and the dwarves the greatest. Nidavellir orbits around a star known as Dvalin's Deceiver, which received its name from Dvalin's dislike of sunlight. The legendary dwarf allegedly preferred the dark even more than most dwarves, complaining incessantly if the sunlight caught him unaware during his travels. The Deep Sea which lies to the east of the dwarven realms of Kal Kartha and Lyr remained unexplored for a long time, until dwarves began building ships robust enough to sail through it. Nidavellir has one moon, which is called \"the Gleamer\". The first contact between dwarves and humans happened in the 23rd century, when an expedition happened upon a dwarven mining operation on a distant planet, resulting in a skirmish.",
