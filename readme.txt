@@ -39,12 +39,17 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Miscellaneous
 - Added a couple of new hints.
 - Added Jotunheim description to the encyclopedia.
+- If a player holds only goblin gliders, he is defeated.
 
 * Units
 - The player now receives a message notification when a unit levels up.
 - Added water elemental description to the encyclopedia.
 - Slimes now have an icon (graphics by Leo); as a result, they are now selectable and appear in the encyclopedia.
 - New wyrm icons have been added (graphics by Leo); the previous wyrm icon is now used as a variation icon of the green-scaled wyrm.
+- The level up button now appears immediately upon level-up, instead of the player having to click the unit again for it to appear.
+
+* Upgrades
+- The graphics for the dwarven level 3 shield icon have been updated (by Leo).
 
 -----------------------------------------------------------------------
 - 0.1.6

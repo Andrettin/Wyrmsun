@@ -296,7 +296,10 @@ DefineVariables(
 
 function SinglePlayerTriggers()
 	AddTrigger(
-		function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
+		function()
+			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnits") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
+			return total_units <= 0
+		end,
 		function()
 			if (GrandStrategy and GrandStrategyEventMap == false) then
 				local victorious_player = ""
@@ -895,8 +898,11 @@ end
 function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,14 do
-		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false) and GetPlayerData(i, "TotalNumUnits") > 0) then
-			rival_count = rival_count + 1
+		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false)) then
+			local total_units = GetPlayerData(i, "TotalNumUnits") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
+			if (total_units > 0) then
+				rival_count = rival_count + 1
+			end
 		end
 	end
 	return rival_count
