@@ -36,7 +36,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")])) then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
 				player = i
 				
 				-- this check is necessary to see if there is a viable raider player (so that the game doesn't crash if the only other dwarven clan are the Shorbear)
@@ -72,7 +72,7 @@ AddTrigger(
 				"Pypo I",
 				"We come to make a bargain with you.",
 				player,
-				{"~!Listen to him", "~!Up axes!"},
+				{"~!Listen to him", "~!Up axes! (Forego Quest)"},
 				{function(s)
 				Event(
 					"Rugnur",
@@ -144,7 +144,7 @@ AddTrigger(
 																"Pypo I",
 																"I can always take my offer to another tribe more friendly to its potential patrons. You are not the only smiths in these lands!",
 																player,
-																{"~!Discuss his offer", "~!No deal"},
+																{"~!Discuss his offer", "~!No deal (Forego Quest)"},
 																{function(s)
 																Event(
 																	"Rugnur",
@@ -473,228 +473,228 @@ AddTrigger(
 					"gnome/icons/gnomish_recruit.png"
 				)
 
-				-- The Gnomish Envoy arrives with the stone
-				AddTrigger(
-					function()
-						if (GameCycle == 0) then
-							return false
-						end
-						for i=0,14 do
-							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
-								player = i
-								return true
-							end
-						end
-						return false
-					end,
-					function() 
-						Event(
-							"Gnomish Envoy",
-							"Here's the stone, for you dwarves! Now, if you'll excuse me, I think I'll be taking refuge here... I don't much like fighting.",
-							player,
-							{"~!Continue"},
-							{function(s)
-								if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
-									Event(
-										"Pypo I",
-										"All the silver is there too. Proceed with the task, Rugnur!",
-										player,
-										{"~!Continue"},
-										{function(s)
-											RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-											if (player == GetThisPlayer() and GrandStrategy == false) then
-												if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-													table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-												end
-												SavePreferences()
-											end
-											if (mapinfo.description == "Chaincolt Foothills") then
-												if (GrandStrategy == false) then
-													NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
-												end
-												if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
-													ActionVictory()
-												else
-													ActionDefeat()
-												end
-												if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-													Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
-												end
-											end
-										end},
-										"gnome/icons/gnomish_recruit.png"
-									)
-								end
-							end},
-							"gnome/icons/gnomish_recruit.png"
-						)
-						return false
-					end
-				)
-
-				-- The last caravan arrives with the silver
-				AddTrigger(
-					function()
-						if (GameCycle == 0) then
-							return false
-						end
-						for i=0,14 do
-							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
-								player = i
-								return true
-							end
-						end
-						return false
-					end,
-					function() 
-						if (IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
-							Event(
-								"Rugnur",
-								"That's the last caravan! We will commence work immediately.",
-								player,
-								{"~!Continue"},
-								{function(s)
-									RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-									if (player == GetThisPlayer() and GrandStrategy == false) then
-										if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-											table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-										end
-										SavePreferences()
-									end
-									if (mapinfo.description == "Chaincolt Foothills") then
-										if (GrandStrategy == false) then
-											NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
-										end
-										if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
-											ActionVictory()
-										else
-											ActionDefeat()
-										end
-										if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-											Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
-										end
-									end
-								end},
-								"dwarf/icons/rugnur.png"
-							)
-						else
-							Event(
-								"Rugnur",
-								"We have all of the silver, now all we need is the stone.",
-								player,
-								{"~!Continue"},
-								{function(s)
-								end},
-								"dwarf/icons/rugnur.png"
-							)
-						end
-						return false
-					end
-				)
-
-				-- This event makes the player complete the quest in the case that the caravans or the recruit arrive first but then are moved, and when the recruit or the caravans finally arrive the quest completion doesn't happen
-				AddTrigger(
-					function()
-						if (GameCycle == 0) then
-							return false
-						end
-						for i=0,14 do
-							-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
-							if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
-								player = i
-								return true
-							end
-						end
-						return false
-					end,
-					function() 
-						RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-						if (player == GetThisPlayer() and GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-							end
-							SavePreferences()
-						end
-						if (mapinfo.description == "Chaincolt Foothills") then
-							if (GrandStrategy == false) then
-								NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
-							end
-							if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
-								ActionVictory()
-							else
-								ActionDefeat()
-							end
-							if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-								Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
-							end
-						end
-						return false
-					end
-				)
-
-				-- If a caravan has been destroyed, the A Bargain is Struck quest fails
-				AddTrigger(
-					function()
-						if (GameCycle == 0) then
-							return false
-						end
-						for i=0,14 do
-							if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
-								player = i
-								return true
-							end
-						end
-						return false
-					end,
-					function() 
-						local event_player = player
-						if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
-							event_player = GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)
-						end
-						Event(
-							"Pypo I",
-							"You just let a caravan, with ~<my~> money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
-							event_player,
-							{"~!Continue"},
-							{function(s)
-								RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
-								if (mapinfo.description == "Chaincolt Foothills") then
-									if (GetThisPlayer() == player) then
-										ActionDefeat()
-									end
-								end
-							end},
-							"gnome/icons/gnomish_recruit.png"
-						)
-						return false
-					end
-				)
-
-				-- If all caravans have been destroyed, then the raiders win, if they are human-controlled
-				AddTrigger(
-					function()
-						if (GameCycle == 0) then
-							return false
-						end
-						if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-gnomish-caravan") == 0) then
-							return true
-						end
-						return false
-					end,
-					function() 
-						if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
-							if (GrandStrategy) then
-								Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
-							end
-							ActionVictory()
-						end
-						return false
-					end
-				)
-
 				return false
 			end
 		)
+		return false
+	end
+)
+
+-- The Gnomish Envoy arrives with the stone
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,14 do
+			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Gnomish Envoy",
+			"Here's the stone, for you dwarves! Now, if you'll excuse me, I think I'll be taking refuge here... I don't much like fighting.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+					Event(
+						"Pypo I",
+						"All the silver is there too. Proceed with the task, Rugnur!",
+						player,
+						{"~!Continue"},
+						{function(s)
+							RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+							if (player == GetThisPlayer() and GrandStrategy == false) then
+								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
+									table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
+								end
+								SavePreferences()
+							end
+							if (mapinfo.description == "Chaincolt Foothills") then
+								if (GrandStrategy == false) then
+									NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
+								end
+								if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
+									ActionVictory()
+								else
+									ActionDefeat()
+								end
+								if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+									Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+								end
+							end
+						end},
+						"gnome/icons/gnomish_recruit.png"
+					)
+				end
+			end},
+			"gnome/icons/gnomish_recruit.png"
+		)
+		return false
+	end
+)
+
+-- The last caravan arrives with the silver
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,14 do
+			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		if (IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+			Event(
+				"Rugnur",
+				"That's the last caravan! We will commence work immediately.",
+				player,
+				{"~!Continue"},
+				{function(s)
+					RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+					if (player == GetThisPlayer() and GrandStrategy == false) then
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
+						end
+						SavePreferences()
+					end
+					if (mapinfo.description == "Chaincolt Foothills") then
+						if (GrandStrategy == false) then
+							NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
+						end
+						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
+							ActionVictory()
+						else
+							ActionDefeat()
+						end
+						if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+							Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+						end
+					end
+				end},
+				"dwarf/icons/rugnur.png"
+			)
+		else
+			Event(
+				"Rugnur",
+				"We have all of the silver, now all we need is the stone.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				end},
+				"dwarf/icons/rugnur.png"
+			)
+		end
+		return false
+	end
+)
+
+-- This event makes the player complete the quest in the case that the caravans or the recruit arrive first but then are moved, and when the recruit or the caravans finally arrive the quest completion doesn't happen
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,14 do
+			-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
+			if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+		if (player == GetThisPlayer() and GrandStrategy == false) then
+			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
+				table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
+			end
+			SavePreferences()
+		end
+		if (mapinfo.description == "Chaincolt Foothills") then
+			if (GrandStrategy == false) then
+				NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
+			end
+			if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
+				ActionVictory()
+			else
+				ActionDefeat()
+			end
+			if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+			end
+		end
+		return false
+	end
+)
+
+-- If a caravan has been destroyed, the A Bargain is Struck quest fails
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,14 do
+			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
+			event_player = GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)
+		end
+		Event(
+			"Pypo I",
+			"You just let a caravan, with ~<my~> money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
+			event_player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+				if (mapinfo.description == "Chaincolt Foothills") then
+					if (GetThisPlayer() == player) then
+						ActionDefeat()
+					end
+				end
+			end},
+			"gnome/icons/gnomish_recruit.png"
+		)
+		return false
+	end
+)
+
+-- If all caravans have been destroyed, then the raiders win, if they are human-controlled
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-gnomish-caravan") == 0) then
+			return true
+		end
+		return false
+	end,
+	function() 
+		if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
+			if (GrandStrategy) then
+				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+			end
+			ActionVictory()
+		end
 		return false
 	end
 )
@@ -706,7 +706,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -717,7 +717,9 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines") then
+		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -744,7 +746,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+		if ((PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -753,7 +755,9 @@ AddTrigger(
 	function()
 		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands") then
+		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
@@ -1010,254 +1014,251 @@ AddTrigger(
 			end},
 			"dwarf/icons/rugnur.png"
 		)
+		return false
+	end
+)
 
-		-- If there is one unit on each glyph
-		AddTrigger(
-			function()
-				if (GameCycle == 0) then
-					return false
-				end
-				for i=0,14 do
-					if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
-						player = i
-						return true
-					end
-				end
-				return false
-			end,
-			function()
-				local event_player = player
-				if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-					event_player = GetFactionPlayer("Shinsplitter Clan")
-				end
+-- If there is one unit on each glyph
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetNumUnitsAt(i, "any", {5, 11}, {5, 11}) > 0 and GetNumUnitsAt(i, "any", {38, 53}, {38, 53}) > 0 and GetNumUnitsAt(i, "any", {28, 33}, {28, 33}) > 0 and GetNumUnitsAt(i, "any", {15, 24}, {15, 24}) > 0 and GetNumUnitsAt(i, "any", {23, 7}, {23, 7}) > 0 and GetNumUnitsAt(i, "any", {51, 43}, {51, 43}) > 0) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
+		end
+		Event(
+			"Rugnur",
+			"We have everyone positioned on the glyphs! What do we do now?",
+			event_player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Baglur",
+				"Just watch. The gates wi' close very soon. Then the raiders outside - and, unfortunately, our clansfolk who are still out there - wi' become irrelevant.",
+				event_player,
+				{"~!Continue"},
+				{function(s)
 				Event(
-					"Rugnur",
-					"We have everyone positioned on the glyphs! What do we do now?",
+					closing_the_gates_raider_leader_name,
+					"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give Pypo back his jewel. And when ye do, we will be ready for ye.",
 					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"Baglur",
-						"Just watch. The gates wi' close very soon. Then the raiders outside - and, unfortunately, our clansfolk who are still out there - wi' become irrelevant.",
+						"If that is what ye choose to do, fine, but be prepared to wait for many years.",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							closing_the_gates_raider_leader_name,
-							"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give Pypo back his jewel. And when ye do, we will be ready for ye.",
-							event_player,
+							"Rugnur",
+							"Well, now I should go down to the city and report. I'm late already...",
+							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Baglur",
-								"If that is what ye choose to do, fine, but be prepared to wait for many years.",
-								event_player,
+								"",
+								"(Later in the dwarven citadel...)",
+								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Rugnur",
-									"Well, now I should go down to the city and report. I'm late already...",
+									"Durstorn",
+									"Where's that fool Rugnur gotten to? It's time for him to report on events in the surface world. He's late!",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"",
-										"(Later in the dwarven citadel...)",
+										"Noiraran",
+										"Perhaps the outpost was held up?",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
 											"Durstorn",
-											"Where's that fool Rugnur gotten to? It's time for him to report on events in the surface world. He's late!",
+											"Ha! There hasn't been a war since that fool Dursil tried to get the better of Pypo I, why would someone attack us now?",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Noiraran",
-												"Perhaps the outpost was held up?",
+												"Kuhnar",
+												"The " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " might want our gold.",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
 													"Durstorn",
-													"Ha! There hasn't been a war since that fool Dursil tried to get the better of Pypo I, why would someone attack us now?",
+													"Good one, let them try to take it! Ha!",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Kuhnar",
-														"The " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " might want our gold.",
+														"Rugnur",
+														"Hey, Durstorn, have we started yet? King Pypo came by just now, wanted to talk to ye...",
 														player,
 														{"~!Continue"},
 														{function(s)
 														Event(
 															"Durstorn",
-															"Good one, let them try to take it! Ha!",
+															"Speak properly to yer elders, boy! Why are ye late?",
 															player,
 															{"~!Continue"},
 															{function(s)
 															Event(
 																"Rugnur",
-																"Hey, Durstorn, have we started yet? King Pypo came by just now, wanted to talk to ye...",
+																"Huh? Didn't a messenger come and tell ye?",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
 																	"Durstorn",
-																	"Speak properly to yer elders, boy! Why are ye late?",
+																	"No.",
 																	player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Rugnur",
-																		"Huh? Didn't a messenger come and tell ye?",
+																		"Baglur",
+																		"I think ye'd better let me explain. The gnomish king Pypo I came to the gate. Then we had to close it, which took considerable time.",
 																		player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Durstorn",
-																			"No.",
+																			"Glinar",
+																			"What'd he want? And why'd ye have to close the gate?",
 																			player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Baglur",
-																				"I think ye'd better let me explain. The gnomish king Pypo I came to the gate. Then we had to close it, which took considerable time.",
+																				"Rugnur",
+																				"He wanted to make a deal with us. He gave us a magical stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders were attacking us.",
 																				player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					"Glinar",
-																					"What'd he want? And why'd ye have to close the gate?",
+																					"Noiraran",
+																					"What is he going to give us for it, eh?",
 																					player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
 																						"Rugnur",
-																						"He wanted to make a deal with us. He gave us a magical stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders were attacking us.",
+																						"He paid us five thousand silver in advance, and he'll give us five thousand more when we deliver the finished scepter if we are done before he dies.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Noiraran",
-																							"What is he going to give us for it, eh?",
+																							"Durstorn",
+																							"What?! Ye already accepted? Foolish boy, ye should have come for one of the elders! We could have gotten much more than ten thousand silver out of him! This is a task that will take many years, and now all of our work in that time will bring us very little gain.",
 																							player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
 																								"Rugnur",
-																								"He paid us five thousand silver in advance, and he'll give us five thousand more when we deliver the finished scepter if we are done before he dies.",
+																								"Sorry, lord, but he said he would move on to another tribe if I left.",
 																								player,
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
 																									"Durstorn",
-																									"What?! Ye already accepted? Foolish boy, ye should have come for one of the elders! We could have gotten much more than ten thousand silver out of him! This is a task that will take many years, and now all of our work in that time will bring us very little gain.",
+																									"Can't ye tell a bluff when ye hear one?! He knows we're the best craftsmen, and he wouldn't have gone to another tribe if we stalled for a year. Oh well, what's done is done. We'll have to work for less than I would prefer...",
 																									player,
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										"Rugnur",
-																										"Sorry, lord, but he said he would move on to another tribe if I left.",
+																										"Baglur",
+																										"Well, since this boy bargained so badly, why not make him fulfill the contract himself? If he fails, it's on his head.",
 																										player,
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
 																											"Durstorn",
-																											"Can't ye tell a bluff when ye hear one?! He knows we're the best craftsmen, and he wouldn't have gone to another tribe if we stalled for a year. Oh well, what's done is done. We'll have to work for less than I would prefer...",
+																											"Good idea, Baglur! He'll need some help, though, and it will take a master smith to make the scepter. Why don't we send him to find Thursagan?",
 																											player,
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
 																												"Baglur",
-																												"Well, since this boy bargained so badly, why not make him fulfill the contract himself? If he fails, it's on his head.",
+																												"Ye mean the insane dwarf who lives in the far north?!",
 																												player,
 																												{"~!Continue"},
 																												{function(s)
 																												Event(
 																													"Durstorn",
-																													"Good idea, Baglur! He'll need some help, though, and it will take a master smith to make the scepter. Why don't we send him to find Thursagan?",
+																													"Aye. He is the only one I know of who could craft the scepter the way Pypo wants it. And he has nothing to do; he will be fine with wasting 25 years of his life on this task.",
 																													player,
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														"Baglur",
-																														"Ye mean the insane dwarf who lives in the far north?!",
+																														"Rugnur",
+																														"Very well, my lord. We will go into the north to find Thursagan. Do ye have any idea where he is?",
 																														player,
 																														{"~!Continue"},
 																														{function(s)
 																														Event(
 																															"Durstorn",
-																															"Aye. He is the only one I know of who could craft the scepter the way Pypo wants it. And he has nothing to do; he will be fine with wasting 25 years of his life on this task.",
+																															"Go to the furthest north entrance to the caves, and then go north. He's somewhere in those hills.",
 																															player,
 																															{"~!Continue"},
 																															{function(s)
 																															Event(
-																																"Rugnur",
-																																"Very well, my lord. We will go into the north to find Thursagan. Do ye have any idea where he is?",
+																																"",
+																																"(Later...)",
 																																player,
 																																{"~!Continue"},
 																																{function(s)
 																																Event(
-																																	"Durstorn",
-																																	"Go to the furthest north entrance to the caves, and then go north. He's somewhere in those hills.",
+																																	"Gnomish Envoy",
+																																	"What did I miss, eh?",
 																																	player,
 																																	{"~!Continue"},
 																																	{function(s)
 																																	Event(
-																																		"",
-																																		"(Later...)",
+																																		"Durstorn",
+																																		"Who the devil are ye? Well, ye seem to be with Rugnur... follow him north.",
 																																		player,
 																																		{"~!Continue"},
 																																		{function(s)
-																																		Event(
-																																			"Gnomish Envoy",
-																																			"What did I miss, eh?",
-																																			player,
-																																			{"~!Continue"},
-																																			{function(s)
-																																			Event(
-																																				"Durstorn",
-																																				"Who the devil are ye? Well, ye seem to be with Rugnur... follow him north.",
-																																				player,
-																																				{"~!Continue"},
-																																				{function(s)
-																																					RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
-																																					if (player == GetThisPlayer() and GrandStrategy == false) then
-																																						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
-																																							table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
-																																						end
-																																						SavePreferences()
-																																					end
-																																					if (mapinfo.description == "Caverns of Chaincolt") then
-																																						if (GrandStrategy == false) then
-																																							NextMap = "maps/nidavellir/northern-wastelands.smp"
-																																						end
-																																						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
-																																							ActionVictory()
-																																						else
-																																							ActionDefeat()
-																																						end
-																																					end
-																																				end},
-																																				"dwarf/icons/durstorn.png"
-																																			)
-																																			end},
-																																			"gnome/icons/gnomish_recruit.png"
-																																		)
-																																		end}
+																																			RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
+																																			if (player == GetThisPlayer() and GrandStrategy == false) then
+																																				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
+																																					table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
+																																				end
+																																				SavePreferences()
+																																			end
+																																			if (mapinfo.description == "Caverns of Chaincolt") then
+																																				if (GrandStrategy == false) then
+																																					NextMap = "maps/nidavellir/northern-wastelands.smp"
+																																				end
+																																				if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
+																																					ActionVictory()
+																																				else
+																																					ActionDefeat()
+																																				end
+																																			end
+																																		end},
+																																		"dwarf/icons/durstorn.png"
 																																	)
 																																	end},
-																																	"dwarf/icons/durstorn.png"
+																																	"gnome/icons/gnomish_recruit.png"
 																																)
-																																end},
-																																"dwarf/icons/rugnur.png"
+																																end}
 																															)
 																															end},
 																															"dwarf/icons/durstorn.png"
 																														)
 																														end},
-																														"dwarf/icons/baglur.png"
+																														"dwarf/icons/rugnur.png"
 																													)
 																													end},
 																													"dwarf/icons/durstorn.png"
@@ -1269,31 +1270,31 @@ AddTrigger(
 																											"dwarf/icons/durstorn.png"
 																										)
 																										end},
-																										"dwarf/icons/rugnur.png"
+																										"dwarf/icons/baglur.png"
 																									)
 																									end},
 																									"dwarf/icons/durstorn.png"
 																								)
 																								end},
 																								"dwarf/icons/rugnur.png"
-																								)
+																							)
 																							end},
-																							"dwarf/icons/dwarven_scout.png"
+																							"dwarf/icons/durstorn.png"
 																						)
 																						end},
 																						"dwarf/icons/rugnur.png"
-																					)
+																						)
 																					end},
-																					"dwarf/icons/dwarven_steelclad.png"
+																					"dwarf/icons/dwarven_scout.png"
 																				)
 																				end},
-																				"dwarf/icons/baglur.png"
+																				"dwarf/icons/rugnur.png"
 																			)
 																			end},
-																			"dwarf/icons/durstorn.png"
+																			"dwarf/icons/dwarven_steelclad.png"
 																		)
 																		end},
-																		"dwarf/icons/rugnur.png"
+																		"dwarf/icons/baglur.png"
 																	)
 																	end},
 																	"dwarf/icons/durstorn.png"
@@ -1305,65 +1306,68 @@ AddTrigger(
 															"dwarf/icons/durstorn.png"
 														)
 														end},
-														"dwarf/icons/dwarven_steelclad.png"
+														"dwarf/icons/rugnur.png"
 													)
 													end},
 													"dwarf/icons/durstorn.png"
 												)
 												end},
-												"dwarf/icons/dwarven_scout.png"
+												"dwarf/icons/dwarven_steelclad.png"
 											)
 											end},
 											"dwarf/icons/durstorn.png"
 										)
-										end}
+										end},
+										"dwarf/icons/dwarven_scout.png"
 									)
 									end},
-									"dwarf/icons/rugnur.png"
+									"dwarf/icons/durstorn.png"
 								)
-								end},
-								"dwarf/icons/baglur.png"
+								end}
 							)
 							end},
-							"dwarf/icons/dwarven_steelclad.png"
+							"dwarf/icons/rugnur.png"
 						)
 						end},
 						"dwarf/icons/baglur.png"
 					)
 					end},
-					"dwarf/icons/rugnur.png"
+					"dwarf/icons/dwarven_steelclad.png"
 				)
-				return false
-			end
+				end},
+				"dwarf/icons/baglur.png"
+			)
+			end},
+			"dwarf/icons/rugnur.png"
 		)
+		return false
+	end
+)
 
-		-- If the Norlund Clan's mead hall has been destroyed, then the Shinsplitters manage to get the gold and win
-		AddTrigger(
-			function()
-				if (GameCycle == 0) then
-					return false
-				end
-				if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-town-hall") == 0) then
-					return true
-				end
-				return false
-			end,
-			function() 
-				if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-					if (GrandStrategy) then
-						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
-						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
-						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
-					end
-					ActionVictory()
-				else
-					ActionDefeat()
-				end
-				return false
+-- If the Norlund Clan's mead hall has been destroyed, then the Shinsplitters manage to get the gold and win
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-town-hall") == 0) then
+			return true
+		end
+		return false
+	end,
+	function() 
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			if (GrandStrategy) then
+				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+				-- if defenses have been breached, then the Shinsplitter Clan conquers the province
+				WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 			end
-		)
+			ActionVictory()
+		else
+			ActionDefeat()
+		end
 		return false
 	end
 )
@@ -1375,7 +1379,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1385,7 +1389,9 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines") then
+		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -1486,137 +1492,135 @@ AddTrigger(
 			"gnome/icons/gnomish_recruit.png"
 		)
 
-		AddTrigger(
-			function()
-				if (GameCycle > 5000) then
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle > 5000) then
+			return true
+		end
+		return false
+	end,
+	function()
+		NorthernWastelandsEnemy(17, 23)
+		NorthernWastelandsEnemy(33, 46)
+		NorthernWastelandsEnemy(50, 68)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle > 15000) then
+			return true
+		end
+		return false
+	end,
+	function()
+		NorthernWastelandsEnemy(30, 14)
+		NorthernWastelandsEnemy(50, 16)
+		return false
+	end
+)
+
+-- move gryphon riders nearer to Rugnur's base when someone from Rugnur's side steps near enough them
+AddTrigger(
+	function()
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
+				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {8 - 4, 53 - 4}, {8 + 4, 53 + 4})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
 					return true
 				end
-				return false
-			end,
-			function()
-				NorthernWastelandsEnemy(17, 23)
-				NorthernWastelandsEnemy(33, 46)
-				NorthernWastelandsEnemy(50, 68)
-				return false
 			end
-		)
-
-		AddTrigger(
-			function()
-				if (GameCycle > 15000) then
-					return true
-				end
-				return false
-			end,
-			function()
-				NorthernWastelandsEnemy(30, 14)
-				NorthernWastelandsEnemy(50, 16)
-				return false
-			end
-		)
-
-		-- move gryphon riders nearer to Rugnur's base when someone from Rugnur's side steps near enough them
-		AddTrigger(
-			function()
-				local uncount = 0
-				uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
-						local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {8 - 4, 53 - 4}, {8 + 4, 53 + 4})
-						if (unit_quantity > 0) then
-							player = GetThisPlayer()
-							return true
-						end
-					end
-				end
-				return false
-			end,
-			function()
-				OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {2, 35}, {8, 53}, "move")
-				return false
-			end
-		)
+		end
+		return false
+	end,
+	function()
+		OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {2, 35}, {8, 53}, "move")
+		return false
+	end
+)
 		
-		-- Find Gryphon Riders
-		AddTrigger(
-			function()
-				local uncount = 0
-				uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
-						local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
-						if (unit_quantity > 0) then
-							player = GetThisPlayer()
-							return true
-						end
-					end
+-- Find Gryphon Riders
+AddTrigger(
+	function()
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
+				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
 				end
-				return false
-			end,
-			function()
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Gryphon Rider",
+			"We'd like to speak with ye.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Gnomish Envoy",
+				"Aah! What is that?!",
+				player,
+				{"~!Continue"},
+				{function(s)
 				Event(
-					"Gryphon Rider",
-					"We'd like to speak with ye.",
+					"Baglur",
+					"Is that... is that a gryphon?",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Gnomish Envoy",
-						"Aah! What is that?!",
+						"Gryphon Rider",
+						"Aye. Will ye speak with us now?",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Baglur",
-							"Is that... is that a gryphon?",
+							"Rugnur",
+							"What do ye want, gryphon rider?",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
 								"Gryphon Rider",
-								"Aye. Will ye speak with us now?",
+								"Are ye looking for a runemaster?",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
 									"Rugnur",
-									"What do ye want, gryphon rider?",
+									"Well, um, aye. Why, can ye help us?",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
 										"Gryphon Rider",
-										"Are ye looking for a runemaster?",
+										"Aye. If ye kill the goblins, we'll help ye.",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Rugnur",
-											"Well, um, aye. Why, can ye help us?",
+											"Baglur",
+											"Sure, we'll help ye fight goblins.",
 											player,
 											{"~!Continue"},
 											{function(s)
-											Event(
-												"Gryphon Rider",
-												"Aye. If ye kill the goblins, we'll help ye.",
-												player,
-												{"~!Continue"},
-												{function(s)
-												Event(
-													"Baglur",
-													"Sure, we'll help ye fight goblins.",
-													player,
-													{"~!Continue"},
-													{function(s)
-														OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {0, 34}, {6, 52}, "move")
-													end},
-													"dwarf/icons/baglur.png"
-												)
-												end},
-												"dwarf/icons/gryphon_rider.png"
-											)
+												OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {0, 34}, {6, 52}, "move")
 											end},
-											"dwarf/icons/rugnur.png"
+											"dwarf/icons/baglur.png"
 										)
 										end},
 										"dwarf/icons/gryphon_rider.png"
@@ -1628,387 +1632,384 @@ AddTrigger(
 								"dwarf/icons/gryphon_rider.png"
 							)
 							end},
-							"dwarf/icons/baglur.png"
+							"dwarf/icons/rugnur.png"
 						)
 						end},
-						"gnome/icons/gnomish_recruit.png"
+						"dwarf/icons/gryphon_rider.png"
 					)
 					end},
-					"dwarf/icons/gryphon_rider.png"
+					"dwarf/icons/baglur.png"
 				)
-				return false
-			end
+				end},
+				"gnome/icons/gnomish_recruit.png"
+			)
+			end},
+			"dwarf/icons/gryphon_rider.png"
 		)
-		
-		-- if Thursagan's smithy is found by a gryphon rider
-		AddTrigger(
-			function()
-				for i=0,14 do
-					if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
-						local uncount = 0
-						uncount = GetUnits(GetFactionPlayer("Thursagan"))
-						for unit1 = 1,table.getn(uncount) do 
-							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
-								if (GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
-									player = i
-									return true
-								end
-							end
+		return false
+	end
+)
+
+-- if Thursagan's smithy is found by a gryphon rider
+AddTrigger(
+	function()
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Thursagan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
+						if (GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+							player = i
+							return true
 						end
 					end
 				end
-				return false
-			end,
-			function()
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Thursagan",
+			"Go away, ye birds! Or I shall burn ye out of the air!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Baglur",
+				"He doesn't want to talk to the gryphon riders, apparently. I think we'll have to get someone there he will talk to...",
+				player,
+				{"~!Continue"},
+				{function(s)
+				end},
+				"dwarf/icons/baglur.png"
+			)
+			end},
+			"dwarf/icons/thursagan.png"
+		)
+		return false
+	end
+)
+
+-- if Thursagan's smithy is found by a non-gryphon rider
+AddTrigger(
+	function()
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Thursagan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
+						if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
+							player = i
+							return true
+						end
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		unit = CreateUnit("unit-hero-thursagan", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
+		Event(
+			"Thursagan",
+			"What do ye people want?! Leave me alone!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Rugnur",
+				"Old sage, we come with a message from Lord Durstorn. He asks ye to come back to the city.",
+				player,
+				{"~!Continue"},
+				{function(s)
 				Event(
 					"Thursagan",
-					"Go away, ye birds! Or I shall burn ye out of the air!",
+					"Ha! That fool thinks he can order me around. Why does he want me to go back, anyway?",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"Baglur",
-						"He doesn't want to talk to the gryphon riders, apparently. I think we'll have to get someone there he will talk to...",
+						"We have entered into a bargain with a gnomish king to craft a scepter for him.",
 						player,
 						{"~!Continue"},
 						{function(s)
+						Event(
+							"Thursagan",
+							"Oh, and now I suppose Durstorn wants me to craft it, eh? Well I'm not going to.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Rugnur",
+								"Ye don't want to make a scepter imbued with the mighty ruby of fire? Very well, yer choice is made.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Thursagan",
+									"The ruby of fire, what is that, some worthless gnomish gem?",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Baglur",
+										"It is a gnomish gem, but it is also supposedly the most flawless precious stone ever seen.",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Thursagan",
+											"Oh, really? And what does the gnomish king want us to do with it?",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Rugnur",
+												"Cut it and insert it into a scepter, creating a powerful symbol of the gnomish monarchy.",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Thursagan",
+													"I see. Fine then, I will help you craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
+													player,
+													{"~!Continue"},
+													{function(s)
+													Event(
+														"Baglur",
+														"Good. Now, there are still wild animals and goblins here... We have to get back into the caves.",
+														player,
+														{"~!Continue"},
+														{function(s)
+															PlayMusic("music/knolls.ogg")
+															NorthernWastelandsEnemy(32, 69)
+															NorthernWastelandsEnemy(2, 47)
+															NorthernWastelandsEnemy(52, 47)
+															NorthernWastelandsEnemy(2, 33)
+															AddTrigger(
+																function()
+																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-thursagan") < 1) then
+																		player = GetThisPlayer()
+																		return true
+																	end
+																	return false
+																end,
+																function() 
+																	RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
+																	if (mapinfo.description == "Northern Wastelands") then
+																		ActionDefeat()
+																	end
+																	return false
+																end
+															)
+														end},
+														"dwarf/icons/baglur.png"
+													)
+													end},
+													"dwarf/icons/thursagan.png"
+												)
+												end},
+												"dwarf/icons/rugnur.png"
+											)
+											end},
+											"dwarf/icons/thursagan.png"
+										)
+										end},
+										"dwarf/icons/baglur.png"
+									)
+									end},
+									"dwarf/icons/thursagan.png"
+								)
+								end},
+								"dwarf/icons/rugnur.png"
+							)
+							end},
+							"dwarf/icons/thursagan.png"
+						)
 						end},
 						"dwarf/icons/baglur.png"
 					)
 					end},
 					"dwarf/icons/thursagan.png"
 				)
-				return false
-			end
+				end},
+				"dwarf/icons/rugnur.png"
+			)
+			end},
+			"dwarf/icons/thursagan.png"
 		)
+		return false
+	end
+)
 
-		-- if Thursagan's smithy is found by a non-gryphon rider
-		AddTrigger(
-			function()
-				for i=0,14 do
-					if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
-						local uncount = 0
-						uncount = GetUnits(GetFactionPlayer("Thursagan"))
-						for unit1 = 1,table.getn(uncount) do 
-							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
-								if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
-									player = i
-									return true
-								end
-							end
-						end
-					end
-				end
-				return false
-			end,
-			function()
-				unit = CreateUnit("unit-hero-thursagan", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
+AddTrigger(
+	function()
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-town-hall")) then
+				player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Thursagan",
+			"Well, now we are near the caves again! Come on, back south, to the city.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"",
+				"(Later in the dwarven citadel...)",
+				player,
+				{"~!Continue"},
+				{function(s)
 				Event(
-					"Thursagan",
-					"What do ye people want?! Leave me alone!",
+					"Rugnur",
+					"Lord Durstorn, we have succeeded in our mission. Thursagan is here.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Rugnur",
-						"Old sage, we come with a message from Lord Durstorn. He asks ye to come back to the city.",
+						"Durstorn",
+						"What? Ye mean ye found Thursagan and got him to return with ye? Astounding!",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Thursagan",
-							"Ha! That fool thinks he can order me around. Why does he want me to go back, anyway?",
+							"Baglur",
+							"Aye, we did.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Baglur",
-								"We have entered into a bargain with a gnomish king to craft a scepter for him.",
+								"Thursagan",
+								"Now, where is this ruby that I am to work with, eh Durstorn?",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Thursagan",
-									"Oh, and now I suppose Durstorn wants me to craft it, eh? Well I'm not going to.",
+									"Durstorn",
+									"In the treasury. And leave it there until ye're ready to work with it - I still don't trust ye.",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Rugnur",
-										"Ye don't want to make a scepter imbued with the mighty ruby of fire? Very well, yer choice is made.",
+										"Thursagan",
+										"Ha! ~<Ye~> don't trust ~<me~>?",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Thursagan",
-											"The ruby of fire, what is that, some worthless gnomish gem?",
-											player,
-											{"~!Continue"},
-											{function(s)
-											Event(
-												"Baglur",
-												"It is a gnomish gem, but it is also supposedly the most flawless precious stone ever seen.",
-												player,
-												{"~!Continue"},
-												{function(s)
-												Event(
-													"Thursagan",
-													"Oh, really? And what does the gnomish king want us to do with it?",
-													player,
-													{"~!Continue"},
-													{function(s)
-													Event(
-														"Rugnur",
-														"Cut it and insert it into a scepter, creating a powerful symbol of the gnomish monarchy.",
-														player,
-														{"~!Continue"},
-														{function(s)
-														Event(
-															"Thursagan",
-															"I see. Fine then, I will help you craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
-															player,
-															{"~!Continue"},
-															{function(s)
-															Event(
-																"Baglur",
-																"Good. Now, there are still wild animals and goblins here... We have to get back into the caves.",
-																player,
-																{"~!Continue"},
-																{function(s)
-																	PlayMusic("music/knolls.ogg")
-																	NorthernWastelandsEnemy(32, 69)
-																	NorthernWastelandsEnemy(2, 47)
-																	NorthernWastelandsEnemy(52, 47)
-																	NorthernWastelandsEnemy(2, 33)
-																	AddTrigger(
-																		function()
-																			if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-thursagan") < 1) then
-																				player = GetThisPlayer()
-																				return true
-																			end
-																			return false
-																		end,
-																		function() 
-																			RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-																			if (mapinfo.description == "Northern Wastelands") then
-																				ActionDefeat()
-																			end
-																			return false
-																		end
-																	)
-																end},
-																"dwarf/icons/baglur.png"
-															)
-															end},
-															"dwarf/icons/thursagan.png"
-														)
-														end},
-														"dwarf/icons/rugnur.png"
-													)
-													end},
-													"dwarf/icons/thursagan.png"
-												)
-												end},
-												"dwarf/icons/baglur.png"
-											)
-											end},
-											"dwarf/icons/thursagan.png"
-										)
-										end},
-										"dwarf/icons/rugnur.png"
-									)
-									end},
-									"dwarf/icons/thursagan.png"
-								)
-								end},
-								"dwarf/icons/baglur.png"
-							)
-							end},
-							"dwarf/icons/thursagan.png"
-						)
-						end},
-						"dwarf/icons/rugnur.png"
-					)
-					end},
-					"dwarf/icons/thursagan.png"
-				)
-
-				AddTrigger(
-					function()
-						for i=0,14 do
-							if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-town-hall")) then
-								player = i
-								return true
-							end
-						end
-						return false
-					end,
-					function()
-						Event(
-							"Thursagan",
-							"Well, now we are near the caves again! Come on, back south, to the city.",
-							player,
-							{"~!Continue"},
-							{function(s)
-							Event(
-								"",
-								"(Later in the dwarven citadel...)",
-								player,
-								{"~!Continue"},
-								{function(s)
-								Event(
-									"Rugnur",
-									"Lord Durstorn, we have succeeded in our mission. Thursagan is here.",
-									player,
-									{"~!Continue"},
-									{function(s)
-									Event(
-										"Durstorn",
-										"What? Ye mean ye found Thursagan and got him to return with ye? Astounding!",
-										player,
-										{"~!Continue"},
-										{function(s)
-										Event(
-											"Baglur",
-											"Aye, we did.",
+											"Durstorn",
+											"Exactly! Why would I? And I order ye to stay out of the treasury, away from that ruby!",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
 												"Thursagan",
-												"Now, where is this ruby that I am to work with, eh Durstorn?",
+												"Ye don't dictate what I am to do, Durstorn! I will do as I please, and don't stop me if ye want me to make this scepter.",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
 													"Durstorn",
-													"In the treasury. And leave it there until ye're ready to work with it - I still don't trust ye.",
+													"The ruby is mine, and don't touch it!",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Thursagan",
-														"Ha! ~<Ye~> don't trust ~<me~>?",
+														"Rugnur",
+														"Uh, technically it's Pypo's, and I think that if Thursagan needs to see it to plan this scepter, we must allow it.",
 														player,
 														{"~!Continue"},
 														{function(s)
 														Event(
 															"Durstorn",
-															"Exactly! Why would I? And I order ye to stay out of the treasury, away from that ruby!",
+															"It will be as it must, then. (~<Grumble~> ~<grumble~>)",
 															player,
 															{"~!Continue"},
 															{function(s)
 															Event(
 																"Thursagan",
-																"Ye don't dictate what I am to do, Durstorn! I will do as I please, and don't stop me if ye want me to make this scepter.",
+																"Hm... a most interesting jewel. I will start drawing up plans for the scepter immediately.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Durstorn",
-																	"The ruby is mine, and don't touch it!",
+																	"Thursagan",
+																	"Now, I will need certain materials to make this scepter.",
 																	player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Rugnur",
-																		"Uh, technically it's Pypo's, and I think that if Thursagan needs to see it to plan this scepter, we must allow it.",
+																		"Durstorn",
+																		"Oh, what?",
 																		player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Durstorn",
-																			"It will be as it must, then. (~<Grumble~> ~<grumble~>)",
+																			"Thursagan",
+																			"I would say probably ten stone of artifact-quality gold and twenty stone of the finest coal, and many of the finest jewels in the land - we'll need others to search for those, though. I'll also need to have the jeweler cut the ruby once I have the plans done.",
 																			player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Thursagan",
-																				"Hm... a most interesting jewel. I will start drawing up plans for the scepter immediately.",
+																				"Durstorn",
+																				"Just use my gold and coal, I have enough! Or, if they're not 'good enough' for ye, find them yerself.",
 																				player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
 																					"Thursagan",
-																					"Now, I will need certain materials to make this scepter.",
+																					"Ye try my patience, Durstorn. Ye know yers aren't acceptable, but ye have to give me something or I can't make the scepter!",
 																					player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Durstorn",
-																						"Oh, what?",
+																						"Baglur",
+																						"Wait, wait. The gold and coal... I think we can find those in the abandoned eastern mines. Goblins ha' overrun them, but earlier they were the source of the finest smithing materials.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Thursagan",
-																							"I would say probably ten stone of artifact-quality gold and twenty stone of the finest coal, and many of the finest jewels in the land - we'll need others to search for those, though. I'll also need to have the jeweler cut the ruby once I have the plans done.",
+																							"Rugnur",
+																							"So, we will go to the eastern mines!",
 																							player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
 																								"Durstorn",
-																								"Just use my gold and coal, I have enough! Or, if they're not 'good enough' for ye, find them yerself.",
+																								"Fine. As for the jewels, I will have others obtain those. That will cost quite a bit of our payment, but it can't be helped. Our people do not mine jewels.",
 																								player,
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
 																									"Thursagan",
-																									"Ye try my patience, Durstorn. Ye know yers aren't acceptable, but ye have to give me something or I can't make the scepter!",
+																									"That is acceptable. Durstorn, send some miners along with us to the eastern mines.",
 																									player,
 																									{"~!Continue"},
 																									{function(s)
-																									Event(
-																										"Baglur",
-																										"Wait, wait. The gold and coal... I think we can find those in the abandoned eastern mines. Goblins ha' overrun them, but earlier they were the source of the finest smithing materials.",
-																										player,
-																										{"~!Continue"},
-																										{function(s)
-																										Event(
-																											"Rugnur",
-																											"So, we will go to the eastern mines!",
-																											player,
-																											{"~!Continue"},
-																											{function(s)
-																											Event(
-																												"Durstorn",
-																												"Fine. As for the jewels, I will have others obtain those. That will cost quite a bit of our payment, but it can't be helped. Our people do not mine jewels.",
-																												player,
-																												{"~!Continue"},
-																												{function(s)
-																												Event(
-																													"Thursagan",
-																													"That is acceptable. Durstorn, send some miners along with us to the eastern mines.",
-																													player,
-																													{"~!Continue"},
-																													{function(s)
-																														RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-																														if (player == GetThisPlayer() and GrandStrategy == false) then
-																															if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") == false) then
-																																table.insert(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")
-																															end
-																															SavePreferences()
-																														end
-																														if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
-																															if (GrandStrategy == false) then
-																																NextMap = "maps/nidavellir/eastern-mines.smp"
-																															else
-																																WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0
-																															end
-																															ActionVictory()
-																														end
-																													end},
-																													"dwarf/icons/thursagan.png"
-																												)
-																												end},
-																												"dwarf/icons/durstorn.png"
-																											)
-																											end},
-																											"dwarf/icons/rugnur.png"
-																										)
-																										end},
-																										"dwarf/icons/baglur.png"
-																									)
+																										RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
+																										if (player == GetThisPlayer() and GrandStrategy == false) then
+																											if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") == false) then
+																												table.insert(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")
+																											end
+																											SavePreferences()
+																										end
+																										if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
+																											if (GrandStrategy == false) then
+																												NextMap = "maps/nidavellir/eastern-mines.smp"
+																											else
+																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0
+																											end
+																											ActionVictory()
+																										end
 																									end},
 																									"dwarf/icons/thursagan.png"
 																								)
@@ -2016,25 +2017,25 @@ AddTrigger(
 																								"dwarf/icons/durstorn.png"
 																							)
 																							end},
-																							"dwarf/icons/thursagan.png"
+																							"dwarf/icons/rugnur.png"
 																						)
 																						end},
-																						"dwarf/icons/durstorn.png"
+																						"dwarf/icons/baglur.png"
 																					)
 																					end},
 																					"dwarf/icons/thursagan.png"
 																				)
 																				end},
-																				"dwarf/icons/thursagan.png"
+																				"dwarf/icons/durstorn.png"
 																			)
 																			end},
-																			"dwarf/icons/durstorn.png"
+																			"dwarf/icons/thursagan.png"
 																		)
 																		end},
-																		"dwarf/icons/rugnur.png"
+																		"dwarf/icons/durstorn.png"
 																	)
 																	end},
-																	"dwarf/icons/durstorn.png"
+																	"dwarf/icons/thursagan.png"
 																)
 																end},
 																"dwarf/icons/thursagan.png"
@@ -2043,7 +2044,7 @@ AddTrigger(
 															"dwarf/icons/durstorn.png"
 														)
 														end},
-														"dwarf/icons/thursagan.png"
+														"dwarf/icons/rugnur.png"
 													)
 													end},
 													"dwarf/icons/durstorn.png"
@@ -2052,25 +2053,30 @@ AddTrigger(
 												"dwarf/icons/thursagan.png"
 											)
 											end},
-											"dwarf/icons/baglur.png"
+											"dwarf/icons/durstorn.png"
 										)
 										end},
-										"dwarf/icons/durstorn.png"
+										"dwarf/icons/thursagan.png"
 									)
 									end},
-									"dwarf/icons/rugnur.png"
+									"dwarf/icons/durstorn.png"
 								)
-								end}
+								end},
+								"dwarf/icons/thursagan.png"
 							)
 							end},
-							"dwarf/icons/thursagan.png"
+							"dwarf/icons/baglur.png"
 						)
-
-						return false
-					end
+						end},
+						"dwarf/icons/durstorn.png"
+					)
+					end},
+					"dwarf/icons/rugnur.png"
 				)
-				return false
-			end
+				end}
+			)
+			end},
+			"dwarf/icons/thursagan.png"
 		)
 		return false
 	end
@@ -2474,7 +2480,7 @@ AddTrigger(
 																																								end
 																																								if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																									if (GrandStrategy == false) then
-																																				--						NextMap = "maps/nidavellir/shorbear-hills.smp"
+																																										NextMap = "maps/nidavellir/shorbear-hills.smp"
 																																									end
 																																									ActionVictory()
 																																								end
@@ -2814,7 +2820,7 @@ AddTrigger(
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																						if (GrandStrategy == false) then
-																																	--						NextMap = "maps/nidavellir/shorbear-hills.smp"
+																																							NextMap = "maps/nidavellir/shorbear-hills.smp"
 																																						end
 																																						ActionVictory()
 																																					end
@@ -2928,7 +2934,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan") < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan") < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -2936,7 +2942,987 @@ AddTrigger(
 	end,
 	function() 
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		if (mapinfo.description == "Eastern Mines") then
+		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
+			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+				ActionDefeat()
+			end
+		end
+		return false
+	end
+)
+
+if (mapinfo.description == "Shorbear Hills") then
+-- Hills of the Shorbear Clan initial dialogue
+-- based on the Hills of the Shorbear Clan scenario of the Sceptre of Fire campaign from Battle for Wesnoth
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") and PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"All dwarves are known for a love of gold and a heart of stone. The Shorbears were no exception. They were crafters of crafters - they made tools. The best in the land. And they bartered well.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Kuhnar",
+				"Here we are; the hills of the Shorbear Clan. What are we here for, anyway?",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Rugnur",
+					"If I understand it correctly, we're here to bargain with the Shorbears, and arrange for us to use their tools to cut the ruby.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Thursagan",
+						"Exactly.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Durstorn",
+							"And I'll be doing the talking; I remember what happened last time ye negotiated a deal! We lost five thousand pieces of silver.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Glonoin",
+								"Och, it's some o' them cave-dwarves. What business do ye have here?",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Durstorn",
+									"I'm Lord Durstorn, king of my tribe. I have been told ye are great jeweler-workers, and so we come to rent some of yer tools for a short time, a few years at most.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Glonoin",
+										"Ye're a king?! Must be a pretty small kingdom for ye to come yerself to bargain with us!",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Durstorn",
+											"Ye insult me! Do ye want my business, or not?",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Glonoin",
+												"Well, fine, I'll hear yer offer.",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Durstorn",
+													"We'd like to rent yer best tools for a short period of time. We'll only be cutting one jewel with it. My starting offer is two hundred silver.",
+													player,
+													{"~!Continue"},
+													{function(s)
+													Event(
+														"Glonoin",
+														"It must be worth a lot for ye to come this way and offer that much! How much are ye going to sell it for, eh?",
+														player,
+														{"~!Continue"},
+														{function(s)
+														Event(
+															"Durstorn",
+															"That's none of yer concern!",
+															player,
+															{"~!Continue"},
+															{function(s)
+															Event(
+																"Glonoin",
+																"I'll take twenty-five hundred, minimum.",
+																player,
+																{"~!Continue"},
+																{function(s)
+																Event(
+																	"Rugnur",
+																	"(Whisper) Durstorn, that would be a quarter of all our gains!",
+																	player,
+																	{"~!Continue"},
+																	{function(s)
+																	Event(
+																		"Durstorn",
+																		"I know that. Uh, Glonoin, how about five hundred?",
+																		player,
+																		{"~!Continue"},
+																		{function(s)
+																		Event(
+																			"Glonoin",
+																			"Twenty-three hundred is my lowest offer. I can tell I don't need the money as much as ye need the jewel cut!",
+																			player,
+																			{"~!Continue"},
+																			{function(s)
+																			Event(
+																				"Durstorn",
+																				"Ye must be mad! I'll offer one thousand, but no higher!",
+																				player,
+																				{"~!Continue"},
+																				{function(s)
+																				Event(
+																					"Glonoin",
+																					"Two thousand, and I'll go no lower!",
+																					player,
+																					{"~!Continue"},
+																					{function(s)
+																					Event(
+																						"Rugnur",
+																						"(Whisper) What are we going to do? We can't go much higher!",
+																						player,
+																						{"~!Continue"},
+																						{function(s)
+																						Event(
+																							"Baglur",
+																							"(Whisper) Offer him fifteen hundred, but don't go up, even if he refuses.",
+																							player,
+																							{"~!Continue"},
+																							{function(s)
+																							Event(
+																								"Durstorn",
+																								"(Whisper) Bah! Getting this cut isn't worth that much; what with Rugnur's mistake earlier, and all the other expenses, if we pay more than a thousand we'll barely even make a profit!",
+																								player,
+																								{"~!Continue"},
+																								{function(s)
+																								Event(
+																									"Thursagan",
+																									"(Whisper) So what are ye going to do?",
+																									player,
+																									{"~!Continue"},
+																									{function(s)
+																									Event(
+																										"Durstorn",
+																										"(Whisper) Fight him, and take the tools by force.",
+																										player,
+																										{"~!Continue"},
+																										{function(s)
+																										Event(
+																											"Thursagan",
+																											"(Whisper) Are ye mad?!",
+																											player,
+																											{"~!Continue"},
+																											{function(s)
+																											Event(
+																												"Durstorn",
+																												"Of course not! Now, Glonoin; one thousand was my final offer. If ye won't accept it, we will take the tools from ye by force!",
+																												player,
+																												{"~!Continue"},
+																												{function(s)
+																												Event(
+																													"Glonoin",
+																													"I'd like to see ye try!",
+																													player,
+																													{"~!Continue"},
+																													{function(s)
+																													Event(
+																														"Thursagan",
+																														"Ye're making a mistake, Durstorn.",
+																														player,
+																														{"~!Continue"},
+																														{function(s)
+																														Event(
+																															"Durstorn",
+																															"Shut up, all of ye! Attack them!",
+																															player,
+																															{"~!Continue"},
+																															{function(s)
+																																unit = CreateUnit("unit-gnomish-recruit", 0, {6, 5}) -- gnomish envoy
+																																IncreaseUnitLevel(unit, 1, true)
+																																if (mapinfo.description == "Shorbear Hills") then
+																																	RemovePlayerObjective(player, "- Destroy the enemy")
+																																end
+																																AddPlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+																																AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
+																															end},
+																															"dwarf/icons/durstorn.png"
+																														)
+																														end},
+																														"dwarf/icons/thursagan.png"
+																													)
+																													end},
+																													"dwarf/icons/thane_gray_hair.png"
+																												)
+																												end},
+																												"dwarf/icons/durstorn.png"
+																											)
+																											end},
+																											"dwarf/icons/thursagan.png"
+																										)
+																										end},
+																										"dwarf/icons/durstorn.png"
+																									)
+																									end},
+																									"dwarf/icons/thursagan.png"
+																								)
+																								end},
+																								"dwarf/icons/durstorn.png"
+																							)
+																							end},
+																							"dwarf/icons/baglur.png"
+																						)
+																						end},
+																						"dwarf/icons/rugnur.png"
+																					)
+																					end},
+																					"dwarf/icons/thane_gray_hair.png"
+																				)
+																				end},
+																				"dwarf/icons/durstorn.png"
+																			)
+																			end},
+																			"dwarf/icons/thane_gray_hair.png"
+																		)
+																		end},
+																		"dwarf/icons/durstorn.png"
+																	)
+																	end},
+																	"dwarf/icons/rugnur.png"
+																)
+																end},
+																"dwarf/icons/thane_gray_hair.png"
+															)
+															end},
+															"dwarf/icons/durstorn.png"
+														)
+														end},
+														"dwarf/icons/thane_gray_hair.png"
+													)
+													end},
+													"dwarf/icons/durstorn.png"
+												)
+												end},
+												"dwarf/icons/thane_gray_hair.png"
+											)
+											end},
+											"dwarf/icons/durstorn.png"
+										)
+										end},
+										"dwarf/icons/thane_gray_hair.png"
+									)
+									end},
+									"dwarf/icons/durstorn.png"
+								)
+								end},
+								"dwarf/icons/thane_gray_hair.png"
+							)
+							end},
+							"dwarf/icons/durstorn.png"
+						)
+						end},
+						"dwarf/icons/thursagan.png"
+					)
+					end},
+					"dwarf/icons/rugnur.png"
+				)
+				end},
+				"dwarf/icons/dwarven_steelclad.png"
+			)
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GameCycle > 3000) then
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, {8, 64}, "move")
+		Event(
+			"Shinsplitter Thane",
+			"Aha! I've spent years looking for ye Norlunds, but now I've found ye! Prepare to die!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Glonoin",
+				"Who the devil are ye?",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Rugnur",
+					"I thought we left the Shinsplitters behind at the gates four years ago! It seems we have two enemies now.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Glonoin",
+						"So, Shinsplitters, are ye against the Norlunds too? They're attacking my clan for absolutely no reason!",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Shinsplitter Thane",
+							"I see. So ye don't have the ruby?",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Glonoin",
+								"No, they do. They wanted to rent my tools to cut it, but they didn't offer me nearly enough!",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Shinsplitter Thane",
+									"How about this - I help ye defeat them, and ye let me keep the ruby when we have?",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Glonoin",
+										"Deal!",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"Durstorn",
+											"Ah, they don't scare me! We can take both of them!",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Thursagan",
+												"Don't be a fool! We can't take the Shinsplitters, and it was a mistake to attack the Shorbears, but if we have to fight we should retreat once we get what we came for, the tools!",
+												player,
+												{"~!Continue"},
+												{function(s)
+													AddPlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+												end},
+												"dwarf/icons/thursagan.png"
+											)
+											end},
+											"dwarf/icons/durstorn.png"
+										)
+										end},
+										"dwarf/icons/thane_gray_hair.png"
+									)
+									end},
+									"dwarf/icons/thane.png"
+								)
+								end},
+								"dwarf/icons/thane_gray_hair.png"
+							)
+							end},
+							"dwarf/icons/thane.png"
+						)
+						end},
+						"dwarf/icons/thane_gray_hair.png"
+					)
+					end},
+					"dwarf/icons/rugnur.png"
+				)
+				end},
+				"dwarf/icons/thane_gray_hair.png"
+			)
+			end},
+			"dwarf/icons/thane.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GetPlayerData(1, "UnitTypesCount", "unit-dwarven-thane") < 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		Event(
+			"Durstorn",
+			"Ha! Now we can get those tools easily, and go back to our own caves.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Thursagan",
+				"And how do ye plan on doing that? There are Shinsplitters swarming these hills, trying to kill us.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Durstorn",
+					"Ye are right... well, we will be able to break out eventually, and while we're here, we'll be able to finally make the scepter.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					if (GetNumUnitsAt(1, "units", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "units", {26, 23}, {51, 44}) >= 1) then
+						if ((GetNumUnitsAt(player, "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(player, "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(player, "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
+							Event(
+								"Thursagan",
+								"Well, back to the battle - we are all in the caves, but there are still enemies in here also!",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Durstorn",
+									"Indeed. Kill them! And make sure no more enter. Then we can close the gates.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									end},
+									"dwarf/icons/durstorn.png"
+								)
+								end},
+								"dwarf/icons/thursagan.png"
+							)
+						else
+							Event(
+								"Thursagan",
+								"Well, back to the battle - we need everyone to get into the Shorbear caves. And then stop any enemies from coming in here.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Durstorn",
+									"Indeed. Everyone to the caves, and kill those still inside!",
+									player,
+									{"~!Continue"},
+									{function(s)
+									end},
+									"dwarf/icons/durstorn.png"
+								)
+								end},
+								"dwarf/icons/thursagan.png"
+							)
+						end
+					elseif (((GetNumUnitsAt(player, "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(player, "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(player, "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) == false) then
+						Event(
+							"Thursagan",
+							"Well, back to the battle - we need everyone to get into the Shorbear caves. And then stop any enemies from coming in here.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Durstorn",
+								"Indeed. Everyone to the caves, and kill those still inside!",
+								player,
+								{"~!Continue"},
+								{function(s)
+								end},
+								"dwarf/icons/durstorn.png"
+							)
+							end},
+							"dwarf/icons/thursagan.png"
+						)
+					end
+					end},
+					"dwarf/icons/durstorn.png"
+				)
+				end},
+				"dwarf/icons/thursagan.png"
+			)
+			end},
+			"dwarf/icons/durstorn.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
+			if (GetNumUnitsAt(1, "any", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "any", {26, 23}, {51, 44}) < 1) then
+				if ((GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(GetThisPlayer(), "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Durstorn",
+			"We have driven all of the Shorbears and Shinsplitters out of these caves! Now, seal the gates!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+				RemovePlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
+				KillUnitAt("unit-dwarven-town-hall", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-mushroom-farm", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-barracks", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-smith", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-lumber-mill", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-sentry-tower", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-guard-tower", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-miner", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-axefighter", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-steelclad", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-thane", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-scout", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-ballista", player, 50, {0, 0}, {256, 256})
+				local uncount = 0
+				uncount = GetUnits(0)
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
+						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
+							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings
+						end
+					end
+				end
+				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
+				unit = CreateUnit("unit-dwarven-town-hall", 0, {37, 32})
+				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+
+				unit = CreateUnit("unit-dwarven-guard-tower", 0, {29, 29})
+				unit = CreateUnit("unit-dwarven-guard-tower", 0, {29, 37})
+				unit = CreateUnit("unit-dwarven-guard-tower", 0, {38, 25})
+				unit = CreateUnit("unit-dwarven-guard-tower", 0, {47, 29})
+				unit = CreateUnit("unit-dwarven-guard-tower", 0, {47, 35})
+
+				unit = CreateUnit("unit-dwarven-barracks", 0, {31, 33})
+				unit = CreateUnit("unit-dwarven-smith", 0, {43, 28})
+				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {32, 30})
+				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 28})
+				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {44, 36})
+
+				unit = CreateUnit("unit-dwarven-thane", 2, {5, 65}) -- Gaenlar
+
+				-- create second encampment for Shinsplitters
+				unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
+				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+				unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
+
+				-- create third encampment for Shinsplitters
+				unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
+				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+				unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
+				Event(
+					"",
+					"Durstorn's rash action led to many problems. Not the least of which was being surrounded by the Shinsplitters.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"",
+						"The Norlunds spent several years trapped in those caves, the Shinsplitters besieging them. The Norlunds could not leave, for there were far too many Shinsplitters, and there was no way out of the caverns other than above ground. But the Shinsplitters could not enter, for the impregnable dwarven gates were closed.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"",
+							"During this time, Thursagan crafted the Scepter of Fire, first cutting the jewel, then putting it, the gold and the cold steel into the heat of the flame. The scepter was crafted, but something was not right. No matter what he did to the Scepter, the ruby couldn't be properly bound to the metal.",
+							player,
+							{"~!Continue"},
+							{function(s)
+								AddPlayerObjective(player, "- Move Rugnur to the northeast cave entrance")
+								AddPlayerObjective(player, "- Move the Gnomish Envoy to the southern border east of the river")
+								AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan and the Gnomish Envoy must survive")
+							end}
+						)
+						end}
+					)
+					end}
+				)
+			end},
+			"dwarf/icons/durstorn.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") >= 1) then
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"Well, Thursagan has reached a conclusion. He can't make the scepter with the materials he has here, but he has the final plans for it, and all the jewels and gold he needs. Shouldn't we leave now?",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Durstorn",
+				"All this time and he couldn't make it? Fine, we should try to leave... but it's not like we could leave if we wanted to. We're surrounded!",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Baglur",
+					"If ye'll permit me to say so, sir, ye're wrong. We could-",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Durstorn",
+						"Shut up, Baglur! Ye don't know what ye're talking about. I've analyzed the situation, and we're doomed. Our best hope is to surrender. Perhaps if we give the Shinsplitters the plans for the Scepter of Fire they will let us survive.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Rugnur",
+							"Yes, of course, let's just all be cowards! What happened to your honor, Durstorn?!",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Durstorn",
+								"Ye little fool, honor is less important than life! So, I'm ordering Thursagan to give the plans and the ruby to the Shinsplitters, as a peace offering. Then maybe we'll walk out of here alive.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Thursagan",
+									"Ye don't have authority over me, Durstorn. And I wouldn't give the Scepter to them even if ye did. It's not yers to give, it's mine, and Rugnur's, and Baglur's. The gryphon riders have done more for its existence than ye have! And yet, you still get the profits from selling it to Pypo.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Durstorn",
+										"So what, all of ye want to die? Fine by me, but I won't die with ye! And if ye won't give the Scepter to the Shinsplitters, I'll take it from ye!",
+										player,
+										{"~!Continue"},
+										{function(s)
+										PlaySound("attack-miss")
+										Event(
+											"Thursagan",
+											"Nice try, Durstorn, but ye missed. Now, I'd say that attacking an ally constitutes treason, wouldn't ye?",
+											player,
+											{"~!Continue"},
+											{function(s)
+											Event(
+												"Durstorn",
+												"Ye're not my ally. Ye're more against me than the Shinsplitters are; all they want is the ruby, but ye want us dead!",
+												player,
+												{"~!Continue"},
+												{function(s)
+												Event(
+													"Rugnur",
+													"If that's what ye're thinking, ye're not fit to be ruler over us! So step down, or we'll force ye.",
+													player,
+													{"~!Continue"},
+													{function(s)
+													Event(
+														"Durstorn",
+														"Never!",
+														player,
+														{"~!Continue"},
+														{function(s)
+															PlaySound("axe-attack")
+															KillUnitAt("unit-hero-durstorn", player, 1, {0, 0}, {256, 256})
+															Event(
+																"Rugnur",
+																"Well, I suppose we were right to silence him, but I don't like this. In any case, now we should try to get out of here.",
+																player,
+																{"~!Continue"},
+																{function(s)
+																Event(
+																	"Thursagan",
+																	"Aye. So, see the area to the northeast of us?",
+																	player,
+																	{"~!Continue"},
+																	{function(s)
+																	Event(
+																		"Thursagan",
+																		"That's where there are the least Shinsplitter guards, so we have the greatest chance of success there. I think we should try to get to it.",
+																		player,
+																		{"~!Continue"},
+																		{function(s)
+																		Event(
+																			"Gnomish Envoy",
+																			"This plan, it isn't worse than staying here to be killed, but it isn't likely to succeed either. Even if it does, what will it accomplish? We will be cornered there.",
+																			player,
+																			{"~!Continue"},
+																			{function(s)
+																			Event(
+																				"Thursagan",
+																				"I don't know if we will be cornered. That cave looks like it goes deep, and we can lose the Shinsplitters in the caves. Once we get out, we'll make our way back to Knalga.",
+																				player,
+																				{"~!Continue"},
+																				{function(s)
+																				Event(
+																					"Rugnur",
+																					"The country between here and Knalga will be swarming with Shinsplitter warriors. We had better head back to the abandoned mines north of the Arkan-thoria, where we gathered our gold and coal. At least there the gnomes will have some hope of finding us.",
+																					player,
+																					{"~!Continue"},
+																					{function(s)
+																					Event(
+																						"Gnomish Envoy",
+																						"That's fine for you, you are used to the deep underground, but I ain't! What am I supposed to do?",
+																						player,
+																						{"~!Continue"},
+																						{function(s)
+																						Event(
+																							"Rugnur",
+																							"Well, ye are a member of the army of Untersberg. Why don't ye rejoin it? See if ye can run past those Shinsplitters to our southeast...",
+																							player,
+																							{"~!Continue"},
+																							{function(s)
+																							Event(
+																								"Rugnur",
+																								"... and then ride south until ye reach one of yer outposts.",
+																								player,
+																								{"~!Continue"},
+																								{function(s)
+																								Event(
+																									"Gnomish Envoy",
+																									"I'm not going to do that, it's suicide! And in any case, I've been with you for ten years, almost as long as I was in the Untersberg army; I'd prefer to fight with you.",
+																									player,
+																									{"~!Continue"},
+																									{function(s)
+																									Event(
+																										"Thursagan",
+																										"Ye going south has more of a chance of success for ye than staying here or going back to the mines! And getting news to Pypo of what has happened is also the best way to get help to us.",
+																										player,
+																										{"~!Continue"},
+																										{function(s)
+																										Event(
+																											"Gnomish Envoy",
+																											"I suppose...",
+																											player,
+																											{"~!Continue"},
+																											{function(s)
+																											Event(
+																												"Shinsplitter Thane",
+																												"Come out, Norlunds, and surrender! Or die in that cave, yer choice.",
+																												player,
+																												{"~!Continue"},
+																												{function(s)
+																												end},
+																												"dwarf/icons/thane.png"
+																											)
+																											end},
+																											"gnome/icons/gnomish_recruit.png"
+																										)
+																										end},
+																										"dwarf/icons/thursagan.png"
+																									)
+																									end},
+																									"gnome/icons/gnomish_recruit.png"
+																								)
+																								end},
+																								"dwarf/icons/rugnur.png"
+																							)
+																							end},
+																							"dwarf/icons/rugnur.png"
+																						)
+																						end},
+																						"gnome/icons/gnomish_recruit.png"
+																					)
+																					end},
+																					"dwarf/icons/rugnur.png"
+																				)
+																				end},
+																				"dwarf/icons/thursagan.png"
+																			)
+																			end},
+																			"gnome/icons/gnomish_recruit.png"
+																		)
+																		end},
+																		"dwarf/icons/thursagan.png"
+																	)
+																	end},
+																	"dwarf/icons/thursagan.png"
+																)
+																end},
+																"dwarf/icons/rugnur.png"
+															)
+														end},
+														"dwarf/icons/durstorn.png"
+													)
+													end},
+													"dwarf/icons/rugnur.png"
+												)
+												end},
+												"dwarf/icons/durstorn.png"
+											)
+											end},
+											"dwarf/icons/thursagan.png"
+										)
+										end},
+										"dwarf/icons/durstorn.png"
+									)
+									end},
+									"dwarf/icons/thursagan.png"
+								)
+								end},
+								"dwarf/icons/durstorn.png"
+							)
+							end},
+							"dwarf/icons/rugnur.png"
+						)
+						end},
+						"dwarf/icons/durstorn.png"
+					)
+					end},
+					"dwarf/icons/baglur.png"
+				)
+				end},
+				"dwarf/icons/durstorn.png"
+			)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and GetNumUnitsAt(GetThisPlayer(), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"My gnomish friend, ride as fast as ye can south. Tell Pypo we are heading northeast, towards the old eastern mines, and if he wants his precious scepter he should send forces to meet us there as soon as he can!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"I don't know what is in these caves, but whatever it is can't be worse than staying here to die.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		if (mapinfo.description == "Shorbear Hills" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+			if (player == GetThisPlayer() and GrandStrategy == false) then
+				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan") == false) then
+					table.insert(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan")
+				end
+				SavePreferences()
+			end
+			if (GrandStrategy == false) then
+--				NextMap = "maps/nidavellir/wyrms_lair.smp"
+			end
+			ActionVictory()
+		end
+		return false
+	end
+)
+end
+
+-- If Durstorn dies, any quests of the Scepter of Fire campaign currently being pursued fail
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") < 1) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
+		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end

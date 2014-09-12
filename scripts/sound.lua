@@ -244,6 +244,13 @@ MakeSound("bow", "missiles/bow.wav")
 MakeSound("bow-hit", "missiles/bow_hit.wav")
 MakeSound("throwing-axe", "missiles/throwing_axe.wav")
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
+
+MakeSound("attack-miss",
+	{"missiles/miss-1.wav",
+	"missiles/miss-2.wav",
+	"missiles/miss-3.wav"}
+)
+
 MakeSound("tree-chopping",
 	{"misc/tree_chopping/tree-chopping-1.wav",
 	"misc/tree_chopping/tree-chopping-2.wav"}

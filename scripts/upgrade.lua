@@ -82,7 +82,9 @@ end
 
 function DefineAllowMercenaryUnits(flags)
 	local units = {
-		"unit-human-lumber-mill", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+		"unit-human-lumber-mill",
+		"unit-mercenary-camp",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 	for i, unitName in ipairs(units) do
 		DefineAllow(unitName, flags)

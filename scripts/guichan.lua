@@ -550,13 +550,13 @@ Widget:setGlobalFont(Fonts["large"])
 
 
 DefaultObjectives = {"- Destroy the enemy"}
-for i=0,14 do
-	for key, value in pairs(CustomPlayerData) do
-		if (CustomPlayerData[key].Number == i) then
-			CustomPlayerData[key].Objectives = DefaultObjectives
-		end
-	end
-end
+--for i=0,14 do
+--	for key, value in pairs(CustomPlayerData) do
+--		if (CustomPlayerData[key].Number == i) then
+--			CustomPlayerData[key].Objectives = DefaultObjectives
+--		end
+--	end
+--end
 
 
 -- Define the different menus ----------
@@ -585,20 +585,22 @@ NextMap = ""
 NextMapDirect = false
 
 function RunMap(map, objective, fow, revealmap)
-  for key, value in pairs(CustomPlayerData) do
-	for i=1,table.getn(CustomPlayerData[key].Objectives) do
-		table.remove(CustomPlayerData[key].Objectives, i)
-	end
-  end
-  
-  if objective == nil then
-	for key, value in pairs(CustomPlayerData) do
-		CustomPlayerData[key].Objectives = DefaultObjectives
-	end
-  else
-	for key, value in pairs(CustomPlayerData) do
-		CustomPlayerData[key].Objectives = objective
-	end
+  if (LoadedGame == false) then
+	  for key, value in pairs(CustomPlayerData) do
+		for i=1,table.getn(CustomPlayerData[key].Objectives) do
+			table.remove(CustomPlayerData[key].Objectives, i)
+		end
+	  end
+
+	  if objective == nil then
+		for key, value in pairs(CustomPlayerData) do
+			CustomPlayerData[key].Objectives = DefaultObjectives
+		end
+	  else
+		for key, value in pairs(CustomPlayerData) do
+			CustomPlayerData[key].Objectives = objective
+		end
+	  end
   end
   local loop = true
   while (loop) do

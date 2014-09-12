@@ -193,11 +193,12 @@ DefineUnitType("unit-goblin-war-machine", { Name = "War Machine",
 		"dead", "explosion"
 } } )
 
-DefineUnitType("unit-goblin-glider", { Name = "Glider",
+DefineUnitType("unit-goblin-glider", { Name = "Goblin Glider",
 	Class = "glider",
 	Civilization = "goblin",
+	Description = "A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions.",
 	Image = {"file", "goblin/units/glider.png", "size", {100, 100}},
-	Animations = "animations-goblin-glider", Icon = "icon-goblin-worker",
+	Animations = "animations-goblin-glider", Icon = "icon-goblin-glider",
 	Costs = {"time", 65, "gold", 500, "lumber", 100},
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 14,
@@ -216,8 +217,7 @@ DefineUnitType("unit-goblin-glider", { Name = "Glider",
 	AirUnit = true,
 	DetectCloak = true,
 	Coward = true,
---	SelectableByRectangle = true, -- until it gets an icon
-	IsNotSelectable = true, -- until it gets an icon
+	SelectableByRectangle = true,
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",

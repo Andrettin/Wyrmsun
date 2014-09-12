@@ -1151,6 +1151,8 @@ function GenerateRandomMap(width, height, symmetric)
 
 	if (wyrmsun.tileset == "forest") then
 		CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+	elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	end
 
 	-- create oil patches

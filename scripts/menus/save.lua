@@ -1,6 +1,9 @@
 function RunSaveGame(name, menu)
+  HexTiles = nil
   HexTiles = {}
+  RawTiles = nil
   RawTiles = {}
+  LoadedGame = nil
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))
     confirm:resize(300,120)
@@ -12,6 +15,7 @@ function RunSaveGame(name, menu)
     UI.StatusLine:Set("Saved game to: " .. name)
     menu:stop()
   end
+  LoadedGame = false
 end
 
 function RunConfirmErase(name, menu)

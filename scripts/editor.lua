@@ -85,7 +85,7 @@ local editor_types = {
    "unit-goblin-spearman",
    "unit-goblin-archer",
    "unit-goblin-war-machine",
---   "unit-goblin-glider",
+   "unit-goblin-glider",
 
    "unit-goblin-town-hall",
    "unit-goblin-farm",
@@ -99,6 +99,7 @@ local editor_types = {
 
    "unit-gold-mine",
    "unit-coal-mine",
+   "unit-mercenary-camp",
    "unit-wood-pile",
    "unit-gold-coins",
    "unit-gold-sack",

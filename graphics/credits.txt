@@ -221,6 +221,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/glyph_player_color.png
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
+/graphics/neutral/buildings/mercenary_camp.png
 /graphics/neutral/buildings/wood_pile.png
 /graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/axe_mastery.png
@@ -309,6 +310,18 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/ocean_west_2.png
 /graphics/tilesets/world/terrain/ocean_west_3.png
 /graphics/tilesets/world/terrain/plains.png
+/graphics/tilesets/world/terrain/province_national_border_east.png
+/graphics/tilesets/world/terrain/province_national_border_north.png
+/graphics/tilesets/world/terrain/province_national_border_northeast_inner.png
+/graphics/tilesets/world/terrain/province_national_border_northeast_outer.png
+/graphics/tilesets/world/terrain/province_national_border_northwest_inner.png
+/graphics/tilesets/world/terrain/province_national_border_northwest_outer.png
+/graphics/tilesets/world/terrain/province_national_border_south.png
+/graphics/tilesets/world/terrain/province_national_border_southeast_inner.png
+/graphics/tilesets/world/terrain/province_national_border_southeast_outer.png
+/graphics/tilesets/world/terrain/province_national_border_southwest_inner.png
+/graphics/tilesets/world/terrain/province_national_border_southwest_outer.png
+/graphics/tilesets/world/terrain/province_national_border_west.png
 /graphics/tilesets/world/terrain/scrub_forest.png
 /graphics/tilesets/fogofwar.png
 /graphics/ui/cursors/magnifying_glass.png
@@ -417,6 +430,7 @@ Leo:
 /graphics/goblin/buildings/lumber_mill.png
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
+/graphics/goblin/icons/glider.png
 /graphics/neutral/icons/wyrm.png
 /graphics/neutral/icons/wyrm_blue_scales.png
 /graphics/neutral/icons/wyrm_cyan_scales.png

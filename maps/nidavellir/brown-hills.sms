@@ -200,4 +200,6 @@ unit = CreateUnit("unit-dwarven-steelclad", 3, {20, 16}) -- Dursil
 unit = CreateUnit("unit-potion-of-healing", 15, {8, 51})
 unit = CreateUnit("unit-potion-of-healing", 15, {52, 96})
 
+CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

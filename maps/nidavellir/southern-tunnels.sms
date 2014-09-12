@@ -255,4 +255,6 @@ PlayMusic("music/knolls.ogg")
 --wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/revelation.ogg" }
 wyrmsun.playlist = { "music/knalgan_theme.ogg" }
 
+CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

@@ -48,6 +48,8 @@ wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
 
 MapDirectories = {"maps/"}
 
+LoadedGame = false
+
 InitFuncs = {}
 function InitFuncs:add(f)
   table.insert(self, f)
@@ -364,14 +366,16 @@ function SinglePlayerTriggers()
 		end
 	)
 
-	for key, value in pairs(CustomPlayerData) do
-		for i=1,table.getn(CustomPlayerData[key].Objectives) do
-			table.remove(CustomPlayerData[key].Objectives, i)
+	if (LoadedGame == false) then
+		for key, value in pairs(CustomPlayerData) do
+			for i=1,table.getn(CustomPlayerData[key].Objectives) do
+				table.remove(CustomPlayerData[key].Objectives, i)
+			end
 		end
-	end
-  
-	for key, value in pairs(CustomPlayerData) do
-		CustomPlayerData[key].Objectives = {"- Destroy the enemy"}
+
+		for key, value in pairs(CustomPlayerData) do
+			CustomPlayerData[key].Objectives = {"- Destroy the enemy"}
+		end
 	end
 
 --	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
@@ -439,6 +443,8 @@ function SinglePlayerTriggers()
 			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 		end
 	end
+	
+	LoadedGame = false
 end
 
 function StandardTriggers()
@@ -746,7 +752,9 @@ function StandardTriggers()
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic")) then
 					IncreaseUnitLevel(uncount[unit1], 1, true)
-					AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
+					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
+						AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
+					end
 				end
 			end
 			return true

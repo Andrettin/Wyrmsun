@@ -36,10 +36,23 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 0.1.7
 -----------------------------------------------------------------------
 
+* Buildings
+- Added Mercenary Camp (graphics by Jinn), neutral building where mercenaries can be hired. It is generated in some maps.
+
+* Maps
+- Added Shorbear Hills map (Nidavellir), from Battle for Wesnoth.
+
 * Miscellaneous
 - Added a couple of new hints.
 - Added Jotunheim description to the encyclopedia.
 - If a player holds only goblin gliders, he is defeated.
+- New grand strategy national border graphics (by Jinn).
+- Allied or neutral AI Players now change their diplomatic stance to enemy if attacked.
+
+* Quests
+- In the A Bargain is Struck quest dialogue, the options that result in foregoing the quest now have "(Forego Quest)" written.
+- Fixed a few issues related to quests and saved games.
+- Added Hills of the Shorbear Clan quest.
 
 * Units
 - The player now receives a message notification when a unit levels up.
@@ -47,6 +60,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Slimes now have an icon (graphics by Leo); as a result, they are now selectable and appear in the encyclopedia.
 - New wyrm icons have been added (graphics by Leo); the previous wyrm icon is now used as a variation icon of the green-scaled wyrm.
 - The level up button now appears immediately upon level-up, instead of the player having to click the unit again for it to appear.
+- Goblin gliders now have an icon (graphics by Leo); as a result, they are now selectable and appear in the encyclopedia.
+- The Surghan Mercenaries are now hireable at the Mercenary Camp.
 
 * Upgrades
 - The graphics for the dwarven level 3 shield icon have been updated (by Leo).

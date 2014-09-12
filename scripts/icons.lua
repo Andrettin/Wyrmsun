@@ -559,6 +559,13 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-glider",
+	Size = {46, 38},
+	Frame = 0,
+	File = "goblin/icons/glider.png"
+})
+
+DefineIcon({
 	Name = "icon-greebo",
 	Size = {46, 38},
 	Frame = 0,
@@ -787,6 +794,13 @@ DefineIcon({
 	Size = {46, 38},
 	Frame = 0,
 	File = "neutral/icons/coal_mine.png"
+})
+
+DefineIcon({
+	Name = "icon-mercenary-camp",
+	Size = {46, 38},
+	Frame = 0,
+	File = "neutral/icons/mercenary_camp.png"
 })
 
 DefineIcon({

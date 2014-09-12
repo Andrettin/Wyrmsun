@@ -235,7 +235,7 @@ WorldMapProvinces = {
 			DwarvenWarHall = 2, -- has capability to train warriors
 			DwarvenSmith = 2 -- renowned skilled crafters
 		},
-		Map = "maps/random_maps/random-map-swamp.smp",
+		Map = "maps/nidavellir/shorbear-hills.smp",
 		Units = {
 			DwarvenThane = 1 -- Glonoin
 		}

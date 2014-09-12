@@ -280,11 +280,10 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
   Key = "b", Hint = "Build ~!Ballista",
   ForUnit = {"unit-dwarven-barracks"} } )
 
---DefineButton( { Pos = 7, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
---  Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
---  Allowed = "check-single-research",
---  Key = "u", Hint = "Hire S~!urghan Mercenaries",
---  ForUnit = {"unit-dwarven-barracks"} } )
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
+  Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
+  Key = "s", Hint = "Hire ~!Surghan Mercenaries",
+  ForUnit = {"unit-mercenary-camp"} } )
 
 -- Researches ---------------------------------------------------------
 
