@@ -222,6 +222,7 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
 
 DefineUnitType("unit-wyrm", { Name = "Wyrm",
 	Description = "These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds.",
+	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, including Svafnir.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
 	Animations = "animations-wyrm", Icon = "icon-wyrm",
 	NeutralMinimapColor = {192, 192, 192},

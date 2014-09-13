@@ -33,6 +33,23 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 ############################################################
 
 -----------------------------------------------------------------------
+- 0.1.8
+-----------------------------------------------------------------------
+
+* Maps
+- Added Svafnir's Lair map (Nidavellir), from Battle for Wesnoth.
+
+* Miscellaneous
+- Fixed a bug which caused the screen to continue scrolling when a dialogue popped up.
+
+* Quests
+- Added The Wyrm quest.
+
+* Units
+- Updated the Wyrm's encyclopedia entry.
+- Gnomish units now have their own boots icon for the move button (graphics by Leo).
+
+-----------------------------------------------------------------------
 - 0.1.7
 -----------------------------------------------------------------------
 

@@ -44,6 +44,11 @@ DefineRaceNames(
 		"visible"
 	},
 	"race", {
+		"name", "kobold",
+		"display", "Kobold",
+		"visible"
+	},
+	"race", {
 		"name", "neutral",
 		"display", "Neutral"
 	}

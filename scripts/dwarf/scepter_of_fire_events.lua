@@ -706,7 +706,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -719,7 +719,7 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
+		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -1379,7 +1379,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1391,7 +1391,7 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
+		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -2934,7 +2934,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan") < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan") < 1 and GetPlayerData(15, "UnitTypesCount", "unit-hero-thursagan") < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -2944,7 +2944,7 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills") then
+		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end
@@ -3897,10 +3897,429 @@ AddTrigger(
 				SavePreferences()
 			end
 			if (GrandStrategy == false) then
---				NextMap = "maps/nidavellir/wyrms_lair.smp"
+				NextMap = "maps/nidavellir/svafnirs-lair.smp"
 			end
 			ActionVictory()
 		end
+		return false
+	end
+)
+end
+
+if (mapinfo.description == "Svafnir's Lair") then
+-- The Wyrm initial dialogue
+-- based on The Dragon scenario of the Sceptre of Fire campaign from Battle for Wesnoth
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan") and PlayerHasObjective(GetThisPlayer(), "- Get all heroes to the end of the tunnel") == false) then
+			for i=0,14 do
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"Thus the gnomish envoy escaped from his Shinsplitter pursuers. But the dwarves were not so lucky. I would say that, perhaps, their betrayal of Durstorn was coming back to haunt them. For the section of the old eastern mines that they reached in their flight had long since become the lair of Svafnir... the wyrm.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Rugnur",
+				"Well, Thursagan, we've reached the eastern mines, but the Shinsplitters are hot on our trail. What do we do now?",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Thursagan",
+					"Well, we have two choices. We may either stand and fight, and assuredly die, or run as quickly as possible down this path into the depths of the cave, where we may find something that will help us. Also, remember, the Shinsplitters will take some time to have their full strength here, so we may be able to get ahead of them and perhaps lay a trap.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Gryphon Rider",
+						"Why don't we just surrender? All they want is that stone!",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Rugnur",
+							"If we give them the ruby, then what? They'll probably kill us anyway. And, that ruby is very valuable, they could use it to gain funds and become even more dangerous. We can't let it fall into the wrong hands.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"Thursagan",
+								"Then we shall run.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"Baglur",
+									"So we're running away, eh? I dinna' like that, but it seems it's our only option.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"Rugnur",
+										"If it makes ye feel any better, we'll probably die this way, too.",
+										player,
+										{"~!Continue"},
+										{function(s)
+											if (mapinfo.description == "Svafnir's Lair") then
+												RemovePlayerObjective(player, "- Destroy the enemy")
+											end
+											AddPlayerObjective(player, "- Get all heroes to the end of the tunnel")
+											AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
+										end},
+										"dwarf/icons/rugnur.png"
+									)
+									end},
+									"dwarf/icons/baglur.png"
+								)
+								end},
+								"dwarf/icons/thursagan.png"
+							)
+							end},
+							"dwarf/icons/rugnur.png"
+						)
+						end},
+						"dwarf/icons/gryphon_rider.png"
+					)
+					end},
+					"dwarf/icons/thursagan.png"
+				)
+				end},
+				"dwarf/icons/rugnur.png"
+			)
+			end}
+		)
+		return false
+	end
+)
+
+-- make the Shinsplitter and kobold units chase Rugnur's dwarves
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		return true
+	end,
+	function() 
+		local thursagan = nil
+	
+		local uncount = 0
+		uncount = GetUnits("any")
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-hero-thursagan") then
+				thursagan = uncount[unit1]
+			end
+		end
+
+		if (thursagan == nil) then
+			return true
+		end
+
+		uncount = 0
+		uncount = GetUnits(1)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
+				OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+			end
+		end
+
+		if (GetPlayerData(GetFactionPlayer("Svafnir"), "TotalNumUnits") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated
+			uncount = 0
+			uncount = GetUnits(2)
+			for unit1 = 1,table.getn(uncount) do 
+				if (IsUnitIdle(uncount[unit1])) then
+					OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+				end
+			end
+		end
+		return true
+	end
+)
+
+-- event when Svafnir is sighted
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Svafnir"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Rugnur",
+			"Look, there's a wyrm in these caves!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Thursagan",
+				"I wonder which of the great wyrms this is...",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Rugnur",
+					"I'd rather face one powerful wyrm than hundreds of mighty dwarves. Continue!",
+					player,
+					{"~!Continue"},
+					{function(s)
+					end},
+					"dwarf/icons/rugnur.png"
+				)
+				end},
+				"dwarf/icons/thursagan.png"
+			)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+-- event when a Surghan Mercenary is sighted
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") then
+				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Thursagan",
+			"What's this? These aren't normal dwarven troops!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Baglur",
+				"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				end},
+				"dwarf/icons/baglur.png"
+			)
+			end},
+			"dwarf/icons/thursagan.png"
+		)
+		return false
+	end
+)
+
+-- event when the Gryphon Rider sees the forge
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
+				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smith", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Gryphon Rider",
+			"Look! Forge here!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Thursagan",
+				"It looks like a forge, heated by lava. It looks ancient, and it looks hot enough to make the Scepter.",
+				player,
+				{"~!Continue"},
+				{function(s)
+					AddPlayerObjective(player, "- Move Thursagan to the forge")
+					AddPlayerObjective(player, "- Defend Thursagan until the Scepter of Fire is complete")
+				end},
+				"dwarf/icons/thursagan.png"
+			)
+			end},
+			"dwarf/icons/gryphon_rider.png"
+		)
+		-- there should be a version of the dialogue if another unit finds the forge, too
+		return false
+	end
+)
+
+-- event when Thursagan reaches the forge
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-hero-thursagan", "unit-dwarven-smith")) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
+				Event(
+					"Thursagan",
+					"This forge will work perfectly. Give me a few days here, and I can reforge the Scepter of Fire to become a proper artifact.",
+					player,
+					{"~!Continue"},
+					{function(s)
+						ChangeUnitOwner(uncount[unit1], 15)
+						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
+					end},
+					"dwarf/icons/thursagan.png"
+				)
+			end
+		end
+		return false
+	end
+)
+
+-- kobolds come to Svafnir's rescue if it is attacked
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Svafnir"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+				if (GetUnitVariable(uncount[unit1], "HitPoints") < GetUnitVariable(uncount[unit1], "HitPoints", "Max")) then
+					player = GetThisPlayer()
+					return true
+				else
+					return false
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Kobold Footpad A",
+			"By the fiery Wyrmsun! The breastlings are attacking the ancient beast...!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Kobold Footpad B",
+				"We cannot allow one of the few surviving great wyrms to be slain! Get at them!",
+				player,
+				{"~!Continue"},
+				{function(s)
+					local uncount = 0
+					uncount = GetUnits(GetFactionPlayer("Svafnir"))
+					for unit1 = 1,table.getn(uncount) do 
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+							unit = CreateUnit("unit-goblin-spearman", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+							unit = CreateUnit("unit-goblin-spearman", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+							unit = CreateUnit("unit-goblin-spearman", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+						end
+					end
+				end},
+				"kobold/icons/kobold_footpad.png"
+			)
+			end},
+			"kobold/icons/kobold_footpad.png"
+		)
+		return false
+	end
+)
+
+-- Thursagan completes the Scepter of Fire
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 6000) then -- Scepter is crafted after 6000 cycles
+				player = GetFactionPlayer("Norlund Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"Thursagan",
+			"I have completed my work. Now it is truly the Scepter of Fire, a mighty artifact.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Rugnur",
+				"Good. Now, let's get out of this cave, before the dwarves or kobolds kill us!",
+				player,
+				{"~!Continue"},
+				{function(s)
+					if (mapinfo.description == "Svafnir's Lair" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+--						if (player == GetThisPlayer() and GrandStrategy == false) then
+--							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm") == false) then
+--								table.insert(wyr.preferences.QuestsCompleted, "The Wyrm")
+--							end
+--							SavePreferences()
+--						end
+						if (GrandStrategy == false) then
+--							NextMap = "maps/nidavellir/caverns-of-flame.smp"
+						end
+						ActionVictory()
+					end
+				end},
+				"dwarf/icons/rugnur.png"
+			)
+			end},
+			"dwarf/icons/thursagan.png"
+		)
 		return false
 	end
 )

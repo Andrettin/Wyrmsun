@@ -36,6 +36,13 @@
 
 -- general commands -------------------------------
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-boots",
+  Action = "move",
+  Key = "m", Hint = "~!Move",
+  ForUnit = {
+    "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
+    "gnome-group"} } )
+
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
   Action = "patrol",
   Key = "p", Hint = "~!Patrol",

@@ -111,6 +111,7 @@ function RunShowCreditsMenu()
 	"Testing",
 	"  b_o",
 	"  Joao Victor G. Costa (Jinn)",
+	"  Leo",
 	"  TaShadan",
 	"Stratagus Patches",
 	"  Martin Renold",

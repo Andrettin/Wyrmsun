@@ -807,6 +807,8 @@ function GetCivilizationFactions(civilization)
 		return {"Untersberg"}
 	elseif (civilization == "goblin") then
 		return {"Goblins"}
+	elseif (civilization == "kobold") then
+		return {"Kobolds"}
 	elseif (civilization == "orc") then
 		return {"Blackeye Clan", "Bloody Sword Clan"}
 	elseif (civilization == "troll") then

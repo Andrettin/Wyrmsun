@@ -438,6 +438,8 @@ Leo:
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png
 /graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
+/graphics/gnome/icons/boots.png
+/graphics/gnome/icons/boots_fur.png
 /graphics/goblin/buildings/farm.png
 /graphics/goblin/buildings/lumber_mill.png
 /graphics/goblin/buildings/mess_hall.png

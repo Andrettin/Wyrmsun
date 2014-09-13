@@ -174,7 +174,7 @@ if (GrandStrategy == false) then
 end
 
 unit = CreateUnit("unit-gold-mine", 15, {34, 40}) -- Shorbear Hold Gold Mine
-SetResourcesHeld(unit, 50000)
+SetResourcesHeld(unit, 100000)
 unit = CreateUnit("unit-gold-mine", 15, {13, 0}) -- Norlund Gold Mine
 SetResourcesHeld(unit, 50000)
 unit = CreateUnit("unit-gold-mine", 15, {4, 73}) -- Shinsplitter Gold Mine

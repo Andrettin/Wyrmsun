@@ -53,12 +53,12 @@ DefineCursor({
   Size = {32, 32}})
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---	* Race dwarf.
+--	* Race gnome.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/battle.ogg" }
 
-function DwarfScreen(screen_width, screen_height)
+function GnomeScreen(screen_width, screen_height)
   local info_panel_x = 0
   local info_panel_y = 160
 

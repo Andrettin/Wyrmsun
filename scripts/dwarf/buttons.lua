@@ -42,7 +42,6 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner",
     "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-    "unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
     "unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-goblin-war-machine", "unit-goblin-glider",
     "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",

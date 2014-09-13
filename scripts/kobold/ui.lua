@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      ui.lua - Define the goblin user interface
+--      ui.lua - Define the kobold user interface
 --
 --      (c) Copyright 2014 by Andre Novellino Gouvêa
 --
@@ -29,36 +29,36 @@
 
 DefineCursor({
   Name = "cursor-point",
-  Race = "goblin",
+  Race = "kobold",
   File = "ui/dwarf/cursors/dwarven_gauntlet.png",
   HotSpot = { 3,  2},
   Size = {28, 32}})
 DefineCursor({
   Name = "cursor-green-hair",
-  Race = "goblin",
+  Race = "kobold",
   File = "ui/cursors/green.png",
   HotSpot = {15, 15},
   Size = {32, 32}})
 DefineCursor({
   Name = "cursor-yellow-hair",
-  Race = "goblin",
+  Race = "kobold",
   File = "ui/cursors/yellow.png",
   HotSpot = {15, 15},
   Size = {32, 32}})
 DefineCursor({
   Name = "cursor-red-hair",
-  Race = "goblin",
+  Race = "kobold",
   File = "ui/cursors/red.png",
   HotSpot = {15, 15},
   Size = {32, 32}})
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---	* Race goblin.
+--	* Race kobold.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/battle.ogg" }
 
-function GoblinScreen(screen_width, screen_height)
+function KoboldScreen(screen_width, screen_height)
   local info_panel_x = 0
   local info_panel_y = 160
 

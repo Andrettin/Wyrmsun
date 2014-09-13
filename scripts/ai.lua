@@ -292,7 +292,7 @@ function AiSiegeWeapon()
 end
 
 --
---  Flying rider of the current race.
+--  Flying rider of the current civilization.
 --
 function AiFlyingRider()
 	if (AiGetRace() == "dwarf") then
@@ -303,7 +303,7 @@ function AiFlyingRider()
 end
 
 --
---  Flying rider of the current race.
+--  Glider of the current civilization.
 --
 function AiGlider()
 	if (AiGetRace() == "goblin") then
