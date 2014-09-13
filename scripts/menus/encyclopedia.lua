@@ -244,6 +244,11 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	b:setSize(46, 38)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrame(true)
+--	if (string.find(unit_name, "upgrade-") == nil) then
+--		b:setTooltip(GetUnitTypeData(unit_name, "Name"))
+--	else
+--		b:setTooltip(CUpgrade:Get(unit_name).Name)
+--	end
 	return b
 end
 

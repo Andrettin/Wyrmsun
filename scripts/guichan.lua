@@ -1139,7 +1139,7 @@ function BuildProgramStartMenu()
   menu:addLabel(wyrmsun.Name .. " v" .. wyrmsun.Version, offx + 320, offy + 104 + 36*-2)
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.6") then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.6" and wyr.preferences.LastVersionPlayed ~= "0.1.7") then
 		wyr.preferences.Heroes.Rugnur.upgrades = nil
 		wyr.preferences.Heroes.Rugnur.upgrades = {}
 		wyr.preferences.Heroes.Baglur.upgrades = nil

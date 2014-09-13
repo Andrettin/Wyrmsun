@@ -45,6 +45,7 @@ Units = {
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
+	"unit-mercenary-camp",
 	"unit-hero-rugnur", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo"
 }
@@ -411,7 +412,7 @@ DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
 		"dead", "building destroyed"} } )
 
 DefineUnitType("unit-mercenary-camp", { Name = "Mercenary Camp",
---	Description = "The gnomish barracks serves as a place for military training and arregimentation for the gnomes.",
+	Description = "This camp houses a number of mercenary groups, who will offer their talents for hire.",
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
 	NeutralMinimapColor = {192, 192, 192},
 	Animations = "animations-building", Icon = "icon-mercenary-camp",

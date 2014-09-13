@@ -89,16 +89,16 @@ function RunKeystrokeHelpMenu()
 end
 
 local tips = {
-  "Completing quests may reward you with technology points and unlock new maps and heroes.",
+  "Completing quests may reward you with technology points and unlock new maps.",
   "You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by \"double clicking\" on a unit.",
   "The more workers you have collecting resources, the faster your economy will grow.",
   "Building more than one barracks will let you train more units faster.",
   "Use your workers to repair damaged buildings.",
   "Explore your surroundings early in the game.",
 
-  "You can demolish trees and rocks.",
+--  "You can demolish trees and rocks.",
   "Keep all workers working. Use ALT-I to find idle workers.",
-  "You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon.  CTRL click again to turn off.",
+--  "You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon.  CTRL click again to turn off.",
 
   -- Shift tips
   "You can give an unit an order which is executed after it finishes the current work, if you hold the SHIFT key.",

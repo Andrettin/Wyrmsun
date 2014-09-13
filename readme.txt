@@ -37,7 +37,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 -----------------------------------------------------------------------
 
 * Buildings
-- Added Mercenary Camp (graphics by Jinn), neutral building where mercenaries can be hired. It is generated in some maps.
+- Added Mercenary Camp (graphics by Jinn), neutral building where mercenaries can be hired, and which is generated in some maps.
+
+* Grand Strategy
+- The Shorbear Hills province now uses the Shorbear Hills map instead of a random swamp map.
 
 * Maps
 - Added Shorbear Hills map (Nidavellir), from Battle for Wesnoth.
@@ -48,6 +51,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - If a player holds only goblin gliders, he is defeated.
 - New grand strategy national border graphics (by Jinn).
 - Allied or neutral AI Players now change their diplomatic stance to enemy if attacked.
+- New grand strategy provincial border graphics (by Jinn).
 
 * Quests
 - In the A Bargain is Struck quest dialogue, the options that result in foregoing the quest now have "(Forego Quest)" written.
