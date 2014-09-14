@@ -30,6 +30,7 @@ Battle for Wesnoth Team:
 /sounds/neutral/gryphon/gryphon_shriek_1.wav
 /sounds/neutral/gryphon/gryphon_shriek_2.wav
 /sounds/neutral/drake_death.wav
+/sounds/neutral/hiss_death.wav
 /sounds/neutral/squishy_death.wav
 /sounds/ui/click.wav
 

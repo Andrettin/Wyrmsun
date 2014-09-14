@@ -115,8 +115,8 @@ SetPlayerData(1, "RaceName", "dwarf")
 SetPlayerData(1, "Name", "Shorbear Clan")
 SetAiType(1, "land-attack")
 SetStartView(2, 5, 65)
-SetPlayerData(2, "Resources", "gold", 3000)
-SetPlayerData(2, "Resources", "lumber", 1500)
+SetPlayerData(2, "Resources", "gold", 2000)
+SetPlayerData(2, "Resources", "lumber", 1000)
 SetPlayerData(2, "Resources", "oil", 0)
 SetPlayerData(2, "RaceName", "dwarf")
 SetPlayerData(2, "Name", "Shinsplitter Clan")
@@ -146,11 +146,11 @@ if (GrandStrategy == false) then
 	end
 
 	unit = CreateUnit("unit-dwarven-town-hall", 1, {37, 32})
-	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
-	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
-	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
-	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
-	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
+--	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
+--	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
+--	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
+--	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
+--	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
@@ -171,6 +171,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-town-hall", 2, {4, 64})
 	unit = CreateUnit("unit-dwarven-miner", 2, {5, 65}) -- only one miner so that they start slower
 	unit = CreateUnit("unit-dwarven-thane", 2, {2, 70}) -- Lyndar
+--	unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {0, 70})
 end
 
 unit = CreateUnit("unit-gold-mine", 15, {34, 40}) -- Shorbear Hold Gold Mine

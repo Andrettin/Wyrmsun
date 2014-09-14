@@ -167,6 +167,11 @@ MakeSound("goblin-archer-ready", "goblin/archer/goblin-archer-ready.wav")
 MakeSound("goblin-shaman-ready", "goblin/shaman/goblin-shaman-ready.wav")
 
 ------------------------------------------------------------------------------
+--	Define simple goblin sounds.
+--
+MakeSound("basic-kobold-voices-dead", "neutral/hiss_death.wav")
+
+------------------------------------------------------------------------------
 --	Define simple misc sounds.
 --
 building_construction = MakeSound("building construction", "misc/building_construction.wav")

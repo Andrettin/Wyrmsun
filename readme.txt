@@ -38,6 +38,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Maps
 - Added Svafnir's Lair map (Nidavellir), from Battle for Wesnoth.
+- In the Shorbear Hills map, the blue player now starts with no miners, as the scenario was too difficult. The green player's starting resources are now the same as those of the other players.
 
 * Miscellaneous
 - Fixed a bug which caused the screen to continue scrolling when a dialogue popped up.
@@ -48,6 +49,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Units
 - Updated the Wyrm's encyclopedia entry.
 - Gnomish units now have their own boots icon for the move button (graphics by Leo).
+- Added Kobold Footpad (unit graphics by b_o and unit icon by Leo).
 
 -----------------------------------------------------------------------
 - 0.1.7

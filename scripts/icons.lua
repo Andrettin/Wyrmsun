@@ -628,6 +628,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-scepter",
+	Size = {46, 38},
+	File = "neutral/icons/scepter.png"
+})
+
+DefineIcon({
 	Name = "icon-gold-coins",
 	Size = {46, 38},
 	File = "neutral/icons/gold_coins.png"

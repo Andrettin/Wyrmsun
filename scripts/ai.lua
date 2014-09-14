@@ -150,6 +150,8 @@ function AiSoldier()
 		return "unit-gnomish-recruit"
 	elseif (AiGetRace() == "goblin") then
 		return "unit-goblin-spearman"
+	elseif (AiGetRace() == "kobold") then
+		return "unit-kobold-footpad"
 	else
 		return "unit-dwarven-axefighter"
 	end

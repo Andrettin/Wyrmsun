@@ -725,7 +725,11 @@ function StandardTriggers()
 			end
 			return true
 		end,
-		function() 
+		function()
+			if (mapinfo.description == "Svafnir's Lair") then -- somewhat ugly way of making this not happen during The Wyrm quest
+				return false
+			end
+			
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
@@ -734,6 +738,28 @@ function StandardTriggers()
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 					DefineAllow("unit-surghan-mercenary-steelclad", "FFFFFFFFFFFFFFFF")
+
+					local enemy_unit = nil
+
+					local surghan_uncount = 0
+					surghan_uncount = GetUnits("any")
+					for surghan_unit1 = 1,table.getn(surghan_uncount) do 
+						if (Players[GetUnitVariable(uncount[unit1], "Player")]:IsEnemy(Players[GetUnitVariable(surghan_uncount[surghan_unit1],"Player")])) then
+							enemy_unit = surghan_uncount[surghan_unit1]
+							break
+						end
+					end
+
+					if (enemy_unit ~= nil) then
+						surghan_uncount = 0
+						surghan_uncount = GetUnits(GetUnitVariable(uncount[unit1], "Player"))
+						for surghan_unit1 = 1,table.getn(surghan_uncount) do 
+							if (GetUnitVariable(surghan_uncount[surghan_unit1],"Ident") == "unit-surghan-mercenary-steelclad") then
+								OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(surghan_uncount[surghan_unit1],"Ident"), {GetUnitVariable(surghan_uncount[surghan_unit1],"PosX"), GetUnitVariable(surghan_uncount[surghan_unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
+							end
+						end
+					end
+
 					return false
 				end
 			end

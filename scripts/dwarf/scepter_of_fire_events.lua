@@ -4258,9 +4258,9 @@ AddTrigger(
 					uncount = GetUnits(GetFactionPlayer("Svafnir"))
 					for unit1 = 1,table.getn(uncount) do 
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
-							unit = CreateUnit("unit-goblin-spearman", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-							unit = CreateUnit("unit-goblin-spearman", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-							unit = CreateUnit("unit-goblin-spearman", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+							unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+							unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+							unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 						end
 					end
 				end},
@@ -4283,6 +4283,7 @@ AddTrigger(
 		uncount = GetUnits(15)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 6000) then -- Scepter is crafted after 6000 cycles
+				unit = CreateUnit("unit-scepter-of-fire", 15, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY") + 1})
 				player = GetFactionPlayer("Norlund Clan")
 				return true
 			end

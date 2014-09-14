@@ -97,6 +97,8 @@ b_o:
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png
+/graphics/neutral/units/kobold_footpad.png
+/graphics/neutral/units/kobold_footpad_thrusting_sword.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rat_black_fur.png
 /graphics/neutral/units/rat_light_gray_fur.png

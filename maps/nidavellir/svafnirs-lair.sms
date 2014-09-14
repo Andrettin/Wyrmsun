@@ -124,6 +124,12 @@ if (GrandStrategy == false) then
 
 	unit = CreateUnit("unit-dwarven-thane", 1, {4, 20}) -- Crintil
 
+	-- create a few more steelclads, to make the Shinsplitters have more of a fighting force
+	unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
+	unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
+	unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
+
+
 	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
 	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
 	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
@@ -161,7 +167,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-guard-tower", 3, {22, 17})
 	unit = CreateUnit("unit-dwarven-guard-tower", 3, {24, 13})
 --	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 10}) -- having this tower next to the other one was creating to much of an impediment for later Shinsplitter attacks
-	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 14})
+--	unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 14})
 	unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 26})
 	unit = CreateUnit("unit-dwarven-guard-tower", 3, {32, 34})
 	unit = CreateUnit("unit-dwarven-guard-tower", 3, {31, 36})

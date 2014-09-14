@@ -36,7 +36,7 @@
 DefineUnitType("unit-kobold-footpad", { Name = "Kobold Footpad",
 	Class = "infantry",
 	Civilization = "kobold",
-	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
+	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},
 	Description = "Stealthy and fierce, kobold footpads are the warriors of their race. They roam the tunnels of Nidavellir, abhorring to fight in the open. They call their swords \"fangs\" in homage to the power of a wyrm's bite.",
 	Animations = "animations-goblin-spearman", Icon = "icon-kobold-footpad",
 	Costs = {"time", 60, "gold", 600},
@@ -50,7 +50,7 @@ DefineUnitType("unit-kobold-footpad", { Name = "Kobold Footpad",
 	Priority = 60,
 	BasePoints = 50,
 	Demand = 1,
---	Corpse = "unit-goblin-dead-body",
+	Corpse = "unit-gnomish-dead-body",
 	Type = "land",
 	RightMouseAction = "attack",
 	CanAttack = true,
@@ -65,7 +65,7 @@ DefineUnitType("unit-kobold-footpad", { Name = "Kobold Footpad",
 --		"acknowledge", "basic-goblin-voices-acknowledge",
 --		"ready", "goblin-impaler-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"} } )
+		"dead", "basic-kobold-voices-dead"} } )
 
 GrandStrategyUnits["KoboldFootpad"] = {
 	Name = GetUnitTypeName("unit-kobold-footpad") .. "s",

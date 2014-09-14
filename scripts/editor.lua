@@ -97,6 +97,10 @@ local editor_types = {
 
 --- - - - - - - - - - - - - - - - - - -
 
+   "unit-kobold-footpad",
+
+--- - - - - - - - - - - - - - - - - - -
+
    "unit-gold-mine",
    "unit-coal-mine",
    "unit-mercenary-camp",
@@ -111,6 +115,7 @@ local editor_types = {
    "unit-cheese",
    "unit-carrots",
    "unit-gryphon-feather",
+   "unit-scepter-of-fire",
 
    "unit-critter",
    "unit-slime",

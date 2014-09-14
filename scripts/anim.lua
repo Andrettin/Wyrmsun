@@ -390,7 +390,7 @@ DefineAnimations("animations-mushroom-patch", {
 	"label end", "wait 1",},
 })
 
-DefineAnimations("animations-gold-sack", {
+DefineAnimations("animations-item", {
   Still = BuildingStill,
   Death = BuildingStill,
 })
