@@ -2962,7 +2962,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") and PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") and PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false and PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -3249,7 +3249,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GameCycle > 3000) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GameCycle > 3000 and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -3491,21 +3491,22 @@ AddTrigger(
 				KillUnitAt("unit-dwarven-lumber-mill", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-sentry-tower", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-guard-tower", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-miner", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-axefighter", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-steelclad", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-thane", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-scout", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-ballista", player, 50, {0, 0}, {256, 256})
-				local uncount = 0
-				uncount = GetUnits(0)
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
-						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
-							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings
-						end
-					end
-				end
+				KillUnitAt("unit-dwarven-miner", player, 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-axefighter", player, 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-steelclad", player, 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-thane", player, 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-scout", player, 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-ballista", player, 100, {0, 0}, {256, 256})
+--				local uncount = 0 -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
+--				uncount = GetUnits(0)
+--				for unit1 = 1,table.getn(uncount) do 
+----					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
+--					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "-hero-") ~= nil or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit") then
+--						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
+--							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings
+--						end
+--					end
+--				end
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
 				unit = CreateUnit("unit-dwarven-town-hall", 0, {37, 32})
 				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})

@@ -394,16 +394,18 @@ function SinglePlayerTriggers()
 		AssignPlayerFactions()
 	end
 
-	DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
-	DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
-	DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
-	ApplyTechLevels()
-	if (GrandStrategy) then
-		for i=0,14 do
-			if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
-				for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do -- if in grand strategy mode, apply upgrades researched
-					if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[gsunit_key] == 2) then
-						AcquireUpgrade(i, GrandStrategyTechnologies[gsunit_key].UpgradeType)
+	if (LoadedGame == false) then
+		DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
+		DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
+		DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
+		ApplyTechLevels()
+		if (GrandStrategy) then
+			for i=0,14 do
+				if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
+					for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do -- if in grand strategy mode, apply upgrades researched
+						if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[gsunit_key] == 2) then
+							AcquireUpgrade(i, GrandStrategyTechnologies[gsunit_key].UpgradeType)
+						end
 					end
 				end
 			end
@@ -509,12 +511,12 @@ function StandardTriggers()
 							end
 						end
 					end
-					if (mercenary_camp_player < 15) then
-					for i=-1,3 do
-						for j=-1,3 do
-							OrderUnit(mercenary_camp_player, "units", {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, "move")
+					if (mercenary_camp_player < 15 and mercenary_camp_player ~= GetUnitVariable(uncount[unit1], "Player")) then
+						for i=-1,3 do
+							for j=-1,3 do
+								OrderUnit(mercenary_camp_player, "units", {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, {GetUnitVariable(uncount[unit1],"PosX") + i, GetUnitVariable(uncount[unit1],"PosY") + j}, "move")
+							end
 						end
-					end
 						ChangeUnitOwner(uncount[unit1], mercenary_camp_player)
 					end
 				end
@@ -701,14 +703,12 @@ function StandardTriggers()
 				end
 				
 				-- move gliders
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and -1 == GetUnitVariable(uncount[unit1],"TargetPosX") and -1 == GetUnitVariable(uncount[unit1],"TargetPosY")) then
-					if (GameCycle >= GetUnitVariable(uncount[unit1], "LastCycle") + 175) then
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and IsUnitIdle(uncount[unit1])) then
+					if (SyncRand(101) <= 33) then
 						local target_x = GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16
 						local target_y = GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16
 						if (target_x >= 0 and target_x < Map.Info.MapWidth and target_y >= 0 and target_y < Map.Info.MapHeight) then
 							OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16, GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16}, "move")
-
-							SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
 						end
 					end
 				end
@@ -738,6 +738,29 @@ function StandardTriggers()
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 					DefineAllow("unit-surghan-mercenary-steelclad", "FFFFFFFFFFFFFFFF")
+					return false
+				end
+			end
+			return true
+		end
+	)
+
+	AddTrigger(
+		function()
+			if (GameCycle == 0) then
+				return false
+			end
+			return true
+		end,
+		function()
+			if (mapinfo.description == "Svafnir's Lair") then -- somewhat ugly way of making this not happen during The Wyrm quest
+				return false
+			end
+			
+			local uncount = 0
+			uncount = GetUnits("any")
+			for unit1 = 1,table.getn(uncount) do 
+				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and IsUnitIdle(uncount[unit1])) then
 
 					local enemy_unit = nil
 
@@ -751,16 +774,8 @@ function StandardTriggers()
 					end
 
 					if (enemy_unit ~= nil) then
-						surghan_uncount = 0
-						surghan_uncount = GetUnits(GetUnitVariable(uncount[unit1], "Player"))
-						for surghan_unit1 = 1,table.getn(surghan_uncount) do 
-							if (GetUnitVariable(surghan_uncount[surghan_unit1],"Ident") == "unit-surghan-mercenary-steelclad") then
-								OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(surghan_uncount[surghan_unit1],"Ident"), {GetUnitVariable(surghan_uncount[surghan_unit1],"PosX"), GetUnitVariable(surghan_uncount[surghan_unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
-							end
-						end
+						OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
 					end
-
-					return false
 				end
 			end
 			return true

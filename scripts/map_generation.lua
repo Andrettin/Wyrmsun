@@ -791,7 +791,8 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 	local Count = 0
 	-- create gold mines
 	Count = gold_mine_number
-	while (Count > 0) do
+	local WhileCount = 0
+	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
 		unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 		SetResourcesHeld(unit, gold_quantity)
@@ -819,6 +820,7 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -860,7 +862,8 @@ end
 function CreateNeutralBuildings(building_type, building_number, min_x, max_x, min_y, max_y, symmetric)
 	local Count = 0
 	Count = building_number
-	while (Count > 0) do
+	local WhileCount = 0
+	while (Count > 0 and WhileCount < building_number * 100) do
 		local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
 		unit = CreateUnit(building_type, 15, {building_spawn_point[1], building_spawn_point[2]})
 		Count = Count - 1
@@ -884,6 +887,7 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 			unit = CreateUnit(building_type, 15, {mirrored_tile_x, mirrored_tile_y})
 			Count = Count - 1
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -1618,7 +1622,8 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
-	while (location_found == false) do
+	local WhileCount = 0
+	while (location_found == false and WhileCount < 100) do
 		if (symmetric) then
 			RandomX = SyncRand((Map.Info.MapWidth / 2) - 24)
 			RandomY = SyncRand((Map.Info.MapHeight / 2) - 24)
@@ -1634,6 +1639,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 				location_found = true
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 	return {RandomX, RandomY}
 end
@@ -1642,7 +1648,8 @@ function FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
-	while (location_found == false) do
+	local WhileCount = 0
+	while (location_found == false and WhileCount < 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		
@@ -1658,6 +1665,7 @@ function FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
 				location_found = true
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 	return {RandomX, RandomY}
 end

@@ -36,6 +36,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 0.1.8
 -----------------------------------------------------------------------
 
+* Buildings
+- Improved capturable neutral building conversion code.
+
 * Maps
 - Added Svafnir's Lair map (Nidavellir), from Battle for Wesnoth.
 - In the Shorbear Hills map, the blue player now starts with no miners, as the scenario was too difficult. The green player's starting resources are now the same as those of the other players.
@@ -45,11 +48,17 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Quests
 - Added The Wyrm quest.
+- Fixed issue with the Hills of the Shorbear Clan quest that was causing the same objective to be added multiple times if the game were loaded at a particular point.
 
 * Units
 - Updated the Wyrm's encyclopedia entry.
 - Gnomish units now have their own boots icon for the move button (graphics by Leo).
 - Added Kobold Footpad (unit graphics by b_o and unit icon by Leo).
+- AI mercenaries now properly attack.
+- Improved glider movement code.
+
+* Upgrades
+- Fixed an issue which caused already-researched upgrades to be researchable again after a game being loaded.
 
 -----------------------------------------------------------------------
 - 0.1.7
