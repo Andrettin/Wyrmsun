@@ -424,6 +424,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-thrusting-sword-1",
+	Size = {46, 38},
+	File = "gnome/icons/thrusting_sword_1.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-boots",
 	Size = {46, 38},
 	File = "gnome/icons/boots.png"

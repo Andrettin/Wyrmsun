@@ -50,7 +50,7 @@ b_o:
 /graphics/gnome/units/gnomish_worker_with_gold.png
 /graphics/gnome/units/gnomish_worker_with_lumber.png
 /graphics/goblin/decorations/goblin_banner.png
-/graphics/goblin/icons/greebo.png
+/graphics/goblin/icons/greebo.png (later modified by Leo)
 /graphics/goblin/units/glider.png
 /graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png
@@ -442,11 +442,15 @@ Leo:
 /graphics/dwarf/icons/thursagan.png
 /graphics/gnome/icons/boots.png
 /graphics/gnome/icons/boots_fur.png
+/graphics/gnome/icons/thrusting_sword_1.png
+/graphics/gnome/icons/thrusting_sword_1_extra_1.png
+/graphics/gnome/icons/thrusting_sword_1_extra_2.png
 /graphics/goblin/buildings/farm.png
 /graphics/goblin/buildings/lumber_mill.png
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
 /graphics/goblin/icons/glider.png
+/graphics/goblin/icons/greebo.png (modified from b_o's icon)
 /graphics/neutral/icons/wyrm.png
 /graphics/neutral/icons/wyrm_blue_scales.png
 /graphics/neutral/icons/wyrm_cyan_scales.png

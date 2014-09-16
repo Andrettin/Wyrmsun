@@ -39,12 +39,16 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Buildings
 - Improved capturable neutral building conversion code.
 
+* Heroes
+- Greebo's icon has been reworked (original Greebo icon by b_o, reworking by Leo).
+
 * Maps
 - Added Svafnir's Lair map (Nidavellir), from Battle for Wesnoth.
 - In the Shorbear Hills map, the blue player now starts with no miners, as the scenario was too difficult. The green player's starting resources are now the same as those of the other players.
 
 * Miscellaneous
 - Fixed a bug which caused the screen to continue scrolling when a dialogue popped up.
+- Gnomish units now have their own attack button.
 
 * Quests
 - Added The Wyrm quest.

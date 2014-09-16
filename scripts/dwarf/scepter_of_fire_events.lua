@@ -3249,7 +3249,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GameCycle > 3000 and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GameCycle > 1500 and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -4194,7 +4194,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-hero-thursagan", "unit-dwarven-smith")) then
+		if (IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-hero-thursagan", "unit-dwarven-smith") and IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-dwarven-smith", "unit-hero-thursagan")) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
