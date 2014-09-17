@@ -54,12 +54,16 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added The Wyrm quest.
 - Fixed issue with the Hills of the Shorbear Clan quest that was causing the same objective to be added multiple times if the game were loaded at a particular point.
 
+* Terrain
+- Added stalagmites decoration unit, which appears in cave maps (graphics by b_o).
+
 * Units
 - Updated the Wyrm's encyclopedia entry.
 - Gnomish units now have their own boots icon for the move button (graphics by Leo).
 - Added Kobold Footpad (unit graphics by b_o and unit icon by Leo).
 - AI mercenaries now properly attack.
 - Improved glider movement code.
+- New glider sounds (by b_o).
 
 * Upgrades
 - Fixed an issue which caused already-researched upgrades to be researchable again after a game being loaded.

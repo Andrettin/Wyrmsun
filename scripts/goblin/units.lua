@@ -220,8 +220,8 @@ DefineUnitType("unit-goblin-glider", { Name = "Goblin Glider",
 	SelectableByRectangle = true,
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
-		"acknowledge", "basic-goblin-voices-acknowledge",
---		"ready", "goblin-archer-ready",
+		"acknowledge", "glider-flying",
+		"ready", "goblin-glider-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-goblin-voices-dead"}
 } )

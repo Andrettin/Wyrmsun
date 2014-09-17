@@ -135,6 +135,7 @@ local editor_types = {
    "unit-twigs",
    "unit-log",
    "unit-small-rocks",
+   "unit-stalagmites",
    "unit-bones",
    "unit-wyrm-skeleton",
    "unit-floor-decoration",

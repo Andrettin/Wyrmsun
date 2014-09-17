@@ -165,6 +165,8 @@ MakeSound("goblin-worker-ready", {
 MakeSound("goblin-impaler-ready", "goblin/impaler/goblin-impaler-ready.wav")
 MakeSound("goblin-archer-ready", "goblin/archer/goblin-archer-ready.wav")
 MakeSound("goblin-shaman-ready", "goblin/shaman/goblin-shaman-ready.wav")
+MakeSound("goblin-glider-ready", "goblin/glider/glider-ready.wav")
+MakeSound("glider-flying", "goblin/glider/glider-flying.wav")
 
 ------------------------------------------------------------------------------
 --	Define simple goblin sounds.

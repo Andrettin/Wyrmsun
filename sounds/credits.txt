@@ -65,6 +65,7 @@ b_o:
 /sounds/dwarf/miner/miner-ready.wav
 /sounds/dwarf/scout/scout-ready.wav
 /sounds/dwarf/steelclad/steelclad-ready.wav
+/sounds/goblin/archer/goblin-archer-ready.wav
 /sounds/goblin/basic_voices/acknowledge-01.wav
 /sounds/goblin/basic_voices/acknowledge-02.wav
 /sounds/goblin/basic_voices/acknowledge-03.wav
@@ -94,6 +95,12 @@ b_o:
 /sounds/goblin/basic_voices/selected-10.wav
 /sounds/goblin/basic_voices/selected-11.wav
 /sounds/goblin/basic_voices/selected-12.wav
+/sounds/goblin/glider/glider-flying.wav
+/sounds/goblin/glider/glider-ready.wav
+/sounds/goblin/impaler/goblin-impaler-ready.wav
+/sounds/goblin/shaman/goblin-shaman-ready.wav
+/sounds/goblin/worker/goblin-worker-ready-1.wav
+/sounds/goblin/worker/goblin-worker-ready-2.wav
 /sounds/misc/rescue.wav
 /sounds/missiles/throwing_axe.wav
 

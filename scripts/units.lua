@@ -723,6 +723,26 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
 	Sounds = {} }
 )
 
+DefineUnitType("unit-stalagmites", { Name = "Stalagmites",
+	Image = {"file", "neutral/decorations/stalagmites.png", "size", {32, 32}},
+	Animations = "animations-decoration", Icon = "icon-stalagmites",
+	Speed = 0,
+	HitPoints = 0,
+	DrawLevel = 5,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 0,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	IsNotSelectable = true,
+	Decoration = true,
+	NumDirections = 1,
+	Indestructible = 1,
+	VisibleUnderFog = true,
+	NonSolid = true, 
+	Sounds = {} }
+)
+
 DefineUnitType("unit-glyph", { Name = "Glyph",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},

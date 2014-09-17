@@ -966,7 +966,7 @@ function CreateDecorations()
 	local Count = 0
 	local RandomNumber = 0
 
-	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
+	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
 	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
 		while (Count > 0) do
@@ -988,8 +988,13 @@ function CreateDecorations()
 						Count = Count - 1
 					end
 				elseif (RandomNumber >= 400 and RandomNumber < 600) then
-					unit = CreateUnit("unit-small-rocks", 15, {RandomX, RandomY})
-					Count = Count - 1
+					if (wyrmsun.tileset == "cave" and SyncRand(2) == 0) then
+						unit = CreateUnit("unit-stalagmites", 15, {RandomX, RandomY})
+						Count = Count - 1
+					else
+						unit = CreateUnit("unit-small-rocks", 15, {RandomX, RandomY})
+						Count = Count - 1
+					end
 				elseif (RandomNumber >= 600 and RandomNumber < 800) then
 					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
 						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})

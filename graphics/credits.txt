@@ -76,6 +76,7 @@ b_o:
 /graphics/neutral/decorations/mushrooms.png
 /graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/small_rocks.png
+/graphics/neutral/decorations/stalagmites.png
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/decorations/wyrm_skeleton_horned.png

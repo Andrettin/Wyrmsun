@@ -430,7 +430,7 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-wood-pile") then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-wood-pile" or GetUnitVariable(uncount[unit1], "Ident") == "unit-stalagmites") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
