@@ -53,6 +53,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Quests
 - Added The Wyrm quest.
 - Fixed issue with the Hills of the Shorbear Clan quest that was causing the same objective to be added multiple times if the game were loaded at a particular point.
+- Updated initial quest dialogues for A Bargain is Struck, Closing the Gates, Searching for the Runecrafter and Gathering Materials to include an introductory text before the dialogue begins.
 
 * Terrain
 - Added stalagmites decoration unit, which appears in cave maps (graphics by b_o).
@@ -64,6 +65,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - AI mercenaries now properly attack.
 - Improved glider movement code.
 - New glider sounds (by b_o).
+- Fixed a bug which caused human player-owned mercenaries to attack automatically (this is supposed to happen only to AI-controlled mercenaries).
+- Fixed a bug which caused three extra mercenaries to be granted at scenario start if there is a mercenary unit present (this is supposed to happen only when the mercenaries are hired at the mercenary camp).
 
 * Upgrades
 - Fixed an issue which caused already-researched upgrades to be researchable again after a game being loaded.

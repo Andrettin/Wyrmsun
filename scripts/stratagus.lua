@@ -282,6 +282,7 @@ DefineVariables(
 	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
+	"ForTheMotherland", {Max = 1, Value = 0, Increase = 0, Enable = true}, -- 0 = not a FtM unit creator, 1 = is a FtM unit creator
 	"AxeMastery", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"CriticalStrike", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"AxeOfPerun", {Max = 2, Value = 0, Increase = 0, Enable = true} -- 0 = not owned, 1 = owned, 2 = equipped
@@ -726,14 +727,10 @@ function StandardTriggers()
 			return true
 		end,
 		function()
-			if (mapinfo.description == "Svafnir's Lair") then -- somewhat ugly way of making this not happen during The Wyrm quest
-				return false
-			end
-			
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") then
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "UnitTypesCount", "unit-mercenary-camp") >= 1 and GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad") then
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
@@ -760,7 +757,7 @@ function StandardTriggers()
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
-				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and IsUnitIdle(uncount[unit1])) then
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and IsUnitIdle(uncount[unit1])) then
 
 					local enemy_unit = nil
 

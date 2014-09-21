@@ -239,7 +239,8 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
 	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
-	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
+--	Mana = {Enable = true},
+	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike", "spell-unit-dwarven-axefighter"},
 	Variations = {
 		{
 			"variation-id", "red-hair"

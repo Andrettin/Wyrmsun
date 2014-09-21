@@ -465,3 +465,12 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Action = "train-unit", Value = "unit-potion-of-healing",
 --  Key = "p", Hint = "Buy ~!Potion of Healing",
 --  ForUnit = {"unit-dwarven-smith"} } )
+
+-- For the Motherland Buttons ------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-axefighter",
+	Action = "cast-spell", Value = "spell-unit-dwarven-axefighter",
+	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
+	Key = "a", Hint = "~!Axefighter",
+	ForUnit = {"unit-dwarven-thane"} }
+)

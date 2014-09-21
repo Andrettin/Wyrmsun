@@ -117,3 +117,14 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
+
+-- For the Motherland Buttons ------------------------------------------------------
+
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-level-up",
+  Action = "button", Value = 1,
+  Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
+  Key = "c", Hint = "~!Create Unit",
+  ForUnit = {
+    "unit-dwarven-thane",
+    "unit-goblin-spearman"
+  } } )

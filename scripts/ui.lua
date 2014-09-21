@@ -67,7 +67,7 @@ DefineDecorations({Index = "UnholyArmor", ShowOpponent = true,
   Offset = {48, 0}, Method = {"static-sprite", {"sprite-spell", 4}}})
 DefineDecorations({Index = "ShadowFly", ShowOpponent = true, ShowWhenMax = true, ShowWhenNull = true,
   Offset = {0, 0}, Method = {"sprite", {"sprite-shadow"}}})
-DefineDecorations({Index = "LevelUp", ShowOpponent = false,
+DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
   Offset = {16, 0}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 
 --
@@ -341,7 +341,7 @@ DefinePanelContents(
 	{ Pos = {50, 153}, More = {"Text", "% Complete"}, Condition = {UpgradeTo = "only"} },
 -- Mana
 	{ Pos = {16, 148}, Condition = {Mana = "only"},
-		More = {"CompleteBar", {Variable = "Mana", Height = 16, Width = 140, Border = false}}
+		More = {"CompleteBar", {Variable = "Mana", Height = 16, Width = 140, Border = false, Color = "light-blue"}}
 	},
 	{ Pos = {86, 150}, More = {"Text", {Variable = "Mana"}}, Condition = {Mana = "only"} },
 -- Resource Carry

@@ -163,6 +163,8 @@ end
 function AiVeteranSoldier()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-steelclad"
+	elseif (AiGetRace() == "goblin") then -- for FtM
+		return "unit-goblin-spearman"
 	else
 		return "unit-dwarven-steelclad"
 	end
@@ -190,6 +192,27 @@ function AiShooter()
 	else
 		return "unit-dwarven-scout"
 	end
+end
+
+--
+--  Veteran shooter of the current civilization.
+--
+function AiVeteranShooter() -- no veteran shooter in the game yet, return normal shooter unit instead
+	return AiShooter()
+end
+
+--
+--  Cavalry of the current civilization.
+--
+function AiCavalry() -- no cavalry in the game yet, return appropriate infantry unit instead
+	return AiSoldier()
+end
+
+--
+--  Veteran cavalry of the current civilization.
+--
+function AiVeteranCavalry() -- no cavalry in the game yet, return appropriate infantry unit instead
+	return AiVeteranSoldier()
 end
 
 --
@@ -395,3 +418,4 @@ Load("scripts/ai/land_attack.lua")
 Load("scripts/ai/land_attack_agrarian_bronze.lua")
 Load("scripts/ai/northern_wastelands_goblins.lua")
 Load("scripts/ai/grand_strategy_battle.lua")
+Load("scripts/ai/ai_redribbon_2014.lua")

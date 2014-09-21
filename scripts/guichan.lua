@@ -29,6 +29,7 @@
 
 PlayerFaction = ""
 GrandStrategy = false
+ForTheMotherland = false
 
 
 SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -862,8 +863,10 @@ function RunSinglePlayerGameMenu()
   local scenario_list = {}
   local faction_list = {"Map Default"}
   local world_list = { }
+  local game_type_list = { }
   
   GrandStrategy = false
+  ForTheMotherland = false
   
   local maps = {}
 
@@ -968,7 +971,12 @@ function RunSinglePlayerGameMenu()
       end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
-      GameSettings.GameType = gametype:getSelected() - 1
+      if (game_type_list[gametype:getSelected() + 1] == "For the Motherland") then
+	      ForTheMotherland = true
+	      GameSettings.GameType = -1
+      else
+	      GameSettings.GameType = gametype:getSelected() - 1
+      end
       TechLevel[person_player + 1] = tech_level:getSelected() - 1
 	  
       RunMap(mapname)
@@ -1016,7 +1024,7 @@ function RunSinglePlayerGameMenu()
   opponents:setSize(152, 20)
 
   menu:addLabel("~<Game Type:~>", offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
-  gametype = menu:addDropDown({"Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"}, offx + 640 - 224 - 16, offy + 10 + 240,
+  gametype = menu:addDropDown(game_type_list, offx + 640 - 224 - 16, offy + 10 + 240,
     function(dd) end)
   gametype:setSize(152, 20)
 
@@ -1079,6 +1087,7 @@ function RunSinglePlayerGameMenu()
 		end
 		mapl:setCaption(string.sub(mapname, 6))
 	end
+	MapForTheMotherland = false
 	GetMapInfo(mapname)
 	MapChanged()
   end
@@ -1096,19 +1105,28 @@ function RunSinglePlayerGameMenu()
   end
 
   function MapChanged()
-    mapl:setCaption(string.sub(mapname, 6))
-    mapl:adjustSize()
+	mapl:setCaption(string.sub(mapname, 6))
+	mapl:adjustSize()
 
-    descriptionl:setCaption(mapinfo.description ..
-      " (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
-    descriptionl:adjustSize()
+	descriptionl:setCaption(mapinfo.description ..
+		" (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
+	descriptionl:adjustSize()
 
-    local o = {}
-    for i=1,mapinfo.nplayers do
-      table.insert(o, opponents_list[i])
-    end
-    opponents:setList(o)
-    opponents:setSize(152, 20)
+	local o = {}
+	for i=1,mapinfo.nplayers do
+		table.insert(o, opponents_list[i])
+	end
+	opponents:setList(o)
+	opponents:setSize(152, 20)
+
+	game_type_list = nil
+	game_type_list = {"Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"}
+	if (MapForTheMotherland) then
+		table.insert(game_type_list, "For the Motherland")
+	end
+	gametype:setList(game_type_list)
+	gametype:setSize(152, 20)
+	gametype:setSelected(0)
   end
 
   GetMapInfo(mapname)

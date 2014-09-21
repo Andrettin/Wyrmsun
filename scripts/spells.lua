@@ -42,7 +42,11 @@ DefineVariables("Mana", {Max = 255, Value = 84, Increase = 1, Enable = false}, "
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-critter", {})
+DefineUnitType("unit-dwarven-axefighter", {})
 DefineUnitType("unit-dwarven-steelclad", {})
+DefineUnitType("unit-goblin-spearman", {})
+DefineUnitType("unit-goblin-archer", {})
+DefineUnitType("unit-goblin-war-machine", {})
 
 -- And declare upgrade for dependency...
 
@@ -125,4 +129,54 @@ DefineSpell("spell-learn-critical-strike",
 		"LevelUp", {MinValue = 0}
 	},
 	"ai-cast", {}
+)
+
+-- For the Motherland Spells
+
+DefineSpell("spell-unit-dwarven-axefighter",
+	"showname", "Axefighter",
+	"manacost", 25,
+	"range", 6,
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-dwarven-axefighter", "time-to-live", 99000}
+--		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
+	}
+--	"sound-when-cast", "eye of vision"
+)
+
+DefineSpell("spell-unit-goblin-spearman",
+	"showname", "Goblin Impaler",
+	"manacost", 25,
+	"range", 6,
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-goblin-spearman", "time-to-live", 99000}
+--		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
+	}
+--	"sound-when-cast", "eye of vision"
+)
+
+DefineSpell("spell-unit-goblin-archer",
+	"showname", "Goblin Archer",
+	"manacost", 25,
+	"range", 6,
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-goblin-archer", "time-to-live", 99000}
+--		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
+	}
+--	"sound-when-cast", "eye of vision"
+)
+
+DefineSpell("spell-unit-goblin-war-machine",
+	"showname", "Goblin War Machine",
+	"manacost", 25,
+	"range", 6,
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-goblin-war-machine", "time-to-live", 99000}
+--		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
+	}
+--	"sound-when-cast", "eye of vision"
 )
