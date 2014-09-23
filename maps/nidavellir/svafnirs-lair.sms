@@ -90,7 +90,7 @@ if (ForTheMotherland) then
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetPlayerData(0, "Name", "Dwarves")
-	SetAiType(0, "passive")
+	SetAiType(0, "ai_red_2014")
 else
 	SetStartView(0, 16, 16)
 	SetPlayerData(0, "RaceName", "dwarf")
@@ -107,7 +107,7 @@ if (ForTheMotherland) then
 	SetPlayerData(1, "Resources", "lumber", 0)
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetPlayerData(1, "Name", "Goblins")
-	SetAiType(1, "ai_red1")
+	SetAiType(1, "ai_red_2014")
 else
 	SetPlayerData(1, "RaceName", "dwarf")
 	SetPlayerData(1, "Resources", "gold", 10000)
@@ -164,14 +164,56 @@ if (GrandStrategy == false) then
 	SetResourcesHeld(unit, 100000)
 
 	if (ForTheMotherland) then
+		-- dwarves' glyphs
+		unit = CreateUnit("unit-glyph", 15, {29, 52})
+		unit = CreateUnit("unit-glyph", 15, {29, 53})
+		unit = CreateUnit("unit-glyph", 15, {30, 52})
+		unit = CreateUnit("unit-glyph", 15, {30, 53})
+		unit = CreateUnit("unit-glyph", 15, {31, 52})
+		unit = CreateUnit("unit-glyph", 15, {31, 53})
+		unit = CreateUnit("unit-glyph", 15, {32, 52})
+		unit = CreateUnit("unit-glyph", 15, {32, 53})
+		unit = CreateUnit("unit-glyph", 15, {33, 52})
+		unit = CreateUnit("unit-glyph", 15, {33, 53})
+		unit = CreateUnit("unit-glyph", 15, {34, 52})
+		unit = CreateUnit("unit-glyph", 15, {34, 53})
+		unit = CreateUnit("unit-glyph", 15, {35, 52})
+		unit = CreateUnit("unit-glyph", 15, {35, 53})
+		unit = CreateUnit("unit-glyph", 15, {36, 52})
+		unit = CreateUnit("unit-glyph", 15, {36, 53})
+		
+		-- goblins' glyphs
+		unit = CreateUnit("unit-glyph", 15, {6, 2})
+		unit = CreateUnit("unit-glyph", 15, {6, 3})
+		unit = CreateUnit("unit-glyph", 15, {6, 4})
+		unit = CreateUnit("unit-glyph", 15, {6, 5})
+		unit = CreateUnit("unit-glyph", 15, {6, 6})
+		unit = CreateUnit("unit-glyph", 15, {6, 7})
+		unit = CreateUnit("unit-glyph", 15, {6, 8})
+		unit = CreateUnit("unit-glyph", 15, {6, 9})
+		unit = CreateUnit("unit-glyph", 15, {7, 2})
+		unit = CreateUnit("unit-glyph", 15, {7, 3})
+		unit = CreateUnit("unit-glyph", 15, {7, 4})
+		unit = CreateUnit("unit-glyph", 15, {7, 5})
+		unit = CreateUnit("unit-glyph", 15, {7, 6})
+		unit = CreateUnit("unit-glyph", 15, {7, 7})
+		unit = CreateUnit("unit-glyph", 15, {7, 8})
+		unit = CreateUnit("unit-glyph", 15, {7, 9})
+
 		unit = CreateUnit("unit-dwarven-smith", 4, {31, 49})
 		unit = CreateUnit("unit-dwarven-barracks", 4, {27, 47})
-		unit = CreateUnit("unit-dwarven-thane", 0, {31, 47})
+		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 47})
+		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 49})
+
+		unit = CreateUnit("unit-dwarven-thane", 0, {29, 51})
 		SetUnitVariable(unit, "ForTheMotherland", 1)
 
 		unit = CreateUnit("unit-goblin-town-hall", 5, {1, 19})
 		unit = CreateUnit("unit-goblin-mess-hall", 5, {1, 30})
-		unit = CreateUnit("unit-goblin-spearman", 1, {4, 28})
+		unit = CreateUnit("unit-dwarven-guard-tower", 5, {4, 26})
+		unit = CreateUnit("unit-dwarven-guard-tower", 5, {4, 28})
+
+		unit = CreateUnit("unit-goblin-spearman", 1, {6, 1})
 		IncreaseUnitLevel(unit, 2, true)
 		SetUnitVariable(unit, "ForTheMotherland", 1)
 	else
@@ -254,18 +296,28 @@ end
 if (ForTheMotherland) then
 	AiRedRibbon_Setup_2014()
 
-	ftm_team[0] = 0
-	ftm_team[1] = 1
-	ftm_team[4] = 0
-	ftm_team_x1[0] = 0
-	ftm_team_y1[0] = 0
-	ftm_team_x2[0] = 256
-	ftm_team_y2[0] = 256
-	ftm_team[5] = 1
-	ftm_team_x1[1] = 0
-	ftm_team_y1[1] = 0
-	ftm_team_x2[1] = 256
-	ftm_team_y2[1] = 256
+	ftm_team[0] = 4
+	ftm_team[1] = 5
+	ftm_team[4] = 4
+	ftm_team[5] = 5
+
+	ftm_team_x1[0] = 29
+	ftm_team_y1[0] = 52
+	ftm_team_x2[0] = 36
+	ftm_team_y2[0] = 53
+	ftm_team_x1[4] = 29
+	ftm_team_y1[4] = 52
+	ftm_team_x2[4] = 36
+	ftm_team_y2[4] = 53
+	ftm_team_x1[1] = 6
+	ftm_team_y1[1] = 2
+	ftm_team_x2[1] = 7
+	ftm_team_y2[1] = 9
+	ftm_team_x1[5] = 6
+	ftm_team_y1[5] = 2
+	ftm_team_x2[5] = 7
+	ftm_team_y2[5] = 9
+
 
 	ftm_faction[0] = "Dwarves"
 	ftm_faction[4] = "Dwarves"
@@ -279,17 +331,51 @@ if (ForTheMotherland) then
 	ftm_index_start[5] = 65
 	ftm_index_end[5] = 67
 
-	ftm_team_startx[0] = 31
-	ftm_team_starty[0] = 47
-	ftm_team_startx[1] = 4
-	ftm_team_starty[1] = 28
+	ftm_team_startx[0] = 29
+	ftm_team_starty[0] = 52
+	ftm_team_startx[1] = 6
+	ftm_team_starty[1] = 2
 	ftm_team_startx[4] = 32
 	ftm_team_starty[4] = 50
 	ftm_team_startx[5] = 4
 	ftm_team_starty[5] = 20
 
-	BlueTeam1_Order = "Wise"
-	RedTeam1_Order = "Wise"
+	aiftm_loop[1] = 4
+	aiftm_terminate[1] = 16
+	aiftm_unit[1][0] = "unit-goblin-spearman"
+	aiftm_quantity[1][0] = 6
+	aiftm_unit[1][1] = "unit-goblin-spearman" -- should be worker
+	aiftm_quantity[1][1] = 2
+	aiftm_unit[1][2] = "unit-goblin-archer" -- should be veteran archer
+	aiftm_quantity[1][2] = 1
+	aiftm_unit[1][3] = "unit-goblin-spearman" -- should be veteran cavalry
+	aiftm_quantity[1][3] = 1
+	aiftm_unit[1][4] = "unit-goblin-archer"
+	aiftm_quantity[1][4] = 2
+	aiftm_unit[1][5] = "unit-goblin-spearman"
+	aiftm_quantity[1][5] = 3
+	aiftm_unit[1][6] = "unit-goblin-archer"
+	aiftm_quantity[1][6] = 1
+	aiftm_unit[1][7] = "unit-goblin-archer"
+	aiftm_quantity[1][7] = 1
+	aiftm_unit[1][8] = "unit-goblin-spearman" -- should be cavalry
+	aiftm_quantity[1][8] = 1
+	aiftm_unit[1][9] = "unit-goblin-war-machine"
+	aiftm_quantity[1][9] = 1
+	aiftm_unit[1][10] = "unit-goblin-spearman"
+	aiftm_quantity[1][10] = 4
+	aiftm_unit[1][11] = "unit-goblin-spearman"
+	aiftm_quantity[1][11] = 3
+	aiftm_unit[1][12] = "unit-goblin-spearman" -- should be cavalry
+	aiftm_quantity[1][12] = 1
+	aiftm_unit[1][13] = "unit-goblin-archer" -- should be flying rider
+	aiftm_quantity[1][13] = 1
+	aiftm_unit[1][14] = "unit-goblin-spearman"
+	aiftm_quantity[1][14] = 4
+	aiftm_unit[1][15] = "unit-goblin-archer"
+	aiftm_quantity[1][15] = 1
+	aiftm_unit[1][16] = "unit-goblin-spearman" -- should be heroic infantry
+	aiftm_quantity[1][16] = 1
 end
 
 PlayMusic("music/knalgan_theme.ogg")

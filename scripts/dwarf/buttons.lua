@@ -468,7 +468,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 
 -- For the Motherland Buttons ------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-axefighter",
+DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-axefighter",
 	Action = "cast-spell", Value = "spell-unit-dwarven-axefighter",
 	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
 	Key = "a", Hint = "~!Axefighter",

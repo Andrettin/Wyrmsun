@@ -459,6 +459,20 @@ DefineUnitType("unit-wood-pile", { Name = "Wood Pile",
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	GivesResource = "lumber", CanHarvest = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		}
+	},
 	Sounds = {
 --		"selected", "gold-mine-selected",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -544,7 +558,7 @@ UnitTypeFiles["unit-flowers"] = {
 
 DefineUnitType("unit-flowers", { Name = "Flowers",
 	Image = {"size", {32, 32}},
-	Animations = "animations-decoration", Icon = "icon-flowers",
+	Animations = "animations-decoration-old", Icon = "icon-flowers",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -571,7 +585,7 @@ UnitTypeFiles["unit-large-flower"] = {
 
 DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	Image = {"size", {32, 32}},
-	Animations = "animations-decoration", Icon = "icon-large-flower",
+	Animations = "animations-decoration-old", Icon = "icon-large-flower",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -598,7 +612,7 @@ UnitTypeFiles["unit-fern"] = {
 
 DefineUnitType("unit-fern", { Name = "Fern",
 	Image = {"size", {48, 48}},
-	Animations = "animations-decoration", Icon = "icon-fern",
+	Animations = "animations-decoration-old", Icon = "icon-fern",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -632,13 +646,90 @@ DefineUnitType("unit-twigs", { Name = "Twigs",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		},
+		{
+			"variation-id", "5"
+		},
+		{
+			"variation-id", "6"
+		},
+		{
+			"variation-id", "7"
+		},
+		{
+			"variation-id", "8"
+		},
+		{
+			"variation-id", "9"
+		},
+		{
+			"variation-id", "10"
+		},
+		{
+			"variation-id", "11"
+		},
+		{
+			"variation-id", "12"
+		},
+		{
+			"variation-id", "13"
+		},
+		{
+			"variation-id", "14"
+		},
+		{
+			"variation-id", "15"
+		},
+		{
+			"variation-id", "16"
+		},
+		{
+			"variation-id", "17"
+		},
+		{
+			"variation-id", "18"
+		},
+		{
+			"variation-id", "19"
+		},
+		{
+			"variation-id", "20"
+		},
+		{
+			"variation-id", "21"
+		},
+		{
+			"variation-id", "22"
+		},
+		{
+			"variation-id", "23"
+		},
+		{
+			"variation-id", "24"
+		},
+		{
+			"variation-id", "25"
+		}
+	},
 	Sounds = {} }
 )
 
 DefineUnitType("unit-log", { Name = "Log",
 	Image = {"file", "neutral/decorations/log.png", "size", {56, 56}},
-	Animations = "animations-decoration", Icon = "icon-log",
+	Animations = "animations-decoration-old", Icon = "icon-log",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 30,
@@ -671,7 +762,21 @@ DefineUnitType("unit-bones", { Name = "Bones",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		}
+	},
 	Sounds = {} }
 )
 
@@ -719,7 +824,27 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		},
+		{
+			"variation-id", "5"
+		},
+		{
+			"variation-id", "6"
+		}
+	},
 	Sounds = {} }
 )
 
@@ -740,6 +865,20 @@ DefineUnitType("unit-stalagmites", { Name = "Stalagmites",
 	Indestructible = 1,
 	VisibleUnderFog = true,
 	NonSolid = true, 
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		}
+	},
 	Sounds = {} }
 )
 
@@ -749,7 +888,7 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
 	Animations = "animations-decoration", Icon = "icon-glyph",
 	Speed = 0,
 	HitPoints = 0,
-	DrawLevel = 5,
+	DrawLevel = 4,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 0,
 	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
@@ -759,6 +898,80 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		},
+		{
+			"variation-id", "5"
+		},
+		{
+			"variation-id", "6"
+		},
+		{
+			"variation-id", "7"
+		},
+		{
+			"variation-id", "8"
+		},
+		{
+			"variation-id", "9"
+		},
+		{
+			"variation-id", "10"
+		},
+		{
+			"variation-id", "11"
+		},
+		{
+			"variation-id", "12"
+		},
+		{
+			"variation-id", "13"
+		},
+		{
+			"variation-id", "14"
+		},
+		{
+			"variation-id", "15"
+		},
+		{
+			"variation-id", "16"
+		},
+		{
+			"variation-id", "17"
+		},
+		{
+			"variation-id", "18"
+		},
+		{
+			"variation-id", "19"
+		},
+		{
+			"variation-id", "20"
+		},
+		{
+			"variation-id", "21"
+		},
+		{
+			"variation-id", "22"
+		},
+		{
+			"variation-id", "23"
+		},
+		{
+			"variation-id", "24"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -770,7 +983,7 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
 DefineUnitType("unit-stairs", { Name = "Stairs",
 	Image = {"file", "neutral/buildings/stairs.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
-	Animations = "animations-decoration", Icon = "icon-stairs",
+	Animations = "animations-decoration-old", Icon = "icon-stairs",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -804,7 +1017,18 @@ DefineUnitType("unit-outer-wall-decoration", { Name = "Outer Wall Decoration",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		}
+	},
 	Sounds = {} }
 )
 
@@ -824,7 +1048,18 @@ DefineUnitType("unit-inner-wall-decoration", { Name = "Inner Wall Decoration",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		}
+	},
 	Sounds = {} }
 )
 
@@ -844,7 +1079,18 @@ DefineUnitType("unit-floor-decoration", { Name = "Floor Decoration",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		}
+	},
 	Sounds = {} }
 )
 

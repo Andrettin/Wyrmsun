@@ -33,10 +33,14 @@ function AiRedRibbon_Setup_2014()
 	ftm_team = {}
 	ftm_team_startx = {}
 	ftm_team_starty = {}
+	ftm_team_tempx = {}
+	ftm_team_tempy = {}
+	ftm_team_orderx = {}
+	ftm_team_ordery = {}
 	ftm_team_x1 = {}
 	ftm_team_y1 = {}
 	ftm_team_x2 = {}
-    ftm_team_y2 = {}
+	ftm_team_y2 = {}
 	ftm_unit = {}
 	ftm_origin = {}
 	ftm_cost = {}
@@ -99,24 +103,47 @@ function AiRedRibbon_Setup_2014()
 	ftm_choice[0] = 3
 	ftm_choice[1] = 2
 	
-    for i=0, 15 do
+	for i=0, 15 do
 		timers[i] = 1
 		ftm_faction[i] = 10
 		ftm_team[i] = 10
 		ftm_index_start[i] = 1
 		ftm_index_end[i] = 1
+		ftm_team_tempx[i] = 0
+		ftm_team_tempy[i] = 0
 		ftm_team_x1[i] = 0
 		ftm_team_y1[i] = 0
 		ftm_team_x2[i] = 256
 		ftm_team_y2[i] = 256
 		ftm_team_startx[i] = 1
 		ftm_team_starty[i] = 1
-    end
+		ftm_team_orderx[i] = "Right"
+		ftm_team_ordery[i] = "Down"
+	end
 	
 	ftm_index_start[0] = 51
 	ftm_index_end[0] = 65
 	ftm_index_start[1] = 1
 	ftm_index_end[1] = 15
+
+	aiftm_unit = {}
+	aiftm_quantity = {}
+	aiftm_loop = {}
+	aiftm_terminate = {}
+	aiftm_index = {}
+	aiftm_mana = {}
+	for i = 0, 15 do
+		aiftm_unit[i] = {}
+		aiftm_quantity[i] = {}
+		aiftm_index[i] = 0
+		aiftm_terminate[i] = 15
+		aiftm_loop[i] = 0
+		aiftm_mana[i] = 0
+		for j = 0, 15 do
+			aiftm_unit[i][j] = 0
+			aiftm_quantity[i][j] = 0
+		end
+	end
 end
 
 function AiRedRibbon_2014()
@@ -127,7 +154,7 @@ function AiRedRibbon_2014()
 --		AddMessage("Time to spawn in.")
 		if (ftm_team[AiPlayer()] == ftm_team[ftm_choice[AiPlayer()]]) then
 			for i=ftm_index_start[AiPlayer()],ftm_index_end[AiPlayer()] do
-				if (GetNumUnitsAt(ftm_choice[AiPlayer()], ftm_unit[i], {ftm_team_x1[ftm_choice[AiPlayer()]], ftm_team_y1[ftm_choice[AiPlayer()]]}, {ftm_team_x2[ftm_choice[AiPlayer()]], ftm_team_y2[ftm_choice[AiPlayer()]]}) > 0) then
+				if (GetNumUnitsAt(ftm_choice[AiPlayer()], ftm_unit[i], {ftm_team_x1[ftm_choice[AiPlayer()]], ftm_team_y1[ftm_choice[AiPlayer()]]}, {ftm_team_x2[ftm_choice[AiPlayer()]], ftm_team_y2[ftm_choice[AiPlayer()]]}) > 0 and GetPlayerData(AiPlayer(), "UnitTypesCount", ftm_origin[i]) > 0) then
 --					AddMessage(ftm_unit[i])
 					local create_unit_x = 0
 					local create_unit_y = 0
@@ -150,7 +177,7 @@ function AiRedRibbon_2014()
 	elseif ((timers[AiPlayer()] == 35) or (timers[AiPlayer()] == 85)) then
 		AiNephrite_Flush_2013()
 	elseif (timers[AiPlayer()] == 1) then	
-		for i=0,15 do
+		for i=0,14 do
 			if (ftm_faction[AiPlayer()] == ftm_faction[i]) then
 				SetSharedVision(AiPlayer(), true, i)
 				SetSharedVision(i, true, AiPlayer())
@@ -171,7 +198,96 @@ function AiRedRibbon_2014()
 	end
 end
 
+function AiRed_2014()
+
+
+--aiftm_unit[i][0] = AiWorker()
+--aiftm_quantity[i][0] = 1
+--aiftm_loop[i] = 0
+--aiftm_terminate[i] = 10
+--aiftm_index[i] = 0
+
+
+	if ((GetPlayerData(AiPlayer(), "UnitTypesCount", AiPriest()) > 0) and (GameCycle > 500)) then
+		if ((timers[ftm_team[AiPlayer()]] == 50) or (timers[ftm_team[AiPlayer()]] == 99) or (timers[ftm_team[AiPlayer()]] == 25) or (timers[ftm_team[AiPlayer()]] == 75)) then
+			aiftm_mana[AiPlayer()] = aiftm_mana[AiPlayer()] + 26
+		else 
+			for i=ftm_index_start[ftm_team[AiPlayer()]],ftm_index_end[ftm_team[AiPlayer()]] do
+				if ((aiftm_unit[AiPlayer()][aiftm_index[AiPlayer()]] == ftm_unit[i]) and (aiftm_mana[AiPlayer()] > (aiftm_quantity[AiPlayer()][aiftm_index[AiPlayer()]]*ftm_cost[i]))) then
+					for i=1, aiftm_quantity[AiPlayer()][aiftm_index[AiPlayer()]] do
+						CreateUnit(aiftm_unit[AiPlayer()][aiftm_index[AiPlayer()]], AiPlayer(), {ftm_team_tempx[AiPlayer()], ftm_team_tempy[AiPlayer()]})
+						if (ftm_team_orderx[AiPlayer()] == "Right") then
+							if (ftm_team_tempx[AiPlayer()] == ftm_team_x2[AiPlayer()]) then
+								ftm_team_tempx[AiPlayer()] = ftm_team_x1[AiPlayer()]
+								if (ftm_team_ordery[AiPlayer()] == "Down") then
+									if (ftm_team_tempy[AiPlayer()] == ftm_team_y2[AiPlayer()]) then
+										ftm_team_tempy[AiPlayer()] = ftm_team_y1[AiPlayer()]
+									else
+										ftm_team_tempy[AiPlayer()] = ftm_team_tempy[AiPlayer()] + 1
+									end
+								elseif (ftm_team_ordery[AiPlayer()] == "Up") then
+									if (ftm_team_tempy[AiPlayer()] == ftm_team_y1[AiPlayer()]) then
+										ftm_team_tempy[AiPlayer()] = ftm_team_y2[AiPlayer()]
+									else
+										ftm_team_tempy[AiPlayer()] = ftm_team_tempy[AiPlayer()] - 1
+									end
+								end
+							else
+								ftm_team_tempx[AiPlayer()] = ftm_team_tempx[AiPlayer()] + 1
+							end
+						end
+						if (ftm_team_orderx[AiPlayer()] == "Left") then
+							if (ftm_team_tempx[AiPlayer()] == ftm_team_x1[AiPlayer()]) then
+								ftm_team_tempx[AiPlayer()] = ftm_team_x2[AiPlayer()]
+								if (ftm_team_ordery[AiPlayer()] == "Down") then
+									if (ftm_team_tempy[AiPlayer()] == ftm_team_y2[AiPlayer()]) then
+										ftm_team_tempy[AiPlayer()] = ftm_team_y1[AiPlayer()]
+									else
+										ftm_team_tempy[AiPlayer()] = ftm_team_tempy[AiPlayer()] + 1
+									end
+								elseif (ftm_team_ordery[AiPlayer()] == "Up") then
+									if (ftm_team_tempy[AiPlayer()] == ftm_team_y1[AiPlayer()]) then
+										ftm_team_tempy[AiPlayer()] = ftm_team_y2[AiPlayer()]
+									else
+										ftm_team_tempy[AiPlayer()] = ftm_team_tempy[AiPlayer()] - 1
+									end
+								end
+							else
+								ftm_team_tempx[AiPlayer()] = ftm_team_tempx[AiPlayer()] - 1
+							end
+						end
+					end
+					aiftm_mana[AiPlayer()] = aiftm_mana[AiPlayer()] - (ftm_cost[i]*aiftm_quantity[AiPlayer()][aiftm_index[AiPlayer()]])
+					if (aiftm_index[AiPlayer()] == aiftm_terminate[AiPlayer()]) then
+						aiftm_index[AiPlayer()] = aiftm_loop[AiPlayer()]
+					else
+						aiftm_index[AiPlayer()] = aiftm_index[AiPlayer()] + 1
+					end
+				end
+			end
+		end
+	elseif ((ftm_team_tempx[AiPlayer()] < 2) and (GameCycle > 100)) then
+		if (ftm_team_ordery[AiPlayer()] == "Down") then
+			ftm_team_tempy[AiPlayer()] = ftm_team_y1[AiPlayer()]
+		elseif (ftm_team_orderx[AiPlayer()] == "Up") then
+			ftm_team_tempy[AiPlayer()] = ftm_team_y2[AiPlayer()]
+		else
+			ftm_team_tempy[AiPlayer()] = ftm_team_starty[AiPlayer()]
+		end
+		if (ftm_team_orderx[AiPlayer()] == "Right") then
+			ftm_team_tempx[AiPlayer()] = ftm_team_x1[AiPlayer()]
+		elseif (ftm_team_orderx[AiPlayer()] == "Left") then
+			ftm_team_tempx[AiPlayer()] = ftm_team_x2[AiPlayer()]
+		else
+			ftm_team_tempx[AiPlayer()] = ftm_team_startx[AiPlayer()]
+		end	
+	elseif ((GameCycle > 20) and (GameCycle < 100)) then
+		aiftm_mana[AiPlayer()] = 101
+	end
+end
+
 DefineAi("ai_redribbon_2014", "*", "ai_redribbon_2014", AiRedRibbon_2014)
+DefineAi("ai_red_2014", "*", "ai_red_2014", AiRed_2014)
 
 -- required Nephrite functions for For the Motherland
 
@@ -182,6 +298,40 @@ local nephrite_wait = {} -- How long the AI waits for the next attack.
 local nephrite_increment = {} -- How large the attack force is increased by.
 local nephrite_modifier_cav = {}
 local nephrite_modifier_archer = {}
+
+function AiForTheMotherlandAttack()
+	if (nephrite_attackforce[AiPlayer()] ~= nil) then
+		if ((GetPlayerData(AiPlayer(), "TotalNumUnits") - GetPlayerData(AiPlayer(), "NumBuildings") - GetPlayerData(AiPlayer(), "UnitTypesCount", AiGlider()) - GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker())) >= nephrite_attackbuffer[AiPlayer()]) then
+			local uncount = 0
+			uncount = GetUnits(AiPlayer())
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitVariable(uncount[unit1], "Ident") ~= AiWorker() and IsUnitIdle(uncount[unit1])) then
+
+					local enemy_unit = nil
+
+					local second_uncount = 0
+					second_uncount = GetUnits("any")
+					for second_unit1 = 1,table.getn(second_uncount) do 
+						if (Players[GetUnitVariable(uncount[unit1], "Player")]:IsEnemy(Players[GetUnitVariable(second_uncount[second_unit1],"Player")])) then
+							enemy_unit = second_uncount[second_unit1]
+							break
+						end
+					end
+
+					if (enemy_unit ~= nil) then
+						OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(enemy_unit,"PosX"), GetUnitVariable(enemy_unit,"PosY")}, "attack")
+					end
+				end
+			end
+
+			nephrite_wait[AiPlayer()] = 150
+			nephrite_attackforce[AiPlayer()] = 1
+			nephrite_attackbuffer[AiPlayer()] = nephrite_attackbuffer[AiPlayer()] + nephrite_increment[AiPlayer()]
+		end
+	else
+		AiNephrite_Setup_2013()
+	end
+end
 
 function AiNephrite_Setup_2013()
 	nephrite_build[AiPlayer()] = "Soldier"
@@ -196,7 +346,7 @@ end
 function AiNephrite_Attack_2013()
 	if (nephrite_attackforce[AiPlayer()] ~= nil) then
 		--AddMessage("It is time to attack.")
-		if ((GetPlayerData(AiPlayer(), "TotalNumUnits") - GetPlayerData(AiPlayer(), "NumBuildings") - GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-glider")) >= nephrite_attackbuffer[AiPlayer()]) then
+		if ((GetPlayerData(AiPlayer(), "TotalNumUnits") - GetPlayerData(AiPlayer(), "NumBuildings") - GetPlayerData(AiPlayer(), "UnitTypesCount", AiGlider()) - GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker())) >= nephrite_attackbuffer[AiPlayer()]) then
 			--AddMessage("Attacking with force 1.")
 			AiForce(nephrite_attackforce[AiPlayer()], {AiSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()), AiVeteranSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiVeteranSoldier()), AiHeroicSoldier(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiHeroicSoldier()), AiShooter(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()), AiSiegeWeapon(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiSiegeWeapon()), AiFlyingRider(), GetPlayerData(AiPlayer(), "UnitTypesCount", AiFlyingRider())}, true)
 			AiAttackWithForce(nephrite_attackforce[AiPlayer()])

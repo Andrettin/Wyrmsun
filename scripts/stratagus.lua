@@ -423,17 +423,11 @@ function SinglePlayerTriggers()
 	uncount = GetUnits("any")
 	for unit1 = 1,table.getn(uncount) do 
 		if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
+			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-wood-pile" or GetUnitVariable(uncount[unit1], "Ident") == "unit-stalagmites") then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
@@ -467,17 +461,11 @@ function StandardTriggers()
 
 				-- set the graphics variation for individual units of certain unit types
 				if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-twigs") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(25) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(24) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
+					if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks") then
-						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(6) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp") or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-wood-pile") then
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest") or GetUnitVariable(uncount[unit1], "Ident") == "unit-outer-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-inner-wall-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration") then
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 					end
 				end
@@ -522,6 +510,20 @@ function StandardTriggers()
 					end
 				end
 				
+				-- upgrade AI units that have leveled up and are capable of doing so
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitVariable(uncount[unit1], "LevelUp") >= 1) then
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-axefighter") then
+						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
+						ConvertUnit(uncount[unit1], "unit-dwarven-steelclad")
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
+						ConvertUnit(uncount[unit1], "unit-dwarven-thane")
+					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad") then
+						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
+						ConvertUnit(uncount[unit1], "unit-surghan-mercenary-thane")
+					end
+				end
+
 				if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
 					SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
 				end
@@ -536,7 +538,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
 					end
 				end
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 2) then
 						SetUnitVariable(uncount[unit1], "StartingLevel", 3)
 					end

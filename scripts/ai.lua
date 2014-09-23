@@ -216,6 +216,23 @@ function AiVeteranCavalry() -- no cavalry in the game yet, return appropriate in
 end
 
 --
+--  Priest of the current civilization.
+--
+function AiPriest()
+	if (AiGetRace() == "dwarf") then
+		return "unit-dwarven-thane"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-recruit"
+	elseif (AiGetRace() == "goblin") then
+		return "unit-goblin-spearman"
+	elseif (AiGetRace() == "kobold") then
+		return "unit-kobold-footpad"
+	else
+		return "unit-dwarven-thane"
+	end
+end
+
+--
 --  Upgrade melee weapon 1 of the current civilization.
 --
 function AiUpgradeWeapon1()

@@ -323,8 +323,6 @@ function CleanGame_Lua()
 	ReInitAiGameData()
 
 	-- clean FtM data
-	ForTheMotherland = false
-	
 	Blue2Temp_x = nil
 	Blue2Temp_y = nil
 	Blue2Step = nil

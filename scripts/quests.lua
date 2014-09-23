@@ -111,15 +111,27 @@ Quests = {
 		Y = 1,
 		PlayerColor = "red"
 	},
+	LastStandAtTheForge = {
+		Name = "Last Stand at the Forge",
+		Icon = "dwarf/icons/smith",
+		Description = "Goblins are overruning dwarven settlements in the region of the Caverns of Flame. The volcanic forge must be defended, lest the goblins be able to use it to craft wondrous weapon with which they could inflict even more damage on dwarven societies.\n\nMap: Svafnir's Lair\n\nRewards: 1 Dwarven Technology Point.",
+		RequiredTechnology = "upgrade-dwarven-alchemy",
+		Civilization = "dwarf",
+		TechnologyPoints = 1,
+		Map = "Svafnir's Lair",
+		X = 8,
+		Y = 1,
+		PlayerColor = "red"
+	},
 	TheMeadOfPoetry = {
 		Name = "The Mead of Poetry",
 		Icon = "dwarf/icons/alchemy",
-		Description = "\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points, Fjalar (Hero), Galar (Hero), Thjodrorir (Hero).",
+		Description = "\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredTechnology = "upgrade-dwarven-alchemy",
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "Fjalar's and Galar's Hall",
-		X = 8,
+		X = 9,
 		Y = 1,
 		PlayerColor = "red"
 	}

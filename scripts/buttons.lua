@@ -121,7 +121,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
 -- For the Motherland Buttons ------------------------------------------------------
 
 DefineButton( { Pos = 8, Level = 0, Icon = "icon-level-up",
-  Action = "button", Value = 1,
+  Action = "button", Value = 2,
   Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
   Key = "c", Hint = "~!Create Unit",
   ForUnit = {

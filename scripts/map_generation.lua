@@ -972,7 +972,7 @@ function CreateDecorations()
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "water") == false and GetTileTerrainHasFlag(RandomX, RandomY, "coast") == false and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 				RandomNumber = SyncRand(1000)
 				if (RandomNumber < 200) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
@@ -1220,6 +1220,17 @@ function RawTile(x, y)
 end
 
 function ApplyRawTiles()
+	-- destroy mushrooms that ended up in inappropriate locations
+	local uncount = 0
+	uncount = GetUnits(15)
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+			if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+				KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+			end
+		end
+	end
+
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Mush") then
@@ -1898,6 +1909,17 @@ function AdjustRawMapTileIrregularities()
 			end
 		end
 		Count = Count - 1
+	end
+
+	-- destroy mushrooms that ended up in inappropriate locations
+	local uncount = 0
+	uncount = GetUnits(15)
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+			if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+				KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+			end
+		end
 	end
 end
 
