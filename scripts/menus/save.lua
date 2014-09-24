@@ -3,7 +3,11 @@ function RunSaveGame(name, menu)
   HexTiles = {}
   RawTiles = nil
   RawTiles = {}
-  LoadedGame = nil
+  Quests = nil
+  GrandStrategyUnits = nil
+  GrandStrategyBuildings = nil
+  GrandStrategyTechnologies = nil
+  LoadedGame = true
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))
     confirm:resize(300,120)

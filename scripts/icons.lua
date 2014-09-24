@@ -724,6 +724,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-volcanic-crater",
+	Size = {46, 38},
+	File = "neutral/icons/volcanic_crater.png"
+})
+
+DefineIcon({
 	Name = "icon-inner-wall-decoration",
 	Size = {46, 38},
 	File = "neutral/icons/inner_wall_decoration.png"

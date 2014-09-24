@@ -58,6 +58,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Terrain
 - Added stalagmites decoration unit, which appears in cave maps (graphics by b_o).
 - Fixed bug which allowed mushroom patches to appear in inappropriate tiles under certain circumstances.
+- Fixed a bug with the cave tileset which caused units to sometimes attack at infinite range.
 
 * Units
 - Updated the Wyrm's encyclopedia entry.

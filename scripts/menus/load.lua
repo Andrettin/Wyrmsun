@@ -4,7 +4,6 @@ function LoadGame(s)
 
   while (loop) do
     InitGameVariables()
-    CleanRawTiles()
     LoadedGame = true
     StartSavedGame(s)
     if (GameResult ~= GameRestart) then

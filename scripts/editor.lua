@@ -138,6 +138,7 @@ local editor_types = {
    "unit-stalagmites",
    "unit-bones",
    "unit-wyrm-skeleton",
+   "unit-volcanic-crater",
    "unit-floor-decoration",
    "unit-outer-wall-decoration",
    "unit-inner-wall-decoration"

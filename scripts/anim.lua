@@ -302,6 +302,12 @@ DefineAnimations("animations-decoration", {
 	"label end", "wait 1",},
 })
 
+DefineAnimations("animations-volcanic-crater", {
+	Still = {
+		"exact-frame 0", "wait 6", "exact-frame 1", "wait 6", "exact-frame 2", "wait 6", "exact-frame 3", "wait 6", "exact-frame 4", "wait 6", "exact-frame 5", "wait 6", "exact-frame 6", "wait 6", "exact-frame 7", "wait 6",
+	},
+})
+
 DefineAnimations("animations-decoration-old", {
   Still = {
 	"if-var v.GraphicsVariation.Value == 1 variation_1",

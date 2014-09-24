@@ -58,7 +58,7 @@ DefineTileset("name", "World",
     {}},								-- 060
   "solid", { "unused",
     {}},								-- 070
-  "solid", { "mountains", "image", "tilesets/world/terrain/mountains.png", "land", "air-unit", "rock", "unpassable",
+  "solid", { "mountains", "image", "tilesets/world/terrain/mountains.png", "land", "rock", "unpassable",
     { 17, 20, 23, 17}},							-- 080
   "solid", { "unused",
     {}},								-- 090
@@ -125,7 +125,7 @@ DefineTileset("name", "World",
     { 200, 200, 200},							-- 3D0
     {},									-- 3E0
     {}},								-- 3F0
-  "mixed", { "mountains", "rockbound-cave-floor", "land", "air-unit", "rock", "unpassable",
+  "mixed", { "mountains", "rockbound-cave-floor", "land", "rock", "unpassable",
     { 34, 37, 34},							-- 400
     { 32, 35, 32},							-- 410
     { 33, 36, 39},							-- 420

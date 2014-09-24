@@ -975,6 +975,7 @@ function RunSinglePlayerGameMenu()
 	      ForTheMotherland = true
 	      GameSettings.GameType = -1
       else
+	      ForTheMotherland = false
 	      GameSettings.GameType = gametype:getSelected() - 1
       end
       TechLevel[person_player + 1] = tech_level:getSelected() - 1

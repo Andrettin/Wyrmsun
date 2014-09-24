@@ -112,6 +112,7 @@ function DefineAllowSpecialUnits(flags)
 		"unit-bones", "unit-wyrm-skeleton",
 		"unit-small-rocks",
 		"unit-stairs",
+		"unit-volcanic-crater",
 		"unit-outer-wall-decoration", "unit-inner-wall-decoration", "unit-floor-decoration",
 		"unit-gold-coins", "unit-gold-sack", "unit-gold-chest", "unit-gold-and-gems-chest", "unit-barrel",
 		"unit-dwarven-dead-body", "unit-gnomish-dead-body", "unit-goblin-dead-body", "unit-kobold-dead-body",

@@ -882,6 +882,25 @@ DefineUnitType("unit-stalagmites", { Name = "Stalagmites",
 	Sounds = {} }
 )
 
+DefineUnitType("unit-volcanic-crater", { Name = "Volcanic Crater",
+	Image = {"file", "neutral/decorations/volcanic_crater.png", "size", {64, 64}},
+	Animations = "animations-volcanic-crater", Icon = "icon-volcanic-crater",
+	Speed = 0,
+	HitPoints = 0,
+	DrawLevel = 30,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 0,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	IsNotSelectable = true,
+	Decoration = true,
+	NumDirections = 1,
+	Indestructible = 1,
+	VisibleUnderFog = true,
+	Sounds = {} }
+)
+
 DefineUnitType("unit-glyph", { Name = "Glyph",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},

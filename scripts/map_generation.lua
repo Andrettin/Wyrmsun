@@ -1220,13 +1220,15 @@ function RawTile(x, y)
 end
 
 function ApplyRawTiles()
-	-- destroy mushrooms that ended up in inappropriate locations
-	local uncount = 0
-	uncount = GetUnits(15)
-	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-			if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
-				KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+	if (Editor.Running == EditorNotRunning) then
+		-- destroy mushrooms that ended up in inappropriate locations
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+				if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+					KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+				end
 			end
 		end
 	end

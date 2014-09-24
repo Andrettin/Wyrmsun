@@ -77,8 +77,12 @@ SetRawTile(54, 37, "Water")
 SetRawTile(55, 25, "Water")
 SetRawTile(61, 37, "Water")
 
--- Randomly add a few more trees, as the base map has none
---GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+-- clear space for glyphs
+SetRawTile(27, 56, "Land")
+SetRawTile(27, 57, "Land")
+SetRawTile(28, 56, "Land")
+SetRawTile(28, 57, "Land")
+SetRawTile(27, 58, "Land")
 
 ApplyRawTiles()
 
@@ -163,24 +167,30 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-gold-mine", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
 
+	-- volcanic craters near the forge
+	unit = CreateUnit("unit-volcanic-crater", 15, {30, 47})
+	unit = CreateUnit("unit-volcanic-crater", 15, {33, 47})
+	unit = CreateUnit("unit-volcanic-crater", 15, {30, 52})
+	unit = CreateUnit("unit-volcanic-crater", 15, {33, 52})
+
 	if (ForTheMotherland) then
 		-- dwarves' glyphs
-		unit = CreateUnit("unit-glyph", 15, {29, 52})
-		unit = CreateUnit("unit-glyph", 15, {29, 53})
-		unit = CreateUnit("unit-glyph", 15, {30, 52})
-		unit = CreateUnit("unit-glyph", 15, {30, 53})
-		unit = CreateUnit("unit-glyph", 15, {31, 52})
-		unit = CreateUnit("unit-glyph", 15, {31, 53})
-		unit = CreateUnit("unit-glyph", 15, {32, 52})
-		unit = CreateUnit("unit-glyph", 15, {32, 53})
-		unit = CreateUnit("unit-glyph", 15, {33, 52})
-		unit = CreateUnit("unit-glyph", 15, {33, 53})
-		unit = CreateUnit("unit-glyph", 15, {34, 52})
-		unit = CreateUnit("unit-glyph", 15, {34, 53})
-		unit = CreateUnit("unit-glyph", 15, {35, 52})
-		unit = CreateUnit("unit-glyph", 15, {35, 53})
-		unit = CreateUnit("unit-glyph", 15, {36, 52})
-		unit = CreateUnit("unit-glyph", 15, {36, 53})
+		unit = CreateUnit("unit-glyph", 15, {27, 56})
+		unit = CreateUnit("unit-glyph", 15, {27, 57})
+		unit = CreateUnit("unit-glyph", 15, {27, 58})
+		unit = CreateUnit("unit-glyph", 15, {27, 59})
+		unit = CreateUnit("unit-glyph", 15, {27, 60})
+		unit = CreateUnit("unit-glyph", 15, {27, 61})
+		unit = CreateUnit("unit-glyph", 15, {27, 62})
+		unit = CreateUnit("unit-glyph", 15, {27, 63})
+		unit = CreateUnit("unit-glyph", 15, {28, 56})
+		unit = CreateUnit("unit-glyph", 15, {28, 57})
+		unit = CreateUnit("unit-glyph", 15, {28, 58})
+		unit = CreateUnit("unit-glyph", 15, {28, 59})
+		unit = CreateUnit("unit-glyph", 15, {28, 60})
+		unit = CreateUnit("unit-glyph", 15, {28, 61})
+		unit = CreateUnit("unit-glyph", 15, {28, 62})
+		unit = CreateUnit("unit-glyph", 15, {28, 63})
 		
 		-- goblins' glyphs
 		unit = CreateUnit("unit-glyph", 15, {6, 2})
@@ -205,7 +215,7 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 47})
 		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 49})
 
-		unit = CreateUnit("unit-dwarven-thane", 0, {29, 51})
+		unit = CreateUnit("unit-dwarven-thane", 0, {27, 55})
 		SetUnitVariable(unit, "ForTheMotherland", 1)
 
 		unit = CreateUnit("unit-goblin-town-hall", 5, {1, 19})
@@ -301,14 +311,14 @@ if (ForTheMotherland) then
 	ftm_team[4] = 4
 	ftm_team[5] = 5
 
-	ftm_team_x1[0] = 29
-	ftm_team_y1[0] = 52
-	ftm_team_x2[0] = 36
-	ftm_team_y2[0] = 53
-	ftm_team_x1[4] = 29
-	ftm_team_y1[4] = 52
-	ftm_team_x2[4] = 36
-	ftm_team_y2[4] = 53
+	ftm_team_x1[0] = 27
+	ftm_team_y1[0] = 56
+	ftm_team_x2[0] = 28
+	ftm_team_y2[0] = 63
+	ftm_team_x1[4] = 27
+	ftm_team_y1[4] = 56
+	ftm_team_x2[4] = 28
+	ftm_team_y2[4] = 63
 	ftm_team_x1[1] = 6
 	ftm_team_y1[1] = 2
 	ftm_team_x2[1] = 7
@@ -331,8 +341,8 @@ if (ForTheMotherland) then
 	ftm_index_start[5] = 65
 	ftm_index_end[5] = 67
 
-	ftm_team_startx[0] = 29
-	ftm_team_starty[0] = 52
+	ftm_team_startx[0] = 27
+	ftm_team_starty[0] = 55
 	ftm_team_startx[1] = 6
 	ftm_team_starty[1] = 2
 	ftm_team_startx[4] = 32
