@@ -419,6 +419,8 @@ João Victor G. Costa (Jinn):
 /graphics/ui/gnome/widgets/right-arrow-normal.png
 /graphics/ui/gnome/widgets/right-arrow-pressed.png
 /graphics/ui/gnome/widgets/slider-knob.png
+/graphics/ui/wyrmsun_logo.png
+/graphics/ui/wyrmsun_logo_monochromatic.png
 
 Leo:
 /graphics/dwarf/buildings/smith.png

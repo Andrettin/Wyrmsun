@@ -1,0 +1,8 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "person", "computer", "computer", "computer", "computer")
+PresentMap("Caverns of Flame", 2, 68, 68, 1)
+MapWorld = "Nidavellir"
+MapAttacker = 1
+MapDefender = 0
+--MapRequiredQuest = "The Wyrm"

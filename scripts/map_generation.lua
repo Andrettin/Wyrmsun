@@ -860,34 +860,36 @@ function CreateCoalMines(coal_mine_number, coal_quantity, min_x, max_x, min_y, m
 end
 
 function CreateNeutralBuildings(building_type, building_number, min_x, max_x, min_y, max_y, symmetric)
-	local Count = 0
-	Count = building_number
-	local WhileCount = 0
-	while (Count > 0 and WhileCount < building_number * 100) do
-		local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
-		unit = CreateUnit(building_type, 15, {building_spawn_point[1], building_spawn_point[2]})
-		Count = Count - 1
-		if (symmetric) then
-			local mirrored_tile_x = building_spawn_point[1] + 1 - 128
-			if (mirrored_tile_x < 0) then
-				mirrored_tile_x = mirrored_tile_x * -1
+	if (LoadedGame == false) then -- save games using maps with this function were not loading without this
+		local Count = 0
+		Count = building_number
+		local WhileCount = 0
+		while (Count > 0 and WhileCount < building_number * 100) do
+			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
+			unit = CreateUnit(building_type, 15, {building_spawn_point[1], building_spawn_point[2]})
+			Count = Count - 1
+			if (symmetric) then
+				local mirrored_tile_x = building_spawn_point[1] + 1 - 128
+				if (mirrored_tile_x < 0) then
+					mirrored_tile_x = mirrored_tile_x * -1
+				end
+
+				local mirrored_tile_y = building_spawn_point[2] + 1 - 128
+				if (mirrored_tile_y < 0) then
+					mirrored_tile_y = mirrored_tile_y * -1
+				end
+
+				unit = CreateUnit(building_type, 15, {mirrored_tile_x, building_spawn_point[2]})
+				Count = Count - 1
+
+				unit = CreateUnit(building_type, 15, {building_spawn_point[1], mirrored_tile_y})
+				Count = Count - 1
+
+				unit = CreateUnit(building_type, 15, {mirrored_tile_x, mirrored_tile_y})
+				Count = Count - 1
 			end
-
-			local mirrored_tile_y = building_spawn_point[2] + 1 - 128
-			if (mirrored_tile_y < 0) then
-				mirrored_tile_y = mirrored_tile_y * -1
-			end
-
-			unit = CreateUnit(building_type, 15, {mirrored_tile_x, building_spawn_point[2]})
-			Count = Count - 1
-
-			unit = CreateUnit(building_type, 15, {building_spawn_point[1], mirrored_tile_y})
-			Count = Count - 1
-
-			unit = CreateUnit(building_type, 15, {mirrored_tile_x, mirrored_tile_y})
-			Count = Count - 1
+			WhileCount = WhileCount + 1
 		end
-		WhileCount = WhileCount + 1
 	end
 end
 

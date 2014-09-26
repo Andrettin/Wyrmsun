@@ -200,6 +200,9 @@ function SetVideoSize(width, height)
   end
   bckground:Resize(Video.Width, Video.Height)
   backgroundWidget = ImageWidget(bckground)
+  wyrmsun_logo = CGraphic:New("ui/wyrmsun_logo_" .. Video.Height .. ".png")
+  wyrmsun_logo:Load()
+  wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
   Load("scripts/ui.lua")
   wyr.preferences.VideoWidth = Video.Width
   wyr.preferences.VideoHeight = Video.Height

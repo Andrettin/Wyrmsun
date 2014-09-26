@@ -4361,12 +4361,12 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 					if (mapinfo.description == "Svafnir's Lair" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
---						if (player == GetThisPlayer() and GrandStrategy == false) then
---							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm") == false) then
---								table.insert(wyr.preferences.QuestsCompleted, "The Wyrm")
---							end
---							SavePreferences()
---						end
+						if (player == GetThisPlayer() and GrandStrategy == false) then
+							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm") == false) then
+								table.insert(wyr.preferences.QuestsCompleted, "The Wyrm")
+							end
+							SavePreferences()
+						end
 						if (GrandStrategy == false) then
 --							NextMap = "maps/nidavellir/caverns-of-flame.smp"
 						end

@@ -48,7 +48,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Miscellaneous
 - Fixed a bug which caused the screen to continue scrolling when a dialogue popped up.
-- Gnomish units now have their own attack button.
+- Added Wyrmsun logo to the main menu.
 
 * Quests
 - Added The Wyrm quest.
@@ -62,6 +62,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Units
 - Updated the Wyrm's encyclopedia entry.
+- Gnomish units now have their own attack button (graphics by Leo).
 - Gnomish units now have their own boots icon for the move button (graphics by Leo).
 - Added Kobold Footpad (unit graphics by b_o and unit icon by Leo).
 - AI mercenaries now properly attack.
@@ -70,6 +71,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed a bug which caused human player-owned mercenaries to attack automatically (this is supposed to happen only to AI-controlled mercenaries).
 - Fixed a bug which caused three extra mercenaries to be granted at scenario start if there is a mercenary unit present (this is supposed to happen only when the mercenaries are hired at the mercenary camp).
 - The AI now makes use of level-up unit type upgrades.
+- Added "Mercenaries" category in the encyclopedia, and added an entry for the Surghan Mercenaries.
 
 * Upgrades
 - Fixed an issue which caused already-researched upgrades to be researchable again after a game being loaded.

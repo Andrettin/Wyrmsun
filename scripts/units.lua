@@ -46,6 +46,7 @@ Units = {
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-mercenary-camp",
+	"unit-surghan-mercenary-steelclad",
 	"unit-hero-rugnur", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo"
 }

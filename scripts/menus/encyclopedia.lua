@@ -65,13 +65,16 @@ function RunEncyclopediaMenu()
 	menu:addFullButton("~!Heroes", "h", offx + 208, offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
+	menu:addFullButton("~!Mercenaries", "m", offx + 208, offy + 104 + 36*3,
+		function() RunEncyclopediaUnitsMenu("mercenaries") end)
+
 --	menu:addFullButton("~!Factions", "f", offx + 208, offy + 104 + 36*3,
 --		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton("~!Worlds", "w", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton("~!Worlds", "w", offx + 208, offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)
 
-	menu:addFullButton("Te~!xts", "x", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton("Te~!xts", "x", offx + 208, offy + 104 + 36*5,
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
@@ -97,7 +100,7 @@ function RunEncyclopediaUnitsMenu(state)
 	local icon_y = 0
 	for i, unitName in ipairs(Units) do
 		if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
-			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "-hero-") ~= nil) == (state == "heroes")) then
+			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "-hero-") ~= nil) == (state == "heroes") and (string.find(unitName, "-mercenary-") ~= nil) == (state == "mercenaries")) then
 				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
@@ -127,6 +130,8 @@ function RunEncyclopediaUnitsMenu(state)
 		menu:addLabel("~<Encyclopedia: Technologies~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "heroes") then
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "mercenaries") then
+		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	end
 
 	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),

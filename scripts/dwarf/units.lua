@@ -652,6 +652,7 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
 
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = "Surghan Mercenary",
 	Civilization = "dwarf",
+	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves in the lair of the wyrm Svafnir.",
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
 	Animations = "animations-dwarven-steelclad", Icon = "icon-surghan-mercenary-steelclad",
 	Costs = {"time", 0, "gold", 3000},
