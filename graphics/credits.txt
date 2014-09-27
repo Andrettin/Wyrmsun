@@ -82,6 +82,7 @@ b_o:
 /graphics/neutral/decorations/wyrm_skeleton_horned.png
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
+/graphics/neutral/items/alchemy_lab.png
 /graphics/neutral/items/axe.png
 /graphics/neutral/items/barrel.png
 /graphics/neutral/items/carrots.png
@@ -454,6 +455,7 @@ Leo:
 /graphics/goblin/buildings/town_hall.png
 /graphics/goblin/icons/glider.png
 /graphics/goblin/icons/greebo.png (modified from b_o's icon)
+/graphics/neutral/decorations/volcanic_crater.png
 /graphics/neutral/icons/wyrm.png
 /graphics/neutral/icons/wyrm_blue_scales.png
 /graphics/neutral/icons/wyrm_cyan_scales.png

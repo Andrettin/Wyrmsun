@@ -547,6 +547,7 @@ if (LoadedGame == false) then
 				if (adjacent_floor_tiles >= 8) then
 					if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 						SetStartView(0, RandomX, RandomY)
+						unit = CreateUnit("unit-alchemy-lab", 15, {RandomX, RandomY})
 						unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
 						unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
 						Count = Count - 1
@@ -574,7 +575,7 @@ if (LoadedGame == false) then
 					end
 					if (adjacent_floor_tiles >= 8) then
 						SetStartView(1, RandomX, RandomY)
-						unit = CreateUnit("unit-dwarven-steelclad", 1, {RandomX, RandomY})
+						unit = CreateUnit("unit-dwarven-thane", 1, {RandomX, RandomY}) -- should be loremaster
 
 						RandomNumber = SyncRand(2)
 						if (RandomNumber == 0) then

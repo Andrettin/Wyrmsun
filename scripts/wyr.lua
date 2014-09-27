@@ -72,18 +72,23 @@ if (OldCreateUnit == nil) then
 	end
 end
 
+function GetCivilizationClassUnitType(class, civilization)
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") ~= "" and class ~= "") then
+			if (GetUnitTypeData(unitName, "Civilization") == civilization and class == GetUnitTypeData(unitName, "Class")) then
+				return unitName
+			end
+		end
+	end
+	return nil
+end
+
 -- Convert a unit type to the equivalent for a different race
 function ConvertUnitType(unittype, civilization, terrain)
 	local equiv
 
-	if (civilization ~= GetUnitTypeData(unittype, "Civilization")) then
-		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") ~= "" and GetUnitTypeData(unittype, "Class") ~= "") then
-				if (GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unittype, "Class") == GetUnitTypeData(unitName, "Class")) then
-					return unitName
-				end
-			end
-		end
+	if (civilization ~= GetUnitTypeData(unittype, "Civilization") and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization) ~= nil) then
+		return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization)
 	end
 
 	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then

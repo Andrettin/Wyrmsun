@@ -4085,10 +4085,11 @@ AddTrigger(
 			return true
 		end
 
+		-- make the initial Shinsplitter units attack (later units follow the normal AI attack pattern)
 		uncount = 0
 		uncount = GetUnits(1)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
+			if (GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
 				OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
 			end
 		end
@@ -4209,7 +4210,7 @@ AddTrigger(
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
-				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smith", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smith", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
 				if (unit_quantity > 0) then
 					player = GetThisPlayer()
 					return true

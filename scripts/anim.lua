@@ -304,7 +304,7 @@ DefineAnimations("animations-decoration", {
 
 DefineAnimations("animations-volcanic-crater", {
 	Still = {
-		"exact-frame 0", "wait 6", "exact-frame 1", "wait 6", "exact-frame 2", "wait 6", "exact-frame 3", "wait 6", "exact-frame 4", "wait 6", "exact-frame 5", "wait 6", "exact-frame 6", "wait 6", "exact-frame 7", "wait 6",
+		"exact-frame 0", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8", "exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8",
 	},
 })
 
@@ -493,6 +493,12 @@ DefineAnimations("animations-barrel", {
 	"label drop_potion_of_healing", "spawn-unit unit-potion-of-healing 0 0 5 15", "goto end",
 	"label drop_potion_of_decay", "spawn-unit unit-potion-of-decay 0 0 5 15", "goto end",
 	"label end", "unbreakable end", "wait 1",}
+})
+
+DefineAnimations("animations-alchemy-lab", {
+	Still = {
+		"exact-frame 0", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8", "exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8", "exact-frame 7", "wait 8", "exact-frame 8", "wait 8", "exact-frame 9", "wait 8",
+	},
 })
 
 DefineAnimations("animations-green-potion", {

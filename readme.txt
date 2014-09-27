@@ -48,7 +48,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Miscellaneous
 - Fixed a bug which caused the screen to continue scrolling when a dialogue popped up.
-- Added Wyrmsun logo to the main menu.
+- Added Wyrmsun logo to the main menu (graphics by Jinn).
 
 * Quests
 - Added The Wyrm quest.
@@ -59,6 +59,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added stalagmites decoration unit, which appears in cave maps (graphics by b_o).
 - Fixed bug which allowed mushroom patches to appear in inappropriate tiles under certain circumstances.
 - Fixed a bug with the cave tileset which caused units to sometimes attack at infinite range.
+- Added volcanic crater decoration unit (graphics by Leo).
+- Added alchemy lab decoration unit (graphics by b_o).
 
 * Units
 - Updated the Wyrm's encyclopedia entry.

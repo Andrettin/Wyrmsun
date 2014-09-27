@@ -1300,6 +1300,26 @@ DefineUnitType("unit-barrel", { Name = "Barrel",
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
+DefineUnitType("unit-alchemy-lab", { Name = "Alchemy Lab",
+	Image = {"file", "neutral/items/alchemy_lab.png", "size", {32, 32}},
+	Animations = "animations-alchemy-lab", Icon = "icon-alchemy-lab",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 5,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	IsNotSelectable = true,
+	Decoration = true,
+	NumDirections = 1,
+	Indestructible = 1,
+	Sounds = {
+		"selected", "click",
+		"dead", "building destroyed"} } )
+
 DefineUnitType("unit-potion-of-healing", { Name = "Potion of Healing",
 	Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
 	Animations = "animations-red-potion", Icon = "icon-red-potion",

@@ -165,11 +165,6 @@ function RunTechTreeMenu(civilization_number)
 				GetUnitTypeData("unit-dwarven-guard-tower", "Description"),
 				offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 3), playercolor)
 		end
---		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-smith") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-stronghold")) then
---			addTechItemIcon("unit-dwarven-steelclad", menu, "dwarf/icons/dwarven_steelclad",
---				GetUnitTypeData("unit-dwarven-steelclad", "Description"),
---				offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 4), playercolor)
---		end
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
 			addTechItemIcon("unit-dwarven-scout", menu, "dwarf/icons/dwarven_scout",
 				GetUnitTypeData("unit-dwarven-scout", "Description"),
