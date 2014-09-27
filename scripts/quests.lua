@@ -104,7 +104,6 @@ Quests = {
 		Icon = "goblin/icons/goblin_spearman",
 		Description = "\n\nMap: Caverns of Flame\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "The Wyrm",
-		RequiredTechnology = "upgrade-dwarven-alchemy",
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "Caverns of Flame",

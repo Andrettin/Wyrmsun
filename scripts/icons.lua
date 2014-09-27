@@ -664,9 +664,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-alchemy-lab",
+	Name = "icon-alchemy-bench",
 	Size = {46, 38},
-	File = "neutral/icons/alchemy_lab.png"
+	File = "neutral/icons/alchemy_bench.png"
 })
 
 DefineIcon({

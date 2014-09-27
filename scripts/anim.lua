@@ -495,9 +495,12 @@ DefineAnimations("animations-barrel", {
 	"label end", "unbreakable end", "wait 1",}
 })
 
-DefineAnimations("animations-alchemy-lab", {
+DefineAnimations("animations-alchemy-bench", {
 	Still = {
-		"exact-frame 0", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8", "exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8", "exact-frame 7", "wait 8", "exact-frame 8", "wait 8", "exact-frame 9", "wait 8",
+		"exact-frame 0", "wait 8", "random-goto 1 use", "goto end",
+		"label use",
+		"exact-frame 2", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8", "exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8", "exact-frame 7", "wait 8",
+		"label end",
 	},
 })
 

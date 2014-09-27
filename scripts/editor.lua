@@ -110,7 +110,7 @@ local editor_types = {
    "unit-gold-chest",
    "unit-gold-and-gems-chest",
    "unit-barrel",
-   "unit-alchemy-lab",
+   "unit-alchemy-bench",
    "unit-potion-of-healing",
    "unit-potion-of-decay",
    "unit-cheese",

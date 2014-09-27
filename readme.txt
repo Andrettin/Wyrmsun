@@ -33,6 +33,20 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.0
+-----------------------------------------------------------------------
+
+* Maps
+- Added Caverns of Flame map (Nidavellir), from Battle for Wesnoth.
+
+* Miscellaneous
+- Alchemy Lab graphics have been updated (by b_o).
+- Alchemy Lab renamed to Alchemy Bench.
+
+* Quests
+- Added Caverns of Flame quest, the last one of the Scepter of Fire campaign.
+
+-----------------------------------------------------------------------
 - 0.1.8
 -----------------------------------------------------------------------
 

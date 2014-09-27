@@ -1300,9 +1300,9 @@ DefineUnitType("unit-barrel", { Name = "Barrel",
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-alchemy-lab", { Name = "Alchemy Lab",
-	Image = {"file", "neutral/items/alchemy_lab.png", "size", {32, 32}},
-	Animations = "animations-alchemy-lab", Icon = "icon-alchemy-lab",
+DefineUnitType("unit-alchemy-bench", { Name = "Alchemy Bench",
+	Image = {"file", "neutral/items/alchemy_bench.png", "size", {32, 32}},
+	Animations = "animations-alchemy-bench", Icon = "icon-alchemy-bench",
 	NeutralMinimapColor = {255, 255, 0},
 	Speed = 0,
 	HitPoints = 5,
