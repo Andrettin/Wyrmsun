@@ -57,6 +57,8 @@ SetRawTile(23, 56, "Rock")
 SetRawTile(25, 43, "Rock")
 SetRawTile(25, 55, "Rock")
 SetRawTile(26, 21, "Rock")
+SetRawTile(33, 43, "Water")
+SetRawTile(40, 43, "Water")
 SetRawTile(41, 24, "Rock")
 SetRawTile(44, 24, "Rock")
 SetRawTile(48, 59, "Water")
@@ -136,11 +138,23 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-goblin-town-hall", 4, {11, 31})
 	unit = CreateUnit("unit-goblin-spearman", 4, {12, 32}) -- troll warrior
 	IncreaseUnitLevel(unit, 2, true)
+	unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+	IncreaseUnitLevel(unit, 1, true)
+	unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+	IncreaseUnitLevel(unit, 1, true)
+	unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+	IncreaseUnitLevel(unit, 1, true)
 	unit = CreateUnit("unit-goblin-worker", 4, {12, 32})
 
 	unit = CreateUnit("unit-goblin-town-hall", 5, {53, 31})
 	unit = CreateUnit("unit-goblin-spearman", 5, {56, 32}) -- troll warrior
 	IncreaseUnitLevel(unit, 2, true)
+	unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+	IncreaseUnitLevel(unit, 1, true)
+	unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+	IncreaseUnitLevel(unit, 1, true)
+	unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+	IncreaseUnitLevel(unit, 1, true)
 	unit = CreateUnit("unit-goblin-worker", 5, {56, 32})
 
 	SetDiplomacy(0, "enemy", 1)

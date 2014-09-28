@@ -38,6 +38,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Maps
 - Added Caverns of Flame map (Nidavellir), from Battle for Wesnoth.
+- Fixed an issue which caused goblin units to sometimes appear in unreachable positions during a grand strategy battle in the Northern Wastelands map.
 
 * Miscellaneous
 - Alchemy Lab graphics have been updated (by b_o).
@@ -45,6 +46,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Quests
 - Added Caverns of Flame quest, the last one of the Scepter of Fire campaign.
+- The player's units are now healed between the first and the second parts of the Hills of the Shorbear Clan quest.
 
 -----------------------------------------------------------------------
 - 0.1.8
