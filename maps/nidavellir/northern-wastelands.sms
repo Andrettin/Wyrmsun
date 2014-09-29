@@ -173,6 +173,7 @@ end
 
 -- create gryphon riders
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
+IncreaseUnitLevel(unit, 1, true)
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {0, 34})
 
 -- create some gryphon critters as scenery

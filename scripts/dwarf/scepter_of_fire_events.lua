@@ -4369,7 +4369,7 @@ AddTrigger(
 							SavePreferences()
 						end
 						if (GrandStrategy == false) then
---							NextMap = "maps/nidavellir/caverns-of-flame.smp"
+							NextMap = "maps/nidavellir/caverns-of-flame.smp"
 						end
 						ActionVictory()
 					end
@@ -4511,6 +4511,426 @@ AddTrigger(
 				"dwarf/icons/rugnur.png"
 			)
 			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and GameCycle > 750) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
+		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y}, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7}, "move")
+		Event(
+			"Shinsplitter Thane",
+			"We have caught up to the Norlunds. Now, prepare to destroy them!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 1)
+			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 1)
+			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 2)
+			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 2)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 1)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 2)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 2)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 2)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 3)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 3)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 3)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 3)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			IncreaseUnitLevel(unit, 2, true)
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 4)
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+			SetUnitVariable(unit, "CustomAIState", 4)
+			Event(
+				"Rugnur",
+				"Thursagan! The Shinsplitters are right on our tail; what should we do?",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Thursagan",
+					"We could try to set off the volcano as soon as possible. Meanwhile, we should draw the Shinsplitters further into the caves, so they can't escape when it does erupt.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					end},
+					"dwarf/icons/thursagan.png"
+				)
+				end},
+				"dwarf/icons/rugnur.png"
+			)
+			end},
+			"dwarf/icons/thane.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Move onto one of the glyphs in the center of the volcano") == false) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+			for unit1 = 1,table.getn(uncount) do 
+				local unit_quantity = GetNumUnitsAt(-1, "unit-goblin-spearman", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+				if (unit_quantity > 0) then
+					player = GetFactionPlayer("Norlund Clan")
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"These goblins appear to be guarding something.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Thursagan",
+				"It is probably the ancient mechanism. Attack them!",
+				player,
+				{"~!Continue"},
+				{function(s)
+					AddPlayerObjective(player, "- Move onto one of the glyphs in the center of the volcano")
+				end},
+				"dwarf/icons/thursagan.png"
+			)
+			end},
+			"dwarf/icons/rugnur.png"
+		)
+		return false
+	end
+)
+
+-- make the Shinsplitter units chase Rugnur's dwarves
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		return true
+	end,
+	function() 
+		local thursagan = nil
+	
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-hero-thursagan") then
+				thursagan = uncount[unit1]
+			end
+		end
+
+		if (thursagan == nil) then
+			return true
+		end
+
+		-- make the Shinsplitter units attack (send a first wave of Surghan units, and then a subsequent wave of Shinsplitter units)
+		uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (IsUnitIdle(uncount[unit1])) then
+				if (GetUnitVariable(uncount[unit1],"CustomAIState") == 1 or (GetUnitVariable(uncount[unit1],"CustomAIState") == 2 and GameCycle >= 2500) or (GetUnitVariable(uncount[unit1],"CustomAIState") == 3 and GameCycle >= 3500) or (GetUnitVariable(uncount[unit1],"CustomAIState") == 4 and GameCycle >= 4500)) then
+					OrderUnit(GetFactionPlayer("Shinsplitter Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+				end
+			end
+		end
+
+		return true
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Move onto one of the glyphs in the center of the volcano") and GetNumUnitsAt(GetThisPlayer(), "any", {36, 46}, {37, 47}) > 0 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them") == false) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		PlaySound("rumble")
+		PlaySound("rumble")
+		Event(
+			"Thursagan",
+			"That's it! The volcano will erupt soon now that ye've triggered it.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			PlaySound("rumble")
+			PlaySound("rumble")
+			Event(
+				"Baglur",
+				"Well, we've succeeded in stopping the Shinsplitters from getting the Scepter, I would say. But what do we do now?!",
+				player,
+				{"~!Continue"},
+				{function(s)
+				PlaySound("rumble")
+				PlaySound("rumble")
+				Event(
+					"Thursagan",
+					"Now, we must fight the goblins until we die, it's our only option.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					PlaySound("rumble")
+					PlaySound("rumble")
+					Event(
+						"Rugnur",
+						"We cannot let any of the Shinsplitters or their mercenaries escape; they would tell where the Scepter of Fire is. Make sure they all die!",
+						player,
+						{"~!Continue"},
+						{function(s)
+						PlaySound("rumble")
+						PlaySound("rumble")
+						Event(
+							"Thursagan",
+							"We have to kill them quickly, before they realize what is happening.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							PlaySound("rumble")
+							PlaySound("rumble")
+							local uncount = 0
+							uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+							for unit1 = 1,table.getn(uncount) do 
+								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
+									SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
+								end
+							end
+							AddPlayerObjective(player, "- Distract the Shinsplitters until the volcano erupts and kills them")
+							end},
+							"dwarf/icons/thursagan.png"
+						)
+						end},
+						"dwarf/icons/rugnur.png"
+					)
+					end},
+					"dwarf/icons/thursagan.png"
+				)
+				end},
+				"dwarf/icons/baglur.png"
+			)
+			end},
+			"dwarf/icons/thursagan.png"
+		)
+		return false
+	end
+)
+
+--[[
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 3500 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+				player = GetFactionPlayer("Norlund Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		PlaySound("rumble")
+		PlaySound("rumble")
+		Event(
+			"Shinsplitter Thane",
+			"Wait, what's going on? The volcano is going to erupt! Everyone, try to get out of these caves!",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"dwarf/icons/thane.png"
+		)
+		return false
+	end
+)
+--]]
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 4500 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+				player = GetFactionPlayer("Norlund Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		PlaySound("rumble")
+		PlaySound("rumble")
+		Event(
+			"Shinsplitter Thane",
+			"Aghh!! The volcano is erupting, and now our exit has been blocked off!!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), 100, {0, 0}, {256, 256})
+			end},
+			"dwarf/icons/thane.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Rugnur",
+			"We have hidden the Scepter well, but now the volcano is going to erupt and kill us all.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Gryphon Rider",
+				"Hmm... I'll leave now.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"",
+					"And thus Rugnur died - a glorious death, in the eyes of the dwarven sages.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"",
+						"The gnomish envoy traveled south, to Untersberg, to Pypo I. To report the events of the past fifteen years.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"",
+							"And a surviving gryphon rider followed the envoy. I know not how. But the gryphon rider made his way south, to the Brown Hills, and reached them about the time that the envoy did.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								"",
+								"Together, they relayed the sad news to the king, that Rugnur and his companions did fulfill their promise to craft the Scepter, but died tragically in the Caverns of Flame.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								Event(
+									"",
+									"Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either.",
+									player,
+									{"~!Continue"},
+									{function(s)
+									Event(
+										"",
+										"The scepter would not be found until many generations after Pypo I, in the time of Rubezahl. During that time, it sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true power.",
+										player,
+										{"~!Continue"},
+										{function(s)
+										Event(
+											"",
+											"But before it was found, legends grew up around it, and around its makers - Thursagan, most brilliant of the dwarven runesmiths, and Rugnur, one of the greatest dwarven heroes of old.",
+											player,
+											{"~!Continue"},
+											{function(s)
+												if (mapinfo.description == "Caverns of Flame" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+													if (player == GetThisPlayer() and GrandStrategy == false) then
+														if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Caverns of Flame") == false) then
+															table.insert(wyr.preferences.QuestsCompleted, "Caverns of Flame")
+														end
+														SavePreferences()
+													end
+													ActionVictory()
+												end
+											end}
+										)
+										end}
+									)
+									end}
+								)
+								end}
+							)
+							end}
+						)
+						end}
+					)
+					end}
+				)
+				end},
+				"dwarf/icons/gryphon_rider.png"
+			)
+			end},
+			"dwarf/icons/rugnur.png"
 		)
 		return false
 	end

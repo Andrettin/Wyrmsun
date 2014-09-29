@@ -232,6 +232,7 @@ if (GrandStrategy == false) then
 			unit = CreateUnit("unit-hero-baglur", 0, {16, 16})
 			unit = CreateUnit("unit-hero-thursagan", 0, {16, 16})
 			unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {16, 16}) -- Krawg
+			IncreaseUnitLevel(unit, 1, true)
 		end
 
 		-- base for the Shinsplitters

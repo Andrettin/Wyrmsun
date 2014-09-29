@@ -143,6 +143,7 @@ if (GrandStrategy == false) then
 		IncreaseUnitLevel(unit, 1, true)
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
+		IncreaseUnitLevel(unit, 1, true)
 	end
 
 	unit = CreateUnit("unit-dwarven-town-hall", 1, {37, 32})

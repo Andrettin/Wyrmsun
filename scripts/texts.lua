@@ -241,6 +241,87 @@ Texts = {
 					"163. A seventeenth I know, | so that seldom shall go\nA maiden young from me;\n. . . . . . . . . .\n. . . . . . . . . .\n\n164. Long these songs | thou shalt, Loddfafnir,\nSeek in vain to sing;\nYet good it were | if thou mightest get them,\nWell, if thou wouldst them learn,\nHelp, if thou hadst them.\n\n165. An eighteenth I know, | that ne'er will I tell\nTo maiden or wife of man,--\nThe best is what none | but one's self doth know,\nSo comes the end of the songs,--\nSave only to her | in whose arms I lie,\nOr who else my sister is.\n\n[163. Some editors have combined these two lines with stanza 164. Others have assumed that the gap follows the first half-line, making \"so that-from me\" the end of the stanza.\n\n164. This stanza is almost certainly an interpolation, and seems to have been introduced after the list of charms and the ~<Loddfafnismol~> (stanzas 111-138) were combined in a single poem, for there is no other apparent excuse for the reference to Loddfafnir at this point. The words \"if thou mightest get them\" are a conjectural emendation.\n\n165. This stanza is almost totally obscure. The third and fourth lines look like interpolations.]"
 				}
 			},
+			Vafthruthnismol = {
+				Title = "Vafthruthnismol",
+				Introduction = false,
+				Index = 5,
+				Text = {
+					"~<Vafthruthnismol~> - ~<The Ballad of Vafthruthnir~>\n\n~<Introductory Note~>\n\nThe Vafthruthnismol follows the Hovamol in the ~<Codex~> ~<Regius~>. From stanza 20 on it is also included in the ~<Arnamagnaean~> ~<Codex~>, the first part evidently having appeared on leaf now lost. Snorri quotes eight stanzas of it in the ~<Prose~> ~<Edda~>, and in his prose text closely paraphrases many others.\n\nThe poem is wholly in dialogue form except for a single narrative stanza (stanza 5). After a brief introductory discussion between Othin and his wife, Frigg, concerning the reputed wisdom of the giant Vafthruthnir, Othin, always in quest of wisdom, seeks out the giant, calling himself Gagnrath. The giant immediately insists that they shall demonstrate which is the wiser of the two, and propounds four questions (stanzas 11, 13, 15, and 17), each of which Othin answers. It is then the god's turn to ask, and he begins with a series of twelve numbered questions regarding the origins and past history of life. These Vafthruthnir answers, and Othin asks five more questions, this time referring to what is to follow the destruction of the gods, the last one asking the name of his own slayer. Again Vafthruthnir answers, and Othin finally propounds the unanswerable question: \"What spake Othin himself in the ears of his son, ere in the bale-fire he burned?\" Vafthruthnir, recognizing his questioner as Othin himself, admits his inferiority in wisdom, and so the contest ends.\n\nThe whole poem is essentially encyclopaedic in character, and thus was particularly useful to Snorri in his preparation of the ~<Prose~> ~<Edda~>. The encyclopaedic poem with a slight narrative outline seems to have been exceedingly popular; the ~<Grimnismol~> and the much later ~<Alvissmol~> represent different phases of the same type. The ~<Vafthruthnismol~> and ~<Grimnismol~> together, in deed, constitute a fairly complete dictionary of Norse mythology. There has been much discussion as to the probable date of the ~<Vafthruthnismol~>, but it appears to belong to about the same period as the ~<Voluspo~>: in other words, the middle of the tenth century. While there may be a few interpolated passages in the poem as we now have it, it is clearly a united whole, and evidently in relatively good condition.", -- had to replace special characters
+					
+					"~<Othin spake:~>\n1, \"Counsel me, Frigg, for I long to fare,\nAnd Vafthruthnir fain would find;\nfit wisdom old with the giant wise\nMyself would I seek to match.\"\n\n~<Frigg spake:~>\n2. \"Heerfather here at home would I keep,\nWhere the gods together dwell;\nAmid all the giants an equal in might\nTo Vafthruthnir know I none.\"\n\n~<Othin spake:~>\n3. \"Much have I fared, much have I found.\nMuch have I got from the gods;\nAnd fain would I know how Vafthruthnir now\nLives in his lofty hall.\"\n\n~<Frigg spake:~>\n4. \"Safe mayst thou go, safe come again,\nAnd safe be the way thou wendest!\nFather of men, let thy mind be keen\nWhen speech with the giant thou seekest.\"\n\n5. The wisdom then of the giant wise\n\n[1. The phrases \"Othin spake,\" \"Frigg spake,\" etc., appear in abbreviated form in both manuscripts. ~<Frigg~>: Othin's wife; cf. ~<Voluspo~>, 34 and note. ~<Vafthruthnir~> (\"the Mighty in Riddles\"): nothing is known of this giant beyond what is told in this poem.\n\n2. ~<Heerfather~> (\"Father of the Host\"): Othin.\n\n3. This single narrative stanza is presumably a later]",
+					
+					"Forth did he fare to try;\nHe found the hall | of the father of Im,\nAnd in forthwith went Ygg.\n\n~<Othin spake:~>\n6. \"Vafthruthnir, hail! | to thy hall am I come,\nFor thyself I fain would see;\nAnd first would I ask | if wise thou art,\nOr, giant, all wisdom hast won.\"\n\n~<Vafthruthnir spake:~>\n7. \"Who is the man | that speaks to me,\nHere in my lofty hall?\nForth from our dwelling | thou never shalt fare,\nUnless wiser than I thou art.\"\n\n~<Othin spake:~>\n8. \"Gagnrath they call me, | and thirsty I come\nFrom a journey hard to thy hall;\nWelcome I look for, | for long have I fared,\nAnd gentle greeting, giant.\"\n\n~<Vafthruthnir spake:~>\n9. \"Why standest thou there | on the floor whilst thou speakest?\nA seat shalt thou have in my hall;\n\n[interpolation. ~<Im~>: the name appears to be corrupt, but we know nothing of any son of Vafthruthnir. Ygg (\"the Terrible\"): Othin.\n\n8. ~<Gagnrath~> (\"the Gain-Counsellor\"): Othin on his travels always assumes a name other than his own.]",
+					
+					"Then soon shall we know | whose knowledge is more,
+The guest's or the sage's gray."
+Othin spake:
+10. "If a poor man reaches | the home of the rich,
+Let him wisely speak or be still;
+For to him who speaks | with the hard of heart
+Will chattering ever work ill."
+Vafthruthnir spake:
+11. "Speak forth now, Gagnrath, | if there from the floor
+Thou wouldst thy wisdom make known:
+What name has the steed | that each morn anew
+The day for mankind doth draw?"
+Othin spake:
+12. "Skinfaxi is he, | the steed who for men
+The glittering day doth draw;
+The best of horses | to heroes he seems,
+And brightly his mane doth burn."
+Vafthruthnir spake:
+13. "Speak forth now, Gagnrath, | if there from the floor
+[10. This stanza sounds very much like many of those in the first part of the Hovamol, and may have been introduced here
+from some such source.
+12. Skinfaxi: "Shining-Mane."]",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					"",
+					
+					""
+				}
+			},
 			Grimnismol = {
 				Title = "Grimnismol",
 				Introduction = false,

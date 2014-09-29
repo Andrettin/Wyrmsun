@@ -47,6 +47,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Quests
 - Added Caverns of Flame quest, the last one of the Scepter of Fire campaign.
 - The player's units are now healed between the first and the second parts of the Hills of the Shorbear Clan quest.
+- The gryphon rider present in the quests now begins the scenarios at level 2.
 
 -----------------------------------------------------------------------
 - 0.1.8

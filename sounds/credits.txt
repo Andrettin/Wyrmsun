@@ -9,6 +9,7 @@ Battle for Wesnoth Team:
 /sounds/misc/gold_coins.wav
 /sounds/misc/open_chest.wav
 /sounds/misc/potion.wav
+/sounds/misc/rumble.wav
 /sounds/missiles/axe.wav
 /sounds/missiles/bite.wav
 /sounds/missiles/bow.wav
