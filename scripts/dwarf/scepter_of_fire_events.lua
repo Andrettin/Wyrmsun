@@ -4429,7 +4429,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"Rugnur and his companions had reached the realms of the goblins, with the Shinsplitters hot on their trail. And there was no exit from those caves, leaving the Norlunds unable to leave the caverns they had entered.",
+			"Rugnur and his companions had reached the realms of the goblins, with the Shinsplitters hot on their trail. And there was no exit from those caves, leaving the Norlunds no way out.",
 			player,
 			{"~!Continue"},
 			{function(s)

@@ -43,6 +43,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Miscellaneous
 - Alchemy Lab graphics have been updated (by b_o).
 - Alchemy Lab renamed to Alchemy Bench.
+- Added the Vafthruthnismol to the encyclopedia texts (The Poetic Edda).
 
 * Quests
 - Added Caverns of Flame quest, the last one of the Scepter of Fire campaign.
