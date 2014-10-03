@@ -394,8 +394,10 @@ DefinePanelContents(
 	} } })
 
 Load("scripts/dwarf/ui.lua")
+Load("scripts/germanic/ui.lua")
 Load("scripts/gnome/ui.lua")
 Load("scripts/goblin/ui.lua")
+Load("scripts/kobold/ui.lua")
 
 wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 

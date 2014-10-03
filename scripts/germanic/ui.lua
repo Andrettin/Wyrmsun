@@ -8,9 +8,9 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      ui.lua - Define the gnomish user interface
+--      ui.lua - Define the germanic user interface
 --
---      (c) Copyright 2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2001-2008 by Lutz Sammer and Jimmy Salmon
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -29,36 +29,36 @@
 
 DefineCursor({
   Name = "cursor-point",
-  Race = "gnome",
+  Race = "germanic",
   File = "ui/dwarf/cursors/dwarven_gauntlet.png",
   HotSpot = { 3,  2},
   Size = {28, 32}})
 DefineCursor({
   Name = "cursor-green-hair",
-  Race = "gnome",
+  Race = "germanic",
   File = "ui/cursors/green.png",
   HotSpot = {15, 15},
   Size = {32, 32}})
 DefineCursor({
   Name = "cursor-yellow-hair",
-  Race = "gnome",
+  Race = "germanic",
   File = "ui/cursors/yellow.png",
   HotSpot = {15, 15},
   Size = {32, 32}})
 DefineCursor({
   Name = "cursor-red-hair",
-  Race = "gnome",
+  Race = "germanic",
   File = "ui/cursors/red.png",
   HotSpot = {15, 15},
   Size = {32, 32}})
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---	* Race gnome.
+--	* Civilization germanic.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/battle.ogg" }
+wyrmsun.playlist = { "music/battle.ogg" }
 
-function GnomeScreen(screen_width, screen_height)
+function GermanicScreen(screen_width, screen_height)
   local info_panel_x = 0
   local info_panel_y = 160
 
@@ -255,6 +255,13 @@ UI.Resources[2].TextY = 1
 --UI.Resources[6].TextX = 176 + 150 + 18
 --UI.Resources[6].TextY = 1
 
+-- Hide Coal (should not show up in normal scenarios)
+if (UI.Resources[6].G) then
+	UI.Resources[6].G = nil
+end
+UI.Resources[6].TextX = -1
+UI.Resources[6].TextY = -1
+
 -- food
 if (CanAccessFile("ui/food.png")) then
   UI.Resources[FoodCost].G = CGraphic:New("ui/food.png", 14, 14)
@@ -285,7 +292,7 @@ UI.Resources[ManaResCost].TextY = -100
 UI.MenuButton.X = 24
 UI.MenuButton.Y = 2
 UI.MenuButton.Text = "Menu (~<F10~>)"
-UI.MenuButton.Style = FindButtonStyle("main-gnome")
+UI.MenuButton.Style = FindButtonStyle("main-dwarf")
 UI.MenuButton:SetCallback(
   function()
     if (Editor.Running == EditorNotRunning) then
@@ -298,12 +305,12 @@ UI.MenuButton:SetCallback(
 UI.NetworkMenuButton.X = 6
 UI.NetworkMenuButton.Y = 2
 UI.NetworkMenuButton.Text = "Menu"
-UI.NetworkMenuButton.Style = FindButtonStyle("network-gnome")
+UI.NetworkMenuButton.Style = FindButtonStyle("network-dwarf")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
 UI.NetworkDiplomacyButton.X = 90
 UI.NetworkDiplomacyButton.Y = 2
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-gnome")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-dwarf")
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 

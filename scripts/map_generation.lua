@@ -915,6 +915,30 @@ function CreateCritters(critter_number)
 	end
 end
 
+function CreateCreeps(player, creep_type, creep_number)
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+	Count = creep_number
+	while (Count > 0) do
+		RandomX = SyncRand(Map.Info.MapWidth)
+		RandomY = SyncRand(Map.Info.MapHeight)
+		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+			local unit_quantity = 0
+			for i=0,14 do
+				if (i ~= player) then
+					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
+				end
+			end
+
+			if (unit_quantity < 1) then -- wyrms shouldn't start near a settlement, or the player will be destroyed
+				unit = CreateUnit(creep_type, player, {RandomX, RandomY})
+				Count = Count - 1
+			end
+		end
+	end
+end
+
 function CreateGryphons(gryphon_number)
 	local RandomX = 0
 	local RandomY = 0
@@ -1161,7 +1185,7 @@ function GenerateRandomMap(width, height, symmetric)
 	end
 
 	if (wyrmsun.tileset == "forest") then
-		CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	end

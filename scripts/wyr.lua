@@ -29,6 +29,11 @@
 
 DefineRaceNames(
 	"race", {
+		"name", "germanic",
+		"display", "Germanic",
+		"visible"
+	},
+	"race", {
 		"name", "dwarf",
 		"display", dwarven_civilization_name,
 		"visible"

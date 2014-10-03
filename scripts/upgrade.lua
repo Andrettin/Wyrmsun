@@ -31,6 +31,7 @@ GrandStrategyTechnologies = {}
 
 -- Load the different races
 Load("scripts/dwarf/upgrade.lua")
+Load("scripts/germanic/upgrade.lua")
 Load("scripts/gnome/upgrade.lua")
 Load("scripts/goblin/upgrade.lua")
 
@@ -82,7 +83,7 @@ end
 
 function DefineAllowMercenaryUnits(flags)
 	local units = {
-		"unit-human-lumber-mill",
+		"unit-teuton-lumber-mill",
 		"unit-mercenary-camp",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}

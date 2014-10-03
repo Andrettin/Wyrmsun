@@ -28,6 +28,17 @@
 --
 
 Quests = {
+	OnTheVanaquisl = {
+		Name = "On the Vanaquisl",
+		Icon = "germanic/icons/short_sword", -- should be an Erala instead
+		Description = "Having assembled a great army, we are to attack the people of Vanaland and take their lands into our possession.\n\nMap: Don Basin\n\nRewards: 2 Germanic Technology Points, Jutland Map.",
+		Civilization = "germanic",
+		TechnologyPoints = 2,
+		Map = "Don Basin",
+		X = 1,
+		Y = 2,
+		PlayerColor = "orange"
+	},
 	ABargainIsStruck = {
 		Name = "A Bargain is Struck",
 		Icon = "dwarf/icons/rugnur",

@@ -844,6 +844,8 @@ function GetCivilizationFactions(civilization)
 		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 	elseif (civilization == "elf") then
 		return {"Lintanir", "Ulfdalir", "Wesmere"}
+	elseif (civilization == "germanic") then
+		return {"Germanics"}
 	elseif (civilization == "gnome") then
 		return {"Untersberg"}
 	elseif (civilization == "goblin") then

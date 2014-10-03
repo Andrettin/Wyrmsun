@@ -70,6 +70,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-short-sword",
+	Size = {46, 38},
+	File = "germanic/icons/short_sword.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-wooden-oblong-shield",
+	Size = {46, 38},
+	File = "germanic/icons/wooden_oblong_shield.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-bronze-shield",
+	Size = {46, 38},
+	File = "germanic/icons/bronze_shield.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},
 	File = "dwarf/icons/miner.png"
@@ -811,9 +829,9 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	})
 
 	DefineIcon({
-		Name = "icon-human-lumber-mill",
+		Name = "icon-teuton-lumber-mill",
 		Size = {46, 38},
-		File = "tilesets/swamp/human/icons/lumber_mill.png"
+		File = "tilesets/swamp/teuton/icons/lumber_mill.png"
 	})
 
 	DefineIcon({
@@ -943,9 +961,9 @@ elseif (wyrmsun.tileset == "forest") then
 	})
 
 	DefineIcon({
-		Name = "icon-human-lumber-mill",
+		Name = "icon-teuton-lumber-mill",
 		Size = {46, 38},
-		File = "tilesets/forest/human/icons/lumber_mill.png"
+		File = "tilesets/forest/teuton/icons/lumber_mill.png"
 	})
 
 	DefineIcon({
@@ -1075,9 +1093,9 @@ else
 	})
 
 	DefineIcon({
-		Name = "icon-human-lumber-mill",
+		Name = "icon-teuton-lumber-mill",
 		Size = {46, 38},
-		File = "tilesets/forest/human/icons/lumber_mill.png"
+		File = "tilesets/forest/teuton/icons/lumber_mill.png"
 	})
 
 	DefineIcon({

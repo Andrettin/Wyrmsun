@@ -16472,4 +16472,4 @@ unit = CreateUnit("unit-critter", 15, {33, 117})
 unit = CreateUnit("unit-gold-mine", 15, {28, 125})
 SetResourcesHeld(unit, 65000)
 
-CreateNeutralBuildings("unit-human-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)

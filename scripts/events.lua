@@ -29,10 +29,10 @@
 
 function EventTriggers()
 
-	Load("scripts/dwarf/events.lua")
-
 	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0 and (GrandStrategy == false or GrandStrategyEventMap)) then
+		Load("scripts/dwarf/events.lua")
 		Load("scripts/dwarf/scepter_of_fire_events.lua")
+		Load("scripts/germanic/events.lua")
 		Load("scripts/gnome/events.lua")
 	end
 

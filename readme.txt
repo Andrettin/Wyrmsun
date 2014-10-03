@@ -33,6 +33,27 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.1
+-----------------------------------------------------------------------
+
+* Civilizations
+- Added Germanic civilization (human).
+
+* Maps
+- Added Don Basin map (Earth), based on the Europe map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- Added Jutland map (Earth), based on the Scandinavia map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+
+* Miscellaneous
+- Added germanic bronze short sword icon (by Leo).
+- Added germanic wooden oblong shield icon (by Leo).
+
+* Quests
+- Added On the Vanaquisl quest.
+
+* Upgrades
+- Added germanic bronze shield upgrade (graphics by Leo).
+
+-----------------------------------------------------------------------
 - 1.0.0
 -----------------------------------------------------------------------
 

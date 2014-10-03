@@ -38,7 +38,7 @@ SetEditorUnitsIcon("icon-dwarven-axefighter")
 --
 local editor_types = {
 
-   "unit-human-lumber-mill",
+   "unit-teuton-lumber-mill",
 
 --- - - - - - - - - - - - - - - - - - -
 

@@ -48,7 +48,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
   Key = "a", Hint = "~!Attack",
   ForUnit = {
 	"unit-gnomish-worker", "unit-gnomish-recruit",
-	"unit-hero-greebo",
 	"gnome-group"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",

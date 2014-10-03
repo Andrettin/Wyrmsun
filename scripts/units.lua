@@ -30,6 +30,7 @@
 UnitTypeFiles = {}
 
 Units = {
+	"upgrade-germanic-bronze-shield",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smith",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
@@ -1537,10 +1538,10 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 
 -- Other civilizations' units
 
-DefineUnitType("unit-human-lumber-mill", { Name = lumber_mill_name,
-	Image = {"file", "human/buildings/lumber_mill.png", "size", {96, 96}},
+DefineUnitType("unit-teuton-lumber-mill", { Name = lumber_mill_name,
+	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	NeutralMinimapColor = {192, 192, 192},
-	Animations = "animations-building", Icon = "icon-human-lumber-mill",
+	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
 	Costs = {"time", 150, "gold", 600, "lumber", 450},
 	RepairHp = 4,
 	RepairCosts = {"gold", 1, "lumber", 1},
@@ -1745,7 +1746,7 @@ Load("scripts/kobold/units.lua")
 
 DefineUnitType("unit-human-wall", { Name = "Wall",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
-	Animations = "animations-building", Icon = "icon-human-lumber-mill",
+	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
 	Costs = {"time", 30, "gold", 20, "lumber", 10},
 	Construction = "construction-wall",
 	Speed = 0,

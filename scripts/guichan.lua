@@ -994,7 +994,7 @@ function RunSinglePlayerGameMenu()
   world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
     function(dd) WorldChanged() end)
   world:setSize(152, 20)
-  world:setSelected(1)
+  world:setSelected(0)
 
   menu:addLabel("~<Map:~>", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
   scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
