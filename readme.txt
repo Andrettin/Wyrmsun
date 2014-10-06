@@ -52,6 +52,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
+- Added germanic broad sword upgrade (graphics by Leo).
 
 -----------------------------------------------------------------------
 - 1.0.0

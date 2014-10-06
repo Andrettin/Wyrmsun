@@ -40,6 +40,8 @@ function RunQuestMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
+	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
+
 	for key, value in pairs(Quests) do
 		if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
 			if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
@@ -48,7 +50,7 @@ function RunQuestMenu()
 		end
 	end
 
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
 	menu:run()
@@ -71,7 +73,7 @@ function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y, 
 			local quest_menu = WarGameMenu(panel(5))
 			quest_menu:setSize(352, 352)
     			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
-			quest_menu:addLabel(quest, 176, 11)
+			quest_menu:addLabel(_("" .. quest .. ""), 176, 11)
 			local quest_menu_image = ImageWidget(questicon)
 			quest_menu:add(quest_menu_image, 153, 48)
 

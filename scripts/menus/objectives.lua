@@ -4,7 +4,7 @@ function RunObjectivesMenu()
   menu:addLabel("Objectives", 128, 11, Fonts["large"], true)
 
   local objectives = ""
-  table.foreachi(GetPlayerObjectives(GetThisPlayer()), function(k,v) objectives = objectives .. v .. "\n" end)
+  table.foreachi(GetPlayerObjectives(GetThisPlayer()), function(k,v) objectives = objectives .. _(v) .. "\n" end)
 
   local l = MultiLineLabel(objectives)
   l:setFont(Fonts["large"])

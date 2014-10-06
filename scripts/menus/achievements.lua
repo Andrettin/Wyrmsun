@@ -44,7 +44,7 @@ function RunAchievementsMenu()
 		addAchievementIcon(Achievements[key].Name, menu, Achievements[key].Icon, Achievements[key].Description, offx + 23 + 4 + (54 * Achievements[key].X), offy + 10 + 4 + (46 * Achievements[key].Y))
 	end
 
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
 	menu:run()

@@ -64,7 +64,7 @@ AddTrigger(
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
 			"",
-			"Ay, the Scepter of Fire. The scepter has a long, glorious, and fearful history. But I am not here to tell you how the jewel within it was obtained by Pypo I. Nor will I tell the story of Bimbam I, king of Untersberg by virtue of the Scepter.",
+			"Ay, the Scepter of Fire. The scepter has a long, glorious, and fearful history. But I am not here to tell you how the jewel within it was obtained by Pypo I. Nor will I tell the story of Rubezahl I, king of Untersberg by virtue of the Scepter.",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -258,7 +258,7 @@ AddTrigger(
 																														SetSharedVision(gnomish_monarch_player, true, player)
 																														SetDiplomacy(player, "allied", gnomish_monarch_player)
 																														SetSharedVision(player, true, gnomish_monarch_player)
-																														AddPlayerObjective(player, a_bargain_is_struck_objective_1)
+																														AddPlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 																														AddPlayerObjective(player, "- Rugnur must survive")
 																														AddPlayerObjective(player, "- The gnomish envoy must survive")
 																													end},
@@ -369,7 +369,7 @@ AddTrigger(
 					return false
 				end
 				for i=0,14 do
-					if (PlayerHasObjective(i, a_bargain_is_struck_objective_1)) then
+					if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
 						player = i
 						return true
 					end
@@ -409,7 +409,7 @@ AddTrigger(
 					{function(s)
 					Event(
 						raider_leader_name,
-						"Hey! Ye can't do that - this road belongs to the " .. wyr.preferences.TheScepterOfFireRaiderFaction .. ". We're not letting ye transport gold and jewels on it without paying a toll.",
+						"Hey! Ye can't do that - this road belongs to the Shinsplitter Clan. We're not letting ye transport gold and jewels on it without paying a toll.",
 						event_player,
 						{"~!Continue"},
 						{function(s)
@@ -427,7 +427,7 @@ AddTrigger(
 								{function(s)
 								Event(
 									"Rugnur",
-									"Not true! This is " .. GetPlayerData(player, "Name") .. " land; if anything, it's our road!",
+									"Not true! This is Norlund land; if anything, it's our road!",
 									event_player,
 									{"~!Continue"},
 									{function(s)
@@ -439,7 +439,7 @@ AddTrigger(
 										{function(s)
 										Event(
 											"Rugnur",
-											"Very well. " .. raider_leader_name .. ", I have no problem with slaying ye if ye stand in our way. I advise ye to leave the shipment alone, but not doing so is yer choice.",
+											"Very well. I have no problem with slaying ye if ye stand in our way. I advise ye to leave the shipment alone, but not doing so is yer choice.",
 											event_player,
 											{"~!Continue"},
 											{function(s)
@@ -511,7 +511,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 				player = i
 				return true
 			end
@@ -532,7 +532,7 @@ AddTrigger(
 						player,
 						{"~!Continue"},
 						{function(s)
-							RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+							RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 							if (player == GetThisPlayer() and GrandStrategy == false) then
 								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 									table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -570,7 +570,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
 				player = i
 				return true
 			end
@@ -585,7 +585,7 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-					RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+					RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 					if (player == GetThisPlayer() and GrandStrategy == false) then
 						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 							table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -631,7 +631,7 @@ AddTrigger(
 		end
 		for i=0,14 do
 			-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
-			if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+			if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 				player = i
 				return true
 			end
@@ -639,7 +639,7 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 		if (player == GetThisPlayer() and GrandStrategy == false) then
 			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 				table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -670,7 +670,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
+			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
 				player = i
 				return true
 			end
@@ -688,7 +688,7 @@ AddTrigger(
 			event_player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+				RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 				if (mapinfo.description == "Chaincolt Foothills") then
 					if (GetThisPlayer() == player) then
 						ActionDefeat()
@@ -713,7 +713,7 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			if (GrandStrategy) then
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
@@ -730,14 +730,14 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
@@ -747,7 +747,7 @@ AddTrigger(
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
-					if (PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
+					if (PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
 						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 					end
 					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
@@ -770,20 +770,20 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1) or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function()
-		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
-			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
+			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
@@ -799,7 +799,7 @@ AddTrigger(
 --		end
 --		for i=0,14 do
 --			-- maybe could check here if the gnomish player has a gnomish recruit with level 3 instead (although perhaps it could be bad for performance)?
---			if (PlayerHasObjective(i, a_bargain_is_struck_objective_1) and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+--			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 --				player = i
 --				return true
 --			end
@@ -807,10 +807,10 @@ AddTrigger(
 --		return false
 --	end,
 --	function() 
---		RemovePlayerObjective(player, a_bargain_is_struck_objective_1)
+--		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
 --		if (mapinfo.description == "Chaincolt Foothills") then
 --			ActionDefeat()
---			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), a_bargain_is_struck_objective_1)) then
+--			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
 --				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 --			end
 --		end
@@ -875,7 +875,7 @@ AddTrigger(
 							{function(s)
 							Event(
 								"Rugnur",
-								"(Gulp)",
+								"(~<Gulp~>)",
 								event_player,
 								{"~!Continue"},
 								{function(s)
@@ -899,7 +899,7 @@ AddTrigger(
 											{function(s)
 											Event(
 												"Baglur",
-												"Wait! Rugnur, dinna' they tell ye anything when ye took command here?!",
+												"Wait! Rugnur, dinna' they tell ye ~<anything~> when ye took command here?!",
 												event_player,
 												{"~!Continue"},
 												{function(s)
@@ -1125,7 +1125,7 @@ AddTrigger(
 											{function(s)
 											Event(
 												"Kuhnar",
-												"The " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " might want our gold.",
+												"The Shinsplitters might want our gold.",
 												player,
 												{"~!Continue"},
 												{function(s)
@@ -1161,7 +1161,7 @@ AddTrigger(
 																	{function(s)
 																	Event(
 																		"Baglur",
-																		"I think ye'd better let me explain. The gnomish king Pypo I came to the gate. Then we had to close it, which took considerable time.",
+																		"I think ye'd better let me explain. King Pypo I of Untersberg came to the gate. Then we had to close it, which took considerable time.",
 																		player,
 																		{"~!Continue"},
 																		{function(s)
@@ -1173,7 +1173,7 @@ AddTrigger(
 																			{function(s)
 																			Event(
 																				"Rugnur",
-																				"He wanted to make a deal with us. He gave us a magical stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders were attacking us.",
+																				"He wanted to make a deal with us. He gave us a magnificent stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders were attacking us.",
 																				player,
 																				{"~!Continue"},
 																				{function(s)
@@ -1486,7 +1486,7 @@ AddTrigger(
 						{function(s)
 						Event(
 							"Baglur",
-							"His will probably be the only house up here. No one else is insane enough to live this far north! Even the " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " won't challenge us here.",
+							"His will probably be the only house up here. No one else is insane enough to live this far north! Even the Shinsplitters won't challenge us here.",
 							player,
 							{"~!Continue"},
 							{function(s)
@@ -1773,7 +1773,7 @@ AddTrigger(
 					{function(s)
 					Event(
 						"Baglur",
-						"We have entered into a bargain with a gnomish king to craft a scepter for him.",
+						"We have entered into a bargain with the king of Untersberg to craft a scepter for him.",
 						player,
 						{"~!Continue"},
 						{function(s)
@@ -1815,7 +1815,7 @@ AddTrigger(
 												{function(s)
 												Event(
 													"Thursagan",
-													"I see. Fine then, I will help you craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
+													"I see. Fine then, I will help ye craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
 													player,
 													{"~!Continue"},
 													{function(s)
@@ -1905,7 +1905,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"",
-				"(Later in the dwarven citadel...)",
+				"The path back was less dangerous than it was a year earlier. It did not take them so long. So they quickly returned to the dwarven city, with new members to their party.",
 				player,
 				{"~!Continue"},
 				{function(s)

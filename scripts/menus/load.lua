@@ -18,11 +18,11 @@ function LoadGame(s)
 end
 
 function AddLoadGameItems(menu)
-  menu:addLabel(load_game_name, 384 / 2, 11)
+  menu:addLabel(_("Load Game"), 384 / 2, 11)
   local browser = menu:addBrowser("~save", "^.*%.sav%.?g?z?$",
     (384 - 300 - 18) / 2, 11 + (36 * 1.5), 318, 126)
 
-  menu:addHalfButton(load_name, "l", (384 - 300 - 18) / 2, 256 - 16 - 27,
+  menu:addHalfButton(_("~!Load"), "l", (384 - 300 - 18) / 2, 256 - 16 - 27,
     function()
       if (browser:getSelected() < 0) then
         return
@@ -35,7 +35,7 @@ function AddLoadGameItems(menu)
         menu:stop()
       end
     end)
-  menu:addHalfButton(cancel_name, "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
+  menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
     function() menu:stop() end)
 end
 

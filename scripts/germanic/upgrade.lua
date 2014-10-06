@@ -28,6 +28,10 @@
 --
 
 local upgrades = {
+	{"upgrade-germanic-broad-sword", "Broad Sword", "icon-germanic-broad-sword", "melee-weapon-1",
+		"While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas.",
+		"A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status.",
+		{   200,   800,     0,     0,     0,     0,     0}},
 	{"upgrade-germanic-bronze-shield", "Bronze Shield", "icon-germanic-bronze-shield", "bronze-shield",
 		"Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas.",
 		"A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons.",
@@ -46,6 +50,11 @@ for i = 1,table.getn(upgrades) do
 		u.Costs[j - 1] = upgrades[i][7][j]
 	end
 end
+
+--DefineModifier("upgrade-germanic-broad-sword",
+--	{"PiercingDamage", 2},
+--	{"apply-to", "unit-germanic-erala"}
+--)
 
 --DefineModifier("upgrade-germanic-bronze-shield",
 --	{"Armor", 2},

@@ -108,7 +108,7 @@ function RunResultsMenu()
   menu:addFullButton("~!Save Replay", "s", offx + 150, offy + 440,
     function() RunSaveReplayMenu() end)
 
-  menu:addFullButton("~!Continue", "c", offx + 400, offy + 440,
+  menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
     function() StopMusic(); menu:stop() end)
 
   menu:run()

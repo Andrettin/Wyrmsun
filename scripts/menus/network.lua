@@ -138,7 +138,7 @@ function RunJoiningMapMenu(s)
   revealmap:setEnabled(false)
 
   menu:writeText("Civilization:", sx, sy*11)
-  local race = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, sx + 100, sy*11,
+  local race = menu:addDropDown({"Map Default", _("Dwarf")}, sx + 100, sy*11,
     function(dd)
       GameSettings.Presets[NetLocalHostsSlot].Race = race:getSelected()
       LocalSetupState.Race[NetLocalHostsSlot] = race:getSelected()
@@ -212,7 +212,7 @@ function RunJoiningMapMenu(s)
   listener = LuaActionListener(listen)
   menu:addLogicCallback(listener)
 
-  menu:addFullButton(cancel_name, "c", Video.Width / 2 - 100, Video.Height - 100,
+  menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100, Video.Height - 100,
     function() NetworkDetachFromServer(); menu:stop() end)
 
   menu:run()
@@ -297,7 +297,7 @@ function RunJoinIpMenu()
       menu:stop()
     end
   )
-  menu:addHalfButton(cancel_name, "c", 154, 80, function() menu:stop() end)
+  menu:addHalfButton(_("~!Cancel"), "c", 154, 80, function() menu:stop() end)
 
   menu:run()
 end
@@ -334,7 +334,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
 
   menu:writeText("Civilization:", sx, sy*11)
-  d = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, sx + 100, sy*11,
+  d = menu:addDropDown({"Map Default", _("Dwarf")}, sx + 100, sy*11,
     function(dd)
       GameSettings.Presets[0].Race = dd:getSelected()
       ServerSetupState.Race[0] = GameSettings.Presets[0].Race
@@ -389,7 +389,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local listener = LuaActionListener(function(s) updateStartButton(updatePlayers()) end)
   menu:addLogicCallback(listener)
 
-  menu:addFullButton(cancel_name, "c", Video.Width / 2 - 100, Video.Height - 100,
+  menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100, Video.Height - 100,
     function() InitGameSettings(); menu:stop() end)
 
   menu:run()
@@ -495,7 +495,7 @@ function RunMultiPlayerGameMenu(s)
       FixMusic()
     end)
 
-  menu:addFullButton(previous_menu_name, "p", 208 + offx, 320 + (36 * 2) + offy,
+  menu:addFullButton(_("~!Previous Menu"), "p", 208 + offx, 320 + (36 * 2) + offy,
     function() SetLocalPlayerName("") menu:stop() end) -- Andrettin: in single-player games the local player shouldn't use his nick
 
   menu:run()

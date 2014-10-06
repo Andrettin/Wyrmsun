@@ -303,21 +303,42 @@ function BuildOptionsMenu()
   	resolution_height_list:setSelected(6)
   end
 
---  menu:addLabel("Language", offx + 160, offy + 34, Fonts["game"], false)
+--[[
+  menu:addLabel("Language", offx + 8, offy + 34 + 26*2, Fonts["game"], false)
 
---  b = menu:addImageCheckBox("English", offx + 160, offy + 55 + 26*0,
---    function()
---	wyr.preferences.Language = "English"
---	menu:stop(1)
---    end)
---  b:setMarked(wyr.preferences.Language == "English")
-
---  b = menu:addImageCheckBox("Portuguese", offx + 160, offy + 55 + 26*1,
---    function()
---	wyr.preferences.Language = "Portuguese"
---	menu:stop(1)
---    end)
---  b:setMarked(wyr.preferences.Language == "Portuguese")
+  language_list = menu:addDropDown({"English", "French", "German", "Portuguese"}, offx + 8, offy + 55 + 26*2,
+    function(dd)
+    	if (language_list:getSelected() == 0) then
+			wyr.preferences.Language = "English"
+			wyr.preferences.StratagusTranslation = ""
+			wyr.preferences.GameTranslation = ""
+    	elseif (language_list:getSelected() == 1) then
+			wyr.preferences.Language = "French"
+			wyr.preferences.StratagusTranslation = "translations/wyr-fr.po"
+			wyr.preferences.GameTranslation = "translations/wyr-fr.po"
+    	elseif (language_list:getSelected() == 2) then
+			wyr.preferences.Language = "German"
+			wyr.preferences.StratagusTranslation = "translations/wyr-de.po"
+			wyr.preferences.GameTranslation = "translations/wyr-de.po"
+    	elseif (language_list:getSelected() == 3) then
+			wyr.preferences.Language = "Portuguese"
+			wyr.preferences.StratagusTranslation = "translations/wyr-pt.po"
+			wyr.preferences.GameTranslation = "translations/wyr-pt.po"
+    	end
+    	SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
+  	menu:stop(1)
+    end)
+  language_list:setSize(152, 20)
+  if (wyr.preferences.Language == "English") then
+  	language_list:setSelected(0)
+  elseif (wyr.preferences.Language == "French") then
+    	language_list:setSelected(1)
+  elseif (wyr.preferences.Language == "German") then
+    	language_list:setSelected(2)
+  elseif (wyr.preferences.Language == "Portuguese") then
+    	language_list:setSelected(3)
+  end
+--]]
 
   b = menu:addImageCheckBox("Full Screen", offx + 16, offy + 55 + 26*10 + 14,
     function()
@@ -376,7 +397,6 @@ function BuildOptionsMenu()
 
   menu:addHalfButton("~!OK", "o", offx + 123, offy + 55 + 26*12 + 14, function()
 	SavePreferences()
-	Load("scripts/localization.lua")
 	Load("scripts/units.lua")
   	menu:stop()
   end)
@@ -394,18 +414,18 @@ end
 function RunGameOptionsMenu()
   local menu = WarGameMenu(panel(1))
 
-  menu:addLabel("Game Options", 128, 11)
-  menu:addFullButton("Sound (~<F7~>)", "f7", 16, 40 + 36*0,
+  menu:addLabel(_("Game Options"), 128, 11)
+  menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16, 40 + 36*0,
     function() RunGameSoundOptionsMenu() end)
-  menu:addFullButton("Preferences (~<F8~>)", "f8", 16, 40 + 36*1,
+  menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16, 40 + 36*1,
     function() RunPreferencesMenu() end)
-  menu:addFullButton("Diplomacy (~<F9~>)", "f9", 16, 40 + 36*2,
+  menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16, 40 + 36*2,
     function() RunDiplomacyMenu() end)
-  menu:addFullButton("~!Quests", "q", 16, 40 + 36*3,
+  menu:addFullButton(_("~!Quests"), "q", 16, 40 + 36*3,
     function() RunQuestMenu() end)
-  menu:addFullButton("~!Tech Tree", "t", 16, 40 + 36*4,
+  menu:addFullButton(_("~!Tech Tree"), "t", 16, 40 + 36*4,
     function() RunTechTreeMenu(0) end)
-  menu:addFullButton("Previous (~<Esc~>)", "escape", 128 - (224 / 2), 288 - 40,
+  menu:addFullButton(_("Previous (~<Esc~>)"), "escape", 128 - (224 / 2), 288 - 40,
     function() menu:stop() end)
 
   menu:run(false)

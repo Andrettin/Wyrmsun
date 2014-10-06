@@ -210,6 +210,9 @@ function AddMenuHelpers(menu)
 		b:setDisabledImage(g_dblg)
 	end
 	b:setSize(224, 28)
+	if (string.len(caption) > 24) then
+		b:setFont(Fonts["game"])
+	end
 	return b
   end
 
@@ -703,7 +706,7 @@ function RunSelectScenarioMenu()
   menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel(select_scenario_name, 176, 8)
+  menu:addLabel(_("Select Map"), 176, 8)
 
   local browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
     24, 140, 300, 108, mapname)
@@ -716,7 +719,7 @@ function RunSelectScenarioMenu()
   end
   browser:setActionCallback(cb)
 
-  menu:addHalfButton("~!OK", "o", 48, 318,
+  menu:addHalfButton(_("~!OK"), "o", 48, 318,
     function()
       local cap = l:getCaption()
 
@@ -727,7 +730,7 @@ function RunSelectScenarioMenu()
       mapname = browser.path .. cap
       menu:stop()
     end)
-  menu:addHalfButton(cancel_name, "c", 198, 318,
+  menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
     function() buttonStatut = 2; menu:stop() end)
 
   menu:run()
@@ -834,11 +837,11 @@ function RunWorldMapMenu(world, maps)
 		end
 	end
 
-	menu:addHalfButton("~!Random", "r", 48, 318,
+	menu:addHalfButton(_("~!Random"), "r", 48, 318,
 		function()
 			menu:stop()
 		end)
-	menu:addHalfButton("~!Cancel", "c", 198, 318,
+	menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
 		function()
 			menu:stop()
 		end)
@@ -866,7 +869,7 @@ function RunSinglePlayerGameMenu()
 
   -- create the scenario and faction lists
   local scenario_list = {}
-  local faction_list = {"Map Default"}
+  local faction_list = {_("Map Default")}
   local world_list = { }
   local game_type_list = { }
   
@@ -914,14 +917,14 @@ function RunSinglePlayerGameMenu()
 	for i=1,table.getn(maps) do
 		MapWorld = ""
 		GetMapInfo(maps[i])
-		if (MapWorld ~= "" and GetArrayIncludes(world_list, MapWorld) == false) then
-			table.insert(world_list, MapWorld)
+		if (MapWorld ~= "" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
+			table.insert(world_list, _(MapWorld))
 		end
 	end
   end
   table.sort(world_list)
 
-  menu:addLabel("Map:", offx + 16, offy + 360, Fonts["game"], false)
+  menu:addLabel(_("Map:"), offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
   descriptionl = menu:addLabel("descriptionl", offx + 16 + 38, offy + 360, Fonts["game"], false)
 
@@ -933,25 +936,25 @@ function RunSinglePlayerGameMenu()
 --      GetMapInfo(mapname)
 --      MapChanged()
 --    end)
-  menu:addFullButton("~!Quests", "q", offx + 640 - 224 - 16, offy + 360 + 36*-1,
+  menu:addFullButton(_("~!Quests"), "q", offx + 640 - 224 - 16, offy + 360 + 36*-1,
     function()
       RunQuestMenu()
     end)
-  menu:addFullButton("~!Tech Tree", "t", offx + 640 - 224 - 16, offy + 360 + 36*0,
+  menu:addFullButton(_("~!Tech Tree"), "t", offx + 640 - 224 - 16, offy + 360 + 36*0,
     function()
       RunTechTreeMenu(0)
     end)
-  menu:addFullButton("~!Start Game", "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
+  menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases
-	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == "Shorbear Clan" and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
+	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
 		person_player = 2
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == "Shorbear Clan" or faction_list[faction:getSelected() + 1] == wyr.preferences.TheScepterOfFireRaiderFaction) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
+	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
 		person_player = 1
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
@@ -988,54 +991,54 @@ function RunSinglePlayerGameMenu()
       RunMap(mapname)
       menu:stop()
     end)
-  menu:addFullButton("~!Cancel Game", "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
+  menu:addFullButton(_("~!Cancel Game"), "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
 
-  menu:addLabel("~<World:~>", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
+  menu:addLabel(_("~<World:~>"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
   world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
     function(dd) WorldChanged() end)
   world:setSize(152, 20)
   world:setSelected(0)
 
-  menu:addLabel("~<Map:~>", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+  menu:addLabel(_("~<Map:~>"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
   scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
     function(dd) ScenarioChanged() end)
   scenario:setSize(152, 20)
 
-  menu:addLabel("~<Your Civilization:~>", offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-  race = menu:addDropDown({"Map Default", dwarven_species_and_civilization_name}, offx + 40, offy + 10 + 180,
+  menu:addLabel(_("~<Your Civilization:~>"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+  race = menu:addDropDown({_("Map Default"), _("Dwarf")}, offx + 40, offy + 10 + 180,
     function(dd) CivilizationChanged() end)
   race:setSize(152, 20)
 
-  menu:addLabel("~<Your Faction:~>", offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
-  faction = menu:addDropDown({"Map Default"}, offx + 220, offy + 10 + 180,
+  menu:addLabel(_("~<Your Faction:~>"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
+  faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
     function(dd) FactionChanged() end)
   faction:setSize(152, 20)
 
-  menu:addLabel("~<Resources:~>", offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
-  resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, offx + 640 - 224 - 16, offy + 10 + 180,
+  menu:addLabel(_("~<Resources:~>"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
+  resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + 640 - 224 - 16, offy + 10 + 180,
     function(dd) end)
   resources:setSize(152, 20)
 
-  menu:addLabel(units_name, offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
-  numunits = menu:addDropDown({"Map Default", "One Worker Only", "Town Hall + Workers"}, offx + 40, offy + 10 + 240,
+  menu:addLabel(_("~<Units:~>"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
+  numunits = menu:addDropDown({_("Map Default"), _("One Worker Only"), _("Town Hall + Workers")}, offx + 40, offy + 10 + 240,
     function(dd) end)
   numunits:setSize(152, 20)
 
-  local opponents_list = {"Map Default", "1 Opponent", "2 Opponents",
-    "3 Opponents", "4 Opponents", "5 Opponents", "6 Opponents", "7 Opponents"}
+  local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"),
+    _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
 
-  menu:addLabel("~<Opponents:~>", offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
+  menu:addLabel(_("~<Opponents:~>"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
   opponents = menu:addDropDown(opponents_list, offx + 220, offy + 10 + 240,
     function(dd) end)
   opponents:setSize(152, 20)
 
-  menu:addLabel("~<Game Type:~>", offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
+  menu:addLabel(_("~<Game Type:~>"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
   gametype = menu:addDropDown(game_type_list, offx + 640 - 224 - 16, offy + 10 + 240,
     function(dd) end)
   gametype:setSize(152, 20)
 
-  menu:addLabel("~<Tech Level:~>", offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-  tech_level = menu:addDropDown({"Map Default", "Agrarian (Bronze)", "Agrarian (Iron)"}, offx + 40, offy + 10 + 300,
+  menu:addLabel(_("~<Tech Level:~>"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+  tech_level = menu:addDropDown({_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)")}, offx + 40, offy + 10 + 300,
     function(dd) end)
   tech_level:setSize(152, 20)
 
@@ -1046,7 +1049,7 @@ function RunSinglePlayerGameMenu()
 		MapWorld = ""
 		MapRequiredQuest = ""
 		GetMapInfo(maps[i])
-		if (MapWorld == world_list[world:getSelected() + 1]) then
+		if (_(MapWorld) == _(world_list[world:getSelected() + 1])) then
 			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
 				local incomplete_quest_present = false
 				for key, value in pairs(Quests) do
@@ -1058,16 +1061,18 @@ function RunSinglePlayerGameMenu()
 						end
 					end
 				end
+				local map_description = _(mapinfo.description)
 				if (incomplete_quest_present) then
-					table.insert(scenario_list, "~<" .. mapinfo.description .. "~>")
+					table.insert(scenario_list, "~<" .. map_description .. "~>")
 				else
-					table.insert(scenario_list, mapinfo.description)
+					table.insert(scenario_list, map_description)
 				end
 			end
 		end
 	end
 
-	table.insert(scenario_list, "Custom Map")
+	--table.sort(scenario_list)
+	table.insert(scenario_list, _("Custom Map"))
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
 	scenario:setSelected(0)
@@ -1078,13 +1083,13 @@ function RunSinglePlayerGameMenu()
 	for i=1,table.getn(maps) do
 		MapWorld = ""
 		GetMapInfo(maps[i])
-		if ((mapinfo.description == scenario_list[scenario:getSelected() + 1] or "~<" .. mapinfo.description .. "~>" == scenario_list[scenario:getSelected() + 1]) and MapWorld == world_list[world:getSelected() + 1]) then
+		if ((_(mapinfo.description) == scenario_list[scenario:getSelected() + 1] or "~<" .. _(mapinfo.description) .. "~>" == scenario_list[scenario:getSelected() + 1]) and _(MapWorld) == _(world_list[world:getSelected() + 1])) then
 			mapname = maps[i]
 			mapl:setCaption(string.sub(mapname, 6))
 		end
 	end
 
-	if (scenario_list[scenario:getSelected() + 1] == "Custom Map") then
+	if (scenario_list[scenario:getSelected() + 1] == _("Custom Map")) then
 		local oldmapname = mapname
 		RunSelectScenarioMenu()
 		if (mapname ~= oldmapname) then
@@ -1102,7 +1107,7 @@ function RunSinglePlayerGameMenu()
     faction_list = {"Map Default"}
     if (race:getSelected() == 1) then
 	    for i=1,table.getn(GetCivilizationFactions("dwarf")) do
-	      table.insert(faction_list, GetCivilizationFactions("dwarf")[i])
+	      table.insert(faction_list, _(GetCivilizationFactions("dwarf")[i]))
 	    end
     end
     faction:setList(faction_list)
@@ -1114,7 +1119,8 @@ function RunSinglePlayerGameMenu()
 	mapl:setCaption(string.sub(mapname, 6))
 	mapl:adjustSize()
 
-	descriptionl:setCaption(mapinfo.description ..
+	local map_description = _(mapinfo.description)
+	descriptionl:setCaption(map_description ..
 		" (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
 	descriptionl:adjustSize()
 
@@ -1126,9 +1132,9 @@ function RunSinglePlayerGameMenu()
 	opponents:setSize(152, 20)
 
 	game_type_list = nil
-	game_type_list = {"Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"}
+	game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
 	if (MapForTheMotherland) then
-		table.insert(game_type_list, "For the Motherland")
+		table.insert(game_type_list, _("For the Motherland"))
 	end
 	gametype:setList(game_type_list)
 	gametype:setSize(152, 20)
@@ -1186,9 +1192,9 @@ function BuildProgramStartMenu()
 		l:setSize(270, 128)
 		l:setLineWidth(270)
 		warning_menu:add(l, 14, 70)
-		l:setCaption("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points.")
+		l:setCaption(_("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points."))
 
-		warning_menu:addFullButton("~!Close", "c", 32, 256 - 40,
+		warning_menu:addFullButton(_("~!Close"), "c", 32, 256 - 40,
 			function()
 				warning_menu:stop()
 			end)
@@ -1198,29 +1204,29 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
-  menu:addFullButton(single_player_game_name, "s", offx + 208, offy + 104 + 36*-1,
+  menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*-1,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(multi_player_game_name, "m", offx + 208, offy + 104 + 36*0,
+  menu:addFullButton(_("~!Multi Player Game"), "m", offx + 208, offy + 104 + 36*0,
     function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton("~!Grand Strategy Game", "g", offx + 208, offy + 104 + 36*1,
+  menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*1,
     function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
-  menu:addFullButton(title_load_game_name, "l", offx + 208, offy + 104 + 36*2,
+  menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*2,
     function() RunLoadGameMenu(); menu:stop(1) end)
-  menu:addFullButton(replay_game_name, "r", offx + 208, offy + 104 + 36*3,
+  menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3,
     function() RunReplayGameMenu(); menu:stop(1) end)
---  menu:addFullButton("~!Achievements", "a", offx + 208, offy + 104 + 36*3,
+--  menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
 --    function() RunAchievementsMenu(); menu:stop(1) end)
-  menu:addFullButton(options_name, "o", offx + 208, offy + 104 + 36*4,
+  menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,
     function() RunOptionsMenu(); menu:stop(1) end)
-  menu:addFullButton(map_editor_name, "e", offx + 208, offy + 104 + 36*5,
+  menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
     function() RunEditorMenu(); menu:stop(1) end)
-  menu:addFullButton("Load Mo~!d", "d", offx + 208, offy + 104 + 36*6,
+  menu:addFullButton(_("Load Mo~!d"), "d", offx + 208, offy + 104 + 36*6,
     function() RunLoadModMenu(); menu:stop(1) end)
-  menu:addFullButton("En~!cyclopedia", "c", offx + 208, offy + 104 + 36*7,
+  menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
     function() RunEncyclopediaMenu(); menu:stop(1) end)
-  menu:addFullButton(show_credits_name, "h", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
+  menu:addFullButton(_("S~!how Credits"), "h", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
 
-  menu:addFullButton(exit_program_name, "x", offx + 208, offy + 104 + 36*9,
+  menu:addFullButton(_("E~!xit Program"), "x", offx + 208, offy + 104 + 36*9,
     function() menu:stop() end)
 
   return menu:run()
@@ -1233,14 +1239,14 @@ function RunLoadModMenu()
   menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel("Load Mod", 176, 8)
+  menu:addLabel(_("Load Mod"), 176, 8)
 
   local browser = menu:addBrowser("mods/", ".lua$",
     24, 140, 300, 108, nil, false)
 
   local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
 
-  menu:addHalfButton("~!OK", "o", 48, 318,
+  menu:addHalfButton(_("~!OK"), "o", 48, 318,
     function()
       if (browser:getSelected() < 0) then
         return
@@ -1248,7 +1254,7 @@ function RunLoadModMenu()
       Load(browser.path .. browser:getSelectedItem())
       menu:stop()
     end)
-  menu:addHalfButton("~!Cancel", "c", 198, 318,
+  menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
     function() buttonStatut = 2; menu:stop() end)
 
   menu:run()

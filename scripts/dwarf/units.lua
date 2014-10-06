@@ -33,7 +33,7 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
+DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Class = "worker",
 	Civilization = "dwarf",
 	Description = "Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources.",
@@ -89,7 +89,7 @@ DefineUnitType("unit-dwarven-miner", { Name = dwarven_miner_name,
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
+DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Class = "infantry",
 	Civilization = "dwarf",
 	Description = "Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local blacksmith.",
@@ -150,7 +150,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = dwarven_axefighter_name,
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
+DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Class = "veteran-infantry",
 	Civilization = "dwarf",
 	Description = "The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous.",
@@ -212,7 +212,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = "Steelclad",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-dwarven-thane", { Name = "Thane",
+DefineUnitType("unit-dwarven-thane", { Name = _("Thane"),
 	Class = "heroic-infantry",
 	Civilization = "dwarf",
 	Description = "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Thanes can yield varied political power, ranging from local chiefs to rulers of realms. One of the first thanes was Modsognir, the legendary chief who led his tribe through the depths of the Heart Mountains.",
@@ -277,7 +277,7 @@ DefineUnitType("unit-dwarven-thane", { Name = "Thane",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-dwarven-scout", { Name = "Scout",
+DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	Class = "archer",
 	Civilization = "dwarf",
 	Description = "Dwarves do not practice archery, preferring to use throwing axes to attack from a distance instead. Dwarven scouts function both as support troops for dwarven soldiers engaged in hand-to-hand combat and as specialists in reconnaissance. They use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities. These scouts were instrumental for pathfinding during the migration of the group of dwarves led by Dvalin, who left the Heart Mountains, passed through swamps, and finally established themselves in a desert.",
@@ -340,7 +340,7 @@ DefineUnitType("unit-dwarven-scout", { Name = "Scout",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
+DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 	Class = "siege-engine",
 	Civilization = "dwarf",
 	Description = "Dwarves employ heavy ballistas as their siege weapon of choice, with devasting effects on enemy fortifications.",
@@ -374,10 +374,10 @@ DefineUnitType("unit-dwarven-ballista", { Name = "Ballista",
 		"dead", "explosion"
 } } )
 
-DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
+DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Class = "flying-rider",
 	Civilization = "dwarf",
-	Description = "One of the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. The usage of gryphons is not very varied - being scarcely used for economic purposes, they serve primarily as a war mount from which dwarves can throw axes from their vantage point on enemies below.",
+	Description = "Only a few are able to bond with the mighty gryphons. Those who do may become Gryphon Riders, and discover the world of the skies upon the backs of these flying beasts. The usage of gryphons is not very varied - being scarcely used for economic purposes, they serve primarily as a war mount from which dwarves can throw axes from their vantage point on enemies below.",
 	Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
 	DrawLevel = 45,
 	Animations = "animations-dwarven-gryphon-rider", Icon = "icon-dwarven-gryphon-rider",
@@ -425,7 +425,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = "Gryphon Rider",
 		"dead", "gryphon-dead"
 } } )
 
-DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
+DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Class = "town-hall",
 	Civilization = "dwarf",
 	Description = "The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls built was that of Lyr.",
@@ -461,7 +461,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = dwarven_town_hall_name,
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name,
+DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Class = "farm",
 	Civilization = "dwarf",
 	Description = "For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities.",
@@ -492,7 +492,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = dwarven_mushroom_farm_name
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
+DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	Class = "barracks",
 	Civilization = "dwarf",
 	Description = "The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
@@ -521,7 +521,7 @@ DefineUnitType("unit-dwarven-barracks", { Name = dwarven_barracks_name,
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
+DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 	Class = "lumber-mill",
 	Civilization = "dwarf",
 	Description = "Dwarven culture places a great emphasis on handling stone and metal, to the detriment of woodworking. Nevertheless, the lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
@@ -553,7 +553,7 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = "Lumber Mill",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-smith", { Name = "Smith",
+DefineUnitType("unit-dwarven-smith", { Name = _("Smith"),
 	Class = "smith",
 	Civilization = "dwarf",
 	Description = "Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers. The most prestigious of dwarven metalworkers are the runesmiths, Thursagan being the greatest among them.",
@@ -585,7 +585,7 @@ DefineUnitType("unit-dwarven-smith", { Name = "Smith",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
+DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	Class = "watch-tower",
 	Civilization = "dwarf",
 	Description = "In these towers dwarves keep watch of threats approaching their settlements.",
@@ -616,7 +616,7 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = "Sentry Tower",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
+DefineUnitType("unit-dwarven-guard-tower", { Name = _("Guard Tower"),
 	Class = "guard-tower",
 	Civilization = "dwarf",
 	Description = "Garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's defenses.",
@@ -650,7 +650,7 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = "Guard Tower",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-surghan-mercenary-steelclad", { Name = "Surghan Mercenary",
+DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),
 	Civilization = "dwarf",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
@@ -687,7 +687,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = "Surghan Mercenary",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-surghan-mercenary-thane", { Name = "Surghan Mercenary",
+DefineUnitType("unit-surghan-mercenary-thane", { Name = _("Surghan Mercenary"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-thane",

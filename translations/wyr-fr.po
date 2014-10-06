@@ -1,0 +1,873 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wyrmsun\n"
+"POT-Creation-Date: 2014-10-04 18:46+0100\n"
+"PO-Revision-Date: 2014-10-04 21:09+0100\n"
+"Last-Translator: Andre Novellino Gouvêa <andre.ng@live.com>\n"
+"Language-Team: Andrettin <andre.ng@live.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: c:/Program Files/Wyrmsun/scripts\n"
+"Language: fr\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
+
+msgid "~!Multi Player Game"
+msgstr "Jeu ~!Multijoueur"
+
+msgid "Load Game"
+msgstr "Charger un jeu"
+
+msgid "~!Load Game"
+msgstr "Charger un jeu"
+
+msgid "Replay Game"
+msgstr "Revoir une partie"
+
+msgid "~!Replay Game"
+msgstr "~!Revoir une partie"
+
+msgid "Map Editor"
+msgstr "Éditeur de carte"
+
+msgid "Map ~!Editor"
+msgstr "Édit~!eur de carte"
+
+msgid "~<Map Editor~>"
+msgstr "~<Éditeur de carte~>"
+
+msgid "~!Quests"
+msgstr "~!Quêtes"
+
+msgid "~<Quests~>"
+msgstr "~<Quêtes~>"
+
+msgid "~!Start Game"
+msgstr "Commencer Jeu"
+
+msgid "Events and Quests"
+msgstr "Événements et Quêtes"
+
+msgid "Dwarf"
+msgstr "Nain"
+
+msgid "Dwarves"
+msgstr "Nains"
+
+msgid "Elves"
+msgstr "Elfes"
+
+msgid "Goblin"
+msgstr "Gobelin"
+
+msgid "Goblins"
+msgstr "Gobelins"
+
+msgid "Norlund Clan"
+msgstr "Clan Norlund"
+
+msgid "Shinsplitter Clan"
+msgstr "Clan Brisetibia"
+
+msgid "Shorbear Clan"
+msgstr "Clan Shorbear"
+
+msgid "Gnomish Outpost"
+msgstr "Avant-poste gnome"
+
+msgid "Miner"
+msgstr "Mineur"
+
+msgid "Steelclad"
+msgstr "Cuirassier"
+
+msgid "Runemaster"
+msgstr "Maître des runes"
+
+msgid "Scout"
+msgstr "Éclaireur"
+
+msgid "Ballista"
+msgstr "Baliste"
+
+msgid "Gryphon Rider"
+msgstr "Monteur de griffon"
+
+msgid "Gryphon Riders"
+msgstr "Monteurs de griffon"
+
+msgid "Mead Hall"
+msgstr "Salle des banquets"
+
+msgid "Mushroom Farm"
+msgstr "Ferme des champignons"
+
+msgid "War Hall"
+msgstr "Salle de guerre"
+
+msgid "Lumber Mill"
+msgstr "Scierie"
+
+msgid "Smith"
+msgstr "Forgeron"
+
+msgid "Surghan Mercenary"
+msgstr "Mercenaire de Surghan"
+
+msgid "Town Hall"
+msgstr "Hôtel de ville"
+
+msgid "Goblin Impaler"
+msgstr "Empaleur gobelin"
+
+msgid "Impaler"
+msgstr "Empaleur"
+
+msgid "Goblin Archer"
+msgstr "Archer gobelin"
+
+msgid "Archer"
+msgstr "Archer"
+
+msgid "Farm"
+msgstr "Ferme"
+
+msgid "Barracks"
+msgstr "Caserne"
+
+msgid "Fugla Forge"
+msgstr "Forge fugla"
+
+msgid "Gryphon"
+msgstr "Griffon"
+
+msgid "Glyph"
+msgstr "Glyphe"
+
+msgid "Earth"
+msgstr "Terre"
+
+msgid "Aquitania"
+msgstr "Aquitaine"
+
+msgid "Central Great Britain"
+msgstr "Centre de la Grande-Bretagne"
+
+msgid "Don Basin"
+msgstr "Bassin du Don"
+
+msgid "Iberia"
+msgstr "Ibérie"
+
+msgid "North America"
+msgstr "Amérique du Nord"
+
+msgid "North Italy"
+msgstr "Nord de l'Italie"
+
+msgid "Scandinavia"
+msgstr "Scandinavie"
+
+msgid "South Italy"
+msgstr "Sud de l'Italie"
+
+msgid "Southern Central Europe"
+msgstr "Sud de l'Europe Centrale"
+
+msgid "Southern Great Britain"
+msgstr "Sud de la Grande-Bretagne"
+
+msgid "Brown Hills"
+msgstr "Collines Ocres"
+
+msgid "Caverns of Chaincolt"
+msgstr "Cavernes de Chaincolt"
+
+msgid "Caverns of Flame"
+msgstr "Cavernes Ardentes"
+
+msgid "Chaincolt Foothills"
+msgstr "Contreforts de Chaincolt"
+
+msgid "Eastern Mines"
+msgstr "Mines Orientales"
+
+msgid "Hall of Lyr"
+msgstr "Salle de Lyr"
+
+msgid "Northern Wastelands"
+msgstr "Contrées du Nord"
+
+msgid "Shorbear Hills"
+msgstr "Collines Shorbear"
+
+msgid "Southern Tunnels"
+msgstr "Galeries du Sud"
+
+msgid "Svafnir's Lair"
+msgstr "Caverne de Svafnir"
+
+msgid "Random Map"
+msgstr "Carte aléatoire"
+
+msgid "Random Map (Cave)"
+msgstr "Carte aléatoire (Caverne)"
+
+msgid "Random Map (Symmetric Cave)"
+msgstr "Carte aléatoire (Caverne symétrique)"
+
+msgid "Random Map (Forest)"
+msgstr "Carte aléatoire (Forêt)"
+
+msgid "Random Map (Symmetric Forest)"
+msgstr "Carte aléatoire (Forêt symétrique)"
+
+msgid "Random Map (Swamp)"
+msgstr "Carte aléatoire (Marais)"
+
+msgid "Random Map (Symmetric Swamp)"
+msgstr "Carte aléatoire (Marais symétrique)"
+
+msgid "Custom Map"
+msgstr "Carte personnalisée"
+
+msgid "The Scepter of Fire"
+msgstr "Le Sceptre de Feu"
+
+msgid "A Bargain is Struck"
+msgstr "Marché conclu"
+
+msgid "Closing the Gates"
+msgstr "Fermeture des portes"
+
+msgid "Searching for the Runecrafter"
+msgstr "À la recherche du forgeron de runes"
+
+msgid "Hills of the Shorbear Clan"
+msgstr "Les Collines du clan Shorbear"
+
+msgid "~!Continue"
+msgstr "~!Continuer"
+
+msgid "Up axes!"
+msgstr "Sortez les haches!"
+
+msgid "Pypo I"
+msgstr "Pypo Ier"
+
+msgid "Gnomish Envoy"
+msgstr "Envoyé gnome"
+
+msgid ""
+"Ay, the Scepter of Fire. The scepter has a long, glorious, and fearful "
+"history. But I am not here to tell you how the jewel within it was obtained "
+"by Pypo I. Nor will I tell the story of Rubezahl I, "
+"king of Untersberg by virtue of "
+"the Scepter."
+msgstr ""
+"Ah, le Sceptre de Feu. Le sceptre a une longue histoire, glorieuse et "
+"terrible. Mais je ne suis pas là pour te raconter comment le joyau a été "
+"obtenu par Pypo Ier. Je ne raconterai pas non "
+"plus l'histoire de Rubezahl Ier, "
+"devenu roi de Untersberg en utilisant le sceptre pour le bien."
+
+msgid ""
+"I am here to tell you of its making. Of its crafting, deep in the caverns of "
+"dwarfdom. And of the dwarves who made it; for they were great, they were. "
+"They are counted among the greatest of the heroes of ancient Knalga."
+msgstr ""
+"Je suis là pour raconter l'histoire de sa création. De son forgeage, dans "
+"les profondeurs des cavernes du royaume des nains. Et des nains qui l'ont "
+"fabriqué. Pour ça, ils ont été grands. On les compte parmi les plus grands "
+"héros de l'ancienne Knalga."
+
+msgid ""
+"Our story begins in a small border outpost in the southern hills of Knalga, "
+"with a young dwarf, named Rugnur, in charge of it. And with the gnomish king "
+"of Untersberg, Pypo I, riding up the road from the Brown Hills with an "
+"army behind him..."
+msgstr ""
+"Notre histoire commence avec le jeune nain nommé Rugnur en charge d'un petit "
+"avant-poste dans les collines au sud de Knalga, et avec le roi gnome de "
+"Untersberg, Pypo Ier, qui a pris la route en provenance des Collines Ocres "
+"accompagné de son armée..."
+
+msgid "Gnomes, halt! Who dares bring an army into the dwarven hills?"
+msgstr "Gnomes, halte ! Qui ose mener une armée dans les collines naines ?"
+
+msgid "We come to make a bargain with you."
+msgstr "Nous venons vous proposer un marché."
+
+msgid "~!Listen to him"
+msgstr "Éc~!outez-le"
+
+msgid "~!Up axes! (Forego Quest)"
+msgstr "~!Attaquez! (Pas de Quête)"
+
+msgid "~!Discuss his offer"
+msgstr "~!Discuter sa proposition"
+
+msgid "~!No deal (Forego Quest)"
+msgstr "~!Pas d'accord (Pas de Quête)"
+
+msgid ""
+"Well, state yer business and be done with it. And if we don't like what ye "
+"say, ye leave!"
+msgstr ""
+"Bien, dites ce que vous avez à dire. Et si nous n'aimons pas votre "
+"proposition, vous partirez ! "
+
+msgid "Have you heard of the Ruby of Fire?"
+msgstr "Avez-vous entendu parler du Rubis de Feu ?"
+
+msgid "Aye... yer deceased king brought it from the west, right? Ye own it."
+msgstr ""
+"Oui... Votre roi décédé l'a rapporté de l'ouest, n'est-ce pas ? "
+"C'est vous qui l'avez."
+
+msgid "Correct. However, we have a problem with it."
+msgstr "C'est exact. Néanmoins, nous avons un petit souci."
+
+msgid "What sort of problem?"
+msgstr "Quel genre de souci ?"
+
+msgid "The stone is very atypical. To cut and insert it would require more skill than my best craftsmen have..."
+msgstr "La pierre est très atypique. Pour la tailler et l'incruster exigerait plus de compétence que mes meilleurs artisans ont..."
+
+msgid ""
+"And what... ye want us to do this, cut the stone? And make an artifact of some kind?"
+msgstr ""
+"Et donc... Vous voudriez que nous le fassions, tailler la "
+"pierre ? Et fabriquer un genre d'artefact ? "
+
+msgid ""
+"I want you to craft it into a mighty artifact, that will embody the power of my will and be a symbol of the legitimacy of my rule."
+msgstr ""
+"Je veux que vous en fassiez un puissant artefact qui encarne "
+"la puissance de ma volonté et sera un symbole de la légitimité de ma autorité. "
+
+msgid ""
+"Well... I think we can make a deal, but I'm not sure. I'll have to ask the "
+"tribal leaders."
+msgstr ""
+"Eh bien... Je pense que nous pourrons faire affaire. Mais je dois me "
+"renseigner auprès des chefs des tribus."
+
+msgid ""
+"If you are not authorized to make a deal, send out someone who is, and I "
+"will bargain with him."
+msgstr ""
+"Si vous n'êtes pas habilité à conclure cette affaire, envoyez quelqu'un qui "
+"le peut, et je négocierai avec lui. "
+
+msgid ""
+"They would refuse to come. Ye must come into the caves, and go to the city "
+"in person, or send a representative."
+msgstr ""
+"Ils refuseront de venir. Vous devez venir dans les sous-sols et aller à la "
+"cité en personne, ou bien envoyer un émissaire. "
+
+msgid ""
+"I can always take my offer to another tribe more friendly to its potential "
+"patrons. You are not the only smiths in these lands!"
+msgstr ""
+"Je peux toujours proposer mon offre à une autre tribu plus amicale envers "
+"ses futurs employeurs. Vous n'êtes pas les seuls forgerons dans ces terres!"
+
+msgid ""
+"Uh, no, wait! Let's talk business - how much will ye pay us to do this for "
+"ye?"
+msgstr ""
+"Euh, non, attendez ! Parlons affaires : combien êtes-vous prêt à payer pour "
+"que nous le façonnions ?"
+
+msgid "Five thousand pieces of silver."
+msgstr "Cinq-mille pièces d'argent."
+
+msgid ""
+"Ye said ye wanted a potent artifact, not a child's playtoy! "
+"So... twenty thousand, minimum. The crafting of this will take us many "
+"years, ye must pay us well."
+msgstr ""
+"Vous avez dit vouloir un artefact puissant, pas un jouet pour "
+"enfants ! Ce sera vingt-mille au minimum. Ce travail va nous prendre de "
+"nombreuses années, vous devez nous payer généreusement."
+
+msgid "Ten thousand."
+msgstr "Dix-mille."
+
+msgid "Nothing below fifteen!"
+msgstr "Pas moins de quinze-mille ! "
+
+msgid ""
+"Then no deal. I'll gather my things and go to another dwarven clan now."
+msgstr ""
+"Alors tant pis. Je vais rassembler mes biens et essayer de trouver un autre "
+"clan nain. "
+
+msgid ""
+"Fine then - ten thousand... now, what exactly do ye want us to make the "
+"stone into?"
+msgstr ""
+"Bon, bon... Dix-mille... Et que voulez-vous que l'on fasse de cette pierre "
+"exactement ?"
+
+msgid "I want you to make it into a scepter, a scepter of fire."
+msgstr "Je veux que vous en fassiez un sceptre, un sceptre de feu. "
+
+msgid ""
+"I'll see what I can do. But I will need five thousand silver in advance, to "
+"pay for the materials."
+msgstr ""
+"Je verrai ce que je peux faire. Mais j'aurai besoin de cinq-mille pièces "
+"d'argent d'avance, pour payer les matériaux."
+
+msgid ""
+"Very well. I have the silver here, ready to ship, and I will send someone "
+"over with the stone itself. He will stay with you as you make the scepter, "
+"and make sure you are going to get it done on time. I expect it done before "
+"my reign as king is ended."
+msgstr ""
+"Très bien. J'ai l'argent ici, prêt à être envoyé, et j'enverrai aussi "
+"quelqu'un avec la pierre. Il restera avec vous pendant que vous fabriquerez "
+"le sceptre et s'assurera qu'il sera prêt en temps et en heure. Je m'attends "
+"à le recevoir avant la fin de mon règne. "
+
+msgid "That's right. I'll be coming over along with the silver."
+msgstr "C'est exact. Je viendrai avec l'argent."
+
+msgid ""
+"Hey! Ye can't do that - this road belongs to the Shinsplitter Clan. We're not letting ye "
+"transport gold and jewels on it without paying a toll."
+msgstr ""
+"Hé ! Vous ne pouvez pas faire ça : cette route appartient au clan Brisetibia. Nous ne vous "
+"laisserons pas y transporter de l'or et des bijoux sans payer une taxe."
+
+msgid "What are ye talking about?! This road has always been open to all."
+msgstr ""
+"De quoi parlez-vous ?! Cette route a toujours été ouverte à tout le monde."
+
+msgid "Aye, we have allowed people to use it, but it is our road."
+msgstr "Oui, nous avons laissé les gens l'utiliser, mais c'est notre route."
+
+msgid "Not true! This is Norlund land; if anything, it's our road!"
+msgstr ""
+"Ce n'est pas vrai ! Ceci est un territoire Norlund ; si cette route appartient "
+"à quelqu'un, c'est à nous ! "
+
+msgid ""
+"Nevertheless, if ye try to move yer caravans here ye have to pay the "
+"toll, or face our wrath!"
+msgstr ""
+"Quoi qu'il en soit, si vous essayez de déplacer vos caravanes par ici, vous "
+"devrez payer la taxe ou affronter notre colère !"
+
+msgid "Very well. I have no problem with slaying ye if ye stand in our way. I advise ye to leave the shipment alone, but not doing so is yer choice."
+msgstr "Très bien. Je n'aurai donc aucun scrupule à vous abattre si vous restez en travers de notre chemin. Je vous conseille de laisser le transfert seul ; mais vous pouvez choisir de ne pas le faire."
+
+msgid "All the silver is there too. Proceed with the task, Rugnur!"
+msgstr "Tout l'argent est là aussi. Accomplis ta tâche, Rugnur !"
+
+msgid "That's the last caravan! We will commence work immediately."
+msgstr ""
+"C'est la dernière caravane ! Nous allons immédiatement nous mettre au "
+"travail. "
+
+msgid "We have all of the silver, now all we need is the stone."
+msgstr "Nous avons tout l'argent, il ne nous manque plus que la pierre."
+
+msgid ""
+"You just let a caravan, with ~<my~> money loaded in it, get captured! If "
+"I can't trust you to keep my property secure, the deal's off."
+msgstr ""
+"Vous avez laissé capturer une caravane avec ~<mon~> argent dedans ! Si je "
+"ne peux pas vous faire confiance pour garder ce qui m'appartient, il n'y a "
+"plus de marché. "
+
+msgid "Here - I'll go warn the council. You stay here and fight."
+msgstr ""
+"Ici. Je vais aller prévenir le conseil. Vous restez ici et vous combattez."
+
+msgid "Aye, that sounds good. I'll stay here and try to defend the gates..."
+msgstr "Oui, d'accord. Je reste ici et j'essaie de défendre les portes..."
+
+msgid ""
+"I see ye have sent a messenger to the city. Good idea, but will it really "
+"help? We have more troops and more provisions, and we are going to enter "
+"those caves and kill ye!"
+msgstr ""
+"Je constate que vous avez envoyé un messager vers la cité. Bonne idée, mais "
+"est-ce que cela va vraiment vous aider ? Nous avons plus de troupes et de "
+"provisions, et nous allons entrer dans ces grottes pour vous tuer !"
+
+msgid "(~<Gulp~>)"
+msgstr "(~<Gloups~>)"
+
+msgid "Ha! I thought as much. Well then, surrender!"
+msgstr "Ha ! C'est bien ce que je pensais. Dans ce cas, rendez-vous !"
+
+msgid "Um... on what terms?"
+msgstr "Hem... Et à quelles conditions ?"
+
+msgid "Unconditional."
+msgstr "Sans condition."
+
+msgid ""
+"Wait! Rugnur, dinna' they tell ye ~<anything~> when ye took command "
+"here?!"
+msgstr ""
+"Attendez ! Rugnur, ils ne vous ont ~<rien~> dit quand vous avez pris le "
+"commandement ici ?!"
+
+msgid "Not really. This was supposedly a time of peace. Who are ye?"
+msgstr "Pas vraiment. On était censé être en temps de paix. Qui êtes-vous ?"
+
+msgid ""
+"Cease yer meddling, old dwarf! Rugnur is in charge here, and it is he who "
+"will bargain with us."
+msgstr ""
+"Occupe-toi de ce qui te regarde, vieux nain ! Seul Rugnur commande ici, et "
+"c'est avec lui seul que nous traiterons."
+
+msgid "Baglur, how do ye close the gates?"
+msgstr "Baglur, comment ferme-t-on les portes ?"
+
+msgid "Don't we have troops positioned near these glyphs, to unlock them?"
+msgstr ""
+"Nous n'avons pas de troupes positionnées à proximité de ces glyphes pour les "
+"débloquer ?"
+
+msgid "Well, where are they located?"
+msgstr "Bien, où sont-ils ?"
+
+msgid ""
+"Two are down a side passage in the northwest, another two are in a similar "
+"location in the southeast, and two are right next to the front gate."
+msgstr ""
+"Il y en a deux dans un passage latéral au nord-ouest, deux autres sont dans "
+"un endroit similaire au sud-est, et les deux derniers sont juste en face de "
+"la porte."
+
+"Have ye made up yer mind yet about surrendering? If ye will not give up, "
+"prepare for battle!"
+
+msgid "We have everyone positioned on the glyphs! What do we do now?"
+msgstr ""
+"Tout le monde est en position sur les glyphes ! Qu'est-ce qu'on fait "
+"maintenant ?"
+
+msgid ""
+"If that is what ye choose to do, fine, but be prepared to wait for many "
+"years."
+msgstr ""
+"Si c'est ce que vous voulez faire, très bien, mais préparez-vous à attendre "
+"de nombreuses années. "
+
+msgid "Well, now I should go down to the city and report. I'm late already..."
+msgstr ""
+"Maintenant, il faut que je descende à la cité pour faire mon rapport. Je "
+"suis déjà en retard..."
+
+msgid ""
+"Where's that fool Rugnur gotten to? It's time for him to report on events in "
+"the surface world. He's late!"
+msgstr ""
+"Où est passé ce fou de Rugnur ? Le moment est venu pour son rapport sur les "
+"évènements dans le monde, à la surface. Il est en retard !"
+
+msgid "Perhaps the outpost was held up?"
+msgstr "Peut-être que l'avant-poste a été attaqué ?"
+
+msgid "Good one, let them try to take it! Ha!"
+msgstr "Bonne idée. Laissons-les essayer ! Ha ! "
+
+msgid ""
+"Hey, Durstorn, have we started yet? King Pypo came by just now, wanted to "
+"talk to ye..."
+msgstr ""
+"Hé, Durstorn, cela a déjà commencé ? Le roi Pypo est venu, il voulait te "
+"parler..."
+
+msgid "Speak properly to yer elders, boy! Why are ye late?"
+msgstr ""
+"Un peu plus de respect pour tes aînés, gamin ! Pourquoi es-tu en retard ? "
+
+msgid "Huh? Didn't a messenger come and tell ye?"
+msgstr "Comment ? Un messager n'est pas venu vous le dire ? "
+
+msgid "No."
+msgstr "Non."
+
+msgid ""
+"I think ye'd better let me explain. King Pypo I of Untersberg came to the "
+"gate. Then we had to close it, which took considerable time."
+msgstr ""
+"Alors je pense que vous feriez mieux de me laisser m'expliquer. Le roi "
+"Pypo Ier de Untersberg est venu aux portes. Ensuite, nous avons dû les "
+"fermer, ce qui a pris un temps considérable. "
+
+msgid "What'd he want? And why'd ye have to close the gate?"
+msgstr "Que voulait-il ? Et pourquoi as-tu dû fermer les portes ?"
+
+msgid "What is he going to give us for it, eh?"
+msgstr "Et qu'est-ce qu'il va nous donner en échange, hein ?"
+
+msgid ""
+"He paid us five thousand silver in advance, and he'll give us five thousand "
+"more when we deliver the finished scepter if we are done before he dies."
+msgstr ""
+"Il nous a payé cinq-mille pièces d'argent d'avance et il nous en donnera "
+"cinq autres mille si nous finissons le sceptre avant sa mort."
+
+msgid ""
+"What?! Ye already accepted? Foolish boy, ye should have come for one of "
+"the elders! We could have gotten much more than ten thousand silver out of "
+"him! This is a task that will take many years, and now all of our work in "
+"that time will bring us very little gain."
+msgstr ""
+"Quoi ?! Tu as déjà accepté ? Jeune fou, tu aurais dû venir chercher un de "
+"tes aînés ! Nous aurions pu en tirer beaucoup plus que dix-mille pièces "
+"d'argent ! C'est un travail qui va nous prendre de nombreuses années et tout "
+"ce travail ne nous rapportera maintenant qu'un tout petit gain."
+
+msgid "Sorry, lord, but he said he would move on to another tribe if I left."
+msgstr ""
+"Désolé, messire, mais il a dit qu'il irait voir un autre clan si je partais."
+
+msgid ""
+"Can't ye tell a bluff when ye hear one?! He knows we're the best "
+"craftsmen, and he wouldn't have gone to another tribe if we stalled for a "
+"year. Oh well, what's done is done. We'll have to work for less than I would "
+"prefer..."
+msgstr ""
+"Ne peux-tu pas reconnaître un bluff quand tu en entends un ?! Il sait que "
+"nous sommes les meilleurs artisans et il ne serait pas parti voir une autre "
+"tribu, même si nous avions disparu pendant un an. Enfin, ce qui est fait est "
+"fait. Nous devrons travailler pour moins que ce que j'aurais voulu..."
+
+msgid ""
+"Well, since this boy bargained so badly, why not make him fulfill the "
+"contract himself? If he fails, it's on his head."
+msgstr ""
+"Bon, puisque ce gamin a si mal négocié, pourquoi ne pas le laisser remplir "
+"le contrat lui-même ?! S'il échoue, ce sera pour sa pomme."
+
+msgid ""
+"Good idea, Baglur! He'll need some help, though, and it will take a master "
+"smith to make the scepter. Why don't we send him to find Thursagan?"
+msgstr ""
+"Bonne idée, Baglur! Néanmoins, il aura besoin d'aide, et il faudra un maître "
+"forgeron pour faire le sceptre. Pourquoi ne pas l'envoyer chercher "
+"Thursagan ?"
+
+msgid "Ye mean the insane dwarf who lives in the far north?!"
+msgstr "Vous parlez de l'horrible nain qui habite loin au nord ?!"
+
+msgid ""
+"Aye. He is the only one I know of who could craft the scepter the way "
+"Pypo wants it. And he has nothing to do; he will be fine with wasting 25 "
+"years of his life on this task."
+msgstr ""
+"Oui. C'est le seul que je connaisse qui puisse fabriquer le sceptre de la "
+"façon dont Pypo le veut. Et comme il n'a rien à faire; il sera content "
+"d'y consacrer vingt-cinq années de sa vie."
+
+msgid ""
+"Very well, my lord. We will go into the north to find Thursagan. Do ye have "
+"any idea where he is?"
+msgstr ""
+"Très bien, monseigneur. Nous irons donc dans le nord pour trouver Thursagan. "
+"Savez-vous où il est ?"
+
+msgid ""
+"Go to the furthest north entrance to the caves, and then go north. He's "
+"somewhere in those hills."
+msgstr ""
+"Va à l'entrée la plus nordique de ces sous-sols, ensuite va au nord. Il sera "
+"quelque part dans ces collines."
+
+msgid "What did I miss, eh?"
+msgstr "Qu'est-ce que j'ai raté, hein ?"
+
+msgid ""
+"Who the devil are ye? Well, ye seem to be with Rugnur... follow him north."
+msgstr ""
+"Qui diable es-tu ? Hum, tu sembles être avec Rugnur... Suis-le au nord."
+
+msgid ""
+"The journey to the far northern wastelands was long and perilous. For the "
+"tunnels were winding and treacherous, and the paths were not safe from goblins, "
+"or worse. Nevertheless, they did reach the northlands, and began to search "
+"for the runesmith named Thursagan - the sage of fire."
+msgstr ""
+"Le trajet vers les contrées du nord fut long et périlleux. Car les tunnels "
+"étaient traitres et sinueux et les chemins n'étaient pas exempts de gobelins, ou "
+"pire. Néanmoins, ils y arrivèrent, et commencèrent à chercher un forgeron "
+"des runes nommé Thursagan, le sage de feu."
+
+msgid ""
+"Now where are we going, anyway? We have been taking wrong turns and fighting "
+"goblins for months. This trip better have a good payoff to be worth that."
+msgstr ""
+"Et maintenant, on va où ? Nous tournons en rond et nous combattons des gobelins "
+"depuis des mois. Ce voyage devra rapporter beaucoup pour valoir cette peine."
+
+msgid ""
+"We need to find the mage Thursagan and convince him to return to the citadel "
+"with us. He's somewhere up here."
+msgstr ""
+"Nous devons trouver le mage Thursagan et le convaincre de rentrer à la "
+"citadelle avec nous. Il est quelque part par ici."
+
+msgid "Well, how are we supposed to find him?"
+msgstr "Bon, et comment on est supposé le trouver ?"
+
+msgid ""
+"His will probably be the only house up here. No one else is insane enough to "
+"live this far north! Even the Shinsplitters won't challenge us here."
+msgstr ""
+"Sa maison sera probablement la seule dans le coin. Personne d'autre n'est "
+"assez fou pour vivre si loin au nord ! Même les Brisetibias ne viendraient pas "
+"nous défier ici."
+
+msgid ""
+"Except for goblins, right? They live in the far northlands. They're "
+"probably lurking around here somewhere."
+msgstr ""
+"À l'exception des gobelins, hein ? Ils vivent bien dans les "
+"territoires du nord. Ils doivent probablement rôder par ici."
+
+msgid "Right. We'll probably have to fight our way through to his house."
+msgstr ""
+"Exact. Nous devrons sûrement nous défendre durant notre trajet vers sa "
+"demeure."
+
+msgid "We'd like to speak with ye."
+msgstr "Nous voudrons parler avec vous."
+
+msgid "Aah! What is that?!"
+msgstr "Aah ! Qu'est-ce que c'est que ça ?!"
+
+msgid "Is that... is that a gryphon?"
+msgstr "Est-ce... Est-ce un griffon ?"
+
+msgid "Aye. Will ye speak with us now?"
+msgstr "Oui. Parlez-vous avec nous maintenant ?"
+
+msgid "What do ye want, gryphon rider?"
+msgstr "Que veux-tu, monteur de griffon ?"
+
+msgid "Are ye looking for a runemaster?"
+msgstr "Cherchez-vous un maître des runes ?"
+
+msgid "Well, um, aye. Why, can ye help us?"
+msgstr "Eh bien, euh, oui. Pourquoi, tu peux nous aider ?"
+
+msgid "Aye. If ye kill the goblins, we'll help ye."
+msgstr "Oui. Si vous tuez les gobelins, nous vous aiderons !"
+
+msgid "Sure, we'll help ye fight goblins."
+msgstr "Bien-sûr, nous vous aiderons à combattre les gobelins."
+
+msgid "Go away, ye birds! Or I shall burn ye out of the air!"
+msgstr "Allez-vous en, sales oiseaux ! Ou je vous grille dans les airs !"
+
+msgid ""
+"He doesn't want to talk to the gryphon riders, apparently. I think we'll have to "
+"get someone there he will talk to..."
+msgstr ""
+"Il ne veut pas parler aux mounteurs de griffon, apparemment. Je crois que nous allons "
+"devoir trouver quelqu'un avec qui il parlera..."
+
+msgid "What do ye people want?! Leave me alone!"
+msgstr "Que me voulez-vous !? Laissez-moi seul !"
+
+"Old sage, we come with a message from Lord Durstorn. He asks ye to come "
+"back to the city."
+msgstr ""
+"Vieux sage, nous venons avec un message du Seigneur Durstorn. Il demande que "
+"vous rentriez à la cité."
+
+"Ha! That fool thinks he can order me around. Why does he want me to go back, "
+"anyway?"
+msgstr ""
+"Ha ! Ce fou pense qu'il peut me commander. Et pourquoi veut-il que je "
+"rentre ?"
+
+msgid ""
+"We have entered into a bargain with the king of Untersberg to craft a scepter "
+"for him."
+msgstr ""
+"Nous avons conclu un marché avec le roi de Untersberg. Nous devons lui "
+"fabriquer un sceptre. "
+
+msgid ""
+"Oh, and now I suppose Durstorn wants me to craft it, eh? Well I'm not going "
+"to."
+msgstr ""
+"Oh, et maintenant Durstorn veut que je le forge, hein ? Eh bien, je n'en ai "
+"pas l'intention."
+
+msgid ""
+"Ye don't want to make a scepter imbued with the mighty ruby of fire? "
+"Very well, yer choice is made."
+msgstr ""
+"Vous ne voulez pas faire un sceptre incrusté avec le puissant Rubis de Feu ? "
+"Très bien, vous avez fait votre choix."
+
+msgid "The ruby of fire, what is that, some worthless gnomish gem?"
+msgstr ""
+"Le Rubis de Feu ? Qu'est-ce que c'est, une pierre gnome sans intérêt ?"
+
+msgid ""
+"It is a gnomish gem, but it is also supposedly the most flawless precious "
+"stone ever seen."
+msgstr ""
+"C'est en effet une pierre précieuse gnome, mais elle est également "
+"censée être la pierre précieuse la plus parfaite jamais vu."
+
+msgid "Oh, really? And what does gnomish king want us to do with it?"
+msgstr "Oh, vraiment ? Et qu'est-ce que le roi gnome veut que nous en fassions ?"
+
+msgid "Cut it and insert it into a scepter, creating a powerful symbol of the gnomish monarchy."
+msgstr "Le tailler et l'incruster dans un sceptre, à créer un puissant symbole de la monarchie gnome."
+
+msgid ""
+"I see. Fine then, I will help ye craft this scepter... into the greatest "
+"artifact ever seen. This will be a true test of my skill. I "
+"expect it will take many years."
+msgstr ""
+"Je vois. Très bien, je vous aiderai à façonner ce sceptre... en l'artefact "
+"le plus grand jamais vu. Ce sera un vrai défi pour mes aptitudes. "
+"Je m'attends à ce que cela prenne de nombreuses années."
+
+msgid ""
+"Good. Now, there are still wild animals and goblins here... We have to get back into the "
+"caves."
+msgstr ""
+"Bien. Maintenant, il y a toujours des animaux sauvages et des gobelins par ici... Nous "
+"devons retourner dans les cavernes."
+
+msgid "Well, now we are near the caves again! Come on, back south, to the city."
+msgstr ""
+"Voilà, nous revoici près de les souterrains ! Allons-y, cap au sud, vers la "
+"cité !"
+
+msgid "(Later in the dwarven citadel...)"
+msgstr "(Plus tard, dans la cité...)"
+
+msgid ""
+"The path back was less dangerous than it was a year earlier. It did not take "
+"them so long. So they quickly returned to the dwarven city, with new "
+"members to their party."
+msgstr ""
+"Le retour fut moins dangereux que l'aller ne l'avait été un an auparavant. "
+"Il leur prit moins de temps. Ils rentrèrent donc rapidement à la cité des "
+"nains, avec nouveaux membres à l'expédition."
+
+msgid "Lord Durstorn, we have succeeded in our mission. Thursagan is here."
+msgstr ""
+"Seigneur Durstorn, nous avons accompli notre mission. Thursagan est ici."
+

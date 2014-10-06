@@ -1472,10 +1472,7 @@ SetDamageFormula(
 )
 
 --- Uses Stratagus Library path!
-Load("scripts/localization.lua")
-
 Load("scripts/wyr.lua")
-
 Load("scripts/icons.lua")
 Load("scripts/sound.lua")
 Load("scripts/missiles.lua")

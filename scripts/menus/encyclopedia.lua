@@ -51,33 +51,33 @@ function RunEncyclopediaMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	menu:addLabel("~<Encyclopedia~>", offx + 320, offy + 104 + 36*-2)
+	menu:addLabel(_("~<Encyclopedia~>"), offx + 320, offy + 104 + 36*-2)
 
-	menu:addFullButton("~!Units", "u", offx + 208, offy + 104 + 36*-1,
+	menu:addFullButton(_("~!Units"), "u", offx + 208, offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton("~!Buildings", "b", offx + 208, offy + 104 + 36*0,
+	menu:addFullButton(_("~!Buildings"), "b", offx + 208, offy + 104 + 36*0,
 		function() RunEncyclopediaUnitsMenu("buildings") end)
 
-	menu:addFullButton("~!Technologies", "t", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208, offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("technologies") end)
 
-	menu:addFullButton("~!Heroes", "h", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208, offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton("~!Mercenaries", "m", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208, offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
 --	menu:addFullButton("~!Factions", "f", offx + 208, offy + 104 + 36*3,
 --		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton("~!Worlds", "w", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)
 
-	menu:addFullButton("Te~!xts", "x", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*5,
 		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() Texts = nil; Worlds = nil; menu:stop(); end)
 
 	menu:run()
@@ -134,7 +134,7 @@ function RunEncyclopediaUnitsMenu(state)
 		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	end
 
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() menu:stop(); end)
 
 	menu:run()
@@ -201,7 +201,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			local background = ""
 			if (string.find(unit_name, "upgrade-") == nil) then
 				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
-					civilization = "Civilization: " .. CapitalizeString(GetUnitTypeData(unit_name, "Civilization")) .. "\n\n"
+					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
 				end
 				if (GetUnitTypeData(unit_name, "Description") ~= "") then
 					description = "Description: " .. GetUnitTypeData(unit_name, "Description")
@@ -239,7 +239,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				end
 			end
 
-			encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+			encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 				function() encyclopedia_entry_menu:stop(); end)
 			encyclopedia_entry_menu:run()
 		end
@@ -281,7 +281,7 @@ function RunEncyclopediaTextsMenu()
 		text_y = text_y + 1
 	end
 
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() menu:stop(); end)
 
 	menu:run()
@@ -566,7 +566,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 		end
 	)
 
-	encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * (10 - height_offset)),
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset)),
 		function() encyclopedia_entry_menu:stop(); end)
 
 	encyclopedia_entry_menu:run()
@@ -594,7 +594,7 @@ function RunEncyclopediaWorldsMenu()
 		world_y = world_y + 1
 	end
 
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() menu:stop(); end)
 
 	menu:run()
@@ -647,7 +647,7 @@ function OpenEncyclopediaWorldEntry(world_key)
 		end
 	end
 
-	encyclopedia_entry_menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 104 + (36 * 9),
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() encyclopedia_entry_menu:stop(); end)
 	encyclopedia_entry_menu:run()
 end

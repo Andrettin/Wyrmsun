@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wyrmsun\n"
+"POT-Creation-Date: 2014-10-04 18:46+0100\n"
+"PO-Revision-Date: 2014-10-04 20:43+0100\n"
+"Last-Translator: Andre Novellino Gouvêa <andre.ng@live.com>\n"
+"Language-Team: Andrettin <andre.ng@live.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: c:/Program Files/Wyrmsun/scripts\n"
+"Language: pt\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
+
+msgid "~!Single Player Game"
+msgstr "Jogo de Um Jogador"
+
+msgid "~!Multi Player Game"
+msgstr "Jogo ~!Multijogador"
+
+msgid "~!Grand Strategy Game"
+msgstr "Jogo de ~!Grande Estratégia"
+
+msgid "Load Game"
+msgstr "Carregar Jogo"
+
+msgid "~!Load Game"
+msgstr "Carregar Jogo"
+
+msgid "~!Replay Game"
+msgstr "~!Rever Jogo"
+
+msgid "~!Options"
+msgstr "~!Opções"
+
+msgid "Map ~!Editor"
+msgstr "~!Editor de Mapas"
+
+msgid "Load Mod"
+msgstr "Carregar Mod"
+
+msgid "Load Mo~!d"
+msgstr "Carregar Mo~!d"
+
+msgid "En~!cyclopedia"
+msgstr "En~!ciclopédia"
+
+msgid "S~!how Credits"
+msgstr "Mostrar Créditos"
+
+msgid "E~!xit Program"
+msgstr "Sair do Programa"
+
+msgid "~!Previous Menu"
+msgstr "Menu Anterior"
+
+msgid "~!New Map"
+msgstr "~!Novo Mapa"
+
+msgid "~!Load Map"
+msgstr "Carregar Mapa"
+
+msgid "Select Map"
+msgstr "Selecionar Mapa"
+
+msgid "~!Select Map"
+msgstr "~!Selecionar Mapa"
+
+msgid "S~!elect Map"
+msgstr "S~!elecionar Mapa"
+
+msgid "~!Edit Map"
+msgstr "~!Editar Mapa"
+
+msgid "~!Continue"
+msgstr "~!Continuar"
+
+msgid "~!Load"
+msgstr "Carregar"
+
+msgid "~!Cancel"
+msgstr "~!Cancelar"
+
+msgid "~<Units:~>"
+msgstr "~<Unidades:~>"
+
+msgid "Dwarf"
+msgstr "Anão"
+
+msgid "Miner"
+msgstr "Mineiro"
+
+msgid "Axefighter"
+msgstr "Machadeiro"
+
+msgid "Mead Hall"
+msgstr "Salão de Hidromel"
+
+msgid "War Hall"
+msgstr "Salão de Guerra"
+
+msgid "Barracks"
+msgstr "Quartel"
+
+msgid "Mushroom Farm"
+msgstr "Fazenda de Cogumelos"
+
+msgid "Lumber Mill"
+msgstr "Serraria"
+
+msgid "Gnomish Recruit"
+msgstr "Recruta Gnomo"
+
+msgid "Gnomish Caravan"
+msgstr "Caravana Gnoma"
+
+msgid "Gold Mine"
+msgstr "Mina de Ouro"
+
+msgid "Coal Mine"
+msgstr "Mina de Carvão"
+
+msgid "Rat"
+msgstr "Rato"
+
+msgid "The Scepter of Fire"
+msgstr "O Cetro de Fogo"
+
+msgid "A Bargain is Struck"
+msgstr "Um Negócio é Fechado"
+
+msgid "- Bring the Gnomish caravans and the envoy to your Mead Hall"
+msgstr "- Traga as caravanas gnomas e o enviado até seu Salão de Hidromel"

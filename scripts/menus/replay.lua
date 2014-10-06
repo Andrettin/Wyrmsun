@@ -4,14 +4,14 @@ function RunReplayGameMenu()
   menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel("Select Game", 352 / 2, 11)
+  menu:addLabel(_("Select Game"), 352 / 2, 11)
 
   local browser = menu:addBrowser("~logs/", "%.log%.?g?z?$",
     (352 - 18 - 288) / 2, 11 + 98, 306, 108)
 
-  local reveal = menu:addCheckBox("Reveal Map", 23, 264, function() end)
+  local reveal = menu:addCheckBox(_("Reveal Map"), 23, 264, function() end)
 
-  menu:addHalfButton("~!OK", "o", 48, 308,
+  menu:addHalfButton(_("~!OK"), "o", 48, 308,
     function()
       if (browser:getSelected() < 0) then
         return
@@ -22,7 +22,7 @@ function RunReplayGameMenu()
       SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
       menu:stop()
     end)
-  menu:addHalfButton(cancel_name, "c", 198, 308, function() menu:stop() end)
+  menu:addHalfButton(_("~!Cancel"), "c", 198, 308, function() menu:stop() end)
 
   menu:run()
 end
@@ -32,7 +32,7 @@ function RunSaveReplayMenu()
   menu:setSize(384, 256)
   menu:setPosition((Video.Width - 384) / 2, (Video.Height - 256) / 2)
 
-  menu:addLabel("Save Replay", 384 / 2, 11)
+  menu:addLabel(_("Save Replay"), 384 / 2, 11)
 
   local t = menu:addTextInputField("game.log",
     (384 - 300 - 18) / 2, 11 + 36, 318)
@@ -44,7 +44,7 @@ function RunSaveReplayMenu()
   end
   browser:setActionCallback(cb)
 
-  menu:addHalfButton("~!Save", "s", 1 * (384 / 3) - 106 - 10, 256 - 16 - 27,
+  menu:addHalfButton(_("~!Save"), "s", 1 * (384 / 3) - 106 - 10, 256 - 16 - 27,
     -- FIXME: use a confirm menu if the file exists already
     function()
       local name = t:getText()
@@ -64,7 +64,7 @@ function RunSaveReplayMenu()
       menu:stop()
     end)
 
-  menu:addHalfButton(cancel_name, "c", 3 * (384 / 3) - 106 - 10, 256 - 16 - 27,
+  menu:addHalfButton(_("~!Cancel"), "c", 3 * (384 / 3) - 106 - 10, 256 - 16 - 27,
     function() menu:stop() end)
 
   menu:run()

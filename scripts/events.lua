@@ -567,7 +567,7 @@ function Event(event_name, event_description, player, options, option_effects, e
 		local menu = WarGameMenu(panel(5))
 		menu:resize(352, 352)
 
-		menu:addLabel(event_name, 176, 11)
+		menu:addLabel(_(event_name), 176, 11)
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
@@ -578,7 +578,7 @@ function Event(event_name, event_description, player, options, option_effects, e
 		else
 			menu:add(l, 14, 112)
 		end
-		l:setCaption(event_description)
+		l:setCaption(_(event_description))
 
 		if (event_icon == "dwarf/icons/rugnur.png" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
 			event_icon = "dwarf/icons/rugnur_older.png"
@@ -600,12 +600,12 @@ function Event(event_name, event_description, player, options, option_effects, e
 
 		for i=1,table.getn(options) do
 			local option_hotkey = ""		
-			if (string.find(options[i], "~!") ~= nil) then
-				option_hotkey = string.sub(string.match(options[i], "~!%a"), 3)
+			if (string.find(_(options[i]), "~!") ~= nil) then
+				option_hotkey = string.sub(string.match(_(options[i]), "~!%a"), 3)
 				option_hotkey = string.lower(option_hotkey)
 			end
 
-			menu:addFullButton(options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
+			menu:addFullButton(_(options[i]), option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
 				function(s)
 					SetGamePaused(false)
 					menu:stop()

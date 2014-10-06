@@ -444,6 +444,7 @@ Leo:
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png
 /graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
+/graphics/germanic/icons/broad_sword.png
 /graphics/germanic/icons/bronze_shield.png
 /graphics/germanic/icons/short_sword.png
 /graphics/germanic/icons/short_sword_extra_1.png

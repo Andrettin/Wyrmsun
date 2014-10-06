@@ -34,10 +34,10 @@ table.foreach(UnitTypeFiles,
 
 -- Fix critters sounds and name
 local CritterNames = {
-	cave = rat_name,
-	dungeon = rat_name,
-	forest = rat_name,
-	swamp = rat_name
+	cave = _("Rat"),
+	dungeon = _("Rat"),
+	forest = _("Rat"),
+	swamp = _("Rat")
 }
 
 DefineUnitType("unit-critter", {

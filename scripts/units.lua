@@ -30,6 +30,7 @@
 UnitTypeFiles = {}
 
 Units = {
+	"upgrade-germanic-broad-sword",
 	"upgrade-germanic-bronze-shield",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smith",
@@ -174,7 +175,7 @@ DefineUnitType("unit-critter", { Name = "Critter",
 		"dead", "rat-dead" }
 } )
 
-DefineUnitType("unit-gryphon", { Name = "Gryphon",
+DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Description = "Amongst the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. It is unknown if the wild gryphons are the descendants of gryphons who avoided domestication, or if descend from gryphons escaped from captivity who managed to survive on their own. Not coincidentally, the Gryphon Mountain is the greatest nesting area for wild gryphons.",
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
 	DrawLevel = 45,
@@ -222,7 +223,7 @@ DefineUnitType("unit-gryphon", { Name = "Gryphon",
 		"dead", "gryphon-dead" }
 } )
 
-DefineUnitType("unit-wyrm", { Name = "Wyrm",
+DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Description = "These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds.",
 	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
@@ -291,7 +292,7 @@ DefineUnitType("unit-wyrm", { Name = "Wyrm",
 		"dead", "drake-dead" }
 } )
 
-DefineUnitType("unit-slime", { Name = "Slime",
+DefineUnitType("unit-slime", { Name = _("Slime"),
 	Description = "Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch.",
 	Image = {"file", "neutral/units/slime_small.png", "size", {32, 32}},
 	Animations = "animations-slime", Icon = "icon-slime",
@@ -354,7 +355,7 @@ DefineUnitType("unit-slime", { Name = "Slime",
 --	swamp = "tilesets/swamp/neutral/buildings/gold_mine.png"
 --}
 
-DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
+DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 	Description = "Gold is a crucial metal for most societies, as it serves as a means of exchange with which a myriad of goods and services can be bought.",
 	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
 	Animations = "animations-gold-mine", Icon = "icon-gold-mine",
@@ -385,7 +386,7 @@ DefineUnitType("unit-gold-mine", { Name = gold_mine_name,
 --		"help", "gold-mine-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
+DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
 	Animations = "animations-gold-mine", Icon = "icon-coal-mine",
 	NeutralMinimapColor = {255, 255, 0},
@@ -415,7 +416,7 @@ DefineUnitType("unit-coal-mine", { Name = "Coal Mine",
 --		"help", "gold-mine-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-mercenary-camp", { Name = "Mercenary Camp",
+DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	Description = "This camp houses a number of mercenary groups, who will offer their talents for hire.",
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
 	NeutralMinimapColor = {192, 192, 192},
@@ -444,7 +445,7 @@ DefineUnitType("unit-mercenary-camp", { Name = "Mercenary Camp",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-wood-pile", { Name = "Wood Pile",
+DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
 	Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},
 	Animations = "animations-decoration", Icon = "icon-wood-pile",
 	NeutralMinimapColor = {128, 0, 0},
@@ -850,7 +851,7 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-stalagmites", { Name = "Stalagmites",
+DefineUnitType("unit-stalagmites", { Name = _("Stalagmites"),
 	Image = {"file", "neutral/decorations/stalagmites.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-stalagmites",
 	Speed = 0,
@@ -884,7 +885,7 @@ DefineUnitType("unit-stalagmites", { Name = "Stalagmites",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-volcanic-crater", { Name = "Volcanic Crater",
+DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
 	Image = {"file", "neutral/decorations/volcanic_crater.png", "size", {64, 64}},
 	Animations = "animations-volcanic-crater", Icon = "icon-volcanic-crater",
 	Speed = 0,
@@ -903,7 +904,7 @@ DefineUnitType("unit-volcanic-crater", { Name = "Volcanic Crater",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-glyph", { Name = "Glyph",
+DefineUnitType("unit-glyph", { Name = _("Glyph"),
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-decoration", Icon = "icon-glyph",
@@ -1001,7 +1002,7 @@ DefineUnitType("unit-glyph", { Name = "Glyph",
 		"dead", "building destroyed"} }
 )
 
-DefineUnitType("unit-stairs", { Name = "Stairs",
+DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Image = {"file", "neutral/buildings/stairs.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-decoration-old", Icon = "icon-stairs",
@@ -1185,7 +1186,7 @@ DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 --	Vanishes = true,
 --	Sounds = {} } )
 
-DefineUnitType("unit-scepter-of-fire", { Name = "Scepter of Fire",
+DefineUnitType("unit-scepter-of-fire", { Name = _("Scepter of Fire"),
 	Image = {"file", "neutral/items/scepter.png", "size", {32, 32}},
 	Animations = "animations-item", Icon = "icon-scepter",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1205,7 +1206,7 @@ DefineUnitType("unit-scepter-of-fire", { Name = "Scepter of Fire",
 	} 
 } )
 
-DefineUnitType("unit-gold-coins", { Name = "Gold Coins",
+DefineUnitType("unit-gold-coins", { Name = _("Gold Coins"),
 	Image = {"file", "neutral/items/gold_coins.png", "size", {12, 13}},
 	Animations = "animations-item", Icon = "icon-gold-coins",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1227,7 +1228,7 @@ DefineUnitType("unit-gold-coins", { Name = "Gold Coins",
 	} 
 } )
 
-DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
+DefineUnitType("unit-gold-sack", { Name = _("Gold Sack"),
 	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
 	Animations = "animations-item", Icon = "icon-gold-sack",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1250,7 +1251,7 @@ DefineUnitType("unit-gold-sack", { Name = "Gold Sack",
 	} 
 } )
 
-DefineUnitType("unit-gold-chest", { Name = "Chest",
+DefineUnitType("unit-gold-chest", { Name = _("Chest"),
 	Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
 	Animations = "animations-gold-chest", Icon = "icon-chest",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1267,7 +1268,7 @@ DefineUnitType("unit-gold-chest", { Name = "Chest",
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-gold-and-gems-chest", { Name = "Chest",
+DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
 	Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
 	Animations = "animations-gold-and-gems-chest", Icon = "icon-chest",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1284,7 +1285,7 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = "Chest",
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-barrel", { Name = "Barrel",
+DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	Image = {"file", "neutral/items/barrel.png", "size", {32, 32}},
 	Animations = "animations-barrel", Icon = "icon-barrel",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1301,7 +1302,7 @@ DefineUnitType("unit-barrel", { Name = "Barrel",
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-alchemy-bench", { Name = "Alchemy Bench",
+DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Image = {"file", "neutral/items/alchemy_bench.png", "size", {32, 32}},
 	Animations = "animations-alchemy-bench", Icon = "icon-alchemy-bench",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1321,7 +1322,7 @@ DefineUnitType("unit-alchemy-bench", { Name = "Alchemy Bench",
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-potion-of-healing", { Name = "Potion of Healing",
+DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
 	Animations = "animations-red-potion", Icon = "icon-red-potion",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1342,7 +1343,7 @@ DefineUnitType("unit-potion-of-healing", { Name = "Potion of Healing",
 	} 
 } )
 
-DefineUnitType("unit-potion-of-decay", { Name = "Potion of Decay",
+DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
 	Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
 	Animations = "animations-blue-potion", Icon = "icon-blue-potion",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1363,7 +1364,7 @@ DefineUnitType("unit-potion-of-decay", { Name = "Potion of Decay",
 	} 
 } )
 
-DefineUnitType("unit-cheese", { Name = "Cheese",
+DefineUnitType("unit-cheese", { Name = _("Cheese"),
 	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
 	Animations = "animations-item", Icon = "icon-cheese",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1381,7 +1382,7 @@ DefineUnitType("unit-cheese", { Name = "Cheese",
 	Food = true,
 	Sounds = {} } )
 
-DefineUnitType("unit-carrots", { Name = "Carrots",
+DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
 	Animations = "animations-item", Icon = "icon-carrots",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1399,7 +1400,7 @@ DefineUnitType("unit-carrots", { Name = "Carrots",
 	Food = true,
 	Sounds = {} } )
 
-DefineUnitType("unit-gryphon-feather", { Name = "Gryphon Feather",
+DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Image = {"file", "neutral/items/gryphon_feather.png", "size", {28, 26}},
 	Animations = "animations-item", Icon = "icon-gryphon-feather",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1538,7 +1539,7 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 
 -- Other civilizations' units
 
-DefineUnitType("unit-teuton-lumber-mill", { Name = lumber_mill_name,
+DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	NeutralMinimapColor = {192, 192, 192},
 	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",

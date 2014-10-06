@@ -19,7 +19,7 @@ local function RunEditorNewMapMenu()
   local mapSizey = menu:addDropDown(mapSizes, offx + 208 + 125, offy + 104 + 32 * 3, function() end)
   mapSizey:setWidth(50)
 
-  menu:addFullButton(new_map_name, "n", offx + 208, offy + 104 + 36 * 5,
+  menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
     function()
       -- TODO : check value
       Map.Info.Description = mapDescription:getText()
@@ -30,7 +30,7 @@ local function RunEditorNewMapMenu()
       StartEditor(nil)
       RunEditorMenu()
     end)
-  menu:addFullButton(cancel_name, "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
+  menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
   return menu:run()
 end
 
@@ -52,7 +52,7 @@ local function RunEditorLoadMapMenu()
     labelNbPlayer:setCaption("Players  : " .. mapinfo.nplayers)
     labelNbPlayer:adjustSize()
 
-    labelDescription:setCaption("Scenario : " .. mapinfo.description)
+    labelDescription:setCaption("Scenario : " .. _(mapinfo.description))
     labelDescription:adjustSize()
 
     labelMapSize:setCaption("Size      : " .. mapinfo.w .. " x " .. mapinfo.h)
@@ -64,7 +64,7 @@ local function RunEditorLoadMapMenu()
   labelNbPlayer = menu:addLabel("", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
   labelMapSize = menu:addLabel("", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
 
-  menu:addFullButton(select_map_name, "s", offx + 208, offy + 104 + 36 * 4,
+  menu:addFullButton(_("~!Select Map"), "s", offx + 208, offy + 104 + 36 * 4,
     function()
       local oldmapname = mapname
       RunSelectScenarioMenu()
@@ -74,8 +74,8 @@ local function RunEditorLoadMapMenu()
       end
     end)
 
-  menu:addFullButton(edit_map_name, "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname); RunEditorMenu() end)
-  menu:addFullButton(cancel_name, "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
+  menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname); RunEditorMenu() end)
+  menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
 
   GetMapInfo(mapname)
   MapChanged()
@@ -95,11 +95,11 @@ function RunEditorMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
 
-  menu:addLabel("~<Map Editor~>", offx + 320, offy + 212 - 25)
+  menu:addLabel(_("~<Map Editor~>"), offx + 320, offy + 212 - 25)
   local buttonNewMap =
-  menu:addFullButton(new_map_name, "n", offx + 208, offy + 104 + 36*3, function() RunEditorNewMapMenu(); menu:stop() end)
-  menu:addFullButton(load_map_name, "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(); menu:stop() end)
-  menu:addFullButton(cancel_name, "c", offx + 208, offy + 104 + 36*5, function() menu:stop() end)
+  menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36*3, function() RunEditorNewMapMenu(); menu:stop() end)
+  menu:addFullButton(_("~!Load Map"), "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(); menu:stop() end)
+  menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36*5, function() menu:stop() end)
   return menu:run()
 end
 
@@ -138,7 +138,7 @@ function RunEditorSaveMenu()
   end
   browser:setActionCallback(cb)
 
-  menu:addHalfButton(cancel_name, "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27, function() menu:stop() end)
+  menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27, function() menu:stop() end)
   menu:addHalfButton("~!Save", "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
     function()
       local name = t:getText()
@@ -286,7 +286,7 @@ function RunEditorPlayerProperties()
       menu:stop()
     end)
 
-  menu:addHalfButton(cancel_name, "c", 3 * (sizeX / 4) - 106 - 10, sizeY - 16 - 27,
+  menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 4) - 106 - 10, sizeY - 16 - 27,
     function() menu:stop() end)
 
   menu:run(false)
@@ -332,7 +332,7 @@ function RunEditorMapProperties()
     end
     )
 
-  menu:addHalfButton(cancel_name, "c", 3 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+  menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
     function() menu:stop() end)
 
   menu:run(false)
@@ -393,7 +393,7 @@ function EditUnitProperties()
     menu:addHalfButton("~!Ok", "o", 24, sizeY - 40,
       function() GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();  menu:stop() end)
   end
-  menu:addHalfButton(cancel_name, "c", 134, sizeY - 40,
+  menu:addHalfButton(_("~!Cancel"), "c", 134, sizeY - 40,
     function() menu:stop() end)
   menu:run(false)
 end

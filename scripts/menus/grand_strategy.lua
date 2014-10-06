@@ -1045,7 +1045,7 @@ function RunGrandStrategySaveMenu()
 			RunGrandStrategyGame()
 		end)
 
-	menu:addHalfButton(cancel_name, "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 		function()
 			menu:stop()
 			GrandStrategyMenu:stop();
@@ -1065,12 +1065,12 @@ function RunGrandStrategyLoadGameMenu()
 		table.insert(saved_games_list, key)
 	end
 	
-	menu:addLabel(load_game_name, 384 / 2, 11)
+	menu:addLabel(_("Load Game"), 384 / 2, 11)
 	local saved_games = menu:addDropDown(saved_games_list, 384 / 2 - 152 / 2, 11 + (36 * 1.5),
 		function(dd) end)
 	saved_games:setSize(152, 20)
 
-	menu:addHalfButton(load_name, "l", (384 - 300 - 18) / 2, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Load"), "l", (384 - 300 - 18) / 2, 256 - 16 - 27,
 		function()
 			if (saved_games:getSelected() < 0) then
 				return
@@ -1111,7 +1111,7 @@ function RunGrandStrategyLoadGameMenu()
 			saved_games:setList(saved_games_list)
 			saved_games:setSize(152, 20)
 		end)
-	menu:addHalfButton(cancel_name, "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 		function()
 			menu:stop()
 			GrandStrategyMenu:stop();
