@@ -826,7 +826,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and GetFactionExists(wyr.preferences.TheScepterOfFireRaiderFaction)) then
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and GetFactionExists("Shinsplitter Clan")) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
 					player = i
@@ -911,7 +911,7 @@ AddTrigger(
 													{function(s)
 													Event(
 														"Baglur",
-														"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders... Well, listen here. This entrance to the city can be closed. There's a gate. If we can close it, the raiders will no' be able to enter. And ye raiders; begone from here!",
+														"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders... Well, listen here. This entrance to the city can be closed. There's a gate. If we can close it, the raiders will no' be able to enter. And ye Shinsplitters; begone from here!",
 														event_player,
 														{"~!Continue"},
 														{function(s)
@@ -935,7 +935,7 @@ AddTrigger(
 																{function(s)
 																Event(
 																	"Baglur",
-																	"Och, well that's the difficulty. It's an impregnable gate, made from thick layers of solid rock. Almost indestructible. But that means it can only be closed by a special mechanism. Ye need to position a warrior on each of the six glyphs. When all are occupied, the gates wi' close. Then the raiders will be shut out of the caves forever, at least through this entrance.",
+																	"Och, well that's the difficulty. It's an impregnable gate, made of thick layers of solid rock. Almost indestructible. But that means it can only be closed by a special mechanism. Ye need to position a warrior on each of the six glyphs. When all are occupied, the gates wi' close. Then the Shinsplitters will be shut out of the caves forever, at least through this entrance.",
 																	event_player,
 																	{"~!Continue"},
 																	{function(s)
@@ -1173,7 +1173,7 @@ AddTrigger(
 																			{function(s)
 																			Event(
 																				"Rugnur",
-																				"He wanted to make a deal with us. He gave us a magnificent stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because " .. wyr.preferences.TheScepterOfFireRaiderFaction .. " raiders were attacking us.",
+																				"He wanted to make a deal with us. He gave us a magnificent stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because Shinsplitter raiders were attacking us.",
 																				player,
 																				{"~!Continue"},
 																				{function(s)
@@ -2013,7 +2013,7 @@ AddTrigger(
 																					{function(s)
 																					Event(
 																						"Baglur",
-																						"Wait, wait. The gold and coal... I think we can find those in the abandoned eastern mines. Goblins ha' overrun them, but earlier they were the source of the finest smithing materials.",
+																						"Wait, wait. The gold and coal... I think we can find those in the abandoned eastern mines, north of the Arkan-thoria. Goblins ha' overrun them, but earlier they were the source of the finest smithing materials.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
@@ -2333,7 +2333,7 @@ AddTrigger(
 							{function(s)
 							Event(
 								"Durstorn",
-								"So, ye have returned. I assume ye have obtained the required materials? My jeweler Theganli has spent the last two years buying jewels from some of the northern clans. So now go to the forge and make your scepter. What do ye need to annoy me for?",
+								"So, ye have returned. I assume ye have obtained the required materials? My jeweler Theganli has spent the last two years buying jewels from some of the northern clans. So now go to the forge and make yer scepter. What do ye need to annoy me for?",
 								player,
 								{"~!Continue"},
 								{function(s)
@@ -2435,7 +2435,7 @@ AddTrigger(
 																								{function(s)
 																								Event(
 																									"",
-																									"(Theganli spent many months cutting the jewels that would go into the Scepter of Fire, and the Ruby of Fire he attempted last. But he could not cut it.)",
+																									"Theganli spent many months cutting the jewels that would go into the Scepter of Fire, and the Ruby of Fire he attempted last. But he could not cut it.",
 																									player,
 																									{"~!Continue"},
 																									{function(s)

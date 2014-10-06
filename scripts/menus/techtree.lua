@@ -44,7 +44,7 @@ function RunTechTreeMenu(civilization_number)
 --	local button_quantity = 0
 
 	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
-	civilization_dd = menu:addDropDown({"Dwarf"}, offx + 244, offy + 10 + 15,
+	civilization_dd = menu:addDropDown({_("Dwarf")}, offx + 244, offy + 10 + 15,
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
 	civilization_dd:setSelected(civilization_number)
 	civilization_dd:setSize(152, 20)
@@ -55,8 +55,10 @@ function RunTechTreeMenu(civilization_number)
 	if (civilization_number == 0) then
 		civilization = "dwarf"
 		tech_points = 7
-		SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
 	elseif (civilization_number == 1) then
+		civilization = "germanic"
+		tech_points = 5
+	elseif (civilization_number == 2) then
 		civilization = "gnome"
 		tech_points = 5
 	end
@@ -107,7 +109,7 @@ function RunTechTreeMenu(civilization_number)
 				l:setCaption(tech_description)
 
 				if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and tech_points > 0) then
-					tech_menu:addFullButton("~!Acquire", "a", 176 - (224 / 2), 352 - 40 * 2,
+					tech_menu:addFullButton(_("~!Acquire"), "a", 176 - (224 / 2), 352 - 40 * 2,
 						function()
 							table.insert(wyr.preferences.TechnologyAcquired, unit)
 							SavePreferences()
@@ -116,7 +118,7 @@ function RunTechTreeMenu(civilization_number)
 							RunTechTreeMenu(civilization_dd:getSelected())
 						end)
 				end
-				tech_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
+				tech_menu:addFullButton(_("~!Close"), "c", 176 - (224 / 2), 352 - 40 * 1,
 					function()
 						tech_menu:stop()
 					end)
@@ -216,13 +218,13 @@ function RunTechTreeMenu(civilization_number)
 		end
 	end
 
-	menu:addFullButton("~!Reset Tech Tree", "r", offx + 208, offy + 212 + (36 * 5),
+	menu:addFullButton(_("~!Reset Tech Tree"), "r", offx + 208, offy + 212 + (36 * 5),
 		function()
 			ResetTechnologiesAcquired()
 			menu:stop()
 			RunTechTreeMenu(civilization_dd:getSelected())
 		end)
-	menu:addFullButton("~!Previous Menu", "p", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
 	menu:run()

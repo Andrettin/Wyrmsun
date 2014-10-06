@@ -38,7 +38,7 @@
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
   Action = "attack",
-  Key = "a", Hint = "~!Attack",
+  Key = "a", Hint = _("~!Attack"),
   ForUnit = {
 	"unit-hero-greebo",
 	"germanic-group"
@@ -46,7 +46,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
   Action = "stop",
-  Key = "s", Hint = "~!Stop",
+  Key = "s", Hint = _("~!Stop"),
   ForUnit = {
 	"germanic-group"
 } } )
@@ -54,7 +54,14 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
   Action = "stop",
   Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-bronze-shield"},
-  Key = "s", Hint = "~!Stop",
+  Key = "s", Hint = _("~!Stop"),
+  ForUnit = {
+	"germanic-group"
+} } )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
+  Action = "stand-ground",
+  Key = "t", Hint = _("S~!tand Ground"),
   ForUnit = {
 	"germanic-group"
 } } )

@@ -112,7 +112,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenSmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 		},
-		Map = "maps/random_maps/random-map-cave.smp",
+		Map = "maps/nidavellir/caverns-of-flame.smp",
 		Units = { -- starting units in the Caverns of Flame scenario
 			GoblinImpaler = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
 			GoblinWarMachine = 1

@@ -94,6 +94,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-stand-ground",
+	Size = {46, 38},
+	File = "germanic/icons/stand_ground.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},
 	File = "dwarf/icons/miner.png"

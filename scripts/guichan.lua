@@ -924,9 +924,8 @@ function RunSinglePlayerGameMenu()
   end
   table.sort(world_list)
 
-  menu:addLabel(_("Map:"), offx + 16, offy + 360, Fonts["game"], false)
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
-  descriptionl = menu:addLabel("descriptionl", offx + 16 + 38, offy + 360, Fonts["game"], false)
+  descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
 
   menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
 --  menu:addFullButton("S~!elect Map", "e", offx + 640 - 224 - 16, offy + 360 + 36*-2,
@@ -1119,7 +1118,7 @@ function RunSinglePlayerGameMenu()
 	mapl:setCaption(string.sub(mapname, 6))
 	mapl:adjustSize()
 
-	local map_description = _(mapinfo.description)
+	local map_description = _("Map:") .. " " .. _(mapinfo.description)
 	descriptionl:setCaption(map_description ..
 		" (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
 	descriptionl:adjustSize()

@@ -46,6 +46,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
 - Added germanic wooden oblong shield icon (by Leo).
+- Fixed error which was making special characters not appear correctly, and updated texts accordingly.
+- Added germanic stand ground icon (by Leo).
 
 * Quests
 - Added On the Vanaquisl quest.

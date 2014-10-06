@@ -17,7 +17,7 @@ function RunDiplomacyMenu()
     if (Players[i].Type ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and ThisPlayer.Index ~= i) then
       j = j + 1
 
-      local l = Label(Players[i].Name)
+      local l = Label(_(Players[i].Name))
       l:setFont(Fonts["game"])
       l:adjustSize()
       menu:add(l, 16, (18 * j) + 26)

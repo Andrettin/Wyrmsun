@@ -38,104 +38,104 @@
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
-  Key = "g", Hint = "Attack ~!Ground",
+  Key = "g", Hint = _("Attack ~!Ground"),
   ForUnit = {"unit-goblin-war-machine", "goblin-group"} } )
 
 -- worker specific actions ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
   Action = "repair",
-  Key = "r", Hint = "~!Repair",
+  Key = "r", Hint = _("~!Repair"),
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Action = "harvest",
-  Key = "h", Hint = "~!Harvest Lumber/Mine Gold",
+  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"),
   ForUnit = {"unit-goblin-worker"} } )
 
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
-  Key = "b", Hint = "~!Build Basic Structure",
+  Key = "b", Hint = _("~!Build Basic Structure"),
   ForUnit = {"unit-goblin-worker"} } )
 
 -- simple buildings goblin -----------------------------------------------------
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-town-hall",
   Action = "build", Value = "unit-goblin-town-hall",
-  Key = "h", Hint = "Build Town ~!Hall",
+  Key = "h", Hint = _("Build Town ~!Hall"),
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-farm",
   Action = "build", Value = "unit-goblin-farm",
-  Key = "f", Hint = "Build ~!Farm",
+  Key = "f", Hint = _("Build ~!Farm"),
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-mess-hall",
   Action = "build", Value = "unit-goblin-mess-hall",
-  Key = "m", Hint = "Build ~!Mess Hall",
+  Key = "m", Hint = _("Build ~!Mess Hall"),
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
   Action = "build", Value = "unit-goblin-lumber-mill",
-  Key = "l", Hint = "Build ~!Lumber Mill",
+  Key = "l", Hint = _("Build ~!Lumber Mill"),
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smith",
   Action = "build", Value = "unit-goblin-smith",
-  Key = "g", Hint = "Build Fu~!gla Forge",
+  Key = "g", Hint = _("Build Fu~!gla Forge"),
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "escape", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = _("~<ESC~> Cancel"),
   ForUnit = {"unit-goblin-worker"} } )
 
 -- buildings commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-worker",
   Action = "train-unit", Value = "unit-goblin-worker",
-  Key = "w", Hint = "Train ~!Worker",
+  Key = "w", Hint = _("Train ~!Worker"),
   ForUnit = {"unit-goblin-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
   Action = "train-unit", Value = "unit-goblin-spearman",
-  Key = "i", Hint = "Train ~!Impaler",
+  Key = "i", Hint = _("Train ~!Impaler"),
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-archer",
   Action = "train-unit", Value = "unit-goblin-archer",
-  Key = "a", Hint = "Train ~!Archer",
+  Key = "a", Hint = _("Train ~!Archer"),
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-war-machine",
   Action = "train-unit", Value = "unit-goblin-war-machine",
-  Key = "m", Hint = "Build War ~!Machine",
+  Key = "m", Hint = _("Build War ~!Machine"),
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-worker",
   Action = "train-unit", Value = "unit-goblin-glider",
-  Key = "g", Hint = "Build ~!Glider",
+  Key = "g", Hint = _("Build ~!Glider"),
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-spearman",
 	Action = "cast-spell", Value = "spell-unit-goblin-spearman",
 	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "i", Hint = "Goblin ~!Impaler",
+	Key = "i", Hint = _("Goblin ~!Impaler"),
 	ForUnit = {"unit-goblin-spearman"} }
 )
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-goblin-archer",
 	Action = "cast-spell", Value = "spell-unit-goblin-archer",
 	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "a", Hint = "Goblin ~!Archer",
+	Key = "a", Hint = _("Goblin ~!Archer"),
 	ForUnit = {"unit-goblin-spearman"} }
 )
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-goblin-war-machine",
 	Action = "cast-spell", Value = "spell-unit-goblin-war-machine",
 	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "m", Hint = "Goblin War ~!Machine",
+	Key = "m", Hint = _("Goblin War ~!Machine"),
 	ForUnit = {"unit-goblin-spearman"} }
 )

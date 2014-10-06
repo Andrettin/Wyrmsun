@@ -134,7 +134,7 @@ DefineSpell("spell-learn-critical-strike",
 -- For the Motherland Spells
 
 DefineSpell("spell-unit-dwarven-axefighter",
-	"showname", "Axefighter",
+	"showname", _("Axefighter"),
 	"manacost", 25,
 	"range", 6,
 	"target", "position",
@@ -146,7 +146,7 @@ DefineSpell("spell-unit-dwarven-axefighter",
 )
 
 DefineSpell("spell-unit-goblin-spearman",
-	"showname", "Goblin Impaler",
+	"showname", _("Goblin Impaler"),
 	"manacost", 25,
 	"range", 6,
 	"target", "position",
@@ -158,7 +158,7 @@ DefineSpell("spell-unit-goblin-spearman",
 )
 
 DefineSpell("spell-unit-goblin-archer",
-	"showname", "Goblin Archer",
+	"showname", _("Goblin Archer"),
 	"manacost", 25,
 	"range", 6,
 	"target", "position",
@@ -170,7 +170,7 @@ DefineSpell("spell-unit-goblin-archer",
 )
 
 DefineSpell("spell-unit-goblin-war-machine",
-	"showname", "Goblin War Machine",
+	"showname", _("Goblin War Machine"),
 	"manacost", 25,
 	"range", 6,
 	"target", "position",
