@@ -1146,6 +1146,9 @@ end
 function AddPlayerObjective(player, objective)
 	for key, value in pairs(CustomPlayerData) do
 		if (CustomPlayerData[key].Number == player) then
+			if (player == GetThisPlayer()) then
+			end
+			AddMessage(_("New Objective: ") .. _(objective))
 			table.insert(CustomPlayerData[key].Objectives, objective)
 		end
 	end

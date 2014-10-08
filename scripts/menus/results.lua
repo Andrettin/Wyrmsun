@@ -66,7 +66,7 @@ function RunResultsMenu()
   c = 0
   for i=0,7 do
     if (GetPlayerData(i, "TotalUnits") > 0 and Players[i].Type ~= PlayerRescuePassive and Players[i].Type ~= PlayerRescueActive) then
-      local name = GetPlayerData(i, "Name")
+      local name = _(GetPlayerData(i, "Name"))
       if (ThisPlayer.Index == i) then
         name = name .. " - You"
       elseif (ThisPlayer:IsAllied(Players[i])) then

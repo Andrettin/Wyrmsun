@@ -1935,7 +1935,7 @@ AddTrigger(
 								{function(s)
 								Event(
 									"Durstorn",
-									"In the treasury. And leave it there until ye're ready to work with it - I still don't trust ye.",
+									"In the treasury. And leave it there until yer ready to work with it - I still don't trust ye.",
 									player,
 									{"~!Continue"},
 									{function(s)
@@ -3037,7 +3037,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"Kuhnar",
-				"Here we are; the hills of the Shorbear Clan. What are we here for, anyway?",
+				"Here we are; the hills of the Shorbear clan. What are we here for, anyway?",
 				player,
 				{"~!Continue"},
 				{function(s)
@@ -3073,7 +3073,7 @@ AddTrigger(
 									{function(s)
 									Event(
 										"Glonoin",
-										"Ye're a king?! Must be a pretty small kingdom for ye to come yerself to bargain with us!",
+										"Yer a king?! Must be a pretty small kingdom for ye to come yerself to bargain with us!",
 										player,
 										{"~!Continue"},
 										{function(s)
@@ -3193,7 +3193,7 @@ AddTrigger(
 																													{function(s)
 																													Event(
 																														"Thursagan",
-																														"Ye're making a mistake, Durstorn.",
+																														"Yer making a mistake, Durstorn.",
 																														player,
 																														{"~!Continue"},
 																														{function(s)
@@ -3337,7 +3337,7 @@ AddTrigger(
 					{function(s)
 					Event(
 						"Glonoin",
-						"So, Shinsplitters, are ye against the Norlunds too? They're attacking my clan for absolutely no reason!",
+						"So, Shinsplitters, are ye against these dwarves too? They're attacking my clan for absolutely no reason!",
 						player,
 						{"~!Continue"},
 						{function(s)
@@ -3622,7 +3622,7 @@ AddTrigger(
 							{function(s)
 								AddPlayerObjective(player, "- Move Rugnur to the northeast cave entrance")
 								AddPlayerObjective(player, "- Move the Gnomish Envoy to the southern border east of the river")
-								AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan and the Gnomish Envoy must survive")
+								AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan and the gnomish envoy must survive")
 							end}
 						)
 						end}
@@ -3666,13 +3666,13 @@ AddTrigger(
 				{function(s)
 				Event(
 					"Baglur",
-					"If ye'll permit me to say so, sir, ye're wrong. We could-",
+					"If ye'll permit me to say so, sir, yer wrong. We could-",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"Durstorn",
-						"Shut up, Baglur! Ye don't know what ye're talking about. I've analyzed the situation, and we're doomed. Our best hope is to surrender. Perhaps if we give the Shinsplitters the plans for the Scepter of Fire they will let us survive.",
+						"Shut up, Baglur! Ye don't know what yer talking about. I've analyzed the situation, and we're doomed. Our best hope is to surrender. Perhaps if we give the Shinsplitters the plans for the Scepter of Fire they will let us survive.",
 						player,
 						{"~!Continue"},
 						{function(s)
@@ -3690,7 +3690,7 @@ AddTrigger(
 								{function(s)
 								Event(
 									"Thursagan",
-									"Ye don't have authority over me, Durstorn. And I wouldn't give the Scepter to them even if ye did. It's not yers to give, it's mine, and Rugnur's, and Baglur's. The gryphon riders have done more for its existence than ye have! And yet, you still get the profits from selling it to Pypo.",
+									"Ye don't have authority over me, Durstorn. And I wouldn't give the Scepter to them even if ye did. It's not yers to give, it's mine, and Rugnur's, and Baglur's. The gryphon riders have done more for its existence than ye have! And yet, ye still get the profits from selling it to Pypo.",
 									player,
 									{"~!Continue"},
 									{function(s)
@@ -3709,13 +3709,13 @@ AddTrigger(
 											{function(s)
 											Event(
 												"Durstorn",
-												"Ye're not my ally. Ye're more against me than the Shinsplitters are; all they want is the ruby, but ye want us dead!",
+												"Yer not my ally. Yer more against me than the Shinsplitters are; all they want is the ruby, but ye want us dead!",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
 													"Rugnur",
-													"If that's what ye're thinking, ye're not fit to be ruler over us! So step down, or we'll force ye.",
+													"If that's what yer thinking, yer not fit to be ruler over us! So step down, or we'll force ye.",
 													player,
 													{"~!Continue"},
 													{function(s)
@@ -4180,7 +4180,7 @@ AddTrigger(
 	function() 
 		Event(
 			"Thursagan",
-			"What's this? These aren't normal dwarven troops!",
+			"What's this? This isn't a normal dwarven soldier!",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -4222,7 +4222,7 @@ AddTrigger(
 	function() 
 		Event(
 			"Gryphon Rider",
-			"Look! Forge here!",
+			"Look, I've found something here!",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -4857,7 +4857,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"Gryphon Rider",
-				"Hmm... I'll leave now.",
+				"Hm... I'll leave now!",
 				player,
 				{"~!Continue"},
 				{function(s)
@@ -4893,7 +4893,7 @@ AddTrigger(
 									{function(s)
 									Event(
 										"",
-										"The scepter would not be found until many generations after Pypo I, in the time of Rubezahl. During that time, it sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true power.",
+										"The scepter would not be found until many generations after Pypo I, in the time of Rubezahl. During that time, it sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true meaning.",
 										player,
 										{"~!Continue"},
 										{function(s)

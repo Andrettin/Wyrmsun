@@ -48,6 +48,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added germanic wooden oblong shield icon (by Leo).
 - Fixed error which was making special characters not appear correctly, and updated texts accordingly.
 - Added germanic stand ground icon (by Leo).
+- The player now receives a message if they receive a new objective.
 
 * Quests
 - Added On the Vanaquisl quest.

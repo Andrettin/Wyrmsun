@@ -33,11 +33,11 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-kobold-footpad", { Name = "Kobold Footpad",
+DefineUnitType("unit-kobold-footpad", { Name = _("Kobold Footpad"),
 	Class = "infantry",
 	Civilization = "kobold",
 	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},
-	Description = "Stealthy and fierce, kobold footpads are the warriors of their race. They roam the tunnels of Nidavellir, abhorring to fight in the open. They call their swords \"fangs\" in homage to the power of a wyrm's bite.",
+	Description = _("Stealthy and fierce, kobold footpads are the warriors of their race. They roam the tunnels of Nidavellir, abhorring to fight in the open. They call their swords \"fangs\" in homage to the power of a wyrm's bite."),
 	Animations = "animations-goblin-spearman", Icon = "icon-kobold-footpad",
 	Costs = {"time", 60, "gold", 600},
 	Speed = 10,

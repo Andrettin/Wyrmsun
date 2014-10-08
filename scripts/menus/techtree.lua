@@ -72,7 +72,7 @@ function RunTechTreeMenu(civilization_number)
 		tech_points = tech_points - GetTechnologyPointCost(civilization, wyr.preferences.TechnologyAcquired[i])
 	end
 	
-	menu:addLabel("Technology Points: " .. tech_points, 80 + 32, offy + 212 + (36 * 4))
+	menu:addLabel(_("Technology Points: ") .. tech_points, 80 + 32, offy + 212 + (36 * 4))
 
 	function addTechItemIcon(unit, menu, techicon_graphics, tech_description, x, y, playercolor)
 		local techicon

@@ -1103,7 +1103,7 @@ function RunSinglePlayerGameMenu()
   end
 
   function CivilizationChanged()
-    faction_list = {"Map Default"}
+    faction_list = {_("Map Default")}
     if (race:getSelected() == 1) then
 	    for i=1,table.getn(GetCivilizationFactions("dwarf")) do
 	      table.insert(faction_list, _(GetCivilizationFactions("dwarf")[i]))
