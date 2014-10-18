@@ -248,8 +248,8 @@ unit = CreateUnit("unit-gold-mine", 15, {8, 54}) -- gold mine for the Vanaland s
 SetResourcesHeld(unit, 100000)
 
 unit = CreateUnit("unit-dwarven-town-hall", 1, {14, 50})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {16, 56})
-unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {25, 54})
+unit = CreateUnit("unit-germanic-farm", 1, {16, 56})
+unit = CreateUnit("unit-germanic-farm", 1, {25, 54})
 unit = CreateUnit("unit-dwarven-axefighter", 1, {15, 51})
 unit = CreateUnit("unit-dwarven-axefighter", 1, {15, 51})
 unit = CreateUnit("unit-dwarven-axefighter", 1, {15, 51})

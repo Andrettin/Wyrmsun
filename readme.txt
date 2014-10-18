@@ -36,12 +36,16 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.1
 -----------------------------------------------------------------------
 
+* Buildings
+- Added germanic farm (graphics by Jinn).
+
 * Civilizations
 - Added Germanic civilization (human).
 
 * Maps
 - Added Don Basin map (Earth), based on the Europe map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Added Jutland map (Earth), based on the Scandinavia map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- Goblin banners are now placed in the entrances to the goblin settlements of players 5 and 6.
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
@@ -49,13 +53,25 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed error which was making special characters not appear correctly, and updated texts accordingly.
 - Added germanic stand ground icon (by Leo).
 - The player now receives a message if they receive a new objective.
+- Added germanic arrow icon (by Leo).
+- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol and the Völundarkvitha to the encyclopedia texts (The Poetic Edda).
+- Added the  to the encyclopedia texts (The Poetic Edda).
+- A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
+- Encyclopedia pages can now have quotes which are relevant to the entry.
+- Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smith, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.
+- Tech tree code made more dynamic to support multiple civilizations without significant extra coding being necessary for each of them.
 
 * Quests
 - Added On the Vanaquisl quest.
 
+* Units
+- Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
+- The Goblin Impaler is now called simply "Impaler", and the same was done to other similar cases.
+
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
 - Added germanic broad sword upgrade (graphics by Leo).
+- Added germanic barbed arrow upgrade (graphics by Leo).
 
 -----------------------------------------------------------------------
 - 1.0.0

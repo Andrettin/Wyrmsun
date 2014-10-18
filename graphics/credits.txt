@@ -199,6 +199,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/throwing_axe_3.png
 /graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
 /graphics/elf/icons/elven_swordsman.png
+/graphics/germanic/buildings/farm.png
 /graphics/gnome/buildings/barracks.png
 /graphics/gnome/buildings/farm.png
 /graphics/gnome/buildings/town_hall.png
@@ -444,6 +445,8 @@ Leo:
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png
 /graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
+/graphics/germanic/icons/arrow.png
+/graphics/germanic/icons/barbed_arrow.png
 /graphics/germanic/icons/broad_sword.png
 /graphics/germanic/icons/bronze_shield.png
 /graphics/germanic/icons/short_sword.png
@@ -451,6 +454,7 @@ Leo:
 /graphics/germanic/icons/short_sword_extra_2.png
 /graphics/germanic/icons/stand_ground.png
 /graphics/germanic/icons/wooden_oblong_shield.png
+/graphics/germanic/icons/worker.png
 /graphics/gnome/icons/boots.png
 /graphics/gnome/icons/boots_fur.png
 /graphics/gnome/icons/thrusting_sword_1.png
@@ -471,6 +475,7 @@ Leo:
 /graphics/neutral/icons/wyrm_vicious.png
 /graphics/neutral/icons/wyrm_vicious_light_green_scales.png
 /graphics/neutral/icons/wyrm_yellow_scales.png
+/graphics/ui/germanic/cursors/germanic_hand.png
 
 Mikodrak:
 /graphics/missiles/big_fire.png (later modified by Jinn)

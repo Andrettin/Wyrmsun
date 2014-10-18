@@ -137,7 +137,7 @@ local dpanels = {
 function panel(n)
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 		return dpanels[n]
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+	else
 		return dpanels[n]
 	end
 end
@@ -975,6 +975,8 @@ function RunSinglePlayerGameMenu()
         PlayerFaction = ""
       elseif (race:getSelected() == 1) then
         PlayerFaction = GetCivilizationFactions("dwarf")[faction:getSelected()]
+      elseif (race:getSelected() == 1) then
+        PlayerFaction = GetCivilizationFactions("germanic")[faction:getSelected()]
       end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
@@ -1004,7 +1006,7 @@ function RunSinglePlayerGameMenu()
   scenario:setSize(152, 20)
 
   menu:addLabel(_("~<Your Civilization:~>"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-  race = menu:addDropDown({_("Map Default"), _("Dwarf")}, offx + 40, offy + 10 + 180,
+  race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, offx + 40, offy + 10 + 180,
     function(dd) CivilizationChanged() end)
   race:setSize(152, 20)
 
@@ -1107,6 +1109,10 @@ function RunSinglePlayerGameMenu()
     if (race:getSelected() == 1) then
 	    for i=1,table.getn(GetCivilizationFactions("dwarf")) do
 	      table.insert(faction_list, _(GetCivilizationFactions("dwarf")[i]))
+	    end
+    elseif (race:getSelected() == 2) then
+	    for i=1,table.getn(GetCivilizationFactions("germanic")) do
+	      table.insert(faction_list, _(GetCivilizationFactions("germanic")[i]))
 	    end
     end
     faction:setList(faction_list)

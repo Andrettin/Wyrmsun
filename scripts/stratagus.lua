@@ -961,6 +961,18 @@ function GetNumRivals(player)
 	return rival_count
 end
 
+function GetNumAllies(player)
+	local ally_count = 0
+	for i=0,14 do
+		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and Players[player]:IsAllied(Players[i]) and Players[i]:IsAllied(Players[player])) then
+			if (GetPlayerData(i, "TotalNumUnits") > 0) then
+				ally_count = ally_count + 1
+			end
+		end
+	end
+	return ally_count
+end
+
 function GetNumPlayers()
 	local player_count = 0
 	for i=0,14 do
@@ -1147,8 +1159,8 @@ function AddPlayerObjective(player, objective)
 	for key, value in pairs(CustomPlayerData) do
 		if (CustomPlayerData[key].Number == player) then
 			if (player == GetThisPlayer()) then
+				AddMessage(_("New Objective: ") .. _(objective))
 			end
-			AddMessage(_("New Objective: ") .. _(objective))
 			table.insert(CustomPlayerData[key].Objectives, objective)
 		end
 	end
@@ -1323,9 +1335,13 @@ local defaultPreferences = {
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
+		"unit-germanic-worker", "unit-germanic-warrior",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall",
+		"unit-kobold-footpad"
 	},
 	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",

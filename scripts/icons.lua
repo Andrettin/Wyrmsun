@@ -70,6 +70,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-worker",
+	Size = {46, 38},
+	File = "germanic/icons/worker.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-farm",
+	Size = {46, 38},
+	File = "germanic/icons/farm.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-short-sword",
 	Size = {46, 38},
 	File = "germanic/icons/short_sword.png"
@@ -91,6 +103,18 @@ DefineIcon({
 	Name = "icon-germanic-bronze-shield",
 	Size = {46, 38},
 	File = "germanic/icons/bronze_shield.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-arrow",
+	Size = {46, 38},
+	File = "germanic/icons/arrow.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-barbed-arrow",
+	Size = {46, 38},
+	File = "germanic/icons/barbed_arrow.png"
 })
 
 DefineIcon({

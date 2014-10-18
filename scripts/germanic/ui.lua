@@ -30,9 +30,9 @@
 DefineCursor({
   Name = "cursor-point",
   Race = "germanic",
-  File = "ui/dwarf/cursors/dwarven_gauntlet.png",
+  File = "ui/germanic/cursors/germanic_hand.png",
   HotSpot = { 3,  2},
-  Size = {28, 32}})
+  Size = {29, 32}})
 DefineCursor({
   Name = "cursor-green-hair",
   Race = "germanic",

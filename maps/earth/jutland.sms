@@ -130,19 +130,19 @@ SetStartView(0, 26, 89) -- Saxons
 SetPlayerData(0, "Resources", "gold", 2000)
 SetPlayerData(0, "Resources", "lumber", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
-SetPlayerData(0, "RaceName", "dwarf")
+SetPlayerData(0, "RaceName", "germanic")
 SetAiType(0, "land-attack")
 SetStartView(1, 27, 44) -- Jutland (pre-Indo-European) natives / Denmark
 SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
-SetPlayerData(1, "RaceName", "dwarf")
+SetPlayerData(1, "RaceName", "germanic")
 SetAiType(1, "land-attack")
 SetStartView(4, 44, 85) -- Germanics / Hanseatic League
 SetPlayerData(4, "Resources", "gold", 2000)
 SetPlayerData(4, "Resources", "lumber", 1000)
 SetPlayerData(4, "Resources", "oil", 0)
-SetPlayerData(4, "RaceName", "dwarf")
+SetPlayerData(4, "RaceName", "germanic")
 SetAiType(4, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
@@ -154,8 +154,8 @@ SetResourcesHeld(unit, 100000)
 
 -- unit = CreateUnit("unit-dwarven-town-hall", 0, {25, 88}) -- saxon town hall
 
-unit = CreateUnit("unit-dwarven-miner", 1, {27, 44})
+unit = CreateUnit("unit-germanic-worker", 1, {27, 44})
 
-unit = CreateUnit("unit-dwarven-miner", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

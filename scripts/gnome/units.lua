@@ -33,7 +33,7 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-gnomish-worker", { Name = _("Gnomish Scavenger"),
+DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Class = "worker",
 	Civilization = "gnome",
 	Description = _("Scavengers serve as the main source of manual labor in the gnomish lands."),
@@ -94,7 +94,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Gnomish Scavenger"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-gnomish-recruit", { Name = _("Gnomish Recruit"),
+DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Class = "infantry",
 	Civilization = "gnome",
 	Description = _("Gnomish recruits form the common soldiery of the gnomish armies. Due to their small size, they tend to attack by thrusting their swords, rather than slashing with them, seeking to strike vital points and cause more damage than their strength would allow when hacking away at enemies."),
@@ -127,7 +127,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Gnomish Recruit"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-gnomish-caravan", { Name = _("Gnomish Caravan"),
+DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Civilization = "gnome",
 	Description = _("These caravans are used by gnomish societies to conduct trade, bringing goods as far as the Heart Mountains."),
 	Image = {"file", "gnome/units/gnomish_caravan.png", "size", {64, 64}},

@@ -31,33 +31,41 @@ local upgrades = {
 	{"upgrade-dwarven-broad-axe", _("Broad Axe"), "icon-dwarven-axe-2", "melee-weapon-1",
 		_("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads and Thanes."),
 		"",
+		"",
 		{   200,   500,   100,     0,     0,     0,     0}},
 	{"upgrade-dwarven-great-axe", _("Great Axe"), "icon-dwarven-axe-3", "melee-weapon-2",
 		_("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads and Thanes."),
+		"",
 		"",
 		{   250,  1500,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-shield-1", _("Heater Shield"), "icon-dwarven-shield-2", "bronze-shield",
 		_("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads and Thanes."),
 		"",
+		"",
 		{   200,   300,   300,     0,     0,     0,     0}},
 	{"upgrade-dwarven-shield-2", _("Thrymgjol Shield"), "icon-dwarven-shield-3", "iron-shield",
 		_("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads and Thanes."),
-		_("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology."),
+		_("The Warder: \"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry"),
+		_("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
 		{   250,   900,   500,     0,     0,     0,     0}},
-	{"upgrade-dwarven-throwing-axe-1", _("Sharp Throwing Axe"), "icon-dwarven-throwing-axe-2", "ranged-projectiles-1",
+	{"upgrade-dwarven-throwing-axe-1", _("Sharp Throwing Axe"), "icon-dwarven-throwing-axe-2", "ranged-projectile-1",
 		_("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts, Gryphon Riders and Guard Towers."),
 		"",
+		"",
 		{   200,   300,   300,     0,     0,     0,     0}},
-	{"upgrade-dwarven-throwing-axe-2", _("Bearded Throwing Axe"), "icon-dwarven-throwing-axe-3", "ranged-projectiles-2",
+	{"upgrade-dwarven-throwing-axe-2", _("Bearded Throwing Axe"), "icon-dwarven-throwing-axe-3", "ranged-projectile-2",
 		_("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts, Gryphon Riders and Guard Towers."),
 		"",
+		"",
 		{   250,   900,   500,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-1", _("Broadhead Ballista Bolt"), "icon-dwarven-ballista-bolt-2", "siege-projectiles-1",
+	{"upgrade-dwarven-ballista-bolt-1", _("Broadhead Ballista Bolt"), "icon-dwarven-ballista-bolt-2", "siege-projectile-1",
 		_("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas."),
 		"",
+		"",
 		{   250,  1500,     0,     0,     0,     0,     0}},
-	{"upgrade-dwarven-ballista-bolt-2", _("Penetrating Ballista Bolt"), "icon-dwarven-ballista-bolt-3", "siege-projectiles-2",
+	{"upgrade-dwarven-ballista-bolt-2", _("Penetrating Ballista Bolt"), "icon-dwarven-ballista-bolt-3", "siege-projectile-2",
 		_("Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas."),
+		"",
 		"",
 		{   250,  4000,     0,     0,     0,     0,     0}},
 }
@@ -69,9 +77,10 @@ for i = 1,table.getn(upgrades) do
 	u.Class = upgrades[i][4]
 	u.Civilization = "dwarf"
 	u.Description = upgrades[i][5]
-	u.Background = upgrades[i][6]
-	for j = 1,table.getn(upgrades[i][7]) do
-		u.Costs[j - 1] = upgrades[i][7][j]
+	u.Quote = upgrades[i][6]
+	u.Background = upgrades[i][7]
+	for j = 1,table.getn(upgrades[i][8]) do
+		u.Costs[j - 1] = upgrades[i][8][j]
 	end
 end
 

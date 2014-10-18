@@ -29,13 +29,13 @@
 
 DefineRaceNames(
 	"race", {
-		"name", "germanic",
-		"display", "Germanic",
+		"name", "dwarf",
+		"display", "Dwarf",
 		"visible"
 	},
 	"race", {
-		"name", "dwarf",
-		"display", "Dwarf",
+		"name", "germanic",
+		"display", "Germanic",
 		"visible"
 	},
 	"race", {
@@ -79,9 +79,17 @@ end
 
 function GetCivilizationClassUnitType(class, civilization)
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") ~= "" and class ~= "") then
-			if (GetUnitTypeData(unitName, "Civilization") == civilization and class == GetUnitTypeData(unitName, "Class")) then
-				return unitName
+		if (string.find(unitName, "upgrade-") == nil) then
+			if (GetUnitTypeData(unitName, "Civilization") ~= "" and class ~= "") then
+				if (GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unitName, "Class") == class) then
+					return unitName
+				end
+			end
+		else
+			if (CUpgrade:Get(unitName).Civilization ~= "" and class ~= "") then
+				if (CUpgrade:Get(unitName).Civilization == civilization and CUpgrade:Get(unitName).Class == class) then
+					return unitName
+				end
 			end
 		end
 	end
@@ -163,9 +171,11 @@ function SetPlayerData(player, data, arg1, arg2)
 			if (GameSettings.Presets[player].Race == 1) then
 				arg1 = "dwarf"
 			elseif (GameSettings.Presets[player].Race == 2) then
-				arg1 = "gnome"
-			elseif (GameSettings.Presets[player].Race == 3) then
-				arg1 = "goblin"
+				arg1 = "germanic"
+--			elseif (GameSettings.Presets[player].Race == 3) then
+--				arg1 = "gnome"
+--			elseif (GameSettings.Presets[player].Race == 4) then
+--				arg1 = "goblin"
 			end
 		end
 		

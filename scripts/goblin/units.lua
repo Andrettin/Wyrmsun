@@ -33,7 +33,7 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-goblin-worker", { Name = _("Goblin Worker"),
+DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	Class = "worker",
 	Civilization = "goblin",
 	Description = _("Goblin workers do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding."),
@@ -90,7 +90,7 @@ DefineUnitType("unit-goblin-worker", { Name = _("Goblin Worker"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-goblin-voices-dead"} } )
 
-DefineUnitType("unit-goblin-spearman", { Name = _("Goblin Impaler"),
+DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Class = "infantry",
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
@@ -124,7 +124,7 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Goblin Impaler"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-goblin-voices-dead"} } )
 
-DefineUnitType("unit-goblin-archer", { Name = _("Goblin Archer"),
+DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	Class = "archer",
 	Civilization = "goblin",
 	Description = _("Swift and deadly, the goblin archers hone above all the art of the ambush. Wary of being caught unprepared, they carry daggers with them, should an enemy get too close."),
@@ -194,7 +194,7 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 		"dead", "explosion"
 } } )
 
-DefineUnitType("unit-goblin-glider", { Name = _("Goblin Glider"),
+DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	Class = "glider",
 	Civilization = "goblin",
 	Description = _("A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions."),

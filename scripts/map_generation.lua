@@ -1075,6 +1075,9 @@ function CreatePlayers()
 			if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf"))) then
 				table.insert(possible_civilizations, "dwarf")
 			end
+			if (GetNumCivilizationPlayers("germanic") < table.getn(GetCivilizationFactions("germanic"))) then
+				table.insert(possible_civilizations, "germanic")
+			end
 			if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled")) then
 				table.insert(possible_civilizations, "gnome")
 			end

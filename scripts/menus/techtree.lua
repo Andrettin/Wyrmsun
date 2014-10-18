@@ -44,7 +44,7 @@ function RunTechTreeMenu(civilization_number)
 --	local button_quantity = 0
 
 	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
-	civilization_dd = menu:addDropDown({_("Dwarf")}, offx + 244, offy + 10 + 15,
+	civilization_dd = menu:addDropDown({_("Dwarf"), _("Human - Germanic")}, offx + 244, offy + 10 + 15,
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
 	civilization_dd:setSelected(civilization_number)
 	civilization_dd:setSize(152, 20)
@@ -74,7 +74,20 @@ function RunTechTreeMenu(civilization_number)
 	
 	menu:addLabel(_("Technology Points: ") .. tech_points, 80 + 32, offy + 212 + (36 * 4))
 
-	function addTechItemIcon(unit, menu, techicon_graphics, tech_description, x, y, playercolor)
+	function addTechItemIcon(unit, menu, x, y, playercolor)
+		local unit_name = ""
+		local techicon_graphics
+		local tech_description
+		if (string.find(unit, "upgrade-") == nil) then
+			unit_name = GetUnitTypeName(unit)
+			tech_description = GetUnitTypeData(unit, "Description")
+			techicon_graphics = CIcon:Get(GetUnitTypeData(unit, "Icon")).G:getFile()
+		else
+			unit_name = CUpgrade:Get(unit).Name
+			tech_description = CUpgrade:Get(unit).Description
+			techicon_graphics = CUpgrade:Get(unit).Icon.G:getFile()
+		end
+		techicon_graphics = string.sub(techicon_graphics, 0, -5)
 		local techicon
 		local b
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit)) then
@@ -91,12 +104,6 @@ function RunTechTreeMenu(civilization_number)
 				local tech_menu = WarGameMenu(panel(5))
 				tech_menu:setSize(352, 352)
 				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
-				local unit_name = ""
-				if (string.find(unit, "upgrade-") == nil) then
-					unit_name = GetUnitTypeName(unit)
-				else
-					unit_name = CUpgrade:Get(unit).Name
-				end
 				tech_menu:addLabel(unit_name, 176, 11)
 				local tech_menu_image = ImageWidget(techicon)
 				tech_menu:add(tech_menu_image, 153, 48)
@@ -138,86 +145,128 @@ function RunTechTreeMenu(civilization_number)
 	local playercolor
 	if (civilization == "dwarf") then
 		playercolor = "red"
-		addTechItemIcon("unit-dwarven-miner", menu, "dwarf/icons/miner",
-			GetUnitTypeData("unit-dwarven-miner", "Description"),
-			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 1), playercolor)
-		addTechItemIcon("unit-dwarven-town-hall", menu, "dwarf/icons/town_hall",
-			GetUnitTypeData("unit-dwarven-town-hall", "Description"),
-			offx + 23 + 4 + (54 * 5), offy + 10 + 4 + (46 * 2), playercolor)
-		addTechItemIcon("unit-dwarven-mushroom-farm", menu, "dwarf/icons/mushroom_farm",
-			GetUnitTypeData("unit-dwarven-mushroom-farm", "Description"),
-			offx + 23 + 4 + (54 * 6), offy + 10 + 4 + (46 * 2), playercolor)
-		addTechItemIcon("unit-dwarven-barracks", menu, "dwarf/icons/barracks",
-			GetUnitTypeData("unit-dwarven-barracks", "Description"),
-			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 2), playercolor)
-		addTechItemIcon("unit-dwarven-axefighter", menu, "dwarf/icons/dwarven_axefighter",
-			GetUnitTypeData("unit-dwarven-axefighter", "Description"),
-			offx + 23 + 4 + (54 * 4), offy + 10 + 4 + (46 * 3), playercolor)
-		addTechItemIcon("unit-dwarven-lumber-mill", menu, "tilesets/swamp/dwarf/icons/lumber_mill",
-			GetUnitTypeData("unit-dwarven-lumber-mill", "Description"),
-			offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 2), playercolor)
-		addTechItemIcon("unit-dwarven-smith", menu, "dwarf/icons/smith",
-			GetUnitTypeData("unit-dwarven-smith", "Description"),
-			offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 2), playercolor)
-		addTechItemIcon("unit-dwarven-sentry-tower", menu, "tilesets/swamp/dwarf/icons/sentry_tower",
-			GetUnitTypeData("unit-dwarven-sentry-tower", "Description"),
-			offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 2), playercolor)
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
-			addTechItemIcon("unit-dwarven-guard-tower", menu, "tilesets/swamp/dwarf/icons/guard_tower",
-				GetUnitTypeData("unit-dwarven-guard-tower", "Description"),
-				offx + 23 + 4 + (54 * 7), offy + 10 + 4 + (46 * 3), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill")) then
-			addTechItemIcon("unit-dwarven-scout", menu, "dwarf/icons/dwarven_scout",
-				GetUnitTypeData("unit-dwarven-scout", "Description"),
-				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 3), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-scout")) then
-			addTechItemIcon("upgrade-dwarven-throwing-axe-1", menu, "dwarf/icons/throwing_axe_2",
-				CUpgrade:Get("upgrade-dwarven-throwing-axe-1").Description,
-				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 4), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
-			addTechItemIcon("upgrade-dwarven-throwing-axe-2", menu, "dwarf/icons/throwing_axe_3",
-				CUpgrade:Get("upgrade-dwarven-throwing-axe-2").Description,
-				offx + 23 + 4 + (54 * 3), offy + 10 + 4 + (46 * 5), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-smith")) then
-			addTechItemIcon("upgrade-dwarven-broad-axe", menu, "dwarf/icons/axe_2",
-				CUpgrade:Get("upgrade-dwarven-broad-axe").Description,
-				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 3), playercolor)
-
-			addTechItemIcon("upgrade-dwarven-shield-1", menu, "dwarf/icons/shield_2",
-				CUpgrade:Get("upgrade-dwarven-shield-1").Description,
-				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 3), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-broad-axe")) then
-			addTechItemIcon("upgrade-dwarven-great-axe", menu, "dwarf/icons/axe_3",
-				CUpgrade:Get("upgrade-dwarven-great-axe").Description,
-				offx + 23 + 4 + (54 * 2), offy + 10 + 4 + (46 * 4), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-shield-1")) then
-			addTechItemIcon("upgrade-dwarven-shield-2", menu, "dwarf/icons/shield_3",
-				CUpgrade:Get("upgrade-dwarven-shield-2").Description,
-				offx + 23 + 4 + (54 * 1), offy + 10 + 4 + (46 * 4), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-lumber-mill") and GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-smith")) then
-			addTechItemIcon("unit-dwarven-ballista", menu, "tilesets/swamp/dwarf/icons/dwarven_ballista",
-				GetUnitTypeData("unit-dwarven-ballista", "Description"),
-				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 3), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-ballista")) then
-			addTechItemIcon("upgrade-dwarven-ballista-bolt-1", menu, "dwarf/icons/ballista_bolt_2",
-				CUpgrade:Get("upgrade-dwarven-ballista-bolt-1").Description,
-				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 4), playercolor)
-		end
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-ballista-bolt-1")) then
-			addTechItemIcon("upgrade-dwarven-ballista-bolt-2", menu, "dwarf/icons/ballista_bolt_3",
-				CUpgrade:Get("upgrade-dwarven-ballista-bolt-2").Description,
-				offx + 23 + 4 + (54 * 0), offy + 10 + 4 + (46 * 5), playercolor)
-		end
+	elseif (civilization == "germanic") then
+		playercolor = "orange"
 	end
 
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil) then
+			if (GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unitName, "Class") ~= "") then
+				local tech_icon_x = 0
+				local tech_icon_y = 0
+				local tech_allowed = true
+				if (GetUnitTypeData(unitName, "Class") == "worker") then
+					tech_icon_x = 5
+					tech_icon_y = 1
+				elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
+					tech_icon_x = 4
+					tech_icon_y = 3
+				elseif (GetUnitTypeData(unitName, "Class") == "archer") then
+					tech_icon_x = 3
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
+						tech_allowed = false
+					end
+				elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
+					tech_icon_x = 0
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smith", civilization))) then
+						tech_allowed = false
+					end
+				elseif (GetUnitTypeData(unitName, "Class") == "town-hall") then
+					tech_icon_x = 5
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "farm") then
+					tech_icon_x = 6
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
+					tech_icon_x = 4
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill") then
+					tech_icon_x = 3
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "smith") then
+					tech_icon_x = 2
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
+					tech_icon_x = 7
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "guard-tower") then
+					tech_icon_x = 7
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("watch-tower", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
+						tech_allowed = false
+					end
+				else
+					tech_allowed = false
+				end
+				if (tech_allowed) then
+					addTechItemIcon(unitName, menu, offx + 23 + 4 + (54 * tech_icon_x), offy + 10 + 4 + (46 * tech_icon_y), playercolor)
+				end
+			end
+		else
+			if (CUpgrade:Get(unitName).Civilization == civilization and CUpgrade:Get(unitName).Class ~= "") then
+				local tech_icon_x = 0
+				local tech_icon_y = 0
+				local tech_allowed = true
+				if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
+					tech_icon_x = 2
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smith", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "melee-weapon-2") then
+					tech_icon_x = 2
+					tech_icon_y = 4
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("melee-weapon-1", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "bronze-shield") then
+					tech_icon_x = 1
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smith", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "iron-shield") then
+					tech_icon_x = 1
+					tech_icon_y = 4
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("bronze-shield", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-1") then
+					tech_icon_x = 3
+					tech_icon_y = 4
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("archer", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("guard-tower", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-2") then
+					tech_icon_x = 3
+					tech_icon_y = 5
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("ranged-projectile-1", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "siege-projectile-1") then
+					tech_icon_x = 0
+					tech_icon_y = 4
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-engine", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "siege-projectile-2") then
+					tech_icon_x = 0
+					tech_icon_y = 5
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-projectile-1", civilization))) then
+						tech_allowed = false
+					end
+				else
+					tech_allowed = false
+				end
+				if (tech_allowed) then
+					addTechItemIcon(unitName, menu, offx + 23 + 4 + (54 * tech_icon_x), offy + 10 + 4 + (46 * tech_icon_y), playercolor)
+				end
+			end
+		end
+	end
+	
 	menu:addFullButton(_("~!Reset Tech Tree"), "r", offx + 208, offy + 212 + (36 * 5),
 		function()
 			ResetTechnologiesAcquired()
@@ -232,9 +281,13 @@ end
 
 function ResetTechnologiesAcquired()
 	wyr.preferences.TechnologyAcquired = {
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+		"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
+		"unit-germanic-worker", "unit-germanic-warrior",
+		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall"
+		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall",
+		"unit-kobold-footpad"
 	}
 	SavePreferences()
 end
@@ -254,6 +307,8 @@ end
 
 function GetTechnologyPointCost(civilization, technology)
 	if (civilization == "dwarf" and string.find(technology, "dwarven-") ~= nil) then
+		return 1
+	elseif (civilization == "germanic" and string.find(technology, "germanic-") ~= nil) then
 		return 1
 	else
 		return 0

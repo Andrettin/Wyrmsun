@@ -299,11 +299,13 @@ MakeSound("slime-dead", "neutral/squishy_death.wav")
 DefineGameSounds(
 
   "placement-error", {"dwarf", placement_error},
+  "placement-error", {"germanic", placement_error},
   "placement-error", {"gnome", placement_error},
   "placement-error", {"goblin", placement_error},
   "placement-error", {"kobold", placement_error},
 
   "placement-success", {"dwarf", placement_success},
+  "placement-success", {"germanic", placement_success},
   "placement-success", {"gnome", placement_success},
   "placement-success", {"goblin", placement_success},
   "placement-success", {"kobold", placement_success},
@@ -313,6 +315,7 @@ DefineGameSounds(
   "chat-message", sound_click,
 
   "building-construction", {"dwarf", building_construction},
+  "building-construction", {"germanic", building_construction},
   "building-construction", {"gnome", building_construction},
   "building-construction", {"goblin", building_construction},
   "building-construction", {"kobold", building_construction},
@@ -320,6 +323,7 @@ DefineGameSounds(
 --  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
 
   "rescue", {"dwarf", rescue},
+  "rescue", {"germanic", rescue},
   "rescue", {"gnome", rescue},
   "rescue", {"goblin", rescue},
   "rescue", {"kobold", rescue}

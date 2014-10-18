@@ -30,9 +30,9 @@
 function AddSoundOptions(menu, offx, offy, centerx, bottom)
   local b
 
-  b = menu:addLabel("Sound Options", 176, 11)
+  b = menu:addLabel(_("Sound Options"), 176, 11)
 
-  b = Label("Effects Volume")
+  b = Label(_("Effects Volume"))
   b:setFont(CFont:Get("game"))
   b:adjustSize();
   menu:add(b, offx + 16, offy + 36 * 1)
@@ -220,8 +220,8 @@ function BuildOptionsMenu()
   local resolution_width = Video.Width
   local resolution_height = Video.Height
 
-  menu:addLabel("Global Options", offx + 176, offy + 1)
-  menu:addLabel("Resolution Width", offx + 8, offy + 34, Fonts["game"], false)
+  menu:addLabel(_("Options"), offx + 176, offy + 1)
+  menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
   resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}, offx + 8, offy + 55 + 26*0,
     function(dd)
     	if (resolution_width_list:getSelected() == 0) then
@@ -266,7 +266,7 @@ function BuildOptionsMenu()
     	resolution_width_list:setSelected(8)
   end
 
-  menu:addLabel("Resolution Height", offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
+  menu:addLabel(_("Resolution Height"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
   resolution_height_list = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + 16 + 152 + 24, offy + 55 + 26*0,
     function(dd)
     	if (resolution_height_list:getSelected() == 0) then
@@ -304,7 +304,7 @@ function BuildOptionsMenu()
   end
 
 --[[
-  menu:addLabel("Language", offx + 8, offy + 34 + 26*2, Fonts["game"], false)
+  menu:addLabel(_("Language"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
 
   language_list = menu:addDropDown({"English", "French", "German", "Portuguese"}, offx + 8, offy + 55 + 26*2,
     function(dd)
@@ -340,7 +340,7 @@ function BuildOptionsMenu()
   end
 --]]
 
-  b = menu:addImageCheckBox("Full Screen", offx + 16, offy + 55 + 26*10 + 14,
+  b = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*10 + 14,
     function()
       ToggleFullScreen()
       wyr.preferences.VideoFullScreen = Video.FullScreen
@@ -349,7 +349,7 @@ function BuildOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
 
-  b = menu:addImageCheckBox("Disable Pathlines", offx + 16, offy + 55 + 26*9 + 14,
+  b = menu:addImageCheckBox(_("Disable Pathlines"), offx + 16, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowOrders == 2) then
 		wyr.preferences.ShowOrders = 0
@@ -361,7 +361,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowOrders == 0) then b:setMarked(true) end
 
-  b = menu:addImageCheckBox("Disable Messages", offx + 160 + 24, offy + 55 + 26*9 + 14,
+  b = menu:addImageCheckBox(_("Disable Messages"), offx + 160 + 24, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowMessages) then
 		wyr.preferences.ShowMessages = false
@@ -373,7 +373,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-  checkTexture = menu:addImageCheckBox("Set Maximum OpenGL Texture to 256", offx + 160 + 24, offy + 55 + 26*10 + 14,
+  checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 160 + 24, offy + 55 + 26*10 + 14,
     function()
       if (checkTexture:isMarked()) then
         wyr.preferences.MaxOpenGLTexture = 256
@@ -385,7 +385,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.MaxOpenGLTexture == 128) then checkTexture:setMarked(true) end
 
-  checkOpenGL = menu:addImageCheckBox("Use OpenGL / OpenGL ES 1.1 (restart required)", offx + 16, offy + 55 + 26*11 + 14,
+  checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*11 + 14,
     function()
 --TODO: Add function for immediately change state of OpenGL
       wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
@@ -395,7 +395,7 @@ function BuildOptionsMenu()
   checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
 --  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
 
-  menu:addHalfButton("~!OK", "o", offx + 123, offy + 55 + 26*12 + 14, function()
+  menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 	SavePreferences()
 	Load("scripts/units.lua")
   	menu:stop()

@@ -33,7 +33,7 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-kobold-footpad", { Name = _("Kobold Footpad"),
+DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	Class = "infantry",
 	Civilization = "kobold",
 	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},

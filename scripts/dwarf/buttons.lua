@@ -47,6 +47,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
+	"unit-germanic-worker",
 	"unit-critter", "unit-gryphon", "unit-wyrm",
 	"dwarf-group"} } )
 
@@ -122,8 +123,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
 	"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
-	"unit-dwarven-guard-tower",
-	"unit-goblin-archer"
+	"unit-dwarven-guard-tower"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
@@ -214,7 +214,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-return-goods",
   Action = "return-goods",
   Key = "g", Hint = _("Return with ~!Goods"),
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker" } } )
+  ForUnit = {"unit-dwarven-miner", "unit-germanic-worker", "unit-gnomish-worker", "unit-goblin-worker" } } )
 
 -- build basic/advanced structs -----------------------------------------------
 

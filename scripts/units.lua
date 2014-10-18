@@ -30,8 +30,10 @@
 UnitTypeFiles = {}
 
 Units = {
-	"upgrade-germanic-broad-sword",
-	"upgrade-germanic-bronze-shield",
+	"unit-germanic-worker",
+	"unit-germanic-farm",
+	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
+	"upgrade-germanic-barbed-arrow",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smith",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
@@ -40,7 +42,7 @@ Units = {
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 	"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-	"unit-gnomish-worker", "unit-gnomish-recruit",
+	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
 	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smith",
 	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-kobold-footpad",
@@ -177,6 +179,7 @@ DefineUnitType("unit-critter", { Name = "Critter",
 
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Description = _("Amongst the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. It is unknown if the wild gryphons are the descendants of gryphons who avoided domestication, or if descend from gryphons escaped from captivity who managed to survive on their own. Not coincidentally, the Gryphon Mountain is the greatest nesting area for wild gryphons."),
+	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
 	DrawLevel = 45,
 	Animations = "animations-gryphon", Icon = "icon-gryphon",
@@ -225,6 +228,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 
 DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Description = _("These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds."),
+	Quote = _("\"More wyrms there are | beneath the ash / Than an unwise ape would think; / Goin and Moin, | Grafvitnir's sons, / Grabak and Grafvolluth, / Ofnir and Svafnir | shall ever, methinks, / Gnaw at the twigs of the tree.\" - Dwarven Traditional Poetry"),
 	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
 	Animations = "animations-wyrm", Icon = "icon-wyrm",
@@ -1569,7 +1573,7 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-elven-swordsman", { Name = "Elven Swordsman",
+DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 	Class = "infantry",
 	Civilization = "elf",
 	Description = _("Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield."),
@@ -1603,7 +1607,7 @@ DefineUnitType("unit-elven-swordsman", { Name = "Elven Swordsman",
 	}
 } )
 
-DefineUnitType("unit-orc-spearthrower", { Name = "Orc Spearthrower",
+DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
 	Class = "archer",
 	Civilization = "orc",
 	Description = _("Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone."),
@@ -1636,7 +1640,7 @@ DefineUnitType("unit-orc-spearthrower", { Name = "Orc Spearthrower",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-orc-sea-orc", { Name = "Sea Orc",
+DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 	Class = "marine-infantry",
 	Civilization = "orc",
 	Description = _("While often viewed as inferior to their land-loving counterparts, sea orcs represent a great leap for all orcs as they have adapted to aquatic environments. These orcs use their ships to raid the coasts of the Eelhome Sea. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness."),
@@ -1670,7 +1674,7 @@ DefineUnitType("unit-orc-sea-orc", { Name = "Sea Orc",
 	}
 } )
 
-DefineUnitType("unit-orc-shaman", { Name = "Orc Shaman",
+DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
 	Class = "priest",
 	Civilization = "orc",
 	Description = _("Orc shamans are the guardians of orcish magic. Respected among orcish tribes, they form the Orcish Council, which makes important decisions for the whole orcish community and arbitrates the many conflicts that arise between tribes of this argumentative race."),
@@ -1704,7 +1708,7 @@ DefineUnitType("unit-orc-shaman", { Name = "Orc Shaman",
 	}
 } )
 
-DefineUnitType("unit-water-elemental", { Name = "Water Elemental",
+DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
 	Description = _("These creatures inhabit the warmer parts of the world of Niflheim. Although in many respects they act like a living being, they seem to be nearly entirely made out of water, putting in doubt just what they really are."),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-water-elemental",
@@ -1741,11 +1745,12 @@ GrandStrategyHeroes = {}
 
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")
+Load("scripts/germanic/units.lua")
 Load("scripts/gnome/units.lua")
 Load("scripts/goblin/units.lua")
 Load("scripts/kobold/units.lua")
 
-DefineUnitType("unit-human-wall", { Name = "Wall",
+DefineUnitType("unit-human-wall", { Name = _("Wall"),
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
 	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
 	Costs = {"time", 30, "gold", 20, "lumber", 10},

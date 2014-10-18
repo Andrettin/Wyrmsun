@@ -21,8 +21,179 @@ msgstr "Zwerg"
 msgid "Mead Hall"
 msgstr "Methalle"
 
+msgid "Miner"
+msgstr "Bergmann"
+
+msgid ""
+"Dwarven miners are the grunt workers of dwarven society. They take the "
+"precious ores out of the ground, but do not ever take part in the crafting "
+"of weapons or artifacts. "
+"Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of other resources."
+msgstr ""
+"Bergmänner sind die Knechte des Volkes der Zwerge. Sie holen die "
+"Kostbarkeiten aus dem Gestein, schmieden allerdings nie Waffen oder "
+"Artefakte. Weil sie viel Zeit im Bergbau Ausbildung verwenden, müssen sie die Ausbildung in der Extraktion der anderen Rostoffen vernachlässigen."
+
+msgid "Axefighter"
+msgstr "Axtkämpfer"
+
+msgid "Steelclad"
+msgstr "Chalybter"
+
+msgid ""
+"The more experienced dwarven steelclad fighters wear heavy chain mail and "
+"plate armor, for which they are rightly famous."
+msgstr ""
+"Die erfahrenen Chalybter tragen schwere Kettenhemden und Plattenrüstungen, "
+"für die sie geradezu berühmt sind."
+
+msgid "Scout"
+msgstr "Späher"
+
+msgid ""
+"Dwarven scouts use their lighter armor to their "
+"advantage, ranging ahead of the main force and reporting back on troop "
+"movements and dispositions, or securing important objectives. Outside of "
+"battle, they are often used to relay messages between dwarven communities. "
+"However, they pay for their speed with the poorer protection provided by "
+"their lighter armor."
+msgstr ""
+"Zwergenspäher nutzen ihre höhere Beweglichkeit "
+"und spionieren Truppenbewegungen und Truppenstärke weit im "
+"feindlichen Gebiet aus oder sichern als Vorauskommando strategisch wichtige "
+"Objekte. In Zivil überbringen sie Botschaften zwischen den Stämmen. Ihre "
+"Geschwindigkeit erkaufen sie sich durch eine höhere Verletzlichkeit in der "
+"nur leichte Rüstung."
+
+msgid "Gryphon Rider"
+msgstr "Greifenreiter"
+
+msgid ""
+"Only a few are able to bond with the mighty gryphons. Those who do may "
+"become gryphon riders, and discover the world of the skies upon the backs of "
+"these flying beasts."
+msgstr ""
+"Nur wenige sind in der Lage, einen der mächtigen Greifen zu zähmen. Diese "
+"werden Greifenreiter und beherrschen mit diesen fliegenden Bestien den "
+"Himmel."
+
+msgid "Town Hall"
+msgstr "Rathaus"
+
+msgid "Kobold Footpad"
+msgstr "Koboldwegelagerer"
+
+msgid "Footpad"
+msgstr "Wegelagerer"
+
+msgid "Elven Swordsman"
+msgstr "Elfenschwertkämpfer"
+
+msgid "Swordsman"
+msgstr "Schwertkämpfer"
+
+msgid ""
+"Elves are not warlike by nature, but in times of need, their natural grace "
+"and agility serve them well, as does their skillful craftsmanship. An elf "
+"can grasp the basics of swordsmanship in a time uncannily short "
+"by the standards of other races, and put them to effective use on the "
+"battlefield."
+msgstr ""
+"Auch wenn sie das Kriegshandwerk ablehnen, wird in Zeiten der Not zu Schwert "
+"und Bogen gegriffen. Den elfischen Fußtruppen ist es durch ihre "
+"Geschicklichkeit möglich, die Grundlagen des Schwertkampfes "
+"in einer sehr kurzen Zeit zu erlernen, so dass in Windeseile "
+"eine schlagkräftige Verteidigungsarmee bereitsteht."
+
+msgid "Earth"
+msgstr "Erde"
+
 msgid "The Scepter of Fire"
 msgstr "Das Zepter des Feuers"
 
 msgid "A Bargain is Struck"
 msgstr "Ein Handel wird vereinbart"
+
+msgid "~!Single Player Game"
+msgstr "Einzel~!spieler"
+
+msgid "~!Multi Player Game"
+msgstr "~!Mehrspieler"
+
+msgid "~!Grand Strategy Game"
+msgstr "~!Großstrategiespiel"
+
+msgid "Load Game"
+msgstr "Spielstand laden"
+
+msgid "~!Load Game"
+msgstr "Spielstand ~!laden"
+
+msgid "Replay Game"
+msgstr "Wiederholung anzeigen"
+
+msgid "~!Replay Game"
+msgstr "Wiede~!rholung anzeigen"
+
+msgid "Load Mo~!d"
+msgstr "Mo~!d laden"
+
+msgid "En~!cyclopedia"
+msgstr "Enzyklopädie"
+
+msgid "~!Worlds"
+msgstr "~!Welten"
+
+msgid "~<World:~>"
+msgstr "~<Welt:~>"
+
+msgid "~<Encyclopedia: Worlds~>"
+msgstr "~<Enzyklopädie: Welten~>"
+
+msgid "~!Units"
+msgstr "Einheiten"
+
+msgid "~<Units:~>"
+msgstr "~<Einheiten:~>"
+
+msgid "~<Encyclopedia: Units~>"
+msgstr "~<Enzyklopädie: Einheiten~>"
+
+msgid "Map Default"
+msgstr "Vorgaben nutzen"
+
+msgid "Use Map Settings"
+msgstr "Vorgaben nutzen"
+
+msgid "Select Scenario"
+msgstr "Szenario auswählen"
+
+msgid "Select Game"
+msgstr "Spiel auswählen"
+
+msgid "~!Options"
+msgstr "Einstellungen"
+
+msgid "Options"
+msgstr "Einstellungen"
+
+msgid "Preferences (~<F8~>)"
+msgstr "Einstellungen (~<F8~>)"
+
+msgid "Map ~!Editor"
+msgstr "~!Editor"
+
+msgid "E~!xit Program"
+msgstr "Programm beenden"
+
+msgid "~<Map:~>"
+msgstr "~<Karte:~>"
+
+msgid "~<Your Civilization:~>"
+msgstr "~<Ihre Zivilisation:~>"
+
+msgid "~<Your Faction:~>"
+msgstr "~<Ihre Fraktion:~>"
+
+msgid "Language"
+msgstr "Sprache"

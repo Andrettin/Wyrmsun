@@ -40,6 +40,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
+	"unit-germanic-worker",
 	"unit-hero-greebo",
 	"germanic-group"
 } } )
@@ -48,6 +49,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
   Action = "stop",
   Key = "s", Hint = _("~!Stop"),
   ForUnit = {
+	"unit-germanic-worker",
 	"germanic-group"
 } } )
 
@@ -59,9 +61,54 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
 	"germanic-group"
 } } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-arrow",
+  Action = "attack",
+  Key = "a", Hint = _("~!Attack"),
+  ForUnit = {
+	"unit-goblin-archer"
+  } } )
+
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = _("S~!tand Ground"),
   ForUnit = {
 	"germanic-group"
 } } )
+
+-- worker specific actions ---------------------------------------------------
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
+  Action = "repair",
+  Key = "r", Hint = _("~!Repair"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
+  Action = "harvest",
+  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+-- build basic/advanced structs -----------------------------------------------
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
+  Action = "button", Value = 1,
+  Key = "b", Hint = _("~!Build Basic Structure"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+-- simple buildings germanic -----------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-farm",
+  Action = "build", Value = "unit-germanic-farm",
+  Key = "f", Hint = _("Build ~!Farm"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+  Action = "button", Value = 0,
+  Key = "escape", Hint = _("~<ESC~> Cancel"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+-- Building Commands ---------------------------------------------------------
+
+--DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
+--  Action = "train-unit", Value = "unit-germanic-worker",
+--  Key = "b", Hint = _("Train ~!Bura"),
+--  ForUnit = {"unit-germanic-town-hall"} } )

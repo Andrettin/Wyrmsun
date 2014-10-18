@@ -44,7 +44,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"We have assembled a great army to take upon those who live on the Vanaquisl, the people of Vanaland. Their lands shall be taken into our possession. Onward to victory!",
+			"We have assembled a great army to take upon those who live on the Vanaquisl, the people of Vanaland. Their territory shall be taken into our possession, providing our people with the lands we much need to prosper. Onward to victory!",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -70,19 +70,27 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"We have ravaged Vanaland, but victory has not fallen within our grasp. A number of Vanaland's warriors still loomed at large, reorganizing themselves for an attack on us, and our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people. Many of our chieftains are now clamoring for us to cross the Vanaquisl once more: but this time not to wage war on the river's inhabitants, but to make passage and head north, finding a new area of settlement and leaving these crowded steppes well behind.",
+			"We have ravaged Vanaland, but victory has not fallen within our grasp. A number of Vanaland's warriors still loomed at large, reorganizing themselves for an attack on us, and our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (player == GetThisPlayer()) then
---					if (GrandStrategy == false) then
---						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
---							table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
---						end
---						SavePreferences()
---					end
-					ActionVictory()
-				end
+			Event(
+				"",
+				"With expansion across the Vanaquisl being denied to us, many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
+				player,
+				{"~!Continue"},
+				{function(s)
+					if (player == GetThisPlayer()) then
+	--					if (GrandStrategy == false) then
+	--						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
+	--							table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
+	--						end
+	--						SavePreferences()
+	--					end
+						ActionVictory()
+					end
+				end}
+			)
 			end}
 		)
 		return false

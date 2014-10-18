@@ -281,7 +281,7 @@ Factions = {
 	-- Germanic tribes
 	Marcomanni = {
 		Name = "Marcomanni",
-		Civilization = "dwarf",
+		Civilization = "germanic",
 		Type = "Tribe",
 		Color = "red"
 	}
