@@ -61,7 +61,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Germanics"), "- Destroy Vanaland's town hall") and GetPlayerData(GetFactionPlayer("Vanaland"), "UnitTypesCount", "unit-dwarven-town-hall") < 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Germanics"), "- Destroy Vanaland's town hall") and GetPlayerData(GetFactionPlayer("Vanaland"), "UnitTypesCount", "unit-germanic-town-hall") < 1) then
 			player = GetFactionPlayer("Germanics")
 			return true
 		end

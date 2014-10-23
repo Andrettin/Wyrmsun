@@ -31,7 +31,7 @@ UnitTypeFiles = {}
 
 Units = {
 	"unit-germanic-worker",
-	"unit-germanic-farm",
+	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
@@ -1577,6 +1577,7 @@ DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 	Class = "infantry",
 	Civilization = "elf",
 	Description = _("Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield."),
+	Quote = _("\"This he learned, | the lord of Lintanir, / That Volund alone | in Ulfdalir lay; / By night went his men, | their mail-coats were studded, / Their shields in the waning | moonlight shone.\" - The Lay of Volund"),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-elven-swordsman",
 	Costs = {"time", 60, "gold", 600},

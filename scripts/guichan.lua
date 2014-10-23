@@ -49,89 +49,89 @@ wyrmsun_logo:Load()
 --wyrmsun_logo:Resize(6197 * Video.Width / 800 / 16, 2456 * Video.Height / 600 / 16)
 wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
-g_dbln = CGraphic:New("ui/dwarf/widgets/button-large-normal.png")
+g_dbln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
 g_dbln:Load()
-g_dblp = CGraphic:New("ui/dwarf/widgets/button-large-pressed.png")
+g_dblp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
 g_dblp:Load()
-g_dblg = CGraphic:New("ui/dwarf/widgets/button-large-grayed.png")
+g_dblg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
 g_dblg:Load()
 
-g_dbsn = CGraphic:New("ui/dwarf/widgets/button-small-normal.png")
+g_dbsn = CGraphic:New("dwarf/ui/widgets/button-small-normal.png")
 g_dbsn:Load()
-g_dbsp = CGraphic:New("ui/dwarf/widgets/button-small-pressed.png")
+g_dbsp = CGraphic:New("dwarf/ui/widgets/button-small-pressed.png")
 g_dbsp:Load()
-g_dbsg = CGraphic:New("ui/dwarf/widgets/button-small-grayed.png")
+g_dbsg = CGraphic:New("dwarf/ui/widgets/button-small-grayed.png")
 g_dbsg:Load()
 
-g_gbln = CGraphic:New("ui/gnome/widgets/button-large-normal.png")
+g_gbln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
 g_gbln:Load()
-g_gblp = CGraphic:New("ui/gnome/widgets/button-large-pressed.png")
+g_gblp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
 g_gblp:Load()
-g_gblg = CGraphic:New("ui/gnome/widgets/button-large-grayed.png")
+g_gblg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
 g_gblg:Load()
 
-g_gbsn = CGraphic:New("ui/gnome/widgets/button-small-normal.png")
+g_gbsn = CGraphic:New("gnome/ui/widgets/button-small-normal.png")
 g_gbsn:Load()
-g_gbsp = CGraphic:New("ui/gnome/widgets/button-small-pressed.png")
+g_gbsp = CGraphic:New("gnome/ui/widgets/button-small-pressed.png")
 g_gbsp:Load()
-g_gbsg = CGraphic:New("ui/gnome/widgets/button-small-grayed.png")
+g_gbsg = CGraphic:New("gnome/ui/widgets/button-small-grayed.png")
 g_gbsg:Load()
 
-g_dcheckbox_off = CGraphic:New("ui/dwarf/widgets/radio-normal-unselected.png")
+g_dcheckbox_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
 g_dcheckbox_off:Load()
-g_dcheckbox_off2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-unselected.png")
+g_dcheckbox_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
 g_dcheckbox_off2:Load()
-g_dcheckbox_on = CGraphic:New("ui/dwarf/widgets/radio-normal-selected.png")
+g_dcheckbox_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
 g_dcheckbox_on:Load()
-g_dcheckbox_on2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-selected.png")
+g_dcheckbox_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
 g_dcheckbox_on2:Load()
 
-g_dradio_off = CGraphic:New("ui/dwarf/widgets/radio-normal-unselected.png")
+g_dradio_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
 g_dradio_off:Load()
-g_dradio_off2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-unselected.png")
+g_dradio_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
 g_dradio_off2:Load()
-g_dradio_on = CGraphic:New("ui/dwarf/widgets/radio-normal-selected.png")
+g_dradio_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
 g_dradio_on:Load()
-g_dradio_on2 = CGraphic:New("ui/dwarf/widgets/radio-pressed-selected.png")
+g_dradio_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
 g_dradio_on2:Load()
 
 -- right slider arrows for dwarf
-g_drslider_n = CGraphic:New("ui/dwarf/widgets/right-arrow-normal.png")
+g_drslider_n = CGraphic:New("dwarf/ui/widgets/right-arrow-normal.png")
 g_drslider_n:Load()
-g_drslider_p = CGraphic:New("ui/dwarf/widgets/right-arrow-pressed.png")
+g_drslider_p = CGraphic:New("dwarf/ui/widgets/right-arrow-pressed.png")
 g_drslider_p:Load()
 
 -- left slider arrows for dwarf
-g_dlslider_n = CGraphic:New("ui/dwarf/widgets/left-arrow-normal.png")
+g_dlslider_n = CGraphic:New("dwarf/ui/widgets/left-arrow-normal.png")
 g_dlslider_n:Load()
-g_dlslider_p = CGraphic:New("ui/dwarf/widgets/left-arrow-pressed.png")
+g_dlslider_p = CGraphic:New("dwarf/ui/widgets/left-arrow-pressed.png")
 g_dlslider_p:Load()
 
 -- slider marker - so we know the value of the option we're trying to change
-g_dmarker = CGraphic:New("ui/dwarf/widgets/slider-knob.png")
+g_dmarker = CGraphic:New("dwarf/ui/widgets/slider-knob.png")
 g_dmarker:Load()
 
 -- slider background image
-g_dslider = CGraphic:New("ui/dwarf/widgets/hslider-bar-normal.png")
+g_dslider = CGraphic:New("dwarf/ui/widgets/hslider-bar-normal.png")
 g_dslider:Load()
 
 -- thin medium button
-g_dbtn = CGraphic:New("ui/dwarf/widgets/button-thin-medium-normal.png")
+g_dbtn = CGraphic:New("dwarf/ui/widgets/button-thin-medium-normal.png")
 g_dbtn:Load()
-g_dbtp = CGraphic:New("ui/dwarf/widgets/button-thin-medium-pressed.png")
+g_dbtp = CGraphic:New("dwarf/ui/widgets/button-thin-medium-pressed.png")
 g_dbtp:Load()
 
-g_gbtn = CGraphic:New("ui/gnome/widgets/button-thin-medium-normal.png")
+g_gbtn = CGraphic:New("gnome/ui/widgets/button-thin-medium-normal.png")
 g_gbtn:Load()
-g_gbtp = CGraphic:New("ui/gnome/widgets/button-thin-medium-pressed.png")
+g_gbtp = CGraphic:New("gnome/ui/widgets/button-thin-medium-pressed.png")
 g_gbtp:Load()
 
 local dpanels = {
-  "ui/dwarf/panel_1.png",
-  "ui/dwarf/panel_2.png",
-  "ui/dwarf/panel_3.png",
-  "ui/dwarf/panel_4.png",
-  "ui/dwarf/panel_5.png"
+  "dwarf/ui/panel_1.png",
+  "dwarf/ui/panel_2.png",
+  "dwarf/ui/panel_3.png",
+  "dwarf/ui/panel_4.png",
+  "dwarf/ui/panel_5.png"
 }
 
 function panel(n)
@@ -1151,6 +1151,40 @@ function RunSinglePlayerGameMenu()
 
   WorldChanged()
 
+  for i=1,table.getn(maps) do
+		MapWorld = ""
+		MapRequiredQuest = ""
+		GetMapInfo(maps[i])
+		if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
+			local incomplete_quest_present = false
+			for key, value in pairs(Quests) do
+				if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
+					if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
+						if (Quests[key].Map == mapinfo.description and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
+							incomplete_quest_present = true
+						end
+					end
+				end
+			end
+			local map_description = _(mapinfo.description)
+			if (incomplete_quest_present) then
+				for j=1,table.getn(world_list) do
+					if (_(MapWorld) == _(world_list[j])) then
+						world:setSelected(j - 1)
+						WorldChanged()
+					end
+				end
+				for j=1,table.getn(scenario_list) do
+					if ("~<" .. map_description .. "~>" == scenario_list[j]) then
+						scenario:setSelected(j - 1)
+						ScenarioChanged()
+					end
+				end
+				break
+			end
+		end
+  end
+
   menu:run()
 end
 
@@ -1185,7 +1219,9 @@ function BuildProgramStartMenu()
 		wyr.preferences.Heroes.Durstorn.upgrades = nil
 		wyr.preferences.Heroes.Durstorn.upgrades = {}
 
-		ResetTechnologiesAcquired()
+		wyr.preferences.TechnologyAcquired = nil
+		wyr.preferences.TechnologyAcquired = {}
+		SavePreferences()
 
 		local warning_menu = WarGameMenu(panel(2))
 		warning_menu:setSize(288, 256)

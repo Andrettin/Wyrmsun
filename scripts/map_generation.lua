@@ -1072,16 +1072,16 @@ function CreatePlayers()
 			SetPlayerData(i, "Resources", "lumber", 3000)
 			SetPlayerData(i, "Resources", "oil", 1000)
 			local possible_civilizations = {}
-			if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf"))) then
+			if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf")) and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if (GetNumCivilizationPlayers("germanic") < table.getn(GetCivilizationFactions("germanic"))) then
+			if (GetNumCivilizationPlayers("germanic") < table.getn(GetCivilizationFactions("germanic")) and wyrmsun.tileset == "forest") then
 				table.insert(possible_civilizations, "germanic")
 			end
-			if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled")) then
+			if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "gnome")
 			end
-			if (GetNumCivilizationPlayers("goblin") < table.getn(GetCivilizationFactions("goblin")) and GetPlayerData(i, "AiEnabled")) then
+			if (GetNumCivilizationPlayers("goblin") < table.getn(GetCivilizationFactions("goblin")) and GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
@@ -1679,7 +1679,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 			RandomY = SyncRand(max_y - min_y) + min_y
 		end
 		
-		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
 			if (unit_quantity < 1) then

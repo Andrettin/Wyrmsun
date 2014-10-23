@@ -1,5 +1,5 @@
-local ddefeat =  "ui/dwarf/defeat.png"
-local dvictory = "ui/dwarf/victory.png"
+local ddefeat =  "dwarf/ui/defeat.png"
+local dvictory = "dwarf/ui/victory.png"
 
 function RunResultsMenu()
   local background

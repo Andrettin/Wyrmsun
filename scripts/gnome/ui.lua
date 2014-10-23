@@ -30,7 +30,7 @@
 DefineCursor({
   Name = "cursor-point",
   Race = "gnome",
-  File = "ui/dwarf/cursors/dwarven_gauntlet.png",
+  File = "dwarf/ui/cursors/dwarven_gauntlet.png",
   HotSpot = { 3,  2},
   Size = {28, 32}})
 DefineCursor({
@@ -88,16 +88,16 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("ui/dwarf/filler-right_" .. Video.Height .. ".png", Video.Width - 16, 0)
-AddFiller("ui/dwarf/resource_" .. Video.Width .. ".png", 176, 0)
-AddFiller("ui/dwarf/statusline_" .. Video.Width .. ".png", 176, Video.Height - 16)
-AddFiller("ui/dwarf/buttonpanel_" .. Video.Height .. ".png", 0, 336)
-AddFiller("ui/dwarf/menubutton.png", 0, 0)
-AddFiller("ui/dwarf/minimap.png", 0, 24)
+AddFiller("dwarf/ui/filler-right_" .. Video.Height .. ".png", Video.Width - 16, 0)
+AddFiller("dwarf/ui/resource_" .. Video.Width .. ".png", 176, 0)
+AddFiller("dwarf/ui/statusline_" .. Video.Width .. ".png", 176, Video.Height - 16)
+AddFiller("dwarf/ui/buttonpanel_" .. Video.Height .. ".png", 0, 336)
+AddFiller("dwarf/ui/menubutton.png", 0, 0)
+AddFiller("dwarf/ui/minimap.png", 0, 24)
 
 UI.InfoPanel.X = 0
 UI.InfoPanel.Y = 160
-UI.InfoPanel.G = CGraphic:New("ui/dwarf/infopanel.png", 176, 176)
+UI.InfoPanel.G = CGraphic:New("dwarf/ui/infopanel.png", 176, 176)
 
 b = CUIButton:new()
 b.X = 9

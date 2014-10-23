@@ -845,7 +845,7 @@ function GetCivilizationFactions(civilization)
 	elseif (civilization == "elf") then
 		return {"Lintanir", "Ulfdalir", "Wesmere"}
 	elseif (civilization == "germanic") then
-		return {"Germanics"}
+		return {"Germanics", "Germanics", "Germanics", "Germanics"}
 	elseif (civilization == "gnome") then
 		return {"Untersberg"}
 	elseif (civilization == "goblin") then
@@ -1334,15 +1334,7 @@ local defaultPreferences = {
 	ShowOrders = 2,
 	Language = "English",
 	QuestsCompleted = {}, -- Quests Completed
-	TechnologyAcquired = {
-		"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
-		"unit-germanic-worker", "unit-germanic-warrior",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall",
-		"unit-kobold-footpad"
-	},
+	TechnologyAcquired = {},
 	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",
 	TheScepterOfFireRaiderFaction = "",

@@ -152,7 +152,7 @@ SetResourcesHeld(unit, 100000)
 unit = CreateUnit("unit-gold-mine", 15, {33, 40}) -- gold mine for the Danish starting position
 SetResourcesHeld(unit, 100000)
 
--- unit = CreateUnit("unit-dwarven-town-hall", 0, {25, 88}) -- saxon town hall
+-- unit = CreateUnit("unit-germanic-town-hall", 0, {25, 88}) -- saxon town hall
 
 unit = CreateUnit("unit-germanic-worker", 1, {27, 44})
 

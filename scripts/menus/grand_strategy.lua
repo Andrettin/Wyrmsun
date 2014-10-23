@@ -1870,12 +1870,12 @@ function DrawOnScreenTiles()
 		end
 	end
 
-	local ui_element = CGraphic:New("ui/dwarf/filler-right_" .. Video.Height .. ".png")
+	local ui_element = CGraphic:New("dwarf/ui/filler-right_" .. Video.Height .. ".png")
 	ui_element:Load()
 	UIFillerRight = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIFillerRight, Video.Width - 16, 0)
 
-	local ui_element = CGraphic:New("ui/dwarf/statusline_" .. Video.Width .. ".png")
+	local ui_element = CGraphic:New("dwarf/ui/statusline_" .. Video.Width .. ".png")
 	ui_element:Load()
 	UIStatusLine = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIStatusLine, 176, Video.Height - 16)
@@ -1900,12 +1900,12 @@ function DrawGrandStrategyInterface()
 	GrandStrategyLabels = nil
 	GrandStrategyLabels = {}
 
-	AddUIElement("ui/dwarf/infopanel.png", 0, 160)
+	AddUIElement("dwarf/ui/infopanel.png", 0, 160)
 
-	AddUIElement("ui/dwarf/resource_" .. Video.Width .. ".png", 176, 0)
+	AddUIElement("dwarf/ui/resource_" .. Video.Width .. ".png", 176, 0)
 
-	AddUIElement("ui/dwarf/buttonpanel_" .. Video.Height .. ".png", 0, 336)
-	AddUIElement("ui/dwarf/menubutton.png", 0, 0)
+	AddUIElement("dwarf/ui/buttonpanel_" .. Video.Height .. ".png", 0, 336)
+	AddUIElement("dwarf/ui/menubutton.png", 0, 0)
 
 	AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GrandStrategyYear .. " AD", 88, 6, Fonts["game"], true, false)
 	
@@ -2353,7 +2353,7 @@ function DrawMinimap()
 		MinimapTiles[y] = {}
 	end
 	
-	local ui_element = CGraphic:New("ui/dwarf/minimap.png")
+	local ui_element = CGraphic:New("dwarf/ui/minimap.png")
 	ui_element:Load()
 	UIMinimap = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIMinimap, 0, 24)

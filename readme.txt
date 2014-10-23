@@ -54,12 +54,14 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added germanic stand ground icon (by Leo).
 - The player now receives a message if they receive a new objective.
 - Added germanic arrow icon (by Leo).
-- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol and the Völundarkvitha to the encyclopedia texts (The Poetic Edda).
-- Added the  to the encyclopedia texts (The Poetic Edda).
+- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I and the Helgakvitha Hundingsbana II to the encyclopedia texts (The Poetic Edda).
 - A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
 - Encyclopedia pages can now have quotes which are relevant to the entry.
 - Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smith, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.
 - Tech tree code made more dynamic to support multiple civilizations without significant extra coding being necessary for each of them.
+- Miscellaneous tech tree code improvements.
+- If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
+- Added "The Gnomes of the Saline Mountains" (by Anna Goldmark Gross, 1912, in the public domain) to the encyclopedia texts.
 
 * Quests
 - Added On the Vanaquisl quest.

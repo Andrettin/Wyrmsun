@@ -101,6 +101,16 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-farm",
   Key = "f", Hint = _("Build ~!Farm"),
   ForUnit = {"unit-germanic-worker"} } )
 
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-barracks",
+  Action = "build", Value = "unit-germanic-barracks",
+  Key = "w", Hint = _("Build ~!War Lodge"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+  DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
+  Action = "build", Value = "unit-germanic-town-hall",
+  Key = "h", Hint = _("Build Chieftain's ~!Hall"),
+  ForUnit = {"unit-germanic-worker"} } )
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"),
@@ -108,7 +118,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
 
 -- Building Commands ---------------------------------------------------------
 
---DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
---  Action = "train-unit", Value = "unit-germanic-worker",
---  Key = "b", Hint = _("Train ~!Bura"),
---  ForUnit = {"unit-germanic-town-hall"} } )
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
+  Action = "train-unit", Value = "unit-germanic-worker",
+  Key = "b", Hint = _("Train ~!Bura"),
+  ForUnit = {"unit-germanic-town-hall"} } )

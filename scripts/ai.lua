@@ -60,6 +60,8 @@ DefineAiHelper(
 function AiCityCenter()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-town-hall"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-town-hall"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-town-hall"
 	elseif (AiGetRace() == "goblin") then
@@ -109,6 +111,8 @@ end
 function AiBarracks()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-barracks"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-barracks"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-barracks"
 	elseif (AiGetRace() == "goblin") then

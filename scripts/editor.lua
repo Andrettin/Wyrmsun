@@ -39,7 +39,9 @@ SetEditorUnitsIcon("icon-dwarven-axefighter")
 local editor_types = {
 
    "unit-germanic-worker",
+   "unit-germanic-town-hall",
    "unit-germanic-farm",
+   "unit-germanic-barracks",
 
 --- - - - - - - - - - - - - - - - - - -
 

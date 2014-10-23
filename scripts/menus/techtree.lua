@@ -54,13 +54,10 @@ function RunTechTreeMenu(civilization_number)
 
 	if (civilization_number == 0) then
 		civilization = "dwarf"
-		tech_points = 7
 	elseif (civilization_number == 1) then
 		civilization = "germanic"
-		tech_points = 5
 	elseif (civilization_number == 2) then
 		civilization = "gnome"
-		tech_points = 5
 	end
 	SetPlayerData(GetThisPlayer(), "RaceName", civilization)
 	
@@ -90,7 +87,7 @@ function RunTechTreeMenu(civilization_number)
 		techicon_graphics = string.sub(techicon_graphics, 0, -5)
 		local techicon
 		local b
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit)) then
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) or GetTechnologyPointCost(civilization, unit) <= 0) then
 			techicon = CPlayerColorGraphic:New(techicon_graphics .. ".png")
 			techicon:Load()
 			b = PlayerColorImageButton("", playercolor)
@@ -115,7 +112,7 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu:add(l, 14, 112)
 				l:setCaption(tech_description)
 
-				if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and tech_points > 0) then
+				if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and tech_points > 0 and GetTechnologyPointCost(civilization, unit) > 0) then
 					tech_menu:addFullButton(_("~!Acquire"), "a", 176 - (224 / 2), 352 - 40 * 2,
 						function()
 							table.insert(wyr.preferences.TechnologyAcquired, unit)
@@ -269,7 +266,7 @@ function RunTechTreeMenu(civilization_number)
 	
 	menu:addFullButton(_("~!Reset Tech Tree"), "r", offx + 208, offy + 212 + (36 * 5),
 		function()
-			ResetTechnologiesAcquired()
+			ResetTechnologiesAcquired(civilization)
 			menu:stop()
 			RunTechTreeMenu(civilization_dd:getSelected())
 		end)
@@ -279,16 +276,22 @@ function RunTechTreeMenu(civilization_number)
 	menu:run()
 end
 
-function ResetTechnologiesAcquired()
-	wyr.preferences.TechnologyAcquired = {
-		"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
-		"unit-germanic-worker", "unit-germanic-warrior",
-		"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-		"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall",
-		"unit-kobold-footpad"
-	}
+function ResetTechnologiesAcquired(civilization)
+	local technologies_to_remove = {}
+	for i=1,table.getn(wyr.preferences.TechnologyAcquired) do
+		if (string.find(wyr.preferences.TechnologyAcquired[i], "upgrade-") == nil) then
+			if (civilization == GetUnitTypeData(wyr.preferences.TechnologyAcquired[i], "Civilization")) then
+				table.insert(technologies_to_remove, wyr.preferences.TechnologyAcquired[i])
+			end
+		else
+			if (civilization == CUpgrade:Get(wyr.preferences.TechnologyAcquired[i]).Civilization) then
+				table.insert(technologies_to_remove, wyr.preferences.TechnologyAcquired[i])
+			end
+		end
+	end
+	for i=1,table.getn(technologies_to_remove) do
+		RemoveElementFromArray(wyr.preferences.TechnologyAcquired, technologies_to_remove[i])
+	end
 	SavePreferences()
 end
 
@@ -306,11 +309,14 @@ function GetQuestTechnologyPoints(civilization, quest)
 end
 
 function GetTechnologyPointCost(civilization, technology)
-	if (civilization == "dwarf" and string.find(technology, "dwarven-") ~= nil) then
-		return 1
-	elseif (civilization == "germanic" and string.find(technology, "germanic-") ~= nil) then
-		return 1
+	if (string.find(technology, "upgrade-") == nil) then
+		if (civilization == GetUnitTypeData(technology, "Civilization")) then
+			return GetUnitTypeData(technology, "TechnologyPointCost")
+		end
 	else
-		return 0
+		if (civilization == CUpgrade:Get(technology).Civilization) then
+			return CUpgrade:Get(technology).TechnologyPointCost
+		end
 	end
+	return 0
 end

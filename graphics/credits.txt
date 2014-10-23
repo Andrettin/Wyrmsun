@@ -13,6 +13,8 @@ b_o:
 /graphics/dwarf/icons/thane_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
 /graphics/dwarf/icons/thane_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
 /graphics/dwarf/icons/thane_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
+/graphics/dwarf/ui/resource_1366.png (modified from the resource bar graphics made by Jinn)
+/graphics/dwarf/ui/statusline_1366.png (modified from the statusline bar graphics made by Jinn)
 /graphics/dwarf/units/dwarven_axefighter.png
 /graphics/dwarf/units/dwarven_axefighter_black_hair.png
 /graphics/dwarf/units/dwarven_axefighter_blond_hair.png
@@ -42,6 +44,7 @@ b_o:
 /graphics/dwarf/units/thane_brown_hair.png
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
+/graphics/germanic/units/worker.png
 /graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
 /graphics/gnome/units/gnomish_caravan.png
 /graphics/gnome/units/gnomish_caravan_extra_1.png
@@ -124,8 +127,6 @@ b_o:
 /graphics/tilesets/swamp/neutral/decorations/fern.png
 /graphics/tilesets/swamp/neutral/decorations/flowers.png
 /graphics/tilesets/swamp/neutral/decorations/large_flower.png
-/graphics/ui/dwarf/resource_1366.png (modified from the resource bar graphics made by Jinn)
-/graphics/ui/dwarf/statusline_1366.png (modified from the statusline bar graphics made by Jinn)
 /graphics/ui/Credits_background.png
 /graphics/ui/goblin_swordsman.png
 
@@ -197,9 +198,74 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/throwing_axe_1.png
 /graphics/dwarf/icons/throwing_axe_2.png
 /graphics/dwarf/icons/throwing_axe_3.png
+/graphics/dwarf/ui/buttonpanel_480.png
+/graphics/dwarf/ui/buttonpanel_600.png
+/graphics/dwarf/ui/buttonpanel_768.png
+/graphics/dwarf/ui/buttonpanel_800.png
+/graphics/dwarf/ui/buttonpanel_960.png
+/graphics/dwarf/ui/buttonpanel_1024.png
+/graphics/dwarf/ui/buttonpanel_1050.png
+/graphics/dwarf/ui/filler-right_480.png
+/graphics/dwarf/ui/filler-right_600.png
+/graphics/dwarf/ui/filler-right_768.png
+/graphics/dwarf/ui/filler-right_800.png
+/graphics/dwarf/ui/filler-right_960.png
+/graphics/dwarf/ui/filler-right_1024.png
+/graphics/dwarf/ui/filler-right_1050.png
+/graphics/dwarf/ui/infopanel.png
+/graphics/dwarf/ui/menubutton.png
+/graphics/dwarf/ui/minimap.png
+/graphics/dwarf/ui/panel_1.png
+/graphics/dwarf/ui/panel_2.png
+/graphics/dwarf/ui/panel_3.png
+/graphics/dwarf/ui/panel_4.png
+/graphics/dwarf/ui/panel_5.png
+/graphics/dwarf/ui/resource_640.png
+/graphics/dwarf/ui/resource_800.png
+/graphics/dwarf/ui/resource_1024.png
+/graphics/dwarf/ui/resource_1280.png
+/graphics/dwarf/ui/resource_1360.png
+/graphics/dwarf/ui/resource_1400.png
+/graphics/dwarf/ui/resource_1600.png
+/graphics/dwarf/ui/resource_1680.png
+/graphics/dwarf/ui/statusline_640.png
+/graphics/dwarf/ui/statusline_800.png
+/graphics/dwarf/ui/statusline_1024.png
+/graphics/dwarf/ui/statusline_1280.png
+/graphics/dwarf/ui/statusline_1360.png
+/graphics/dwarf/ui/statusline_1400.png
+/graphics/dwarf/ui/statusline_1600.png
+/graphics/dwarf/ui/statusline_1680.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_1.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_2.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_3.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_4.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_5.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_6.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_7.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_8.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_9.png
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_10.png
+/graphics/dwarf/ui/widgets/button-large-grayed.png
+/graphics/dwarf/ui/widgets/button-large-normal.png
+/graphics/dwarf/ui/widgets/button-large-pressed.png
+/graphics/dwarf/ui/widgets/button-small-grayed.png
+/graphics/dwarf/ui/widgets/button-small-normal.png
+/graphics/dwarf/ui/widgets/button-small-pressed.png
+/graphics/dwarf/ui/widgets/button-thin-medium-normal.png
+/graphics/dwarf/ui/widgets/button-thin-medium-pressed.png
+/graphics/dwarf/ui/widgets/button-thin-small-normal.png
+/graphics/dwarf/ui/widgets/button-thin-small-pressed.png
+/graphics/dwarf/ui/widgets/radio-normal-selected.png
+/graphics/dwarf/ui/widgets/radio-normal-unselected.png
+/graphics/dwarf/ui/widgets/radio-pressed-selected.png
+/graphics/dwarf/ui/widgets/radio-pressed-unselected.png
 /graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
 /graphics/elf/icons/elven_swordsman.png
+/graphics/germanic/buildings/barracks.png
 /graphics/germanic/buildings/farm.png
+/graphics/germanic/buildings/town_hall.png
 /graphics/gnome/buildings/barracks.png
 /graphics/gnome/buildings/farm.png
 /graphics/gnome/buildings/town_hall.png
@@ -209,6 +275,22 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
 /graphics/gnome/icons/patrol_land.png
 /graphics/gnome/icons/patrol_land_extra_1.png
+/graphics/gnome/ui/widgets/button-large-grayed.png
+/graphics/gnome/ui/widgets/button-large-normal.png
+/graphics/gnome/ui/widgets/button-large-pressed.png
+/graphics/gnome/ui/widgets/button-small-grayed.png
+/graphics/gnome/ui/widgets/button-small-normal.png
+/graphics/gnome/ui/widgets/button-small-pressed.png
+/graphics/gnome/ui/widgets/button-thin-medium-normal.png
+/graphics/gnome/ui/widgets/button-thin-medium-pressed.png
+/graphics/gnome/ui/widgets/button-thin-small-normal.png
+/graphics/gnome/ui/widgets/button-thin-small-pressed.png
+/graphics/gnome/ui/widgets/hslider-bar-normal.png
+/graphics/gnome/ui/widgets/left-arrow-normal.png
+/graphics/gnome/ui/widgets/left-arrow-pressed.png
+/graphics/gnome/ui/widgets/right-arrow-normal.png
+/graphics/gnome/ui/widgets/right-arrow-pressed.png
+/graphics/gnome/ui/widgets/slider-knob.png
 /graphics/goblin/buildings/smith.png
 /graphics/goblin/icons/goblin_archer.png
 /graphics/goblin/icons/goblin_assassin.png
@@ -342,85 +424,6 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest.png
 /graphics/tilesets/fogofwar.png
 /graphics/ui/cursors/magnifying_glass.png
-/graphics/ui/dwarf/buttonpanel_480.png
-/graphics/ui/dwarf/buttonpanel_600.png
-/graphics/ui/dwarf/buttonpanel_768.png
-/graphics/ui/dwarf/buttonpanel_800.png
-/graphics/ui/dwarf/buttonpanel_960.png
-/graphics/ui/dwarf/buttonpanel_1024.png
-/graphics/ui/dwarf/buttonpanel_1050.png
-/graphics/ui/dwarf/filler-right_480.png
-/graphics/ui/dwarf/filler-right_600.png
-/graphics/ui/dwarf/filler-right_768.png
-/graphics/ui/dwarf/filler-right_800.png
-/graphics/ui/dwarf/filler-right_960.png
-/graphics/ui/dwarf/filler-right_1024.png
-/graphics/ui/dwarf/filler-right_1050.png
-/graphics/ui/dwarf/infopanel.png
-/graphics/ui/dwarf/menubutton.png
-/graphics/ui/dwarf/minimap.png
-/graphics/ui/dwarf/panel_1.png
-/graphics/ui/dwarf/panel_2.png
-/graphics/ui/dwarf/panel_3.png
-/graphics/ui/dwarf/panel_4.png
-/graphics/ui/dwarf/panel_5.png
-/graphics/ui/dwarf/resource_640.png
-/graphics/ui/dwarf/resource_800.png
-/graphics/ui/dwarf/resource_1024.png
-/graphics/ui/dwarf/resource_1280.png
-/graphics/ui/dwarf/resource_1360.png
-/graphics/ui/dwarf/resource_1400.png
-/graphics/ui/dwarf/resource_1600.png
-/graphics/ui/dwarf/resource_1680.png
-/graphics/ui/dwarf/statusline_640.png
-/graphics/ui/dwarf/statusline_800.png
-/graphics/ui/dwarf/statusline_1024.png
-/graphics/ui/dwarf/statusline_1280.png
-/graphics/ui/dwarf/statusline_1360.png
-/graphics/ui/dwarf/statusline_1400.png
-/graphics/ui/dwarf/statusline_1600.png
-/graphics/ui/dwarf/statusline_1680.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_1.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_2.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_3.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_4.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_5.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_6.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_7.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_8.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_9.png
-/graphics/ui/dwarf/cursors/dwarven_gauntlet_extra_10.png
-/graphics/ui/dwarf/widgets/button-large-grayed.png
-/graphics/ui/dwarf/widgets/button-large-normal.png
-/graphics/ui/dwarf/widgets/button-large-pressed.png
-/graphics/ui/dwarf/widgets/button-small-grayed.png
-/graphics/ui/dwarf/widgets/button-small-normal.png
-/graphics/ui/dwarf/widgets/button-small-pressed.png
-/graphics/ui/dwarf/widgets/button-thin-medium-normal.png
-/graphics/ui/dwarf/widgets/button-thin-medium-pressed.png
-/graphics/ui/dwarf/widgets/button-thin-small-normal.png
-/graphics/ui/dwarf/widgets/button-thin-small-pressed.png
-/graphics/ui/gnome/widgets/button-large-grayed.png
-/graphics/ui/gnome/widgets/button-large-normal.png
-/graphics/ui/gnome/widgets/button-large-pressed.png
-/graphics/ui/gnome/widgets/button-small-grayed.png
-/graphics/ui/gnome/widgets/button-small-normal.png
-/graphics/ui/gnome/widgets/button-small-pressed.png
-/graphics/ui/gnome/widgets/button-thin-medium-normal.png
-/graphics/ui/gnome/widgets/button-thin-medium-pressed.png
-/graphics/ui/gnome/widgets/button-thin-small-normal.png
-/graphics/ui/gnome/widgets/button-thin-small-pressed.png
-/graphics/ui/gnome/widgets/hslider-bar-normal.png
-/graphics/ui/gnome/widgets/left-arrow-normal.png
-/graphics/ui/gnome/widgets/left-arrow-pressed.png
-/graphics/ui/dwarf/widgets/radio-normal-selected.png
-/graphics/ui/dwarf/widgets/radio-normal-unselected.png
-/graphics/ui/dwarf/widgets/radio-pressed-selected.png
-/graphics/ui/dwarf/widgets/radio-pressed-unselected.png
-/graphics/ui/gnome/widgets/right-arrow-normal.png
-/graphics/ui/gnome/widgets/right-arrow-pressed.png
-/graphics/ui/gnome/widgets/slider-knob.png
 /graphics/ui/wyrmsun_logo.png
 /graphics/ui/wyrmsun_logo_monochromatic.png
 
@@ -455,6 +458,7 @@ Leo:
 /graphics/germanic/icons/stand_ground.png
 /graphics/germanic/icons/wooden_oblong_shield.png
 /graphics/germanic/icons/worker.png
+/graphics/germanic/ui/cursors/germanic_hand.png
 /graphics/gnome/icons/boots.png
 /graphics/gnome/icons/boots_fur.png
 /graphics/gnome/icons/thrusting_sword_1.png
@@ -475,7 +479,6 @@ Leo:
 /graphics/neutral/icons/wyrm_vicious.png
 /graphics/neutral/icons/wyrm_vicious_light_green_scales.png
 /graphics/neutral/icons/wyrm_yellow_scales.png
-/graphics/ui/germanic/cursors/germanic_hand.png
 
 Mikodrak:
 /graphics/missiles/big_fire.png (later modified by Jinn)
