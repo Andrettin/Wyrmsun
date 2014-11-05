@@ -1982,13 +1982,12 @@ function DrawGrandStrategyInterface()
 						b:setBaseColor(Color(0,0,0,0))
 						b:setForegroundColor(Color(0,0,0,0))
 						b:setBackgroundColor(Color(0,0,0,0))
-						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-							b:setNormalImage(g_dlslider_n)
-							b:setPressedImage(g_dlslider_p)
-						else
-							b:setNormalImage(g_dlslider_n)
-							b:setPressedImage(g_dlslider_p)
-						end
+						local g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
+						local g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
+						g_lslider_n:Load()
+						g_lslider_p:Load()
+						b:setNormalImage(g_lslider_n)
+						b:setPressedImage(g_lslider_p)
 						b:setTooltip("Deselect one ".. GrandStrategyUnits[gsunit_key].Name .. " regiment")
 
 						local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2006,13 +2005,12 @@ function DrawGrandStrategyInterface()
 						b:setBaseColor(Color(0,0,0,0))
 						b:setForegroundColor(Color(0,0,0,0))
 						b:setBackgroundColor(Color(0,0,0,0))
-						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-							b:setNormalImage(g_drslider_n)
-							b:setPressedImage(g_drslider_p)
-						else
-							b:setNormalImage(g_drslider_n)
-							b:setPressedImage(g_drslider_p)
-						end
+						local g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
+						local g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
+						g_rslider_n:Load()
+						g_rslider_p:Load()
+						b:setNormalImage(g_rslider_n)
+						b:setPressedImage(g_rslider_p)
 						b:setTooltip("Select one ".. GrandStrategyUnits[gsunit_key].Name .. " regiment")
 
 						local selected_veterans = 0
@@ -2053,13 +2051,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dlslider_n)
-					b:setPressedImage(g_dlslider_p)
-				else
-					b:setNormalImage(g_dlslider_n)
-					b:setPressedImage(g_dlslider_p)
-				end
+				local g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
+				local g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
+				g_lslider_n:Load()
+				g_lslider_p:Load()
+				b:setNormalImage(g_lslider_n)
+				b:setPressedImage(g_lslider_p)
 				if (GrandStrategyFaction.Trade.Lumber <= 0) then
 					b:setTooltip("Increase bid of Lumber by 100")
 				else
@@ -2075,13 +2072,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_drslider_n)
-					b:setPressedImage(g_drslider_p)
-				else
-					b:setNormalImage(g_drslider_n)
-					b:setPressedImage(g_drslider_p)
-				end
+				local g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
+				local g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
+				g_rslider_n:Load()
+				g_rslider_p:Load()
+				b:setNormalImage(g_rslider_n)
+				b:setPressedImage(g_rslider_p)
 				if (GrandStrategyFaction.Trade.Lumber >= 0) then
 					b:setTooltip("Increase offer of Lumber by 100")
 				else
@@ -2098,13 +2094,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dbtn)
-					b:setPressedImage(g_dbtp)
-				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-					b:setNormalImage(g_gbtn)
-					b:setPressedImage(g_gbtp)
-				end
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Barracks") then
@@ -2141,13 +2136,12 @@ function DrawGrandStrategyInterface()
 						b:setBaseColor(Color(0,0,0,0))
 						b:setForegroundColor(Color(0,0,0,0))
 						b:setBackgroundColor(Color(0,0,0,0))
-						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-							b:setNormalImage(g_dlslider_n)
-							b:setPressedImage(g_dlslider_p)
-						else
-							b:setNormalImage(g_dlslider_n)
-							b:setPressedImage(g_dlslider_p)
-						end
+						local g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
+						local g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
+						g_lslider_n:Load()
+						g_lslider_p:Load()
+						b:setNormalImage(g_lslider_n)
+						b:setPressedImage(g_lslider_p)
 						b:setTooltip("Cancel training of one ".. GrandStrategyUnits[gsunit_key].Name .. " regiment")
 
 						local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2157,13 +2151,12 @@ function DrawGrandStrategyInterface()
 						b:setBaseColor(Color(0,0,0,0))
 						b:setForegroundColor(Color(0,0,0,0))
 						b:setBackgroundColor(Color(0,0,0,0))
-						if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-							b:setNormalImage(g_drslider_n)
-							b:setPressedImage(g_drslider_p)
-						else
-							b:setNormalImage(g_drslider_n)
-							b:setPressedImage(g_drslider_p)
-						end
+						local g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
+						local g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
+						g_rslider_n:Load()
+						g_rslider_p:Load()
+						b:setNormalImage(g_rslider_n)
+						b:setPressedImage(g_rslider_p)
 						
 						local cost_tooltip = ""
 						if (GrandStrategyUnits[gsunit_key].Costs.Gold > 0) then
@@ -2200,13 +2193,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dbtn)
-					b:setPressedImage(g_dbtp)
-				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-					b:setNormalImage(g_gbtn)
-					b:setPressedImage(g_gbtp)
-				end
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Lumber Mill") then
@@ -2229,13 +2221,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dbtn)
-					b:setPressedImage(g_dbtp)
-				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-					b:setNormalImage(g_gbtn)
-					b:setPressedImage(g_gbtp)
-				end
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Smith") then
@@ -2258,13 +2249,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dbtn)
-					b:setPressedImage(g_dbtp)
-				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-					b:setNormalImage(g_gbtn)
-					b:setPressedImage(g_gbtp)
-				end
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			end
@@ -2280,13 +2270,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dbtn)
-					b:setPressedImage(g_dbtp)
-				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-					b:setNormalImage(g_gbtn)
-					b:setPressedImage(g_gbtp)
-				end
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
@@ -2300,13 +2289,12 @@ function DrawGrandStrategyInterface()
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-					b:setNormalImage(g_dbtn)
-					b:setPressedImage(g_dbtp)
-				elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-					b:setNormalImage(g_gbtn)
-					b:setPressedImage(g_gbtp)
-				end
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			end
@@ -2320,13 +2308,12 @@ function DrawGrandStrategyInterface()
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setNormalImage(g_dbtn)
-		b:setPressedImage(g_dbtp)
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		b:setNormalImage(g_gbtn)
-		b:setPressedImage(g_gbtp)
-	end
+	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+	g_btn:Load()
+	g_btp:Load()
+	b:setNormalImage(g_btn)
+	b:setPressedImage(g_btp)
 	b:setSize(128, 20)
 	b:setFont(Fonts["game"])
 end

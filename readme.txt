@@ -37,7 +37,11 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 -----------------------------------------------------------------------
 
 * Buildings
-- Added germanic farm (graphics by Jinn).
+- Added Germanic Farm (graphics by Jinn).
+- Added Germanic Chieftain's Hall (graphics by Jinn).
+- Added Germanic War Lodge (graphics by Jinn).
+- Added Germanic Carpenter's Shop (graphics by Leo).
+- The Mercenary Camp's fire is now animated (modification by b_o).
 
 * Civilizations
 - Added Germanic civilization (human).
@@ -54,7 +58,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added germanic stand ground icon (by Leo).
 - The player now receives a message if they receive a new objective.
 - Added germanic arrow icon (by Leo).
-- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I and the Helgakvitha Hundingsbana II to the encyclopedia texts (The Poetic Edda).
+- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I, the Helgakvitha Hundingsbana II, the Gripisspo and the Reginsmol to the encyclopedia texts (The Poetic Edda).
 - A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
 - Encyclopedia pages can now have quotes which are relevant to the entry.
 - Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smith, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.

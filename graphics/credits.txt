@@ -44,7 +44,10 @@ b_o:
 /graphics/dwarf/units/thane_brown_hair.png
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
+/graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
 /graphics/germanic/units/worker.png
+/graphics/germanic/units/worker_with_gold.png
+/graphics/germanic/units/worker_with_lumber.png
 /graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
 /graphics/gnome/units/gnomish_caravan.png
 /graphics/gnome/units/gnomish_caravan_extra_1.png
@@ -70,6 +73,7 @@ b_o:
 /graphics/missiles/slime_glob.png
 /graphics/missiles/throwing_axe.png
 /graphics/missiles/throwing_dagger.png
+/graphics/neutral/buildings/mercenary_camp.png (modified from the building made by Jinn to add the fire animation)
 /graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
@@ -205,6 +209,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/buttonpanel_960.png
 /graphics/dwarf/ui/buttonpanel_1024.png
 /graphics/dwarf/ui/buttonpanel_1050.png
+/graphics/dwarf/ui/buttonpanel_1200.png
 /graphics/dwarf/ui/filler-right_480.png
 /graphics/dwarf/ui/filler-right_600.png
 /graphics/dwarf/ui/filler-right_768.png
@@ -212,6 +217,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/filler-right_960.png
 /graphics/dwarf/ui/filler-right_1024.png
 /graphics/dwarf/ui/filler-right_1050.png
+/graphics/dwarf/ui/filler-right_1200.png
 /graphics/dwarf/ui/infopanel.png
 /graphics/dwarf/ui/menubutton.png
 /graphics/dwarf/ui/minimap.png
@@ -257,15 +263,81 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/widgets/button-thin-medium-pressed.png
 /graphics/dwarf/ui/widgets/button-thin-small-normal.png
 /graphics/dwarf/ui/widgets/button-thin-small-pressed.png
+/graphics/dwarf/ui/widgets/left-arrow-normal.png
+/graphics/dwarf/ui/widgets/left-arrow-pressed.png
+/graphics/dwarf/ui/widgets/right-arrow-normal.png
+/graphics/dwarf/ui/widgets/right-arrow-pressed.png
 /graphics/dwarf/ui/widgets/radio-normal-selected.png
 /graphics/dwarf/ui/widgets/radio-normal-unselected.png
 /graphics/dwarf/ui/widgets/radio-pressed-selected.png
 /graphics/dwarf/ui/widgets/radio-pressed-unselected.png
+/graphics/dwarf/ui/widgets/slider-bar-normal.png
+/graphics/dwarf/ui/widgets/slider-knob.png
 /graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
 /graphics/elf/icons/elven_swordsman.png
 /graphics/germanic/buildings/barracks.png
 /graphics/germanic/buildings/farm.png
-/graphics/germanic/buildings/town_hall.png
+/graphics/germanic/buildings/town_hall.png (later modified by b_o to add the fire animation)
+/graphics/germanic/ui/buttonpanel_480.png
+/graphics/germanic/ui/buttonpanel_600.png
+/graphics/germanic/ui/buttonpanel_768.png
+/graphics/germanic/ui/buttonpanel_800.png
+/graphics/germanic/ui/buttonpanel_960.png
+/graphics/germanic/ui/buttonpanel_1024.png
+/graphics/germanic/ui/buttonpanel_1050.png
+/graphics/germanic/ui/buttonpanel_1200.png
+/graphics/germanic/ui/filler-right_480.png
+/graphics/germanic/ui/filler-right_600.png
+/graphics/germanic/ui/filler-right_768.png
+/graphics/germanic/ui/filler-right_800.png
+/graphics/germanic/ui/filler-right_960.png
+/graphics/germanic/ui/filler-right_1024.png
+/graphics/germanic/ui/filler-right_1050.png
+/graphics/germanic/ui/filler-right_1200.png
+/graphics/germanic/ui/infopanel.png
+/graphics/germanic/ui/menubutton.png
+/graphics/germanic/ui/minimap.png
+/graphics/germanic/ui/panel_1.png
+/graphics/germanic/ui/panel_2.png
+/graphics/germanic/ui/panel_3.png
+/graphics/germanic/ui/panel_4.png
+/graphics/germanic/ui/panel_5.png
+/graphics/germanic/ui/resource_640.png
+/graphics/germanic/ui/resource_800.png
+/graphics/germanic/ui/resource_1024.png
+/graphics/germanic/ui/resource_1280.png
+/graphics/germanic/ui/resource_1360.png
+/graphics/germanic/ui/resource_1400.png
+/graphics/germanic/ui/resource_1600.png
+/graphics/germanic/ui/resource_1680.png
+/graphics/germanic/ui/statusline_640.png
+/graphics/germanic/ui/statusline_800.png
+/graphics/germanic/ui/statusline_1024.png
+/graphics/germanic/ui/statusline_1280.png
+/graphics/germanic/ui/statusline_1360.png
+/graphics/germanic/ui/statusline_1400.png
+/graphics/germanic/ui/statusline_1600.png
+/graphics/germanic/ui/statusline_1680.png
+/graphics/germanic/ui/widgets/button-large-grayed.png
+/graphics/germanic/ui/widgets/button-large-normal.png
+/graphics/germanic/ui/widgets/button-large-pressed.png
+/graphics/germanic/ui/widgets/button-small-grayed.png
+/graphics/germanic/ui/widgets/button-small-normal.png
+/graphics/germanic/ui/widgets/button-small-pressed.png
+/graphics/germanic/ui/widgets/button-thin-medium-normal.png
+/graphics/germanic/ui/widgets/button-thin-medium-pressed.png
+/graphics/germanic/ui/widgets/button-thin-small-normal.png
+/graphics/germanic/ui/widgets/button-thin-small-pressed.png
+/graphics/germanic/ui/widgets/left-arrow-normal.png
+/graphics/germanic/ui/widgets/left-arrow-pressed.png
+/graphics/germanic/ui/widgets/right-arrow-normal.png
+/graphics/germanic/ui/widgets/right-arrow-pressed.png
+/graphics/germanic/ui/widgets/radio-normal-selected.png
+/graphics/germanic/ui/widgets/radio-normal-unselected.png
+/graphics/germanic/ui/widgets/radio-pressed-selected.png
+/graphics/germanic/ui/widgets/radio-pressed-unselected.png
+/graphics/germanic/ui/widgets/slider-bar-normal.png
+/graphics/germanic/ui/widgets/slider-knob.png
 /graphics/gnome/buildings/barracks.png
 /graphics/gnome/buildings/farm.png
 /graphics/gnome/buildings/town_hall.png
@@ -285,12 +357,6 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/ui/widgets/button-thin-medium-pressed.png
 /graphics/gnome/ui/widgets/button-thin-small-normal.png
 /graphics/gnome/ui/widgets/button-thin-small-pressed.png
-/graphics/gnome/ui/widgets/hslider-bar-normal.png
-/graphics/gnome/ui/widgets/left-arrow-normal.png
-/graphics/gnome/ui/widgets/left-arrow-pressed.png
-/graphics/gnome/ui/widgets/right-arrow-normal.png
-/graphics/gnome/ui/widgets/right-arrow-pressed.png
-/graphics/gnome/ui/widgets/slider-knob.png
 /graphics/goblin/buildings/smith.png
 /graphics/goblin/icons/goblin_archer.png
 /graphics/goblin/icons/goblin_assassin.png
@@ -306,7 +372,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/glyph_player_color.png
 /graphics/neutral/buildings/gold_mine.png
 /graphics/neutral/buildings/land_construction_site.png
-/graphics/neutral/buildings/mercenary_camp.png
+/graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation)
 /graphics/neutral/buildings/wood_pile.png
 /graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/axe_mastery.png
@@ -448,6 +514,7 @@ Leo:
 /graphics/dwarf/icons/surghan_mercenary_steelclad.png
 /graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
+/graphics/germanic/buildings/carpenters_shop.png
 /graphics/germanic/icons/arrow.png
 /graphics/germanic/icons/barbed_arrow.png
 /graphics/germanic/icons/broad_sword.png

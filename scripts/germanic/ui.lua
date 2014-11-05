@@ -53,7 +53,7 @@ DefineCursor({
   Size = {32, 32}})
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---	* Civilization germanic.
+--	* Civilization Germanic.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 wyrmsun.playlist = { "music/battle.ogg" }
@@ -88,16 +88,16 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("dwarf/ui/filler-right_" .. Video.Height .. ".png", Video.Width - 16, 0)
-AddFiller("dwarf/ui/resource_" .. Video.Width .. ".png", 176, 0)
-AddFiller("dwarf/ui/statusline_" .. Video.Width .. ".png", 176, Video.Height - 16)
-AddFiller("dwarf/ui/buttonpanel_" .. Video.Height .. ".png", 0, 336)
-AddFiller("dwarf/ui/menubutton.png", 0, 0)
-AddFiller("dwarf/ui/minimap.png", 0, 24)
+AddFiller("germanic/ui/filler-right_" .. Video.Height .. ".png", Video.Width - 16, 0)
+AddFiller("germanic/ui/resource_" .. Video.Width .. ".png", 176, 0)
+AddFiller("germanic/ui/statusline_" .. Video.Width .. ".png", 176, Video.Height - 16)
+AddFiller("germanic/ui/buttonpanel_" .. Video.Height .. ".png", 0, 336)
+AddFiller("germanic/ui/menubutton.png", 0, 0)
+AddFiller("germanic/ui/minimap.png", 0, 24)
 
 UI.InfoPanel.X = 0
 UI.InfoPanel.Y = 160
-UI.InfoPanel.G = CGraphic:New("dwarf/ui/infopanel.png", 176, 176)
+UI.InfoPanel.G = CGraphic:New("germanic/ui/infopanel.png", 176, 176)
 
 b = CUIButton:new()
 b.X = 9
@@ -292,7 +292,7 @@ UI.Resources[ManaResCost].TextY = -100
 UI.MenuButton.X = 24
 UI.MenuButton.Y = 2
 UI.MenuButton.Text = "Menu (~<F10~>)"
-UI.MenuButton.Style = FindButtonStyle("main-dwarf")
+UI.MenuButton.Style = FindButtonStyle("main-germanic")
 UI.MenuButton:SetCallback(
   function()
     if (Editor.Running == EditorNotRunning) then
@@ -305,12 +305,12 @@ UI.MenuButton:SetCallback(
 UI.NetworkMenuButton.X = 6
 UI.NetworkMenuButton.Y = 2
 UI.NetworkMenuButton.Text = "Menu"
-UI.NetworkMenuButton.Style = FindButtonStyle("network-dwarf")
+UI.NetworkMenuButton.Style = FindButtonStyle("network-germanic")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
 UI.NetworkDiplomacyButton.X = 90
 UI.NetworkDiplomacyButton.Y = 2
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-dwarf")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-germanic")
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 

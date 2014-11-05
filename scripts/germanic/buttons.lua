@@ -41,6 +41,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
 	"unit-germanic-worker",
+    "unit-germanic-warrior",
 	"unit-hero-greebo",
 	"germanic-group"
 } } )
@@ -50,6 +51,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
   Key = "s", Hint = _("~!Stop"),
   ForUnit = {
 	"unit-germanic-worker",
+    "unit-germanic-warrior",
 	"germanic-group"
 } } )
 
@@ -58,6 +60,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
   Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-bronze-shield"},
   Key = "s", Hint = _("~!Stop"),
   ForUnit = {
+    "unit-germanic-warrior",
 	"germanic-group"
 } } )
 
@@ -72,6 +75,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = _("S~!tand Ground"),
   ForUnit = {
+    "unit-germanic-warrior",
 	"germanic-group"
 } } )
 
@@ -106,12 +110,17 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"),
   ForUnit = {"unit-germanic-worker"} } )
 
-  DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
   Action = "build", Value = "unit-germanic-town-hall",
   Key = "h", Hint = _("Build Chieftain's ~!Hall"),
   ForUnit = {"unit-germanic-worker"} } )
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
+  Action = "build", Value = "unit-germanic-carpenters-shop",
+  Key = "c", Hint = _("Build ~!Carpenter's Shop"),
+  ForUnit = {"unit-germanic-worker"} } )
+
+  DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"),
   ForUnit = {"unit-germanic-worker"} } )
@@ -122,3 +131,16 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
   Action = "train-unit", Value = "unit-germanic-worker",
   Key = "b", Hint = _("Train ~!Bura"),
   ForUnit = {"unit-germanic-town-hall"} } )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
+  Action = "train-unit", Value = "unit-germanic-warrior",
+  Key = "e", Hint = _("Train ~!Erala"),
+  ForUnit = {"unit-germanic-barracks"} } )
+  
+-- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
+  Action = "research", Value = "upgrade-germanic-barbed-arrow",
+  Allowed = "check-single-research",
+  Key = "a", Hint = _("Research Barbed ~!Arrow"),
+  ForUnit = {"unit-germanic-carpenters-shop"} } )

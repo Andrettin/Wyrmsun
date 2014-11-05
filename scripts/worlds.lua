@@ -35,7 +35,7 @@ Worlds = {
 	},
 	Alfheim = {
 		Name = _("Alfheim"),
-		Description = _("The lush world of Alfheim is inhabited by elves and trolls. Its forests are characterized by the beautiful golden foliage of the fairlimbed trees, which are much adored by the elves. The planet orbits a star known as Fairwheel, and is in turn orbited by a moon called Timeteller."),
+		Description = _("The lush world of Alfheim is inhabited by elves and trolls. Its forests are characterized by the beautiful golden foliage of the fairlimbed trees, which are much adored by the elves. The planet orbits a star known as Fairwheel, and is in turn orbited by a moon called Timeteller. Centuries after the elves first achieved spacefaring capability, they decided to use their advanced technology to create an artificial \"sun\" for Alfheim - in truth a fiery moon - to lengthen the days and shorten the darkness. Eventually, the elves wanted to live under sunlight at all times, and the construction of a third \"sun\" started. An accident during the construction caused the third-sun-in-the-making to blow up, causing devastation on the planet. This catastrophe, added with the unnatural existence of the second sun, caused the earth to be scorched with high temperatures, and thus the fields dried up, forests died, and swamps turned into mud-cracked plains."),
 		Background = _("Alfheim was the world of the light elves in Norse mythology. In the ~<Alvissmol~> it is mentioned that elves' term for \"wood\" is \"fair-limbed\". In that same poem, \"the Teller of Time\" is said to be the elves' term for the moon, and \"Fair Wheel\" their term for the sun. The ~<Grimnismol~> mentions that Alfheim was given to the Norse god Freyr by the other deities.")
 	},
 	Jotunheim = {
@@ -47,5 +47,67 @@ Worlds = {
 		Name = _("Nidavellir"),
 		Description = _("The dark plains and mountains of Nidavellir are home to the dwarves, gnomes, goblins and kobolds. Of these diminutive races, the gnomes established the first civilization, and the dwarves the greatest. Nidavellir orbits around a star known as Dvalin's Deceiver, which received its name from Dvalin's dislike of sunlight. The legendary dwarf allegedly preferred the dark even more than most dwarves, complaining incessantly if the sunlight caught him unaware during his travels. The Deep Sea which lies to the east of the dwarven realms of Kal Kartha and Lyr remained unexplored for a long time, until dwarves began building ships robust enough to sail through it. Nidavellir has one moon, which is called \"the Gleamer\". The first contact between dwarves and humans happened in the 23rd century, when an expedition happened upon a dwarven mining operation on a distant planet, resulting in a skirmish."),
 		Background = _("Nidavellir was the world of the dwarves in Norse mythology. The name means \"the Dark Fields\" or \"the Dark Crags\". Nidavellir is mentioned in the ~<Voluspo~>. In the ~<Alvissmol~> it is said that \"the Gleamer\" is the dwarves' term for the moon, while \"the Deceiver of Dvalin\" is their term for the sun.")
-	}
+	},
+	--[[
+	Beowulf = {
+		Name = _("Beowulf"),
+		Description = _("The planet remained unsettled until a London-based chartered company made efforts to colonize it, naming it after the hero of Anglo-Saxon legend."),
+		Background = _("Beowulf featured in H. Beam Piper's ~<Space Viking~> novel.")
+	},
+	Colada = {
+		Name = _("Colada"),
+		Description = _("One of the Sword Worlds."),
+		Background = _("Colada was mentioned in H. Beam Piper's ~<Space Viking~> novel.")
+	},
+	Curtana = {
+		Name = _("Curtana"),
+		Description = _("One of the Sword Worlds."),
+		Background = _("Curtana was mentioned in H. Beam Piper's ~<Space Viking~> novel, and in his ~<A Slave is a Slave~>.")
+	},
+	Durendal = {
+		Name = _("Durendal"),
+		Description = _("One of the Sword Worlds, Durendal was settled by colonists from Excalibur. It was ruled by a planetary king, and a civil war was fought between the Oskarsan and Elmersan branches of the royal house over that position, with the Oskarsans emerging victorious. The planet is heavily agricultural."),
+		Background = _("Durendal was mentioned in H. Beam Piper's ~<Space Viking~> novel, and in his ~<Ministry of Disturbance~> and ~<A Slave is a Slave~>.")
+	},
+	Excalibur = {
+		Name = _("Excalibur"),
+		Description = _("A long distance away from Earth, Excalibur was the first of the Sword Worlds to be colonized. The settlers, who came from a decaying planetary colony in the frontiers of space, were mostly soldiers and spacefarers, although many skilled technicians, engineers and scientists went along, bringing considerable equipment with them. In keeping with the name given to the planet, its main settlement was called Camelot. Young noblemen and noblewomen from throughout the Sword Worlds were sent to the prestigious University of Camelot to study."),
+		Background = _("Excalibur was mentioned in H. Beam Piper's ~<Space Viking~> novel, and in his ~<A Slave is a Slave~>.")
+	},
+	Flamberge = {
+		Name = _("Flamberge"),
+		Description = _("One of the Sword Worlds, Flamberge was settled by colonists from Excalibur. It was ruled by a planetary king."),
+		Background = _("Flamberge was mentioned in H. Beam Piper's ~<Space Viking~> novel, and in his ~<A Slave is a Slave~>.")
+	},
+	Gram = {
+		Name = _("Gram"),
+		Description = _("One of the last Sword Worlds to be colonized, Gram was home to a series of fiefdoms, such as the Duchy of Wardshaven and the Barony of Traskon. It was settled by colonists from Haulteclere."),
+		Background = _("Gram featured in H. Beam Piper's ~<Space Viking~> novel, and in his ~<A Slave is a Slave~>.")
+	},
+	Haulteclere = {
+		Name = _("Haulteclere"),
+		Description = _("One of the Sword Worlds, Flamberge was settled by colonists from Joyeuse. It was ruled by a planetary king."),
+		Background = _("Haulteclere was mentioned in H. Beam Piper's ~<Space Viking~> novel.")
+	},
+	Joyeuse = {
+		Name = _("Joyeuse"),
+		Description = _("One of the Sword Worlds, Joyeuse was settled by colonists from Excalibur."),
+		Background = _("Joyeuse was mentioned in H. Beam Piper's ~<Space Viking~> novel.")
+	},
+	Morglay = {
+		Name = _("Morglay"),
+		Description = _("One of the Sword Worlds."),
+		Background = _("Morglay was mentioned in H. Beam Piper's ~<Space Viking~> novel, and in his ~<A Slave is a Slave~>.")
+	},
+	Quernbiter = {
+		Name = _("Quernbiter"),
+		Description = _("One of the Sword Worlds."),
+		Background = _("Quernbiter was mentioned in H. Beam Piper's ~<A Slave is a Slave~>.")
+	},
+	Tizona = {
+		Name = _("Tizona"),
+		Description = _("One of the Sword Worlds. Tizona is inhabited by animals known as \"giraffe-birds\"."),
+		Background = _("Tizona was mentioned in H. Beam Piper's ~<Space Viking~> novel, and in his ~<A Slave is a Slave~>.")
+	},
+	--]]
 }

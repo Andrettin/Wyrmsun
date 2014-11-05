@@ -246,18 +246,35 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			l:setCaption(civilization .. description .. quote .. background)
 			
 			-- add buttons of texts related to the subject matter of the entry
+			local chapter_references = 0
+			for text_key, text_value in pairsByKeys(Texts, text_compare) do
+				for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
+					if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+						chapter_references = chapter_references + 1
+					end
+				end
+			end
+
+			local chapter_x
 			local chapter_y = 8
+			if (chapter_references == 1) then
+				chapter_x = 0
+			elseif (chapter_references == 2) then
+				chapter_x = -1
+			else
+				chapter_x = -2
+			end
 			for text_key, text_value in pairsByKeys(Texts, text_compare) do
 				for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
 					if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
 						if (GetTableSize(Texts[text_key].Chapters) > 1) then
-							encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+							encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
 								function() OpenEncyclopediaText(text_key, chapter_key); end)
 						else
-							encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+							encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
 								function() OpenEncyclopediaText(text_key); end)
 						end
-						chapter_y = chapter_y - 1
+						chapter_x = chapter_x + 2
 					end
 				end
 			end
@@ -650,20 +667,38 @@ function RunEncyclopediaWorldsMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*-2)
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 0
+	else
+		height_offset = 2
+	end
+	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
-	local world_y = -1
+	local world_x = 0
+	if (GetTableSize(Worlds) > 26) then
+		world_x = -2
+	elseif (GetTableSize(Worlds) > 13) then
+		world_x = -1
+	end
+	local world_y = -3
+
 	for world_key, world_value in pairsByKeys(Worlds) do
-		menu:addFullButton(Worlds[world_key].Name, "", offx + 208, offy + 104 + 36*world_y,
+		menu:addFullButton(Worlds[world_key].Name, "", offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
 			function() OpenEncyclopediaWorldEntry(world_key); end)
-		world_y = world_y + 1
+
+		if (world_y > 8 or (world_y > 4 and Video.Height < 600)) then
+			world_x = world_x + 2
+			world_y = -3
+		else
+			world_y = world_y + 1
+		end
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
 		function() menu:stop(); end)
 
 	menu:run()
-
 end
 
 function OpenEncyclopediaWorldEntry(world_key)
@@ -696,18 +731,36 @@ function OpenEncyclopediaWorldEntry(world_key)
 	l:setCaption(description .. background)
 			
 	-- add buttons of texts related to the subject matter of the entry
+	local chapter_references = 0
+	for text_key, text_value in pairsByKeys(Texts, text_compare) do
+		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
+			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+				chapter_references = chapter_references + 1
+			end
+		end
+	end
+	
+	local chapter_x
 	local chapter_y = 8
+	if (chapter_references == 1) then
+		chapter_x = 0
+	elseif (chapter_references == 2) then
+		chapter_x = -1
+	else
+		chapter_x = -2
+	end
+
 	for text_key, text_value in pairsByKeys(Texts, text_compare) do
 		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
 			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
 				if (GetTableSize(Texts[text_key].Chapters) > 1) then
-					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
 						function() OpenEncyclopediaText(text_key, chapter_key); end)
 				else
-					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208, offy + 104 + (36 * chapter_y),
+					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
 						function() OpenEncyclopediaText(text_key); end)
 				end
-				chapter_y = chapter_y - 1
+				chapter_x = chapter_x + 2
 			end
 		end
 	end

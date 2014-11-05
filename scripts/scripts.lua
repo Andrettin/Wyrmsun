@@ -75,6 +75,24 @@ if (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then
 			"wait-at-depot", 150}
 		}
 	} )
+	DefineUnitType("unit-germanic-worker", {
+		Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
+		CanGatherResources = {
+			{"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "gold",
+--			"harvest-from-outside",
+			"resource-capacity", 100,
+			"wait-at-resource", 150,
+			"wait-at-depot", 150},
+			{"file-when-loaded", "germanic/units/worker_with_lumber.png",
+			"resource-id", "lumber",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150}
+		}
+	} )
 	DefineUnitType("unit-gnomish-worker", {
 		Image = {"file", "gnome/units/gnomish_worker.png", "size", {72, 72}},
 		CanGatherResources = {
@@ -135,6 +153,24 @@ else
 			"wait-at-depot", 150}
 		}
 	} )
+	DefineUnitType("unit-germanic-worker", {
+		Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
+		CanGatherResources = {
+			{"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "gold",
+--			"harvest-from-outside",
+			"resource-capacity", 100,
+			"wait-at-resource", 150,
+			"wait-at-depot", 150},
+			{"file-when-loaded", "germanic/units/worker_with_lumber.png",
+			"resource-id", "lumber",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150,
+			"terrain-harvester"}
+		}
+	} )
 	DefineUnitType("unit-gnomish-worker", {
 		Image = {"file", "gnome/units/gnomish_worker.png", "size", {72, 72}},
 		CanGatherResources = {
@@ -177,18 +213,6 @@ end
 
 Load("scripts/icons.lua")
 Load("scripts/constructions.lua")
-
-if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-	Load("scripts/dwarf/ui.lua")
-elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-	Load("scripts/germanic/ui.lua")
-elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-	Load("scripts/gnome/ui.lua")
-elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-	Load("scripts/goblin/ui.lua")
-elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
-	Load("scripts/kobold/ui.lua")
-end
 
 StopMusic()
 MusicStopped()

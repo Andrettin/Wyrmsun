@@ -32,6 +32,7 @@ UnitStill = {"frame 0", "wait 4", "random-goto 99 no-rotate", "random-rotate 1",
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
 
 Load("scripts/dwarf/anim.lua")
+Load("scripts/germanic/anim.lua")
 Load("scripts/gnome/anim.lua")
 Load("scripts/goblin/anim.lua")
 
@@ -213,6 +214,16 @@ DefineAnimations("animations-gold-mine", {
 			"label active", "frame 1", "wait 4", "frame 1", "wait 1"}
 })
 
+--
+-- Mercenary Camp
+--
+
+DefineAnimations("animations-mercenary-camp", {
+  Still = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
+  Research = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
+  Train = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
+  Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+})
 
 DefineAnimations("animations-dwarven-dead-body", {
   Death = {"unbreakable begin", "frame 0", "wait 200", "frame 5", "wait 200", "frame 10", "wait 200",

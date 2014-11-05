@@ -30,8 +30,9 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-germanic-worker",
+	"unit-germanic-worker", "unit-germanic-warrior",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
+	"unit-germanic-carpenters-shop",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
@@ -424,7 +425,7 @@ DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	Description = _("This camp houses a number of mercenary groups, who will offer their talents for hire."),
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
 	NeutralMinimapColor = {192, 192, 192},
-	Animations = "animations-building", Icon = "icon-mercenary-camp",
+	Animations = "animations-mercenary-camp", Icon = "icon-mercenary-camp",
 	Costs = {"time", 200, "gold", 700, "lumber", 450},
 	RepairHp = 4,
 	RepairCosts = {"gold", 1, "lumber", 1},

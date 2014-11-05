@@ -994,6 +994,8 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
 		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-germanic-warrior") then
+		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-gnomish-recruit") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-goblin-spearman") then

@@ -128,6 +128,8 @@ end
 function AiLumberMill()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-lumber-mill"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-carpenters-shop"
 	elseif (AiGetRace() == "goblin") then
 		return "unit-goblin-lumber-mill"
 	else
@@ -154,6 +156,8 @@ end
 function AiSoldier()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-axefighter"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-warrior"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-recruit"
 	elseif (AiGetRace() == "goblin") then
@@ -229,6 +233,8 @@ end
 function AiPriest()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-thane"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-warrior"
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-recruit"
 	elseif (AiGetRace() == "goblin") then
@@ -246,8 +252,8 @@ end
 function AiUpgradeWeapon1()
 	if (AiGetRace() == "dwarf") then
 		return "upgrade-dwarven-broad-axe"
-	elseif (AiGetRace() == "germanic") then
-		return "upgrade-germanic-broad-sword"
+--	elseif (AiGetRace() == "germanic") then
+--		return "upgrade-germanic-broad-sword"
 	else
 		return "upgrade-dwarven-broad-axe"
 	end
@@ -270,8 +276,8 @@ end
 function AiUpgradeShield1()
 	if (AiGetRace() == "dwarf") then
 		return "upgrade-dwarven-shield-1"
-	elseif (AiGetRace() == "germanic") then
-		return "upgrade-germanic-bronze-shield"
+--	elseif (AiGetRace() == "germanic") then
+--		return "upgrade-germanic-bronze-shield"
 	else
 		return "upgrade-dwarven-shield-1"
 	end

@@ -49,97 +49,34 @@ wyrmsun_logo:Load()
 --wyrmsun_logo:Resize(6197 * Video.Width / 800 / 16, 2456 * Video.Height / 600 / 16)
 wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
-g_dbln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
-g_dbln:Load()
-g_dblp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
-g_dblp:Load()
-g_dblg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
-g_dblg:Load()
-
-g_dbsn = CGraphic:New("dwarf/ui/widgets/button-small-normal.png")
-g_dbsn:Load()
-g_dbsp = CGraphic:New("dwarf/ui/widgets/button-small-pressed.png")
-g_dbsp:Load()
-g_dbsg = CGraphic:New("dwarf/ui/widgets/button-small-grayed.png")
-g_dbsg:Load()
-
-g_gbln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
-g_gbln:Load()
-g_gblp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
-g_gblp:Load()
-g_gblg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
-g_gblg:Load()
-
-g_gbsn = CGraphic:New("gnome/ui/widgets/button-small-normal.png")
-g_gbsn:Load()
-g_gbsp = CGraphic:New("gnome/ui/widgets/button-small-pressed.png")
-g_gbsp:Load()
-g_gbsg = CGraphic:New("gnome/ui/widgets/button-small-grayed.png")
-g_gbsg:Load()
-
-g_dcheckbox_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
-g_dcheckbox_off:Load()
-g_dcheckbox_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
-g_dcheckbox_off2:Load()
-g_dcheckbox_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
-g_dcheckbox_on:Load()
-g_dcheckbox_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
-g_dcheckbox_on2:Load()
-
-g_dradio_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
-g_dradio_off:Load()
-g_dradio_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
-g_dradio_off2:Load()
-g_dradio_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
-g_dradio_on:Load()
-g_dradio_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
-g_dradio_on2:Load()
-
--- right slider arrows for dwarf
-g_drslider_n = CGraphic:New("dwarf/ui/widgets/right-arrow-normal.png")
-g_drslider_n:Load()
-g_drslider_p = CGraphic:New("dwarf/ui/widgets/right-arrow-pressed.png")
-g_drslider_p:Load()
-
--- left slider arrows for dwarf
-g_dlslider_n = CGraphic:New("dwarf/ui/widgets/left-arrow-normal.png")
-g_dlslider_n:Load()
-g_dlslider_p = CGraphic:New("dwarf/ui/widgets/left-arrow-pressed.png")
-g_dlslider_p:Load()
-
--- slider marker - so we know the value of the option we're trying to change
-g_dmarker = CGraphic:New("dwarf/ui/widgets/slider-knob.png")
-g_dmarker:Load()
-
--- slider background image
-g_dslider = CGraphic:New("dwarf/ui/widgets/hslider-bar-normal.png")
-g_dslider:Load()
-
--- thin medium button
-g_dbtn = CGraphic:New("dwarf/ui/widgets/button-thin-medium-normal.png")
-g_dbtn:Load()
-g_dbtp = CGraphic:New("dwarf/ui/widgets/button-thin-medium-pressed.png")
-g_dbtp:Load()
-
-g_gbtn = CGraphic:New("gnome/ui/widgets/button-thin-medium-normal.png")
-g_gbtn:Load()
-g_gbtp = CGraphic:New("gnome/ui/widgets/button-thin-medium-pressed.png")
-g_gbtp:Load()
-
-local dpanels = {
-  "dwarf/ui/panel_1.png",
-  "dwarf/ui/panel_2.png",
-  "dwarf/ui/panel_3.png",
-  "dwarf/ui/panel_4.png",
-  "dwarf/ui/panel_5.png"
-}
-
 function panel(n)
+	local panels = {}
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		return dpanels[n]
+		panels = {
+			"dwarf/ui/panel_1.png",
+			"dwarf/ui/panel_2.png",
+			"dwarf/ui/panel_3.png",
+			"dwarf/ui/panel_4.png",
+			"dwarf/ui/panel_5.png"
+		}
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		panels = {
+			"germanic/ui/panel_1.png",
+			"germanic/ui/panel_2.png",
+			"germanic/ui/panel_3.png",
+			"germanic/ui/panel_4.png",
+			"germanic/ui/panel_5.png"
+		}
 	else
-		return dpanels[n]
+		panels = {
+			"dwarf/ui/panel_1.png",
+			"dwarf/ui/panel_2.png",
+			"dwarf/ui/panel_3.png",
+			"dwarf/ui/panel_4.png",
+			"dwarf/ui/panel_5.png"
+		}
 	end
+	return panels[n]
 end
 
 
@@ -196,19 +133,32 @@ function AddMenuHelpers(menu)
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
+	local g_bln
+	local g_blp
+	local g_blg
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setNormalImage(g_dbln)
-		b:setPressedImage(g_dblp)
-		b:setDisabledImage(g_dblg)
+		g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
+		g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
+		g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
+		g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
+		g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		b:setNormalImage(g_gbln)
-		b:setPressedImage(g_gblp)
-		b:setDisabledImage(g_gblg)
+		g_bln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
+		g_blp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
+		g_blg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
 	else
-		b:setNormalImage(g_dbln)
-		b:setPressedImage(g_dblp)
-		b:setDisabledImage(g_dblg)
+		g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
+		g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
+		g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
 	end
+	g_bln:Load()
+	g_blp:Load()
+	g_blg:Load()
+	b:setNormalImage(g_bln)
+	b:setPressedImage(g_blp)
+	b:setDisabledImage(g_blg)
 	b:setSize(224, 28)
 	if (string.len(caption) > 24) then
 		b:setFont(Fonts["game"])
@@ -221,19 +171,32 @@ function AddMenuHelpers(menu)
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
+	local g_bsn
+	local g_bsp
+	local g_bsg
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setNormalImage(g_dbsn)
-		b:setPressedImage(g_dbsp)
-		b:setDisabledImage(g_dbsg)
+		g_bsn = CGraphic:New("dwarf/ui/widgets/button-small-normal.png")
+		g_bsp = CGraphic:New("dwarf/ui/widgets/button-small-pressed.png")
+		g_bsg = CGraphic:New("dwarf/ui/widgets/button-small-grayed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_bsn = CGraphic:New("germanic/ui/widgets/button-small-normal.png")
+		g_bsp = CGraphic:New("germanic/ui/widgets/button-small-pressed.png")
+		g_bsg = CGraphic:New("germanic/ui/widgets/button-small-grayed.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		b:setNormalImage(g_gbsn)
-		b:setPressedImage(g_gbsp)
-		b:setDisabledImage(g_gbsg)
+		g_bsn = CGraphic:New("gnome/ui/widgets/button-small-normal.png")
+		g_bsp = CGraphic:New("gnome/ui/widgets/button-small-pressed.png")
+		g_bsg = CGraphic:New("gnome/ui/widgets/button-small-grayed.png")
 	else
-		b:setNormalImage(g_dbsn)
-		b:setPressedImage(g_dbsp)
-		b:setDisabledImage(g_dbsg)
+		g_bsn = CGraphic:New("dwarf/ui/widgets/button-small-normal.png")
+		g_bsp = CGraphic:New("dwarf/ui/widgets/button-small-pressed.png")
+		g_bsg = CGraphic:New("dwarf/ui/widgets/button-small-grayed.png")
 	end
+	g_bsn:Load()
+	g_bsp:Load()
+	g_bsg:Load()
+	b:setNormalImage(g_bsn)
+	b:setPressedImage(g_bsp)
+	b:setDisabledImage(g_bsg)
 	b:setSize(106, 28)
 	return b
   end
@@ -254,13 +217,22 @@ function AddMenuHelpers(menu)
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
+	local g_lslider_n
+	local g_lslider_p
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setNormalImage(g_dlslider_n)
-		b:setPressedImage(g_dlslider_p)
+		g_lslider_n = CGraphic:New("dwarf/ui/widgets/left-arrow-normal.png")
+		g_lslider_p = CGraphic:New("dwarf/ui/widgets/left-arrow-pressed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_lslider_n = CGraphic:New("germanic/ui/widgets/left-arrow-normal.png")
+		g_lslider_p = CGraphic:New("germanic/ui/widgets/left-arrow-pressed.png")
 	else
-		b:setNormalImage(g_dlslider_n)
-		b:setPressedImage(g_dlslider_p)
+		g_lslider_n = CGraphic:New("dwarf/ui/widgets/left-arrow-normal.png")
+		g_lslider_p = CGraphic:New("dwarf/ui/widgets/left-arrow-pressed.png")
 	end
+	g_lslider_n:Load()
+	g_lslider_p:Load()
+	b:setNormalImage(g_lslider_n)
+	b:setPressedImage(g_lslider_p)
 	b:setSize(20, 19)
 	b:setBorderSize(0)
 	return b
@@ -269,13 +241,22 @@ function AddMenuHelpers(menu)
   function menu:addImageSlider(min, max, w, h, x, y, callback)
 	local b = ImageSlider(min, max)
 	-- New Slider Functions
+	local g_marker
+	local g_slider
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setMarkerImage(g_dmarker)
-		b:setBackgroundImage(g_dslider)
+		g_marker = CGraphic:New("dwarf/ui/widgets/slider-knob.png")
+		g_slider = CGraphic:New("dwarf/ui/widgets/slider-bar-normal.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_marker = CGraphic:New("germanic/ui/widgets/slider-knob.png")
+		g_slider = CGraphic:New("germanic/ui/widgets/slider-bar-normal.png")
 	else
-		b:setMarkerImage(g_dmarker)
-		b:setBackgroundImage(g_dslider)
+		g_marker = CGraphic:New("dwarf/ui/widgets/slider-knob.png")
+		g_slider = CGraphic:New("dwarf/ui/widgets/slider-bar-normal.png")
 	end
+	g_marker:Load()
+	g_slider:Load()
+	b:setMarkerImage(g_marker)
+	b:setBackgroundImage(g_slider)
 	b:setSize(w, h)
 	b:setActionCallback(function(s) callback(b, s) end)
 	self:add(b, x, y)
@@ -288,13 +269,22 @@ function AddMenuHelpers(menu)
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
+	local g_rslider_n
+	local g_rslider_p
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setNormalImage(g_drslider_n)
-		b:setPressedImage(g_drslider_p)
+		g_rslider_n = CGraphic:New("dwarf/ui/widgets/right-arrow-normal.png")
+		g_rslider_p = CGraphic:New("dwarf/ui/widgets/right-arrow-pressed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_rslider_n = CGraphic:New("germanic/ui/widgets/right-arrow-normal.png")
+		g_rslider_p = CGraphic:New("germanic/ui/widgets/right-arrow-pressed.png")
 	else
-		b:setNormalImage(g_drslider_n)
-		b:setPressedImage(g_drslider_p)
-	end	  
+		g_rslider_n = CGraphic:New("dwarf/ui/widgets/right-arrow-normal.png")
+		g_rslider_p = CGraphic:New("dwarf/ui/widgets/right-arrow-pressed.png")
+	end
+	g_rslider_n:Load()
+	g_rslider_p:Load()
+	b:setNormalImage(g_rslider_n)
+	b:setPressedImage(g_rslider_p)
 	b:setSize(20, 19)
 	b:setBorderSize(0)
 	return b
@@ -450,17 +440,34 @@ function AddMenuHelpers(menu)
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
 	-- new functions to display checkbox graphics
+	local g_checkbox_off
+	local g_checkbox_off2
+	local g_checkbox_on
+	local g_checkbox_on2
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setUncheckedNormalImage(g_dcheckbox_off)
-		b:setUncheckedPressedImage(g_dcheckbox_off2)
-		b:setCheckedNormalImage(g_dcheckbox_on)
-		b:setCheckedPressedImage(g_dcheckbox_on2)
+		g_checkbox_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
+		g_checkbox_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
+		g_checkbox_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
+		g_checkbox_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_checkbox_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
+		g_checkbox_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
+		g_checkbox_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
+		g_checkbox_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
 	else
-		b:setUncheckedNormalImage(g_dcheckbox_off)
-		b:setUncheckedPressedImage(g_dcheckbox_off2)
-		b:setCheckedNormalImage(g_dcheckbox_on)
-		b:setCheckedPressedImage(g_dcheckbox_on2)
+		g_checkbox_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
+		g_checkbox_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
+		g_checkbox_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
+		g_checkbox_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
 	end
+	g_checkbox_off:Load()
+	g_checkbox_off2:Load()
+	g_checkbox_on:Load()
+	g_checkbox_on2:Load()
+	b:setUncheckedNormalImage(g_checkbox_off)
+	b:setUncheckedPressedImage(g_checkbox_off2)
+	b:setCheckedNormalImage(g_checkbox_on)
+	b:setCheckedPressedImage(g_checkbox_on2)
 	if (callback ~= nil) then b:setActionCallback(function(s) callback(b, s) end) end
 	b:setFont(Fonts["game"])
 	self:add(b, x - 1, y - 1) -- reduced by 1 because the images are bigger than they are supposed to be, as they are graphics for radio buttons
@@ -482,17 +489,34 @@ function AddMenuHelpers(menu)
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
+	local g_radio_off
+	local g_radio_off2
+	local g_radio_on
+	local g_radio_on2
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		b:setUncheckedNormalImage(g_dradio_off)
-		b:setUncheckedPressedImage(g_dradio_off2)
-		b:setCheckedNormalImage(g_dradio_on)
-		b:setCheckedPressedImage(g_dradio_on2)
+		g_radio_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
+		g_radio_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
+		g_radio_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
+		g_radio_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_radio_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
+		g_radio_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
+		g_radio_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
+		g_radio_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
 	else
-		b:setUncheckedNormalImage(g_dradio_off)
-		b:setUncheckedPressedImage(g_dradio_off2)
-		b:setCheckedNormalImage(g_dradio_on)
-		b:setCheckedPressedImage(g_dradio_on2)
+		g_radio_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
+		g_radio_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
+		g_radio_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
+		g_radio_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
 	end
+	g_radio_off:Load()
+	g_radio_off2:Load()
+	g_radio_on:Load()
+	g_radio_on2:Load()
+	b:setUncheckedNormalImage(g_radio_off)
+	b:setUncheckedPressedImage(g_radio_off2)
+	b:setCheckedNormalImage(g_radio_on)
+	b:setCheckedPressedImage(g_radio_on2)
 	b:setFont(Fonts["game"])
 	b:setActionCallback(callback)
 	self:add(b, x, y)
