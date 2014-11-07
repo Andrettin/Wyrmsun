@@ -35,8 +35,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Germanics"), "- Destroy Vanaland's town hall") == false) then
-			player = GetFactionPlayer("Germanics")
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's town hall") == false) then
+			player = GetFactionPlayer("Asa Tribe")
 			return true
 		end
 		return false
@@ -61,8 +61,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Germanics"), "- Destroy Vanaland's town hall") and GetPlayerData(GetFactionPlayer("Vanaland"), "UnitTypesCount", "unit-germanic-town-hall") < 1) then
-			player = GetFactionPlayer("Germanics")
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's town hall") and GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-town-hall") < 1) then
+			player = GetFactionPlayer("Asa Tribe")
 			return true
 		end
 		return false
