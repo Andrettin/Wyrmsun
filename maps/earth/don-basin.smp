@@ -3,5 +3,6 @@
 DefinePlayerTypes("nobody", "computer", "nobody", "nobody", "person")
 PresentMap("Don Basin", 2, 37, 60, 1)
 MapWorld = "Earth"
+MapPersonPlayer = 4
 
 -- Based on map by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv

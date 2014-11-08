@@ -7,3 +7,4 @@ MapSiteType = "Gnomish Settlement"
 WorldMapPosition = {4, 4}
 MapAttacker = 3
 MapDefender = 1
+MapPersonPlayer = 3

@@ -888,8 +888,8 @@ function RunSinglePlayerGameMenu()
   local gametype
   local mapl
   local descriptionl
-  local person_player = 0
   local tech_level
+  MapPersonPlayer = 0
 
   -- create the scenario and faction lists
   local scenario_list = {}
@@ -971,29 +971,22 @@ function RunSinglePlayerGameMenu()
     function()
     	-- change the human player in special cases
 	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
-		person_player = 2
+		MapPersonPlayer = 2
 		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
+			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
 	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
-		person_player = 1
+		MapPersonPlayer = 1
 		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
+			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
---	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3) and mapinfo.nplayers >= 4 and mapinfo.playertypes[4] == "person") then
---		person_player = 3
---		for i=1,mapinfo.nplayers do
---			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
---				GameSettings.Presets[i-1].Type = PlayerComputer
---			end
---		end
 	end
 
-      GameSettings.Presets[person_player].Race = race:getSelected()
+      GameSettings.Presets[MapPersonPlayer].Race = race:getSelected()
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then
         PlayerFaction = ""
@@ -1011,7 +1004,7 @@ function RunSinglePlayerGameMenu()
 	      ForTheMotherland = false
 	      GameSettings.GameType = gametype:getSelected() - 1
       end
-      TechLevel[person_player + 1] = tech_level:getSelected() - 1
+      TechLevel[MapPersonPlayer + 1] = tech_level:getSelected() - 1
 	  
       RunMap(mapname)
       menu:stop()
