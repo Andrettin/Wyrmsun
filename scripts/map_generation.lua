@@ -1066,11 +1066,6 @@ function CreatePlayers()
 	-- create player units
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-			local player_spawn_point = FindAppropriatePlayerSpawnPoint()
-			SetStartView(i, player_spawn_point[1], player_spawn_point[2])
-			SetPlayerData(i, "Resources", "gold", 10000)
-			SetPlayerData(i, "Resources", "lumber", 3000)
-			SetPlayerData(i, "Resources", "oil", 1000)
 			local possible_civilizations = {}
 			if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf")) and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "dwarf")
@@ -1084,7 +1079,15 @@ function CreatePlayers()
 			if (GetNumCivilizationPlayers("goblin") < table.getn(GetCivilizationFactions("goblin")) and GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "goblin")
 			end
+			if (table.getn(possible_civilizations) < 1) then
+				break
+			end
 			SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+			local player_spawn_point = FindAppropriatePlayerSpawnPoint()
+			SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+			SetPlayerData(i, "Resources", "gold", 10000)
+			SetPlayerData(i, "Resources", "lumber", 3000)
+			SetPlayerData(i, "Resources", "oil", 1000)
 			SetAiType(i, "land-attack")
 			unit = CreateUnit("unit-dwarven-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
 			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})

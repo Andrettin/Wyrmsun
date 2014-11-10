@@ -845,7 +845,7 @@ function GetCivilizationFactions(civilization)
 	elseif (civilization == "elf") then
 		return {"Lintanir", "Ulfdalir", "Wesmere"}
 	elseif (civilization == "germanic") then
-		return {"Asa Tribe", "Vana Tribe", "Asa Tribe", "Vana Tribe"}
+		return {"Asa Tribe", "Vana Tribe"}
 	elseif (civilization == "gnome") then
 		return {"Untersberg"}
 	elseif (civilization == "goblin") then
