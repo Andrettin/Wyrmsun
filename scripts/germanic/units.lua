@@ -53,7 +53,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	Priority = 50,
 	BasePoints = 30,
 	Demand = 1,
-	Corpse = "unit-dwarven-dead-body",
+	Corpse = "unit-human-dead-body",
 	Type = "land",
 	RightMouseAction = "harvest",
 	CanAttack = true, RepairRange = 1,
@@ -79,11 +79,11 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	organic = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "dwarven-miner-acknowledge",
+		"selected", "click",
+--		"acknowledge", "dwarven-miner-acknowledge",
 --		"ready", "dwarven-miner-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-human-voices-dead"
 	}
 } )
 		
@@ -107,7 +107,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Priority = 60,
 	BasePoints = 50,
 	Demand = 1,
-	Corpse = "unit-dwarven-dead-body",
+	Corpse = "unit-human-dead-body",
 	Type = "land",
 	RightMouseAction = "attack",
 	CanAttack = true,
@@ -121,7 +121,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"}
+		"dead", "basic-human-voices-dead"}
 } )
 
 DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),

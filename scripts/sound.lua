@@ -169,7 +169,16 @@ MakeSound("goblin-glider-ready", "goblin/glider/glider-ready.wav")
 MakeSound("glider-flying", "goblin/glider/glider-flying.wav")
 
 ------------------------------------------------------------------------------
---	Define simple goblin sounds.
+--	Define simple human sounds.
+--
+MakeSound("basic-human-voices-dead", {
+	"human/basic_voices/human-die-1.wav",
+	"human/basic_voices/human-die-2.wav",
+	"human/basic_voices/human-die-3.wav"
+})
+
+------------------------------------------------------------------------------
+--	Define simple kobold sounds.
 --
 MakeSound("basic-kobold-voices-dead", "neutral/hiss_death.wav")
 

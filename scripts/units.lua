@@ -1163,6 +1163,20 @@ DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
 	Vanishes = true,
 	Sounds = {} } )
 
+DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
+	Image = {"file", "neutral/units/human_corpse.png", "size", {72, 72}},
+	Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
+	Speed = 0,
+	HitPoints = 255,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	Vanishes = true,
+	Sounds = {} } )
+
 DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
 	Animations = "animations-kobold-dead-body", Icon = "icon-dwarven-miner",

@@ -392,6 +392,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/water_elemental.png
 /graphics/neutral/units/dwarven_corpse.png
 /graphics/neutral/units/gnomish_goblin_and_kobold_corpses.png
+/graphics/neutral/units/human_corpse.png
 /graphics/orc/icons/sea_orc.png
 /graphics/orc/icons/shaman.png
 /graphics/orc/icons/spearthrower.png
