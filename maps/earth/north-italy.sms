@@ -169,7 +169,7 @@ RawTiles = {
 
 GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, 64)
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 --GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 

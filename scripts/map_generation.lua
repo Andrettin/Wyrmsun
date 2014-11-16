@@ -555,25 +555,25 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Land") then
 			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree")) then
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RandomX - 1) >= min_x and (RandomY - 1) >= min_y) then
 				SetRawTile(RandomX, RandomY, "Tree")
 				SetRawTile(RandomX - 1, RandomY - 1, "Tree")
 				SetRawTile(RandomX - 1, RandomY, "Tree")
 				SetRawTile(RandomX, RandomY - 1, "Tree")
 				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree")) then
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RandomX + 1) <= max_x and (RandomY - 1) >= min_y) then
 				SetRawTile(RandomX, RandomY, "Tree")
 				SetRawTile(RandomX + 1, RandomY - 1, "Tree")
 				SetRawTile(RandomX, RandomY - 1, "Tree")
 				SetRawTile(RandomX + 1, RandomY, "Tree")
 				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree")) then
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree") and (RandomX + 1) <= max_x and (RandomY + 1) <= max_y) then
 				SetRawTile(RandomX, RandomY, "Tree")
 				SetRawTile(RandomX + 1, RandomY + 1, "Tree")
 				SetRawTile(RandomX + 1, RandomY, "Tree")
 				SetRawTile(RandomX, RandomY + 1, "Tree")
 				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree")) then
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree") and (RandomX - 1) >= min_x and (RandomY + 1) <= max_y) then
 				SetRawTile(RandomX, RandomY, "Tree")
 				SetRawTile(RandomX - 1, RandomY + 1, "Tree")
 				SetRawTile(RandomX - 1, RandomY, "Tree")
@@ -593,22 +593,22 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Tree") then
 			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY - 1) ~= "Tree" or RawTile(RandomX - 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY - 1) ~= "Tree")) then
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY - 1) ~= "Tree" or RawTile(RandomX - 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY - 1) ~= "Tree") and (RandomX - 1) >= min_x and (RandomY - 1) >= min_y) then
 				SetRawTile(RandomX - 1, RandomY - 1, "Tree")
 				SetRawTile(RandomX - 1, RandomY, "Tree")
 				SetRawTile(RandomX, RandomY - 1, "Tree")
 				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RawTile(RandomX + 1, RandomY - 1) ~= "Tree" or RawTile(RandomX, RandomY - 1) ~= "Tree" or RawTile(RandomX + 1, RandomY) ~= "Tree")) then
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == "Land" or RawTile(RandomX + 1, RandomY - 1) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RawTile(RandomX + 1, RandomY - 1) ~= "Tree" or RawTile(RandomX, RandomY - 1) ~= "Tree" or RawTile(RandomX + 1, RandomY) ~= "Tree") and (RandomX + 1) <= max_x and (RandomY - 1) >= min_y) then
 				SetRawTile(RandomX + 1, RandomY - 1, "Tree")
 				SetRawTile(RandomX, RandomY - 1, "Tree")
 				SetRawTile(RandomX + 1, RandomY, "Tree")
 				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree") and (RawTile(RandomX + 1, RandomY + 1) ~= "Tree" or RawTile(RandomX + 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY + 1) ~= "Tree")) then
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == "Land" or RawTile(RandomX + 1, RandomY + 1) == "Tree") and (RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree") and (RawTile(RandomX + 1, RandomY + 1) ~= "Tree" or RawTile(RandomX + 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY + 1) ~= "Tree") and (RandomX + 1) <= max_x and (RandomY + 1) <= max_y) then
 				SetRawTile(RandomX + 1, RandomY + 1, "Tree")
 				SetRawTile(RandomX + 1, RandomY, "Tree")
 				SetRawTile(RandomX, RandomY + 1, "Tree")
 				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree") and (RawTile(RandomX - 1, RandomY + 1) ~= "Tree" or RawTile(RandomX - 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY + 1) ~= "Tree")) then
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == "Land" or RawTile(RandomX - 1, RandomY + 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY + 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Tree") and (RawTile(RandomX - 1, RandomY + 1) ~= "Tree" or RawTile(RandomX - 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY + 1) ~= "Tree") and (RandomX - 1) >= min_x and (RandomY + 1) <= max_y) then
 				SetRawTile(RandomX - 1, RandomY + 1, "Tree")
 				SetRawTile(RandomX - 1, RandomY, "Tree")
 				SetRawTile(RandomX, RandomY + 1, "Tree")
@@ -992,9 +992,10 @@ function CreateDecorations()
 	local Count = 0
 	local RandomNumber = 0
 
-	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
+--	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
-	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
+--	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
+	if (GetTileTerrainFlagCount("land") > Count) then
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
@@ -1278,6 +1279,42 @@ function ApplyRawTiles()
 				SetResourcesHeld(unit, 100)
 			elseif (RawTile(x, y) == "DpWtr") then -- no tilesets have Deep Water yet, so it should be treated as normal water for now
 				SetRawTile(x, y, "Water")
+			elseif (RawTile(x, y) == "Gold Mine") then
+				unit = CreateUnit("unit-gold-mine", 15, {x, y})
+				SetResourcesHeld(unit, 50000)
+				for sub_x=0,2 do
+					for sub_y=0,2 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
+			elseif (string.sub(RawTile(x, y), 0, 9) == "Town Hall") then
+				unit = CreateUnit("unit-germanic-town-hall", tonumber(string.sub(RawTile(x, y), 10)), {x, y})
+				for sub_x=0,3 do
+					for sub_y=0,3 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
+			elseif (string.sub(RawTile(x, y), 0, 4) == "Farm") then
+				unit = CreateUnit("unit-germanic-farm", tonumber(string.sub(RawTile(x, y), 5)), {x, y})
+				for sub_x=0,1 do
+					for sub_y=0,1 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
+			elseif (string.sub(RawTile(x, y), 0, 11) == "Lumber Mill") then
+				unit = CreateUnit("unit-germanic-carpenters-shop", tonumber(string.sub(RawTile(x, y), 12)), {x, y})
+				for sub_x=0,2 do
+					for sub_y=0,2 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
+			elseif (string.sub(RawTile(x, y), 0, 5) == "Smith") then
+				unit = CreateUnit("unit-dwarven-smith", tonumber(string.sub(RawTile(x, y), 6)), {x, y})
+				for sub_x=0,2 do
+					for sub_y=0,2 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
 			end
 		end
 	end
@@ -1744,9 +1781,9 @@ function GetTileTerrainFlagCount(flag)
 	
 end
 
-function AdjustRawMapTileIrregularities()
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjust_transitions)
+	for x=min_x,max_x do
+		for y=min_y,max_y do
 			if (RawTile(x, y) == "Mush") then
 				SetRawTile(x, y, "Land")
 				if (SyncRand(4) <= 2) then
@@ -1762,10 +1799,15 @@ function AdjustRawMapTileIrregularities()
 		end
 	end
 
-	local Count = 4
-	while (Count > 0) do
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
+	if (count == nil) then
+		count = 4
+	end
+	if (adjust_transitions == nil) then
+		adjust_transitions = true
+	end
+	for i=1,count do
+		for x=min_x,max_x do
+			for y=min_y,max_y do
 				if (RawTile(x, y) == "Rock") then
 					local adjacent_tiles = 0
 					for adjacent_x=(x - 1),(x + 1) do
@@ -1928,21 +1970,10 @@ function AdjustRawMapTileIrregularities()
 				end
 			end
 		end
-
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
-				-- convert buildable land tiles adjacent to water tiles into rough land
-				if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
-					SetRawTile(x, y, "Rough")
-				end
-
-				-- convert buildable land tiles adjacent to rock tiles into rough land
-				if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
-					SetRawTile(x, y, "Rough")
-				end
-			end
+		
+		if (adjust_transitions) then
+			AdjustTransitions(min_x, max_x, min_y, max_y)
 		end
-		Count = Count - 1
 	end
 
 	-- destroy mushrooms that ended up in inappropriate locations
@@ -1950,8 +1981,26 @@ function AdjustRawMapTileIrregularities()
 	uncount = GetUnits(15)
 	for unit1 = 1,table.getn(uncount) do 
 		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-			if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
-				KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+			if (GetUnitVariable(uncount[unit1],"PosX") >= min_x and GetUnitVariable(uncount[unit1],"PosX") <= max_x and GetUnitVariable(uncount[unit1],"PosY") >= min_y and GetUnitVariable(uncount[unit1],"PosY") <= max_y) then
+				if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+					KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+				end
+			end
+		end
+	end
+end
+
+function AdjustTransitions(min_x, max_x, min_y, max_y)
+	for x=min_x,max_x do
+		for y=min_y,max_y do
+			-- convert buildable land tiles adjacent to water tiles into rough land
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+				SetRawTile(x, y, "Rough")
+			end
+
+			-- convert buildable land tiles adjacent to rock tiles into rough land
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+				SetRawTile(x, y, "Rough")
 			end
 		end
 	end
@@ -2241,6 +2290,697 @@ function ConvertHexTiles()
 			hex_indent = true
 		elseif (hex_indent == true) then
 			hex_indent = false
+		end
+	end
+end
+
+function FillArea(x1, y1, x2, y2, tile_type)
+	if (x1 > x2) then
+		local t = x1
+		x1 = x2
+		x2 = t
+	end
+	if (y1 > y2) then
+		local t = y1
+		y1 = y2
+		y2 = t
+	end
+	for x=x1,x2 do
+		for y=y1,y2 do
+			SetRawTile(x, y, tile_type)
+		end
+	end
+
+	for x=x1-1,x2+1 do
+		for y=y1-1,y2+1 do
+			-- convert buildable land tiles adjacent to water tiles into rough land
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+				SetRawTile(x, y, "Rough")
+			end
+
+			-- convert buildable land tiles adjacent to rock tiles into rough land
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+				SetRawTile(x, y, "Rough")
+			end
+		end
+	end
+end
+
+-- town generation algorithm based on Mike Anderson's code for Tyrant, which was released under the GPLv2 license
+function CreateTown(layout, town_player, invader_player)
+	CleanRawTiles()
+
+	local RandomNumber = 0
+
+	-- out of town areas (buildarea -1)
+	local outer = {0, 1, 2, 7, 14}
+
+	-- inner town areas (buildarea -2)
+	local inner = {4, 15, 5, 3, 24, 26}
+
+	-- build town sector of type t
+	-- -2 = random inner town area
+	-- -1 = random outer town area
+	-- 0 = wooded
+	-- 1 = cleared
+	-- 2 = animals
+	-- 3 = huts
+	-- 4 = block
+	-- 5 = hall
+	-- 6 = square
+	-- 7 = pond
+	-- 8 = N/S river
+	-- 9 = N/S river + bridge
+	-- 10 = E/W river
+	-- 11 = E/W river + bridge
+	-- 12 = N/S street
+	-- 13 = E/W street
+	-- 14 = orchard
+	-- 15 = smithy (north exit)
+	-- 16 = N/W river bend
+	-- 17 = N/E river bend
+	-- 18 = S/E river bend
+	-- 19 = S/W river bend
+	-- 20 = N/W/E river fork
+	-- 21 = N/S/E river fork
+	-- 22 = S/W/E river fork
+	-- 23 = N/S/W river fork
+	-- 24 = water garden
+	-- 25 = invader's location
+	-- 26 = lumber mill
+	-- 27 = gold mine
+
+	-- array of town arrays
+	local towns = {
+		{{11, 22, 16, -2, -1}, {-2, 9, 6, 13, -2}, {-2, 8, -2, 15, -1}},
+		{{8, -1, -2, -1, 7}, {9, 13, 6, -2, -1}, {17, 19, 12, -2, 14}},
+		{{-1, 17, 19, -2, 13}, {-1, -2, 9, 6, 13}}, 
+		{{-1, 12, -2}, {13, 6, 13}, {-2, 12, -1}}, 
+		{{-1, -2, 14}, {-2, 6, -2}, {7, -2, -1}}
+	}
+	
+	if (layout == nil) then
+		layout = towns[SyncRand(table.getn(towns)) + 1]
+	end
+	
+	if (invader_player ~= nil) then
+		local invader_location_found = false
+		while (invader_location_found == false) do
+			local potential_location_y = SyncRand(table.getn(layout)) + 1
+			local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
+			if (layout[potential_location_y][potential_location_x] == -1) then
+				layout[potential_location_y][potential_location_x] = 25
+				invader_location_found = true
+			end
+		end
+	end
+	
+	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
+
+	local function BuildArea(x, y, t)
+		if (t == -1) then
+			t = outer[SyncRand(table.getn(outer)) + 1]
+		elseif (t == -2) then
+			t = inner[SyncRand(table.getn(inner)) + 1]
+		end
+		
+		if (t == 0) then -- wooded area
+			GenerateTrees(20, 20, x, x + 15, y, y + 15)
+			
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0) then
+				-- add well
+			elseif (RandomNumber == 1) then
+				-- add gravestone
+			else
+				-- create small house with equipment inside
+			end
+			unit = AddThing("unit-dwarven-scout", town_player, x, y, x + 15, y + 15) -- add a ranger to the wooded area
+		elseif (t == 3) then -- hut
+			local hx = x + 1 + SyncRand(14 - 2)
+			local hy = y + 1 + SyncRand(14 - 2)
+			unit = CreateUnit("unit-germanic-farm", town_player, {hx, hy}) -- add a hut
+		elseif (t == 4) then -- block
+			unit = AddThing("unit-germanic-farm", town_player, x + 8 - dice(2, 3), y + 8 - dice(2, 3), x + 8, y + 8)
+			unit = AddThing("unit-germanic-farm", town_player, x + 8 - dice(2, 3), y + 8, x + 8, y + 8 + dice(2, 3))
+			unit = AddThing("unit-germanic-farm", town_player, x + 8, y + 8 - dice(2, 3), x + 8 + dice(2, 3), y + 8)
+			unit = AddThing("unit-germanic-farm", town_player, x + 8, y + 8, x + 8 + dice(2, 3), y + 8 + dice(2, 3))
+--		elseif (t == 5) then -- temple hall
+--			unit = AddThing("unit-dwarven-temple", town_player, x + 8 - dice(2, 3), y + 3, x + dice(2, 3), y + 12)
+--			unit = AddThing("unit-dwarven-witness", town_player, x + 8, y + 7, x + 8, y + 7) -- add a healer to the temple's entrance
+		elseif (t == 6) then -- central crossroads with shops
+			FillArea(x, y, x + 15, y + 15, "Land") -- make sure that the area is entirely buildable land
+			SetStartView(town_player, x + 8, y + 8)
+			unit = CreateUnit("unit-germanic-town-hall", town_player, {x + 6, y + 6}) -- add the settlement's town hall
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0) then
+				unit = AddThing("unit-gold-mine", 15, x, y, x + dice(2, 2), y + dice(2, 2))
+				SetResourcesHeld(unit, 50000)
+			elseif (RandomNumber == 1) then
+				unit = AddThing("unit-gold-mine", 15, x + 15 - dice(2, 2), y, x + 15, y + dice(2, 2))
+				SetResourcesHeld(unit, 50000)
+			elseif (RandomNumber == 2) then
+				unit = AddThing("unit-gold-mine", 15, x, y + 15 - dice(2, 2), x + dice(2, 2), y + 15)
+				SetResourcesHeld(unit, 50000)
+			elseif (RandomNumber == 3) then
+				unit = AddThing("unit-gold-mine", 15, x + 15 - dice(2, 2), y + 15 - dice(2, 2), x + 15, y + 15)
+				SetResourcesHeld(unit, 50000)
+			end
+			--[[
+			if (RandomNumber ~= 0) then
+				unit = AddThing("random-shop", town_player, x, y, x + dice(3, 2), y + dice(3, 2)) -- general store
+			end
+			if (RandomNumber ~= 1) then
+				unit = AddThing("random-shop", town_player, x + 15 - dice(3, 2), y, x + 15, y + dice(3, 2)) -- random store
+			end
+			if (RandomNumber ~= 2) then
+				unit = AddThing("unit-dwarven-smith", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store
+				unit = AddThing("unit-germanic-warrior", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store guard
+			end
+			if (RandomNumber ~= 3) then
+				unit = AddThing("random-shop", town_player, x + 15 - dice(3, 2), y + 15 - dice(3, 2), x + 15, y + 15) -- food store
+			end
+			--]]
+			
+			-- add townspeople
+			for i=0,4 do -- farmers; was i=0,10
+				unit = AddThing("unit-germanic-worker", 0, x, y, x + 15, y + 15)
+			end
+		elseif (t == 7) then -- pond
+			SetRawTile(x + 8, y + 8, "Water")
+			Fractalize(x + 4, y + 4, x + 11, y + 11, 4)
+			AdjustRawMapTileIrregularities(x, x + 15, y, y + 15) -- correct for leftover single tiles
+			for i=1,10 do
+				unit = AddThing("random-plant", 15, x, y, x + 15, y + 15) -- should be a bush
+			end
+		elseif (t == 8) then -- N/S river
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 9) then -- N/S river + bridge
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 10) then -- E/W river
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			RotateArea(x, y, 16, 1)
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 11) then -- E/W river + bridge
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+			RotateArea(x, y, 16, 1)
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 14) then -- orchard
+			GenerateTrees(20, 20, x, x + 15, y, y + 15) -- should be fruit trees or mix between fruit and normal trees instead
+		elseif (t == 15) then -- smithy
+			FillArea(x, y, x + 15, y + 15, "Land") -- make sure that the area is entirely buildable land
+			unit = AddThing("unit-dwarven-smith", town_player, x + 5, y + 5, x + 10, y + 10)
+		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
+			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			RotateArea(x, y, 16, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 20 or t == 21 or t == 22 or t == 23) then -- river forks
+			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
+			MakeRandomPath(x + 8, y, x + 15, y + 8, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			RotateArea(x, y, 16, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 24) then -- water garden
+			-- water area, (7, 7) is the center
+			FillArea(x + 1, y + 1, x + 13, y + 13, "Water")
+			
+			-- island
+			FillArea(x + 3, y + 3, x + 11, y + 11, "Land")
+			
+			-- bridges
+			FillArea(x, y + 6, x + 14, y + 8, "Land")
+			FillArea(x + 6, y, x + 8, y + 14, "Land")
+			
+			--[[
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0) then
+			--]]
+				for rx=5,9,2 do
+					for ry=5,9,2 do
+						unit = AddThing("random-plant", 15, x + rx, y + ry, x + rx, y + ry)
+					end
+				end
+			--[[
+			elseif (RandomNumber == 1) then
+				for rx=5,9,2 do
+					for ry=5,9,2 do
+						SetRawTile(x + rx, y + ry, "Water")
+					end
+				end
+			elseif (RandomNumber == 2) then -- room with teacher
+			elseif (RandomNumber == 3) then -- fountain
+			end
+			--]]
+		elseif (t == 25) then -- invader's location
+			SetStartView(invader_player, x + 8, y + 8)
+			for i=1,5 do -- workers
+				unit = AddThing("unit-germanic-worker", 4, x, y, x + 15, y + 15)
+			end
+			for i=1,3 do -- warriors
+				unit = AddThing("unit-germanic-warrior", 4, x, y, x + 15, y + 15)
+			end
+
+			unit = AddThing("unit-gold-mine", 15, x, y, x + 15, y + 15)
+			SetResourcesHeld(unit, 50000)
+		elseif (t == 26) then -- lumber mill
+			GenerateTrees(10, 10, x, x + 15, y, y + 15)
+			unit = AddThing("unit-germanic-carpenters-shop", town_player, x, y, x + 15, y + 15)
+		elseif (t == 1 or t == 2) then -- make "cleared" and "animals" areas wooded
+			GenerateTrees(20, 20, x, x + 15, y, y + 15)
+		end
+	end
+
+	for ay=1,table.getn(layout) do
+		for ax=1,table.getn(layout[ay]) do
+			BuildArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
+		end
+	end
+	
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	
+	for i=0,4 do -- guards; was i=0,8
+		unit = AddThing("unit-germanic-warrior", 0, 0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1))
+	end
+
+	ApplyRawTiles()
+	
+	CleanRawTiles()
+	
+	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+end
+
+function AddThing(unit_type, player, x1, y1, x2, y2)
+	if (unit_type == "random-shop") then
+		local RandomNumber = SyncRand(3)
+		if (RandomNumber == 0) then
+			unit_type = "unit-dwarven-lumber-mill"
+		elseif (RandomNumber == 1) then
+			unit_type = "unit-dwarven-smith"
+		elseif (RandomNumber == 2) then
+			unit_type = "unit-dwarven-mushroom-farm"
+		end
+	elseif (unit_type == "random-plant") then
+		local RandomNumber = SyncRand(3)
+		if (RandomNumber == 0) then
+			unit_type = "unit-flowers"
+		elseif (RandomNumber == 1) then
+			unit_type = "unit-large-flower"
+		elseif (RandomNumber == 2) then
+			unit_type = "unit-fern"
+		end
+	end
+	local p = FindFreeSquare(x1, y1, x2 - GetUnitTypeData(unit_type, "TileWidth") + 1, y2 - GetUnitTypeData(unit_type, "TileHeight") + 1, GetUnitTypeData(unit_type, "TileWidth"), GetUnitTypeData(unit_type, "TileHeight"))
+	if (p ~= nil) then
+		return CreateUnit(unit_type, player, p)
+	else
+		return CreateUnit(unit_type, player, {rspread(x1,x2), rspread(y1,y2)})
+	end
+end
+
+function FindFreeSquare(x1, y1, x2, y2, width, height)
+	local x
+	local y
+	-- prefer completely free squares
+	for i=(5 * (x2 - x1 + 2) * (y2 - y1 + 2)),1,-1 do
+		x = rspread(x1, x2)
+		y = rspread(y1, y2)
+		local tile = RawTile(x, y)
+		if (tile ~= "" and GetNumUnitsAt(-1, "any", {x, y}, {x + width - 1, y + height - 1}) == 0) then
+			local free_square = true
+			for sub_x=1,width do
+				for sub_y=1,height do
+					if (RawTile(x + sub_x - 1, y + sub_y - 1) ~= "Land" and RawTile(x + sub_x - 1, y + sub_y - 1) ~= "Rough" and RawTile(x + sub_x - 1, y + sub_y - 1) ~= "Dark-Land" and RawTile(x + sub_x - 1, y + sub_y - 1) ~= "Dark-Rough") then
+						free_square = false
+					end
+				end
+			end
+			if (free_square) then
+				return {x, y}
+			end
+		end
+	end
+	-- make do with unblocked squares
+	--[[
+	for i=(5 * (x2 - x1 + 2) * (y2 - y1 + 2)),1,-1 do
+		x = rspread(x1, x2)
+		y = rspread(y1, y2)
+		local tile = RawTile(x, y)
+		if (tile == "") then
+			continue
+		end
+		if (GetNumUnitsAt(-1, "any", {x, y}, {x, y}) and (tile == "Land" or tile == "Rough" or tile == "Dark-Land" or tile == "Dark-Rough")) then
+			return {x, y}
+		end
+	end
+	--]]
+	return nil
+end
+
+function Fractalize(x1, y1, x2, y2, gran)
+	local RandomNumber = 0
+
+	-- ensure workable size
+	x2=x1+((x2-x1)/gran)*gran-1
+	y2=y1+((y2-y1)/gran)*gran-1
+	
+	local g = gran / 2
+	if (g < 1) then
+		return
+	end
+	for y=y1,y2,gran do
+		for x=x1,x2,gran do
+			if (SyncRand(2) == 0) then
+				SetRawTile(x + g, y, RawTile(x, y))
+			else
+				SetRawTile(x + g, y, RawTile(x + gran, y))
+			end
+			if (SyncRand(2) == 0) then
+				SetRawTile(x, y + g, RawTile(x, y))
+			else
+				SetRawTile(x, y + g, RawTile(x, y + gran))
+			end
+		end
+	end
+
+	-- now do middle tile
+	for y=y1,y2,gran do
+		for x=x1,x2,gran do
+			local c
+			RandomNumber = dice(1, 4)
+			if (RandomNumber == 1) then
+				c = RawTile(x + g, y)
+			elseif (RandomNumber == 2) then
+				c = RawTile(x + g, y + gran)
+			elseif (RandomNumber == 3) then
+				c = RawTile(x, y + g)
+			elseif (RandomNumber == 4) then
+				c = RawTile(x + gran, y + g)
+			end
+			SetRawTile(x + g, y + g, c)
+		end
+	end
+	
+	-- continue down to next level of detail
+	if (g > 1) then
+		Fractalize(x1, y1, x2, y2, g)
+	end
+end
+
+function MakeRandomPath(x1, y1, x2, y2, x3, y3, x4, y4, c, diagonals)
+	local dx
+	local dy
+	while ((x1 ~= x2) or (y1 ~= y2)) do
+		SetRawTile(x1, y1, c)
+		if (dice(1, 3) == 1) then
+			dx = sign(x2 - x1)
+			dy = sign(y2 - y1)
+		else
+			dx = SyncRand(3) - 1
+			dy = SyncRand(3) - 1
+		end
+		local RandomNumber
+		if (diagonals) then
+			RandomNumber = dice(1, 3)
+		else
+			RandomNumber = dice(1, 2)
+		end
+		if (RandomNumber == 1) then
+			dx = 0
+		elseif (RandomNumber == 2) then
+			dy = 0
+		end
+		x1 = x1 + dx
+		y1 = y1 + dy
+		x1 = middle(x3, x1, x4)
+		y1 = middle(y3, y1, y4)
+	end
+	SetRawTile(x2, y2, c)
+end
+
+function SpreadTiles(x1, y1, x2, y2, src, des)
+	for x=x1,x2 do
+		for y=y1,y2 do
+			if (RawTile(x, y) == des) then
+				for dx=-1,1 do
+					for dy=-1,1 do
+						if (RawTile(x + dx, y + dy) == src) then
+							SetRawTile(x, y, "Replace")
+						end
+					end
+				end
+			end
+		end
+	end
+	ReplaceTiles(0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1, "Replace", src)
+end
+
+function RotateArea(x, y, size, count)
+	-- make rotation in range 0-3
+	if (count > 3) then
+		count = 3
+	end
+	
+	-- bail out or recurse as needed
+	if (count == 0) then
+		return
+	elseif (count > 1) then
+		RotateArea(x, y, size, count - 1)
+	end
+	
+	-- rotate tiles
+	for p=0,(((size + 1) / 2) - 1) do
+		for q=0,((size / 2) - 1) do
+			local temp = RawTile(x + p, y + q)
+			SetRawTile(x + p, y + q, RawTile(x + q, y + size - 1 - p))
+			SetRawTile(x + q, y + size - 1 - p, RawTile(x + size - 1 - p, y + size - 1 - q))
+			SetRawTile(x + size - 1 - p, y + size - 1 - q, RawTile(x + size - 1 - q, y + p))
+			SetRawTile(x + size - 1 - q, y + p, temp)
+		end
+	end
+	
+	-- should rotate units as well
+end
+
+function ReplaceTiles(x1, y1, x2, y2, from, to)
+	for x=x1,x2 do
+		for y=y1,y2 do
+			if (RawTile(x, y) == from) then
+				SetRawTile(x, y, to)
+			end
+		end
+	end
+end
+
+function GenerateTown(layout, town_player, invader_player)
+	CleanRawTiles()
+
+	local RandomNumber = 0
+
+	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
+
+	if (invader_player ~= nil) then
+		local invader_location_found = false
+		while (invader_location_found == false) do
+			local potential_location_y = SyncRand(table.getn(layout)) + 1
+			local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
+			if (layout[potential_location_y][potential_location_x] == -1) then
+				layout[potential_location_y][potential_location_x] = 25
+				invader_location_found = true
+			end
+		end
+	end
+	
+	local extra_gold_mines = 2
+	while (extra_gold_mines > 0) do
+		local potential_location_y = SyncRand(table.getn(layout)) + 1
+		local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
+		if (layout[potential_location_y][potential_location_x] == -1) then
+			layout[potential_location_y][potential_location_x] = 27
+			extra_gold_mines = extra_gold_mines - 1
+		end
+	end
+
+	local function BuildRiverArea(x, y, t)
+		if (t == 8) then -- N/S river
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 9) then -- N/S river + bridge
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 10) then -- E/W river
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			RotateArea(x, y, 16, 1)
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 11) then -- E/W river + bridge
+			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+			RotateArea(x, y, 16, 1)
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
+			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			RotateArea(x, y, 16, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 20 or t == 21 or t == 22 or t == 23) then -- river forks
+			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
+			MakeRandomPath(x + 8, y, x + 15, y + 8, x, y, x + 15, y + 15, "Water", false)
+			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
+			RotateArea(x, y, 16, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
+			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		end
+	end
+
+	local function BuildArea(x, y, t)
+		if (t == 6) then -- town center
+			local town_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
+			SetStartView(town_player, town_player_starting_point[1], town_player_starting_point[2])
+			for sub_x=0,3 do
+				for sub_y=0,3 do
+					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Town Hall " .. town_player)
+				end
+			end
+			CreateStartingGoldMine(town_player) -- create the town player's gold mine
+			CreateStartingBuilding(town_player, "Farm") -- create the town player's initial farms
+			CreateStartingBuilding(town_player, "Farm")
+			CreateStartingBuilding(town_player, "Lumber Mill")
+			CreateStartingBuilding(town_player, "Smith")
+		elseif (t == 25) then -- invader's base
+			local invader_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
+			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
+			for sub_x=0,3 do
+				for sub_y=0,3 do
+					SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Town Hall " .. invader_player)
+				end
+			end
+			CreateStartingGoldMine(invader_player) -- create the invader player's gold mine
+		elseif (t == 27) then -- extra gold mine
+			CreateStartingGoldMine(15, x, y)
+		end
+	end
+
+	for ay=1,table.getn(layout) do
+		for ax=1,table.getn(layout[ay]) do
+			BuildRiverArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
+		end
+	end
+	
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+
+	for ay=1,table.getn(layout) do
+		for ax=1,table.getn(layout[ay]) do
+			BuildArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
+		end
+	end
+	
+	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	
+	ApplyRawTiles()
+	CleanRawTiles()
+	
+	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+
+	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+
+	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+end
+
+function CreateStartingGoldMine(player, x, y)
+	local gold_mine_built = false
+	while (gold_mine_built == false) do
+		RandomNumber = SyncRand(4) -- which direction the gold mine will be created
+		local gold_mine_spawn_point
+		if (player == 15) then
+			gold_mine_spawn_point = {x + SyncRand(14), y + SyncRand(14)}
+		else
+			if (RandomNumber == 0) then -- north
+				gold_mine_spawn_point = {(Players[player].StartPos.x + (SyncRand(14) - 6)), (Players[player].StartPos.y - 6)}
+			elseif (RandomNumber == 1) then -- south
+				gold_mine_spawn_point = {(Players[player].StartPos.x + (SyncRand(14) - 6)), (Players[player].StartPos.y + 7)}
+			elseif (RandomNumber == 2) then -- west
+				gold_mine_spawn_point = {(Players[player].StartPos.x - 6), (Players[player].StartPos.y + (SyncRand(14) - 6))}
+			elseif (RandomNumber == 3) then -- east
+				gold_mine_spawn_point = {(Players[player].StartPos.x + 7), (Players[player].StartPos.y + (SyncRand(14) - 6))}
+			end
+		end
+		local free_square = true
+		for sub_x=1,3 do
+			for sub_y=1,3 do
+					if (RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Dark-Rough") then
+						free_square = false
+					end
+			end
+		end
+		if (free_square) then
+			for sub_x=0,2 do
+				for sub_y=0,2 do
+					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Gold Mine")
+				end
+			end
+			gold_mine_built = true
+		end
+	end
+end
+
+function CreateStartingBuilding(player, building_type)
+	local width
+	local height
+	if (building_type == "Farm") then
+		width = 2
+		height = 2
+	elseif (building_type == "Lumber Mill" or building_type == "Smith") then
+		width = 3
+		height = 3
+	end
+	local building_built = false
+	while (building_built == false) do
+		RandomNumber = SyncRand(4) -- which direction the gold mine will be created
+		local building_spawn_point
+		if (RandomNumber == 0) then -- north
+			building_spawn_point = {(Players[player].StartPos.x + (SyncRand(7 + width) - (width + 1))), (Players[player].StartPos.y - (height + 1))}
+		elseif (RandomNumber == 1) then -- south
+			building_spawn_point = {(Players[player].StartPos.x + (SyncRand(7 + width) - (width + 1))), (Players[player].StartPos.y + 5)}
+		elseif (RandomNumber == 2) then -- west
+			building_spawn_point = {(Players[player].StartPos.x - (width + 1)), (Players[player].StartPos.y + (SyncRand(7 + height) - (height + 1)))}
+		elseif (RandomNumber == 3) then -- east
+			building_spawn_point = {(Players[player].StartPos.x + 5), (Players[player].StartPos.y + (SyncRand(7 + height) - (height + 1)))}
+		end
+		local free_square = true
+		for sub_x=0,width+1 do
+			for sub_y=0,height+1 do
+					if (RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Rough") then
+						free_square = false
+					end
+			end
+		end
+		if (free_square) then
+			for sub_x=1,width do
+				for sub_y=1,height do
+					SetRawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1, building_type .. " " .. player)
+				end
+			end
+			building_built = true
 		end
 	end
 end

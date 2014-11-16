@@ -1285,6 +1285,52 @@ function round(num)
 	return math.floor(num + 0.5)
 end
 
+function rspread(a, b)
+	if (a > b) then
+		local t = a
+		a = b
+		b = t
+	end
+	return SyncRand(b - a + 1) + a
+end
+
+function dice(number, sides)
+	local total = 0
+	for i=1,number do
+		total = total + SyncRand(sides) + 1
+	end
+	return total
+end
+
+function sign(number)
+	if (number < 0) then
+		return -1
+	elseif (number > 0) then
+		return 1
+	else
+		return 0
+	end
+end
+
+-- return the middle value of 3 numbers
+function middle(n1, n2, n3)
+	if (n1 < n2) then
+		if (n2 < n3) then
+			return n2
+		elseif (n1 < n3) then
+			return n3
+		else
+			return n1
+		end
+	elseif (n1 < n3) then
+		return n1
+	elseif (n2 < n3) then
+		return n3
+	else
+		return n2
+	end
+end
+
 -------------------------------------------------------------------------------
 --  String Functions
 -------------------------------------------------------------------------------

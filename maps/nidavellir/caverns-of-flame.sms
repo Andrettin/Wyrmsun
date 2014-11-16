@@ -44,7 +44,7 @@ HexTiles = {
 
 ConvertHexTiles()
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 -- fix issues related to hex-to-tile conversion
 SetRawTile(18, 38, "Rock")

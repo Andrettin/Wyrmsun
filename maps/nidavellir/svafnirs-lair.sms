@@ -59,7 +59,7 @@ SetRawTile(34, 50, "Land")
 SetRawTile(35, 49, "Land")
 SetRawTile(35, 50, "Land")
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 -- rectify cave wall pieces which appear too much like separate small blocks
 SetRawTile(7, 20, "Rock")

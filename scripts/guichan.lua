@@ -972,20 +972,15 @@ function RunSinglePlayerGameMenu()
     	-- change the human player in special cases
 	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
 		MapPersonPlayer = 2
-		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
-				GameSettings.Presets[i-1].Type = PlayerComputer
-			end
-		end
 	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
 		MapPersonPlayer = 1
+	end
+
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-	end
-
       GameSettings.Presets[MapPersonPlayer].Race = race:getSelected()
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then

@@ -1,0 +1,31 @@
+LoadTileModels("scripts/tilesets/forest.lua")
+
+SetPlayerData(0, "Resources", "gold", 2000)
+SetPlayerData(0, "Resources", "lumber", 1000)
+SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "germanic")
+SetPlayerData(0, "Name", "Iuvavum")
+SetAiType(0, "land-attack")
+SetPlayerData(4, "Resources", "gold", 2000)
+SetPlayerData(4, "Resources", "lumber", 1000)
+SetPlayerData(4, "Resources", "oil", 0)
+SetPlayerData(4, "RaceName", "germanic")
+SetPlayerData(4, "Name", "Marcomanni Tribe")
+SetAiType(4, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+local layout = {
+	{-1,  8, -1, -1, -1, -1, -1, -1},
+	{-1, 17, 19, -2, -1, -1, -1, -1},
+	{-1, -1, 17, 11, 10, 10, 19, -1},
+	{-1, -1, -2, -2,  6, -2, 17, 10},
+	{-1, -1, -1, -2, -2, -2, -2, -1},
+	{-1, -1, -1, -1, -1, -1, -1, -1},
+	{-1, -1, -1, -1, -1, -1, -1, -1},
+	{-1, -1, -1, -1, -1, -1, -1, -1}
+}
+
+--layout = nil
+
+GenerateTown(layout, 0, 4)
+
