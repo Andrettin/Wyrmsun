@@ -992,10 +992,9 @@ function CreateDecorations()
 	local Count = 0
 	local RandomNumber = 0
 
---	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
+	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
---	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
-	if (GetTileTerrainFlagCount("land") > Count) then
+	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
@@ -1063,39 +1062,62 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers()
+function CreatePlayers(min_x, max_x, min_y, max_y)
 	-- create player units
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
-			if (GetNumCivilizationPlayers("dwarf") < table.getn(GetCivilizationFactions("dwarf")) and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
+			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if (GetNumCivilizationPlayers("germanic") < table.getn(GetCivilizationFactions("germanic")) and wyrmsun.tileset == "forest") then
+			if (wyrmsun.tileset == "forest") then
 				table.insert(possible_civilizations, "germanic")
 			end
-			if (GetNumCivilizationPlayers("gnome") < table.getn(GetCivilizationFactions("gnome")) and GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "gnome")
 			end
-			if (GetNumCivilizationPlayers("goblin") < table.getn(GetCivilizationFactions("goblin")) and GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
 				break
 			end
 			SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
-			local player_spawn_point = FindAppropriatePlayerSpawnPoint()
+
+			local player_spawn_point
+			local starting_point_found = false
+			while (starting_point_found == false) do
+				player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
+				starting_point_found = true
+				if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
+					starting_point_found = false
+				end
+				for j=0,14 do
+					if (j < i and (Map.Info.PlayerType[j] == PlayerPerson or Map.Info.PlayerType[j] == PlayerComputer)) then
+						if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then
+							starting_point_found = false
+						end
+					end
+				end
+			end
+			
 			SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+			for sub_x=-1,4 do
+				for sub_y=-1,4 do
+					SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
+				end
+			end
+			for sub_x=0,3 do
+				for sub_y=0,3 do
+					SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+				end
+			end
+			CreateStartingGoldMine(i) -- create the player's gold mine
+
 			SetPlayerData(i, "Resources", "gold", 10000)
 			SetPlayerData(i, "Resources", "lumber", 3000)
 			SetPlayerData(i, "Resources", "oil", 1000)
 			SetAiType(i, "land-attack")
-			unit = CreateUnit("unit-dwarven-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
-			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
-			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
-			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
-			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
-			unit = CreateUnit("unit-dwarven-miner", i, {player_spawn_point[1], player_spawn_point[2]})
 		end
 	end
 
@@ -1145,6 +1167,8 @@ function GenerateRandomMap(width, height, symmetric)
 		end
 	end
 	
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
 	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land")
@@ -1183,12 +1207,24 @@ function GenerateRandomMap(width, height, symmetric)
 		end
 	end
 
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	
 	ApplyRawTiles()
 
-	CreateDecorations()
-	
+	CreateDecorations()	
+
+	for i=0,14 do
+		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		end
+	end
+
 	if (GrandStrategy == false) then
-		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	end
 
 	if (wyrmsun.tileset == "forest") then
@@ -1215,11 +1251,11 @@ function GenerateRandomMap(width, height, symmetric)
 		CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
 	end
 
-	CreatePlayers()
-
 --	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
 --		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
 --	end
+
+	CleanRawTiles()
 end
 
 function SetRawTile(x, y, tile_type)
@@ -1279,6 +1315,8 @@ function ApplyRawTiles()
 				SetResourcesHeld(unit, 100)
 			elseif (RawTile(x, y) == "DpWtr") then -- no tilesets have Deep Water yet, so it should be treated as normal water for now
 				SetRawTile(x, y, "Water")
+			elseif (RawTile(x, y) == "Road") then
+				SetRawTile(x, y, "Land")
 			elseif (RawTile(x, y) == "Gold Mine") then
 				unit = CreateUnit("unit-gold-mine", 15, {x, y})
 				SetResourcesHeld(unit, 50000)
@@ -1994,12 +2032,12 @@ function AdjustTransitions(min_x, max_x, min_y, max_y)
 	for x=min_x,max_x do
 		for y=min_y,max_y do
 			-- convert buildable land tiles adjacent to water tiles into rough land
-			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Road") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
 				SetRawTile(x, y, "Rough")
 			end
 
 			-- convert buildable land tiles adjacent to rock tiles into rough land
-			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Road") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 				SetRawTile(x, y, "Rough")
 			end
 		end
@@ -2799,7 +2837,7 @@ function GenerateTown(layout, town_player, invader_player)
 		end
 	end
 	
-	local extra_gold_mines = 2
+	local extra_gold_mines = (Map.Info.MapWidth * Map.Info.MapHeight) / 4096
 	while (extra_gold_mines > 0) do
 		local potential_location_y = SyncRand(table.getn(layout)) + 1
 		local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
@@ -2848,19 +2886,29 @@ function GenerateTown(layout, town_player, invader_player)
 		if (t == 6) then -- town center
 			local town_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
 			SetStartView(town_player, town_player_starting_point[1], town_player_starting_point[2])
+			for sub_x=-1,4 do
+				for sub_y=-1,4 do
+					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Road")
+				end
+			end
 			for sub_x=0,3 do
 				for sub_y=0,3 do
 					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Town Hall " .. town_player)
 				end
 			end
-			CreateStartingGoldMine(town_player) -- create the town player's gold mine
 			CreateStartingBuilding(town_player, "Farm") -- create the town player's initial farms
 			CreateStartingBuilding(town_player, "Farm")
 			CreateStartingBuilding(town_player, "Lumber Mill")
 			CreateStartingBuilding(town_player, "Smith")
+			CreateStartingGoldMine(town_player) -- create the town player's gold mine
 		elseif (t == 25) then -- invader's base
 			local invader_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
 			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
+			for sub_x=-1,4 do
+				for sub_y=-1,4 do
+					SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Road")
+				end
+			end
 			for sub_x=0,3 do
 				for sub_y=0,3 do
 					SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Town Hall " .. invader_player)
@@ -2932,7 +2980,15 @@ function CreateStartingGoldMine(player, x, y)
 					end
 			end
 		end
+		if ((gold_mine_spawn_point[1] + 2) > Map.Info.MapWidth or (gold_mine_spawn_point[2] + 2) > Map.Info.MapHeight or gold_mine_spawn_point[1] < 0 or gold_mine_spawn_point[2] < 0) then
+			free_square = false
+		end
 		if (free_square) then
+			for sub_x=-1,3 do
+				for sub_y=-1,3 do
+					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add road so that there are no transition issues
+				end
+			end
 			for sub_x=0,2 do
 				for sub_y=0,2 do
 					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Gold Mine")
@@ -2955,26 +3011,39 @@ function CreateStartingBuilding(player, building_type)
 	end
 	local building_built = false
 	while (building_built == false) do
+		local road_tile
+		local road_found = false
+		while (road_found == false) do
+			road_tile = {(Players[player].StartPos.x + (SyncRand(32) - 16)), (Players[player].StartPos.y + (SyncRand(32) - 16))}
+			if (RawTile(road_tile[1], road_tile[2]) == "Road") then
+				road_found = true
+			end
+		end
 		RandomNumber = SyncRand(4) -- which direction the gold mine will be created
 		local building_spawn_point
 		if (RandomNumber == 0) then -- north
-			building_spawn_point = {(Players[player].StartPos.x + (SyncRand(7 + width) - (width + 1))), (Players[player].StartPos.y - (height + 1))}
+			building_spawn_point = {(road_tile[1] - SyncRand(width)), (road_tile[2] - height)}
 		elseif (RandomNumber == 1) then -- south
-			building_spawn_point = {(Players[player].StartPos.x + (SyncRand(7 + width) - (width + 1))), (Players[player].StartPos.y + 5)}
+			building_spawn_point = {(road_tile[1] - SyncRand(width)), (road_tile[2] + 1)}
 		elseif (RandomNumber == 2) then -- west
-			building_spawn_point = {(Players[player].StartPos.x - (width + 1)), (Players[player].StartPos.y + (SyncRand(7 + height) - (height + 1)))}
+			building_spawn_point = {(road_tile[1] - width), (road_tile[2] - SyncRand(height))}
 		elseif (RandomNumber == 3) then -- east
-			building_spawn_point = {(Players[player].StartPos.x + 5), (Players[player].StartPos.y + (SyncRand(7 + height) - (height + 1)))}
+			building_spawn_point = {(road_tile[1] + 1), (road_tile[2] - SyncRand(height))}
 		end
 		local free_square = true
 		for sub_x=0,width+1 do
 			for sub_y=0,height+1 do
-					if (RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Rough") then
+					if (RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Road") then
 						free_square = false
 					end
 			end
 		end
 		if (free_square) then
+			for sub_x=-1,width do
+				for sub_y=-1,height do
+					SetRawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y, "Road")
+				end
+			end
 			for sub_x=1,width do
 				for sub_y=1,height do
 					SetRawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1, building_type .. " " .. player)

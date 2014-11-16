@@ -8,6 +8,8 @@ for x=0,(Map.Info.MapWidth - 1) do
 	end
 end
 	
+CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
 for y=0,(Map.Info.MapHeight - 1) do
 	SetRawTile(0, y, "Water")
 end
@@ -76,6 +78,8 @@ if (wyrmsun.tileset == "forest") then
 	GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 end
 
+AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+
 ApplyRawTiles()
 
 CreateDecorations()
@@ -88,4 +92,12 @@ CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
-CreatePlayers()
+for i=0,14 do
+	if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+	end
+end

@@ -717,6 +717,7 @@ function GetMapInfo(mapname)
     mapinfo.id = id
   end
 
+  MapPersonPlayer = 0 -- default person player is 0
   Load(mapname)
 
   DefinePlayerTypes = OldDefinePlayerTypes
