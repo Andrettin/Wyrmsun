@@ -289,7 +289,7 @@ function CleanRawTiles()
 	}
 end
 
-function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
+function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type, min_x, max_x, min_y, max_y)
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -299,8 +299,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 	-- create initial rock seeds
 	Count = rock_seed_number
 	while (Count > 0 and WhileCount < rock_seed_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(max_x - min_x) + min_x
+		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == base_tile_type) then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Rock")) then
@@ -337,8 +337,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 	-- expand rocks
 	Count = rock_expansions_number
 	while (Count > 0 and WhileCount < rock_expansions_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(max_x - min_x) + min_x
+		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Rock") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY - 1) ~= "Rock" or RawTile(RandomX - 1, RandomY) ~= "Rock" or RawTile(RandomX, RandomY - 1) ~= "Rock")) then
@@ -366,6 +366,7 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 		WhileCount = WhileCount + 1
 	end
 
+	--[[
 	-- convert buildable land tiles adjacent to rock tiles into rough land
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
@@ -374,6 +375,7 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type)
 			end
 		end
 	end
+	--]]
 end
 
 function GenerateWater(water_seed_number, water_expansions_number)
@@ -1171,7 +1173,7 @@ function GenerateRandomMap(width, height, symmetric)
 
 	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land")
+	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
@@ -1225,12 +1227,12 @@ function GenerateRandomMap(width, height, symmetric)
 
 	if (GrandStrategy == false) then
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
-	end
 
-	if (wyrmsun.tileset == "forest") then
-		CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
-	elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
-		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		if (wyrmsun.tileset == "forest") then
+			CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		end
 	end
 
 	-- create oil patches
@@ -2818,7 +2820,7 @@ function ReplaceTiles(x1, y1, x2, y2, from, to)
 	end
 end
 
-function GenerateTown(layout, town_player, invader_player)
+function GenerateTown(layout, town_player, invader_player, town_buildings, rock_generation)
 	CleanRawTiles()
 
 	local RandomNumber = 0
@@ -2896,11 +2898,12 @@ function GenerateTown(layout, town_player, invader_player)
 					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Town Hall " .. town_player)
 				end
 			end
-			CreateStartingBuilding(town_player, "Farm") -- create the town player's initial farms
-			CreateStartingBuilding(town_player, "Farm")
-			CreateStartingBuilding(town_player, "Lumber Mill")
-			CreateStartingBuilding(town_player, "Smith")
 			CreateStartingGoldMine(town_player) -- create the town player's gold mine
+			if (town_buildings) then
+				for i=1,table.getn(town_buildings) do
+					CreateStartingBuilding(town_player, town_buildings[i]) -- create the town player's initial farms
+				end
+			end
 		elseif (t == 25) then -- invader's base
 			local invader_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
 			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
@@ -2934,6 +2937,14 @@ function GenerateTown(layout, town_player, invader_player)
 		end
 	end
 	
+	if (rock_generation) then
+		for i=1,table.getn(rock_generation) do
+			GenerateRocks((((rock_generation[i][2] - rock_generation[i][1]) * (rock_generation[i][4] - rock_generation[i][3])) / 32), (((rock_generation[i][2] - rock_generation[i][1]) * (rock_generation[i][4] - rock_generation[i][3])) / 4), "Land", rock_generation[i][1], rock_generation[i][2], rock_generation[i][3], rock_generation[i][4])
+		end
+	end
+	
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+
 	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	
 	ApplyRawTiles()

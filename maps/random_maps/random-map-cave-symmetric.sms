@@ -18,7 +18,7 @@ SetMapBorders("Rock", true)
 
 CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16)
 
-GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land")
+GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64)
 

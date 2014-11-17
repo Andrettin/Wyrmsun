@@ -52,7 +52,7 @@ ConvertHexTiles()
 
 SetMapBorders("Rock", false)
 
-GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "")
+GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 for x=0,(Map.Info.MapWidth - 1) do
 	for y=0,(Map.Info.MapHeight - 1) do
