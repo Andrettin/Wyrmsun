@@ -147,8 +147,11 @@ DefinePanelContents(
 	{ Pos = {114, 25}, More = {"Text", {Text = Line(2, UnitName("Active"), 110, "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
-	{ Pos = {114, 27}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
-	{ Pos = {114, 41}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {114, 27}, Condition = {ShowOpponent = true, Building = "false"}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {114, 41}, Condition = {ShowOpponent = true, Building = "false"}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+
+	{ Pos = {114, 41}, Condition = {ShowOpponent = true, Building = "only"}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {114, 55}, Condition = {ShowOpponent = true, Building = "only"}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
 	
 -- Ressource Left
 	{ Pos = {88, 86}, Condition = {ShowOpponent = false, GiveResource = "only"},

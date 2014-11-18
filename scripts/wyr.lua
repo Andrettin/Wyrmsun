@@ -40,7 +40,9 @@ DefineRaceNames(
 		"name", "germanic",
 		"display", "Germanic",
 		"visible",
-		"personal_names", {"Hlewagastiz", "Theudariks"} -- Hlewagastiz is Proto-Norse (or late Proto-Germanic); need more names
+		"personal_names", {"Hlewagastiz"}, -- Hlewagastiz is Proto-Norse (or late Proto-Germanic); need more names
+		"personal_name_prefixes", {"Theuda"}, -- Theuda = People
+		"personal_name_suffixes", {"riks"} -- Riks = Ruler
 	},
 	"race", {
 		"name", "gnome",
@@ -52,12 +54,16 @@ DefineRaceNames(
 		"name", "goblin",
 		"display", "Goblin",
 		"visible",
-		"personal_names", {"Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd"}
+		"personal_names", {"Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd"},
+		"personal_name_prefixes", {"Gom", "Grash", "Grut", "Gum", "Kar", "Kret", "Krom", "Stug"}, -- from Mike Anderson's Tyrant
+		"personal_name_suffixes", {"bag", "dag", "lig", "lug", "nak", "nark", "rat", "tug"} -- from Mike Anderson's Tyrant
 	},
 	"race", {
 		"name", "kobold",
 		"display", "Kobold",
-		"visible"
+		"visible",
+		"personal_name_prefixes", {"Hinzel", "Rein"},
+		"personal_name_suffixes", {"hold", "mann"}
 	},
 	"race", {
 		"name", "neutral",
