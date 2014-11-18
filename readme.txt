@@ -75,6 +75,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
 - The Goblin Impaler is now called simply "Impaler", and the same was done to other similar cases.
 - Organic units now have personal names.
+- The goblin Glider is now an organic unit.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
