@@ -204,6 +204,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	RandomMovementProbability = 1,
 	organic = true,
 	Fauna = true,
+	PersonalNames = {"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kawn", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Krawg", "Kuu", "Kzaaa", "Kzuuu"},
 	Variations = {
 		{
 			"variation-id", "brown-feathers"
@@ -251,10 +252,12 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	CanTargetLand = true,
 	LandUnit = true,
 	organic = true,
---	SelectableByRectangle = true,
 	RandomMovementProbability = 1,
 	Fauna = true,
 	StartingLevel = 3,
+	PersonalNames = {"Goin", "Grabak", "Jormungand", "Moin", "Nidhogg", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
+	PersonalNamePrefixes = {"Graf"}, -- Graf = Gnawer / Gnawing
+	PersonalNameSuffixes = {"vitnir", "volluth"}, -- Vitnir = Wolf, Volluth = Field
 	Variations = {
 		{
 			"variation-id", "green-scales"

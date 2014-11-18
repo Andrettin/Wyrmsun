@@ -386,7 +386,8 @@ DefineUnitType("unit-goblin-smith", { Name = _("Fugla Forge"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-hero-greebo", { Name = "Greebo",
+DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
+	DefaultName = "Greebo",
 	Civilization = "goblin",
 	Description = _("Greebo is a scoundrel, simply put. He lives in a rocky hideout, and survives by stealing from the farms in the region. He is quick to thrust his short sword into those who get in his way, holding love only for his baby child."),
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},

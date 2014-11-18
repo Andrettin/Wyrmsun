@@ -2945,7 +2945,7 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, rock_
 	
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	
 	ApplyRawTiles()
 	CleanRawTiles()
