@@ -62,8 +62,8 @@ DefineRaceNames(
 		"name", "kobold",
 		"display", "Kobold",
 		"visible",
-		"personal_name_prefixes", {"Hinzel", "Rein"},
-		"personal_name_suffixes", {"hold", "mann"}
+		"personal_name_prefixes", {"Hinzel", "Hod", "Hoid", "Pump", "Rein"},
+		"personal_name_suffixes", {"eke", "hold", "ike", "hut"}
 	},
 	"race", {
 		"name", "neutral",
