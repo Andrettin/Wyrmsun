@@ -47,7 +47,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Germanic civilization (human).
 
 * Maps
-- Added Don Basin map (Earth), based on the Europe map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- Added Tanais map (Earth).
 - Added Jutland map (Earth), based on the Scandinavia map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Goblin banners are now placed in the entrances to the goblin settlements of players 5 and 6.
 

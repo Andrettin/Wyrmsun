@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (mapinfo.description == "Don Basin") then
+if (mapinfo.description == "Tanais") then
 -- On the Vanaquisl introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 AddTrigger(

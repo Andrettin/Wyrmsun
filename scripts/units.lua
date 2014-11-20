@@ -255,7 +255,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	RandomMovementProbability = 1,
 	Fauna = true,
 	StartingLevel = 3,
-	PersonalNames = {"Goin", "Grabak", "Jormungand", "Moin", "Nidhogg", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
+	PersonalNames = {"Goin", "Grabak", "Jormungand", "Moin", "Nidhogg", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Nidhogg = Corpse Tearer, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
 	PersonalNamePrefixes = {"Graf"}, -- Graf = Gnawer / Gnawing
 	PersonalNameSuffixes = {"vitnir", "volluth"}, -- Vitnir = Wolf, Volluth = Field
 	Variations = {
@@ -614,15 +614,17 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	Sounds = {} }
 )
 
+--[[
 UnitTypeFiles["unit-fern"] = {
 	cave = "tilesets/swamp/neutral/decorations/fern.png",
 	dungeon = "tilesets/swamp/neutral/decorations/fern.png",
 	forest = "tilesets/forest/neutral/decorations/fern.png",
 	swamp = "tilesets/swamp/neutral/decorations/fern.png"
 }
+--]]
 
 DefineUnitType("unit-fern", { Name = "Fern",
-	Image = {"size", {48, 48}},
+	Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
 	Animations = "animations-decoration-old", Icon = "icon-fern",
 	Speed = 0,
 	HitPoints = 0,

@@ -917,14 +917,14 @@ function CreateCritters(critter_number)
 	end
 end
 
-function CreateCreeps(player, creep_type, creep_number)
+function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
 	Count = creep_number
 	while (Count > 0) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(max_x - min_x) + min_x
+		RandomY = SyncRand(max_y - min_y) + min_y
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			local unit_quantity = 0
 			for i=0,14 do
@@ -2820,7 +2820,7 @@ function ReplaceTiles(x1, y1, x2, y2, from, to)
 	end
 end
 
-function GenerateTown(layout, town_player, invader_player, town_buildings, rock_generation)
+function GenerateTown(layout, town_player, invader_player, town_buildings, town_units, invader_base, invader_units, tree_quantity, rock_generation)
 	CleanRawTiles()
 
 	local RandomNumber = 0
@@ -2839,16 +2839,6 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, rock_
 		end
 	end
 	
-	local extra_gold_mines = (Map.Info.MapWidth * Map.Info.MapHeight) / 4096
-	while (extra_gold_mines > 0) do
-		local potential_location_y = SyncRand(table.getn(layout)) + 1
-		local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
-		if (layout[potential_location_y][potential_location_x] == -1) then
-			layout[potential_location_y][potential_location_x] = 27
-			extra_gold_mines = extra_gold_mines - 1
-		end
-	end
-
 	local function BuildRiverArea(x, y, t)
 		if (t == 8) then -- N/S river
 			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
@@ -2907,17 +2897,19 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, rock_
 		elseif (t == 25) then -- invader's base
 			local invader_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
 			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
-			for sub_x=-1,4 do
-				for sub_y=-1,4 do
-					SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Road")
+			if (invader_base) then
+				for sub_x=-1,4 do
+					for sub_y=-1,4 do
+						SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Road")
+					end
 				end
-			end
-			for sub_x=0,3 do
-				for sub_y=0,3 do
-					SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Town Hall " .. invader_player)
+				for sub_x=0,3 do
+					for sub_y=0,3 do
+						SetRawTile(invader_player_starting_point[1] + sub_x, invader_player_starting_point[2] + sub_y, "Town Hall " .. invader_player)
+					end
 				end
+				CreateStartingGoldMine(invader_player) -- create the invader player's gold mine
 			end
-			CreateStartingGoldMine(invader_player) -- create the invader player's gold mine
 		elseif (t == 27) then -- extra gold mine
 			CreateStartingGoldMine(15, x, y)
 		end
@@ -2945,10 +2937,18 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, rock_
 	
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	if (tree_quantity == "high") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (tree_quantity == "medium") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (tree_quantity == "low") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
 	
 	ApplyRawTiles()
 	CleanRawTiles()
+	
+	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	
 	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
 	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
@@ -2956,11 +2956,21 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, rock_
 	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
 	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
 
-	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	for i=1,table.getn(town_units) do
+		unit = CreateUnit(town_units[i], town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+	end
+
+	if (invader_base) then
+		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	end
+
+	for i=1,table.getn(invader_units) do
+		unit = CreateUnit(invader_units[i], invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+	end
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 end

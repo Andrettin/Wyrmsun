@@ -40,9 +40,9 @@ DefineRaceNames(
 		"name", "germanic",
 		"display", "Germanic",
 		"visible",
-		"personal_names", {"Hlewagastiz"}, -- Hlewagastiz is Proto-Norse (or late Proto-Germanic); need more names
-		"personal_name_prefixes", {"Theuda"}, -- Theuda = People
-		"personal_name_suffixes", {"riks"} -- Riks = Ruler
+		"personal_names", {"Godagaz", "Wagigaz", "Wiwaz"}, -- Godagaz = Goody / Good One, Hagustaldaz = Young Warrior / Owner of a Small Property, Hadulaikaz = Battle-Dancer, Hlewagastiz = Protected / Glory-Guest, Holtagastiz = Wood Guest, Wagigaz = One Who Moves Along Impetuously, Wiwaz = Darter; Godagaz, Hadulaikaz, Hagustaldaz, Hlewagastiz, Holtagastiz, Wagigaz, Wiwaz and Woduridaz are Proto-Norse (or late Proto-Germanic)
+		"personal_name_prefixes", {"Hadu", "Hagu", "Hlewa", "Holta", "Theuda", "Wodu"}, -- Hadu = Battle, Hagu = Small Property, Hlewa = Glory, Holta = Wood, Theuda = People, Wodu = Fury
+		"personal_name_suffixes", {"gastiz", "laikaz", "ridaz", "riks", "staldaz"} -- Gastiz = Guest, Laikaz = Dancer, Riks = Ruler, Ridaz = Rider, Staldaz = Owner
 	},
 	"race", {
 		"name", "gnome",
@@ -62,8 +62,8 @@ DefineRaceNames(
 		"name", "kobold",
 		"display", "Kobold",
 		"visible",
-		"personal_name_prefixes", {"Hinzel", "Hod", "Hoid", "Pump", "Rein"},
-		"personal_name_suffixes", {"eke", "hold", "ike", "hut"}
+		"personal_name_prefixes", {"Hod", "Hoid", "Napf", "Pump"},
+		"personal_name_suffixes", {"eke", "ike", "hut"} -- Hut = Hat
 	},
 	"race", {
 		"name", "neutral",

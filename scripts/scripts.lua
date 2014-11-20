@@ -48,6 +48,18 @@ DefineUnitType("unit-critter", {
 --	swamp = "pig-selected"
 --}
 
+-- different ferns depending on tileset (normal graphic-per-tileset setting was resulting in bugs with the fern)
+if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then
+	DefineUnitType("unit-fern", {
+		Image = {"file", "tilesets/swamp/neutral/decorations/fern.png", "size", {48, 48}},
+	} )
+elseif (wyrmsun.tileset == "forest") then
+	DefineUnitType("unit-fern", {
+		Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
+	} )
+end
+
+
 --MapSound("critter-selected", CritterSounds[wyrmsun.tileset])
 
 -- different lumber-harvesting methods depending on tileset
