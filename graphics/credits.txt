@@ -404,6 +404,7 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/forest/terrain/forest.png (dirt and water tiles)
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
 /graphics/tilesets/swamp/neutral/icons/rat.png
+/graphics/tilesets/swamp/terrain/rock.png
 /graphics/tilesets/swamp/terrain/swamp.png
 /graphics/tilesets/world/sites/dwarven_settlement.png
 /graphics/tilesets/world/sites/gnomish_settlement.png

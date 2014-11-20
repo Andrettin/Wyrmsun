@@ -71,6 +71,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Quests
 - Added On the Vanaquisl quest.
 
+* Terrain
+- Tile types can now use different images in a tileset's definition.
+- Updated swamp rocks (graphics by Jinn).
+
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
 - The Goblin Impaler is now called simply "Impaler", and the same was done to other similar cases.
