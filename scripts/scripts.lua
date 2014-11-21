@@ -36,6 +36,7 @@ table.foreach(UnitTypeFiles,
 local CritterNames = {
 	cave = _("Rat"),
 	dungeon = _("Rat"),
+	fairlimbed_forest = _("Rat"),
 	forest = _("Rat"),
 	swamp = _("Rat")
 }
@@ -53,7 +54,7 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave" or wyrmsun.tileset =
 	DefineUnitType("unit-fern", {
 		Image = {"file", "tilesets/swamp/neutral/decorations/fern.png", "size", {48, 48}},
 	} )
-elseif (wyrmsun.tileset == "forest") then
+elseif (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 	DefineUnitType("unit-fern", {
 		Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
 	} )

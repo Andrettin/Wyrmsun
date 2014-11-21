@@ -4,7 +4,7 @@ local function RunEditorNewMapMenu()
   local menu = WarMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
-  local tilesets = { "cave", "dungeon", "forest", "swamp"}
+  local tilesets = { "cave", "dungeon", "fairlimbed-forest", "forest", "swamp"}
   local mapSizes = {"32", "64", "96", "128", "256"}
 
   menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
@@ -25,7 +25,7 @@ local function RunEditorNewMapMenu()
       Map.Info.Description = mapDescription:getText()
       Map.Info.MapWidth = mapSizes[1 + mapSizex:getSelected()]
       Map.Info.MapHeight = mapSizes[1 + mapSizey:getSelected()]
-      LoadTileModels("scripts/tilesets/" .. tilesets[1 + dropDownTileset:getSelected()] .. ".lua")
+      LoadTileModels("scripts/tilesets/" .. string.gsub(tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
       menu:stop()
       StartEditor(nil)
       RunEditorMenu()
@@ -316,7 +316,7 @@ function RunEditorMapProperties()
 
   menu:addLabel("Tileset : ", 45, 36 * 4, nil, false)
 
-  local list = { "Cave", "Dungeon", "Forest", "Swamp"}
+  local list = { "Cave", "Dungeon", "Fairlimbed Forest", "Forest", "Swamp"}
   local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
   for i = 0,3 do
     if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)

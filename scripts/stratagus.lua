@@ -422,7 +422,7 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest"))) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
@@ -460,7 +460,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest"))) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 					end
 				end

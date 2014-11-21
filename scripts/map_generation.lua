@@ -378,7 +378,7 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 	--]]
 end
 
-function GenerateWater(water_seed_number, water_expansions_number)
+function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x, min_y, max_y)
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -388,8 +388,8 @@ function GenerateWater(water_seed_number, water_expansions_number)
 	-- create initial water seeds
 	Count = water_seed_number
 	while (Count > 0 and WhileCount < water_seed_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(max_x - min_x) + min_x
+		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Land") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
@@ -426,8 +426,8 @@ function GenerateWater(water_seed_number, water_expansions_number)
 	-- expand water
 	Count = water_expansions_number
 	while (Count > 0 and WhileCount < water_expansions_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(max_x - min_x) + min_x
+		RandomY = SyncRand(max_y - min_y) + min_y
 		if (RawTile(RandomX, RandomY) == "Water") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY - 1) ~= "Water" or RawTile(RandomX - 1, RandomY) ~= "Water" or RawTile(RandomX, RandomY - 1) ~= "Water")) then
@@ -898,15 +898,16 @@ end
 function CreateCritters(critter_number)
 	local RandomX = 0
 	local RandomY = 0
-	local Count = 0
+	local Count = critter_number
 	-- create critters
 	local critter_unit_type
 	if (wyrmsun.tileset == "forest") then
 		critter_unit_type = "unit-critter"
 	elseif (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
 		critter_unit_type = "unit-slime"
+	else
+		Count = 0
 	end
-	Count = critter_number
 	while (Count > 0) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
@@ -1072,10 +1073,10 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if (wyrmsun.tileset == "forest") then
+			if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest")) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
 			end
 			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
@@ -1171,19 +1172,21 @@ function GenerateRandomMap(width, height, symmetric)
 	
 	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	if (wyrmsun.tileset == "forest") then
+	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
 	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-	if (wyrmsun.tileset == "forest") then
+	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
@@ -1209,8 +1212,6 @@ function GenerateRandomMap(width, height, symmetric)
 		end
 	end
 
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	
 	ApplyRawTiles()
 
 	CreateDecorations()	
@@ -3073,4 +3074,86 @@ function CreateStartingBuilding(player, building_type)
 			building_built = true
 		end
 	end
+end
+
+function GenerateValley(direction, lake_quantity)
+	CleanRawTiles()
+	
+	if (direction == nil) then
+		if (SyncRand(2) == 0) then
+			direction = "north-south"
+		else
+			direction = "west-east"
+		end
+	end
+
+	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
+	
+	if (direction == "north-south") then
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
+		
+		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
+		
+		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", round(Map.Info.MapWidth * 5 / 6), Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
+	elseif (direction == "west-east") then
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6))
+		
+		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
+		
+		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, round(Map.Info.MapHeight * 5 / 6), Map.Info.MapHeight)
+		
+		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6))
+	end
+
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	
+--	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+
+	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+--		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+	end
+
+	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+--		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
+
+	ApplyRawTiles()
+
+	CreateDecorations()	
+
+	for i=0,14 do
+		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		end
+	end
+
+	if (GrandStrategy == false) then
+		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+
+		if (wyrmsun.tileset == "forest") then
+			CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		end
+	end
+
+	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+	if (wyrmsun.tileset == "swamp") then
+		CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
+	end
+
+--	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
+--		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
+--	end
+
+	CleanRawTiles()
 end

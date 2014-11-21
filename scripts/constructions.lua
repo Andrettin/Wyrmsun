@@ -35,6 +35,7 @@ local files = {
   cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
+  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
 
@@ -58,6 +59,7 @@ local files = {
   cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
+  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
 
@@ -97,6 +99,7 @@ local files = {
   cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
+  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
 
@@ -117,6 +120,7 @@ local files = {
   cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
   forest = "neutral/buildings/land_construction_site.png",
+  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
 

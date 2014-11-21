@@ -124,9 +124,11 @@ b_o:
 /graphics/neutral/units/wyrm_red_scales.png
 /graphics/neutral/units/wyrm_yellow_scales.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/tilesets/fairlimbed_forest/terrain/fairlimbed_tree.png
 /graphics/tilesets/forest/neutral/decorations/fern.png
 /graphics/tilesets/forest/neutral/decorations/flowers.png
 /graphics/tilesets/forest/neutral/decorations/large_flower.png
+/graphics/tilesets/forest/terrain/deciduous_tree_autumn.png
 /graphics/tilesets/forest/terrain/forest.png (dark dirt, dark grass, grass, grass-dirt transition and tree tiles)
 /graphics/tilesets/swamp/neutral/decorations/fern.png
 /graphics/tilesets/swamp/neutral/decorations/flowers.png

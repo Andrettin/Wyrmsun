@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","person","person","computer")
+PresentMap("Random Map (Symmetric Fairlimbed Forest)", 3, 128, 128, 1)
+MapWorld = "Alfheim"

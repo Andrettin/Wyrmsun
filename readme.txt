@@ -50,6 +50,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Tanais map (Earth).
 - Added Jutland map (Earth), based on the Scandinavia map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Goblin banners are now placed in the entrances to the goblin settlements of players 5 and 6.
+- Added random maps for the fairlimbed forest tileset (Alfheim).
+- Added Ulfdalir map (Alfheim).
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
@@ -74,6 +76,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Terrain
 - Tile types can now use different images in a tileset's definition.
 - Updated swamp rocks (graphics by Jinn).
+- Added fairlimbed forest tileset (graphics by b_o).
 
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).

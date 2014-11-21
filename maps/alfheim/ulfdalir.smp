@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","person","person","person")
+PresentMap("Ulfdalir", 4, 128, 128, 1) -- name means "Wolf-Dale"
+MapWorld = "Alfheim"

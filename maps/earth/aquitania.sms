@@ -46,9 +46,9 @@ for y=0,(16 - 1) do
 	SetRawTile(8, y, "Water")
 end
 
-GenerateWater(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16)
+GenerateWater(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-GenerateWater(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 64) -- four major lakes: Lacanau, Cazaux et Sanguinet, Biscarrosse et Parentis and Aureilhan
+GenerateWater(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight) -- four major lakes: Lacanau, Cazaux et Sanguinet, Biscarrosse et Parentis and Aureilhan
 
 GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 

@@ -63,7 +63,7 @@ DefineRaceNames(
 		"display", "Kobold",
 		"visible",
 		"personal_name_prefixes", {"Hod", "Hoid", "Napf", "Pump"},
-		"personal_name_suffixes", {"eke", "ike", "hut"} -- Hut = Hat
+		"personal_name_suffixes", {"coat", "eke", "ike", "hut"} -- Hut = Hat
 	},
 	"race", {
 		"name", "neutral",
