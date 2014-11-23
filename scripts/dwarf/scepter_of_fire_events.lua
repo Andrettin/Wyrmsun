@@ -392,10 +392,17 @@ AddTrigger(
 						return false
 					end
 				end
-				wyr.preferences.TheScepterOfFireRaiderFaction = GetPlayerData(bandit_player, "Name")
 				SavePreferences()
 				unit = CreateUnit("unit-revealer", player, {Players[bandit_player].StartPos.x, Players[bandit_player].StartPos.y})
-				local raider_leader_name = GetRandomCharacterName("dwarf", "male", false)
+				
+				local raider_leader_name = ""
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+						raider_leader_name = GetUnitVariable(uncount[unit1], "Name")
+					end
+				end
 				
 				local event_player = player
 				if (GetThisPlayer() == bandit_player) then
@@ -679,8 +686,8 @@ AddTrigger(
 	end,
 	function() 
 		local event_player = player
-		if (GetThisPlayer() == GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)) then
-			event_player = GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
 			"Pypo I",
@@ -828,7 +835,7 @@ AddTrigger(
 		end
 		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and GetFactionExists("Shinsplitter Clan")) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
 					player = i
 					return true
 				end
@@ -841,8 +848,17 @@ AddTrigger(
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
-		closing_the_gates_raider_leader_name = GetRandomCharacterName("dwarf", "male", false) -- new raider leader, name should be different from the one in A Bargain is Struck
-		unit = CreateUnit("unit-revealer", player, {Players[GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)].StartPos.x, Players[GetFactionPlayer(wyr.preferences.TheScepterOfFireRaiderFaction)].StartPos.y})
+
+		local closing_the_gates_raider_leader_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+				closing_the_gates_raider_leader_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+
+		unit = CreateUnit("unit-revealer", player, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
 		Event(
 			"",
 			"Next in our story, Rugnur retreated into the caves of Knalga. But the Shinsplitters pressed on, and would enter the caves shortly.",
@@ -1069,6 +1085,16 @@ AddTrigger(
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
+
+		local closing_the_gates_raider_leader_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+				closing_the_gates_raider_leader_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+		
 		Event(
 			"Rugnur",
 			"We have everyone positioned on the glyphs! What do we do now?",
@@ -1451,7 +1477,7 @@ AddTrigger(
 		end
 		if (GetFactionExists("Thursagan") and PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -2134,7 +2160,7 @@ AddTrigger(
 		end
 		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") and PlayerHasObjective(GetThisPlayer(), "- Mine 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-mine", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {256, 256}) >= 2) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -3317,8 +3343,18 @@ AddTrigger(
 	end,
 	function()
 		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, {8, 64}, "move")
+
+		local shinsplitter_thane_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+
 		Event(
-			"Shinsplitter Thane",
+			shinsplitter_thane_name,
 			"Aha! I've spent years looking for ye Norlunds, but now I've found ye! Prepare to die!",
 			player,
 			{"~!Continue"},
@@ -3342,7 +3378,7 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Shinsplitter Thane",
+							shinsplitter_thane_name,
 							"I see. So ye don't have the ruby?",
 							player,
 							{"~!Continue"},
@@ -3354,7 +3390,7 @@ AddTrigger(
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Shinsplitter Thane",
+									shinsplitter_thane_name,
 									"How about this - I help ye defeat them, and ye let me keep the ruby when we have?",
 									player,
 									{"~!Continue"},
@@ -3652,6 +3688,15 @@ AddTrigger(
 		return false
 	end,
 	function()
+		local shinsplitter_thane_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+		
 		Event(
 			"Rugnur",
 			"Well, Thursagan has reached a conclusion. He can't make the scepter with the materials he has here, but he has the final plans for it, and all the jewels and gold he needs. Shouldn't we leave now?",
@@ -3800,7 +3845,7 @@ AddTrigger(
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												"Shinsplitter Thane",
+																												shinsplitter_thane_name,
 																												"Come out, Norlunds, and surrender! Or die in that cave, yer choice.",
 																												player,
 																												{"~!Continue"},
@@ -4530,8 +4575,18 @@ AddTrigger(
 	function()
 		unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
 		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y}, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7}, "move")
+
+		local shinsplitter_thane_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+
 		Event(
-			"Shinsplitter Thane",
+			shinsplitter_thane_name,
 			"We have caught up to the Norlunds. Now, prepare to destroy them!",
 			player,
 			{"~!Continue"},
@@ -4789,8 +4844,18 @@ AddTrigger(
 	function()
 		PlaySound("rumble")
 		PlaySound("rumble")
+
+		local shinsplitter_thane_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+
 		Event(
-			"Shinsplitter Thane",
+			shinsplitter_thane_name,
 			"Wait, what's going on? The volcano is going to erupt! Everyone, try to get out of these caves!",
 			player,
 			{"~!Continue"},
@@ -4821,8 +4886,18 @@ AddTrigger(
 	function()
 		PlaySound("rumble")
 		PlaySound("rumble")
+
+		local shinsplitter_thane_name = ""
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
+			end
+		end
+
 		Event(
-			"Shinsplitter Thane",
+			shinsplitter_thane_name,
 			"Aghh!! The volcano is erupting, and now our exit has been blocked off!!",
 			player,
 			{"~!Continue"},

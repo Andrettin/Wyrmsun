@@ -387,7 +387,9 @@ function SinglePlayerTriggers()
 	StandardTriggers()
 
 	if (not IsNetworkGame()) then
-		AssignPlayerFactions()
+		if (PlayerFaction ~= "") then
+			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
+		end
 	end
 
 	if (LoadedGame == false) then
@@ -540,9 +542,9 @@ function StandardTriggers()
 				end
 
 				if (not IsNetworkGame()) then
-					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
+					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "-hero-") ~= nil) then
 						for key, value in pairs(wyr.preferences.Heroes) do
-							if (wyr.preferences.Heroes[key].name == GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) then
+							if (wyr.preferences.Heroes[key].name == GetUnitVariable(uncount[unit1], "Name")) then
 								-- apply persistent hero levels
 								if (GetUnitVariable(uncount[unit1], "Level") < wyr.preferences.Heroes[key].level) then
 									IncreaseUnitLevel(uncount[unit1], (wyr.preferences.Heroes[key].level - GetUnitVariable(uncount[unit1], "Level")), true)
@@ -815,24 +817,7 @@ function StandardTriggers()
 --	)
 end
 
-function AssignPlayerFactions()
-
-	if (PlayerFaction ~= "") then
-		SetPlayerData(GetThisPlayer(), "Name", PlayerFaction)
-	end
-
-	local RandomNumber = 0
-
-	for i=0,14 do
-		if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
-			if (table.getn(GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName"))) > 0) then
-				RandomNumber = SyncRand(table.getn(GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName")))) + 1
-				SetPlayerData(i, "Name", GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName"))[RandomNumber])
-			end
-		end
-	end
-end
-
+--[[
 function GetCivilizationFactions(civilization)
 	if (civilization == "dwarf") then
 		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
@@ -854,9 +839,10 @@ function GetCivilizationFactions(civilization)
 		return { }
 	end
 end
+--]]
 
 function GetCivilizationAvailableFactions(civilization)
-	local civilization_factions = GetCivilizationFactions(civilization)
+	local civilization_factions = GetCivilizationFactionNames(civilization)
 
 	-- remove faction names already in use
 	for i=0,14 do
@@ -1113,7 +1099,7 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 		-- save the levels of heroes in a persistent manner
 		if (not IsNetworkGame()) then
 			for key, value in pairs(wyr.preferences.Heroes) do
-				if (wyr.preferences.Heroes[key].name == GetUnitTypeName(GetUnitVariable(unit, "Ident"))) then
+				if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name") and string.find(GetUnitVariable(unit, "Ident"), "-hero-") ~= nil) then
 					if (GetUnitVariable(unit, "Level") > wyr.preferences.Heroes[key].level) then
 						wyr.preferences.Heroes[key].level = GetUnitVariable(unit, "Level")
 						SavePreferences()

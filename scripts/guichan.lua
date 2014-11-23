@@ -987,9 +987,9 @@ function RunSinglePlayerGameMenu()
       if (faction:getSelected() == 0) then
         PlayerFaction = ""
       elseif (race:getSelected() == 1) then
-        PlayerFaction = GetCivilizationFactions("dwarf")[faction:getSelected()]
-      elseif (race:getSelected() == 1) then
-        PlayerFaction = GetCivilizationFactions("germanic")[faction:getSelected()]
+        PlayerFaction = GetCivilizationFactionNames("dwarf")[faction:getSelected()]
+      elseif (race:getSelected() == 2) then
+        PlayerFaction = GetCivilizationFactionNames("germanic")[faction:getSelected()]
       end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
@@ -1025,7 +1025,7 @@ function RunSinglePlayerGameMenu()
 
   menu:addLabel(_("~<Your Faction:~>"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
   faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
-    function(dd) FactionChanged() end)
+    function(dd) end)
   faction:setSize(152, 20)
 
   menu:addLabel(_("~<Resources:~>"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
@@ -1120,12 +1120,12 @@ function RunSinglePlayerGameMenu()
   function CivilizationChanged()
     faction_list = {_("Map Default")}
     if (race:getSelected() == 1) then
-	    for i=1,table.getn(GetCivilizationFactions("dwarf")) do
-	      table.insert(faction_list, _(GetCivilizationFactions("dwarf")[i]))
+	    for i=1,table.getn(GetCivilizationFactionNames("dwarf")) do
+	      table.insert(faction_list, _(GetCivilizationFactionNames("dwarf")[i]))
 	    end
     elseif (race:getSelected() == 2) then
-	    for i=1,table.getn(GetCivilizationFactions("germanic")) do
-	      table.insert(faction_list, _(GetCivilizationFactions("germanic")[i]))
+	    for i=1,table.getn(GetCivilizationFactionNames("germanic")) do
+	      table.insert(faction_list, _(GetCivilizationFactionNames("germanic")[i]))
 	    end
     end
     faction:setList(faction_list)

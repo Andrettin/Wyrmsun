@@ -67,8 +67,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Tech tree code made more dynamic to support multiple civilizations without significant extra coding being necessary for each of them.
 - Miscellaneous tech tree code improvements.
 - If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
-- Added "The Gnomes of the Saline Mountains" (by Anna Goldmark Gross, 1912, in the public domain) to the encyclopedia texts.
-- There is now a boolean field ("Transparent") which allows making a unit type's image transparent.
+- Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
 
 * Quests
 - Added On the Vanaquisl quest.
@@ -81,6 +80,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
 - The Goblin Impaler is now called simply "Impaler", and the same was done to other similar cases.
+- There is now a boolean field ("Transparent") which allows making a unit type's image transparent.
 - Organic units now have personal names.
 - The goblin Glider is now an organic unit.
 

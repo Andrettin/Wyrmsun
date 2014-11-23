@@ -231,7 +231,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Description = _("These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds."),
 	Quote = _("\"More wyrms there are | beneath the ash / Than an unwise ape would think; / Goin and Moin, | Grafvitnir's sons, / Grabak and Grafvolluth, / Ofnir and Svafnir | shall ever, methinks, / Gnaw at the twigs of the tree.\" - Dwarven Traditional Poetry"),
-	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them.",
+	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
 	Animations = "animations-wyrm", Icon = "icon-wyrm",
 	NeutralMinimapColor = {192, 192, 192},
@@ -255,9 +255,9 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	RandomMovementProbability = 1,
 	Fauna = true,
 	StartingLevel = 3,
-	PersonalNames = {"Goin", "Grabak", "Jormungand", "Moin", "Nidhogg", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Nidhogg = Corpse Tearer, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
-	PersonalNamePrefixes = {"Graf"}, -- Graf = Gnawer / Gnawing
-	PersonalNameSuffixes = {"vitnir", "volluth"}, -- Vitnir = Wolf, Volluth = Field
+	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
+	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
+	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	Variations = {
 		{
 			"variation-id", "green-scales"

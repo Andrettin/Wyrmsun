@@ -1,17 +1,17 @@
 LoadTileModels("scripts/tilesets/forest.lua")
 
+SetPlayerData(0, "Resources", "gold", 2000)
+SetPlayerData(0, "Resources", "lumber", 1000)
+SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "germanic")
+SetPlayerData(0, "Faction", "Asa Tribe")
+SetAiType(0, "land-attack")
 SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "germanic")
-SetPlayerData(1, "Name", "Vana Tribe")
+SetPlayerData(1, "Faction", "Vana Tribe")
 SetAiType(1, "passive")
-SetPlayerData(4, "Resources", "gold", 2000)
-SetPlayerData(4, "Resources", "lumber", 1000)
-SetPlayerData(4, "Resources", "oil", 0)
-SetPlayerData(4, "RaceName", "germanic")
-SetPlayerData(4, "Name", "Asa Tribe")
-SetAiType(4, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 local layout = {
@@ -44,6 +44,6 @@ local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germ
 
 local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior"}
 
-GenerateTown(layout, 1, 4, town_buildings, town_units, false, invader_units, "medium", nil)
+GenerateTown(layout, 1, 0, town_buildings, town_units, false, invader_units, "medium", nil)
 
 CreateCreeps(1, "unit-germanic-warrior", 9, 32, 112, 16, 80)

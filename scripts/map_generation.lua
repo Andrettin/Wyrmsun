@@ -1070,57 +1070,58 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
-			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
+			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp") and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") and table.getn(GetCivilizationAvailableFactions("germanic")) > 0) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest")) then -- allow gnomes in elven forests since there is no elven civilization yet
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest") and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp")) then
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp") and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
-				break
-			end
-			SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+				Map.Info.PlayerType[i] = PlayerNobody
+			else
+				SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 
-			local player_spawn_point
-			local starting_point_found = false
-			while (starting_point_found == false) do
-				player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
-				starting_point_found = true
-				if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
-					starting_point_found = false
-				end
-				for j=0,14 do
-					if (j < i and (Map.Info.PlayerType[j] == PlayerPerson or Map.Info.PlayerType[j] == PlayerComputer)) then
-						if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then
-							starting_point_found = false
+				local player_spawn_point
+				local starting_point_found = false
+				while (starting_point_found == false) do
+					player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
+					starting_point_found = true
+					if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
+						starting_point_found = false
+					end
+					for j=0,14 do
+						if (j < i and (Map.Info.PlayerType[j] == PlayerPerson or Map.Info.PlayerType[j] == PlayerComputer)) then
+							if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then
+								starting_point_found = false
+							end
 						end
 					end
 				end
-			end
-			
-			SetStartView(i, player_spawn_point[1], player_spawn_point[2])
-			for sub_x=-1,4 do
-				for sub_y=-1,4 do
-					SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
+				
+				SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+				for sub_x=-1,4 do
+					for sub_y=-1,4 do
+						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
+					end
 				end
-			end
-			for sub_x=0,3 do
-				for sub_y=0,3 do
-					SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+				for sub_x=0,3 do
+					for sub_y=0,3 do
+						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+					end
 				end
-			end
-			CreateStartingGoldMine(i) -- create the player's gold mine
+				CreateStartingGoldMine(i) -- create the player's gold mine
 
-			SetPlayerData(i, "Resources", "gold", 10000)
-			SetPlayerData(i, "Resources", "lumber", 3000)
-			SetPlayerData(i, "Resources", "oil", 1000)
-			SetAiType(i, "land-attack")
+				SetPlayerData(i, "Resources", "gold", 10000)
+				SetPlayerData(i, "Resources", "lumber", 3000)
+				SetPlayerData(i, "Resources", "oil", 1000)
+				SetAiType(i, "land-attack")
+			end
 		end
 	end
 

@@ -1,6 +1,5 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("nobody","person","nobody","nobody","person")
+DefinePlayerTypes("person","person")
 PresentMap("Tanais", 2, 128, 96, 1)
 MapWorld = "Earth"
-MapPersonPlayer = 4
