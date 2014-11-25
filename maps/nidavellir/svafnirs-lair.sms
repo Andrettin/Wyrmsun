@@ -301,7 +301,9 @@ if (GrandStrategy == false) then
 
 --	unit = CreateUnit("unit-wyrm", 2, {8, 34}) -- Khrakrahs / Svafnir
 	unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
-	SetUnitName(unit, "Svafnir")
+	if (LoadedGame == false) then
+		SetUnitName(unit, "Svafnir")
+	end
 
 end
 

@@ -2,71 +2,73 @@ LoadTileModels("scripts/tilesets/cave.lua")
 
 CleanRawTiles()
 
-local RandomNumber = 0
-local RandomX = 0
-local RandomY = 0
-local Count = 0
-local EntranceExists = false
+if (LoadedGame == false) then
+	local RandomNumber = 0
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+	local EntranceExists = false
 
-for x=0,(Map.Info.MapWidth - 1) do
-	for y=0,(Map.Info.MapHeight - 1) do
-		SetRawTile(x, y, "Land")
-	end
-end
-
-SetMapBorders("Rock", true)
-
-CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16)
-
-GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
-
-GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-for x=(Map.Info.MapWidth / 2),(Map.Info.MapWidth - 1) do
-	for y=0,(Map.Info.MapHeight - 1) do
-		local mirrored_tile_x = x + 1 - 128
-		if (mirrored_tile_x < 0) then
-			mirrored_tile_x = mirrored_tile_x * -1
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			SetRawTile(x, y, "Land")
 		end
-		SetRawTile(x, y, RawTile(mirrored_tile_x, y))
 	end
-end
 
+	SetMapBorders("Rock", true)
 
-for x=0,(Map.Info.MapWidth - 1) do
-	for y=(Map.Info.MapHeight / 2),(Map.Info.MapHeight - 1) do
-		local mirrored_tile_y = y + 1 - 128
-		if (mirrored_tile_y < 0) then
-			mirrored_tile_y = mirrored_tile_y * -1
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16)
+
+	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+
+	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	for x=(Map.Info.MapWidth / 2),(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			local mirrored_tile_x = x + 1 - 128
+			if (mirrored_tile_x < 0) then
+				mirrored_tile_x = mirrored_tile_x * -1
+			end
+			SetRawTile(x, y, RawTile(mirrored_tile_x, y))
 		end
-		SetRawTile(x, y, RawTile(x, mirrored_tile_y))
 	end
-end
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
-ApplyRawTiles()
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=(Map.Info.MapHeight / 2),(Map.Info.MapHeight - 1) do
+			local mirrored_tile_y = y + 1 - 128
+			if (mirrored_tile_y < 0) then
+				mirrored_tile_y = mirrored_tile_y * -1
+			end
+			SetRawTile(x, y, RawTile(x, mirrored_tile_y))
+		end
+	end
 
-CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, true)
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+	ApplyRawTiles()
 
---if (SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
---	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
---end
+	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, true)
 
-CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
-for i=0,14 do
-	if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+	--if (SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
+	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
+	--end
+
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+
+	for i=0,14 do
+		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		end
 	end
 end

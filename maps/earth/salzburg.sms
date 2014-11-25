@@ -40,5 +40,7 @@ local rock_generation = {
 
 --layout = nil
 
-GenerateTown(layout, 0, 4, town_buildings, {}, true, {}, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
+if (LoadedGame == false) then
+	GenerateTown(layout, 0, 4, town_buildings, {}, true, {}, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
+end
 

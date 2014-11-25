@@ -44,6 +44,8 @@ local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germ
 
 local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior"}
 
-GenerateTown(layout, 1, 0, town_buildings, town_units, false, invader_units, "medium", nil)
-
-CreateCreeps(1, "unit-germanic-warrior", 9, 32, 112, 16, 80)
+if (LoadedGame == false) then
+	GenerateTown(layout, 1, 0, town_buildings, town_units, false, invader_units, "medium", nil)
+	
+	CreateCreeps(1, "unit-germanic-warrior", 9, 32, 112, 16, 80)
+end

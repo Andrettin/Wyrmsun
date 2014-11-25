@@ -669,7 +669,7 @@ function RunEncyclopediaWorldsMenu()
 	
 	local height_offset = 2
 	if (Video.Height >= 600) then
-		height_offset = 0
+		height_offset = 2 -- change this to 0 if the number of world entries becomes too large
 	else
 		height_offset = 2
 	end
@@ -695,7 +695,8 @@ function RunEncyclopediaWorldsMenu()
 		end
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() menu:stop(); end)
 
 	menu:run()

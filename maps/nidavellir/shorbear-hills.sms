@@ -141,9 +141,13 @@ if (GrandStrategy == false) then
 
 		unit = CreateUnit("unit-dwarven-scout", 0, {6, 5}) -- Noiraran
 		IncreaseUnitLevel(unit, 1, true)
-		SetUnitName(unit, "Noiraran")
+		if (LoadedGame == false) then
+			SetUnitName(unit, "Noiraran")
+		end
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
-		SetUnitName(unit, "Kuhnar")
+		if (LoadedGame == false) then
+			SetUnitName(unit, "Kuhnar")
+		end
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
 		IncreaseUnitLevel(unit, 1, true)
 	end
@@ -155,7 +159,9 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
-	SetUnitName(unit, "Glonoin")
+	if (LoadedGame == false) then
+		SetUnitName(unit, "Glonoin")
+	end
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 29})
