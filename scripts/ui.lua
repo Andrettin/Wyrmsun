@@ -74,8 +74,13 @@ DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
 --  Define Panels
 --
 local info_panel_x = 0
-local info_panel_y = 160
-
+local info_panel_y
+if (wyrmsun.Thunder == true) then
+	info_panel_y = Video.Height - 136 - 24 - 16
+else
+	info_panel_y = 160
+end
+	
 local min_damage = Div(
 	Sub(
 		ActiveUnitVar("PiercingDamage"),
