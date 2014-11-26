@@ -717,6 +717,7 @@ function GetMapInfo(mapname)
     mapinfo.id = id
   end
 
+  MapPersonPlayer = 0 -- default person player is 0
   Load(mapname)
 
   DefinePlayerTypes = OldDefinePlayerTypes
@@ -888,8 +889,8 @@ function RunSinglePlayerGameMenu()
   local gametype
   local mapl
   local descriptionl
-  local person_player = 0
   local tech_level
+  MapPersonPlayer = 0
 
   -- create the scenario and faction lists
   local scenario_list = {}
@@ -971,36 +972,24 @@ function RunSinglePlayerGameMenu()
     function()
     	-- change the human player in special cases
 	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
-		person_player = 2
-		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
-				GameSettings.Presets[i-1].Type = PlayerComputer
-			end
-		end
+		MapPersonPlayer = 2
 	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
-		person_player = 1
-		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
-				GameSettings.Presets[i-1].Type = PlayerComputer
-			end
-		end
---	elseif (mapinfo.description == "Brown Hills" and (opponents:getSelected() == 0 or opponents:getSelected() >= 3) and mapinfo.nplayers >= 4 and mapinfo.playertypes[4] == "person") then
---		person_player = 3
---		for i=1,mapinfo.nplayers do
---			if ((i - 1) ~= person_player and mapinfo.playertypes[i] == "person") then
---				GameSettings.Presets[i-1].Type = PlayerComputer
---			end
---		end
+		MapPersonPlayer = 1
 	end
 
-      GameSettings.Presets[person_player].Race = race:getSelected()
+		for i=1,mapinfo.nplayers do
+			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
+				GameSettings.Presets[i-1].Type = PlayerComputer
+			end
+		end
+      GameSettings.Presets[MapPersonPlayer].Race = race:getSelected()
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then
         PlayerFaction = ""
       elseif (race:getSelected() == 1) then
-        PlayerFaction = GetCivilizationFactions("dwarf")[faction:getSelected()]
-      elseif (race:getSelected() == 1) then
-        PlayerFaction = GetCivilizationFactions("germanic")[faction:getSelected()]
+        PlayerFaction = GetCivilizationFactionNames("dwarf")[faction:getSelected()]
+      elseif (race:getSelected() == 2) then
+        PlayerFaction = GetCivilizationFactionNames("germanic")[faction:getSelected()]
       end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
@@ -1011,7 +1000,7 @@ function RunSinglePlayerGameMenu()
 	      ForTheMotherland = false
 	      GameSettings.GameType = gametype:getSelected() - 1
       end
-      TechLevel[person_player + 1] = tech_level:getSelected() - 1
+      TechLevel[MapPersonPlayer + 1] = tech_level:getSelected() - 1
 	  
       RunMap(mapname)
       menu:stop()
@@ -1036,7 +1025,7 @@ function RunSinglePlayerGameMenu()
 
   menu:addLabel(_("~<Your Faction:~>"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
   faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
-    function(dd) FactionChanged() end)
+    function(dd) end)
   faction:setSize(152, 20)
 
   menu:addLabel(_("~<Resources:~>"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
@@ -1131,12 +1120,12 @@ function RunSinglePlayerGameMenu()
   function CivilizationChanged()
     faction_list = {_("Map Default")}
     if (race:getSelected() == 1) then
-	    for i=1,table.getn(GetCivilizationFactions("dwarf")) do
-	      table.insert(faction_list, _(GetCivilizationFactions("dwarf")[i]))
+	    for i=1,table.getn(GetCivilizationFactionNames("dwarf")) do
+	      table.insert(faction_list, _(GetCivilizationFactionNames("dwarf")[i]))
 	    end
     elseif (race:getSelected() == 2) then
-	    for i=1,table.getn(GetCivilizationFactions("germanic")) do
-	      table.insert(faction_list, _(GetCivilizationFactions("germanic")[i]))
+	    for i=1,table.getn(GetCivilizationFactionNames("germanic")) do
+	      table.insert(faction_list, _(GetCivilizationFactionNames("germanic")[i]))
 	    end
     end
     faction:setList(faction_list)

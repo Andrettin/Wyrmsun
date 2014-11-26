@@ -202,8 +202,10 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	AirUnit = true,
 	RandomMovementProbability = 1,
+	RandomMovementDistance = 12,
 	organic = true,
 	Fauna = true,
+	PersonalNames = {"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kawn", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Krawg", "Kuu", "Kzaaa", "Kzuuu"},
 	Variations = {
 		{
 			"variation-id", "brown-feathers"
@@ -230,7 +232,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Description = _("These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds."),
 	Quote = _("\"More wyrms there are | beneath the ash / Than an unwise ape would think; / Goin and Moin, | Grafvitnir's sons, / Grabak and Grafvolluth, / Ofnir and Svafnir | shall ever, methinks, / Gnaw at the twigs of the tree.\" - Dwarven Traditional Poetry"),
-	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them.",
+	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
 	Animations = "animations-wyrm", Icon = "icon-wyrm",
 	NeutralMinimapColor = {192, 192, 192},
@@ -251,10 +253,12 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	CanTargetLand = true,
 	LandUnit = true,
 	organic = true,
---	SelectableByRectangle = true,
 	RandomMovementProbability = 1,
 	Fauna = true,
 	StartingLevel = 3,
+	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
+	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
+	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	Variations = {
 		{
 			"variation-id", "green-scales"
@@ -560,6 +564,7 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 UnitTypeFiles["unit-flowers"] = {
 	cave = "tilesets/swamp/neutral/decorations/flowers.png",
 	dungeon = "tilesets/swamp/neutral/decorations/flowers.png",
+	fairlimbed_forest = "tilesets/forest/neutral/decorations/flowers.png",
 	forest = "tilesets/forest/neutral/decorations/flowers.png",
 	swamp = "tilesets/swamp/neutral/decorations/flowers.png"
 }
@@ -587,6 +592,7 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 UnitTypeFiles["unit-large-flower"] = {
 	cave = "tilesets/swamp/neutral/decorations/large_flower.png",
 	dungeon = "tilesets/swamp/neutral/decorations/large_flower.png",
+	fairlimbed_forest = "tilesets/forest/neutral/decorations/large_flower.png",
 	forest = "tilesets/forest/neutral/decorations/large_flower.png",
 	swamp = "tilesets/swamp/neutral/decorations/large_flower.png"
 }
@@ -611,15 +617,18 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	Sounds = {} }
 )
 
+--[[
 UnitTypeFiles["unit-fern"] = {
 	cave = "tilesets/swamp/neutral/decorations/fern.png",
 	dungeon = "tilesets/swamp/neutral/decorations/fern.png",
+	fairlimbed_forest = "tilesets/forest/neutral/decorations/fern.png",
 	forest = "tilesets/forest/neutral/decorations/fern.png",
 	swamp = "tilesets/swamp/neutral/decorations/fern.png"
 }
+--]]
 
 DefineUnitType("unit-fern", { Name = "Fern",
-	Image = {"size", {48, 48}},
+	Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
 	Animations = "animations-decoration-old", Icon = "icon-fern",
 	Speed = 0,
 	HitPoints = 0,
@@ -1163,6 +1172,20 @@ DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
 	Vanishes = true,
 	Sounds = {} } )
 
+DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
+	Image = {"file", "neutral/units/human_corpse.png", "size", {72, 72}},
+	Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
+	Speed = 0,
+	HitPoints = 255,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	Vanishes = true,
+	Sounds = {} } )
+
 DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
 	Animations = "animations-kobold-dead-body", Icon = "icon-dwarven-miner",
@@ -1444,6 +1467,7 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 UnitTypeFiles["unit-destroyed-2x2-place"] = {
 	cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
+	fairlimbed_forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 }
@@ -1467,6 +1491,7 @@ DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
 UnitTypeFiles["unit-destroyed-3x3-place"] = {
 	cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
+	fairlimbed_forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 }
@@ -1508,6 +1533,7 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 UnitTypeFiles["unit-destroyed-4x4-place"] = {
 	cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
+	fairlimbed_forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
 	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 }

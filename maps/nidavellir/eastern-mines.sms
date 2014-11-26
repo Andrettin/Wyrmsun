@@ -52,7 +52,7 @@ ConvertHexTiles()
 
 SetMapBorders("Rock", false)
 
-GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "")
+GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 for x=0,(Map.Info.MapWidth - 1) do
 	for y=0,(Map.Info.MapHeight - 1) do
@@ -74,7 +74,7 @@ end
 -- Randomly add a few more trees, as the base map has none
 GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 -- rectify hex-conversion derived issues
 SetRawTile(18, 43, "Water")
@@ -90,7 +90,7 @@ SetPlayerData(0, "Resources", "gold", 2000)
 SetPlayerData(0, "Resources", "lumber", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
 SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Name", "Norlund Clan")
+SetPlayerData(0, "Faction", "Norlund Clan")
 SetAiType(0, "land-attack")
 SetStartView(1, 59, 53)
 SetPlayerData(1, "Resources", "gold", 2000)
@@ -133,7 +133,7 @@ end
 unit = CreateUnit("unit-dwarven-town-hall", 0, {19, 47})
 unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
 
-if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= wyr.preferences.TheScepterOfFireRaiderFaction))) then
+if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
 	unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
 	unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
 	unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})

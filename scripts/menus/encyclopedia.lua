@@ -477,7 +477,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 					local chapter_y = -3
 					for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
 						if (Texts[text_key].Chapters[chapter_key].Index > 0) then
-							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset)),
+							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset) - 16),
 								function()
 									for i=1,table.getn(chapter_buttons) do
 										encyclopedia_entry_menu:remove(chapter_buttons[i])
@@ -510,7 +510,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 									end
 								end
 							)
-							if (chapter_y > 8 or (chapter_y > 4 and Video.Height < 600)) then
+							if (chapter_y > 9 or (chapter_y > 4 and Video.Height < 600)) then
 								chapter_x = chapter_x + 2
 								chapter_y = -3
 							else
@@ -549,7 +549,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 					local chapter_y = -3
 					for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
 						if (Texts[text_key].Chapters[chapter_key].Index > 0) then
-							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset)),
+							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset) - 16),
 								function()
 									for i=1,table.getn(chapter_buttons) do
 										encyclopedia_entry_menu:remove(chapter_buttons[i])
@@ -582,7 +582,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 									end
 								end
 							)
-							if (chapter_y > 8 or (chapter_y > 4 and Video.Height < 600)) then
+							if (chapter_y > 9 or (chapter_y > 4 and Video.Height < 600)) then
 								chapter_x = chapter_x + 2
 								chapter_y = -3
 							else
@@ -669,7 +669,7 @@ function RunEncyclopediaWorldsMenu()
 	
 	local height_offset = 2
 	if (Video.Height >= 600) then
-		height_offset = 0
+		height_offset = 2 -- change this to 0 if the number of world entries becomes too large
 	else
 		height_offset = 2
 	end
@@ -695,7 +695,8 @@ function RunEncyclopediaWorldsMenu()
 		end
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() menu:stop(); end)
 
 	menu:run()

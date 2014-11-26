@@ -1,3 +1,5 @@
 LoadTileModels("scripts/tilesets/forest.lua")
 
-GenerateRandomMap(128, 128, true)
+if (LoadedGame == false) then
+	GenerateRandomMap(128, 128, true)
+end

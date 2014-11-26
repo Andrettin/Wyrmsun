@@ -739,7 +739,8 @@ DefineUnitType("unit-surghan-mercenary-thane", { Name = _("Surghan Mercenary"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
+DefineUnitType("unit-hero-rugnur", { Name = _("Axefighter"),
+	DefaultName = "Rugnur",
 	Civilization = "dwarf",
 	Description = _("Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch."),
 	Image = {"file", "dwarf/units/rugnur.png", "size", {72, 72}},
@@ -775,7 +776,8 @@ DefineUnitType("unit-hero-rugnur", { Name = "Rugnur",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
+DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
+	DefaultName = "Rugnur",
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-steelclad", Icon = "icon-rugnur",
@@ -811,7 +813,8 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = "Rugnur",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
+DefineUnitType("unit-hero-rugnur-thane", { Name = _("Thane"),
+	DefaultName = "Rugnur",
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
@@ -848,7 +851,8 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = "Rugnur",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-baglur", { Name = "Baglur",
+DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
+	DefaultName = "Baglur",
 	Civilization = "dwarf",
 	Description = _("Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan."),
 --	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
@@ -886,7 +890,8 @@ DefineUnitType("unit-hero-baglur", { Name = "Baglur",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
+DefineUnitType("unit-hero-baglur-thane", { Name = _("Thane"),
+	DefaultName = "Baglur",
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
@@ -923,7 +928,8 @@ DefineUnitType("unit-hero-baglur-thane", { Name = "Baglur",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
+DefineUnitType("unit-hero-thursagan", { Name = _("Thane"),
+	DefaultName = "Thursagan",
 	Civilization = "dwarf",
 	Description = _("Thursagan is an extremely skilled runemaster who has retired to live as a hermit in the Northern Wastelands. Due to his talents, he was contacted by Rugnur to craft of the Scepter of Fire. His hammer is considered legendary, and dwarves have sought to find it for centuries after his death."),
 	Quote = _("\"Ye mean the insane dwarf who lives in the far north?!\" - Baglur, Retired Norlund Warrior"),
@@ -963,7 +969,8 @@ DefineUnitType("unit-hero-thursagan", { Name = "Thursagan",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-DefineUnitType("unit-hero-durstorn", { Name = "Durstorn",
+DefineUnitType("unit-hero-durstorn", { Name = _("Thane"),
+	DefaultName = "Durstorn",
 	Civilization = "dwarf",
 	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},

@@ -144,7 +144,7 @@ RawTiles = {
 GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 --GenerateTrees(0, 24, 11, 26, 44, 61)
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 SetRawTile(53, 30, "Rough")
 SetRawTile(57, 51, "Rock")

@@ -61,7 +61,7 @@ SetRawTile(5, 8, "Rough")
 SetRawTile(8, 3, "Rough")
 SetRawTile(9, 3, "Rough")
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 -- rectify hex-conversion derived issues
 SetRawTile(15, 13, "Rock")
@@ -105,21 +105,21 @@ SetPlayerData(0, "Resources", "gold", 2000)
 SetPlayerData(0, "Resources", "lumber", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
 SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Name", "Norlund Clan")
+SetPlayerData(0, "Faction", "Norlund Clan")
 SetAiType(0, "land-attack")
 SetStartView(1, 38, 33)
 SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "dwarf")
-SetPlayerData(1, "Name", "Shorbear Clan")
+SetPlayerData(1, "Faction", "Shorbear Clan")
 SetAiType(1, "land-attack")
 SetStartView(2, 5, 65)
 SetPlayerData(2, "Resources", "gold", 2000)
 SetPlayerData(2, "Resources", "lumber", 1000)
 SetPlayerData(2, "Resources", "oil", 0)
 SetPlayerData(2, "RaceName", "dwarf")
-SetPlayerData(2, "Name", "Shinsplitter Clan")
+SetPlayerData(2, "Faction", "Shinsplitter Clan")
 SetAiType(2, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
@@ -133,7 +133,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {21, 1})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {23, 1})
 
-	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= wyr.preferences.TheScepterOfFireRaiderFaction and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= wyr.preferences.TheScepterOfFireRaiderFaction))) then
+	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
 		unit = CreateUnit("unit-hero-rugnur", 0, {6, 5})
 		unit = CreateUnit("unit-hero-baglur", 0, {6, 5})
 		unit = CreateUnit("unit-hero-thursagan", 0, {6, 5})
@@ -141,7 +141,13 @@ if (GrandStrategy == false) then
 
 		unit = CreateUnit("unit-dwarven-scout", 0, {6, 5}) -- Noiraran
 		IncreaseUnitLevel(unit, 1, true)
+		if (LoadedGame == false) then
+			SetUnitName(unit, "Noiraran")
+		end
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
+		if (LoadedGame == false) then
+			SetUnitName(unit, "Kuhnar")
+		end
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
 		IncreaseUnitLevel(unit, 1, true)
 	end
@@ -153,6 +159,9 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
+	if (LoadedGame == false) then
+		SetUnitName(unit, "Glonoin")
+	end
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 29})

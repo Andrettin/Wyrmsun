@@ -1,0 +1,5 @@
+LoadTileModels("scripts/tilesets/fairlimbed_forest.lua")
+
+if (LoadedGame == false) then
+	GenerateValley(nil, 1) -- has one lake, Ulfsjar
+end

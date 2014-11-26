@@ -4,6 +4,9 @@ Battle for Wesnoth Team:
 /sounds/dwarf/basic_voices/dead-2.wav
 /sounds/goblin/basic_voices/goblin-die-1.wav
 /sounds/goblin/basic_voices/goblin-die-2.wav
+/sounds/human/basic_voices/human-die-1.wav
+/sounds/human/basic_voices/human-die-2.wav
+/sounds/human/basic_voices/human-die-3.wav
 /sounds/misc/explosion.wav
 /sounds/misc/fanfare_short.wav
 /sounds/misc/gold_coins.wav

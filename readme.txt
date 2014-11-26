@@ -47,9 +47,11 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Germanic civilization (human).
 
 * Maps
-- Added Don Basin map (Earth), based on the Europe map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
+- Added Tanais map (Earth).
 - Added Jutland map (Earth), based on the Scandinavia map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
 - Goblin banners are now placed in the entrances to the goblin settlements of players 5 and 6.
+- Added random maps for the fairlimbed forest tileset (Alfheim).
+- Added Ulfdalir map (Alfheim).
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
@@ -58,21 +60,30 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added germanic stand ground icon (by Leo).
 - The player now receives a message if they receive a new objective.
 - Added germanic arrow icon (by Leo).
-- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I, the Helgakvitha Hundingsbana II, the Gripisspo and the Reginsmol to the encyclopedia texts (The Poetic Edda).
+- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I, the Helgakvitha Hundingsbana II, the Gripisspo, the Reginsmol, the Fafnismol, the Sigrdrifumol, the Brot Af Sigurtharkvithu, the Guthrunarkvitha I, the Sigurtharkvitha En Skamma, the Helreith Brynhildar, the Drap Niflunga, the Guthrunarkvitha II En Forna, the Guthrunarkvitha III and the Oddrunargratr to the encyclopedia texts (The Poetic Edda).
 - A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
 - Encyclopedia pages can now have quotes which are relevant to the entry.
 - Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smith, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.
 - Tech tree code made more dynamic to support multiple civilizations without significant extra coding being necessary for each of them.
 - Miscellaneous tech tree code improvements.
 - If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
-- Added "The Gnomes of the Saline Mountains" (by Anna Goldmark Gross, 1912, in the public domain) to the encyclopedia texts.
+- Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
 
 * Quests
 - Added On the Vanaquisl quest.
 
+* Terrain
+- Tile types can now use different images in a tileset's definition.
+- Updated swamp rocks (graphics by Jinn).
+- Added fairlimbed forest tileset (graphics by b_o).
+
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
 - The Goblin Impaler is now called simply "Impaler", and the same was done to other similar cases.
+- There is now a boolean field ("Transparent") which allows making a unit type's image transparent.
+- Organic units now have personal names.
+- The goblin Glider is now an organic unit.
+- Gryphons now move greater distances during their random movement.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

@@ -959,7 +959,7 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/wyrm_skeleton.png"
 	})
-elseif (wyrmsun.tileset == "forest") then
+elseif (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 	DefineIcon({
 		Name = "icon-gold-mine",
 		Size = {46, 38},

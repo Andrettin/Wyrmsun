@@ -1,0 +1,46 @@
+LoadTileModels("scripts/tilesets/forest.lua")
+
+SetPlayerData(0, "Resources", "gold", 2000)
+SetPlayerData(0, "Resources", "lumber", 1000)
+SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "germanic")
+SetPlayerData(0, "Name", "Iuvavum")
+SetAiType(0, "land-attack")
+SetPlayerData(4, "Resources", "gold", 2000)
+SetPlayerData(4, "Resources", "lumber", 1000)
+SetPlayerData(4, "Resources", "oil", 0)
+SetPlayerData(4, "RaceName", "germanic")
+SetPlayerData(4, "Name", "Marcomanni Tribe")
+SetAiType(4, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+local layout = {
+	{-1,  8, -1, -1, 27, -1, -1, -1},
+	{-1, 17, 19, -2, -1, -1, -1, -1},
+	{-1, -1, 17, 11, 10, 10, 19, -1},
+	{-1, -1, -2,  6, -2, -2, 17, 10},
+	{-1, -1, -1, -2, -2, -2, -2, -1},
+	{-1, -1, -1, -1, -1, -1, -1, -1},
+	{-1, -1, -1, -1, -1, -1, -1, -1},
+	{-1, -1, -1, -1, -1, -1, -1, -1}
+}
+
+local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smith"}
+
+local rock_generation = {
+	{80, 128, 0, 32},
+	{64, 80, 16, 32},
+	{0, 16, 0, 48},
+	{16, 32, 48, 112},
+	{32, 48, 64, 96},
+	{48, 64, 80, 96},
+	{112, 128, 96, 112},
+	{96, 128, 112, 128}
+}
+
+--layout = nil
+
+if (LoadedGame == false) then
+	GenerateTown(layout, 0, 4, town_buildings, {}, true, {}, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
+end
+

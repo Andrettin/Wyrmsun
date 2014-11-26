@@ -182,7 +182,7 @@ DefineAnimations("animations-dwarven-ballista", {
     "frame 0", "move 2", "unbreakable end", "wait 1",},	
   Attack = {"unbreakable begin",
     "frame 10", "wait 25",
-    "frame 15", "attack", "sound ballista-attack", "wait 5", 
+    "frame 15", "attack", "wait 5", 
     "frame 20", "wait 4",
     "frame 15", "wait 6",
     "frame 20", "wait 8",

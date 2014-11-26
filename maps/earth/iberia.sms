@@ -120,9 +120,9 @@ SetRawTile(72, 35, "Land")
 
 GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-AdjustRawMapTileIrregularities()
+AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
-SetRawTile(41, 11, "Rough")
+--SetRawTile(41, 11, "Rough")
 
 GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 

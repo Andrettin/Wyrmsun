@@ -201,6 +201,7 @@ DefinePlayerColors({
   "brown", {{170, 119, 0}, {134, 82, 0}, {98, 47, 0}, {70, 23, 15}},
   "radioactive", {{248, 254, 1}, {154, 204, 5}, {103, 146, 4}, {51, 74, 2}},
   "gray", {{116, 104, 99}, {97, 85, 80}, {74, 62, 57}, {48, 36, 31}},
+  "acid", {{229, 11, 217}, {144, 18, 206}, {82, 0, 185}, {42, 0, 111}},
 })
 
 --  If color-cycle-all is off (#f) only the tileset palette is color cycled.
@@ -254,12 +255,6 @@ SetAllPlayersUnitLimit(200)
 SetAllPlayersBuildingLimit(200)
 --  All player total unit limit
 SetAllPlayersTotalUnitLimit(400)
-
--------------------------------------------------------------------------------
--- Character Names
-
--- There are at present 337 Dwarven names
---DwarvenNames = {"Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"}
 
 -------------------------------------------------------------------------------
 
@@ -393,7 +388,9 @@ function SinglePlayerTriggers()
 	StandardTriggers()
 
 	if (not IsNetworkGame()) then
-		AssignPlayerFactions()
+		if (PlayerFaction ~= "") then
+			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
+		end
 	end
 
 	if (LoadedGame == false) then
@@ -428,7 +425,7 @@ function SinglePlayerTriggers()
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest"))) then
 				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
 				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
@@ -466,7 +463,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
 					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "forest")) then
+					elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest"))) then
 						SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
 					end
 				end
@@ -546,9 +543,9 @@ function StandardTriggers()
 				end
 
 				if (not IsNetworkGame()) then
-					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
+					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "-hero-") ~= nil) then
 						for key, value in pairs(wyr.preferences.Heroes) do
-							if (wyr.preferences.Heroes[key].name == GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident"))) then
+							if (wyr.preferences.Heroes[key].name == GetUnitVariable(uncount[unit1], "Name")) then
 								-- apply persistent hero levels
 								if (GetUnitVariable(uncount[unit1], "Level") < wyr.preferences.Heroes[key].level) then
 									IncreaseUnitLevel(uncount[unit1], (wyr.preferences.Heroes[key].level - GetUnitVariable(uncount[unit1], "Level")), true)
@@ -821,31 +818,14 @@ function StandardTriggers()
 --	)
 end
 
-function AssignPlayerFactions()
-
-	if (PlayerFaction ~= "") then
-		SetPlayerData(GetThisPlayer(), "Name", PlayerFaction)
-	end
-
-	local RandomNumber = 0
-
-	for i=0,14 do
-		if (GetPlayerData(i, "Name") == "" or GetPlayerData(i, "Name") == nil or GetPlayerData(i, "Name") == "Computer" or GetPlayerData(i, "Name") == "Person") then
-			if (table.getn(GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName"))) > 0) then
-				RandomNumber = SyncRand(table.getn(GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName")))) + 1
-				SetPlayerData(i, "Name", GetCivilizationAvailableFactions(GetPlayerData(i, "RaceName"))[RandomNumber])
-			end
-		end
-	end
-end
-
+--[[
 function GetCivilizationFactions(civilization)
 	if (civilization == "dwarf") then
 		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 	elseif (civilization == "elf") then
 		return {"Lintanir", "Ulfdalir", "Wesmere"}
 	elseif (civilization == "germanic") then
-		return {"Germanics", "Germanics", "Germanics", "Germanics"}
+		return {"Asa Tribe", "Vana Tribe"}
 	elseif (civilization == "gnome") then
 		return {"Untersberg"}
 	elseif (civilization == "goblin") then
@@ -860,9 +840,10 @@ function GetCivilizationFactions(civilization)
 		return { }
 	end
 end
+--]]
 
 function GetCivilizationAvailableFactions(civilization)
-	local civilization_factions = GetCivilizationFactions(civilization)
+	local civilization_factions = GetCivilizationFactionNames(civilization)
 
 	-- remove faction names already in use
 	for i=0,14 do
@@ -1119,7 +1100,7 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 		-- save the levels of heroes in a persistent manner
 		if (not IsNetworkGame()) then
 			for key, value in pairs(wyr.preferences.Heroes) do
-				if (wyr.preferences.Heroes[key].name == GetUnitTypeName(GetUnitVariable(unit, "Ident"))) then
+				if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name") and string.find(GetUnitVariable(unit, "Ident"), "-hero-") ~= nil) then
 					if (GetUnitVariable(unit, "Level") > wyr.preferences.Heroes[key].level) then
 						wyr.preferences.Heroes[key].level = GetUnitVariable(unit, "Level")
 						SavePreferences()
@@ -1283,6 +1264,52 @@ end
 
 function round(num)
 	return math.floor(num + 0.5)
+end
+
+function rspread(a, b)
+	if (a > b) then
+		local t = a
+		a = b
+		b = t
+	end
+	return SyncRand(b - a + 1) + a
+end
+
+function dice(number, sides)
+	local total = 0
+	for i=1,number do
+		total = total + SyncRand(sides) + 1
+	end
+	return total
+end
+
+function sign(number)
+	if (number < 0) then
+		return -1
+	elseif (number > 0) then
+		return 1
+	else
+		return 0
+	end
+end
+
+-- return the middle value of 3 numbers
+function middle(n1, n2, n3)
+	if (n1 < n2) then
+		if (n2 < n3) then
+			return n2
+		elseif (n1 < n3) then
+			return n3
+		else
+			return n1
+		end
+	elseif (n1 < n3) then
+		return n1
+	elseif (n2 < n3) then
+		return n3
+	else
+		return n2
+	end
 end
 
 -------------------------------------------------------------------------------

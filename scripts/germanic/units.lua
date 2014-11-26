@@ -53,7 +53,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	Priority = 50,
 	BasePoints = 30,
 	Demand = 1,
-	Corpse = "unit-dwarven-dead-body",
+	Corpse = "unit-human-dead-body",
 	Type = "land",
 	RightMouseAction = "harvest",
 	CanAttack = true, RepairRange = 1,
@@ -79,11 +79,11 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	organic = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "dwarven-miner-acknowledge",
+		"selected", "click",
+--		"acknowledge", "dwarven-miner-acknowledge",
 --		"ready", "dwarven-miner-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-human-voices-dead"
 	}
 } )
 		
@@ -92,6 +92,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Civilization = "germanic",
 	Quote = _("\"His spear he shook, | his shield he brandished, / His horse he spurred, | with his sword he hewed; / Wars he raised, | and reddened the field, / Warriors slew he, | and land he won.\" - Rigsthula"),
 --	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
+	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
 	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
@@ -106,7 +107,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Priority = 60,
 	BasePoints = 50,
 	Demand = 1,
-	Corpse = "unit-dwarven-dead-body",
+	Corpse = "unit-human-dead-body",
 	Type = "land",
 	RightMouseAction = "attack",
 	CanAttack = true,
@@ -120,7 +121,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"}
+		"dead", "basic-human-voices-dead"}
 } )
 
 DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
@@ -162,7 +163,7 @@ DefineUnitType("unit-germanic-farm", { Name = _("Farm"),
 	Class = "farm",
 	Civilization = "germanic",
 	Description = _("Farms are essential for supporting a settlement's population."),
-	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred then were generally smaller than their modern counterparts, but they were sturdier."),
+	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
 	Image = {"file", "germanic/buildings/farm.png", "size", {64, 64}},
 	Animations = "animations-building", Icon = "icon-germanic-farm",
 	Costs = {"time", 100, "gold", 500, "lumber", 250},
@@ -221,8 +222,7 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	Class = "lumber-mill",
 	Civilization = "germanic",
---	Description = _("Dwarven culture places a great emphasis on handling stone and metal, to the detriment of woodworking. Nevertheless, the lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes."),
---	Background = _("In Germanic mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>."),
+	Description = _("Germanic carpenters work hard to provide settlements with all their woodworking needs."),
 	Image = {"file", "germanic/buildings/carpenters_shop.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-carpenters-shop",
 	Costs = {"time", 150, "gold", 600, "lumber", 450},
