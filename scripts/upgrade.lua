@@ -150,7 +150,7 @@ function ApplyTechLevels()
 	for i, unitName in ipairs(bronze_upgrades) do
 		for j=0,15 do
 			if (TechLevel[j + 1] >= 1 and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
-				AcquireUpgrade(j, unitName)
+				SetPlayerData(j, "HasUpgrade", unitName, true)
 			end
 		end
 	end
