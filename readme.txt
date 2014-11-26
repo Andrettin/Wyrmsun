@@ -84,6 +84,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Organic units now have personal names.
 - The goblin Glider is now an organic unit.
 - Gryphons now move greater distances during their random movement.
+- Added Bat, which functions as fauna for cave maps (graphics by b_o).
+- Added Bird, which functions as fauna for forest maps (graphics by b_o).
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

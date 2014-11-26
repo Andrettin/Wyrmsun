@@ -134,7 +134,7 @@ DefineUnitType("unit-nothing-36", { Name = "Nothing 36",
 	Type = "land",
 	Sounds = {} } )
 
-DefineUnitType("unit-critter", { Name = "Critter",
+DefineUnitType("unit-rat", { Name = "Rat",
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -358,6 +358,90 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 --		"ready", "critter-ready",
 --		"help", "critter-help",
 		"dead", "slime-dead" }
+} )
+
+DefineUnitType("unit-bird", { Name = _("Bird"),
+	Image = {"file", "neutral/units/bird_brown.png", "size", {32, 32}},
+	Animations = "animations-bird", Icon = "icon-gryphon",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 14,
+	HitPoints = 5,
+	DrawLevel = 45,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, PiercingDamage = 2, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	AirUnit = true,
+	RandomMovementProbability = 100,
+	RandomMovementDistance = 12,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Variations = {
+		{
+			"variation-id", "black",
+			"file", "neutral/units/bird_black.png"
+		},
+		{
+			"variation-id", "brown"
+		},
+		{
+			"variation-id", "gray",
+			"file", "neutral/units/bird_gray.png"
+		},
+		{
+			"variation-id", "white",
+			"file", "neutral/units/bird_white.png"
+		}
+	},
+	Sounds = {
+		"selected", "bird-selected",
+		"acknowledge", "bird-selected",
+		"ready", "bird-selected",
+--		"help", "critter-help",
+--		"dead", "gryphon-dead"
+	}
+} )
+
+DefineUnitType("unit-bat", { Name = _("Bat"),
+	Image = {"file", "neutral/units/bat.png", "size", {32, 32}},
+	Animations = "animations-bird", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 14,
+	HitPoints = 5,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, PiercingDamage = 2, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly-low",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	AirUnit = true,
+	RandomMovementProbability = 100,
+	RandomMovementDistance = 8,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Sounds = {
+		"selected", "bat-selected",
+		"acknowledge", "bat-selected",
+		"ready", "bat-selected",
+--		"help", "critter-help",
+		"dead", "rat-dead" }
 } )
 
 --UnitTypeFiles["unit-gold-mine"] = {

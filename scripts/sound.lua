@@ -302,6 +302,12 @@ MakeSound("gryphon-dead", {
 	"neutral/gryphon/gryphon_death_2.wav"
 })
 MakeSound("slime-dead", "neutral/squishy_death.wav")
+MakeSound("bird-selected", {
+	"neutral/birds1.wav",
+	"neutral/birds2.wav",
+	"neutral/birds3.wav"
+})
+MakeSound("bat-selected", "neutral/bat_flapping.wav")
 
 --	Define sounds used by game
 --

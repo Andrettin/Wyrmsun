@@ -75,7 +75,7 @@ local RatMove = {"unbreakable begin",
 	"frame 0", "move 1", "wait 2", "frame 15", "move 1", "wait 1",
 	"frame 15", "move 1", "wait 2", "frame 20", "move 1", "wait 1",
 	"frame 20", "move 1", "wait 1", "frame 0",
-	"unbreakable end", "wait 1",}
+	"unbreakable end", "wait 1",} -- should have 2 more waits to be speed 3 more precisely
 local RatDeath = {"unbreakable begin",
 	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
 	"unbreakable end", "wait 1",}
@@ -88,6 +88,61 @@ DefineAnimations("animations-rat", {
 	"frame 40", "attack", "sound bite-attack", "wait 5", "frame 0", "wait 10", "frame 0",
 	"unbreakable end", "wait 1",},
   Death = RatDeath,
+})
+
+--
+-- Bird
+--
+
+local BirdStill = {
+	"frame 5", "wait 3",
+	"frame 10", "wait 3",
+	"frame 15", "wait 3",
+	"frame 20", "wait 3",
+	"frame 25", "wait 3",
+	"frame 30", "wait 3",
+	-- following part for bird hop, not for bat
+	-- "random-goto 1 idle_animation", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
+	-- "label idle_animation","frame 0", "wait 6", "frame 0", "wait 6", "frame 0", "wait 6", "frame 0", "wait 6", "frame 0", "wait 6",
+	-- "label no-rotate", "wait 1",
+}
+local BirdMove = {"unbreakable begin",
+	"frame 5", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 15", "move 2", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 20", "move 3", "wait 1",
+	"frame 25", "move 3", "wait 1", "frame 25", "move 3", "wait 1",
+	"frame 30", "move 3", "wait 1", "frame 30", "move 3",
+	"unbreakable end", "wait 1",}
+local BirdDeath = {"unbreakable begin",
+	"frame 50", "wait 3", "frame 55", "wait 3",
+	"frame 60", "wait 3", "frame 60", "wait 5",
+	"frame 60",
+	"unbreakable end", "wait 1",}
+
+DefineAnimations("animations-bird", {
+	Still = BirdStill,
+	Move = BirdMove,
+	Attack = {"unbreakable begin",
+		"frame 35", "wait 2",
+		"frame 40", "wait 2",
+		"frame 45", "wait 1",
+		"frame 45", "attack", "sound claw-attack", "wait 1",
+		"frame 40", "wait 2",
+		"frame 35", "wait 2",
+		"frame 10", "wait 3",
+		"frame 15", "wait 3",
+		"frame 20", "wait 3",
+		"frame 25", "wait 3",
+		"frame 30", "wait 3",
+		"frame 5", "wait 3",
+		"frame 10", "wait 3",
+		"frame 15", "wait 3",
+		"frame 20", "wait 3",
+		"frame 25", "wait 3",
+		"frame 30", "wait 3",
+		"frame 35", "unbreakable end", "wait 1", },
+	Death = BirdDeath,
 })
 
 --

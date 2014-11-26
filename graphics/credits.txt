@@ -103,6 +103,11 @@ b_o:
 /graphics/neutral/items/key.png
 /graphics/neutral/items/potion.png
 /graphics/neutral/items/scepter.png
+/graphics/neutral/units/bat.png
+/graphics/neutral/units/bird_black.png
+/graphics/neutral/units/bird_brown.png
+/graphics/neutral/units/bird_gray.png
+/graphics/neutral/units/bird_white.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png

@@ -896,19 +896,32 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 end
 
 function CreateCritters(critter_number)
+	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
 	local Count = critter_number
 	-- create critters
-	local critter_unit_type
-	if (wyrmsun.tileset == "forest") then
-		critter_unit_type = "unit-critter"
-	elseif (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
-		critter_unit_type = "unit-slime"
-	else
-		Count = 0
-	end
 	while (Count > 0) do
+		local critter_unit_type
+		if (wyrmsun.tileset == "forest") then
+			RandomNumber = SyncRand(2)
+			if (RandomNumber == 0) then
+				critter_unit_type = "unit-rat"
+			else
+				critter_unit_type = "unit-bird"
+			end
+		elseif (wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
+			critter_unit_type = "unit-slime"
+		elseif (wyrmsun.tileset == "cave") then
+			RandomNumber = SyncRand(2)
+			if (RandomNumber == 0) then
+				critter_unit_type = "unit-slime"
+			else
+				critter_unit_type = "unit-bat"
+			end
+		else
+			Count = 0
+		end
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then

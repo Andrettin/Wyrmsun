@@ -127,8 +127,10 @@ local editor_types = {
    "unit-gryphon-feather",
    "unit-scepter-of-fire",
 
-   "unit-critter",
+   "unit-rat",
    "unit-slime",
+   "unit-bird",
+   "unit-bat",
    "unit-gryphon",
    "unit-wyrm",
 
