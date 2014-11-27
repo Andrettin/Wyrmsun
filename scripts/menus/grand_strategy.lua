@@ -603,6 +603,7 @@ function AttackProvince(province, faction)
 				if (mapinfo.playertypes[k] == "person" and person_player_found == false) then
 					person_player_found = true
 				elseif (mapinfo.playertypes[k] == "person" and person_player_found == true and computer_player_found == false) then
+					GameSettings.Presets[k-1].Type = PlayerComputer
 					computer_player_found = true
 				elseif (mapinfo.playertypes[k] == "computer" and computer_player_found == false) then
 					computer_player_found = true

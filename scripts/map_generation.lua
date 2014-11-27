@@ -900,8 +900,9 @@ function CreateCritters(critter_number)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = critter_number
+	local WhileCount = 0
 	-- create critters
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < critter_number * 100) do
 		local critter_unit_type
 		if (wyrmsun.tileset == "forest") then
 			RandomNumber = SyncRand(2)
@@ -928,6 +929,7 @@ function CreateCritters(critter_number)
 			unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
 			Count = Count - 1
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -959,9 +961,10 @@ function CreateGryphons(gryphon_number)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	Count = gryphon_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < gryphon_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
@@ -975,6 +978,7 @@ function CreateGryphons(gryphon_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -1007,11 +1011,12 @@ function CreateDecorations()
 	local RandomY = 0
 	local Count = 0
 	local RandomNumber = 0
+	local WhileCount = 0
 
 	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
 	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
-		while (Count > 0) do
+		while (Count > 0 and WhileCount < ((Map.Info.MapWidth * Map.Info.MapHeight) / 128) * 100) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "water") == false and GetTileTerrainHasFlag(RandomX, RandomY, "coast") == false and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
@@ -1074,6 +1079,7 @@ function CreateDecorations()
 				unit = CreateUnit("unit-inner-wall-decoration", 15, {RandomX, RandomY})
 				Count = Count - 1
 			end
+			WhileCount = WhileCount + 1
 		end
 	end
 end
@@ -1098,8 +1104,6 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 			if (table.getn(possible_civilizations) < 1) then
 				Map.Info.PlayerType[i] = PlayerNobody
 			else
-				SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
-
 				local player_spawn_point
 				local starting_point_found = false
 				while (starting_point_found == false) do
@@ -1118,6 +1122,8 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 				end
 				
 				SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+
+				SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 				for sub_x=-1,4 do
 					for sub_y=-1,4 do
 						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
@@ -1230,17 +1236,17 @@ function GenerateRandomMap(width, height, symmetric)
 
 	CreateDecorations()	
 
-	for i=0,14 do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		end
-	end
-
 	if (GrandStrategy == false) then
+		for i=0,14 do
+			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			end
+		end
+
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 
 		if (wyrmsun.tileset == "forest") then

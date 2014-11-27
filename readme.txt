@@ -68,6 +68,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Miscellaneous tech tree code improvements.
 - If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
 - Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
+- Added crow sound (from the public domain).
 
 * Quests
 - Added On the Vanaquisl quest.

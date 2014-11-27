@@ -27,6 +27,57 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- markov chain test implementation
+--[[
+DwarvenNames = {"Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"}
+
+DwarvenLetterPairs = {}
+DwarvenLetterPairEntries = {}
+for i=1,table.getn(DwarvenNames) do
+	for j=1,(string.len(DwarvenNames[i]) - 1) do
+		local letter_pair = string.lower(string.sub(DwarvenNames[i], j, j + 1))
+		if (DwarvenLetterPairs[letter_pair] == nil) then
+			DwarvenLetterPairs[letter_pair] = ""
+		end
+		if (j + 2 <= string.len(DwarvenNames[i])) then
+			local next_letter = string.sub(DwarvenNames[i], j + 2, j + 2)
+			DwarvenLetterPairs[letter_pair] = DwarvenLetterPairs[letter_pair] .. next_letter
+		else
+			DwarvenLetterPairs[letter_pair] = DwarvenLetterPairs[letter_pair] .. "-" -- The - means that it is an end letter pair
+		end
+		if (GetArrayIncludes(DwarvenLetterPairEntries, letter_pair) == false) then
+			table.insert(DwarvenLetterPairEntries, letter_pair)
+		end
+	end
+end
+
+local dwarven_personal_names = {}
+for i=1,5 do -- create 5 dwarven names as a test
+	local latest_letter_pair = DwarvenLetterPairEntries[SyncRand(table.getn(DwarvenLetterPairEntries)) + 1]
+	local personal_name = latest_letter_pair
+	local name_completed = false
+	while (name_completed == false) do
+		local next_letter_pair_found = false
+		while (next_letter_pair_found == false) do
+			local chosen_letter_index = SyncRand(string.len(DwarvenLetterPairs[latest_letter_pair])) + 1
+			local chosen_letter = string.sub(DwarvenLetterPairs[latest_letter_pair], chosen_letter_index, chosen_letter_index)
+			local chosen_letter_pair = ""
+			if (chosen_letter == "-" or string.len(personal_name) >= 12) then
+				name_completed = true
+			else
+				while (string.find(string.sub(chosen_letter_pair, 1, 1), chosen_letter) == nil) do
+					chosen_letter_pair = DwarvenLetterPairEntries[SyncRand(table.getn(DwarvenLetterPairEntries)) + 1]
+				end
+				latest_letter_pair = chosen_letter_pair
+				personal_name = personal_name .. chosen_letter_pair
+			end
+			next_letter_pair_found = true
+		end
+	end
+	table.insert(dwarven_personal_names, CapitalizeString(personal_name))
+end
+--]]
+
 DefineRaceNames(
 	"race", {
 		"name", "dwarf",
@@ -346,6 +397,22 @@ function SetPlayerData(player, data, arg1, arg2)
 				Load("scripts/goblin/ui.lua")
 			elseif (arg1 == "kobold") then
 				Load("scripts/kobold/ui.lua")
+			end
+		end
+		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
+			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
+				if (Players[player].Type == PlayerPerson) then
+					SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
+					SetPlayerData(player, "Name", GrandStrategyFaction.Name)
+				elseif (Players[player].Type == PlayerComputer) then
+					if (GrandStrategyFaction.Name == Attacker) then
+						SetPlayerData(player, "Faction", Defender)
+						SetPlayerData(player, "Name", Defender)
+					elseif (GrandStrategyFaction.Name == Defender) then
+						SetPlayerData(player, "Faction", Attacker)
+						SetPlayerData(player, "Name", Attacker)
+					end
+				end
 			end
 		end
 	elseif (data == "Name") then
