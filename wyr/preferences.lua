@@ -46,7 +46,7 @@ wyr.preferences.StratagusTranslation = ""
 wyr.preferences.ShowTips = true
 wyr.preferences.UseOpenGL = false
 wyr.preferences.UseFancyBuildings = true
-wyr.preferences.TipNumber = 5
+wyr.preferences.TipNumber = 11
 wyr.preferences.VideoFullScreen = false
 wyr.preferences.MaxOpenGLTexture = 0
 if (wyr.preferences.AchievementsCompleted == nil) then wyr.preferences.AchievementsCompleted = {} end
@@ -54,17 +54,17 @@ wyr.preferences.EffectsVolume = 128
 wyr.preferences.GameSpeed = 30
 wyr.preferences.TheScepterOfFireRaiderFaction = ""
 wyr.preferences.MouseScrollSpeed = 1
-if (wyr.preferences.TechnologyAcquired == nil) then wyr.preferences.TechnologyAcquired = {} end
+if (wyr.preferences.GrandStrategySaveGames == nil) then wyr.preferences.GrandStrategySaveGames = {} end
 wyr.preferences.VideoWidth = 800
-wyr.preferences.LeaveStopScrolling = true
+wyr.preferences.EnableMouseScrolling = true
 if (wyr.preferences.QuestsCompleted == nil) then wyr.preferences.QuestsCompleted = {} end
 wyr.preferences.EnableKeyboardScrolling = true
-if (wyr.preferences.GrandStrategySaveGames == nil) then wyr.preferences.GrandStrategySaveGames = {} end
+if (wyr.preferences.TechnologyAcquired == nil) then wyr.preferences.TechnologyAcquired = {} end
 wyr.preferences.GroupKeys = "0123456789`"
 wyr.preferences.HoldClickDelayInMs = 1000
 wyr.preferences.MinimapWithTerrain = true
 wyr.preferences.FogOfWarOpacity = 128
-wyr.preferences.EnableMouseScrolling = true
+wyr.preferences.LeaveStopScrolling = true
 wyr.preferences.Language = "English"
 wyr.preferences.ShowMessages = true
 wyr.preferences.GameTranslation = ""

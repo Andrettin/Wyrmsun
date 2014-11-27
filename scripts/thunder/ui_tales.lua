@@ -54,7 +54,7 @@ DefineCursor({
 
 wyrmsun.playlist = { "music/battle.ogg" }
 
-function GermanicScreen(screen_width, screen_height)
+function ThunderScreen(screen_width, screen_height)
   local info_panel_x = 0
   local info_panel_y = Video.Height - 136 - 24 - 16
 
@@ -75,7 +75,7 @@ UI.ReverseFontColor = "white"
 UI.Fillers:clear()
 
 b = CFiller:new_local()
-b.G = CGraphic:New("germanic/ui/infopanel.png", 176, 176)
+b.G = CGraphic:New("thunder/ui/infopanel.png", 176, 176)
 b.X = 0
 b.Y = Video.Height - 136 - 24 - 16
 UI.Fillers:push_back(b)
@@ -90,11 +90,11 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("germanic/ui/filler-right_" .. Video.Height .. ".png", 176 + 176 + 176, Video.Height - 136 - 24)
-AddFiller("germanic/ui/buttonpanel_" .. Video.Height .. ".png", 176 + 176, Video.Height - 160)
-AddFiller("germanic/ui/menubutton.png", 176, Video.Height - 136 - 24)
-AddFiller("germanic/ui/minimap.png", 176, Video.Height - 136)
-AddFiller("germanic/ui/statusline_" .. Video.Width .. ".png", 176, Video.Height - 160 - 16)
+AddFiller("thunder/ui/filler1.png", 176 + 176, Video.Height - 136 - 24)
+AddFiller("thunder/ui/buttonpanel.png", 176, Video.Height - 160)
+AddFiller("thunder/ui/menubutton.png", Video.Width - 176, Video.Height - 136 - 24)
+AddFiller("thunder/ui/statusline.png", 176, Video.Height - 160 - 16)
+AddFiller("thunder/ui/minimap.png", Video.Width - 176, Video.Height - 136)
 
 UI.InfoPanel.X = 0
 UI.InfoPanel.Y = Video.Height - 136 - 24 - 16
@@ -188,7 +188,7 @@ UI.ButtonPanel.Buttons:clear()
 
 function AddButtonPanelButton(x, y)
 	b = CUIButton:new_local()
-	b.X = x + (176 + 176) -- Terrible hack
+	b.X = x + (176) -- Terrible hack
 	b.Y = y + (Video.Height - 160 - 160 - 160) -- Terrible hack
 	b.Style = FindButtonStyle("icon")
 	UI.ButtonPanel.Buttons:push_back(b)
@@ -213,7 +213,7 @@ UI.MapArea.Y = 0
 UI.MapArea.EndX = Video.Width - 2
 UI.MapArea.EndY = Video.Height - 136 - 24 - 16
 
-UI.Minimap.X = 176 + 24
+UI.Minimap.X = Video.Width - 176 + 24
 UI.Minimap.Y = Video.Height - 136 + 2
 UI.Minimap.W = 128
 UI.Minimap.H = 128
@@ -282,7 +282,7 @@ UI.Resources[ManaResCost].IconY = -100
 UI.Resources[ManaResCost].TextX = -100
 UI.Resources[ManaResCost].TextY = -100
 
-UI.MenuButton.X = 176 + 24
+UI.MenuButton.X = Video.Width - 176 + 24
 UI.MenuButton.Y = UI.MapArea.EndY + 2 + 16
 UI.MenuButton.Text = "Menu (~<F10~>)"
 UI.MenuButton.Style = FindButtonStyle("main-germanic")

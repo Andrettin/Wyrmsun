@@ -13,4 +13,5 @@ This software is provided as-is.  The author(s) can not be held liable for any
 damage that might arise from the use of this software.
 Use it at your own risk.
 
+game ends
 Thanks for playing Stratagus.
