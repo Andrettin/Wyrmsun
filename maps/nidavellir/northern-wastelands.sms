@@ -156,19 +156,22 @@ end
 RandomNumber = SyncRand(5)
 if (RandomNumber == 0) then
 	SetStartView(2, 11, 15)
-	unit = CreateUnit("unit-dwarven-smith", 2, {11, 15})
+	unit = CreateUnit("unit-dwarven-smithy", 2, {11, 15})
 elseif (RandomNumber == 1) then
 	SetStartView(2, 20, 3)
-	unit = CreateUnit("unit-dwarven-smith", 2, {20, 3})
+	unit = CreateUnit("unit-dwarven-smithy", 2, {20, 3})
 elseif (RandomNumber == 2) then
 	SetStartView(2, 51, 13)
-	unit = CreateUnit("unit-dwarven-smith", 2, {51, 13})
+	unit = CreateUnit("unit-dwarven-smithy", 2, {51, 13})
 elseif (RandomNumber == 3) then
 	SetStartView(2, 47, 43)
-	unit = CreateUnit("unit-dwarven-smith", 2, {47, 43})
+	unit = CreateUnit("unit-dwarven-smithy", 2, {47, 43})
 elseif (RandomNumber == 4) then
 	SetStartView(2, 50, 63)
-	unit = CreateUnit("unit-dwarven-smith", 2, {50, 63})
+	unit = CreateUnit("unit-dwarven-smithy", 2, {50, 63})
+end
+if (LoadedGame == false) then
+	SetUnitName(unit, "Thursagan's Forge")
 end
 
 -- create gryphon riders

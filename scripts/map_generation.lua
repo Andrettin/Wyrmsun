@@ -1104,9 +1104,10 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 			if (table.getn(possible_civilizations) < 1) then
 				Map.Info.PlayerType[i] = PlayerNobody
 			else
+				local WhileCount = 0
 				local player_spawn_point
 				local starting_point_found = false
-				while (starting_point_found == false) do
+				while (starting_point_found == false and WhileCount < 1000) do
 					player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
 					starting_point_found = true
 					if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
@@ -1119,6 +1120,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 							end
 						end
 					end
+					WhileCount = WhileCount + 1
 				end
 				
 				SetStartView(i, player_spawn_point[1], player_spawn_point[2])
@@ -1369,8 +1371,8 @@ function ApplyRawTiles()
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
-			elseif (string.sub(RawTile(x, y), 0, 5) == "Smith") then
-				unit = CreateUnit("unit-dwarven-smith", tonumber(string.sub(RawTile(x, y), 6)), {x, y})
+			elseif (string.sub(RawTile(x, y), 0, 5) == "Smithy") then
+				unit = CreateUnit("unit-dwarven-smithy", tonumber(string.sub(RawTile(x, y), 6)), {x, y})
 				for sub_x=0,2 do
 					for sub_y=0,2 do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
@@ -1697,8 +1699,9 @@ end
 function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
+	local WhileCount = 0
 	local location_found = false
-	while (location_found == false) do
+	while (location_found == false and WhileCount < 1000) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		
@@ -1712,6 +1715,7 @@ function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 				location_found = true
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 	return {RandomX, RandomY}
 end
@@ -2515,7 +2519,7 @@ function CreateTown(layout, town_player, invader_player)
 				unit = AddThing("random-shop", town_player, x + 15 - dice(3, 2), y, x + 15, y + dice(3, 2)) -- random store
 			end
 			if (RandomNumber ~= 2) then
-				unit = AddThing("unit-dwarven-smith", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store
+				unit = AddThing("unit-dwarven-smithy", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store
 				unit = AddThing("unit-germanic-warrior", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store guard
 			end
 			if (RandomNumber ~= 3) then
@@ -2558,7 +2562,7 @@ function CreateTown(layout, town_player, invader_player)
 			GenerateTrees(20, 20, x, x + 15, y, y + 15) -- should be fruit trees or mix between fruit and normal trees instead
 		elseif (t == 15) then -- smithy
 			FillArea(x, y, x + 15, y + 15, "Land") -- make sure that the area is entirely buildable land
-			unit = AddThing("unit-dwarven-smith", town_player, x + 5, y + 5, x + 10, y + 10)
+			unit = AddThing("unit-dwarven-smithy", town_player, x + 5, y + 5, x + 10, y + 10)
 		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
 			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
 			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
@@ -2645,7 +2649,7 @@ function AddThing(unit_type, player, x1, y1, x2, y2)
 		if (RandomNumber == 0) then
 			unit_type = "unit-dwarven-lumber-mill"
 		elseif (RandomNumber == 1) then
-			unit_type = "unit-dwarven-smith"
+			unit_type = "unit-dwarven-smithy"
 		elseif (RandomNumber == 2) then
 			unit_type = "unit-dwarven-mushroom-farm"
 		end
@@ -2997,8 +3001,9 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, town_
 end
 
 function CreateStartingGoldMine(player, x, y)
+	local WhileCount = 0
 	local gold_mine_built = false
-	while (gold_mine_built == false) do
+	while (gold_mine_built == false and WhileCount < 100) do
 		RandomNumber = SyncRand(4) -- which direction the gold mine will be created
 		local gold_mine_spawn_point
 		if (player == 15) then
@@ -3038,6 +3043,7 @@ function CreateStartingGoldMine(player, x, y)
 			end
 			gold_mine_built = true
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -3047,7 +3053,7 @@ function CreateStartingBuilding(player, building_type)
 	if (building_type == "Farm") then
 		width = 2
 		height = 2
-	elseif (building_type == "Lumber Mill" or building_type == "Smith") then
+	elseif (building_type == "Lumber Mill" or building_type == "Smithy") then
 		width = 3
 		height = 3
 	end

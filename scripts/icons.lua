@@ -310,9 +310,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-smith",
+	Name = "icon-dwarven-smithy",
 	Size = {46, 38},
-	File = "dwarf/icons/smith.png"
+	File = "dwarf/icons/smithy.png"
 })
 
 DefineIcon({
@@ -538,9 +538,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-goblin-smith",
+	Name = "icon-goblin-smithy",
 	Size = {46, 38},
-	File = "goblin/icons/smith.png"
+	File = "goblin/icons/smithy.png"
 })
 
 DefineIcon({

@@ -326,6 +326,7 @@ function SinglePlayerTriggers()
 						end
 					end
 				end
+				GrandStrategyBattle = false
 			end
 			return ActionDefeat()
 		end
@@ -358,6 +359,7 @@ function SinglePlayerTriggers()
 						end
 					end
 				end
+				GrandStrategyBattle = false
 			end
 			return ActionVictory()
 		end

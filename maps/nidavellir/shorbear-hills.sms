@@ -172,7 +172,7 @@ if (GrandStrategy == false) then
 
 	-- Give the Shorbear Hold a few other buildings which are appropriate
 	unit = CreateUnit("unit-dwarven-barracks", 1, {31, 33})
-	unit = CreateUnit("unit-dwarven-smith", 1, {43, 28})
+	unit = CreateUnit("unit-dwarven-smithy", 1, {43, 28})
 	unit = CreateUnit("unit-dwarven-lumber-mill", 1, {62, 27})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {32, 30})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {40, 28})

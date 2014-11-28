@@ -94,7 +94,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 --	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
 	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
 	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
-	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
 	Costs = {"time", 60, "gold", 600},
 	Speed = 10,

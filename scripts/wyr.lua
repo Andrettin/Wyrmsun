@@ -131,7 +131,7 @@ DefineRaceNames(
 	}
 )
 
--- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus, Steropes ("Lightner")
+-- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
 
 DefineCivilizationFactions("dwarf",
 	"faction", {
@@ -399,7 +399,7 @@ function SetPlayerData(player, data, arg1, arg2)
 				Load("scripts/kobold/ui.lua")
 			end
 		end
-		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
+		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle) then
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 				if (Players[player].Type == PlayerPerson) then
 					SetPlayerData(player, "Faction", GrandStrategyFaction.Name)

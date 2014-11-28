@@ -303,9 +303,13 @@ MakeSound("gryphon-dead", {
 })
 MakeSound("slime-dead", "neutral/squishy_death.wav")
 MakeSound("bird-selected", {
-	"neutral/birds1.wav",
-	"neutral/birds2.wav",
-	"neutral/birds3.wav"
+	"neutral/bird/birds1.wav",
+	"neutral/bird/birds2.wav",
+	"neutral/bird/birds3.wav"
+})
+MakeSound("bird-dead", {
+	"neutral/bird/deadbird.wav",
+	"neutral/bird/deadbird2.wav"
 })
 MakeSound("bat-selected", "neutral/bat_flapping.wav")
 

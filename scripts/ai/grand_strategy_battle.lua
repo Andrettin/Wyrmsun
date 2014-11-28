@@ -74,7 +74,7 @@ local land_funcs = {
 --  function() return AiNeed(AiBarracks()) end,
 --  function() return AiSet(AiWorker(), 8) end, -- 8
 --  function() return AiWait(AiBarracks()) end,
---  function() return AiSet(AiSmith(), 1) end,
+--  function() return AiSet(AiSmithy(), 1) end,
 --  function() return AiResearch(AiUpgradeWeapon1()) end,
 --  function() return AiResearch(AiUpgradeShield1()) end,
 --  function() return AiResearch(AiUpgradeWeapon2()) end,

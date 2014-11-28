@@ -1300,6 +1300,12 @@ function RunLoadModMenu()
 
   local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
 
+  local function cb(s)
+    l:setCaption(browser:getSelectedItem())
+    l:adjustSize()
+  end
+  browser:setActionCallback(cb)
+
   menu:addHalfButton(_("~!OK"), "o", 48, 318,
     function()
       if (browser:getSelected() < 0) then
