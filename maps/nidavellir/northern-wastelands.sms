@@ -170,7 +170,7 @@ elseif (RandomNumber == 4) then
 	SetStartView(2, 50, 63)
 	unit = CreateUnit("unit-dwarven-smithy", 2, {50, 63})
 end
-if (LoadedGame == false) then
+if (LoadedGame == false and GrandStrategy == false and unit) then
 	SetUnitName(unit, "Thursagan's Forge")
 end
 

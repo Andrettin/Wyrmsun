@@ -545,7 +545,7 @@ if (LoadedGame == false) then
 					if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 						SetStartView(0, RandomX, RandomY)
 						unit = CreateUnit("unit-dwarven-steelclad", 0, {RandomX, RandomY})
-						if (LoadedGame == false) then
+						if (LoadedGame == false and GrandStrategy == false and unit) then
 							SetUnitName(unit, "Durin")
 						end
 						unit = CreateUnit("unit-dwarven-axefighter", 0, {RandomX, RandomY})
@@ -577,11 +577,11 @@ if (LoadedGame == false) then
 						SetStartView(1, RandomX, RandomY)
 						unit = CreateUnit("unit-alchemy-bench", 15, {RandomX, RandomY})
 						unit = CreateUnit("unit-dwarven-steelclad", 1, {RandomX, RandomY})
-						if (LoadedGame == false) then
+						if (LoadedGame == false and GrandStrategy == false and unit) then
 							SetUnitName(unit, "Fjalar")
 						end
 						unit = CreateUnit("unit-dwarven-steelclad", 1, {RandomX, RandomY})
-						if (LoadedGame == false) then
+						if (LoadedGame == false and GrandStrategy == false and unit) then
 							SetUnitName(unit, "Galar")
 						end
 						Count = Count - 1
