@@ -36,11 +36,18 @@ DebugPrint("Stratagus default config file loading ...\n")
 
 wyrmsun = {}
 
-wyrmsun.Name = "Wyrmsun"
+wyrmsun.Thunder = true
+if (wyrmsun.Thunder == true) then
+	wyrmsun.Name = "Wyrmsun Thunder"
+else
+	wyrmsun.Name = "Wyrmsun"
+end
 wyrmsun.Version = "1.0.0"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
-wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
+if (wyrmsun.Thunder ~= true) then
+	wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
+end
 
 -------------------------------------------------------------------------------
 --  Config-Part

@@ -1,0 +1,17 @@
+Stratagus V2.2.7, Copyright (c) 1998-2012 by The Stratagus Project and Pali Rohar
+  written by Lutz Sammer, Fabrice Rossi, Vladi Shabanski, Patrice Fortier,
+  Jon Gabrielson, Andreas Arens, Nehal Mistry, Jimmy Salmon, Pali Rohar,
+  and others.
+	https://launchpad.net/stratagus
+Compile options ZLIB BZ2LIB VORBIS THEORA MIKMOD MNG OPENGL WIN32 
+
+Stratagus may be copied only under the terms of the GNU General Public License
+which may be found in the Stratagus source kit.
+
+DISCLAIMER:
+This software is provided as-is.  The author(s) can not be held liable for any
+damage that might arise from the use of this software.
+Use it at your own risk.
+
+game ends
+Thanks for playing Stratagus.
