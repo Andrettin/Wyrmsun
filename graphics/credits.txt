@@ -103,6 +103,11 @@ b_o:
 /graphics/neutral/items/key.png
 /graphics/neutral/items/potion.png
 /graphics/neutral/items/scepter.png
+/graphics/neutral/units/bat.png
+/graphics/neutral/units/bird_black.png
+/graphics/neutral/units/bird_brown.png
+/graphics/neutral/units/bird_gray.png
+/graphics/neutral/units/bird_white.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png
@@ -359,7 +364,7 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/ui/widgets/button-thin-medium-pressed.png
 /graphics/gnome/ui/widgets/button-thin-small-normal.png
 /graphics/gnome/ui/widgets/button-thin-small-pressed.png
-/graphics/goblin/buildings/smith.png
+/graphics/goblin/buildings/smithy.png
 /graphics/goblin/icons/goblin_archer.png
 /graphics/goblin/icons/goblin_assassin.png
 /graphics/goblin/icons/goblin_spearman.png
@@ -498,7 +503,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/wyrmsun_logo_monochromatic.png
 
 Leo:
-/graphics/dwarf/buildings/smith.png
+/graphics/dwarf/buildings/smithy.png
 /graphics/dwarf/icons/axe_1.png
 /graphics/dwarf/icons/axe_3.png
 /graphics/dwarf/icons/ballista_bolt_1.png

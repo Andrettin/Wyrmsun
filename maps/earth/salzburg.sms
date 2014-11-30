@@ -25,7 +25,7 @@ local layout = {
 	{-1, -1, -1, -1, -1, -1, -1, -1}
 }
 
-local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smith"}
+local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smithy"}
 
 local rock_generation = {
 	{80, 128, 0, 32},

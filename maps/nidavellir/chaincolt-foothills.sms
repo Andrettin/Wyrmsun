@@ -138,7 +138,7 @@ if (GrandStrategy == false) then
 		-- Gnomish king
 		unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
 		IncreaseUnitLevel(unit, 2, true)
-		if (LoadedGame == false) then
+		if (LoadedGame == false and GrandStrategy == false and unit) then
 			SetUnitName(unit, "Pypo I")
 		end
 	end

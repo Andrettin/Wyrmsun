@@ -1720,11 +1720,11 @@ AddTrigger(
 AddTrigger(
 	function()
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smithy") then
 						if (GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
 							player = i
 							return true
@@ -1762,11 +1762,11 @@ AddTrigger(
 AddTrigger(
 	function()
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smith")) then
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smith") then
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smithy") then
 						if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
 							player = i
 							return true
@@ -2072,7 +2072,7 @@ AddTrigger(
 																											if (GrandStrategy == false) then
 																												NextMap = "maps/nidavellir/eastern-mines.smp"
 																											else
-																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0
+																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmithy = 0
 																											end
 																											ActionVictory()
 																										end
@@ -3579,7 +3579,7 @@ AddTrigger(
 				KillUnitAt("unit-dwarven-town-hall", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-mushroom-farm", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-barracks", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-smith", player, 50, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-smithy", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-lumber-mill", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-sentry-tower", player, 50, {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-guard-tower", player, 50, {0, 0}, {256, 256})
@@ -3614,7 +3614,7 @@ AddTrigger(
 				unit = CreateUnit("unit-dwarven-guard-tower", 0, {47, 35})
 
 				unit = CreateUnit("unit-dwarven-barracks", 0, {31, 33})
-				unit = CreateUnit("unit-dwarven-smith", 0, {43, 28})
+				unit = CreateUnit("unit-dwarven-smithy", 0, {43, 28})
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {32, 30})
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 28})
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {44, 36})
@@ -4255,7 +4255,7 @@ AddTrigger(
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
-				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smith", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
+				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smithy", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
 				if (unit_quantity > 0) then
 					player = GetThisPlayer()
 					return true
@@ -4296,7 +4296,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-hero-thursagan", "unit-dwarven-smith") and IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-dwarven-smith", "unit-hero-thursagan")) then
+		if (IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-hero-thursagan", "unit-dwarven-smithy") and IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-dwarven-smithy", "unit-hero-thursagan")) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

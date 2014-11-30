@@ -128,6 +128,7 @@ function HandleCheats(str)
 				end
 			end
 		end
+		GrandStrategyBattle = false
 	end
     ActionVictory()
 

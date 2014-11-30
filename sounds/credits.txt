@@ -29,10 +29,14 @@ Battle for Wesnoth Team:
 /sounds/missiles/squishy_hit.wav
 /sounds/missiles/sword.wav
 /sounds/missiles/throwing_axe_hit.wav
+/sounds/neutral/bird/birds1.wav
+/sounds/neutral/bird/birds2.wav
+/sounds/neutral/bird/birds3.wav
 /sounds/neutral/gryphon/gryphon_death_1.wav
 /sounds/neutral/gryphon/gryphon_death_2.wav
 /sounds/neutral/gryphon/gryphon_shriek_1.wav
 /sounds/neutral/gryphon/gryphon_shriek_2.wav
+/sounds/neutral/bat_flapping.wav
 /sounds/neutral/drake_death.wav
 /sounds/neutral/hiss_death.wav
 /sounds/neutral/squishy_death.wav
@@ -119,3 +123,18 @@ Wolfgang Kohler:
 /sounds/misc/building_explosion/2.wav
 /sounds/ui/placement_error.wav
 /sounds/ui/placement_success.wav
+
+Sounds in the Public Domain:
+/sounds/misc/tree_chopping/tree-chopping-1.wav
+/sounds/misc/tree_chopping/tree-chopping-2.wav
+/sounds/neutral/bird/deadbird.wav (http://www.fws.gov/video/sound.htm)
+/sounds/neutral/bird/deadbird2.wav (http://www.fws.gov/video/sound.htm)
+/sounds/neutral/crow/crow1.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow2.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow3.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow4.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow5.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow6.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow7.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow8.wav (https://archive.org/details/AmericanCrow)
+/sounds/neutral/crow/crow9.wav (https://archive.org/details/AmericanCrow)

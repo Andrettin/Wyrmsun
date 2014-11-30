@@ -141,11 +141,11 @@ if (GrandStrategy == false) then
 
 		unit = CreateUnit("unit-dwarven-scout", 0, {6, 5}) -- Noiraran
 		IncreaseUnitLevel(unit, 1, true)
-		if (LoadedGame == false) then
+		if (LoadedGame == false and GrandStrategy == false and unit) then
 			SetUnitName(unit, "Noiraran")
 		end
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
-		if (LoadedGame == false) then
+		if (LoadedGame == false and GrandStrategy == false and unit) then
 			SetUnitName(unit, "Kuhnar")
 		end
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
@@ -159,7 +159,7 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
-	if (LoadedGame == false) then
+	if (LoadedGame == false and GrandStrategy == false and unit) then
 		SetUnitName(unit, "Glonoin")
 	end
 
@@ -172,7 +172,7 @@ if (GrandStrategy == false) then
 
 	-- Give the Shorbear Hold a few other buildings which are appropriate
 	unit = CreateUnit("unit-dwarven-barracks", 1, {31, 33})
-	unit = CreateUnit("unit-dwarven-smith", 1, {43, 28})
+	unit = CreateUnit("unit-dwarven-smithy", 1, {43, 28})
 	unit = CreateUnit("unit-dwarven-lumber-mill", 1, {62, 27})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {32, 30})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {40, 28})

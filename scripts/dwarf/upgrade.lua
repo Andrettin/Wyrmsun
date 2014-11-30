@@ -163,13 +163,13 @@ DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill"})
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smith", "unit-dwarven-lumber-mill"})
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"})
 
 --DefineDependency("unit-dwarven-steelclad",
---	{"unit-dwarven-smith"})
+--	{"unit-dwarven-smithy"})
 
 --DefineDependency("unit-hero-rugnur-steelclad",
---	{"unit-dwarven-smith"})
+--	{"unit-dwarven-smithy"})
 
 
 
@@ -186,8 +186,8 @@ GrandStrategyTechnologies["DwarvenBroadAxe"] = {
 	},
 	X = 0,
 	Y = -2,
-	RequiredBuildings = { "DwarvenSmith" },
-	InterfaceState = "Smith"
+	RequiredBuildings = { "DwarvenSmithy" },
+	InterfaceState = "Smithy"
 }
 
 GrandStrategyTechnologies["DwarvenGreatAxe"] = {
@@ -202,9 +202,9 @@ GrandStrategyTechnologies["DwarvenGreatAxe"] = {
 	},
 	X = 0,
 	Y = -2,
-	RequiredBuildings = { "DwarvenSmith" },
+	RequiredBuildings = { "DwarvenSmithy" },
 	RequiredTechnologies = { "DwarvenBroadAxe" },
-	InterfaceState = "Smith"
+	InterfaceState = "Smithy"
 }
 
 GrandStrategyTechnologies["DwarvenHeaterShield"] = {
@@ -219,8 +219,8 @@ GrandStrategyTechnologies["DwarvenHeaterShield"] = {
 	},
 	X = 1,
 	Y = -2,
-	RequiredBuildings = { "DwarvenSmith" },
-	InterfaceState = "Smith"
+	RequiredBuildings = { "DwarvenSmithy" },
+	InterfaceState = "Smithy"
 }
 
 GrandStrategyTechnologies["DwarvenThrymgjolShield"] = {
@@ -235,9 +235,9 @@ GrandStrategyTechnologies["DwarvenThrymgjolShield"] = {
 	},
 	X = 1,
 	Y = -2,
-	RequiredBuildings = { "DwarvenSmith" },
+	RequiredBuildings = { "DwarvenSmithy" },
 	RequiredTechnologies = { "DwarvenHeaterShield" },
-	InterfaceState = "Smith"
+	InterfaceState = "Smithy"
 }
 
 GrandStrategyTechnologies["DwarvenSharpThrowingAxe"] = {
@@ -284,8 +284,8 @@ GrandStrategyTechnologies["DwarvenBroadheadBallistaBolt"] = {
 	},
 	X = 2,
 	Y = -2,
-	RequiredBuildings = { "DwarvenSmith", "DwarvenLumberMill" },
-	InterfaceState = "Smith"
+	RequiredBuildings = { "DwarvenSmithy", "DwarvenLumberMill" },
+	InterfaceState = "Smithy"
 }
 
 GrandStrategyTechnologies["DwarvenPenetratingBallistaBolt"] = {
@@ -299,7 +299,7 @@ GrandStrategyTechnologies["DwarvenPenetratingBallistaBolt"] = {
 	},
 	X = 2,
 	Y = -2,
-	RequiredBuildings = { "DwarvenSmith", "DwarvenLumberMill" },
+	RequiredBuildings = { "DwarvenSmithy", "DwarvenLumberMill" },
 	RequiredTechnologies = { "DwarvenBroadheadBallistaBolt" },
-	InterfaceState = "Smith"
+	InterfaceState = "Smithy"
 }

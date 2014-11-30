@@ -92,7 +92,7 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Class = "infantry",
 	Civilization = "dwarf",
-	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local blacksmith."),
+	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
 	Costs = {"time", 60, "gold", 600},
@@ -563,14 +563,14 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-dwarven-smith", { Name = _("Smith"),
-	Class = "smith",
+DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
+	Class = "smithy",
 	Civilization = "dwarf",
 	Description = _("Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers. The most prestigious of dwarven metalworkers are the runesmiths, Thursagan being the greatest among them."),
 	Quote = _("\"The land of Untersberg's banner bold / Comes not from its own land; / It comes from Dwarfdom, grim and old / Made by a runesmith's hand.\" - The Scepter of Fire"),
 	Background = _("One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the ~<Reginsmol~>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem."),
-	Image = {"file", "dwarf/buildings/smith.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-dwarven-smith",
+	Image = {"file", "dwarf/buildings/smithy.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-dwarven-smithy",
 --	Costs = {"time", 200, "gold", 800, "lumber", 450, "oil", 100},
 	Costs = {"time", 200, "gold", 900, "lumber", 500},
 	TechnologyPointCost = 1,
@@ -590,6 +590,8 @@ DefineUnitType("unit-dwarven-smith", { Name = _("Smith"),
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
+	PersonalNamePrefixes = {"The Black", "Brisings'", "Brokk's", "Eitri's", "The Fiery", "Ivaldi's", "Regin's"}, -- The Brisings were a group of dwarves who crafter a magnificent necklace; Brokk and Eitri were skilled dwarven smiths; Ivaldi's sons were skilled dwarven smiths; Regin was a dwarven smith in the Siegfried myth
+	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"},
 	Sounds = {
 --		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -1088,7 +1090,7 @@ GrandStrategyUnits["DwarvenBallista"] = {
 	Upkeep = 50,
 	X = 2,
 	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenSmith" },
+	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenSmithy" },
 	InterfaceState = "Barracks"
 }
 
@@ -1150,11 +1152,11 @@ GrandStrategyBuildings["DwarvenLumberMill"] = {
 	RequiredBuildings = { "DwarvenMeadHall" }
 }
 
-GrandStrategyBuildings["DwarvenSmith"] = {
-	Name = GetUnitTypeName("unit-dwarven-smith"),
-	UnitType = "unit-dwarven-smith",
-	Icon = "dwarf/icons/smith.png",
-	Type = "Smith",
+GrandStrategyBuildings["DwarvenSmithy"] = {
+	Name = GetUnitTypeName("unit-dwarven-smithy"),
+	UnitType = "unit-dwarven-smithy",
+	Icon = "dwarf/icons/smithy.png",
+	Type = "Smithy",
 	Costs = {
 		Gold = 900,
 		Lumber = 500

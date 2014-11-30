@@ -35,17 +35,17 @@ Units = {
 	"unit-germanic-carpenters-shop",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
-	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-	"unit-dwarven-lumber-mill", "unit-dwarven-smith",
-	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
 	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
+	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 	"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
-	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
-	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smith",
+	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider",
+	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy",
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
@@ -134,7 +134,7 @@ DefineUnitType("unit-nothing-36", { Name = "Nothing 36",
 	Type = "land",
 	Sounds = {} } )
 
-DefineUnitType("unit-critter", { Name = "Critter",
+DefineUnitType("unit-rat", { Name = "Rat",
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -358,6 +358,90 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 --		"ready", "critter-ready",
 --		"help", "critter-help",
 		"dead", "slime-dead" }
+} )
+
+DefineUnitType("unit-bird", { Name = _("Bird"),
+	Image = {"file", "neutral/units/bird_brown.png", "size", {32, 32}},
+	Animations = "animations-bird", Icon = "icon-gryphon",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 14,
+	HitPoints = 5,
+	DrawLevel = 45,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, PiercingDamage = 1, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	AirUnit = true,
+	RandomMovementProbability = 100,
+	RandomMovementDistance = 12,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Variations = {
+		{
+			"variation-id", "black",
+			"file", "neutral/units/bird_black.png"
+		},
+		{
+			"variation-id", "brown"
+		},
+		{
+			"variation-id", "gray",
+			"file", "neutral/units/bird_gray.png"
+		},
+		{
+			"variation-id", "white",
+			"file", "neutral/units/bird_white.png"
+		}
+	},
+	Sounds = {
+		"selected", "bird-selected",
+		"acknowledge", "bird-selected",
+		"ready", "bird-selected",
+--		"help", "critter-help",
+		"dead", "bird-dead"
+	}
+} )
+
+DefineUnitType("unit-bat", { Name = _("Bat"),
+	Image = {"file", "neutral/units/bat.png", "size", {32, 32}},
+	Animations = "animations-bird", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 14,
+	HitPoints = 5,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, PiercingDamage = 1, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly-low",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	AirUnit = true,
+	RandomMovementProbability = 100,
+	RandomMovementDistance = 8,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Sounds = {
+		"selected", "bat-selected",
+		"acknowledge", "bat-selected",
+		"ready", "bat-selected",
+--		"help", "critter-help",
+		"dead", "rat-dead" }
 } )
 
 --UnitTypeFiles["unit-gold-mine"] = {

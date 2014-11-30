@@ -167,7 +167,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
 					tech_icon_x = 0
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smith", civilization))) then
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
 						tech_allowed = false
 					end
 				elseif (GetUnitTypeData(unitName, "Class") == "town-hall") then
@@ -182,7 +182,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill") then
 					tech_icon_x = 3
 					tech_icon_y = 2
-				elseif (GetUnitTypeData(unitName, "Class") == "smith") then
+				elseif (GetUnitTypeData(unitName, "Class") == "smithy") then
 					tech_icon_x = 2
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
@@ -209,7 +209,7 @@ function RunTechTreeMenu(civilization_number)
 				if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
 					tech_icon_x = 2
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smith", civilization))) then
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "melee-weapon-2") then
@@ -221,7 +221,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (CUpgrade:Get(unitName).Class == "bronze-shield") then
 					tech_icon_x = 1
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smith", civilization))) then
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "iron-shield") then

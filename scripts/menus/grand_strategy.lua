@@ -30,6 +30,7 @@
 Attacker = ""
 Defender = ""
 GrandStrategyEventMap = false
+GrandStrategyBattle = false
 EventFaction = nil
 GrandStrategyWorld = ""
 
@@ -603,6 +604,7 @@ function AttackProvince(province, faction)
 				if (mapinfo.playertypes[k] == "person" and person_player_found == false) then
 					person_player_found = true
 				elseif (mapinfo.playertypes[k] == "person" and person_player_found == true and computer_player_found == false) then
+					GameSettings.Presets[k-1].Type = PlayerComputer
 					computer_player_found = true
 				elseif (mapinfo.playertypes[k] == "computer" and computer_player_found == false) then
 					computer_player_found = true
@@ -611,6 +613,7 @@ function AttackProvince(province, faction)
 				end
 			end
 		end
+		GrandStrategyBattle = true
 		RunMap(province.Map)
 
 		if (GameResult == GameVictory) then
@@ -1427,7 +1430,7 @@ function AddGrandStrategyBuildingButton(x, y, grand_strategy_building_key)
 		building_function_tooltip = " (recruits units)"
 	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Lumber Mill") then
 		building_function_tooltip = " (researches projectile upgrades)"
-	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Smith") then
+	elseif (GrandStrategyBuildings[grand_strategy_building_key].Type == "Smithy") then
 		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
 	end
 	if (SelectedProvince.SettlementBuildings[grand_strategy_building_key] == 2) then
@@ -2229,7 +2232,7 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "Smith") then
+			elseif (InterfaceState == "Smithy") then
 				AddGrandStrategyLabel(GetCivilizationBuildingTypeName(GrandStrategyFaction.Civilization, InterfaceState), 88, 213, Fonts["game"], true, false)
 				
 				for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do
@@ -2431,7 +2434,7 @@ function AIDoTurn(ai_faction)
 					elseif (GrandStrategyBuildings[gsunit_key].Type == "Lumber Mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction.Name, "Lumber Mill") == 0)) then
 						BuildStructure(WorldMapProvinces[key], gsunit_key)
 						break
-					elseif (GrandStrategyBuildings[gsunit_key].Type == "Smith" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "Lumber Mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "Smith") == 0)) then -- it only makes sense to build more than one smith if it is to make ballistas available in a province
+					elseif (GrandStrategyBuildings[gsunit_key].Type == "Smithy" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "Barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "Lumber Mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "Smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
 						BuildStructure(WorldMapProvinces[key], gsunit_key)
 						break
 					end
@@ -2736,6 +2739,7 @@ end
 function ClearGrandStrategyVariables()
 	GrandStrategy = false
 	GrandStrategyEventMap = false	
+	GrandStrategyBattle = false	
 	WorldMapOffsetX = nil
 	WorldMapOffsetY = nil
 	GrandStrategyYear = nil

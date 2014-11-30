@@ -124,7 +124,7 @@ Quests = {
 	},
 	LastStandAtTheForge = {
 		Name = "Last Stand at the Forge",
-		Icon = "dwarf/icons/smith",
+		Icon = "dwarf/icons/smithy",
 		Description = "Goblins are overruning dwarven settlements in the region of the Caverns of Flame. The volcanic forge must be defended, lest the goblins be able to use it to craft wondrous weapon with which they could inflict even more damage on dwarven societies.\n\nMap: Svafnir's Lair\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredTechnology = "upgrade-dwarven-alchemy",
 		Civilization = "dwarf",

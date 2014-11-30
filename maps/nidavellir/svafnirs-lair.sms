@@ -210,7 +210,7 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-glyph", 15, {7, 8})
 		unit = CreateUnit("unit-glyph", 15, {7, 9})
 
-		unit = CreateUnit("unit-dwarven-smith", 4, {31, 49})
+		unit = CreateUnit("unit-dwarven-smithy", 4, {31, 49})
 		unit = CreateUnit("unit-dwarven-barracks", 4, {27, 47})
 		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 47})
 		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 49})
@@ -275,7 +275,7 @@ if (GrandStrategy == false) then
 		IncreaseUnitLevel(unit, 2, true)
 
 		-- abandoned dwarven buildings
-		unit = CreateUnit("unit-dwarven-smith", 3, {31, 49})
+		unit = CreateUnit("unit-dwarven-smithy", 3, {31, 49})
 
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {22, 17})
@@ -301,7 +301,7 @@ if (GrandStrategy == false) then
 
 --	unit = CreateUnit("unit-wyrm", 2, {8, 34}) -- Khrakrahs / Svafnir
 	unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
-	if (LoadedGame == false) then
+	if (LoadedGame == false and GrandStrategy == false and unit) then
 		SetUnitName(unit, "Svafnir")
 	end
 

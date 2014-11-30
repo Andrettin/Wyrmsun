@@ -31,24 +31,6 @@
 table.foreach(UnitTypeFiles,
 	function(k, v) DefineUnitType(k, {Image = {"file", v[wyrmsun.tileset]}}) end)
 
-
--- Fix critters sounds and name
-local CritterNames = {
-	cave = _("Rat"),
-	dungeon = _("Rat"),
-	fairlimbed_forest = _("Rat"),
-	forest = _("Rat"),
-	swamp = _("Rat")
-}
-
-DefineUnitType("unit-critter", {
-  Name = CritterNames[wyrmsun.tileset]
-})
-
---local CritterSounds = {
---	swamp = "pig-selected"
---}
-
 -- different ferns depending on tileset (normal graphic-per-tileset setting was resulting in bugs with the fern)
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then
 	DefineUnitType("unit-fern", {

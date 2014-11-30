@@ -333,6 +333,7 @@ function SinglePlayerTriggers()
 						end
 					end
 				end
+				GrandStrategyBattle = false
 			end
 			return ActionDefeat()
 		end
@@ -365,6 +366,7 @@ function SinglePlayerTriggers()
 						end
 					end
 				end
+				GrandStrategyBattle = false
 			end
 			return ActionVictory()
 		end
@@ -410,7 +412,7 @@ function SinglePlayerTriggers()
 				if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
 					for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do -- if in grand strategy mode, apply upgrades researched
 						if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[gsunit_key] == 2) then
-							AcquireUpgrade(i, GrandStrategyTechnologies[gsunit_key].UpgradeType)
+							SetPlayerData(i, "HasUpgrade", GrandStrategyTechnologies[gsunit_key].UpgradeType, true)
 						end
 					end
 				end

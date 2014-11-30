@@ -63,11 +63,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I, the Helgakvitha Hundingsbana II, the Gripisspo, the Reginsmol, the Fafnismol, the Sigrdrifumol, the Brot Af Sigurtharkvithu, the Guthrunarkvitha I, the Sigurtharkvitha En Skamma, the Helreith Brynhildar, the Drap Niflunga, the Guthrunarkvitha II En Forna, the Guthrunarkvitha III and the Oddrunargratr to the encyclopedia texts (The Poetic Edda).
 - A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
 - Encyclopedia pages can now have quotes which are relevant to the entry.
-- Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smith, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.
+- Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smithy, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.
 - Tech tree code made more dynamic to support multiple civilizations without significant extra coding being necessary for each of them.
 - Miscellaneous tech tree code improvements.
 - If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
 - Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
+- Added crow sound (from the public domain).
 
 * Quests
 - Added On the Vanaquisl quest.
@@ -76,6 +77,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Tile types can now use different images in a tileset's definition.
 - Updated swamp rocks (graphics by Jinn).
 - Added fairlimbed forest tileset (graphics by b_o).
+- Dungeon tiles updated (by b_o).
 
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
@@ -84,6 +86,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Organic units now have personal names.
 - The goblin Glider is now an organic unit.
 - Gryphons now move greater distances during their random movement.
+- Added Bat, which functions as fauna for cave maps (graphics by b_o).
+- Added Bird, which functions as fauna for forest maps (graphics by b_o).
+- Dwarven Smith renamed to "Smithy".
+- Smithies now have personal names.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

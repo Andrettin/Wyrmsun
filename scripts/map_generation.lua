@@ -896,25 +896,40 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 end
 
 function CreateCritters(critter_number)
+	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
 	local Count = critter_number
+	local WhileCount = 0
 	-- create critters
-	local critter_unit_type
-	if (wyrmsun.tileset == "forest") then
-		critter_unit_type = "unit-critter"
-	elseif (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
-		critter_unit_type = "unit-slime"
-	else
-		Count = 0
-	end
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < critter_number * 100) do
+		local critter_unit_type
+		if (wyrmsun.tileset == "forest") then
+			RandomNumber = SyncRand(2)
+			if (RandomNumber == 0) then
+				critter_unit_type = "unit-rat"
+			else
+				critter_unit_type = "unit-bird"
+			end
+		elseif (wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
+			critter_unit_type = "unit-slime"
+		elseif (wyrmsun.tileset == "cave") then
+			RandomNumber = SyncRand(2)
+			if (RandomNumber == 0) then
+				critter_unit_type = "unit-slime"
+			else
+				critter_unit_type = "unit-bat"
+			end
+		else
+			Count = 0
+		end
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
 			Count = Count - 1
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -946,9 +961,10 @@ function CreateGryphons(gryphon_number)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	Count = gryphon_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < gryphon_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
@@ -962,6 +978,7 @@ function CreateGryphons(gryphon_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -994,11 +1011,12 @@ function CreateDecorations()
 	local RandomY = 0
 	local Count = 0
 	local RandomNumber = 0
+	local WhileCount = 0
 
 	local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {256, 256}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 	Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
 	if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
-		while (Count > 0) do
+		while (Count > 0 and WhileCount < ((Map.Info.MapWidth * Map.Info.MapHeight) / 128) * 100) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "water") == false and GetTileTerrainHasFlag(RandomX, RandomY, "coast") == false and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
@@ -1061,6 +1079,7 @@ function CreateDecorations()
 				unit = CreateUnit("unit-inner-wall-decoration", 15, {RandomX, RandomY})
 				Count = Count - 1
 			end
+			WhileCount = WhileCount + 1
 		end
 	end
 end
@@ -1085,11 +1104,10 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 			if (table.getn(possible_civilizations) < 1) then
 				Map.Info.PlayerType[i] = PlayerNobody
 			else
-				SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
-
+				local WhileCount = 0
 				local player_spawn_point
 				local starting_point_found = false
-				while (starting_point_found == false) do
+				while (starting_point_found == false and WhileCount < 1000) do
 					player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
 					starting_point_found = true
 					if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
@@ -1102,9 +1120,12 @@ function CreatePlayers(min_x, max_x, min_y, max_y)
 							end
 						end
 					end
+					WhileCount = WhileCount + 1
 				end
 				
 				SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+
+				SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
 				for sub_x=-1,4 do
 					for sub_y=-1,4 do
 						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
@@ -1217,17 +1238,17 @@ function GenerateRandomMap(width, height, symmetric)
 
 	CreateDecorations()	
 
-	for i=0,14 do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		end
-	end
-
 	if (GrandStrategy == false) then
+		for i=0,14 do
+			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			end
+		end
+
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 
 		if (wyrmsun.tileset == "forest") then
@@ -1350,8 +1371,8 @@ function ApplyRawTiles()
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
-			elseif (string.sub(RawTile(x, y), 0, 5) == "Smith") then
-				unit = CreateUnit("unit-dwarven-smith", tonumber(string.sub(RawTile(x, y), 6)), {x, y})
+			elseif (string.sub(RawTile(x, y), 0, 5) == "Smithy") then
+				unit = CreateUnit("unit-dwarven-smithy", tonumber(string.sub(RawTile(x, y), 6)), {x, y})
 				for sub_x=0,2 do
 					for sub_y=0,2 do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
@@ -1678,8 +1699,9 @@ end
 function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
+	local WhileCount = 0
 	local location_found = false
-	while (location_found == false) do
+	while (location_found == false and WhileCount < 1000) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		
@@ -1693,6 +1715,7 @@ function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 				location_found = true
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 	return {RandomX, RandomY}
 end
@@ -2496,7 +2519,7 @@ function CreateTown(layout, town_player, invader_player)
 				unit = AddThing("random-shop", town_player, x + 15 - dice(3, 2), y, x + 15, y + dice(3, 2)) -- random store
 			end
 			if (RandomNumber ~= 2) then
-				unit = AddThing("unit-dwarven-smith", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store
+				unit = AddThing("unit-dwarven-smithy", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store
 				unit = AddThing("unit-germanic-warrior", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store guard
 			end
 			if (RandomNumber ~= 3) then
@@ -2539,7 +2562,7 @@ function CreateTown(layout, town_player, invader_player)
 			GenerateTrees(20, 20, x, x + 15, y, y + 15) -- should be fruit trees or mix between fruit and normal trees instead
 		elseif (t == 15) then -- smithy
 			FillArea(x, y, x + 15, y + 15, "Land") -- make sure that the area is entirely buildable land
-			unit = AddThing("unit-dwarven-smith", town_player, x + 5, y + 5, x + 10, y + 10)
+			unit = AddThing("unit-dwarven-smithy", town_player, x + 5, y + 5, x + 10, y + 10)
 		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
 			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
 			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
@@ -2626,7 +2649,7 @@ function AddThing(unit_type, player, x1, y1, x2, y2)
 		if (RandomNumber == 0) then
 			unit_type = "unit-dwarven-lumber-mill"
 		elseif (RandomNumber == 1) then
-			unit_type = "unit-dwarven-smith"
+			unit_type = "unit-dwarven-smithy"
 		elseif (RandomNumber == 2) then
 			unit_type = "unit-dwarven-mushroom-farm"
 		end
@@ -2978,8 +3001,9 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, town_
 end
 
 function CreateStartingGoldMine(player, x, y)
+	local WhileCount = 0
 	local gold_mine_built = false
-	while (gold_mine_built == false) do
+	while (gold_mine_built == false and WhileCount < 100) do
 		RandomNumber = SyncRand(4) -- which direction the gold mine will be created
 		local gold_mine_spawn_point
 		if (player == 15) then
@@ -3019,6 +3043,7 @@ function CreateStartingGoldMine(player, x, y)
 			end
 			gold_mine_built = true
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -3028,7 +3053,7 @@ function CreateStartingBuilding(player, building_type)
 	if (building_type == "Farm") then
 		width = 2
 		height = 2
-	elseif (building_type == "Lumber Mill" or building_type == "Smith") then
+	elseif (building_type == "Lumber Mill" or building_type == "Smithy") then
 		width = 3
 		height = 3
 	end

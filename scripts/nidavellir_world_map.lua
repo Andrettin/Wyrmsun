@@ -87,7 +87,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenMeadHall = 2,
 			DwarvenWarHall = 2, -- has capability to train warriors
-			DwarvenSmith = 2 -- Durstorn has runesmiths under his employ
+			DwarvenSmithy = 2 -- Durstorn has runesmiths under his employ
 		},
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 		Units = {
@@ -110,7 +110,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {41, 6},
 		SettlementBuildings = {
-			DwarvenSmith = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
+			DwarvenSmithy = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 		},
 		Map = "maps/nidavellir/caverns-of-flame.smp",
 		Units = { -- starting units in the Caverns of Flame scenario
@@ -213,7 +213,7 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {14, 2},
 		SettlementBuildings = {
-			DwarvenSmith = 2 -- Thursagan's smithy
+			DwarvenSmithy = 2 -- Thursagan's smithy
 		},
 		Map = "maps/nidavellir/northern-wastelands.smp",
 		Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
@@ -233,7 +233,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {
 			DwarvenMeadHall = 2,
 			DwarvenWarHall = 2, -- has capability to train warriors
-			DwarvenSmith = 2 -- renowned skilled crafters
+			DwarvenSmithy = 2 -- renowned skilled crafters
 		},
 		Map = "maps/nidavellir/shorbear-hills.smp",
 		Units = {
@@ -553,7 +553,7 @@ GrandStrategyEvents = {
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-				WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0
+				WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmithy = 0
 				WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler = WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler / 2 -- halve enemies in the northern wastelands
 				WorldMapProvinces.NorthernWastelands.Units.GoblinArcher = WorldMapProvinces.NorthernWastelands.Units.GoblinArcher / 2
 				WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
@@ -674,7 +674,7 @@ if (GrandStrategyYear >= 27) then
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
 	WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmith = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmithy = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
@@ -686,7 +686,7 @@ end
 if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenMeadHall = 0
-	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenSmith = 0
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenSmithy = 0
 	WorldMapProvinces.ShorbearHills.Units.DwarvenAxefighter = 0
 	WorldMapProvinces.ShorbearHills.Units.DwarvenThane = 0
 end
@@ -732,7 +732,7 @@ if (GrandStrategyYear >= 535) then
 end
 
 if (GrandStrategyYear >= 550) then
-	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenSmith = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
+	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenSmithy = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
 
 	WorldMapProvinces.KalKartha.Units.DwarvenAxefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
 	WorldMapProvinces.KalKartha.Units.DwarvenSteelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court

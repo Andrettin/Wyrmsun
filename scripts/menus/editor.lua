@@ -1,3 +1,126 @@
+--
+--	editor-unit-types a sorted list of unit-types for the editor.
+--	FIXME: this is only a temporary hack, for better sorted units.
+--
+editor_types = {
+
+   "unit-germanic-worker",
+   "unit-germanic-warrior",
+   "unit-germanic-town-hall",
+   "unit-germanic-farm",
+   "unit-germanic-barracks",
+   "unit-germanic-carpenters-shop",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-teuton-lumber-mill",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-dwarven-miner",
+   "unit-dwarven-axefighter",
+   "unit-dwarven-steelclad",
+   "unit-dwarven-thane",
+   "unit-dwarven-scout",
+   "unit-dwarven-ballista",
+   "unit-dwarven-gryphon-rider",
+
+   "unit-dwarven-town-hall",
+   "unit-dwarven-mushroom-farm",
+   "unit-dwarven-barracks",
+   "unit-dwarven-lumber-mill",
+   "unit-dwarven-smithy",
+   "unit-dwarven-sentry-tower",
+   "unit-dwarven-guard-tower",
+
+   "unit-surghan-mercenary-steelclad",
+   "unit-surghan-mercenary-thane",
+
+   "unit-hero-rugnur",
+   "unit-hero-rugnur-steelclad",
+   "unit-hero-rugnur-thane",
+   "unit-hero-baglur",
+   "unit-hero-baglur-thane",
+   "unit-hero-thursagan",
+   "unit-hero-durstorn",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-gnomish-worker",
+   "unit-gnomish-recruit",
+   "unit-gnomish-caravan",
+
+   "unit-gnomish-town-hall",
+   "unit-gnomish-farm",
+   "unit-gnomish-barracks",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-goblin-worker",
+   "unit-goblin-spearman",
+   "unit-goblin-archer",
+   "unit-goblin-war-machine",
+   "unit-goblin-glider",
+
+   "unit-goblin-town-hall",
+   "unit-goblin-farm",
+   "unit-goblin-mess-hall",
+   "unit-goblin-lumber-mill",
+   "unit-goblin-smithy",
+
+   "unit-hero-greebo",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-kobold-footpad",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-gold-mine",
+   "unit-coal-mine",
+   "unit-mercenary-camp",
+   "unit-wood-pile",
+   "unit-gold-coins",
+   "unit-gold-sack",
+   "unit-gold-chest",
+   "unit-gold-and-gems-chest",
+   "unit-barrel",
+   "unit-alchemy-bench",
+   "unit-potion-of-healing",
+   "unit-potion-of-decay",
+   "unit-cheese",
+   "unit-carrots",
+   "unit-gryphon-feather",
+   "unit-scepter-of-fire",
+
+   "unit-rat",
+   "unit-slime",
+   "unit-bird",
+   "unit-bat",
+   "unit-gryphon",
+   "unit-wyrm",
+
+--- - - - - - - - - - - - - - - - - - -
+
+   "unit-goblin-banner",
+   "unit-glyph",
+   "unit-stairs",
+   "unit-mushroom",
+   "unit-mushroom-patch",
+   "unit-flowers",
+   "unit-large-flower",
+   "unit-fern",
+   "unit-twigs",
+   "unit-log",
+   "unit-small-rocks",
+   "unit-stalagmites",
+   "unit-bones",
+   "unit-wyrm-skeleton",
+   "unit-volcanic-crater",
+   "unit-floor-decoration",
+   "unit-outer-wall-decoration",
+   "unit-inner-wall-decoration"
+}
 
 --  Menu for new map to edit
 local function RunEditorNewMapMenu()

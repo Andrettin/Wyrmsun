@@ -355,13 +355,13 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-goblin-smith", { Name = _("Fugla Forge"),
-	Class = "smith",
+DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
+	Class = "smithy",
 	Civilization = "goblin",
 	Description = _("Goblins construct their forges out of the skulls of massive birds found on Nidavellir."),
 	Background = _("The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'."),
-	Image = {"file", "goblin/buildings/smith.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-goblin-smith",
+	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-goblin-smithy",
 --	Costs = {"time", 200, "gold", 800, "lumber", 450, "oil", 100},
 	Costs = {"time", 200, "gold", 900, "lumber", 500},
 	RepairHp = 4,
@@ -502,7 +502,7 @@ GrandStrategyUnits["GoblinWarMachine"] = {
 	Upkeep = 50,
 	X = 2,
 	Y = 0,
-	RequiredBuildings = { "GoblinMessHall", "GoblinLumberMill", "GoblinSmith" },
+	RequiredBuildings = { "GoblinMessHall", "GoblinLumberMill", "GoblinSmithy" },
 	InterfaceState = "Barracks"
 }
 
@@ -549,11 +549,11 @@ GrandStrategyBuildings["GoblinLumberMill"] = {
 	RequiredBuildings = { "GoblinTownHall" }
 }
 
-GrandStrategyBuildings["GoblinSmith"] = {
-	Name = GetUnitTypeName("unit-goblin-smith"),
-	UnitType = "unit-goblin-smith",
-	Icon = "goblin/icons/smith.png",
-	Type = "Smith",
+GrandStrategyBuildings["GoblinSmithy"] = {
+	Name = GetUnitTypeName("unit-goblin-smithy"),
+	UnitType = "unit-goblin-smithy",
+	Icon = "goblin/icons/smithy.png",
+	Type = "Smithy",
 	Costs = {
 		Gold = 900,
 		Lumber = 500
