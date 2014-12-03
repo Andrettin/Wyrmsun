@@ -563,6 +563,22 @@ DefineAnimations("animations-barrel", {
 	"label end", "unbreakable end", "wait 1",}
 })
 
+DefineAnimations("animations-door", {
+	Still = {
+		"if-var v_HitPoints.Percent <= 50 damaged_50",
+		"if-var v_HitPoints.Percent <= 75 damaged_25",
+		"frame 0", "wait 4", "frame 0", "goto end",
+		"label damaged_50", "frame 2", "wait 4", "frame 2", "goto end",
+		"label damaged_25", "frame 1", "wait 4", "frame 1", "goto end",
+		"label end", "wait 1",
+	},
+	Death = {"unbreakable begin",
+	"frame 3", "wait 3", "frame 4",
+	"label loop", 
+	"wait 100", "frame 4", "goto loop",
+	"unbreakable end", "wait 1",}
+})
+
 DefineAnimations("animations-alchemy-bench", {
 	Still = {
 		"exact-frame 0", "wait 8", "random-goto 1 use", "goto end",

@@ -1121,6 +1121,32 @@ DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Sounds = {} }
 )
 
+DefineUnitType("unit-door", { Name = _("Door"),
+	Image = {"file", "tilesets/dungeon/neutral/decorations/door_left.png", "size", {32, 32}},
+	Animations = "animations-door", Icon = "icon-door",
+	NeutralMinimapColor = {128, 128, 0},
+	Speed = 0,
+	HitPoints = 10,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	Variations = {
+		{
+			"variation-id", "left"
+		},
+		{
+			"variation-id", "right",
+			"file", "tilesets/dungeon/neutral/decorations/door_right.png"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+		"dead", "building destroyed"} } )
+
 DefineUnitType("unit-outer-wall-decoration", { Name = "Outer Wall Decoration",
 	Image = {"file", "neutral/decorations/outer_wall_decoration.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-outer-wall-decoration",

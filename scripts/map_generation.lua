@@ -1338,6 +1338,9 @@ function ApplyRawTiles()
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
 				SetResourcesHeld(unit, 100)
+			elseif (RawTile(x, y) == "Door") then
+				SetRawTile(x, y, "Land")
+				unit = CreateUnit("unit-door", 15, {x, y})
 			elseif (RawTile(x, y) == "DpWtr") then -- no tilesets have Deep Water yet, so it should be treated as normal water for now
 				SetRawTile(x, y, "Water")
 			elseif (RawTile(x, y) == "Road") then

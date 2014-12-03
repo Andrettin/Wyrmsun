@@ -105,6 +105,7 @@ if (LoadedGame == false) then
 						for y=RandomY,(RandomY + 8) do
 							SetRawTile(RandomX, y, "Land")
 						end
+						SetRawTile(RandomX, RandomY, "Door")
 						Count = Count - 1
 					end
 				elseif (RawTile(RandomX, RandomY + 1) == "Land") then
@@ -120,6 +121,7 @@ if (LoadedGame == false) then
 						for y=(RandomY - 8),RandomY do
 							SetRawTile(RandomX, y, "Land")
 						end
+						SetRawTile(RandomX, RandomY, "Door")
 						Count = Count - 1
 					end
 				end
@@ -170,7 +172,7 @@ if (LoadedGame == false) then
 						end
 					end
 					if (SuitableArea == true) then
-						SetRawTile(RandomX, RandomY, "Land")
+						SetRawTile(RandomX, RandomY, "Door")
 						for x=(RandomX - 2),(RandomX + 1) do
 							for y=(RandomY + 1),(RandomY + 4) do
 								SetRawTile(x, y, "Land")
@@ -188,7 +190,7 @@ if (LoadedGame == false) then
 						end
 					end
 					if (SuitableArea == true) then
-						SetRawTile(RandomX, RandomY, "Land")
+						SetRawTile(RandomX, RandomY, "Door")
 						for x=(RandomX - 2),(RandomX + 1) do
 							for y=(RandomY - 4),(RandomY - 1) do
 								SetRawTile(x, y, "Land")
@@ -264,7 +266,7 @@ if (LoadedGame == false) then
 						end
 					end
 					if (SuitableArea == true) then
-						SetRawTile(RandomX, RandomY, "Land")
+						SetRawTile(RandomX, RandomY, "Door")
 						for x=(RandomX - 1),(RandomX + 1) do
 							for y=(RandomY + 1),(RandomY + 7) do
 								SetRawTile(x, y, "Land")
@@ -292,7 +294,7 @@ if (LoadedGame == false) then
 						end
 					end
 					if (SuitableArea == true) then
-						SetRawTile(RandomX, RandomY, "Land")
+						SetRawTile(RandomX, RandomY, "Door")
 						for x=(RandomX - 1),(RandomX + 1) do
 							for y=(RandomY - 7),(RandomY - 1) do
 								SetRawTile(x, y, "Land")
@@ -360,7 +362,7 @@ if (LoadedGame == false) then
 						end
 					end
 					if (SuitableArea == true) then
-						SetRawTile(RandomX, RandomY, "Land")
+						SetRawTile(RandomX, RandomY, "Door")
 						for x=(RandomX - 4),(RandomX + 3) do
 							for y=(RandomY + 1),(RandomY + 16) do
 								SetRawTile(x, y, "Land")
@@ -379,7 +381,7 @@ if (LoadedGame == false) then
 						end
 					end
 					if (SuitableArea == true) then
-						SetRawTile(RandomX, RandomY, "Land")
+						SetRawTile(RandomX, RandomY, "Door")
 						for x=(RandomX - 4),(RandomX + 3) do
 							for y=(RandomY - 16),(RandomY - 1) do
 								SetRawTile(x, y, "Land")
@@ -399,18 +401,18 @@ if (LoadedGame == false) then
 	while (Count > 0) do
 		for x=0,(Map.Info.MapWidth - 1) do
 			for y=0,(Map.Info.MapHeight - 1) do
-				if (RawTile(x, y) == "Land") then
+				if (RawTile(x, y) == "Land" or RawTile(x, y) == "Door") then
 					local adjacent_floor_tiles = 0
-					if (RawTile(x + 1, y) == "Land") then
+					if (RawTile(x + 1, y) == "Land" or RawTile(x + 1, y) == "Door") then
 						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
-					if (RawTile(x - 1, y) == "Land") then
+					if (RawTile(x - 1, y) == "Land" or RawTile(x - 1, y) == "Door") then
 						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
-					if (RawTile(x, y + 1) == "Land") then
+					if (RawTile(x, y + 1) == "Land" or RawTile(x, y + 1) == "Door") then
 						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
-					if (RawTile(x, y - 1) == "Land") then
+					if (RawTile(x, y - 1) == "Land" or RawTile(x, y - 1) == "Door") then
 						adjacent_floor_tiles = adjacent_floor_tiles + 1
 					end
 					if (adjacent_floor_tiles <= 1) then

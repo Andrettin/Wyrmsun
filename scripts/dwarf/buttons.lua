@@ -468,11 +468,9 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Key = "p", Hint = _("Buy ~!Potion of Healing"),
 --  ForUnit = {"unit-dwarven-smithy"} } )
 
--- For the Motherland Buttons ------------------------------------------------------
+-- Special Abilities ------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-dwarven-axefighter",
-	Action = "cast-spell", Value = "spell-unit-dwarven-axefighter",
-	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "a", Hint = _("~!Axefighter"),
-	ForUnit = {"unit-dwarven-thane"} }
-)
+--DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
+--  Action = "cast-spell", Value = "spell-axe-twirl",
+--  Key = "w", Hint = "Axe T~!wirl",
+--  ForUnit = {"unit-dwarven-thane", "unit-hero-rugnur-thane"} } )

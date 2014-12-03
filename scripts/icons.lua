@@ -736,6 +736,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-door",
+	Size = {46, 38},
+	File = "tilesets/dungeon/neutral/icons/door.png"
+})
+
+DefineIcon({
 	Name = "icon-alchemy-bench",
 	Size = {46, 38},
 	File = "neutral/icons/alchemy_bench.png"

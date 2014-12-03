@@ -85,6 +85,7 @@ editor_types = {
    "unit-gold-chest",
    "unit-gold-and-gems-chest",
    "unit-barrel",
+   "unit-door",
    "unit-alchemy-bench",
    "unit-potion-of-healing",
    "unit-potion-of-decay",

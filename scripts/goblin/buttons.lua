@@ -118,24 +118,3 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-worker",
   Action = "train-unit", Value = "unit-goblin-glider",
   Key = "g", Hint = _("Build ~!Glider"),
   ForUnit = {"unit-goblin-mess-hall"} } )
-
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-spearman",
-	Action = "cast-spell", Value = "spell-unit-goblin-spearman",
-	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "i", Hint = _("Goblin ~!Impaler"),
-	ForUnit = {"unit-goblin-spearman"} }
-)
-
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-goblin-archer",
-	Action = "cast-spell", Value = "spell-unit-goblin-archer",
-	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "a", Hint = _("Goblin ~!Archer"),
-	ForUnit = {"unit-goblin-spearman"} }
-)
-
-DefineButton( { Pos = 2, Level = 2, Icon = "icon-goblin-war-machine",
-	Action = "cast-spell", Value = "spell-unit-goblin-war-machine",
-	Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-	Key = "m", Hint = _("Goblin War ~!Machine"),
-	ForUnit = {"unit-goblin-spearman"} }
-)

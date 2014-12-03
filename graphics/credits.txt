@@ -66,10 +66,14 @@ b_o:
 /graphics/goblin/units/goblin_worker.png
 /graphics/goblin/units/goblin_worker_with_gold.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
+/graphics/missiles/axe_twirl.png
 /graphics/missiles/catapult_flaming_rock.png
+/graphics/missiles/dart.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/missiles/dwarven_ballista_bolt.png
 /graphics/missiles/goblin_arrow.png
 /graphics/missiles/gobtoss.png
+/graphics/missiles/javelin.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/missiles/magic.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/missiles/slime_glob.png
 /graphics/missiles/throwing_axe.png
 /graphics/missiles/throwing_dagger.png
@@ -87,6 +91,7 @@ b_o:
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/decorations/wyrm_skeleton_horned.png
+/graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
 /graphics/neutral/items/alchemy_bench.png
@@ -96,6 +101,7 @@ b_o:
 /graphics/neutral/items/cheese.png
 /graphics/neutral/items/chest.png
 /graphics/neutral/items/crown.png
+/graphics/neutral/items/double_axe.png
 /graphics/neutral/items/goblet.png
 /graphics/neutral/items/gold_coins.png
 /graphics/neutral/items/gold_sack.png
@@ -128,6 +134,8 @@ b_o:
 /graphics/neutral/units/wyrm_purple_scales.png
 /graphics/neutral/units/wyrm_red_scales.png
 /graphics/neutral/units/wyrm_yellow_scales.png
+/graphics/tilesets/dungeon/neutral/decorations/door_left.png
+/graphics/tilesets/dungeon/neutral/decorations/door_right.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/tilesets/fairlimbed_forest/terrain/fairlimbed_tree.png
 /graphics/tilesets/forest/neutral/decorations/fern.png
@@ -381,6 +389,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation)
 /graphics/neutral/buildings/wood_pile.png
+/graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
 /graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/axe_mastery.png
 /graphics/neutral/icons/build_basic_structure.png

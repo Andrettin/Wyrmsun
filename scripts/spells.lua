@@ -82,6 +82,24 @@ DefineSpell("spell-war-machine-spear-attack",
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
 )
 
+DefineSpell("spell-axe-twirl",
+	"showname", _("Axe Twirl"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"action", {
+		{"demolish", "range", 1, "basic-damage", 3, "piercing-damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
+		{"spawn-missile", "missile", "missile-axe-twirl", "start-point", {"base", "caster"}}
+	},
+--	"condition", {
+--		"alliance", "false",
+--		"opponent", "only",
+--		"AirUnit", "false"
+--	},
+	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}},
+	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
+)
+
 DefineSpell("spell-equip-axe-of-perun",
 	"showname", _("equip toporik"),
 	"manacost", 0,
@@ -129,54 +147,4 @@ DefineSpell("spell-learn-critical-strike",
 		"LevelUp", {MinValue = 0}
 	},
 	"ai-cast", {}
-)
-
--- For the Motherland Spells
-
-DefineSpell("spell-unit-dwarven-axefighter",
-	"showname", _("Axefighter"),
-	"manacost", 25,
-	"range", 6,
-	"target", "position",
-	"action", {
-		{"summon", "unit-type", "unit-dwarven-axefighter", "time-to-live", 99000}
---		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
-	}
---	"sound-when-cast", "eye of vision"
-)
-
-DefineSpell("spell-unit-goblin-spearman",
-	"showname", _("Goblin Impaler"),
-	"manacost", 25,
-	"range", 6,
-	"target", "position",
-	"action", {
-		{"summon", "unit-type", "unit-goblin-spearman", "time-to-live", 99000}
---		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
-	}
---	"sound-when-cast", "eye of vision"
-)
-
-DefineSpell("spell-unit-goblin-archer",
-	"showname", _("Goblin Archer"),
-	"manacost", 25,
-	"range", 6,
-	"target", "position",
-	"action", {
-		{"summon", "unit-type", "unit-goblin-archer", "time-to-live", 99000}
---		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
-	}
---	"sound-when-cast", "eye of vision"
-)
-
-DefineSpell("spell-unit-goblin-war-machine",
-	"showname", _("Goblin War Machine"),
-	"manacost", 25,
-	"range", 6,
-	"target", "position",
-	"action", {
-		{"summon", "unit-type", "unit-goblin-war-machine", "time-to-live", 99000}
---		{"spawn-missile", "missile", "missile-impact-slime", "start-point", {"base", "target"}}
-	}
---	"sound-when-cast", "eye of vision"
 )

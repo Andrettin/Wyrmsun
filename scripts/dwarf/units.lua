@@ -241,7 +241,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Thane"),
 	organic = true,
 	SelectableByRectangle = true,
 --	Mana = {Enable = true},
-	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike", "spell-unit-dwarven-axefighter"},
+	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike", "spell-axe-twirl"},
 	Variations = {
 		{
 			"variation-id", "red-hair"
@@ -845,7 +845,7 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = _("Thane"),
 	LandUnit = GetUnitTypeData("unit-dwarven-thane", "LandUnit"),
 	organic = GetUnitTypeData("unit-dwarven-thane", "organic"),
 	SelectableByRectangle = GetUnitTypeData("unit-dwarven-thane", "SelectableByRectangle"),
-	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike"},
+	CanCastSpell = {"spell-learn-axe-mastery", "spell-learn-critical-strike", "spell-axe-twirl"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",

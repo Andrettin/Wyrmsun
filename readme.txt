@@ -78,6 +78,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Updated swamp rocks (graphics by Jinn).
 - Added fairlimbed forest tileset (graphics by b_o).
 - Dungeon tiles updated (by b_o).
+- Added north-south dungeon doors (graphics by b_o).
 
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
