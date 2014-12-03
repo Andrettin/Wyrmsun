@@ -74,9 +74,11 @@ b_o:
 /graphics/missiles/gobtoss.png
 /graphics/missiles/javelin.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/missiles/magic.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/missiles/metal_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/missiles/slime_glob.png
 /graphics/missiles/throwing_axe.png
 /graphics/missiles/throwing_dagger.png
+/graphics/missiles/wood_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/buildings/mercenary_camp.png (modified from the building made by Jinn to add the fire animation)
 /graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/bones.png
