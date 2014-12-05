@@ -76,12 +76,12 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	organic = true,
 	SelectableByRectangle = true,
 	Variations = {
-	{
-		"variation-id", "bald"
-	},
-	{
-		"variation-id", "spiky-hair"
-	}
+		{
+			"variation-id", "bald"
+		},
+		{
+			"variation-id", "spiky-hair"
+		}
 	},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -438,12 +438,12 @@ DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
 	IsNotSelectable = true,
 	Building = true,
 	Variations = {
-	{
-		"variation-id", "no-skull"
-	},
-	{
-		"variation-id", "skull"
-	}
+		{
+			"variation-id", "no-skull"
+		},
+		{
+			"variation-id", "skull"
+		}
 	},
 	Sounds = {
 		"selected", "click",
@@ -452,7 +452,6 @@ DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
 --		"help", "gold-mine-help",
 		"dead", "building destroyed"} }
 )
-
 
 
 

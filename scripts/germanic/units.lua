@@ -61,20 +61,24 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	LandUnit = true,
 	Coward = true,
 	CanGatherResources = {
-	 {"file-when-loaded", "germanic/units/worker_with_gold.png",
-		"resource-id", "gold",
---		"harvest-from-outside",
-		"resource-capacity", 100,
-		"wait-at-resource", 150,
-		"wait-at-depot", 150},
-	 {"file-when-loaded", "germanic/units/worker_with_lumber.png",
-		"resource-id", "lumber",
-		"harvest-from-outside",
-		"resource-capacity", 100,
-		"resource-step", 2,
-		"wait-at-resource", 24,
-		"wait-at-depot", 150,
-		"terrain-harvester"}
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "gold",
+--			"harvest-from-outside",
+			"resource-capacity", 100,
+			"wait-at-resource", 150,
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_lumber.png",
+			"resource-id", "lumber",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150,
+			"terrain-harvester"
+		}
 	},
 	organic = true,
 	SelectableByRectangle = true,
@@ -116,6 +120,17 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	organic = true,
 	SelectableByRectangle = true,
 	CanCastSpell = {"spell-learn-critical-strike"},
+	Variations = {
+		{
+			"variation-id", "blond",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+		},
+		{
+			"variation-id", "blond",
+			"file", "germanic/units/warrior_bronze_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",

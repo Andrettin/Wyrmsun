@@ -731,7 +731,7 @@ DefineUnitType("unit-fern", { Name = "Fern",
 	Sounds = {} }
 )
 
-DefineUnitType("unit-twigs", { Name = "Twigs",
+DefineUnitType("unit-twigs", { Name = _("Twigs"),
 	Image = {"file", "neutral/decorations/twigs.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-twigs",
 	Speed = 0,

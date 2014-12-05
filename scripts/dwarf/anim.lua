@@ -84,54 +84,13 @@ DefineAnimations("animations-dwarven-axefighter", {
   Upgrade = { "set-var LevelUp.Value -= 1", "wait 1",},
   Death = AxefighterDeath,
   SpellCast = {"unbreakable begin",
+	"if-var s_spell-axe-twirl == 1 axe_twirl",
 	"attack",
-	"unbreakable end",
-	"wait 1",}
-})
-
---
--- Dwarven Steelclad
---
-
-local SteelcladStill = {
-	"if-var v.PiercingDamage.Value >= 7 great_axe", "frame 0", "goto end",
-	"label great_axe", "frame 60", "goto end",
-	"label end", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
-local SteelcladMove = {"unbreakable begin",
-	"if-var v.PiercingDamage.Value >= 7 great_axe",
-	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-	"frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "goto end",
-	"label great_axe", 
-	"frame 60", "move 3", "wait 2", "frame 65", "move 3", "wait 1",
-	"frame 65", "move 3", "wait 2", "frame 70", "move 2", "wait 1",
-	"frame 70", "move 3", "wait 1", "frame 60", "move 2", "wait 1",
-	"frame 60", "move 3", "wait 2", "frame 75", "move 3", "wait 1",
-	"frame 75", "move 3", "wait 2", "frame 80", "move 2", "wait 1",
-	"frame 80", "move 3", "wait 1", "frame 60", "move 2", "goto end",
-	"label end", "unbreakable end", "wait 1",}
-local SteelcladDeath = {"unbreakable begin",
-	"if-var v.PiercingDamage.Value >= 7 great_axe",
-	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55", "goto end",
-	"label great_axe", "frame 105", "wait 3", "frame 110", "wait 3", "frame 115", "wait 100", "frame 115", "goto end",
-	"label end", "unbreakable end", "wait 1",}
-
-DefineAnimations("animations-dwarven-steelclad", {
-  Still = SteelcladStill,
-  Move = SteelcladMove,
-  Attack = {"unbreakable begin",
-  	"if-var v.PiercingDamage.Value >= 7 great_axe", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-  	"frame 40", "attack", "sound axe-attack", "wait 5", "frame 0", "wait 10", "frame 0", "goto end",
-  	"label great_axe", "frame 85", "wait 3", "frame 90", "wait 3", "frame 95", "wait 3",
-  	"frame 100", "attack", "sound axe-attack", "wait 5", "frame 60", "wait 10", "frame 60", "goto end",
-	"label end", "unbreakable end", "wait 1",},
-  Upgrade = { "set-var LevelUp.Value -= 1", "wait 1",},
-  Death = SteelcladDeath,
-  SpellCast = {"unbreakable begin",
-	"attack",
+	"goto end",
+	"label axe_twirl",
+	"frame 40", "wait 3", "rotate 1", "wait 3", "rotate 1", "attack", "sound axe-attack", "wait 2", "rotate 1", "wait 3", "rotate 1", "wait 3", "rotate 1", "wait 2", "rotate 1", "wait 3", "rotate 1", "wait 3", "rotate 1",
+	"wait 2", "frame 0", "goto end",
+	"label end",
 	"unbreakable end",
 	"wait 1",}
 })

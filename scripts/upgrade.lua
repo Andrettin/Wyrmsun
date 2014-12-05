@@ -144,8 +144,8 @@ function ApplyTechLevels()
 	end
 
 	local bronze_upgrades = {
-		"upgrade-dwarven-broad-axe", "upgrade-dwarven-throwing-axe-1",
-		"upgrade-dwarven-shield-1"
+		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",
+		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"
 	}
 	for i, unitName in ipairs(bronze_upgrades) do
 		for j=0,15 do

@@ -87,9 +87,10 @@ DefineSpell("spell-axe-twirl",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
+	"force-use-animation",
 	"action", {
-		{"demolish", "range", 1, "basic-damage", 3, "piercing-damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
-		{"spawn-missile", "missile", "missile-axe-twirl", "start-point", {"base", "caster"}}
+		{"demolish", "range", 1, "basic-damage", 3, "piercing-damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false}
+--		{"spawn-missile", "missile", "missile-axe-twirl", "start-point", {"base", "caster"}}
 	},
 --	"condition", {
 --		"alliance", "false",

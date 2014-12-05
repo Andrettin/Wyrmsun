@@ -27,10 +27,16 @@ b_o:
 /graphics/dwarf/units/dwarven_scout_gray_hair.png
 /graphics/dwarf/units/dwarven_steelclad.png
 /graphics/dwarf/units/dwarven_steelclad_black_hair.png
+/graphics/dwarf/units/dwarven_steelclad_black_hair_great_axe.png
 /graphics/dwarf/units/dwarven_steelclad_blond_hair.png
+/graphics/dwarf/units/dwarven_steelclad_blond_hair_great_axe.png
 /graphics/dwarf/units/dwarven_steelclad_brown_hair.png
+/graphics/dwarf/units/dwarven_steelclad_brown_hair_great_axe.png
 /graphics/dwarf/units/dwarven_steelclad_gray_hair.png
+/graphics/dwarf/units/dwarven_steelclad_gray_hair_great_axe.png
+/graphics/dwarf/units/dwarven_steelclad_great_axe.png
 /graphics/dwarf/units/dwarven_steelclad_orange_hair.png
+/graphics/dwarf/units/dwarven_steelclad_orange_hair_great_axe.png
 /graphics/dwarf/units/gryphon_rider.png
 /graphics/dwarf/units/gryphon_rider_brown_hair_blue_feathers.png
 /graphics/dwarf/units/gryphon_rider_red_hair_gray_feathers.png
@@ -45,6 +51,8 @@ b_o:
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
+/graphics/germanic/units/warrior.png
+/graphics/germanic/units/warrior_bronze_shield.png
 /graphics/germanic/units/worker.png
 /graphics/germanic/units/worker_with_gold.png
 /graphics/germanic/units/worker_with_lumber.png

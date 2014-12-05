@@ -63,15 +63,15 @@ for i = 1,table.getn(upgrades) do
 	u.TechnologyPointCost = upgrades[i][9]
 end
 
---DefineModifier("upgrade-germanic-broad-sword",
---	{"PiercingDamage", 2},
---	{"apply-to", "unit-germanic-warrior"}
---)
+DefineModifier("upgrade-germanic-broad-sword",
+	{"PiercingDamage", 2},
+	{"apply-to", "unit-germanic-warrior"}
+)
 
---DefineModifier("upgrade-germanic-bronze-shield",
---	{"Armor", 2},
---	{"apply-to", "unit-germanic-warrior"}
---)
+DefineModifier("upgrade-germanic-bronze-shield",
+	{"Armor", 2},
+	{"apply-to", "unit-germanic-warrior"}
+)
 
 --DefineModifier("upgrade-germanic-barbed-arrow",
 --	{"PiercingDamage", 1},

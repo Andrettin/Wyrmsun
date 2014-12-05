@@ -155,7 +155,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Civilization = "dwarf",
 	Description = _("The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."),
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
-	Animations = "animations-dwarven-steelclad", Icon = "icon-dwarven-steelclad",
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
 	Costs = {"time", 0},
 	Speed = 10,
 	HitPoints = 75,
@@ -178,31 +178,72 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	SelectableByRectangle = true,
 	Variations = {
 		{
-			"variation-id", "red-hair"
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
-			"icon", "icon-dwarven-steelclad-gray-hair"
+			"icon", "icon-dwarven-steelclad-gray-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_steelclad_orange_hair.png"
+			"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
-			"icon", "icon-dwarven-steelclad-blond-hair"
+			"icon", "icon-dwarven-steelclad-blond-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "black-hair",
 			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
-			"icon", "icon-dwarven-steelclad-black-hair"
+			"icon", "icon-dwarven-steelclad-black-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
-			"icon", "icon-dwarven-steelclad-brown-hair"
+			"icon", "icon-dwarven-steelclad-brown-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+		},
+		-- Great Axe
+		{
+			"variation-id", "red-hair",
+			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-gray-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-blond-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-black-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-brown-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe"
 		}
 	},
 	Sounds = {
@@ -671,7 +712,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	Description = _("These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond."),
 	Quote = _("\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\" - Baglur, Retired Norlund Warrior"),
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
-	Animations = "animations-dwarven-steelclad", Icon = "icon-surghan-mercenary-steelclad",
+	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-steelclad",
 	Costs = {"time", 0, "gold", 3000},
 	Speed = GetUnitTypeData("unit-dwarven-steelclad", "Speed"),
 	HitPoints = GetUnitTypeData("unit-dwarven-steelclad", "HitPoints"),
@@ -697,6 +738,17 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	LandUnit = GetUnitTypeData("unit-dwarven-steelclad", "LandUnit"),
 	organic = GetUnitTypeData("unit-dwarven-steelclad", "organic"),
 	SelectableByRectangle = GetUnitTypeData("unit-dwarven-steelclad", "SelectableByRectangle"),
+	Variations = {
+		{
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		}
+	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -782,7 +834,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
 	DefaultName = "Rugnur",
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
-	Animations = "animations-dwarven-steelclad", Icon = "icon-rugnur",
+	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
 	Costs = {"time", 0},
 	Speed = GetUnitTypeData("unit-dwarven-steelclad", "Speed"),
 	HitPoints = GetUnitTypeData("unit-dwarven-steelclad", "HitPoints"),
@@ -808,6 +860,17 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
 	LandUnit = GetUnitTypeData("unit-dwarven-steelclad", "LandUnit"),
 	organic = GetUnitTypeData("unit-dwarven-steelclad", "organic"),
 	SelectableByRectangle = GetUnitTypeData("unit-dwarven-steelclad", "SelectableByRectangle"),
+	Variations = {
+		{
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		}
+	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -859,7 +922,7 @@ DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
 	Description = _("Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan."),
 --	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
 	Image = {"file", "dwarf/units/dwarven_steelclad_gray_hair.png", "size", {72, 72}},
-	Animations = "animations-dwarven-steelclad", Icon = "icon-baglur",
+	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
 	Costs = {"time", 0},
 	Speed = GetUnitTypeData("unit-dwarven-steelclad", "Speed"),
 	HitPoints = GetUnitTypeData("unit-dwarven-steelclad", "HitPoints"),
@@ -885,6 +948,17 @@ DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
 	LandUnit = GetUnitTypeData("unit-dwarven-steelclad", "LandUnit"),
 	organic = GetUnitTypeData("unit-dwarven-steelclad", "organic"),
 	SelectableByRectangle = GetUnitTypeData("unit-dwarven-steelclad", "SelectableByRectangle"),
+	Variations = {
+		{
+			"variation-id", "gray-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		}
+	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",

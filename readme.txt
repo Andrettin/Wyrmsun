@@ -91,6 +91,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Bird, which functions as fauna for forest maps (graphics by b_o).
 - Dwarven Smith renamed to "Smithy".
 - Smithies now have personal names.
+- Added Erala (germanic warrior) (unit graphics by b_o).
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
