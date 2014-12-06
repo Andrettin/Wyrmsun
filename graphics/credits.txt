@@ -20,6 +20,7 @@ b_o:
 /graphics/dwarf/units/dwarven_axefighter_blond_hair.png
 /graphics/dwarf/units/dwarven_axefighter_brown_hair.png
 /graphics/dwarf/units/dwarven_axefighter_gray_hair.png
+/graphics/dwarf/units/dwarven_axefighter_no_shield.png
 /graphics/dwarf/units/dwarven_axefighter_orange_hair.png
 /graphics/dwarf/units/dwarven_ballista.png
 /graphics/dwarf/units/dwarven_scout.png
@@ -69,7 +70,9 @@ b_o:
 /graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png
 /graphics/goblin/units/goblin_spearman.png
+/graphics/goblin/units/goblin_spearman_no_shield.png
 /graphics/goblin/units/goblin_swordsman.png
+/graphics/goblin/units/goblin_thief.png
 /graphics/goblin/units/goblin_war_machine.png
 /graphics/goblin/units/goblin_worker.png
 /graphics/goblin/units/goblin_worker_with_gold.png
@@ -96,6 +99,7 @@ b_o:
 /graphics/neutral/decorations/mushroom.png
 /graphics/neutral/decorations/mushrooms.png
 /graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/neutral/decorations/roaming_fog.png
 /graphics/neutral/decorations/small_rocks.png
 /graphics/neutral/decorations/stalagmites.png
 /graphics/neutral/decorations/twigs.png

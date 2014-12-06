@@ -148,6 +148,8 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Coward = true,
 	RightMouseAction = "move",
 	SelectableByRectangle = true,
+--	MaxOnBoard = 2,
+--	CanTransport = {"LandUnit", "only"},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",

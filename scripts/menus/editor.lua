@@ -59,6 +59,7 @@ editor_types = {
    "unit-goblin-worker",
    "unit-goblin-spearman",
    "unit-goblin-archer",
+   "unit-goblin-thief",
    "unit-goblin-war-machine",
    "unit-goblin-glider",
 

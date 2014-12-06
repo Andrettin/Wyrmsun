@@ -618,3 +618,31 @@ DefineAnimations("animations-blue-potion", {
 	"frame 2",
 	"wait 1",},
 })
+
+--
+-- Roaming Fog
+--
+
+DefineAnimations("animations-roaming-fog", {
+  Still = BuildingStill,
+  Move = {"unbreakable begin",
+	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"exact-frame 0", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 1",
+	"unbreakable end", "wait 1",}
+})

@@ -1554,6 +1554,37 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Item = true,
 	Sounds = {} } )
 
+--[[
+DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
+	Image = {"file", "neutral/decorations/roaming_fog.png", "size", {498, 277}},
+	Animations = "animations-roaming-fog", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 1,
+	DrawLevel = 40,
+	TileSize = {15, 18}, BoxSize = {497, 276},
+	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
+	Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+	AirUnit = true,
+	RandomMovementProbability = 100,
+	NumDirections = 1,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "bat-selected",
+--		"ready", "bat-selected",
+--		"help", "critter-help",
+--		"dead", "rat-dead"
+	}
+} )
+--]]
+
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
 --	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 --}

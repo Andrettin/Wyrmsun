@@ -92,6 +92,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven Smith renamed to "Smithy".
 - Smithies now have personal names.
 - Added Erala (germanic warrior) (unit graphics by b_o).
+- Added Goblin Thief (unit graphics by b_o).
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
