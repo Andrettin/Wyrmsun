@@ -40,14 +40,14 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-boots",
   Action = "move",
   Key = "m", Hint = _("~!Move"),
   ForUnit = {
-	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-caravan",
+	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"gnome-group"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-gnomish-worker", "unit-gnomish-recruit",
+	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist",
 	"gnome-group"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",

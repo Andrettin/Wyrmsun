@@ -831,6 +831,12 @@ DefineIcon({
 	File = "neutral/icons/floor_decoration.png"
 })
 
+DefineIcon({
+	Name = "icon-roaming-fog",
+	Size = {46, 38},
+	File = "neutral/icons/roaming_fog.png"
+})
+
 -- tileset-dependent icons
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then

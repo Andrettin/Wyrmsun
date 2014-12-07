@@ -1554,14 +1554,13 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Item = true,
 	Sounds = {} } )
 
---[[
 DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	Image = {"file", "neutral/decorations/roaming_fog.png", "size", {498, 277}},
-	Animations = "animations-roaming-fog", Icon = "icon-rat",
+	Animations = "animations-roaming-fog", Icon = "icon-roaming-fog",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 3,
 	HitPoints = 1,
-	DrawLevel = 40,
+	DrawLevel = 45,
 	TileSize = {15, 18}, BoxSize = {497, 276},
 	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
 	Missile = "missile-none",
@@ -1575,6 +1574,10 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	AirUnit = true,
 	RandomMovementProbability = 100,
 	NumDirections = 1,
+	NonSolid = true, 
+	Transparent = true,
+	Decoration = true,
+	VisibleUnderFog = false,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bat-selected",
@@ -1583,7 +1586,6 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 --		"dead", "rat-dead"
 	}
 } )
---]]
 
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
 --	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"

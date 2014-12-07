@@ -130,6 +130,41 @@ DefineAnimations("animations-gnomish-recruit", {
 })
 
 --
+-- Gnomish Herbalist
+--
+
+local HerbalistStill = {
+	"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
+	"label taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6",
+	"frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "wait 1", "goto no-rotate",
+	"label no-rotate", "wait 1", }
+local HerbalistMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 2", "frame 0", "move 2", "wait 1",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 2", "frame 0", "move 2", "unbreakable end", "wait 1",}
+local HerbalistDeath = {"unbreakable begin",
+	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
+	"frame 60", "wait 1", "unbreakable end", "wait 1",
+}
+
+DefineAnimations("animations-gnomish-herbalist", {
+  Still = HerbalistStill,
+  Move = HerbalistMove,
+  Attack = {"unbreakable begin",
+	"frame 30", "wait 3", "frame 35", "wait 3", "frame 40", "wait 3",
+	"frame 45", "attack", "sound dagger-attack", "wait 5", "frame 25", "wait 24",
+	"frame 25", "wait 1",
+	"unbreakable end", "wait 1",
+	},
+  SpellCast = {"unbreakable begin", "frame 75", "wait 5", "frame 80", "wait 5",
+    "frame 85", "attack", "wait 7",
+    "frame 90", "wait 5", "frame 0", "wait 17", "frame 0", "unbreakable end", "wait 1",},
+  Death = HerbalistDeath,
+})
+
+--
 -- Gnomish Caravan
 --
 

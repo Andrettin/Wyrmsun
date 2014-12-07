@@ -82,6 +82,23 @@ DefineAnimations("animations-goblin-swordsman", {
 })
 
 --
+-- Goblin Thief
+--
+
+DefineAnimations("animations-goblin-thief", {
+  Still = GoblinSwordsmanStill,
+  Move = GoblinSwordsmanMove,
+  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "attack", "sound dagger-attack", "wait 5", "frame 0", "wait 10",
+    "frame 0", "unbreakable end", "wait 1",},
+  Death = GoblinSwordsmanDeath,
+  SpellCast = {"unbreakable begin",
+	"attack",
+	"unbreakable end",
+	"wait 1",}
+})
+
+--
 -- Goblin Archer
 --
 

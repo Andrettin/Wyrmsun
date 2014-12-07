@@ -201,3 +201,5 @@ PlayMusic("music/knolls.ogg")
 wyrmsun.playlist = { "music/the_city_falls.ogg", "music/battle.ogg", "music/breaking_the_chains.ogg", "music/the_king_is_dead.ogg" }
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)

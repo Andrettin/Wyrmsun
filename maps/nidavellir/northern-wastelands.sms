@@ -230,3 +230,5 @@ end
 PlayMusic("music/wanderer.ogg")
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 1024) -- should be particularly foggy

@@ -48,6 +48,7 @@ editor_types = {
 
    "unit-gnomish-worker",
    "unit-gnomish-recruit",
+   "unit-gnomish-herbalist",
    "unit-gnomish-caravan",
 
    "unit-gnomish-town-hall",
@@ -119,6 +120,7 @@ editor_types = {
    "unit-bones",
    "unit-wyrm-skeleton",
    "unit-volcanic-crater",
+   "unit-roaming-fog",
    "unit-floor-decoration",
    "unit-outer-wall-decoration",
    "unit-inner-wall-decoration"

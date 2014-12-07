@@ -896,40 +896,43 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 end
 
 function CreateCritters(critter_number)
-	local RandomNumber = 0
-	local RandomX = 0
-	local RandomY = 0
-	local Count = critter_number
-	local WhileCount = 0
-	-- create critters
-	while (Count > 0 and WhileCount < critter_number * 100) do
-		local critter_unit_type
-		if (wyrmsun.tileset == "forest") then
-			RandomNumber = SyncRand(2)
-			if (RandomNumber == 0) then
-				critter_unit_type = "unit-rat"
-			else
-				critter_unit_type = "unit-bird"
-			end
-		elseif (wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
-			critter_unit_type = "unit-slime"
-		elseif (wyrmsun.tileset == "cave") then
-			RandomNumber = SyncRand(2)
-			if (RandomNumber == 0) then
+	if (LoadedGame == false) then
+		local RandomNumber = 0
+		local RandomX = 0
+		local RandomY = 0
+		local Count = critter_number
+		local WhileCount = 0
+		-- create critters
+		while (Count > 0 and WhileCount < critter_number * 100) do
+			local critter_unit_type
+			if (wyrmsun.tileset == "forest") then
+				RandomNumber = SyncRand(2)
+				if (RandomNumber == 0) then
+					critter_unit_type = "unit-rat"
+				else
+					critter_unit_type = "unit-bird"
+				end
+			elseif (wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
 				critter_unit_type = "unit-slime"
+			elseif (wyrmsun.tileset == "cave") then
+				RandomNumber = SyncRand(2)
+				if (RandomNumber == 0) then
+					critter_unit_type = "unit-slime"
+				else
+					critter_unit_type = "unit-bat"
+				end
 			else
-				critter_unit_type = "unit-bat"
+				Count = 0
+				break
 			end
-		else
-			Count = 0
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+				unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
+				Count = Count - 1
+			end
+			WhileCount = WhileCount + 1
 		end
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
-		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
-			unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
-			Count = Count - 1
-		end
-		WhileCount = WhileCount + 1
 	end
 end
 
@@ -1001,6 +1004,26 @@ function CreateWyrms(wyrm_number)
 				unit = CreateUnit("unit-wyrm", 15, {RandomX, RandomY})
 				Count = Count - 1
 			end
+		end
+	end
+end
+
+function CreateRoamingFog(fog_number)
+	if (LoadedGame == false) then
+		local RandomNumber = 0
+		local RandomX = 0
+		local RandomY = 0
+		local Count = fog_number
+		local WhileCount = 0
+		-- create critters
+		while (Count > 0 and WhileCount < fog_number * 100) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData("unit-roaming-fog", "TileWidth") < Map.Info.MapWidth - RandomX - 1 and GetUnitTypeData("unit-roaming-fog", "TileHeight") < Map.Info.MapHeight - RandomY - 1) then
+				unit = CreateUnit("unit-roaming-fog", 15, {RandomX, RandomY})
+				Count = Count - 1
+			end
+			WhileCount = WhileCount + 1
 		end
 	end
 end
@@ -3174,6 +3197,8 @@ function GenerateValley(direction, lake_quantity)
 		end
 	end
 
+	CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+	
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
 	if (wyrmsun.tileset == "swamp") then

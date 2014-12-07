@@ -128,6 +128,50 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
+DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
+	Class = "priest",
+	Civilization = "gnome",
+	Description = _("The priests of gnomish societies, herbalists are in deep contact with nature. They honor the souls of plants while using them to concoct powerful potions and medicines."),
+	Image = {"file", "gnome/units/gnomish_herbalist.png", "size", {72, 72}},
+	Animations = "animations-gnomish-herbalist", Icon = "icon-gnomish-worker",
+	Costs = {"time", 80, "gold", 700},
+	Speed = 8,
+	HitPoints = 40,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 9, ComputerReactionRange = 11, PersonReactionRange = 9,
+	BasicDamage = 0, PiercingDamage = 6, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 70,
+	BasePoints = 60,
+	Demand = 1,
+	Corpse = "unit-gnomish-dead-body",
+	Type = "land",
+	RightMouseAction = "attack",
+	Coward = true,
+	CanAttack = true,
+	CanTargetLand = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	Mana = {Enable = true},
+	Variations = {
+		{
+			"variation-id", "blond-hair"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "gnome/units/gnomish_herbalist_gray_hair.png",
+			"icon", "icon-gnomish-worker-gray-hair"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "basic-dwarf-voices-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"} } )
+
 DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Civilization = "gnome",
 	Description = _("These caravans are used by gnomish societies to conduct trade, bringing goods as far as the Heart Mountains."),

@@ -79,6 +79,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added fairlimbed forest tileset (graphics by b_o).
 - Dungeon tiles updated (by b_o).
 - Added north-south dungeon doors (graphics by b_o).
+- Added roaming fog (graphics by b_o).
 
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
@@ -93,6 +94,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Smithies now have personal names.
 - Added Erala (germanic warrior) (unit graphics by b_o).
 - Added Goblin Thief (unit graphics by b_o).
+- Added Gnomish Herbalist (unit graphics by b_o).
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
