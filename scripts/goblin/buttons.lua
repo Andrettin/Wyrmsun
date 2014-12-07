@@ -36,6 +36,13 @@
 
 -- general commands -- almost all", "units have it -------------------------------
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-spear-1",
+  Action = "attack",
+  Key = "a", Hint = _("~!Attack"),
+  ForUnit = {
+	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
+	"goblin-group"} } )
+
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
   Key = "g", Hint = _("Attack ~!Ground"),

@@ -166,6 +166,9 @@ b_o:
 /graphics/ui/Credits_background.png
 /graphics/ui/goblin_swordsman.png
 
+Battle for Wesnoth Team:
+/graphics/goblin/icons/spear_1.png
+
 Bos Wars Team:
 /graphics/missiles/green_cross.png
 /graphics/missiles/red_cross.png

@@ -182,6 +182,7 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
+	AttackFromTransporter = true,
 	CanCastSpell = {"spell-dagger-attack", "spell-learn-critical-strike"},
 	AutoCastActive = {"spell-dagger-attack"},
 	Sounds = {

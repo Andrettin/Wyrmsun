@@ -62,7 +62,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
 	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-dwarven-guard-tower",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
  	"unit-rat", "unit-gryphon", "unit-wyrm",
@@ -93,7 +92,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-miner",
-	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-rat", "unit-gryphon", "unit-wyrm",
@@ -123,8 +121,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
-	"unit-dwarven-guard-tower"
+	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
@@ -132,8 +129,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-throwing-axe-1"},
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
-	"unit-dwarven-guard-tower"
+	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
@@ -141,8 +137,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-throwing-axe-2"},
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
-	"unit-dwarven-guard-tower"
+	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-1",

@@ -42,6 +42,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Germanic War Lodge (graphics by Jinn).
 - Added Germanic Carpenter's Shop (graphics by Leo).
 - The Mercenary Camp's fire is now animated (modification by b_o).
+- Sentry Towers now can garrison one organic unit.
+- Guard Towers now can garrison two organic units.
 
 * Civilizations
 - Added Germanic civilization (human).
@@ -95,6 +97,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Erala (germanic warrior) (unit graphics by b_o).
 - Added Goblin Thief (unit graphics by b_o).
 - Added Gnomish Herbalist (unit graphics by b_o).
+- Scouts and archers can now attack from within towers.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).
