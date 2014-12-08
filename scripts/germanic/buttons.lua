@@ -40,7 +40,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-germanic-worker",
+	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior",
 	"unit-hero-greebo",
 	"germanic-group"
@@ -50,7 +50,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
   Action = "stop",
   Key = "s", Hint = _("~!Stop"),
   ForUnit = {
-	"unit-germanic-worker",
+	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior",
 	"germanic-group"
 } } )
@@ -84,7 +84,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
   Action = "repair",
   Key = "r", Hint = _("~!Repair"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Action = "harvest",
@@ -96,34 +96,34 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
   Key = "b", Hint = _("~!Build Basic Structure"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 -- simple buildings germanic -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-farm",
   Action = "build", Value = "unit-germanic-farm",
   Key = "f", Hint = _("Build ~!Farm"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-germanic-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
   Action = "build", Value = "unit-germanic-town-hall",
   Key = "h", Hint = _("Build Chieftain's ~!Hall"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Action = "build", Value = "unit-germanic-carpenters-shop",
   Key = "c", Hint = _("Build ~!Carpenter's Shop"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
   DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"),
-  ForUnit = {"unit-germanic-worker"} } )
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 -- Building Commands ---------------------------------------------------------
 

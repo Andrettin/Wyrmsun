@@ -5,6 +5,7 @@
 editor_types = {
 
    "unit-germanic-worker",
+   "unit-germanic-builder",
    "unit-germanic-warrior",
    "unit-germanic-town-hall",
    "unit-germanic-farm",

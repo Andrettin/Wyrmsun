@@ -98,6 +98,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Goblin Thief (unit graphics by b_o).
 - Added Gnomish Herbalist (unit graphics by b_o).
 - Scouts and archers can now attack from within towers.
+- Added Germanic Builder (unit graphics by b_o).
+- Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
+- Mechanical units now no longer display Level and XP.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

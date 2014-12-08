@@ -300,7 +300,7 @@ DefinePanelContents(
 --		More = {"FormattedText2", {Centered = true,
 --			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}
 --	},
-	{ Pos = {114, 56}, Condition = {ShowOpponent = false, HideNeutral = true},
+	{ Pos = {114, 56}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
 		More = {"FormattedText2", {Centered = true,
 			Variable1 = "Level", Variable2 = "Xp", Format = "Lv.: ~<%d~> XP: ~<%d~>"}}
 	},

@@ -91,6 +91,40 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	}
 } )
 		
+DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
+	Civilization = "germanic",
+	Image = {"file", "germanic/units/builder.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-germanic-worker",
+	Costs = {"time", 45, "gold", 400},
+	Speed = 10,
+	HitPoints = 30,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+	AutoRepairRange = 4,
+	BasicDamage = 3, PiercingDamage = 2, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 50,
+	BasePoints = 30,
+	Demand = 1,
+	Corpse = "unit-human-dead-body",
+	Type = "land",
+	RightMouseAction = "harvest",
+	CanAttack = true, RepairRange = 1,
+	CanTargetLand = true,
+	LandUnit = true,
+	Coward = true,
+	organic = true,
+	SelectableByRectangle = true,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "dwarven-miner-acknowledge",
+--		"ready", "dwarven-miner-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead"
+	}
+} )
+		
 DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
 	Class = "infantry",
 	Civilization = "germanic",

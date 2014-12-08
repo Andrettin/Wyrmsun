@@ -47,7 +47,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
-	"unit-germanic-worker",
+	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior",
 	"unit-rat", "unit-gryphon", "unit-wyrm",
 	"dwarf-group"} } )
