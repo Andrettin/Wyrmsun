@@ -74,6 +74,10 @@ DefineMissileType("missile-axe-twirl",
   { File = "missiles/axe_twirl.png", Size = {72, 72}, Frames = 8, NumDirections = 1,
   DrawLevel = 50, Class = "missile-class-stay", Sleep = 3, Speed = 16, Range = 1 } )
 
+DefineMissileType("missile-magic-effect",
+  { File = "missiles/magic.png", Size = {32, 32}, Frames = 9, NumDirections = 1,
+  DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
+
 DefineMissileType("missile-small-fire",
   { File = "missiles/small_fire.png", Size = {32, 48}, Frames = 10, NumDirections = 1,
   DrawLevel = 45, Class = "missile-class-fire", Sleep = 4, Speed = 16, Range = 1 } )

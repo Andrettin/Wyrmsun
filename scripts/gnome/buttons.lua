@@ -70,6 +70,20 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"),
   ForUnit = {"unit-gnomish-worker"} } )
 
+-- Special Abilities ---------------------------------------------------
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",
+  Action = "cast-spell", Value = "spell-herbal-cure",
+  Key = "h", Hint = "~!Herbal Cure (per 1 HP)",
+  ForUnit = {"unit-gnomish-herbalist"} } )
+
+--[[
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
+  Action = "cast-spell", Value = "spell-portent",
+  Key = "p", Hint = "~!Portent",
+  ForUnit = {"unit-gnomish-herbalist"} } )
+--]]
+
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",

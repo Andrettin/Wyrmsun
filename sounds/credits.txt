@@ -10,6 +10,11 @@ Battle for Wesnoth Team:
 /sounds/misc/explosion.wav
 /sounds/misc/fanfare_short.wav
 /sounds/misc/gold_coins.wav
+/sounds/misc/heal.wav
+/sounds/misc/magic-holy-1.wav
+/sounds/misc/magic-holy-2.wav
+/sounds/misc/magic-holy-3.wav
+/sounds/misc/magic-holy-4.wav
 /sounds/misc/open_chest.wav
 /sounds/misc/potion.wav
 /sounds/misc/rumble.wav

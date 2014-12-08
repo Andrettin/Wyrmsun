@@ -50,6 +50,37 @@ DefineUnitType("unit-goblin-war-machine", {})
 
 -- And declare upgrade for dependency...
 
+DefineSpell("spell-herbal-cure",
+	"showname", _("Herbal Cure"),
+	"manacost", 5,
+	"range", 1,
+	"target", "unit",
+	"action", {
+		{"adjust-vitals", "hit-points", 1},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"HitPoints", {MaxValuePercent = 100}
+	},
+	"sound-when-cast", "heal",
+	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
+	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
+)
+
+DefineSpell("spell-portent",
+	"showname", _("Portent"),
+	"manacost", 70,
+	"range", "infinite",
+	"target", "position",
+	"action", {
+		{"summon", "unit-type", "unit-revealer", "time-to-live", 50},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"sound-when-cast", "magic-holy"
+)
+
 DefineSpell("spell-dagger-attack",
 	"showname", _("dagger attack"),
 	"manacost", 0,

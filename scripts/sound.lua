@@ -274,9 +274,17 @@ MakeSound("tree-chopping",
 SetSoundRange("tree-chopping", 32)
 
 MakeSound("gold-coins", "misc/gold_coins.wav")
+MakeSound("heal", "misc/heal.wav")
 MakeSound("open-chest", "misc/open_chest.wav")
 MakeSound("potion", "misc/potion.wav")
 MakeSound("rumble", "misc/rumble.wav")
+
+MakeSound("magic-holy",
+	{"misc/magic-holy-1.wav",
+	"misc/magic-holy-2.wav",
+	"misc/magic-holy-3.wav",
+	"misc/magic-holy-4.wav"}
+)
 ------------------------------------------------------------------------------
 --	Define selection sound groups.
 

@@ -514,6 +514,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-herbal-cure",
+	Size = {46, 38},
+	File = "gnome/icons/herbal_cure.png"
+})
+
+DefineIcon({
+	Name = "icon-portent",
+	Size = {46, 38},
+	File = "gnome/icons/portent.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-town-hall",
 	Size = {46, 38},
 	File = "goblin/icons/town_hall.png"

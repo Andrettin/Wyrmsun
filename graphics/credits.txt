@@ -531,6 +531,10 @@ João Victor G. Costa (Jinn):
 /graphics/ui/wyrmsun_logo.png
 /graphics/ui/wyrmsun_logo_monochromatic.png
 
+J. W. Bjerk (eleazzaar):
+/graphics/gnome/icons/herbal_cure.png
+/graphics/gnome/icons/portent.png
+
 Leo:
 /graphics/dwarf/buildings/smithy.png
 /graphics/dwarf/icons/axe_1.png

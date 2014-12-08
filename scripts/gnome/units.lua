@@ -155,6 +155,8 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	organic = true,
 	SelectableByRectangle = true,
 	Mana = {Enable = true},
+	CanCastSpell = {"spell-herbal-cure", "spell-portent"},
+	AutoCastActive = {"spell-herbal-cure"},
 	Variations = {
 		{
 			"variation-id", "blond-hair"
