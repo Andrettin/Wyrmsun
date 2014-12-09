@@ -268,7 +268,7 @@ DefineVariables(
 	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 --	"Points",
 	"XpRequired", {Max = 43500, Value = 200, Increase = 0, Enable = true},
-	"LevelUp", {Max = 255, Value = 0, Increase = 0, Enable = true},
+	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
@@ -279,8 +279,6 @@ DefineVariables(
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CustomAIState", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"ForTheMotherland", {Max = 1, Value = 0, Increase = 0, Enable = true}, -- 0 = not a FtM unit creator, 1 = is a FtM unit creator
-	"AxeMastery", {Max = 1, Value = 0, Increase = 0, Enable = true},
-	"CriticalStrike", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"AxeOfPerun", {Max = 2, Value = 0, Increase = 0, Enable = true} -- 0 = not owned, 1 = owned, 2 = equipped
 )
 
@@ -559,16 +557,10 @@ function StandardTriggers()
 								end
 
 								-- load upgrades
-								if (GetUnitVariable(uncount[unit1], "AxeMastery") < 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")) then
-									SetUnitVariable(uncount[unit1], "AxeMastery", 1)
-									UpdateUnitBonuses(uncount[unit1])
-									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
-								end
-
-								if (GetUnitVariable(uncount[unit1], "CriticalStrike") < 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")) then
-									SetUnitVariable(uncount[unit1], "CriticalStrike", 1)
-									UpdateUnitBonuses(uncount[unit1])
-									SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
+								for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
+									if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade-") ~= nil and UnitHasAbility(uncount[unit1], wyr.preferences.Heroes[key].upgrades[i]) == false) then
+										AcquireAbility(uncount[unit1], wyr.preferences.Heroes[key].upgrades[i])
+									end
 								end
 
 								if (GetUnitVariable(uncount[unit1], "LevelUp") > 0 and GetUnitVariable(uncount[unit1], "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) + GetUnitVariable(uncount[unit1], "StartingLevel")) then
@@ -578,12 +570,16 @@ function StandardTriggers()
 
 								-- save upgrades
 								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
-									if (GetUnitVariable(uncount[unit1], "AxeMastery") == 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
+									if (UnitHasAbility(uncount[unit1], "upgrade-axe-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")
 										SavePreferences()
 									end
-									if (GetUnitVariable(uncount[unit1], "CriticalStrike") == 1 and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
+									if (UnitHasAbility(uncount[unit1], "upgrade-critical-strike") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
+										SavePreferences()
+									end
+									if (UnitHasAbility(uncount[unit1], "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
 										SavePreferences()
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
@@ -986,6 +982,8 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-gnomish-recruit") then
 		return { "upgrade-critical-strike" }
+	elseif (unit_type == "unit-gnomish-herbalist") then
+		return { "upgrade-portent" }
 	elseif (unit_type == "unit-goblin-thief") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-goblin-spearman") then
@@ -1130,13 +1128,6 @@ function UpdateUnitBonuses(unit)
 		if (GetUnitVariable(unit, "AttackRange") == 1) then
 			piercing_damage_bonus = piercing_damage_bonus + 1
 		end
-	end
-	-- bonuses from abilities
-	if (GetUnitVariable(unit, "AxeMastery") >= 1) then -- if has Axe Mastery, grant +2 piercing damage
-		piercing_damage_bonus = piercing_damage_bonus + 2
-	end
-	if (GetUnitVariable(unit, "CriticalStrike") >= 1) then
-		SetUnitVariable(unit, "CriticalStrikeChance", 15)
 	end
 	-- bonuses from equipment
 	if (GetUnitVariable(unit, "AxeOfPerun") >= 2) then

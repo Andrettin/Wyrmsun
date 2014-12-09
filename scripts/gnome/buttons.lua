@@ -77,12 +77,16 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",
   Key = "h", Hint = "~!Herbal Cure (per 1 HP)",
   ForUnit = {"unit-gnomish-herbalist"} } )
 
---[[
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-portent",
+  Action = "learn-ability", Value = "upgrade-portent",
+  Key = "p", Hint = "Learn ~!Portent",
+  ForUnit = {"unit-gnomish-herbalist"} } )
+
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
   Action = "cast-spell", Value = "spell-portent",
+  Allowed = "check-ability", AllowArg = {"upgrade-portent"},
   Key = "p", Hint = "~!Portent",
   ForUnit = {"unit-gnomish-herbalist"} } )
---]]
 
 -- build basic/advanced structs -----------------------------------------------
 

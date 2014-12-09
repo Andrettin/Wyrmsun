@@ -153,7 +153,6 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
-	CanCastSpell = {"spell-learn-critical-strike"},
 	Variations = {
 		{
 			"variation-id", "blond",

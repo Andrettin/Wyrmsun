@@ -61,6 +61,7 @@ for i = 1,table.getn(upgrades) do
 		u.Costs[j - 1] = upgrades[i][8][j]
 	end
 	u.TechnologyPointCost = upgrades[i][9]
+	u.Ability = false
 end
 
 DefineModifier("upgrade-germanic-broad-sword",

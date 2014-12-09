@@ -1804,7 +1804,6 @@ DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
 	organic = true,
 	SelectableByRectangle = true,
 	AttackFromTransporter = true,
-	CanCastSpell = {"spell-learn-critical-strike"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",

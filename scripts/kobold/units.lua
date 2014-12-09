@@ -58,7 +58,6 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
-	CanCastSpell = {"spell-learn-critical-strike"},
 	Sounds = {
 		"selected", "click",
 --		"selected", "basic-goblin-voices-selected-group",

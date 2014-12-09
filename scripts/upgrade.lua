@@ -155,3 +155,34 @@ function ApplyTechLevels()
 		end
 	end
 end
+
+-- neutral upgrades
+local upgrades = {
+	{"upgrade-axe-mastery", _("Axe Mastery"), "icon-axe-mastery"},
+	{"upgrade-critical-strike", _("Critical Strike"), "icon-critical-strike"},
+	{"upgrade-portent", _("Portent"), "icon-portent"}
+}
+
+for i = 1,table.getn(upgrades) do
+	u = CUpgrade:New(upgrades[i][1])
+	u.Name = upgrades[i][2]
+	u.Icon = Icons[upgrades[i][3]]
+	u.Class = ""
+	u.Description = ""
+	u.Quote = ""
+	u.Background = ""
+	for j = 1,7 do
+		u.Costs[j - 1] = 0
+	end
+	u.TechnologyPointCost = 0
+	u.Ability = true
+	DefineAllow(upgrades[i][1], "AAAAAAAAAAAAAAAA")
+end
+
+DefineModifier("upgrade-axe-mastery",
+	{"PiercingDamage", 2}
+)
+
+DefineModifier("upgrade-critical-strike",
+	{"CriticalStrikeChance", 15}
+)

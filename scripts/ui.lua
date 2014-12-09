@@ -80,7 +80,7 @@ local min_damage = Div(
 	Sub(
 		ActiveUnitVar("PiercingDamage"),
 		Sub(
-			ActiveUnitVar("PiercingDamage", "Value", "Type"),
+			ActiveUnitVar("PiercingDamage", "Value", "Unit"),
 			ActiveUnitVar("PiercingDamage", "Value", "Initial")
 		)
 	),
@@ -95,14 +95,14 @@ local max_damage = Sub(
 		ActiveUnitVar("PiercingDamage")
 	),
 	Sub(
-		ActiveUnitVar("PiercingDamage", "Value", "Type"),
+		ActiveUnitVar("PiercingDamage", "Value", "Unit"),
 		ActiveUnitVar("PiercingDamage", "Value", "Initial")
 	)
 )
 -- takes piercing damage bonuses into account for the "+X" damage bonus on the unit's panel
 local damage_bonus = Add(
 	Sub(
-		ActiveUnitVar("PiercingDamage", "Value", "Type"),
+		ActiveUnitVar("PiercingDamage", "Value", "Unit"),
 		ActiveUnitVar("PiercingDamage", "Value", "Initial")
 	),
 	ActiveUnitVar("PiercingDamageBonus")
