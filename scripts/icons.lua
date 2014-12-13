@@ -76,6 +76,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-warrior",
+	Size = {46, 38},
+	File = "germanic/icons/warrior.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-town-hall",
 	Size = {46, 38},
 	File = "germanic/icons/town_hall.png"
@@ -97,6 +103,12 @@ DefineIcon({
 	Name = "icon-germanic-carpenters-shop",
 	Size = {46, 38},
 	File = "germanic/icons/carpenters_shop.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-smithy",
+	Size = {46, 38},
+	File = "germanic/icons/smithy.png"
 })
 
 DefineIcon({

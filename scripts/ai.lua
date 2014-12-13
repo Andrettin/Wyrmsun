@@ -143,6 +143,8 @@ end
 function AiSmithy()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-smithy"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-smithy"
 	elseif (AiGetRace() == "goblin") then
 		return "unit-goblin-smithy"
 	else
@@ -252,8 +254,8 @@ end
 function AiUpgradeWeapon1()
 	if (AiGetRace() == "dwarf") then
 		return "upgrade-dwarven-broad-axe"
---	elseif (AiGetRace() == "germanic") then
---		return "upgrade-germanic-broad-sword"
+	elseif (AiGetRace() == "germanic") then
+		return "upgrade-germanic-broad-sword"
 	else
 		return "upgrade-dwarven-broad-axe"
 	end
@@ -276,8 +278,8 @@ end
 function AiUpgradeShield1()
 	if (AiGetRace() == "dwarf") then
 		return "upgrade-dwarven-shield-1"
---	elseif (AiGetRace() == "germanic") then
---		return "upgrade-germanic-bronze-shield"
+	elseif (AiGetRace() == "germanic") then
+		return "upgrade-germanic-bronze-shield"
 	else
 		return "upgrade-dwarven-shield-1"
 	end

@@ -69,6 +69,7 @@ b_o:
 /graphics/gnome/units/gnomish_worker_with_lumber.png
 /graphics/goblin/decorations/goblin_banner.png
 /graphics/goblin/icons/greebo.png (later modified by Leo)
+/graphics/goblin/icons/spear_1.png (modified from the icon made by the Battle for Wesnoth team, later modified by Jinn)
 /graphics/goblin/units/glider.png
 /graphics/goblin/units/goblin_archer.png
 /graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png
@@ -168,7 +169,7 @@ b_o:
 /graphics/ui/goblin_swordsman.png
 
 Battle for Wesnoth Team:
-/graphics/goblin/icons/spear_1.png
+/graphics/goblin/icons/spear_1.png (later modified by b_o and Jinn)
 
 Bos Wars Team:
 /graphics/missiles/green_cross.png
@@ -314,6 +315,11 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/buildings/barracks.png
 /graphics/germanic/buildings/farm.png
 /graphics/germanic/buildings/town_hall.png (later modified by b_o to add the fire animation)
+/graphics/germanic/icons/warrior.png
+/graphics/germanic/icons/warrior_black_hair.png
+/graphics/germanic/icons/warrior_brown_hair.png
+/graphics/germanic/icons/warrior_gray_hair.png
+/graphics/germanic/icons/warrior_red_hair.png
 /graphics/germanic/ui/buttonpanel_480.png
 /graphics/germanic/ui/buttonpanel_600.png
 /graphics/germanic/ui/buttonpanel_768.png
@@ -381,8 +387,10 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/icons/gnomish_worker.png
 /graphics/gnome/icons/gnomish_worker_black_hair.png
 /graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
+/graphics/gnome/icons/herbal_cure.png (modified from J. W. Bjerk's icon)
 /graphics/gnome/icons/patrol_land.png
 /graphics/gnome/icons/patrol_land_extra_1.png
+/graphics/gnome/icons/portent.png (modified from J. W. Bjerk's icon)
 /graphics/gnome/ui/widgets/button-large-grayed.png
 /graphics/gnome/ui/widgets/button-large-normal.png
 /graphics/gnome/ui/widgets/button-large-pressed.png
@@ -398,6 +406,7 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/icons/goblin_assassin.png
 /graphics/goblin/icons/goblin_spearman.png
 /graphics/goblin/icons/goblin_worker.png
+/graphics/goblin/icons/spear_1.png (modified from the icon made by the Battle for Wesnoth team, which had been later modified by b_o)
 /graphics/missiles/big_fire.png (modified from Mikodrak's graphics)
 /graphics/missiles/big_fire_extra_1.png (modified from Mikodrak's graphics)
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
@@ -533,8 +542,8 @@ João Victor G. Costa (Jinn):
 /graphics/ui/wyrmsun_logo_monochromatic.png
 
 J. W. Bjerk (eleazzaar):
-/graphics/gnome/icons/herbal_cure.png
-/graphics/gnome/icons/portent.png
+/graphics/gnome/icons/herbal_cure.png (later modified by Jinn)
+/graphics/gnome/icons/portent.png (later modified by Jinn)
 
 Leo:
 /graphics/dwarf/buildings/smithy.png
@@ -558,6 +567,7 @@ Leo:
 /graphics/dwarf/icons/surghan_mercenary_thane.png
 /graphics/dwarf/icons/thursagan.png
 /graphics/germanic/buildings/carpenters_shop.png
+/graphics/germanic/buildings/smithy.png
 /graphics/germanic/icons/arrow.png
 /graphics/germanic/icons/barbed_arrow.png
 /graphics/germanic/icons/broad_sword.png

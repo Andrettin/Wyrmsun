@@ -44,6 +44,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Mercenary Camp's fire is now animated (modification by b_o).
 - Sentry Towers now can garrison one organic unit.
 - Guard Towers now can garrison two organic units.
+- Added Germanic Smithy (graphics by Leo).
 
 * Civilizations
 - Added Germanic civilization (human).
@@ -94,7 +95,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Bird, which functions as fauna for forest maps (graphics by b_o).
 - Dwarven Smith renamed to "Smithy".
 - Smithies now have personal names.
-- Added Erala (germanic warrior) (unit graphics by b_o).
+- Added Erala (germanic warrior) (unit graphics by b_o and icon by Jinn).
 - Added Goblin Thief (unit graphics by b_o).
 - Added Gnomish Herbalist (unit graphics by b_o).
 - Scouts and archers can now attack from within towers.

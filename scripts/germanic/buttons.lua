@@ -120,7 +120,12 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Key = "c", Hint = _("Build ~!Carpenter's Shop"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-  DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
+  Action = "build", Value = "unit-germanic-smithy",
+  Key = "s", Hint = _("Build ~!Smithy"),
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
@@ -132,12 +137,24 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
   Key = "b", Hint = _("Train ~!Bura"),
   ForUnit = {"unit-germanic-town-hall"} } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
   Action = "train-unit", Value = "unit-germanic-warrior",
   Key = "e", Hint = _("Train ~!Erala"),
   ForUnit = {"unit-germanic-barracks"} } )
   
 -- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
+  Action = "research", Value = "upgrade-germanic-broad-sword",
+  Allowed = "check-single-research",
+  Key = "s", Hint = _("Research Broad S~!word"),
+  ForUnit = {"unit-germanic-smithy"} } )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
+  Action = "research", Value = "upgrade-germanic-bronze-shield",
+  Allowed = "check-single-research",
+  Key = "s", Hint = _("Research Bronze ~!Shield"),
+  ForUnit = {"unit-germanic-smithy"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
   Action = "research", Value = "upgrade-germanic-barbed-arrow",

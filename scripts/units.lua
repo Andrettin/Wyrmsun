@@ -32,7 +32,7 @@ UnitTypeFiles = {}
 Units = {
 	"unit-germanic-worker", "unit-germanic-warrior",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
-	"unit-germanic-carpenters-shop",
+	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"unit-dwarven-miner", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout",
