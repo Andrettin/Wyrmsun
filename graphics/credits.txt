@@ -53,6 +53,7 @@ b_o:
 /graphics/dwarf/units/thane_orange_hair.png
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
 /graphics/germanic/units/builder.png
+/graphics/germanic/units/builder_red_hair.png
 /graphics/germanic/units/warrior.png
 /graphics/germanic/units/warrior_bronze_shield.png
 /graphics/germanic/units/worker.png

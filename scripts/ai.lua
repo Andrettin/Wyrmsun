@@ -130,6 +130,8 @@ function AiLumberMill()
 		return "unit-dwarven-lumber-mill"
 	elseif (AiGetRace() == "germanic") then
 		return "unit-germanic-carpenters-shop"
+	elseif (AiGetRace() == "gnome") then
+		return "unit-gnomish-farm" -- to not make gnomes stop building/training when the AI requires a lumber mill
 	elseif (AiGetRace() == "goblin") then
 		return "unit-goblin-lumber-mill"
 	else
@@ -177,8 +179,6 @@ end
 function AiVeteranSoldier()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-steelclad"
-	elseif (AiGetRace() == "goblin") then -- for FtM
-		return "unit-goblin-spearman"
 	else
 		return "unit-dwarven-steelclad"
 	end
@@ -233,18 +233,10 @@ end
 --  Priest of the current civilization.
 --
 function AiPriest()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-thane"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-warrior"
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-recruit"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-spearman"
-	elseif (AiGetRace() == "kobold") then
-		return "unit-kobold-footpad"
+	if (AiGetRace() == "gnome") then
+		return "unit-gnomish-herbalist"
 	else
-		return "unit-dwarven-thane"
+		return "unit-gnomish-herbalist"
 	end
 end
 

@@ -121,10 +121,15 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-worker",
   Action = "train-unit", Value = "unit-gnomish-worker",
-  Key = "s", Hint = _("Train Gnomish ~!Scavenger"),
+  Key = "s", Hint = _("Train ~!Scavenger"),
   ForUnit = {"unit-gnomish-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-recruit",
   Action = "train-unit", Value = "unit-gnomish-recruit",
-  Key = "r", Hint = _("Train Gnomish ~!Recruit"),
+  Key = "r", Hint = _("Train ~!Recruit"),
+  ForUnit = {"unit-gnomish-barracks"} } )
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-worker",
+  Action = "train-unit", Value = "unit-gnomish-herbalist",
+  Key = "h", Hint = _("Train ~!Herbalist"),
   ForUnit = {"unit-gnomish-barracks"} } )

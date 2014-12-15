@@ -106,7 +106,7 @@ function RunEncyclopediaUnitsMenu(state)
 	local icon_y = 0
 	for i, unitName in ipairs(Units) do
 		if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
-			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "-hero-") ~= nil) == (state == "heroes") and (string.find(unitName, "-mercenary-") ~= nil) == (state == "mercenaries")) then
+			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "hero") ~= nil) == (state == "heroes") and (string.find(unitName, "-mercenary-") ~= nil) == (state == "mercenaries")) then
 				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
