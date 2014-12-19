@@ -65,18 +65,3 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 --		"ready", "goblin-impaler-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-kobold-voices-dead"} } )
-
-GrandStrategyUnits["KoboldFootpad"] = {
-	Name = GetUnitTypeName("unit-kobold-footpad") .. "s",
-	UnitType = "unit-kobold-footpad",
-	Icon = "kobold/icons/kobold_footpad.png",
-	Civilization = "kobold",
-	Type = "Infantry",
-	Costs = {
-		Gold = 600
-	},
-	Upkeep = 25,
-	X = 0,
-	Y = 0,
-	InterfaceState = "Barracks"
-}

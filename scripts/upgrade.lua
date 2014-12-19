@@ -27,8 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-GrandStrategyTechnologies = {}
-
 -- Load the different races
 Load("scripts/dwarf/upgrade.lua")
 Load("scripts/germanic/upgrade.lua")

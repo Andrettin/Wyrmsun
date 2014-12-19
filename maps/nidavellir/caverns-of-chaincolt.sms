@@ -160,35 +160,43 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-dwarven-guard-tower", 0, {22, 34})
 
 	local units_to_be_created = {}
-	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-		units_to_be_created[gsunit_key] = 0
-		if (gsunit_key ~= "GnomishRecruit") then -- the gnomish recruit doesn't appear in this mission
-			units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] / 1) -- must have every unit in there, since otherwise it will be impossible to win
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			if (unitName ~= "unit-gnomish-recruit") then -- the gnomish recruit doesn't appear in this mission
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 1) -- must have every unit in there, since otherwise it will be impossible to win
+			end
+			WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
 		end
-		WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] - units_to_be_created[gsunit_key]
 	end
-	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-		if (units_to_be_created[gsunit_key] > 0) then
-			for i=1,units_to_be_created[gsunit_key] do
-				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+					unit = CreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+				end
 			end
 		end
 	end
 
 	-- Shinsplitters
-	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-		units_to_be_created[gsunit_key] = 0
-		units_to_be_created[gsunit_key] = math.floor(WorldMapProvinces.SouthernTunnels.Units[gsunit_key] / 2)
-		WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] - units_to_be_created[gsunit_key]
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 2)
+			WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+		end
 	end
-	if (units_to_be_created.DwarvenSteelclad < 1 and WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad >= 1) then
-		units_to_be_created.DwarvenSteelclad = 1
-		WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad - 1
+	if (units_to_be_created.unit_dwarven_steelclad < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad >= 1) then
+		units_to_be_created.unit_dwarven_steelclad = 1
+		WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 	end
-	for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-		if (units_to_be_created[gsunit_key] > 0) then
-			for i=1,units_to_be_created[gsunit_key] do
-				unit = CreateUnit(GrandStrategyUnits[gsunit_key].UnitType, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+					unit = CreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+				end
 			end
 		end
 	end
@@ -215,7 +223,7 @@ PlayMusic("music/battle.ogg")
 wyrmsun.playlist = { "music/the_city_falls.ogg" }
 
 if (GrandStrategy) then
-	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.DwarvenSmithy == 2) then
+	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_smithy == 2) then
 		unit = CreateUnit("unit-dwarven-smithy", 0, {38, 21})
 	end
 end

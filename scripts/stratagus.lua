@@ -298,7 +298,7 @@ function SinglePlayerTriggers()
 			return total_units <= 0
 		end,
 		function()
-			if (GrandStrategy and GrandStrategyEventMap == false) then
+			if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyFaction ~= nil) then
 				local victorious_player = ""
 				if (Attacker == GrandStrategyFaction.Name) then
 					victorious_player = Defender
@@ -307,23 +307,12 @@ function SinglePlayerTriggers()
 				end
 
 				-- set the new unit quantity to the surviving units of the victorious side
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					AttackingUnits[gsunit_key] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-				end
-					
-				-- upgrade units which leveled up during the battle, if a veteran unit for them is available
-				local uncount = 0
-				uncount = GetUnits(GetFactionPlayer(victorious_player))
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Level") > GetUnitVariable(uncount[unit1], "StartingLevel")) then
-						for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-							if (GrandStrategyUnits[gsunit_key].AdvancesFrom ~= "" and GrandStrategyUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom].UnitType == GetUnitVariable(uncount[unit1], "Ident")) then
-								AttackingUnits[gsunit_key] = AttackingUnits[gsunit_key] + 1
-								AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] = AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] - 1
-							end
-						end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName)
 					end
 				end
+					
 				GrandStrategyBattle = false
 			end
 			return ActionDefeat()
@@ -340,23 +329,12 @@ function SinglePlayerTriggers()
 		function()
 			if (GrandStrategy and GrandStrategyEventMap == false) then
 				-- set the new unit quantity to the surviving units of the victorious side
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					AttackingUnits[gsunit_key] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-				end
-					
-				-- upgrade units which leveled up during the battle, if a veteran unit for them is available
-				local uncount = 0
-				uncount = GetUnits(GetThisPlayer())
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Level") > GetUnitVariable(uncount[unit1], "StartingLevel")) then
-						for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-							if (GrandStrategyUnits[gsunit_key].AdvancesFrom ~= "" and GrandStrategyUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom].UnitType == GetUnitVariable(uncount[unit1], "Ident")) then
-								AttackingUnits[gsunit_key] = AttackingUnits[gsunit_key] + 1
-								AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] = AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] - 1
-							end
-						end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", unitName)
 					end
 				end
+					
 				GrandStrategyBattle = false
 			end
 			return ActionVictory()
@@ -401,9 +379,11 @@ function SinglePlayerTriggers()
 		if (GrandStrategy) then
 			for i=0,14 do
 				if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
-					for gsunit_key, gsunit_value in pairs(GrandStrategyTechnologies) do -- if in grand strategy mode, apply upgrades researched
-						if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[gsunit_key] == 2) then
-							SetPlayerData(i, "HasUpgrade", GrandStrategyTechnologies[gsunit_key].UpgradeType, true)
+					for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
+						if (string.find(unitName, "upgrade-") ~= nil) then
+							if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[string.gsub(unitName, "-", "_")] == 2) then
+								SetPlayerData(i, "HasUpgrade", unitName, true)
+							end
 						end
 					end
 				end

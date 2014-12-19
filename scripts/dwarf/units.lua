@@ -1085,182 +1085,22 @@ DefineUnitType("unit-hero-durstorn", { Name = _("Thane"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"} } )
 
-
-
-
--- define the units for the grand strategy mode (cost is defined here again because it may differ from the unit's RTS cost, as the grand strategy mode can contain more resource types
-
-GrandStrategyUnits["DwarvenAxefighter"] = {
-	Name = GetUnitTypeName("unit-dwarven-axefighter") .. "s",
-	UnitType = "unit-dwarven-axefighter",
-	Icon = "dwarf/icons/dwarven_axefighter.png",
-	Type = "Infantry",
-	Costs = {
-		Gold = 600
-	},
-	Upkeep = 25,
-	X = 0,
-	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall" },
-	InterfaceState = "Barracks"
-}
-
-GrandStrategyUnits["DwarvenSteelclad"] = {
-	Name = GetUnitTypeName("unit-dwarven-steelclad") .. "s",
-	UnitType = "unit-dwarven-steelclad",
-	Icon = "dwarf/icons/dwarven_steelclad.png",
-	Type = "Veteran Infantry",
-	Costs = {
-		Gold = 600
-	},
-	Upkeep = 25,
-	X = 0,
-	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall" },
-	InterfaceState = "",
-	AdvancesFrom = "DwarvenAxefighter"
-}
-
-GrandStrategyUnits["DwarvenThane"] = {
-	Name = GetUnitTypeName("unit-dwarven-thane") .. "s",
-	UnitType = "unit-dwarven-thane",
-	Icon = "dwarf/icons/dwarven_steelclad.png",
-	Type = "Heroic Infantry",
-	Costs = {
-		Gold = 600
-	},
-	Upkeep = 25,
-	X = 0,
-	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall" },
-	InterfaceState = "",
-	AdvancesFrom = "DwarvenSteelclad"
-}
-
-GrandStrategyUnits["DwarvenScout"] = {
-	Name = GetUnitTypeName("unit-dwarven-scout") .. "s",
-	UnitType = "unit-dwarven-scout",
-	Icon = "dwarf/icons/dwarven_scout.png",
-	Type = "Archer",
-	Costs = {
-		Gold = 500,
-		Lumber = 50
-	},
-	Upkeep = 25,
-	X = 1,
-	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill" },
-	InterfaceState = "Barracks"
-}
-
-GrandStrategyUnits["DwarvenBallista"] = {
-	Name = GetUnitTypeName("unit-dwarven-ballista") .. "s",
-	UnitType = "unit-dwarven-ballista",
-	Icon = "tilesets/swamp/dwarf/icons/dwarven_ballista.png",
-	Type = "Catapult",
-	Costs = {
-		Gold = 900,
-		Lumber = 300
-	},
-	Upkeep = 50,
-	X = 2,
-	Y = 0,
-	RequiredBuildings = { "DwarvenWarHall", "DwarvenLumberMill", "DwarvenSmithy" },
-	InterfaceState = "Barracks"
-}
-
-GrandStrategyUnits["DwarvenGryphonRider"] = {
-	Name = GetUnitTypeName("unit-dwarven-gryphon-rider") .. "s",
-	UnitType = "unit-dwarven-gryphon-rider",
-	Icon = "dwarf/icons/gryphon_rider.png",
-	Type = "Flying Rider",
-	Costs = {
-		Gold = 1750,
-		Lumber = 750
-	},
-	Upkeep = 50,
-	X = 0,
-	Y = 1,
-	RequiredBuildings = { "DwarvenWarHall" },
-	InterfaceState = "Aviary"
-}
-
--- GS buildings
-GrandStrategyBuildings["DwarvenMeadHall"] = {
-	Name = GetUnitTypeName("unit-dwarven-town-hall"),
-	UnitType = "unit-dwarven-town-hall",
-	Icon = "dwarf/icons/town_hall.png",
-	Type = "Town Hall",
-	Costs = {
-		Gold = 1200,
-		Lumber = 800
-	},
-	X = 0,
-	Y = -2
-}
-
-GrandStrategyBuildings["DwarvenWarHall"] = {
-	Name = GetUnitTypeName("unit-dwarven-barracks"),
-	UnitType = "unit-dwarven-barracks",
-	Icon = "dwarf/icons/barracks.png",
-	Type = "Barracks",
-	Costs = {
-		Gold = 700,
-		Lumber = 450
-	},
-	X = 1,
-	Y = -2,
-	RequiredBuildings = { "DwarvenMeadHall" }
-}
-
-GrandStrategyBuildings["DwarvenLumberMill"] = {
-	Name = GetUnitTypeName("unit-dwarven-lumber-mill"),
-	UnitType = "unit-dwarven-lumber-mill",
-	Icon = "tilesets/swamp/dwarf/icons/lumber_mill.png",
-	Type = "Lumber Mill",
-	Costs = {
-		Gold = 600,
-		Lumber = 450
-	},
-	X = 2,
-	Y = -2,
-	RequiredBuildings = { "DwarvenMeadHall" }
-}
-
-GrandStrategyBuildings["DwarvenSmithy"] = {
-	Name = GetUnitTypeName("unit-dwarven-smithy"),
-	UnitType = "unit-dwarven-smithy",
-	Icon = "dwarf/icons/smithy.png",
-	Type = "Smithy",
-	Costs = {
-		Gold = 900,
-		Lumber = 500
-	},
-	X = 0,
-	Y = -1,
-	RequiredBuildings = { "DwarvenMeadHall" }
-}
-
+--[[
 GrandStrategyHeroes["Rugnur"] = {
-	Name = GetUnitTypeName("unit-hero-rugnur"),
 	UnitType = "unit-hero-rugnur",
-	Icon = "dwarf/icons/rugnur.png",
 	Year = 25,
 	DeathYear = 40
 }
 
 GrandStrategyHeroes["Baglur"] = {
-	Name = GetUnitTypeName("unit-hero-baglur"),
 	UnitType = "unit-hero-baglur",
-	Icon = "dwarf/icons/baglur.png",
 	Year = 25, -- should be earlier than that, but we have no notice of when he entered service or gained notability
 	DeathYear = 40
 }
 
 GrandStrategyHeroes["Thursagan"] = {
-	Name = GetUnitTypeName("unit-hero-thursagan"),
 	UnitType = "unit-hero-thursagan",
-	Icon = "dwarf/icons/thursagan.png",
 	Year = 25, -- should be earlier than that, but we have no notice of when he entered service or gained notability
 	DeathYear = 40
 }
+--]]

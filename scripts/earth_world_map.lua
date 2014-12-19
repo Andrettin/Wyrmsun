@@ -159,7 +159,7 @@ WorldMapProvinces = {
 		SettlementName = "Bubienum",
 		SettlementLocation = {130, 28}, -- Prague
 		SettlementBuildings = {
-			DwarvenMeadHall = 2
+			unit_dwarven_town_hall = 2
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {

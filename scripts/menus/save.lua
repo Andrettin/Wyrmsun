@@ -4,9 +4,6 @@ function RunSaveGame(name, menu)
   RawTiles = nil
   RawTiles = {}
   Quests = nil
-  GrandStrategyUnits = nil
-  GrandStrategyBuildings = nil
-  GrandStrategyTechnologies = nil
   LoadedGame = true
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))

@@ -2072,7 +2072,7 @@ AddTrigger(
 																											if (GrandStrategy == false) then
 																												NextMap = "maps/nidavellir/eastern-mines.smp"
 																											else
-																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmithy = 0
+																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0
 																											end
 																											ActionVictory()
 																										end

@@ -71,12 +71,12 @@ WorldMapProvinces = {
 		Owner = "Untersberg",
 		SettlementLocation = {25, 26},
 		SettlementBuildings = {
-			GnomishTownHall = 2,
-			GnomishBarracks = 2 -- has capability to train soldiers
+			unit_gnomish_town_hall = 2,
+			unit_gnomish_barracks = 2 -- has capability to train soldiers
 		},
 		Map = "maps/nidavellir/brown-hills.smp",
 		Units = {
-			GnomishRecruit = 2 -- Pypo I and his envoy
+			unit_gnomish_recruit = 2 -- Pypo I and his envoy
 		}
 	},
 	CavernsOfChaincolt = {
@@ -85,23 +85,23 @@ WorldMapProvinces = {
 		Owner = "Norlund Clan",
 		SettlementLocation = {30, 13},
 		SettlementBuildings = {
-			DwarvenMeadHall = 2,
-			DwarvenWarHall = 2, -- has capability to train warriors
-			DwarvenSmithy = 2 -- Durstorn has runesmiths under his employ
+			unit_dwarven_town_hall = 2,
+			unit_dwarven_barracks = 2, -- has capability to train warriors
+			unit_dwarven_smithy = 2 -- Durstorn has runesmiths under his employ
 		},
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 		Units = {
---			DwarvenAxefighter = 5, -- Rugnur, 4 Dwarven Guardsmen (5 if easy mode)
---			DwarvenSteelclad = 6, -- Baglur, Durstorn, Neglur, Glinar, Kuhnar, Theganli
---			DwarvenScout = 1 -- Noiraran
-			DwarvenAxefighter = 4, -- 4 Dwarven Guardsmen (5 if easy mode)
-			DwarvenSteelclad = 2, -- Neglur, Glinar
-			GnomishRecruit = 0
+--			unit_dwarven_axefighter = 5, -- Rugnur, 4 Dwarven Guardsmen (5 if easy mode)
+--			unit_dwarven_steelclad = 6, -- Baglur, Durstorn, Neglur, Glinar, Kuhnar, Theganli
+--			unit_dwarven_scout = 1 -- Noiraran
+			unit_dwarven_axefighter = 4, -- 4 Dwarven Guardsmen (5 if easy mode)
+			unit_dwarven_steelclad = 2, -- Neglur, Glinar
+			unit_gnomish_recruit = 0
 		},
 		Heroes = {
-			Rugnur = true,
-			Baglur = false, -- could place Baglur here, but he is important as an event trigger
-			Thursagan = false
+			unit_hero_rugnur = true,
+			unit_hero_baglur = false, -- could place Baglur here, but he is important as an event trigger
+			unit_hero_thursagan = false
 		}
 	},
 	CavernsOfFlame = {
@@ -110,12 +110,12 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {41, 6},
 		SettlementBuildings = {
-			DwarvenSmithy = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
+			unit_dwarven_smithy = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 		},
 		Map = "maps/nidavellir/caverns-of-flame.smp",
 		Units = { -- starting units in the Caverns of Flame scenario
-			GoblinImpaler = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
-			GoblinWarMachine = 1
+			unit_goblin_spearman = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
+			unit_goblin_war_machine = 1
 		}
 	},
 	EasternMines = {
@@ -126,8 +126,8 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/nidavellir/eastern-mines.smp",
 		Units = {
---			GoblinImpaler = 3 -- three starting chieftains in the Gathering Materials scenario
-			GoblinImpaler = 9 -- three starting chieftains in the Gathering Materials scenario, plus 2 goblins for each tribe to prevent too early expansion into this province
+--			unit_goblin_spearman = 3 -- three starting chieftains in the Gathering Materials scenario
+			unit_goblin_spearman = 9 -- three starting chieftains in the Gathering Materials scenario, plus 2 goblins for each tribe to prevent too early expansion into this province
 		}
 	},
 	GryphonMountain = {
@@ -138,7 +138,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- wild units in the Gryphon Mountain scenario
-			DwarvenGryphonRider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
+			unit_dwarven_gryphon_rider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
 		}
 	},
 	Heartfangs = {
@@ -149,8 +149,8 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild dwarves to stop too early expansion into this province
-			DwarvenAxefighter = 4,
-			DwarvenScout = 3
+			unit_dwarven_axefighter = 4,
+			unit_dwarven_scout = 3
 		}
 	},
 	HighPass = {
@@ -161,8 +161,8 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- wild units in the High Pass scenario
-			GoblinImpaler = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
-			DwarvenGryphonRider = 1 -- Kaara
+			unit_goblin_spearman = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
+			unit_dwarven_gryphon_rider = 1 -- Kaara
 		}
 	},
 	HighbrookPass = {
@@ -173,11 +173,11 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- starting units in the Settling Disputes scenario
-			DwarvenAxefighter = 0,
-			DwarvenSteelclad = 0,
-			DwarvenThane = 0,
-			GoblinImpaler = 4, -- one troll, two young ogres, one ogre
-			GoblinArcher = 2 -- two liches
+			unit_dwarven_axefighter = 0,
+			unit_dwarven_steelclad = 0,
+			unit_dwarven_thane = 0,
+			unit_goblin_spearman = 4, -- one troll, two young ogres, one ogre
+			unit_goblin_archer = 2 -- two liches
 		}
 	},
 	KalKartha = {
@@ -189,10 +189,10 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild gnomes from the Forbidden Forest to stop too early expansion into this province
-			DwarvenAxefighter = 0,
-			DwarvenSteelclad = 0,
-			DwarvenThane = 0,
-			GnomishRecruit = 4
+			unit_dwarven_axefighter = 0,
+			unit_dwarven_steelclad = 0,
+			unit_dwarven_thane = 0,
+			unit_gnomish_recruit = 4
 		}
 	},
 	Lyr = {
@@ -204,7 +204,7 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild dwarves to stop too early expansion into this province
-			DwarvenAxefighter = 4
+			unit_dwarven_axefighter = 4
 		}
 	},
 	NorthernWastelands = {
@@ -213,15 +213,15 @@ WorldMapProvinces = {
 		Owner = "",
 		SettlementLocation = {14, 2},
 		SettlementBuildings = {
-			DwarvenSmithy = 2 -- Thursagan's smithy
+			unit_dwarven_smithy = 2 -- Thursagan's smithy
 		},
 		Map = "maps/nidavellir/northern-wastelands.smp",
 		Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
-			GoblinImpaler = 26,
-			GoblinArcher = 13
+			unit_goblin_spearman = 26,
+			unit_goblin_archer = 13
 		},
 		Heroes = {
-			Thursagan = true
+			unit_hero_thursagan = true
 		}
 	},
 	ShorbearHills = {
@@ -231,13 +231,13 @@ WorldMapProvinces = {
 		SettlementName = "Shorbear Hold",
 		SettlementLocation = {33, 15},
 		SettlementBuildings = {
-			DwarvenMeadHall = 2,
-			DwarvenWarHall = 2, -- has capability to train warriors
-			DwarvenSmithy = 2 -- renowned skilled crafters
+			unit_dwarven_town_hall = 2,
+			unit_dwarven_barracks = 2, -- has capability to train warriors
+			unit_dwarven_smithy = 2 -- renowned skilled crafters
 		},
 		Map = "maps/nidavellir/shorbear-hills.smp",
 		Units = {
-			DwarvenThane = 1 -- Glonoin
+			unit_dwarven_thane = 1 -- Glonoin
 		}
 	},
 	SouthernTunnels = {
@@ -247,13 +247,13 @@ WorldMapProvinces = {
 		SettlementName = "Knalga",
 		SettlementLocation = {32, 14},
 		SettlementBuildings = {
-			DwarvenMeadHall = 2,
-			DwarvenWarHall = 2 -- has capability to train warriors
+			unit_dwarven_town_hall = 2,
+			unit_dwarven_barracks = 2 -- has capability to train warriors
 		},
 		Map = "maps/nidavellir/southern-tunnels.smp",
 		Units = {
-			DwarvenSteelclad = 3, -- Glildur, Glindur, Kalnar
-			DwarvenThane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
+			unit_dwarven_steelclad = 3, -- Glildur, Glindur, Kalnar
+			unit_dwarven_thane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
 		}
 	}
 }
@@ -361,9 +361,9 @@ GrandStrategyEvents = {
 					WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
 				end
 
 			end
@@ -372,8 +372,8 @@ GrandStrategyEvents = {
 				Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
 				Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
-				WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit + 1
-				WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad - 1
+				WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
+				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ABargainIsStruckShinsplitterClan)
 		end}
@@ -404,12 +404,12 @@ GrandStrategyEvents = {
 					WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
 				end
 			end
-			if (WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit >= 1) then -- way to check if Norlund Clan successfully transported the caravans
+			if (WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit >= 1) then -- way to check if Norlund Clan successfully transported the caravans
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.ClosingTheGates)
 			end
 		end}
@@ -434,21 +434,21 @@ GrandStrategyEvents = {
 				GrandStrategyEventMap = false
 
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
 				end
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
 				else
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
@@ -457,8 +457,8 @@ GrandStrategyEvents = {
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then
-				WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad - 1
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
+				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
 		end}
@@ -483,21 +483,21 @@ GrandStrategyEvents = {
 				GrandStrategyEventMap = false
 
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
 				end
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
 				else
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
@@ -516,10 +516,10 @@ GrandStrategyEvents = {
 			CavernsOfChaincolt = true
 		},
 		Units = {
-			GnomishRecruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
 		},
 		Heroes = {
-			Baglur = true
+			unit_hero_baglur = true
 		},
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
@@ -534,29 +534,29 @@ GrandStrategyEvents = {
 					WorldMapProvinces.NorthernWastelands.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-					WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
+					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = false
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = false
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
-				WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-				WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmithy = 0
-				WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler = WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler / 2 -- halve enemies in the northern wastelands
-				WorldMapProvinces.NorthernWastelands.Units.GoblinArcher = WorldMapProvinces.NorthernWastelands.Units.GoblinArcher / 2
-				WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
+				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = false
+				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
+				WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0
+				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
+				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
+				WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 			end
 		end}
 	},
@@ -569,12 +569,12 @@ GrandStrategyEvents = {
 			CavernsOfChaincolt = true
 		},
 		Units = {
-			GnomishRecruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
 		},
 		Heroes = {
-			Rugnur = true,
-			Baglur = true,
-			Thursagan = true
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_thursagan = true
 		},
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
@@ -589,27 +589,27 @@ GrandStrategyEvents = {
 					WorldMapProvinces.EasternMines.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(3, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = false
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				Factions.NorlundClan.Commodities["Coal"] = 20000
-				WorldMapProvinces.EasternMines.Units.GoblinImpaler = WorldMapProvinces.EasternMines.Units.GoblinImpaler
-				WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler = WorldMapProvinces.NorthernWastelands.Units.GoblinImpaler / 2 -- halve enemies in the northern wastelands
-				WorldMapProvinces.NorthernWastelands.Units.GoblinArcher = WorldMapProvinces.NorthernWastelands.Units.GoblinArcher / 2
-				WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
+				WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = WorldMapProvinces.EasternMines.Units.unit_goblin_spearman
+				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
+				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
+				WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 			end
 		end}
 	},
@@ -666,17 +666,17 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ABargainIsStruckShinsplitterClan = nil
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
-	WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit + 1
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = true
+	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
 end
 
 if (GrandStrategyYear >= 27) then
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
-	WorldMapProvinces.NorthernWastelands.Heroes.Thursagan = false
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = true
-	WorldMapProvinces.NorthernWastelands.SettlementBuildings.DwarvenSmithy = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
---	WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter = WorldMapProvinces.CavernsOfChaincolt.Units.DwarvenAxefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
-	WorldMapProvinces.CavernsOfChaincolt.Units["DwarvenGryphonRider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
+	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = false
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
+	WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+--	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
+	WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
 
 if (GrandStrategyYear >= 29) then
@@ -685,16 +685,16 @@ end
 
 if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
-	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenMeadHall = 0
-	WorldMapProvinces.ShorbearHills.SettlementBuildings.DwarvenSmithy = 0
-	WorldMapProvinces.ShorbearHills.Units.DwarvenAxefighter = 0
-	WorldMapProvinces.ShorbearHills.Units.DwarvenThane = 0
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_town_hall = 0
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_smithy = 0
+	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_axefighter = 0
+	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 0
 end
 
 if (GrandStrategyYear >= 40) then
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.Rugnur = false -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.Baglur = false
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.Thursagan = false
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = false
 end
 
 if (GrandStrategyYear >= 400) then
@@ -702,39 +702,39 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.SouthernTunnels.Owner = "Knalga"
 
 	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
-	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenMeadHall = 2
-	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenWarHall = 2
-	WorldMapProvinces.KalKartha.Units.GnomishRecruit = 0
+	WorldMapProvinces.KalKartha.SettlementBuildings.unit_dwarven_town_hall = 2
+	WorldMapProvinces.KalKartha.SettlementBuildings.unit_dwarven_barracks = 2
+	WorldMapProvinces.KalKartha.Units.unit_gnomish_recruit = 0
 
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
-	WorldMapProvinces.Lyr.SettlementBuildings.DwarvenMeadHall = 2
-	WorldMapProvinces.Lyr.SettlementBuildings.DwarvenWarHall = 2
+	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_town_hall = 2
+	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_barracks = 2
 	WorldMapProvinces.Lyr.Map = nil
 	WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
 end
 
 if (GrandStrategyYear >= 500) then
 	WorldMapProvinces.HighbrookPass.Owner = "Shinsplitter Clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
-	WorldMapProvinces.HighbrookPass.SettlementBuildings.DwarvenMeadHall = 2
-	WorldMapProvinces.HighbrookPass.Units.GoblinImpaler = 0
-	WorldMapProvinces.HighbrookPass.Units.GoblinArcher = 0
-	WorldMapProvinces.HighbrookPass.Units.DwarvenAxefighter = 6 -- six dwarven ulfserkers
-	WorldMapProvinces.HighbrookPass.Units.DwarvenThane = 1 -- Stalrag
+	WorldMapProvinces.HighbrookPass.SettlementBuildings.unit_dwarven_town_hall = 2
+	WorldMapProvinces.HighbrookPass.Units.unit_goblin_spearman = 0
+	WorldMapProvinces.HighbrookPass.Units.unit_goblin_archer = 0
+	WorldMapProvinces.HighbrookPass.Units.unit_dwarven_axefighter = 6 -- six dwarven ulfserkers
+	WorldMapProvinces.HighbrookPass.Units.unit_dwarven_thane = 1 -- Stalrag
 end
 
 if (GrandStrategyYear >= 534) then
-	WorldMapProvinces.SouthernTunnels.Units.DwarvenSteelclad = 4 -- 4 Dwarven Stalwarts
-	WorldMapProvinces.SouthernTunnels.Units.DwarvenThane = 1 -- Hamel
+	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = 4 -- 4 Dwarven Stalwarts
+	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 1 -- Hamel
 end
 
 if (GrandStrategyYear >= 535) then
-	WorldMapProvinces.HighbrookPass.SettlementBuildings.DwarvenWarHall = 2 -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
+	WorldMapProvinces.HighbrookPass.SettlementBuildings.unit_dwarven_barracks = 2 -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
 end
 
 if (GrandStrategyYear >= 550) then
-	WorldMapProvinces.KalKartha.SettlementBuildings.DwarvenSmithy = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
+	WorldMapProvinces.KalKartha.SettlementBuildings.unit_dwarven_smithy = 2 -- Karrag was already reviving the art of runesmithing in 550 AD
 
-	WorldMapProvinces.KalKartha.Units.DwarvenAxefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
-	WorldMapProvinces.KalKartha.Units.DwarvenSteelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court
-	WorldMapProvinces.KalKartha.Units.DwarvenThane = 4 -- Karrag
+	WorldMapProvinces.KalKartha.Units.unit_dwarven_axefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
+	WorldMapProvinces.KalKartha.Units.unit_dwarven_steelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court
+	WorldMapProvinces.KalKartha.Units.unit_dwarven_thane = 4 -- Karrag
 end

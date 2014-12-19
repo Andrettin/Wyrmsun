@@ -1909,11 +1909,6 @@ DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
 	}
 } )
 
--- initialize the grand strategy unit variable
-GrandStrategyUnits = {}
-GrandStrategyBuildings = {}
-GrandStrategyHeroes = {}
-
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")
 Load("scripts/germanic/units.lua")
@@ -1947,16 +1942,3 @@ DefineUnitType("unit-human-wall", { Name = _("Wall"),
 
 -- Hardcoded unit-types, moved from Stratagus to games
 UnitTypeHumanWall = UnitTypeByIdent("unit-human-wall");
-
-GrandStrategyUnits["Gryphon"] = {
-	Name = GetUnitTypeName("unit-gryphon") .. "s",
-	UnitType = "unit-gryphon",
-	Icon = "neutral/icons/gryphon.png",
-	Type = "Predator",
-	Costs = {
-	},
-	X = 0,
-	Y = 0,
-	RequiredBuildings = { },
-	InterfaceState = ""
-}

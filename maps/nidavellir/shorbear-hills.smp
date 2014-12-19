@@ -1,12 +1,8 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false or GrandStrategyEventMap) then
-	DefinePlayerTypes("person", "person", "person")
-elseif (Attacker == GrandStrategyFaction.Name) then
-	DefinePlayerTypes("person", "computer", "nobody")
-else
-	DefinePlayerTypes("computer", "person", "nobody")
-end
+DefinePlayerTypes("person", "person", "person")
 PresentMap("Shorbear Hills", 3, 84, 80, 1)
 MapWorld = "Nidavellir"
 MapRequiredQuest = "Gathering Materials"
+MapAttacker = 0
+MapDefender = 1

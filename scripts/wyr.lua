@@ -153,6 +153,21 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "red"
 	},
 	"faction", {
+		"name", "Frank Tribe",
+		"color", "cyan",
+		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Marcomanni Tribe",
+		"color", "orange",
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Suebi Tribe",
+		"color", "brown",
+		"secondary_color", "yellow"
+	},
+	"faction", {
 		"name", "Vana Tribe",
 		"color", "blue",
 		"secondary_color", "cyan"
@@ -301,7 +316,7 @@ function SetPlayerData(player, data, arg1, arg2)
 			end
 		end
 		
-		if (GrandStrategy) then
+		if (GrandStrategy and GrandStrategyFaction ~= nil) then
 			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
 				arg1 = GrandStrategyFaction.Civilization
 			end
@@ -315,7 +330,7 @@ function SetPlayerData(player, data, arg1, arg2)
 			end
 		end
 	elseif (data == "Name") then
-		if (GrandStrategy) then
+		if (GrandStrategy and GrandStrategyFaction ~= nil) then
 			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
 				arg1 = GrandStrategyFaction.Name
 			end
@@ -394,7 +409,7 @@ function SetPlayerData(player, data, arg1, arg2)
 				Load("scripts/kobold/ui.lua")
 			end
 		end
-		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle) then
+		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 				if (Players[player].Type == PlayerPerson) then
 					SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
@@ -413,14 +428,16 @@ function SetPlayerData(player, data, arg1, arg2)
 	elseif (data == "Name") then
 		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
-				for gsunit_key, gsunit_value in pairs(AttackingUnits) do
-					if (arg1 == Attacker) then
-						for i=1,AttackingUnits[gsunit_key] do
-							OldCreateUnit(GrandStrategyUnits[gsunit_key].UnitType, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-						end
-					elseif (arg1 == Defender) then
-						for i=1,AttackedProvince.Units[gsunit_key] do
-							OldCreateUnit(GrandStrategyUnits[gsunit_key].UnitType, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						if (arg1 == Attacker) then
+							for i=1,AttackingUnits[string.gsub(unitName, "-", "_")] do
+								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+							end
+						elseif (arg1 == Defender) then
+							for i=1,AttackedProvince.Units[string.gsub(unitName, "-", "_")] do
+								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+							end
 						end
 					end
 				end

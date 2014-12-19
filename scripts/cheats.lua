@@ -111,29 +111,18 @@ function HandleCheats(str)
   elseif (str == "hold off the goblin hordes") then
 	if (GrandStrategy and GrandStrategyEventMap == false) then
 		-- set the new unit quantity to the surviving units of the victorious side
-		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-			AttackingUnits[gsunit_key] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-		end
-					
-		-- upgrade units which leveled up during the battle, if a veteran unit for them is available
-		local uncount = 0
-		uncount = GetUnits(GetThisPlayer())
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Level") > GetUnitVariable(uncount[unit1], "StartingLevel")) then
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					if (GrandStrategyUnits[gsunit_key].AdvancesFrom ~= "" and GrandStrategyUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom].UnitType == GetUnitVariable(uncount[unit1], "Ident")) then
-						AttackingUnits[gsunit_key] = AttackingUnits[gsunit_key] + 1
-						AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] = AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] - 1
-					end
-				end
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", unitName)
 			end
 		end
+					
 		GrandStrategyBattle = false
 	end
     ActionVictory()
 
   elseif (str == "ragnarok") then
-	if (GrandStrategy and GrandStrategyEventMap == false) then
+	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyFaction ~= nil) then
 		local victorious_player = ""
 		if (Attacker == GrandStrategyFaction.Name) then
 			victorious_player = Defender
@@ -142,21 +131,9 @@ function HandleCheats(str)
 		end
 
 		-- set the new unit quantity to the surviving units of the victorious side
-		for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-			AttackingUnits[gsunit_key] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-		end
-					
-		-- upgrade units which leveled up during the battle, if a veteran unit for them is available
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer(victorious_player))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Level") > GetUnitVariable(uncount[unit1], "StartingLevel")) then
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					if (GrandStrategyUnits[gsunit_key].AdvancesFrom ~= "" and GrandStrategyUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom].UnitType == GetUnitVariable(uncount[unit1], "Ident")) then
-						AttackingUnits[gsunit_key] = AttackingUnits[gsunit_key] + 1
-						AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] = AttackingUnits[GrandStrategyUnits[gsunit_key].AdvancesFrom] - 1
-					end
-				end
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName)
 			end
 		end
 	end
