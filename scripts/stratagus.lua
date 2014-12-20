@@ -562,6 +562,10 @@ function StandardTriggers()
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
 										SavePreferences()
 									end
+									if (UnitHasAbility(uncount[unit1], "upgrade-sword-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery")
+										SavePreferences()
+									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad")
 										SavePreferences()
@@ -959,9 +963,9 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-germanic-warrior") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
 	elseif (unit_type == "unit-gnomish-recruit") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
 	elseif (unit_type == "unit-gnomish-herbalist") then
 		return { "upgrade-portent" }
 	elseif (unit_type == "unit-goblin-thief") then
@@ -971,7 +975,7 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	elseif (unit_type == "unit-goblin-archer") then
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-hero-greebo") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
 	else
 		return {}
 	end

@@ -106,6 +106,26 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
     "unit-hero-greebo"
   } } )
 
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery-bronze",
+  Action = "learn-ability", Value = "upgrade-sword-mastery",
+  Key = "w", Hint = "Learn S~!word Mastery (+2 damage)",
+  ForUnit = {
+    "unit-germanic-warrior",
+    "unit-gnomish-recruit",
+	"unit-hero-greebo"
+  } } )
+
+--[[
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery",
+  Action = "learn-ability", Value = "upgrade-sword-mastery",
+  Key = "w", Hint = "Learn S~!word Mastery (+2 damage)",
+  ForUnit = {
+    "unit-germanic-warrior",
+    "unit-gnomish-recruit",
+	"unit-hero-greebo"
+  } } )
+--]]
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = "~<ESC~> Cancel",

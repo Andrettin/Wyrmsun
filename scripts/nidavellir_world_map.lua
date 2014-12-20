@@ -99,7 +99,7 @@ WorldMapProvinces = {
 			unit_gnomish_recruit = 0
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
+			unit_hero_rugnur = false,
 			unit_hero_baglur = false, -- could place Baglur here, but he is important as an event trigger
 			unit_hero_thursagan = false
 		}
@@ -221,7 +221,7 @@ WorldMapProvinces = {
 			unit_goblin_archer = 13
 		},
 		Heroes = {
-			unit_hero_thursagan = true
+			unit_hero_thursagan = false
 		}
 	},
 	ShorbearHills = {
@@ -660,6 +660,11 @@ GrandStrategyEvents = {
 		end}
 	}
 }
+
+if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills and Thursagan was living in the Northern Wastelands
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = true
+end
 
 if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.StrikeABargain = nil

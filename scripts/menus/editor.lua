@@ -19,6 +19,7 @@ editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-dwarven-miner",
+   "unit-dwarven-militia",
    "unit-dwarven-axefighter",
    "unit-dwarven-steelclad",
    "unit-dwarven-thane",

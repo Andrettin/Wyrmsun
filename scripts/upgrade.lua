@@ -158,7 +158,8 @@ end
 local upgrades = {
 	{"upgrade-axe-mastery", _("Axe Mastery"), "icon-axe-mastery"},
 	{"upgrade-critical-strike", _("Critical Strike"), "icon-critical-strike"},
-	{"upgrade-portent", _("Portent"), "icon-portent"}
+	{"upgrade-portent", _("Portent"), "icon-portent"},
+	{"upgrade-sword-mastery", _("Sword Mastery"), "icon-sword-mastery"}
 }
 
 for i = 1,table.getn(upgrades) do
@@ -183,4 +184,8 @@ DefineModifier("upgrade-axe-mastery",
 
 DefineModifier("upgrade-critical-strike",
 	{"CriticalStrikeChance", 15}
+)
+
+DefineModifier("upgrade-sword-mastery",
+	{"PiercingDamage", 2}
 )

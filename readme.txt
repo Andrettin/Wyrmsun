@@ -72,6 +72,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
 - Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
 - Added crow sound (from the public domain).
+- Added the possibility to select Earth in the Grand Strategy Mode.
 
 * Quests
 - Added On the Vanaquisl quest.
@@ -99,9 +100,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Goblin Thief (unit graphics by b_o).
 - Added Gnomish Herbalist (unit graphics by b_o).
 - Scouts and archers can now attack from within towers.
-- Added Germanic Builder (unit graphics by b_o).
 - Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
 - Mechanical units now no longer display Level and XP.
+- Added Dwarven Militia (icon graphics by Jinn).
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

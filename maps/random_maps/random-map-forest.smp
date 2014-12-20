@@ -1,5 +1,9 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person","person","person","computer")
-PresentMap("Random Map (Forest)", 3, 128, 128, 1)
+if (GrandStrategy == false) then
+	PresentMap("Random Map (Forest)", 3, 128, 128, 1)
+else
+	PresentMap("Random Map (Forest)", 3, 64, 64, 1)
+end
 MapWorld = "Earth"

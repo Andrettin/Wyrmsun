@@ -225,12 +225,14 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/gryphon_rider.png
 /graphics/dwarf/icons/gryphon_rider_brown_hair.png
 /graphics/dwarf/icons/gryphon_rider_red_hair.png
-/graphics/dwarf/icons/miner.png (modified from igoku's icon)
+/graphics/dwarf/icons/militia.png
+/graphics/dwarf/icons/miner.png
+/graphics/dwarf/icons/miner_extra_1.png
 /graphics/dwarf/icons/patrol_land.png
 /graphics/dwarf/icons/return_goods.png
 /graphics/dwarf/icons/rugnur.png
 /graphics/dwarf/icons/rugnur_older.png
-/graphics/dwarf/icons/shield_1.png
+/graphics/dwarf/icons/shield_1.png (modified from igoku's icon)
 /graphics/dwarf/icons/stand_ground.png
 /graphics/dwarf/icons/thane.png
 /graphics/dwarf/icons/thane_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
@@ -437,6 +439,8 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/repair_extra_1.png
 /graphics/neutral/icons/repair_extra_2.png
 /graphics/neutral/icons/water_elemental.png
+/graphics/neutral/icons/sword_mastery.png
+/graphics/neutral/icons/sword_mastery_bronze.png
 /graphics/neutral/units/dwarven_corpse.png
 /graphics/neutral/units/gnomish_goblin_and_kobold_corpses.png
 /graphics/neutral/units/human_corpse.png

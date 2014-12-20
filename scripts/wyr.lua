@@ -153,9 +153,19 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "red"
 	},
 	"faction", {
+		"name", "Dane Tribe",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
 		"name", "Frank Tribe",
 		"color", "cyan",
 		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Goth Tribe",
+		"color", "black",
+		"secondary_color", "green"
 	},
 	"faction", {
 		"name", "Marcomanni Tribe",
@@ -163,8 +173,23 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "red"
 	},
 	"faction", {
+		"name", "Rugian Tribe",
+		"color", "red",
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Saxon Tribe",
+		"color", "orange",
+		"secondary_color", "brown"
+	},
+	"faction", {
 		"name", "Suebi Tribe",
 		"color", "brown",
+		"secondary_color", "yellow"
+	},
+	"faction", {
+		"name", "Swede Tribe",
+		"color", "blue",
 		"secondary_color", "yellow"
 	},
 	"faction", {

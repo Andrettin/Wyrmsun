@@ -70,6 +70,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-sword-mastery",
+	Size = {46, 38},
+	File = "neutral/icons/sword_mastery.png"
+})
+
+DefineIcon({
+	Name = "icon-sword-mastery-bronze",
+	Size = {46, 38},
+	File = "neutral/icons/sword_mastery_bronze.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-worker",
 	Size = {46, 38},
 	File = "germanic/icons/worker.png"
@@ -157,6 +169,12 @@ DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},
 	File = "dwarf/icons/miner.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-militia",
+	Size = {46, 38},
+	File = "dwarf/icons/militia.png"
 })
 
 DefineIcon({
