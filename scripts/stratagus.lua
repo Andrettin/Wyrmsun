@@ -499,6 +499,12 @@ function StandardTriggers()
 					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad") then
 						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
 						ConvertUnit(uncount[unit1], "unit-surghan-mercenary-thane")
+					else -- for other units, learn an ability, if any are present for learning
+						for i=1,table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) do
+							if (string.find(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i], "upgrade-") ~= nil and UnitHasAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i]) == false) then
+								AcquireAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i])
+							end
+						end
 					end
 				end
 
@@ -953,9 +959,9 @@ end
 
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter" or unit_type == "unit-hero-rugnur") then
-		return { "upgrade-dwarven-steelclad" }
+		return { "unit-dwarven-steelclad" }
 	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
-		return { "upgrade-dwarven-thane" }
+		return { "unit-dwarven-thane" }
 	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then

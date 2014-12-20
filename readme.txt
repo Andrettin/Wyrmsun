@@ -76,6 +76,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Quests
 - Added On the Vanaquisl quest.
+- The leveled-up units that appear on the player's side during quests (i.e. the gnomish envoy) now begin with an experience upgrade already chosen.
 
 * Terrain
 - Tile types can now use different images in a tileset's definition.
@@ -102,6 +103,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Scouts and archers can now attack from within towers.
 - Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
 - Mechanical units now no longer display Level and XP.
+- Added Sword Mastery learnable ability (for germanic warriors, gnomish recruits and Greebo) (graphics by Jinn).
 - Added Dwarven Militia (icon graphics by Jinn).
 
 * Upgrades

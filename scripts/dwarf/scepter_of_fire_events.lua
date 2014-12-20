@@ -226,6 +226,7 @@ AddTrigger(
 																													{function(s)
 																														unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
 																														IncreaseUnitLevel(unit, 1, true)
+																														AcquireAbility(unit, "upgrade-sword-mastery")
 																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																															OrderUnit(player, "unit-gnomish-recruit", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
@@ -1531,6 +1532,7 @@ AddTrigger(
 										if (GrandStrategy == false) then
 											unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
 											IncreaseUnitLevel(unit, 1, true)
+											AcquireAbility(unit, "upgrade-sword-mastery")
 										end
 										if (mapinfo.description == "Northern Wastelands") then
 											RemovePlayerObjective(player, "- Destroy the enemy")
@@ -3231,6 +3233,7 @@ AddTrigger(
 																															{function(s)
 																																unit = CreateUnit("unit-gnomish-recruit", 0, {6, 5}) -- gnomish envoy
 																																IncreaseUnitLevel(unit, 1, true)
+																																AcquireAbility(unit, "upgrade-sword-mastery")
 																																if (mapinfo.description == "Shorbear Hills") then
 																																	RemovePlayerObjective(player, "- Destroy the enemy")
 																																end
@@ -4601,15 +4604,19 @@ AddTrigger(
 			SetUnitVariable(unit, "CustomAIState", 2)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 1)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 2)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 2)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 2)
 			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			SetUnitVariable(unit, "CustomAIState", 3)
@@ -4621,15 +4628,19 @@ AddTrigger(
 			SetUnitVariable(unit, "CustomAIState", 3)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 4)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 4)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 4)
 			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			IncreaseUnitLevel(unit, 2, true)
+			AcquireAbility(unit, "upgrade-critical-strike")
 			SetUnitVariable(unit, "CustomAIState", 4)
 			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 			SetUnitVariable(unit, "CustomAIState", 4)
