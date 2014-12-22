@@ -77,55 +77,12 @@ local info_panel_x = 0
 local info_panel_y = 160
 
 local min_damage = Div(
-	Sub(
-		ActiveUnitVar("PiercingDamage"),
-		Sub(
-			ActiveUnitVar("PiercingDamage", "Value", "Unit"),
-			ActiveUnitVar("PiercingDamage", "Value", "Initial")
-		)
-	),
+	ActiveUnitVar("PiercingDamage"),
 	2
 )
-local max_damage = Sub(
-	Add(
-		Add(
-			ActiveUnitVar("BasicDamage"),
-			ActiveUnitVar("BasicDamageBonus")
-		),
-		ActiveUnitVar("PiercingDamage")
-	),
-	Sub(
-		ActiveUnitVar("PiercingDamage", "Value", "Unit"),
-		ActiveUnitVar("PiercingDamage", "Value", "Initial")
-	)
-)
--- takes piercing damage bonuses into account for the "+X" damage bonus on the unit's panel
-local damage_bonus = Add(
-	Sub(
-		ActiveUnitVar("PiercingDamage", "Value", "Unit"),
-		ActiveUnitVar("PiercingDamage", "Value", "Initial")
-	),
-	ActiveUnitVar("PiercingDamageBonus")
-);
---local damage_bonus = Sub(
---	ActiveUnitVar("PiercingDamage", "Value", "Type"),
---	ActiveUnitVar("PiercingDamage", "Value", "Initial")
---)
-
-local armor = Sub(
-	ActiveUnitVar("Armor"),
-	Sub(
-		ActiveUnitVar("Armor", "Value", "Type"),
-		ActiveUnitVar("Armor", "Value", "Initial")
-	)
-)
-
-local armor_bonus = Add(
-	Sub(
-		ActiveUnitVar("Armor", "Value", "Type"),
-		ActiveUnitVar("Armor", "Value", "Initial")
-	),
-	ActiveUnitVar("ArmorBonus")
+local max_damage = Add(
+	ActiveUnitVar("BasicDamage"),
+	ActiveUnitVar("PiercingDamage")
 )
 
 DefinePanelContents(
@@ -237,16 +194,38 @@ DefinePanelContents(
   DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, Build = "false"},
   Contents = {
-	{ Pos = {37, 86}, Condition = {PiercingDamage = "only"},
-		More = {"Text", {Text = Concat("Damage: ", String(min_damage), "-", String(max_damage),
-								If(Equal(0, damage_bonus), "",
-									InverseVideo(Concat("+", String(damage_bonus)))) )}}
-
+	{ Pos = {16, 102}, Condition = {PiercingDamage = "only"},
+		More = {"Text", {Text = Concat(
+			"Damage: ",
+			String(min_damage),
+			"-",
+			String(max_damage)
+		)}}
 	},
 
-	{ Pos = {47, 102}, Condition = {AttackRange = "only"},
-		More = {"Text", {
-					Text = "Range: ", Variable = "AttackRange" , Stat = true}}
+--	{ Pos = {16, 102}, Condition = {AttackRange = "only", SightRange = "false"},
+--		More = {"Text", {
+--					Text = "Range: ", Variable = "AttackRange" , Stat = true}}
+--	},
+	{ Pos = {16, 118}, Condition = {AttackRange = "only", SightRange = "false"},
+		More = {"Text", {Text = Concat(
+			"Range: ",
+			String(ActiveUnitVar("AttackRange"))
+		)}}
+	},
+	{ Pos = {16, 118}, Condition = {SightRange = "only", AttackRange = "false", Building = "false"},
+		More = {"Text", {Text = Concat(
+			"Sight: ",
+			String(ActiveUnitVar("SightRange"))
+		)}}
+	},
+	{ Pos = {16, 118}, Condition = {AttackRange = "only", SightRange = "only"},
+		More = {"Text", {Text = Concat(
+			"Range: ",
+			String(ActiveUnitVar("AttackRange")),
+			" Sight: ",
+			String(ActiveUnitVar("SightRange"))
+		)}}
 	},
 -- Research
 	{ Pos = {12, 152}, Condition = {Research = "only"},
@@ -271,7 +250,7 @@ DefinePanelContents(
 	},
 	{ Pos = {86, 150}, More = {"Text", {Variable = "Mana"}}, Condition = {Mana = "only"} },
 -- Resource Carry
-	{ Pos = {61, 149}, Condition = {CarryResource = "only"},
+	{ Pos = {16, 149}, Condition = {CarryResource = "only"},
 		More = {"FormattedText2", {Format = "Carry: %d %s", Variable = "CarryResource",
 				Component1 = "Value", Component2 = "Name"}}
 	}
@@ -285,14 +264,7 @@ DefinePanelContents(
   Condition = {ShowOpponent = true, HideNeutral = true, Building = "false", Build = "false"},
   Contents = {
 -- Unit caracteristics
-	{ Pos = {54, 71}, Condition = {ShowOpponent = false},
-		More = {"Text", {Text =
-			If(GreaterThanOrEq(ActiveUnitVar("TraitResilient"), 1), "Trait: Resilient",
-			If(GreaterThanOrEq(ActiveUnitVar("TraitStrong"), 1), "Trait: Strong",
-			""
-		))}}
 
-	},
 --	{ Pos = {114, 41},
 --		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
 --	},
@@ -302,21 +274,19 @@ DefinePanelContents(
 --	},
 	{ Pos = {114, 56}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
 		More = {"FormattedText2", {Centered = true,
-			Variable1 = "Level", Variable2 = "Xp", Format = "Lv.: ~<%d~> XP: ~<%d~>"}}
+			Variable1 = "Level", Variable2 = "Xp", Format = "Lv.: %d XP: %d"}}
 	},
-	{ Pos = {47, 71}, Condition = {Armor = "only"},
-		More = {"Text", {Text = Concat("Armor: ", String(armor),
-			If(Equal(0, armor_bonus), "",
-			InverseVideo(Concat("+", String(armor_bonus)))) 
+	{ Pos = {16, 71}, Condition = {organic = "only"},
+		More = {"Text", {Text = Concat("Trait: ", UnitTrait("Active")
 								)}}
---		More = {"Text", {
---					Text = "Armor: ", Variable = "Armor", Stat = true}}
 	},
-	{ Pos = {54, 118}, Condition = {SightRange = "only"},
-		More = {"Text", {Text = "Sight: ", Variable = "SightRange", Stat = true}}
+	{ Pos = {16, 86}, Condition = {},
+		More = {"Text", {Text = Concat("Armor: ", String(ActiveUnitVar("Armor"))
+								)}}
 	},
-	{ Pos = {53, 133}, Condition = {Speed = "only"},
-		More = {"Text", {Text = "Speed: ", Variable = "Speed", Stat = true}}
+	{ Pos = {16, 133}, Condition = {Speed = "only"},
+		More = {"FormattedText", {
+			Variable = "Speed", Format = "Speed: %d"}}
 	} } })
 
 Load("scripts/dwarf/ui.lua")

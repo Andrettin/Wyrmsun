@@ -135,10 +135,23 @@ function RunGrandStrategyGameSetupMenu()
 				if (Factions[key].Trade.Lumber == nil) then
 					Factions[key].Trade["Lumber"] = 0
 				end
+				
+				-- provinces owned by the faction, to not have to loop through the provinces each time
+				if (Factions[key].OwnedProvinces == nil) then
+					Factions[key]["OwnedProvinces"] = {}
+				end
 			end
 			
 			-- initialize province variables
 			for key, value in pairs(WorldMapProvinces) do
+				if (WorldMapProvinces[key].Owner == nil) then
+					WorldMapProvinces[key]["Owner"] = ""
+				end
+				-- set the province into its owner's owned provinces list
+				if (WorldMapProvinces[key].Owner ~= "") then
+					table.insert(GetFactionFromName(WorldMapProvinces[key].Owner).OwnedProvinces, key)
+				end
+				
 				if (WorldMapProvinces[key].Units == nil) then
 					WorldMapProvinces[key]["Units"] = {}
 				end
@@ -257,7 +270,7 @@ function RunGrandStrategyGameSetupMenu()
 
 		faction_list = {}
 		for key, value in pairsByKeys(Factions) do
-			if (GetFactionProvinceCount(Factions[key].Name) > 0 and Factions[key].Civilization ~= "gnome" and Factions[key].Civilization ~= "goblin") then -- Gnomes and goblins aren't playable yet
+			if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and Factions[key].Civilization ~= "gnome" and Factions[key].Civilization ~= "goblin") then -- Gnomes and goblins aren't playable yet
 				table.insert(faction_list, Factions[key].Name)
 			end
 		end
@@ -341,7 +354,7 @@ function EndTurn()
 
 	-- AI moves
 	for key, value in pairs(Factions) do
-		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key].Name) > 0) then
+		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key]) > 0) then
 			AIDoTurn(Factions[key])
 		end
 	end
@@ -451,18 +464,16 @@ function EndTurn()
 		if (Factions[key].Gold < 0 and Factions[key].Upkeep > Factions[key].Income.Gold) then
 			disbanding_happened = true
 			local disband_quota = Factions[key].Upkeep - Factions[key].Income.Gold
-			for province_key, province_value in pairs(WorldMapProvinces) do
-				if (WorldMapProvinces[province_key].Owner == Factions[key].Name) then
-					for i, unitName in ipairs(Units) do
-						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-							if (WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] > 0) then
-								if (disband_quota > WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)) then
-									disband_quota = disband_quota - WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
-									WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = 0
-								else
-									WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] - math.floor(disband_quota / GetUnitTypeUpkeep(unitName))
-									disband_quota = disband_quota - math.floor(disband_quota / GetUnitTypeUpkeep(unitName)) * GetUnitTypeUpkeep(unitName)
-								end
+			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						if (WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] > 0) then
+							if (disband_quota > WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)) then
+								disband_quota = disband_quota - WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
+								WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = 0
+							else
+								WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] - math.floor(disband_quota / GetUnitTypeUpkeep(unitName))
+								disband_quota = disband_quota - math.floor(disband_quota / GetUnitTypeUpkeep(unitName)) * GetUnitTypeUpkeep(unitName)
 							end
 						end
 					end
@@ -494,7 +505,7 @@ function EndTurn()
 
 	-- AI diplomacy
 	for key, value in pairs(Factions) do
-		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key].Name) > 0) then
+		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key]) > 0) then
 			AIDoDiplomacy(Factions[key])
 		end
 	end
@@ -544,7 +555,7 @@ function EndTurn()
 		end
 	end
 
-	if (GrandStrategyFaction ~= nil and GetFactionProvinceCount(GrandStrategyFaction.Name) == 0) then -- if player lost all provinces, end game
+	if (GrandStrategyFaction ~= nil and GetFactionProvinceCount(GrandStrategyFaction) == 0) then -- if player lost all provinces, end game
 		GrandStrategyMenu:stop()
 		ClearGrandStrategyVariables()
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -644,7 +655,7 @@ function AttackProvince(province, faction)
 			province.AttackingUnits[string.gsub(unitName, "-", "_")] = 0
 		end
 	end
-	if (empty_province == false and GetFactionProvinceCount(Defender) == 0) then
+	if (empty_province == false and GetFactionProvinceCount(GetFactionFromName(Defender)) == 0) then
 		local defender_faction_key = GetFactionKeyFromName(Defender)
 		for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
 			Factions[key].Diplomacy[defender_faction_key] = "Peace"
@@ -659,7 +670,11 @@ function AttackProvince(province, faction)
 end
 
 function AcquireProvince(province, faction)
+	if (province.Owner ~= "") then
+		RemoveElementFromArray(GetFactionFromName(province.Owner).OwnedProvinces, GetProvinceKeyFromName(province.Name))
+	end
 	province.Owner = faction
+	table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 	
 	-- replace existent buildings from other civilizations with buildings of own civilization
 	for i, unitName in ipairs(Units) do
@@ -854,12 +869,15 @@ function GetTileProvince(x, y)
 end
 
 function GetFactionFromName(faction)
-	for key, value in pairs(Factions) do
-		if (Factions[key].Name == faction) then
-			return Factions[key]
-		end
+	return Factions[string.gsub(faction, " ", "")]
+end
+
+function GetFactionKeyFromName(faction)
+	if (Factions[string.gsub(faction, " ", "")] ~= nil) then
+		return string.gsub(faction, " ", "")
+	else
+		return nil
 	end
-	return nil
 end
 
 function GetProvinceFromName(province_name)
@@ -871,9 +889,9 @@ function GetProvinceFromName(province_name)
 	return nil
 end
 
-function GetFactionKeyFromName(faction)
-	for key, value in pairs(Factions) do
-		if (Factions[key].Name == faction) then
+function GetProvinceKeyFromName(province_name)
+	for key, value in pairs(WorldMapProvinces) do
+		if (WorldMapProvinces[key].Name == province_name) then
 			return key
 		end
 	end
@@ -881,6 +899,10 @@ function GetFactionKeyFromName(faction)
 end
 
 function GetFactionProvinceCount(faction)
+	return table.getn(faction.OwnedProvinces)
+end
+
+function GetFactionProvinceCountPreGame(faction)
 	local province_count = 0
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].Owner == faction) then
@@ -1690,6 +1712,8 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_northeast_outer_southwest_inner"
 					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_southwest_outer_northeast_inner"
+					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_southeast_outer_northwest_inner"
 					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_west_northeast_inner_southeast_inner"
 					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) then
@@ -2543,35 +2567,33 @@ function AIDoTurn(ai_faction)
 	
 	AIConsiderOffers(ai_faction)
 
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == ai_faction.Name) then
-			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") ~= nil) then
-					if (CanResearchTechnology(WorldMapProvinces[key], unitName)) then
-	--					if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
-							ResearchTechnology(WorldMapProvinces[key], unitName)
-							break
-	--					end
-					end
+	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") ~= nil) then
+				if (CanResearchTechnology(WorldMapProvinces[key], unitName)) then
+--					if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
+						ResearchTechnology(WorldMapProvinces[key], unitName)
+						break
+--					end
 				end
 			end
+		end
 
-			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
-					if (CanBuildStructure(WorldMapProvinces[key], unitName)) then
-						if (GetUnitTypeData(unitName, "Class") == "town-hall") then
-							BuildStructure(WorldMapProvinces[key], unitName)
-							break
-						elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
-							BuildStructure(WorldMapProvinces[key], unitName)
-							break
-						elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction.Name, "lumber-mill") == 0)) then
-							BuildStructure(WorldMapProvinces[key], unitName)
-							break
-						elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
-							BuildStructure(WorldMapProvinces[key], unitName)
-							break
-						end
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
+				if (CanBuildStructure(WorldMapProvinces[key], unitName)) then
+					if (GetUnitTypeData(unitName, "Class") == "town-hall") then
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
+					elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
+					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction.Name, "lumber-mill") == 0)) then
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
+					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
 					end
 				end
 			end
@@ -2579,84 +2601,79 @@ function AIDoTurn(ai_faction)
 	end
 
 	-- conduct attacks and build military units
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == ai_faction.Name) then
-			local desired_infantry_in_province = 10
-			local desired_archers_in_province = 6
-			local desired_catapults_in_province = 1
+	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
+		local desired_infantry_in_province = 10
+		local desired_archers_in_province = 6
+		local desired_catapults_in_province = 1
 
-			local borders_foreign = false
+		local borders_foreign = false
 
-			for second_key, second_value in pairs(WorldMapProvinces) do
-				if (ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key])) then
-					if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
-						borders_foreign = true
-						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-							if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
-								WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
-								for i, unitName in ipairs(Units) do
-									if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/3rd of the province's forces as a defense
-										WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
-									end
+		for second_key, second_value in pairs(WorldMapProvinces) do
+			if (ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key])) then
+				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
+					borders_foreign = true
+					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+						if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+							WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
+							for i, unitName in ipairs(Units) do
+								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+									WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/3rd of the province's forces as a defense
+									WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
 								end
 							end
-						elseif (GetMilitaryScore(WorldMapProvinces[second_key], false) > 0) then
-							desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
-							desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
-							desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
 						end
+					elseif (GetMilitaryScore(WorldMapProvinces[second_key], false) > 0) then
+						desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
+						desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
+						desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
 					end
 				end
 			end
+		end
 
-			if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction.Name, "town-hall") < GetFactionProvinceCount(ai_faction.Name) or (ai_faction.Income.Gold - ai_faction.Upkeep) < 100) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small
-				desired_infantry_in_province = 0
-				desired_archers_in_province = 0
-				desired_catapults_in_province = 0
-			end
+		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction.Name, "town-hall") < GetFactionProvinceCount(ai_faction) or (ai_faction.Income.Gold - ai_faction.Upkeep) < 100) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small
+			desired_infantry_in_province = 0
+			desired_archers_in_province = 0
+			desired_catapults_in_province = 0
+		end
 
-			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-					if (IsUnitAvailableForTraining(WorldMapProvinces[key], unitName)) then
-						if (GetUnitTypeData(unitName, "Class") == "infantry" and desired_infantry_in_province > 0) then
-							for i=1,desired_infantry_in_province do
-								if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_infantry_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
-									TrainUnit(WorldMapProvinces[key], unitName)
-								end
-							end
-						elseif (GetUnitTypeData(unitName, "Class") == "archer" and desired_archers_in_province > 0) then
-							for i=1,desired_archers_in_province do
-								if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
-									TrainUnit(WorldMapProvinces[key], unitName)
-								end
-							end
-						elseif (GetUnitTypeData(unitName, "Class") == "siege-engine" and desired_catapults_in_province > 0) then
-							for i=1,desired_catapults_in_province do
-								if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_catapults_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
-									TrainUnit(WorldMapProvinces[key], unitName)
-								end
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				if (IsUnitAvailableForTraining(WorldMapProvinces[key], unitName)) then
+					if (GetUnitTypeData(unitName, "Class") == "infantry" and desired_infantry_in_province > 0) then
+						for i=1,desired_infantry_in_province do
+							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_infantry_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+								TrainUnit(WorldMapProvinces[key], unitName)
 							end
 						end
-
-					end
-
-					if (borders_foreign == false and WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] > 0) then -- if this province borders no foreign provinces but has units in the province, move them out
-						for second_key, second_value in pairs(WorldMapProvinces) do
-							if (WorldMapProvinces[second_key].Owner == ai_faction.Name) then
-								local second_province_borders_foreign = false
-								for third_key, third_value in pairs(WorldMapProvinces) do
-									if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name and ProvinceHasBorderWith(WorldMapProvinces[second_key], WorldMapProvinces[third_key])) then
-										second_province_borders_foreign = true
-										break
-									end
-								end
-								if (second_province_borders_foreign) then
-									WorldMapProvinces[second_key].MovingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].MovingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
-									WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
-									break
-								end
+					elseif (GetUnitTypeData(unitName, "Class") == "archer" and desired_archers_in_province > 0) then
+						for i=1,desired_archers_in_province do
+							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+								TrainUnit(WorldMapProvinces[key], unitName)
 							end
+						end
+					elseif (GetUnitTypeData(unitName, "Class") == "siege-engine" and desired_catapults_in_province > 0) then
+						for i=1,desired_catapults_in_province do
+							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_catapults_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+								TrainUnit(WorldMapProvinces[key], unitName)
+							end
+						end
+					end
+				end
+
+				if (borders_foreign == false and WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] > 0) then -- if this province borders no foreign provinces but has units in the province, move them out
+					for second_province_i, second_key in ipairs(ai_faction.OwnedProvinces) do
+						local second_province_borders_foreign = false
+						for third_key, third_value in pairs(WorldMapProvinces) do
+							if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name and ProvinceHasBorderWith(WorldMapProvinces[second_key], WorldMapProvinces[third_key])) then
+								second_province_borders_foreign = true
+								break
+							end
+						end
+						if (second_province_borders_foreign) then
+							WorldMapProvinces[second_key].MovingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].MovingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
+							WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
+							break
 						end
 					end
 				end
@@ -2676,14 +2693,12 @@ function AIDoTurn(ai_faction)
 end
 
 function AIDoDiplomacy(ai_faction)
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == ai_faction.Name) then
-			for second_key, second_value in pairs(WorldMapProvinces) do
-				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
-					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 9 / 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 225% or greater of that of the province to be attacked
-							DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
-						end
+	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
+		for second_key, second_value in pairs(WorldMapProvinces) do
+			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
+				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 9 / 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 225% or greater of that of the province to be attacked
+						DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 					end
 				end
 			end
@@ -2952,10 +2967,8 @@ end
 
 function GetFactionMilitaryScore(faction)
 	local military_score = 0
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == faction) then
-			military_score = military_score + GetMilitaryScore(WorldMapProvinces[key], false)
-		end
+	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
+		military_score = military_score + GetMilitaryScore(WorldMapProvinces[key], false)
 	end
 	return military_score
 end

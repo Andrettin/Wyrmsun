@@ -189,3 +189,48 @@ DefineModifier("upgrade-critical-strike",
 DefineModifier("upgrade-sword-mastery",
 	{"PiercingDamage", 2}
 )
+
+-- traits
+local traits = {
+	{"upgrade-dextrous", _("Dextrous")},
+	{"upgrade-perceptive", _("Perceptive")},
+	{"upgrade-resilient", _("Resilient")},
+	{"upgrade-strong", _("Strong")},
+	{"upgrade-weak", _("Weak")}
+}
+
+for i = 1,table.getn(traits) do
+	u = CUpgrade:New(traits[i][1])
+	u.Name = traits[i][2]
+	u.Icon = Icons["icon-level-up"]
+	u.Class = ""
+	u.Description = ""
+	u.Quote = ""
+	u.Background = ""
+	for j = 1,7 do
+		u.Costs[j - 1] = 0
+	end
+	u.TechnologyPointCost = 0
+	u.Ability = true
+	DefineAllow(traits[i][1], "AAAAAAAAAAAAAAAA")
+end
+
+DefineModifier("upgrade-dextrous",
+	{"PiercingDamage", 1}
+)
+
+DefineModifier("upgrade-perceptive",
+	{"SightRange", 1}
+)
+
+DefineModifier("upgrade-resilient",
+	{"HitPoints", 5}
+)
+
+DefineModifier("upgrade-strong",
+	{"BasicDamage", 1}
+)
+
+DefineModifier("upgrade-weak",
+	{"PiercingDamage", -1}
+)

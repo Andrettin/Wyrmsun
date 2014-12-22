@@ -586,8 +586,8 @@ function StandardTriggers()
 					end
 				end
 
---				if (GetUnitVariable(uncount[unit1],"Traits") < 1 and GetUnitBoolFlag(uncount[unit1], "organic")) then
---					RandomNumber = SyncRand(2)
+				if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
+					AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
 --					if (RandomNumber == 0) then
 --						if (GetUnitVariable(uncount[unit1],"TraitResilient") < 1) then
 --							SetUnitVariable(uncount[unit1], "Traits", GetUnitVariable(uncount[unit1],"Traits") + 1)
@@ -604,7 +604,7 @@ function StandardTriggers()
 --						end
 --					end
 --					UpdateUnitBonuses(uncount[unit1])
---				end
+				end
 
 				-- make certain critters retaliate if people get too near
 				-- is not working (neutral player critters don't attack no matter what)
@@ -696,8 +696,8 @@ function StandardTriggers()
 					end
 				end
 				
-				-- move gliders
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and IsUnitIdle(uncount[unit1])) then
+				-- move AI gliders
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and IsUnitIdle(uncount[unit1])) then
 					if (SyncRand(101) <= 33) then
 						local target_x = GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16
 						local target_y = GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16
@@ -970,6 +970,8 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-germanic-warrior") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
+	elseif (unit_type == "unit-germanic-archer") then
+		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-gnomish-recruit") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
 	elseif (unit_type == "unit-gnomish-herbalist") then
@@ -985,6 +987,33 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	else
 		return {}
 	end
+end
+
+function GetUnitTypeTraits(unit_type)
+	local traits = {}
+	if (string.find(unit_type, "hero") == nil) then
+		if (GetUnitTypeData(unit_type, "AttackRange") > 0) then
+			if (GetUnitTypeData(unit_type, "AttackRange") == 1) then
+				table.insert(traits, "upgrade-strong")
+			else
+				table.insert(traits, "upgrade-dextrous")
+			end
+			table.insert(traits, "upgrade-weak")
+		end
+		table.insert(traits, "upgrade-perceptive")
+		table.insert(traits, "upgrade-resilient")
+	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
+		table.insert(traits, "upgrade-perceptive") -- not the best fit for this character, should be replaced with something else perhaps?
+	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then
+		table.insert(traits, "upgrade-resilient")
+	elseif (unit_type == "unit-hero-thursagan") then
+		table.insert(traits, "upgrade-strong")
+	elseif (unit_type == "unit-hero-durstorn") then
+		table.insert(traits, "upgrade-strong") -- seems appropriate, but maybe something else for this character would be better?
+	elseif (unit_type == "unit-hero-greebo") then
+		table.insert(traits, "upgrade-strong") -- seems appropriate, but maybe something else for this character would be better?
+	end
+	return traits
 end
 
 function GetRandomCharacterName(civilization, gender, is_monarch)

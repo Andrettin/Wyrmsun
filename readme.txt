@@ -105,6 +105,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Mechanical units now no longer display Level and XP.
 - Added Sword Mastery learnable ability (for germanic warriors, gnomish recruits and Greebo) (graphics by Jinn).
 - Added Dwarven Militia (icon graphics by Jinn).
+- Added Germanic Skutan (unit graphics by b_o).
+- Organic units can now have personal traits (i.e. strong, weak, perceptive) which affect their stats.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

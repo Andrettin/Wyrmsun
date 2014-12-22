@@ -48,7 +48,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
 	"unit-germanic-worker", "unit-germanic-builder",
-    "unit-germanic-warrior",
+    "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-rat", "unit-gryphon", "unit-wyrm",
 	"dwarf-group"} } )
 
@@ -169,7 +169,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia", "unit-dwarven-scout",
 	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-    "unit-germanic-warrior",
+    "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",

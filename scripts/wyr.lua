@@ -147,10 +147,25 @@ DefineCivilizationFactions("dwarf",
 )
 
 DefineCivilizationFactions("germanic",
+--	"faction", {
+--		"name", "Alamanni Tribe",
+--		"color", "yellow",
+--		"secondary_color", "orange"
+--	},
 	"faction", {
 		"name", "Asa Tribe",
 		"color", "orange",
 		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Bavarian Tribe",
+		"color", "cyan",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Burgundian Tribe",
+		"color", "brown",
+		"secondary_color", "yellow"
 	},
 	"faction", {
 		"name", "Dane Tribe",
@@ -192,6 +207,11 @@ DefineCivilizationFactions("germanic",
 		"color", "blue",
 		"secondary_color", "yellow"
 	},
+--	"faction", {
+--		"name", "Thuringian Tribe",
+--		"color", "green",
+--		"secondary_color", "teal"
+--	},
 	"faction", {
 		"name", "Vana Tribe",
 		"color", "blue",

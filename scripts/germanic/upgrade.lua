@@ -74,7 +74,10 @@ DefineModifier("upgrade-germanic-bronze-shield",
 	{"apply-to", "unit-germanic-warrior"}
 )
 
---DefineModifier("upgrade-germanic-barbed-arrow",
---	{"PiercingDamage", 1},
---	{"apply-to", "unit-germanic-archer"}
---)
+DefineModifier("upgrade-germanic-barbed-arrow",
+	{"PiercingDamage", 1},
+	{"apply-to", "unit-germanic-archer"}
+)
+
+DefineDependency("unit-germanic-archer",
+	{"unit-germanic-carpenters-shop"})

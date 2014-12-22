@@ -46,12 +46,23 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
 	"germanic-group"
 } } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-broad-sword",
+  Action = "attack",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-broad-sword"},
+  Key = "a", Hint = _("~!Attack"),
+  ForUnit = {
+	"unit-germanic-worker", "unit-germanic-builder",
+    "unit-germanic-warrior",
+	"unit-hero-greebo",
+	"germanic-group"
+} } )
+
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
   Action = "stop",
   Key = "s", Hint = _("~!Stop"),
   ForUnit = {
 	"unit-germanic-worker", "unit-germanic-builder",
-    "unit-germanic-warrior",
+    "unit-germanic-warrior", "unit-germanic-archer",
 	"germanic-group"
 } } )
 
@@ -68,14 +79,22 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-arrow",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-goblin-archer"
+	"unit-germanic-archer", "unit-goblin-archer"
+  } } )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
+  Action = "attack",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-barbed-arrow"},
+  Key = "a", Hint = _("~!Attack"),
+  ForUnit = {
+	"unit-germanic-archer"
   } } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = _("S~!tand Ground"),
   ForUnit = {
-    "unit-germanic-warrior",
+    "unit-germanic-warrior", "unit-germanic-archer",
 	"germanic-group"
 } } )
 
@@ -142,12 +161,17 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
   Key = "e", Hint = _("Train ~!Erala"),
   ForUnit = {"unit-germanic-barracks"} } )
   
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-warrior",
+  Action = "train-unit", Value = "unit-germanic-archer",
+  Key = "s", Hint = _("Train ~!Skutan"),
+  ForUnit = {"unit-germanic-barracks"} } )
+
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
   Action = "research", Value = "upgrade-germanic-broad-sword",
   Allowed = "check-single-research",
-  Key = "s", Hint = _("Research Broad S~!word"),
+  Key = "w", Hint = _("Research Broad S~!word"),
   ForUnit = {"unit-germanic-smithy"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",

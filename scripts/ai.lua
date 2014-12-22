@@ -201,6 +201,8 @@ end
 function AiShooter()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-scout"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-germanic-archer"
 	elseif (AiGetRace() == "goblin") then
 		return "unit-goblin-archer"
 	else

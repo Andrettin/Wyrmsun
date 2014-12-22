@@ -30,7 +30,7 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-germanic-worker", "unit-germanic-warrior",
+	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",

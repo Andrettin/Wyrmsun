@@ -172,6 +172,43 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		"dead", "basic-human-voices-dead"}
 } )
 
+DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
+	Class = "archer",
+	Civilization = "germanic",
+--	Description = _("Swift and deadly, the goblin archers hone above all the art of the ambush. Wary of being caught unprepared, they carry daggers with them, should an enemy get too close."),
+	Image = {"file", "germanic/units/archer.png", "size", {72, 72}},
+	Animations = "animations-goblin-archer", Icon = "icon-germanic-warrior",
+	Costs = {"time", 70, "gold", 500, "lumber", 50},
+	TechnologyPointCost = 1,
+	Speed = 10,
+	HitPoints = 35,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {33, 33},
+	SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
+	BasicDamage = 0, PiercingDamage = 9, Missile = "missile-arrow",
+	MaxAttackRange = 4,
+	Priority = 55,
+	Points = 60,
+	Demand = 1,
+	Corpse = "unit-human-dead-body",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	AttackFromTransporter = true,
+	CanCastSpell = {"spell-dagger-attack"},
+	AutoCastActive = {"spell-dagger-attack"},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead"}
+} )
+
 DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Class = "town-hall",
 	Civilization = "germanic",
