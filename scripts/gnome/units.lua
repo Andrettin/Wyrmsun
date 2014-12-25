@@ -158,12 +158,14 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	AutoCastActive = {"spell-herbal-cure"},
 	Variations = {
 		{
-			"variation-id", "blond-hair"
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "gnome/units/gnomish_herbalist_gray_hair.png",
-			"icon", "icon-gnomish-worker-gray-hair"
+			"icon", "icon-gnomish-worker-gray-hair",
+			"upgrade-required", "upgrade-old"
 		}
 	},
 	Sounds = {

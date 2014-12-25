@@ -32,18 +32,12 @@
 --
 
 local GoblinSpearmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
-local GoblinSpearmanMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
 local GoblinSpearmanDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
     "frame 55", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-spearman", {
   Still = GoblinSpearmanStill,
-  Move = GoblinSpearmanMove,
+  Move = UnitMove,
   Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "sound spear-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
@@ -59,18 +53,12 @@ DefineAnimations("animations-goblin-spearman", {
 --
 
 local GoblinSwordsmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
-local GoblinSwordsmanMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
 local GoblinSwordsmanDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
     "frame 55", "spawn-unit unit-gold-sack 0 0 5 15", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-swordsman", {
   Still = GoblinSwordsmanStill,
-  Move = GoblinSwordsmanMove,
+  Move = UnitMove,
   Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "sound sword-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
@@ -87,7 +75,7 @@ DefineAnimations("animations-goblin-swordsman", {
 
 DefineAnimations("animations-goblin-thief", {
   Still = GoblinSwordsmanStill,
-  Move = GoblinSwordsmanMove,
+  Move = UnitMove,
   Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "sound dagger-attack", "wait 5", "frame 0", "wait 10",
     "frame 0", "unbreakable end", "wait 1",},
@@ -105,18 +93,12 @@ DefineAnimations("animations-goblin-thief", {
 local GoblinArcherStill  = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
 	"label taunt", "frame 70", "wait 6", "frame 75", "wait 6", "frame 70", "wait 6", "frame 75", "wait 6", "frame 70", "wait 6", "frame 75", "wait 6", "frame 0",
 	"label no-rotate", "wait 1",}
-local GoblinArcherMove = {"unbreakable begin","frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-	"frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",}
 local GoblinArcherDeath = {"unbreakable begin", "frame 55", "wait 3", "frame 60", "wait 3", "frame 65", "wait 100",
 	"frame 65", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-archer", {
 	Still = GoblinArcherStill,
-	Move = GoblinArcherMove,
+	Move = UnitMove,
 	Attack = {"unbreakable begin", "frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
 		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50", "unbreakable end", "wait 1",},
 	Death = GoblinArcherDeath,

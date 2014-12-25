@@ -194,7 +194,10 @@ DefineModifier("upgrade-sword-mastery",
 local traits = {
 	{"upgrade-dextrous", _("Dextrous")},
 	{"upgrade-keen", _("Keen")},
+	{"upgrade-old", _("Old")},
+	{"upgrade-quick", _("Quick")},
 	{"upgrade-resilient", _("Resilient")},
+	{"upgrade-slow", _("Slow")},
 	{"upgrade-strong", _("Strong")},
 	{"upgrade-weak", _("Weak")}
 }
@@ -223,8 +226,21 @@ DefineModifier("upgrade-keen",
 	{"SightRange", 1}
 )
 
+DefineModifier("upgrade-old",
+	{"SightRange", -1},
+	{"Speed", -1}
+)
+
+DefineModifier("upgrade-quick",
+	{"Speed", 1}
+)
+
 DefineModifier("upgrade-resilient",
 	{"HitPoints", 5}
+)
+
+DefineModifier("upgrade-slow",
+	{"Speed", -1}
 )
 
 DefineModifier("upgrade-strong",

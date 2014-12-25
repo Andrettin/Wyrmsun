@@ -147,31 +147,37 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	SelectableByRectangle = true,
 	Variations = {
 		{
-			"variation-id", "red-hair"
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
-			"icon", "icon-dwarven-axefighter-gray-hair"
+			"icon", "icon-dwarven-axefighter-gray-hair",
+			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_axefighter_orange_hair.png"
+			"file", "dwarf/units/dwarven_axefighter_orange_hair.png",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
-			"icon", "icon-dwarven-axefighter-blond-hair"
+			"icon", "icon-dwarven-axefighter-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "black-hair",
 			"file", "dwarf/units/dwarven_axefighter_black_hair.png",
-			"icon", "icon-dwarven-axefighter-black-hair"
+			"icon", "icon-dwarven-axefighter-black-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
-			"icon", "icon-dwarven-axefighter-brown-hair"
+			"icon", "icon-dwarven-axefighter-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
 		}
 	},
 	Sounds = {
@@ -210,71 +216,83 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
 			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "orange-hair",
 			"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
 			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "black-hair",
 			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
 			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
 			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		-- Great Axe
 		{
 			"variation-id", "red-hair",
 			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "orange-hair",
 			"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "black-hair",
 			"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"upgrade-forbidden", "upgrade-old"
 		}
 	},
 	Sounds = {
@@ -316,31 +334,37 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Thane"),
 	CanCastSpell = {"spell-axe-twirl"},
 	Variations = {
 		{
-			"variation-id", "red-hair"
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/thane_gray_hair.png",
-			"icon", "icon-dwarven-thane-gray-hair"
+			"icon", "icon-dwarven-thane-gray-hair",
+			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "orange-hair",
-			"file", "dwarf/units/thane_orange_hair.png"
+			"file", "dwarf/units/thane_orange_hair.png",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "dwarf/units/thane_blond_hair.png",
-			"icon", "icon-dwarven-thane-blond-hair"
+			"icon", "icon-dwarven-thane-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "black-hair",
 			"file", "dwarf/units/thane_black_hair.png",
-			"icon", "icon-dwarven-thane-black-hair"
+			"icon", "icon-dwarven-thane-black-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
 			"file", "dwarf/units/thane_brown_hair.png",
-			"icon", "icon-dwarven-thane-brown-hair"
+			"icon", "icon-dwarven-thane-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
 		}
 	},
 	Sounds = {
@@ -381,31 +405,37 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	AttackFromTransporter = true,
 	Variations = {
 		{
-			"variation-id", "orange-hair-short-beard"
+			"variation-id", "orange-hair-short-beard",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "orange-hair-braided-beard",
-			"icon", "icon-dwarven-scout-braided-beard"
+			"icon", "icon-dwarven-scout-braided-beard",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair-short-beard",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
-			"icon", "icon-dwarven-scout-blond-hair"
+			"icon", "icon-dwarven-scout-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair-braided-beard",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
-			"icon", "icon-dwarven-scout-blond-hair-braided-beard"
+			"icon", "icon-dwarven-scout-blond-hair-braided-beard",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair-short-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-scout-gray-hair"
+			"icon", "icon-dwarven-scout-gray-hair",
+			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair-braided-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-scout-gray-hair-braided-beard"
+			"icon", "icon-dwarven-scout-gray-hair-braided-beard",
+			"upgrade-required", "upgrade-old"
 		}
 	},
 	Sounds = {

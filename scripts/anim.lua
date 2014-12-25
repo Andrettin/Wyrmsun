@@ -29,6 +29,56 @@
 --
 
 UnitStill = {"frame 0", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
+UnitMove = {"unbreakable begin", 
+	"if-var v.Speed.Value <= 8 speed_8",
+	"if-var v.Speed.Value == 9 speed_9",
+	"if-var v.Speed.Value == 10 speed_10",
+	"if-var v.Speed.Value == 11 speed_11",
+	"if-var v.Speed.Value >= 12 speed_12",
+	"label speed_7", -- 16 / (7 / 10) = c. 22 waits
+	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 2",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
+    "frame 10", "move 3", "wait 2", "frame 0", "move 2", "wait 1",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 2",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 2",
+    "frame 20", "move 3", "wait 2", "frame 0", "move 2", "goto end",
+	"label speed_8", -- 16 / (8 / 10) = 20 waits
+	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
+    "frame 10", "move 3", "wait 2", "frame 0", "move 2", "wait 1",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 2",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 2", "frame 0", "move 2", "goto end",
+	"label speed_9", -- 16 / (9 / 10) = c. 18 waits
+	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 2", "frame 0", "move 2", "wait 1",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 2", "frame 0", "move 2", "goto end",
+	"label speed_10", -- 16 waits (this is the reference speed for other ones)
+	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "goto end",
+	"label speed_11", -- 16 / (11 / 10) = c. 14 waits
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
+	"frame 0", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "goto end",
+	"label speed_12", -- 16 / (12 / 10) = c. 13 waits
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
+	"frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 20", "move 2", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "goto end",
+	"label end", "unbreakable end", "wait 1",
+}
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
 
 Load("scripts/dwarf/anim.lua")

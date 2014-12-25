@@ -33,12 +33,7 @@
 
 DefineAnimations("animations-dwarven-miner", {
   Still = UnitStill,
-  Move = {"unbreakable begin", "frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",},
+  Move = UnitMove,
 --  Move = {"unbreakable begin", "frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1", -- miner after movement speed boosting upgrade
 --    "frame 5", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
 --    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
@@ -62,21 +57,13 @@ DefineAnimations("animations-dwarven-miner", {
 -- Dwarven Axefighter
 --
 
-local AxefighterMove = {"unbreakable begin",
-	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
-	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-	"frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
-	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-	"frame 20", "move 3", "wait 1", "frame 0", "move 2",
-	"unbreakable end", "wait 1",}
 local AxefighterDeath = {"unbreakable begin",
 	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
 	"unbreakable end", "wait 1",}
 
 DefineAnimations("animations-dwarven-axefighter", {
   Still = UnitStill,
-  Move = AxefighterMove,
+  Move = UnitMove,
   Attack = {"unbreakable begin",
   	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
   	"frame 40", "attack", "sound axe-attack", "wait 5", "frame 0", "wait 10", "frame 0",
@@ -105,14 +92,7 @@ local ScoutDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait
 
 DefineAnimations("animations-dwarven-scout", {
   Still = UnitStill,
-  Move = {"unbreakable begin",
-	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
-	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
-	"frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
-	"frame 0", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
-	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
-	"frame 20", "move 3", "wait 1", "frame 0", "move 2",
-	"unbreakable end", "wait 1",},
+  Move = UnitMove,
   Attack = {"unbreakable begin", 
 	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
 	"frame 40", "attack", "sound throwing-axe", "wait 12",

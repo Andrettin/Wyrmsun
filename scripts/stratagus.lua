@@ -983,7 +983,10 @@ function GetUnitTypeTraits(unit_type)
 			table.insert(traits, "upgrade-weak")
 		end
 		table.insert(traits, "upgrade-keen")
+		table.insert(traits, "upgrade-old")
+		table.insert(traits, "upgrade-quick")
 		table.insert(traits, "upgrade-resilient")
+		table.insert(traits, "upgrade-slow")
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
 		table.insert(traits, "upgrade-keen") -- not the best fit for this character, should be replaced with something else perhaps?
 	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then
