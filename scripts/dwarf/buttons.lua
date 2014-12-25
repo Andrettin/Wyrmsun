@@ -50,7 +50,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-rat", "unit-gryphon", "unit-wyrm",
-	"dwarf-group"} } )
+	"dwarf-group", "germanic-group"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
   Action = "stop",

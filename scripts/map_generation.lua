@@ -2871,7 +2871,7 @@ function ReplaceTiles(x1, y1, x2, y2, from, to)
 	end
 end
 
-function GenerateTown(layout, town_player, invader_player, town_buildings, town_units, invader_base, invader_units, tree_quantity, rock_generation)
+function GenerateTown(layout, town_player, town_player_civilization, town_player_faction, invader_player, invader_player_civilization, invader_player_faction, town_buildings, town_units, invader_base, invader_units, tree_quantity, rock_generation)
 	CleanRawTiles()
 
 	local RandomNumber = 0
@@ -2929,6 +2929,12 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, town_
 		if (t == 6) then -- town center
 			local town_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
 			SetStartView(town_player, town_player_starting_point[1], town_player_starting_point[2])
+			if (town_player_civilization ~= nil) then
+				SetPlayerData(town_player, "RaceName", town_player_civilization)
+			end
+			if (town_player_faction ~= nil) then
+				SetPlayerData(town_player, "Faction", town_player_faction)
+			end
 			for sub_x=-1,4 do
 				for sub_y=-1,4 do
 					SetRawTile(town_player_starting_point[1] + sub_x, town_player_starting_point[2] + sub_y, "Road")
@@ -2948,6 +2954,12 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, town_
 		elseif (t == 25) then -- invader's base
 			local invader_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
 			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
+			if (invader_player_civilization ~= nil) then
+				SetPlayerData(invader_player, "RaceName", invader_player_civilization)
+			end
+			if (invader_player_faction ~= nil) then
+				SetPlayerData(invader_player, "Faction", invader_player_faction)
+			end
 			if (invader_base) then
 				for sub_x=-1,4 do
 					for sub_y=-1,4 do
@@ -2999,28 +3011,30 @@ function GenerateTown(layout, town_player, invader_player, town_buildings, town_
 	ApplyRawTiles()
 	CleanRawTiles()
 	
-	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-	
-	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+	if (GrandStrategy == false) then
+		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		
+		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
 
-	for i=1,table.getn(town_units) do
-		unit = CreateUnit(town_units[i], town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-	end
+		for i=1,table.getn(town_units) do
+			unit = CreateUnit(town_units[i], town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
+		end
 
-	if (invader_base) then
-		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
-	end
+		if (invader_base) then
+			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		end
 
-	for i=1,table.getn(invader_units) do
-		unit = CreateUnit(invader_units[i], invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		for i=1,table.getn(invader_units) do
+			unit = CreateUnit(invader_units[i], invader_player, {Players[invader_player].StartPos.x, Players[invader_player].StartPos.y})
+		end
 	end
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

@@ -30,7 +30,7 @@
 Quests = {
 	OnTheVanaquisl = {
 		Name = "On the Vanaquisl",
-		Icon = "germanic/icons/short_sword", -- should be an Erala instead
+		Icon = "germanic/icons/warrior",
 		Description = "Having assembled a great army, we are to attack the people of Vanaland and take their lands into our possession.\n\nMap: Tanais\n\nRewards: 2 Germanic Technology Points, Jutland Map.",
 		Civilization = "germanic",
 		TechnologyPoints = 2,

@@ -138,8 +138,8 @@ DefineSpell("spell-equip-axe-of-perun",
 	"range", 0,
 	"target", "self",
 	"action", {
-		{"adjust-variable", {AxeOfPerun = {Value = 2}}},
-		{"adjust-variable", {PiercingDamageBonus = {AddValue = 2}}}
+		{"adjust-variable", {AxeOfPerun = {Value = 2}}}
+--		{"adjust-variable", {PiercingDamageBonus = {AddValue = 2}}}
 	},
 	"condition", {
 		"AxeOfPerun", {MinValue = 0, MaxValue = 2}

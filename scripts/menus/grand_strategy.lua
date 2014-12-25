@@ -57,7 +57,7 @@ function RunGrandStrategyGameSetupMenu()
 
 	local world_list = {"Earth", "Nidavellir"}
 	local world
-	local date_list = {"2800 BC", "25 AD", "40 AD", "550 AD"}
+	local date_list = {"3000 BC", "25 AD", "40 AD", "550 AD"} -- 3000 BC: begin of the last wave of Indo-European migrations, which lasted until 2800 BC
 	local date
 	local faction
 	local faction_list = {}
@@ -1714,6 +1714,8 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_southwest_outer_northeast_inner"
 					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_southeast_outer_northwest_inner"
+					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_north_southwest_inner_southeast_inner"
 					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_west_northeast_inner_southeast_inner"
 					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) then
@@ -2900,6 +2902,7 @@ function ClearGrandStrategyVariables()
 	GrandStrategyBattle = false	
 	WorldMapOffsetX = nil
 	WorldMapOffsetY = nil
+	GrandStrategyWorld = nil
 	GrandStrategyYear = nil
 	GrandStrategyFaction = nil
 	GrandStrategyHero = nil
@@ -2908,6 +2911,7 @@ function ClearGrandStrategyVariables()
 	Defender = nil
 	Factions = nil
 	WorldMapProvinces = nil
+	WorldMapWaterProvinces = nil
 	SelectedUnits = nil
 	SelectedProvince = nil
 	AttackingUnits = nil
@@ -2917,6 +2921,8 @@ function ClearGrandStrategyVariables()
 	GrandStrategyCommodities = nil
 	GrandStrategyEvents = nil
 	EventFaction = nil
+	WorldMapTiles = nil
+	WorldMapResources = nil
 
 	OnScreenTiles = nil
 	OnScreenSites = nil

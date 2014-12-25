@@ -193,7 +193,7 @@ DefineModifier("upgrade-sword-mastery",
 -- traits
 local traits = {
 	{"upgrade-dextrous", _("Dextrous")},
-	{"upgrade-perceptive", _("Perceptive")},
+	{"upgrade-keen", _("Keen")},
 	{"upgrade-resilient", _("Resilient")},
 	{"upgrade-strong", _("Strong")},
 	{"upgrade-weak", _("Weak")}
@@ -219,7 +219,7 @@ DefineModifier("upgrade-dextrous",
 	{"PiercingDamage", 1}
 )
 
-DefineModifier("upgrade-perceptive",
+DefineModifier("upgrade-keen",
 	{"SightRange", 1}
 )
 

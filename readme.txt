@@ -106,7 +106,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Sword Mastery learnable ability (for germanic warriors, gnomish recruits and Greebo) (graphics by Jinn).
 - Added Dwarven Militia (icon graphics by Jinn).
 - Added Germanic Skutan (unit graphics by b_o).
-- Organic units can now have personal traits (i.e. strong, weak, perceptive) which affect their stats.
+- Organic units can now have personal traits (i.e. strong, weak, keen) which affect their stats.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

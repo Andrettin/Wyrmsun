@@ -260,9 +260,6 @@ SetAllPlayersTotalUnitLimit(400)
 
 DefineVariables(
 --	"CharacterName", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"Traits", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"TraitResilient", {Max = 1, Value = 0, Increase = 0, Enable = true},
-	"TraitStrong", {Max = 1, Value = 0, Increase = 0, Enable = true},
 	"Level", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"BasePoints", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
@@ -271,9 +268,6 @@ DefineVariables(
 	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"BasicDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"PiercingDamageBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"ArmorBonus", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
@@ -416,6 +410,9 @@ function SinglePlayerTriggers()
 		end
 		if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
 			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
+		end
+		if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
+			AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
 		end
 	end
 	
@@ -588,22 +585,6 @@ function StandardTriggers()
 
 				if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
 					AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
---					if (RandomNumber == 0) then
---						if (GetUnitVariable(uncount[unit1],"TraitResilient") < 1) then
---							SetUnitVariable(uncount[unit1], "Traits", GetUnitVariable(uncount[unit1],"Traits") + 1)
---							SetUnitVariable(uncount[unit1], "TraitResilient", 1)
---							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + 4, "Max")
---							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max"))
---						end
---					elseif (RandomNumber == 1) then
---						if (GetUnitVariable(uncount[unit1],"TraitStrong") < 1) then
---							SetUnitVariable(uncount[unit1], "Traits", GetUnitVariable(uncount[unit1],"Traits") + 1)
---							SetUnitVariable(uncount[unit1], "TraitStrong", 1)
---							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + 1, "Max")
---							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max"))
---						end
---					end
---					UpdateUnitBonuses(uncount[unit1])
 				end
 
 				-- make certain critters retaliate if people get too near
@@ -995,15 +976,16 @@ function GetUnitTypeTraits(unit_type)
 		if (GetUnitTypeData(unit_type, "AttackRange") > 0) then
 			if (GetUnitTypeData(unit_type, "AttackRange") == 1) then
 				table.insert(traits, "upgrade-strong")
-			else
+			end
+			if (GetUnitTypeData(unit_type, "AttackRange") > 1 or unit_type == "unit-gnomish-recruit") then -- ranged units and ones using thrusting swords can get the dextrous trait
 				table.insert(traits, "upgrade-dextrous")
 			end
 			table.insert(traits, "upgrade-weak")
 		end
-		table.insert(traits, "upgrade-perceptive")
+		table.insert(traits, "upgrade-keen")
 		table.insert(traits, "upgrade-resilient")
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
-		table.insert(traits, "upgrade-perceptive") -- not the best fit for this character, should be replaced with something else perhaps?
+		table.insert(traits, "upgrade-keen") -- not the best fit for this character, should be replaced with something else perhaps?
 	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then
 		table.insert(traits, "upgrade-resilient")
 	elseif (unit_type == "unit-hero-thursagan") then
@@ -1115,12 +1097,8 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
 				end
 			end
-			if (GetUnitVariable(unit, "TraitResilient") > 0) then
-				SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 1, "Max")
-			end
 			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
 			level_number = level_number - 1
-			UpdateUnitBonuses(unit)
 		end
 
 		-- save the levels of heroes in a persistent manner
@@ -1135,26 +1113,6 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 			end
 		end
 	end
-end
-
-function UpdateUnitBonuses(unit)
-	local basic_damage_bonus = 0
-	local piercing_damage_bonus = 0
-	local armor_bonus = 0
-	if (GetUnitVariable(unit, "TraitStrong") > 0) then
---		basic_damage_bonus = basic_damage_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
---		armor_bonus = armor_bonus + (1 * (GetUnitVariable(unit, "Level") - 1))
-		if (GetUnitVariable(unit, "AttackRange") == 1) then
-			piercing_damage_bonus = piercing_damage_bonus + 1
-		end
-	end
-	-- bonuses from equipment
-	if (GetUnitVariable(unit, "AxeOfPerun") >= 2) then
-		piercing_damage_bonus = piercing_damage_bonus + 2
-	end
-	SetUnitVariable(unit, "BasicDamageBonus", basic_damage_bonus)
-	SetUnitVariable(unit, "PiercingDamageBonus", piercing_damage_bonus)
-	SetUnitVariable(unit, "ArmorBonus", armor_bonus)
 end
 
 function AddPlayerObjective(player, objective)
@@ -1385,7 +1343,6 @@ local defaultPreferences = {
 	TechnologyAcquired = {},
 	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",
-	TheScepterOfFireRaiderFaction = "",
 	Heroes = {
 		Rugnur = {
 			name = "Rugnur",
@@ -1452,83 +1409,6 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 Preference.ShowOrders = wyr.preferences.ShowOrders
 Preference.ShowMessages = wyr.preferences.ShowMessages
-
--- New Damage Formula (takes level into account)
-SetDamageFormula(
-	Div(
-		Mul(
-			Div(
-				Mul(
-					Add(
-						51,
-						Rand(50)
-					),
-					Add(
-						Max(
-							0,
-							Sub(
-								Div(
-									Mul(
-										Add(
-											AttackerVar("BasicDamage"),
-											AttackerVar("BasicDamageBonus")
-										),
-										Add(
-											100,
-											Mul(
-												100,
-												GreaterThan(
-													AttackerVar("Bloodlust"),
-													0
-												)
-											)
-										)
-									),
-									100
-								),
-								Add(
-									DefenderVar("Armor"),
-									DefenderVar("ArmorBonus")
-								)
-							)
-						),
-						Div(
-							Mul(
-								Add(
-									AttackerVar("PiercingDamage"),
-									AttackerVar("PiercingDamageBonus")
-								),
-								Add(
-									100,
-									Mul(
-										100,
-										GreaterThan(
-											AttackerVar("Bloodlust"),
-											0
-										)
-									)
-								)
-							),
-							100
-						)
-					)
-				),
-				100
-			),
-			Add(
-				100,
-				Mul(
-					100,
-					LessThan(
-						Rand(100),
-						AttackerVar("CriticalStrikeChance")
-					)
-				)
-			)
-		),
-		100
-	)
-)
 
 --- Uses Stratagus Library path!
 Load("scripts/wyr.lua")

@@ -3,3 +3,5 @@
 DefinePlayerTypes("person","person")
 PresentMap("Tanais", 2, 128, 96, 1)
 MapWorld = "Earth"
+MapAttacker = 0
+MapDefender = 1

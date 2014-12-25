@@ -44,7 +44,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"We have assembled a great army to take upon those who live on the Vanaquisl, the people of Vanaland. Their territory shall be taken into our possession, providing our people with the lands we much need to prosper. Onward to victory!",
+			"We have assembled a great army to attack those who live on the Vanaquisl, the people of Vanaland. Their territory shall be taken into our possession, providing our people with the lands we much need to prosper. Onward to victory!",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -70,7 +70,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"We have ravaged Vanaland, but victory has not fallen within our grasp. A number of Vanaland's warriors still loomed at large, reorganizing themselves for an attack on us, and our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
+			"We ravaged Vanaland and pillaged its wealth, but victory did not fall within our grasp. A number of Vanaland's warriors still loomed at large, and reorganized themselves for an attack on us: our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -81,12 +81,16 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 					if (player == GetThisPlayer()) then
-	--					if (GrandStrategy == false) then
-	--						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
-	--							table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
-	--						end
-	--						SavePreferences()
-	--					end
+						if (GrandStrategy == false) then
+							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
+								table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
+							end
+							SavePreferences()
+--							NextMap = "maps/earth/jutland.smp"
+						else
+							Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
+							WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
+						end
 						ActionVictory()
 					end
 				end}
