@@ -1,8 +1,11 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("nobody", "computer", "nobody", "nobody", "person")
+DefinePlayerTypes("nobody", "person", "nobody", "nobody", "person")
 PresentMap("Jutland", 2, 50, 96, 1)
 MapWorld = "Earth"
-MapRequiredQuest = "On the Vanaquisl"
+MapRequiredQuest = "Westward Migration"
+MapPersonPlayer = 4
+MapAttacker = 4
+MapDefender = 1
 
 -- Based on map by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv

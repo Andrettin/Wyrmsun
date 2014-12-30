@@ -131,16 +131,19 @@ DefineRaceNames(
 DefineCivilizationFactions("dwarf",
 	"faction", {
 		"name", "Norlund Clan",
+		"type", "tribe",
 		"color", "red",
 		"secondary_color", "orange"
 	},
 	"faction", {
 		"name", "Shinsplitter Clan",
+		"type", "tribe",
 		"color", "green",
 		"secondary_color", "teal"
 	},
 	"faction", {
 		"name", "Shorbear Clan",
+		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "cyan"
 	}
@@ -149,79 +152,160 @@ DefineCivilizationFactions("dwarf",
 DefineCivilizationFactions("germanic",
 --	"faction", {
 --		"name", "Alamanni Tribe",
---		"color", "yellow",
---		"secondary_color", "orange"
+--		"type", "tribe",
+--		"color", "blue",
+--		"secondary_color", "blue"
 --	},
 	"faction", {
 		"name", "Asa Tribe",
+		"type", "tribe",
 		"color", "orange",
 		"secondary_color", "red"
 	},
 	"faction", {
 		"name", "Bavarian Tribe",
+		"type", "tribe",
 		"color", "cyan",
 		"secondary_color", "white"
 	},
 	"faction", {
 		"name", "Burgundian Tribe",
+		"type", "tribe",
 		"color", "brown",
-		"secondary_color", "yellow"
+		"secondary_color", "brown"
 	},
 	"faction", {
 		"name", "Dane Tribe",
+		"type", "tribe",
 		"color", "red",
 		"secondary_color", "white"
 	},
 	"faction", {
 		"name", "Frank Tribe",
-		"color", "cyan",
-		"secondary_color", "blue"
+		"type", "tribe",
+		"color", "green",
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Frisian Tribe",
+		"type", "tribe",
+		"color", "violet", -- change to a better one?
+		"secondary_color", "purple"
 	},
 	"faction", {
 		"name", "Goth Tribe",
-		"color", "black",
-		"secondary_color", "green"
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "red"
 	},
 	"faction", {
 		"name", "Marcomanni Tribe",
-		"color", "orange",
+		"type", "tribe",
+		"color", "orange", -- change to a better one?
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Ostrogoth Tribe",
+		"type", "tribe",
+		"color", "red",
 		"secondary_color", "red"
 	},
 	"faction", {
 		"name", "Rugian Tribe",
-		"color", "red",
+		"type", "tribe",
+		"color", "red", -- change to a better one?
 		"secondary_color", "orange"
 	},
 	"faction", {
 		"name", "Saxon Tribe",
-		"color", "orange",
-		"secondary_color", "brown"
+		"type", "tribe",
+		"color", "pink",
+		"secondary_color", "pink"
 	},
 	"faction", {
 		"name", "Suebi Tribe",
-		"color", "brown",
-		"secondary_color", "yellow"
+		"type", "tribe",
+		"color", "black",
+		"secondary_color", "black"
 	},
 	"faction", {
 		"name", "Swede Tribe",
+		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "yellow"
 	},
 --	"faction", {
 --		"name", "Thuringian Tribe",
---		"color", "green",
---		"secondary_color", "teal"
+--		"type", "tribe",
+--		"color", "yellow",
+--		"secondary_color", "yellow"
 --	},
 	"faction", {
 		"name", "Vana Tribe",
+		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "cyan"
+	},
+	"faction", {
+		"name", "Vandal Tribe",
+		"type", "tribe",
+		"color", "cyan",
+		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Visigoth Tribe",
+		"type", "tribe",
+		"color", "pink",
+		"secondary_color", "pink"
+	},
+	"faction", {
+		"name", "Bavaria",
+		"type", "polity",
+		"color", "cyan",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Burgundy",
+		"type", "polity",
+		"color", "brown",
+		"secondary_color", "brown"
+	},
+	"faction", {
+		"name", "Denmark",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Francia",
+		"type", "polity",
+		"color", "green",
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Galicia", -- Suebi kingdom of Galicia
+		"type", "polity",
+		"color", "black",
+		"secondary_color", "black"
+	},
+	"faction", {
+		"name", "Saxony",
+		"type", "polity",
+		"color", "pink",
+		"secondary_color", "pink"
+	},
+	"faction", {
+		"name", "Sweden",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "yellow"
 	}
 )
 
 DefineCivilizationFactions("gnome",
 	"faction", {
 		"name", "Untersberg",
+		"type", "tribe", -- should be polity
 		"color", "blue",
 		"secondary_color", "purple"
 	}
@@ -230,6 +314,7 @@ DefineCivilizationFactions("gnome",
 DefineCivilizationFactions("goblin",
 	"faction", {
 		"name", "Goblins",
+		"type", "tribe",
 		"color", "teal",
 		"secondary_color", "green"
 	}
@@ -238,6 +323,7 @@ DefineCivilizationFactions("goblin",
 DefineCivilizationFactions("kobold",
 	"faction", {
 		"name", "Kobolds",
+		"type", "tribe",
 		"color", "violet",
 		"secondary_color", "purple"
 	}
@@ -245,18 +331,6 @@ DefineCivilizationFactions("kobold",
 
 if (OldCreateUnit == nil) then
 	OldCreateUnit = CreateUnit
-
-	local t = {
---		{"unit-critter", "unit-slime"}
-	}
-
-	ForestEquivalent = {}
-	SwampEquivalent = {}
-
-	for i=1,table.getn(t) do
-		ForestEquivalent[t[i][2]] = t[i][1]
-		SwampEquivalent[t[i][1]] = t[i][2]
-	end
 end
 
 function GetCivilizationClassUnitType(class, civilization)
@@ -286,17 +360,7 @@ function ConvertUnitType(unittype, civilization, terrain)
 		return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization)
 	end
 
-	if (terrain == "forest" and ForestEquivalent[unittype] ~= nil) then
-		equiv = ForestEquivalent[unittype]
-	elseif (terrain == "swamp" and SwampEquivalent[unittype] ~= nil) then
-		equiv = SwampEquivalent[unittype]
-	end
-
-	if (equiv ~= nil) then
-		return equiv
-	else
-		return unittype
-	end
+	return unittype
 end
 
 -- Convert unit type to the player's race

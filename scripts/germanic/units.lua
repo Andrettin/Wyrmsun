@@ -155,13 +155,57 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	SelectableByRectangle = true,
 	Variations = {
 		{
-			"variation-id", "blond",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "blond",
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
 			"file", "germanic/units/warrior_bronze_shield.png",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
 		}
 	},
 	Sounds = {

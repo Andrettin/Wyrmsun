@@ -199,6 +199,7 @@ local traits = {
 	{"upgrade-resilient", _("Resilient")},
 	{"upgrade-slow", _("Slow")},
 	{"upgrade-strong", _("Strong")},
+	{"upgrade-vicious", _("Vicious")},
 	{"upgrade-weak", _("Weak")}
 }
 
@@ -245,6 +246,10 @@ DefineModifier("upgrade-slow",
 
 DefineModifier("upgrade-strong",
 	{"BasicDamage", 1}
+)
+
+DefineModifier("upgrade-vicious",
+	{"BasicDamage", 2}
 )
 
 DefineModifier("upgrade-weak",

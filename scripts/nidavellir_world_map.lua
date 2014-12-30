@@ -271,9 +271,7 @@ Factions = {
 	Untersberg = {
 		Name = "Untersberg",
 		Civilization = "gnome",
-		Type = "Polity",
 		Title = "Kingdom",
-		Color = "blue",
 		Gold = 7500,
 		Commodities = {
 			Lumber = 3750 -- half of the gold value
@@ -283,8 +281,6 @@ Factions = {
 	NorlundClan = {
 		Name = "Norlund Clan",
 		Civilization = "dwarf",
-		Type = "Tribe",
-		Color = "orange",
 		Gold = 3000,
 		Commodities = {
 			Lumber = 1500 -- half of the gold value
@@ -293,8 +289,6 @@ Factions = {
 	ShinsplitterClan = {
 		Name = "Shinsplitter Clan",
 		Civilization = "dwarf",
-		Type = "Tribe",
-		Color = "green",
 		Gold = 7500,
 		Commodities = {
 			Lumber = 3750 -- half of the gold value
@@ -303,8 +297,6 @@ Factions = {
 	ShorbearClan = {
 		Name = "Shorbear Clan",
 		Civilization = "dwarf",
-		Type = "Tribe",
-		Color = "cyan",
 		Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 		Commodities = {
 			Lumber = 4500 -- half of the gold value
@@ -314,23 +306,17 @@ Factions = {
 	KalKartha = {
 		Name = "Kal Kartha",
 		Civilization = "dwarf",
-		Type = "Polity",
-		Title = "Lordship",
-		Color = "black"
+		Title = "Lordship"
 	},
 	Knalga = {
 		Name = "Knalga",
 		Civilization = "dwarf",
-		Type = "Polity",
-		Title = "Lordship",
-		Color = "red"
+		Title = "Lordship"
 	},
 	Lyr = {
 		Name = "Lyr",
 		Civilization = "dwarf",
-		Type = "Polity",
-		Title = "Lordship",
-		Color = "teal"
+		Title = "Lordship"
 	}
 }
 
@@ -361,9 +347,9 @@ GrandStrategyEvents = {
 					WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
 				end
 
 			end
@@ -404,9 +390,9 @@ GrandStrategyEvents = {
 					WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
 				end
 			end
 			if (WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit >= 1) then -- way to check if Norlund Clan successfully transported the caravans
@@ -434,21 +420,21 @@ GrandStrategyEvents = {
 				GrandStrategyEventMap = false
 
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 				end
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 				else
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
@@ -458,7 +444,7 @@ GrandStrategyEvents = {
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then
 				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
+				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
 		end}
@@ -483,21 +469,21 @@ GrandStrategyEvents = {
 				GrandStrategyEventMap = false
 
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 				end
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 				else
 					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
 						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
@@ -534,25 +520,25 @@ GrandStrategyEvents = {
 					WorldMapProvinces.NorthernWastelands.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
-					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
+					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
-				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = false
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
+				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
+				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 				WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0
 				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
 				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
@@ -589,19 +575,19 @@ GrandStrategyEvents = {
 					WorldMapProvinces.EasternMines.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(3, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = false
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
@@ -618,7 +604,7 @@ GrandStrategyEvents = {
 		Name = "The Founding of Knalga",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Knalga!",
 		Civilization = "dwarf",
-		FactionType = "Tribe",
+		FactionType = "tribe",
 		Provinces = {
 			CavernsOfChaincolt = true,
 			SouthernTunnels = true
@@ -633,7 +619,7 @@ GrandStrategyEvents = {
 		Name = "The Founding of Kal Kartha",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Kal Kartha!",
 		Civilization = "dwarf",
-		FactionType = "Tribe",
+		FactionType = "tribe",
 		Provinces = {
 			KalKartha = true
 		},
@@ -647,7 +633,7 @@ GrandStrategyEvents = {
 		Name = "The Founding of Lyr",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Lyr!",
 		Civilization = "dwarf",
-		FactionType = "Tribe",
+		FactionType = "tribe",
 		Provinces = {
 			Lyr = true
 		},
@@ -662,8 +648,8 @@ GrandStrategyEvents = {
 }
 
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills and Thursagan was living in the Northern Wastelands
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = true
-	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = true
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
+	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2
 end
 
 if (GrandStrategyYear > 25) then
@@ -672,15 +658,15 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = true
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 end
 
 if (GrandStrategyYear >= 27) then
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
-	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = false
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = true
+	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 	WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
---	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter + 3 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
+--	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter + 2 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
 
@@ -690,16 +676,14 @@ end
 
 if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
-	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_town_hall = 0
-	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_smithy = 0
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_axefighter = 0
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 0
 end
 
 if (GrandStrategyYear >= 40) then
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = false -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = false
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = false
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0 -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 end
 
 if (GrandStrategyYear >= 400) then

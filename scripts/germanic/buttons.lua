@@ -90,6 +90,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	"unit-germanic-archer"
   } } )
 
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-patrol-land",
+  Action = "patrol",
+  Key = "p", Hint = _("~!Patrol"),
+  ForUnit = {
+    "unit-germanic-warrior", "unit-germanic-archer",
+	"germanic-group"
+  } } )
+  
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = _("S~!tand Ground"),

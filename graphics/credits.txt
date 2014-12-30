@@ -459,6 +459,7 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/swamp/terrain/rock.png
 /graphics/tilesets/swamp/terrain/swamp.png
 /graphics/tilesets/world/sites/dwarven_settlement.png
+/graphics/tilesets/world/sites/germanic_settlement.png
 /graphics/tilesets/world/sites/gnomish_settlement.png
 /graphics/tilesets/world/sites/kal_karthan_settlement.png
 /graphics/tilesets/world/terrain/dark_plains.png
@@ -578,6 +579,7 @@ Leo:
 /graphics/germanic/icons/barbed_arrow.png
 /graphics/germanic/icons/broad_sword.png
 /graphics/germanic/icons/bronze_shield.png
+/graphics/germanic/icons/patrol_land.png
 /graphics/germanic/icons/short_sword.png
 /graphics/germanic/icons/short_sword_extra_1.png
 /graphics/germanic/icons/short_sword_extra_2.png

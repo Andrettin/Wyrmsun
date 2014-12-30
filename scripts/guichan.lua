@@ -971,11 +971,11 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases
-	if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
-		MapPersonPlayer = 2
-	elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
-		MapPersonPlayer = 1
-	end
+		if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
+			MapPersonPlayer = 2
+		elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
+			MapPersonPlayer = 1
+		end
 
 		for i=1,mapinfo.nplayers do
 			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
@@ -986,10 +986,8 @@ function RunSinglePlayerGameMenu()
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then
         PlayerFaction = ""
-      elseif (race:getSelected() == 1) then
-        PlayerFaction = GetCivilizationFactionNames("dwarf")[faction:getSelected()]
-      elseif (race:getSelected() == 2) then
-        PlayerFaction = GetCivilizationFactionNames("germanic")[faction:getSelected()]
+      else
+        PlayerFaction = faction_list[faction:getSelected() + 1]
       end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
@@ -1119,14 +1117,18 @@ function RunSinglePlayerGameMenu()
 
   function CivilizationChanged()
     faction_list = {_("Map Default")}
+	local factions_civilization = ""
     if (race:getSelected() == 1) then
-	    for i=1,table.getn(GetCivilizationFactionNames("dwarf")) do
-	      table.insert(faction_list, _(GetCivilizationFactionNames("dwarf")[i]))
-	    end
+		factions_civilization = "dwarf"
     elseif (race:getSelected() == 2) then
-	    for i=1,table.getn(GetCivilizationFactionNames("germanic")) do
-	      table.insert(faction_list, _(GetCivilizationFactionNames("germanic")[i]))
-	    end
+		factions_civilization = "germanic"
+	end
+	if (race:getSelected() > 0) then
+		for i=1,table.getn(GetCivilizationFactionNames(factions_civilization)) do
+			if (GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Type") == "tribe") then
+				table.insert(faction_list, GetCivilizationFactionNames(factions_civilization)[i])
+			end
+		end
     end
     faction:setList(faction_list)
     faction:setSize(152, 20)

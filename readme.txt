@@ -38,7 +38,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Buildings
 - Added Germanic Farm (graphics by Jinn).
-- Added Germanic Chieftain's Hall (graphics by Jinn).
+- Added Germanic Chieftain's Hall (graphics by Jinn and modification to make the fire animated by b_o).
 - Added Germanic War Lodge (graphics by Jinn).
 - Added Germanic Carpenter's Shop (graphics by Leo).
 - The Mercenary Camp's fire is now animated (modification by b_o).
@@ -52,14 +52,15 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Maps
 - Added Tanais map (Earth).
 - Added Jutland map (Earth), based on the Scandinavia map by GM1530 which was licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv.
-- Goblin banners are now placed in the entrances to the goblin settlements of players 5 and 6.
+- Goblin banners are now placed in the entrances to the goblin settlements of players 5 and 6 in the Caverns of Flame map.
 - Added random maps for the fairlimbed forest tileset (Alfheim).
 - Added Ulfdalir map (Alfheim).
+- Added Holmgard map (Earth).
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
 - Added germanic wooden oblong shield icon (by Leo).
-- Fixed error which was making special characters not appear correctly, and updated texts accordingly.
+- Fixed error which made special characters not appear correctly, and updated texts accordingly.
 - Added germanic stand ground icon (by Leo).
 - The player now receives a message if they receive a new objective.
 - Added germanic arrow icon (by Leo).
@@ -73,10 +74,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
 - Added crow sound (from the public domain).
 - Added the possibility to select Earth in the Grand Strategy Mode.
+- Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
 
 * Quests
 - Added On the Vanaquisl quest.
 - The leveled-up units that appear on the player's side during quests (i.e. the gnomish envoy) now begin with an experience upgrade already chosen.
+- Added Westward Migration quest.
 
 * Terrain
 - Tile types can now use different images in a tileset's definition.
@@ -108,6 +111,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Germanic Skutan (unit graphics by b_o).
 - Organic units can now have personal traits (i.e. strong, weak, keen) which affect their stats.
 - Units' gray hair variation is now linked to the "old" trait.
+- Wyrm's "vicious" icon variation is now linked to the "vicious" trait.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

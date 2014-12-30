@@ -141,19 +141,21 @@ if (GrandStrategy == false) then
 
 		unit = CreateUnit("unit-dwarven-scout", 0, {6, 5}) -- Noiraran
 		IncreaseUnitLevel(unit, 1, true)
-		AcquireAbility(unit, "upgrade-critical-strike")
-		AcquireTrait(unit, "upgrade-keen") -- was loyal and intelligent in Wesnoth
-		if (LoadedGame == false and GrandStrategy == false and unit) then
+		if (unit) then
+			AcquireAbility(unit, "upgrade-critical-strike")
+			AcquireTrait(unit, "upgrade-keen") -- was loyal and intelligent in Wesnoth
 			SetUnitName(unit, "Noiraran")
 		end
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
-		AcquireTrait(unit, "upgrade-quick") -- was loyal and quick in Wesnoth
-		if (LoadedGame == false and GrandStrategy == false and unit) then
+		if (unit) then
+			AcquireTrait(unit, "upgrade-quick") -- was loyal and quick in Wesnoth
 			SetUnitName(unit, "Kuhnar")
 		end
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
 		IncreaseUnitLevel(unit, 1, true)
-		AcquireAbility(unit, "upgrade-critical-strike")
+		if (unit) then
+			AcquireAbility(unit, "upgrade-critical-strike")
+		end
 	end
 
 	unit = CreateUnit("unit-dwarven-town-hall", 1, {37, 32})

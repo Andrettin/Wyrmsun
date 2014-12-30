@@ -1533,6 +1533,20 @@ AddTrigger(
 											unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
 											IncreaseUnitLevel(unit, 1, true)
 											AcquireAbility(unit, "upgrade-sword-mastery")
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
+											unit = CreateUnit("unit-gnomish-worker", 0, {8, 60}) -- gnomish envoy
 										end
 										if (mapinfo.description == "Northern Wastelands") then
 											RemovePlayerObjective(player, "- Destroy the enemy")

@@ -2890,6 +2890,23 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 		end
 	end
 	
+	-- -1 = potential invader base location
+	-- 6 = town center
+	-- 8 = N/S river
+	-- 9 = N/S river + bridge
+	-- 10 = E/W river
+	-- 11 = E/W river + bridge
+	-- 16 = N/W river bend
+	-- 17 = N/E river bend
+	-- 18 = S/E river bend
+	-- 19 = S/W river bend
+	-- 20 = N/W/E river fork
+	-- 21 = N/S/E river fork
+	-- 22 = S/W/E river fork
+	-- 23 = N/S/W river fork
+	-- 25 = invader base
+	-- 27 = gold mine
+	
 	local function BuildRiverArea(x, y, t)
 		if (t == 8) then -- N/S river
 			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)

@@ -134,7 +134,7 @@ local function RunEditorNewMapMenu()
   local menu = WarMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
-  local tilesets = { "cave", "dungeon", "fairlimbed-forest", "forest", "swamp"}
+  local tilesets = { "cave", "dungeon", "fairlimbed_forest", "forest", "swamp"}
   local mapSizes = {"32", "64", "96", "128", "256"}
 
   menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)

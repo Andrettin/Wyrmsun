@@ -94,6 +94,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-warrior-brown-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-warrior-gray-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-warrior-red-hair",
+	Size = {46, 38},
+	File = "germanic/icons/warrior_red_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-town-hall",
 	Size = {46, 38},
 	File = "germanic/icons/town_hall.png"
@@ -157,6 +175,12 @@ DefineIcon({
 	Name = "icon-germanic-barbed-arrow",
 	Size = {46, 38},
 	File = "germanic/icons/barbed_arrow.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-patrol-land",
+	Size = {46, 38},
+	File = "germanic/icons/patrol_land.png"
 })
 
 DefineIcon({

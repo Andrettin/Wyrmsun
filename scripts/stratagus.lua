@@ -206,7 +206,7 @@ DefinePlayerColors({
 
 --  If color-cycle-all is off (#f) only the tileset palette is color cycled.
 -- Otherwise (#t) all palettes are color cycled.
-SetColorCycleAll(true)
+SetColorCycleAll(false)
 ClearAllColorCyclingRange()
 AddColorCyclingRange(38, 47) -- water
 
@@ -821,7 +821,7 @@ function GetCivilizationAvailableFactions(civilization)
 
 	-- remove faction names already in use
 	for i=0,14 do
-		if (table.getn(civilization_factions) > 0) then
+		if (table.getn(civilization_factions) > 0 and GetPlayerData(i, "RaceName") == civilization) then
 			RemoveElementFromArray(civilization_factions, GetPlayerData(i, "Name"))
 		end
 	end
@@ -987,6 +987,12 @@ function GetUnitTypeTraits(unit_type)
 		table.insert(traits, "upgrade-quick")
 		table.insert(traits, "upgrade-resilient")
 		table.insert(traits, "upgrade-slow")
+		if (unit_type == "unit-wyrm") then
+			table.insert(traits, "upgrade-vicious")
+		end
+		if (GetUnitTypeData(unit_type, "Civilization") ~= "") then -- only for sapient units
+			-- insert more traits here later
+		end
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
 		table.insert(traits, "upgrade-keen") -- not the best fit for this character, should be replaced with something else perhaps?
 	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then

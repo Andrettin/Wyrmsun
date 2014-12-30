@@ -262,36 +262,43 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	Variations = {
 		{
-			"variation-id", "green-scales"
+			"variation-id", "green-scales",
+			"upgrade-forbidden", "upgrade-vicious"
 		},
 		{
 			"variation-id", "green-scales-vicious",
-			"icon", "icon-wyrm-vicious"
+			"icon", "icon-wyrm-vicious",
+			"upgrade-required", "upgrade-vicious"
 		},
 		{
 			"variation-id", "blue-scales",
 			"file", "neutral/units/wyrm_blue_scales.png",
-			"icon", "icon-wyrm-blue-scales"
+			"icon", "icon-wyrm-blue-scales",
+			"upgrade-forbidden", "upgrade-vicious"
 		},
 		{
 			"variation-id", "cyan-scales",
 			"file", "neutral/units/wyrm_cyan_scales.png",
-			"icon", "icon-wyrm-cyan-scales"
+			"icon", "icon-wyrm-cyan-scales",
+			"upgrade-forbidden", "upgrade-vicious"
 		},
 		{
 			"variation-id", "purple-scales",
 			"file", "neutral/units/wyrm_purple_scales.png",
-			"icon", "icon-wyrm-purple-scales"
+			"icon", "icon-wyrm-purple-scales",
+			"upgrade-forbidden", "upgrade-vicious"
 		},
 		{
 			"variation-id", "red-scales",
 			"file", "neutral/units/wyrm_red_scales.png",
-			"icon", "icon-wyrm-red-scales"
+			"icon", "icon-wyrm-red-scales",
+			"upgrade-forbidden", "upgrade-vicious"
 		},
 		{
 			"variation-id", "yellow-scales",
 			"file", "neutral/units/wyrm_yellow_scales.png",
-			"icon", "icon-wyrm-yellow-scales"
+			"icon", "icon-wyrm-yellow-scales",
+			"upgrade-forbidden", "upgrade-vicious"
 		}
 	},
 	Sounds = {

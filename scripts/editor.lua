@@ -28,8 +28,8 @@
 --
 
 --	Set which icons to display
-SetEditorSelectIcon("icon-dwarven-patrol-land")
-SetEditorUnitsIcon("icon-dwarven-axefighter")
+SetEditorSelectIcon("icon-germanic-patrol-land")
+SetEditorUnitsIcon("icon-germanic-warrior")
 
 Editor.UnitTypes:clear()
 for key,value in ipairs(editor_types) do

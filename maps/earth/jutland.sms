@@ -101,8 +101,6 @@ RawTiles = {
 	{"Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"}
 }
 
-GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
 AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 SetRawTile(13, 22, "Water")
@@ -119,9 +117,26 @@ SetRawTile(40, 17, "Rough")
 SetRawTile(40, 19, "Water")
 SetRawTile(41, 18, "Rough")
 
---GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+for x=34,36 do
+	for y=91,93 do
+		SetRawTile(x, y, "Gold Mine") -- gold mine for the Saxon starting position
+	end
+end
+for x=33,35 do
+	for y=40,42 do
+		SetRawTile(x, y, "Gold Mine") -- gold mine for the Danish starting position
+	end
+end
 
-ApplyRawTiles()
+for x=25,28 do -- Danish town hall
+	for y=42,45 do
+		SetRawTile(x, y, "Town Hall 1")
+	end
+end
+
+GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+--GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 -- starting point offsets: -32, -235
 
@@ -137,25 +152,33 @@ SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "germanic")
+SetPlayerData(1, "Name", "Natives")
 SetAiType(1, "land-attack")
 SetStartView(4, 44, 85) -- Germanics / Hanseatic League
 SetPlayerData(4, "Resources", "gold", 2000)
 SetPlayerData(4, "Resources", "lumber", 1000)
 SetPlayerData(4, "Resources", "oil", 0)
 SetPlayerData(4, "RaceName", "germanic")
+SetPlayerData(4, "Faction", "Asa Tribe")
 SetAiType(4, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
--- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {34, 91}) -- gold mine for the Saxon starting position
-SetResourcesHeld(unit, 100000)
-unit = CreateUnit("unit-gold-mine", 15, {33, 40}) -- gold mine for the Danish starting position
-SetResourcesHeld(unit, 100000)
+ApplyRawTiles()
 
 -- unit = CreateUnit("unit-germanic-town-hall", 0, {25, 88}) -- saxon town hall
 
 unit = CreateUnit("unit-germanic-worker", 1, {27, 44})
+unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
+unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
+unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
 
 unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
+unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
+unit = CreateUnit("unit-germanic-archer", 4, {44, 85})
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

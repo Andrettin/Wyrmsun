@@ -1,0 +1,81 @@
+LoadTileModels("scripts/tilesets/forest.lua")
+
+SetPlayerData(0, "Resources", "gold", 2000)
+SetPlayerData(0, "Resources", "lumber", 1000)
+SetPlayerData(0, "Resources", "oil", 0)
+SetAiType(0, "land-attack")
+SetPlayerData(1, "Resources", "gold", 2000)
+SetPlayerData(1, "Resources", "lumber", 1000)
+SetPlayerData(1, "Resources", "oil", 0)
+SetAiType(1, "passive")
+SetPlayerData(15, "RaceName", "neutral")
+
+local layout = {
+	{ 0,  0,  0,  0, -1,  8, -1,  0},
+	{ 0,  0,  0,  0, 18, 16,  0,  0},
+	{ 0,  0,  0,  0,  8,  0,  0,  0},
+	{18, 10, 10, 11, 16,  0,  0,  0},
+	{16,  0,  0,  6,  0,  0,  0,  0},
+	{ 0,  0,  0,  0,  0,  0,  0,  0}
+}
+
+local town_buildings = {"Farm", "Farm", "Farm"}
+
+--[[
+local rock_generation = {
+	{80, 128, 0, 32},
+	{64, 80, 16, 32},
+	{0, 16, 0, 48},
+	{16, 32, 48, 112},
+	{32, 48, 64, 96},
+	{48, 64, 80, 96},
+	{112, 128, 96, 112},
+	{96, 128, 112, 128}
+}
+--]]
+
+--layout = nil
+
+local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior"}
+
+local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker"}
+
+if (LoadedGame == false) then
+	GenerateTown(layout, 1, "germanic", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, false, invader_units, "medium", nil)
+	SetPlayerData(1, "Name", "Natives")
+	
+	CreateCreeps(15, "unit-glyph", 1, 0, 16, 32, 96)
+	CreateCreeps(1, "unit-germanic-warrior", 48, 0, 128, 0, 96)
+end
+
+
+if (GrandStrategyEventMap) then
+	SetAiType(0, "grand-strategy-battle")
+	
+	local units_to_be_created = {}
+	
+	-- Asa units
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")]
+			WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+		end
+	end
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+					unit = CreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+				end
+			end
+		end
+	end
+	-- create buras for the mission
+	unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+end
