@@ -184,6 +184,7 @@ function RunGrandStrategyGameSetupMenu()
 						end
 					end
 				end
+				
 				if (WorldMapProvinces[key].Heroes == nil) then
 					WorldMapProvinces[key]["Heroes"] = {}
 				end
@@ -194,6 +195,21 @@ function RunGrandStrategyGameSetupMenu()
 						end
 					end
 				end
+				
+				-- load heroes' upgraded versions, if those have been acquired
+				if ((WorldMapProvinces[key].Heroes.unit_hero_rugnur == 2 or WorldMapProvinces[key].Heroes.unit_hero_rugnur_steelclad == 2) and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
+					WorldMapProvinces[key].Heroes.unit_hero_rugnur = 0
+					WorldMapProvinces[key].Heroes.unit_hero_rugnur_steelclad = 0
+					WorldMapProvinces[key].Heroes.unit_hero_rugnur_thane = 2
+				elseif (WorldMapProvinces[key].Heroes.unit_hero_rugnur == 2 and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
+					WorldMapProvinces[key].Heroes.unit_hero_rugnur = 0
+					WorldMapProvinces[key].Heroes.unit_hero_rugnur_steelclad = 2
+				end
+				if (WorldMapProvinces[key].Heroes.unit_hero_baglur == 2 and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
+					WorldMapProvinces[key].Heroes.unit_hero_baglur = 0
+					WorldMapProvinces[key].Heroes.unit_hero_baglur_thane = 2
+				end
+				
 				if (WorldMapProvinces[key].AttackedBy == nil) then
 					WorldMapProvinces[key]["AttackedBy"] = ""
 				end
@@ -634,18 +650,28 @@ function AttackProvince(province, faction)
 			victorious_player = Attacker
 		end
 	else
-		if (GetMilitaryScore(province, true) > GetMilitaryScore(province, false)) then -- if military score is the same, then defenders win
+		if (GetMilitaryScore(province, true, true) > GetMilitaryScore(province, false, true)) then -- if military score is the same, then defenders win
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-					AttackingUnits[string.gsub(unitName, "-", "_")] = AttackingUnits[string.gsub(unitName, "-", "_")] - math.floor(AttackingUnits[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, false) / GetMilitaryScore(province, true)) -- formula for calculating units belonging to the victorious player that were killed
+				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+					AttackingUnits[string.gsub(unitName, "-", "_")] = AttackingUnits[string.gsub(unitName, "-", "_")] - math.floor(AttackingUnits[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true)) -- formula for calculating units belonging to the victorious player that were killed
+				elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then -- kill off defending heroes if the attacking player was the victorious one
+					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
+						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
+					elseif (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
+						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
+					end
 				end
 			end
 		else
 			victorious_player = Defender
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-					AttackingUnits[string.gsub(unitName, "-", "_")] = province.Units[string.gsub(unitName, "-", "_")] - math.floor(province.Units[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, true) / GetMilitaryScore(province, false))
+				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+					AttackingUnits[string.gsub(unitName, "-", "_")] = province.Units[string.gsub(unitName, "-", "_")] - math.floor(province.Units[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true))
+				elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then -- kill off attacking heroes if the defending player was the victorious one
+					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
+						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
+					end
 				end
 			end
 		end
@@ -2286,7 +2312,6 @@ function DrawGrandStrategyInterface()
 					end
 				end
 				
-				--[[
 				for i, unitName in ipairs(Units) do
 					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
@@ -2310,7 +2335,6 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				end
-				--]]
 			elseif (InterfaceState == "town-hall") then
 				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
 				
@@ -2742,6 +2766,19 @@ function SetSelectedProvince(province)
 					end
 				end
 			end
+			for i, unitName in ipairs(Units) do
+				if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (SelectedHero == unitName) then
+						province.AttackedBy = GrandStrategyFaction.Name
+						province.Heroes[string.gsub(unitName, "-", "_")] = 3
+						SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
+						SelectedHero = ""
+
+						-- draw symbol that a hero is attacking the province
+						DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
+					end
+				end
+			end
 		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and SelectedProvince.Owner == province.Owner and SelectedProvince.Owner == GrandStrategyFaction.Name) then
 			for i, unitName in ipairs(Units) do
 				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
@@ -2836,20 +2873,20 @@ function AIDoTurn(ai_faction)
 			if (ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key])) then
 				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
 					borders_foreign = true
-					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 						if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 							WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
 							for i, unitName in ipairs(Units) do
-								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
 									WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/3rd of the province's forces as a defense
 									WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
 								end
 							end
 						end
-					elseif (GetMilitaryScore(WorldMapProvinces[second_key], false) > 0) then
-						desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
-						desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
-						desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false) * 9 / 4) / 960) + 1
+					elseif (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
+						desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
+						desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1
+						desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1
 					end
 				end
 			end
@@ -2920,7 +2957,7 @@ function AIDoDiplomacy(ai_faction)
 	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
 		for second_key, second_value in pairs(WorldMapProvinces) do
 			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
-				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 9 / 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 225% or greater of that of the province to be attacked
 						DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 					end
@@ -3195,12 +3232,12 @@ end
 function GetFactionMilitaryScore(faction)
 	local military_score = 0
 	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
-		military_score = military_score + GetMilitaryScore(WorldMapProvinces[key], false)
+		military_score = military_score + GetMilitaryScore(WorldMapProvinces[key], false, true)
 	end
 	return military_score
 end
 
-function GetMilitaryScore(province, attacker)
+function GetMilitaryScore(province, attacker, count_heroes)
 	local units
 	local faction
 	if (attacker == false) then
@@ -3259,10 +3296,21 @@ function GetMilitaryScore(province, attacker)
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "archer") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (60 + archer_military_score_bonus))
+			elseif (GetUnitTypeData(unitName, "Class") == "priest") then
+				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * 60)
 			elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + catapult_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (150 + flying_rider_military_score_bonus))
+			-- Heroes
+			elseif (count_heroes and string.find(unitName, "hero") ~= nil and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
+				if (unitName == "unit-hero-rugnur") then
+					military_score = military_score + (50 + infantry_military_score_bonus)
+				elseif (unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
+					military_score = military_score + (75 + infantry_military_score_bonus)
+				elseif (unitName == "unit-hero-rugnur-thane" or unitName == "unit-hero-baglur-thane" or unitName == "unit-hero-thursagan" or unitName == "unit-hero-durstorn") then
+					military_score = military_score + (100 + infantry_military_score_bonus + (10 * (wyr.preferences.Heroes[GetUnitTypeData(unitName, "DefaultName")].level - GetUnitTypeData(unitName, "StartingLevel"))))
+				end
 			end
 		end
 	end
@@ -3640,6 +3688,8 @@ function GetUnitTypeUpkeep(unit_type)
 		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 		return 50
+	elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
+		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
 		return 50
 	else
@@ -3655,6 +3705,8 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			return "barracks"
+		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
+			return "barracks" -- should be temple, but make it barracks for now to allow gnomish herbalists to be trained
 		elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
 			return "aviary"
 		else

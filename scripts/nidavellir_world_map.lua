@@ -78,6 +78,8 @@ WorldMapProvinces = {
 		Map = "maps/nidavellir/brown-hills.smp",
 		Units = {
 			unit_gnomish_recruit = 2 -- Pypo I and his envoy
+		},
+		Heroes = {
 		}
 	},
 	CavernsOfChaincolt = {
@@ -101,9 +103,6 @@ WorldMapProvinces = {
 			unit_gnomish_recruit = 0
 		},
 		Heroes = {
-			unit_hero_rugnur = false,
-			unit_hero_baglur = false, -- could place Baglur here, but he is important as an event trigger
-			unit_hero_thursagan = false
 		}
 	},
 	CavernsOfFlame = {
@@ -119,6 +118,8 @@ WorldMapProvinces = {
 		Units = { -- starting units in the Caverns of Flame scenario
 			unit_goblin_spearman = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
 			unit_goblin_war_machine = 1
+		},
+		Heroes = {
 		}
 	},
 	EasternMines = {
@@ -132,6 +133,8 @@ WorldMapProvinces = {
 		Units = {
 --			unit_goblin_spearman = 3 -- three starting chieftains in the Gathering Materials scenario
 			unit_goblin_spearman = 9 -- three starting chieftains in the Gathering Materials scenario, plus 2 goblins for each tribe to prevent too early expansion into this province
+		},
+		Heroes = {
 		}
 	},
 	GryphonMountain = {
@@ -143,6 +146,8 @@ WorldMapProvinces = {
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- wild units in the Gryphon Mountain scenario
 			unit_dwarven_gryphon_rider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
+		},
+		Heroes = {
 		}
 	},
 	Heartfangs = {
@@ -155,6 +160,8 @@ WorldMapProvinces = {
 		Units = { -- some wild dwarves to stop too early expansion into this province
 			unit_dwarven_axefighter = 4,
 			unit_dwarven_scout = 3
+		},
+		Heroes = {
 		}
 	},
 	HighPass = {
@@ -167,6 +174,8 @@ WorldMapProvinces = {
 		Units = { -- wild units in the High Pass scenario
 			unit_goblin_spearman = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
 			unit_dwarven_gryphon_rider = 1 -- Kaara
+		},
+		Heroes = {
 		}
 	},
 	HighbrookPass = {
@@ -182,6 +191,8 @@ WorldMapProvinces = {
 			unit_dwarven_thane = 0,
 			unit_goblin_spearman = 4, -- one troll, two young ogres, one ogre
 			unit_goblin_archer = 2 -- two liches
+		},
+		Heroes = {
 		}
 	},
 	KalKartha = {
@@ -197,6 +208,8 @@ WorldMapProvinces = {
 			unit_dwarven_steelclad = 0,
 			unit_dwarven_thane = 0,
 			unit_gnomish_recruit = 4
+		},
+		Heroes = {
 		}
 	},
 	Lyr = {
@@ -209,6 +222,8 @@ WorldMapProvinces = {
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild dwarves to stop too early expansion into this province
 			unit_dwarven_axefighter = 4
+		},
+		Heroes = {
 		}
 	},
 	NorthernWastelands = {
@@ -225,7 +240,6 @@ WorldMapProvinces = {
 			unit_goblin_archer = 13
 		},
 		Heroes = {
-			unit_hero_thursagan = false
 		}
 	},
 	ShorbearHills = {
@@ -243,6 +257,8 @@ WorldMapProvinces = {
 		Map = "maps/nidavellir/shorbear-hills.smp",
 		Units = {
 			unit_dwarven_thane = 1 -- Glonoin
+		},
+		Heroes = {
 		}
 	},
 	SouthernTunnels = {
@@ -260,6 +276,8 @@ WorldMapProvinces = {
 		Units = {
 			unit_dwarven_steelclad = 3, -- Glildur, Glindur, Kalnar
 			unit_dwarven_thane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
+		},
+		Heroes = {
 		}
 	}
 }
@@ -653,8 +671,10 @@ GrandStrategyEvents = {
 	}
 }
 
-if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills and Thursagan was living in the Northern Wastelands
+if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 2
 	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2
 end
 
@@ -664,7 +684,6 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 end
 
 if (GrandStrategyYear >= 27) then
@@ -678,12 +697,27 @@ end
 
 if (GrandStrategyYear >= 29) then
 	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold conquered in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 2
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 2
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 2
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_thursagan = 2
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 end
 
 if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_axefighter = 0
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 0
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 0
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 0
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_thursagan = 0
 end
 
 if (GrandStrategyYear >= 40) then

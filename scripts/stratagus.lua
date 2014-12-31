@@ -302,8 +302,13 @@ function SinglePlayerTriggers()
 
 				-- set the new unit quantity to the surviving units of the victorious side
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
 						AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName)
+					elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
+						if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
+							AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
 					end
 				end
 					
@@ -324,8 +329,13 @@ function SinglePlayerTriggers()
 			if (GrandStrategy and GrandStrategyEventMap == false) then
 				-- set the new unit quantity to the surviving units of the victorious side
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
 						AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", unitName)
+					elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
+						if (GetPlayerData(GetThisPlayer(), "UnitTypesCount", unitName) >= 1) then
+							AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
 					end
 				end
 					

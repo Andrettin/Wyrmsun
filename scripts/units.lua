@@ -53,7 +53,9 @@ Units = {
 	"unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad",
-	"unit-hero-rugnur", "unit-hero-baglur", "unit-hero-thursagan", "unit-hero-durstorn",
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane",
+	"unit-hero-baglur", "unit-hero-baglur-thane",
+	"unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo"
 }
 

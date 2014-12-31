@@ -76,6 +76,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added the possibility to select Earth in the Grand Strategy Mode.
 - Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
 - Provinces in the Grand Strategy mode now have a culture (a civilization) assigned to them, which remains even if they are conquered, and the units and buildings available in the province are those belonging to that province's culture/civilization.
+- Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay).
 
 * Quests
 - Added On the Vanaquisl quest.
