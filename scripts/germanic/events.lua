@@ -179,6 +179,7 @@ AddTrigger(
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
+					WorldMapProvinces.Astrakhan.Civilization = ""
 					ActionDefeat()
 				end
 			end}
@@ -227,6 +228,8 @@ AddTrigger(
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
+						WorldMapProvinces.Astrakhan.Civilization = ""
+						CenterMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 					end
 					ActionVictory()
 				end

@@ -146,6 +146,24 @@ DefineCivilizationFactions("dwarf",
 		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "cyan"
+	},
+	"faction", {
+		"name", "Kal Kartha",
+		"type", "polity",
+		"color", "black",
+		"secondary_color", "black"
+	},
+	"faction", {
+		"name", "Knalga",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Lyr",
+		"type", "polity",
+		"color", "green",
+		"secondary_color", "teal"
 	}
 )
 

@@ -75,6 +75,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added crow sound (from the public domain).
 - Added the possibility to select Earth in the Grand Strategy Mode.
 - Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
+- Provinces in the Grand Strategy mode now have a culture (a civilization) assigned to them, which remains even if they are conquered, and the units and buildings available in the province are those belonging to that province's culture/civilization.
 
 * Quests
 - Added On the Vanaquisl quest.

@@ -146,6 +146,15 @@ function RunGrandStrategyGameSetupMenu()
 				if (WorldMapProvinces[key].Owner ~= "") then
 					table.insert(GetFactionFromName(WorldMapProvinces[key].Owner).OwnedProvinces, key)
 				end
+
+				if (WorldMapProvinces[key].Civilization == nil) then
+					-- if province has no civilization/culture defined, then make it that of its owner, if any
+					if (WorldMapProvinces[key].Owner ~= "") then
+						WorldMapProvinces[key]["Civilization"] = GetFactionFromName(WorldMapProvinces[key].Owner).Civilization
+					else
+						WorldMapProvinces[key]["Civilization"] = ""
+					end
+				end
 				
 				if (WorldMapProvinces[key].Units == nil) then
 					WorldMapProvinces[key]["Units"] = {}
@@ -359,19 +368,21 @@ function EndTurn()
 	end
 
 	for key, value in pairs(Factions) do
-		Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
-		Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
+		if (GetFactionProvinceCount(Factions[key]) > 0) then
+			Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
+			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
 
-		if (Factions[key].Trade.Lumber < 0) then -- if wants to import lumber
-			for second_key, second_value in pairs(Factions) do
-				if (Factions[second_key].Trade.Lumber > 0) then -- if second faction wants to export lumber
-					PerformTrade(Factions[key], Factions[second_key], "Lumber")
+			if (Factions[key].Trade.Lumber < 0) then -- if wants to import lumber
+				for second_key, second_value in pairs(Factions) do
+					if (Factions[second_key].Trade.Lumber > 0) then -- if second faction wants to export lumber
+						PerformTrade(Factions[key], Factions[second_key], "Lumber")
+					end
 				end
-			end
-		elseif (Factions[key].Trade.Lumber > 0) then -- if wants to export lumber
-			for second_key, second_value in pairs(Factions) do
-				if (Factions[second_key].Trade.Lumber < 0) then -- if second faction wants to import lumber
-					PerformTrade(Factions[second_key], Factions[key], "Lumber")
+			elseif (Factions[key].Trade.Lumber > 0) then -- if wants to export lumber
+				for second_key, second_value in pairs(Factions) do
+					if (Factions[second_key].Trade.Lumber < 0) then -- if second faction wants to import lumber
+						PerformTrade(Factions[second_key], Factions[key], "Lumber")
+					end
 				end
 			end
 		end
@@ -680,6 +691,10 @@ function AcquireProvince(province, faction)
 	if (faction ~= "") then
 		table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 		
+		if (province.Civilization == "") then -- if province has no culture, make it that of the one who acquired it
+			province.Civilization = GetFactionFromName(faction).Civilization
+		end
+					
 		-- replace existent buildings from other civilizations with buildings of own civilization
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
@@ -858,7 +873,7 @@ function CalculateFactionUpkeeps()
 	
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-				if (province_owner ~= nil and GetUnitTypeData(unitName, "Civilization") == province_owner.Civilization) then -- pay upkeep for military units
+				if (province_owner ~= nil) then -- pay upkeep for military units
 					province_owner.Upkeep = province_owner.Upkeep + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
 				end
 			end
@@ -1193,7 +1208,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	elseif (GetWorldMapTile(tile_x, tile_y) == "Watr") then
 		tooltip = "Water"
 	end
-	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
+	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall")) then
 		if (GetTileProvince(tile_x, tile_y).SettlementName ~= nil) then
 			tooltip = "Settlement of " .. GetTileProvince(tile_x, tile_y).SettlementName .. " (" .. tooltip .. ")"
 		else
@@ -1275,7 +1290,13 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		local b
 		if (string.find(file, "settlement") ~= nil) then
 			world_map_tile = CPlayerColorGraphic:New(file)
-			b = PlayerColorImageButton("", GetFactionData(GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Civilization, GetTileProvince(tile_x, tile_y).Owner, "Color"))
+			local settlement_color = ""
+			if (GetTileProvince(tile_x, tile_y).Owner ~= "") then
+				settlement_color = GetFactionData(GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Civilization, GetTileProvince(tile_x, tile_y).Owner, "Color")
+			else
+				settlement_color = "gray"
+			end
+			b = PlayerColorImageButton("", settlement_color)
 		else
 			world_map_tile = CGraphic:New(file)
 			b = ImageButton("")
@@ -1487,7 +1508,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	
 	local building_function_tooltip = ""
 	if (GetUnitTypeData(unit_type, "Class") == "town-hall") then
-		building_function_tooltip = " (allows trading resources for gold)"
+		building_function_tooltip = " (more province information and trading of resources)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "barracks") then
 		building_function_tooltip = " (recruits units)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "lumber-mill") then
@@ -1942,20 +1963,30 @@ function DrawOnScreenTiles()
 
 		-- draw province settlement
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
-			if (WorldMapProvinces[key].Owner ~= "" and ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall")) then
+			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall")) then
 				local settlement_graphics = ""
-				if (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
+				if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
 					if (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
 						settlement_graphics = "tilesets/world/sites/dwarven_settlement_with_barracks.png"
 					else
 						settlement_graphics = "tilesets/world/sites/dwarven_settlement.png"
 					end
-				elseif (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "germanic") then
+				elseif (WorldMapProvinces[key].Civilization == "germanic") then
 					settlement_graphics = "tilesets/world/sites/germanic_settlement.png"
-				elseif (GetFactionFromName(WorldMapProvinces[key].Owner).Civilization == "gnome") then
+				elseif (WorldMapProvinces[key].Civilization == "gnome") then
 					settlement_graphics = "tilesets/world/sites/gnomish_settlement.png"
-				elseif (WorldMapProvinces[key].Owner == "Kal Kartha") then
+				elseif (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner == "Kal Kartha") then
 					settlement_graphics = "tilesets/world/sites/kal_karthan_settlement.png"
+				elseif (GrandStrategyWorld == "Earth") then -- if province has no civilization, default to germanic city graphics if world is Earth
+					settlement_graphics = "tilesets/world/sites/germanic_settlement.png"
+				elseif (GrandStrategyWorld == "Nidavellir") then -- if province has no civilization, default to dwarf city graphics if world is Nidavellir
+					if (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
+						settlement_graphics = "tilesets/world/sites/dwarven_settlement_with_barracks.png"
+					else
+						settlement_graphics = "tilesets/world/sites/dwarven_settlement.png"
+					end
+				else
+					settlement_graphics = "tilesets/world/sites/germanic_settlement.png"
 				end
 				DrawWorldMapTile(settlement_graphics, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])				
 			end
@@ -2145,7 +2176,7 @@ function DrawGrandStrategyInterface()
 							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
 						end
 
-						if (IsUnitAvailableForTraining(SelectedProvince, unitName) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and GetUnitTypeInterfaceState(unitName) ~= "" and GetUnitTypeData(unitName, "Civilization") == GrandStrategyFaction.Civilization)) then
+						if (IsUnitAvailableForTraining(SelectedProvince, unitName) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and GetUnitTypeInterfaceState(unitName) ~= "")) then
 							local icon_offset_x = 9 + (item_x * 56)
 							local icon_offset_y = 340 + (item_y * (47 + 19 + 4))
 
@@ -2225,6 +2256,9 @@ function DrawGrandStrategyInterface()
 								item_x = 0
 								item_y = item_y + 1
 							end
+							if (item_y > 2 and Video.Height <= 600) then -- don't show more than 9 units if the resolution height is too small to show that
+								break
+							end
 						end
 					end
 				end
@@ -2278,55 +2312,66 @@ function DrawGrandStrategyInterface()
 				end
 				--]]
 			elseif (InterfaceState == "town-hall") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, GrandStrategyFaction.Civilization)), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
 				
-				AddUIElement("ui/lumber.png", 9, 246 + 3)
+				local item_y = -2
 
-				-- add trade bid/offer arrows
-				local b = AddGrandStrategyImageButton("", "", 112 - 2 - 24, 246, function()
-					if (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade.Lumber - 100) * GetCommodityPrice("Lumber") / 100) then
-						GrandStrategyFaction.Trade.Lumber = GrandStrategyFaction.Trade.Lumber - 100
+				AddGrandStrategyLabel("Province Culture: " .. CapitalizeString(SelectedProvince.Civilization), 4, 340 + (item_y * 47), Fonts["game"], true, true)
+				item_y = item_y + 1
+
+				for key, value in pairs(GrandStrategyCommodities) do
+					local icon_offset_y = 340 + (item_y * 47)
+
+					AddUIElement("ui/" .. string.lower(key) .. ".png", 9, icon_offset_y + 3)
+
+					-- add trade bid/offer arrows
+					local b = AddGrandStrategyImageButton("", "", 112 - 2 - 24, icon_offset_y, function()
+						if (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade[key] - 100) * GetCommodityPrice(key) / 100) then
+							GrandStrategyFaction.Trade[key] = GrandStrategyFaction.Trade[key] - 100
+						end
+						DrawGrandStrategyInterface()
+					end)
+					b:setBaseColor(Color(0,0,0,0))
+					b:setForegroundColor(Color(0,0,0,0))
+					b:setBackgroundColor(Color(0,0,0,0))
+					local g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
+					local g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
+					g_lslider_n:Load()
+					g_lslider_p:Load()
+					b:setNormalImage(g_lslider_n)
+					b:setPressedImage(g_lslider_p)
+					if (GrandStrategyFaction.Trade[key] <= 0) then
+						b:setTooltip("Increase bid of " .. key .. " by 100")
+					else
+						b:setTooltip("Decrease offer of " .. key .. " by 100")
 					end
-					DrawGrandStrategyInterface()
-				end)
-				b:setBaseColor(Color(0,0,0,0))
-				b:setForegroundColor(Color(0,0,0,0))
-				b:setBackgroundColor(Color(0,0,0,0))
-				local g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
-				local g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
-				g_lslider_n:Load()
-				g_lslider_p:Load()
-				b:setNormalImage(g_lslider_n)
-				b:setPressedImage(g_lslider_p)
-				if (GrandStrategyFaction.Trade.Lumber <= 0) then
-					b:setTooltip("Increase bid of Lumber by 100")
-				else
-					b:setTooltip("Decrease offer of Lumber by 100")
-				end
 
-				local b = AddGrandStrategyImageButton("", "", 112 + 2 + 46 - 20, 246, function()
-					if (GrandStrategyFaction.Commodities.Lumber >= GrandStrategyFaction.Trade.Lumber + 100) then
-						GrandStrategyFaction.Trade.Lumber = GrandStrategyFaction.Trade.Lumber + 100
+					local b = AddGrandStrategyImageButton("", "", 112 + 2 + 46 - 20, icon_offset_y, function()
+						if (GrandStrategyFaction.Commodities[key] >= GrandStrategyFaction.Trade[key] + 100) then
+							GrandStrategyFaction.Trade[key] = GrandStrategyFaction.Trade[key] + 100
+						end
+						DrawGrandStrategyInterface()
+					end)
+					b:setBaseColor(Color(0,0,0,0))
+					b:setForegroundColor(Color(0,0,0,0))
+					b:setBackgroundColor(Color(0,0,0,0))
+					local g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
+					local g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
+					g_rslider_n:Load()
+					g_rslider_p:Load()
+					b:setNormalImage(g_rslider_n)
+					b:setPressedImage(g_rslider_p)
+					if (GrandStrategyFaction.Trade[key] >= 0) then
+						b:setTooltip("Increase offer of " .. key .. " by 100")
+					else
+						b:setTooltip("Decrease bid of " .. key .. " by 100")
 					end
-					DrawGrandStrategyInterface()
-				end)
-				b:setBaseColor(Color(0,0,0,0))
-				b:setForegroundColor(Color(0,0,0,0))
-				b:setBackgroundColor(Color(0,0,0,0))
-				local g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
-				local g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
-				g_rslider_n:Load()
-				g_rslider_p:Load()
-				b:setNormalImage(g_rslider_n)
-				b:setPressedImage(g_rslider_p)
-				if (GrandStrategyFaction.Trade.Lumber >= 0) then
-					b:setTooltip("Increase offer of Lumber by 100")
-				else
-					b:setTooltip("Decrease bid of Lumber by 100")
+
+					AddGrandStrategyLabel("~<" .. GrandStrategyFaction.Trade[key] .. "~>", 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					
+					item_y = item_y + 1
 				end
-
-				AddGrandStrategyLabel("~<" .. GrandStrategyFaction.Trade.Lumber .. "~>", 112 + 24 - 12, 246 + 2, Fonts["game"], true, false)
-
+				
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
 					InterfaceState = "Province"
@@ -2344,7 +2389,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "barracks") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, GrandStrategyFaction.Civilization)), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
 				
 				-- add units buttons for training
 				local item_x = 0
@@ -2461,7 +2506,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "lumber-mill") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, GrandStrategyFaction.Civilization)), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
 				
 				local item_x = 0
 				local item_y = -2
@@ -2499,7 +2544,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "smithy") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, GrandStrategyFaction.Civilization)), 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
 				
 				local item_x = 0
 				local item_y = -2
@@ -2898,7 +2943,7 @@ function AIConsiderOffers(ai_faction)
 end
 
 function IsBuildingAvailable(province, unit_type)
-	if (province.Owner ~= "" and province.Owner ~= "Ocean" and GetUnitTypeData(unit_type, "Civilization") ~= GetFactionFromName(province.Owner).Civilization) then
+	if (province.Owner ~= "Ocean" and GetUnitTypeData(unit_type, "Civilization") ~= province.Civilization) then
 		return false
 	end
 
@@ -2962,7 +3007,7 @@ function CanTrainUnit(province, unit_type)
 end
 
 function IsUnitAvailableForTraining(province, unit_type)
-	if (GetUnitTypeData(unit_type, "Civilization") ~= GetFactionFromName(province.Owner).Civilization) then
+	if (GetUnitTypeData(unit_type, "Civilization") ~= province.Civilization) then
 		return false
 	end
 	
@@ -3006,7 +3051,7 @@ function UseBuilding(province, unit_type)
 end
 
 function IsTechnologyAvailable(province, unit_type)
-	if (CUpgrade:Get(unit_type).Civilization ~= GetFactionFromName(province.Owner).Civilization) then
+	if (CUpgrade:Get(unit_type).Civilization ~= province.Civilization) then
 		return false
 	end
 
@@ -3117,7 +3162,7 @@ end
 function ProvinceHasBuildingType(province, building_type)
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
-			if (GetUnitTypeData(unitName, "Class") == building_type and IsBuildingAvailable(province, unitName) and province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2) then
+			if (GetUnitTypeData(unitName, "Class") == building_type and (province.Civilization == "" or IsBuildingAvailable(province, unitName)) and province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2) then
 				return true
 			end
 		end

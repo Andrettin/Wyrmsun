@@ -100,9 +100,9 @@ editor_types = {
    "unit-scepter-of-fire",
 
    "unit-rat",
-   "unit-slime",
    "unit-bird",
    "unit-bat",
+   "unit-slime",
    "unit-gryphon",
    "unit-wyrm",
 
