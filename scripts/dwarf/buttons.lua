@@ -210,7 +210,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-return-goods",
   Action = "return-goods",
   Key = "g", Hint = _("Return with ~!Goods"),
-  ForUnit = {"unit-dwarven-miner", "unit-germanic-worker", "unit-gnomish-worker", "unit-goblin-worker" } } )
+  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker" } } )
 
 -- build basic/advanced structs -----------------------------------------------
 

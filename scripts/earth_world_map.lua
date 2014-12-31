@@ -832,6 +832,7 @@ GrandStrategyEvents = {
 		SecondProvinces = {
 			Don = true
 		},
+		RandomChance = 33,
 		Options = {"~!Attack them!", "~!Leave them alone"},
 		OptionEffects = {
 			function(s)
@@ -901,6 +902,7 @@ GrandStrategyEvents = {
 		Units = {
 			unit_germanic_warrior = 8 -- event only happens if player has enough warriors to successfully migrate
 		},
+		RandomChance = 33,
 		Options = {"~!Migrate to the west", "The ~!steppes are our home"},
 		OptionEffects = {
 			function(s)

@@ -29,6 +29,11 @@
 --
 
 DefineMissileType("missile-arrow",
+  { File = "missiles/arrow.png", Size = {32, 32}, Frames = 5, NumDirections = 9,
+  ImpactSound = "bow-hit",
+  DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0 } )
+
+DefineMissileType("missile-goblin-arrow",
   { File = "missiles/goblin_arrow.png", Size = {32, 32}, Frames = 5, NumDirections = 9,
   ImpactSound = "bow-hit",
   DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0 } )

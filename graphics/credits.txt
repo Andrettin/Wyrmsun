@@ -41,6 +41,7 @@ b_o:
 /graphics/dwarf/units/gryphon_rider.png
 /graphics/dwarf/units/gryphon_rider_brown_hair_blue_feathers.png
 /graphics/dwarf/units/gryphon_rider_red_hair_gray_feathers.png
+/graphics/dwarf/units/militia.png
 /graphics/dwarf/units/miner.png
 /graphics/dwarf/units/miner_with_gold.png
 /graphics/dwarf/units/miner_with_lumber.png
@@ -83,6 +84,7 @@ b_o:
 /graphics/goblin/units/goblin_worker.png
 /graphics/goblin/units/goblin_worker_with_gold.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
+/graphics/missiles/arrow.png
 /graphics/missiles/axe_twirl.png
 /graphics/missiles/catapult_flaming_rock.png
 /graphics/missiles/dart.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
@@ -580,6 +582,8 @@ Leo:
 /graphics/germanic/icons/broad_sword.png
 /graphics/germanic/icons/bronze_shield.png
 /graphics/germanic/icons/patrol_land.png
+/graphics/germanic/icons/return_goods.png
+/graphics/germanic/icons/return_goods_extra_1.png
 /graphics/germanic/icons/short_sword.png
 /graphics/germanic/icons/short_sword_extra_1.png
 /graphics/germanic/icons/short_sword_extra_2.png

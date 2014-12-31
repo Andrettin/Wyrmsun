@@ -3439,6 +3439,10 @@ function CanTriggerEvent(faction, event)
 		end
 	end
 		
+	if (event.RandomChance ~= nil and SyncRand(100) >= event.RandomChance) then
+		return false
+	end
+	
 	return true
 end
 

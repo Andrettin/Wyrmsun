@@ -118,6 +118,11 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"),
   ForUnit = {"unit-germanic-worker"} } )
 
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-return-goods",
+  Action = "return-goods",
+  Key = "g", Hint = _("Return with ~!Goods"),
+  ForUnit = {"unit-germanic-worker"} } )
+
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",

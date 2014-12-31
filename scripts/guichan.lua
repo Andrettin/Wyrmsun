@@ -837,10 +837,6 @@ function RunWorldMapMenu(world, maps)
 			local world_map_site_image
 			if (MapSiteType == "Dwarven Settlement") then
 				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_settlement.png")
-			elseif (MapSiteType == "Dwarven Outpost") then
-				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_outpost.png")
-			elseif (MapSiteType == "Dwarven Fortified Outpost") then
-				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_fortified_outpost.png")
 			elseif (MapSiteType == "Gnomish Settlement") then
 				world_map_site_image = CGraphic:New("tilesets/world/sites/gnomish_settlement.png")
 			end

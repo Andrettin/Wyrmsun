@@ -107,7 +107,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
 - Mechanical units now no longer display Level and XP.
 - Added Sword Mastery learnable ability (for germanic warriors, gnomish recruits and Greebo) (graphics by Jinn).
-- Added Dwarven Militia (icon graphics by Jinn).
+- Added Dwarven Militia (icon graphics by Jinn and unit graphics by b_o).
 - Added Germanic Skutan (unit graphics by b_o).
 - Organic units can now have personal traits (i.e. strong, weak, keen) which affect their stats.
 - Units' gray hair variation is now linked to the "old" trait.
