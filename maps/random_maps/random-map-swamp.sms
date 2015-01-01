@@ -2,8 +2,8 @@ LoadTileModels("scripts/tilesets/swamp.lua")
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateRandomMap(128, 128, false)
+		GenerateRandomMap(128, 128, false, true)
 	else
-		GenerateRandomMap(64, 64, false)
+		GenerateRandomMap(64, 64, false, true)
 	end
 end

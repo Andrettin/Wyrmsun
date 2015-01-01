@@ -1,5 +1,5 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person","person","person","computer")
-PresentMap("Random Map (Symmetric Swamp)", 3, 128, 128, 1)
-MapWorld = "Nidavellir"
+PresentMap("Random Swamp (Symmetric)", 3, 128, 128, 1)
+MapWorld = "Random"

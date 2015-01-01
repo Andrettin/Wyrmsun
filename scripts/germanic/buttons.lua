@@ -174,7 +174,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
   Key = "e", Hint = _("Train ~!Erala"),
   ForUnit = {"unit-germanic-barracks"} } )
   
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-warrior",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
   Action = "train-unit", Value = "unit-germanic-archer",
   Key = "s", Hint = _("Train ~!Skutan"),
   ForUnit = {"unit-germanic-barracks"} } )

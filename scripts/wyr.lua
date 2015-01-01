@@ -540,14 +540,11 @@ function SetPlayerData(player, data, arg1, arg2)
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 				if (Players[player].Type == PlayerPerson) then
 					SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
-					SetPlayerData(player, "Name", GrandStrategyFaction.Name)
 				elseif (Players[player].Type == PlayerComputer) then
 					if (GrandStrategyFaction.Name == Attacker) then
 						SetPlayerData(player, "Faction", Defender)
-						SetPlayerData(player, "Name", Defender)
 					elseif (GrandStrategyFaction.Name == Defender) then
 						SetPlayerData(player, "Faction", Attacker)
-						SetPlayerData(player, "Name", Attacker)
 					end
 				end
 			end

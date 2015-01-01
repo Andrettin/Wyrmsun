@@ -369,12 +369,29 @@ function SinglePlayerTriggers()
 
 	StandardTriggers()
 
-	if (not IsNetworkGame()) then
+	if (not IsNetworkGame() and GrandStrategy == false) then
 		if (PlayerFaction ~= "") then
 			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
 		end
 	end
 
+	-- make the players have the correct names in grand strategy mode
+	for i=0,14 do
+		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
+			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
+				if (Players[i].Type == PlayerPerson) then
+					SetPlayerData(i, "Name", GrandStrategyFaction.Name)
+				elseif (Players[i].Type == PlayerComputer) then
+					if (GrandStrategyFaction.Name == Attacker) then
+						SetPlayerData(i, "Name", Defender)
+					elseif (GrandStrategyFaction.Name == Defender) then
+						SetPlayerData(i, "Name", Attacker)
+					end
+				end
+			end
+		end
+	end
+	
 	if (LoadedGame == false) then
 		DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
 		DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
@@ -425,7 +442,7 @@ function SinglePlayerTriggers()
 			AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
 		end
 	end
-	
+
 	LoadedGame = false
 end
 

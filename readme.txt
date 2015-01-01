@@ -56,6 +56,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added random maps for the fairlimbed forest tileset (Alfheim).
 - Added Ulfdalir map (Alfheim).
 - Added Holmgard map (Earth).
+- Random maps are now placed in the "Random" world, and feature a mix of civilizations regardless of tileset.
+- Added a random dungeon map.
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
@@ -66,7 +68,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added germanic arrow icon (by Leo).
 - Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I, the Helgakvitha Hundingsbana II, the Gripisspo, the Reginsmol, the Fafnismol, the Sigrdrifumol, the Brot Af Sigurtharkvithu, the Guthrunarkvitha I, the Sigurtharkvitha En Skamma, the Helreith Brynhildar, the Drap Niflunga, the Guthrunarkvitha II En Forna, the Guthrunarkvitha III and the Oddrunargratr to the encyclopedia texts (The Poetic Edda).
 - A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
-- Encyclopedia pages can now have quotes which are relevant to the entry.
+- Encyclopedia pages now can have quotes which are relevant to the entry.
 - Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smithy, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.
 - Tech tree code made more dynamic to support multiple civilizations without significant extra coding being necessary for each of them.
 - Miscellaneous tech tree code improvements.
@@ -76,7 +78,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added the possibility to select Earth in the Grand Strategy Mode.
 - Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
 - Provinces in the Grand Strategy mode now have a culture (a civilization) assigned to them, which remains even if they are conquered, and the units and buildings available in the province are those belonging to that province's culture/civilization.
-- Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay).
+- Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay). The presence of heroes in a province owned by the player is marked by a crown on the top-left of the province's settlement.
 
 * Quests
 - Added On the Vanaquisl quest.
@@ -110,7 +112,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Mechanical units now no longer display Level and XP.
 - Added Sword Mastery learnable ability (for germanic warriors, gnomish recruits and Greebo) (graphics by Jinn).
 - Added Dwarven Militia (icon graphics by Jinn and unit graphics by b_o).
-- Added Germanic Skutan (unit graphics by b_o).
+- Added Germanic Skutan (unit graphics by b_o and icon by Leo).
 - Organic units can now have personal traits (i.e. strong, weak, keen) which affect their stats.
 - Units' gray hair variation is now linked to the "old" trait.
 - Wyrm's "vicious" icon variation is now linked to the "vicious" trait.

@@ -1,5 +1,5 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person","person","person","computer")
-PresentMap("Random Map (Symmetric Forest)", 3, 128, 128, 1)
-MapWorld = "Earth"
+PresentMap("Random Forest (Symmetric)", 3, 128, 128, 1)
+MapWorld = "Random"

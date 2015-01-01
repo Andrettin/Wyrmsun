@@ -106,7 +106,7 @@ function RunEncyclopediaUnitsMenu(state)
 	local icon_y = 0
 	for i, unitName in ipairs(Units) do
 		if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
-			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "hero") ~= nil) == (state == "heroes") and (string.find(unitName, "-mercenary-") ~= nil) == (state == "mercenaries")) then
+			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (string.find(unitName, "hero") ~= nil) == (state == "heroes") and (string.find(unitName, "mercenary") ~= nil) == (state == "mercenaries")) then
 				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
@@ -154,7 +154,11 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	if (string.find(unit_name, "upgrade-") == nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		civilization = GetUnitTypeData(unit_name, "Civilization")
-		tooltip_name = GetUnitTypeData(unit_name, "Name")
+		if (string.find(unit_name, "hero") == nil) then
+			tooltip_name = GetUnitTypeData(unit_name, "Name")
+		else
+			tooltip_name = GetUnitTypeData(unit_name, "DefaultName")
+		end
 		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 			tooltip_civilization = "(" ..  _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. ")"
 		end
@@ -201,11 +205,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 
 			local encyclopedia_entry_menu_image = ImageWidget(encyclopedia_icon)
 			encyclopedia_entry_menu:add(encyclopedia_entry_menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
-			if (string.find(unit_name, "upgrade-") == nil) then
-				encyclopedia_entry_menu:addLabel("~<" .. GetUnitTypeData(unit_name, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-			else
-				encyclopedia_entry_menu:addLabel("~<" .. CUpgrade:Get(unit_name).Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-			end
+			encyclopedia_entry_menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 			local l = MultiLineLabel()
 			l:setFont(Fonts["game"])

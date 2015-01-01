@@ -577,6 +577,7 @@ Leo:
 /graphics/dwarf/icons/thursagan.png
 /graphics/germanic/buildings/carpenters_shop.png
 /graphics/germanic/buildings/smithy.png
+/graphics/germanic/icons/archer.png
 /graphics/germanic/icons/arrow.png
 /graphics/germanic/icons/barbed_arrow.png
 /graphics/germanic/icons/broad_sword.png

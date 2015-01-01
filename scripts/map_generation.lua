@@ -1107,21 +1107,21 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations)
 	-- create player units
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
-			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp") and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
+			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") and table.getn(GetCivilizationAvailableFactions("germanic")) > 0) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest") and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp") and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
+			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
@@ -1206,7 +1206,7 @@ function SetMapBorders(tile_type, replace_tile)
 	end
 end
 
-function GenerateRandomMap(width, height, symmetric)
+function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 	CleanRawTiles()
 
 	for x=0,(Map.Info.MapWidth - 1) do
@@ -1215,7 +1215,7 @@ function GenerateRandomMap(width, height, symmetric)
 		end
 	end
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations)
 
 	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
@@ -3159,7 +3159,7 @@ function CreateStartingBuilding(player, building_type)
 	end
 end
 
-function GenerateValley(direction, lake_quantity)
+function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	CleanRawTiles()
 	
 	if (direction == nil) then
@@ -3173,7 +3173,7 @@ function GenerateValley(direction, lake_quantity)
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -3181,7 +3181,7 @@ function GenerateValley(direction, lake_quantity)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6))
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -3241,4 +3241,796 @@ function GenerateValley(direction, lake_quantity)
 --	end
 
 	CleanRawTiles()
+end
+
+function GenerateRandomDungeon(player_civilization, player_name, player_hero, second_player_civilization, second_player_name, second_player_hero, hostile_dungeon_player_civilization, hostile_dungeon_player_name, hostile_creep_number, dungeon_boss, dungeon_boss_name, second_dungeon_boss, second_dungeon_boss_name, boss_room_decorations, passive_dungeon_player_name, passive_dweller_number)
+	CleanRawTiles()
+
+	SetRawTile(29, 30, "Wall")
+	SetRawTile(29, 31, "Wall")
+	SetRawTile(29, 32, "Wall")
+	SetRawTile(29, 33, "Wall")
+	SetRawTile(29, 34, "Wall")
+	SetRawTile(30, 30, "Wall")
+	SetRawTile(30, 31, "Land")
+	SetRawTile(30, 32, "Land")
+	SetRawTile(30, 33, "Land")
+	SetRawTile(30, 34, "Wall")
+	SetRawTile(31, 30, "Wall")
+	SetRawTile(31, 31, "Land")
+	SetRawTile(31, 32, "Land")
+	SetRawTile(31, 33, "Land")
+	SetRawTile(31, 34, "Wall")
+	SetRawTile(32, 30, "Wall")
+	SetRawTile(32, 31, "Land")
+	SetRawTile(32, 32, "Land")
+	SetRawTile(32, 33, "Land")
+	SetRawTile(32, 34, "Wall")
+	SetRawTile(33, 30, "Wall")
+	SetRawTile(33, 31, "Land")
+	SetRawTile(33, 32, "Land")
+	SetRawTile(33, 33, "Land")
+	SetRawTile(33, 34, "Wall")
+	SetRawTile(34, 30, "Wall")
+	SetRawTile(34, 31, "Land")
+	SetRawTile(34, 32, "Land")
+	SetRawTile(34, 33, "Land")
+	SetRawTile(34, 34, "Wall")
+	SetRawTile(35, 30, "Wall")
+	SetRawTile(35, 31, "Wall")
+	SetRawTile(35, 32, "Wall")
+	SetRawTile(35, 33, "Wall")
+	SetRawTile(35, 34, "Wall")
+
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			if (RawTile(x, y) == "") then
+				SetRawTile(x, y, "Wall")
+			end
+		end
+	end
+
+	if (LoadedGame == false) then
+		local RandomNumber = 0
+		local RandomX = 0
+		local RandomY = 0
+		local Count = 64
+		local SuitableArea = true
+		local FeastHallArea = nil
+		local WhileCount = 0
+
+		-- dungeon generation algorithm inspired by Mike Anderson's code for Tyrant, which was released under the GPLv2 license
+		while ((Count > 0 or FeastHallArea == nil) and WhileCount < 64 * 100) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (RawTile(RandomX, RandomY) == "Wall" and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Land")) then
+				RandomNumber = SyncRand(100)
+				if (RandomNumber < 45 and Count > 0) then -- corridors
+					if (RawTile(RandomX - 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=RandomX,(RandomX + 9) do
+							for y=(RandomY - 1),(RandomY + 1) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							for x=RandomX,(RandomX + 8) do
+								SetRawTile(x, RandomY, "Land")
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX + 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 9),RandomX do
+							for y=(RandomY - 1),(RandomY + 1) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							for x=(RandomX - 8),RandomX do
+								SetRawTile(x, RandomY, "Land")
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY - 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 1),(RandomX + 1) do
+							for y=RandomY,(RandomY + 9) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							for y=RandomY,(RandomY + 8) do
+								SetRawTile(RandomX, y, "Land")
+							end
+							SetRawTile(RandomX, RandomY, "Door")
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY + 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 1),(RandomX + 1) do
+							for y=(RandomY - 9),RandomY do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							for y=(RandomY - 8),RandomY do
+								SetRawTile(RandomX, y, "Land")
+							end
+							SetRawTile(RandomX, RandomY, "Door")
+							Count = Count - 1
+						end
+					end
+				elseif (RandomNumber < 85 and Count > 0) then -- normal room
+					if (RawTile(RandomX - 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=RandomX,(RandomX + 5) do
+							for y=(RandomY - 3),(RandomY + 2) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Land")
+							for x=(RandomX + 1),(RandomX + 4) do
+								for y=(RandomY - 2),(RandomY + 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX + 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 5),RandomX do
+							for y=(RandomY - 3),(RandomY + 2) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Land")
+							for x=(RandomX - 4),(RandomX - 1) do
+								for y=(RandomY - 2),(RandomY + 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY - 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 3),(RandomX + 2) do
+							for y=RandomY,(RandomY + 5) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Door")
+							for x=(RandomX - 2),(RandomX + 1) do
+								for y=(RandomY + 1),(RandomY + 4) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY + 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 3),(RandomX + 2) do
+							for y=(RandomY - 5),RandomY do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Door")
+							for x=(RandomX - 2),(RandomX + 1) do
+								for y=(RandomY - 4),(RandomY - 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					end
+				elseif (RandomNumber < 90 and Count > 0) then -- octogonal room
+					if (RawTile(RandomX - 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=RandomX,(RandomX + 8) do
+							for y=(RandomY - 4),(RandomY + 4) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Land")
+							for x=(RandomX + 1),(RandomX + 7) do
+								for y=(RandomY - 1),(RandomY + 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX + 2),(RandomX + 6) do
+								for y=(RandomY - 2),(RandomY + 2) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX + 3),(RandomX + 5) do
+								for y=(RandomY - 3),(RandomY + 3) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX + 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 8),RandomX do
+							for y=(RandomY - 4),(RandomY + 4) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Land")
+							for x=(RandomX - 7),(RandomX - 1) do
+								for y=(RandomY - 1),(RandomY + 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX - 6),(RandomX - 2) do
+								for y=(RandomY - 2),(RandomY + 2) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX - 5),(RandomX - 3) do
+								for y=(RandomY - 3),(RandomY + 3) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY - 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 4),(RandomX + 4) do
+							for y=RandomY,(RandomY + 8) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Door")
+							for x=(RandomX - 1),(RandomX + 1) do
+								for y=(RandomY + 1),(RandomY + 7) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX - 2),(RandomX + 2) do
+								for y=(RandomY + 2),(RandomY + 6) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX - 3),(RandomX + 3) do
+								for y=(RandomY + 3),(RandomY + 5) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY + 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 4),(RandomX + 4) do
+							for y=(RandomY - 8),RandomY do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Door")
+							for x=(RandomX - 1),(RandomX + 1) do
+								for y=(RandomY - 7),(RandomY - 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX - 2),(RandomX + 2) do
+								for y=(RandomY - 6),(RandomY - 2) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							for x=(RandomX - 3),(RandomX + 3) do
+								for y=(RandomY - 5),(RandomY - 3) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							Count = Count - 1
+						end
+					end
+				elseif (FeastHallArea == nil) then -- feast hall
+					if (RawTile(RandomX - 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=RandomX,(RandomX + 17) do
+							for y=(RandomY - 5),(RandomY + 4) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Land")
+							for x=(RandomX + 1),(RandomX + 16) do
+								for y=(RandomY - 4),(RandomY + 3) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							FeastHallArea = { {RandomX + 1, RandomY - 4}, {RandomX + 16, RandomY + 3} }
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX + 1, RandomY) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 17),RandomX do
+							for y=(RandomY - 5),(RandomY + 4) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Land")
+							for x=(RandomX - 16),(RandomX - 1) do
+								for y=(RandomY - 4),(RandomY + 3) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							FeastHallArea = { {RandomX - 16, RandomY - 4}, {RandomX - 1, RandomY + 3} }
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY - 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 5),(RandomX + 4) do
+							for y=RandomY,(RandomY + 17) do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Door")
+							for x=(RandomX - 4),(RandomX + 3) do
+								for y=(RandomY + 1),(RandomY + 16) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							FeastHallArea = { {RandomX - 4, RandomY + 1}, {RandomX + 3, RandomY + 16} }
+							Count = Count - 1
+						end
+					elseif (RawTile(RandomX, RandomY + 1) == "Land") then
+						SuitableArea = true
+						for x=(RandomX - 5),(RandomX + 4) do
+							for y=(RandomY - 17),RandomY do
+								if (RawTile(x, y) ~= "Wall") then
+									SuitableArea = false
+								end
+							end
+						end
+						if (SuitableArea == true) then
+							SetRawTile(RandomX, RandomY, "Door")
+							for x=(RandomX - 4),(RandomX + 3) do
+								for y=(RandomY - 16),(RandomY - 1) do
+									SetRawTile(x, y, "Land")
+								end
+							end
+							FeastHallArea = { {RandomX - 4, RandomY - 16}, {RandomX + 3, RandomY - 1} }
+							Count = Count - 1
+						end
+					end
+				end
+			end
+			WhileCount = WhileCount + 1
+		end
+
+		Count = 24
+
+		while (Count > 0) do
+			for x=0,(Map.Info.MapWidth - 1) do
+				for y=0,(Map.Info.MapHeight - 1) do
+					if (RawTile(x, y) == "Land" or RawTile(x, y) == "Door") then
+						local adjacent_floor_tiles = 0
+						if (RawTile(x + 1, y) == "Land" or RawTile(x + 1, y) == "Door") then
+							adjacent_floor_tiles = adjacent_floor_tiles + 1
+						end
+						if (RawTile(x - 1, y) == "Land" or RawTile(x - 1, y) == "Door") then
+							adjacent_floor_tiles = adjacent_floor_tiles + 1
+						end
+						if (RawTile(x, y + 1) == "Land" or RawTile(x, y + 1) == "Door") then
+							adjacent_floor_tiles = adjacent_floor_tiles + 1
+						end
+						if (RawTile(x, y - 1) == "Land" or RawTile(x, y - 1) == "Door") then
+							adjacent_floor_tiles = adjacent_floor_tiles + 1
+						end
+						if (adjacent_floor_tiles <= 1) then
+							SetRawTile(x, y, "Wall")
+						end
+					end
+				end
+			end
+			Count = Count - 1
+		end
+
+		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Land")
+
+		-- remove gold pile and random rug tiles from feast hall
+		for x=FeastHallArea[1][1],FeastHallArea[2][1] do
+			for y=FeastHallArea[1][2],FeastHallArea[2][2] do
+				SetRawTile(x, y, "Land")
+			end
+		end
+
+		for x=FeastHallArea[1][1] + 1,FeastHallArea[2][1] - 1 do -- create a big rug in the middle of the feast hall
+			for y=FeastHallArea[1][2] + 1,FeastHallArea[2][2] - 1 do
+				SetRawTile(x, y, "Dark-Rough")
+			end
+		end
+
+		ApplyRawTiles()
+
+		for x=FeastHallArea[1][1] + 2,FeastHallArea[2][1] - 2 do -- make sure only non-damaged rug tiles are used for the feast hall's rug
+			for y=FeastHallArea[1][2] + 2,FeastHallArea[2][2] - 2 do
+				SetTile(64, x, y, 0)
+			end
+		end
+
+		CreateDecorations()
+
+		-- remove mushrooms, rocks and other such things from the feast hall
+		local uncount = 0
+		uncount = GetUnits("any")
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-small-rocks" or GetUnitVariable(uncount[unit1], "Ident") == "unit-bones" or GetUnitVariable(uncount[unit1], "Ident") == "unit-floor-decoration" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+				if (GetUnitVariable(uncount[unit1],"PosX") >= FeastHallArea[1][1] and GetUnitVariable(uncount[unit1],"PosX") <= FeastHallArea[2][1] and GetUnitVariable(uncount[unit1],"PosY") >= FeastHallArea[1][2] and GetUnitVariable(uncount[unit1],"PosY") <= FeastHallArea[2][2]) then
+					KillUnitAt(GetUnitVariable(uncount[unit1], "Ident"), 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+				end
+			end
+		end
+
+		SetPlayerData(0, "RaceName", player_civilization)
+		if (player_name ~= "") then
+			SetPlayerData(0, "Name", player_name)
+		end
+		SetAiType(0, "passive")
+		if (second_player_civilization ~= "") then
+			SetPlayerData(1, "RaceName", second_player_civilization)
+			if (second_player_name ~= "") then
+				SetPlayerData(1, "Name", second_player_name)
+			end
+			SetAiType(1, "passive")
+		end
+		if (hostile_dungeon_player_civilization == "random") then
+			local possible_civilizations = {"dwarf", "germanic", "gnome", "goblin", "kobold"}
+			hostile_dungeon_player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
+		end
+		SetPlayerData(2, "RaceName", hostile_dungeon_player_civilization)
+		if (hostile_dungeon_player_name ~= "") then
+			SetPlayerData(2, "Name", hostile_dungeon_player_name)
+		end
+		SetAiType(2, "passive")
+		if (passive_dungeon_player_name ~= "") then
+			SetPlayerData(3, "RaceName", "neutral")
+			SetPlayerData(3, "Name", passive_dungeon_player_name)
+			SetAiType(3, "passive")
+		end
+		
+		SetDiplomacy(0, "enemy", 1)
+		SetDiplomacy(0, "enemy", 2)
+		SetDiplomacy(1, "enemy", 0)
+		SetDiplomacy(1, "enemy", 2)
+		SetDiplomacy(2, "enemy", 0)
+		SetDiplomacy(2, "enemy", 1)
+
+		-- create items
+		RandomX = 0
+		RandomY = 0
+		Count = 12
+		while (Count > 0) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+				local adjacent_floor_tiles = 0
+				for x=(RandomX - 1),(RandomX + 1) do
+					for y=(RandomY - 1),(RandomY + 1) do
+						if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+							adjacent_floor_tiles = adjacent_floor_tiles + 1
+						end
+					end
+				end
+				if (adjacent_floor_tiles >= 8) then
+					if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+						RandomNumber = SyncRand(100)
+						if (RandomNumber < 40) then
+							local barrel_quantity = SyncRand(4)
+							for i=0,barrel_quantity do
+								unit = CreateUnit("unit-barrel", 15, {RandomX, RandomY})
+							end
+						elseif (RandomNumber < 80) then
+							unit = CreateUnit("unit-potion-of-healing", 15, {RandomX, RandomY})
+						else
+							unit = CreateUnit("unit-potion-of-decay", 15, {RandomX, RandomY})
+						end
+						Count = Count - 1
+					end
+				end
+			end
+		end
+
+		-- create stairs
+		--RandomX = 0
+		--RandomY = 0
+		--Count = 1
+		--while (Count > 0) do
+		--	RandomX = SyncRand(Map.Info.MapWidth)
+		--	RandomY = SyncRand(Map.Info.MapHeight)
+		--	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+		--		local adjacent_floor_tiles = 0
+		--		for x=(RandomX - 1),(RandomX + 1) do
+		--			for y=(RandomY - 1),(RandomY + 1) do
+		--				if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+		--					adjacent_floor_tiles = adjacent_floor_tiles + 1
+		--				end
+		--			end
+		--		end
+		--		if (adjacent_floor_tiles >= 9) then
+		--			unit = CreateUnit("unit-stairs", 15, {RandomX, RandomY})
+		--			SetUnitVariable(unit, "GraphicsVariation", 1)
+		--			Count = Count - 1
+		--		end
+		--	end
+		--end
+
+		-- create player 1's units
+		Count = 1
+		while (Count > 0) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+				if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
+					local adjacent_floor_tiles = 0
+					for x=(RandomX - 1),(RandomX + 1) do
+						for y=(RandomY - 1),(RandomY + 1) do
+							if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+								adjacent_floor_tiles = adjacent_floor_tiles + 1
+							end
+						end
+					end
+					if (adjacent_floor_tiles >= 8) then
+						if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+							SetStartView(0, RandomX, RandomY)
+							if (player_hero == "random") then
+								local available_heroes = {}
+								if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-rugnur")
+								end
+								if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-baglur")
+								end
+								if (GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-thursagan")
+								end
+								if (GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-durstorn")
+								end
+								unit = CreateUnit(available_heroes[SyncRand(table.getn(available_heroes)) + 1], 0, {RandomX, RandomY})
+							else
+								unit = CreateUnit(player_hero, 0, {RandomX, RandomY})
+							end
+							Count = Count - 1
+						end
+					end
+				end
+			end
+		end
+
+		-- create player 2's units
+		Count = 1
+		while (Count > 0) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+				if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
+					local adjacent_floor_tiles = 0
+					for x=(RandomX - 1),(RandomX + 1) do
+						for y=(RandomY - 1),(RandomY + 1) do
+							if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+								adjacent_floor_tiles = adjacent_floor_tiles + 1
+							end
+						end
+					end
+					if (adjacent_floor_tiles >= 8) then
+						if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+							SetStartView(1, RandomX, RandomY)
+							if (second_player_hero == "random") then
+								local available_heroes = {}
+								if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-rugnur")
+								end
+								if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-baglur")
+								end
+								if (GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-thursagan")
+								end
+								if (GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-durstorn")
+								end
+								unit = CreateUnit(available_heroes[SyncRand(table.getn(available_heroes)) + 1], 1, {RandomX, RandomY})
+							else
+								unit = CreateUnit(second_player_hero, 1, {RandomX, RandomY})
+							end
+							Count = Count - 1
+						end
+					end
+				end
+			end
+		end
+
+		-- create dungeon boss(es)
+		if (dungeon_boss ~= "") then
+			Count = 1
+			while (Count > 0) do
+				RandomX = SyncRand(Map.Info.MapWidth)
+				RandomY = SyncRand(Map.Info.MapHeight)
+				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+					if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
+						local adjacent_floor_tiles = 0
+						for x=(RandomX - 1),(RandomX + 1) do
+							for y=(RandomY - 1),(RandomY + 1) do
+								if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+									adjacent_floor_tiles = adjacent_floor_tiles + 1
+								end
+							end
+						end
+						if (adjacent_floor_tiles >= 8) then
+							if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+								SetStartView(1, RandomX, RandomY)
+								for i=1,table.getn(boss_room_decorations) do
+									unit = CreateUnit(boss_room_decorations[i], 15, {RandomX, RandomY})
+								end
+								unit = CreateUnit(dungeon_boss, 2, {RandomX, RandomY})
+								if (unit and dungeon_boss_name ~= "") then
+									SetUnitName(unit, dungeon_boss_name)
+								end
+								if (second_dungeon_boss ~= "") then
+									unit = CreateUnit(second_dungeon_boss, 2, {RandomX, RandomY})
+									if (unit and second_dungeon_boss_name ~= "") then
+										SetUnitName(unit, second_dungeon_boss_name)
+									end
+								end
+								Count = Count - 1
+							end
+						end
+					end
+				end
+			end
+		end
+	
+		-- create hostile creeps
+		Count = hostile_creep_number
+		while (Count > 0) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+				if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
+					RandomNumber = SyncRand(100)
+					if (hostile_dungeon_player_civilization == "dwarf" or hostile_dungeon_player_civilization == "germanic" or hostile_dungeon_player_civilization == "goblin") then
+						if (RandomNumber < 50) then
+							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 50) then
+							unit = CreateUnit("unit-dwarven-scout", 2, {RandomX, RandomY})
+							Count = Count - 1
+						end
+					elseif (hostile_dungeon_player_civilization == "gnome") then
+						if (RandomNumber < 75) then
+							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 75) then
+							unit = CreateUnit("unit-gnomish-herbalist", 2, {RandomX, RandomY})
+							Count = Count - 1
+						end
+					elseif (hostile_dungeon_player_civilization == "kobold") then
+						if (RandomNumber < 90) then
+							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 90) then
+							unit = CreateUnit("unit-wyrm", 2, {RandomX, RandomY})
+							Count = Count - 1
+						end
+					end
+				end
+			end
+		end
+		
+		if (passive_dungeon_player_name ~= "") then
+			-- create workers to represent the dwellers of the hall, as scenery
+			Count = passive_dweller_number
+			while (Count > 0) do
+				RandomX = SyncRand(Map.Info.MapWidth)
+				RandomY = SyncRand(Map.Info.MapHeight)
+				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+					if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
+						if (GetNumUnitsAt(0, "any", {RandomX - 4, RandomY - 4}, {RandomX + 4, RandomY + 4}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 4, RandomY - 4}, {RandomX + 4, RandomY + 4}) < 1) then
+							local adjacent_floor_tiles = 0
+							for x=(RandomX - 1),(RandomX + 1) do
+								for y=(RandomY - 1),(RandomY + 1) do
+									if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+										adjacent_floor_tiles = adjacent_floor_tiles + 1
+									end
+								end
+							end
+							if (adjacent_floor_tiles >= 8) then
+								if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+									if (hostile_dungeon_player_civilization == "dwarf") then
+										RandomNumber = SyncRand(100)
+										if (RandomNumber < 95) then
+											unit = CreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY})
+										else
+											unit = CreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a dwarven hall will be a gnome instead of a dwarf
+										end
+									elseif (hostile_dungeon_player_civilization == "germanic") then
+										unit = CreateUnit("unit-germanic-worker", 3, {RandomX, RandomY})
+									elseif (hostile_dungeon_player_civilization == "gnome") then
+										RandomNumber = SyncRand(100)
+										if (RandomNumber < 95) then
+											unit = CreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY})
+										else
+											unit = CreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a gnomish hall will be a dwarf instead of a gnome
+										end
+									elseif (hostile_dungeon_player_civilization == "goblin") then
+										unit = CreateUnit("unit-goblin-worker", 3, {RandomX, RandomY})
+									end
+									Count = Count - 1
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+
+		-- run next dungeon level if a unit is on the stairs
+		--AddTrigger(
+		--	function()
+		--		if (GameCycle == 0) then
+		--			return false
+		--		end
+		--		return true
+		--	end,
+		--	function()
+		--		local uncount = 0
+		--		uncount = GetUnits("any")
+		--		for unit1 = 1,table.getn(uncount) do 
+		--			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-stairs") then
+		--				local people_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+		--				if (people_quantity > 0) then
+		--					NextMap = "maps/nidavellir/fjalars-and-galars-hall.smp"
+		--					NextMapDirect = true
+		--					ActionVictory()					
+		--				end
+		--			end
+		--		end
+		--		return true
+		--	end
+		--)
+	end
 end

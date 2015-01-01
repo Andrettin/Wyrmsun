@@ -2016,7 +2016,7 @@ function DrawOnScreenTiles()
 				end
 				DrawWorldMapTile(settlement_graphics, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])				
 			end
-
+			
 			if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].AttackedBy == GrandStrategyFaction.Name) then
 				-- draw symbol that the province is being attacked by the human player if that is the case
 				DrawWorldMapTile("tilesets/world/sites/attack.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
@@ -2033,6 +2033,14 @@ function DrawOnScreenTiles()
 						if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 1) then
 							-- draw symbol that a hero is moving to the province
 							DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+							break
+						end
+					end
+				end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) then
+							DrawWorldMapTile("tilesets/world/sites/hero.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 							break
 						end
 					end

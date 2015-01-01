@@ -1080,7 +1080,9 @@ function RunSinglePlayerGameMenu()
 	end
 
 	--table.sort(scenario_list)
-	table.insert(scenario_list, _("Custom Map"))
+	if (world_list[world:getSelected() + 1] == "Random") then
+		table.insert(scenario_list, _("Custom Map"))
+	end
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
 	scenario:setSelected(0)

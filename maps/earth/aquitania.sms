@@ -8,7 +8,7 @@ for x=0,(Map.Info.MapWidth - 1) do
 	end
 end
 	
-CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
 
 for y=0,(Map.Info.MapHeight - 1) do
 	SetRawTile(0, y, "Water")
