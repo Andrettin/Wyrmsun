@@ -77,12 +77,6 @@ AddTrigger(
 		return false
 	end,
 	function()
-		if (GrandStrategy) then
-			Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
-			Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
-			WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
-			WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
-		end
 		Event(
 			"",
 			"We ravaged Vanaland and pillaged its wealth, but victory did not quite fall within our grasp. A number of Vanaland's warriors still loomed at large, and reorganized themselves for an attack on us: our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
@@ -101,7 +95,7 @@ AddTrigger(
 								table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
 							end
 							SavePreferences()
---							NextMap = "maps/earth/novgorod.smp"
+							NextMap = "maps/earth/novgorod.smp"
 						end
 						ActionVictory()
 					end
@@ -173,13 +167,6 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
-					for i, unitName in ipairs(Units) do
-						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-							WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-						end
-					end
-					AcquireProvince(WorldMapProvinces.Astrakhan, "")
-					WorldMapProvinces.Astrakhan.Civilization = ""
 					ActionDefeat()
 				end
 			end}
@@ -218,18 +205,134 @@ AddTrigger(
 							table.insert(wyr.preferences.QuestsCompleted, "Westward Migration")
 						end
 						SavePreferences()
---						NextMap = "maps/earth/jutland.smp"
-					else
-						AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
-						for i, unitName in ipairs(Units) do
-							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-							end
+						NextMap = "maps/earth/jutland.smp"
+					end
+					ActionVictory()
+				end
+			end}
+		)
+		return false
+	end
+)
+end
+
+if (mapinfo.description == "Jutland") then
+-- Northwards to the Sea introduction
+-- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Subdue the natives") == false) then
+			player = GetFactionPlayer("Asa Tribe")
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"",
+			"This land pleases us. Let us take it for ourselves!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, "- Destroy the enemy")
+				AddPlayerObjective(player, "- Subdue the natives")
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Subdue the natives") and GetNumRivals(GetFactionPlayer("Asa Tribe")) == 0) then
+			player = GetFactionPlayer("Asa Tribe")
+			return true
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"After subduing the natives, we made ourselves the new masters of this land. Our journey has not ended, however: you set up your sons as the rulers of this country and set your eyes upon the northern seas...",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (player == GetThisPlayer()) then
+					if (GrandStrategy == false) then
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Northwards to the Sea") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "Northwards to the Sea")
 						end
-						AcquireProvince(WorldMapProvinces.Astrakhan, "")
-						WorldMapProvinces.Astrakhan.Civilization = ""
-						CenterMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
+						SavePreferences()
+						NextMap = "maps/earth/malmo.smp"
+					end
+					ActionVictory()
+				end
+			end}
+		)
+		return false
+	end
+)
+end
+
+if (mapinfo.description == "Malmo") then
+-- Gylve's Realm introduction
+-- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") == false) then
+			player = GetFactionPlayer("Asa Tribe")
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"",
+			"After disembarking at the coast, we were greeted by the local king, Gylve. Although he was impressed by us and treated us gently, the king refused to give way and swear an oath of fealty to you, or even to allow us to pass through his lands to reach the fields beyond. If we are to succeed in our aims, we have to demonstrate our power to Gylve and force him to a peace. He will know the might of the Asa!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, "- Destroy the enemy")
+				AddPlayerObjective(player, "- Destroy all of Gylve's war lodges and military units")
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") and GetPlayerData(GetFactionPlayer("Gylve"), "UnitTypesCount", "unit-germanic-barracks") < 1 and GetPlayerData(GetFactionPlayer("Gylve"), "UnitTypesCount", "unit-germanic-warrior") < 1 and GetPlayerData(GetFactionPlayer("Gylve"), "UnitTypesCount", "unit-germanic-archer") < 1) then
+			player = GetFactionPlayer("Asa Tribe")
+			return true
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"Gylve has accepted a honorable peace with us. He has retained his role as a king, yet became subordinated to you. We moved on to the north... to our final destination. We came upon a large lake, with fair fields spread around it. You founded a hall by the lake, Sigtun, from which your descendants shall rule the land for untold generations!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (player == GetThisPlayer()) then
+					if (GrandStrategy == false) then
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "Gylve's Realm")
+						end
+						SavePreferences()
 					end
 					ActionVictory()
 				end

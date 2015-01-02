@@ -8,7 +8,7 @@ for x=0,(Map.Info.MapWidth - 1) do
 	end
 end
 	
-CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight, false, false)
 
 for y=0,(Map.Info.MapHeight - 1) do
 	SetRawTile(0, y, "Water")
@@ -100,4 +100,8 @@ for i=0,14 do
 		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 	end
+end
+
+if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
 end

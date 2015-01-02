@@ -100,6 +100,7 @@ b_o:
 /graphics/missiles/wood_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/buildings/mercenary_camp.png (modified from the building made by Jinn to add the fire animation)
 /graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
+/graphics/neutral/buildings/tree_stump.png
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/inner_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
@@ -594,6 +595,7 @@ Leo:
 /graphics/germanic/ui/cursors/germanic_hand.png
 /graphics/gnome/icons/boots.png
 /graphics/gnome/icons/boots_fur.png
+/graphics/gnome/icons/gnomish_herbalist.png
 /graphics/gnome/icons/thrusting_sword_1.png
 /graphics/gnome/icons/thrusting_sword_1_extra_1.png
 /graphics/gnome/icons/thrusting_sword_1_extra_2.png

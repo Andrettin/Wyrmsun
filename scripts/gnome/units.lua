@@ -132,7 +132,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	Civilization = "gnome",
 	Description = _("The priests of gnomish societies, herbalists are in deep contact with nature. They honor the souls of plants while using them to concoct powerful potions and medicines."),
 	Image = {"file", "gnome/units/gnomish_herbalist.png", "size", {72, 72}},
-	Animations = "animations-gnomish-herbalist", Icon = "icon-gnomish-worker",
+	Animations = "animations-gnomish-herbalist", Icon = "icon-gnomish-herbalist",
 	Costs = {"time", 80, "gold", 700},
 	Speed = 8,
 	HitPoints = 40,
@@ -164,7 +164,6 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 		{
 			"variation-id", "gray-hair",
 			"file", "gnome/units/gnomish_herbalist_gray_hair.png",
-			"icon", "icon-gnomish-worker-gray-hair",
 			"upgrade-required", "upgrade-old"
 		}
 	},

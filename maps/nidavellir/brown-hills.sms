@@ -214,3 +214,7 @@ CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Ma
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+
+if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+end

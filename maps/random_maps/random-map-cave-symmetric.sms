@@ -17,7 +17,7 @@ if (LoadedGame == false) then
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true)
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, true)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
@@ -33,7 +33,9 @@ if (LoadedGame == false) then
 			if (mirrored_tile_x < 0) then
 				mirrored_tile_x = mirrored_tile_x * -1
 			end
-			SetRawTile(x, y, RawTile(mirrored_tile_x, y))
+			if (string.find(RawTile(x, y), "Town Hall") == nil and string.find(RawTile(mirrored_tile_x, y), "Town Hall") == nil) then
+				SetRawTile(x, y, RawTile(mirrored_tile_x, y))
+			end
 		end
 	end
 
@@ -44,7 +46,9 @@ if (LoadedGame == false) then
 			if (mirrored_tile_y < 0) then
 				mirrored_tile_y = mirrored_tile_y * -1
 			end
-			SetRawTile(x, y, RawTile(x, mirrored_tile_y))
+			if (string.find(RawTile(x, y), "Town Hall") == nil and string.find(RawTile(x, mirrored_tile_y), "Town Hall") == nil) then
+				SetRawTile(x, y, RawTile(x, mirrored_tile_y))
+			end
 		end
 	end
 

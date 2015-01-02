@@ -332,6 +332,23 @@ DefineAnimations("animations-mercenary-camp", {
   Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
 })
 
+DefineAnimations("animations-tree-stump", {
+	Still = {
+		"if-var v.Transport.Value >= 1 transport",
+		"exact-frame 0", "wait 4", "exact-frame 0", "goto end",
+		"label transport", 
+		"exact-frame 2", "wait 4", "exact-frame 2", "goto end",
+		"label end", 
+		"wait 1",
+	},
+	Death = {"unbreakable begin",
+		"frame 1",
+		"label loop", 
+		"wait 100", "exact-frame 1", "goto loop",
+		"unbreakable end", "wait 1",
+	}
+})
+
 DefineAnimations("animations-dwarven-dead-body", {
   Death = {"unbreakable begin", "frame 0", "wait 200", "frame 5", "wait 200", "frame 10", "wait 200",
     "frame 15", "wait 200", "frame 15", "unbreakable end", "wait 1",},

@@ -562,6 +562,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-herbalist",
+	Size = {46, 38},
+	File = "gnome/icons/gnomish_herbalist.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-thrusting-sword-1",
 	Size = {46, 38},
 	File = "gnome/icons/thrusting_sword_1.png"
@@ -877,6 +883,12 @@ DefineIcon({
 	Name = "icon-mercenary-camp",
 	Size = {46, 38},
 	File = "neutral/icons/mercenary_camp.png"
+})
+
+DefineIcon({
+	Name = "icon-tree-stump",
+	Size = {46, 38},
+	File = "neutral/icons/tree_stump.png"
 })
 
 DefineIcon({

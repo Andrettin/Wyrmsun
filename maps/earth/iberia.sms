@@ -200,3 +200,7 @@ unit = CreateUnit("unit-germanic-worker", 3, {78, 68})
 unit = CreateUnit("unit-germanic-worker", 3, {78, 68})
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+end

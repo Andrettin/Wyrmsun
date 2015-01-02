@@ -45,9 +45,18 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Sentry Towers now can garrison one organic unit.
 - Guard Towers now can garrison two organic units.
 - Added Germanic Smithy (graphics by Leo).
+- Sentry towers now have an extra under construction frame and a frame for when they are occupied.
 
 * Civilizations
 - Added Germanic civilization (human).
+
+* Grand Strategy Mode
+- Added the possibility to select Earth in the Grand Strategy Mode.
+- Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
+- Provinces in the Grand Strategy mode now have a culture (a civilization) assigned to them, which remains even if they are conquered, and the units and buildings available in the province are those belonging to that province's culture/civilization.
+- Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay). The presence of heroes in a province owned by the player is marked by a crown on the top-left of the province's settlement.
+- Added the quests of the Germanic campaign as events to the Grand Strategy mode.
+- Added three flavor events for the Germanics, "The Curved Swords", "The Sun Chariot" and "Nobleman's Burial".
 
 * Maps
 - Added Tanais map (Earth).
@@ -58,6 +67,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Holmgard map (Earth).
 - Random maps are now placed in the "Random" world, and feature a mix of civilizations regardless of tileset.
 - Added a random dungeon map.
+- Added Malmo map (Earth).
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
@@ -75,15 +85,13 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - If there is any incomplete quest available, then its map will now be automatically selected when starting the single player game menu.
 - Factions now have a particular color which they will use (or their secondary color, if their preferential color is already in use).
 - Added crow sound (from the public domain).
-- Added the possibility to select Earth in the Grand Strategy Mode.
-- Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
-- Provinces in the Grand Strategy mode now have a culture (a civilization) assigned to them, which remains even if they are conquered, and the units and buildings available in the province are those belonging to that province's culture/civilization.
-- Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay). The presence of heroes in a province owned by the player is marked by a crown on the top-left of the province's settlement.
 
 * Quests
 - Added On the Vanaquisl quest.
 - The leveled-up units that appear on the player's side during quests (i.e. the gnomish envoy) now begin with an experience upgrade already chosen.
 - Added Westward Migration quest.
+- Added Northwards to the Sea quest.
+- Added Gylve's Realm quest.
 
 * Terrain
 - Tile types can now use different images in a tileset's definition.
@@ -92,6 +100,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dungeon tiles updated (by b_o).
 - Added north-south dungeon doors (graphics by b_o).
 - Added roaming fog (graphics by b_o).
+- Added tree stump (graphics by b_o), in which units can hide from enemies.
 
 * Units
 - Added Bura (germanic worker) (unit graphics by b_o and icon by Leo).
@@ -106,7 +115,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Smithies now have personal names.
 - Added Erala (germanic warrior) (unit graphics by b_o and icon by Jinn).
 - Added Goblin Thief (unit graphics by b_o).
-- Added Gnomish Herbalist (unit graphics by b_o).
+- Added Gnomish Herbalist (unit graphics by b_o and icon by Leo).
 - Scouts and archers can now attack from within towers.
 - Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
 - Mechanical units now no longer display Level and XP.

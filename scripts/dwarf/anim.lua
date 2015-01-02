@@ -162,6 +162,25 @@ DefineAnimations("animations-dwarven-gryphon-rider", {
 })
 
 --
+-- Dwarven Sentry Tower
+--
+local SentryTowerStill = {
+	"if-var v.Transport.Value >= 1 transport",
+	"frame 0", "wait 4", "frame 0", "goto end",
+	"label transport", 
+	"frame 3", "wait 4", "frame 3", "goto end",
+	"label end", 
+	"wait 1",
+}
+
+DefineAnimations("animations-dwarven-sentry-tower", {
+  Still = SentryTowerStill,
+  Research = SentryTowerStill,
+  Train = SentryTowerStill,
+  Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+})
+
+--
 -- Dwarven Guard Tower
 --
 

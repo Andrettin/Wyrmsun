@@ -59,6 +59,7 @@ function RunGrandStrategyGameSetupMenu()
 	local world
 	local date_list = {
 		"3000 BC", -- begin of the last wave of Indo-European migrations, which lasted until 2800 BC
+--		"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 		"25 AD", -- begin of The Scepter of Fire
 		"40 AD", -- end of The Scepter of Fire
 		"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
@@ -718,25 +719,9 @@ function AcquireProvince(province, faction)
 		table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 		
 		if (province.Civilization == "") then -- if province has no culture, make it that of the one who acquired it
-			province.Civilization = GetFactionFromName(faction).Civilization
+			ChangeProvinceCulture(province, GetFactionFromName(faction).Civilization)
 		end
 					
-		-- replace existent buildings from other civilizations with buildings of own civilization
-		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
-				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetUnitTypeData(unitName, "Civilization") ~= GetFactionFromName(faction).Civilization) then
-					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
-					for j, second_unitName in ipairs(Units) do -- if there is an equivalent building of the acquirer's civilization, create it
-						if (GetUnitTypeData(second_unitName, "Civilization") == GetFactionFromName(faction).Civilization and GetUnitTypeData(second_unitName, "Class") == GetUnitTypeData(unitName, "Class")) then
-							province.SettlementBuildings[string.gsub(second_unitName, "-", "_")] = 2
-						end
-					end
-				elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
-					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
-				end
-			end
-		end
-
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
 				if (province.Heroes[string.gsub(unitName, "-", "_")] == 1) then -- if a hero is moving here, remove him
@@ -747,6 +732,26 @@ function AcquireProvince(province, faction)
 	end
 	
 	CalculateFactionIncomes()
+end
+
+function ChangeProvinceCulture(province, civilization)
+	province.Civilization = civilization
+	
+	-- replace existent buildings from other civilizations with buildings of the new civilization
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
+			if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetUnitTypeData(unitName, "Civilization") ~= civilization) then
+				province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
+				for j, second_unitName in ipairs(Units) do -- if there is an equivalent building of the acquirer's civilization, create it
+					if (GetUnitTypeData(second_unitName, "Civilization") == civilization and GetUnitTypeData(second_unitName, "Class") == GetUnitTypeData(unitName, "Class")) then
+						province.SettlementBuildings[string.gsub(second_unitName, "-", "_")] = 2
+					end
+				end
+			elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
+				province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
+			end
+		end
+	end
 end
 
 function CalculateProvinceBorderTiles()
@@ -2324,7 +2329,7 @@ function DrawGrandStrategyInterface()
 					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							-- add a button to show the heroes in the province (but only if there is actually a hero there)
-							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", 24, Video.Height - (22 * 2) - 16, function()
+							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", 24, Video.Height - (22 * 3) - 8, function()
 								InterfaceState = "Heroes"
 								DrawGrandStrategyInterface()
 							end)
@@ -2405,7 +2410,7 @@ function DrawGrandStrategyInterface()
 				end
 				
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 3) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -2522,7 +2527,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 3) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -2560,7 +2565,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 3) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -2598,7 +2603,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 3) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -2636,7 +2641,7 @@ function DrawGrandStrategyInterface()
 				end
 				
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 2) - 16, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 3) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -2696,8 +2701,24 @@ function DrawGrandStrategyInterface()
 	end
 
 	-- add an end turn button
-	local b = AddGrandStrategyImageButton("~!End Turn", "e", 24, Video.Height - 22 - 16, function()
+	local b = AddGrandStrategyImageButton("~!End Turn", "e", 24, Video.Height - (22 * 2) - 8, function()
 		EndTurn()
+	end)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+	g_btn:Load()
+	g_btp:Load()
+	b:setNormalImage(g_btn)
+	b:setPressedImage(g_btp)
+	b:setSize(128, 20)
+	b:setFont(Fonts["game"])
+	
+	-- add a menu button
+	local b = AddGrandStrategyImageButton("Menu (~<F10~>)", "", 24, Video.Height - (22 * 1) - 8, function()
+		RunGrandStrategyGameMenu()
 	end)
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
@@ -3484,7 +3505,11 @@ function CanTriggerEvent(faction, event)
 		return false
 	end
 	
-	if (event.Year ~= nil and event.Year ~= GrandStrategyYear) then
+	if (event.MinYear ~= nil and GrandStrategyYear < event.MinYear) then
+		return false
+	end
+	
+	if (event.MaxYear ~= nil and GrandStrategyYear > event.MaxYear) then
 		return false
 	end
 	
@@ -3504,6 +3529,18 @@ function CanTriggerEvent(faction, event)
 		end
 	end
 	
+	if (event.Provinces ~= nil and event.SettlementBuildings ~= nil) then
+		for key, value in pairs(event.Provinces) do
+			for i, unitName in ipairs(Units) do
+				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
+					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == 2) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
+						return false
+					end
+				end
+			end
+		end
+	end
+
 	if (event.Provinces ~= nil and event.Units ~= nil) then
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
@@ -3666,7 +3703,7 @@ function FormFaction(old_faction, new_faction)
 	new_faction.Technologies = old_faction.Technologies
 	new_faction.Trade = old_faction.Trade
 
-	for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
+	for key, value in pairs(Factions) do
 		Factions[key].Diplomacy[new_faction_key] = Factions[key].Diplomacy[old_faction_key]
 		Factions[new_faction_key].Diplomacy[key] = Factions[old_faction_key].Diplomacy[key]
 		

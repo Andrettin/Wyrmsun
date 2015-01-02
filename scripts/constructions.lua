@@ -95,6 +95,25 @@ DefineConstruction("construction-germanic-town-hall", {
     Frame = 3}}
 })
 
+DefineConstruction("construction-dwarven-sentry-tower", {
+  Files = {
+    File = files[wyrmsun.tileset],
+    Size = {64, 64}},
+  Constructions = {
+   {Percent = 0,
+    File = "construction",
+    Frame = 0},
+   {Percent = 25,
+    File = "construction",
+    Frame = 1},
+   {Percent = 50,
+    File = "main",
+    Frame = 1},
+   {Percent = 75,
+    File = "main",
+    Frame = 2}}
+})
+
 local files = {
   cave = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",

@@ -129,7 +129,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-recruit",
   Key = "r", Hint = _("Train ~!Recruit"),
   ForUnit = {"unit-gnomish-barracks"} } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-worker",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-herbalist",
   Action = "train-unit", Value = "unit-gnomish-herbalist",
   Key = "h", Hint = _("Train ~!Herbalist"),
   ForUnit = {"unit-gnomish-barracks"} } )

@@ -219,6 +219,7 @@ WorldMapProvinces = {
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
+			unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
 		}
 	},
 	Belgium = {
@@ -246,6 +247,7 @@ WorldMapProvinces = {
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
+			unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
 		}
 	},
 	Brandenburg = {
@@ -390,9 +392,13 @@ WorldMapProvinces = {
 --		SettlementName = "Gothenburg",
 		SettlementLocation = {128, 22}, -- Gothenburg
 		SettlementBuildings = {
+			unit_germanic_town_hall = 2, -- Gylve's realm
+			unit_germanic_barracks = 2
 		},
-		Map = "maps/random_maps/random-map-forest.smp",
+		Map = "maps/earth/malmo.smp",
 		Units = {
+			unit_germanic_warrior = 4,
+			unit_germanic_archer = 4
 		}
 	},
 	Hungary = {
@@ -445,6 +451,8 @@ WorldMapProvinces = {
 		},
 		Map = "maps/earth/jutland.smp",
 		Units = {
+			unit_germanic_warrior = 4,
+			unit_germanic_archer = 2
 		}
 	},
 --	Naples = {
@@ -533,6 +541,7 @@ WorldMapProvinces = {
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
+			unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
 		}
 	},
 	Rhineland = {
@@ -545,6 +554,7 @@ WorldMapProvinces = {
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
+			unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
 		}
 	},
 	Romania = {
@@ -622,6 +632,7 @@ WorldMapProvinces = {
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
+			unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
 		}
 	},
 	Sweden = {
@@ -815,9 +826,9 @@ Factions = {
 		Name = "Vana Tribe",
 		Civilization = "germanic",
 		Technologies = {},
-		Gold = 3000,
+		Gold = 5000,
 		Commodities = {
-			Lumber = 1500 -- half of the gold value
+			Lumber = 2500 -- half of the gold value
 		}
 	},
 	VandalTribe = {
@@ -870,6 +881,12 @@ GrandStrategyEvents = {
 					GetMapInfo("maps/earth/tanais.smp")
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
+						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
+						WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
+						WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
+					end
 					for i, unitName in ipairs(Units) do
 						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
 							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
@@ -879,8 +896,8 @@ GrandStrategyEvents = {
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name ~= "Vana Tribe") then
 					for i, unitName in ipairs(Units) do
 						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] / 2
-							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] / 2
+							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")]
+							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")]
 						end
 					end
 					Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
@@ -913,6 +930,10 @@ GrandStrategyEvents = {
 							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 						end
 					end
+					if (GameResult == GameDefeat) then
+						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
+						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000
+					end
 				end
 			end
 		}
@@ -940,6 +961,27 @@ GrandStrategyEvents = {
 					GetMapInfo("maps/earth/novgorod.smp")
 					RunMap("maps/earth/novgorod.smp")
 					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+						AcquireProvince(WorldMapProvinces.Astrakhan, "")
+						WorldMapProvinces.Astrakhan.Civilization = ""
+						WorldMapProvinces.Brandenburg.Units.unit_germanic_worker = 0
+						CenterMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
+					elseif (GameResult == GameDefeat) then
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+						AcquireProvince(WorldMapProvinces.Astrakhan, "")
+						WorldMapProvinces.Astrakhan.Civilization = ""
+					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 					for i, unitName in ipairs(Units) do
@@ -956,14 +998,299 @@ GrandStrategyEvents = {
 			function(s)
 			end
 		}
+	},
+	NorthwardsToTheSea = {
+		Name = "Northwards to the Sea",
+		Description = "The peninsula to our north seems promising for settlement... Shall we invade it and subdue its natives?",
+		Civilization = "germanic",
+		Faction = "AsaTribe",
+		Provinces = {
+			Brandenburg = true
+		},
+		Units = {
+			unit_germanic_warrior = 6 -- event only happens if player has enough warriors to successfully attack the province
+		},
+--		RandomChance = 50,
+		Options = {"~!Yes", "~!No"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/earth/jutland.smp")
+					GameSettings.Presets[1].Type = PlayerComputer					
+					RunMap("maps/earth/jutland.smp")
+					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.Jutland, "Asa Tribe")
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(4, "UnitTypesCount", unitName)
+								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
+							end
+						end
+						AcquireProvince(WorldMapProvinces.Brandenburg, "")
+						WorldMapProvinces.Brandenburg.Civilization = ""
+						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8
+						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
+						CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
+					elseif (GameResult == GameDefeat) then
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Jutland, "Asa Tribe")
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")]
+							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
+						end
+					end
+					AcquireProvince(WorldMapProvinces.Brandenburg, "")
+					WorldMapProvinces.Brandenburg.Civilization = ""
+					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8
+					WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
+				end
+				DrawMinimap()
+			end,
+			function(s)
+			end
+		}
+	},
+	GylvesRealm = {
+		Name = "Gylve's Realm",
+		Description = "After establishing ourselves in the Jutland peninsula, we now have the opportunity to sail across this short sea... what will await us?",
+		Civilization = "germanic",
+		Faction = "AsaTribe",
+		Provinces = {
+			Jutland = true
+		},
+		Units = {
+			unit_germanic_warrior = 6 -- event only happens if player has enough warriors to successfully attack the province
+		},
+--		RandomChance = 50,
+		Options = {"~!Embark!", "~!Seafaring is not for us."},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/earth/malmo.smp")
+					RunMap("maps/earth/malmo.smp")
+					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
+						AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(0, "UnitTypesCount", unitName)
+							end
+						end
+						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
+						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
+					elseif (GameResult == GameDefeat) then
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
+					AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+							WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = 0
+							WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] * 3 / 4
+							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
+						end
+					end
+					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
+				end
+				DrawMinimap()
+			end,
+			function(s)
+			end
+		}
+	},
+	GermanicTribalSplit = {
+		Name = "Tribal Split",
+		Description = "Quarrels amongst our people's chieftains have led to our tribe splitting up into a number of smaller tribes. Which splinter group shall we follow?",
+		Civilization = "germanic",
+		Faction = "AsaTribe",
+		Provinces = {
+			Gotaland = true,
+			Jutland = true,
+			Sweden = true
+		},
+		RandomChance = 1,
+		Options = {"~!Swede Tribe", "~!Goth Tribe", "~!Saxon Tribe"},
+		OptionEffects = {
+			function(s)
+				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+				Factions.GothTribe.Technologies = Factions.AsaTribe.Technologies				
+				AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
+				Factions.SaxonTribe.Technologies = Factions.AsaTribe.Technologies
+				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
+				end
+				if (WorldMapProvinces.Netherlands.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+				end
+				if (WorldMapProvinces.Prussia.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Prussia, "Goth Tribe")
+				end
+				if (WorldMapProvinces.Rhineland.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+				end
+				if (WorldMapProvinces.Austria.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Austria, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Bavaria.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Bavaria, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Bohemia.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Bohemia, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
+				end
+				Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
+				Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+				FormFaction(EventFaction, Factions.SwedeTribe)
+			end,
+			function(s)
+				AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
+				Factions.SwedeTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
+				Factions.SaxonTribe.Technologies = Factions.AsaTribe.Technologies
+				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
+				end
+				if (WorldMapProvinces.Netherlands.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+				end
+				if (WorldMapProvinces.Prussia.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Prussia, "Goth Tribe")
+				end
+				if (WorldMapProvinces.Rhineland.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+				end
+				if (WorldMapProvinces.Austria.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Austria, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Bavaria.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Bavaria, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Bohemia.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Bohemia, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
+				end
+				Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
+				Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+				FormFaction(EventFaction, Factions.GothTribe)
+			end,
+			function(s)
+				AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
+				Factions.SwedeTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+				Factions.GothTribe.Technologies = Factions.AsaTribe.Technologies
+				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
+				end
+				if (WorldMapProvinces.Netherlands.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+				end
+				if (WorldMapProvinces.Prussia.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Prussia, "Goth Tribe")
+				end
+				if (WorldMapProvinces.Rhineland.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+				end
+				if (WorldMapProvinces.Austria.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Austria, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Bavaria.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Bavaria, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Bohemia.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Bohemia, "Suebi Tribe")
+				end
+				if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
+					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
+				end
+				Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
+				Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+				FormFaction(EventFaction, Factions.SaxonTribe)
+			end
+		}
+	},
+	TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
+		Name = "The Curved Swords",
+		Description = "One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords would serve to embellish ceremonies and bring prestige to their bearer.",
+		Civilization = "germanic",
+		Provinces = {
+			Jutland = true
+		},
+		SettlementBuildings = {
+			unit_germanic_smithy = true
+		},
+		RandomChance = 1,
+		Options = {"~!Marvelous! (+100 Gold)"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold + 100 -- a small effect to give more purpose to this flavor event
+			end
+		}
+	},
+	TheSunChariot = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
+		Name = "The Sun Chariot",
+		Description = "One of our artisans has made a delicate bronze figure of a sun chariot, representing the divine horse that carries the sun on its eternal journey across the sky.",
+		Civilization = "germanic",
+		Provinces = {
+			Jutland = true
+		},
+		SettlementBuildings = {
+			unit_germanic_smithy = true
+		},
+		RandomChance = 1,
+		Options = {"~!Inspiring! (+100 Gold)"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold + 100 -- a small effect to give more purpose to this flavor event
+			end
+		}
+	},
+	NoblemansBurial = { -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
+		Name = "Nobleman's Burial",
+		Description = "In 1365 BC, a nobleman was buried in the northwestern parts of the Jutland peninsula. Dressed in wool, he was laid down with his bronze sword in an oak coffin, which was then placed in a mound.",
+		Civilization = "germanic",
+		Provinces = {
+			Jutland = true
+		},
+		MinYear = -1365,
+		MaxYear = -1365,
+		Options = {"~!OK (+100 Gold)"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold + 100 -- his inheritance? a small effect to give more purpose to this flavor event
+			end
+		}
 	}
 }
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
 	WorldMapProvinces.Gotaland.Owner = "Asa Tribe" -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
 	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Gotaland.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Gotaland.Units.unit_germanic_archer = 0
 	WorldMapProvinces.Jutland.Owner = "Asa Tribe"
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Jutland.Units.unit_germanic_archer = 0
 	WorldMapProvinces.Sweden.Owner = "Asa Tribe"
 	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Astrakhan.Owner = ""
@@ -974,6 +1301,23 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
 	WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
 	WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
+	GrandStrategyEvents.OnTheVanaquisl = nil
+	GrandStrategyEvents.AsaRaid = nil
+	GrandStrategyEvents.WestwardMigration = nil
+	GrandStrategyEvents.NorthwardsToTheSea = nil
+	GrandStrategyEvents.GylvesRealm = nil
+end
+
+if (GrandStrategyYear >= -1600) then
+	GrandStrategyEvents.TheCurvedSwords = nil  -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
+end
+
+if (GrandStrategyYear >= -1400) then
+	GrandStrategyEvents.TheSunChariot = nil -- http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
+end
+
+if (GrandStrategyYear >= -1365) then
+	GrandStrategyEvents.NoblemansBurial = nil -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
 end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
@@ -1017,12 +1361,14 @@ end
 if (GrandStrategyYear >= -9) then -- Maroboduus, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 	WorldMapProvinces.Bohemia.Owner = "Marcomanni Tribe"
 	WorldMapProvinces.Bohemia.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
 	Factions.MarcomanniTribe.Technologies = Factions.SuebiTribe.Technologies
 end
 
 if (GrandStrategyYear >= 1) then -- Political situation in Europe in 1 AD; Source: http://www.euratlas.net/history/europe/1/index.html
 	WorldMapProvinces.Bavaria.Owner = "Suebi Tribe" -- Suebi in modern southwestern Germany in 1 AD
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= 98) then
@@ -1031,6 +1377,7 @@ if (GrandStrategyYear >= 98) then
 	Factions.RugianTribe.Technologies = Factions.AsaTribe.Technologies
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Rhineland area by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Rhineland.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
 	Factions.SaxonTribe.Technologies = Factions.AsaTribe.Technologies
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
 end
@@ -1041,6 +1388,7 @@ if (GrandStrategyYear >= 150) then
 	Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
 	WorldMapProvinces.Gotaland.Owner = ""
 	WorldMapProvinces.Prussia.Owner = "Goth Tribe" -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Prussia.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= 200) then

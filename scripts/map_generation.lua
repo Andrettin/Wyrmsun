@@ -455,6 +455,7 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 		WhileCount = WhileCount + 1
 	end
 
+	--[[	
 	-- convert buildable land tiles adjacent to water tiles into rough land
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do
@@ -463,6 +464,7 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 			end
 		end
 	end
+	--]]
 end
 
 function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
@@ -867,7 +869,7 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 		Count = building_number
 		local WhileCount = 0
 		while (Count > 0 and WhileCount < building_number * 100) do
-			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
+			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y)
 			unit = CreateUnit(building_type, 15, {building_spawn_point[1], building_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
@@ -952,7 +954,7 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 				end
 			end
 
-			if (unit_quantity < 1) then -- wyrms shouldn't start near a settlement, or the player will be destroyed
+			if (unit_quantity < 1) then -- creeps shouldn't start near a settlement, or the player will likely be destroyed
 				unit = CreateUnit(creep_type, player, {RandomX, RandomY})
 				Count = Count - 1
 			end
@@ -1107,8 +1109,9 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, symmetric)
 	-- create player units
+	local symmetric_starting_location = {0, 0}
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
@@ -1131,7 +1134,20 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations)
 				local player_spawn_point
 				local starting_point_found = false
 				while (starting_point_found == false and WhileCount < 1000) do
-					player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
+					if (symmetric == false) then
+						player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
+					else
+						if (i == 0 or i == 4 or i == 8 or i == 12) then
+							player_spawn_point = {SyncRand((max_x / 2) - min_x) + min_x, SyncRand((max_y / 2) - min_y) + min_y}
+							symmetric_starting_location = player_spawn_point
+						elseif (i == 1 or i == 5 or i == 9 or i == 13) then
+							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)), symmetric_starting_location[2]}
+						elseif (i == 2 or i == 6 or i == 10 or i == 14) then
+							player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1))}
+						elseif (i == 3 or i == 7 or i == 11) then
+							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)), math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1))}
+						end
+					end
 					starting_point_found = true
 					if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
 						starting_point_found = false
@@ -1215,9 +1231,9 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 		end
 	end
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations)
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, symmetric)
 
-	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
@@ -1242,7 +1258,9 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 				if (mirrored_tile_x < 0) then
 					mirrored_tile_x = mirrored_tile_x * -1
 				end
-				SetRawTile(x, y, RawTile(mirrored_tile_x, y))
+				if (string.find(RawTile(x, y), "Town Hall") == nil and string.find(RawTile(mirrored_tile_x, y), "Town Hall") == nil) then
+					SetRawTile(x, y, RawTile(mirrored_tile_x, y))
+				end
 			end
 		end
 
@@ -1252,7 +1270,9 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 				if (mirrored_tile_y < 0) then
 					mirrored_tile_y = mirrored_tile_y * -1
 				end
-				SetRawTile(x, y, RawTile(x, mirrored_tile_y))
+				if (string.find(RawTile(x, y), "Town Hall") == nil and string.find(RawTile(x, mirrored_tile_y), "Town Hall") == nil) then
+					SetRawTile(x, y, RawTile(x, mirrored_tile_y))
+				end
 			end
 		end
 	end
@@ -1303,6 +1323,10 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 --		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
 --	end
 
+	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, symmetric)
+	end
+	
 	CleanRawTiles()
 end
 
@@ -1822,7 +1846,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 	return {RandomX, RandomY}
 end
 
-function FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
+function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
@@ -1831,7 +1855,15 @@ function FindAppropriateNeutralBuildingSpawnPoint(min_x, max_x, min_y, max_y)
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
 		
-		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
+		local in_buildable_land = true
+		for x_offset=0, (GetUnitTypeData(building_type, "TileWidth") - 1) do
+			for y_offset=0, (GetUnitTypeData(building_type, "TileHeight") - 1) do
+				if (GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "land") == false or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "unpassable") or GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "no-building")) then
+					in_buildable_land = false
+				end
+			end
+		end
+		if (in_buildable_land) then
 			local unit_quantity = 0
 			for i=0,14 do
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
@@ -2385,7 +2417,7 @@ function ConvertHexTiles()
 	end
 end
 
-function FillArea(x1, y1, x2, y2, tile_type)
+function FillArea(x1, y1, x2, y2, tile_type, adjust_transitions)
 	if (x1 > x2) then
 		local t = x1
 		x1 = x2
@@ -2402,16 +2434,18 @@ function FillArea(x1, y1, x2, y2, tile_type)
 		end
 	end
 
-	for x=x1-1,x2+1 do
-		for y=y1-1,y2+1 do
-			-- convert buildable land tiles adjacent to water tiles into rough land
-			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
-				SetRawTile(x, y, "Rough")
-			end
+	if (adjust_transitions) then
+		for x=x1-1,x2+1 do
+			for y=y1-1,y2+1 do
+				-- convert buildable land tiles adjacent to water tiles into rough land
+				if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+					SetRawTile(x, y, "Rough")
+				end
 
-			-- convert buildable land tiles adjacent to rock tiles into rough land
-			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
-				SetRawTile(x, y, "Rough")
+				-- convert buildable land tiles adjacent to rock tiles into rough land
+				if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+					SetRawTile(x, y, "Rough")
+				end
 			end
 		end
 	end
@@ -2486,7 +2520,7 @@ function CreateTown(layout, town_player, invader_player)
 		end
 	end
 	
-	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
+	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 
 	local function BuildArea(x, y, t)
 		if (t == -1) then
@@ -2520,7 +2554,7 @@ function CreateTown(layout, town_player, invader_player)
 --			unit = AddThing("unit-dwarven-temple", town_player, x + 8 - dice(2, 3), y + 3, x + dice(2, 3), y + 12)
 --			unit = AddThing("unit-dwarven-witness", town_player, x + 8, y + 7, x + 8, y + 7) -- add a healer to the temple's entrance
 		elseif (t == 6) then -- central crossroads with shops
-			FillArea(x, y, x + 15, y + 15, "Land") -- make sure that the area is entirely buildable land
+			FillArea(x, y, x + 15, y + 15, "Land", false) -- make sure that the area is entirely buildable land
 			SetStartView(town_player, x + 8, y + 8)
 			unit = CreateUnit("unit-germanic-town-hall", town_player, {x + 6, y + 6}) -- add the settlement's town hall
 			RandomNumber = SyncRand(4)
@@ -2587,7 +2621,7 @@ function CreateTown(layout, town_player, invader_player)
 		elseif (t == 14) then -- orchard
 			GenerateTrees(20, 20, x, x + 15, y, y + 15) -- should be fruit trees or mix between fruit and normal trees instead
 		elseif (t == 15) then -- smithy
-			FillArea(x, y, x + 15, y + 15, "Land") -- make sure that the area is entirely buildable land
+			FillArea(x, y, x + 15, y + 15, "Land", false) -- make sure that the area is entirely buildable land
 			unit = AddThing("unit-dwarven-smithy", town_player, x + 5, y + 5, x + 10, y + 10)
 		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
 			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
@@ -2602,14 +2636,14 @@ function CreateTown(layout, town_player, invader_player)
 			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
 		elseif (t == 24) then -- water garden
 			-- water area, (7, 7) is the center
-			FillArea(x + 1, y + 1, x + 13, y + 13, "Water")
+			FillArea(x + 1, y + 1, x + 13, y + 13, "Water", true)
 			
 			-- island
-			FillArea(x + 3, y + 3, x + 11, y + 11, "Land")
+			FillArea(x + 3, y + 3, x + 11, y + 11, "Land", true)
 			
 			-- bridges
-			FillArea(x, y + 6, x + 14, y + 8, "Land")
-			FillArea(x + 6, y, x + 8, y + 14, "Land")
+			FillArea(x, y + 6, x + 14, y + 8, "Land", true)
+			FillArea(x + 6, y, x + 8, y + 14, "Land", true)
 			
 			--[[
 			RandomNumber = SyncRand(4)
@@ -2876,7 +2910,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	local RandomNumber = 0
 
-	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
+	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 
 	if (invader_player ~= nil) then
 		local invader_location_found = false
@@ -2906,8 +2940,21 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	-- 23 = N/S/W river fork
 	-- 25 = invader base
 	-- 27 = gold mine
+	-- 30 = Sea
+	-- 31 = North coast
+	-- 32 = East coast
+	-- 33 = South coast
+	-- 34 = West coast
+	-- 35 = Northwest outer coast
+	-- 36 = Northeast outer coast
+	-- 37 = Southeast outer coast
+	-- 38 = Southwest outer coast
+	-- 39 = Northwest inner coast
+	-- 40 = Northeast inner coast
+	-- 41 = Southeast inner coast
+	-- 42 = Southwest inner coast
 	
-	local function BuildRiverArea(x, y, t)
+	local function BuildWaterArea(x, y, t)
 		if (t == 8) then -- N/S river
 			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
 			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
@@ -2939,6 +2986,42 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
 			RotateArea(x, y, 16, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
 			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+		elseif (t == 30) then -- sea
+			FillArea(x, y, x + 15, y + 15, "Water", false)
+		elseif (t == 31) then -- North coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y, x + 15, y + 3, "Water", false)
+			GenerateWater(0, 64, x, x + 15, y, y + 15) -- (8 (the water area goal height) * 16 (the water area goal width) - (4 * 16)) (the already filled-in area of water)
+		elseif (t == 32) then -- East coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x + 12, y, x + 15, y + 15, "Water", false)
+			GenerateWater(0, 64, x, x + 15, y, y + 15)
+		elseif (t == 33) then -- South coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y + 12, x + 15, y + 15, "Water", false)
+			GenerateWater(0, 64, x, x + 15, y, y + 15)
+		elseif (t == 34) then -- West coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y, x + 3, y + 15, "Water", false)
+			GenerateWater(0, 64, x, x + 15, y, y + 15)
+		elseif (t == 35) then -- Northwest outer coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y, x + 15, y + 3, "Water", false)
+			FillArea(x, y, x + 3, y + 15, "Water", false)
+			GenerateWater(0, 80, x, x + 15, y, y + 15)
+		elseif (t == 36) then -- Northeast outer coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y, x + 15, y + 3, "Water", false)
+			FillArea(x + 12, y, x + 15, y + 15, "Water", false)
+			GenerateWater(0, 80, x, x + 15, y, y + 15)
+		elseif (t == 39) then -- Northwest inner coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y, x + 3, y + 3, "Water", false)
+			GenerateWater(0, 48, x, x + 15, y, y + 15)
+		elseif (t == 40) then -- Northeast inner coast
+			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x + 12, y, x + 15, y + 3, "Water", false)
+			GenerateWater(0, 48, x, x + 15, y, y + 15)
 		end
 	end
 
@@ -2997,7 +3080,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	for ay=1,table.getn(layout) do
 		for ax=1,table.getn(layout[ay]) do
-			BuildRiverArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
+			BuildWaterArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
 		end
 	end
 	
@@ -3055,6 +3138,10 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	end
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+	end
 end
 
 function CreateStartingGoldMine(player, x, y)
@@ -3170,10 +3257,10 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 		end
 	end
 
-	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land")
+	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, false)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -3181,7 +3268,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations)
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, false)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -3240,6 +3327,10 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 --		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
 --	end
 
+	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+	end
+	
 	CleanRawTiles()
 end
 
