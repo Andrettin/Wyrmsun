@@ -90,7 +90,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 		"dead", "basic-human-voices-dead"
 	}
 } )
-		
+
 DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 	Civilization = "germanic",
 	Image = {"file", "germanic/units/builder.png", "size", {72, 72}},
@@ -124,7 +124,7 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 		"dead", "basic-human-voices-dead"
 	}
 } )
-		
+
 DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
 	Class = "infantry",
 	Civilization = "germanic",

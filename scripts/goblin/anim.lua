@@ -54,7 +54,7 @@ DefineAnimations("animations-goblin-spearman", {
 
 local GoblinSwordsmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
 local GoblinSwordsmanDeath = {"unbreakable begin", "frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100",
-    "frame 55", "spawn-unit unit-gold-sack 0 0 5 15", "unbreakable end", "wait 1",}
+    "frame 55", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-swordsman", {
   Still = GoblinSwordsmanStill,

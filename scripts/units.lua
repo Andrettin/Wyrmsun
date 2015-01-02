@@ -565,6 +565,27 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	MaxOnBoard = 1,
 	CanTransport = {"LandUnit", "only", "organic", "only"},
 	SaveCargo = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "neutral/buildings/tree_stump_2.png"
+		},
+		{
+			"variation-id", "3",
+			"file", "neutral/buildings/tree_stump_3.png"
+		},
+		{
+			"variation-id", "4",
+			"file", "neutral/buildings/tree_stump_4.png"
+		},
+		{
+			"variation-id", "5",
+			"file", "neutral/buildings/tree_stump_5.png"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
@@ -1470,6 +1491,19 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,	
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "neutral/items/barrel_2.png"
+		},
+		{
+			"variation-id", "3",
+			"file", "neutral/items/barrel_3.png"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 		"dead", "building destroyed"} } )
@@ -1495,8 +1529,8 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 		"dead", "building destroyed"} } )
 
 DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
-	Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
-	Animations = "animations-red-potion", Icon = "icon-red-potion",
+	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
+	Animations = "animations-item", Icon = "icon-red-potion",
 	NeutralMinimapColor = {255, 255, 0},
 	Speed = 0,
 	HitPoints = 1,
@@ -1516,8 +1550,8 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 } )
 
 DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
-	Image = {"file", "neutral/items/potion.png", "size", {16, 16}},
-	Animations = "animations-blue-potion", Icon = "icon-blue-potion",
+	Image = {"file", "neutral/items/potion_blue.png", "size", {16, 16}},
+	Animations = "animations-item", Icon = "icon-blue-potion",
 	NeutralMinimapColor = {255, 255, 0},
 	Speed = 0,
 	HitPoints = 1,
@@ -1595,7 +1629,7 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	Speed = 3,
 	HitPoints = 1,
 	DrawLevel = 45,
-	TileSize = {15, 18}, BoxSize = {497, 276},
+	TileSize = {15, 8}, BoxSize = {497, 276},
 	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
 	Missile = "missile-none",
 	MaxAttackRange = 1,

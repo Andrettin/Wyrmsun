@@ -655,37 +655,6 @@ DefineAnimations("animations-alchemy-bench", {
 	},
 })
 
-DefineAnimations("animations-green-potion", {
-  Still = BuildingStill,
-  Death = BuildingStill,
-})
-
-DefineAnimations("animations-red-potion", {
-  Still = {
-	"frame 1",
-	"wait 4",
-	"frame 1",
-	"wait 1",},
-  Death = {
-	"frame 1",
-	"wait 4",
-	"frame 1",
-	"wait 1",},
-})
-
-DefineAnimations("animations-blue-potion", {
-  Still = {
-	"frame 2",
-	"wait 4",
-	"frame 2",
-	"wait 1",},
-  Death = {
-	"frame 2",
-	"wait 4",
-	"frame 2",
-	"wait 1",},
-})
-
 --
 -- Roaming Fog
 --

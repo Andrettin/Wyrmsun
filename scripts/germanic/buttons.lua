@@ -51,7 +51,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-broad-sword",
   Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-broad-sword"},
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior",
 	"unit-hero-greebo",
 	"germanic-group"

@@ -41,13 +41,13 @@ function DefineAllowNormalUnits(flags)
 			local PlayerHeroUnitMax = {}
 			for j=0,15 do
 				if (string.find(unitName, "upgrade-") == nil) then
-					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and GetUnitTypeData(unitName, "TechnologyPointCost") > 0) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Name")), unitName)) then
+					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and GetUnitTypeData(unitName, "TechnologyPointCost") > 0) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
 						PlayerUnitFlag[j] = "F"
 					else
 						PlayerUnitFlag[j] = "A"
 					end
 				else
-					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and CUpgrade:Get(unitName).TechnologyPointCost > 0) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Name")), unitName)) then
+					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and CUpgrade:Get(unitName).TechnologyPointCost > 0) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
 						PlayerUnitFlag[j] = "F"
 					elseif (flags == "RRRRRRRRRRRRRRRR") then
 						PlayerUnitFlag[j] = "R"
@@ -56,7 +56,7 @@ function DefineAllowNormalUnits(flags)
 					end
 				end
 				if (string.find(unitName, "hero") ~= nil) then
-					if (GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Name")), unitName)) then
+					if (GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
 						PlayerHeroUnitMax[j] = 0
 					else
 						PlayerHeroUnitMax[j] = 1

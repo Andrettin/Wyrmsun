@@ -1354,7 +1354,6 @@ if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
 	Factions.SwedeTribe.Technologies = Factions.AsaTribe.Technologies
 --	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	WorldMapProvinces.Gotaland.Name = "Gotaland"
 	WorldMapProvinces.Jutland.Owner = "" -- remove the Asa Tribe
 end
 
@@ -1387,6 +1386,7 @@ if (GrandStrategyYear >= 150) then
 	WorldMapProvinces.Netherlands.SettlementBuildings.unit_germanic_town_hall = 2
 	Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
 	WorldMapProvinces.Gotaland.Owner = ""
+	WorldMapProvinces.Gotaland.Name = "Gotaland"
 	WorldMapProvinces.Prussia.Owner = "Goth Tribe" -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Prussia.Units.unit_germanic_warrior = 0
 end
@@ -1437,8 +1437,7 @@ end
 
 if (GrandStrategyYear >= 454) then
 	WorldMapProvinces.Ukraine.Owner = ""
-	WorldMapProvinces.Austria.Owner = "Ostrogoth Tribe" -- The eastern goths had migrated to the area of modern Austria in about 454 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	WorldMapProvinces.Hungary.Owner = "Ostrogoth Tribe" -- The eastern goths had migrated to Pannonia in about 454 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 end
 
 if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
@@ -1474,6 +1473,8 @@ if (GrandStrategyYear >= 495) then
 end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	WorldMapProvinces.Austria.Owner = "Ostrogoth Tribe"
+	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.Bavaria.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Sicily.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Sicily.SettlementBuildings.unit_germanic_town_hall = 2

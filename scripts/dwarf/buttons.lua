@@ -74,7 +74,8 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+ 	"dwarf-group"
     } } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
@@ -84,7 +85,8 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+ 	"dwarf-group"
     } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
@@ -104,7 +106,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-2",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+ 	"dwarf-group"
     } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
@@ -114,7 +117,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
+	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+ 	"dwarf-group"
     } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",

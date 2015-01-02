@@ -914,7 +914,16 @@ function CreateCritters(critter_number)
 				else
 					critter_unit_type = "unit-bird"
 				end
-			elseif (wyrmsun.tileset == "dungeon" or wyrmsun.tileset == "swamp") then
+			elseif (wyrmsun.tileset == "dungeon") then
+				RandomNumber = SyncRand(3)
+				if (RandomNumber == 0) then
+					critter_unit_type = "unit-slime"
+				elseif (RandomNumber == 1) then
+					critter_unit_type = "unit-bat"
+				elseif (RandomNumber == 2) then
+					critter_unit_type = "unit-rat"
+				end
+			elseif (wyrmsun.tileset == "swamp") then
 				critter_unit_type = "unit-slime"
 			elseif (wyrmsun.tileset == "cave") then
 				RandomNumber = SyncRand(2)
@@ -4023,7 +4032,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 				if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 					RandomNumber = SyncRand(100)
-					if (hostile_dungeon_player_civilization == "dwarf" or hostile_dungeon_player_civilization == "germanic" or hostile_dungeon_player_civilization == "goblin") then
+					if (hostile_dungeon_player_civilization == "dwarf" or hostile_dungeon_player_civilization == "germanic") then
 						if (RandomNumber < 50) then
 							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
 							Count = Count - 1
@@ -4033,15 +4042,27 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						end
 					elseif (hostile_dungeon_player_civilization == "gnome") then
 						if (RandomNumber < 75) then
-							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							unit = CreateUnit("unit-gnomish-recruit", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 75) then
 							unit = CreateUnit("unit-gnomish-herbalist", 2, {RandomX, RandomY})
 							Count = Count - 1
 						end
+					elseif (hostile_dungeon_player_civilization == "goblin") then
+						if (RandomNumber < 33) then
+							unit = CreateUnit("unit-goblin-spearman", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 33 and RandomNumber < 66) then
+							unit = CreateUnit("unit-goblin-archer", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 66) then
+							unit = CreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+							unit = CreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+							Count = Count - 1
+						end
 					elseif (hostile_dungeon_player_civilization == "kobold") then
 						if (RandomNumber < 90) then
-							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							unit = CreateUnit("unit-kobold-footpad", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 90) then
 							unit = CreateUnit("unit-wyrm", 2, {RandomX, RandomY})
