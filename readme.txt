@@ -114,7 +114,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven Smith renamed to "Smithy".
 - Smithies now have personal names.
 - Added Erala (germanic warrior) (unit graphics by b_o and icon by Jinn).
-- Added Goblin Thief (unit graphics by b_o), a unit that can backstab other units (give increased to them if they are facing opposite to the goblin thief).
+- Added Goblin Thief (unit graphics by b_o), a unit that can backstab other units (give increased damage to them if they are facing opposite to the goblin thief).
 - Added Gnomish Herbalist (unit graphics by b_o and icon by Leo).
 - Scouts and archers can now attack from within towers.
 - Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
