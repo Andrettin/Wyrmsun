@@ -124,6 +124,11 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-worker",
   Key = "s", Hint = _("Train ~!Scavenger"),
   ForUnit = {"unit-gnomish-town-hall"} } )
 
+--DefineButton( { Pos = 2, Level = 0, Icon = "icon-gnomish-caravan",
+--  Action = "train-unit", Value = "unit-gnomish-caravan",
+--  Key = "c", Hint = _("Build ~!Caravan"),
+--  ForUnit = {"unit-gnomish-town-hall"} } )
+
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-recruit",
   Action = "train-unit", Value = "unit-gnomish-recruit",
   Key = "r", Hint = _("Train ~!Recruit"),
@@ -133,3 +138,4 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-herbalist",
   Action = "train-unit", Value = "unit-gnomish-herbalist",
   Key = "h", Hint = _("Train ~!Herbalist"),
   ForUnit = {"unit-gnomish-barracks"} } )
+  

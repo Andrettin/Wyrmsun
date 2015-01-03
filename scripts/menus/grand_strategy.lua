@@ -2215,7 +2215,7 @@ function DrawGrandStrategyInterface()
 							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
 						end
 
-						if (IsUnitAvailableForTraining(SelectedProvince, unitName) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and GetUnitTypeInterfaceState(unitName) ~= "")) then
+						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and GetUnitTypeInterfaceState(unitName) ~= "")) then -- don't show available for training but not had units in resolution heights lower than 600
 							local icon_offset_x = 9 + (item_x * 56)
 							local icon_offset_y = 340 + (item_y * (47 + 19 + 4))
 
@@ -2295,7 +2295,9 @@ function DrawGrandStrategyInterface()
 								item_x = 0
 								item_y = item_y + 1
 							end
-							if (item_y > 2 and Video.Height <= 600) then -- don't show more than 9 units if the resolution height is too small to show that
+							if (item_y > 0 and Video.Height <= 480) then -- don't show more than 3 units if the resolution height is too small to show that
+								break
+							elseif (item_y > 2 and Video.Height <= 600) then -- don't show more than 9 units if the resolution height is too small to show that
 								break
 							end
 						end
@@ -3752,6 +3754,10 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
 			return "barracks" -- should be temple, but make it barracks for now to allow gnomish herbalists to be trained
+--		elseif (GetUnitTypeData(unit_type, "Class") == "caravan") then
+--			return "barracks"
+		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
+			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
 			return "aviary"
 		else
@@ -3791,6 +3797,13 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			end
 			if (GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
+			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "barracks" or GetUnitTypeData(unit_type, "Class") == "lumber-mill" or GetUnitTypeData(unit_type, "Class") == "smithy") then
 			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then

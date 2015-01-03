@@ -35,6 +35,7 @@ Units = {
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
+	"unit-teuton-lumber-mill",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-scout", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
@@ -50,7 +51,7 @@ Units = {
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
-	"unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
+	"unit-rat", "unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane",
@@ -138,6 +139,7 @@ DefineUnitType("unit-nothing-36", { Name = "Nothing 36",
 	Sounds = {} } )
 
 DefineUnitType("unit-rat", { Name = "Rat",
+	Description = _("Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled for their carrying of diseases."),
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -553,7 +555,7 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-tree-stump", Icon = "icon-tree-stump",
 	Speed = 0,
-	HitPoints = 100,
+	HitPoints = 20,
 	DrawLevel = 20,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 1,
@@ -561,6 +563,7 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	Type = "land",
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	NumDirections = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	MaxOnBoard = 1,
 	CanTransport = {"LandUnit", "only", "organic", "only"},
@@ -1072,6 +1075,7 @@ DefineUnitType("unit-glyph", { Name = _("Glyph"),
 	NonSolid = true,
 	NumDirections = 1,
 	Indestructible = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	Variations = {
 		{
@@ -1189,6 +1193,8 @@ DefineUnitType("unit-door", { Name = _("Door"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	VisibleUnderFog = true,
 	Variations = {
 		{
 			"variation-id", "left"

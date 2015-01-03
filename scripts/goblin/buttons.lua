@@ -99,7 +99,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Key = "escape", Hint = _("~<ESC~> Cancel"),
   ForUnit = {"unit-goblin-worker"} } )
 
--- buildings commands ---------------------------------------------------------
+-- Buildings Commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-worker",
   Action = "train-unit", Value = "unit-goblin-worker",
@@ -121,7 +121,13 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-war-machine",
   Key = "m", Hint = _("Build War ~!Machine"),
   ForUnit = {"unit-goblin-mess-hall"} } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-worker",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-glider",
   Action = "train-unit", Value = "unit-goblin-glider",
   Key = "g", Hint = _("Build ~!Glider"),
   ForUnit = {"unit-goblin-mess-hall"} } )
+
+  DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
+  Action = "train-unit", Value = "unit-goblin-thief",
+  Key = "t", Hint = _("Hire Goblin ~!Thief"),
+  ForUnit = {"unit-mercenary-camp"} } )
+

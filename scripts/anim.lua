@@ -30,11 +30,20 @@
 
 UnitStill = {"frame 0", "wait 4", "random-goto 99 no-rotate", "random-rotate 1", "label no-rotate", "wait 1",}
 UnitMove = {"unbreakable begin", 
-	"if-var v.Speed.Value <= 8 speed_8",
+	"if-var v.Speed.Value <= 6 speed_6",
+	"if-var v.Speed.Value == 7 speed_7",
+	"if-var v.Speed.Value == 8 speed_8",
 	"if-var v.Speed.Value == 9 speed_9",
 	"if-var v.Speed.Value == 10 speed_10",
 	"if-var v.Speed.Value == 11 speed_11",
 	"if-var v.Speed.Value >= 12 speed_12",
+	"label speed_6", -- 16 / (6 / 10) = c. 26 waits
+	"frame 0", "move 3", "wait 3", "frame 5", "move 3", "wait 2",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
+    "frame 10", "move 3", "wait 3", "frame 0", "move 2", "wait 2",
+    "frame 0", "move 3", "wait 2", "frame 15", "move 3", "wait 2",
+    "frame 15", "move 3", "wait 3", "frame 20", "move 2", "wait 2",
+    "frame 20", "move 3", "wait 2", "frame 0", "move 2", "goto end",
 	"label speed_7", -- 16 / (7 / 10) = c. 22 waits
 	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 2",
     "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",

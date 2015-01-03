@@ -65,8 +65,13 @@ function DefineAllowNormalUnits(flags)
 			end
 			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
 			DefineAllow(unitName, flags)
-			if (string.find(unitName, "hero") ~= nil) then
-				DefineUnitAllow(unitName, PlayerHeroUnitMax[0], PlayerHeroUnitMax[1], PlayerHeroUnitMax[2], PlayerHeroUnitMax[3], PlayerHeroUnitMax[4], PlayerHeroUnitMax[5], PlayerHeroUnitMax[6], PlayerHeroUnitMax[7], PlayerHeroUnitMax[8], PlayerHeroUnitMax[9], PlayerHeroUnitMax[10], PlayerHeroUnitMax[11], PlayerHeroUnitMax[12], PlayerHeroUnitMax[13], PlayerHeroUnitMax[14], PlayerHeroUnitMax[15])
+			if (string.find(unitName, "upgrade-") == nil) then
+				if (string.find(unitName, "hero") ~= nil) then
+					DefineUnitAllow(unitName, PlayerHeroUnitMax[0], PlayerHeroUnitMax[1], PlayerHeroUnitMax[2], PlayerHeroUnitMax[3], PlayerHeroUnitMax[4], PlayerHeroUnitMax[5], PlayerHeroUnitMax[6], PlayerHeroUnitMax[7], PlayerHeroUnitMax[8], PlayerHeroUnitMax[9], PlayerHeroUnitMax[10], PlayerHeroUnitMax[11], PlayerHeroUnitMax[12], PlayerHeroUnitMax[13], PlayerHeroUnitMax[14], PlayerHeroUnitMax[15])
+				end
+				if (GetUnitTypeData(unitName, "Class") == "thief") then
+					DefineUnitAllow(unitName, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+				end
 			end
 		end
 	else
@@ -86,53 +91,6 @@ function DefineAllowNormalUnits(flags)
 		end
 	end
 end
-
-function DefineAllowMercenaryUnits(flags)
-	local units = {
-		"unit-teuton-lumber-mill",
-		"unit-mercenary-camp",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
-	}
-	for i, unitName in ipairs(units) do
-		DefineAllow(unitName, flags)
-	end
-end
-
-function DefineAllowExtraUnits(flags)
-	local units = {
-		"unit-glyph",
-		"unit-gnomish-caravan",
-		"unit-hero-greebo",
-		"unit-goblin-banner"
-	}
-	for i, unitName in ipairs(units) do
-		DefineAllow(unitName, flags)
-	end
-end
-
-function DefineAllowSpecialUnits(flags)
-	local units = {
-		"unit-critter", "unit-gryphon",
-		"unit-gold-mine", "unit-coal-mine", "unit-wood-pile",
-		"unit-mushroom", "unit-mushroom-patch", "unit-flowers", "unit-large-flower",
-		"unit-fern", "unit-twigs", "unit-log",
-		"unit-bones", "unit-wyrm-skeleton",
-		"unit-small-rocks",
-		"unit-stairs",
-		"unit-volcanic-crater",
-		"unit-outer-wall-decoration", "unit-inner-wall-decoration", "unit-floor-decoration",
-		"unit-gold-coins", "unit-gold-sack", "unit-gold-chest", "unit-gold-and-gems-chest", "unit-barrel", "unit-alchemy-bench",
-		"unit-dwarven-dead-body", "unit-gnomish-dead-body", "unit-goblin-dead-body", "unit-kobold-dead-body",
---		"unit-dead-sea-body",
-		"unit-destroyed-2x2-place",
-		"unit-destroyed-3x3-place", "unit-destroyed-4x4-place"
-	}
-	for i, unitName in ipairs(units) do
-		DefineAllow(unitName, flags)
-	end
-end
-
-InitFuncs:add(function() DefineAllowSpecialUnits("AAAAAAAAAAAAAAAA") end)
 
 function ApplyTechLevels()
 	for i=0,15 do
@@ -194,6 +152,9 @@ DefineModifier("upgrade-sword-mastery",
 local traits = {
 	{"upgrade-dextrous", _("Dextrous")},
 	{"upgrade-keen", _("Keen")},
+	{"upgrade-limping", _("Limping")},
+	{"upgrade-mighty", _("Mighty")},
+	{"upgrade-near-sighted", _("Near-Sighted")},
 	{"upgrade-old", _("Old")},
 	{"upgrade-quick", _("Quick")},
 	{"upgrade-resilient", _("Resilient")},
@@ -225,6 +186,18 @@ DefineModifier("upgrade-dextrous",
 
 DefineModifier("upgrade-keen",
 	{"SightRange", 1}
+)
+
+DefineModifier("upgrade-limping",
+	{"Speed", -2}
+)
+
+DefineModifier("upgrade-mighty",
+	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-near-sighted",
+	{"SightRange", -1}
 )
 
 DefineModifier("upgrade-old",

@@ -236,21 +236,33 @@ AddTrigger(
 																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																														end
+																														local transporter = unit
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
 																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																														end
+																														transporter = unit
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
 																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																														end
+																														transporter = unit
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
 																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																														end
+																														transporter = unit
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
 																														if (mapinfo.description == "Chaincolt Foothills") then
 																															ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
 																															RemovePlayerObjective(player, "- Destroy the enemy")
@@ -259,7 +271,7 @@ AddTrigger(
 																														SetSharedVision(gnomish_monarch_player, true, player)
 																														SetDiplomacy(player, "allied", gnomish_monarch_player)
 																														SetSharedVision(player, true, gnomish_monarch_player)
-																														AddPlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+																														AddPlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 																														AddPlayerObjective(player, "- Rugnur must survive")
 																														AddPlayerObjective(player, "- The gnomish envoy must survive")
 																													end},
@@ -370,7 +382,7 @@ AddTrigger(
 					return false
 				end
 				for i=0,14 do
-					if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
+					if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 						player = i
 						return true
 					end
@@ -519,7 +531,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
 				player = i
 				return true
 			end
@@ -533,14 +545,23 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+				local caravans_loaded = true -- are all caravans loaded?
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-caravan" and GetUnitVariable(uncount[unit1], "Transport") < 2) then -- only checks if the unit is transporting two things, not necessarily two chests, which isn't optimal
+						caravans_loaded = false
+					end
+				end
+				
+				if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and caravans_loaded) then
 					Event(
 						"Pypo I",
 						"All the silver is there too. Proceed with the task, Rugnur!",
 						player,
 						{"~!Continue"},
 						{function(s)
-							RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+							RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 							if (player == GetThisPlayer() and GrandStrategy == false) then
 								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 									table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -578,9 +599,20 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
-				player = i
-				return true
+			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+				local caravans_loaded = true -- are all caravans loaded?
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-caravan" and GetUnitVariable(uncount[unit1], "Transport") < 2) then -- only checks if the unit is transporting two things, not necessarily two chests, which isn't optimal
+						caravans_loaded = false
+					end
+				end
+				
+				if (caravans_loaded) then
+					player = i
+					return true
+				end
 			end
 		end
 		return false
@@ -593,7 +625,7 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-					RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+					RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 					if (player == GetThisPlayer() and GrandStrategy == false) then
 						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 							table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -639,15 +671,26 @@ AddTrigger(
 		end
 		for i=0,14 do
 			-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
-			if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
-				player = i
-				return true
+			if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+				local caravans_loaded = true -- are all caravans loaded?
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-caravan" and GetUnitVariable(uncount[unit1], "Transport") < 2) then -- only checks if the unit is transporting two things, not necessarily two chests, which isn't optimal
+						caravans_loaded = false
+					end
+				end
+				
+				if (caravans_loaded) then
+					player = i
+					return true
+				end
 			end
 		end
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 		if (player == GetThisPlayer() and GrandStrategy == false) then
 			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
 				table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
@@ -678,7 +721,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
+			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 4) then
 				player = i
 				return true
 			end
@@ -696,7 +739,55 @@ AddTrigger(
 			event_player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+				RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
+				if (mapinfo.description == "Chaincolt Foothills") then
+					if (GetThisPlayer() == player) then
+						ActionDefeat()
+					end
+				end
+			end},
+			"gnome/icons/gnomish_recruit.png"
+		)
+		return false
+	end
+)
+
+-- If a caravan's cargo has been dropped, the A Bargain is Struck quest fails
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		for i=0,14 do
+			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
+				local caravans_loaded = true -- are all caravans loaded?
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-caravan" and GetUnitVariable(uncount[unit1], "Transport") < 2) then -- only checks if the unit is transporting two things, not necessarily two chests, which isn't optimal
+						caravans_loaded = false
+					end
+				end
+				if (caravans_loaded == false) then
+					player = i
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function() 
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
+		end
+		Event(
+			"Pypo I",
+			"Rugnur, you fool! You just let a caravan's cargo fall away! If I can't trust you to keep my property secure, the deal's off.",
+			event_player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				if (mapinfo.description == "Chaincolt Foothills") then
 					if (GetThisPlayer() == player) then
 						ActionDefeat()
@@ -738,14 +829,14 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
@@ -755,7 +846,7 @@ AddTrigger(
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
-					if (PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
+					if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 					end
 					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
@@ -778,20 +869,20 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function()
-		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
-			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
+			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
@@ -807,7 +898,7 @@ AddTrigger(
 --		end
 --		for i=0,14 do
 --			-- maybe could check here if the gnomish player has a gnomish recruit with level 3 instead (although perhaps it could be bad for performance)?
---			if (PlayerHasObjective(i, "- Bring the Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+--			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
 --				player = i
 --				return true
 --			end
@@ -815,10 +906,10 @@ AddTrigger(
 --		return false
 --	end,
 --	function() 
---		RemovePlayerObjective(player, "- Bring the Gnomish caravans and the envoy to your Mead Hall")
+--		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 --		if (mapinfo.description == "Chaincolt Foothills") then
 --			ActionDefeat()
---			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the Gnomish caravans and the envoy to your Mead Hall")) then
+--			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 --				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 --			end
 --		end

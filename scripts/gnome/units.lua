@@ -175,6 +175,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 		"dead", "basic-dwarf-voices-dead"} } )
 
 DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
+	Class = "caravan",
 	Civilization = "gnome",
 	Description = _("These caravans are used by gnomish societies to conduct trade, bringing goods as far as the Heart Mountains."),
 	Image = {"file", "gnome/units/gnomish_caravan.png", "size", {64, 64}},
@@ -194,8 +195,10 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Coward = true,
 	RightMouseAction = "move",
 	SelectableByRectangle = true,
---	MaxOnBoard = 2,
---	CanTransport = {"LandUnit", "only"},
+	MaxOnBoard = 2,
+	CanTransport = {"GroundAttack", "false", "Fauna", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter
+	AttackFromTransporter = true,
+	SaveCargo = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",

@@ -92,6 +92,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Westward Migration quest.
 - Added Northwards to the Sea quest.
 - Added Gylve's Realm quest.
+- The gnomish caravans in the A Bargain is Struck quest are now loaded with chests, and if those chests are dropped then the scenario is lost.
 
 * Terrain
 - Tile types can now use different images in a tileset's definition.
@@ -114,7 +115,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven Smith renamed to "Smithy".
 - Smithies now have personal names.
 - Added Erala (germanic warrior) (unit graphics by b_o and icon by Jinn).
-- Added Goblin Thief (unit graphics by b_o), a unit that can backstab other units (give increased damage to them if they are facing opposite to the goblin thief).
+- Added Goblin Thief (unit graphics by b_o and icon by Leo), a unit that can backstab other units (give increased damage to them if they are facing opposite to the goblin thief) and can be hired at the mercenary camp (a maximum of 6 goblin thieves can be had at a single time).
 - Added Gnomish Herbalist (unit graphics by b_o and icon by Leo).
 - Scouts and archers can now attack from within towers.
 - Experience is now distributed among nearby units (radius of 6) which belong to the same player as the unit that struck the final blow.
@@ -125,6 +126,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Organic units can now have personal traits (i.e. strong, weak, keen) which affect their stats.
 - Units' gray hair variation is now linked to the "old" trait.
 - Wyrm's "vicious" icon variation is now linked to the "vicious" trait.
+- Gnomish caravans can now carry two units.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

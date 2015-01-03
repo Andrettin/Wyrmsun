@@ -213,12 +213,16 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			l:setLineWidth(Video.Width - 64)
 			encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0 + 18)
 			local civilization = ""
+			local unit_type_class = ""
 			local description = ""
 			local quote = ""
 			local background = ""
 			if (string.find(unit_name, "upgrade-") == nil) then
 				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
+				end
+				if (GetUnitTypeData(unit_name, "Class") ~= "") then
+					unit_type_class = "Class: " .. _(CapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 				end
 				if (GetUnitTypeData(unit_name, "Description") ~= "") then
 					description = "Description: " .. GetUnitTypeData(unit_name, "Description")
@@ -233,6 +237,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				if (CUpgrade:Get(unit_name).Civilization ~= "") then
 					civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
 				end
+				if (CUpgrade:Get(unit_name).Class ~= "") then
+					unit_type_class = "Class: " .. _(CapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
+				end
 				if (CUpgrade:Get(unit_name).Description ~= "") then
 					description = "Description: " .. CUpgrade:Get(unit_name).Description
 				end
@@ -243,6 +250,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 					background = "\n\nBackground: " .. CUpgrade:Get(unit_name).Background
 				end
 			end
+--			l:setCaption(civilization .. unit_type_class .. description .. quote .. background)
 			l:setCaption(civilization .. description .. quote .. background)
 			
 			-- add buttons of texts related to the subject matter of the entry

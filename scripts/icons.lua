@@ -646,6 +646,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-thief",
+	Size = {46, 38},
+	File = "goblin/icons/goblin_thief.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-war-machine",
 	Size = {46, 38},
 	File = "goblin/icons/goblin_war_machine.png"

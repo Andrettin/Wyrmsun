@@ -615,6 +615,7 @@ Leo:
 /graphics/goblin/buildings/mess_hall.png
 /graphics/goblin/buildings/town_hall.png
 /graphics/goblin/icons/glider.png
+/graphics/goblin/icons/goblin_thief.png
 /graphics/goblin/icons/greebo.png (modified from b_o's icon)
 /graphics/neutral/decorations/volcanic_crater.png
 /graphics/neutral/icons/wyrm.png

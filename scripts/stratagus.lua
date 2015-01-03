@@ -394,8 +394,6 @@ function SinglePlayerTriggers()
 	
 	if (LoadedGame == false) then
 		DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
-		DefineAllowExtraUnits("FFFFFFFFFFFFFFFF")
-		DefineAllowMercenaryUnits("AAAAAAAAAAAAAAAA")
 		ApplyTechLevels()
 		if (GrandStrategy) then
 			for i=0,14 do
@@ -1002,6 +1000,7 @@ function GetUnitTypeTraits(unit_type)
 	if (string.find(unit_type, "hero") == nil) then
 		if (GetUnitTypeData(unit_type, "AttackRange") > 0) then
 			if (GetUnitTypeData(unit_type, "AttackRange") == 1) then
+				table.insert(traits, "upgrade-mighty")
 				table.insert(traits, "upgrade-strong")
 			end
 			if (GetUnitTypeData(unit_type, "AttackRange") > 1 or unit_type == "unit-gnomish-recruit") then -- ranged units and ones using thrusting swords can get the dextrous trait
@@ -1009,7 +1008,11 @@ function GetUnitTypeTraits(unit_type)
 			end
 			table.insert(traits, "upgrade-weak")
 		end
+		if ((GetUnitTypeData(unit_type, "SightRange") - 1) >= GetUnitTypeData(unit_type, "AttackRange")) then -- don't allow near-sighted trait for units whose vision would become smaller than their range with the trait
+			table.insert(traits, "upgrade-near-sighted")
+		end
 		table.insert(traits, "upgrade-keen")
+		table.insert(traits, "upgrade-limping")
 		table.insert(traits, "upgrade-old")
 		table.insert(traits, "upgrade-quick")
 		table.insert(traits, "upgrade-resilient")
