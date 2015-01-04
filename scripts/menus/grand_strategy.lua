@@ -95,13 +95,16 @@ function RunGrandStrategyGameSetupMenu()
 			-- add resource quantities to factions that don't have that set up
 			for key, value in pairs(Factions) do
 				if (Factions[key].Gold == nil) then
-					Factions[key]["Gold"] = 10000
+					Factions[key]["Gold"] = 3000
 				end
 				if (Factions[key].Commodities == nil) then
 					Factions[key]["Commodities"] = {}
 				end
 				if (Factions[key].Commodities.Lumber == nil) then
-					Factions[key].Commodities["Lumber"] = 2400
+					Factions[key].Commodities["Lumber"] = 1500
+				end
+				if (Factions[key].Research == nil) then
+					Factions[key]["Research"] = 0
 				end
 				if (Factions[key].Technologies == nil) then
 					Factions[key]["Technologies"] = {}
@@ -378,17 +381,43 @@ function EndTurn()
 		end
 	end
 
-	-- collect resources and perform trade
+	-- faction income
+	for key, value in pairs(Factions) do
+		if (GetFactionProvinceCount(Factions[key]) > 0) then
+			Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
+			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
+			Factions[key].Research = Factions[key].Research + Factions[key].Income.Research
+		end
+	end
+	
+	-- perform trade
 	local player_trade_preferences = {}
 	if (GrandStrategyFaction ~= nil) then
 		player_trade_preferences["Lumber"] = GrandStrategyFaction.Trade.Lumber
 	end
 
+	local province_consumed_commodity = {}
+	province_consumed_commodity["Lumber"] = {}
+	for key, value in pairs(WorldMapProvinces) do
+		province_consumed_commodity["Lumber"][key] = false
+	end
+	
+	-- first sell to domestic provinces, then to other factions, and only then to foreign provinces
 	for key, value in pairs(Factions) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
-			Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
-			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
+			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
+				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= 50 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall")) then
+					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - 50 -- 50 is how much a province demands of lumber per turn
+					Factions[key].Gold = Factions[key].Gold + round(50 * GetCommodityPrice("Lumber") / 100)
+					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - 50
+					province_consumed_commodity.Lumber[province_key] = true
+				end
+			end
+		end
+	end
 
+	for key, value in pairs(Factions) do
+		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			if (Factions[key].Trade.Lumber < 0) then -- if wants to import lumber
 				for second_key, second_value in pairs(Factions) do
 					if (Factions[second_key].Trade.Lumber > 0) then -- if second faction wants to export lumber
@@ -405,6 +434,19 @@ function EndTurn()
 		end
 	end
 	
+	for key, value in pairs(Factions) do
+		if (GetFactionProvinceCount(Factions[key]) > 0) then
+			for province_key, province_value in pairs(WorldMapProvinces) do
+				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= 50 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - 50 -- 50 is how much a province demands of lumber per turn
+					Factions[key].Gold = Factions[key].Gold + round(50 * GetCommodityPrice("Lumber") / 100)
+					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - 50
+					province_consumed_commodity.Lumber[province_key] = true
+				end
+			end
+		end
+	end
+
 	-- keep human player's trading preferences
 	if (GrandStrategyFaction ~= nil) then
 		if (player_trade_preferences.Lumber > 0 and GrandStrategyFaction.Commodities.Lumber < player_trade_preferences.Lumber) then
@@ -437,7 +479,7 @@ function EndTurn()
 			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
 				if (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then
 					WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] = 2
-					if (GetUnitTypeData(unitName, "Class") == "town-hall" or GetUnitTypeData(unitName, "Class") == "lumber-mill") then
+					if (GetUnitTypeData(unitName, "Class") == "town-hall" or GetUnitTypeData(unitName, "Class") == "lumber-mill" or GetUnitTypeData(unitName, "Class") == "smithy") then
 						CalculateFactionIncomes()
 					end
 				end
@@ -445,6 +487,9 @@ function EndTurn()
 		end
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				if (string.find(unitName, "mercenary") ~= nil and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
+					MercenaryGroups[string.gsub(unitName, "-", "_")] = nil
+				end
 				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")]
 				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
 				WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] = 0
@@ -455,6 +500,18 @@ function EndTurn()
 				if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 1) then
 					WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] = 2
 				end
+			end
+		end
+		-- if a dwarven province has a town hall and a barracks, give it a mercenary camp; only for Nidavellir for now, since there are no recruitable mercenaries for Earth
+		if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] < 4) then
+			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
+				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] + 1
+			end
+		end
+		-- if the province has a town hall, a barracks and a smithy, give it a mercenary camp; only for Nidavellir for now, since there are no recruitable mercenaries for Earth
+		if (WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp == 0 and GrandStrategyWorld == "Nidavellir") then
+			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "smithy")) then
+				WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp = 2
 			end
 		end
 	end
@@ -779,22 +836,22 @@ function CalculateProvinceBorderTiles()
 
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
-					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name)
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
-					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name)
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name) == false) then
-					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name)
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name) == false) then
-					table.insert(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)
+					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name))
 				end
 			end
 		end
@@ -816,22 +873,22 @@ function CalculateProvinceBorderTiles()
 
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
 				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name) == false) then
-					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name)
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
 				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name) == false) then
-					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name)
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= WorldMapWaterProvinces[key]) then
 				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name) == false) then
-					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name)
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= WorldMapWaterProvinces[key]) then
 				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name) == false) then
-					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name)
+					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name))
 				end
 			end
 		end
@@ -875,6 +932,7 @@ function CalculateFactionIncomes()
 		Factions[key]["Income"] = {}
 		Factions[key].Income["Gold"] = 0
 		Factions[key].Income["Lumber"] = 0
+		Factions[key].Income["Research"] = 0
 
 		-- collect resources
 		for i=1,table.getn(WorldMapResources.Gold) do
@@ -891,6 +949,13 @@ function CalculateFactionIncomes()
 				end
 			end
 		end
+		
+		-- faction's research is 10 if all provinces have town halls, lumber mills and smithies
+		Factions[key].Income.Research = round(
+			6 * GetFactionBuildingTypeCount(Factions[key].Name, "town-hall") / GetFactionProvinceCount(Factions[key])
+			+ 2 * GetFactionBuildingTypeCount(Factions[key].Name, "lumber-mill") / GetFactionProvinceCount(Factions[key])
+			+ 2 * GetFactionBuildingTypeCount(Factions[key].Name, "smithy") / GetFactionProvinceCount(Factions[key])
+		)
 	end
 end
 
@@ -971,6 +1036,19 @@ function GetFactionProvinceCountPreGame(faction)
 	return province_count
 end
 
+function GetFactionUnitTypeCount(faction, unit_type, include_under_construction)
+	local unit_count = 0
+	for key, value in pairs(WorldMapProvinces) do
+		if (WorldMapProvinces[key].Owner == faction) then
+			unit_count = unit_count + WorldMapProvinces[key].Units[string.gsub(unit_type, "-", "_")]
+			if (include_under_construction) then
+				unit_count = unit_count + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unit_type, "-", "_")]
+			end
+		end
+	end
+	return unit_count
+end
+
 function GetFactionBuildingTypeCount(faction, building_type)
 	local building_count = 0
 	for key, value in pairs(WorldMapProvinces) do
@@ -1011,7 +1089,7 @@ end
 
 function ProvinceHasBorderWith(province, province_to)
 	for i=1,table.getn(province.BorderProvinces) do
-		if (province.BorderProvinces[i] == province_to.Name) then
+		if (WorldMapProvinces[province.BorderProvinces[i]] == province_to) then
 			return true
 		end
 	end
@@ -1114,32 +1192,19 @@ function RunGrandStrategySaveMenu()
 			local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
 			table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
 
-			if (GrandStrategyFaction ~= nil) then
-				wyr.preferences.GrandStrategySaveGames[name] = {
-					SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
-					SavedGrandStrategyYear = GrandStrategyYear,
-					SavedGrandStrategyWorld = GrandStrategyWorld,
-					SavedWorldMapTiles = WorldMapTiles,
-					SavedWorldMapResources = WorldMapResources,
-					SavedWorldMapProvinces = WorldMapProvinces,
-					SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
-					SavedFactions = Factions,
-					SavedGrandStrategyCommodities = GrandStrategyCommodities,
-					SavedGrandStrategyEvents = GrandStrategyEvents
-				}
-			else
-				wyr.preferences.GrandStrategySaveGames[name] = {
-					SavedGrandStrategyYear = GrandStrategyYear,
-					SavedGrandStrategyWorld = GrandStrategyWorld,
-					SavedWorldMapTiles = WorldMapTiles,
-					SavedWorldMapResources = WorldMapResources,
-					SavedWorldMapProvinces = WorldMapProvinces,
-					SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
-					SavedFactions = Factions,
-					SavedGrandStrategyCommodities = GrandStrategyCommodities,
-					SavedGrandStrategyEvents = GrandStrategyEvents
-				}
-			end
+			wyr.preferences.GrandStrategySaveGames[name] = {
+				SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
+				SavedGrandStrategyYear = GrandStrategyYear,
+				SavedGrandStrategyWorld = GrandStrategyWorld,
+				SavedWorldMapTiles = WorldMapTiles,
+				SavedWorldMapResources = WorldMapResources,
+				SavedWorldMapProvinces = WorldMapProvinces,
+				SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
+				SavedFactions = Factions,
+				SavedGrandStrategyCommodities = GrandStrategyCommodities,
+				SavedGrandStrategyEvents = GrandStrategyEvents,
+				SavedMercenaryGroups = MercenaryGroups
+			}
 			SavePreferences()
     			menu:stop()
 			GrandStrategyMenu:stop();
@@ -1188,6 +1253,7 @@ function RunGrandStrategyLoadGameMenu()
 			end
 			GrandStrategyCommodities = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
 			GrandStrategyEvents = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyEvents
+			MercenaryGroups = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
 			CalculateTileProvinces()
 
 			for key, value in pairs(WorldMapProvinces) do -- center map on a province of the loaded player's faction
@@ -1546,6 +1612,8 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		building_function_tooltip = " (researches projectile upgrades)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "smithy") then
 		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
+	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
+		building_function_tooltip = " (hires mercenaries)"
 	end
 	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 2) then
 		UIElements[table.getn(UIElements)]:setTooltip("Use " .. GetUnitTypeName(unit_type) .. building_function_tooltip)
@@ -1631,6 +1699,14 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
 	local cost_tooltip = ""
+	if (CUpgrade:Get(unit_type).Costs[1] > 0 or CUpgrade:Get(unit_type).Costs[2] > 0) then -- research cost
+		if (cost_tooltip == "") then
+			cost_tooltip = " (costs "
+		else
+			cost_tooltip = cost_tooltip .. ", "
+		end
+		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).Costs[1] + CUpgrade:Get(unit_type).Costs[2] .. " Research"
+	end
 	if (CUpgrade:Get(unit_type).Costs[1] > 0) then -- gold cost
 		if (cost_tooltip == "") then
 			cost_tooltip = " (costs "
@@ -1643,7 +1719,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 		if (cost_tooltip == "") then
 			cost_tooltip = " (costs "
 		else
-			cost_tooltip = cost_tooltip .. " and "
+			cost_tooltip = cost_tooltip .. ", "
 		end
 		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).Costs[2] .. " Lumber"
 	end
@@ -1700,6 +1776,62 @@ function AddGrandStrategyHeroButton(x, y, unit_type)
 		UIElements[table.getn(UIElements)]:setTooltip("Unselect " .. GetUnitTypeData(unit_type, "DefaultName"))
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Select " .. GetUnitTypeData(unit_type, "DefaultName"))
+	end
+	UIElements[table.getn(UIElements)]:setFrame(true)
+	
+	return UIElements[table.getn(UIElements)]
+end
+
+function AddGrandStrategyMercenaryButton(x, y, unit_type)
+	local b
+	local unit_icon
+	
+	if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] > 0) then -- if mercenary group is already being hired, make icon gray
+		b = ImageButton("")
+		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+	else
+		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
+	end
+	unit_icon:Load()
+	UIElements[table.getn(UIElements) + 1] = b
+	UIElements[table.getn(UIElements)]:setActionCallback(
+		function()
+			if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] < 1) then
+				HireMercenary(SelectedProvince, unit_type)
+			else
+				CancelHireMercenary(SelectedProvince, unit_type)
+			end
+			DrawGrandStrategyInterface()
+		end
+	)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+
+--	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
+	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setSize(46, 38)
+	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
+
+	local regiment_type_name = GetUnitTypeName(unit_type) .. "s"
+	if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
+		regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
+	end
+	if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+		regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+	end
+	if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+		regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
+	end
+							
+	if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] > 0) then
+		UIElements[table.getn(UIElements)]:setTooltip("Cancel hiring " .. regiment_type_name)
+	else
+		UIElements[table.getn(UIElements)]:setTooltip("Hire " .. regiment_type_name)
 	end
 	UIElements[table.getn(UIElements)]:setFrame(true)
 	
@@ -2174,16 +2306,24 @@ function DrawGrandStrategyInterface()
 			gold_income = "+" .. GrandStrategyFaction.Income.Gold - GrandStrategyFaction.Upkeep
 		end
 
-		AddUIElement("ui/gold.png", 176, 0)
-		AddGrandStrategyLabel(GrandStrategyFaction.Gold .. gold_income, 176 + 18, 1, Fonts["game"], false, false)
+		AddUIElement("ui/gold.png", 176 + (100 * 0), 0)
+		AddGrandStrategyLabel(GrandStrategyFaction.Gold .. gold_income, 176 + (100 * 0) + 18, 1, Fonts["game"], false, false)
 
 		local lumber_income = ""
 		if (GrandStrategyFaction.Income.Lumber > 0) then
 			lumber_income = "+" .. GrandStrategyFaction.Income.Lumber
 		end
 
-		AddUIElement("ui/lumber.png", 176 + 100, 0)
-		AddGrandStrategyLabel(GrandStrategyFaction.Commodities.Lumber .. lumber_income, 176 + 100 + 18, 1, Fonts["game"], false, false)
+		AddUIElement("ui/lumber.png", 176 + (100 * 1), 0)
+		AddGrandStrategyLabel(GrandStrategyFaction.Commodities.Lumber .. lumber_income, 176 + (100 * 1) + 18, 1, Fonts["game"], false, false)
+		
+		local research_income = ""
+		if (GrandStrategyFaction.Income.Research > 0) then
+			research_income = "+" .. GrandStrategyFaction.Income.Research
+		end
+
+		AddUIElement("ui/research.png", 176 + (100 * 2), 0)
+		AddGrandStrategyLabel(GrandStrategyFaction.Research .. research_income, 176 + (100 * 2) + 18, 1, Fonts["game"], false, false)
 	end
 	
 	if (SelectedProvince ~= nil) then
@@ -2215,7 +2355,7 @@ function DrawGrandStrategyInterface()
 							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
 						end
 
-						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and GetUnitTypeInterfaceState(unitName) ~= "")) then -- don't show available for training but not had units in resolution heights lower than 600
+						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp" and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or string.find(unitName, "mercenary") ~= nil))) then -- don't show available for training but not had units in resolution heights lower than 600
 							local icon_offset_x = 9 + (item_x * 56)
 							local icon_offset_y = 340 + (item_y * (47 + 19 + 4))
 
@@ -2252,6 +2392,12 @@ function DrawGrandStrategyInterface()
 							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
 								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
 							end
+							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+							end
+							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
+							end
 							b:setTooltip("Deselect one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2278,6 +2424,12 @@ function DrawGrandStrategyInterface()
 							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
 							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
 								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
+							end
+							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+							end
+							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
 							end
 							b:setTooltip("Select one ".. regiment_type_name .. " regiment")
 
@@ -2474,6 +2626,12 @@ function DrawGrandStrategyInterface()
 							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
 								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
 							end
+							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+							end
+							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
+							end
 							b:setTooltip("Cancel training of one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2514,6 +2672,12 @@ function DrawGrandStrategyInterface()
 							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
 							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
 								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
+							end
+							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+							end
+							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
 							end
 							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
@@ -2600,6 +2764,153 @@ function DrawGrandStrategyInterface()
 								item_x = 0
 								item_y = item_y + 1
 							end
+						end
+					end
+				end
+
+				-- add a button to go back to the main province interface
+				local b = AddGrandStrategyImageButton("~!OK", "o", 24, Video.Height - (22 * 3) - 8, function()
+					InterfaceState = "Province"
+					DrawGrandStrategyInterface()
+				end)
+				b:setBaseColor(Color(0,0,0,0))
+				b:setForegroundColor(Color(0,0,0,0))
+				b:setBackgroundColor(Color(0,0,0,0))
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
+				b:setSize(128, 20)
+				b:setFont(Fonts["game"])
+			elseif (InterfaceState == "mercenary-camp") then
+				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), 88, 213, Fonts["game"], true, false)
+				
+				-- add units buttons for hiring generic mercenaries
+				local item_x = 0
+				local item_y = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						local veterans = 0
+						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
+						if (veteran_unit_type ~= nil) then
+							veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
+						end
+						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
+						if (heroic_unit_type ~= nil) then
+							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
+						end
+
+						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
+							local icon_offset_x = 9 + (item_x * 56)
+							local icon_offset_y = 340 + ((item_y - 1) * (47 + 19 + 4))
+
+							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
+							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
+								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans .. "+" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							else
+								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							end
+
+							-- add unit training arrows
+							local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
+								TrainUnitCancel(SelectedProvince, unitName)
+								DrawGrandStrategyInterface()
+							end)
+							b:setBaseColor(Color(0,0,0,0))
+							b:setForegroundColor(Color(0,0,0,0))
+							b:setBackgroundColor(Color(0,0,0,0))
+							local g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
+							local g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
+							g_lslider_n:Load()
+							g_lslider_p:Load()
+							b:setNormalImage(g_lslider_n)
+							b:setPressedImage(g_lslider_p)
+							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
+							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
+								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
+							end
+							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+							end
+							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
+							end
+							b:setTooltip("Cancel hiring of one ".. regiment_type_name .. " regiment")
+
+							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
+								TrainUnit(SelectedProvince, unitName)
+								DrawGrandStrategyInterface()
+							end)
+							b:setBaseColor(Color(0,0,0,0))
+							b:setForegroundColor(Color(0,0,0,0))
+							b:setBackgroundColor(Color(0,0,0,0))
+							local g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
+							local g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
+							g_rslider_n:Load()
+							g_rslider_p:Load()
+							b:setNormalImage(g_rslider_n)
+							b:setPressedImage(g_rslider_p)
+							
+							local cost_tooltip = ""
+							if (GetUnitTypeData(unitName, "Costs", "gold") > 0) then
+								if (cost_tooltip == "") then
+									cost_tooltip = " (costs "
+								else
+									cost_tooltip = cost_tooltip .. ", "
+								end
+								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "gold") .. " Gold"
+							end
+							if (GetUnitTypeData(unitName, "Costs", "lumber") > 0) then
+								if (cost_tooltip == "") then
+									cost_tooltip = " (costs "
+								else
+									cost_tooltip = cost_tooltip .. " and "
+								end
+								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "lumber") .. " Lumber"
+							end
+							if (cost_tooltip ~= "") then
+								cost_tooltip = cost_tooltip .. ")"
+							end
+							
+							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
+							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
+								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
+							end
+							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
+							end
+							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
+							end
+							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. cost_tooltip)
+
+							AddGrandStrategyLabel("~<" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+
+							item_x = item_x + 1
+							if (item_x > 2) then
+								item_x = 0
+								item_y = item_y + 1
+							end
+						end
+					end
+				end
+				
+				-- add units buttons for hiring specific mercenary groups
+				item_x = 0
+				item_y = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "mercenary") ~= nil and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's gold cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
+						local icon_offset_x = 9 + (item_x * 56)
+						local icon_offset_y = 340 + (item_y * 47)
+
+						AddGrandStrategyMercenaryButton(icon_offset_x, icon_offset_y, unitName)
+							
+						item_x = item_x + 1
+						if (item_x > 2) then
+							item_x = 0
+							item_y = item_y + 1
 						end
 					end
 				end
@@ -2900,30 +3211,38 @@ function AIDoTurn(ai_faction)
 
 		local borders_foreign = false
 
-		for second_key, second_value in pairs(WorldMapProvinces) do
-			if (ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key])) then
-				if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
-					borders_foreign = true
+		for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
+			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
+				borders_foreign = true
+				if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+						local province_threatened = false
+						for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
+							if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
+								if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
+									province_threatened = true
+								end
+							end
+						end
+						if (province_threatened == false) then
 							WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
 							for i, unitName in ipairs(Units) do
-								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil and GetUnitTypeData(unitName, "Class") ~= "militia") then
 									WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/3rd of the province's forces as a defense
 									WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
 								end
 							end
 						end
-					elseif (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
-						desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
-						desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1
-						desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1
 					end
+				elseif (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
+					desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1 -- 960 is the military score of the default desired military units in a province
+					desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1
+					desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 9 / 4) / 960) + 1
 				end
 			end
 		end
 
-		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction.Name, "town-hall") < GetFactionProvinceCount(ai_faction) or (ai_faction.Income.Gold - ai_faction.Upkeep) < 100) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small
+		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction.Name, "town-hall") < GetFactionProvinceCount(ai_faction) or ((ai_faction.Income.Gold - ai_faction.Upkeep) < 100 and ai_faction.Gold < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_catapults_in_province = 0
@@ -2956,8 +3275,8 @@ function AIDoTurn(ai_faction)
 				if (borders_foreign == false and WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] > 0) then -- if this province borders no foreign provinces but has units in the province, move them out
 					for second_province_i, second_key in ipairs(ai_faction.OwnedProvinces) do
 						local second_province_borders_foreign = false
-						for third_key, third_value in pairs(WorldMapProvinces) do
-							if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name and ProvinceHasBorderWith(WorldMapProvinces[second_key], WorldMapProvinces[third_key])) then
+						for third_i, third_key in ipairs(WorldMapProvinces[second_key].BorderProvinces) do
+							if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name) then
 								second_province_borders_foreign = true
 								break
 							end
@@ -3011,7 +3330,7 @@ function AIConsiderOffers(ai_faction)
 end
 
 function IsBuildingAvailable(province, unit_type)
-	if (province.Owner ~= "Ocean" and GetUnitTypeData(unit_type, "Civilization") ~= province.Civilization) then
+	if (province.Owner ~= "Ocean" and GetUnitTypeData(unit_type, "Civilization") ~= province.Civilization and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp") then
 		return false
 	end
 
@@ -3024,6 +3343,10 @@ function IsBuildingAvailable(province, unit_type)
 		end
 	end
 	if (has_required_buildings == false) then
+		return false
+	end
+	
+	if (GetUnitTypeData(unit_type, "Class") == "mercenary-camp" and province.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- mercenary camps are not buildable, so they are only available if already built
 		return false
 	end
 	
@@ -3071,11 +3394,15 @@ function CanTrainUnit(province, unit_type)
 		return false
 	end
 
+	if (GetUnitTypeData(unit_type, "Class") == "thief" and GetFactionUnitTypeCount(province.Owner, unit_type, true) >= 6) then -- only 6 regiments of a particular sort of thief can be had at a single time
+		return false
+	end
+
 	return IsUnitAvailableForTraining(province, unit_type)
 end
 
 function IsUnitAvailableForTraining(province, unit_type)
-	if (GetUnitTypeData(unit_type, "Civilization") ~= province.Civilization) then
+	if (GetUnitTypeData(unit_type, "Civilization") ~= province.Civilization and GetUnitTypeInterfaceState(unit_type) ~= "mercenary-camp") then
 		return false
 	end
 	
@@ -3109,6 +3436,43 @@ end
 function TrainUnitCancel(province, unit_type)
 	if (province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] >= 1) then
 		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] - 1
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
+	end
+end
+
+function CanHireMercenary(province, unit_type)
+	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber")) then
+		return false
+	end
+
+	return IsMercenaryAvailableForHiring(province, unit_type)
+end
+
+function IsMercenaryAvailableForHiring(province, unit_type)
+	if (province.SettlementBuildings.unit_mercenary_camp < 2) then
+		return false
+	end
+	
+	if (MercenaryGroups[string.gsub(unit_type, "-", "_")] == nil) then
+		return false
+	end
+	
+	return true
+end
+
+function HireMercenary(province, unit_type)
+	if (CanHireMercenary(province, unit_type)) then
+		local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
+		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = mercenary_quantity
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
+	end
+end
+
+function CancelHireMercenary(province, unit_type)
+	if (province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] >= 1) then
+		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = 0
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
 	end
@@ -3155,7 +3519,7 @@ function IsTechnologyAvailable(province, unit_type)
 end
 
 function CanResearchTechnology(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < CUpgrade:Get(unit_type).Costs[1] or GetFactionFromName(province.Owner).Commodities.Lumber < CUpgrade:Get(unit_type).Costs[2]) then
+	if (GetFactionFromName(province.Owner).Gold < CUpgrade:Get(unit_type).Costs[1] or GetFactionFromName(province.Owner).Commodities.Lumber < CUpgrade:Get(unit_type).Costs[2] or GetFactionFromName(province.Owner).Research < (CUpgrade:Get(unit_type).Costs[1] + CUpgrade:Get(unit_type).Costs[2])) then
 		return false
 	end
 	
@@ -3175,6 +3539,7 @@ function ResearchTechnology(province, unit_type)
 		GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] = 1
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - CUpgrade:Get(unit_type).Costs[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - CUpgrade:Get(unit_type).Costs[2]
+		GetFactionFromName(province.Owner).Research = GetFactionFromName(province.Owner).Research - CUpgrade:Get(unit_type).Costs[1] - CUpgrade:Get(unit_type).Costs[2]
 	end
 end
 
@@ -3183,6 +3548,7 @@ function CancelResearchTechnology(province, unit_type)
 		GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] = 0
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + CUpgrade:Get(unit_type).Costs[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + CUpgrade:Get(unit_type).Costs[2]
+		GetFactionFromName(province.Owner).Research = GetFactionFromName(province.Owner).Research + CUpgrade:Get(unit_type).Costs[1] + CUpgrade:Get(unit_type).Costs[2]
 	end
 end
 
@@ -3209,6 +3575,7 @@ function ClearGrandStrategyVariables()
 	InterfaceState = nil
 	GrandStrategyCommodities = nil
 	GrandStrategyEvents = nil
+	MercenaryGroups = nil
 	EventFaction = nil
 	WorldMapTiles = nil
 	WorldMapResources = nil
@@ -3268,7 +3635,7 @@ function GetFactionMilitaryScore(faction)
 	return military_score
 end
 
-function GetMilitaryScore(province, attacker, count_heroes)
+function GetMilitaryScore(province, attacker, count_defenders)
 	local units
 	local faction
 	if (attacker == false) then
@@ -3319,7 +3686,9 @@ function GetMilitaryScore(province, attacker, count_heroes)
 	local military_score = 0
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
-			if (GetUnitTypeData(unitName, "Class") == "infantry") then
+			if (GetUnitTypeData(unitName, "Class") == "militia" and count_defenders) then
+				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (30 + infantry_military_score_bonus))
+			elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (50 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "veteran-infantry") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (75 + infantry_military_score_bonus))
@@ -3327,14 +3696,23 @@ function GetMilitaryScore(province, attacker, count_heroes)
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "archer") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (60 + archer_military_score_bonus))
+			elseif (GetUnitTypeData(unitName, "Class") == "thief") then
+				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * 30)
 			elseif (GetUnitTypeData(unitName, "Class") == "priest") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * 60)
 			elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + catapult_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (150 + flying_rider_military_score_bonus))
+			-- Mercenaries
+			elseif (string.find(unitName, "mercenary") ~= nil) then
+				if (unitName == "unit-surghan-mercenary-steelclad") then
+					military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (75 + infantry_military_score_bonus))
+				elseif (unitName == "unit-surghan-mercenary-thane") then
+					military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
+				end
 			-- Heroes
-			elseif (count_heroes and string.find(unitName, "hero") ~= nil and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
+			elseif (count_defenders and string.find(unitName, "hero") ~= nil and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
 				if (unitName == "unit-hero-rugnur") then
 					military_score = military_score + (50 + infantry_military_score_bonus)
 				elseif (unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
@@ -3702,6 +4080,7 @@ function FormFaction(old_faction, new_faction)
 	
 	new_faction.Gold = old_faction.Gold
 	new_faction.Commodities = old_faction.Commodities
+	new_faction.Research = old_faction.Research
 	new_faction.Technologies = old_faction.Technologies
 	new_faction.Trade = old_faction.Trade
 
@@ -3733,12 +4112,16 @@ function GetUnitTypeUpkeep(unit_type)
 		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "archer") then
 		return 25
+	elseif (GetUnitTypeData(unit_type, "Class") == "thief") then
+		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 		return 50
 	elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
 		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
 		return 50
+	elseif (string.find(unit_type, "mercenary") ~= nil) then
+		return 25
 	else
 		return 0
 	end
@@ -3760,6 +4143,8 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
 			return "aviary"
+		elseif (GetUnitTypeData(unit_type, "Class") == "thief") then
+			return "mercenary-camp"
 		else
 			return ""
 		end

@@ -522,6 +522,7 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 		"dead", "building destroyed"} } )
 
 DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
+	Class = "mercenary-camp",
 	Description = _("This camp houses a number of mercenary groups, who will offer their talents for hire."),
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
 	NeutralMinimapColor = {192, 192, 192},

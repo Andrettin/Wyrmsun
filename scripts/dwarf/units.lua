@@ -511,17 +511,25 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	SelectableByRectangle = true,
 	Variations = {
 		{
-			"variation-id", "black-hair-brown-feathers"
+			"variation-id", "black-hair-brown-feathers",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair-blue-feathers",
 			"file", "dwarf/units/gryphon_rider_brown_hair_blue_feathers.png",
-			"icon", "icon-dwarven-gryphon-rider-brown-hair"
+			"icon", "icon-dwarven-gryphon-rider-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair-brown-feathers",
+			"file", "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png",
+			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "red-hair-gray-feathers",
 			"file", "dwarf/units/gryphon_rider_red_hair_gray_feathers.png",
-			"icon", "icon-dwarven-gryphon-rider-red-hair"
+			"icon", "icon-dwarven-gryphon-rider-red-hair",
+			"upgrade-forbidden", "upgrade-old"
 		}
 	},
 	Sounds = {

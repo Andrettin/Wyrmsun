@@ -230,6 +230,7 @@ WorldMapProvinces = {
 		Name = "Northern Wastelands",
 		Tiles = { {12, 3}, {12, 4}, {13, 3}, {13, 4}, {14, 2}, {14, 3}, {14, 4}, {15, 1}, {15, 2}, {15, 3}, {15, 4}, {16, 1}, {16, 2}, {16, 3}, {16, 4}, {16, 5}, {16, 6}, {17, 1}, {17, 2}, {17, 3}, {17, 4}, {17, 5}, {17, 6}, {17, 7}, {18, 1}, {18, 2}, {18, 3}, {18, 4}, {18, 5}, {18, 7}, {18, 8}, {19, 1}, {19, 2}, {19, 3}, {19, 4}, {19, 7}, {20, 1}, {20, 2}, {20, 3}, {21, 1}, {21, 2}, {21, 3}, {22, 3} },
 		Owner = "",
+		Civilization = "goblin",
 		SettlementLocation = {14, 2},
 		SettlementBuildings = {
 			unit_dwarven_smithy = 2 -- Thursagan's smithy
@@ -342,6 +343,10 @@ Factions = {
 		Civilization = "dwarf",
 		Title = "Lordship"
 	}
+}
+
+MercenaryGroups = {
+	unit_surghan_mercenary_steelclad = 4
 }
 
 GrandStrategyEvents = {
@@ -718,6 +723,7 @@ if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 0
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_thursagan = 0
+	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_mercenary_camp = 2 -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 end
 
 if (GrandStrategyYear >= 40) then

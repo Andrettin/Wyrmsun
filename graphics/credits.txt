@@ -40,6 +40,7 @@ b_o:
 /graphics/dwarf/units/dwarven_steelclad_orange_hair_great_axe.png
 /graphics/dwarf/units/gryphon_rider.png
 /graphics/dwarf/units/gryphon_rider_brown_hair_blue_feathers.png
+/graphics/dwarf/units/gryphon_rider_gray_hair_brown_feathers.png
 /graphics/dwarf/units/gryphon_rider_red_hair_gray_feathers.png
 /graphics/dwarf/units/militia.png
 /graphics/dwarf/units/miner.png
@@ -561,6 +562,8 @@ João Victor G. Costa (Jinn):
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/wyrmsun_logo.png
 /graphics/ui/wyrmsun_logo_monochromatic.png
+/graphics/ui/potion.png
+/graphics/ui/research.png
 
 J. W. Bjerk (eleazzaar):
 /graphics/gnome/icons/herbal_cure.png (later modified by Jinn)

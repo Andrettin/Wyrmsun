@@ -856,6 +856,9 @@ Factions = {
 	}
 }
 
+MercenaryGroups = {
+}
+
 GrandStrategyEvents = {
 	OnTheVanaquisl = {
 		Name = "On the Vanaquisl",
@@ -947,7 +950,8 @@ GrandStrategyEvents = {
 			"OnTheVanaquisl"
 		},
 		Provinces = {
-			Astrakhan = true
+			Astrakhan = true,
+			Russia = false
 		},
 		Units = {
 			unit_germanic_warrior = 8 -- event only happens if player has enough warriors to successfully migrate
@@ -1031,7 +1035,7 @@ GrandStrategyEvents = {
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Civilization = ""
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8
-						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
+						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 						CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -1051,7 +1055,7 @@ GrandStrategyEvents = {
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
 					WorldMapProvinces.Brandenburg.Civilization = ""
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8
-					WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
+					WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 				end
 				DrawMinimap()
 			end,
@@ -1068,7 +1072,7 @@ GrandStrategyEvents = {
 			Jutland = true
 		},
 		Units = {
-			unit_germanic_warrior = 6 -- event only happens if player has enough warriors to successfully attack the province
+			unit_germanic_warrior = 8 -- event only happens if player has enough warriors to successfully attack the province
 		},
 --		RandomChance = 50,
 		Options = {"~!Embark!", "~!Seafaring is not for us."},
@@ -1087,7 +1091,7 @@ GrandStrategyEvents = {
 								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(0, "UnitTypesCount", unitName)
 							end
 						end
-						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
+						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -1106,7 +1110,7 @@ GrandStrategyEvents = {
 							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
 						end
 					end
-					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
+					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 				end
 				DrawMinimap()
 			end,
@@ -1239,10 +1243,10 @@ GrandStrategyEvents = {
 			unit_germanic_smithy = true
 		},
 		RandomChance = 1,
-		Options = {"~!Marvelous! (+100 Gold)"},
+		Options = {"~!Marvelous! (+1 Research)"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 100 -- a small effect to give more purpose to this flavor event
+				EventFaction.Research = EventFaction.Research + 1
 			end
 		}
 	},
@@ -1257,10 +1261,10 @@ GrandStrategyEvents = {
 			unit_germanic_smithy = true
 		},
 		RandomChance = 1,
-		Options = {"~!Inspiring! (+100 Gold)"},
+		Options = {"~!Inspiring! (+1 Research)"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 100 -- a small effect to give more purpose to this flavor event
+				EventFaction.Research = EventFaction.Research + 1
 			end
 		}
 	},

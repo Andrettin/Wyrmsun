@@ -57,6 +57,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay). The presence of heroes in a province owned by the player is marked by a crown on the top-left of the province's settlement.
 - Added the quests of the Germanic campaign as events to the Grand Strategy mode.
 - Added three flavor events for the Germanics, "The Curved Swords", "The Sun Chariot" and "Nobleman's Burial".
+- Mercenary camps can now be used in Grand Strategy mode (they are not buildable, but appear automatically in a province once it has a town hall, a barracks and a smithy; currently mercenary camps only appear if the world is Nidavellir, as there are no mercenaries to be recruited for Earth).
+- Technologies now cost "Research" (icon graphics by Jinn) as well as normal resources; research gathering rate depends on how advanced the average province of the faction is.
+- The grand strategy battle AI now uses units that don't belong to its civilization to attack.
+- Provinces now provide a market for lumber, each province (with a town hall) that is owned by a faction consuming 50 lumber.
+- Improvements to how the AI chooses to attack provinces.
+- Dwarven provinces that have a town hall and barracks now build up militia units (maximum of 4), which appear in battle to defend the province.
 
 * Maps
 - Added Tanais map (Earth).
@@ -68,6 +74,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Random maps are now placed in the "Random" world, and feature a mix of civilizations regardless of tileset.
 - Added a random dungeon map.
 - Added Malmo map (Earth).
+- Fixed an issue which caused players to not have symmetric starting locations in symmetric maps.
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).
@@ -127,6 +134,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Units' gray hair variation is now linked to the "old" trait.
 - Wyrm's "vicious" icon variation is now linked to the "vicious" trait.
 - Gnomish caravans can now carry two units.
+- Gryphon riders now have a gray-haired variations (graphics by b_o).
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

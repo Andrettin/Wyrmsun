@@ -1333,7 +1333,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 --	end
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
-		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, symmetric)
+		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	end
 	
 	CleanRawTiles()
@@ -3149,7 +3149,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
-		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	end
 end
 
@@ -3337,7 +3337,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 --	end
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
-		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, false)
+		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	end
 	
 	CleanRawTiles()
