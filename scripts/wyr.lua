@@ -500,8 +500,14 @@ function SetPlayerData(player, data, arg1, arg2)
 			end
 		elseif (arg1 == "oil") then
 			arg2 = res[3]
+		elseif (arg1 == "ore") then
+			arg2 = res[4]
+		elseif (arg1 == "stone") then
+			arg2 = res[5]
 		elseif (arg1 == "coal") then
 			arg2 = res[6]
+		elseif (arg1 == "research") then
+			arg2 = res[7]
 		end
 	end
 

@@ -1133,9 +1133,9 @@ GrandStrategyEvents = {
 		OptionEffects = {
 			function(s)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				Factions.GothTribe.Technologies = Factions.AsaTribe.Technologies				
+				AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
 				AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
-				Factions.SaxonTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
 				end
@@ -1160,15 +1160,15 @@ GrandStrategyEvents = {
 				if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				end
-				Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
-				Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
+				AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 				FormFaction(EventFaction, Factions.SwedeTribe)
 			end,
 			function(s)
 				AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
-				Factions.SwedeTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
 				AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
-				Factions.SaxonTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
 				end
@@ -1193,15 +1193,15 @@ GrandStrategyEvents = {
 				if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				end
-				Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
-				Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
+				AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 				FormFaction(EventFaction, Factions.GothTribe)
 			end,
 			function(s)
 				AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
-				Factions.SwedeTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				Factions.GothTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
 				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
 				end
@@ -1226,8 +1226,8 @@ GrandStrategyEvents = {
 				if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				end
-				Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
-				Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+				AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
+				AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 				FormFaction(EventFaction, Factions.SaxonTribe)
 			end
 		}
@@ -1283,6 +1283,23 @@ GrandStrategyEvents = {
 				EventFaction.Gold = EventFaction.Gold + 100 -- his inheritance? a small effect to give more purpose to this flavor event
 			end
 		}
+	},
+	PytheasVoyageGoths = { -- Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
+		Name = "Pytheas' Voyage",
+		Description = "A Greek scholar and explorer, Pytheas, arrived in our shores. He seemed interested in the island which is a day's sail away from us, due to the amber thrown upon its coast by waves in the spring. He also asked about our use of the material for fuel, and soon went back to the seas to continue his voyage.",
+		Civilization = "germanic",
+		Provinces = {
+			Gotaland = true
+		},
+		MinYear = -325, -- Pytheas' voyage begins
+		MaxYear = -319, -- Pytheas' writes about the results of his voyage
+		RandomChance = 50,
+		Options = {"A ~!wise man! (+1 Research)"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		}
 	}
 }
 
@@ -1332,16 +1349,17 @@ if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Sour
 	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
 end
 
-if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths
+if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 	WorldMapProvinces.Gotaland.Owner = "Goth Tribe"
-	Factions.GothTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+	PytheasVoyageGoths = nil
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Brandenburg.SettlementBuildings.unit_germanic_town_hall = 2
-	Factions.SuebiTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 end
 
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
@@ -1356,7 +1374,7 @@ end
 
 if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
-	Factions.SwedeTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
 --	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.Jutland.Owner = "" -- remove the Asa Tribe
 end
@@ -1365,7 +1383,7 @@ if (GrandStrategyYear >= -9) then -- Maroboduus, king of the Suebic tribe of the
 	WorldMapProvinces.Bohemia.Owner = "Marcomanni Tribe"
 	WorldMapProvinces.Bohemia.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
-	Factions.MarcomanniTribe.Technologies = Factions.SuebiTribe.Technologies
+	AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
 end
 
 if (GrandStrategyYear >= 1) then -- Political situation in Europe in 1 AD; Source: http://www.euratlas.net/history/europe/1/index.html
@@ -1377,18 +1395,18 @@ end
 if (GrandStrategyYear >= 98) then
 	WorldMapProvinces.Bavaria.Owner = "Rugian Tribe" -- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
-	Factions.RugianTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.RugianTribe, Factions.AsaTribe)
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Rhineland area by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Rhineland.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
-	Factions.SaxonTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
 if (GrandStrategyYear >= 150) then
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks were the people settled in the modern Netherlands in 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Netherlands.SettlementBuildings.unit_germanic_town_hall = 2
-	Factions.FrankTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Owner = ""
 	WorldMapProvinces.Gotaland.Name = "Gotaland"
 	WorldMapProvinces.Prussia.Owner = "Goth Tribe" -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -1399,9 +1417,9 @@ if (GrandStrategyYear >= 200) then
 	WorldMapProvinces.Prussia.Owner = ""
 	WorldMapProvinces.Ukraine.Owner = "Ostrogoth Tribe" -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Ukraine.Units.unit_germanic_warrior = 0
-	Factions.OstrogothTribe.Technologies = Factions.GothTribe.Technologies
+	AcquireFactionTechnologies(Factions.OstrogothTribe, Factions.GothTribe)
 	WorldMapProvinces.Romania.Owner = "Visigoth Tribe" -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	Factions.VisigothTribe.Technologies = Factions.GothTribe.Technologies
+	AcquireFactionTechnologies(Factions.VisigothTribe, Factions.GothTribe)
 end
 
 if (GrandStrategyYear >= 397) then
@@ -1427,7 +1445,7 @@ end
 if (GrandStrategyYear >= 445) then
 	WorldMapProvinces.Switzerland.Owner = "Burgundian Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	Factions.BurgundianTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.BurgundianTribe, Factions.AsaTribe)
 end
 
 if (GrandStrategyYear >= 450) then
@@ -1447,7 +1465,7 @@ end
 if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	WorldMapProvinces.Belgium.Owner = "Francia"
 	WorldMapProvinces.Belgium.Name = "Austrasia"
-	Factions.Francia.Technologies = Factions.FrankTribe.Technologies
+	AcquireFactionTechnologies(Factions.Francia, Factions.FrankTribe)
 end
 
 if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -1458,10 +1476,10 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	WorldMapProvinces.Corsica.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.Sardinia.Owner = "Vandal Tribe" -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Sardinia.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	Factions.VandalTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.VandalTribe, Factions.AsaTribe)
 	WorldMapProvinces.GaliciaIberia.Owner = "Galicia" -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Portugal.Owner = "Galicia"
-	Factions.Galicia.Technologies = Factions.SuebiTribe.Technologies
+	AcquireFactionTechnologies(Factions.Galicia, Factions.SuebiTribe)
 	WorldMapProvinces.Castille.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Castille.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Castille.Units.unit_germanic_warrior = 0
@@ -1492,12 +1510,12 @@ end
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.Bavaria.Name = "Bavaria"
 	WorldMapProvinces.Bavaria.Owner = "Bavarian Tribe"
-	Factions.BavarianTribe.Technologies = Factions.MarcomanniTribe.Technologies
+	AcquireFactionTechnologies(Factions.BavarianTribe, Factions.MarcomanniTribe)
 	WorldMapProvinces.Netherlands.Name = "Frisia"
 	WorldMapProvinces.Netherlands.Owner = "Frisian Tribe"
-	Factions.FrisianTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.FrisianTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	Factions.DaneTribe.Technologies = Factions.AsaTribe.Technologies
+	AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
 	WorldMapProvinces.Brittany.Name = "Brittany" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 52
 	WorldMapProvinces.England.Owner = "Saxon Tribe" -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.England.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer

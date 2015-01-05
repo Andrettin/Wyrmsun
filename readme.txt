@@ -56,13 +56,16 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Provinces in the Grand Strategy mode now have a culture (a civilization) assigned to them, which remains even if they are conquered, and the units and buildings available in the province are those belonging to that province's culture/civilization.
 - Heroes now feature in Grand Strategy mode, and can be moved between provinces and be used to attack and defend (hero levels and upgrades are persistent, as in normal single player gameplay). The presence of heroes in a province owned by the player is marked by a crown on the top-left of the province's settlement.
 - Added the quests of the Germanic campaign as events to the Grand Strategy mode.
-- Added three flavor events for the Germanics, "The Curved Swords", "The Sun Chariot" and "Nobleman's Burial".
+- Added four flavor events for the Germanics, "The Curved Swords", "The Sun Chariot", "Nobleman's Burial" and "Pytheas' Voyage".
 - Mercenary camps can now be used in Grand Strategy mode (they are not buildable, but appear automatically in a province once it has a town hall, a barracks and a smithy; currently mercenary camps only appear if the world is Nidavellir, as there are no mercenaries to be recruited for Earth).
 - Technologies now cost "Research" (icon graphics by Jinn) as well as normal resources; research gathering rate depends on how advanced the average province of the faction is.
 - The grand strategy battle AI now uses units that don't belong to its civilization to attack.
 - Provinces now provide a market for lumber, each province (with a town hall) that is owned by a faction consuming 50 lumber.
 - Improvements to how the AI chooses to attack provinces.
 - Dwarven provinces that have a town hall and barracks now build up militia units (maximum of 4), which appear in battle to defend the province.
+- Dwarven factions now start with the first level axe, shield and throwing axe upgrades researched for the 25 AD starting date and beyond.
+- Dwarven factions now start with the second level axe, shield and throwing axe upgrades researched, along with the first level ballista one, for the 550 AD starting date and beyond.
+- Improvements to how the AI chooses to train/build units.
 
 * Maps
 - Added Tanais map (Earth).

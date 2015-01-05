@@ -32,19 +32,22 @@ local upgrades = {
 		_("While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas."),
 		"",
 		_("A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status."),
-		{   200,   800,     0,     0,     0,     0,     0},
+		{   200,   800,     0,     0,     0,     0,     0,     0},
+		{   200,   800,     0,     0,     0,     0,     0,   800},
 		1},
 	{"upgrade-germanic-bronze-shield", _("Bronze Shield"), "icon-germanic-bronze-shield", "bronze-shield",
 		_("Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas."),
 		"",
 		_("A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons."),
-		{   200,   300,   300,     0,     0,     0,     0},
+		{   200,   300,   300,     0,     0,     0,     0,     0},
+		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
 	{"upgrade-germanic-barbed-arrow", _("Barbed Arrow"), "icon-germanic-barbed-arrow", "ranged-projectile-1",
 		_("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +1 Damage for Skutians."),
 		"",
 		"",
-		{   200,   300,   300,     0,     0,     0,     0},
+		{   200,   300,   300,     0,     0,     0,     0,     0},
+		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
 }
 
@@ -60,7 +63,10 @@ for i = 1,table.getn(upgrades) do
 	for j = 1,table.getn(upgrades[i][8]) do
 		u.Costs[j - 1] = upgrades[i][8][j]
 	end
-	u.TechnologyPointCost = upgrades[i][9]
+	for j = 1,table.getn(upgrades[i][9]) do
+		u.GrandStrategyCosts[j - 1] = upgrades[i][9][j]
+	end
+	u.TechnologyPointCost = upgrades[i][10]
 	u.Ability = false
 end
 

@@ -296,6 +296,7 @@ Factions = {
 	Untersberg = {
 		Name = "Untersberg",
 		Civilization = "gnome",
+		Technologies = {},
 		Title = "Kingdom",
 		Gold = 7500,
 		Commodities = {
@@ -306,6 +307,7 @@ Factions = {
 	NorlundClan = {
 		Name = "Norlund Clan",
 		Civilization = "dwarf",
+		Technologies = {},
 		Gold = 3000,
 		Commodities = {
 			Lumber = 1500 -- half of the gold value
@@ -314,6 +316,7 @@ Factions = {
 	ShinsplitterClan = {
 		Name = "Shinsplitter Clan",
 		Civilization = "dwarf",
+		Technologies = {},
 		Gold = 7500,
 		Commodities = {
 			Lumber = 3750 -- half of the gold value
@@ -322,6 +325,7 @@ Factions = {
 	ShorbearClan = {
 		Name = "Shorbear Clan",
 		Civilization = "dwarf",
+		Technologies = {},
 		Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 		Commodities = {
 			Lumber = 4500 -- half of the gold value
@@ -331,17 +335,20 @@ Factions = {
 	KalKartha = {
 		Name = "Kal Kartha",
 		Civilization = "dwarf",
-		Title = "Lordship"
+		Title = "Lordship",
+		Technologies = {}
 	},
 	Knalga = {
 		Name = "Knalga",
 		Civilization = "dwarf",
-		Title = "Lordship"
+		Title = "Lordship",
+		Technologies = {}
 	},
 	Lyr = {
 		Name = "Lyr",
 		Civilization = "dwarf",
-		Title = "Lordship"
+		Title = "Lordship",
+		Technologies = {}
 	}
 }
 
@@ -676,6 +683,27 @@ GrandStrategyEvents = {
 	}
 }
 
+if (GrandStrategyYear >= -1) then -- bronze age technologies already obtained by the dwarves by this point
+	Factions.NorlundClan.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+end
+
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
@@ -772,4 +800,30 @@ if (GrandStrategyYear >= 550) then
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_axefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_steelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_thane = 4 -- Karrag
+	
+	-- late iron age technologies already obtained by the dwarves by this point
+	Factions.NorlundClan.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.NorlundClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
 end
