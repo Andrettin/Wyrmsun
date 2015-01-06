@@ -309,7 +309,7 @@ function RunGrandStrategyGameSetupMenu()
 
 		faction_list = {}
 		for key, value in pairsByKeys(Factions) do
-			if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and Factions[key].Civilization ~= "gnome" and Factions[key].Civilization ~= "goblin") then -- Gnomes and goblins aren't playable yet
+			if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and Factions[key].Civilization ~= "gnome" and Factions[key].Civilization ~= "goblin" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then -- Gnomes and goblins aren't playable yet
 				table.insert(faction_list, Factions[key].Name)
 			end
 		end
@@ -1344,7 +1344,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	elseif (GetWorldMapTile(tile_x, tile_y) == "Watr") then
 		tooltip = "Water"
 	end
-	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall")) then
+	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
 		if (GetTileProvince(tile_x, tile_y).SettlementName ~= nil) then
 			tooltip = "Settlement of " .. GetTileProvince(tile_x, tile_y).SettlementName .. " (" .. tooltip .. ")"
 		else
@@ -2216,7 +2216,7 @@ function DrawOnScreenTiles()
 
 		-- draw province settlement
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
-			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall")) then
+			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and WorldMapProvinces[key].Owner ~= "") then
 				local settlement_graphics = ""
 				if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
 					if (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
@@ -2224,12 +2224,18 @@ function DrawOnScreenTiles()
 					else
 						settlement_graphics = "tilesets/world/sites/dwarven_settlement.png"
 					end
+				elseif (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner == "Kal Kartha") then
+					settlement_graphics = "tilesets/world/sites/kal_karthan_settlement.png"
 				elseif (WorldMapProvinces[key].Civilization == "germanic") then
 					settlement_graphics = "tilesets/world/sites/germanic_settlement.png"
 				elseif (WorldMapProvinces[key].Civilization == "gnome") then
 					settlement_graphics = "tilesets/world/sites/gnomish_settlement.png"
-				elseif (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner == "Kal Kartha") then
-					settlement_graphics = "tilesets/world/sites/kal_karthan_settlement.png"
+				elseif (WorldMapProvinces[key].Civilization == "goblin") then
+					if (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
+						settlement_graphics = "tilesets/world/sites/goblin_settlement_with_barracks.png"
+					else
+						settlement_graphics = "tilesets/world/sites/goblin_settlement.png"
+					end
 				elseif (GrandStrategyWorld == "Earth") then -- if province has no civilization, default to germanic city graphics if world is Earth
 					settlement_graphics = "tilesets/world/sites/germanic_settlement.png"
 				elseif (GrandStrategyWorld == "Nidavellir") then -- if province has no civilization, default to dwarf city graphics if world is Nidavellir

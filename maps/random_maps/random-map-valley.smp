@@ -1,0 +1,9 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","person","person","person")
+if (GrandStrategy == false) then
+	PresentMap("Random Valley", 4, 128, 128, 1)
+else
+	PresentMap("Random Valley", 4, 64, 64, 1)
+end
+MapWorld = "Random"

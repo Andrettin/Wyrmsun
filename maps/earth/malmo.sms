@@ -28,12 +28,9 @@ local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-g
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "germanic", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_units, "low", nil)
+		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_units, "low", nil)
 	else
-		GenerateTown(layout, 1, "germanic", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, "low", nil)
-	end
-	if (GrandStrategy == false or GrandStrategyEventMap) then
-		SetPlayerData(1, "Name", "Gylve")
+		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, "low", nil)
 	end
 end
 

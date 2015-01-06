@@ -534,6 +534,23 @@ function StandardTriggers()
 				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
 					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("archer", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
 				end
+				
+				-- AI units inside tree stumps get out to attack if an enemy is near
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" and GetUnitVariable(uncount[unit1], "Transport") > 0) then
+					local inside_uncount = 0
+					inside_uncount = GetUnitsInsideUnit(uncount[unit1])
+					for unit2 = 1,table.getn(inside_uncount) do
+						if (GetPlayerData(GetUnitVariable(inside_uncount[unit2], "Player"), "AiEnabled")) then
+							local nearby_uncount = 0
+							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], GetUnitVariable(inside_uncount[unit2], "SightRange") / 2, false)
+							for unit3 = 1,table.getn(nearby_uncount) do 
+								if (Players[GetUnitVariable(inside_uncount[unit2], "Player")]:IsEnemy(Players[GetUnitVariable(nearby_uncount[unit3],"Player")])) then
+									OrderUnit(15, "unit-tree-stump", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "unload")
+								end
+							end
+						end
+					end
+				end
 
 				if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
 					SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))

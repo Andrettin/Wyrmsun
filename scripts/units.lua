@@ -210,7 +210,11 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	RandomMovementDistance = 12,
 	organic = true,
 	Fauna = true,
-	PersonalNames = {"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kawn", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Krawg", "Kuu", "Kzaaa", "Kzuuu"},
+	PersonalNames = {
+		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
+		"Kawn", "Krawg", -- names from the "Sceptre of Fire" Wesnoth campaign
+		"Graak", "Graik", "Griak", "Grook", "Gruak" -- names from the "Gryphon Mountain" scenario of the "Heir to the Throne" Wesnoth campaign
+	},
 	Variations = {
 		{
 			"variation-id", "brown-feathers"

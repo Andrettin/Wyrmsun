@@ -2,8 +2,8 @@ LoadTileModels("scripts/tilesets/forest.lua")
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateRandomMap(128, 128, false, true)
+		GenerateRandomMap(128, 128, false, true, "high")
 	else
-		GenerateRandomMap(64, 64, false, true)
+		GenerateRandomMap(64, 64, false, true, "high")
 	end
 end

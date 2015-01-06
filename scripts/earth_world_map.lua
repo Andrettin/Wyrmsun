@@ -386,9 +386,9 @@ WorldMapProvinces = {
 		}
 	},
 	Gotaland = {
-		Name = "Gothland",
+		Name = "Gylveland",
 		Tiles = { {128, 21}, {128, 22}, {129, 21}, {129, 22}, {129, 23}, {130, 22}, {130, 23}, {131, 22}, {131, 23} },
-		Owner = "",
+		Owner = "Gylfing Tribe",
 --		SettlementName = "Gothenburg",
 		SettlementLocation = {128, 22}, -- Gothenburg
 		SettlementBuildings = {
@@ -532,7 +532,7 @@ WorldMapProvinces = {
 		}
 	},
 	Prussia = {
-		Name = "Prussia",
+		Name = "Gothiscandza",
 		Tiles = { {130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25} },
 		Owner = "",
 --		SettlementName = "Konigsberg",
@@ -645,6 +645,7 @@ WorldMapProvinces = {
 		},
 		Map = "maps/random_maps/random-map-forest.smp",
 		Units = {
+			unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
 		}
 	},
 	Switzerland = {
@@ -822,15 +823,6 @@ Factions = {
 		Civilization = "germanic",
 		Technologies = {}
 	},
-	VanaTribe = {
-		Name = "Vana Tribe",
-		Civilization = "germanic",
-		Technologies = {},
-		Gold = 5000,
-		Commodities = {
-			Lumber = 2500 -- half of the gold value
-		}
-	},
 	VandalTribe = {
 		Name = "Vandal Tribe",
 		Civilization = "germanic",
@@ -853,6 +845,25 @@ Factions = {
 		Civilization = "germanic",
 		Title = "Kingdom",
 		Technologies = {}
+	},
+	-- Non-Playable Tribes
+	GylfingTribe = {
+		Name = "Gylfing Tribe",
+		Civilization = "germanic",
+		Technologies = {},
+		Gold = 5000,
+		Commodities = {
+			Lumber = 2500 -- half of the gold value
+		}
+	},
+	VanaTribe = {
+		Name = "Vana Tribe",
+		Civilization = "germanic",
+		Technologies = {},
+		Gold = 5000,
+		Commodities = {
+			Lumber = 2500 -- half of the gold value
+		}
 	}
 }
 
@@ -1134,6 +1145,7 @@ GrandStrategyEvents = {
 			function(s)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+				WorldMapProvinces.Gotaland.Name = "Gothland"
 				AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
 				AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
@@ -1196,12 +1208,14 @@ GrandStrategyEvents = {
 				AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
 				AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 				FormFaction(EventFaction, Factions.GothTribe)
+				WorldMapProvinces.Gotaland.Name = "Gothland"
 			end,
 			function(s)
 				AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
 				AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+				WorldMapProvinces.Gotaland.Name = "Gothland"
 				if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
 				end
@@ -1353,6 +1367,7 @@ if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage
 	WorldMapProvinces.Gotaland.Owner = "Goth Tribe"
 	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
 	PytheasVoyageGoths = nil
+	WorldMapProvinces.Gotaland.Name = "Gothland"
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.

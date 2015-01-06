@@ -155,6 +155,11 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
 
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	
+	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
 elseif (GrandStrategyEventMap) then
 	SetAiType(0, "grand-strategy-battle")
 	SetAiType(1, "grand-strategy-battle")
@@ -232,6 +237,9 @@ elseif (GrandStrategyEventMap) then
 			end
 		end
 	end
+	
+	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
+	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
 end
 
 PlayMusic("music/knolls.ogg")
@@ -240,7 +248,3 @@ wyrmsun.playlist = { "music/loyalists.ogg", "music/breaking_the_chains.ogg" }
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
-
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
-	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-end

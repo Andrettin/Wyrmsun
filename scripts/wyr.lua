@@ -259,12 +259,6 @@ DefineCivilizationFactions("germanic",
 --		"secondary_color", "yellow"
 --	},
 	"faction", {
-		"name", "Vana Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "cyan"
-	},
-	"faction", {
 		"name", "Vandal Tribe",
 		"type", "tribe",
 		"color", "cyan",
@@ -276,6 +270,7 @@ DefineCivilizationFactions("germanic",
 		"color", "pink",
 		"secondary_color", "pink"
 	},
+	-- Germanic polities
 	"faction", {
 		"name", "Bavaria",
 		"type", "polity",
@@ -317,6 +312,21 @@ DefineCivilizationFactions("germanic",
 		"type", "polity",
 		"color", "blue",
 		"secondary_color", "yellow"
+	},
+	-- Non-Playable Tribes
+	"faction", {
+		"name", "Gylfing Tribe",
+		"type", "tribe",
+		"color", "green",
+		"secondary_color", "teal",
+		"playable", false
+	},
+	"faction", {
+		"name", "Vana Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "cyan",
+		"playable", false
 	}
 )
 

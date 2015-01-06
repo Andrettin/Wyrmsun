@@ -1231,7 +1231,7 @@ function SetMapBorders(tile_type, replace_tile)
 	end
 end
 
-function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
+function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_quantity)
 	CleanRawTiles()
 
 	for x=0,(Map.Info.MapWidth - 1) do
@@ -1254,7 +1254,13 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations)
 		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	if (tree_quantity == "high") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (tree_quantity == "medium") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (tree_quantity == "low") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
 
 	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
@@ -3264,6 +3270,10 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 		else
 			direction = "west-east"
 		end
+	end
+
+	if (lake_quantity == "random") then
+		lake_quantity = SyncRand(4) -- 0-3 lakes
 	end
 
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)

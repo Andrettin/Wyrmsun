@@ -78,6 +78,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added a random dungeon map.
 - Added Malmo map (Earth).
 - Fixed an issue which caused players to not have symmetric starting locations in symmetric maps.
+- In the Chaincolt Foothills map, a few Shinsplitter scouts are now hidden within tree stumps.
+- Added Random Valley map.
+- Tree distribution is now more widely dispersed in many random maps, and they have a more variable quantity of trees (for instance: there will be more trees in random forest maps than in random swamp ones).
 
 * Miscellaneous
 - Added germanic bronze short sword icon (by Leo).

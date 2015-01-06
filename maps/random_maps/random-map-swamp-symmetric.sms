@@ -1,5 +1,5 @@
 LoadTileModels("scripts/tilesets/swamp.lua")
 
 if (LoadedGame == false) then
-	GenerateRandomMap(128, 128, true, true)
+	GenerateRandomMap(128, 128, true, true, "medium")
 end

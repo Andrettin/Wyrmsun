@@ -314,7 +314,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") and GetPlayerData(GetFactionPlayer("Gylve"), "UnitTypesCount", "unit-germanic-barracks") < 1 and GetPlayerData(GetFactionPlayer("Gylve"), "UnitTypesCount", "unit-germanic-warrior") < 1 and GetPlayerData(GetFactionPlayer("Gylve"), "UnitTypesCount", "unit-germanic-archer") < 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-barracks") < 1 and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-warrior") < 1 and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-archer") < 1) then
 			player = GetFactionPlayer("Asa Tribe")
 			return true
 		end
