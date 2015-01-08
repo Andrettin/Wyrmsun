@@ -448,7 +448,6 @@ end
 ReInitAiGameData()
 Load("scripts/ai/passive.lua")
 Load("scripts/ai/land_attack.lua")
-Load("scripts/ai/land_attack_agrarian_bronze.lua")
 Load("scripts/ai/northern_wastelands_goblins.lua")
 Load("scripts/ai/grand_strategy_battle.lua")
 Load("scripts/ai/ai_redribbon_2014.lua")

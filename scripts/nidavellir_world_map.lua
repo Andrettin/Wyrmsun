@@ -158,8 +158,8 @@ WorldMapProvinces = {
 		SettlementBuildings = {},
 		Map = "maps/random_maps/random-map-swamp.smp",
 		Units = { -- some wild dwarves to stop too early expansion into this province
-			unit_dwarven_axefighter = 4,
-			unit_dwarven_scout = 3
+			unit_dwarven_axefighter = 8,
+			unit_dwarven_scout = 6
 		},
 		Heroes = {
 		}
@@ -189,8 +189,8 @@ WorldMapProvinces = {
 			unit_dwarven_axefighter = 0,
 			unit_dwarven_steelclad = 0,
 			unit_dwarven_thane = 0,
-			unit_goblin_spearman = 4, -- one troll, two young ogres, one ogre
-			unit_goblin_archer = 2 -- two liches
+			unit_goblin_spearman = 4 * 3, -- one troll, two young ogres, one ogre -- multiply by three to prevent dwarven expansion here too early
+			unit_goblin_archer = 2 * 3 -- two liches
 		},
 		Heroes = {
 		}
@@ -301,7 +301,8 @@ Factions = {
 		Gold = 7500,
 		Commodities = {
 			Lumber = 3750 -- half of the gold value
-		}
+		},
+		Diplomacy = {}
 	},
 	-- Dwarven clans
 	NorlundClan = {
@@ -311,7 +312,8 @@ Factions = {
 		Gold = 3000,
 		Commodities = {
 			Lumber = 1500 -- half of the gold value
-		}
+		},
+		Diplomacy = {}
 	},
 	ShinsplitterClan = {
 		Name = "Shinsplitter Clan",
@@ -320,7 +322,8 @@ Factions = {
 		Gold = 7500,
 		Commodities = {
 			Lumber = 3750 -- half of the gold value
-		}
+		},
+		Diplomacy = {}
 	},
 	ShorbearClan = {
 		Name = "Shorbear Clan",
@@ -329,26 +332,30 @@ Factions = {
 		Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 		Commodities = {
 			Lumber = 4500 -- half of the gold value
-		}
+		},
+		Diplomacy = {}
 	},
 	-- Dwarven polities
 	KalKartha = {
 		Name = "Kal Kartha",
 		Civilization = "dwarf",
 		Title = "Lordship",
-		Technologies = {}
+		Technologies = {},
+		Diplomacy = {}
 	},
 	Knalga = {
 		Name = "Knalga",
 		Civilization = "dwarf",
 		Title = "Lordship",
-		Technologies = {}
+		Technologies = {},
+		Diplomacy = {}
 	},
 	Lyr = {
 		Name = "Lyr",
 		Civilization = "dwarf",
 		Title = "Lordship",
-		Technologies = {}
+		Technologies = {},
+		Diplomacy = {}
 	}
 }
 
@@ -357,7 +364,56 @@ MercenaryGroups = {
 }
 
 GrandStrategyEvents = {
-	--[[
+	ChargeRugnurWithTheOutpost = {
+		Name = "Charge Rugnur with the Outpost?",
+		Description = "A young dwarf by the name of Rugnur could be an adequate choice for being encharged with one of our border outposts. Do you wish to appoint him for the job?",
+		Civilization = "dwarf",
+		Faction = "NorlundClan",
+		Provinces = {
+			CavernsOfChaincolt = true
+		},
+		Heroes = {
+			unit_hero_rugnur = false
+		},
+		MinYear = 25, -- start date
+		MaxYear = 40, -- death date
+		Options = {"~!Yes", "~!No"},
+		OptionEffects = {
+			function(s)
+				if (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 2
+				elseif (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 2
+				else
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
+				end
+			end,
+			function(s)
+			end
+		}
+	},
+	TheSagesDeparture = {
+		Name = "The Sage's Departure",
+		Description = "Discontent with Durstorn's leadership, Thursagan has decided to leave us and move to the far north.",
+		Civilization = "dwarf",
+		Faction = "NorlundClan",
+		Provinces = {
+			CavernsOfChaincolt = true
+		},
+		Heroes = {
+			unit_hero_thursagan = true,
+			unit_hero_durstorn = true
+		},
+		RandomChance = 10,
+		MaxYear = 40, -- death date
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2
+			end
+		}
+	},
 	StrikeABargain = {
 		Name = "Strike a Bargain?",
 		Description = "The gnomish king Pypo I has arrived with an army behind him near a small border outpost of ours in the Chaincolt Foothills, which is under the charge of a young dwarf named Rugnur.",
@@ -365,6 +421,11 @@ GrandStrategyEvents = {
 		Faction = "NorlundClan",
 		Provinces = {
 			CavernsOfChaincolt = true
+		},
+		Heroes = {
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_durstorn = true
 		},
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
@@ -377,15 +438,21 @@ GrandStrategyEvents = {
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-					WorldMapProvinces.BrownHills.Units[gsunit_key] = WorldMapProvinces.BrownHills.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-					WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+						end
+					end
 				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
 				end
 
 			end
@@ -398,6 +465,7 @@ GrandStrategyEvents = {
 				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ABargainIsStruckShinsplitterClan)
+			DrawMinimap()
 		end}
 	},
 	ABargainIsStruckShinsplitterClan = {
@@ -420,15 +488,21 @@ GrandStrategyEvents = {
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-					WorldMapProvinces.BrownHills.Units[gsunit_key] = WorldMapProvinces.BrownHills.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-					WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+						end
+					end
 				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
 				end
 			end
 			if (WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit >= 1) then -- way to check if Norlund Clan successfully transported the caravans
@@ -444,6 +518,11 @@ GrandStrategyEvents = {
 		Provinces = {
 			CavernsOfChaincolt = true
 		},
+		Heroes = {
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_durstorn = true
+		},
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
@@ -455,34 +534,36 @@ GrandStrategyEvents = {
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
 				end
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
-					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+						end
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
 				else
-					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-						WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
 					end
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then
 				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
+			DrawMinimap()
 		end}
 	},
 	ClosingTheGatesShinsplitterClan = {
@@ -504,26 +585,28 @@ GrandStrategyEvents = {
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
 				end
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
-					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
 				else
-					for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-						WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-						WorldMapProvinces.SouthernTunnels.Units[gsunit_key] = WorldMapProvinces.SouthernTunnels.Units[gsunit_key] + GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+						end
 					end
 				end
 			end
@@ -541,8 +624,11 @@ GrandStrategyEvents = {
 			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
 		},
 		Heroes = {
-			unit_hero_baglur = true
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_durstorn = true
 		},
+		RandomChance = 50, -- took two years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
@@ -551,25 +637,23 @@ GrandStrategyEvents = {
 				RunMap("maps/nidavellir/northern-wastelands.smp")
 				GrandStrategyEventMap = false
 
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-					WorldMapProvinces.NorthernWastelands.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.NorthernWastelands.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+						end
+					end
 				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
@@ -596,8 +680,10 @@ GrandStrategyEvents = {
 		Heroes = {
 			unit_hero_rugnur = true,
 			unit_hero_baglur = true,
-			unit_hero_thursagan = true
+			unit_hero_thursagan = true,
+			unit_hero_durstorn = true
 		},
+		RandomChance = 50, -- took two years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
@@ -606,36 +692,355 @@ GrandStrategyEvents = {
 				RunMap("maps/nidavellir/eastern-mines.smp")
 				GrandStrategyEventMap = false
 
-				for gsunit_key, gsunit_value in pairs(GrandStrategyUnits) do
-					WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] = WorldMapProvinces.CavernsOfChaincolt.Units[gsunit_key] + GetPlayerData(0, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
-					WorldMapProvinces.EasternMines.Units[gsunit_key] = GetPlayerData(1, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(2, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType) + GetPlayerData(3, "UnitTypesCount", GrandStrategyUnits[gsunit_key].UnitType)
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.EasternMines.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName) + GetPlayerData(2, "UnitTypesCount", unitName) + GetPlayerData(3, "UnitTypesCount", unitName)
+						end
+					end
 				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(0, "UnitTypesCount", "unit-hero-rugnur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(0, "UnitTypesCount", "unit-hero-baglur-thane") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
-				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
-				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				Factions.NorlundClan.Commodities["Coal"] = 20000
-				WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = WorldMapProvinces.EasternMines.Units.unit_goblin_spearman
-				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
-				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
-				WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
+				WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = WorldMapProvinces.EasternMines.Units.unit_goblin_spearman / 2
+				WorldMapProvinces.EasternMines.Units.unit_goblin_archer = WorldMapProvinces.EasternMines.Units.unit_goblin_archer / 2
 			end
 		end}
 	},
-	--]]
+	HillsOfTheShorbearClan = {
+		Name = "Hills of the Shorbear Clan",
+		Description = "Durstorn and his entourage went to meet the Shorbear clan's chieftain. Well, all dwarves are known for a love of gold and a heart of stone. The Shorbears were no exception. They were crafters of crafters - they made tools. The best in the land. And they bartered well.",
+		Civilization = "dwarf",
+		Faction = "NorlundClan",
+		Provinces = {
+			CavernsOfChaincolt = true
+		},
+		Units = {
+			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+		},
+		Heroes = {
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_thursagan = true,
+			unit_hero_durstorn = true
+		},
+		Commodities = {
+			Coal = 20000
+		},
+		RandomChance = 16, -- six years
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEventMap = true
+				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
+				RunMap("maps/nidavellir/shorbear-hills.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							if (unitName ~= "unit-gnomish-recruit") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							else
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+					end
+				end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
+				end
+				if (GameResult == GameVictory) then
+					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
+				end
+			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.HillsOfTheShorbearClanShinsplitterClan)
+			elseif ("Shorbear Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEvent(Factions.ShorbearClan, GrandStrategyEvents.HillsOfTheShorbearClanShorbearClan)
+			else
+				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1 -- Kalnar
+				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 3 -- Lyndar, Gaenlar and Glinan
+				WorldMapProvinces.ShorbearHills.Units.unit_dwarven_axefighter = 0
+				WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 0
+				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
+			end
+			DrawMinimap()
+		end}
+	},
+	HillsOfTheShorbearClanShinsplitterClan = {
+		Name = "Hills of the Shorbear Clan",
+		Description = "Our scouts have found out that the Norlunds have gone out of their caves through an exit near the Shorbear Hills... we must be quick, if we are to catch them!",
+		Civilization = "dwarf",
+		Faction = "ShinsplitterClan",
+		TriggeredOnly = true,
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+				GameSettings.Presets[0].Type = PlayerComputer
+				GameSettings.Presets[1].Type = PlayerComputer
+				GrandStrategyEventMap = true
+				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
+				RunMap("maps/nidavellir/shorbear-hills.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							if (unitName ~= "unit-gnomish-recruit") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							else
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+					end
+				end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
+				end
+				if (GameResult ~= GameVictory and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan == 2) then
+					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
+				end
+			end
+		end}
+	},
+	HillsOfTheShorbearClanShorbearClan = {
+		Name = "Hills of the Shorbear Clan",
+		Description = "The Norlunds are approaching our hills... let us see what they want.",
+		Civilization = "dwarf",
+		Faction = "ShorbearClan",
+		TriggeredOnly = true,
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Shorbear Clan" == GrandStrategyFaction.Name) then
+				GameSettings.Presets[0].Type = PlayerComputer
+				GameSettings.Presets[2].Type = PlayerComputer
+				GrandStrategyEventMap = true
+				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
+				RunMap("maps/nidavellir/shorbear-hills.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							if (unitName ~= "unit-gnomish-recruit") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							else
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							end
+						end
+					end
+				end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
+				end
+			end
+		end}
+	},
+	TheWyrm = {
+		Name = "The Wyrm",
+		Description = "Thus the gnomish envoy escaped from his Shinsplitter pursuers. But the dwarves were not so lucky. I would say that, perhaps, their betrayal of Durstorn was coming back to haunt them. For the section of the old eastern mines that they reached in their flight had long since become the lair of Svafnir... the wyrm.",
+		Civilization = "dwarf",
+		Faction = "NorlundClan",
+		Provinces = {
+			CavernsOfChaincolt = true
+		},
+		Heroes = {
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_thursagan = true
+		},
+		Commodities = {
+			Coal = 20000
+		},
+		RequiredEvents = {
+			HillsOfTheShorbearClan = true
+		},
+		RandomChance = 40, -- two and a half years
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = 8 -- Surghan mercenaries hired by the Shinsplitters
+				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2)
+				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
+			
+				GrandStrategyEventMap = true
+				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
+				RunMap("maps/nidavellir/svafnirs-lair.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker" and GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "archer") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+						end
+					end
+				end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
+				end
+				if (GameResult == GameVictory) then
+					Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
+				end
+			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.TheWyrmShinsplitterClan)
+			else
+				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = 8 -- Surghan mercenaries hired by the Shinsplitters
+				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2)
+				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
+			
+				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1 -- Crintil
+				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad - 4
+				
+				Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+			end
+			DrawMinimap()
+		end}
+	},
+	TheWyrmShinsplitterClan = {
+		Name = "The Wyrm",
+		Description = "We have sent a detachment of our warriors to go after the Norlunds in those caves.",
+		Civilization = "dwarf",
+		Faction = "ShinsplitterClan",
+		TriggeredOnly = true,
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEventMap = true
+				GameSettings.Presets[0].Type = PlayerComputer
+				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
+				RunMap("maps/nidavellir/svafnirs-lair.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker" and GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "archer") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+						end
+					end
+				end
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+						end
+					end
+				end
+				if (GameResult ~= GameVictory and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan) then
+					Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
+					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
+				end
+			end
+		end}
+	},
+	CavernsOfFlame = {
+		Name = "Caverns of Flame",
+		Description = "Rugnur and his companions had reached the realms of the goblins, with the Shinsplitters hot on their trail. And there was no exit from those caves, leaving the Norlunds no way out.",
+		Civilization = "dwarf",
+		Faction = "NorlundClan",
+		Provinces = {
+			CavernsOfChaincolt = true
+		},
+		Heroes = {
+			unit_hero_rugnur = true,
+			unit_hero_baglur = true,
+			unit_hero_thursagan = true
+		},
+		RequiredEvents = {
+			TheWyrm = true
+		},
+		RandomChance = 40, -- two and a half years
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEventMap = true
+				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
+				RunMap("maps/nidavellir/caverns-of-flame.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+						end
+					end
+				end
+			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.CavernsOfFlameShinsplitterClan)
+			else
+				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 0
+				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = 0
+			end
+			DrawMinimap()
+		end}
+	},
+	CavernsOfFlameShinsplitterClan = {
+		Name = "Caverns of Flame",
+		Description = "We have followed the Norlunds deep into goblin territory...",
+		Civilization = "dwarf",
+		Faction = "ShinsplitterClan",
+		TriggeredOnly = true,
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+				GrandStrategyEventMap = true
+				GameSettings.Presets[0].Type = PlayerComputer
+				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
+				RunMap("maps/nidavellir/caverns-of-flame.smp")
+				GrandStrategyEventMap = false
+
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+						if (GetUnitTypeData(unitName, "Class") ~= "worker") then
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+						end
+					end
+				end
+			end
+		end}
+	},
 	TheFoundingOfKnalga = {
 		Name = "The Founding of Knalga",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Knalga!",
@@ -683,7 +1088,7 @@ GrandStrategyEvents = {
 	}
 }
 
-if (GrandStrategyYear >= -1) then -- bronze age technologies already obtained by the dwarves by this point
+if (GrandStrategyYear >= -1) then -- bronze age technologies had already been obtained by the dwarves by this point
 	Factions.NorlundClan.Technologies.upgrade_dwarven_broad_axe = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_1 = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
@@ -702,13 +1107,21 @@ if (GrandStrategyYear >= -1) then -- bronze age technologies already obtained by
 	Factions.Lyr.Technologies.upgrade_dwarven_broad_axe = 2
 	Factions.Lyr.Technologies.upgrade_dwarven_shield_1 = 2
 	Factions.Lyr.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2 -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 2 -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2 -- Thursagan could be in the Caverns of Chaincolt at this time
 end
 
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
+	GrandStrategyEvents.ChargeRugnurWithTheOutpost = nil
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 2
-	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2
+	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2 -- by this point, Thursagan had gone away to the north
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	GrandStrategyEvents.TheSagesDeparture = nil
+
+	WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
+	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
 end
 
 if (GrandStrategyYear > 25) then
@@ -717,19 +1130,33 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
+	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
+	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "War"
+	Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+	Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 end
 
-if (GrandStrategyYear >= 27) then
+if (GrandStrategyYear >= 27) then -- time it took for Rugnur's party to travel to the Northern Wastelands and come back
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
 	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 	WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0 -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter + 2 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
+	WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands (deaths due to combat with Rugnur's dwarves)
+	WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
 	WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
 end
 
 if (GrandStrategyYear >= 29) then
-	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold conquered in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
+	GrandStrategyEvents.GatheringMaterials = nil
+	Factions.NorlundClan.Commodities["Coal"] = 20000 -- Rugnur's party returned from the Eastern Mines in 29 AD
+--	WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = WorldMapProvinces.EasternMines.Units.unit_goblin_spearman / 2
+	WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = 12 -- to prevent the Norlunds expanding here too soon
+	WorldMapProvinces.EasternMines.Units.unit_goblin_archer = 4
+
+	--[[
+	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 2
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 2
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 2
@@ -738,19 +1165,27 @@ if (GrandStrategyYear >= 29) then
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	--]]
+
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
 end
 
 if (GrandStrategyYear >= 35) then
-	WorldMapProvinces.ShorbearHills.Owner = "" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
+	GrandStrategyEvents.HillsOfTheShorbearClan = nil
+	GrandStrategyEvents.HillsOfTheShorbearClanShinsplitterClan = nil
+	GrandStrategyEvents.HillsOfTheShorbearClanShorbearClan = nil
+	WorldMapProvinces.ShorbearHills.Owner = "Shinsplitter Clan" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan), while the Shinsplitter forces were sieging them
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_axefighter = 0
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 0
+	--[[
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 0
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 0
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_thursagan = 0
+	--]]
+	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
 	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_mercenary_camp = 2 -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 end
 
@@ -758,6 +1193,9 @@ if (GrandStrategyYear >= 40) then
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0 -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+	Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- payment for the crafting of the Scepter
+	Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- payment for the crafting of the Scepter
 end
 
 if (GrandStrategyYear >= 400) then

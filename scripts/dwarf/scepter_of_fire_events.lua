@@ -368,11 +368,20 @@ AddTrigger(
 						end},
 						"dwarf/icons/rugnur.png"
 					)
-					end}
+					end},
+					nil,
+					nil,
+					GrandStrategy
 				)
-				end}
+				end},
+				nil,
+				nil,
+				GrandStrategy
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 
 		-- Follow-up of the A Bargain is Struck initial dialogue
@@ -853,7 +862,7 @@ AddTrigger(
 						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
 						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+						WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 					end
 				end
@@ -1152,7 +1161,10 @@ AddTrigger(
 				end},
 				"dwarf/icons/rugnur.png"
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 		return false
 	end
@@ -1511,7 +1523,7 @@ AddTrigger(
 				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
 				-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-				WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+				WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 			end
 			ActionVictory()
@@ -1549,7 +1561,7 @@ AddTrigger(
 						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
 						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.GnomishRecruit = 0 -- kill off the gnomish envoy if the province has been conquered
+						WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 					end
 				end
@@ -1648,7 +1660,10 @@ AddTrigger(
 				end},
 				"gnome/icons/gnomish_recruit.png"
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 
 		return false
@@ -2324,9 +2339,15 @@ AddTrigger(
 					end},
 					"dwarf/icons/rugnur.png"
 				)
-				end}
+				end},
+				nil,
+				nil,
+				GrandStrategy
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 		return false
 	end
@@ -2990,7 +3011,7 @@ AddTrigger(
 																																						SavePreferences()
 																																					end
 																																					if (GrandStrategy) then
-																																						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 10000
+																																						--Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 10000
 																																						Factions.NorlundClan.Commodities["Coal"] = 20000
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
@@ -3137,7 +3158,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gathering Materials") and PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false and PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") == false) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -3147,189 +3168,204 @@ AddTrigger(
 		end
 		return false
 	end,
-	function() 
+	function()
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shorbear Clan")) then
+			event_player = GetFactionPlayer("Shorbear Clan")
+		end
+		
 		Event(
 			"",
 			"All dwarves are known for a love of gold and a heart of stone. The Shorbears were no exception. They were crafters of crafters - they made tools. The best in the land. And they bartered well.",
-			player,
+			event_player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"Kuhnar",
 				"Here we are; the hills of the Shorbear clan. What are we here for, anyway?",
-				player,
+				event_player,
 				{"~!Continue"},
 				{function(s)
 				Event(
 					"Rugnur",
 					"If I understand it correctly, we're here to bargain with the Shorbears, and arrange for us to use their tools to cut the ruby.",
-					player,
+					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"Thursagan",
 						"Exactly.",
-						player,
+						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							"Durstorn",
 							"And I'll be doing the talking; I remember what happened last time ye negotiated a deal! We lost five thousand pieces of silver.",
-							player,
+							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
 								"Glonoin",
 								"Och, it's some o' them cave-dwarves. What business do ye have here?",
-								player,
+								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
 									"Durstorn",
 									"I'm Lord Durstorn, king of my tribe. I have been told ye are great jeweler-workers, and so we come to rent some of yer tools for a short time, a few years at most.",
-									player,
+									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
 										"Glonoin",
 										"Yer a king?! Must be a pretty small kingdom for ye to come yerself to bargain with us!",
-										player,
+										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
 											"Durstorn",
 											"Ye insult me! Do ye want my business, or not?",
-											player,
+											event_player,
 											{"~!Continue"},
 											{function(s)
 											Event(
 												"Glonoin",
 												"Well, fine, I'll hear yer offer.",
-												player,
+												event_player,
 												{"~!Continue"},
 												{function(s)
 												Event(
 													"Durstorn",
 													"We'd like to rent yer best tools for a short period of time. We'll only be cutting one jewel with it. My starting offer is two hundred silver.",
-													player,
+													event_player,
 													{"~!Continue"},
 													{function(s)
 													Event(
 														"Glonoin",
 														"It must be worth a lot for ye to come this way and offer that much! How much are ye going to sell it for, eh?",
-														player,
+														event_player,
 														{"~!Continue"},
 														{function(s)
 														Event(
 															"Durstorn",
 															"That's none of yer concern!",
-															player,
+															event_player,
 															{"~!Continue"},
 															{function(s)
 															Event(
 																"Glonoin",
 																"I'll take twenty-five hundred, minimum.",
-																player,
+																event_player,
 																{"~!Continue"},
 																{function(s)
 																Event(
 																	"Rugnur",
 																	"(Whisper) Durstorn, that would be a quarter of all our gains!",
-																	player,
+																	event_player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
 																		"Durstorn",
 																		"I know that. Uh, Glonoin, how about five hundred?",
-																		player,
+																		event_player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
 																			"Glonoin",
 																			"Twenty-three hundred is my lowest offer. I can tell I don't need the money as much as ye need the jewel cut!",
-																			player,
+																			event_player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
 																				"Durstorn",
 																				"Ye must be mad! I'll offer one thousand, but no higher!",
-																				player,
+																				event_player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
 																					"Glonoin",
 																					"Two thousand, and I'll go no lower!",
-																					player,
+																					event_player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
 																						"Rugnur",
 																						"(Whisper) What are we going to do? We can't go much higher!",
-																						player,
+																						event_player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
 																							"Baglur",
 																							"(Whisper) Offer him fifteen hundred, but don't go up, even if he refuses.",
-																							player,
+																							event_player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
 																								"Durstorn",
 																								"(Whisper) Bah! Getting this cut isn't worth that much; what with Rugnur's mistake earlier, and all the other expenses, if we pay more than a thousand we'll barely even make a profit!",
-																								player,
+																								event_player,
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
 																									"Thursagan",
 																									"(Whisper) So what are ye going to do?",
-																									player,
+																									event_player,
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
 																										"Durstorn",
 																										"(Whisper) Fight him, and take the tools by force.",
-																										player,
+																										event_player,
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
 																											"Thursagan",
 																											"(Whisper) Are ye mad?!",
-																											player,
+																											event_player,
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
 																												"Durstorn",
 																												"Of course not! Now, Glonoin; one thousand was my final offer. If ye won't accept it, we will take the tools from ye by force!",
-																												player,
+																												event_player,
 																												{"~!Continue"},
 																												{function(s)
 																												Event(
 																													"Glonoin",
 																													"I'd like to see ye try!",
-																													player,
+																													event_player,
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
 																														"Thursagan",
 																														"Yer making a mistake, Durstorn.",
-																														player,
+																														event_player,
 																														{"~!Continue"},
 																														{function(s)
 																														Event(
 																															"Durstorn",
 																															"Shut up, all of ye! Attack them!",
-																															player,
+																															event_player,
 																															{"~!Continue"},
 																															{function(s)
-																																unit = CreateUnit("unit-gnomish-recruit", 0, {6, 5}) -- gnomish envoy
-																																IncreaseUnitLevel(unit, 1, true)
-																																AcquireAbility(unit, "upgrade-sword-mastery")
+																																if (GrandStrategy == false) then
+																																	unit = CreateUnit("unit-gnomish-recruit", 0, {6, 5}) -- gnomish envoy
+																																	IncreaseUnitLevel(unit, 1, true)
+																																	AcquireAbility(unit, "upgrade-sword-mastery")
+																																end
 																																if (mapinfo.description == "Shorbear Hills") then
 																																	RemovePlayerObjective(player, "- Destroy the enemy")
 																																end
 																																AddPlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 																																AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
+																																RemovePlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Destroy the enemy")
+																																AddPlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")
+																																--[[
+																																if (GrandStrategy) then
+																																	Factions.NorlundClan.Diplomacy.ShorbearClan = "War"
+																																	Factions.ShorbearClan.Diplomacy.NorlundClan = "War"
+																																end
+																																--]]
 																															end},
 																															"dwarf/icons/durstorn.png"
 																														)
@@ -3343,22 +3379,34 @@ AddTrigger(
 																												"dwarf/icons/durstorn.png"
 																											)
 																											end},
-																											"dwarf/icons/thursagan.png"
+																											"dwarf/icons/thursagan.png",
+																											nil,
+																											event_player ~= GetFactionPlayer("Norlund Clan")
 																										)
 																										end},
-																										"dwarf/icons/durstorn.png"
+																										"dwarf/icons/durstorn.png",
+																										nil,
+																										event_player ~= GetFactionPlayer("Norlund Clan")
 																									)
 																									end},
-																									"dwarf/icons/thursagan.png"
+																									"dwarf/icons/thursagan.png",
+																									nil,
+																									event_player ~= GetFactionPlayer("Norlund Clan")
 																								)
 																								end},
-																								"dwarf/icons/durstorn.png"
+																								"dwarf/icons/durstorn.png",
+																								nil,
+																								event_player ~= GetFactionPlayer("Norlund Clan")
 																							)
 																							end},
-																							"dwarf/icons/baglur.png"
+																							"dwarf/icons/baglur.png",
+																							nil,
+																							event_player ~= GetFactionPlayer("Norlund Clan")
 																						)
 																						end},
-																						"dwarf/icons/rugnur.png"
+																						"dwarf/icons/rugnur.png",
+																						nil,
+																						event_player ~= GetFactionPlayer("Norlund Clan")
 																					)
 																					end},
 																					"dwarf/icons/thane_gray_hair.png"
@@ -3373,7 +3421,9 @@ AddTrigger(
 																		"dwarf/icons/durstorn.png"
 																	)
 																	end},
-																	"dwarf/icons/rugnur.png"
+																	"dwarf/icons/rugnur.png",
+																	nil,
+																	event_player ~= GetFactionPlayer("Norlund Clan")
 																)
 																end},
 																"dwarf/icons/thane_gray_hair.png"
@@ -3403,18 +3453,29 @@ AddTrigger(
 								"dwarf/icons/thane_gray_hair.png"
 							)
 							end},
-							"dwarf/icons/durstorn.png"
+							"dwarf/icons/durstorn.png",
+							nil,
+							event_player ~= GetFactionPlayer("Norlund Clan")
 						)
 						end},
-						"dwarf/icons/thursagan.png"
+						"dwarf/icons/thursagan.png",
+						nil,
+						event_player ~= GetFactionPlayer("Norlund Clan")
 					)
 					end},
-					"dwarf/icons/rugnur.png"
+					"dwarf/icons/rugnur.png",
+					nil,
+					event_player ~= GetFactionPlayer("Norlund Clan")
 				)
 				end},
-				"dwarf/icons/dwarven_steelclad.png"
+				"dwarf/icons/dwarven_steelclad.png",
+				nil,
+				event_player ~= GetFactionPlayer("Norlund Clan")
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 		return false
 	end
@@ -3425,7 +3486,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GameCycle > 1500 and PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") and (GameCycle > 1500 or (GrandStrategy and GameCycle > 500)) and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
@@ -3436,7 +3497,9 @@ AddTrigger(
 		return false
 	end,
 	function()
-		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, {8, 64}, "move")
+		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
+			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, {8, 64}, "move")
+		end
 
 		local shinsplitter_thane_name = ""
 		local uncount = 0
@@ -3446,68 +3509,77 @@ AddTrigger(
 				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
 			end
 		end
+		
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
+		elseif (GetThisPlayer() == GetFactionPlayer("Shorbear Clan")) then
+			event_player = GetFactionPlayer("Shorbear Clan")
+		end
 
 		Event(
 			shinsplitter_thane_name,
 			"Aha! I've spent years looking for ye Norlunds, but now I've found ye! Prepare to die!",
-			player,
+			event_player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"Glonoin",
 				"Who the devil are ye?",
-				player,
+				event_player,
 				{"~!Continue"},
 				{function(s)
 				Event(
 					"Rugnur",
 					"I thought we left the Shinsplitters behind at the gates four years ago! It seems we have two enemies now.",
-					player,
+					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"Glonoin",
 						"So, Shinsplitters, are ye against these dwarves too? They're attacking my clan for absolutely no reason!",
-						player,
+						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							shinsplitter_thane_name,
 							"I see. So ye don't have the ruby?",
-							player,
+							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
 								"Glonoin",
 								"No, they do. They wanted to rent my tools to cut it, but they didn't offer me nearly enough!",
-								player,
+								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
 									shinsplitter_thane_name,
 									"How about this - I help ye defeat them, and ye let me keep the ruby when we have?",
-									player,
+									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
 										"Glonoin",
 										"Deal!",
-										player,
+										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
 											"Durstorn",
 											"Ah, they don't scare me! We can take both of them!",
-											player,
+											event_player,
 											{"~!Continue"},
 											{function(s)
 											Event(
 												"Thursagan",
 												"Don't be a fool! We can't take the Shinsplitters, and it was a mistake to attack the Shorbears, but if we have to fight we should retreat once we get what we came for, the tools!",
-												player,
+												event_player,
 												{"~!Continue"},
 												{function(s)
 													AddPlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Destroy the enemy")
+													AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 												end},
 												"dwarf/icons/thursagan.png"
 											)
@@ -3547,8 +3619,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") and GetPlayerData(1, "UnitTypesCount", "unit-dwarven-thane") < 1) then
-			player = GetThisPlayer()
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") and GetPlayerData(1, "UnitTypesCount", "unit-dwarven-thane") < 1) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -3651,10 +3723,10 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
 			if (GetNumUnitsAt(1, "any", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "any", {26, 23}, {51, 44}) < 1) then
-				if ((GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(GetThisPlayer(), "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
-					player = GetThisPlayer()
+				if ((GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
+					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
 			end
@@ -3670,23 +3742,23 @@ AddTrigger(
 			{function(s)
 				RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 				RemovePlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
-				KillUnitAt("unit-dwarven-town-hall", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-mushroom-farm", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-barracks", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-smithy", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-lumber-mill", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-sentry-tower", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-guard-tower", player, 50, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-miner", player, 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-axefighter", player, 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-steelclad", player, 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-thane", player, 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-scout", player, 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-ballista", player, 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-town-hall", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-town-hall"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-mushroom-farm", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-mushroom-farm"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-barracks", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-barracks"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-smithy", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-smithy"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-lumber-mill", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-lumber-mill"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-sentry-tower", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-sentry-tower"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-guard-tower", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-guard-tower"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-miner", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-miner"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-axefighter", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-steelclad", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-thane", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-scout", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-ballista", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
 				local uncount = 0
 				uncount = GetUnits(0)
 				for unit1 = 1,table.getn(uncount) do 
-					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "-hero-") ~= nil or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit") then
+					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit") then
 						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
 --							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
 							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
@@ -3695,11 +3767,13 @@ AddTrigger(
 				end
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
 				unit = CreateUnit("unit-dwarven-town-hall", 0, {37, 32})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				if (GrandStrategy == false) then
+					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				end
 
 				unit = CreateUnit("unit-dwarven-guard-tower", 0, {29, 29})
 				unit = CreateUnit("unit-dwarven-guard-tower", 0, {29, 37})
@@ -3713,25 +3787,55 @@ AddTrigger(
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 28})
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {44, 36})
 
-				unit = CreateUnit("unit-dwarven-thane", 2, {5, 65}) -- Gaenlar
+				if (GrandStrategy == false) then
+					unit = CreateUnit("unit-dwarven-thane", 2, {5, 65}) -- Gaenlar
 
-				-- create second encampment for Shinsplitters
-				unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
-				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-				unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-				unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
+					-- create second encampment for Shinsplitters
+					unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
+					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
 
-				-- create third encampment for Shinsplitters
-				unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
-				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-				unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-				unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
+					-- create third encampment for Shinsplitters
+					unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
+					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
+				elseif (GrandStrategyEventMap) then
+					-- Shinsplitters
+					local units_to_be_created = {}
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+							units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+							units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 4)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+						end
+					end
+					if (units_to_be_created.unit_dwarven_thane < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane >= 1) then
+						units_to_be_created.unit_dwarven_thane = 1
+						WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1
+					end
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+							if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+								for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+									unit = CreateUnit(unitName, 2, {40, 10})
+								end
+							end
+						end
+					end
+					
+					-- if in grand strategy mode, give the province to the Shinsplitters
+					AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+				end
+				
+				
 				Event(
 					"",
 					"Durstorn's rash action led to many problems. Not the least of which was being surrounded by the Shinsplitters.",
@@ -3771,7 +3875,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") >= 1) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")) then
 					player = i
@@ -4028,8 +4132,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and GetNumUnitsAt(GetThisPlayer(), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
-			player = GetThisPlayer()
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -4053,8 +4157,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1) then
-			player = GetThisPlayer()
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -4078,8 +4182,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetThisPlayer(), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1 and GetNumUnitsAt(GetThisPlayer(), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
-			player = GetThisPlayer()
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -4100,6 +4204,137 @@ AddTrigger(
 		return false
 	end
 )
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
+			if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1) then
+				player = GetFactionPlayer("Shinsplitter Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		KillUnitAt("any", GetFactionPlayer("Shorbear Clan"), GetPlayerData(GetFactionPlayer("Shorbear Clan"), "TotalNumUnits"), {0, 0}, {256, 256})
+		Event(
+			"",
+			"The Norlunds have defeated our forces at the hills, garrisoning themselves inside the Shorbear Hold after destroying the Shorbears. Our reinforcements established control over the hills and kept the siege on the Norlunds, but eventually they escaped to some nearby caves...",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (GrandStrategyEventMap) then
+					-- if in grand strategy mode, give the province to the Shinsplitters
+					AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+				end
+				ActionDraw()
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionPlayer("Shorbear Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
+			if (GetPlayerData(GetFactionPlayer("Shorbear Clan"), "TotalNumUnits") < 1) then
+				player = GetFactionPlayer("Shorbear Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"",
+			"The Norlunds have obliterated our defenses, taking Shorbear Hold for themselves.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (GrandStrategyEventMap) then
+					-- if in grand strategy mode, give the province to the Shinsplitters
+					AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+				end
+				ActionDefeat()
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")) then
+			if (GetNumUnitsAt(0, "any", {0, 0}, {256, 256}) < 1) then
+				player = GetFactionPlayer("Shinsplitter Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"",
+			"On this day we have slain the most valiant of the Norlund warriors. With the Norlund leaders dead, not only did we manage to exact the silver from the clan to make peace, but we now have the valuable ruby with us, which we can trade for a hefty sum.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (GrandStrategyEventMap) then
+					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 10000 -- gold gained from the ruby's sale
+					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- gained the silver via peace treaty with the Norlunds
+					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
+					Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
+				end
+				ActionVictory()
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionPlayer("Shorbear Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")) then
+			if (GetNumUnitsAt(0, "any", {0, 0}, {256, 256}) < 1) then
+				player = GetFactionPlayer("Shorbear Clan")
+				return true
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"",
+			"With the help of the Shinsplitter Clan, we have managed to free ourselves from the Norlund threat! With their leaders dead, there shall now be a durable peace.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (GrandStrategyEventMap) then
+					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 10000 -- gold gained from the ruby's sale
+					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- gained the silver via peace treaty with the Norlunds
+					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
+					Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
+				end
+				ActionVictory()
+			end}
+		)
+		return false
+	end
+)
 end
 
 if (mapinfo.description == "Svafnir's Lair" and ForTheMotherland == false) then
@@ -4110,7 +4345,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan") and PlayerHasObjective(GetThisPlayer(), "- Get all heroes to the end of the tunnel") == false) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
 					player = i
@@ -4195,7 +4430,10 @@ AddTrigger(
 				end},
 				"dwarf/icons/rugnur.png"
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 		return false
 	end
@@ -4225,23 +4463,72 @@ AddTrigger(
 		end
 
 		-- make the initial Shinsplitter units attack (later units follow the normal AI attack pattern)
-		uncount = 0
-		uncount = GetUnits(1)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
-				OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
-			end
-		end
-
-		if (GetPlayerData(GetFactionPlayer("Svafnir"), "TotalNumUnits") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated
+		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
 			uncount = 0
-			uncount = GetUnits(2)
+			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (IsUnitIdle(uncount[unit1])) then
-					OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+				if (GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
+					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+				end
+			end
+			
+			if (GetPlayerData(GetFactionPlayer("Svafnir"), "TotalNumUnits") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated, and they don't attack if the player is the Shinsplitter Clan
+				uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Svafnir"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (IsUnitIdle(uncount[unit1])) then
+						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+					end
 				end
 			end
 		end
+
+		return true
+	end
+)
+
+-- make the Norlunds move to the smithy
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() or GetPlayerData(15, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
+			return false
+		end
+		return true
+	end,
+	function() 
+		local smithy = nil
+		local thursagan = nil
+	
+		local uncount = 0
+		uncount = GetUnits("any")
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-dwarven-smithy" and GetUnitVariable(uncount[unit1],"Player") ~= GetFactionPlayer("Shinsplitter Clan")) then
+				smithy = uncount[unit1]
+			elseif (GetUnitVariable(uncount[unit1],"Ident") == "unit-hero-thursagan") then
+				thursagan = uncount[unit1]
+			end
+		end
+
+		if (smithy == nil or thursagan == nil) then
+			return true
+		end
+
+		-- make the initial Shinsplitter units attack (later units follow the normal AI attack pattern)
+		uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-scout" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
+				if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-hero-thursagan") then
+					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "move")
+				else
+					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(smithy,"PosX"), GetUnitVariable(smithy,"PosY")}, "move")
+				end
+			end
+		end
+		
 		return true
 	end
 )
@@ -4258,7 +4545,7 @@ AddTrigger(
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
 				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
 				if (unit_quantity > 0) then
-					player = GetThisPlayer()
+					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
 			end
@@ -4309,7 +4596,7 @@ AddTrigger(
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") then
 				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
 				if (unit_quantity > 0) then
-					player = GetThisPlayer()
+					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
 			end
@@ -4351,7 +4638,7 @@ AddTrigger(
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
 				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smithy", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
 				if (unit_quantity > 0) then
-					player = GetThisPlayer()
+					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
 			end
@@ -4488,6 +4775,13 @@ AddTrigger(
 		return false
 	end,
 	function() 
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
+				ChangeUnitOwner(uncount[unit1], GetFactionPlayer("Norlund Clan"))
+			end
+		end
 		Event(
 			"Thursagan",
 			"I have completed my work. Now it is truly the Scepter of Fire, a mighty artifact.",
@@ -4500,7 +4794,11 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-					if (mapinfo.description == "Svafnir's Lair" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+					if (GrandStrategy) then
+						KillUnitAt("unit-dwarven-guard-tower", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-guard-tower"), {0, 0}, {256, 256})
+						KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+					end
+					if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 						if (player == GetThisPlayer() and GrandStrategy == false) then
 							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm") == false) then
 								table.insert(wyr.preferences.QuestsCompleted, "The Wyrm")
@@ -4511,6 +4809,16 @@ AddTrigger(
 							NextMap = "maps/nidavellir/caverns-of-flame.smp"
 						end
 						ActionVictory()
+					elseif (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then
+						Event(
+							"",
+							"The dwarves of the Norlund clan have disappeared into some nearby tunnel!",
+							GetFactionPlayer("Shinsplitter Clan"),
+							{"~!Continue"},
+							{function(s)
+								ActionDefeat()
+							end}
+						)
 					end
 				end},
 				"dwarf/icons/rugnur.png"
@@ -4555,7 +4863,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm") and PlayerHasObjective(GetThisPlayer(), "- Explore as much of the cave as possible") == false) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") == false) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
 					player = i
@@ -4649,7 +4957,10 @@ AddTrigger(
 				end},
 				"dwarf/icons/rugnur.png"
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 		return false
 	end
@@ -4660,16 +4971,38 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and GameCycle > 750) then
-			player = GetThisPlayer()
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and (GameCycle > 750 or (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan") and GameCycle > 350))) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function()
-		unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
-		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y}, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7}, "move")
-
+		if (GrandStrategy == false) then
+			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
+			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y}, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7}, "move")
+		elseif (GrandStrategyEventMap) then
+			-- Shinsplitters
+			local units_to_be_created = {}
+			for i, unitName in ipairs(Units) do
+				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+					units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+					units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")]
+					WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+				end
+			end
+			for i, unitName in ipairs(Units) do
+				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+					if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+						for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+							unit = OldCreateUnit(unitName, 1, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+							SetUnitVariable(unit, "CustomAIState", SyncRand(4)+1)
+						end
+					end
+				end
+			end
+		end
+			
 		local shinsplitter_thane_name = ""
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
@@ -4679,68 +5012,77 @@ AddTrigger(
 			end
 		end
 
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
+		end
+
 		Event(
 			shinsplitter_thane_name,
 			"We have caught up to the Norlunds. Now, prepare to destroy them!",
-			player,
+			event_player,
 			{"~!Continue"},
 			{function(s)
-			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 1)
-			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 1)
-			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 2)
-			unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 2)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 1)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 2)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 2)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 2)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 3)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 3)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 3)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 3)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			IncreaseUnitLevel(unit, 2, true)
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 4)
-			unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
-			SetUnitVariable(unit, "CustomAIState", 4)
+			if (GrandStrategy == false) then
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 1)
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 1)
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 2)
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 2)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 1)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 2)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 2)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 2)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 3)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 3)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 3)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 3)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 2, true)
+				AcquireAbility(unit, "upgrade-critical-strike")
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 4)
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				SetUnitVariable(unit, "CustomAIState", 4)
+			end
+			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Destroy the enemy")
+			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 			Event(
 				"Rugnur",
 				"Thursagan! The Shinsplitters are right on our tail; what should we do?",
@@ -4771,7 +5113,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Move onto one of the glyphs in the center of the volcano") == false) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move onto one of the glyphs in the center of the volcano") == false) then
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 			for unit1 = 1,table.getn(uncount) do 
@@ -4846,13 +5188,51 @@ AddTrigger(
 	end
 )
 
+-- make the Rugnur's dwarves step onto the glyph
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Move onto one of the glyphs in the center of the volcano") and GetNumUnitsAt(GetThisPlayer(), "any", {36, 46}, {37, 47}) > 0 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them") == false) then
-			player = GetThisPlayer()
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+			return false
+		end
+		return true
+	end,
+	function() 
+		local glyph = nil
+	
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-glyph") then
+				glyph = uncount[unit1]
+			end
+		end
+
+		if (glyph == nil) then
+			return true
+		end
+
+		uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (IsUnitIdle(uncount[unit1])) then
+				OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(glyph,"PosX"), GetUnitVariable(glyph,"PosY")}, "move")
+			end
+		end
+
+		return true
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move onto one of the glyphs in the center of the volcano") and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {36, 46}, {37, 47}) > 0 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them") == false) then
+			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
@@ -4936,7 +5316,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 3500 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 3500 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
 				player = GetFactionPlayer("Norlund Clan")
 				return true
 			end
@@ -4978,7 +5358,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 4500 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 4500 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
 				player = GetFactionPlayer("Norlund Clan")
 				return true
 			end
@@ -4998,15 +5378,24 @@ AddTrigger(
 			end
 		end
 
+		local event_player = player
+		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+			event_player = GetFactionPlayer("Shinsplitter Clan")
+		end
+		
 		Event(
 			shinsplitter_thane_name,
 			"Aghh!! The volcano is erupting, and now our exit has been blocked off!!",
-			player,
+			event_player,
 			{"~!Continue"},
 			{function(s)
-				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), 100, {0, 0}, {256, 256})
-				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), 100, {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
+				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
+				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
 			end},
 			"dwarf/icons/thane.png"
 		)
@@ -5019,7 +5408,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and PlayerHasObjective(GetThisPlayer(), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+		if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -5032,6 +5421,19 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
+			KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {256, 256})
+			KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
+			KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
+			KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+			KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
+			KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
+			KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
+			KillUnitAt("unit-hero-rugnur", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur"), {0, 0}, {256, 256})
+			KillUnitAt("unit-hero-rugnur-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad"), {0, 0}, {256, 256})
+			KillUnitAt("unit-hero-rugnur-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane"), {0, 0}, {256, 256})
+			KillUnitAt("unit-hero-baglur", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur"), {0, 0}, {256, 256})
+			KillUnitAt("unit-hero-baglur-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane"), {0, 0}, {256, 256})
+			KillUnitAt("unit-hero-thursagan", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan"), {0, 0}, {256, 256})
 			Event(
 				"Gryphon Rider",
 				"Hm... I'll leave now!",
@@ -5064,13 +5466,18 @@ AddTrigger(
 								{function(s)
 								Event(
 									"",
-									"Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either.",
+									"Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either. All he could do was sending the rest of the payment to the remnants of the Norlund Clan, as the promise to craft the Scepter was indeed fulfilled.",
 									player,
 									{"~!Continue"},
 									{function(s)
+									Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500
+									Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500
+									AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan")
+									Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
+									Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
 									Event(
 										"",
-										"The scepter would not be found until many generations after Pypo I, in the time of Rubezahl. During that time, it sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true meaning.",
+										"The Shinsplitters, depleted by war and wary of the forces the Norlunds would be able to muster with the gnomish silver, accepted a peace, ceding the Shorbear Hold back to the Norlunds. The scepter would not be found until many generations after Pypo I, in the time of Rubezahl. During that time, it sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true meaning.",
 										player,
 										{"~!Continue"},
 										{function(s)
@@ -5108,6 +5515,15 @@ AddTrigger(
 			)
 			end},
 			"dwarf/icons/rugnur.png"
+		)
+		Event(
+			"",
+			"Thus exploded the volcano, obliterating our valiant kin. The Norlunds seem to have done well in the eyes of the gnomish king, for he sent silver caravans with the rest of the payment to them. With our forces depleted and the Norlunds possessing the financial capability of mustering more soldiers, we had no choice but to sue for peace - resulting in our cession of the Shorbear Hold to the Norlund Clan.",
+			GetFactionPlayer("Shinsplitter Clan"),
+			{"~!Continue"},
+			{function(s)
+				ActionDefeat()
+			end}
 		)
 		return false
 	end

@@ -56,7 +56,7 @@ if (LoadedGame == false) then
 
 	ApplyRawTiles()
 
-	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, true)
+	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 150000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, true)
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
@@ -64,7 +64,7 @@ if (LoadedGame == false) then
 	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
 	--end
 
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then

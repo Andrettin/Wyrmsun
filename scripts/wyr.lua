@@ -493,18 +493,14 @@ function SetPlayerData(player, data, arg1, arg2)
 			res = {10000, 5000, 5000, 0, 0, 5000}
 		end
 		if (arg1 == "gold") then
-			if (GrandStrategy == false) then
+			if (GrandStrategy == false or GrandStrategyEventMap) then
 				arg2 = res[1]
-			elseif (GrandStrategyEventMap and GetFactionFromName(GetPlayerData(player, "Name")) ~= nil) then
-				arg2 = GetFactionFromName(GetPlayerData(player, "Name")).Gold
 			else
 				arg2 = 0
 			end
 		elseif (arg1 == "lumber") then
-			if (GrandStrategy == false) then
+			if (GrandStrategy == false or GrandStrategyEventMap) then
 				arg2 = res[2]
-			elseif (GrandStrategyEventMap and GetFactionFromName(GetPlayerData(player, "Name")) ~= nil) then
-				arg2 = GetFactionFromName(GetPlayerData(player, "Name")).Commodities.Lumber
 			else
 				arg2 = 0
 			end
@@ -515,7 +511,11 @@ function SetPlayerData(player, data, arg1, arg2)
 		elseif (arg1 == "stone") then
 			arg2 = res[5]
 		elseif (arg1 == "coal") then
-			arg2 = res[6]
+			if (GrandStrategy == false or GrandStrategyEventMap) then
+				arg2 = res[6]
+			else
+				arg2 = 0
+			end
 		elseif (arg1 == "research") then
 			arg2 = res[7]
 		end

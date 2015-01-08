@@ -82,11 +82,11 @@ ApplyRawTiles()
 
 -- Player Setup
 SetStartView(0, 8, 60)
-SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Faction", "Norlund Clan")
 SetPlayerData(0, "Resources", "gold", 1000)
 SetPlayerData(0, "Resources", "lumber", 500)
 SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "dwarf")
+SetPlayerData(0, "Faction", "Norlund Clan")
 SetAiType(0, "land-attack")
 SetStartView(1, 25, 33)
 SetPlayerData(1, "RaceName", "goblin")
@@ -114,9 +114,32 @@ unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
 unit = CreateUnit("unit-gold-mine", 15, {14, 52})
 SetResourcesHeld(unit, 50000)
 
-if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-	unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
-	unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
+if (GrandStrategy == false) then
+	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
+		unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
+		unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
+	end
+elseif (GrandStrategyEventMap) then
+	-- Rugnur
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
+		unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2) then
+		unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {8, 60})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) then
+		unit = CreateUnit("unit-hero-rugnur-thane", 0, {8, 60})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+	end
+
+	-- Baglur
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2) then
+		unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) then
+		unit = CreateUnit("unit-hero-baglur-thane", 0, {8, 60})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 0
+	end
 end
 
 if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "unit-dwarven-sentry-tower") or GrandStrategyEventMap or GetThisPlayer() ~= 0) then
@@ -131,7 +154,7 @@ end
 if (GrandStrategyEventMap) then
 	local units_to_be_created = {}
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 			if (unitName ~= "unit-gnomish-recruit") then
 				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 2) -- a half of Norlund forces in the Cavern of Chaincolt sent to the mission
@@ -142,14 +165,10 @@ if (GrandStrategyEventMap) then
 		end
 	end
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
-					if (unitName ~= "unit-gnomish-recruit") then
-						unit = CreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-					else
-						unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-					end
+					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 				end
 			end
 		end
@@ -174,7 +193,7 @@ elseif (RandomNumber == 4) then
 	SetStartView(2, 50, 63)
 	unit = CreateUnit("unit-dwarven-smithy", 2, {50, 63})
 end
-if (LoadedGame == false and GrandStrategy == false and unit) then
+if (unit) then
 	SetUnitName(unit, "Thursagan's Forge")
 end
 
@@ -227,7 +246,7 @@ function NorthernWastelandsEnemy(enemy_x, enemy_y)
 	end
 end
 
-if (GrandStrategy == false) then
+if (GrandStrategy == false or GrandStrategyEventMap) then
 	NorthernWastelandsEnemy(8, 11)
 	NorthernWastelandsEnemy(25, 33)
 	NorthernWastelandsEnemy(40, 53) --NorthernWastelandsEnemy(42, 54)

@@ -611,6 +611,7 @@ function InitGameSettings()
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
 	TechLevel = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+	MaxTechLevel = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 end
 InitGameSettings()
 
@@ -886,6 +887,7 @@ function RunSinglePlayerGameMenu()
   local mapl
   local descriptionl
   local tech_level
+  local max_tech_level
   MapPersonPlayer = 0
 
   -- create the scenario and faction lists
@@ -995,6 +997,7 @@ function RunSinglePlayerGameMenu()
 	      GameSettings.GameType = gametype:getSelected() - 1
       end
       TechLevel[MapPersonPlayer + 1] = tech_level:getSelected() - 1
+      MaxTechLevel[MapPersonPlayer + 1] = max_tech_level:getSelected() - 1
 	  
       RunMap(mapname)
       menu:stop()
@@ -1049,6 +1052,11 @@ function RunSinglePlayerGameMenu()
   tech_level = menu:addDropDown({_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)")}, offx + 40, offy + 10 + 300,
     function(dd) end)
   tech_level:setSize(152, 20)
+
+  menu:addLabel(_("~<Max Tech Level:~>"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
+  max_tech_level = menu:addDropDown({_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)")}, offx + 220, offy + 10 + 300,
+    function(dd) end)
+  max_tech_level:setSize(152, 20)
 
   function WorldChanged()
 	scenario_list = {}

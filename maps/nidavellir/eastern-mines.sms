@@ -86,11 +86,11 @@ ApplyRawTiles()
 
 -- Player Setup
 SetStartView(0, 19, 47)
+SetPlayerData(0, "RaceName", "dwarf")
+SetPlayerData(0, "Faction", "Norlund Clan")
 SetPlayerData(0, "Resources", "gold", 2000)
 SetPlayerData(0, "Resources", "lumber", 1000)
 SetPlayerData(0, "Resources", "oil", 0)
-SetPlayerData(0, "RaceName", "dwarf")
-SetPlayerData(0, "Faction", "Norlund Clan")
 SetAiType(0, "land-attack")
 SetStartView(1, 59, 53)
 SetPlayerData(1, "Resources", "gold", 2000)
@@ -133,10 +133,39 @@ end
 unit = CreateUnit("unit-dwarven-town-hall", 0, {19, 47})
 unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
 
-if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-	unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
-	unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
-	unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+if (GrandStrategy == false) then
+	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
+		unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
+		unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
+		unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+	end
+elseif (GrandStrategyEventMap) then
+	-- Rugnur
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
+		unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2) then
+		unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {19, 47})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) then
+		unit = CreateUnit("unit-hero-rugnur-thane", 0, {19, 47})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+	end
+
+	-- Baglur
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2) then
+		unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) then
+		unit = CreateUnit("unit-hero-baglur-thane", 0, {19, 47})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 0
+	end
+
+	-- Thursagan
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan == 2) then
+		unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	end
 end
 
 unit = CreateUnit("unit-goblin-town-hall", 1, {59, 53})
@@ -164,11 +193,11 @@ if (unit) then
 end
 
 CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
-CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 2, false)
-CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 2, false)
-CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight / 2, false)
+CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
+CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
+CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false)
 
-CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 2, false)
+CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
 CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
 
 PlayMusic("music/underground.ogg")

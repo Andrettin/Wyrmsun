@@ -4020,8 +4020,16 @@ function CanTriggerEvent(faction, event)
 	end
 	
 	if (event.RequiredEvents ~= nil) then -- only works for non-persistent events
-		for i, required_event in pairs(event.RequiredEvents) do
-			if (GrandStrategyEvents[required_event] ~= nil) then
+		for key, value in pairs(event.RequiredEvents) do
+			if ((GrandStrategyEvents[key] == nil) ~= event.RequiredEvents[key]) then
+				return false
+			end
+		end
+	end
+	
+	if (event.Commodities ~= nil) then
+		for key, value in pairs(event.Commodities) do
+			if (faction.Commodities[key] < event.Commodities[key]) then
 				return false
 			end
 		end
@@ -4064,7 +4072,17 @@ function CanTriggerEvent(faction, event)
 			for i, unitName in ipairs(Units) do
 				if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
 					if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
-						return false
+						local has_other_hero_version = false -- check to see if the province has another version of the hero in it
+						for j, second_unitName in ipairs(Units) do
+							if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+								if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and WorldMapProvinces[key].Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
+									has_other_hero_version = true
+								end
+							end
+						end
+						if (has_other_hero_version ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
+							return false
+						end
 					end
 				end
 			end

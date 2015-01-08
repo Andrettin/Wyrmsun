@@ -346,7 +346,7 @@ function RunEditorPlayerProperties()
 
   local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
   local racenames = {"dwarf", "germanic", "gnome", "goblin", "kobold"}
-  local ais = { "passive", "land-attack", "land-attack-agrarian-bronze", "northern-wastelands-goblins" }
+  local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
 
   menu:addLabel("#", 15, 36)
   menu:addLabel("Type", offxType, 36)

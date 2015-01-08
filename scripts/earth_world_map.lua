@@ -958,7 +958,7 @@ GrandStrategyEvents = {
 		Civilization = "germanic",
 		Faction = "AsaTribe",
 		RequiredEvents = {
-			"OnTheVanaquisl"
+			OnTheVanaquisl = true
 		},
 		Provinces = {
 			Astrakhan = true,

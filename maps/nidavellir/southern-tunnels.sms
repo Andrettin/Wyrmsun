@@ -219,7 +219,9 @@ SetPlayerData(0, "Resources", "oil", 0)
 SetAiType(0, "land-attack")
 SetStartView(3, 70, 43)
 SetPlayerData(3, "RaceName", "dwarf")
-SetPlayerData(3, "Name", "Knalga")
+if (GrandStrategy == false) then
+	SetPlayerData(3, "Faction", "Knalga")
+end
 SetPlayerData(3, "Resources", "gold", 2000)
 SetPlayerData(3, "Resources", "lumber", 1000)
 SetPlayerData(3, "Resources", "oil", 0)
@@ -255,6 +257,6 @@ PlayMusic("music/knolls.ogg")
 --wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/revelation.ogg" }
 wyrmsun.playlist = { "music/knalgan_theme.ogg" }
 
-CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

@@ -40,7 +40,7 @@ wyrmsun.Name = "Wyrmsun"
 wyrmsun.Version = "1.0.0"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
-wyrmsun.Copyright = "Copyright (c) 2013-2014 by Andre Novellino Gouvea"
+wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andre Novellino Gouvea"
 
 -------------------------------------------------------------------------------
 --  Config-Part
@@ -289,7 +289,9 @@ function SinglePlayerTriggers()
 	AddTrigger(
 		function()
 			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnits") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
-			return total_units <= 0
+			if (total_units <= 0 and PlayerHasObjective(GetThisPlayer(), "- Defeat the Norlunds") == false and (GameCycle > 1000 or mapinfo.description ~= "Caverns of Flame" or GetPlayerData(GetThisPlayer(), "Name") ~= "Shinsplitter Clan")) then
+				return true
+			end
 		end,
 		function()
 			if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyFaction ~= nil) then
@@ -807,31 +809,17 @@ function StandardTriggers()
 				if (GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic")) then
 					IncreaseUnitLevel(uncount[unit1], 1, true)
 					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
-						AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
+						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "DefaultName") ~= "") then
+							AddMessage(GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
+						else
+							AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
+						end
 					end
 				end
 			end
 			return true
 		end
 	)
-
-	-- randomly pick a character name for the unit
---	AddTrigger(
---		function()
---			local uncount = 0
---			uncount = GetUnits("any")
---			for unit1 = 1,table.getn(uncount) do 
---				if (GetUnitVariable(uncount[unit1],"CharacterName") < 1) then
---					RandomNumber = SyncRand(77) + 1
---					SetUnitVariable(uncount[unit1], "CharacterName", RandomNumber)
---				end
---			end
---			return false
---		end,
---		function()
---			return true
---		end
---	)
 end
 
 --[[

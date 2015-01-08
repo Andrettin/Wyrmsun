@@ -149,6 +149,9 @@ function HandleCheats(str)
 	end
     ActionDefeat()
 
+  elseif (str == "fenrir") then
+	KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {256, 256})
+  
   elseif (str == "scepter of fire") then
     if (godcheat) then
       godcheat = false

@@ -123,6 +123,15 @@ SetPlayerData(2, "Faction", "Shinsplitter Clan")
 SetAiType(2, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
+if (GrandStrategy == false or GrandStrategyEventMap) then
+	SetDiplomacy(0, "enemy", 1)
+	SetDiplomacy(0, "enemy", 2)
+	SetDiplomacy(1, "enemy", 0)
+	SetDiplomacy(1, "allied", 2)
+	SetDiplomacy(2, "enemy", 0)
+	SetDiplomacy(2, "allied", 1)
+end
+
 if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {5, 4})
 	unit = CreateUnit("unit-dwarven-miner", 0, {6, 5})
@@ -198,6 +207,139 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-miner", 2, {5, 65}) -- only one miner so that they start slower
 	unit = CreateUnit("unit-dwarven-thane", 2, {2, 70}) -- Lyndar
 --	unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {0, 70})
+elseif (GrandStrategyEventMap) then
+	SetPlayerData(0, "Resources", "gold", 0)
+	SetPlayerData(0, "Resources", "lumber", 0)
+	SetAiType(0, "grand-strategy-battle")
+	SetAiType(1, "passive")
+	SetAiType(2, "grand-strategy-battle")
+	
+	unit = CreateUnit("unit-dwarven-town-hall", 0, {5, 4})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {21, 1})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {23, 1})
+
+	-- Rugnur
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
+		unit = CreateUnit("unit-hero-rugnur", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2) then
+		unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) then
+		unit = CreateUnit("unit-hero-rugnur-thane", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+	end
+
+	-- Baglur
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2) then
+		unit = CreateUnit("unit-hero-baglur", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) then
+		unit = CreateUnit("unit-hero-baglur-thane", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 0
+	end
+
+	-- Thursagan
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan == 2) then
+		unit = CreateUnit("unit-hero-thursagan", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	end
+
+	-- Durstorn
+	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn == 2) then
+		unit = CreateUnit("unit-hero-durstorn", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
+	end
+	
+	-- Gnomish Envoy
+	if (WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit >= 1) then
+		unit = OldCreateUnit("unit-gnomish-recruit", 0, {6, 5})
+		WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit - 1
+	end
+	
+	-- Norlund units
+	local units_to_be_created = {}
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")])
+			WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+		end
+	end
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+				end
+			end
+		end
+	end
+
+	-- Shinsplitters
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 4)
+			WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+		end
+	end
+	if (units_to_be_created.unit_dwarven_thane < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane >= 1) then
+		units_to_be_created.unit_dwarven_thane = 1
+		WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1
+	end
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+					unit = OldCreateUnit(unitName, 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+				end
+			end
+		end
+	end
+
+	unit = CreateUnit("unit-dwarven-town-hall", 1, {37, 32})
+
+	-- Shorbears
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")]
+			WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = 0
+		end
+	end
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+					unit = OldCreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+				end
+			end
+		end
+	end
+	
+	local uncount = 0
+	uncount = GetUnits(GetFactionPlayer("Shorbear Clan"))
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+			SetUnitName(uncount[unit1], "Glonoin")
+			break
+		end
+	end
+		
+	unit = CreateUnit("unit-dwarven-sentry-tower", 1, {29, 29})
+	unit = CreateUnit("unit-dwarven-sentry-tower", 1, {29, 37})
+	unit = CreateUnit("unit-dwarven-sentry-tower", 1, {38, 25})
+	unit = CreateUnit("unit-dwarven-sentry-tower", 1, {47, 29})
+	unit = CreateUnit("unit-dwarven-sentry-tower", 1, {47, 35})
+
+	-- Give the Shorbear Hold a few other buildings which are appropriate
+	unit = CreateUnit("unit-dwarven-barracks", 1, {31, 33})
+	unit = CreateUnit("unit-dwarven-smithy", 1, {43, 28})
+	unit = CreateUnit("unit-dwarven-lumber-mill", 1, {62, 27})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {32, 30})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {40, 28})
+	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {44, 36})
 end
 
 unit = CreateUnit("unit-gold-mine", 15, {34, 40}) -- Shorbear Hold Gold Mine

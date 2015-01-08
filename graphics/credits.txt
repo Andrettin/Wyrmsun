@@ -333,6 +333,8 @@ João Victor G. Costa (Jinn):
 /graphics/elf/icons/elven_swordsman.png
 /graphics/germanic/buildings/barracks.png
 /graphics/germanic/buildings/farm.png
+/graphics/germanic/buildings/farm_extra_1.png
+/graphics/germanic/buildings/farm_extra_2.png
 /graphics/germanic/buildings/town_hall.png (later modified by b_o to add the fire animation)
 /graphics/germanic/icons/warrior.png
 /graphics/germanic/icons/warrior_black_hair.png
@@ -473,10 +475,10 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/swamp/neutral/icons/rat.png
 /graphics/tilesets/swamp/terrain/rock.png
 /graphics/tilesets/swamp/terrain/swamp.png
-/graphics/tilesets/world/sites/dwarven_settlement.png
+/graphics/tilesets/world/sites/dwarven_settlement_with_barracks.png
 /graphics/tilesets/world/sites/germanic_settlement.png
 /graphics/tilesets/world/sites/gnomish_settlement.png
-/graphics/tilesets/world/sites/goblin_settlement.png (based on the goblin buildings made by Leo)
+/graphics/tilesets/world/sites/goblin_settlement_with_barracks.png (based on the goblin buildings made by Leo)
 /graphics/tilesets/world/sites/kal_karthan_settlement.png
 /graphics/tilesets/world/terrain/dark_plains.png
 /graphics/tilesets/world/terrain/hills.png

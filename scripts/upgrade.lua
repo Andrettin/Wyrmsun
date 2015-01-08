@@ -97,11 +97,17 @@ function ApplyTechLevels()
 		if (TechLevel[i + 1] == -1 and i ~= GetThisPlayer()) then
 			TechLevel[i + 1] = TechLevel[GetThisPlayer() + 1]
 		end
+		if (MaxTechLevel[i + 1] == -1 and i ~= GetThisPlayer()) then
+			MaxTechLevel[i + 1] = MaxTechLevel[GetThisPlayer() + 1]
+		end
 	end
 
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"
+	}
+	local iron_upgrades = {
+		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2"
 	}
 	for i, unitName in ipairs(bronze_upgrades) do
 		for j=0,15 do
@@ -109,6 +115,17 @@ function ApplyTechLevels()
 				SetPlayerData(j, "HasUpgrade", unitName, true)
 			end
 		end
+	end
+	for i, unitName in ipairs(iron_upgrades) do
+		local PlayerUnitFlag = {}
+		for j=0,15 do
+			if (MaxTechLevel[j + 1] ~= -1 and MaxTechLevel[j + 1] <= 0 and GetPlayerData(j, "Allow", unitName) == "A") then -- if max tech level is Agrarian (Bronze) or lower
+				PlayerUnitFlag[j] = "F"
+			else
+				PlayerUnitFlag[j] = GetPlayerData(j, "Allow", unitName)
+			end
+		end
+		DefineAllow(unitName, PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15])
 	end
 end
 
