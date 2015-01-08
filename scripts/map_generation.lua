@@ -4104,24 +4104,54 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 									if (hostile_dungeon_player_civilization == "dwarf") then
 										RandomNumber = SyncRand(100)
-										if (RandomNumber < 95) then
+										if (RandomNumber < 90) then
 											unit = CreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY})
-										else
+											Count = Count - 1
+										elseif (RandomNumber < 95) then
 											unit = CreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a dwarven hall will be a gnome instead of a dwarf
+											Count = Count - 1
+										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											unit = CreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											Count = Count - 1
 										end
 									elseif (hostile_dungeon_player_civilization == "germanic") then
-										unit = CreateUnit("unit-germanic-worker", 3, {RandomX, RandomY})
-									elseif (hostile_dungeon_player_civilization == "gnome") then
 										RandomNumber = SyncRand(100)
 										if (RandomNumber < 95) then
+											unit = CreateUnit("unit-germanic-worker", 3, {RandomX, RandomY})
+											Count = Count - 1
+										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											unit = CreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											Count = Count - 1
+										end
+									elseif (hostile_dungeon_player_civilization == "gnome") then
+										RandomNumber = SyncRand(100)
+										if (RandomNumber < 90) then
 											unit = CreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY})
-										else
+											Count = Count - 1
+										elseif (RandomNumber < 95) then
 											unit = CreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a gnomish hall will be a dwarf instead of a gnome
+											Count = Count - 1
+										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											unit = CreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											Count = Count - 1
 										end
 									elseif (hostile_dungeon_player_civilization == "goblin") then
-										unit = CreateUnit("unit-goblin-worker", 3, {RandomX, RandomY})
+										RandomNumber = SyncRand(100)
+										if (RandomNumber < 95) then
+											unit = CreateUnit("unit-goblin-worker", 3, {RandomX, RandomY})
+											Count = Count - 1
+										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											unit = CreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											Count = Count - 1
+										end
+									elseif (hostile_dungeon_player_civilization == "kobold") then
+										if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											unit = CreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											Count = Count - 1
+										else
+											Count = Count - 1
+										end
 									end
-									Count = Count - 1
 								end
 							end
 						end

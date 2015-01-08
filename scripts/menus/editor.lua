@@ -106,6 +106,7 @@ editor_types = {
    "unit-slime",
    "unit-gryphon",
    "unit-wyrm",
+   "unit-long-swordsman",
 
 --- - - - - - - - - - - - - - - - - - -
 

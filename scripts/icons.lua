@@ -939,6 +939,12 @@ DefineIcon({
 	File = "neutral/icons/roaming_fog.png"
 })
 
+DefineIcon({
+	Name = "icon-long-swordsman",
+	Size = {46, 38},
+	File = "neutral/icons/long_swordsman.png"
+})
+
 -- tileset-dependent icons
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then

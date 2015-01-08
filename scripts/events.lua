@@ -271,6 +271,47 @@ function EventTriggers()
 		)
 	end
 	
+	if (wyrmsun.tileset == "dungeon") then
+		-- Soldier offers training
+		AddTrigger(
+			function()
+				if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) >= 1) then
+					local uncount = 0
+					uncount = GetUnits("any")
+					for unit1 = 1,table.getn(uncount) do 
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-long-swordsman") then
+							local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
+							if (unit_quantity > 0) then
+								player = GetThisPlayer()
+								return true
+							end
+						end
+					end
+				end
+				return false
+			end,
+			function()
+				Event(
+					"Seasoned Swordsman",
+					"Thanks for freeing me from my captors. They imprisoned me hoping to ransom me for gold, but it turns out I am naught but a wandering knight, with no baron of a father to pay for my freedom. So they just left me here to rot... I can't reward you with gold, but I will teach you what I know about personal combat.",
+					player,
+					{"~!OK (+100 XP)"},
+					{function(s)
+						local uncount = 0
+						uncount = GetUnits(GetThisPlayer())
+						for unit1 = 1,table.getn(uncount) do 
+							SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max") + 100, "Max")
+							SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max"))
+						end
+					end},
+					"neutral/icons/long_swordsman.png"
+				)
+				
+				return false
+			end
+		)
+	end
+				
 	-- Fredfrode's Feast
 	AddTrigger(
 		function()

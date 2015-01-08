@@ -453,6 +453,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/gryphon_white_feathers.png
 /graphics/neutral/icons/harvest.png
 /graphics/neutral/icons/level_up.png
+/graphics/neutral/icons/long_swordsman.png
 /graphics/neutral/icons/repair.png
 /graphics/neutral/icons/repair_extra_1.png
 /graphics/neutral/icons/repair_extra_2.png
@@ -466,7 +467,6 @@ João Victor G. Costa (Jinn):
 /graphics/orc/icons/shaman.png
 /graphics/orc/icons/spearthrower.png
 /graphics/teuton/buildings/lumber_mill.png
-/graphics/teuton/icons/soldier.png
 /graphics/tilesets/cave/terrain/cave.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles)
 /graphics/tilesets/forest/neutral/icons/rat.png
@@ -653,6 +653,9 @@ Rick Elliot:
 
 StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
+
+TaShadan:
+/graphics/neutral/units/long_swordsman.png
 
 Veneteaou:
 /graphics/tilesets/world/terrain/province_tile_ocean.png

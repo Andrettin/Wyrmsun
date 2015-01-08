@@ -96,6 +96,10 @@ Load("scripts/gnome/anim.lua")
 Load("scripts/goblin/anim.lua")
 
 
+DefineAnimations("animations-static-npc", {
+  Still = {"exact-frame 0", "wait 4", "exact-frame 0", "wait 1",},
+})
+
 DefineAnimations("animations-critter", {
   Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
   Move = {"unbreakable begin", "frame 0", "move 2", "wait 2", "frame 0", "move 2", "wait 3",

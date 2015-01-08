@@ -1988,6 +1988,37 @@ DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
 	}
 } )
 
+DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
+	Image = {"file", "neutral/units/long_swordsman.png", "size", {72, 72}},
+	Animations = "animations-static-npc", Icon = "icon-long-swordsman",
+	Costs = {"time", 60, "gold", 600},
+	Speed = 10,
+	HitPoints = 60,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
+	Armor = 2, BasicDamage = 6, PiercingDamage = 3, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 60,
+	BasePoints = 50,
+	Demand = 1,
+	Corpse = "unit-human-dead-body",
+	Type = "land",
+--	RightMouseAction = "attack",
+	CanAttack = false, -- since it doesn't have attack animations as of now
+--	CanTargetLand = true,
+	LandUnit = true,
+	organic = true,
+	SelectableByRectangle = true,
+	Indestructible = 1, -- because it doesn't have death animations
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead"}
+} )
+
 -- Load the different civilizations
 Load("scripts/dwarf/units.lua")
 Load("scripts/germanic/units.lua")

@@ -64,6 +64,7 @@ function RunShowCreditsMenu()
 	"  Rick Elliot",
 	"  Soeren Soendergaard Jensen",
 	"  StumpyStrust",
+	"  TaShadan",
 	"  Tina Petersen Jensen",
 	"  TimberDragon",
 	"  Veneteaou",
