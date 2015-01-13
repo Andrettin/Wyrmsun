@@ -76,6 +76,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added events for Rugnur, Baglur, Durstorn and Thursagan dying of natural causes, if they have survived until a certain date and haven't died in battle or in a scenario yet.
 - Added the possibility to generate a random world map for Grand Strategy mode.
 - Added conifer forest terrain (graphics by Jinn).
+- Added random event "Bountiful Harvest" (+100 gold per province owned, the event can happen multiple times).
 
 * Maps
 - Added Tanais map (Earth).

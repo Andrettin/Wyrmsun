@@ -1345,6 +1345,30 @@ function LoadEvents(world)
 		}
 	}
 	
+	local GenericEvents = {
+		BountifulHarvest = {
+			Name = "Bountiful Harvest",
+			Description = "The harvest this year has been exceptionally plentiful, rejoice!",
+			Conditions = function(s)
+				if (
+					SyncRand(100) < 1
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Persistent = true,
+			Options = {"E~!xcellent!"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + (100 * GetFactionProvinceCount(EventFaction))
+				end
+			},
+			OptionTooltips = {"+100 Gold per province owned"}
+		}
+	}
+	
 	local function AddEventTable(event_table)
 		for key, value in pairs(event_table) do
 			GrandStrategyEvents[key] = {}
@@ -1445,10 +1469,13 @@ function LoadEvents(world)
 	
 	if (world == "Earth") then
 		AddEventTable(EarthEvents)
+		AddEventTable(GenericEvents)
 	elseif (world == "Nidavellir") then
 		AddEventTable(NidavellirEvents)
+		AddEventTable(GenericEvents)
 	elseif (world == "Random") then
 		AddEventTable(NidavellirEvents)
 		AddEventTable(EarthEvents)
+		AddEventTable(GenericEvents)
 	end
 end

@@ -1104,7 +1104,11 @@ function GetProvinceKeyFromName(province_name)
 end
 
 function GetFactionProvinceCount(faction)
-	return table.getn(faction.OwnedProvinces)
+	if (faction ~= nil) then
+		return table.getn(faction.OwnedProvinces)
+	else
+		return 0
+	end
 end
 
 function GetFactionProvinceCountPreGame(faction)
@@ -2093,10 +2097,10 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_west_east_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northwest_northeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northwest_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northwest_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_northwest_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northeast_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
@@ -2109,6 +2113,8 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_northwest_northeast_southeast_inner"
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northwest_southwest_southeast_inner"
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_northeast_southwest_southeast_inner"
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northwest_northeast_southwest_southeast_inner"
 					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
@@ -2310,7 +2316,7 @@ function DrawOnScreenTiles()
 
 		-- draw province settlement
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
-			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and WorldMapProvinces[key].Owner ~= "") then
+			if (WorldMapProvinces[key].Owner ~= "" and ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall")) then
 				local settlement_graphics = ""
 				if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
 					if (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
