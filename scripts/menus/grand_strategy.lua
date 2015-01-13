@@ -56,7 +56,8 @@ function RunGrandStrategyGameSetupMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	local world_list = {"Earth", "Nidavellir"}
+	local world_list = {"Earth", "Nidavellir", "Random"}
+--	local world_list = {"Earth", "Nidavellir"}
 	local world
 	local date_list = {}
 	local date
@@ -73,7 +74,11 @@ function RunGrandStrategyGameSetupMenu()
 			if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
 				GrandStrategyYear = GrandStrategyYear * -1
 			end
-			Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+			if (world_list[world:getSelected() + 1] ~= "Random") then
+				Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+			else
+				GenerateRandomWorldMap()
+			end
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 			InterfaceState = "Province"
@@ -85,6 +90,8 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyCommodities = {}
 			GrandStrategyCommodities["Lumber"] = {}
 			GrandStrategyCommodities.Lumber["Price"] = 100
+--			GrandStrategyCommodities["Coal"] = {}
+--			GrandStrategyCommodities.Coal["Price"] = 100
 
 			-- add resource quantities to factions that don't have that set up
 			for key, value in pairs(Factions) do
@@ -97,6 +104,9 @@ function RunGrandStrategyGameSetupMenu()
 				if (Factions[key].Commodities.Lumber == nil) then
 					Factions[key].Commodities["Lumber"] = 1500
 				end
+				if (Factions[key].Commodities.Coal == nil) then
+					Factions[key].Commodities["Coal"] = 0
+				end
 				if (Factions[key].Research == nil) then
 					Factions[key]["Research"] = 0
 				end
@@ -107,6 +117,12 @@ function RunGrandStrategyGameSetupMenu()
 					if (string.find(unitName, "upgrade-") ~= nil) then
 						if (Factions[key].Technologies[string.gsub(unitName, "-", "_")] == nil) then
 							Factions[key].Technologies[string.gsub(unitName, "-", "_")] = 0
+						elseif (Factions[key].Technologies[string.gsub(unitName, "-", "_")] == 2) then -- if has a technology researched, mark technologies of the same class from other civilizations as researched too
+							for j, second_unitName in ipairs(Units) do
+								if (string.find(second_unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Class == CUpgrade:Get(second_unitName).Class) then
+									Factions[key].Technologies[string.gsub(second_unitName, "-", "_")] = 2
+								end
+							end
 						end
 					end
 				end
@@ -236,7 +252,7 @@ function RunGrandStrategyGameSetupMenu()
 			local RandomNumber = 0
 			for x=0,table.getn(WorldMapTiles[1]) - 1 do
 				for y=0,table.getn(WorldMapTiles) - 1 do
-					if (GetWorldMapTile(x, y) == "ScFr") then -- add lumber resource location to forest tiles
+					if (GetWorldMapTile(x, y) == "CnFr" or GetWorldMapTile(x, y) == "ScFr") then -- add lumber resource location to forest tiles
 						if (TileHasResource(x, y, "Lumber") == false) then
 							table.insert(WorldMapResources.Lumber, {x, y})
 						end
@@ -294,6 +310,10 @@ function RunGrandStrategyGameSetupMenu()
 					"40 AD", -- end of The Scepter of Fire
 					"550 AD" -- begin of The Hammer of Thursagan
 				}
+			elseif (GrandStrategyWorld == "Random") then
+				date_list = {
+					"3000 BC"
+				}
 			end
 			
 			date:setList(date_list)
@@ -305,14 +325,21 @@ function RunGrandStrategyGameSetupMenu()
 		if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
 			GrandStrategyYear = GrandStrategyYear * -1
 		end
-		Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 
-		faction_list = {}
-		for key, value in pairsByKeys(Factions) do
-			if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and Factions[key].Civilization ~= "gnome" and Factions[key].Civilization ~= "goblin" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then -- Gnomes and goblins aren't playable yet
-				table.insert(faction_list, Factions[key].Name)
+		
+		if (world_list[world:getSelected() + 1] ~= "Random") then
+			Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+			
+			faction_list = {}
+			for key, value in pairsByKeys(Factions) do
+				if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and Factions[key].Civilization ~= "gnome" and Factions[key].Civilization ~= "goblin" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then -- Gnomes and goblins aren't playable yet
+					table.insert(faction_list, Factions[key].Name)
+				end
 			end
+		else
+			faction_list = {"Asa Tribe", "Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
 		end
+
 		faction:setList(faction_list)
 		faction:setSize(152, 20)
 		faction:setSelected(0)
@@ -547,6 +574,11 @@ function EndTurn()
 			if (string.find(unitName, "upgrade-") ~= nil) then
 				if (Factions[key].Technologies[string.gsub(unitName, "-", "_")] == 1) then
 					Factions[key].Technologies[string.gsub(unitName, "-", "_")] = 2
+					for j, second_unitName in ipairs(Units) do -- mark technologies from other civilizations that are of the same class as researched too, so that the player doesn't need to research the same type of technology every time
+						if (string.find(second_unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Class == CUpgrade:Get(second_unitName).Class) then
+							Factions[key].Technologies[string.gsub(second_unitName, "-", "_")] = 2
+						end
+					end
 				end
 			end
 		end
@@ -872,22 +904,22 @@ function CalculateProvinceBorderTiles()
 			end
 
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
-				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
-				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name) == false) then
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
-				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name) == false) then
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
-				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name) == false) then
+				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name))
 				end
 			end
@@ -909,22 +941,22 @@ function CalculateProvinceBorderTiles()
 			end
 
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
-				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name) == false) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name)) == false) then
 					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] - 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= WorldMapWaterProvinces[key]) then
-				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name) == false) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name)) == false) then
 					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1] + 1, WorldMapWaterProvinces[key].Tiles[i][2]).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= WorldMapWaterProvinces[key]) then
-				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name) == false) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name)) == false) then
 					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] - 1).Name))
 				end
 			end
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= WorldMapWaterProvinces[key]) then
-				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name) == false) then
+				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name)) == false) then
 					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name))
 				end
 			end
@@ -1049,12 +1081,22 @@ function GetProvinceFromName(province_name)
 			return WorldMapProvinces[key]
 		end
 	end
+	for key, value in pairs(WorldMapWaterProvinces) do
+		if (WorldMapWaterProvinces[key].Name == province_name) then
+			return WorldMapWaterProvinces[key]
+		end
+	end
 	return nil
 end
 
 function GetProvinceKeyFromName(province_name)
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].Name == province_name) then
+			return key
+		end
+	end
+	for key, value in pairs(WorldMapWaterProvinces) do
+		if (WorldMapWaterProvinces[key].Name == province_name) then
 			return key
 		end
 	end
@@ -1077,12 +1119,10 @@ end
 
 function GetFactionUnitTypeCount(faction, unit_type, include_under_construction)
 	local unit_count = 0
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == faction) then
-			unit_count = unit_count + WorldMapProvinces[key].Units[string.gsub(unit_type, "-", "_")]
-			if (include_under_construction) then
-				unit_count = unit_count + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unit_type, "-", "_")]
-			end
+	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
+		unit_count = unit_count + WorldMapProvinces[key].Units[string.gsub(unit_type, "-", "_")]
+		if (include_under_construction) then
+			unit_count = unit_count + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unit_type, "-", "_")]
 		end
 	end
 	return unit_count
@@ -1090,8 +1130,8 @@ end
 
 function GetFactionBuildingTypeCount(faction, building_type)
 	local building_count = 0
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == faction and ProvinceHasBuildingType(WorldMapProvinces[key], building_type)) then
+	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
+		if (ProvinceHasBuildingType(WorldMapProvinces[key], building_type)) then
 			building_count = building_count + 1
 		end
 	end
@@ -1107,6 +1147,32 @@ function FactionHasTechnologyType(faction, technology_type)
 		end
 	end
 	return false
+end
+
+function FactionHasHero(faction, unit_type)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		if (ProvinceHasHero(WorldMapProvinces[key], unit_type)) then
+			return true
+		end
+	end
+	return false
+end
+
+function ProvinceHasHero(province, unit_type)
+	if (province.Heroes[string.gsub(unit_type, "-", "_")] == 2) then
+		return true
+	else
+		local has_other_hero_version = false -- check to see if the province has another version of the hero in it
+		for j, second_unitName in ipairs(Units) do
+			if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+				if (GetUnitTypeData(unit_type, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and province.Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
+					has_other_hero_version = true
+					break
+				end
+			end
+		end
+		return has_other_hero_version
+	end
 end
 
 function CanAttackProvince(province, faction, province_from)
@@ -1126,9 +1192,22 @@ function CanAttackProvince(province, faction, province_from)
 	return true
 end
 
+function FactionHasBorderWith(faction, faction_to)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
+			if (WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil and WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].Owner == faction_to.Name) then
+				return true
+			end
+		end
+	end
+	return false
+end
+
 function ProvinceHasBorderWith(province, province_to)
 	for i=1,table.getn(province.BorderProvinces) do
 		if (WorldMapProvinces[province.BorderProvinces[i]] == province_to) then
+			return true
+		elseif (WorldMapWaterProvinces[province.BorderProvinces[i]] == province_to) then
 			return true
 		end
 	end
@@ -1241,7 +1320,6 @@ function RunGrandStrategySaveMenu()
 				SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
 				SavedFactions = Factions,
 				SavedGrandStrategyCommodities = GrandStrategyCommodities,
-				SavedGrandStrategyEvents = GrandStrategyEvents,
 				SavedMercenaryGroups = MercenaryGroups
 			}
 			SavePreferences()
@@ -1289,8 +1367,8 @@ function RunGrandStrategyLoadGameMenu()
 			Factions = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
 			GrandStrategyCommodities = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
-			GrandStrategyEvents = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyEvents
 			MercenaryGroups = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
+			LoadEvents(GrandStrategyWorld)
 			CalculateTileProvinces()
 			
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
@@ -1335,6 +1413,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		tooltip = "Plains"
 	elseif (GetWorldMapTile(tile_x, tile_y) == "DkPl") then
 		tooltip = "Dark Plains"
+	elseif (GetWorldMapTile(tile_x, tile_y) == "CnFr") then
+		tooltip = "Conifer Forest"
 	elseif (GetWorldMapTile(tile_x, tile_y) == "ScFr") then
 		tooltip = "Scrub Forest"
 	elseif (GetWorldMapTile(tile_x, tile_y) == "Hill") then
@@ -1362,7 +1442,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	tooltip = tooltip .. " (" .. tile_x .. ", " .. tile_y .. ")"
 
 	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
-		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "ScFr" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil) then
+		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "CnFr" or GetWorldMapTile(tile_x, tile_y) == "ScFr" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil or string.find(file, "outer") ~= nil or string.find(file, "inner") ~= nil) then
 			local world_map_tile
 			if (GrandStrategyWorld == "Nidavellir") then
 				world_map_tile = CGraphic:New("tilesets/world/terrain/dark_plains.png")
@@ -1970,6 +2050,8 @@ function DrawOnScreenTiles()
 				tile_image = "tilesets/world/terrain/plains.png"
 			elseif (GetWorldMapTile(x, y) == "DkPl") then
 				tile_image = "tilesets/world/terrain/dark_plains.png"
+			elseif (GetWorldMapTile(x, y) == "CnFr") then
+				tile_image = "tilesets/world/terrain/conifer_forest.png"
 			elseif (GetWorldMapTile(x, y) == "ScFr") then
 				tile_image = "tilesets/world/terrain/scrub_forest.png"
 			elseif (GetWorldMapTile(x, y) == "Hill") then
@@ -1997,13 +2079,13 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_southwest_outer_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
 					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_southeast_outer_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_northeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_north_south_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
@@ -2021,6 +2103,16 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_northeast_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_southwest_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_northwest_northeast_southwest_inner"
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_northwest_northeast_southeast_inner"
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_northwest_southwest_southeast_inner"
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_northwest_northeast_southwest_southeast_inner"
+					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_north_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_north_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
 					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
@@ -2053,6 +2145,8 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_southeast_outer_northwest_inner"
 					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_north_southwest_inner_southeast_inner"
+					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
+						tile_image = tile_image .. "_south_northwest_inner_northeast_inner"
 					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
 						tile_image = tile_image .. "_west_northeast_inner_southeast_inner"
 					elseif (GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
@@ -2236,7 +2330,7 @@ function DrawOnScreenTiles()
 					else
 						settlement_graphics = "tilesets/world/sites/goblin_settlement.png"
 					end
-				elseif (GrandStrategyWorld == "Earth") then -- if province has no civilization, default to germanic city graphics if world is Earth
+				elseif (GrandStrategyWorld == "Earth" or GrandStrategyWorld == "Random") then -- if province has no civilization, default to germanic city graphics if world is Earth
 					settlement_graphics = "tilesets/world/sites/germanic_settlement.png"
 				elseif (GrandStrategyWorld == "Nidavellir") then -- if province has no civilization, default to dwarf city graphics if world is Nidavellir
 					if (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
@@ -3316,14 +3410,14 @@ function AIDoTurn(ai_faction)
 		local borders_foreign = false
 
 		for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
+			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or (WorldMapWaterProvinces[second_key] ~= nil and WorldMapWaterProvinces[second_key].Owner ~= ai_faction.Name)) then
 				borders_foreign = true
-				if (WorldMapProvinces[second_key].Owner ~= "Ocean") then
+				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
 					if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
+								if (WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
 									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
 										province_threatened = true
 									end
@@ -3401,7 +3495,7 @@ function AIDoTurn(ai_faction)
 					for second_province_i, second_key in ipairs(ai_faction.OwnedProvinces) do
 						local second_province_borders_foreign = false
 						for third_province_i, third_key in ipairs(WorldMapProvinces[second_key].BorderProvinces) do
-							if (WorldMapProvinces[third_key].Owner ~= ai_faction.Name) then
+							if ((WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name) or (WorldMapWaterProvinces[third_key] ~= nil and WorldMapWaterProvinces[third_key].Owner ~= ai_faction.Name)) then
 								second_province_borders_foreign = true
 								break
 							end
@@ -4011,20 +4105,24 @@ function CanTriggerEvent(faction, event)
 		return false
 	end
 	
-	if (event.MinYear ~= nil and GrandStrategyYear < event.MinYear) then
-		return false
-	end
-	
-	if (event.MaxYear ~= nil and GrandStrategyYear > event.MaxYear) then
-		return false
-	end
-	
 	if (event.RequiredEvents ~= nil) then -- only works for non-persistent events
 		for key, value in pairs(event.RequiredEvents) do
 			if ((GrandStrategyEvents[key] == nil) ~= event.RequiredEvents[key]) then
 				return false
 			end
 		end
+	end
+	
+	if (event.Conditions ~= nil) then
+		return event.Conditions()
+	end
+	
+	if (event.MinYear ~= nil and GrandStrategyYear < event.MinYear) then
+		return false
+	end
+	
+	if (event.MaxYear ~= nil and GrandStrategyYear > event.MaxYear) then
+		return false
 	end
 	
 	if (event.Commodities ~= nil) then
@@ -4041,6 +4139,10 @@ function CanTriggerEvent(faction, event)
 				return false
 			end
 		end
+	end
+	
+	if (event.RandomChance ~= nil and SyncRand(100) >= event.RandomChance) then
+		return false
 	end
 	
 	if (event.Provinces ~= nil and event.SettlementBuildings ~= nil) then
@@ -4067,20 +4169,45 @@ function CanTriggerEvent(faction, event)
 		end
 	end
 
-	if (event.Provinces ~= nil and event.Heroes ~= nil) then
-		for key, value in pairs(event.Provinces) do
+	if (event.Heroes ~= nil) then
+		if (event.Provinces ~= nil and GetTableSize(event.Provinces) > 0) then
+			for key, value in pairs(event.Provinces) do
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+						if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
+							local has_other_hero_version = false -- check to see if the province has another version of the hero in it
+							for j, second_unitName in ipairs(Units) do
+								if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and WorldMapProvinces[key].Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
+										has_other_hero_version = true
+									end
+								end
+							end
+							if (has_other_hero_version ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
+								return false
+							end
+						end
+					end
+				end
+			end
+		else -- if no provinces are specified, search in all of the faction's provinces
 			for i, unitName in ipairs(Units) do
 				if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
-					if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
-						local has_other_hero_version = false -- check to see if the province has another version of the hero in it
-						for j, second_unitName in ipairs(Units) do
-							if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
-								if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and WorldMapProvinces[key].Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
-									has_other_hero_version = true
+					if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil) then
+						local has_hero = false
+						for province_i, province_key in ipairs(faction.OwnedProvinces) do
+							if (WorldMapProvinces[province_key].Heroes[string.gsub(unitName, "-", "_")] == 2) then
+								has_hero = true
+							end
+							for j, second_unitName in ipairs(Units) do -- check for other versions of the hero (for instance, thane Rugnur)
+								if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and WorldMapProvinces[province_key].Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
+										has_hero = true
+									end
 								end
 							end
 						end
-						if (has_other_hero_version ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
+						if (has_hero ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
 							return false
 						end
 					end
@@ -4101,10 +4228,6 @@ function CanTriggerEvent(faction, event)
 		end
 	end
 		
-	if (event.RandomChance ~= nil and SyncRand(100) >= event.RandomChance) then
-		return false
-	end
-	
 	return true
 end
 
@@ -4147,12 +4270,15 @@ function GrandStrategyEvent(faction, event)
 				option_hotkey = string.lower(option_hotkey)
 			end
 
-			menu:addFullButton(event.Options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event.Options) - (i - 1)),
+			local b = menu:addFullButton(event.Options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event.Options) - (i - 1)),
 				function(s)
 					menu:stop()
 					event.OptionEffects[i]()
 				end
 			)
+			if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
+				b:setTooltip(event.OptionTooltips[i])
+			end
 		end
 
 		menu:run()
@@ -4202,11 +4328,13 @@ end
 function DoEvents()
 	-- process events
 	for key, value in pairs(Factions) do
-		for event_key, event_value in pairs(GrandStrategyEvents) do
-			if (CanTriggerEvent(Factions[key], GrandStrategyEvents[event_key])) then
+		if (GetFactionProvinceCount(Factions[key]) > 0) then
+			for event_key, event_value in pairs(GrandStrategyEvents) do
 				EventFaction = Factions[key]
-				GrandStrategyEvent(Factions[key], GrandStrategyEvents[event_key])
-				break -- only one event per faction per turn
+				if (CanTriggerEvent(Factions[key], GrandStrategyEvents[event_key])) then
+					GrandStrategyEvent(Factions[key], GrandStrategyEvents[event_key])
+					break -- only one event per faction per turn
+				end
 			end
 		end
 	end

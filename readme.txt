@@ -50,6 +50,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Civilizations
 - Added Germanic civilization (human).
 
+* Factions
+- Added Lggi Tribe (goblins).
+- Added Khag Tribe (goblins).
+
 * Grand Strategy Mode
 - Added the possibility to select Earth in the Grand Strategy Mode.
 - Fixed issues which caused provincial borders and fog graphics to appear over the interface in Grand Strategy mode.
@@ -67,6 +71,11 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven factions now start with the second level axe, shield and throwing axe upgrades researched, along with the first level ballista one, for the 550 AD starting date and beyond.
 - Improvements to how the AI chooses to train/build units.
 - Added the quests of the Dwarven campaign as events for the Grand Strategy mode.
+- Added "Peaceful Valley" province in Nidavellir, owned by the goblin Lggi Tribe.
+- The Heartfangs province now begins owned by the goblin Khag Tribe.
+- Added events for Rugnur, Baglur, Durstorn and Thursagan dying of natural causes, if they have survived until a certain date and haven't died in battle or in a scenario yet.
+- Added the possibility to generate a random world map for Grand Strategy mode.
+- Added conifer forest terrain (graphics by Jinn).
 
 * Maps
 - Added Tanais map (Earth).
@@ -76,7 +85,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Ulfdalir map (Alfheim).
 - Added Holmgard map (Earth).
 - Random maps are now placed in the "Random" world, and feature a mix of civilizations regardless of tileset.
-- Added a random dungeon map.
+- Added Random Dungeon map.
 - Added Malmo map (Earth).
 - Fixed an issue which caused players to not have symmetric starting locations in symmetric maps.
 - In the Chaincolt Foothills map, a few Shinsplitter scouts are now hidden within tree stumps.

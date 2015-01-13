@@ -54,6 +54,20 @@ DefineAnimations("animations-dwarven-miner", {
 })
 
 --
+-- Dwarven Militia
+--
+
+DefineAnimations("animations-dwarven-militia", {
+  Still = UnitStill,
+  Move = UnitMove,
+  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "attack", "sound axe-attack", "wait 5", "frame 45", "wait 3",
+    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
+  Death = {"unbreakable begin", "frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
+    "frame 60", "unbreakable end", "wait 1",},
+})
+
+--
 -- Dwarven Axefighter
 --
 

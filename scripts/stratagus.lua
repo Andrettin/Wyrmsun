@@ -889,7 +889,7 @@ function GetFactionForbiddenUnits(faction)
 		return { }
 	elseif (faction == "Lyr") then
 		return { }
-	elseif (faction == "Goblins") then
+	elseif (faction == "Lggi Tribe") then
 		return { }
 	else
 		return { }
@@ -1473,5 +1473,8 @@ Load("scripts/map_generation.lua")
 Load("scripts/quests.lua")
 Load("scripts/events.lua")
 Load("scripts/achievements.lua")
+Load("scripts/grand_strategy_map_generation.lua")
+Load("scripts/grand_strategy_provinces.lua")
+Load("scripts/grand_strategy_events.lua")
 
 DebugPrint("... ready!\n")

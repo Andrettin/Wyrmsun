@@ -341,10 +341,16 @@ DefineCivilizationFactions("gnome",
 
 DefineCivilizationFactions("goblin",
 	"faction", {
-		"name", "Goblins",
+		"name", "Khag Tribe",
 		"type", "tribe",
-		"color", "teal",
-		"secondary_color", "green"
+		"color", "blue",
+		"secondary_color", "cyan"
+	},
+	"faction", {
+		"name", "Lggi Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "cyan"
 	}
 )
 
