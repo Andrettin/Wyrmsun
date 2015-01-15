@@ -1118,7 +1118,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, symmetric)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,14 do
@@ -1179,9 +1179,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, symmetri
 						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
 					end
 				end
-				for sub_x=0,3 do
-					for sub_y=0,3 do
-						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+				if (town_halls) then
+					for sub_x=0,3 do
+						for sub_y=0,3 do
+							SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+						end
 					end
 				end
 				CreateStartingGoldMine(i) -- create the player's gold mine
@@ -1240,7 +1242,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 		end
 	end
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, symmetric)
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, true, symmetric)
 
 	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
@@ -3279,7 +3281,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, false)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -3287,7 +3289,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, false)
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -4184,5 +4186,83 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		--		return true
 		--	end
 		--)
+	end
+end
+
+function GenerateCave(town_halls, symmetric)
+	local RandomNumber = 0
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+	local EntranceExists = false
+
+	for x=0,(Map.Info.MapWidth - 1) do
+		for y=0,(Map.Info.MapHeight - 1) do
+			SetRawTile(x, y, "Land")
+		end
+	end
+
+	SetMapBorders("Rock", true)
+
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric)
+
+	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+
+	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+
+	if (symmetric) then
+		for x=(Map.Info.MapWidth / 2),(Map.Info.MapWidth - 1) do
+			for y=0,(Map.Info.MapHeight - 1) do
+				local mirrored_tile_x = x + 1 - 128
+				if (mirrored_tile_x < 0) then
+					mirrored_tile_x = mirrored_tile_x * -1
+				end
+				if (string.find(RawTile(x, y), "Town Hall") == nil and string.find(RawTile(mirrored_tile_x, y), "Town Hall") == nil) then
+					SetRawTile(x, y, RawTile(mirrored_tile_x, y))
+				end
+			end
+		end
+
+		for x=0,(Map.Info.MapWidth - 1) do
+			for y=(Map.Info.MapHeight / 2),(Map.Info.MapHeight - 1) do
+				local mirrored_tile_y = y + 1 - 128
+				if (mirrored_tile_y < 0) then
+					mirrored_tile_y = mirrored_tile_y * -1
+				end
+				if (string.find(RawTile(x, y), "Town Hall") == nil and string.find(RawTile(x, mirrored_tile_y), "Town Hall") == nil) then
+					SetRawTile(x, y, RawTile(x, mirrored_tile_y))
+				end
+			end
+		end
+	end
+	
+	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+
+	ApplyRawTiles()
+
+	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+
+	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+
+	--if (SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
+	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
+	--end
+
+	if (GrandStrategy == false) then
+		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
+
+		for i=0,14 do
+			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			end
+		end
 	end
 end

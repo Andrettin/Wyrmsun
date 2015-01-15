@@ -786,12 +786,6 @@ function GetWorldMapTile(x, y)
 	end
 end
 
-function SetWorldMapTile(x, y, tile_type)
-	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		WorldMapTiles[y+1][x+1] = tile_type
-	end
-end
-
 function RunWorldMapMenu(world, maps)
 	buttonStatut = 0
 	local menu = WarMenu(nil, panel(5), false)

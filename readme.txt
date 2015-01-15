@@ -77,6 +77,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added the possibility to generate a random world map for Grand Strategy mode.
 - Added conifer forest terrain (graphics by Jinn).
 - Added random event "Bountiful Harvest" (+100 gold per province owned, the event can happen multiple times).
+- Added "Goblin Looters" random event (for Nidavellir and random world maps).
+- Plains and dark plains tiles are now automatically made into hills if there is a gold mine there.
+- If the player has 100000 or more of a resource stored, now that resource's quantity appears in a smaller font.
 
 * Maps
 - Added Tanais map (Earth).
@@ -100,7 +103,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added germanic stand ground icon (by Leo).
 - The player now receives a message if they receive a new objective.
 - Added germanic arrow icon (by Leo).
-- Added the Skirnismol, the Harbarthsljoth, the Hymiskvitha, the Lokasenna, the Thrymskvitha, Baldrs Draumar, the Rigsthula, the Hyndluljoth, the Svipdagsmol, the Völundarkvitha, the Helgakvitha Hjorvarthssonar, the Helgakvitha Hundingsbana I, the Helgakvitha Hundingsbana II, the Gripisspo, the Reginsmol, the Fafnismol, the Sigrdrifumol, the Brot Af Sigurtharkvithu, the Guthrunarkvitha I, the Sigurtharkvitha En Skamma, the Helreith Brynhildar, the Drap Niflunga, the Guthrunarkvitha II En Forna, the Guthrunarkvitha III and the Oddrunargratr to the encyclopedia texts (The Poetic Edda).
+- Added the remaining Poetic Edda chapters to the encyclopedia texts.
 - A unit's, building's or technology's name now appears in the bottom of the screen when hovering the mouse over its icon in the encyclopedia, along with their civilization (if any).
 - Encyclopedia pages now can have quotes which are relevant to the entry.
 - Added quotes for the Mead Hall, Mushroom Farm, War Hall, dwarven Smithy, Thrymgjol Shield, Gryphon, Wyrm, Surghan Mercenary and Thursagan.

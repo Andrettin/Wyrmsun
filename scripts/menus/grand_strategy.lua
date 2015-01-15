@@ -32,6 +32,7 @@ Defender = ""
 GrandStrategyEventMap = false
 GrandStrategyBattle = false
 EventFaction = nil
+EventProvince = nil
 GrandStrategyWorld = ""
 
 function RunGrandStrategyGameSetupMenu()
@@ -57,7 +58,6 @@ function RunGrandStrategyGameSetupMenu()
 	local offy = (Video.Height - 480) / 2
 
 	local world_list = {"Earth", "Nidavellir", "Random"}
---	local world_list = {"Earth", "Nidavellir"}
 	local world
 	local date_list = {}
 	local date
@@ -255,6 +255,10 @@ function RunGrandStrategyGameSetupMenu()
 					if (GetWorldMapTile(x, y) == "CnFr" or GetWorldMapTile(x, y) == "ScFr") then -- add lumber resource location to forest tiles
 						if (TileHasResource(x, y, "Lumber") == false) then
 							table.insert(WorldMapResources.Lumber, {x, y})
+						end
+					elseif (GetWorldMapTile(x, y) == "Plns" or GetWorldMapTile(x, y) == "DkPl") then -- make plains tiles into hills if there is a mine there
+						if (TileHasResource(x, y, "Gold") == true) then
+							SetWorldMapTile(x, y, "Hill")
 						end
 					elseif (GetWorldMapTile(x, y) == "Mntn") then -- implement variations for mountain tiles
 						RandomNumber = SyncRand(1) + 1
@@ -561,8 +565,8 @@ function EndTurn()
 		elseif (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] > 4) then
 				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] = 4
 		end
-		-- if the province has a town hall, a barracks and a smithy, give it a mercenary camp; only for Nidavellir for now, since there are no recruitable mercenaries for Earth
-		if (WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp == 0 and GrandStrategyWorld == "Nidavellir") then
+		-- if the province has a town hall, a barracks and a smithy, give it a mercenary camp; not for Earth for now, since there are no recruitable mercenaries for Earth
+		if (WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp == 0 and GrandStrategyWorld ~= "Earth") then
 			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "smithy")) then
 				WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp = 2
 			end
@@ -1022,9 +1026,9 @@ function CalculateFactionIncomes()
 			
 			-- faction's research is 10 if all provinces have town halls, lumber mills and smithies
 			Factions[key].Income.Research = round(
-				6 * GetFactionBuildingTypeCount(Factions[key].Name, "town-hall") / GetFactionProvinceCount(Factions[key])
-				+ 2 * GetFactionBuildingTypeCount(Factions[key].Name, "lumber-mill") / GetFactionProvinceCount(Factions[key])
-				+ 2 * GetFactionBuildingTypeCount(Factions[key].Name, "smithy") / GetFactionProvinceCount(Factions[key])
+				6 * GetFactionBuildingTypeCount(Factions[key], "town-hall") / GetFactionProvinceCount(Factions[key])
+				+ 2 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
+				+ 2 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
 			)
 		end
 	end
@@ -1134,7 +1138,7 @@ end
 
 function GetFactionBuildingTypeCount(faction, building_type)
 	local building_count = 0
-	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
+	for province_i, key in ipairs(faction.OwnedProvinces) do
 		if (ProvinceHasBuildingType(WorldMapProvinces[key], building_type)) then
 			building_count = building_count + 1
 		end
@@ -2007,7 +2011,12 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 		end
 	end
 
-	AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1, Fonts["game"], false, false)
+	if (quantity_stored <= 99999) then
+		AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1, Fonts["game"], false, false)
+	else
+		AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1 + 2, Fonts["small"], false, false)
+	end
+	
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -3369,10 +3378,10 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction.Name, "lumber-mill") == 0)) then
+					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction, "lumber-mill") == 0)) then
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction.Name, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
+					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					end
@@ -3461,7 +3470,7 @@ function AIDoTurn(ai_faction)
 			end
 		end
 
-		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction.Name, "town-hall") < GetFactionProvinceCount(ai_faction) or ((ai_faction.Income.Gold - ai_faction.Upkeep) < 100 and ai_faction.Gold < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
+		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction) or ((ai_faction.Income.Gold - ai_faction.Upkeep) < 100 and ai_faction.Gold < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_catapults_in_province = 0
@@ -3802,6 +3811,7 @@ function ClearGrandStrategyVariables()
 	GrandStrategyEvents = nil
 	MercenaryGroups = nil
 	EventFaction = nil
+	EventProvince = nil
 	WorldMapTiles = nil
 	WorldMapResources = nil
 	ProcessingEndTurn = nil
@@ -4253,7 +4263,11 @@ function GrandStrategyEvent(faction, event)
 		else
 			menu:add(l, 14, 112)
 		end
-		l:setCaption(event.Description)
+		local event_description = event.Description
+		if (EventProvince ~= nil and string.find(event_description, "PROVINCE_NAME") ~= nil) then
+			event_description = string.gsub(event_description, "PROVINCE_NAME", EventProvince.Name)
+		end
+		l:setCaption(event_description)
 
 		if (event_icon ~= nil) then
 			event_icon = CGraphic:New(event_icon)
@@ -4270,20 +4284,22 @@ function GrandStrategyEvent(faction, event)
 		end
 
 		for i=1,table.getn(event.Options) do
-			local option_hotkey = ""		
-			if (string.find(event.Options[i], "~!") ~= nil) then
-				option_hotkey = string.sub(string.match(event.Options[i], "~!%a"), 3)
-				option_hotkey = string.lower(option_hotkey)
-			end
-
-			local b = menu:addFullButton(event.Options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event.Options) - (i - 1)),
-				function(s)
-					menu:stop()
-					event.OptionEffects[i]()
+			if (event.OptionConditions == nil or event.OptionConditions[i]()) then
+				local option_hotkey = ""		
+				if (string.find(event.Options[i], "~!") ~= nil) then
+					option_hotkey = string.sub(string.match(event.Options[i], "~!%a"), 3)
+					option_hotkey = string.lower(option_hotkey)
 				end
-			)
-			if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
-				b:setTooltip(event.OptionTooltips[i])
+
+				local b = menu:addFullButton(event.Options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event.Options) - (i - 1)),
+					function(s)
+						menu:stop()
+						event.OptionEffects[i]()
+					end
+				)
+				if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
+					b:setTooltip(event.OptionTooltips[i])
+				end
 			end
 		end
 
@@ -4341,6 +4357,8 @@ function DoEvents()
 					GrandStrategyEvent(Factions[key], GrandStrategyEvents[event_key])
 					break -- only one event per faction per turn
 				end
+				EventFaction = nil
+				EventProvince = nil
 			end
 		end
 	end

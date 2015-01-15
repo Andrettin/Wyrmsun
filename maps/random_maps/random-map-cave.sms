@@ -3,51 +3,5 @@ LoadTileModels("scripts/tilesets/cave.lua")
 CleanRawTiles()
 
 if (LoadedGame == false) then
-	local RandomNumber = 0
-	local RandomX = 0
-	local RandomY = 0
-	local Count = 0
-	local EntranceExists = false
-
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
-			SetRawTile(x, y, "Land")
-		end
-	end
-
-	SetMapBorders("Rock", true)
-
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, false)
-
-	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
-
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-
-	ApplyRawTiles()
-
-	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
-
-	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
-
-	--if (SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
-	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
-	--end
-
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
-
-	for i=0,14 do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-		end
-	end
+	GenerateCave(true, false)
 end

@@ -1,0 +1,4 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","computer")
+PresentMap("Random Cave", 2, 64, 64, 1)

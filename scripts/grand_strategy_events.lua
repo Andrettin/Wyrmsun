@@ -619,7 +619,6 @@ function LoadEvents(world)
 							end
 						end
 					end
-
 				end
 				if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
@@ -1342,6 +1341,70 @@ function LoadEvents(world)
 				WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
 			end},
 			OptionTooltips = {"Our faction becomes Lyr"}
+		},
+		GoblinLooters = {
+			Name = "Goblin Looters",
+			Description = "A band of goblin thieves has been looting the farms in PROVINCE_NAME. We have obtained information on where their hideout is... what shall we do?",
+			Conditions = function(s)
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+					if (ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "barracks") == false and SyncRand(100) < 1) then -- event only fires if there is a province which is settled but does not have proper defenses
+						EventProvince = WorldMapProvinces[province_key]
+						return true
+					end
+				end
+				return false
+			end,
+			Persistent = true,
+			Options = {"~!Root them out", "~!Better let them be"},
+			OptionConditions = {
+				function(s)
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+							if (EventProvince.Units[string.gsub(unitName, "-", "_")] > 0) then
+								return true
+							end
+						elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+							if (EventProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
+								return true
+							end
+						end
+					end
+				end,
+				function(s)
+					return true
+				end
+			},
+			OptionEffects = {
+				function(s)
+					if (EventFaction.Name == GrandStrategyFaction.Name) then
+						GrandStrategyEventMap = true
+						GetMapInfo("maps/nidavellir/goblin-thief-hideout.smp")
+						RunMap("maps/nidavellir/goblin-thief-hideout.smp")
+						GrandStrategyEventMap = false
+
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+								EventProvince.Units[string.gsub(unitName, "-", "_")] = EventProvince.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							end
+						end
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+									EventProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
+								end
+							end
+						end
+						
+						if (GameResult == GameDefeat) then -- if lost the battle, lose the gold
+							EventFaction.Gold = EventFaction.Gold - 500
+						end
+					end
+				end,
+				function(s)
+					EventFaction.Gold = EventFaction.Gold - 500
+				end
+			},
+			OptionTooltips = {"Fight the goblin thieves", "-500 Gold"}
 		}
 	}
 	
@@ -1450,6 +1513,12 @@ function LoadEvents(world)
 				GrandStrategyEvents[key]["Options"] = {}
 				for i=1,table.getn(event_table[key].Options) do
 					table.insert(GrandStrategyEvents[key].Options, event_table[key].Options[i])
+				end
+			end
+			if (event_table[key].OptionConditions ~= nil) then
+				GrandStrategyEvents[key]["OptionConditions"] = {}
+				for i=1,table.getn(event_table[key].OptionConditions) do
+					table.insert(GrandStrategyEvents[key].OptionConditions, event_table[key].OptionConditions[i])
 				end
 			end
 			if (event_table[key].OptionEffects ~= nil) then

@@ -288,6 +288,7 @@ function GenerateRandomWorldMap()
 	for key, value in pairs(WorldMapProvinces) do -- insert the province seeds at this point, so that it will be known where the settlement locations will be when gold deposits and etc. are generated
 		WorldMapProvinces[key].Tiles = nil
 		WorldMapProvinces[key].Tiles = {}
+		WorldMapProvinces[key].SettlementLocation = nil
 		for i=1,100 do
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
