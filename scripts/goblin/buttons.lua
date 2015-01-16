@@ -126,8 +126,15 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-glider",
   Key = "g", Hint = _("Build ~!Glider"),
   ForUnit = {"unit-goblin-mess-hall"} } )
 
-  DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
   Action = "train-unit", Value = "unit-goblin-thief",
   Key = "t", Hint = _("Hire Goblin ~!Thief"),
   ForUnit = {"unit-mercenary-camp"} } )
 
+-- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
+  Action = "research", Value = "upgrade-goblin-masonry",
+  Allowed = "check-single-research",
+  Key = "m", Hint = _("Research ~!Masonry"),
+  ForUnit = {"unit-goblin-lumber-mill"} } )

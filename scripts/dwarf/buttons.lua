@@ -337,6 +337,12 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
   Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"),
   ForUnit = {"unit-dwarven-lumber-mill"} } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
+  Action = "research", Value = "upgrade-dwarven-masonry",
+  Allowed = "check-single-research",
+  Key = "m", Hint = _("Research ~!Masonry"),
+  ForUnit = {"unit-dwarven-lumber-mill"} } )
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",

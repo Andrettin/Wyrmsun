@@ -256,6 +256,13 @@ function RunGrandStrategyGameSetupMenu()
 						if (TileHasResource(x, y, "Lumber") == false) then
 							table.insert(WorldMapResources.Lumber, {x, y})
 						end
+						if (GetWorldMapTile(x, y) == "CnFr") then -- implement variations for conifer forest tiles
+							RandomNumber = SyncRand(2) + 1
+							WorldMapTiles[y+1][x+1] = "CnFr" .. RandomNumber
+						elseif (GetWorldMapTile(x, y) == "ScFr") then -- implement variations for scrub forest tiles
+							RandomNumber = SyncRand(4) + 1
+							WorldMapTiles[y+1][x+1] = "ScFr" .. RandomNumber
+						end
 					elseif (GetWorldMapTile(x, y) == "Plns" or GetWorldMapTile(x, y) == "DkPl") then -- make plains tiles into hills if there is a mine there
 						if (TileHasResource(x, y, "Gold") == true) then
 							SetWorldMapTile(x, y, "Hill")
@@ -306,6 +313,7 @@ function RunGrandStrategyGameSetupMenu()
 				date_list = {
 					"3000 BC", -- begin of the last wave of Indo-European migrations, which lasted until 2800 BC
 --					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
+					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
 				}
 			elseif (GrandStrategyWorld == "Nidavellir") then
@@ -1678,13 +1686,25 @@ end
 function AddGrandStrategyBuildingButton(x, y, unit_type)
 	local b
 	local unit_icon
+	
+	local old_unit_type = unit_type
+	
 	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- if not built, make icon gray
+		if (GrandStrategyFaction.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
+			unit_type = "unit-teuton-lumber-mill"
+		end
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
+		if (GrandStrategyFaction.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
+			unit_type = "unit-teuton-lumber-mill"
+		end
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
 	end
+	
+	unit_type = old_unit_type
+	
 	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
@@ -2064,15 +2084,15 @@ function DrawOnScreenTiles()
 			elseif (GetWorldMapTile(x, y) == "DkPl") then
 				tile_image = "tilesets/world/terrain/dark_plains.png"
 			elseif (GetWorldMapTile(x, y) == "CnFr") then
-				tile_image = "tilesets/world/terrain/conifer_forest.png"
+				tile_image = "tilesets/world/terrain/conifer_forest/conifer_forest"
 			elseif (GetWorldMapTile(x, y) == "ScFr") then
-				tile_image = "tilesets/world/terrain/scrub_forest.png"
+				tile_image = "tilesets/world/terrain/scrub_forest_" .. string.sub(WorldMapTiles[y+1][x+1], 5) .. ".png"
 			elseif (GetWorldMapTile(x, y) == "Hill") then
 				tile_image = "tilesets/world/terrain/hills.png"
 			elseif (GetWorldMapTile(x, y) == "Mntn") then
-				tile_image = "tilesets/world/terrain/mountains"
+				tile_image = "tilesets/world/terrain/mountains/mountains"
 			elseif (GetWorldMapTile(x, y) == "Watr") then
-				tile_image = "tilesets/world/terrain/ocean"
+				tile_image = "tilesets/world/terrain/ocean/ocean"
 			end
 			if (tile_image ~= "") then
 				if (string.find(tile_image, ".png") == nil) then -- if has no file type ending, then it is because this tile type can have transitions
@@ -2172,6 +2192,9 @@ function DrawOnScreenTiles()
 						tile_image = tile_image .. "_inner"
 					end
 					tile_image = tile_image .. ".png"
+					if (CanAccessFile(tile_image) == false and string.find(tile_image, "2") ~= nil) then
+						tile_image = string.gsub(tile_image, "2", "1")
+					end
 				end
 				DrawWorldMapTile(tile_image, x, y)
 			end
@@ -2642,7 +2665,7 @@ function DrawGrandStrategyInterface()
 				local item_x = 0
 				local item_y = -2
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower" and GetUnitTypeData(unitName, "Class") ~= "") then
 						if (IsBuildingAvailable(SelectedProvince, unitName)) then
 							local icon_offset_x = 9 + (item_x * 56)
 							local icon_offset_y = 340 + (item_y * 47)
@@ -2892,7 +2915,11 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "lumber-mill") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				if (GrandStrategyFaction.Civilization == "germanic" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
+					AddGrandStrategyLabel(GetUnitTypeName("unit-teuton-lumber-mill"), 88, 213, Fonts["game"], true, false)
+				else
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				end
 				
 				local item_x = 0
 				local item_y = -2
@@ -4455,7 +4482,7 @@ function GetUnitTypeInterfaceState(unit_type)
 	else
 		if (CUpgrade:Get(unit_type).Class == "melee-weapon-1" or CUpgrade:Get(unit_type).Class == "melee-weapon-2" or CUpgrade:Get(unit_type).Class == "bronze-shield" or CUpgrade:Get(unit_type).Class == "iron-shield" or CUpgrade:Get(unit_type).Class == "siege-projectile-1" or CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
 			return "smithy"
-		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2") then
+		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "masonry") then
 			return "lumber-mill"
 		else
 			return ""
@@ -4504,7 +4531,7 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			if (GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2") then
+		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "masonry") then
 			if (GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization))
 			end

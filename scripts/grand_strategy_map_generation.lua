@@ -43,15 +43,26 @@ function GenerateRandomWorldMap()
 		end
 	end
 	
+	-- set map water borders
+	for y=0,(world_map_height - 1) do -- to make the map seem wrap around the horizontal edges
+		SetWorldMapTile(0, y, "Watr")
+		SetWorldMapTile((world_map_width - 1), y, "Watr")
+	end
+
 	local mountain_seeds = {}
 	local hill_seeds = {}
 	local plains_seeds = {}
 	
-	for i=1,5 do
-		local RandomX = SyncRand(world_map_width)
-		local RandomY = SyncRand(world_map_height)
-		SetWorldMapTile(RandomX, RandomY, "Mntn")
-		table.insert(mountain_seeds, {RandomX, RandomY})
+	for i=1,5 do -- 5 mountain seeds
+		for j=1,100 do -- 100 attempts to get a suitable location
+			local RandomX = SyncRand(world_map_width)
+			local RandomY = SyncRand(world_map_height)
+			if (GetWorldMapTile(RandomX, RandomY) == "") then
+				SetWorldMapTile(RandomX, RandomY, "Mntn")
+				table.insert(mountain_seeds, {RandomX, RandomY})
+				break
+			end
+		end
 	end
 
 	for i=1,50 do
@@ -178,6 +189,9 @@ function GenerateRandomWorldMap()
 					break
 				end
 			end
+			if (WorldMapWaterProvinces[key].Tiles == {}) then -- if no suitable location for this province was found, then delete it from the list
+				WorldMapWaterProvinces[key] = nil
+			end
 		else
 			WorldMapWaterProvinces[key] = nil
 		end
@@ -235,7 +249,11 @@ function GenerateRandomWorldMap()
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTile(RandomX, RandomY) == "Plns") then
 				if (TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
-					SetWorldMapTile(RandomX, RandomY, "CnFr")
+					if (RandomY >= (world_map_height / 4) and RandomY < (world_map_height - (world_map_height / 4))) then
+						SetWorldMapTile(RandomX, RandomY, "ScFr") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+					else
+						SetWorldMapTile(RandomX, RandomY, "CnFr")
+					end
 					table.insert(forest_seeds, {RandomX, RandomY})
 					break
 				end
@@ -255,13 +273,17 @@ function GenerateRandomWorldMap()
 				for y_offset=-1,1 do
 					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Plns" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
-						if (RandomNumber < 50) then
-							SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "ScFr") -- should be CnFr, but the tiling is too visible without transitions
+						if (RandomNumber < 33) then
+							if (forest_seeds[j][2] + y_offset >= (world_map_height / 4) and forest_seeds[j][2] + y_offset < (world_map_height - (world_map_height / 4))) then
+								SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "ScFr") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+							else
+								SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "CnFr")
+							end
 							table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
 						end
 					elseif (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "DkPl" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
-						if (RandomNumber < 50) then
+						if (RandomNumber < 33) then
 							SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "ScFr")
 							table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
 						end
@@ -289,7 +311,7 @@ function GenerateRandomWorldMap()
 		WorldMapProvinces[key].Tiles = nil
 		WorldMapProvinces[key].Tiles = {}
 		WorldMapProvinces[key].SettlementLocation = nil
-		for i=1,100 do
+		for i=1,1000 do
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTile(RandomX, RandomY) ~= "Watr" and TileProvinces[RandomY+1][RandomX+1] == "" and (WorldMapProvinces[key].SettlementTerrain == nil or GetWorldMapTile(RandomX, RandomY) == WorldMapProvinces[key].SettlementTerrain)) then
@@ -299,6 +321,9 @@ function GenerateRandomWorldMap()
 				table.insert(province_seeds, {RandomX, RandomY})
 				break
 			end
+		end
+		if (WorldMapProvinces[key].SettlementLocation == nil) then -- if the settlement location is nil, then no suitable location for this province was found: delete it from the list; this shouldn't be happening, as it breaks events and can cause instant game over if the province owned by the player's faction was deleted
+			WorldMapProvinces[key] = nil
 		end
 	end
 
@@ -442,6 +467,14 @@ function LoadFactions(world)
 			Title = "Kingdom"
 		},
 		-- Non-Playable Tribes
+		AeduiTribe = {
+			Name = "Aedui Tribe",
+			Civilization = "germanic"
+		},
+		ArverniTribe = {
+			Name = "Arverni Tribe",
+			Civilization = "germanic"
+		},
 		GylfingTribe = {
 			Name = "Gylfing Tribe",
 			Civilization = "germanic",
@@ -450,6 +483,10 @@ function LoadFactions(world)
 				Lumber = 2500 -- half of the gold value
 			}
 		},
+		SequaniTribe = {
+			Name = "Sequani Tribe",
+			Civilization = "germanic"
+		},
 		VanaTribe = {
 			Name = "Vana Tribe",
 			Civilization = "germanic",
@@ -457,6 +494,12 @@ function LoadFactions(world)
 			Commodities = {
 				Lumber = 2500 -- half of the gold value
 			}
+		},
+		-- Non-Playable Polities
+		Rome = {
+			Name = "Rome",
+			Civilization = "germanic",
+			Title = "Republic"
 		}
 	}
 	

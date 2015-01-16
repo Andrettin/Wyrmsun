@@ -84,6 +84,13 @@ local upgrades = {
 		{   250,  4000,     0,     0,     0,     0,     0,     0},
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
 		1},
+	{"upgrade-dwarven-masonry", _("Masonry"), "icon-masonry", "masonry",
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Tower upgrade to Guard Tower."),
+		"",
+		"",
+		{   250,  1500,  1750,     0,     0,     0,     0,     0},
+		{   250,  1500,  1750,     0,     0,     0,     0,  1500},
+		1},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -161,6 +168,13 @@ DefineModifier("upgrade-dwarven-ballista-bolt-2",
 	{"PiercingDamage", 15},
 	{"apply-to", "unit-dwarven-ballista"})
 
+DefineModifier("upgrade-dwarven-masonry",
+	{"HitPoints", 20, "Percent"},
+	{"Armor", 5},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-dwarven-sentry-tower"},
+	{"apply-to", "unit-dwarven-guard-tower"})
+
 DefineDependency("unit-dwarven-scout",
 	{"unit-dwarven-lumber-mill"})
 
@@ -180,7 +194,7 @@ DefineDependency("upgrade-dwarven-ballista-bolt-2",
 	{"upgrade-dwarven-ballista-bolt-1", "unit-dwarven-lumber-mill"})
 
 DefineDependency("unit-dwarven-guard-tower",
-	{"unit-dwarven-lumber-mill"})
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"})
 
 DefineDependency("unit-dwarven-ballista",
 	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"})

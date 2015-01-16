@@ -315,6 +315,20 @@ DefineCivilizationFactions("germanic",
 	},
 	-- Non-Playable Tribes
 	"faction", {
+		"name", "Aedui Tribe",
+		"type", "tribe",
+		"color", "green",
+		"secondary_color", "green",
+		"playable", false
+	},
+	"faction", {
+		"name", "Arverni Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "blue",
+		"playable", false
+	},
+	"faction", {
 		"name", "Gylfing Tribe",
 		"type", "tribe",
 		"color", "green",
@@ -322,10 +336,25 @@ DefineCivilizationFactions("germanic",
 		"playable", false
 	},
 	"faction", {
+		"name", "Sequani Tribe",
+		"type", "tribe",
+		"color", "pink",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
 		"name", "Vana Tribe",
 		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "cyan",
+		"playable", false
+	},
+	-- Non-Playable Polities
+	"faction", {
+		"name", "Rome",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "yellow",
 		"playable", false
 	}
 )

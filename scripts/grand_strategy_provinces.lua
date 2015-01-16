@@ -34,8 +34,21 @@ function LoadProvinces(world)
 	WorldMapWaterProvinces = {}
 
 	local EarthProvinces = {
+		Aquitaine = {
+			Name = "Aquitania",
+			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
+			Owner = "",
+			SettlementName = "Tolosa",
+			SettlementLocation = {120, 32}, -- Toulouse
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Aragon = {
-			Name = "Aragon",
+			Name = "Hither Baetica",
 			Tiles = { {119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34} },
 			Owner = "",
 			SettlementName = "Caesaraugusta",
@@ -165,6 +178,19 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plns"
 		},
+		Burgundy = {
+			Name = "Gallia Narbonensis",
+			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
+			Owner = "",
+			SettlementName = "Lugdunum",
+			SettlementLocation = {123, 31}, -- Lyon
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Castille = {
 			Name = "Hispania Tarraconensis",
 			Tiles = { {115, 34}, {115, 35}, {115, 36}, {115, 37}, {116, 33}, {116, 34}, {116, 35}, {116, 36}, {116, 37}, {117, 33}, {117, 34}, {117, 35}, {117, 36}, {117, 37}, {118, 33}, {118, 34}, {118, 35}, {118, 36}, {118, 37} },
@@ -243,7 +269,7 @@ function LoadProvinces(world)
 		},
 		France = {
 			Name = "Gallia Lugdunensis",
-			Tiles = { {119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {124, 30}, {125, 29} },
+			Tiles = { {119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29} },
 			Owner = "",
 			SettlementName = "Lutetia",
 			SettlementLocation = {121, 29}, -- Paris
@@ -394,21 +420,6 @@ function LoadProvinces(world)
 	--		Units = {
 	--		}
 	--	},
-		Occitania = {
-			Name = "Gallia Narbonensis",
-			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32}, {123, 31}, {123, 32}, {124, 31}, {124, 32} },
-			Owner = "",
-			SettlementName = "Tolosa",
-			SettlementLocation = {120, 32}, -- Toulouse
-			SettlementBuildings = {
-				unit_germanic_town_hall = 2
-			},
-			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
-			SettlementTerrain = "Plns"
-		},
 		Poland = {
 			Name = "Poland",
 			Tiles = { {133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27} },

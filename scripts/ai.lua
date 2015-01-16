@@ -140,6 +140,21 @@ function AiLumberMill()
 end
 
 --
+--  Masonry upgrade of the current civilization.
+--
+function AiUpgradeMasonry()
+	if (AiGetRace() == "dwarf") then
+		return "upgrade-dwarven-masonry"
+	elseif (AiGetRace() == "germanic") then
+		return "upgrade-germanic-masonry"
+	elseif (AiGetRace() == "goblin") then
+		return "upgrade-goblin-masonry"
+	else
+		return "upgrade-germanic-masonry"
+	end
+end
+
+--
 --  Smithy of the current civilization.
 --
 function AiSmithy()

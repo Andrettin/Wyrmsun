@@ -159,13 +159,13 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_x = 4
 					tech_icon_y = 3
 				elseif (GetUnitTypeData(unitName, "Class") == "archer") then
-					tech_icon_x = 3
+					tech_icon_x = 7
 					tech_icon_y = 3
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
 						tech_allowed = false
 					end
 				elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
-					tech_icon_x = 0
+					tech_icon_x = 1
 					tech_icon_y = 3
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
 						tech_allowed = false
@@ -180,18 +180,18 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_x = 4
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill") then
-					tech_icon_x = 3
+					tech_icon_x = 7
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "smithy") then
-					tech_icon_x = 2
+					tech_icon_x = 3
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
-					tech_icon_x = 7
+					tech_icon_x = 9
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "guard-tower") then
-					tech_icon_x = 7
+					tech_icon_x = 9
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("watch-tower", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("watch-tower", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("masonry", civilization))) then
 						tech_allowed = false
 					end
 				else
@@ -207,51 +207,57 @@ function RunTechTreeMenu(civilization_number)
 				local tech_icon_y = 0
 				local tech_allowed = true
 				if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
-					tech_icon_x = 2
+					tech_icon_x = 3
 					tech_icon_y = 3
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "melee-weapon-2") then
-					tech_icon_x = 2
+					tech_icon_x = 3
 					tech_icon_y = 4
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("melee-weapon-1", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "bronze-shield") then
-					tech_icon_x = 1
+					tech_icon_x = 2
 					tech_icon_y = 3
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "iron-shield") then
-					tech_icon_x = 1
+					tech_icon_x = 2
 					tech_icon_y = 4
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("bronze-shield", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-1") then
-					tech_icon_x = 3
+					tech_icon_x = 7
 					tech_icon_y = 4
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("archer", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("guard-tower", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-2") then
-					tech_icon_x = 3
+					tech_icon_x = 7
 					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("ranged-projectile-1", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "siege-projectile-1") then
-					tech_icon_x = 0
+					tech_icon_x = 1
 					tech_icon_y = 4
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-engine", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "siege-projectile-2") then
-					tech_icon_x = 0
+					tech_icon_x = 1
 					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-projectile-1", civilization))) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "masonry") then
+					tech_icon_x = 8
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
 						tech_allowed = false
 					end
 				else

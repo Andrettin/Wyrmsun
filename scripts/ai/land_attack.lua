@@ -102,6 +102,10 @@ local land_funcs = {
 
 -- NOW UPGRADING
 
+  function() return AiNeed(AiLumberMill()) end, -- moved here, as it is necessary for the stronghold to be available
+  function() return AiWait(AiLumberMill()) end,
+  function() return AiResearch(AiUpgradeMasonry()) end,
+  
 --  function() return AiUpgradeTo(AiBetterCityCenter()) end,
 --  function() return AiWait(AiBetterCityCenter()) end,
   function() return AiSet(AiWorker(), 25) end,
@@ -111,8 +115,6 @@ local land_funcs = {
 -- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
  function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
 
-  function() return AiNeed(AiLumberMill()) end,
-  function() return AiWait(AiLumberMill()) end,
   function() return AiSet(AiGlider(), 1) end,
 -- function() return AiUpgradeTo(AiBestCityCenter()) end,
 -- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,

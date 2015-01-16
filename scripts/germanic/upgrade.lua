@@ -49,6 +49,13 @@ local upgrades = {
 		{   200,   300,   300,     0,     0,     0,     0,     0},
 		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
+	{"upgrade-germanic-masonry", _("Masonry"), "icon-masonry", "masonry",
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
+		"",
+		"",
+		{   250,  1500,  1750,     0,     0,     0,     0,     0},
+		{   250,  1500,  1750,     0,     0,     0,     0,  1500},
+		1},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -85,5 +92,23 @@ DefineModifier("upgrade-germanic-barbed-arrow",
 	{"apply-to", "unit-germanic-archer"}
 )
 
+DefineModifier("upgrade-germanic-masonry",
+	{"HitPoints", 20, "Percent"},
+	{"Armor", 5},
+	{"apply-to", "unit-germanic-town-hall"}, {"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-germanic-barracks"},
+	{"apply-to", "unit-germanic-carpenters-shop"}, {"apply-to", "unit-germanic-smithy"},
+	{"apply-to", "unit-teuton-lumber-mill"})
+
+DefineModifier("upgrade-germanic-masonry",
+	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"})
+  
+DefineModifier("upgrade-germanic-masonry",
+	{"allow-unit", "unit-germanic-carpenters-shop", 0})
+  
 DefineDependency("unit-germanic-archer",
-	{"unit-germanic-carpenters-shop"})
+	{"unit-germanic-carpenters-shop"},
+	"or",
+	{"unit-teuton-lumber-mill"})
+
+DefineDependency("unit-teuton-lumber-mill",
+	{"upgrade-germanic-masonry"})

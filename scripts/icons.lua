@@ -700,6 +700,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-masonry",
+	Size = {46, 38},
+	File = "neutral/icons/masonry.png"
+})
+
+DefineIcon({
 	Name = "icon-slime",
 	Size = {46, 38},
 	File = "neutral/icons/slime.png"

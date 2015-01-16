@@ -33,6 +33,19 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.2
+-----------------------------------------------------------------------
+
+* Grand Strategy Mode
+- Added transitions for the conifer forest tiles (graphics by Jinn).
+- Forests now spawn at a decreased rate in random world maps.
+- In random world maps conifer forests now appear at high latitudes, with scrub forests appearing elsewhere.
+
+* Upgrades
+- Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).
+- The Germanic Carpenter's Shop now changes its graphic after Masonry is researched, and becomes called "Lumber Mill".
+
+-----------------------------------------------------------------------
 - 1.0.1
 -----------------------------------------------------------------------
 

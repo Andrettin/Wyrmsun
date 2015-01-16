@@ -35,6 +35,7 @@ Units = {
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
+	"upgrade-germanic-masonry",
 	"unit-teuton-lumber-mill",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-scout", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
@@ -43,11 +44,13 @@ Units = {
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 	"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
+	"upgrade-dwarven-masonry",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-thief",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy",
+	"upgrade-goblin-masonry",
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
@@ -1792,36 +1795,6 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 
 -- Other civilizations' units
 
-DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
-	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
-	NeutralMinimapColor = {192, 192, 192},
-	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
-	Costs = {"time", 150, "gold", 600, "lumber", 450},
-	RepairHp = 4,
-	RepairCosts = {"gold", 1, "lumber", 1},
-	ImproveProduction = {"lumber", 25},
-	Construction = "construction-land",
-	Speed = 0,
-	HitPoints = 600,
-	DrawLevel = 20,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
-	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
-	Priority = 25, AnnoyComputerFactor = 15,
-	Points = 150,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true, LumberImprove = true,
-	CanStore = {"lumber"},
-	Capturable = true,
-	Sounds = {
-		"selected", "lumber-mill-selected",
---		"acknowledge", "elven-lumber-mill-acknowledge",
---		"ready", "elven-lumber-mill-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"} } )
-
 DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 	Class = "infantry",
 	Civilization = "elf",
@@ -2025,6 +1998,7 @@ Load("scripts/germanic/units.lua")
 Load("scripts/gnome/units.lua")
 Load("scripts/goblin/units.lua")
 Load("scripts/kobold/units.lua")
+Load("scripts/teuton/units.lua")
 
 DefineUnitType("unit-human-wall", { Name = _("Wall"),
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},

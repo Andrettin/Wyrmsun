@@ -215,11 +215,39 @@ if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage
 	WorldMapProvinces.Gotaland.Name = "Gothland"
 end
 
+if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Italy.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Sicily.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Corsica.Owner = "Rome"
+	WorldMapProvinces.Sardinia.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Aragon.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Castille.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Portugal.Owner = "Rome"
+end
+
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Brandenburg.SettlementBuildings.unit_germanic_town_hall = 2
 	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
+	WorldMapProvinces.France.Owner = "Aedui Tribe" -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.Aquitaine.Owner = "Arverni Tribe" -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 end
 
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
@@ -239,6 +267,14 @@ if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir
 	WorldMapProvinces.Jutland.Owner = "" -- remove the Asa Tribe
 end
 
+if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.GaliciaIberia.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -15) then -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Austria.Owner = "Rome"
+end
+
 if (GrandStrategyYear >= -9) then -- Maroboduus, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 	WorldMapProvinces.Bohemia.Owner = "Marcomanni Tribe"
 	WorldMapProvinces.Bohemia.SettlementBuildings.unit_germanic_town_hall = 2
@@ -252,6 +288,10 @@ if (GrandStrategyYear >= 1) then -- Political situation in Europe in 1 AD; Sourc
 	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
 end
 
+if (GrandStrategyYear >= 43) then -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.England.Owner = "Rome"
+end
+
 if (GrandStrategyYear >= 98) then
 	WorldMapProvinces.Bavaria.Owner = "Rugian Tribe" -- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
@@ -261,6 +301,10 @@ if (GrandStrategyYear >= 98) then
 	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
+end
+
+if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Romania.Owner = "Rome"
 end
 
 if (GrandStrategyYear >= 150) then
@@ -282,6 +326,10 @@ if (GrandStrategyYear >= 200) then
 	AcquireFactionTechnologies(Factions.VisigothTribe, Factions.GothTribe)
 end
 
+if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--	WorldMapProvinces.Romania.Owner = ""
+end
+
 if (GrandStrategyYear >= 397) then
 	WorldMapProvinces.Romania.Owner = ""
 	WorldMapProvinces.Croatia.Owner = "Visigoth Tribe" -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -297,9 +345,9 @@ end
 
 if (GrandStrategyYear >= 412) then
 	WorldMapProvinces.Croatia.Owner = ""
-	WorldMapProvinces.Occitania.Owner = "Visigoth Tribe" -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.Occitania.SettlementBuildings.unit_germanic_town_hall = 2
-	WorldMapProvinces.Occitania.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	WorldMapProvinces.Aquitaine.Owner = "Visigoth Tribe" -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Aquitaine.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
 if (GrandStrategyYear >= 445) then
@@ -346,7 +394,7 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	WorldMapProvinces.Aragon.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Aragon.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Aragon.Units.unit_germanic_warrior = 0
-	WorldMapProvinces.Occitania.Name = "Aquitaine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	WorldMapProvinces.Aquitaine.Name = "Aquitaine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 end
 
 if (GrandStrategyYear >= 495) then
@@ -364,7 +412,7 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	WorldMapProvinces.Croatia.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Bohemia.Owner = ""
 	WorldMapProvinces.Brandenburg.Owner = ""
-	WorldMapProvinces.Occitania.Owner = "Francia" -- Aquitania conquered by the Franks in 507, Burgundy in 534 and Provence in 537
+	WorldMapProvinces.Aquitaine.Owner = "Francia" -- Aquitania conquered by the Franks in 507, Burgundy in 534 and Provence in 537
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
