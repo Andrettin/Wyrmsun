@@ -41,6 +41,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Forests now spawn at a decreased rate in random world maps.
 - In random world maps conifer forests now appear at high latitudes, with scrub forests appearing elsewhere.
 
+* Units
+- The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
+- The Gnomish Recruit now has a gray-haired variation for its unit graphics (by b_o).
+
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).
 - The Germanic Carpenter's Shop now changes its graphic after Masonry is researched, and becomes called "Lumber Mill".

@@ -129,7 +129,11 @@ function AiLumberMill()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-lumber-mill"
 	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-carpenters-shop"
+		if (GetPlayerData(AiPlayer(), "Allow", "upgrade-germanic-masonry") == "R") then
+			return "unit-teuton-lumber-mill"
+		else
+			return "unit-germanic-carpenters-shop"
+		end
 	elseif (AiGetRace() == "gnome") then
 		return "unit-gnomish-farm" -- to not make gnomes stop building/training when the AI requires a lumber mill
 	elseif (AiGetRace() == "goblin") then

@@ -55,6 +55,8 @@ b_o:
 /graphics/dwarf/units/thane_orange_hair.png
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
 /graphics/germanic/units/archer.png
+/graphics/germanic/units/archer_blond_hair.png
+/graphics/germanic/units/archer_gray_hair.png
 /graphics/germanic/units/builder.png
 /graphics/germanic/units/builder_red_hair.png
 /graphics/germanic/units/warrior.png
@@ -68,6 +70,7 @@ b_o:
 /graphics/gnome/units/gnomish_herbalist.png
 /graphics/gnome/units/gnomish_herbalist_gray_hair.png
 /graphics/gnome/units/gnomish_recruit.png
+/graphics/gnome/units/gnomish_recruit_gray_hair.png
 /graphics/gnome/units/gnomish_worker.png
 /graphics/gnome/units/gnomish_worker_with_gold.png
 /graphics/gnome/units/gnomish_worker_with_lumber.png

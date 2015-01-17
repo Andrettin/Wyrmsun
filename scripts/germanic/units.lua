@@ -247,6 +247,22 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	AttackFromTransporter = true,
 	CanCastSpell = {"spell-dagger-attack"},
 	AutoCastActive = {"spell-dagger-attack"},
+	Variations = {
+		{
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/archer_gray_hair.png",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "germanic/units/archer_blond_hair.png",
+			"upgrade-forbidden", "upgrade-old"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",

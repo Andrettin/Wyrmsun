@@ -120,6 +120,17 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
+	Variations = {
+		{
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "gnome/units/gnomish_recruit_gray_hair.png",
+			"upgrade-required", "upgrade-old"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
