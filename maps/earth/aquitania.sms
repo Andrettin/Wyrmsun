@@ -88,8 +88,6 @@ CreateGoldMines(1, 50000, 16, 64, 64 - 3, Map.Info.MapHeight - 3, false) -- gas 
 
 CreateGoldMines(5, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 
-CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
-
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
 for i=0,14 do

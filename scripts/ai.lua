@@ -42,16 +42,15 @@
 --
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---  * Civilization Dwarf.
+--  * Civilization Germanic.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 DefineAiHelper(
   --
   -- Equivalence of units for the resource manager.
   --
---  {"unit-equiv", "unit-dwarven-axefighter",
---  "unit-dwarven-steelclad"
---  }
+	{"unit-equiv", "unit-germanic-carpenters-shop",
+	"unit-teuton-lumber-mill"}
 )
 
 --

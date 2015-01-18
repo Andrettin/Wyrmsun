@@ -1230,7 +1230,13 @@ function BuildProgramStartMenu()
   
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.6" and wyr.preferences.LastVersionPlayed ~= "0.1.7" and wyr.preferences.LastVersionPlayed ~= "0.1.8" and wyr.preferences.LastVersionPlayed ~= "1.0.0") then
+	
+	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
+		wyr.preferences.SavedGrandStrategyGames = nil
+		SavePreferences()
+	end
+	
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.6" and wyr.preferences.LastVersionPlayed ~= "0.1.7" and wyr.preferences.LastVersionPlayed ~= "0.1.8" and wyr.preferences.LastVersionPlayed ~= "1.0.0" and wyr.preferences.LastVersionPlayed ~= "1.0.1") then
 		wyr.preferences.Heroes.Rugnur.upgrades = nil
 		wyr.preferences.Heroes.Rugnur.upgrades = {}
 		wyr.preferences.Heroes.Baglur.upgrades = nil

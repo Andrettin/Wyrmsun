@@ -443,7 +443,7 @@ function CreateUnit(unittype, player, pos)
   end
 
   -- Don't add any units in 1 worker only mode or in 5 workers only mode, and don't add scenario units if in a grand strategy game
-  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2 or GrandStrategy) and (player ~= 15 or unittype == "unit-gold-mine" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp" or unittype == "unit-teuton-lumber-mill") and GrandStrategyEventMap == false) then
+  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2 or GrandStrategy) and (player ~= 15 or unittype == "unit-gold-mine" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp") and GrandStrategyEventMap == false) then
     return
   end
 

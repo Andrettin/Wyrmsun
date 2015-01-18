@@ -1311,9 +1311,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-		if (wyrmsun.tileset == "forest") then
-			CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
-		elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 		end
 	end
@@ -3329,9 +3327,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	if (GrandStrategy == false) then
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-		if (wyrmsun.tileset == "forest") then
-			CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
-		elseif (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 		end
 	end

@@ -16471,5 +16471,3 @@ unit = CreateUnit("unit-gnomish-farm", 4, {87, 123}) -- Varva farm (described in
 unit = CreateUnit("unit-rat", 15, {33, 117})
 unit = CreateUnit("unit-gold-mine", 15, {28, 125})
 SetResourcesHeld(unit, 65000)
-
-CreateNeutralBuildings("unit-teuton-lumber-mill", 4, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)

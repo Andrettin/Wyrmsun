@@ -435,6 +435,10 @@ function RunGrandStrategyGame()
 end
 
 function EndTurn()
+	if (GrandStrategyYear % 10 == 0) then
+		SaveGrandStrategyGame("autosave")
+	end
+
 	ProcessingEndTurn = true
 	
 	-- AI moves
@@ -1307,10 +1311,15 @@ function RunGrandStrategySaveMenu()
 
 	local default_name
 	if (GrandStrategyFaction ~= nil) then
-		default_name = GrandStrategyFaction.Name
+		local year_ending = ""
+		if (GrandStrategyYear < 0) then
+			year_ending = "BC"
+		else
+			year_ending = "AD"
+		end
+		default_name = string.gsub(GrandStrategyFaction.Name, " ", "_") .. "_" .. math.abs(GrandStrategyYear) .. "_" .. year_ending
+		default_name = string.lower(default_name)
 	end
-	local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
-	table.foreachi(t, function(k,v) default_name = string.gsub(default_name, v, "") end)
 	
 	local t = menu:addTextInputField(default_name,
 		(384 - 300 - 18) / 2, 11 + 36, 318)
@@ -1326,20 +1335,8 @@ function RunGrandStrategySaveMenu()
 			local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
 			table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
 
-			wyr.preferences.GrandStrategySaveGames[name] = {
-				SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
-				SavedGrandStrategyYear = GrandStrategyYear,
-				SavedGrandStrategyWorld = GrandStrategyWorld,
-				SavedWorldMapTiles = WorldMapTiles,
-				SavedWorldMapResources = WorldMapResources,
-				SavedWorldMapProvinces = WorldMapProvinces,
-				SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
-				SavedFactions = Factions,
-				SavedGrandStrategyCommodities = GrandStrategyCommodities,
-				SavedMercenaryGroups = MercenaryGroups
-			}
-			SavePreferences()
-    			menu:stop()
+			SaveGrandStrategyGame(name)
+    		menu:stop()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
@@ -1360,8 +1357,10 @@ function RunGrandStrategyLoadGameMenu()
 	menu:setDrawMenusUnder(true)
 
 	local saved_games_list = {}
-	for key, value in pairs(wyr.preferences.GrandStrategySaveGames) do
-		table.insert(saved_games_list, key)
+	for i, key in ipairs(ListFilesInDirectory("wyr/")) do
+		if (key ~= "preferences.lua") then
+			table.insert(saved_games_list, string.sub(key, 0, -5))
+		end
 	end
 	
 	menu:addLabel(_("Load Game"), 384 / 2, 11)
@@ -1374,16 +1373,17 @@ function RunGrandStrategyLoadGameMenu()
 			if (saved_games:getSelected() < 0) then
 				return
 			end
-			GrandStrategyYear = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
-			GrandStrategyWorld = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
-			WorldMapTiles = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
-			WorldMapResources = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
-			WorldMapProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
-			WorldMapWaterProvinces = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
-			Factions = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
-			GrandStrategyFaction = GetFactionFromName(wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
-			GrandStrategyCommodities = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
-			MercenaryGroups = wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
+			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
+			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
+			GrandStrategyWorld = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
+			WorldMapTiles = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
+			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
+			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
+			WorldMapWaterProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
+			Factions = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
+			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
+			GrandStrategyCommodities = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
+			MercenaryGroups = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
 			LoadEvents(GrandStrategyWorld)
 			CalculateTileProvinces()
 			
@@ -1395,24 +1395,26 @@ function RunGrandStrategyLoadGameMenu()
 				end
 			end
 			
+			wyr[saved_games_list[saved_games:getSelected() + 1]] = nil
+			
 			menu:stop()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
-	menu:addHalfButton("Delete", "", 384 - ((384 - 300 - 18) / 2) - 212, 256 - 16 - 27,
-		function()
-			if (saved_games:getSelected() < 0) then
-				return
-			end
-			wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]] = nil
-			SavePreferences()
-			local saved_games_list = {}
-			for key, value in pairs(wyr.preferences.GrandStrategySaveGames) do
-				table.insert(saved_games_list, key)
-			end
-			saved_games:setList(saved_games_list)
-			saved_games:setSize(152, 20)
-		end)
+--	menu:addHalfButton("Delete", "", 384 - ((384 - 300 - 18) / 2) - 212, 256 - 16 - 27,
+--		function()
+--			if (saved_games:getSelected() < 0) then
+--				return
+--			end
+--			wyr.preferences.GrandStrategySaveGames[saved_games_list[saved_games:getSelected() + 1]] = nil
+--			SavePreferences()
+--			local saved_games_list = {}
+--			for key, value in pairs(wyr.preferences.GrandStrategySaveGames) do
+--				table.insert(saved_games_list, key)
+--			end
+--			saved_games:setList(saved_games_list)
+--			saved_games:setSize(152, 20)
+--		end)
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 		function()
 			menu:stop()
@@ -4570,4 +4572,21 @@ function GetUnitTypeRequiredTechnologies(unit_type)
 		end
 	end
 	return required_technologies
+end
+
+function SaveGrandStrategyGame(name)
+	wyr[name] = {
+		SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
+		SavedGrandStrategyYear = GrandStrategyYear,
+		SavedGrandStrategyWorld = GrandStrategyWorld,
+		SavedWorldMapTiles = WorldMapTiles,
+		SavedWorldMapResources = WorldMapResources,
+		SavedWorldMapProvinces = WorldMapProvinces,
+		SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
+		SavedFactions = Factions,
+		SavedGrandStrategyCommodities = GrandStrategyCommodities,
+		SavedMercenaryGroups = MercenaryGroups
+	}
+	SaveExtraPreferences(name)
+	wyr[name] = nil
 end
