@@ -2733,7 +2733,9 @@ function DrawGrandStrategyInterface()
 
 					-- add trade bid/offer arrows
 					local b = AddGrandStrategyImageButton("", "", 112 - 2 - 24, icon_offset_y, function()
-						if (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade[key] - 100) * GetCommodityPrice(key) / 100) then
+						if (GrandStrategyFaction.Trade[key] > 0 and GrandStrategyFaction.Trade[key] < 100) then
+							GrandStrategyFaction.Trade[key] = 0
+						elseif (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade[key] - 100) * GetCommodityPrice(key) / 100) then
 							GrandStrategyFaction.Trade[key] = GrandStrategyFaction.Trade[key] - 100
 						end
 						DrawGrandStrategyInterface()
@@ -2754,7 +2756,9 @@ function DrawGrandStrategyInterface()
 					end
 
 					local b = AddGrandStrategyImageButton("", "", 112 + 2 + 46 - 20, icon_offset_y, function()
-						if (GrandStrategyFaction.Commodities[key] >= GrandStrategyFaction.Trade[key] + 100) then
+						if (GrandStrategyFaction.Trade[key] < 0 and GrandStrategyFaction.Trade[key] > -100) then
+							GrandStrategyFaction.Trade[key] = 0
+						elseif (GrandStrategyFaction.Commodities[key] >= GrandStrategyFaction.Trade[key] + 100) then
 							GrandStrategyFaction.Trade[key] = GrandStrategyFaction.Trade[key] + 100
 						end
 						DrawGrandStrategyInterface()
