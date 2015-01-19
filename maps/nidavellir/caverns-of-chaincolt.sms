@@ -129,10 +129,14 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})
-	unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	if (unit) then
+		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	end
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also have an accompanying dwarven scout
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {22, 34})
-	unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	if (unit) then
+		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	end
 
 	-- Bandits
 	unit = CreateUnit("unit-dwarven-town-hall", 1, {11, 50})
@@ -181,10 +185,14 @@ elseif (GrandStrategyEventMap) then
 	end
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})
-	unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	if (unit) then
+		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	end
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also be guard tower
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {22, 34})
-	unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	if (unit) then
+		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+	end
 
 	local units_to_be_created = {}
 	for i, unitName in ipairs(Units) do

@@ -165,9 +165,13 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
-	unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+	if (unit) then
+		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+	end
 	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
-	unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+	if (unit) then
+		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+	end
 elseif (GrandStrategyEventMap) then
 	SetAiType(0, "grand-strategy-battle")
 	SetAiType(1, "grand-strategy-battle")

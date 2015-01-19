@@ -40,6 +40,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added transitions for the conifer forest tiles (graphics by Jinn).
 - Forests now spawn at a decreased rate in random world maps.
 - In random world maps conifer forests now appear at high latitudes, with scrub forests appearing elsewhere.
+- Fixed crash which could happen when conquering a province not owned by any factions.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).

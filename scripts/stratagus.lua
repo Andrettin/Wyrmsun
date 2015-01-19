@@ -575,7 +575,7 @@ function StandardTriggers()
 				end
 
 				if (not IsNetworkGame()) then
-					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "-hero-") ~= nil) then
+					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil) then
 						for key, value in pairs(wyr.preferences.Heroes) do
 							if (wyr.preferences.Heroes[key].name == GetUnitVariable(uncount[unit1], "Name")) then
 								-- apply persistent hero levels
@@ -1148,7 +1148,7 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 		-- save the levels of heroes in a persistent manner
 		if (not IsNetworkGame()) then
 			for key, value in pairs(wyr.preferences.Heroes) do
-				if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name") and string.find(GetUnitVariable(unit, "Ident"), "-hero-") ~= nil) then
+				if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name") and string.find(GetUnitVariable(unit, "Ident"), "hero") ~= nil) then
 					if (GetUnitVariable(unit, "Level") > wyr.preferences.Heroes[key].level) then
 						wyr.preferences.Heroes[key].level = GetUnitVariable(unit, "Level")
 						SavePreferences()

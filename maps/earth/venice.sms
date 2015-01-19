@@ -16500,12 +16500,16 @@ SetResourcesHeld(unit, 250000)
 --SetResourcesHeld(unit, 30000)
 unit = CreateUnit("unit-dwarven-scout", 4, {24, 53})
 unit = CreateUnit("unit-dwarven-guard-tower", 4, {53, 53})
-unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
-unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+end
 --unit = CreateUnit("unit-human-cannon-tower", 4, {55, 54})
 unit = CreateUnit("unit-dwarven-guard-tower", 4, {19, 55})
-unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
-unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+end
 unit = CreateUnit("unit-gold-mine", 15, {100, 56})
 SetResourcesHeld(unit, 150000)
 --unit = CreateUnit("unit-oil-patch", 15, {109, 57})
@@ -16521,8 +16525,10 @@ unit = CreateUnit("unit-germanic-carpenters-shop", 4, {35, 62})
 --SetResourcesHeld(unit, 10000)
 unit = CreateUnit("unit-germanic-worker", 4, {34, 64})
 unit = CreateUnit("unit-dwarven-guard-tower", 4, {58, 64})
-unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
-unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+if (unit) then
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
+	unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+end
 --unit = CreateUnit("unit-human-cannon-tower", 4, {35, 70})
 --unit = CreateUnit("unit-oil-patch", 15, {29, 71})
 --SetResourcesHeld(unit, 15000)

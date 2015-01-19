@@ -213,11 +213,15 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-dwarven-smithy", 4, {31, 49})
 		unit = CreateUnit("unit-dwarven-barracks", 4, {27, 47})
 		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 47})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 4, {41, 49})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit)
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 4, unit - 1)
+		end
 
 		unit = CreateUnit("unit-dwarven-thane", 0, {27, 55})
 		SetUnitVariable(unit, "ForTheMotherland", 1)
@@ -225,11 +229,15 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-goblin-town-hall", 5, {1, 19})
 		unit = CreateUnit("unit-goblin-mess-hall", 5, {1, 30})
 		unit = CreateUnit("unit-dwarven-guard-tower", 5, {4, 26})
-		unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit)
-		unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit - 1)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit)
+			unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit - 1)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 5, {4, 28})
-		unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit)
-		unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit - 1)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit)
+			unit = CreateUnitInTransporter("unit-goblin-archer", 5, unit - 1)
+		end
 
 		unit = CreateUnit("unit-goblin-spearman", 1, {6, 1})
 		IncreaseUnitLevel(unit, 2, true)
@@ -298,31 +306,57 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-dwarven-smithy", 3, {31, 49})
 
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {22, 17})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {24, 13})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 10}) -- having this tower next to the other one was creating to much of an impediment for later Shinsplitter attacks
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 14})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 26})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {32, 34})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {31, 36})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {43, 37})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {57, 34})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 47})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {41, 49})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", 3, {37, 50})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", 3, unit)
+		end
 
 		SetDiplomacy(0, "enemy", 1)
 		SetDiplomacy(0, "enemy", 2)
@@ -424,31 +458,57 @@ elseif (GrandStrategyEventMap) then
 	local abandoned_building_player = 3
 	if (GrandStrategyFaction.Name ~= "Shinsplitter Clan") then
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {22, 17})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {24, 13})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 10}) -- having this tower next to the other one was creating to much of an impediment for later Shinsplitter attacks
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 14})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {37, 26})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {32, 34})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {31, 36})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {43, 37})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {57, 34})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 47})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {41, 49})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 		unit = CreateUnit("unit-dwarven-guard-tower", abandoned_building_player, {37, 50})
-		unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		if (unit) then
+			unit = CreateUnitInTransporter("unit-dwarven-scout", abandoned_building_player, unit)
+		end
 	else
 		abandoned_building_player = 0
 	end

@@ -560,6 +560,9 @@ function EndTurn()
 				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")]
 				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
 				WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] = 0
+				if (WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] < 0 or WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] == nil) then
+					WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
+				end
 			end
 		end
 		for i, unitName in ipairs(Units) do
@@ -728,6 +731,9 @@ end
 function AttackProvince(province, faction)
 	MapAttacker = nil
 	MapDefender = nil
+	if (province == nil or faction == nil or faction == "") then
+		return
+	end
 	GetMapInfo(province.Map)
 	Attacker = faction
 	local empty_province = false
@@ -881,12 +887,14 @@ function ChangeProvinceCulture(province, civilization)
 	
 	-- replace existent buildings from other civilizations with buildings of the new civilization
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower") then
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower" and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp" and GetUnitTypeData(unitName, "Class") ~= "") then
 			if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetUnitTypeData(unitName, "Civilization") ~= civilization) then
 				province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
 				for j, second_unitName in ipairs(Units) do -- if there is an equivalent building of the acquirer's civilization, create it
-					if (GetUnitTypeData(second_unitName, "Civilization") == civilization and GetUnitTypeData(second_unitName, "Class") == GetUnitTypeData(unitName, "Class")) then
-						province.SettlementBuildings[string.gsub(second_unitName, "-", "_")] = 2
+					if (string.find(second_unitName, "upgrade-") == nil and GetUnitTypeData(second_unitName, "Building")) then
+						if (GetUnitTypeData(second_unitName, "Civilization") == civilization and GetUnitTypeData(second_unitName, "Class") == GetUnitTypeData(unitName, "Class")) then
+							province.SettlementBuildings[string.gsub(second_unitName, "-", "_")] = 2
+						end
 					end
 				end
 			elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
@@ -3471,7 +3479,7 @@ function AIDoTurn(ai_faction)
 								WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
 								for i, unitName in ipairs(Units) do
 									if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil and GetUnitTypeData(unitName, "Class") ~= "militia") then
-										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/3rd of the province's forces as a defense
+										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/4th of the province's forces as a defense
 										WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
 									end
 								end
@@ -3948,7 +3956,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 		end
 	end
 
-	local military_score = 0
+	local military_score = 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
 			if (GetUnitTypeData(unitName, "Class") == "militia" and count_defenders) then
