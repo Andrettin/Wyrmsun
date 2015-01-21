@@ -35,11 +35,11 @@ function LoadEvents(world)
 		OnTheVanaquisl = {
 			Name = "On the Vanaquisl",
 			Description = "Our people hunger for new land: the steppes we live in are no longer enough for our sustenance. Neighboring us are the Vana people, and adding their lands to our own may well solve our dilemma. Shall we attack them?",
-			Civilization = "germanic",
-			Faction = "AsaTribe",
 			Conditions = function(s)
 				if (
-					WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
+					EventFaction.Civilization == "germanic"
+					and EventFaction.Name == "Asa Tribe"
+					and WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
 					and WorldMapProvinces.Don.Owner == "Vana Tribe"
 					and WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior >= 8 -- event only happens if player has gathered enough warriors for a raid
 					and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
@@ -118,14 +118,14 @@ function LoadEvents(world)
 		WestwardMigration = {
 			Name = "Westward Migration",
 			Description = "The lands to the west besides Vanaland provide us with an alternative migration route, if we are to seek greener pastures. Shall we wander out of our homelands and migrate through them?",
-			Civilization = "germanic",
-			Faction = "AsaTribe",
 			RequiredEvents = {
 				OnTheVanaquisl = true
 			},
 			Conditions = function(s)
 				if (
-					WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
+					EventFaction.Civilization == "germanic"
+					and EventFaction.Name == "Asa Tribe"
+					and WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
 					and WorldMapProvinces.Russia.Owner ~= EventFaction.Name
 					and WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior >= 8 -- event only happens if player has enough warriors to successfully migrate
 					and ProvinceHasBorderWith(WorldMapProvinces.Astrakhan, WorldMapProvinces.Russia)
@@ -187,11 +187,11 @@ function LoadEvents(world)
 		NorthwardsToTheSea = {
 			Name = "Northwards to the Sea",
 			Description = "The peninsula to our north seems promising for settlement... Shall we invade it and subdue its natives?",
-			Civilization = "germanic",
-			Faction = "AsaTribe",
 			Conditions = function(s)
 				if (
-					WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+					EventFaction.Civilization == "germanic"
+					and EventFaction.Name == "Asa Tribe"
+					and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
 					and WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior >= 6 -- event only happens if player has enough warriors to successfully attack the province
 					and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Jutland)
 --					and SyncRand(100) < 50
@@ -220,7 +220,7 @@ function LoadEvents(world)
 							end
 							AcquireProvince(WorldMapProvinces.Brandenburg, "")
 							WorldMapProvinces.Brandenburg.Civilization = ""
-							WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8
+							WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 							WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 							CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 						elseif (GameResult == GameDefeat) then
@@ -240,7 +240,7 @@ function LoadEvents(world)
 						end
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Civilization = ""
-						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8
+						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 					end
 					DrawMinimap()
@@ -251,12 +251,12 @@ function LoadEvents(world)
 		},
 		GylvesRealm = {
 			Name = "Gylve's Realm",
-			Description = "After establishing ourselves in the Jutland peninsula, we now have the opportunity to sail across this short sea... what will await us?",
-			Civilization = "germanic",
-			Faction = "AsaTribe",
+			Description = "After establishing ourselves in the Jutland peninsula, we now have the opportunity to sail across this short sea... what will await us? Shall we set sail, leaving your son Skjold to rule this peninsula?",
 			Conditions = function(s)
 				if (
-					WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					EventFaction.Civilization == "germanic"
+					and EventFaction.Name == "Asa Tribe"
+					and WorldMapProvinces.Jutland.Owner == EventFaction.Name
 					and WorldMapProvinces.Jutland.Units.unit_germanic_warrior >= 8 -- event only happens if player has enough warriors to successfully attack the province
 					and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Jutland)
 					and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Gotaland)
@@ -267,7 +267,7 @@ function LoadEvents(world)
 					return false
 				end
 			end,
-			Options = {"~!Embark!", "~!Seafaring is not for us."},
+			Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as S~!kjold"},
 			OptionEffects = {
 				function(s)
 					if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
@@ -278,6 +278,7 @@ function LoadEvents(world)
 						if (GameResult == GameVictory) then
 							AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
 							AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+							FormFaction(EventFaction, Factions.SwedeTribe)
 							for i, unitName in ipairs(Units) do
 								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
 									WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(0, "UnitTypesCount", unitName)
@@ -295,6 +296,7 @@ function LoadEvents(world)
 					elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
 						AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
 						AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+						FormFaction(EventFaction, Factions.SwedeTribe)
 						for i, unitName in ipairs(Units) do
 							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
 								WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = 0
@@ -304,136 +306,143 @@ function LoadEvents(world)
 						end
 						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 					end
+					AcquireProvince(WorldMapProvinces.Jutland, "Dane Tribe")
+					AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
 					DrawMinimap()
 				end,
 				function(s)
+				end,
+				function(s)
+					AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
+					AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+					FormFaction(EventFaction, Factions.SwedeTribe)
+					for i, unitName in ipairs(Units) do
+						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+							WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = 0
+							WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] * 3 / 4
+							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
+						end
+					end
+					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+					
+					AcquireProvince(WorldMapProvinces.Jutland, "Dane Tribe")
+					AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
+					GrandStrategyFaction = Factions.DaneTribe
+					DrawMinimap()
 				end
 			}
 		},
-		GermanicTribalSplit = {
-			Name = "Tribal Split",
-			Description = "Quarrels amongst our people's chieftains have led to our tribe splitting up into a number of smaller tribes. Which splinter group shall we follow?",
-			Civilization = "germanic",
-			Faction = "AsaTribe",
-			Provinces = {
-				Gotaland = true,
-				Jutland = true,
-				Sweden = true
-			},
-			RandomChance = 1,
-			Options = {"~!Swede Tribe", "~!Goth Tribe", "~!Saxon Tribe"},
+		DagsKingdom = { -- Dag is the first legendary king of Gotaland; Source: http://www.oe.eclipse.co.uk/nom/Sturlaug.htm
+			Name = "Dag's Kingdom",
+			Description = "Our tribesmen to the south have declared Dag as their king.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+					and WorldMapProvinces.Gotaland.Owner == EventFaction.Name
+					and WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall == 2
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK", "Play as ~!Dag"},
 			OptionEffects = {
 				function(s)
+					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-					AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+					AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 					WorldMapProvinces.Gotaland.Name = "Gothland"
-					AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
-					AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
-					if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
-					end
-					if (WorldMapProvinces.Netherlands.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
-					end
-					if (WorldMapProvinces.Prussia.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Prussia, "Goth Tribe")
-					end
-					if (WorldMapProvinces.Rhineland.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
-					end
-					if (WorldMapProvinces.Austria.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Austria, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Bavaria.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Bavaria, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Bohemia.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Bohemia, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-					end
-					AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
-					AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
-					FormFaction(EventFaction, Factions.SwedeTribe)
+					DrawMinimap()
 				end,
 				function(s)
-					AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
-					AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
-					AcquireProvince(WorldMapProvinces.Jutland, "Saxon Tribe")
-					AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
-					if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
-					end
-					if (WorldMapProvinces.Netherlands.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
-					end
-					if (WorldMapProvinces.Prussia.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Prussia, "Goth Tribe")
-					end
-					if (WorldMapProvinces.Rhineland.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
-					end
-					if (WorldMapProvinces.Austria.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Austria, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Bavaria.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Bavaria, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Bohemia.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Bohemia, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-					end
-					AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
-					AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
-					FormFaction(EventFaction, Factions.GothTribe)
-					WorldMapProvinces.Gotaland.Name = "Gothland"
-				end,
-				function(s)
-					AcquireProvince(WorldMapProvinces.Sweden, "Swede Tribe")
-					AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
+					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-					AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+					AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 					WorldMapProvinces.Gotaland.Name = "Gothland"
-					if (WorldMapProvinces.Belgium.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Belgium, "Frank Tribe")
-					end
-					if (WorldMapProvinces.Netherlands.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
-					end
-					if (WorldMapProvinces.Prussia.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Prussia, "Goth Tribe")
-					end
-					if (WorldMapProvinces.Rhineland.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
-					end
-					if (WorldMapProvinces.Austria.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Austria, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Bavaria.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Bavaria, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Bohemia.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Bohemia, "Suebi Tribe")
-					end
-					if (WorldMapProvinces.Brandenburg.Owner == "Asa Tribe") then
-						AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-					end
-					AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
-					AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
-					FormFaction(EventFaction, Factions.SaxonTribe)
+					GrandStrategyFaction = Factions.GothTribe
+					DrawMinimap()
 				end
 			}
+		},
+		DivisionOfDomains = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+			Name = "Division of Domains",
+			Description = "After erecting a large temple in Sigtun, where rituals were performed in accordance to the customs of our people, domains were distributed to the temple priests, with them receiving good estates.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+					and WorldMapProvinces.Sweden.Owner == EventFaction.Name
+					and WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall == 2 -- Hall of Sigtun
+					-- should require a temple having been built? when those are implemented in the game
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research + 3 -- promotion of the educated priest class
+					EventFaction.Gold = EventFaction.Gold - 300 -- cost of the land grant
+				end
+			},
+			OptionTooltips = {"-300 Gold, +3 Research"}
+		},
+		AsaLawgiving = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+			Name = "Asa Lawgiving",
+			Description = "We have established the same law in this new land as that had been in force in Asaland. Thus it is determined that dead men of consequence shall be buried in a mound raised to their memory, and all other warriors who had been distinguished for their manhood a standing stone shall be erected. Over all the land a tax shall be paid to the tribe's high chieftain, who has to defend the country from enemy or disturbance, and to pay the expense for the feasts commemorating a good year.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+					and WorldMapProvinces.Sweden.Owner == EventFaction.Name
+					and WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall == 2 -- a town hall is needed, since without basic political organization there can be no lawgiving
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 500 -- tax gains
+				end
+			},
+			OptionTooltips = {"+500 Gold"}
+		},
+		TheBirthOfSaeming = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+			Name = "The Birth of Saeming",
+			Description = "Your wife has bore you a son, who has been named Saeming. The notables of the tribe have given you many gifts to commemorate his birth.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+					and WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 100 -- gifts
+				end
+			},
+			OptionTooltips = {"+100 Gold"}
 		},
 		TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 			Name = "The Curved Swords",
 			Description = "One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords would serve to embellish ceremonies and bring prestige to their bearer.",
-			Civilization = "germanic",
 			Conditions = function(s)
 				if (
 					WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic"
 					and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy == 2 -- Jutland must have a smithy
 					and SyncRand(100) < 1
 				) then
@@ -453,10 +462,10 @@ function LoadEvents(world)
 		TheSunChariot = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 			Name = "The Sun Chariot",
 			Description = "One of our artisans has made a delicate bronze figure of a sun chariot, representing the divine horse that carries the sun on its eternal journey across the sky.",
-			Civilization = "germanic",
 			Conditions = function(s)
 				if (
 					WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic"
 					and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy == 2 -- Jutland must have a smithy
 					and SyncRand(100) < 1
 				) then
@@ -476,10 +485,10 @@ function LoadEvents(world)
 		NoblemansBurial = { -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
 			Name = "Nobleman's Burial",
 			Description = "In 1365 BC, a nobleman was buried in the northwestern parts of the Jutland peninsula. Dressed in wool, he was laid down with his bronze sword in an oak coffin, which was then placed in a mound.",
-			Civilization = "germanic",
 			Conditions = function(s)
 				if (
 					WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic"
 					and GrandStrategyYear == -1365
 				) then
 					return true
@@ -495,13 +504,110 @@ function LoadEvents(world)
 			},
 			OptionTooltips = {"+100 Gold"}
 		},
+		BeldegsLands = { -- Beldeg (Baldr), the first legendary ruler of Westphalia (in the sagas he became ruler of Westphalia even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Westphalia); Source: "The Prose Edda", Snorri Sturlson, 1916, pp. 7-8.
+			Name = "Beldeg's Lands",
+			Description = "The territory of Westphalia has been entrusted to the warrior known by the name of Beldeg.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and WorldMapProvinces.Rhineland.Owner == EventFaction.Name
+					and WorldMapProvinces.Rhineland.SettlementBuildings.unit_germanic_town_hall == 2
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK", "Play as ~!Beldeg"},
+			OptionEffects = {
+				function(s)
+					EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
+					AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+					AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
+					DrawMinimap()
+					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+					AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
+					GrandStrategyFaction = Factions.SaxonTribe
+					DrawMinimap()
+					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				end
+			}
+		},
+		SigisLands = { -- Sigi, the first legendary ruler of "Frankland" (in the sagas he became ruler of Frankland even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Frankland); Source: "The Prose Edda", Snorri Sturlson, 1916, p. 8.
+			Name = "Sigi's Lands",
+			Description = "The territory of Frankland has been entrusted to the warrior known as Sigi.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and WorldMapProvinces.Netherlands.Owner == EventFaction.Name -- the Netherlands were the Franks' homelands
+					and WorldMapProvinces.Netherlands.SettlementBuildings.unit_germanic_town_hall == 2
+					and (GetFactionUnitTypeCount(EventFaction, "unit-germanic-warrior", false) + GetFactionUnitTypeCount(EventFaction, "unit-germanic-archer", false) >= 5) -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK", "Play as ~!Sigi"},
+			OptionEffects = {
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+					AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
+					DrawMinimap()
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+					AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
+					GrandStrategyFaction = Factions.FrankTribe
+					DrawMinimap()
+				end
+			}
+		},
+		VegdegsKingdom = { -- Vegdeg, the first legendary ruler of "East Saxland" (in the sagas he became ruler of East Saxland even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to East Germany); Source: "The Prose Edda", Snorri Sturlson, 1916, p. 7.
+			Name = "Vegdeg's Kingdom",
+			Description = "The lands to the southeast of the Jutland peninsula have been entrusted to the mighty Vegdeg, who has established himself as king there.",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name -- the Netherlands were the Franks' homelands
+					and WorldMapProvinces.Brandenburg.SettlementBuildings.unit_germanic_town_hall == 2
+					and (GetFactionUnitTypeCount(EventFaction, "unit-germanic-warrior", false) + GetFactionUnitTypeCount(EventFaction, "unit-germanic-archer", false) >= 5) -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK", "Play as ~!Vegdeg"},
+			OptionEffects = {
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
+					AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
+					DrawMinimap()
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
+					AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
+					GrandStrategyFaction = Factions.SuebiTribe
+					DrawMinimap()
+				end
+			}
+		},
 		PytheasVoyageGoths = { -- Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 			Name = "Pytheas' Voyage",
 			Description = "A Greek scholar and explorer, Pytheas, arrived in our shores. He seemed interested in the island which is a day's sail away from us, due to the amber thrown upon its coast by waves in the spring. He also asked about our use of the material for fuel, and soon went back to the seas to continue his voyage.",
-			Civilization = "germanic",
 			Conditions = function(s)
 				if (
-					WorldMapProvinces.Gotaland.Owner == EventFaction.Name
+					EventFaction.Civilization == "germanic"
+					and WorldMapProvinces.Gotaland.Owner == EventFaction.Name
 					and GrandStrategyYear >= -325 and GrandStrategyYear <= -319
 					and SyncRand(100) < 50
 				) then

@@ -128,7 +128,7 @@ function AiLumberMill()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-lumber-mill"
 	elseif (AiGetRace() == "germanic") then
-		if (GetPlayerData(AiPlayer(), "Allow", "upgrade-germanic-masonry") == "R") then
+		if (GetPlayerData(AiPlayer(), "Allow", "upgrade-teuton-masonry") == "R") then
 			return "unit-teuton-lumber-mill"
 		else
 			return "unit-germanic-carpenters-shop"
@@ -149,11 +149,11 @@ function AiUpgradeMasonry()
 	if (AiGetRace() == "dwarf") then
 		return "upgrade-dwarven-masonry"
 	elseif (AiGetRace() == "germanic") then
-		return "upgrade-germanic-masonry"
+		return "upgrade-teuton-masonry"
 	elseif (AiGetRace() == "goblin") then
 		return "upgrade-goblin-masonry"
 	else
-		return "upgrade-germanic-masonry"
+		return "upgrade-teuton-masonry"
 	end
 end
 
@@ -360,10 +360,12 @@ end
 function AiSiegeWeapon()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-ballista"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-teuton-catapult"
 	elseif (AiGetRace() == "goblin") then
 		return "unit-goblin-war-machine"
 	else
-		return "unit-dwarven-ballista"
+		return "unit-teuton-catapult"
 	end
 end
 

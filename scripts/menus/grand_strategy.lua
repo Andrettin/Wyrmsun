@@ -1147,7 +1147,7 @@ end
 
 function GetFactionUnitTypeCount(faction, unit_type, include_under_construction)
 	local unit_count = 0
-	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
+	for province_i, key in ipairs(faction.OwnedProvinces) do
 		unit_count = unit_count + WorldMapProvinces[key].Units[string.gsub(unit_type, "-", "_")]
 		if (include_under_construction) then
 			unit_count = unit_count + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unit_type, "-", "_")]
@@ -1700,13 +1700,13 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	local old_unit_type = unit_type
 	
 	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- if not built, make icon gray
-		if (GrandStrategyFaction.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
+		if (SelectedProvince.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
 			unit_type = "unit-teuton-lumber-mill"
 		end
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
-		if (GrandStrategyFaction.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
+		if (SelectedProvince.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
 			unit_type = "unit-teuton-lumber-mill"
 		end
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
@@ -2929,7 +2929,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "lumber-mill") then
-				if (GrandStrategyFaction.Civilization == "germanic" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
+				if (SelectedProvince.Civilization == "germanic" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-teuton-lumber-mill"), 88, 213, Fonts["game"], true, false)
 				else
 					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
@@ -3583,7 +3583,7 @@ function AIDoDiplomacy(ai_faction)
 		for second_key, second_value in pairs(WorldMapProvinces) do
 			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
 				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 9 / 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is 225% or greater of that of the province to be attacked
+					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
 						DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 					end
 				end
@@ -3629,7 +3629,7 @@ function IsBuildingAvailable(province, unit_type)
 end
 
 function CanBuildStructure(province, unit_type)
-	if (province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 2) then -- can't build if already built
+	if (province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 2 or province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 1) then -- can't build if already built or if under construction
 		return false
 	end
 
@@ -3669,7 +3669,7 @@ function CanTrainUnit(province, unit_type)
 		return false
 	end
 
-	if (GetUnitTypeData(unit_type, "Class") == "thief" and GetFactionUnitTypeCount(province.Owner, unit_type, true) >= 6) then -- only 6 regiments of a particular sort of thief can be had at a single time
+	if (GetUnitTypeData(unit_type, "Class") == "thief" and GetFactionUnitTypeCount(GetFactionFromName(province.Owner), unit_type, true) >= 6) then -- only 6 regiments of a particular sort of thief can be had at a single time
 		return false
 	end
 
@@ -4601,4 +4601,21 @@ function SaveGrandStrategyGame(name)
 	}
 	SaveExtraPreferences(name)
 	wyr[name] = nil
+end
+
+function EqualizeProvinceUnits(faction)
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+			local unit_count = GetFactionUnitTypeCount(faction, unitName, false)
+			if (unit_count > 0) then
+				for province_i, province_key in ipairs(faction.OwnedProvinces) do
+					WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = math.floor(unit_count / GetFactionProvinceCount(faction))
+				end
+			end
+			local new_unit_count = GetFactionUnitTypeCount(faction, unitName, false)
+			if (unit_count > new_unit_count) then -- if the total unit count is smaller after the redistribution of units, add the missing units to the oldest province
+				WorldMapProvinces[faction.OwnedProvinces[1]].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[faction.OwnedProvinces[1]].Units[string.gsub(unitName, "-", "_")] + (unit_count - new_unit_count)
+			end
+		end
+	end
 end

@@ -15,6 +15,7 @@ editor_types = {
 
 --- - - - - - - - - - - - - - - - - - -
 
+   "unit-teuton-catapult",
    "unit-teuton-lumber-mill",
 
 --- - - - - - - - - - - - - - - - - - -

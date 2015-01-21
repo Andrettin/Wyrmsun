@@ -94,7 +94,7 @@ Load("scripts/dwarf/anim.lua")
 Load("scripts/germanic/anim.lua")
 Load("scripts/gnome/anim.lua")
 Load("scripts/goblin/anim.lua")
-
+Load("scripts/teuton/anim.lua")
 
 DefineAnimations("animations-static-npc", {
   Still = {"exact-frame 0", "wait 4", "exact-frame 0", "wait 1",},

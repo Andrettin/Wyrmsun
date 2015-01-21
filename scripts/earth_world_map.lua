@@ -134,10 +134,12 @@ WorldMapResources = {
 	Gold = {
 		{117, 27}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 		{119, 29}, -- iron ore deposits
+		{123, 27}, -- this is just to provide the Franks in the Netherlands with better survival chances
 		{121, 33}, -- iron ore deposits
 		{125, 28}, -- iron ore deposits
 		{125, 29}, -- iron ore deposits
 		{127, 27}, -- copper ore deposits
+		{127, 25}, -- crude oil or natural gas
 		{128, 28}, -- iron ore deposits
 		{129, 28}, -- iron ore deposits
 		{130, 27}, -- Copper deposits; Source: "Philip's International School Atlas", 2006, p. 59.
@@ -163,16 +165,16 @@ MercenaryGroups = {
 LoadEvents("Earth")
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
-	WorldMapProvinces.Gotaland.Owner = "Asa Tribe" -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 2
-	WorldMapProvinces.Gotaland.Units.unit_germanic_warrior = 0
-	WorldMapProvinces.Gotaland.Units.unit_germanic_archer = 0
-	WorldMapProvinces.Jutland.Owner = "Asa Tribe"
+	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
+	WorldMapProvinces.Jutland.Owner = "Dane Tribe"
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Jutland.Units.unit_germanic_archer = 0
-	WorldMapProvinces.Sweden.Owner = "Asa Tribe"
+	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
 	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_barracks = 2 -- to prevent the Goth Tribe from conquering Sweden too easily
+	WorldMapProvinces.Sweden.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Sweden.Units.unit_germanic_archer = 0
 	WorldMapProvinces.Astrakhan.Owner = ""
 	WorldMapProvinces.Astrakhan.SettlementBuildings.unit_germanic_town_hall = 0
 	WorldMapProvinces.Astrakhan.SettlementBuildings.unit_germanic_barracks = 0
@@ -181,11 +183,35 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
 	WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
 	WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
+
+	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 2
+	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+	WorldMapProvinces.Gotaland.Name = "Gothland"
+	WorldMapProvinces.Gotaland.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Gotaland.Units.unit_germanic_archer = 0
+
 	GrandStrategyEvents.OnTheVanaquisl = nil
 	GrandStrategyEvents.AsaRaid = nil
 	GrandStrategyEvents.WestwardMigration = nil
 	GrandStrategyEvents.NorthwardsToTheSea = nil
 	GrandStrategyEvents.GylvesRealm = nil
+	GrandStrategyEvents.DagsKingdom = nil
+	GrandStrategyEvents.DivisionOfDomains = nil
+	GrandStrategyEvents.AsaLawgiving = nil
+	GrandStrategyEvents.TheBirthOfSaeming = nil
+	
+	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6 -- to make this province less easily to be conquered
+	
+	-- this is just for testing
+	--[[
+	WorldMapProvinces.Sweden.Units.unit_germanic_warrior = 8
+	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 5
+	WorldMapProvinces.Jutland.Units.unit_germanic_archer = 2
+	Factions.DaneTribe.Technologies.upgrade_germanic_bronze_shield = 2
+	Factions.DaneTribe.Technologies.upgrade_germanic_broad_sword = 2
+	Factions.DaneTribe.Technologies.upgrade_germanic_barbed_arrow = 2
+	--]]
 end
 
 if (GrandStrategyYear >= -1600) then
@@ -202,17 +228,39 @@ end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	Factions.AsaTribe.Technologies.upgrade_germanic_bronze_shield = 2
+	Factions.SwedeTribe.Technologies.upgrade_germanic_bronze_shield = 2
+	Factions.DaneTribe.Technologies.upgrade_germanic_bronze_shield = 2
 end
 
 if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
+	Factions.SwedeTribe.Technologies.upgrade_germanic_broad_sword = 2
+	Factions.DaneTribe.Technologies.upgrade_germanic_broad_sword = 2
+end
+
+if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
+	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- The Suebi are the earliest Germanic people known to inhabit the Brandenburg area; the Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
+	WorldMapProvinces.Brandenburg.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 0
+	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
+	
+	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- The Saxons are the earliest Germanic people known to inhabit the Hannover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
+	WorldMapProvinces.Rhineland.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
+	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
+
+	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Netherlands.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Netherlands.Units.unit_germanic_warrior = 0
+	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
+	
+	GrandStrategyEvents.VegdegsKingdom = nil
+	GrandStrategyEvents.BeldegsLands = nil
+	GrandStrategyEvents.SigisLands = nil
 end
 
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
-	WorldMapProvinces.Gotaland.Owner = "Goth Tribe"
-	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
 	PytheasVoyageGoths = nil
-	WorldMapProvinces.Gotaland.Name = "Gothland"
 end
 
 if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -242,9 +290,6 @@ end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
-	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
-	WorldMapProvinces.Brandenburg.SettlementBuildings.unit_germanic_town_hall = 2
-	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 	WorldMapProvinces.France.Owner = "Aedui Tribe" -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Aquitaine.Owner = "Arverni Tribe" -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
@@ -261,10 +306,9 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 end
 
 if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
-	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
-	AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
+--	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
+--	AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
 --	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	WorldMapProvinces.Jutland.Owner = "" -- remove the Asa Tribe
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -296,11 +340,7 @@ if (GrandStrategyYear >= 98) then
 	WorldMapProvinces.Bavaria.Owner = "Rugian Tribe" -- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
 	AcquireFactionTechnologies(Factions.RugianTribe, Factions.AsaTribe)
-	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Rhineland area by William R. Shepherd's Historical Atlas (1911) p. 45
-	WorldMapProvinces.Rhineland.SettlementBuildings.unit_germanic_town_hall = 2
-	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
-	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
-	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
+--	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
 if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -308,9 +348,6 @@ if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: 
 end
 
 if (GrandStrategyYear >= 150) then
-	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks were the people settled in the modern Netherlands in 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.Netherlands.SettlementBuildings.unit_germanic_town_hall = 2
-	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Owner = ""
 	WorldMapProvinces.Gotaland.Name = "Gotaland"
 	WorldMapProvinces.Prussia.Owner = "Goth Tribe" -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.

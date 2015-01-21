@@ -34,6 +34,7 @@ Load("scripts/dwarf/buttons.lua")
 Load("scripts/germanic/buttons.lua")
 Load("scripts/gnome/buttons.lua")
 Load("scripts/goblin/buttons.lua")
+Load("scripts/teuton/buttons.lua")
 
 ------------------------------------------------------------------------------
 --  Define unit-button.

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      buttons.ccl - Define the unit-buttons of the gnomish civilization.
+--      buttons.ccl - Define the unit-buttons of the germanic civilization.
 --
 --      (c) Copyright 2014 by Andre Novellino Gouvêa
 --
@@ -62,6 +62,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
   ForUnit = {
 	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior", "unit-germanic-archer",
+	"unit-teuton-catapult",
 	"germanic-group"
 } } )
 
@@ -94,6 +95,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-patrol-land",
   Key = "p", Hint = _("~!Patrol"),
   ForUnit = {
     "unit-germanic-warrior", "unit-germanic-archer",
+	"unit-teuton-catapult",
 	"germanic-group"
   } } )
   
@@ -102,6 +104,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Key = "t", Hint = _("S~!tand Ground"),
   ForUnit = {
     "unit-germanic-warrior", "unit-germanic-archer",
+	"unit-teuton-catapult",
 	"germanic-group"
 } } )
 
@@ -151,11 +154,6 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Key = "c", Hint = _("Build ~!Carpenter's Shop"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
-  Action = "build", Value = "unit-teuton-lumber-mill",
-  Key = "l", Hint = _("Build ~!Lumber Mill"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
-
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
   Action = "build", Value = "unit-germanic-smithy",
   Key = "s", Hint = _("Build ~!Smithy"),
@@ -201,10 +199,4 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
   Action = "research", Value = "upgrade-germanic-barbed-arrow",
   Allowed = "check-single-research",
   Key = "a", Hint = _("Research Barbed ~!Arrow"),
-  ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"} } )
-
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
-  Action = "research", Value = "upgrade-germanic-masonry",
-  Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"),
   ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"} } )

@@ -116,7 +116,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
+				unit_germanic_warrior = 20 -- soldiers to stop the Asa Tribe from expanding here
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -146,7 +146,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
+				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -277,6 +277,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+				unit_germanic_warrior = 20 -- soldiers to prevent germanic expansion here too soon
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -405,6 +406,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+				unit_germanic_warrior = 1 -- soldiers to prevent germanic expansion here too soon
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -458,7 +460,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
+				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -472,7 +474,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
+				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -556,7 +558,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Asa Tribe from expanding here
+				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
 			SettlementTerrain = "Plns"
 		},

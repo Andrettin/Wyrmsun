@@ -41,10 +41,18 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Forests now spawn at a decreased rate in random world maps.
 - In random world maps conifer forests now appear at high latitudes, with scrub forests appearing elsewhere.
 - Fixed crash which could happen when conquering a province not owned by any factions.
+- Dwarven factions now start with Masonry researched in the 25 AD start date.
+- Added "Division of Domains", "Asa Lawgiving" and "The Birth of Saeming" flavor events for the Asa Tribe (or the Swede Tribe).
+- Added "Dag's Kingdom" event.
+- In the "Gylve's Realm" event, the Jutland peninsula is now granted to Skjold upon choosing to embark, who then founds the Dane Tribe.
+- Removed the germanic "Tribal Split" event, since the Dag's Kingdom and Gylve's Realm events now perform its functions.
+- Added "Beldeg's Lands" and "Sigi's Lands" events, which create new germanic tribes when certain territories are conquered by a germanic tribe.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
 - The Gnomish Recruit now has a gray-haired variation for its unit graphics (by b_o).
+- Added Germanic Catapult (graphics by b_o).
+- The Gnomish Caravan's graphics have been updated (by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).

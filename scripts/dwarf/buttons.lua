@@ -49,6 +49,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-hero-greebo",
 	"unit-germanic-worker", "unit-germanic-builder",
     "unit-germanic-warrior", "unit-germanic-archer",
+	"unit-teuton-catapult", 
 	"unit-rat", "unit-gryphon", "unit-wyrm",
 	"dwarf-group", "germanic-group"} } )
 
@@ -148,7 +149,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-1",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-	"unit-dwarven-ballista", "unit-goblin-war-machine"
+	"unit-dwarven-ballista", "unit-goblin-war-machine", "unit-teuton-catapult"
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",

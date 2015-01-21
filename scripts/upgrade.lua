@@ -32,6 +32,7 @@ Load("scripts/dwarf/upgrade.lua")
 Load("scripts/germanic/upgrade.lua")
 Load("scripts/gnome/upgrade.lua")
 Load("scripts/goblin/upgrade.lua")
+Load("scripts/teuton/upgrade.lua")
 
 function DefineAllowNormalUnits(flags)
 	-- Allow units for human players only if they have been acquired
@@ -108,7 +109,7 @@ function ApplyTechLevels()
 	}
 	local iron_upgrades = {
 		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2", "upgrade-dwarven-masonry",
-		"upgrade-germanic-masonry",
+		"upgrade-teuton-masonry",
 		"upgrade-goblin-masonry"
 	}
 	for i, unitName in ipairs(bronze_upgrades) do

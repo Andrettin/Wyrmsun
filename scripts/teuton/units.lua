@@ -33,6 +33,41 @@
 --	NOTE: Save can generate this table.
 --
 
+DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
+	Class = "siege-engine",
+	Civilization = "germanic",
+	Description = _("Catapults were "),
+	Image = {"file", "teuton/units/catapult.png", "size", {72, 72}},
+	Animations = "animations-teuton-catapult", Icon = "icon-teuton-catapult",
+	Costs = {"time", 250, "gold", 900, "lumber", 300},
+	TechnologyPointCost = 1,
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+	Speed = 5,
+	HitPoints = 110,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {63, 63},
+	SightRange = 9, ComputerReactionRange = 11, PersonReactionRange = 9,
+	BasicDamage = 80, PiercingDamage = 0, Missile = "missile-catapult-flaming-rock",
+	MinAttackRange = 2, MaxAttackRange = 8,
+	Priority = 70,
+	BasePoints = 100,
+	Demand = 1,
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanGroundAttack = true,
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true,
+	SelectableByRectangle = true,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "ballista-acknowledge",
+--		"ready", "dwarven-ballista-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "explosion"
+} } )
+
 DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 --	Class = "lumber-mill",
 	Civilization = "germanic",

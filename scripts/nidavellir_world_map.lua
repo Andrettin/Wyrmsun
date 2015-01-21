@@ -108,6 +108,13 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 
 	WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
 	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
+
+	Factions.NorlundClan.Technologies.upgrade_dwarven_masonry = 2 -- dwarves already had castles built of stone masonry by then
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_masonry = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_masonry = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_masonry = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_masonry = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_masonry = 2
 end
 
 if (GrandStrategyYear > 25) then
