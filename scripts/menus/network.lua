@@ -334,7 +334,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
 
   menu:writeText("Civilization:", sx, sy*11)
-  d = menu:addDropDown({"Map Default", _("Dwarf")}, sx + 100, sy*11,
+  d = menu:addDropDown({_("Map Default"), _("Dwarf")}, sx + 100, sy*11,
     function(dd)
       GameSettings.Presets[0].Race = dd:getSelected()
       ServerSetupState.Race[0] = GameSettings.Presets[0].Race
@@ -343,7 +343,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   d:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  d = menu:addDropDown({"Map Default", "One Worker Only", "Town Hall + Workers"}, sx + 100, sy*11+25,
+  d = menu:addDropDown({_("Map Default"), _("One Worker Only"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
     function(dd)
       GameSettings.NumUnits = dd:getSelected()
       ServerSetupState.UnitsOption = GameSettings.NumUnits
@@ -352,7 +352,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   d:setSize(190, 20)
 
   menu:writeText("Resources:", sx, sy*11+50)
-  d = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, sx + 100, sy*11+50,
+  d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100, sy*11+50,
     function(dd)
       GameSettings.Resources = dd:getSelected()
       ServerSetupState.ResourcesOption = GameSettings.Resources
@@ -367,7 +367,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   ServerSetupState.FogOfWar = 1
   ServerSetupState.Inside = 0
   GameSettings.Inside = false
-  startgame = menu:addFullButton("~!Start Game", "s", sx * 11,  sy*14,
+  startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
     function(s)
       SetFogOfWar(fow:isMarked())
       if revealmap:isMarked() == true then
@@ -380,7 +380,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
     end
   )
   startgame:setVisible(false)
-  local waitingtext = menu:writeText("Waiting for players", sx*11, sy*14)
+  local waitingtext = menu:writeText(_("Waiting for players"), sx*11, sy*14)
   local function updateStartButton(ready)
     startgame:setVisible(ready)
     waitingtext:setVisible(not ready)
@@ -404,13 +404,13 @@ function RunCreateMultiGameMenu(s)
   local sx = Video.Width / 20
   local sy = Video.Height / 20
 
-  menu = WarMenu("Create MultiPlayer game")
+  menu = WarMenu(_("Create MultiPlayer game"))
 
-  menu:writeText("File:", sx, sy*3+30)
+  menu:writeText(_("File:"), sx, sy*3+30)
   maptext = menu:writeText(string.sub(mapfile, 6), sx+50, sy*3+30)
-  menu:writeText("Players:", sx, sy*3+50)
+  menu:writeText(_("Players:"), sx, sy*3+50)
   players = menu:writeText(numplayers, sx+70, sy*3+50)
-  menu:writeText("Description:", sx, sy*3+70)
+  menu:writeText(_("Description:"), sx, sy*3+70)
   descr = menu:writeText(description, sx+20, sy*3+90)
 
   local OldPresentMap = PresentMap
@@ -444,7 +444,7 @@ function RunCreateMultiGameMenu(s)
     end
   )
 
-  menu:addFullButton("Cancel (~<Esc~>)", "escape", sx,  sy*12+25,
+  menu:addFullButton(_("Cancel (~<Esc~>)"), "escape", sx,  sy*12+25,
     function() menu:stop() end)
 
   menu:run()
@@ -474,7 +474,7 @@ function RunMultiPlayerGameMenu(s)
   menu:writeText(_("Nickname :"), 208 + offx, 264 + offy)
   nick = menu:addTextInputField(GetLocalPlayerName(), offx + 298, 260 + offy)
 
-  menu:addFullButton("~!Join Game", "j", 208 + offx, 320 + (36 * 0) + offy,
+  menu:addFullButton(_("~!Join Game"), "j", 208 + offx, 320 + (36 * 0) + offy,
     function()
       if nick:getText() ~= GetLocalPlayerName() then
         SetLocalPlayerName(nick:getText())
@@ -484,7 +484,7 @@ function RunMultiPlayerGameMenu(s)
       RunJoinIpMenu()
       FixMusic()
     end)
-  menu:addFullButton("~!Create Game", "c", 208 + offx, 320 + (36 * 1) + offy,
+  menu:addFullButton(_("~!Create Game"), "c", 208 + offx, 320 + (36 * 1) + offy,
     function()
       if nick:getText() ~= GetLocalPlayerName() then
         SetLocalPlayerName(nick:getText())

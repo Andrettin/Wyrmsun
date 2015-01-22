@@ -36,7 +36,7 @@
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Class = "siege-engine",
 	Civilization = "germanic",
-	Description = _("Catapults were "),
+	Description = _("These engines of war can be of great use in battering enemy fortifications."),
 	Image = {"file", "teuton/units/catapult.png", "size", {72, 72}},
 	Animations = "animations-teuton-catapult", Icon = "icon-teuton-catapult",
 	Costs = {"time", 250, "gold", 900, "lumber", 300},

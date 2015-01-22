@@ -483,6 +483,10 @@ function LoadFactions(world)
 				Lumber = 2500 -- half of the gold value
 			}
 		},
+		MenapiiTribe = {
+			Name = "Menapii Tribe",
+			Civilization = "germanic"
+		},
 		SequaniTribe = {
 			Name = "Sequani Tribe",
 			Civilization = "germanic"

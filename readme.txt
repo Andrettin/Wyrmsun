@@ -47,12 +47,20 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - In the "Gylve's Realm" event, the Jutland peninsula is now granted to Skjold upon choosing to embark, who then founds the Dane Tribe.
 - Removed the germanic "Tribal Split" event, since the Dag's Kingdom and Gylve's Realm events now perform its functions.
 - Added "Beldeg's Lands" and "Sigi's Lands" events, which create new germanic tribes when certain territories are conquered by a germanic tribe.
+- Added a few Scrub Forest tiles and a gold mine in Iberia.
+
+* Maps
+- Dwarven Militia are now possible to be generated in dungeons.
+
+* Miscellaneous
+- Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
 - The Gnomish Recruit now has a gray-haired variation for its unit graphics (by b_o).
 - Added Germanic Catapult (graphics by b_o).
 - The Gnomish Caravan's graphics have been updated (by b_o).
+- The Goblin Thief's attack now sometimes displays a slashing animation instead of a thrusting one (graphics by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).

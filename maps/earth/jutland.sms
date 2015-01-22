@@ -152,7 +152,9 @@ SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
 SetPlayerData(1, "RaceName", "germanic")
-SetPlayerData(1, "Name", "Natives")
+if (GrandStrategy == false or GrandStrategyEventMap) then
+	SetPlayerData(1, "Name", "Natives")
+end
 SetAiType(1, "land-attack")
 SetStartView(4, 44, 85) -- Germanics / Hanseatic League
 SetPlayerData(4, "Resources", "gold", 2000)

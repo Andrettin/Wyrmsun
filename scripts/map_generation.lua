@@ -3813,31 +3813,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			end
 		end
 
-		SetPlayerData(0, "RaceName", player_civilization)
-		if (player_name ~= "") then
-			SetPlayerData(0, "Name", player_name)
-		end
-		SetAiType(0, "passive")
-		if (second_player_civilization ~= "") then
-			SetPlayerData(1, "RaceName", second_player_civilization)
-			if (second_player_name ~= "") then
-				SetPlayerData(1, "Name", second_player_name)
-			end
-			SetAiType(1, "passive")
-		end
 		if (hostile_dungeon_player_civilization == "random") then
 			local possible_civilizations = {"dwarf", "germanic", "gnome", "goblin", "kobold"}
 			hostile_dungeon_player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
-		end
-		SetPlayerData(2, "RaceName", hostile_dungeon_player_civilization)
-		if (hostile_dungeon_player_name ~= "") then
-			SetPlayerData(2, "Name", hostile_dungeon_player_name)
-		end
-		SetAiType(2, "passive")
-		if (passive_dungeon_player_name ~= "") then
-			SetPlayerData(3, "RaceName", "neutral")
-			SetPlayerData(3, "Name", passive_dungeon_player_name)
-			SetAiType(3, "passive")
 		end
 		
 		SetDiplomacy(0, "enemy", 1)
@@ -4010,7 +3988,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						end
 						if (adjacent_floor_tiles >= 8) then
 							if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
-								SetStartView(1, RandomX, RandomY)
+								SetStartView(2, RandomX, RandomY)
 								for i=1,table.getn(boss_room_decorations) do
 									unit = CreateUnit(boss_room_decorations[i], 15, {RandomX, RandomY})
 								end
@@ -4041,39 +4019,51 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 					RandomNumber = SyncRand(100)
 					if (hostile_dungeon_player_civilization == "dwarf" or hostile_dungeon_player_civilization == "germanic") then
+						if (RandomNumber < 33) then
+							unit = OldCreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 33 and RandomNumber < 66) then
+							unit = OldCreateUnit("unit-dwarven-scout", 2, {RandomX, RandomY})
+							Count = Count - 1
+						elseif (RandomNumber >= 66) then
+							unit = OldCreateUnit("unit-dwarven-militia", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-dwarven-militia", 2, {RandomX, RandomY})
+							Count = Count - 1
+						end
+					elseif (hostile_dungeon_player_civilization == "germanic") then
 						if (RandomNumber < 50) then
-							unit = CreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-germanic-warrior", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 50) then
-							unit = CreateUnit("unit-dwarven-scout", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-germanic-archer", 2, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "gnome") then
 						if (RandomNumber < 75) then
-							unit = CreateUnit("unit-gnomish-recruit", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-gnomish-recruit", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 75) then
-							unit = CreateUnit("unit-gnomish-herbalist", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-gnomish-herbalist", 2, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "goblin") then
 						if (RandomNumber < 33) then
-							unit = CreateUnit("unit-goblin-spearman", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-goblin-spearman", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 33 and RandomNumber < 66) then
-							unit = CreateUnit("unit-goblin-archer", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-goblin-archer", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 66) then
-							unit = CreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
-							unit = CreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "kobold") then
 						if (RandomNumber < 90) then
-							unit = CreateUnit("unit-kobold-footpad", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-kobold-footpad", 2, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (RandomNumber >= 90) then
-							unit = CreateUnit("unit-wyrm", 2, {RandomX, RandomY})
+							unit = OldCreateUnit("unit-wyrm", 2, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					end
@@ -4100,6 +4090,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							end
 							if (adjacent_floor_tiles >= 8) then
 								if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+									SetStartView(3, RandomX, RandomY)
 									if (hostile_dungeon_player_civilization == "dwarf") then
 										RandomNumber = SyncRand(100)
 										if (RandomNumber < 90) then
@@ -4158,6 +4149,29 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			end
 		end
 
+		SetPlayerData(0, "RaceName", player_civilization)
+		if (player_name ~= "") then
+			SetPlayerData(0, "Name", player_name)
+		end
+		SetAiType(0, "passive")
+		if (second_player_civilization ~= "") then
+			SetPlayerData(1, "RaceName", second_player_civilization)
+			if (second_player_name ~= "") then
+				SetPlayerData(1, "Name", second_player_name)
+			end
+			SetAiType(1, "passive")
+		end
+		SetPlayerData(2, "RaceName", hostile_dungeon_player_civilization)
+		if (hostile_dungeon_player_name ~= "") then
+			SetPlayerData(2, "Name", hostile_dungeon_player_name)
+		end
+		SetAiType(2, "passive")
+		if (passive_dungeon_player_name ~= "") then
+			SetPlayerData(3, "RaceName", "neutral")
+			SetPlayerData(3, "Name", passive_dungeon_player_name)
+			SetAiType(3, "passive")
+		end
+		
 		-- run next dungeon level if a unit is on the stairs
 		--AddTrigger(
 		--	function()

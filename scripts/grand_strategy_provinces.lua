@@ -127,11 +127,10 @@ function LoadProvinces(world)
 			SettlementName = "Aduatuca",
 			SettlementLocation = {123, 28}, -- Brussels
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer early on
 			},
 			SettlementTerrain = "Plns"
 		},

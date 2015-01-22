@@ -336,6 +336,13 @@ DefineCivilizationFactions("germanic",
 		"playable", false
 	},
 	"faction", {
+		"name", "Menapii Tribe",
+		"type", "tribe",
+		"color", "orange",
+		"secondary_color", "orange",
+		"playable", false
+	},
+	"faction", {
 		"name", "Sequani Tribe",
 		"type", "tribe",
 		"color", "pink",
@@ -442,8 +449,8 @@ function CreateUnit(unittype, player, pos)
     return OldCreateUnit(unittype, player, pos)
   end
 
-  -- Don't add any units in 1 worker only mode or in 5 workers only mode, and don't add scenario units if in a grand strategy game
-  if ((GameSettings.NumUnits == 1 or GameSettings.NumUnits == 2 or GrandStrategy) and (player ~= 15 or unittype == "unit-gold-mine" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp") and GrandStrategyEventMap == false) then
+  -- Don't add any units if the player setup the units to use, and don't add scenario units if in a grand strategy game
+  if ((GameSettings.NumUnits >= 1 or GrandStrategy) and ((player ~= 15 and Players[player].Type ~= PlayerNeutral) or unittype == "unit-gold-mine" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp") and GrandStrategyEventMap == false) then
     return
   end
 
@@ -560,13 +567,13 @@ function SetPlayerData(player, data, arg1, arg2)
 
 	-- If this is 1 worker mode add the worker now
 	if (data == "RaceName") then
-		if (GameSettings.NumUnits == 1) then
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody) then
+		if (GameSettings.NumUnits == 1) then -- 1 Worker
+			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 				local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 			end
-		elseif (GameSettings.NumUnits == 2) then
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody) then
+		elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
+			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
 				local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
@@ -574,6 +581,39 @@ function SetPlayerData(player, data, arg1, arg2)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+			end
+		elseif (GameSettings.NumUnits == 3) then -- Basic Squad
+			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+			end
+		elseif (GameSettings.NumUnits == 4) then -- Improved Squad
+			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+			end
+		elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
+			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+				local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				unittype = ConvertUnitType("unit-dwarven-ballista", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
 				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 			end
 		end
@@ -638,7 +678,7 @@ end
 
 -- Override with game settings
 function SetAiType(player, arg)
-	if (GrandStrategy and GrandStrategyEventMap == false) then
+	if ((GrandStrategy and GrandStrategyEventMap == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
 		arg = "grand-strategy-battle"
 	end
 

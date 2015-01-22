@@ -347,7 +347,7 @@ function LoadEvents(world)
 					return false
 				end
 			end,
-			Options = {"~!OK", "Play as ~!Dag"},
+			Options = {"~!OK", "This means ~!war!", "Play as ~!Dag"},
 			OptionEffects = {
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
@@ -355,6 +355,15 @@ function LoadEvents(world)
 					AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 					WorldMapProvinces.Gotaland.Name = "Gothland"
 					DrawMinimap()
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+					AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
+					WorldMapProvinces.Gotaland.Name = "Gothland"
+					DrawMinimap()
+					EventFaction.Diplomacy.GothTribe = "War"
+					Factions.GothTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 				end,
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
@@ -518,7 +527,7 @@ function LoadEvents(world)
 					return false
 				end
 			end,
-			Options = {"~!OK", "Play as ~!Beldeg"},
+			Options = {"~!OK", "This means ~!war!", "Play as ~!Beldeg"},
 			OptionEffects = {
 				function(s)
 					EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
@@ -526,6 +535,15 @@ function LoadEvents(world)
 					AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
 					DrawMinimap()
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
+					AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+					AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
+					DrawMinimap()
+					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+					EventFaction.Diplomacy.SaxonTribe = "War"
+					Factions.SaxonTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 				end,
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
@@ -552,13 +570,21 @@ function LoadEvents(world)
 					return false
 				end
 			end,
-			Options = {"~!OK", "Play as ~!Sigi"},
+			Options = {"~!OK", "This means ~!war!", "Play as ~!Sigi"},
 			OptionEffects = {
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
 					AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
 					DrawMinimap()
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+					AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
+					DrawMinimap()
+					EventFaction.Diplomacy.FrankTribe = "War"
+					Factions.FrankTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 				end,
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
@@ -584,13 +610,21 @@ function LoadEvents(world)
 					return false
 				end
 			end,
-			Options = {"~!OK", "Play as ~!Vegdeg"},
+			Options = {"~!OK", "This means ~!war!", "Play as ~!Vegdeg"},
 			OptionEffects = {
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 					AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
 					DrawMinimap()
+				end,
+				function(s)
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
+					AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
+					DrawMinimap()
+					EventFaction.Diplomacy.SuebiTribe = "War"
+					Factions.SuebiTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 				end,
 				function(s)
 					EqualizeProvinceUnits(EventFaction)
