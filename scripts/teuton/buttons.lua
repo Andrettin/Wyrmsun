@@ -48,6 +48,11 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
   Key = "l", Hint = _("Build ~!Lumber Mill"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
+  Action = "build", Value = "unit-teuton-watch-tower",
+  Key = "t", Hint = _("Build Watch ~!Tower"),
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+
 -- Building Commands ---------------------------------------------------------
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
@@ -62,3 +67,10 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Allowed = "check-single-research",
   Key = "m", Hint = _("Research ~!Masonry"),
   ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"} } )
+
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
+  Action = "upgrade-to", Value = "unit-teuton-guard-tower",
+  Key = "g", Hint = _("Upgrade to ~!Guard Tower"),
+  ForUnit = {"unit-teuton-watch-tower"} } )

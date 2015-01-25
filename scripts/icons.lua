@@ -208,6 +208,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-watch-tower",
+	Size = {46, 38},
+	File = "teuton/icons/watch_tower.png"
+})
+	
+DefineIcon({
+	Name = "icon-teuton-guard-tower",
+	Size = {46, 38},
+	File = "teuton/icons/guard_tower.png"
+})
+	
+DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},
 	File = "dwarf/icons/miner.png"
@@ -889,6 +901,18 @@ DefineIcon({
 	Name = "icon-gryphon-feather",
 	Size = {46, 38},
 	File = "neutral/icons/gryphon_feather.png"
+})
+
+DefineIcon({
+	Name = "icon-caltrops",
+	Size = {46, 38},
+	File = "neutral/icons/caltrops.png"
+})
+
+DefineIcon({
+	Name = "icon-trap",
+	Size = {46, 38},
+	File = "neutral/icons/trap.png"
 })
 
 DefineIcon({

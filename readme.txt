@@ -54,6 +54,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
+- Added caltrops and trap objects (graphics by b_o).
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
@@ -61,6 +62,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Germanic Catapult (graphics by b_o).
 - The Gnomish Caravan's graphics have been updated (by b_o).
 - The Goblin Thief's attack now sometimes displays a slashing animation instead of a thrusting one (graphics by b_o).
+- Added Germanic Watch Tower and Guard Tower (graphics by Jinn).
+- Fixed two bugs which could cause desync in multiplayer due to heroes.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).

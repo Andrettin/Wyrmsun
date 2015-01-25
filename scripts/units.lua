@@ -37,6 +37,7 @@ Units = {
 	"upgrade-germanic-barbed-arrow",
 	"unit-teuton-catapult",
 	"unit-teuton-lumber-mill",
+	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 	"upgrade-teuton-masonry",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-scout", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
@@ -1636,6 +1637,46 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	NumDirections = 1,	
 	Item = true,
 	Sounds = {} } )
+
+DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
+	Image = {"file", "neutral/items/caltrops.png", "size", {32, 32}},
+	Animations = "animations-item", Icon = "icon-caltrops",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 1,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,	
+	Item = true,
+	HitPointHealing = -10,
+	Sounds = {
+		"selected", "click"
+	} 
+} )
+
+DefineUnitType("unit-trap", { Name = _("Trap"),
+	Image = {"file", "neutral/items/trap.png", "size", {32, 32}},
+	Animations = "animations-trap", Icon = "icon-trap",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 1,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,	
+	Item = true,
+	HitPointHealing = -15,
+	Sounds = {
+		"selected", "click"
+	} 
+} )
 
 DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	Image = {"file", "neutral/decorations/roaming_fog.png", "size", {498, 277}},

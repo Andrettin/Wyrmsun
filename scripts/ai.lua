@@ -397,8 +397,10 @@ end
 function AiWatchTower()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-sentry-tower"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-teuton-watch-tower"
 	else
-		return "unit-dwarven-sentry-tower"
+		return "unit-teuton-watch-tower"
 	end
 end
 
@@ -408,8 +410,10 @@ end
 function AiGuardTower()
 	if (AiGetRace() == "dwarf") then
 		return "unit-dwarven-guard-tower"
+	elseif (AiGetRace() == "germanic") then
+		return "unit-teuton-guard-tower"
 	else
-		return "unit-dwarven-guard-tower"
+		return "unit-teuton-guard-tower"
 	end
 end
 

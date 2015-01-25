@@ -647,7 +647,7 @@ function StandardTriggers()
 --				end
 
 				-- process items if stepped upon
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Item")) then
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Item") and GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
 						local nearby_uncount = 0
@@ -678,6 +678,7 @@ function StandardTriggers()
 									AddMessage("Suffered " .. (-1 * GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) .. " HP loss")
 								end
 								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
+								DamageUnit(uncount[unit1], nearby_uncount[unit2], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) -- necessary to make the game display the damage and check if the unit should have died (for some reason it doesn't actually cause the damage though - probably because the damaging unit belongs to a neutral player)
 								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna")) then -- make animals eat food items
 								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)

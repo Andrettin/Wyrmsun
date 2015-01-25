@@ -29,7 +29,7 @@
 
 local upgrades = {
 	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers upgrade to a Guard Tower."),
 		"",
 		"",
 		{   250,  1500,  1750,     0,     0,     0,     0,     0},
@@ -61,7 +61,8 @@ DefineModifier("upgrade-teuton-masonry",
 	{"Armor", 5},
 	{"apply-to", "unit-germanic-town-hall"}, {"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-germanic-barracks"},
 	{"apply-to", "unit-germanic-carpenters-shop"}, {"apply-to", "unit-germanic-smithy"},
-	{"apply-to", "unit-teuton-lumber-mill"}
+	{"apply-to", "unit-teuton-lumber-mill"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
 DefineModifier("upgrade-teuton-masonry",
@@ -74,6 +75,12 @@ DefineModifier("upgrade-teuton-masonry",
   
 DefineDependency("unit-teuton-lumber-mill",
 	{"upgrade-teuton-masonry"}
+)
+
+DefineDependency("unit-teuton-guard-tower",
+	{"unit-germanic-carpenters-shop", "upgrade-teuton-masonry"},
+	"or",
+	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("unit-teuton-catapult",

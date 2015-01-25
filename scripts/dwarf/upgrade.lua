@@ -57,14 +57,14 @@ local upgrades = {
 		{   250,   900,   500,     0,     0,     0,     0,  2400},
 		1},
 	{"upgrade-dwarven-throwing-axe-1", _("Sharp Throwing Axe"), "icon-dwarven-throwing-axe-2", "ranged-projectile-1",
-		_("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts, Gryphon Riders and Guard Towers."),
+		_("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
 		"",
 		"",
 		{   200,   300,   300,     0,     0,     0,     0,     0},
 		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
 	{"upgrade-dwarven-throwing-axe-2", _("Bearded Throwing Axe"), "icon-dwarven-throwing-axe-3", "ranged-projectile-2",
-		_("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts, Gryphon Riders and Guard Towers."),
+		_("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
 		"",
 		"",
 		{   250,   900,   500,     0,     0,     0,     0,     0},
@@ -85,7 +85,7 @@ local upgrades = {
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
 		1},
 	{"upgrade-dwarven-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Tower upgrade to Guard Tower."),
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to upgrade to a Guard Tower."),
 		"",
 		"",
 		{   250,  1500,  1750,     0,     0,     0,     0,     0},
@@ -154,11 +154,11 @@ DefineModifier("upgrade-dwarven-shield-2",
 
 DefineModifier("upgrade-dwarven-throwing-axe-1",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}, {"apply-to", "unit-dwarven-guard-tower"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineModifier("upgrade-dwarven-throwing-axe-2",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}, {"apply-to", "unit-dwarven-guard-tower"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
 	{"PiercingDamage", 15},
@@ -172,32 +172,41 @@ DefineModifier("upgrade-dwarven-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
-	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-dwarven-sentry-tower"},
-	{"apply-to", "unit-dwarven-guard-tower"})
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
+)
 
 DefineDependency("unit-dwarven-scout",
-	{"unit-dwarven-lumber-mill"})
+	{"unit-dwarven-lumber-mill"}
+)
 
 DefineDependency("upgrade-dwarven-great-axe",
-	{"upgrade-dwarven-broad-axe"})
+	{"upgrade-dwarven-broad-axe"}
+)
 
 DefineDependency("upgrade-dwarven-shield-2",
-	{"upgrade-dwarven-shield-1"})
+	{"upgrade-dwarven-shield-1"}
+)
 
 DefineDependency("upgrade-dwarven-throwing-axe-2",
-	{"upgrade-dwarven-throwing-axe-1"})
+	{"upgrade-dwarven-throwing-axe-1"}
+)
 
 DefineDependency("upgrade-dwarven-ballista-bolt-1",
-	{"unit-dwarven-lumber-mill"})
+	{"unit-dwarven-lumber-mill"}
+)
 
 DefineDependency("upgrade-dwarven-ballista-bolt-2",
-	{"upgrade-dwarven-ballista-bolt-1", "unit-dwarven-lumber-mill"})
+	{"upgrade-dwarven-ballista-bolt-1", "unit-dwarven-lumber-mill"}
+)
 
 DefineDependency("unit-dwarven-guard-tower",
-	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"})
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"}
+)
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"})
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}
+)
 
 --DefineDependency("unit-dwarven-steelclad",
 --	{"unit-dwarven-smithy"})

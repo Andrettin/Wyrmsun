@@ -668,6 +668,14 @@ DefineAnimations("animations-alchemy-bench", {
 	},
 })
 
+DefineAnimations("animations-trap", {
+	Still = BuildingStill,
+	Death = {"unbreakable begin",
+		"frame 1", "wait 3", "frame 2", "wait 100", "frame 2",
+		"unbreakable end", "wait 1",
+	}
+})
+
 --
 -- Roaming Fog
 --

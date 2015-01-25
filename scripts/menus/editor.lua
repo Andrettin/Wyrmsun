@@ -17,6 +17,8 @@ editor_types = {
 
    "unit-teuton-catapult",
    "unit-teuton-lumber-mill",
+   "unit-teuton-watch-tower",
+   "unit-teuton-guard-tower",
 
 --- - - - - - - - - - - - - - - - - - -
 
@@ -99,6 +101,8 @@ editor_types = {
    "unit-cheese",
    "unit-carrots",
    "unit-gryphon-feather",
+   "unit-caltrops",
+   "unit-trap",
    "unit-scepter-of-fire",
 
    "unit-rat",

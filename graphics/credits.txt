@@ -131,6 +131,7 @@ b_o:
 /graphics/neutral/items/barrel.png
 /graphics/neutral/items/barrel_2.png
 /graphics/neutral/items/barrel_3.png
+/graphics/neutral/items/caltrops.png
 /graphics/neutral/items/carrots.png
 /graphics/neutral/items/cheese.png
 /graphics/neutral/items/chest.png
@@ -148,6 +149,7 @@ b_o:
 /graphics/neutral/items/potion_red.png
 /graphics/neutral/items/potion_teal.png
 /graphics/neutral/items/scepter.png
+/graphics/neutral/items/trap.png
 /graphics/neutral/units/bat.png
 /graphics/neutral/units/bird_black.png
 /graphics/neutral/units/bird_brown.png
@@ -470,7 +472,9 @@ João Victor G. Costa (Jinn):
 /graphics/orc/icons/sea_orc.png
 /graphics/orc/icons/shaman.png
 /graphics/orc/icons/spearthrower.png
+/graphics/teuton/buildings/guard_tower.png
 /graphics/teuton/buildings/lumber_mill.png
+/graphics/teuton/buildings/watch_tower.png
 /graphics/tilesets/cave/terrain/cave.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles)
 /graphics/tilesets/forest/neutral/icons/rat.png
