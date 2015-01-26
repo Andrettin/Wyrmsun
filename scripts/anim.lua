@@ -671,7 +671,7 @@ DefineAnimations("animations-alchemy-bench", {
 DefineAnimations("animations-trap", {
 	Still = BuildingStill,
 	Death = {"unbreakable begin",
-		"frame 1", "wait 3", "frame 2", "wait 100", "frame 2",
+		"frame 0", "wait 5", "frame 1", "wait 2", "frame 2", "wait 100", "frame 2",
 		"unbreakable end", "wait 1",
 	}
 })

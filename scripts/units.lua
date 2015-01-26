@@ -1640,7 +1640,7 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 
 DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
 	Image = {"file", "neutral/items/caltrops.png", "size", {32, 32}},
-	Animations = "animations-item", Icon = "icon-caltrops",
+	Animations = "animations-decoration", Icon = "icon-caltrops",
 	NeutralMinimapColor = {255, 255, 0},
 	Speed = 0,
 	HitPoints = 1,
@@ -1653,6 +1653,26 @@ DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
 	NumDirections = 1,	
 	Item = true,
 	HitPointHealing = -10,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		},
+		{
+			"variation-id", "5"
+		},
+		{
+			"variation-id", "6"
+		}
+	},
 	Sounds = {
 		"selected", "click"
 	} 
