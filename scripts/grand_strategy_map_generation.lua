@@ -456,6 +456,36 @@ function LoadFactions(world)
 			Civilization = "germanic"
 		},
 		-- Germanic polities
+		Austria = {
+			Name = "Austria",
+			Civilization = "germanic",
+			Title = "Duchy" -- later Archduchy
+		},
+		Bavaria = {
+			Name = "Bavaria",
+			Civilization = "germanic",
+			Title = "Duchy"
+		},
+		Brandenburg = {
+			Name = "Brandenburg",
+			Civilization = "germanic",
+			Title = "Margravate"
+		},
+		Burgundy = {
+			Name = "Burgundy",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Denmark = {
+			Name = "Denmark",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		England = {
+			Name = "England",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
 		Francia = {
 			Name = "Francia",
 			Civilization = "germanic",
@@ -465,6 +495,46 @@ function LoadFactions(world)
 			Name = "Galicia",
 			Civilization = "germanic",
 			Title = "Kingdom"
+		},
+		Netherlands = {
+			Name = "Netherlands",
+			Civilization = "germanic",
+			Title = "Republic"
+		},
+		Norway = {
+			Name = "Norway",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Saxony = {
+			Name = "Saxony",
+			Civilization = "germanic",
+			Title = "Duchy"
+		},
+		Scotland = {
+			Name = "Scotland",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Sweden = {
+			Name = "Sweden",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Switzerland = {
+			Name = "Switzerland",
+			Civilization = "germanic",
+			Title = "Confederation"
+		},
+		TeutonicOrder = {
+			Name = "Teutonic Order",
+			Civilization = "germanic",
+			Title = "Dominion"
+		},
+		Westphalia = {
+			Name = "Westphalia",
+			Civilization = "germanic",
+			Title = "Duchy"
 		},
 		-- Non-Playable Tribes
 		AeduiTribe = {
@@ -500,10 +570,65 @@ function LoadFactions(world)
 			}
 		},
 		-- Non-Playable Polities
+		Crimea = {
+			Name = "Crimea",
+			Civilization = "germanic",
+			Title = "Khanate"
+		},
+		France = {
+			Name = "France",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Moldavia = {
+			Name = "Moldavia",
+			Civilization = "germanic",
+			Title = "Principality"
+		},
+		Muscovy = {
+			Name = "Muscovy",
+			Civilization = "germanic",
+			Title = "Dominion"
+		},
+		Poland = {
+			Name = "Poland",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Portugal = {
+			Name = "Portugal",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
 		Rome = {
 			Name = "Rome",
 			Civilization = "germanic",
 			Title = "Republic"
+		},
+		Russia = {
+			Name = "Russia",
+			Civilization = "germanic",
+			Title = "Empire"
+		},
+		Spain = {
+			Name = "Spain",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
+		Transylvania = {
+			Name = "Transylvania",
+			Civilization = "germanic",
+			Title = "Principality"
+		},
+		Turkey = {
+			Name = "Turkey",
+			Civilization = "germanic",
+			Title = "Empire"
+		},
+		Wallachia = {
+			Name = "Wallachia",
+			Civilization = "germanic",
+			Title = "Principality"
 		}
 	}
 	

@@ -48,6 +48,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Removed the germanic "Tribal Split" event, since the Dag's Kingdom and Gylve's Realm events now perform its functions.
 - Added "Beldeg's Lands" and "Sigi's Lands" events, which create new germanic tribes when certain territories are conquered by a germanic tribe.
 - Added a few Scrub Forest tiles and a gold mine in Iberia.
+- A faction can now receive more than one event in the same turn.
+- Added "The Sun Shields" flavor event for the Germanics.
+- Added "Skilled Masons" and "Skilled Carpenters" random events.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.

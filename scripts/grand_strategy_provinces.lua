@@ -327,7 +327,7 @@ function LoadProvinces(world)
 		},
 		Hungary = {
 			Name = "Pannonia",
-			Tiles = { {132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29}, {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
+			Tiles = { {132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29} },
 			Owner = "",
 			SettlementName = "Aquincum",
 			SettlementLocation = {133, 30}, -- Budapest
@@ -380,6 +380,20 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2
+			},
+			SettlementTerrain = "Plns"
+		},
+		Moldavia = {
+			Name = "Northern Lower Dacia",
+			Tiles = { {139, 29}, {139, 30}, {139, 31}, {140, 30}, {140, 31} },
+			Owner = "",
+			SettlementLocation = {139, 31}, -- Braila
+			SettlementBuildings = {
+				unit_germanic_town_hall = 2
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -474,20 +488,6 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
-			},
-			SettlementTerrain = "Plns"
-		},
-		Romania = {
-			Name = "Dacia",
-			Tiles = { {136, 32}, {137, 32}, {138, 32}, {139, 29}, {139, 30}, {139, 31}, {139, 32}, {140, 30}, {140, 31}, {140, 32} },
-			Owner = "",
-			SettlementLocation = {138, 32}, -- Bucharest
-			SettlementBuildings = {
-				unit_germanic_town_hall = 2
-			},
-			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -590,6 +590,19 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Mntn"
 		},
+		Transylvania = {
+			Name = "Upper Dacia",
+			Tiles = { {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
+			Owner = "",
+			SettlementName = "",
+			SettlementLocation = {136, 30}, -- Klausenburg
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Ukraine = {
 			Name = "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
 			Tiles = { {139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29} },
@@ -601,6 +614,20 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
+			},
+			SettlementTerrain = "Plns"
+		},
+		Wallachia = {
+			Name = "Southern Lower Dacia",
+			Tiles = { {136, 32}, {137, 32}, {138, 32}, {139, 32}, {140, 32} },
+			Owner = "",
+			SettlementLocation = {138, 32}, -- Bucharest
+			SettlementBuildings = {
+				unit_germanic_town_hall = 2
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},

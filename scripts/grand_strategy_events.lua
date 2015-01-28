@@ -513,6 +513,29 @@ function LoadEvents(world)
 			},
 			OptionTooltips = {"+100 Gold"}
 		},
+		TheSunShields = { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+			Name = "The Sun Shields",
+			Description = "Our artisans have learned the craft of making circular bronze shields from the Celtic peoples to our south. These shields are often made to symbolize the sun and the cycle of the seasons.",
+			Conditions = function(s)
+				if (
+					WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic"
+					and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy == 2 -- Jutland must have a smithy
+					and EventFaction.Technologies.upgrade_germanic_bronze_shield == 2
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!Marvelous!"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research + 1
+				end
+			},
+			OptionTooltips = {"+1 Research"}
+		},
 		BeldegsLands = { -- Beldeg (Baldr), the first legendary ruler of Westphalia (in the sagas he became ruler of Westphalia even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Westphalia); Source: "The Prose Edda", Snorri Sturlson, 1916, pp. 7-8.
 			Name = "Beldeg's Lands",
 			Description = "The territory of Westphalia has been entrusted to the warrior known by the name of Beldeg.",
@@ -657,6 +680,121 @@ function LoadEvents(world)
 				end
 			},
 			OptionTooltips = {"+1 Research"}
+		},
+		TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
+			Name = "The Confirmation of Seignorial Privileges",
+			Description = "An official confirmation has been made of aristocratic privileges in Livonia and Estonia, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Teutonic Order" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+					and WorldMapProvinces.BalticLands.Owner == EventFaction.Name
+					-- should only trigger after a technology for the appropriate time period has been researched
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 500
+					EventFaction.Research = EventFaction.Research - 5
+				end
+			},
+			OptionTooltips = {"+500 Gold, -5 Research"}
+		},
+		MartinTrampesFarm = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 12.
+			Name = "Martin Trampe's Farm",
+			Description = "A serf from Pomerania called Martin Trampe had managed to accumulate enough money to buy his freedom for 60 reichstaler. After becoming a free man, he has been enterprising enough to gather sufficient funds to buy a large farm in the Brandenburg Uckermark, although to do so he had to willingly submit himself to hereditary subjection to the local lord. Should a man exchange his hard-won freedom for land?",
+			Conditions = function(s)
+				if (
+					EventFaction.Civilization == "germanic"
+					and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+					and WorldMapProvinces.Brandenburg.Civilization == "germanic"
+					and GrandStrategyYear == 1667 -- events which relate to specific persons directly have dates attached to them
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"More ~!taxes for us!"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 50
+				end
+			},
+			OptionTooltips = {"+50 Gold"}
+		},
+		TheUlozhenieLawCode = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
+			Name = "The Ulozhenie Law Code",
+			Description = "A new law code has been enacted, with provisions greatly enhancing the subjection of the peasantry to the aristocracy.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Russia"
+					-- should have more conditions, such as technology-related upgrades
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 500 -- greater exploitation of the peasantry bringing in more revenues
+					EventFaction.Research = EventFaction.Research - 5 -- strengthening of serfdom increases long-term backwardness
+				end
+			},
+			OptionTooltips = {"+500 Gold, -5 Research"}
+		},
+		TheSerfdomActForBohemiaAndMoravia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
+			Name = "Serfdom Act for Bohemia and Moravia",
+			Description = "A major reform of servile relationships has been enacted in Bohemia and Moravia, seeking to bring the economic and social aspects of life in the countryside in line with enlightened thought.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Austria" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+					and WorldMapProvinces.Bohemia.Owner == EventFaction.Name
+					-- should only trigger after an enlightenment-related technology has been researched
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 500
+					EventFaction.Research = EventFaction.Research + 1
+				end
+			},
+			OptionTooltips = {"+500 Gold, +1 Research"}
+		},
+		TheAbolitionOfSerfdomRussia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
+			Name = "The Abolition of Serfdom",
+			Description = "Serfdom has finally been abolished in Russia, paving the way for the modernization of agriculture.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Russia"
+					-- should have more conditions, such as technology-related upgrades
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			RequiredEvents = {
+				TheUlozhenieLawCode = true
+			},
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research + 100
+				end
+			},
+			OptionTooltips = {"+100 Research"}
 		}
 	}
 	
@@ -1569,6 +1707,61 @@ function LoadEvents(world)
 				end
 			},
 			OptionTooltips = {"+100 Gold per province owned"}
+		},
+		SkilledCarpenters = {
+			Name = "Skilled Carpenters",
+			Description = "A group of skilled carpenters has come to our country, opening up a workshop in PROVINCE_NAME.",
+			Conditions = function(s)
+				if (
+					SyncRand(100) < 50 -- 50% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.5% of happening if the player has one province (this event shouldn't be common)
+				) then
+					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+						if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+							EventProvince = WorldMapProvinces[province_key]
+							return true
+						end
+					end
+				else
+					return false
+				end
+			end,
+			Persistent = true,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 100
+					EventFaction.Research = EventFaction.Research + 1
+				end
+			},
+			OptionTooltips = {"+100 Gold, +1 Research"}
+		},
+		SkilledMasons = {
+			Name = "Skilled Masons",
+			Description = "A group of skilled masons has come to our country, opening up a workshop in PROVINCE_NAME.",
+			Conditions = function(s)
+				if (
+					SyncRand(100) < 50 -- 50% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.5% of happening if the player has one province (this event shouldn't be common)
+					and FactionHasTechnologyType(EventFaction, "masonry")
+				) then
+					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+						if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+							EventProvince = WorldMapProvinces[province_key]
+							return true
+						end
+					end
+				else
+					return false
+				end
+			end,
+			Persistent = true,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 100
+					EventFaction.Research = EventFaction.Research + 1
+				end
+			},
+			OptionTooltips = {"+100 Gold, +1 Research"}
 		}
 	}
 	

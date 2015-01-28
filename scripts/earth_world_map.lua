@@ -147,7 +147,7 @@ WorldMapResources = {
 		{131, 21}, -- iron ore deposits
 		{131, 22}, -- iron ore deposits
 		{131, 30}, -- iron ore deposits
-		{136, 30}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
+--		{136, 30}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{136, 31}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{134, 27}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 		{152, 31} -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
@@ -227,14 +227,15 @@ if (GrandStrategyYear >= -1365) then
 	GrandStrategyEvents.NoblemansBurial = nil -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
 end
 
-if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	Factions.AsaTribe.Technologies.upgrade_germanic_bronze_shield = 2
 	Factions.SwedeTribe.Technologies.upgrade_germanic_bronze_shield = 2
 	Factions.DaneTribe.Technologies.upgrade_germanic_bronze_shield = 2
 	Factions.GothTribe.Technologies.upgrade_germanic_bronze_shield = 2
+	GrandStrategyEvents.TheSunShields = nil
 end
 
-if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
+if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.SwedeTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.DaneTribe.Technologies.upgrade_germanic_broad_sword = 2
@@ -356,7 +357,8 @@ if (GrandStrategyYear >= 98) then
 end
 
 if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	WorldMapProvinces.Romania.Owner = "Rome"
+	WorldMapProvinces.Moldavia.Owner = "Rome"
+	WorldMapProvinces.Wallachia.Owner = "Rome"
 end
 
 if (GrandStrategyYear >= 150) then
@@ -371,16 +373,19 @@ if (GrandStrategyYear >= 200) then
 	WorldMapProvinces.Ukraine.Owner = "Ostrogoth Tribe" -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Ukraine.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.OstrogothTribe, Factions.GothTribe)
-	WorldMapProvinces.Romania.Owner = "Visigoth Tribe" -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Wallachia.Owner = "Visigoth Tribe" -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Moldavia.Owner = "Visigoth Tribe"
 	AcquireFactionTechnologies(Factions.VisigothTribe, Factions.GothTribe)
 end
 
 if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
---	WorldMapProvinces.Romania.Owner = ""
+--	WorldMapProvinces.Moldavia.Owner = ""
+--	WorldMapProvinces.Wallachia.Owner = ""
 end
 
 if (GrandStrategyYear >= 397) then
-	WorldMapProvinces.Romania.Owner = ""
+	WorldMapProvinces.Moldavia.Owner = ""
+	WorldMapProvinces.Wallachia.Owner = ""
 	WorldMapProvinces.Croatia.Owner = "Visigoth Tribe" -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Croatia.Units.unit_germanic_warrior = 0
 end
@@ -491,4 +496,123 @@ end
 
 if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	WorldMapProvinces.Netherlands.Owner = "Francia"
+end
+
+if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	WorldMapProvinces.Astrakhan.Owner = "Muscovy"
+	WorldMapProvinces.Astrakhan.Name = "Astrakhan"
+end
+
+if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	WorldMapProvinces.Aragon.Owner = "Spain"
+	WorldMapProvinces.Aragon.Name = "Aragon"
+	WorldMapProvinces.Castille.Owner = "Spain"
+	WorldMapProvinces.Castille.Name = "Castille"
+	WorldMapProvinces.GaliciaIberia.Owner = "Spain"
+--	WorldMapProvinces.GaliciaIberia.Name = "Galicia"
+	WorldMapProvinces.Portugal.Owner = "Portugal"
+	WorldMapProvinces.Portugal.Name = "Portugal"
+
+	WorldMapProvinces.Aquitaine.Owner = "France"
+	WorldMapProvinces.Brittany.Owner = "France"
+	WorldMapProvinces.Burgundy.Owner = "France"
+	WorldMapProvinces.Burgundy.Name = "Provence"
+	WorldMapProvinces.France.Owner = "France"
+	WorldMapProvinces.France.Name = "France"
+	
+	WorldMapProvinces.Sardinia.Owner = "Spain"
+	WorldMapProvinces.Sicily.Owner = "Spain"
+
+	WorldMapProvinces.Belgium.Owner = "Spain"
+	WorldMapProvinces.Belgium.Name = "Belgium"
+	WorldMapProvinces.Netherlands.Owner = "Spain"
+	WorldMapProvinces.Netherlands.Name = "Netherlands"
+	WorldMapProvinces.Switzerland.Owner = "Switzerland"
+	WorldMapProvinces.Switzerland.Name = "Switzerland"
+	
+	WorldMapProvinces.Jutland.Owner = "Denmark"
+	WorldMapProvinces.Gotaland.Owner = "Sweden"
+	WorldMapProvinces.Sweden.Owner = "Sweden"
+
+	WorldMapProvinces.Bavaria.Owner = "Bavaria"
+	WorldMapProvinces.Brandenburg.Owner = "Brandenburg"
+	WorldMapProvinces.Brandenburg.Name = "Brandenburg"
+	WorldMapProvinces.Prussia.Owner = "Teutonic Order"
+	WorldMapProvinces.Prussia.Name = "Prussia"
+	WorldMapProvinces.Rhineland.Name = "Rhineland"
+	
+	Factions.Austria.Title = "Archduchy"
+	WorldMapProvinces.Austria.Owner = "Austria"
+	WorldMapProvinces.Austria.Name = "Austria"
+	WorldMapProvinces.Bohemia.Owner = "Austria"
+	WorldMapProvinces.Croatia.Owner = "Turkey"
+	WorldMapProvinces.Croatia.Name = "Croatia"
+	WorldMapProvinces.Hungary.Owner = "Turkey"
+	WorldMapProvinces.Hungary.Name = "Hungary"
+	WorldMapProvinces.Silesia.Owner = "Austria"
+	WorldMapProvinces.Transylvania.Owner = "Transylvania"
+	WorldMapProvinces.Transylvania.Name = "Transylvania"
+	
+	WorldMapProvinces.BalticLands.Owner = "Teutonic Order"
+	WorldMapProvinces.Don.Owner = "Crimea"
+	WorldMapProvinces.Don.Name = "Don"
+	WorldMapProvinces.Galicia.Owner = "Poland"
+	WorldMapProvinces.Poland.Owner = "Poland"
+	WorldMapProvinces.Russia.Owner = "Muscovy"
+	WorldMapProvinces.Russia.Name = "Russia"
+	WorldMapProvinces.Ukraine.Owner = "Poland"
+	WorldMapProvinces.Ukraine.Name = "Ukraine"
+	WorldMapProvinces.WhiteRussia.Owner = "Poland"
+	
+	WorldMapProvinces.Moldavia.Owner = "Moldavia"
+	WorldMapProvinces.Moldavia.Name = "Moldavia"
+	WorldMapProvinces.Wallachia.Owner = "Wallachia"
+	WorldMapProvinces.Wallachia.Name = "Wallachia"
+	
+	WorldMapProvinces.England.Owner = "England"
+	WorldMapProvinces.Scotland.Owner = "Scotland"
+	WorldMapProvinces.Scotland.Name = "Scotland"
+	WorldMapProvinces.Ireland.Name = "Ireland"
+	
+	WorldMapWaterProvinces.BalticSea.Name = "Baltic Sea"
+	WorldMapWaterProvinces.EnglishChannel.Name = "English Channel"
+	WorldMapWaterProvinces.IrishSea.Name = "Irish Sea"
+	WorldMapWaterProvinces.NorthSea.Name = "North Sea"
+end
+
+if (GrandStrategyYear >= 1561) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
+	GrandStrategyEvents.TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = nil
+end
+
+if (GrandStrategyYear >= 1618) then -- Brandenburg acquired the Duchy of Prussia in 1618, although it remained under Polish suzerainty until 1657-1660, and Farther Pommerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	WorldMapProvinces.Prussia.Owner = "Brandenburg"
+end
+
+if (GrandStrategyYear >= 1629) then -- Sweden acquired Estonia in 1561 and Livonia in 1629; Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
+	WorldMapProvinces.BalticLands.Owner = "Sweden"
+end
+
+if (GrandStrategyYear >= 1648) then -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	WorldMapProvinces.Netherlands.Owner = "Netherlands"
+	WorldMapProvinces.Rhineland.Owner = "Westphalia"
+end
+
+if (GrandStrategyYear >= 1649) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
+	GrandStrategyEvents.TheUlozhenieLawCode = nil
+end
+
+if (GrandStrategyYear >= 1667) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 12.
+	GrandStrategyEvents.MartinTrampesFarm = nil
+end
+
+if (GrandStrategyYear >= 1740) then -- Brandenburg acquired Silesia in 1740; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	WorldMapProvinces.Silesia.Owner = "Brandenburg"
+end
+
+if (GrandStrategyYear >= 1781) then -- The Serfdom Act for Bohemia and Moravia enacted in 1781 by Emperor Joseph II; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
+	GrandStrategyEvents.TheSerfdomActForBohemiaAndMoravia = nil
+end
+
+if (GrandStrategyYear >= 1861) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
+	GrandStrategyEvents.TheAbolitionOfSerfdomRussia = nil
 end

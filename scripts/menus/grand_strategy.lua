@@ -315,6 +315,7 @@ function RunGrandStrategyGameSetupMenu()
 --					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
+--					"1660 AD", -- 
 				}
 			elseif (GrandStrategyWorld == "Nidavellir") then
 				date_list = {
@@ -651,9 +652,9 @@ function EndTurn()
 		CalculateFactionUpkeeps()
 	end
 
-	DoEvents()
-
 	GrandStrategyYear = GrandStrategyYear + 1;
+
+	DoEvents()
 
 --	if (math.fmod(GrandStrategyYear, 10) == 0) then -- every ten turns, end and restart the menu, to increase performance
 --		GrandStrategyMenu:stop();
@@ -3583,11 +3584,16 @@ function AIDoDiplomacy(ai_faction)
 		for second_key, second_value in pairs(WorldMapProvinces) do
 			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean") then
 				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and round(GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
+					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and (GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
 						DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 					end
 				end
 			end
+		end
+	end
+	for key, value in pairs(Factions) do
+		if (ai_faction.Diplomacy[key] == "War" and FactionHasBorderWith(ai_faction, Factions[key]) == false) then
+			OfferPeace(ai_faction.Name, Factions[key].Name)
 		end
 	end
 end
@@ -3595,7 +3601,9 @@ end
 function AIConsiderOffers(ai_faction)
 	for key, value in pairs(Factions) do
 		if (ai_faction.Diplomacy[key] == "Peace Offered") then
-			if (round(GetFactionMilitaryScore(ai_faction.Name) * 3 / 2) < GetFactionMilitaryScore(Factions[key].Name)) then -- only accept peace if enemy's forces are 50% greater than own forces
+			if (round(GetFactionMilitaryScore(ai_faction.Name) * 3 / 2) < GetFactionMilitaryScore(Factions[key].Name)) then -- accept peace if enemy's forces are 50% greater than own forces
+				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
+			elseif (FactionHasBorderWith(ai_faction, Factions[key]) == false) then -- accept peace if has no borders with enemy any longer (since ships aren't implemented yet)
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
 			else
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, false)
@@ -4396,7 +4404,6 @@ function DoEvents()
 				EventFaction = Factions[key]
 				if (CanTriggerEvent(Factions[key], GrandStrategyEvents[event_key])) then
 					GrandStrategyEvent(Factions[key], GrandStrategyEvents[event_key])
-					break -- only one event per faction per turn
 				end
 				EventFaction = nil
 				EventProvince = nil

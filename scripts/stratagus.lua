@@ -653,35 +653,37 @@ function StandardTriggers()
 						local nearby_uncount = 0
 						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, false)
 						for unit2 = 1,table.getn(nearby_uncount) do 
-							if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource") ~= "" and GetUnitVariable(uncount[unit1], "ResourcesHeld") > 0) then
-								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-									AddMessage("Gained " .. GetUnitVariable(uncount[unit1], "ResourcesHeld") .. " " .. GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"))
+							if (GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
+								if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource") ~= "" and GetUnitVariable(uncount[unit1], "ResourcesHeld") > 0) then
+									if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+										AddMessage("Gained " .. GetUnitVariable(uncount[unit1], "ResourcesHeld") .. " " .. GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"))
+									end
+									
+									SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"), GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource")) + GetUnitVariable(uncount[unit1], "ResourcesHeld"))
+									
+									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") > 0 and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
+									local hp_healed = 0
+									if ((GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")) < GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) then
+										hp_healed = GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")
+									else
+										hp_healed = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")
+									end
+									if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+										AddMessage("Healed " .. hp_healed .. " HP")
+									end
+									SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_healed)
+									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") < 0 and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low") then
+									if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+										AddMessage("Suffered " .. (-1 * GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) .. " HP loss")
+									end
+									SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
+									DamageUnit(uncount[unit1], nearby_uncount[unit2], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) -- necessary to make the game display the damage and check if the unit should have died (for some reason it doesn't actually cause the damage though - probably because the damaging unit belongs to a neutral player)
+									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna")) then -- make animals eat food items
+									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
 								end
-								
-								SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"), GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource")) + GetUnitVariable(uncount[unit1], "ResourcesHeld"))
-								
-								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") > 0 and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
-								local hp_healed = 0
-								if ((GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")) < GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) then
-									hp_healed = GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")
-								else
-									hp_healed = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")
-								end
-								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-									AddMessage("Healed " .. hp_healed .. " HP")
-								end
-								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_healed)
-								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") < 0) then
-								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-									AddMessage("Suffered " .. (-1 * GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) .. " HP loss")
-								end
-								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
-								DamageUnit(uncount[unit1], nearby_uncount[unit2], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) -- necessary to make the game display the damage and check if the unit should have died (for some reason it doesn't actually cause the damage though - probably because the damaging unit belongs to a neutral player)
-								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
-							elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna")) then -- make animals eat food items
-								DamageUnit(nearby_uncount[unit2], uncount[unit1], 1)
 							end
 							break
 						end
