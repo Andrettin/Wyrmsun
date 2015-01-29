@@ -1694,7 +1694,8 @@ DefineUnitType("unit-trap", { Name = _("Trap"),
 	Item = true,
 	HitPointHealing = -15,
 	Sounds = {
-		"selected", "click"
+		"selected", "click",
+		"dead", "axe-attack"
 	} 
 } )
 

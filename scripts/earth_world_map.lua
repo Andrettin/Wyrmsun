@@ -498,6 +498,14 @@ if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 
 	WorldMapProvinces.Netherlands.Owner = "Francia"
 end
 
+if (GrandStrategyYear >= 1490) then -- happened in the 1490s; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+	GrandStrategyEvents.Vornedskabet = nil
+end
+
+if (GrandStrategyYear >= 1523) then -- happened in 1523-1536; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+	GrandStrategyEvents.NoblesClaimLegalJurisdictionPrivilege = nil
+end
+
 if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	WorldMapProvinces.Astrakhan.Owner = "Muscovy"
 	WorldMapProvinces.Astrakhan.Name = "Astrakhan"
@@ -603,6 +611,14 @@ end
 
 if (GrandStrategyYear >= 1667) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 12.
 	GrandStrategyEvents.MartinTrampesFarm = nil
+end
+
+if (GrandStrategyYear >= 1702) then -- Vornedskabet lifted in 1702; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+	GrandStrategyEvents.TheLiftingOfTheVornedskabet = nil
+end
+
+if (GrandStrategyYear >= 1733) then -- Stavnsbandet established in 1733; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+	GrandStrategyEvents.Stavnsbandet = nil
 end
 
 if (GrandStrategyYear >= 1740) then -- Brandenburg acquired Silesia in 1740; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.

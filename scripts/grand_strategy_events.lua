@@ -681,13 +681,14 @@ function LoadEvents(world)
 			},
 			OptionTooltips = {"+1 Research"}
 		},
-		TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
-			Name = "The Confirmation of Seignorial Privileges",
-			Description = "An official confirmation has been made of aristocratic privileges in Livonia and Estonia, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
+		Vornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+			Name = "Vornedskabet",
+			Description = "Movement restrictions, or vornedskabet, have been introduced on the serfs of the island of Zealand.",
 			Conditions = function(s)
 				if (
-					EventFaction.Name == "Teutonic Order" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-					and WorldMapProvinces.BalticLands.Owner == EventFaction.Name
+					EventFaction.Name == "Denmark"
+					and WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic" -- because the name "Vornedskabet" is specific to the Danish language
 					-- should only trigger after a technology for the appropriate time period has been researched
 				) then
 					return true
@@ -703,6 +704,55 @@ function LoadEvents(world)
 				end
 			},
 			OptionTooltips = {"+500 Gold, -5 Research"}
+		},
+		NoblesClaimLegalJurisdictionPrivilege = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+			Name = "Nobles Claim Legal Jurisdiction Privilege",
+			Description = "The Danish nobility has been campaigning for the right of legal jurisdiction over their villagers.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Denmark"
+					-- should only trigger after a technology for the appropriate time period has been researched
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!Accept", "~!Reject"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 500
+					EventFaction.Research = EventFaction.Research - 5
+				end,
+				function(s)
+				end
+			},
+			OptionTooltips = {"+500 Gold, -5 Research", ""}
+		},
+		TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
+			Name = "The Confirmation of Seignorial Privileges",
+			Description = "The aristocrats of Livonia and Estonia claim an official confirmation of their privileges, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Teutonic Order" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+					and WorldMapProvinces.BalticLands.Owner == EventFaction.Name
+					-- should only trigger after a technology for the appropriate time period has been researched
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!Accept", "~!Reject"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold + 500
+					EventFaction.Research = EventFaction.Research - 5
+				end,
+				function(s)
+				end
+			},
+			OptionTooltips = {"+500 Gold, -5 Research", ""}
 		},
 		MartinTrampesFarm = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 12.
 			Name = "Martin Trampe's Farm",
@@ -771,6 +821,57 @@ function LoadEvents(world)
 				end
 			},
 			OptionTooltips = {"+500 Gold, +1 Research"}
+		},
+		TheLiftingOfTheVornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+			Name = "The Lifting of the Vornedskabet",
+			Description = "The vornedskabet has been abolished in Zealand.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Denmark"
+					and WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic"
+					-- should only trigger after a technology for the appropriate time period has been researched
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			RequiredEvents = {
+				Vornedskabet = true
+			},
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research + 5
+				end
+			},
+			OptionTooltips = {"+5 Research"}
+		},
+		Stavnsbandet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+			Name = "Stavnsbandet",
+			Description = "The stavnsbandet, which consists of movement restrictions for the male population, has been introduced for military reasons. It will hurt our economy, however.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Denmark"
+					and WorldMapProvinces.Jutland.Owner == EventFaction.Name
+					and WorldMapProvinces.Jutland.Civilization == "germanic" -- because the name "Vornedskabet" is specific to the Danish language
+					and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_barracks == 2
+					-- should only trigger after a technology for the appropriate time period has been researched
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Gold = EventFaction.Gold - 300
+					EventFaction.Research = EventFaction.Research - 2
+				end
+			},
+			OptionTooltips = {"+300 Gold, -2 Research"}
 		},
 		TheAbolitionOfSerfdomRussia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
 			Name = "The Abolition of Serfdom",
