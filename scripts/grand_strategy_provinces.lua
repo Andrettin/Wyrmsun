@@ -34,6 +34,19 @@ function LoadProvinces(world)
 	WorldMapWaterProvinces = {}
 
 	local EarthProvinces = {
+		Albania = {
+			Name = "Taulantia",
+			Tiles = { {134, 33}, {134, 34} },
+			Owner = "",
+			SettlementName = "Dyr",
+			SettlementLocation = {134, 34}, -- Dyr
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Aquitaine = {
 			Name = "Aquitania",
 			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
@@ -75,6 +88,19 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 8
+			},
+			SettlementTerrain = "Plns"
+		},
+		Attica = {
+			Name = "Attica",
+			Tiles = { {135, 36}, {136, 36} },
+			Owner = "",
+			SettlementName = "Athens",
+			SettlementLocation = {136, 36}, -- Athens
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -177,6 +203,19 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plns"
 		},
+		Bulgaria = {
+			Name = "Haemus",
+			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
+			Owner = "",
+			SettlementName = "Odessus",
+			SettlementLocation = {139, 33}, -- Aegae
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Burgundy = {
 			Name = "Gallia Narbonensis",
 			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
@@ -217,6 +256,20 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plns"
+		},
+		Crete = {
+			Name = "Crete",
+			Tiles = { {137, 39}, {138, 39} },
+			Owner = "Minoan Tribe", -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
+			SettlementName = "Knossos",
+			SettlementLocation = {137, 39}, -- Knossos
+			SettlementBuildings = {
+				unit_germanic_town_hall = 2
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -357,10 +410,6 @@ function LoadProvinces(world)
 			SettlementName = "Rome",
 			SettlementLocation = {129, 34}, -- Rome
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
-				unit_germanic_barracks = 2,
-				unit_germanic_carpenters_shop = 2,
-				unit_germanic_smithy = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -380,6 +429,19 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2
+			},
+			SettlementTerrain = "Plns"
+		},
+		Macedonia = {
+			Name = "Macedonia",
+			Tiles = { {134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34} },
+			Owner = "",
+			SettlementName = "Aegae",
+			SettlementLocation = {135, 34}, -- Aegae
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -435,6 +497,19 @@ function LoadProvinces(world)
 	--		Units = {
 	--		}
 	--	},
+		Peloponnese = {
+			Name = "Peloponnese",
+			Tiles = { {135, 37}, {136, 37} },
+			Owner = "",
+			SettlementName = "Mycenae",
+			SettlementLocation = {136, 37}, -- Mycenae
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Poland = {
 			Name = "Poland",
 			Tiles = { {133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27} },
@@ -532,6 +607,19 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Hill"
 		},
+		Serbia = {
+			Name = "Upper Moesia",
+			Tiles = { {134, 32}, {135, 32}, {135, 33} },
+			Owner = "",
+			SettlementName = "Viminacium",
+			SettlementLocation = {135, 32}, -- Viminacium
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Sicily = {
 			Name = "Sicily",
 			Tiles = { {129, 37} },
@@ -589,6 +677,19 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Mntn"
+		},
+		Thrace = {
+			Name = "Thrace",
+			Tiles = { {138, 34}, {139, 34} },
+			Owner = "",
+			SettlementName = "Byzantium",
+			SettlementLocation = {139, 34}, -- Athens
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
 		},
 		Transylvania = {
 			Name = "Upper Dacia",
@@ -904,6 +1005,11 @@ function LoadProvinces(world)
 			Tiles = { {129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35} },
 			Owner = "Ocean"
 		},
+		AegeanSea = {
+			Name = "Aegean Sea",
+			Tiles = { {136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35} },
+			Owner = "Ocean"
+		},
 		BalearicSea = {
 			Name = "Balearic Sea",
 			Tiles = { {116, 38}, {117, 38}, {118, 38}, {119, 37}, {119, 38}, {120, 35}, {120, 36}, {120, 37}, {121, 35}, {121, 36}, {121, 37}, {122, 33}, {122, 34}, {122, 35}, {122, 36}, {122, 37}, {123, 33}, {123, 34}, {123, 35}, {123, 36}, {123, 37}, {124, 33}, {124, 34}, {124, 35}, {124, 36}, {124, 37}, {125, 34}, {125, 35}, {125, 36}, {125, 37}, {126, 35} },
@@ -931,12 +1037,17 @@ function LoadProvinces(world)
 		},
 		IonianSea = {
 			Name = "Ionian Sea",
-			Tiles = { {128, 38}, {128, 39}, {129, 38}, {129, 39}, {129, 40}, {130, 37}, {130, 38}, {130, 39}, {130, 40}, {131, 37}, {131, 38}, {131, 39}, {131, 40}, {131, 41}, {132, 36}, {132, 37}, {132, 38}, {132, 39}, {132, 40}, {132, 41}, {133, 36}, {133, 37}, {133, 38}, {133, 39}, {133, 40}, {133, 41} },
+			Tiles = { {128, 38}, {128, 39}, {129, 38}, {129, 39}, {129, 40}, {130, 37}, {130, 38}, {130, 39}, {130, 40}, {131, 37}, {131, 38}, {131, 39}, {131, 40}, {131, 41}, {132, 36}, {132, 37}, {132, 38}, {132, 39}, {133, 36}, {133, 37}, {133, 38}, {134, 36}, {134, 37}, {134, 38}, {135, 38}, {136, 38} },
 			Owner = "Ocean"
 		},
 		IrishSea = {
 			Name = "Hibernian Ocean",
 			Tiles = { {113, 27}, {114, 27}, {115, 27}, {116, 24}, {116, 25}, {116, 26}, {116, 27}, {117, 25} },
+			Owner = "Ocean"
+		},
+		LibyanSea = {
+			Name = "Libyan Sea",
+			Tiles = { {132, 40}, {132, 41}, {133, 39}, {133, 40}, {133, 41}, {134, 39}, {134, 40}, {135, 39}, {135, 40}, {136, 39}, {136, 40}, {137, 40}, {138, 40}, {139, 39}, {139, 40} },
 			Owner = "Ocean"
 		},
 		LigurianSea = {

@@ -66,7 +66,7 @@ Quests = {
 	GylvesRealm = {
 		Name = "Gylve's Realm",
 		Icon = "germanic/icons/barbed_arrow",
-		Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo\n\nRewards: 2 Germanic Technology Points.",
+		Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo\n\nRewards: 2 Germanic Technology Points, Belfort Map.",
 		RequiredQuest = "Northwards to the Sea",
 		Civilization = "germanic",
 		TechnologyPoints = 2,
@@ -74,6 +74,18 @@ Quests = {
 		X = 4,
 		Y = 2,
 		PlayerColor = "orange"
+	},
+	TheBattleOfMagetobria = {
+		Name = "The Battle of Magetobria",
+		Icon = "germanic/icons/broad_sword",
+		Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...\n\nMap: Belfort\n\nRewards: 1 Germanic Technology Point.",
+		RequiredQuest = "Gylve's Realm",
+		Civilization = "germanic",
+		TechnologyPoints = 1,
+		Map = "Belfort",
+		X = 5,
+		Y = 2,
+		PlayerColor = "black"
 	},
 	ABargainIsStruck = {
 		Name = "A Bargain is Struck",

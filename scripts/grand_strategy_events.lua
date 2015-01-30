@@ -156,6 +156,7 @@ function LoadEvents(world)
 							end
 							AcquireProvince(WorldMapProvinces.Astrakhan, "")
 							WorldMapProvinces.Astrakhan.Civilization = ""
+							WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 							WorldMapProvinces.Brandenburg.Units.unit_germanic_worker = 0
 							CenterMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 						elseif (GameResult == GameDefeat) then
@@ -166,6 +167,7 @@ function LoadEvents(world)
 							end
 							AcquireProvince(WorldMapProvinces.Astrakhan, "")
 							WorldMapProvinces.Astrakhan.Civilization = ""
+							WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 						end
 					elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
 						AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
@@ -177,6 +179,7 @@ function LoadEvents(world)
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						WorldMapProvinces.Astrakhan.Civilization = ""
+						WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 					end
 					DrawMinimap()
 				end,
@@ -319,7 +322,7 @@ function LoadEvents(world)
 					for i, unitName in ipairs(Units) do
 						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
 							WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = 0
-							WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] * 3 / 4
+							WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] * 3 / 4)
 							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
 						end
 					end
@@ -536,6 +539,51 @@ function LoadEvents(world)
 			},
 			OptionTooltips = {"+1 Research"}
 		},
+		MigrationOfTheVana = {
+			Name = "Migration of the Vana",
+			Description = "Our chieftains desire to migrate to the west, to more hospitable lands for settlement...",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Vana Tribe"
+					and WorldMapProvinces.Don.Owner == EventFaction.Name
+					and SyncRand(100) < 1
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			RequiredEvents = {
+				WestwardMigration = true
+			},
+			Options = {"~!OK", "This is our ~!home"},
+			OptionEffects = {
+				function(s)
+					WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
+					WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
+					WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
+					WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 8
+					WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 8
+					WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 8
+					WorldMapProvinces.France.Units.unit_germanic_warrior = 8
+					WorldMapProvinces.Italy.Units.unit_germanic_warrior = 8
+					AcquireProvince(WorldMapProvinces.Don, "")
+					AcquireFactionTechnologies(Factions.AeduiTribe, EventFaction)
+					AcquireFactionTechnologies(Factions.ArverniTribe, EventFaction)
+					AcquireFactionTechnologies(Factions.MenapiiTribe, EventFaction)
+					AcquireFactionTechnologies(Factions.SequaniTribe, EventFaction)
+					AcquireFactionTechnologies(Factions.Rome, EventFaction)
+					AcquireProvince(WorldMapProvinces.Aquitaine, "Arverni Tribe")
+					AcquireProvince(WorldMapProvinces.Belgium, "Menapii Tribe")
+					AcquireProvince(WorldMapProvinces.Burgundy, "Sequani Tribe")
+					AcquireProvince(WorldMapProvinces.France, "Aedui Tribe")
+					AcquireProvince(WorldMapProvinces.Italy, "Rome")
+					DrawMinimap()
+				end,
+				function(s)
+				end
+			}
+		},
 		BeldegsLands = { -- Beldeg (Baldr), the first legendary ruler of Westphalia (in the sagas he became ruler of Westphalia even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Westphalia); Source: "The Prose Edda", Snorri Sturlson, 1916, pp. 7-8.
 			Name = "Beldeg's Lands",
 			Description = "The territory of Westphalia has been entrusted to the warrior known by the name of Beldeg.",
@@ -680,6 +728,90 @@ function LoadEvents(world)
 				end
 			},
 			OptionTooltips = {"+1 Research"}
+		},
+		TheSequanisAppeal = { -- Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
+			Name = "The Sequani's Appeal",
+			Description = "The Gaulish tribes of the Sequani and the Arverni are embroiled in a war with the Aedui. The Sequani have come to us asking to enlist our help in their war.",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Suebi Tribe"
+					and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+					and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.Brandenburg)
+					and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.France)
+					and EventFaction.Diplomacy.AeduiTribe == "Peace"
+					and EventFaction.Diplomacy.ArverniTribe == "Peace"
+					and EventFaction.Diplomacy.SequaniTribe == "Peace"
+					and Factions.ArverniTribe.Diplomacy.AeduiTribe == "War"
+					and Factions.SequaniTribe.Diplomacy.AeduiTribe == "War"
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!Accept", "~!Reject"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Diplomacy.AeduiTribe = "War"
+					Factions.AeduiTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				end,
+				function(s)
+				end
+			}
+		},
+		TheBattleOfMagetobria = { -- Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
+			Name = "The Battle of Magetobria",
+			Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...",
+			Conditions = function(s)
+				if (
+					EventFaction.Name == "Suebi Tribe"
+					and EventFaction.Diplomacy.AeduiTribe == "War"
+					and EventFaction.Diplomacy.ArverniTribe == "Peace"
+					and EventFaction.Diplomacy.SequaniTribe == "Peace"
+				) then
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
+						GrandStrategyEventMap = true
+						GetMapInfo("maps/earth/belfort.smp")
+						RunMap("maps/earth/belfort.smp")
+						GrandStrategyEventMap = false
+						if (GameResult == GameVictory) then
+							AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
+							for i, unitName in ipairs(Units) do
+								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+									WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(0, "UnitTypesCount", unitName)
+								end
+							end
+							WorldMapProvinces.France.Units.unit_germanic_warrior = 5 -- to give the Aedui something of a defense
+							CenterMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
+						elseif (GameResult == GameDefeat) then
+							for i, unitName in ipairs(Units) do
+								if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+									WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+								end
+							end
+						end
+					elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Suebi Tribe") then
+						AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
+						for i, unitName in ipairs(Units) do
+							if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+								WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2) -- to give them something of a defense
+								WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] * 3 / 4)
+								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
+							end
+						end
+						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+					end
+					DrawMinimap()
+				end
+			}
 		},
 		Vornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 			Name = "Vornedskabet",
@@ -1868,103 +2000,105 @@ function LoadEvents(world)
 	
 	local function AddEventTable(event_table)
 		for key, value in pairs(event_table) do
-			GrandStrategyEvents[key] = {}
-			GrandStrategyEvents[key]["Name"] = event_table[key].Name
-			GrandStrategyEvents[key]["Description"] = event_table[key].Description
-			if (event_table[key].Civilization ~= nil) then
-				GrandStrategyEvents[key]["Civilization"] = event_table[key].Civilization
-			end
-			if (event_table[key].Faction ~= nil) then
-				GrandStrategyEvents[key]["Faction"] = event_table[key].Faction
-			end
-			if (event_table[key].FactionType ~= nil) then
-				GrandStrategyEvents[key]["FactionType"] = event_table[key].FactionType
-			end
-			if (event_table[key].TriggeredOnly ~= nil) then
-				GrandStrategyEvents[key]["TriggeredOnly"] = event_table[key].TriggeredOnly
-			end
-			if (event_table[key].Conditions ~= nil) then
-				GrandStrategyEvents[key]["Conditions"] = event_table[key].Conditions
-			end
-			if (event_table[key].MinYear ~= nil) then
-				GrandStrategyEvents[key]["MinYear"] = event_table[key].MinYear
-			end
-			if (event_table[key].MaxYear ~= nil) then
-				GrandStrategyEvents[key]["MaxYear"] = event_table[key].MaxYear
-			end
-			if (event_table[key].RandomChance ~= nil) then
-				GrandStrategyEvents[key]["RandomChance"] = event_table[key].RandomChance
-			end
-			if (event_table[key].RequiredEvents ~= nil) then
-				GrandStrategyEvents[key]["RequiredEvents"] = {}
-				for second_key, second_value in pairs(event_table[key].RequiredEvents) do
-					GrandStrategyEvents[key].RequiredEvents[second_key] = event_table[key].RequiredEvents[second_key]
+			if (world ~= "Save" or GetArrayIncludes(SavedGrandStrategyEvents, key)) then
+				GrandStrategyEvents[key] = {}
+				GrandStrategyEvents[key]["Name"] = event_table[key].Name
+				GrandStrategyEvents[key]["Description"] = event_table[key].Description
+				if (event_table[key].Civilization ~= nil) then
+					GrandStrategyEvents[key]["Civilization"] = event_table[key].Civilization
 				end
-			end
-			if (event_table[key].Commodities ~= nil) then
-				GrandStrategyEvents[key]["Commodities"] = {}
-				for second_key, second_value in pairs(event_table[key].Commodities) do
-					GrandStrategyEvents[key].Commodities[second_key] = event_table[key].Commodities[second_key]
+				if (event_table[key].Faction ~= nil) then
+					GrandStrategyEvents[key]["Faction"] = event_table[key].Faction
 				end
-			end
-			if (event_table[key].Provinces ~= nil) then
-				GrandStrategyEvents[key]["Provinces"] = {}
-				for second_key, second_value in pairs(event_table[key].Provinces) do
-					GrandStrategyEvents[key].Provinces[second_key] = event_table[key].Provinces[second_key]
+				if (event_table[key].FactionType ~= nil) then
+					GrandStrategyEvents[key]["FactionType"] = event_table[key].FactionType
 				end
-			end
-			if (event_table[key].SettlementBuildings ~= nil) then
-				GrandStrategyEvents[key]["SettlementBuildings"] = {}
-				for second_key, second_value in pairs(event_table[key].SettlementBuildings) do
-					GrandStrategyEvents[key].SettlementBuildings[second_key] = event_table[key].SettlementBuildings[second_key]
+				if (event_table[key].TriggeredOnly ~= nil) then
+					GrandStrategyEvents[key]["TriggeredOnly"] = event_table[key].TriggeredOnly
 				end
-			end
-			if (event_table[key].Units ~= nil) then
-				GrandStrategyEvents[key]["Units"] = {}
-				for second_key, second_value in pairs(event_table[key].Units) do
-					GrandStrategyEvents[key].Units[second_key] = event_table[key].Units[second_key]
+				if (event_table[key].Conditions ~= nil) then
+					GrandStrategyEvents[key]["Conditions"] = event_table[key].Conditions
 				end
-			end
-			if (event_table[key].Heroes ~= nil) then
-				GrandStrategyEvents[key]["Heroes"] = {}
-				for second_key, second_value in pairs(event_table[key].Heroes) do
-					GrandStrategyEvents[key].Heroes[second_key] = event_table[key].Heroes[second_key]
+				if (event_table[key].MinYear ~= nil) then
+					GrandStrategyEvents[key]["MinYear"] = event_table[key].MinYear
 				end
-			end
-			if (event_table[key].SecondFaction ~= nil) then
-				GrandStrategyEvents[key]["SecondFaction"] = event_table[key].SecondFaction
-			end
-			if (event_table[key].SecondProvinces ~= nil) then
-				GrandStrategyEvents[key]["SecondProvinces"] = {}
-				for second_key, second_value in pairs(event_table[key].SecondProvinces) do
-					GrandStrategyEvents[key].SecondProvinces[second_key] = event_table[key].SecondProvinces[second_key]
+				if (event_table[key].MaxYear ~= nil) then
+					GrandStrategyEvents[key]["MaxYear"] = event_table[key].MaxYear
 				end
-			end
-			if (event_table[key].Persistent ~= nil) then
-				GrandStrategyEvents[key]["Persistent"] = event_table[key].Persistent
-			end
-			if (event_table[key].Options ~= nil) then
-				GrandStrategyEvents[key]["Options"] = {}
-				for i=1,table.getn(event_table[key].Options) do
-					table.insert(GrandStrategyEvents[key].Options, event_table[key].Options[i])
+				if (event_table[key].RandomChance ~= nil) then
+					GrandStrategyEvents[key]["RandomChance"] = event_table[key].RandomChance
 				end
-			end
-			if (event_table[key].OptionConditions ~= nil) then
-				GrandStrategyEvents[key]["OptionConditions"] = {}
-				for i=1,table.getn(event_table[key].OptionConditions) do
-					table.insert(GrandStrategyEvents[key].OptionConditions, event_table[key].OptionConditions[i])
+				if (event_table[key].RequiredEvents ~= nil) then
+					GrandStrategyEvents[key]["RequiredEvents"] = {}
+					for second_key, second_value in pairs(event_table[key].RequiredEvents) do
+						GrandStrategyEvents[key].RequiredEvents[second_key] = event_table[key].RequiredEvents[second_key]
+					end
 				end
-			end
-			if (event_table[key].OptionEffects ~= nil) then
-				GrandStrategyEvents[key]["OptionEffects"] = {}
-				for i=1,table.getn(event_table[key].OptionEffects) do
-					table.insert(GrandStrategyEvents[key].OptionEffects, event_table[key].OptionEffects[i])
+				if (event_table[key].Commodities ~= nil) then
+					GrandStrategyEvents[key]["Commodities"] = {}
+					for second_key, second_value in pairs(event_table[key].Commodities) do
+						GrandStrategyEvents[key].Commodities[second_key] = event_table[key].Commodities[second_key]
+					end
 				end
-			end
-			if (event_table[key].OptionTooltips ~= nil) then
-				GrandStrategyEvents[key]["OptionTooltips"] = {}
-				for i=1,table.getn(event_table[key].OptionTooltips) do
-					table.insert(GrandStrategyEvents[key].OptionTooltips, event_table[key].OptionTooltips[i])
+				if (event_table[key].Provinces ~= nil) then
+					GrandStrategyEvents[key]["Provinces"] = {}
+					for second_key, second_value in pairs(event_table[key].Provinces) do
+						GrandStrategyEvents[key].Provinces[second_key] = event_table[key].Provinces[second_key]
+					end
+				end
+				if (event_table[key].SettlementBuildings ~= nil) then
+					GrandStrategyEvents[key]["SettlementBuildings"] = {}
+					for second_key, second_value in pairs(event_table[key].SettlementBuildings) do
+						GrandStrategyEvents[key].SettlementBuildings[second_key] = event_table[key].SettlementBuildings[second_key]
+					end
+				end
+				if (event_table[key].Units ~= nil) then
+					GrandStrategyEvents[key]["Units"] = {}
+					for second_key, second_value in pairs(event_table[key].Units) do
+						GrandStrategyEvents[key].Units[second_key] = event_table[key].Units[second_key]
+					end
+				end
+				if (event_table[key].Heroes ~= nil) then
+					GrandStrategyEvents[key]["Heroes"] = {}
+					for second_key, second_value in pairs(event_table[key].Heroes) do
+						GrandStrategyEvents[key].Heroes[second_key] = event_table[key].Heroes[second_key]
+					end
+				end
+				if (event_table[key].SecondFaction ~= nil) then
+					GrandStrategyEvents[key]["SecondFaction"] = event_table[key].SecondFaction
+				end
+				if (event_table[key].SecondProvinces ~= nil) then
+					GrandStrategyEvents[key]["SecondProvinces"] = {}
+					for second_key, second_value in pairs(event_table[key].SecondProvinces) do
+						GrandStrategyEvents[key].SecondProvinces[second_key] = event_table[key].SecondProvinces[second_key]
+					end
+				end
+				if (event_table[key].Persistent ~= nil) then
+					GrandStrategyEvents[key]["Persistent"] = event_table[key].Persistent
+				end
+				if (event_table[key].Options ~= nil) then
+					GrandStrategyEvents[key]["Options"] = {}
+					for i=1,table.getn(event_table[key].Options) do
+						table.insert(GrandStrategyEvents[key].Options, event_table[key].Options[i])
+					end
+				end
+				if (event_table[key].OptionConditions ~= nil) then
+					GrandStrategyEvents[key]["OptionConditions"] = {}
+					for i=1,table.getn(event_table[key].OptionConditions) do
+						table.insert(GrandStrategyEvents[key].OptionConditions, event_table[key].OptionConditions[i])
+					end
+				end
+				if (event_table[key].OptionEffects ~= nil) then
+					GrandStrategyEvents[key]["OptionEffects"] = {}
+					for i=1,table.getn(event_table[key].OptionEffects) do
+						table.insert(GrandStrategyEvents[key].OptionEffects, event_table[key].OptionEffects[i])
+					end
+				end
+				if (event_table[key].OptionTooltips ~= nil) then
+					GrandStrategyEvents[key]["OptionTooltips"] = {}
+					for i=1,table.getn(event_table[key].OptionTooltips) do
+						table.insert(GrandStrategyEvents[key].OptionTooltips, event_table[key].OptionTooltips[i])
+					end
 				end
 			end
 		end
@@ -1977,6 +2111,10 @@ function LoadEvents(world)
 		AddEventTable(NidavellirEvents)
 		AddEventTable(GenericEvents)
 	elseif (world == "Random") then
+		AddEventTable(NidavellirEvents)
+		AddEventTable(EarthEvents)
+		AddEventTable(GenericEvents)
+	elseif (world == "Save") then
 		AddEventTable(NidavellirEvents)
 		AddEventTable(EarthEvents)
 		AddEventTable(GenericEvents)

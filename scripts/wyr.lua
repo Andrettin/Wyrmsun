@@ -397,6 +397,13 @@ DefineCivilizationFactions("germanic",
 		"playable", false
 	},
 	"faction", {
+		"name", "Minoan Tribe",
+		"type", "tribe",
+		"color", "yellow",
+		"secondary_color", "yellow",
+		"playable", false
+	},
+	"faction", {
 		"name", "Sequani Tribe",
 		"type", "tribe",
 		"color", "pink",
@@ -411,6 +418,13 @@ DefineCivilizationFactions("germanic",
 		"playable", false
 	},
 	-- Non-Playable Polities
+	"faction", {
+		"name", "Crete", -- Minoans
+		"type", "polity",
+		"color", "yellow",
+		"secondary_color", "yellow",
+		"playable", false
+	},
 	"faction", {
 		"name", "Crimea",
 		"type", "polity",

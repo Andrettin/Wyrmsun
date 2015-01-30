@@ -47,8 +47,7 @@ function RunEncyclopediaMenu()
 	Load("scripts/worlds.lua")
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
+	
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
@@ -92,7 +91,6 @@ end
 function RunEncyclopediaUnitsMenu(state)
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")
@@ -193,7 +191,6 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	b:setActionCallback(
 		function()
 			wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 			if not (IsMusicPlaying()) then
 				PlayMusic("music/legends_of_the_north.ogg")
@@ -306,7 +303,6 @@ end
 function RunEncyclopediaTextsMenu()
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")
@@ -338,7 +334,6 @@ end
 
 function OpenEncyclopediaText(text_key, chosen_chapter)
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")
@@ -665,7 +660,6 @@ end
 function RunEncyclopediaWorldsMenu()
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")
@@ -712,7 +706,6 @@ end
 
 function OpenEncyclopediaWorldEntry(world_key)
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/legends_of_the_north.ogg")

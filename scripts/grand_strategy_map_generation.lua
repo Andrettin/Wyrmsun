@@ -557,6 +557,10 @@ function LoadFactions(world)
 			Name = "Menapii Tribe",
 			Civilization = "germanic"
 		},
+		MinoanTribe = {
+			Name = "Minoan Tribe",
+			Civilization = "germanic"
+		},
 		SequaniTribe = {
 			Name = "Sequani Tribe",
 			Civilization = "germanic"
@@ -570,6 +574,11 @@ function LoadFactions(world)
 			}
 		},
 		-- Non-Playable Polities
+		Crete = {
+			Name = "Crete",
+			Civilization = "germanic",
+			Title = "Kingdom"
+		},
 		Crimea = {
 			Name = "Crimea",
 			Civilization = "germanic",

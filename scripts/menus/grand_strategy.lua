@@ -388,6 +388,11 @@ function RunGrandStrategyGame()
 			RunGrandStrategyLoadGameMenu()
 		end,
 	{0, 0})
+	GrandStrategyMenu:addButton("", "f5", 0, 0,
+		function()
+			RunEncyclopediaMenu()
+		end,
+	{0, 0})
 
 	-- add pseudo-buttons to allow the player to see other parts of the map
 	GrandStrategyMenu:addButton("", "up", 0, 0,
@@ -1232,6 +1237,27 @@ function FactionHasBorderWith(faction, faction_to)
 	return false
 end
 
+function FactionHasSecondaryBorderWith(faction, faction_to)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
+			if (WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
+				for j=1,table.getn(WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
+					if (WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Owner == faction_to.Name) then
+						return true
+					end
+				end
+			elseif (WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
+				for j=1,table.getn(WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
+					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Owner == faction_to.Name) then
+						return true
+					end
+				end
+			end
+		end
+	end
+	return false
+end
+
 function ProvinceHasBorderWith(province, province_to)
 	for i=1,table.getn(province.BorderProvinces) do
 		if (WorldMapProvinces[province.BorderProvinces[i]] == province_to) then
@@ -1253,8 +1279,13 @@ function RunGrandStrategyGameMenu()
 		function() menu:stop(); RunGrandStrategySaveMenu() end)
 	menu:addHalfButton("Load (~<F12~>)", "f12", 16 + 12 + 106, 40,
 		function() menu:stop(); RunGrandStrategyLoadGameMenu() end)
---	menu:addFullButton("Options (~<F5~>)", "f5", 16, 40 + 36*1,
---		function() RunGameOptionsMenu() end)
+	menu:addFullButton("Encyclopedia (~<F5~>)", "f5", 16, 40 + 36*1,
+		function()
+			RunEncyclopediaMenu()
+			menu:stop()
+			GrandStrategyMenu:stop();
+			RunGrandStrategyGame()
+		end)
 --	menu:addFullButton("Help (~<F1~>)", "f1", 16, 40 + 36*2,
 --		function() RunHelpMenu() end)
 --	menu:addFullButton("~!Objectives", "o", 16, 40 + 36*3,
@@ -1393,7 +1424,9 @@ function RunGrandStrategyLoadGameMenu()
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
 			GrandStrategyCommodities = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
 			MercenaryGroups = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
-			LoadEvents(GrandStrategyWorld)
+			SavedGrandStrategyEvents = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyEvents
+			LoadEvents("Save")
+			SavedGrandStrategyEvents = nil
 			CalculateTileProvinces()
 			
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
@@ -3593,7 +3626,9 @@ function AIDoDiplomacy(ai_faction)
 	end
 	for key, value in pairs(Factions) do
 		if (ai_faction.Diplomacy[key] == "War" and FactionHasBorderWith(ai_faction, Factions[key]) == false) then
-			OfferPeace(ai_faction.Name, Factions[key].Name)
+			if (FactionHasSecondaryBorderWith(ai_faction, Factions[key]) == false) then
+				OfferPeace(ai_faction.Name, Factions[key].Name)
+			end
 		end
 	end
 end
@@ -4604,8 +4639,12 @@ function SaveGrandStrategyGame(name)
 		SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
 		SavedFactions = Factions,
 		SavedGrandStrategyCommodities = GrandStrategyCommodities,
-		SavedMercenaryGroups = MercenaryGroups
+		SavedMercenaryGroups = MercenaryGroups,
+		SavedGrandStrategyEvents = {}
 	}
+	for key, value in pairs(GrandStrategyEvents) do
+		table.insert(wyr[name].SavedGrandStrategyEvents, key)
+	end
 	SaveExtraPreferences(name)
 	wyr[name] = nil
 end

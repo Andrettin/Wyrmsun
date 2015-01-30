@@ -51,13 +51,21 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - A faction can now receive more than one event in the same turn.
 - Added "The Sun Shields" flavor event for the Germanics.
 - Added "Skilled Masons" and "Skilled Carpenters" random events.
+- Fixed a bug which caused non-persistent event to re-trigger after loading a saved game.
+- Added "The Sequani's Appeal" and "The Battle of Magetobria" events.
+- Added Albania, Attica, Bulgaria, Crete, Macedonia, Peloponnese, Serbia and Thrace provinces to the Earth world map.
+- The encyclopedia can now be accessed through the menu in Grand Strategy mode.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
+- Added Belfort map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
 - Added caltrops and trap objects (graphics by b_o).
+
+* Quests
+- Added The Battle of Magetobria quest.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
