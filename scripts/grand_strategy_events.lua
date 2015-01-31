@@ -813,6 +813,80 @@ function LoadEvents(world)
 				end
 			}
 		},
+		PalladiusBishopOfIreland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
+			Name = "Palladius, Bishop of PROVINCE_NAME",
+			Description = "The Pope has ordained the Briton deacon Palladius as the first bishop of PROVINCE_NAME, sending him to administer the small community of the faithful there, and to promote Christianity amongst the non-believers.",
+			Conditions = function(s)
+				if (
+					WorldMapProvinces.Ireland.Owner == EventFaction.Name
+					and GrandStrategyYear == 431
+				) then
+					EventProvince = WorldMapProvinces.Ireland
+					return true
+				else
+					return false
+				end
+			end,
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research + 1
+				end
+			},
+			OptionTooltips = {"+1 Research"}
+		},
+		PalladiusFailure = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
+			Name = "Palladius' Failure",
+			Description = "The bishop of PROVINCE_NAME Palladius, faced with great difficulties, has desisted from his mission of promoting Christianity there. He left with his assistants for the northern parts of Great Britain, where his days ended.",
+			Conditions = function(s)
+				if (
+					WorldMapProvinces.Ireland.Owner == EventFaction.Name
+					and SyncRand(100) < 80
+				) then
+					EventProvince = WorldMapProvinces.Ireland
+					return true
+				else
+					return false
+				end
+			end,
+			RequiredEvents = {
+				PalladiusBishopOfIreland = true
+			},
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research - 1
+					GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
+				end
+			},
+			OptionTooltips = {"-1 Research"}
+		},
+		PalladiusTheApostleOfIreland = { -- ahistorical success of Palladius in converting the Irish
+			Name = "Palladius, the Apostle of PROVINCE_NAME",
+			Description = "Palladius has succeeded in converting the people of PROVINCE_NAME to the Christian faith!",
+			Conditions = function(s)
+				if (
+					WorldMapProvinces.Ireland.Owner == EventFaction.Name
+					and SyncRand(100) < 20
+				) then
+					EventProvince = WorldMapProvinces.Ireland
+					return true
+				else
+					return false
+				end
+			end,
+			RequiredEvents = {
+				PalladiusBishopOfIreland = true
+			},
+			Options = {"~!OK"},
+			OptionEffects = {
+				function(s)
+					EventFaction.Research = EventFaction.Research + 1
+					GrandStrategyEvents.PalladiusFailure = nil
+				end
+			},
+			OptionTooltips = {"+1 Research"}
+		},
 		Vornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 			Name = "Vornedskabet",
 			Description = "Movement restrictions, or vornedskabet, have been introduced on the serfs of the island of Zealand.",

@@ -4336,7 +4336,11 @@ function GrandStrategyEvent(faction, event)
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
 
-		menu:addLabel(event.Name, 176, 11)
+		local event_name = event.Name
+		if (EventProvince ~= nil and string.find(event_name, "PROVINCE_NAME") ~= nil) then
+			event_name = string.gsub(event_name, "PROVINCE_NAME", EventProvince.Name)
+		end
+		menu:addLabel(event_name, 176, 11)
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])

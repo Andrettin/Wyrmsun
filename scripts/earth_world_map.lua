@@ -425,6 +425,12 @@ if (GrandStrategyYear >= 412) then
 	WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
+if (GrandStrategyYear >= 431) then
+	GrandStrategyEvents.PalladiusBishopOfIreland = nil
+	GrandStrategyEvents.PalladiusFailure = nil
+	GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
+end
+
 if (GrandStrategyYear >= 445) then
 	WorldMapProvinces.Switzerland.Owner = "Burgundian Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
