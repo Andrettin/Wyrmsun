@@ -67,11 +67,9 @@ function LoadProvinces(world)
 			SettlementName = "Caesaraugusta",
 			SettlementLocation = {119, 34}, -- Zaragoza
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -111,7 +109,6 @@ function LoadProvinces(world)
 			SettlementName = "Vindobona",
 			SettlementLocation = {131, 29}, -- Vienna
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -195,7 +192,6 @@ function LoadProvinces(world)
 	--		SettlementName = "Rennes",
 			SettlementLocation = {118, 29}, -- Rennes
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -204,15 +200,16 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plns"
 		},
 		Bulgaria = {
-			Name = "Haemus",
+			Name = "Lower Moesia",
 			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
 			Owner = "",
 			SettlementName = "Odessus",
-			SettlementLocation = {139, 33}, -- Aegae
+			SettlementLocation = {139, 33}, -- Odessus
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -224,7 +221,7 @@ function LoadProvinces(world)
 			SettlementLocation = {123, 31}, -- Lyon
 			SettlementBuildings = {
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/earth/belfort.smp",
 			Units = {
 			},
 			SettlementTerrain = "Plns"
@@ -236,11 +233,9 @@ function LoadProvinces(world)
 			SettlementName = "Toletum",
 			SettlementLocation = {117, 35}, -- Toledo
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -251,11 +246,9 @@ function LoadProvinces(world)
 			SettlementName = "Aleria",
 			SettlementLocation = {126, 34},
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -280,7 +273,6 @@ function LoadProvinces(world)
 			SettlementName = "Salonae",
 			SettlementLocation = {131, 31}, -- Zagreb
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -311,7 +303,6 @@ function LoadProvinces(world)
 			SettlementName = "Londinium",
 			SettlementLocation = {119, 27}, -- London
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -353,7 +344,6 @@ function LoadProvinces(world)
 			SettlementName = "Lucus Augusti",
 			SettlementLocation = {114, 33}, -- Corunna
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -413,7 +403,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 40 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -451,7 +441,6 @@ function LoadProvinces(world)
 			Owner = "",
 			SettlementLocation = {139, 31}, -- Braila
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -530,11 +519,9 @@ function LoadProvinces(world)
 			SettlementName = "Olisipo",
 			SettlementLocation = {114, 36}, -- Lisbon
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -587,11 +574,9 @@ function LoadProvinces(world)
 			SettlementName = "Caralis",
 			SettlementLocation = {126, 36},
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -617,6 +602,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -627,11 +613,9 @@ function LoadProvinces(world)
 			SettlementName = "Syracuse",
 			SettlementLocation = {129, 37}, -- Palermo
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -670,7 +654,6 @@ function LoadProvinces(world)
 	--		SettlementName = "Bern",
 			SettlementLocation = {125, 30}, -- Bern
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -688,6 +671,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -724,7 +708,6 @@ function LoadProvinces(world)
 			Owner = "",
 			SettlementLocation = {138, 32}, -- Bucharest
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {

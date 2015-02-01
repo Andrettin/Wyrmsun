@@ -18,14 +18,14 @@ if (GrandStrategyEventMap) then
 
 	local units_to_be_created = {}
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 			units_to_be_created[string.gsub(unitName, "-", "_")] = EventProvince.Units[string.gsub(unitName, "-", "_")]
 			EventProvince.Units[string.gsub(unitName, "-", "_")] = EventProvince.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
 		end
 	end
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
 					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -36,7 +36,7 @@ if (GrandStrategyEventMap) then
 	
 	-- create heroes, if any
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+		if (IsHero(unitName)) then
 			if (EventProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 				EventProvince.Heroes[string.gsub(unitName, "-", "_")] = 0

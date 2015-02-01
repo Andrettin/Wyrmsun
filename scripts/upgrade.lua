@@ -56,7 +56,7 @@ function DefineAllowNormalUnits(flags)
 						PlayerUnitFlag[j] = "A"
 					end
 				end
-				if (string.find(unitName, "hero") ~= nil) then
+				if (IsHero(unitName)) then
 					if (GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
 						PlayerHeroUnitMax[j] = 0
 					else
@@ -67,7 +67,7 @@ function DefineAllowNormalUnits(flags)
 			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
 			DefineAllow(unitName, flags)
 			if (string.find(unitName, "upgrade-") == nil) then
-				if (string.find(unitName, "hero") ~= nil) then
+				if (IsHero(unitName)) then
 					DefineUnitAllow(unitName, PlayerHeroUnitMax[0], PlayerHeroUnitMax[1], PlayerHeroUnitMax[2], PlayerHeroUnitMax[3], PlayerHeroUnitMax[4], PlayerHeroUnitMax[5], PlayerHeroUnitMax[6], PlayerHeroUnitMax[7], PlayerHeroUnitMax[8], PlayerHeroUnitMax[9], PlayerHeroUnitMax[10], PlayerHeroUnitMax[11], PlayerHeroUnitMax[12], PlayerHeroUnitMax[13], PlayerHeroUnitMax[14], PlayerHeroUnitMax[15])
 				end
 				if (GetUnitTypeData(unitName, "Class") == "thief") then
@@ -82,7 +82,7 @@ function DefineAllowNormalUnits(flags)
 			else
 				DefineAllow(unitName, flags)
 			end
-			if (string.find(unitName, "hero") ~= nil) then
+			if (IsHero(unitName)) then
 				if (flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") then
 					DefineUnitAllow(unitName, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 				else

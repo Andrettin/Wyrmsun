@@ -278,23 +278,43 @@ end
 
 if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Sicily.Owner = "Rome"
+	WorldMapProvinces.Sicily.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Corsica.Owner = "Rome"
+	WorldMapProvinces.Corsica.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Sardinia.Owner = "Rome"
+	WorldMapProvinces.Sardinia.SettlementBuildings.unit_germanic_town_hall = 2
+end
+
+if (GrandStrategyYear >= -229) then -- The cities of Dyrrhachium and Apollonia were acquired by Rome in 229 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Albania.Owner = "Rome"
+	WorldMapProvinces.Albania.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Aragon.Owner = "Rome"
+	WorldMapProvinces.Aragon.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Castille.Owner = "Rome"
+	WorldMapProvinces.Castille.SettlementBuildings.unit_germanic_town_hall = 2
+end
+
+if (GrandStrategyYear >= -146) then -- Attica, Macedonia and the Peloponnese acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Attica.Owner = "Rome"
+	WorldMapProvinces.Attica.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Macedonia.Owner = "Rome"
+	WorldMapProvinces.Macedonia.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Peloponnese.Owner = "Rome"
+	WorldMapProvinces.Peloponnese.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Portugal.Owner = "Rome"
+	WorldMapProvinces.Portugal.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
@@ -324,6 +344,10 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	GrandStrategyEvents.MigrationOfTheVana = nil
 end
 
+if (GrandStrategyYear >= -67) then -- Crete acquired by Rome in 67 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Crete.Owner = "Rome"
+end
+
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 	WorldMapProvinces.Burgundy.Owner = "Suebi Tribe"
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_germanic_town_hall = 2
@@ -335,8 +359,19 @@ if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus 
 end
 
 if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
+	GrandStrategyEvents.AskRomeForHelp = nil
+	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	WorldMapProvinces.Burgundy.Owner = ""
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 10 -- to make the province harder to conquer
+end
+
+if (GrandStrategyYear >= -33) then -- Illyricum acquired by Rome in 33 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Croatia.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Bulgaria.Owner = "Rome"
+	WorldMapProvinces.Serbia.Owner = "Rome"
 end
 
 if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
@@ -353,6 +388,10 @@ if (GrandStrategyYear >= -15) then -- Noricum acquired by Rome in 15 BC; Source:
 	WorldMapProvinces.Austria.Owner = "Rome"
 end
 
+if (GrandStrategyYear >= -14) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Thrace.Owner = "Rome"
+end
+
 if (GrandStrategyYear >= -9) then -- Maroboduus, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 	WorldMapProvinces.Bohemia.Owner = "Marcomanni Tribe"
 	WorldMapProvinces.Bohemia.SettlementBuildings.unit_germanic_town_hall = 2
@@ -364,6 +403,10 @@ if (GrandStrategyYear >= 1) then -- Political situation in Europe in 1 AD; Sourc
 	WorldMapProvinces.Bavaria.Owner = "Suebi Tribe" -- Suebi in modern southwestern Germany in 1 AD
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
+end
+
+if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Hungary.Owner = "Rome"
 end
 
 if (GrandStrategyYear >= 43) then -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -379,7 +422,14 @@ end
 
 if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Moldavia.Owner = "Rome"
+	WorldMapProvinces.Transylvania.Owner = "Rome"
 	WorldMapProvinces.Wallachia.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= 142) then
+	WorldMapProvinces.Transylvania.Owner = "Vandal Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Transylvania.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	AcquireFactionTechnologies(Factions.VandalTribe, Factions.AsaTribe)
 end
 
 if (GrandStrategyYear >= 150) then
@@ -401,6 +451,7 @@ end
 
 if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --	WorldMapProvinces.Moldavia.Owner = ""
+	WorldMapProvinces.Transylvania.Owner = ""
 --	WorldMapProvinces.Wallachia.Owner = ""
 end
 
@@ -429,6 +480,10 @@ if (GrandStrategyYear >= 431) then
 	GrandStrategyEvents.PalladiusBishopOfIreland = nil
 	GrandStrategyEvents.PalladiusFailure = nil
 	GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
+end
+
+if (GrandStrategyYear >= 440) then
+	GrandStrategyEvents.PatrickTheApostleOfIreland = nil
 end
 
 if (GrandStrategyYear >= 445) then
@@ -461,11 +516,11 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	WorldMapProvinces.France.Owner = "Francia"
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.France.Name = "Neustria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
+	WorldMapProvinces.Transylvania.Owner = ""
 	WorldMapProvinces.Corsica.Owner = "Vandal Tribe" -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Corsica.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.Sardinia.Owner = "Vandal Tribe" -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Sardinia.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	AcquireFactionTechnologies(Factions.VandalTribe, Factions.AsaTribe)
 	WorldMapProvinces.GaliciaIberia.Owner = "Galicia" -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Portugal.Owner = "Galicia"
 	AcquireFactionTechnologies(Factions.Galicia, Factions.SuebiTribe)
@@ -521,8 +576,57 @@ if (GrandStrategyYear >= 537) then -- region of Altbayern, Salzburg and Tyrol co
 	WorldMapProvinces.Bavaria.Owner = "Francia"
 end
 
+if (GrandStrategyYear >= 563) then
+	GrandStrategyEvents.ColumbaMissionaryToScotland = nil
+	GrandStrategyEvents.MohonnaMissionaryToThePicts = nil
+end
+
+if (GrandStrategyYear >= 596) then
+	GrandStrategyEvents.TheMissionOfAugustine = nil
+end
+
+if (GrandStrategyYear >= 597) then
+	GrandStrategyEvents.AugustineArchbishopOfEngland = nil
+	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, §10.
+end
+
+if (GrandStrategyYear >= 602) then
+	GrandStrategyEvents.TheConferenceAtAugustinesOak = nil
+	GrandStrategyEvents.AugustinesSecondConference = nil
+end
+
+if (GrandStrategyYear >= 604) then
+	GrandStrategyEvents.MellitusConsecratedBishopOfLondon = nil
+	GrandStrategyEvents.JustusConsecratedBishopOfRochester = nil
+end
+
+if (GrandStrategyYear >= 612) then
+	GrandStrategyEvents.ColumbanusMissionaryToFrance = nil
+end
+
+if (GrandStrategyYear >= 625) then
+	GrandStrategyEvents.PaulinusAppointedArchbishopOfYork = nil
+end
+
+if (GrandStrategyYear >= 680) then
+	GrandStrategyEvents.KilianMissionaryToFranconia = nil
+	GrandStrategyEvents.EloquiusMissionaryToBelgium = nil
+end
+
+if (GrandStrategyYear >= 692) then
+	GrandStrategyEvents.WillibrordMissionaryToFriesland = nil
+end
+
+if (GrandStrategyYear >= 700) then
+	GrandStrategyEvents.RupertMissionaryToBavaria = nil
+end
+
 if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	WorldMapProvinces.Netherlands.Owner = "Francia"
+end
+
+if (GrandStrategyYear >= 970) then
+	GrandStrategyEvents.ForannanMissionaryToFrontierOfBelgium = nil
 end
 
 if (GrandStrategyYear >= 1490) then -- happened in the 1490s; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
@@ -530,7 +634,7 @@ if (GrandStrategyYear >= 1490) then -- happened in the 1490s; Source: Markus Cer
 end
 
 if (GrandStrategyYear >= 1523) then -- happened in 1523-1536; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
-	GrandStrategyEvents.NoblesClaimLegalJurisdictionPrivilege = nil
+	GrandStrategyEvents.NoblesAcquireLegalJurisdictionPrivilege = nil
 end
 
 if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

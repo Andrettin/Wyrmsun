@@ -795,7 +795,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+					if (IsMilitaryUnit(unitName)) then
 						if (arg1 == Attacker) then
 							for i=1,AttackingUnits[string.gsub(unitName, "-", "_")] do
 								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
@@ -805,7 +805,7 @@ function SetPlayerData(player, data, arg1, arg2)
 								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 							end
 						end
-					elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then -- create heroes which are in the province for the defender
+					elseif (IsHero(unitName)) then -- create heroes which are in the province for the defender
 						if (arg1 == Attacker and AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
 							OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 						elseif (arg1 == Defender and AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then

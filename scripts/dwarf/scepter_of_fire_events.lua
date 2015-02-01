@@ -3811,7 +3811,7 @@ AddTrigger(
 					-- Shinsplitters
 					local units_to_be_created = {}
 					for i, unitName in ipairs(Units) do
-						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						if (IsMilitaryUnit(unitName)) then
 							units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 							units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 4)
 							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
@@ -3822,7 +3822,7 @@ AddTrigger(
 						WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1
 					end
 					for i, unitName in ipairs(Units) do
-						if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+						if (IsMilitaryUnit(unitName)) then
 							if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 								for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
 									unit = CreateUnit(unitName, 2, {40, 10})
@@ -4985,14 +4985,14 @@ AddTrigger(
 			-- Shinsplitters
 			local units_to_be_created = {}
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+				if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 					units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 					units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")]
 					WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
 				end
 			end
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+				if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 					if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 						for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
 							unit = OldCreateUnit(unitName, 1, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})

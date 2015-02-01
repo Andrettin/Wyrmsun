@@ -85,7 +85,7 @@ local upgrades = {
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
 		1},
 	{"upgrade-dwarven-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to upgrade to a Guard Tower."),
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to upgrade to Guard Towers."),
 		"",
 		"",
 		{   250,  1500,  1750,     0,     0,     0,     0,     0},

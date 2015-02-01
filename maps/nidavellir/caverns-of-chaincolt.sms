@@ -196,7 +196,7 @@ elseif (GrandStrategyEventMap) then
 
 	local units_to_be_created = {}
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 			if (unitName ~= "unit-gnomish-recruit") then -- the gnomish recruit doesn't appear in this mission
 				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 1) -- must have every unit in there, since otherwise it will be impossible to win
@@ -205,7 +205,7 @@ elseif (GrandStrategyEventMap) then
 		end
 	end
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
 					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -216,7 +216,7 @@ elseif (GrandStrategyEventMap) then
 
 	-- Shinsplitters
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 2)
 			WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
@@ -227,7 +227,7 @@ elseif (GrandStrategyEventMap) then
 		WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 	end
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
 					unit = OldCreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.y})

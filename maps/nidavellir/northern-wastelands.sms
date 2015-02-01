@@ -154,7 +154,7 @@ end
 if (GrandStrategyEventMap) then
 	local units_to_be_created = {}
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 			if (unitName ~= "unit-gnomish-recruit") then
 				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 2) -- a half of Norlund forces in the Cavern of Chaincolt sent to the mission
@@ -165,7 +165,7 @@ if (GrandStrategyEventMap) then
 		end
 	end
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then
+		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
 					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})

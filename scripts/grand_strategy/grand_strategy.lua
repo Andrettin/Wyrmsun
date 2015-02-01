@@ -75,7 +75,7 @@ function RunGrandStrategyGameSetupMenu()
 				GrandStrategyYear = GrandStrategyYear * -1
 			end
 			if (world_list[world:getSelected() + 1] ~= "Random") then
-				Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			else
 				GenerateRandomWorldMap()
 			end
@@ -183,7 +183,7 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key]["AttackingUnits"] = {}
 				end
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (IsMilitaryUnit(unitName)) then
 						if (WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] == nil) then
 							WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
 						end
@@ -203,7 +203,7 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key]["Heroes"] = {}
 				end
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (IsHero(unitName)) then
 						if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == nil) then
 							WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] = 0 -- 0 = hero isn't here, 1 = hero is moving here, 2 = hero is here
 						end
@@ -244,7 +244,7 @@ function RunGrandStrategyGameSetupMenu()
 
 			SelectedUnits = {}
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				if (IsMilitaryUnit(unitName)) then
 					SelectedUnits[string.gsub(unitName, "-", "_")] = 0
 				end
 			end
@@ -341,7 +341,7 @@ function RunGrandStrategyGameSetupMenu()
 
 		
 		if (world_list[world:getSelected() + 1] ~= "Random") then
-			Load("scripts/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			
 			faction_list = {}
 			for key, value in pairsByKeys(Factions) do
@@ -559,7 +559,7 @@ function EndTurn()
 			end
 		end
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (IsMilitaryUnit(unitName)) then
 				if (string.find(unitName, "mercenary") ~= nil and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
 					MercenaryGroups[string.gsub(unitName, "-", "_")] = nil
 				end
@@ -572,7 +572,7 @@ function EndTurn()
 			end
 		end
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+			if (IsHero(unitName)) then
 				if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 1) then
 					WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] = 2
 				end
@@ -634,7 +634,7 @@ function EndTurn()
 			local disband_quota = Factions[key].Upkeep - Factions[key].Income.Gold
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (IsMilitaryUnit(unitName)) then
 						if (WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] > 0) then
 							if (disband_quota > WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)) then
 								disband_quota = disband_quota - WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
@@ -799,9 +799,9 @@ function AttackProvince(province, faction)
 		if (GetMilitaryScore(province, true, true) > GetMilitaryScore(province, false, true)) then -- if military score is the same, then defenders win
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+				if (IsMilitaryUnit(unitName)) then
 					AttackingUnits[string.gsub(unitName, "-", "_")] = AttackingUnits[string.gsub(unitName, "-", "_")] - math.floor(AttackingUnits[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true)) -- formula for calculating units belonging to the victorious player that were killed
-				elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then -- kill off defending heroes if the attacking player was the victorious one
+				elseif (IsHero(unitName)) then -- kill off defending heroes if the attacking player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 					elseif (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
@@ -812,9 +812,9 @@ function AttackProvince(province, faction)
 		else
 			victorious_player = Defender
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+				if (IsMilitaryUnit(unitName)) then
 					AttackingUnits[string.gsub(unitName, "-", "_")] = province.Units[string.gsub(unitName, "-", "_")] - math.floor(province.Units[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true))
-				elseif (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then -- kill off attacking heroes if the defending player was the victorious one
+				elseif (IsHero(unitName)) then -- kill off attacking heroes if the defending player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 					end
@@ -831,12 +831,12 @@ function AttackProvince(province, faction)
 	end
 				
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			province.Units[string.gsub(unitName, "-", "_")] = AttackingUnits[string.gsub(unitName, "-", "_")]
 		end
 	end
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			province.AttackingUnits[string.gsub(unitName, "-", "_")] = 0
 		end
 	end
@@ -868,7 +868,7 @@ function AcquireProvince(province, faction)
 		end
 					
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+			if (IsHero(unitName)) then
 				if (province.Heroes[string.gsub(unitName, "-", "_")] == 1) then -- if a hero is moving here, remove him
 					province.Heroes[string.gsub(unitName, "-", "_")] = 0
 				end
@@ -1069,7 +1069,7 @@ function CalculateFactionUpkeeps()
 		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
 	
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (IsMilitaryUnit(unitName)) then
 				if (province_owner ~= nil) then -- pay upkeep for military units
 					province_owner.Upkeep = province_owner.Upkeep + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
 				end
@@ -1198,7 +1198,7 @@ function ProvinceHasHero(province, unit_type)
 	else
 		local has_other_hero_version = false -- check to see if the province has another version of the hero in it
 		for j, second_unitName in ipairs(Units) do
-			if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+			if (IsHero(second_unitName)) then
 				if (GetUnitTypeData(unit_type, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and province.Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
 					has_other_hero_version = true
 					break
@@ -2431,14 +2431,14 @@ function DrawOnScreenTiles()
 				DrawWorldMapTile("tilesets/world/sites/attack.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 			elseif (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (IsMilitaryUnit(unitName)) then
 						if (WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] > 0) then
 							-- draw symbol that troops are moving to the province
 							DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 							break
 						end
 					end
-					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (IsHero(unitName)) then
 						if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 1) then
 							-- draw symbol that a hero is moving to the province
 							DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
@@ -2447,7 +2447,7 @@ function DrawOnScreenTiles()
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (IsHero(unitName)) then
 						if (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							DrawWorldMapTile("tilesets/world/sites/hero.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 							break
@@ -2594,7 +2594,7 @@ function DrawGrandStrategyInterface()
 				local item_x = 0
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (IsMilitaryUnit(unitName)) then
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil) then
@@ -2730,7 +2730,7 @@ function DrawGrandStrategyInterface()
 				end
 				
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (IsHero(unitName)) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							-- add a button to show the heroes in the province (but only if there is actually a hero there)
 							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", 24, Video.Height - (22 * 3) - 8, function()
@@ -2840,7 +2840,7 @@ function DrawGrandStrategyInterface()
 				local item_x = 0
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (IsMilitaryUnit(unitName)) then
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil) then
@@ -3049,7 +3049,7 @@ function DrawGrandStrategyInterface()
 				local item_x = 0
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+					if (IsMilitaryUnit(unitName)) then
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil) then
@@ -3159,7 +3159,7 @@ function DrawGrandStrategyInterface()
 				item_x = 0
 				item_y = 0
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "mercenary") ~= nil and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's gold cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
+					if (IsMilitaryUnit(unitName) and string.find(unitName, "mercenary") ~= nil and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's gold cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
 						local icon_offset_x = 9 + (item_x * 56)
 						local icon_offset_y = 340 + (item_y * 47)
 
@@ -3195,7 +3195,7 @@ function DrawGrandStrategyInterface()
 				local item_x = 0
 				local item_y = -2
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (IsHero(unitName)) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							local icon_offset_x = 9 + (item_x * 56)
 							local icon_offset_y = 340 + (item_y * 47)
@@ -3359,7 +3359,7 @@ function SetSelectedProvince(province)
 		-- if the player has units selected and then selects an attackable province, set those units to attack the province
 		if (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
 						province.AttackedBy = GrandStrategyFaction.Name
 						province.AttackingUnits[string.gsub(unitName, "-", "_")] = province.AttackingUnits[string.gsub(unitName, "-", "_")] + SelectedUnits[string.gsub(unitName, "-", "_")]
@@ -3371,7 +3371,7 @@ function SetSelectedProvince(province)
 				end
 			end
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+				if (IsHero(unitName)) then
 					if (SelectedHero == unitName) then
 						province.AttackedBy = GrandStrategyFaction.Name
 						province.Heroes[string.gsub(unitName, "-", "_")] = 3
@@ -3385,7 +3385,7 @@ function SetSelectedProvince(province)
 			end
 		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and SelectedProvince.Owner == province.Owner and SelectedProvince.Owner == GrandStrategyFaction.Name) then
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
 						province.MovingUnits[string.gsub(unitName, "-", "_")] = province.MovingUnits[string.gsub(unitName, "-", "_")] + SelectedUnits[string.gsub(unitName, "-", "_")]
 						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
@@ -3396,7 +3396,7 @@ function SetSelectedProvince(province)
 				end
 			end
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+				if (IsHero(unitName)) then
 					if (SelectedHero == unitName) then
 						province.Heroes[string.gsub(unitName, "-", "_")] = 1
 						SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
@@ -3420,7 +3420,7 @@ function SetSelectedProvince(province)
 		SelectedUnits = nil
 		SelectedUnits = {}
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (IsMilitaryUnit(unitName)) then
 				SelectedUnits[string.gsub(unitName, "-", "_")] = 0
 			end
 		end
@@ -3500,7 +3500,7 @@ function AIDoTurn(ai_faction)
 		local borders_foreign = false
 
 		for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or (WorldMapWaterProvinces[second_key] ~= nil and WorldMapWaterProvinces[second_key].Owner ~= ai_faction.Name)) then
+			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
 				borders_foreign = true
 				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
 					if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
@@ -3516,7 +3516,7 @@ function AIDoTurn(ai_faction)
 							if (province_threatened == false) then
 								WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
 								for i, unitName in ipairs(Units) do
-									if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil and GetUnitTypeData(unitName, "Class") ~= "militia") then
+									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/4th of the province's forces as a defense
 										WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
 									end
@@ -3552,7 +3552,7 @@ function AIDoTurn(ai_faction)
 		end
 
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+			if (IsMilitaryUnit(unitName)) then
 				if (IsUnitAvailableForTraining(WorldMapProvinces[key], unitName)) then
 					if (GetUnitTypeData(unitName, "Class") == "infantry" and desired_infantry_in_province > 0) then
 						for j=1,desired_infantry_in_province do
@@ -4005,7 +4005,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 
 	local military_score = 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+		if (IsMilitaryUnit(unitName)) then
 			if (GetUnitTypeData(unitName, "Class") == "militia" and count_defenders) then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (30 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
@@ -4031,15 +4031,15 @@ function GetMilitaryScore(province, attacker, count_defenders)
 				elseif (unitName == "unit-surghan-mercenary-thane") then
 					military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
 				end
-			-- Heroes
-			elseif (count_defenders and string.find(unitName, "hero") ~= nil and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
-				if (unitName == "unit-hero-rugnur") then
-					military_score = military_score + (50 + infantry_military_score_bonus)
-				elseif (unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
-					military_score = military_score + (75 + infantry_military_score_bonus)
-				elseif (unitName == "unit-hero-rugnur-thane" or unitName == "unit-hero-baglur-thane" or unitName == "unit-hero-thursagan" or unitName == "unit-hero-durstorn") then
-					military_score = military_score + (100 + infantry_military_score_bonus + (10 * (wyr.preferences.Heroes[GetUnitTypeData(unitName, "DefaultName")].level - GetUnitTypeData(unitName, "StartingLevel"))))
-				end
+			end
+		-- Heroes
+		elseif (count_defenders and IsHero(unitName) and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
+			if (unitName == "unit-hero-rugnur") then
+				military_score = military_score + (50 + infantry_military_score_bonus)
+			elseif (unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
+				military_score = military_score + (75 + infantry_military_score_bonus)
+			elseif (unitName == "unit-hero-rugnur-thane" or unitName == "unit-hero-baglur-thane" or unitName == "unit-hero-thursagan" or unitName == "unit-hero-durstorn") then
+				military_score = military_score + (100 + infantry_military_score_bonus + (10 * (wyr.preferences.Heroes[GetUnitTypeData(unitName, "DefaultName")].level - GetUnitTypeData(unitName, "StartingLevel"))))
 			end
 		end
 	end
@@ -4260,7 +4260,7 @@ function CanTriggerEvent(faction, event)
 	if (event.Provinces ~= nil and event.Units ~= nil) then
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0) then
+				if (IsMilitaryUnit(unitName)) then
 					if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] < event.Units[string.gsub(unitName, "-", "_")]) then
 						return false
 					end
@@ -4273,11 +4273,11 @@ function CanTriggerEvent(faction, event)
 		if (event.Provinces ~= nil and GetTableSize(event.Provinces) > 0) then
 			for key, value in pairs(event.Provinces) do
 				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+					if (IsHero(unitName)) then
 						if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
 							local has_other_hero_version = false -- check to see if the province has another version of the hero in it
 							for j, second_unitName in ipairs(Units) do
-								if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+								if (IsHero(second_unitName)) then
 									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and WorldMapProvinces[key].Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
 										has_other_hero_version = true
 									end
@@ -4292,7 +4292,7 @@ function CanTriggerEvent(faction, event)
 			end
 		else -- if no provinces are specified, search in all of the faction's provinces
 			for i, unitName in ipairs(Units) do
-				if (string.find(unitName, "upgrade-") == nil and string.find(unitName, "hero") ~= nil) then
+				if (IsHero(unitName)) then
 					if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil) then
 						local has_hero = false
 						for province_i, province_key in ipairs(faction.OwnedProvinces) do
@@ -4300,7 +4300,7 @@ function CanTriggerEvent(faction, event)
 								has_hero = true
 							end
 							for j, second_unitName in ipairs(Units) do -- check for other versions of the hero (for instance, thane Rugnur)
-								if (string.find(second_unitName, "upgrade-") == nil and string.find(second_unitName, "hero") ~= nil) then
+								if (IsHero(second_unitName)) then
 									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and WorldMapProvinces[province_key].Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
 										has_hero = true
 									end
@@ -4332,13 +4332,23 @@ function CanTriggerEvent(faction, event)
 end
 
 function GrandStrategyEvent(faction, event)
+	EventFaction = faction
 	if (faction == GrandStrategyFaction) then
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
 
 		local event_name = event.Name
-		if (EventProvince ~= nil and string.find(event_name, "PROVINCE_NAME") ~= nil) then
-			event_name = string.gsub(event_name, "PROVINCE_NAME", EventProvince.Name)
+		if (EventProvince ~= nil) then
+			if (string.find(event_name, "PROVINCE_NAME") ~= nil) then
+				event_name = string.gsub(event_name, "PROVINCE_NAME", EventProvince.Name)
+			end
+			if (string.find(event_name, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
+				if (EventProvince.SettlementName ~= "") then
+					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", EventProvince.SettlementName)
+				else
+					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", EventProvince.Name .. "'s capital")
+				end
+			end
 		end
 		menu:addLabel(event_name, 176, 11)
 
@@ -4352,8 +4362,17 @@ function GrandStrategyEvent(faction, event)
 			menu:add(l, 14, 112)
 		end
 		local event_description = event.Description
-		if (EventProvince ~= nil and string.find(event_description, "PROVINCE_NAME") ~= nil) then
-			event_description = string.gsub(event_description, "PROVINCE_NAME", EventProvince.Name)
+		if (EventProvince ~= nil) then
+			if (string.find(event_description, "PROVINCE_NAME") ~= nil) then
+				event_description = string.gsub(event_description, "PROVINCE_NAME", EventProvince.Name)
+			end
+			if (string.find(event_description, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
+				if (EventProvince.SettlementName ~= "") then
+					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", EventProvince.SettlementName)
+				else
+					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", EventProvince.Name .. "'s capital")
+				end
+			end
 		end
 		l:setCaption(event_description)
 
@@ -4655,7 +4674,7 @@ end
 
 function EqualizeProvinceUnits(faction)
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") == false and GetUnitTypeData(unitName, "Demand") > 0 and string.find(unitName, "hero") == nil) then
+		if (IsMilitaryUnit(unitName)) then
 			local unit_count = GetFactionUnitTypeCount(faction, unitName, false)
 			if (unit_count > 0) then
 				for province_i, province_key in ipairs(faction.OwnedProvinces) do
@@ -4667,5 +4686,21 @@ function EqualizeProvinceUnits(faction)
 				WorldMapProvinces[faction.OwnedProvinces[1]].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[faction.OwnedProvinces[1]].Units[string.gsub(unitName, "-", "_")] + (unit_count - new_unit_count)
 			end
 		end
+	end
+end
+
+function IsMilitaryUnit(unit_type)
+	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and string.find(unit_type, "hero") == nil) then
+		return true
+	else
+		return false
+	end
+end
+
+function IsHero(unit_type)
+	if (string.find(unit_type, "upgrade-") == nil and string.find(unit_type, "hero") ~= nil) then
+		return true
+	else
+		return false
 	end
 end

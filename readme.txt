@@ -55,6 +55,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "The Sequani's Appeal" and "The Battle of Magetobria" events.
 - Added Albania, Attica, Bulgaria, Crete, Macedonia, Peloponnese, Serbia and Thrace provinces to the Earth world map.
 - The encyclopedia can now be accessed through the menu in Grand Strategy mode.
+- Scenarios can no longer be restarted when in grand strategy mode.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.

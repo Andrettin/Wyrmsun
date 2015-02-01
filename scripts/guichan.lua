@@ -795,7 +795,7 @@ function RunWorldMapMenu(world, maps)
 
 	menu:addLabel("Select Map", 176, 8)
 
-	Load("scripts/" .. string.lower(world) .. "_world_map.lua")
+	Load("scripts/grand_strategy/" .. string.lower(world) .. "_world_map.lua")
 
 	for x=0,9 do
 		for y=0,7 do
@@ -1365,7 +1365,7 @@ Load("scripts/menus/network.lua")
 Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
 Load("scripts/menus/achievements.lua")
-Load("scripts/menus/grand_strategy.lua")
+Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
 
 function GameStarting()

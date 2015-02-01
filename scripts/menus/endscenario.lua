@@ -4,7 +4,7 @@ function RunEndScenarioMenu()
   menu:addLabel("End Scenario", 128, 11)
   local b = menu:addFullButton("~!Restart Scenario", "r", 16, 40 + (36 * 0),
     function() RunRestartConfirmMenu() end)
-  if (IsNetworkGame()) then
+  if (IsNetworkGame() or GrandStrategy) then
     b:setEnabled(false)
   end
   menu:addFullButton("~!Surrender", "s", 16, 40 + (36 * 1),

@@ -612,7 +612,8 @@ function LoadFactions(world)
 		Rome = {
 			Name = "Rome",
 			Civilization = "germanic",
-			Title = "Republic"
+			Title = "Republic",
+			Gold = 5000
 		},
 		Russia = {
 			Name = "Russia",
