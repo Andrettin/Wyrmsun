@@ -53,9 +53,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "Skilled Masons" and "Skilled Carpenters" random events.
 - Fixed a bug which caused non-persistent event to re-trigger after loading a saved game.
 - Added "The Sequani's Appeal" and "The Battle of Magetobria" events.
-- Added Albania, Attica, Bulgaria, Crete, Macedonia, Peloponnese, Serbia and Thrace provinces to the Earth world map.
+- Added Albania, Andalusia, Attica, Bulgaria, Crete, Macedonia, Peloponnese, Serbia and Thrace provinces to the Earth world map.
 - The encyclopedia can now be accessed through the menu in Grand Strategy mode.
 - Scenarios can no longer be restarted when in grand strategy mode.
+- A province can now be attacked if it is only separated from the attacker by a single water province.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.

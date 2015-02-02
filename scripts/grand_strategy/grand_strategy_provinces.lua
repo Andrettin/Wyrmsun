@@ -47,6 +47,19 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plns"
 		},
+		Andalusia = {
+			Name = "Farther Baetica",
+			Tiles = { {115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37} },
+			Owner = "",
+			SettlementName = "Corduba",
+			SettlementLocation = {116, 36}, -- Cordoba
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns"
+		},
 		Aquitaine = {
 			Name = "Aquitania",
 			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
@@ -228,7 +241,7 @@ function LoadProvinces(world)
 		},
 		Castille = {
 			Name = "Hispania Tarraconensis",
-			Tiles = { {115, 34}, {115, 35}, {115, 36}, {115, 37}, {116, 33}, {116, 34}, {116, 35}, {116, 36}, {116, 37}, {117, 33}, {117, 34}, {117, 35}, {117, 36}, {117, 37}, {118, 33}, {118, 34}, {118, 35}, {118, 36}, {118, 37} },
+			Tiles = { {115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36} },
 			Owner = "",
 			SettlementName = "Toletum",
 			SettlementLocation = {117, 35}, -- Toledo
@@ -382,9 +395,10 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plns"
 		},
 		Ireland = {
-			Name = "Hibernia",
+			Name = "Ireland",
 			Tiles = { {113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26} },
 			Owner = "",
+			SettlementName = "Eblana", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			SettlementLocation = {115, 26}, -- Dublin
 			SettlementBuildings = {
 			},
@@ -1024,7 +1038,7 @@ function LoadProvinces(world)
 			Owner = "Ocean"
 		},
 		IrishSea = {
-			Name = "Hibernian Ocean",
+			Name = "Irish Sea",
 			Tiles = { {113, 27}, {114, 27}, {115, 27}, {116, 24}, {116, 25}, {116, 26}, {116, 27}, {117, 25} },
 			Owner = "Ocean"
 		},

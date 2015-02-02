@@ -158,6 +158,52 @@ local EarthEvents = {
 			end
 		},
 		OptionTooltips = {"+100 Research"}
+	},
+	HiberniaConquered = {
+		Name = "Hibernia Conquered",
+		Description = "We have managed to conquer Hibernia, making it a new province of ours.",
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Rome"
+				and WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Name ~= "Hibernia"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				WorldMapProvinces.Ireland.Name = "Hibernia"
+				WorldMapWaterProvinces.IrishSea.Name = "Hibernian Ocean"
+			end
+		}
+	},
+	IrelandConquered = {
+		Name = "Ireland Conquered",
+		Description = "We have managed to conquer Ireland, making it a new province of ours.",
+		Conditions = function(s)
+			if (
+				EventFaction.Name ~= "Rome"
+				and WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Name ~= "Ireland"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				WorldMapProvinces.Ireland.Name = "Ireland"
+				WorldMapWaterProvinces.IrishSea.Name = "Irish Sea"
+			end
+		}
 	}
 }
 	

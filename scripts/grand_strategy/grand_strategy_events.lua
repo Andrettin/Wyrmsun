@@ -946,7 +946,7 @@ function LoadEvents(world)
 			Description = "A group of skilled carpenters has come to our country, opening up a workshop in PROVINCE_NAME.",
 			Conditions = function(s)
 				if (
-					SyncRand(100) < 50 -- 50% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.5% of happening if the player has one province (this event shouldn't be common)
+					SyncRand(100) < 25 -- 25% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.25% of happening if the player has one province (this event shouldn't be common)
 				) then
 					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 						if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
@@ -973,7 +973,7 @@ function LoadEvents(world)
 			Description = "A group of skilled masons has come to our country, opening up a workshop in PROVINCE_NAME.",
 			Conditions = function(s)
 				if (
-					SyncRand(100) < 50 -- 50% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.5% of happening if the player has one province (this event shouldn't be common)
+					SyncRand(100) < 25 -- 25% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.25% of happening if the player has one province (this event shouldn't be common)
 					and FactionHasTechnologyType(EventFaction, "masonry")
 				) then
 					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do

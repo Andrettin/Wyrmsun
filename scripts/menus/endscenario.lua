@@ -3,7 +3,11 @@ function RunEndScenarioMenu()
 
   menu:addLabel("End Scenario", 128, 11)
   local b = menu:addFullButton("~!Restart Scenario", "r", 16, 40 + (36 * 0),
-    function() RunRestartConfirmMenu() end)
+    function()
+		if not (IsNetworkGame() or GrandStrategy) then
+			RunRestartConfirmMenu()
+		end
+	end)
   if (IsNetworkGame() or GrandStrategy) then
     b:setEnabled(false)
   end

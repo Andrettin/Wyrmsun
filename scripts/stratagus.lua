@@ -1477,6 +1477,7 @@ Load("scripts/quests.lua")
 Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 Load("scripts/grand_strategy/grand_strategy_map_generation.lua")
+Load("scripts/grand_strategy/grand_strategy_factions.lua")
 Load("scripts/grand_strategy/grand_strategy_provinces.lua")
 Load("scripts/grand_strategy/grand_strategy_events.lua")
 

@@ -126,6 +126,30 @@ local ChristianityEvents = {
 		},
 		OptionTooltips = {"+1 Research"}
 	},
+	SPatriciiCanticumScotticum = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
+		Name = "S. Patricii Canticum Scotticum",
+		Description = "Patrick wrote a hymn called S. Patricii Canticum Scotticum just before he converted the main chieftain of PROVINCE_NAME. The hymn contained a prayer invoking help for such an important task, and contained the major Christian doctrines, along with a warning against spells done by old women and smiths who abided by the pagan traditions.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and SyncRand(100) < 10 -- should take a bit until Patrick writes this hymn, as his mission began in 440 and ended only in 493
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		RequiredEvents = {
+			PatrickTheApostleOfIreland = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
 	ColumbaMissionaryToScotland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Columba, Missionary to PROVINCE_NAME",
 		Description = "The Irish missionary Columba has arrived with twelve companions in the settlement of Hy in PROVINCE_NAME to spread the Christian faith.",
@@ -456,6 +480,50 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
+	FerdomnachLearnedMonkOfArmagh = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
+		Name = "Ferdomnach, Learned Monk of Armagh",
+		Description = "Ferdomnach was a learned monk belonging to the monastery of Armagh, who worked as a scribe and compiled many of the religious works extant at the time.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and GrandStrategyYear == 807
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
+	TheBookOfArmagh = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
+		Name = "The Book of Armagh",
+		Description = "The Book of Armargh was a compilation of a number of religious texts, written by the learned monk Ferdomnach. The book included the memoirs of St. Patrick, the Confession of St. Patrick, the Preface of Jerome to the New Testament, and many other texts.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		RequiredEvents = {
+			FerdomnachLearnedMonkOfArmagh = true
+		},
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)

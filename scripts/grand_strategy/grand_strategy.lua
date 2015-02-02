@@ -1219,7 +1219,7 @@ function CanAttackProvince(province, faction, province_from)
 		return false
 	end
 
-	if (ProvinceHasBorderWith(province_from, province) == false) then
+	if (ProvinceHasBorderWith(province_from, province) == false and ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false) then
 		return false
 	end
 
@@ -1267,6 +1267,19 @@ function ProvinceHasBorderWith(province, province_to)
 		end
 	end
 
+	return false
+end
+
+function ProvinceHasSecondaryBorderThroughWaterWith(province, province_to)
+	for i=1,table.getn(province.BorderProvinces) do
+		if (WorldMapWaterProvinces[province.BorderProvinces[i]] ~= nil) then
+			for j=1,table.getn(WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces) do
+				if (WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]] == province_to) then
+					return true
+				end
+			end
+		end
+	end
 	return false
 end
 
@@ -2075,7 +2088,7 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 		end
 	end
 
-	if (quantity_stored <= 99999) then
+	if (string.len(quantity_stored .. income) <= 9) then
 		AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1, Fonts["game"], false, false)
 	else
 		AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1 + 2, Fonts["small"], false, false)
@@ -2712,7 +2725,7 @@ function DrawGrandStrategyInterface()
 					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Building") and GetUnitTypeData(unitName, "Class") ~= "farm" and GetUnitTypeData(unitName, "Class") ~= "watch-tower" and GetUnitTypeData(unitName, "Class") ~= "guard-tower" and GetUnitTypeData(unitName, "Class") ~= "") then
 						if (IsBuildingAvailable(SelectedProvince, unitName)) then
 							local icon_offset_x = 9 + (item_x * 56)
-							local icon_offset_y = 340 + (item_y * 47)
+							local icon_offset_y = 340 + (item_y * 47) -- change to 343 to make six buildings fit -- was 340, changed to make more than six buildings fit into the screen
 
 							AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, unitName)
 

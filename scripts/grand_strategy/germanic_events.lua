@@ -810,6 +810,29 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"+500 Gold, -5 Research", ""}
 	},
+	TheEastPrussianLandOrdinance = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
+		Name = "The East Prussian Land Ordinance",
+		Description = "With the passage of a new East Prussian Land Ordinance, peasants have now lost the right of movement.",
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+				and WorldMapProvinces.Prussia.Owner == EventFaction.Name
+				-- should only trigger after a technology for the appropriate time period has been researched
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold + 500
+				EventFaction.Research = EventFaction.Research - 5
+			end
+		},
+		OptionTooltips = {"+500 Gold, -5 Research", ""}
+	},
 	TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
 		Name = "The Confirmation of Seignorial Privileges",
 		Description = "The aristocrats of Livonia and Estonia have managed to acquire an official confirmation of their privileges, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
@@ -817,6 +840,29 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Teutonic Order" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
 				and WorldMapProvinces.BalticLands.Owner == EventFaction.Name
+				-- should only trigger after a technology for the appropriate time period has been researched
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold + 500
+				EventFaction.Research = EventFaction.Research - 5
+			end
+		},
+		OptionTooltips = {"+500 Gold, -5 Research", ""}
+	},
+	ThePeasantsAndShepherdsOrdinance = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
+		Name = "The Peasants' and Shepherds' Ordinance",
+		Description = "The passage of the Peasants' and Shepherds' Ordinance has extinguished hereditary tenure of land amongst the peasantry, so that they now hold these lands as a lease from their lords.",
+		Conditions = function(s)
+			if (
+				(EventFaction.Name == "Brandenburg" or EventFaction.Name == "Prussia") -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+				and (WorldMapProvinces.Prussia.Owner == EventFaction.Name or WorldMapProvinces.Brandenburg.Owner == EventFaction.Name) -- can happen in either Western or Eastern Pommerania (historically it happened in both)
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -855,6 +901,31 @@ local GermanicEvents = {
 			end
 		},
 		OptionTooltips = {"+50 Gold"}
+	},
+	HansRutenbergsEviction = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 37.
+		Name = "Hans Rutenberg's Eviction",
+		Description = "The farmer Hans Rutenberg, from the village of Woddrow in PROVINCE_NAME, has refused as a form of protest to do the work required of him to his lord, and as a consequence was evicted from his land.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				and WorldMapProvinces.Brandenburg.Civilization == "germanic"
+				and GrandStrategyYear == 1692 -- events which relate to specific persons directly have dates attached to them
+			) then
+				EventProvince = WorldMapProvinces.Brandenburg
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold - 50
+				EventFaction.Gold = EventFaction.Research - 1
+			end
+		},
+		OptionTooltips = {"-50 Gold, -1 Research"}
 	},
 	TheSerfdomActForBohemiaAndMoravia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
 		Name = "Serfdom Act for Bohemia and Moravia",

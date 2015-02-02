@@ -404,6 +404,20 @@ DefineCivilizationFactions("germanic",
 		"playable", false
 	},
 	"faction", {
+		"name", "Pict Tribe",
+		"type", "tribe",
+		"color", "cyan",
+		"secondary_color", "cyan",
+		"playable", false
+	},
+	"faction", {
+		"name", "Scot Tribe",
+		"type", "tribe",
+		"color", "brown",
+		"secondary_color", "brown",
+		"playable", false
+	},
+	"faction", {
 		"name", "Sequani Tribe",
 		"type", "tribe",
 		"color", "pink",
@@ -656,6 +670,22 @@ function SetPlayerData(player, data, arg1, arg2)
 					end
 				elseif (AttackedProvince.Civilization ~= "") then
 					arg1 = AttackedProvince.Civilization
+				end
+			end
+		end
+	elseif (data == "Faction") then
+		if (GrandStrategy and GrandStrategyFaction ~= nil) then
+			if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
+				arg1 = GrandStrategyFaction.Name
+			end
+
+			if (ThisPlayer ~= nil and ThisPlayer.Index ~= player and GrandStrategyEventMap == false) then
+				if (AttackedProvince.Owner ~= "" and AttackedProvince.Owner ~= "Ocean") then
+					if (GrandStrategyFaction.Name == Attacker and GetFactionFromName(Defender) ~= nil) then
+						arg1 = Defender
+					elseif (GrandStrategyFaction.Name == Defender and GetFactionFromName(Attacker) ~= nil) then
+						arg1 = Attacker
+					end
 				end
 			end
 		end

@@ -298,9 +298,11 @@ if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC
 	WorldMapProvinces.Aragon.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
-if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Castille.Owner = "Rome"
 	WorldMapProvinces.Castille.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Andalusia.Owner = "Rome"
+	WorldMapProvinces.Andalusia.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -146) then -- Attica, Macedonia and the Peloponnese acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -351,7 +353,7 @@ end
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 	WorldMapProvinces.Burgundy.Owner = "Suebi Tribe"
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_germanic_town_hall = 2
-	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 4 -- to give them something of a defense
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 13
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 0 -- Aedui forces defeated
 	GrandStrategyEvents.TheSequanisAppeal = nil
@@ -363,6 +365,15 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	WorldMapProvinces.Burgundy.Owner = ""
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 10 -- to make the province harder to conquer
+end
+
+if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Aquitaine.Owner = "Rome"
+	WorldMapProvinces.Brittany.Owner = "Rome"
+	WorldMapProvinces.Burgundy.Owner = "Rome"
+	WorldMapProvinces.France.Owner = "Rome"
+	WorldMapProvinces.Belgium.Owner = "Rome"
+	WorldMapProvinces.Switzerland.Owner = "Rome"
 end
 
 if (GrandStrategyYear >= -33) then -- Illyricum acquired by Rome in 33 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -455,6 +466,11 @@ if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: Will
 --	WorldMapProvinces.Wallachia.Owner = ""
 end
 
+if (GrandStrategyYear >= 395) then
+	WorldMapProvinces.Ireland.Owner = "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	WorldMapProvinces.Scotland.Owner = "Pict Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+end
+
 if (GrandStrategyYear >= 397) then
 	WorldMapProvinces.Moldavia.Owner = ""
 	WorldMapProvinces.Wallachia.Owner = ""
@@ -527,10 +543,17 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	WorldMapProvinces.Castille.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Castille.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Castille.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Andalusia.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	WorldMapProvinces.Andalusia.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Andalusia.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Aragon.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Aragon.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Aragon.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Aquitaine.Name = "Aquitaine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+end
+
+if (GrandStrategyYear >= 493) then
+	GrandStrategyEvents.SPatriciiCanticumScotticum = nil -- Patrick's mission lasted until 493
 end
 
 if (GrandStrategyYear >= 495) then
@@ -625,6 +648,11 @@ if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 
 	WorldMapProvinces.Netherlands.Owner = "Francia"
 end
 
+if (GrandStrategyYear >= 807) then
+	GrandStrategyEvents.FerdomnachLearnedMonkOfArmagh = nil
+	GrandStrategyEvents.TheBookOfArmagh = nil
+end
+
 if (GrandStrategyYear >= 970) then
 	GrandStrategyEvents.ForannanMissionaryToFrontierOfBelgium = nil
 end
@@ -637,6 +665,10 @@ if (GrandStrategyYear >= 1523) then -- happened in 1523-1536; Source: Markus Cer
 	GrandStrategyEvents.NoblesAcquireLegalJurisdictionPrivilege = nil
 end
 
+if (GrandStrategyYear >= 1526) then -- East Prussian Land Ordinance of 1526; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
+	GrandStrategyEvents.TheEastPrussianLandOrdinance = nil
+end
+
 if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	WorldMapProvinces.Astrakhan.Owner = "Muscovy"
 	WorldMapProvinces.Astrakhan.Name = "Astrakhan"
@@ -647,6 +679,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	WorldMapProvinces.Aragon.Name = "Aragon"
 	WorldMapProvinces.Castille.Owner = "Spain"
 	WorldMapProvinces.Castille.Name = "Castille"
+	WorldMapProvinces.Andalusia.Owner = "Spain"
+	WorldMapProvinces.Andalusia.Name = "Andalusia"
 	WorldMapProvinces.GaliciaIberia.Owner = "Spain"
 --	WorldMapProvinces.GaliciaIberia.Name = "Galicia"
 	WorldMapProvinces.Portugal.Owner = "Portugal"
@@ -711,7 +745,6 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	WorldMapProvinces.England.Owner = "England"
 	WorldMapProvinces.Scotland.Owner = "Scotland"
 	WorldMapProvinces.Scotland.Name = "Scotland"
-	WorldMapProvinces.Ireland.Name = "Ireland"
 	
 	WorldMapWaterProvinces.BalticSea.Name = "Baltic Sea"
 	WorldMapWaterProvinces.EnglishChannel.Name = "English Channel"
@@ -721,6 +754,10 @@ end
 
 if (GrandStrategyYear >= 1561) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
 	GrandStrategyEvents.TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = nil
+end
+
+if (GrandStrategyYear >= 1616) then -- The Peasants' and Shepherds' Ordinance passed in Western and Eastern Pommerania; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
+	GrandStrategyEvents.ThePeasantsAndShepherdsOrdinance = nil
 end
 
 if (GrandStrategyYear >= 1618) then -- Brandenburg acquired the Duchy of Prussia in 1618, although it remained under Polish suzerainty until 1657-1660, and Farther Pommerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
@@ -742,6 +779,10 @@ end
 
 if (GrandStrategyYear >= 1667) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 12.
 	GrandStrategyEvents.MartinTrampesFarm = nil
+end
+
+if (GrandStrategyYear >= 1692) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 37.
+	GrandStrategyEvents.HansRutenbergsEviction = nil
 end
 
 if (GrandStrategyYear >= 1702) then -- Vornedskabet lifted in 1702; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
