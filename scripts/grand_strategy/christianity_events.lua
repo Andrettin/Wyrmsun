@@ -134,6 +134,7 @@ local ChristianityEvents = {
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
 				and SyncRand(100) < 10 -- should take a bit until Patrick writes this hymn, as his mission began in 440 and ended only in 493
 			) then
+				EventProvince = WorldMapProvinces.Ireland
 				return true
 			else
 				return false
