@@ -1234,6 +1234,9 @@ function BuildProgramStartMenu()
 	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
 		wyr.preferences.SavedGrandStrategyGames = nil
 		SavePreferences()
+	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
+		wyr.preferences.GrandStrategySaveGames = nil
+		SavePreferences()
 	end
 	
 	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.6" and wyr.preferences.LastVersionPlayed ~= "0.1.7" and wyr.preferences.LastVersionPlayed ~= "0.1.8" and wyr.preferences.LastVersionPlayed ~= "1.0.0" and wyr.preferences.LastVersionPlayed ~= "1.0.1") then

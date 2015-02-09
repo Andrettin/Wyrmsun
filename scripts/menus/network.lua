@@ -138,7 +138,7 @@ function RunJoiningMapMenu(s)
   revealmap:setEnabled(false)
 
   menu:writeText("Civilization:", sx, sy*11)
-  local race = menu:addDropDown({"Map Default", _("Dwarf")}, sx + 100, sy*11,
+  local race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,
     function(dd)
       GameSettings.Presets[NetLocalHostsSlot].Race = race:getSelected()
       LocalSetupState.Race[NetLocalHostsSlot] = race:getSelected()
@@ -146,7 +146,7 @@ function RunJoiningMapMenu(s)
   race:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  local units = menu:addDropDown({"Map Default", "One Worker Only", "Town Hall + Workers"}, sx + 100, sy*11+25,
+  local units = menu:addDropDown({_("Map Default"), _("One Worker Only"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
     function(dd) end)
   units:setSize(190, 20)
   units:setEnabled(false)
@@ -334,7 +334,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
 
   menu:writeText("Civilization:", sx, sy*11)
-  d = menu:addDropDown({_("Map Default"), _("Dwarf")}, sx + 100, sy*11,
+  d = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,
     function(dd)
       GameSettings.Presets[0].Race = dd:getSelected()
       ServerSetupState.Race[0] = GameSettings.Presets[0].Race

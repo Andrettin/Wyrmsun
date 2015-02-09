@@ -146,7 +146,12 @@ function LoadProvinces(world)
 			},
 			Tiles = { {127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30} },
 			Owner = "",
-			SettlementName = "Vindobona",
+			SettlementName = "Vienna",
+			CulturalSettlementNames = {
+				celt = "Vindobona",
+				germanic = "Vindobona",
+				latin = "Vindobona"
+			},
 			SettlementLocation = {131, 29}, -- Vienna
 			SettlementBuildings = {
 			},
@@ -209,9 +214,17 @@ function LoadProvinces(world)
 		Bohemia = {
 	--		Name = "Marcomannia",
 			Name = "Bohemia",
+			CulturalSettlementNames = {
+				celt = "Boiohaemum",
+				germanic = "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+				latin = "Boiohaemum"
+			},
 			Tiles = { {129, 28}, {130, 28}, {131, 28} },
 			Owner = "",
-			SettlementName = "Bubienum",
+			SettlementName = "Prague",
+			CulturalSettlementNames = {
+				germanic = "Bubienum" -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+			},
 			SettlementLocation = {130, 28}, -- Prague
 			SettlementBuildings = {
 			},
@@ -594,6 +607,9 @@ function LoadProvinces(world)
 			Tiles = { {125, 31}, {125, 32}, {126, 31}, {126, 32}, {127, 31}, {127, 32}, {128, 31}, {128, 32}, {128, 33}, {129, 31} },
 			Owner = "",
 			SettlementName = "Milan",
+			CulturalSettlementNames = {
+				latin = "Mediolanum"
+			},
 			SettlementLocation = {127, 31}, -- Milan
 			SettlementBuildings = {
 			},

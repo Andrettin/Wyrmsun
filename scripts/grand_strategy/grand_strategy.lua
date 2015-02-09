@@ -1583,8 +1583,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		tooltip = "Water"
 	end
 	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
-		if (GetTileProvince(tile_x, tile_y).SettlementName ~= nil) then
-			tooltip = "Settlement of " .. GetTileProvince(tile_x, tile_y).SettlementName .. " (" .. tooltip .. ")"
+		if (GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) ~= nil) then
+			tooltip = "Settlement of " .. GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) .. " (" .. tooltip .. ")"
 		else
 			tooltip = "Settlement (" .. tooltip .. ")"
 		end
@@ -2711,11 +2711,11 @@ function DrawGrandStrategyInterface()
 					if (IsMilitaryUnit(unitName)) then
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (veteran_unit_type ~= nil) then
+						if (veteran_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
 							veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
 						end
 						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (heroic_unit_type ~= nil) then
+						if (heroic_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
 							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
 						end
 
@@ -4535,8 +4535,8 @@ function GrandStrategyEvent(faction, event)
 				event_name = string.gsub(event_name, "PROVINCE_NAME", GetProvinceName(EventProvince))
 			end
 			if (string.find(event_name, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
-				if (EventProvince.SettlementName ~= "") then
-					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", EventProvince.SettlementName)
+				if (GetProvinceSettlementName(EventProvince) ~= nil) then
+					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", GetProvinceSettlementName(EventProvince))
 				else
 					event_name = string.gsub(event_name, "PROVINCE_SETTLEMENT_NAME", GetProvinceName(EventProvince) .. "'s capital")
 				end
@@ -4562,8 +4562,8 @@ function GrandStrategyEvent(faction, event)
 				event_description = string.gsub(event_description, "PROVINCE_NAME", GetProvinceName(EventProvince))
 			end
 			if (string.find(event_description, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
-				if (EventProvince.SettlementName ~= "") then
-					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", EventProvince.SettlementName)
+				if (GetProvinceSettlementName(EventProvince) ~= nil) then
+					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", GetProvinceSettlementName(EventProvince))
 				else
 					event_description = string.gsub(event_description, "PROVINCE_SETTLEMENT_NAME", GetProvinceName(EventProvince) .. "'s capital")
 				end
@@ -4915,6 +4915,20 @@ function GetProvinceName(province)
 		return province.CulturalNames[WorldMapProvinces[province.ReferenceProvince].Civilization]
 	else
 		return province.Name
+	end
+end
+
+function GetProvinceSettlementName(province)
+	if (province.CulturalSettlementNames ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)] ~= nil and province.Civilization == GetFactionFromName(province.Owner).Civilization) then
+		return province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)]
+	elseif (province.CulturalSettlementNames ~= nil and province.Civilization ~= nil and province.Civilization ~= "" and province.CulturalSettlementNames[province.Civilization] ~= nil) then
+		return province.CulturalSettlementNames[province.Civilization]
+	elseif (province.CulturalSettlementNames ~= nil and province.Owner == "Ocean" and province.ReferenceProvince ~= nil and WorldMapProvinces[province.ReferenceProvince].Owner ~= "" and WorldMapProvinces[province.ReferenceProvince].Owner ~= "Ocean" and province.CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[province.ReferenceProvince].Owner)] ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization == GetFactionFromName(WorldMapProvinces[province.ReferenceProvince].Owner).Civilization) then
+		return province.CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[province.ReferenceProvince].Owner)]
+	elseif (province.CulturalSettlementNames ~= nil and province.Owner == "Ocean" and province.ReferenceProvince ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization ~= "" and province.CulturalSettlementNames[WorldMapProvinces[province.ReferenceProvince].Civilization] ~= nil) then
+		return province.CulturalSettlementNames[WorldMapProvinces[province.ReferenceProvince].Civilization]
+	else
+		return province.SettlementName
 	end
 end
 
