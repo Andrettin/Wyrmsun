@@ -36,7 +36,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "Tanais",
 		X = 1,
-		Y = 2,
+		Y = 1,
 		PlayerColor = "orange"
 	},
 	WestwardMigration = {
@@ -48,7 +48,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "Holmgard",
 		X = 2,
-		Y = 2,
+		Y = 1,
 		PlayerColor = "orange"
 	},
 	NorthwardsToTheSea = {
@@ -60,7 +60,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Jutland",
 		X = 3,
-		Y = 2,
+		Y = 1,
 		PlayerColor = "orange"
 	},
 	GylvesRealm = {
@@ -72,7 +72,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Malmo",
 		X = 4,
-		Y = 2,
+		Y = 1,
 		PlayerColor = "orange"
 	},
 	TheBattleOfMagetobria = {
@@ -84,7 +84,19 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "Belfort",
 		X = 5,
-		Y = 2,
+		Y = 1,
+		PlayerColor = "black"
+	},
+	TheHomeOfTheBoii = {
+		Name = "The Home of the Boii",
+		Icon = "germanic/icons/warrior",
+		Description = "After a devastating conflict with the Romans, Maroboduus seeks to lead the tribe of the Marcomanni to safer lands.\n\nMap: Prague\n\nRewards: 2 Germanic Technology Points.",
+		RequiredQuest = "The Battle of Magetobria",
+		Civilization = "germanic",
+		TechnologyPoints = 2,
+		Map = "Prague",
+		X = 6,
+		Y = 1,
 		PlayerColor = "black"
 	},
 	ABargainIsStruck = {
@@ -95,7 +107,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Chaincolt Foothills",
 		X = 1,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	ClosingTheGates = {
@@ -107,7 +119,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Caverns of Chaincolt",
 		X = 2,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	SearchingForTheRunecrafter = {
@@ -119,7 +131,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Northern Wastelands",
 		X = 3,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	GatheringMaterials = {
@@ -131,7 +143,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Eastern Mines",
 		X = 4,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	HillsOfTheShorbearClan = {
@@ -143,7 +155,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Shorbear Hills",
 		X = 5,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	TheWyrm = {
@@ -155,7 +167,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Svafnir's Lair",
 		X = 6,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	CavernsOfFlame = {
@@ -167,7 +179,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Caverns of Flame",
 		X = 7,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	LastStandAtTheForge = {
@@ -179,7 +191,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "Svafnir's Lair",
 		X = 8,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	TheMeadOfPoetry = {
@@ -191,7 +203,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "Fjalar's and Galar's Hall",
 		X = 9,
-		Y = 1,
+		Y = 2,
 		PlayerColor = "red"
 	}
 }

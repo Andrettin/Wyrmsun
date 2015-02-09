@@ -46,9 +46,9 @@
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 DefineAiHelper(
-  --
-  -- Equivalence of units for the resource manager.
-  --
+	--
+	-- Equivalence of units for the resource manager.
+	--
 	{"unit-equiv", "unit-germanic-carpenters-shop",
 	"unit-teuton-lumber-mill"}
 )
@@ -57,16 +57,10 @@ DefineAiHelper(
 --  City-center of the current civilization.
 --
 function AiCityCenter()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-town-hall"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-town-hall"
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-town-hall"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-town-hall"
+	if (GetCivilizationClassUnitType("town-hall", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("town-hall", AiGetRace())
 	else
-		return "unit-dwarven-town-hall"
+		return GetCivilizationClassUnitType("town-hall", "dwarf")
 	end
 end
 
@@ -74,16 +68,10 @@ end
 --  Worker of the current civilization.
 --
 function AiWorker()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-miner"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-worker"
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-worker"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-worker"
+	if (GetCivilizationClassUnitType("worker", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("worker", AiGetRace())
 	else
-		return "unit-dwarven-miner"
+		return GetCivilizationClassUnitType("worker", "dwarf")
 	end
 end
 
@@ -91,16 +79,10 @@ end
 --  Farm of the current civilization.
 --
 function AiFarm()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-mushroom-farm"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-farm"
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-farm"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-farm"
+	if (GetCivilizationClassUnitType("farm", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("farm", AiGetRace())
 	else
-		return "unit-dwarven-mushroom-farm"
+		return GetCivilizationClassUnitType("farm", "dwarf")
 	end
 end
 
@@ -108,16 +90,10 @@ end
 --  Barracks of the current civilization.
 --
 function AiBarracks()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-barracks"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-barracks"
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-barracks"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-mess-hall"
+	if (GetCivilizationClassUnitType("barracks", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("barracks", AiGetRace())
 	else
-		return "unit-dwarven-barracks"
+		return GetCivilizationClassUnitType("barracks", "dwarf")
 	end
 end
 
@@ -125,20 +101,10 @@ end
 --  Lumber mill of the current civilization.
 --
 function AiLumberMill()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-lumber-mill"
-	elseif (AiGetRace() == "germanic") then
-		if (GetPlayerData(AiPlayer(), "Allow", "upgrade-teuton-masonry") == "R") then
-			return "unit-teuton-lumber-mill"
-		else
-			return "unit-germanic-carpenters-shop"
-		end
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-farm" -- to not make gnomes stop building/training when the AI requires a lumber mill
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-lumber-mill"
+	if (GetCivilizationClassUnitType("lumber-mill", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("lumber-mill", AiGetRace())
 	else
-		return "unit-dwarven-lumber-mill"
+		return GetCivilizationClassUnitType("lumber-mill", "dwarf")
 	end
 end
 
@@ -146,14 +112,10 @@ end
 --  Masonry upgrade of the current civilization.
 --
 function AiUpgradeMasonry()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-masonry"
-	elseif (AiGetRace() == "germanic") then
-		return "upgrade-teuton-masonry"
-	elseif (AiGetRace() == "goblin") then
-		return "upgrade-goblin-masonry"
+	if (GetCivilizationClassUnitType("masonry", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("masonry", AiGetRace())
 	else
-		return "upgrade-teuton-masonry"
+		return GetCivilizationClassUnitType("masonry", "dwarf")
 	end
 end
 
@@ -161,14 +123,10 @@ end
 --  Smithy of the current civilization.
 --
 function AiSmithy()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-smithy"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-smithy"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-smithy"
+	if (GetCivilizationClassUnitType("smithy", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("smithy", AiGetRace())
 	else
-		return "unit-dwarven-smithy"
+		return GetCivilizationClassUnitType("smithy", "dwarf")
 	end
 end
 
@@ -176,18 +134,10 @@ end
 --  Soldier of the current civilization.
 --
 function AiSoldier()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-axefighter"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-warrior"
-	elseif (AiGetRace() == "gnome") then
-		return "unit-gnomish-recruit"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-spearman"
-	elseif (AiGetRace() == "kobold") then
-		return "unit-kobold-footpad"
+	if (GetCivilizationClassUnitType("infantry", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("infantry", AiGetRace())
 	else
-		return "unit-dwarven-axefighter"
+		return GetCivilizationClassUnitType("infantry", "dwarf")
 	end
 end
 
@@ -195,10 +145,10 @@ end
 --  Veteran soldier of the current civilization.
 --
 function AiVeteranSoldier()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-steelclad"
+	if (GetCivilizationClassUnitType("veteran-infantry", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("veteran-infantry", AiGetRace())
 	else
-		return "unit-dwarven-steelclad"
+		return GetCivilizationClassUnitType("veteran-infantry", "dwarf")
 	end
 end
 
@@ -206,10 +156,10 @@ end
 --  Heroic soldier of the current civilization.
 --
 function AiHeroicSoldier()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-thane"
+	if (GetCivilizationClassUnitType("heroic-infantry", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("heroic-infantry", AiGetRace())
 	else
-		return "unit-dwarven-thane"
+		return GetCivilizationClassUnitType("heroic-infantry", "dwarf")
 	end
 end
 
@@ -217,14 +167,10 @@ end
 --  Shooter of the current civilization.
 --
 function AiShooter()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-scout"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-germanic-archer"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-archer"
+	if (GetCivilizationClassUnitType("archer", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("archer", AiGetRace())
 	else
-		return "unit-dwarven-scout"
+		return GetCivilizationClassUnitType("archer", "dwarf")
 	end
 end
 
@@ -253,10 +199,10 @@ end
 --  Priest of the current civilization.
 --
 function AiPriest()
-	if (AiGetRace() == "gnome") then
-		return "unit-gnomish-herbalist"
+	if (GetCivilizationClassUnitType("priest", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("priest", AiGetRace())
 	else
-		return "unit-gnomish-herbalist"
+		return GetCivilizationClassUnitType("priest", "gnome")
 	end
 end
 
@@ -264,12 +210,10 @@ end
 --  Upgrade melee weapon 1 of the current civilization.
 --
 function AiUpgradeWeapon1()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-broad-axe"
-	elseif (AiGetRace() == "germanic") then
-		return "upgrade-germanic-broad-sword"
+	if (GetCivilizationClassUnitType("melee-weapon-1", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("melee-weapon-1", AiGetRace())
 	else
-		return "upgrade-dwarven-broad-axe"
+		return GetCivilizationClassUnitType("melee-weapon-1", "dwarf")
 	end
 end
 
@@ -277,10 +221,10 @@ end
 --  Upgrade melee weapon 2 of the current civilization.
 --
 function AiUpgradeWeapon2()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-great-axe"
+	if (GetCivilizationClassUnitType("melee-weapon-2", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("melee-weapon-2", AiGetRace())
 	else
-		return "upgrade-dwarven-great-axe"
+		return GetCivilizationClassUnitType("melee-weapon-2", "dwarf")
 	end
 end
 
@@ -288,12 +232,10 @@ end
 --  Upgrade shield 1 of the current civilization.
 --
 function AiUpgradeShield1()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-shield-1"
-	elseif (AiGetRace() == "germanic") then
-		return "upgrade-germanic-bronze-shield"
+	if (GetCivilizationClassUnitType("bronze-shield", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("bronze-shield", AiGetRace())
 	else
-		return "upgrade-dwarven-shield-1"
+		return GetCivilizationClassUnitType("bronze-shield", "dwarf")
 	end
 end
 
@@ -301,10 +243,10 @@ end
 --  Upgrade shield 2 of the current civilization.
 --
 function AiUpgradeShield2()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-shield-2"
+	if (GetCivilizationClassUnitType("iron-shield", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("iron-shield", AiGetRace())
 	else
-		return "upgrade-dwarven-shield-2"
+		return GetCivilizationClassUnitType("iron-shield", "dwarf")
 	end
 end
 
@@ -312,12 +254,10 @@ end
 --  Upgrade missile 1 of the current civilization.
 --
 function AiUpgradeMissile1()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-throwing-axe-1"
-	elseif (AiGetRace() == "germanic") then
-		return "upgrade-germanic-barbed-arrow"
+	if (GetCivilizationClassUnitType("ranged-projectile-1", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("ranged-projectile-1", AiGetRace())
 	else
-		return "upgrade-dwarven-throwing-axe-1"
+		return GetCivilizationClassUnitType("ranged-projectile-1", "dwarf")
 	end
 end
 
@@ -325,10 +265,10 @@ end
 --  Upgrade missile 2 of the current civilization.
 --
 function AiUpgradeMissile2()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-throwing-axe-2"
+	if (GetCivilizationClassUnitType("ranged-projectile-2", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("ranged-projectile-2", AiGetRace())
 	else
-		return "upgrade-dwarven-throwing-axe-2"
+		return GetCivilizationClassUnitType("ranged-projectile-2", "dwarf")
 	end
 end
 
@@ -336,10 +276,10 @@ end
 --  Siege weapon upgrade 1 of the current civilization.
 --
 function AiUpgradeSiegeProjectile1()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-ballista-bolt-1"
+	if (GetCivilizationClassUnitType("siege-projectile-1", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("siege-projectile-1", AiGetRace())
 	else
-		return "upgrade-dwarven-ballista-bolt-1"
+		return GetCivilizationClassUnitType("siege-projectile-1", "dwarf")
 	end
 end
 
@@ -347,10 +287,10 @@ end
 --  Siege weapon upgrade 1 of the current civilization.
 --
 function AiUpgradeSiegeProjectile2()
-	if (AiGetRace() == "dwarf") then
-		return "upgrade-dwarven-ballista-bolt-2"
+	if (GetCivilizationClassUnitType("siege-projectile-2", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("siege-projectile-2", AiGetRace())
 	else
-		return "upgrade-dwarven-ballista-bolt-2"
+		return GetCivilizationClassUnitType("siege-projectile-2", "dwarf")
 	end
 end
 
@@ -358,14 +298,10 @@ end
 --  Siege weapon of the current civilization.
 --
 function AiSiegeWeapon()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-ballista"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-teuton-catapult"
-	elseif (AiGetRace() == "goblin") then
-		return "unit-goblin-war-machine"
+	if (GetCivilizationClassUnitType("siege-engine", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("siege-engine", AiGetRace())
 	else
-		return "unit-teuton-catapult"
+		return GetCivilizationClassUnitType("siege-engine", "dwarf")
 	end
 end
 
@@ -373,10 +309,10 @@ end
 --  Flying rider of the current civilization.
 --
 function AiFlyingRider()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-gryphon-rider"
+	if (GetCivilizationClassUnitType("flying-rider", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("flying-rider", AiGetRace())
 	else
-		return "unit-dwarven-gryphon-rider"
+		return GetCivilizationClassUnitType("flying-rider", "dwarf")
 	end
 end
 
@@ -384,10 +320,10 @@ end
 --  Glider of the current civilization.
 --
 function AiGlider()
-	if (AiGetRace() == "goblin") then
-		return "unit-goblin-glider"
+	if (GetCivilizationClassUnitType("glider", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("glider", AiGetRace())
 	else
-		return "unit-goblin-glider"
+		return GetCivilizationClassUnitType("glider", "goblin")
 	end
 end
 
@@ -395,12 +331,10 @@ end
 --  Watch Tower of the current civilization.
 --
 function AiWatchTower()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-sentry-tower"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-teuton-watch-tower"
+	if (GetCivilizationClassUnitType("watch-tower", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("watch-tower", AiGetRace())
 	else
-		return "unit-teuton-watch-tower"
+		return GetCivilizationClassUnitType("watch-tower", "dwarf")
 	end
 end
 
@@ -408,12 +342,10 @@ end
 --  Guard Tower of the current civilization.
 --
 function AiGuardTower()
-	if (AiGetRace() == "dwarf") then
-		return "unit-dwarven-guard-tower"
-	elseif (AiGetRace() == "germanic") then
-		return "unit-teuton-guard-tower"
+	if (GetCivilizationClassUnitType("guard-tower", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("guard-tower", AiGetRace())
 	else
-		return "unit-teuton-guard-tower"
+		return GetCivilizationClassUnitType("guard-tower", "dwarf")
 	end
 end
 

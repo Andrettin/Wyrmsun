@@ -87,7 +87,7 @@ function RunTechTreeMenu(civilization_number)
 		techicon_graphics = string.sub(techicon_graphics, 0, -5)
 		local techicon
 		local b
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) or GetTechnologyPointCost(civilization, unit) <= 0) then
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) or GetTechnologyPointCost("", unit) <= 0) then
 			techicon = CPlayerColorGraphic:New(techicon_graphics .. ".png")
 			techicon:Load()
 			b = PlayerColorImageButton("", playercolor)
@@ -148,7 +148,7 @@ function RunTechTreeMenu(civilization_number)
 
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil) then
-			if (GetUnitTypeData(unitName, "Civilization") == civilization and GetUnitTypeData(unitName, "Class") ~= "") then
+			if (GetUnitTypeData(unitName, "Class") ~= "" and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) == unitName) then
 				local tech_icon_x = 0
 				local tech_icon_y = 0
 				local tech_allowed = true
@@ -202,7 +202,7 @@ function RunTechTreeMenu(civilization_number)
 				end
 			end
 		else
-			if (CUpgrade:Get(unitName).Civilization == civilization and CUpgrade:Get(unitName).Class ~= "") then
+			if (CUpgrade:Get(unitName).Class ~= "" and GetCivilizationClassUnitType(CUpgrade:Get(unitName).Class, civilization) == unitName) then
 				local tech_icon_x = 0
 				local tech_icon_y = 0
 				local tech_allowed = true
@@ -316,11 +316,11 @@ end
 
 function GetTechnologyPointCost(civilization, technology)
 	if (string.find(technology, "upgrade-") == nil) then
-		if (civilization == GetUnitTypeData(technology, "Civilization")) then
+		if (civilization == GetUnitTypeData(technology, "Civilization") or civilization == "") then
 			return GetUnitTypeData(technology, "TechnologyPointCost")
 		end
 	else
-		if (civilization == CUpgrade:Get(technology).Civilization) then
+		if (civilization == CUpgrade:Get(technology).Civilization or civilization == "") then
 			return CUpgrade:Get(technology).TechnologyPointCost
 		end
 	end

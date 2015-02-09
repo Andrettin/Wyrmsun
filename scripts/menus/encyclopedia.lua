@@ -29,7 +29,7 @@
 
 function text_compare( a, b )
 	if (Texts[a] and Texts[b]) then
-			return Texts[a].Year < Texts[b].Year
+		return Texts[a].Year < Texts[b].Year
 	end
 end
 

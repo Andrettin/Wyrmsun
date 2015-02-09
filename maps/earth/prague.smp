@@ -1,0 +1,8 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person","person")
+PresentMap("Prague", 2, 128, 96, 1)
+MapWorld = "Earth"
+MapRequiredQuest = "The Battle of Magetobria"
+MapAttacker = 0
+MapDefender = 1

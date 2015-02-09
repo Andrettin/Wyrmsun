@@ -325,33 +325,45 @@ MakeSound("bat-selected", "neutral/bat_flapping.wav")
 --
 DefineGameSounds(
 
+  "placement-error", {"celt", placement_error},
   "placement-error", {"dwarf", placement_error},
   "placement-error", {"germanic", placement_error},
   "placement-error", {"gnome", placement_error},
   "placement-error", {"goblin", placement_error},
+  "placement-error", {"greek", placement_error},
   "placement-error", {"kobold", placement_error},
+  "placement-error", {"latin", placement_error},
 
+  "placement-success", {"celt", placement_success},
   "placement-success", {"dwarf", placement_success},
   "placement-success", {"germanic", placement_success},
   "placement-success", {"gnome", placement_success},
   "placement-success", {"goblin", placement_success},
+  "placement-success", {"greek", placement_success},
   "placement-success", {"kobold", placement_success},
+  "placement-success", {"latin", placement_success},
 
   "click", sound_click,
 --  "transport-docking", transport_docking,
   "chat-message", sound_click,
 
+  "building-construction", {"celt", building_construction},
   "building-construction", {"dwarf", building_construction},
   "building-construction", {"germanic", building_construction},
   "building-construction", {"gnome", building_construction},
   "building-construction", {"goblin", building_construction},
+  "building-construction", {"greek", building_construction},
   "building-construction", {"kobold", building_construction},
+  "building-construction", {"latin", building_construction},
 
 --  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
 
+  "rescue", {"celt", rescue},
   "rescue", {"dwarf", rescue},
   "rescue", {"germanic", rescue},
   "rescue", {"gnome", rescue},
   "rescue", {"goblin", rescue},
-  "rescue", {"kobold", rescue}
+  "rescue", {"greek", rescue},
+  "rescue", {"kobold", rescue},
+  "rescue", {"latin", rescue}
 )

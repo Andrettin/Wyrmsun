@@ -36,12 +36,20 @@ function LoadEvents(world)
 			Name = "Charge Rugnur with the Outpost?",
 			Description = "A young dwarf by the name of Rugnur could be an adequate choice for being encharged with one of our border outposts. Do you wish to appoint him for the job?",
 			Conditions = function(s) -- can happen for clans other than the Norlund clan, if they conquer the Caverns of Chaincolt in time!
-				if (GrandStrategyYear >= 25 and GrandStrategyYear <= 40 and WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf" and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 0 and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 0 and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 0) then
+				if (
+					WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
+					and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+					and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 0
+					and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 0
+					and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 0
+				) then
 					return true
 				else
 					return false
 				end
 			end,
+			MinYear = 25,
+			MaxYear = 40,
 			Options = {"~!Yes", "~!No"},
 			OptionEffects = {
 				function(s)
@@ -64,12 +72,13 @@ function LoadEvents(world)
 			Civilization = "dwarf",
 			Faction = "NorlundClan",
 			Conditions = function(s)
-				if (GrandStrategyYear <= 40 and SyncRand(100) < 10 and FactionHasHero(EventFaction, "unit-hero-thursagan") and FactionHasHero(EventFaction, "unit-hero-durstorn")) then
+				if (SyncRand(100) < 10 and FactionHasHero(EventFaction, "unit-hero-thursagan") and FactionHasHero(EventFaction, "unit-hero-durstorn")) then
 					return true
 				else
 					return false
 				end
 			end,
+			MaxYear = 40,
 			Options = {"~!OK"},
 			OptionEffects = {
 				function(s)
@@ -712,6 +721,8 @@ function LoadEvents(world)
 					WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 					Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
 					Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"
+					
+					Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 100 -- a lot of prestige for completing the legendary scepter
 				end
 				DrawMinimap()
 			end}
@@ -818,8 +829,9 @@ function LoadEvents(world)
 			Options = {"~!OK"},
 			OptionEffects = {function(s)
 				FormFaction(EventFaction, Factions.Knalga)
+				EventFaction.Prestige = EventFaction.Prestige + 10
 			end},
-			OptionTooltips = {"Our faction becomes Knalga"}
+			OptionTooltips = {"Our faction becomes Knalga, +10 Prestige"}
 		},
 		TheFoundingOfKalKartha = {
 			Name = "The Founding of Kal Kartha",
@@ -833,8 +845,9 @@ function LoadEvents(world)
 			Options = {"~!OK"},
 			OptionEffects = {function(s)
 				FormFaction(EventFaction, Factions.KalKartha)
+				EventFaction.Prestige = EventFaction.Prestige + 10
 			end},
-			OptionTooltips = {"Our faction becomes Kal Kartha"}
+			OptionTooltips = {"Our faction becomes Kal Kartha, +10 Prestige"}
 		},
 		TheFoundingOfLyr = {
 			Name = "The Founding of Lyr",
@@ -850,8 +863,9 @@ function LoadEvents(world)
 				FormFaction(EventFaction, Factions.Lyr)
 				WorldMapProvinces.Lyr.Map = nil
 				WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
+				EventFaction.Prestige = EventFaction.Prestige + 10
 			end},
-			OptionTooltips = {"Our faction becomes Lyr"}
+			OptionTooltips = {"Our faction becomes Lyr, +10 Prestige"}
 		},
 		GoblinLooters = {
 			Name = "Goblin Looters",
@@ -913,88 +927,10 @@ function LoadEvents(world)
 				end,
 				function(s)
 					EventFaction.Gold = EventFaction.Gold - 500
+					EventFaction.Prestige = EventFaction.Prestige - 1
 				end
 			},
-			OptionTooltips = {"Fight the goblin thieves", "-500 Gold"}
-		}
-	}
-	
-	local GenericEvents = {
-		BountifulHarvest = {
-			Name = "Bountiful Harvest",
-			Description = "The harvest this year has been exceptionally plentiful, rejoice!",
-			Conditions = function(s)
-				if (
-					SyncRand(100) < 1
-				) then
-					return true
-				else
-					return false
-				end
-			end,
-			Persistent = true,
-			Options = {"E~!xcellent!"},
-			OptionEffects = {
-				function(s)
-					EventFaction.Gold = EventFaction.Gold + (100 * GetFactionProvinceCount(EventFaction))
-				end
-			},
-			OptionTooltips = {"+100 Gold per province owned"}
-		},
-		SkilledCarpenters = {
-			Name = "Skilled Carpenters",
-			Description = "A group of skilled carpenters has come to our country, opening up a workshop in PROVINCE_NAME.",
-			Conditions = function(s)
-				if (
-					SyncRand(100) < 25 -- 25% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.25% of happening if the player has one province (this event shouldn't be common)
-				) then
-					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-						if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
-							EventProvince = WorldMapProvinces[province_key]
-							return true
-						end
-					end
-				else
-					return false
-				end
-			end,
-			Persistent = true,
-			Options = {"~!OK"},
-			OptionEffects = {
-				function(s)
-					EventFaction.Gold = EventFaction.Gold + 100
-					EventFaction.Research = EventFaction.Research + 1
-				end
-			},
-			OptionTooltips = {"+100 Gold, +1 Research"}
-		},
-		SkilledMasons = {
-			Name = "Skilled Masons",
-			Description = "A group of skilled masons has come to our country, opening up a workshop in PROVINCE_NAME.",
-			Conditions = function(s)
-				if (
-					SyncRand(100) < 25 -- 25% chance the event happens at all, and then 1% chance that it happens to a particular province, for a total chance of 0.25% of happening if the player has one province (this event shouldn't be common)
-					and FactionHasTechnologyType(EventFaction, "masonry")
-				) then
-					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-						if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
-							EventProvince = WorldMapProvinces[province_key]
-							return true
-						end
-					end
-				else
-					return false
-				end
-			end,
-			Persistent = true,
-			Options = {"~!OK"},
-			OptionEffects = {
-				function(s)
-					EventFaction.Gold = EventFaction.Gold + 100
-					EventFaction.Research = EventFaction.Research + 1
-				end
-			},
-			OptionTooltips = {"+100 Gold, +1 Research"}
+			OptionTooltips = {"Fight the goblin thieves", "-500 Gold, -1 Prestige"}
 		}
 	}
 	
@@ -1032,6 +968,12 @@ function LoadEvents(world)
 					GrandStrategyEvents[key]["RequiredEvents"] = {}
 					for second_key, second_value in pairs(event_table[key].RequiredEvents) do
 						GrandStrategyEvents[key].RequiredEvents[second_key] = event_table[key].RequiredEvents[second_key]
+					end
+				end
+				if (event_table[key].RequiredEventsOr ~= nil) then
+					GrandStrategyEvents[key]["RequiredEventsOr"] = {}
+					for second_key, second_value in pairs(event_table[key].RequiredEventsOr) do
+						GrandStrategyEvents[key].RequiredEventsOr[second_key] = event_table[key].RequiredEventsOr[second_key]
 					end
 				end
 				if (event_table[key].Commodities ~= nil) then
@@ -1108,15 +1050,15 @@ function LoadEvents(world)
 		Load("scripts/grand_strategy/earth_events.lua")
 		Load("scripts/grand_strategy/germanic_events.lua")
 		Load("scripts/grand_strategy/christianity_events.lua")
-		AddEventTable(GenericEvents)
+		Load("scripts/grand_strategy/generic_events.lua")
 	elseif (world == "Nidavellir") then
 		AddEventTable(NidavellirEvents)
-		AddEventTable(GenericEvents)
+		Load("scripts/grand_strategy/generic_events.lua")
 	elseif (world == "Random" or world == "Save") then -- load all events in this case
 		Load("scripts/grand_strategy/earth_events.lua")
 		Load("scripts/grand_strategy/germanic_events.lua")
 		Load("scripts/grand_strategy/christianity_events.lua")
 		AddEventTable(NidavellirEvents)
-		AddEventTable(GenericEvents)
+		Load("scripts/grand_strategy/generic_events.lua")
 	end
 end

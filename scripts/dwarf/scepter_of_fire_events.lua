@@ -5475,6 +5475,7 @@ AddTrigger(
 									AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan")
 									Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
 									Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
+									Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 100 -- a lot of prestige for completing the legendary scepter
 									Event(
 										"",
 										"The Shinsplitters, depleted by war and wary of the forces the Norlunds would be able to muster with the gnomish silver, accepted a peace, ceding the Shorbear Hold back to the Norlunds. The scepter would not be found until many generations after Pypo I, in the time of Rubezahl. During that time, it sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true meaning.",

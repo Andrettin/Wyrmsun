@@ -602,6 +602,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/wyrmsun_logo.png
 /graphics/ui/wyrmsun_logo_monochromatic.png
 /graphics/ui/potion.png
+/graphics/ui/prestige.png
 /graphics/ui/research.png
 
 J. W. Bjerk (eleazzaar):

@@ -36,6 +36,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.2
 -----------------------------------------------------------------------
 
+* Civilizations
+- The Gnomes now use Dwarven units for the types of unit they lack.
+- Added Celt, Greek and Latin NPC civilizations (they are essentially identical with the Germanic civilization, but them being a different culture affects events and features in Grand Strategy mode).
+
 * Grand Strategy Mode
 - Added transitions for the conifer forest tiles (graphics by Jinn).
 - Forests now spawn at a decreased rate in random world maps.
@@ -50,17 +54,26 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added a few Scrub Forest tiles and a gold mine in Iberia.
 - A faction can now receive more than one event in the same turn.
 - Added "The Sun Shields" flavor event for the Germanics.
-- Added "Skilled Masons" and "Skilled Carpenters" random events.
+- Added "Skilled Masons", "Skilled Carpenters", "Build Observatory?", "Build Library?", "Build Monument?" and "Province Assimilates" semi-random events.
 - Fixed a bug which caused non-persistent event to re-trigger after loading a saved game.
 - Added "The Sequani's Appeal" and "The Battle of Magetobria" events.
-- Added Albania, Andalusia, Attica, Bulgaria, Crete, Macedonia, Peloponnese, Serbia and Thrace provinces to the Earth world map.
+- Added Albania, Andalusia, Attica, Bulgaria, Crete, Macedonia, Naples, North Italy, Peloponnese, Serbia and Thrace provinces to the Earth world map.
 - The encyclopedia can now be accessed through the menu in Grand Strategy mode.
 - Scenarios can no longer be restarted when in grand strategy mode.
 - A province can now be attacked if it is only separated from the attacker by a single water province.
+- Provinces' names now can change according to the faction that owns them, or according to the province's culture.
+- Added 8 events about the legendary rulers of the Swedes and the Danes.
+- Added 23 events about the spread of early Christianity.
+- Added "Prestige" variable for factions, which influences the likelihood of certain events, as well as trade priority. Factions with negative prestige can't declare war. Prestige can be gained by winning battles (and lost by losing them), or as a consequence of certain events.
+- War can now only be declared against factions with which you share a border with, or if both factions have a coast.
+- Crafting the Scepter of Fire now grants +100 Prestige to the Norlund Clan.
+- Settling Scandinavia now grants +25 Prestige to the Asa Tribe.
+- Provinces of a different culture than the owner now produce only 75% of the resources they would otherwise produce.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
 - Added Belfort map.
+- Added Prague map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -68,6 +81,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Quests
 - Added The Battle of Magetobria quest.
+- Added The Home of the Boii quest.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).

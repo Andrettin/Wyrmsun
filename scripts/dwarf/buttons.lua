@@ -244,17 +244,17 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-barracks",
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
   Action = "build", Value = "unit-dwarven-lumber-mill",
   Key = "l", Hint = _("Build ~!Lumber Mill"),
-  ForUnit = {"unit-dwarven-miner"} } )
+  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
   Action = "build", Value = "unit-dwarven-smithy",
   Key = "s", Hint = _("Build ~!Smithy"),
-  ForUnit = {"unit-dwarven-miner"} } )
+  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
   Action = "build", Value = "unit-dwarven-sentry-tower",
   Key = "t", Hint = _("Build Sentry ~!Tower"),
-  ForUnit = {"unit-dwarven-miner"} } )
+  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
@@ -276,12 +276,12 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-scout",
   Action = "train-unit", Value = "unit-dwarven-scout",
   Key = "s", Hint = _("Train ~!Scout"),
-  ForUnit = {"unit-dwarven-barracks"} } )
+  ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
   Action = "train-unit", Value = "unit-dwarven-ballista",
   Key = "b", Hint = _("Build ~!Ballista"),
-  ForUnit = {"unit-dwarven-barracks"} } )
+  ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
   Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",

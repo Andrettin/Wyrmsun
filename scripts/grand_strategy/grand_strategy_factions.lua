@@ -32,6 +32,35 @@ function LoadFactions(world)
 	Factions = {}
 
 	local EarthFactions = {
+		-- Celtic tribes
+		AeduiTribe = {
+			Name = "Aedui Tribe",
+			Civilization = "celt"
+		},
+		ArverniTribe = {
+			Name = "Arverni Tribe",
+			Civilization = "celt"
+		},
+		BoiiTribe = {
+			Name = "Boii Tribe",
+			Civilization = "celt"
+		},
+		MenapiiTribe = {
+			Name = "Menapii Tribe",
+			Civilization = "celt"
+		},
+		PictTribe = {
+			Name = "Pict Tribe",
+			Civilization = "celt"
+		},
+		ScotTribe = {
+			Name = "Scot Tribe",
+			Civilization = "celt"
+		},
+		SequaniTribe = {
+			Name = "Sequani Tribe",
+			Civilization = "celt"
+		},
 		-- Germanic tribes
 		AsaTribe = {
 			Name = "Asa Tribe",
@@ -148,6 +177,11 @@ function LoadFactions(world)
 			Civilization = "germanic",
 			Title = "Kingdom"
 		},
+		Prussia = {
+			Name = "Prussia",
+			Civilization = "germanic",
+			Title = "Duchy"
+		},
 		Saxony = {
 			Name = "Saxony",
 			Civilization = "germanic",
@@ -168,25 +202,65 @@ function LoadFactions(world)
 			Civilization = "germanic",
 			Title = "Confederation"
 		},
-		TeutonicOrder = {
-			Name = "Teutonic Order",
-			Civilization = "germanic",
-			Title = "Dominion"
-		},
 		Westphalia = {
 			Name = "Westphalia",
 			Civilization = "germanic",
 			Title = "Duchy"
 		},
+		-- Greek polities
+		Athens = {
+			Name = "Athens",
+			Civilization = "greek",
+			Title = "City-State"
+		},
+		Macedon = {
+			Name = "Athens",
+			Civilization = "greek",
+			Title = "Kingdom"
+		},
+		Sparta = {
+			Name = "Sparta",
+			Civilization = "greek",
+			Title = "City-State"
+		},
+		-- Latin polities
+		France = {
+			Name = "France",
+			Civilization = "latin",
+			Title = "Kingdom"
+		},
+		Moldavia = {
+			Name = "Moldavia",
+			Civilization = "latin",
+			Title = "Principality"
+		},
+		Portugal = {
+			Name = "Portugal",
+			Civilization = "latin",
+			Title = "Kingdom"
+		},
+		Rome = {
+			Name = "Rome",
+			Civilization = "latin",
+			Title = "Republic",
+			Gold = 5000
+		},
+		Spain = {
+			Name = "Spain",
+			Civilization = "latin",
+			Title = "Kingdom"
+		},
+		Transylvania = {
+			Name = "Transylvania",
+			Civilization = "latin",
+			Title = "Principality"
+		},
+		Wallachia = {
+			Name = "Wallachia",
+			Civilization = "latin",
+			Title = "Principality"
+		},
 		-- Non-Playable Tribes
-		AeduiTribe = {
-			Name = "Aedui Tribe",
-			Civilization = "germanic"
-		},
-		ArverniTribe = {
-			Name = "Arverni Tribe",
-			Civilization = "germanic"
-		},
 		GylfingTribe = {
 			Name = "Gylfing Tribe",
 			Civilization = "germanic",
@@ -195,25 +269,9 @@ function LoadFactions(world)
 				Lumber = 2500 -- half of the gold value
 			}
 		},
-		MenapiiTribe = {
-			Name = "Menapii Tribe",
-			Civilization = "germanic"
-		},
 		MinoanTribe = {
 			Name = "Minoan Tribe",
-			Civilization = "germanic"
-		},
-		PictTribe = {
-			Name = "Pict Tribe",
-			Civilization = "germanic"
-		},
-		ScotTribe = {
-			Name = "Scot Tribe",
-			Civilization = "germanic"
-		},
-		SequaniTribe = {
-			Name = "Sequani Tribe",
-			Civilization = "germanic"
+			Civilization = "greek"
 		},
 		VanaTribe = {
 			Name = "Vana Tribe",
@@ -226,7 +284,7 @@ function LoadFactions(world)
 		-- Non-Playable Polities
 		Crete = {
 			Name = "Crete",
-			Civilization = "germanic",
+			Civilization = "greek",
 			Title = "Kingdom"
 		},
 		Crimea = {
@@ -234,61 +292,30 @@ function LoadFactions(world)
 			Civilization = "germanic",
 			Title = "Khanate"
 		},
-		France = {
-			Name = "France",
-			Civilization = "germanic",
-			Title = "Kingdom"
-		},
-		Moldavia = {
-			Name = "Moldavia",
-			Civilization = "germanic",
-			Title = "Principality"
-		},
 		Muscovy = {
 			Name = "Muscovy",
 			Civilization = "germanic",
 			Title = "Dominion"
+		},
+		Persia = {
+			Name = "Persia",
+			Civilization = "greek",
+			Title = "Kingdom"
 		},
 		Poland = {
 			Name = "Poland",
 			Civilization = "germanic",
 			Title = "Kingdom"
 		},
-		Portugal = {
-			Name = "Portugal",
-			Civilization = "germanic",
-			Title = "Kingdom"
-		},
-		Rome = {
-			Name = "Rome",
-			Civilization = "germanic",
-			Title = "Republic",
-			Gold = 5000
-		},
 		Russia = {
 			Name = "Russia",
 			Civilization = "germanic",
 			Title = "Empire"
 		},
-		Spain = {
-			Name = "Spain",
-			Civilization = "germanic",
-			Title = "Kingdom"
-		},
-		Transylvania = {
-			Name = "Transylvania",
-			Civilization = "germanic",
-			Title = "Principality"
-		},
 		Turkey = {
 			Name = "Turkey",
 			Civilization = "germanic",
 			Title = "Empire"
-		},
-		Wallachia = {
-			Name = "Wallachia",
-			Civilization = "germanic",
-			Title = "Principality"
 		}
 	}
 	

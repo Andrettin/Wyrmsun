@@ -170,10 +170,12 @@ LoadEvents("Earth")
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
 	WorldMapProvinces.Jutland.Owner = "Dane Tribe"
+	WorldMapProvinces.Jutland.Civilization = "germanic"
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
 	WorldMapProvinces.Jutland.Units.unit_germanic_archer = 0
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
+	WorldMapProvinces.Sweden.Civilization = "germanic"
 	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_barracks = 2 -- to prevent the Goth Tribe from conquering Sweden too easily
 	WorldMapProvinces.Sweden.Units.unit_germanic_warrior = 0
@@ -188,9 +190,9 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
 
 	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Gotaland.Civilization = "germanic"
 	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 2
 	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
-	WorldMapProvinces.Gotaland.Name = "Gothland"
 	WorldMapProvinces.Gotaland.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Gotaland.Units.unit_germanic_archer = 0
 
@@ -220,6 +222,15 @@ if (GrandStrategyYear >= -2000) then -- Minoan civilization disappears; Source: 
 	WorldMapProvinces.Crete.SettlementBuildings.unit_germanic_town_hall = 0
 end
 
+if (GrandStrategyYear >= -1450) then -- Mycenaean Greece; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	WorldMapProvinces.Attica.Civilization = "greek"
+	WorldMapProvinces.Attica.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Crete.Civilization = "greek"
+	WorldMapProvinces.Crete.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Peloponnese.Civilization = "greek"
+	WorldMapProvinces.Peloponnese.SettlementBuildings.unit_germanic_town_hall = 2
+end
+
 if (GrandStrategyYear >= -1400) then
 	GrandStrategyEvents.TheSunChariot = nil -- http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 end
@@ -243,18 +254,26 @@ if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Sour
 	Factions.GothTribe.Technologies.upgrade_germanic_broad_sword = 2
 end
 
+if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	WorldMapProvinces.Attica.Owner = "Athens"
+	WorldMapProvinces.Peloponnese.Owner = "Sparta"
+end
+
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
 	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- The Suebi are the earliest Germanic people known to inhabit the Brandenburg area; the Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
+	WorldMapProvinces.Brandenburg.Civilization = "germanic"
 	WorldMapProvinces.Brandenburg.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
 	
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- The Saxons are the earliest Germanic people known to inhabit the Hannover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
+	WorldMapProvinces.Rhineland.Civilization = "germanic"
 	WorldMapProvinces.Rhineland.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
 	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Netherlands.Civilization = "germanic"
 	WorldMapProvinces.Netherlands.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Netherlands.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
 	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
@@ -264,16 +283,52 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	GrandStrategyEvents.SigisLands = nil
 end
 
+if (GrandStrategyYear >= -550) then -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
+	WorldMapProvinces.Albania.Civilization = "greek"
+	WorldMapProvinces.Macedonia.Civilization = "greek"
+	WorldMapProvinces.Naples.Civilization = "greek" -- Magna Graecia
+	WorldMapProvinces.Sicily.Civilization = "greek"
+	WorldMapProvinces.Thrace.Civilization = "greek"
+end
+
+if (GrandStrategyYear >= -500) then -- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	WorldMapProvinces.Macedonia.Owner = "Persia"
+	WorldMapProvinces.Macedonia.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Thrace.Owner = "Persia"
+	WorldMapProvinces.Thrace.SettlementBuildings.unit_germanic_town_hall = 2
+end
+
+if (GrandStrategyYear >= -431) then -- Greece in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+	WorldMapProvinces.Macedonia.Owner = "Macedon"
+	WorldMapProvinces.Thrace.Owner = ""
+end
+
+if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
+	WorldMapProvinces.Bohemia.Owner = "Boii Tribe"
+	WorldMapProvinces.Bohemia.Civilization = "celt"
+	WorldMapProvinces.Bohemia.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
+end
+
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 	PytheasVoyageGoths = nil
 end
 
+if (GrandStrategyYear >= -323) then -- Macedonian Empire in 323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+	WorldMapProvinces.Thrace.Owner = "Macedon"
+	WorldMapProvinces.Bulgaria.Owner = "Macedon"
+	WorldMapProvinces.Bulgaria.Civilization = "greek"
+end
+
 if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	WorldMapProvinces.Italy.Owner = "Rome"
-	WorldMapProvinces.Italy.SettlementBuildings.unit_germanic_town_hall = 2
-	WorldMapProvinces.Italy.SettlementBuildings.unit_germanic_barracks = 2
-	WorldMapProvinces.Italy.SettlementBuildings.unit_germanic_carpenters_shop = 2
-	WorldMapProvinces.Italy.SettlementBuildings.unit_germanic_smithy = 2
+	WorldMapProvinces.Latium.Owner = "Rome"
+	WorldMapProvinces.Latium.Civilization = "latin"
+	WorldMapProvinces.Latium.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Latium.SettlementBuildings.unit_germanic_barracks = 2
+	WorldMapProvinces.Latium.SettlementBuildings.unit_germanic_carpenters_shop = 2
+	WorldMapProvinces.Latium.SettlementBuildings.unit_germanic_smithy = 2
+	WorldMapProvinces.Naples.Owner = "Rome"
+	WorldMapProvinces.Naples.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -298,6 +353,11 @@ if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC
 	WorldMapProvinces.Aragon.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
+if (GrandStrategyYear >= -200) then -- Kingdoms of the Diadochi about 200 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+	WorldMapProvinces.Thrace.Owner = ""
+	WorldMapProvinces.Bulgaria.Owner = ""
+end
+
 if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Castille.Owner = "Rome"
 	WorldMapProvinces.Castille.SettlementBuildings.unit_germanic_town_hall = 2
@@ -305,13 +365,16 @@ if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and Farther Baetic
 	WorldMapProvinces.Andalusia.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
+if (GrandStrategyYear >= -191) then -- Cisalpine Gaul conquered in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.NorthItaly.Owner = "Rome"
+	WorldMapProvinces.NorthItaly.SettlementBuildings.unit_germanic_town_hall = 2
+end
+
 if (GrandStrategyYear >= -146) then -- Attica, Macedonia and the Peloponnese acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Attica.Owner = "Rome"
-	WorldMapProvinces.Attica.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Macedonia.Owner = "Rome"
 	WorldMapProvinces.Macedonia.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Peloponnese.Owner = "Rome"
-	WorldMapProvinces.Peloponnese.SettlementBuildings.unit_germanic_town_hall = 2
 end
 
 if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -322,15 +385,19 @@ end
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	WorldMapProvinces.France.Owner = "Aedui Tribe" -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.France.Civilization = "celt"
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 10 -- enough troops for them to be able to hold their own (except against Ariovistus)
 	WorldMapProvinces.France.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Aquitaine.Owner = "Arverni Tribe" -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.Aquitaine.Civilization = "celt"
 	WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own
 	WorldMapProvinces.Aquitaine.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.Burgundy.Civilization = "celt"
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Belgium.Owner = "Menapii Tribe" -- Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.Belgium.Civilization = "celt"
 	WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own
 	WorldMapProvinces.Belgium.SettlementBuildings.unit_germanic_town_hall = 2
 	
@@ -341,7 +408,7 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	
 	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 13 -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
 	
-	WorldMapProvinces.Italy.Units.unit_germanic_warrior = 20 -- enough troops to vanquish Ariovistus (in reality Caesar won with less troops)
+	WorldMapProvinces.NorthItaly.Units.unit_germanic_warrior = 30 -- enough troops to vanquish Ariovistus (in reality Caesar won with less troops)
 	
 	GrandStrategyEvents.MigrationOfTheVana = nil
 end
@@ -367,6 +434,10 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 10 -- to make the province harder to conquer
 end
 
+if (GrandStrategyYear >= -57) then -- estimated date
+	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
+end
+
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Aquitaine.Owner = "Rome"
 	WorldMapProvinces.Brittany.Owner = "Rome"
@@ -389,6 +460,9 @@ if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir
 --	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
 --	AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
 --	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	GrandStrategyEvents.YngvesSickness = nil
+	GrandStrategyEvents.FjolneChieftainOfTheSwedes = nil
+	GrandStrategyEvents.FredfrodeChieftainOfTheDanes = nil
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -410,14 +484,21 @@ if (GrandStrategyYear >= -9) then -- Maroboduus, king of the Suebic tribe of the
 	AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
 end
 
-if (GrandStrategyYear >= 1) then -- Political situation in Europe in 1 AD; Source: http://www.euratlas.net/history/europe/1/index.html
-	WorldMapProvinces.Bavaria.Owner = "Suebi Tribe" -- Suebi in modern southwestern Germany in 1 AD
-	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
-	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
+if (GrandStrategyYear >= 3) then -- estimated date
+	GrandStrategyEvents.FredfrodesFeast = nil
+	GrandStrategyEvents.SwegdeChieftainOfTheSwedes = nil
 end
 
 if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Hungary.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= 28) then -- estimated date
+	GrandStrategyEvents.SwegdesJourney = nil
+end
+
+if (GrandStrategyYear >= 33) then -- estimated date
+	GrandStrategyEvents.SwegdesReturn = nil
 end
 
 if (GrandStrategyYear >= 43) then -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -427,6 +508,7 @@ end
 if (GrandStrategyYear >= 98) then
 	WorldMapProvinces.Bavaria.Owner = "Rugian Tribe" -- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.RugianTribe, Factions.AsaTribe)
 --	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
 end
@@ -445,7 +527,6 @@ end
 
 if (GrandStrategyYear >= 150) then
 	WorldMapProvinces.Gotaland.Owner = ""
-	WorldMapProvinces.Gotaland.Name = "Gotaland"
 	WorldMapProvinces.Prussia.Owner = "Goth Tribe" -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Prussia.Units.unit_germanic_warrior = 0
 end
@@ -524,14 +605,12 @@ end
 
 if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	WorldMapProvinces.Belgium.Owner = "Francia"
-	WorldMapProvinces.Belgium.Name = "Austrasia"
 	AcquireFactionTechnologies(Factions.Francia, Factions.FrankTribe)
 end
 
 if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	WorldMapProvinces.France.Owner = "Francia"
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	WorldMapProvinces.France.Name = "Neustria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
 	WorldMapProvinces.Transylvania.Owner = ""
 	WorldMapProvinces.Corsica.Owner = "Vandal Tribe" -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Corsica.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
@@ -549,7 +628,6 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	WorldMapProvinces.Aragon.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Aragon.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Aragon.Units.unit_germanic_warrior = 0
-	WorldMapProvinces.Aquitaine.Name = "Aquitaine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 end
 
 if (GrandStrategyYear >= 493) then
@@ -557,8 +635,12 @@ if (GrandStrategyYear >= 493) then
 end
 
 if (GrandStrategyYear >= 495) then
-	WorldMapProvinces.Italy.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.Italy.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	WorldMapProvinces.NorthItaly.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.NorthItaly.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	WorldMapProvinces.Latium.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Latium.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	WorldMapProvinces.Naples.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Naples.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -575,10 +657,8 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	WorldMapProvinces.Bavaria.Name = "Bavaria"
 	WorldMapProvinces.Bavaria.Owner = "Bavarian Tribe"
 	AcquireFactionTechnologies(Factions.BavarianTribe, Factions.MarcomanniTribe)
-	WorldMapProvinces.Netherlands.Name = "Frisia"
 	WorldMapProvinces.Netherlands.Owner = "Frisian Tribe"
 	AcquireFactionTechnologies(Factions.FrisianTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -586,7 +666,6 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	WorldMapProvinces.Brittany.Name = "Brittany" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 52
 	WorldMapProvinces.England.Owner = "Saxon Tribe" -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.England.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	WorldMapProvinces.England.Name = "England"
 end
 
 if (GrandStrategyYear >= 534) then
@@ -671,37 +750,26 @@ end
 
 if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	WorldMapProvinces.Astrakhan.Owner = "Muscovy"
-	WorldMapProvinces.Astrakhan.Name = "Astrakhan"
 end
 
 if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	WorldMapProvinces.Aragon.Owner = "Spain"
-	WorldMapProvinces.Aragon.Name = "Aragon"
 	WorldMapProvinces.Castille.Owner = "Spain"
-	WorldMapProvinces.Castille.Name = "Castille"
 	WorldMapProvinces.Andalusia.Owner = "Spain"
-	WorldMapProvinces.Andalusia.Name = "Andalusia"
 	WorldMapProvinces.GaliciaIberia.Owner = "Spain"
---	WorldMapProvinces.GaliciaIberia.Name = "Galicia"
 	WorldMapProvinces.Portugal.Owner = "Portugal"
-	WorldMapProvinces.Portugal.Name = "Portugal"
 
 	WorldMapProvinces.Aquitaine.Owner = "France"
 	WorldMapProvinces.Brittany.Owner = "France"
 	WorldMapProvinces.Burgundy.Owner = "France"
-	WorldMapProvinces.Burgundy.Name = "Provence"
 	WorldMapProvinces.France.Owner = "France"
-	WorldMapProvinces.France.Name = "France"
 	
 	WorldMapProvinces.Sardinia.Owner = "Spain"
 	WorldMapProvinces.Sicily.Owner = "Spain"
 
 	WorldMapProvinces.Belgium.Owner = "Spain"
-	WorldMapProvinces.Belgium.Name = "Belgium"
 	WorldMapProvinces.Netherlands.Owner = "Spain"
-	WorldMapProvinces.Netherlands.Name = "Netherlands"
 	WorldMapProvinces.Switzerland.Owner = "Switzerland"
-	WorldMapProvinces.Switzerland.Name = "Switzerland"
 	
 	WorldMapProvinces.Jutland.Owner = "Denmark"
 	WorldMapProvinces.Gotaland.Owner = "Sweden"
@@ -709,47 +777,29 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 
 	WorldMapProvinces.Bavaria.Owner = "Bavaria"
 	WorldMapProvinces.Brandenburg.Owner = "Brandenburg"
-	WorldMapProvinces.Brandenburg.Name = "Brandenburg"
-	WorldMapProvinces.Prussia.Owner = "Teutonic Order"
-	WorldMapProvinces.Prussia.Name = "Prussia"
-	WorldMapProvinces.Rhineland.Name = "Rhineland"
+	WorldMapProvinces.Prussia.Owner = "Prussia"
 	
 	Factions.Austria.Title = "Archduchy"
 	WorldMapProvinces.Austria.Owner = "Austria"
-	WorldMapProvinces.Austria.Name = "Austria"
 	WorldMapProvinces.Bohemia.Owner = "Austria"
 	WorldMapProvinces.Croatia.Owner = "Turkey"
-	WorldMapProvinces.Croatia.Name = "Croatia"
 	WorldMapProvinces.Hungary.Owner = "Turkey"
-	WorldMapProvinces.Hungary.Name = "Hungary"
 	WorldMapProvinces.Silesia.Owner = "Austria"
 	WorldMapProvinces.Transylvania.Owner = "Transylvania"
-	WorldMapProvinces.Transylvania.Name = "Transylvania"
 	
-	WorldMapProvinces.BalticLands.Owner = "Teutonic Order"
+	WorldMapProvinces.BalticLands.Owner = "Prussia"
 	WorldMapProvinces.Don.Owner = "Crimea"
-	WorldMapProvinces.Don.Name = "Don"
 	WorldMapProvinces.Galicia.Owner = "Poland"
 	WorldMapProvinces.Poland.Owner = "Poland"
 	WorldMapProvinces.Russia.Owner = "Muscovy"
-	WorldMapProvinces.Russia.Name = "Russia"
 	WorldMapProvinces.Ukraine.Owner = "Poland"
-	WorldMapProvinces.Ukraine.Name = "Ukraine"
 	WorldMapProvinces.WhiteRussia.Owner = "Poland"
 	
 	WorldMapProvinces.Moldavia.Owner = "Moldavia"
-	WorldMapProvinces.Moldavia.Name = "Moldavia"
 	WorldMapProvinces.Wallachia.Owner = "Wallachia"
-	WorldMapProvinces.Wallachia.Name = "Wallachia"
 	
 	WorldMapProvinces.England.Owner = "England"
 	WorldMapProvinces.Scotland.Owner = "Scotland"
-	WorldMapProvinces.Scotland.Name = "Scotland"
-	
-	WorldMapWaterProvinces.BalticSea.Name = "Baltic Sea"
-	WorldMapWaterProvinces.EnglishChannel.Name = "English Channel"
-	WorldMapWaterProvinces.IrishSea.Name = "Irish Sea"
-	WorldMapWaterProvinces.NorthSea.Name = "North Sea"
 end
 
 if (GrandStrategyYear >= 1561) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.

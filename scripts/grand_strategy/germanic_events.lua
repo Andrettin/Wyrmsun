@@ -285,6 +285,7 @@ local GermanicEvents = {
 						end
 						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
+						EventFaction.Prestige = EventFaction.Prestige + 25
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -304,6 +305,7 @@ local GermanicEvents = {
 						end
 					end
 					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+					EventFaction.Prestige = EventFaction.Prestige + 25
 				end
 				AcquireProvince(WorldMapProvinces.Jutland, "Dane Tribe")
 				AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
@@ -312,6 +314,7 @@ local GermanicEvents = {
 			function(s)
 			end,
 			function(s)
+				Factions.AsaTribe.Prestige = Factions.AsaTribe.Prestige + 25
 				AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
 				AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
 				FormFaction(EventFaction, Factions.SwedeTribe)
@@ -352,14 +355,12 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
-				WorldMapProvinces.Gotaland.Name = "Gothland"
 				DrawMinimap()
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
-				WorldMapProvinces.Gotaland.Name = "Gothland"
 				DrawMinimap()
 				EventFaction.Diplomacy.GothTribe = "War"
 				Factions.GothTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
@@ -368,7 +369,6 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
-				WorldMapProvinces.Gotaland.Name = "Gothland"
 				GrandStrategyFaction = Factions.GothTribe
 				DrawMinimap()
 			end
@@ -393,11 +393,11 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 3 -- promotion of the educated priest class
+				EventFaction.Prestige = EventFaction.Prestige + 3 -- promotion of the educated priest class
 				EventFaction.Gold = EventFaction.Gold - 300 -- cost of the land grant
 			end
 		},
-		OptionTooltips = {"-300 Gold, +3 Research"}
+		OptionTooltips = {"-300 Gold, +3 Prestige"}
 	},
 	AsaLawgiving = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Asa Lawgiving",
@@ -462,10 +462,10 @@ local GermanicEvents = {
 		Options = {"~!Marvelous!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheSunChariot = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 		Name = "The Sun Chariot",
@@ -485,10 +485,10 @@ local GermanicEvents = {
 		Options = {"~!Inspiring!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	NoblemansBurial = { -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
 		Name = "Nobleman's Burial",
@@ -497,20 +497,21 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and GrandStrategyYear == -1365
 			) then
 				return true
 			else
 				return false
 			end
 		end,
+		MinYear = -1365,
+		MaxYear = -1365,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 100 -- his inheritance? a small effect to give more purpose to this flavor event
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+100 Gold"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheSunShields = { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 		Name = "The Sun Shields",
@@ -530,10 +531,10 @@ local GermanicEvents = {
 		Options = {"~!Marvelous!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	BeldegsLands = { -- Beldeg (Baldr), the first legendary ruler of Westphalia (in the sagas he became ruler of Westphalia even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Westphalia); Source: "The Prose Edda", Snorri Sturlson, 1916, pp. 7-8.
 		Name = "Beldeg's Lands",
@@ -664,7 +665,6 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and WorldMapProvinces.Gotaland.Owner == EventFaction.Name
-				and GrandStrategyYear >= -325 and GrandStrategyYear <= -319
 				and SyncRand(100) < 50
 			) then
 				return true
@@ -672,13 +672,16 @@ local GermanicEvents = {
 				return false
 			end
 		end,
+		MinYear = -325,
+		MaxYear = -319,
 		Options = {"A ~!wise man!"},
 		OptionEffects = {
 			function(s)
 				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Research, +1 Prestige"}
 	},
 	TheSequanisAppeal = { -- Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
 		Name = "The Sequani's Appeal",
@@ -754,7 +757,7 @@ local GermanicEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] * 3 / 4) -- to give them something of a defense
-							WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] * 3 / 4)
+							WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2)
 							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
 						end
 					end
@@ -763,6 +766,211 @@ local GermanicEvents = {
 				DrawMinimap()
 			end
 		}
+	},
+	YngveChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Yngve, Chieftain of the Swedes",
+		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son Fjolne stands in line to become our next chieftain.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 - 30,
+		MaxYear = -27,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold + 250
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+250 Gold, +1 Prestige"}
+	},
+	YngvesSickness = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Yngve's Sickness",
+		Description = "Our chieftain Yngve fell ill. As the disease advanced, not many would be allowed to see him, and meanwhile a great mound began to be built... where he would be finally buried when his time came.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27,
+		MaxYear = -27,
+		RequiredEvents = {
+			YngveChieftainOfTheSwedes = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+			end
+		}
+	},
+	FjolneChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Fjolne, Chieftain of the Swedes",
+		Description = "With the death of his father, Fjolne has become our new chieftain. Besides being a powerful warrior, Fjolne is also well-capable of maintaining the peace in his realm which his father had established.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27, -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
+		MaxYear = -27 + 30, -- the year of his death is unknown, so +30 after the start
+		RequiredEventsOr = {
+			YngveChieftainOfTheSwedes = false,
+			YngvesSickness = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	FredfrodeChieftainOfTheDanes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Fredfrode, Chieftain of the Danes",
+		Description = "Fredfrode has become our new ruler in Leidre. He holds a great friendship for the chieftain of the Swedes, and both visit each other often.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Denmark")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27, -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana, and Fredfrode is his contemporary
+		MaxYear = -27 + 30,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	FredfrodesFeast = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Fredfrode's Feast",
+		Description = "The chieftain of the Danes, Fredfrode, prepared a great feast for our chieftain Fjolne in his capital of Leidre. Within Fredfrode's dwelling, there were many tall vessels filled with mead. Our chieftain, while walking through a gallery during the evening, sleepy and exceedingly drunk, slipped his foot and fell into one such vessel, drowning in mead.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				and (GetFactionProvinceCount(Factions.DaneTribe) > 0 or GetFactionProvinceCount(Factions.Denmark) > 0)
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + 30,
+		MaxYear = -27 + 30,
+		RequiredEvents = {
+			FjolneChieftainOfTheSwedes = true,
+			FredfrodeChieftainOfTheDanes = true
+		},
+		Options = {"~!Oh no!"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige - 1 -- not a particularly prestigious way of dying
+			end
+		},
+		OptionTooltips = {"-1 Prestige"}
+	},
+	SwegdeChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Swegde, Chieftain of the Swedes",
+		Description = "The faithful Swegde has become our chieftain.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + (30 * 1),
+		MaxYear = -27 + (30 * 2),
+		RequiredEventsOr = {
+			FjolneChieftainOfTheSwedes = false,
+			FredfrodesFeast = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	SwegdesJourney = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Swegde's Journey",
+		Description = "Our chieftain Swegde has gone on a journey to find Wodan and his dwelling. Travelling with twelve men, he went as far as Asia Minor and the Black Sea.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + 25,
+		MaxYear = -27 + 25,
+		RequiredEvents = {
+			SwegdeChieftainOfTheSwedes = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	SwegdesReturn = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Swegde's Return",
+		Description = "After five years, our chieftain Swegde has returned from his journey, bringing with him a wife, Vana, and their son Vanlande. He did not manage to find Wodan, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after much drinking had been had, Swegde and his men saw someone near the stone... and they ran in the direction of the stone. There was a man standing behind a door in the stone, and he invited Swegde inside, and that within he would be able to finally see Wodan. Our chieftain agreed... and once inside he was murdered and was never seen again.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + 30,
+		MaxYear = -27 + 30,
+		RequiredEvents = {
+			SwegdesJourney = true
+		},
+		Options = {"Oh ~!no!"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige - 1
+			end
+		},
+		OptionTooltips = {"-1 Prestige"}
 	},
 	Vornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "Vornedskabet",
@@ -838,7 +1046,7 @@ local GermanicEvents = {
 		Description = "The aristocrats of Livonia and Estonia have managed to acquire an official confirmation of their privileges, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Teutonic Order" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+				EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
 				and WorldMapProvinces.BalticLands.Owner == EventFaction.Name
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
@@ -887,13 +1095,14 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
 				and WorldMapProvinces.Brandenburg.Civilization == "germanic"
-				and GrandStrategyYear == 1667 -- events which relate to specific persons directly have dates attached to them
 			) then
 				return true
 			else
 				return false
 			end
 		end,
+		MinYear = 1667, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1667,
 		Options = {"More ~!taxes for us!"},
 		OptionEffects = {
 			function(s)
@@ -910,7 +1119,6 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
 				and WorldMapProvinces.Brandenburg.Civilization == "germanic"
-				and GrandStrategyYear == 1692 -- events which relate to specific persons directly have dates attached to them
 			) then
 				EventProvince = WorldMapProvinces.Brandenburg
 				return true
@@ -918,6 +1126,8 @@ local GermanicEvents = {
 				return false
 			end
 		end,
+		MinYear = 1692, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1692,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
@@ -946,9 +1156,10 @@ local GermanicEvents = {
 			function(s)
 				EventFaction.Gold = EventFaction.Gold + 500
 				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+500 Gold, +1 Research"}
+		OptionTooltips = {"+500 Gold, +1 Research", "+1 Prestige"}
 	},
 	TheLiftingOfTheVornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "The Lifting of the Vornedskabet",

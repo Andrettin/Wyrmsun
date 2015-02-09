@@ -165,20 +165,20 @@ SetFogOfWarGraphics("tilesets/fogofwar.png")
 --
 
 DefineDefaultIncomes(
-  0, 100, 100, 100, 100, 100, 100, 100)
+  0, 100, 100, 100, 100, 100, 100, 100, 100)
 
 DefineDefaultActions(
-  "stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce")
+  "stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain")
 
 DefineDefaultResourceNames(
-  "time", "gold", "lumber", "oil", "ore", "stone", "coal", "research")
+  "time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige")
 
 DefineDefaultResourceAmounts(
   "gold", 100000,
   "oil", 50000,
   "coal", 50000)
 
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1)
+DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1)
 
 -------------------------------------------------------------------------------
 
@@ -1458,7 +1458,7 @@ Preference.ShowOrders = wyr.preferences.ShowOrders
 Preference.ShowMessages = wyr.preferences.ShowMessages
 
 --- Uses Stratagus Library path!
-Load("scripts/wyr.lua")
+Load("scripts/civilizations.lua")
 Load("scripts/icons.lua")
 Load("scripts/sound.lua")
 Load("scripts/missiles.lua")
@@ -1466,6 +1466,7 @@ Load("scripts/constructions.lua")
 Load("scripts/spells.lua")
 Load("scripts/units.lua")
 Load("scripts/upgrade.lua")
+Load("scripts/wyr.lua")
 Load("scripts/fonts.lua")
 Load("scripts/buttons.lua")
 Load("scripts/ui.lua")

@@ -53,20 +53,23 @@ local EarthEvents = {
 				WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
 				WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 8
 				WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 8
+				WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 8
 				WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 8
 				WorldMapProvinces.France.Units.unit_germanic_warrior = 8
-				WorldMapProvinces.Italy.Units.unit_germanic_warrior = 8
+				WorldMapProvinces.Latium.Units.unit_germanic_warrior = 8
 				AcquireProvince(WorldMapProvinces.Don, "")
 				AcquireFactionTechnologies(Factions.AeduiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.ArverniTribe, EventFaction)
+				AcquireFactionTechnologies(Factions.BoiiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.MenapiiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.SequaniTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.Rome, EventFaction)
 				AcquireProvince(WorldMapProvinces.Aquitaine, "Arverni Tribe")
 				AcquireProvince(WorldMapProvinces.Belgium, "Menapii Tribe")
+				AcquireProvince(WorldMapProvinces.Bohemia, "Boii Tribe")
 				AcquireProvince(WorldMapProvinces.Burgundy, "Sequani Tribe")
 				AcquireProvince(WorldMapProvinces.France, "Aedui Tribe")
-				AcquireProvince(WorldMapProvinces.Italy, "Rome")
+				AcquireProvince(WorldMapProvinces.Latium, "Rome")
 				DrawMinimap()
 			end,
 			function(s)
@@ -79,7 +82,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Aedui Tribe"
-				and WorldMapProvinces.Italy.Owner == "Rome"
+				and WorldMapProvinces.NorthItaly.Owner == "Rome"
 				and EventFaction.Diplomacy.SuebiTribe == "War"
 				and Factions.Rome.Diplomacy.SuebiTribe == "Peace"
 				and WorldMapProvinces.Burgundy.Owner == "Suebi Tribe"
@@ -158,52 +161,6 @@ local EarthEvents = {
 			end
 		},
 		OptionTooltips = {"+100 Research"}
-	},
-	HiberniaConquered = {
-		Name = "Hibernia Conquered",
-		Description = "We have managed to conquer Hibernia, making it a new province of ours.",
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "Rome"
-				and WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Name ~= "Hibernia"
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Persistent = true,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				WorldMapProvinces.Ireland.Name = "Hibernia"
-				WorldMapWaterProvinces.IrishSea.Name = "Hibernian Ocean"
-			end
-		}
-	},
-	IrelandConquered = {
-		Name = "Ireland Conquered",
-		Description = "We have managed to conquer Ireland, making it a new province of ours.",
-		Conditions = function(s)
-			if (
-				EventFaction.Name ~= "Rome"
-				and WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Name ~= "Ireland"
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Persistent = true,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				WorldMapProvinces.Ireland.Name = "Ireland"
-				WorldMapWaterProvinces.IrishSea.Name = "Irish Sea"
-			end
-		}
 	}
 }
 	

@@ -33,7 +33,7 @@ InitFuncs:add(function()
 end)
 
 function HandleCheats(str)
-  local resources = { "gold", "lumber", "oil", "ore", "stone", "coal", "research" }
+  local resources = { "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige" }
 
   if (str == "im a lumberjack and its ok") then
     SetSpeedResourcesHarvest("lumber", 52 / 2)

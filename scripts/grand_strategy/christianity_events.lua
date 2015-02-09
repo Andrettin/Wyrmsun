@@ -34,7 +34,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and GrandStrategyYear == 431
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -42,13 +41,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 431,
+		MaxYear = 431,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	PalladiusFailure = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
 		Name = "Palladius' Failure",
@@ -70,11 +71,11 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research - 1
+				EventFaction.Prestige = EventFaction.Prestige - 1
 				GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
 			end
 		},
-		OptionTooltips = {"-1 Research"}
+		OptionTooltips = {"-1 Prestige"}
 	},
 	PalladiusTheApostleOfIreland = { -- ahistorical success of Palladius in converting the Irish
 		Name = "Palladius, the Apostle of PROVINCE_NAME",
@@ -96,21 +97,19 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 				GrandStrategyEvents.PalladiusFailure = nil
 				GrandStrategyEvents.PatrickTheApostleOfIreland = nil
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	PatrickTheApostleOfIreland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
 		Name = "Patrick, the Apostle of Ireland",
-		Description = "Patrick, the son of a deacon and grandson of a priest, was brought to PROVINCE_NAME as a slave when young, where he worked for six years as a shepherd. Having ran away from PROVINCE_NAME, he later had a dream instigating him to come back to the island and help propagate the Christian faith there. After his return to PROVINCE_NAME, Patrick personally baptized many thousands, successfully gaining the island for Christianity. \"The Irish\", he said, \"who never had the knowledge of God and worshipped only idols and unclean things, have lately become the people of the Lord\".",
+		Description = "Patrick, the son of a deacon and grandson of a priest, was brought to PROVINCE_NAME as a slave when young, where he worked for six years as a shepherd. Having ran away from PROVINCE_NAME, he later had a dream instigating him to come back to the island and help propagate the Christian faith there. After his return to PROVINCE_NAME, Patrick personally baptized many thousands, successfully gaining the island for Christianity. \"The Irish\", he said, \"who never had the knowledge of God and worshiped only idols and unclean things, have lately become the people of the Lord\".",
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and GrandStrategyYear >= 440
-				and GrandStrategyYear <= 493 -- when Patrick died
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -118,13 +117,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 440,
+		MaxYear = 493,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 10 -- major development for Ireland, founding a monastic tradition that would have impact in much of Europe
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+10 Prestige"}
 	},
 	SPatriciiCanticumScotticum = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "S. Patricii Canticum Scotticum",
@@ -143,13 +144,14 @@ local ChristianityEvents = {
 		RequiredEvents = {
 			PatrickTheApostleOfIreland = true
 		},
+		MaxYear = 493,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	ColumbaMissionaryToScotland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Columba, Missionary to PROVINCE_NAME",
@@ -157,7 +159,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
-				and GrandStrategyYear == 563
 			) then
 				EventProvince = WorldMapProvinces.Scotland
 				return true
@@ -165,13 +166,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 563,
+		MaxYear = 563,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	MohonnaMissionaryToThePicts = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Mohonna, Missionary to the Picts",
@@ -192,10 +195,10 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheMissionOfAugustine = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "The Mission of Augustine",
@@ -203,8 +206,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and GrandStrategyYear >= 596
-				and GrandStrategyYear <= 604 -- when Augustine died
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -212,17 +213,19 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 596,
+		MaxYear = 604, -- when Augustine died
 		Options = {"~!Welcome him warmly", "Pay him no ~!heed"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 				GrandStrategyEvent(EventFaction, GrandStrategyEvents.AugustineArchbishopOfEngland)
 			end,
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+--				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research", "+1 Research"}
+		OptionTooltips = {"+1 Prestige", ""}
 	},
 	AugustineArchbishopOfEngland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "Augustine, Archbishop of PROVINCE_NAME",
@@ -231,10 +234,10 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheChurchAtCanterbury = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "The Church at Canterbury",
@@ -243,7 +246,6 @@ local ChristianityEvents = {
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
 --				and ProvinceHasBuildingType(WorldMapProvinces.England, "temple")
-				and GrandStrategyYear <= 604 -- when Augustine died
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -254,13 +256,14 @@ local ChristianityEvents = {
 		RequiredEvents = {
 			AugustineArchbishopOfEngland = true
 		},
+		MaxYear = 604, -- when Augustine died
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheConferenceAtAugustinesOak = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §11.
 		Name = "The Conference at Augustine's Oak",
@@ -268,7 +271,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and GrandStrategyYear <= 604 -- when Augustine died
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -280,13 +282,14 @@ local ChristianityEvents = {
 			AugustineArchbishopOfEngland = true,
 			TheChurchAtCanterbury = true -- to make this event happen a bit later
 		},
+		MaxYear = 604, -- when Augustine died
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research - 1
+				EventFaction.Prestige = EventFaction.Prestige - 1
 			end
 		},
-		OptionTooltips = {"-1 Research"}
+		OptionTooltips = {"-1 Prestige"}
 	},
 	AugustinesSecondConference = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §11.
 		Name = "Augustine's Second Conference",
@@ -294,7 +297,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and GrandStrategyYear <= 604 -- when Augustine died
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -305,13 +307,14 @@ local ChristianityEvents = {
 		RequiredEvents = {
 			TheConferenceAtAugustinesOak = true
 		},
+		MaxYear = 604, -- when Augustine died
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research - 1
+				EventFaction.Prestige = EventFaction.Prestige - 1
 			end
 		},
-		OptionTooltips = {"-1 Research"}
+		OptionTooltips = {"-1 Prestige"}
 	},
 	MellitusConsecratedBishopOfLondon = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "Mellitus Ordained Bishop of PROVINCE_SETTLEMENT_NAME",
@@ -319,7 +322,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and GrandStrategyYear == 604
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -327,13 +329,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 604,
+		MaxYear = 604,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	JustusConsecratedBishopOfRochester = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "Justus Ordained Bishop of Rochester",
@@ -341,7 +345,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and GrandStrategyYear == 604
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -349,13 +352,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 604,
+		MaxYear = 604,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	ColumbanusMissionaryToFrance = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Columbanus, Missionary to PROVINCE_NAME",
@@ -363,7 +368,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.France.Owner == EventFaction.Name
-				and GrandStrategyYear == 612
 			) then
 				EventProvince = WorldMapProvinces.France
 				return true
@@ -371,13 +375,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 612,
+		MaxYear = 612,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	PaulinusAppointedArchbishopOfYork = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "Paulinus Appointed Archbishop of York",
@@ -385,7 +391,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and GrandStrategyYear == 625
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -393,13 +398,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 625,
+		MaxYear = 625,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	KilianMissionaryToFranconia = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Kilian, Missionary to Franconia",
@@ -408,20 +415,21 @@ local ChristianityEvents = {
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
 				and WorldMapProvinces.Bavaria.Civilization == "germanic" -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
-				and GrandStrategyYear == 680
 			) then
 				return true
 			else
 				return false
 			end
 		end,
+		MinYear = 680,
+		MaxYear = 680,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	EloquiusMissionaryToBelgium = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Eloquius, Missionary to PROVINCE_NAME",
@@ -429,7 +437,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Belgium.Owner == EventFaction.Name
-				and GrandStrategyYear == 680
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true
@@ -437,13 +444,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 680,
+		MaxYear = 680,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	WillibrordMissionaryToFriesland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Willibrord, Missionary to PROVINCE_NAME",
@@ -451,7 +460,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
-				and GrandStrategyYear == 692
 			) then
 				EventProvince = WorldMapProvinces.Netherlands
 				return true
@@ -459,13 +467,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 692,
+		MaxYear = 692,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	RupertMissionaryToBavaria = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Rupert, Missionary to PROVINCE_NAME",
@@ -473,7 +483,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
-				and GrandStrategyYear == 700
 			) then
 				EventProvince = WorldMapProvinces.Bavaria
 				return true
@@ -481,13 +490,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 700,
+		MaxYear = 700,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	FerdomnachLearnedMonkOfArmagh = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Ferdomnach, Learned Monk of Armagh",
@@ -495,20 +506,21 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and GrandStrategyYear == 807
 			) then
 				return true
 			else
 				return false
 			end
 		end,
+		MinYear = 807,
+		MaxYear = 807,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheBookOfArmagh = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "The Book of Armagh",
@@ -528,10 +540,10 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	},
 	ForannanMissionaryToFrontierOfBelgium = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Forannan, Missionary to the Frontier of PROVINCE_NAME",
@@ -539,7 +551,6 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Belgium.Owner == EventFaction.Name
-				and GrandStrategyYear == 970
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true
@@ -547,13 +558,15 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
+		MinYear = 970,
+		MaxYear = 970,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+1 Research"}
+		OptionTooltips = {"+1 Prestige"}
 	}
 }
 	

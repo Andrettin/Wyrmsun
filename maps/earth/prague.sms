@@ -8,36 +8,30 @@ SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
 SetPlayerData(1, "Resources", "oil", 0)
 SetAiType(1, "land-attack")
-SetPlayerData(2, "Resources", "gold", 2000)
-SetPlayerData(2, "Resources", "lumber", 1000)
-SetPlayerData(2, "Resources", "oil", 0)
-SetAiType(2, "passive")
 SetPlayerData(15, "RaceName", "neutral")
 
 local layout = {
-	{-1, -1,  8, 40, 31},
-	{ 0,  0, 17, 19,  0},
-	{ 0,  0, 18, 16,  0},
-	{ 0,  6, 17, 19,  0},
-	{ 0,  0,  0,  8,  0},
-	{ 0,  0,  0,  8,  0},
-	{ 0,  0, 18, 16,  0},
-	{-1, -1, 17, 19,  0}
+	{ 0,  0,  0,  8,  0,  0,  0,  0},
+	{-1,  0,  0, 17, 10, 19,  0,  0},
+	{-1,  0,  0, 18, 10, 16,  0,  0},
+	{-1,  0,  0,  9,  6,  0,  0,  0},
+	{-1,  0,  0,  8,  0,  0,  0,  0},
+	{-1,  0,  0,  8,  0,  0,  0,  0}
 }
 
 local rock_generation = {
-	{64, 80, 48, 112}
+	{0, 16, 0, 16}
 }
 
 local town_buildings = {"Farm", "Farm"}
 
-local town_units = {}
+local town_units = {"unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-archer"}
 
 local invader_units = {"unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-archer"}
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 2, "celt", "Sequani Tribe", 1, "celt", "Aedui Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
+		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "germanic", "Marcomanni Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == -1) then -- set AI max tech level to Agrarian (Iron)
 			for i=0,15 do
@@ -47,30 +41,8 @@ if (LoadedGame == false) then
 			end
 		end
 	else
-		GenerateTown(layout, 2, "celt", "Sequani Tribe", 1, "celt", "Aedui Tribe", town_buildings, {}, false, {}, "low", nil)
+		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "germanic", "Marcomanni Tribe", town_buildings, {}, false, {}, "low", nil)
 	end
-end
-
--- Suebi units
-SetStartView(0, Players[2].StartPos.x, Players[2].StartPos.y)
-SetPlayerData(0, "RaceName", "germanic")
-SetPlayerData(0, "Faction", "Suebi Tribe")
-
-if (GrandStrategy == false) then
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-
-	unit = CreateUnit("unit-germanic-warrior", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-warrior", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-archer", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-end
-
-if (GrandStrategy == false or GrandStrategyEventMap) then
-	SetDiplomacy(0, "allied", 2)
-	SetDiplomacy(2, "allied", 0)
 end
 
 if (GrandStrategyEventMap) then
