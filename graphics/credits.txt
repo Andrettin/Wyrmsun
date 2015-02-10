@@ -599,11 +599,24 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest_4.png
 /graphics/tilesets/fogofwar.png
 /graphics/ui/cursors/magnifying_glass.png
-/graphics/ui/wyrmsun_logo.png
-/graphics/ui/wyrmsun_logo_monochromatic.png
+/graphics/ui/coal.png
+/graphics/ui/coal_extra_1.png
+/graphics/ui/food.png
+/graphics/ui/fuel.png
+/graphics/ui/gold.png
+/graphics/ui/gold_ore.png
+/graphics/ui/housing.png
+/graphics/ui/lumber.png
+/graphics/ui/oil.png
 /graphics/ui/potion.png
 /graphics/ui/prestige.png
+/graphics/ui/prestige_extra_1.png
 /graphics/ui/research.png
+/graphics/ui/score.png
+/graphics/ui/score_extra_1.png
+/graphics/ui/timber.png
+/graphics/ui/wyrmsun_logo.png
+/graphics/ui/wyrmsun_logo_monochromatic.png
 
 J. W. Bjerk (eleazzaar):
 /graphics/gnome/icons/herbal_cure.png (later modified by Jinn)
@@ -678,10 +691,9 @@ Mikodrak:
 
 
 Oray Studios:
-/graphics/ui/gold.png
-/graphics/ui/lumber.png
+/graphics/ui/gold_extra_1.png
 /graphics/ui/mana_icon.png
-/graphics/ui/oil.png
+/graphics/ui/timber_extra_1.png
 
 Ransom.00:
 /graphics/dwarf/icons/axe_2.png (later modified by Jinn)

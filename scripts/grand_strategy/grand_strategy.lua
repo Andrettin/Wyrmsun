@@ -89,8 +89,10 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyCommodities = nil
 			GrandStrategyCommodities = {}
 			GrandStrategyCommodities["Lumber"] = {}
+			GrandStrategyCommodities.Lumber["BasePrice"] = 100
 			GrandStrategyCommodities.Lumber["Price"] = 100
 --			GrandStrategyCommodities["Coal"] = {}
+--			GrandStrategyCommodities.Coal["BasePrice"] = 100
 --			GrandStrategyCommodities.Coal["Price"] = 100
 
 			-- add resource quantities to factions that don't have that set up
@@ -499,10 +501,10 @@ function EndTurn()
 	for key, value in pairs(Factions) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
-				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= 50 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall")) then
-					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - 50 -- 50 is how much a province demands of lumber per turn
-					Factions[key].Gold = Factions[key].Gold + round(50 * GetCommodityPrice("Lumber") / 100)
-					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - 50
+				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall")) then
+					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - GetProvinceCommodityDemand("Lumber")
+					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
+					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
 			end
@@ -530,14 +532,36 @@ function EndTurn()
 	for key, value in pairsByKeys(Factions, trade_priority) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			for province_key, province_value in pairs(WorldMapProvinces) do
-				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= 50 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
-					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - 50 -- 50 is how much a province demands of lumber per turn
-					Factions[key].Gold = Factions[key].Gold + round(50 * GetCommodityPrice("Lumber") / 100)
-					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - 50
+				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - GetProvinceCommodityDemand("Lumber")
+					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
+					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
 			end
 		end
+	end
+
+	-- check whether offers or bids have been greater, and change the commodity's price accordingly (disabled for now since the trade system isn't robust enough yet to not make lumber become worthless over time)
+	local remaining_wanted_trade_lumber = 0
+	for key, value in pairs(Factions) do
+		remaining_wanted_trade_lumber = remaining_wanted_trade_lumber + Factions[key].Trade.Lumber
+	end
+	
+	for province_key, province_value in pairs(WorldMapProvinces) do
+		if (ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+			if (province_consumed_commodity.Lumber[province_key] == false) then
+				remaining_wanted_trade_lumber = remaining_wanted_trade_lumber - GetProvinceCommodityDemand("Lumber")
+			end
+		end
+	end
+	
+--	GrandStrategyCommodities.Lumber["Difference"] = remaining_wanted_trade_lumber -- for debugging	
+	
+	if (remaining_wanted_trade_lumber > 0 and GrandStrategyCommodities.Lumber.Price > 1) then -- more offers than bids
+		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price - 1
+	elseif (remaining_wanted_trade_lumber < 0) then -- more bids than offers
+		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price + 1
 	end
 
 	-- keep human player's trading preferences
@@ -551,19 +575,7 @@ function EndTurn()
 		end
 		GrandStrategyFaction.Trade.Lumber = player_trade_preferences.Lumber
 	end
-
-	-- check whether offers or bids have been greater, and change the commodity's price accordingly (disabled for now since the trade system isn't robust enough yet to not make lumber become worthless over time)
---	local remaining_wanted_trade_lumber = 0
---	for key, value in pairs(Factions) do
---		remaining_wanted_trade_lumber = remaining_wanted_trade_lumber + Factions[key].Trade.Lumber
---	end
---	
---	if (remaining_wanted_trade_lumber > 0 and GrandStrategyCommodities.Lumber.Price > 1) then -- more offers than bids
---		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price - 1
---	elseif (remaining_wanted_trade_lumber < 0) then -- more bids than offers
---		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price + 1
---	end
-
+	
 	for key, value in pairs(WorldMapProvinces) do
 		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
 	
@@ -2926,6 +2938,7 @@ function DrawGrandStrategyInterface()
 						b:setTooltip("Decrease bid of " .. key .. " by 100")
 					end
 
+					AddGrandStrategyLabel("~<" .. GetCommodityPrice(key) .. "~>", 9 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
 					AddGrandStrategyLabel("~<" .. GrandStrategyFaction.Trade[key] .. "~>", 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
 					
 					item_y = item_y + 1
@@ -4624,8 +4637,21 @@ function GrandStrategyEvent(faction, event)
 end
 
 function GetCommodityPrice(commodity)
-	if (commodity == "Lumber") then
-		return GrandStrategyCommodities.Lumber.Price -- price for every 100 lumber
+	if (GrandStrategyCommodities[commodity] ~= nil and GrandStrategyCommodities[commodity].Price ~= nil) then
+		return GrandStrategyCommodities[commodity].Price -- price for every 100 of that commodity
+	end
+	return 0
+end
+
+function GetProvinceCommodityDemand(commodity)
+	if (GrandStrategyCommodities[commodity] ~= nil and GrandStrategyCommodities[commodity].BasePrice ~= nil and GrandStrategyCommodities[commodity].Price ~= nil) then
+		local commodity_demand = 0
+		if (commodity == "Lumber") then
+			commodity_demand = 50
+		end
+		commodity_demand = math.floor(commodity_demand * GrandStrategyCommodities[commodity].BasePrice / GrandStrategyCommodities[commodity].Price)
+--		GrandStrategyCommodities[commodity]["Demand"] = commodity_demand -- for debugging
+		return commodity_demand
 	end
 	return 0
 end

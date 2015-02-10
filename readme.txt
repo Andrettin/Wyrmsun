@@ -64,11 +64,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Provinces' names now can change according to the faction that owns them, or according to the province's culture.
 - Added 8 events about the legendary rulers of the Swedes and the Danes.
 - Added 23 events about the spread of early Christianity.
-- Added "Prestige" variable for factions, which influences the likelihood of certain events, as well as trade priority. Factions with negative prestige can't declare war. Prestige can be gained by winning battles (and lost by losing them), or as a consequence of certain events.
+- Added "Prestige" variable for factions (icon graphics by Jinn), which influences the likelihood of certain events, as well as trade priority. Factions with negative prestige can't declare war. Prestige can be gained by winning battles (and lost by losing them), or as a consequence of certain events.
 - War can now only be declared against factions with which you share a border with, or if both factions have a coast.
 - Crafting the Scepter of Fire now grants +100 Prestige to the Norlund Clan.
 - Settling Scandinavia now grants +25 Prestige to the Asa Tribe.
 - Provinces of a different culture than the owner now produce only 75% of the resources they would otherwise produce.
+- Commodity prices now fluctuate according to supply and demand. Provinces will demand less commodities if they are too costly, and more if they are cheap.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
@@ -78,6 +79,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
 - Added caltrops and trap objects (graphics by b_o).
+- Gold, lumber, coal, food and score icons reworked (by Jinn).
 
 * Quests
 - Added The Battle of Magetobria quest.

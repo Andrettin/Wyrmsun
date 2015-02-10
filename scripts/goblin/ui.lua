@@ -248,8 +248,8 @@ UI.Resources[2].TextY = 1
 --UI.Resources[3].TextY = 1
 
 -- coal
---UI.Resources[6].G = CGraphic:New("ui/ore,stone,coal.png", 14, 14)
---UI.Resources[6].IconFrame = 2
+--UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
+--UI.Resources[6].IconFrame = 0
 --UI.Resources[6].IconX = 176 + 150
 --UI.Resources[6].IconY = 0
 --UI.Resources[6].TextX = 176 + 150 + 18
