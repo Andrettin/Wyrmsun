@@ -499,10 +499,19 @@ end
 
 if (GrandStrategyYear >= 33) then -- estimated date
 	GrandStrategyEvents.SwegdesReturn = nil
+	GrandStrategyEvents.VanlandeChieftainOfTheSwedes = nil
 end
 
 if (GrandStrategyYear >= 43) then -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.England.Owner = "Rome"
+end
+
+if (GrandStrategyYear >= 53) then -- estimated date
+	GrandStrategyEvents.TheWinterAbode = nil
+end
+
+if (GrandStrategyYear >= 63) then -- estimated date
+	GrandStrategyEvents.HuldsCurse = nil
 end
 
 if (GrandStrategyYear >= 98) then

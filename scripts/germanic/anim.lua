@@ -31,9 +31,45 @@
 -- Germanic Chieftain's Hall
 --
 
+--[[
 DefineAnimations("animations-germanic-town-hall", {
   Still = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
   Research = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
   Train = {"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "wait 1",},
   Upgrade = {"frame 3", "wait 4", "frame 3", "wait 1",},
+})
+--]]
+
+DefineAnimations("animations-germanic-town-hall", {
+	Still = {
+		"if-var v.Armor.Value <= 15 town_hall",
+		"if-var v.Armor.Value >= 20 masonry_town_hall", -- if has masonry
+		"label town_hall",
+		"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "goto end",
+		"label masonry_town_hall",
+		"frame 0", "wait 4", "frame 0", "goto end",
+		"label end",
+		"wait 1",
+	},
+	Research = {
+		"if-var v.Armor.Value <= 15 town_hall",
+		"if-var v.Armor.Value >= 20 masonry_town_hall", -- if has masonry
+		"label town_hall",
+		"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "goto end",
+		"label masonry_town_hall",
+		"frame 0", "wait 4", "frame 0", "goto end",
+		"label end",
+		"wait 1",
+	},
+	Train = {
+		"if-var v.Armor.Value <= 15 town_hall",
+		"if-var v.Armor.Value >= 20 masonry_town_hall", -- if has masonry
+		"label town_hall",
+		"frame 0", "wait 6", "frame 1", "wait 6", "frame 2", "wait 6", "frame 0", "goto end",
+		"label masonry_town_hall",
+		"frame 0", "wait 4", "frame 0", "goto end",
+		"label end",
+		"wait 1",
+	},
+	Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
 })

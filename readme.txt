@@ -62,7 +62,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Scenarios can no longer be restarted when in grand strategy mode.
 - A province can now be attacked if it is only separated from the attacker by a single water province.
 - Provinces' names now can change according to the faction that owns them, or according to the province's culture.
-- Added 8 events about the legendary rulers of the Swedes and the Danes.
+- Added 11 events about the legendary rulers of the Swedes and the Danes.
 - Added 23 events about the spread of early Christianity.
 - Added "Prestige" variable for factions (icon graphics by Jinn), which influences the likelihood of certain events, as well as trade priority. Factions with negative prestige can't declare war. Prestige can be gained by winning battles (and lost by losing them), or as a consequence of certain events.
 - War can now only be declared against factions with which you share a border with, or if both factions have a coast.
@@ -96,7 +96,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).
-- The Germanic Carpenter's Shop now changes its graphic after Masonry is researched, and becomes called "Lumber Mill".
+- The Germanic Carpenter's Shop now changes its graphic after Masonry is researched, and becomes called "Lumber Mill" (graphics by Jinn).
+- The Germanic Chieftain's Hall now changes its graphic after Masonry is researched (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.0.1

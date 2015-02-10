@@ -812,8 +812,10 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
-		}
+		},
+		OptionTooltips = {"+1 Prestige"}
 	},
 	FjolneChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Fjolne, Chieftain of the Swedes",
@@ -933,8 +935,8 @@ local GermanicEvents = {
 				return false
 			end
 		end,
-		MinYear = -27 + 25,
-		MaxYear = -27 + 25,
+		MinYear = -27 + (30 * 1) + 25,
+		MaxYear = -27 + (30 * 1) + 25,
 		RequiredEvents = {
 			SwegdeChieftainOfTheSwedes = true
 		},
@@ -948,7 +950,7 @@ local GermanicEvents = {
 	},
 	SwegdesReturn = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Swegde's Return",
-		Description = "After five years, our chieftain Swegde has returned from his journey, bringing with him a wife, Vana, and their son Vanlande. He did not manage to find Wodan, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after much drinking had been had, Swegde and his men saw someone near the stone... and they ran in the direction of the stone. There was a man standing behind a door in the stone, and he invited Swegde inside, and that within he would be able to finally see Wodan. Our chieftain agreed... and once inside he was murdered and was never seen again.",
+		Description = "After five years, Swegde returned from his journey, bringing with him a wife, Vana, and their son Vanlande. He did not manage to find Wodan, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after having drunk much, Swegde and his men saw someone near the stone... There was a man standing behind a door in it, and he invited Swegde inside, claiming Wodan to be inside. Our chieftain agreed... and once inside he was murdered and was never seen again.",
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
@@ -959,8 +961,8 @@ local GermanicEvents = {
 				return false
 			end
 		end,
-		MinYear = -27 + 30,
-		MaxYear = -27 + 30,
+		MinYear = -27 + (30 * 2),
+		MaxYear = -27 + (30 * 2),
 		RequiredEvents = {
 			SwegdesJourney = true
 		},
@@ -971,6 +973,85 @@ local GermanicEvents = {
 			end
 		},
 		OptionTooltips = {"-1 Prestige"}
+	},
+	VanlandeChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Vanlande, Chieftain of the Swedes",
+		Description = "The mighty Vanlande has become our chieftain. He is a great warrior, and has a passion for traveling.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + (30 * 2),
+		MaxYear = -27 + (30 * 3),
+		RequiredEventsOr = {
+			SwegdeChieftainOfTheSwedes = false,
+			SwegdesReturn = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	TheWinterAbode = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "The Winter Abode",
+		Description = "Our chieftain Vanlande has taken up his winter abode in Finland with Snae the Old, marrying his daughter Driva. When spring came, Vanlande set out to Sweden, promising to Driva that he would return within three years.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + (30 * 2) + 20,
+		MaxYear = -27 + (30 * 2) + 20,
+		RequiredEvents = {
+			VanlandeChieftainOfTheSwedes = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	HuldsCurse = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Huld's Curse",
+		Description = "Vanlande did not keep his promise. Even after ten years had passed, he hadn't returned to Driva's embrace... She sent the son she had with Vanlande, Visbur, to Sweden, and then bribed the witch Huld to charm Vanlande into returning to Finland, or to kill him. Vanlande felt a sudden urge to visit Finland, but his councilors and friends advised him against it. He then became quite drowsy, and went to sleep... cries were heard from his chamber, and his men rushed there, only to find him dead. His body was burnt at the river Skytaa, and a standing stone was raised for him.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -27 + (30 * 3),
+		MaxYear = -27 + (30 * 3),
+		RequiredEvents = {
+			TheWinterAbode = true
+		},
+		Options = {"Oh ~!no!"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
 	},
 	Vornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "Vornedskabet",
