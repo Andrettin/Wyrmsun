@@ -128,11 +128,19 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
+		"name", "goth",
+		"display", "Goth",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "greek",
 		"display", "Greek",
 		"visible",
 		"species", "human",
-		"parent-civilization", "germanic",
+		"parent-civilization", "teuton",
 		"playable", false
 	},
 	"race", {
@@ -151,8 +159,23 @@ DefineRaceNames(
 		"display", "Latin",
 		"visible",
 		"species", "human",
-		"parent-civilization", "germanic",
+		"parent-civilization", "teuton",
 		"playable", false
+	},
+	"race", {
+		"name", "norse",
+		"display", "Norse",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
+		"name", "teuton",
+		"display", "Teuton",
+		"visible",
+		"species", "human",
+		"parent-civilization", "germanic"
 	},
 	"race", {
 		"name", "neutral",
@@ -351,103 +374,6 @@ DefineCivilizationFactions("germanic",
 		"color", "pink",
 		"secondary_color", "pink"
 	},
-	-- Germanic polities
-	"faction", {
-		"name", "Austria",
-		"type", "polity",
-		"color", "white",
-		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Bavaria",
-		"type", "polity",
-		"color", "cyan",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Brandenburg",
-		"type", "polity",
-		"color", "blue",
-		"secondary_color", "blue"
-	},
-	"faction", {
-		"name", "Burgundy",
-		"type", "polity",
-		"color", "brown",
-		"secondary_color", "brown"
-	},
-	"faction", {
-		"name", "Denmark",
-		"type", "polity",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "England",
-		"type", "polity",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Francia",
-		"type", "polity",
-		"color", "green",
-		"secondary_color", "orange"
-	},
-	"faction", {
-		"name", "Galicia", -- Suebi kingdom of Galicia
-		"type", "polity",
-		"color", "black",
-		"secondary_color", "black"
-	},
-	"faction", {
-		"name", "Netherlands",
-		"type", "polity",
-		"color", "orange",
-		"secondary_color", "blue"
-	},
-	"faction", {
-		"name", "Norway",
-		"type", "polity",
-		"color", "blue",
-		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Prussia",
-		"type", "polity",
-		"color", "black",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Saxony",
-		"type", "polity",
-		"color", "pink",
-		"secondary_color", "pink"
-	},
-	"faction", {
-		"name", "Scotland",
-		"type", "polity",
-		"color", "blue",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Sweden",
-		"type", "polity",
-		"color", "blue",
-		"secondary_color", "yellow"
-	},
-	"faction", {
-		"name", "Switzerland",
-		"type", "polity",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Westphalia",
-		"type", "polity",
-		"color", "black",
-		"secondary_color", "black"
-	},
 	-- Non-Playable Tribes
 	"faction", {
 		"name", "Gylfing Tribe",
@@ -461,42 +387,6 @@ DefineCivilizationFactions("germanic",
 		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "cyan",
-		"playable", false
-	},
-	-- Non-Playable Polities
-	"faction", {
-		"name", "Crimea",
-		"type", "polity",
-		"color", "brown",
-		"secondary_color", "brown",
-		"playable", false
-	},
-	"faction", {
-		"name", "Muscovy",
-		"type", "polity",
-		"color", "red",
-		"secondary_color", "red",
-		"playable", false
-	},
-	"faction", {
-		"name", "Poland",
-		"type", "polity",
-		"color", "red",
-		"secondary_color", "white",
-		"playable", false
-	},
-	"faction", {
-		"name", "Russia",
-		"type", "polity",
-		"color", "blue",
-		"secondary_color", "red",
-		"playable", false
-	},
-	"faction", {
-		"name", "Turkey",
-		"type", "polity",
-		"color", "brown",
-		"secondary_color", "brown",
 		"playable", false
 	}
 )
@@ -522,6 +412,52 @@ DefineCivilizationFactions("goblin",
 		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "cyan"
+	}
+)
+
+DefineCivilizationFactions("goth",
+	"faction", {
+		"name", "Burgundian Tribe",
+		"type", "tribe",
+		"color", "brown",
+		"secondary_color", "brown"
+	},
+	"faction", {
+		"name", "Goth Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Ostrogoth Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Rugian Tribe",
+		"type", "tribe",
+		"color", "red", -- change to a better one?
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Vandal Tribe",
+		"type", "tribe",
+		"color", "cyan",
+		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Visigoth Tribe",
+		"type", "tribe",
+		"color", "pink",
+		"secondary_color", "pink"
+	},
+	-- polities
+	"faction", {
+		"name", "Burgundy",
+		"type", "polity",
+		"color", "brown",
+		"secondary_color", "brown"
 	}
 )
 
@@ -619,5 +555,283 @@ DefineCivilizationFactions("latin",
 		"type", "polity",
 		"color", "brown",
 		"secondary_color", "brown"
+	}
+)
+
+DefineCivilizationFactions("norse",
+	"faction", {
+		"name", "Dane Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Swede Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "yellow"
+	},
+	-- polities
+	"faction", {
+		"name", "Denmark",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Norway",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Sweden",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "yellow"
+	}
+)
+
+DefineCivilizationFactions("teuton",
+--	"faction", {
+--		"name", "Alamanni Tribe",
+--		"type", "tribe",
+--		"color", "blue",
+--		"secondary_color", "blue"
+--	},
+	"faction", {
+		"name", "Bavarian Tribe",
+		"type", "tribe",
+		"color", "cyan",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Burgundian Tribe",
+		"type", "tribe",
+		"color", "brown",
+		"secondary_color", "brown",
+		"playable", false
+	},
+	"faction", {
+		"name", "Dane Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white",
+		"playable", false
+	},
+	"faction", {
+		"name", "Frank Tribe",
+		"type", "tribe",
+		"color", "green",
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Frisian Tribe",
+		"type", "tribe",
+		"color", "violet", -- change to a better one?
+		"secondary_color", "purple"
+	},
+	"faction", {
+		"name", "Goth Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
+		"name", "Marcomanni Tribe",
+		"type", "tribe",
+		"color", "orange", -- change to a better one?
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Ostrogoth Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
+		"name", "Rugian Tribe",
+		"type", "tribe",
+		"color", "red", -- change to a better one?
+		"secondary_color", "orange",
+		"playable", false
+	},
+	"faction", {
+		"name", "Saxon Tribe",
+		"type", "tribe",
+		"color", "pink",
+		"secondary_color", "pink"
+	},
+	"faction", {
+		"name", "Suebi Tribe",
+		"type", "tribe",
+		"color", "black",
+		"secondary_color", "black"
+	},
+	"faction", {
+		"name", "Swede Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "yellow",
+		"playable", false
+	},
+--	"faction", {
+--		"name", "Thuringian Tribe",
+--		"type", "tribe",
+--		"color", "yellow",
+--		"secondary_color", "yellow"
+--	},
+	"faction", {
+		"name", "Vandal Tribe",
+		"type", "tribe",
+		"color", "cyan",
+		"secondary_color", "blue",
+		"playable", false
+	},
+	"faction", {
+		"name", "Visigoth Tribe",
+		"type", "tribe",
+		"color", "pink",
+		"secondary_color", "pink",
+		"playable", false
+	},
+	-- Germanic polities
+	"faction", {
+		"name", "Austria",
+		"type", "polity",
+		"color", "white",
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Bavaria",
+		"type", "polity",
+		"color", "cyan",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Brandenburg",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Burgundy",
+		"type", "polity",
+		"color", "brown",
+		"secondary_color", "brown",
+		"playable", false
+	},
+	"faction", {
+		"name", "Denmark",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white",
+		"playable", false
+	},
+	"faction", {
+		"name", "England",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Francia",
+		"type", "polity",
+		"color", "green",
+		"secondary_color", "orange"
+	},
+	"faction", {
+		"name", "Galicia", -- Suebi kingdom of Galicia
+		"type", "polity",
+		"color", "black",
+		"secondary_color", "black"
+	},
+	"faction", {
+		"name", "Netherlands",
+		"type", "polity",
+		"color", "orange",
+		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Norway",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
+		"name", "Prussia",
+		"type", "polity",
+		"color", "black",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Saxony",
+		"type", "polity",
+		"color", "pink",
+		"secondary_color", "pink"
+	},
+	"faction", {
+		"name", "Scotland",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Sweden",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "yellow",
+		"playable", false
+	},
+	"faction", {
+		"name", "Switzerland",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Westphalia",
+		"type", "polity",
+		"color", "black",
+		"secondary_color", "black"
+	},
+	-- Non-Playable Polities
+	"faction", {
+		"name", "Crimea",
+		"type", "polity",
+		"color", "brown",
+		"secondary_color", "brown",
+		"playable", false
+	},
+	"faction", {
+		"name", "Muscovy",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
+		"name", "Poland",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white",
+		"playable", false
+	},
+	"faction", {
+		"name", "Russia",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
+		"name", "Turkey",
+		"type", "polity",
+		"color", "brown",
+		"secondary_color", "brown",
+		"playable", false
 	}
 )

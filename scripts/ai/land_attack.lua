@@ -76,8 +76,6 @@ local land_funcs = {
   function() return AiSet(AiSmithy(), 1) end,
   function() return AiResearch(AiUpgradeWeapon1()) end,
   function() return AiResearch(AiUpgradeShield1()) end,
-  function() return AiResearch(AiUpgradeWeapon2()) end,
-  function() return AiResearch(AiUpgradeShield2()) end,
 
 -- FAST AND FURIOUS
   function() return AiForce(1, {AiSoldier(), 1}, true) end,
@@ -93,17 +91,22 @@ local land_funcs = {
 
 -- PREPARING FIRST SERIOUS ATTACK
 
+  function() return AiNeed(AiLumberMill()) end, -- moved here, as it is necessary for the stronghold to be available
+  function() return AiWait(AiLumberMill()) end,
+  function() return AiResearch(AiUpgradeMissile1()) end,
+  function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") end end,
+
   function() return AiSet(AiBarracks(), 2) end,
-  function() return AiForce(1, {AiSoldier(), 16}, true) end,
-  function() return AiForce(0, {AiSoldier(), 4}) end,
+  function() return AiForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
+  function() return AiForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
   function() return AiSet(AiWorker(), 20) end,
   function() return AiWaitForce(1) end,
   function() return AiAttackWithForce(1) end,
 
 -- NOW UPGRADING
 
-  function() return AiNeed(AiLumberMill()) end, -- moved here, as it is necessary for the stronghold to be available
-  function() return AiWait(AiLumberMill()) end,
+  function() return AiResearch(AiUpgradeWeapon2()) end,
+  function() return AiResearch(AiUpgradeShield2()) end,
   function() return AiResearch(AiUpgradeMasonry()) end,
   
 --  function() return AiUpgradeTo(AiBetterCityCenter()) end,

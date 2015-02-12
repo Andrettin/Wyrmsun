@@ -16,6 +16,7 @@ editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-teuton-catapult",
+   "unit-teuton-town-hall",
    "unit-teuton-lumber-mill",
    "unit-teuton-watch-tower",
    "unit-teuton-guard-tower",
@@ -351,7 +352,7 @@ function RunEditorPlayerProperties()
   local offxOil = 470
 
   local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
-  local racenames = {"celt", "dwarf", "germanic", "gnome", "goblin", "greek", "kobold", "latin"}
+  local racenames = {"celt", "dwarf", "germanic", "gnome", "goblin", "goth", "greek", "kobold", "latin", "norse"}
   local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
 
   menu:addLabel("#", 15, 36)

@@ -36,9 +36,14 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Added Teuton Watch Tower and Guard Tower (graphics by Jinn).
+- Added Teuton Town Hall (graphics by Jinn).
+
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
-- Added Celt, Greek and Latin NPC civilizations (they are essentially identical with the Germanic civilization, but them being a different culture affects events and features in Grand Strategy mode).
+- Added Celt, Goth, Greek, Latin and Norse NPC civilizations (they are essentially identical with the Germanic/Teuton civilization, but them being a different culture affects events and features in Grand Strategy mode).
+- Added Teuton civilization (the Germanic civilization can transform into it), representing West Germanic peoples.
 
 * Grand Strategy Mode
 - Added transitions for the conifer forest tiles (graphics by Jinn).
@@ -70,6 +75,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Settling Scandinavia now grants +25 Prestige to the Asa Tribe.
 - Provinces of a different culture than the owner now produce only 75% of the resources they would otherwise produce.
 - Commodity prices now fluctuate according to supply and demand. Provinces will demand less commodities if they are too costly, and more if they are cheap.
+- Added events for the development and spread of the Teuton, Goth and Norse cultures out of the Germanic one (if the Dane, Goth, or Swede Tribe is player-controlled, then it will develop Teuton culture instead of the Norse one, since the latter is not playable).
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
@@ -80,6 +86,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
 - Added caltrops and trap objects (graphics by b_o).
 - Gold, lumber, coal, food and score icons reworked (by Jinn).
+- Added "Civilized (Bronze)" and "Civilized (Iron)" tech level and max tech level options in the Single Player Game Setup menu.
+- The cursor now properly changes according to civilization outside of the RTS mode (in the menus and in Grand Strategy mode).
 
 * Quests
 - Added The Battle of Magetobria quest.
@@ -88,16 +96,13 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
 - The Gnomish Recruit now has a gray-haired variation for its unit graphics (by b_o).
-- Added Germanic Catapult (graphics by b_o).
+- Added Teuton Catapult (graphics by b_o).
 - The Gnomish Caravan's graphics have been updated (by b_o).
 - The Goblin Thief's attack now sometimes displays a slashing animation instead of a thrusting one (graphics by b_o).
-- Added Germanic Watch Tower and Guard Tower (graphics by Jinn).
 - Fixed two bugs which could cause desync in multiplayer due to heroes.
 
 * Upgrades
-- Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, germanics and goblins (graphics by Leo).
-- The Germanic Carpenter's Shop now changes its graphic after Masonry is researched, and becomes called "Lumber Mill" (graphics by Jinn).
-- The Germanic Chieftain's Hall now changes its graphic after Masonry is researched (graphics by Jinn).
+- Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, goblins and teutons (graphics by Leo).
 
 -----------------------------------------------------------------------
 - 1.0.1

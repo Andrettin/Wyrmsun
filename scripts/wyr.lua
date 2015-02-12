@@ -130,6 +130,8 @@ function SetPlayerData(player, data, arg1, arg2)
 				arg1 = "dwarf"
 			elseif (GameSettings.Presets[player].Race == 2) then
 				arg1 = "germanic"
+			elseif (GameSettings.Presets[player].Race == 3) then
+				arg1 = "teuton"
 --			elseif (GameSettings.Presets[player].Race == 3) then
 --				arg1 = "gnome"
 --			elseif (GameSettings.Presets[player].Race == 4) then

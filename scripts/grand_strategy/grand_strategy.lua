@@ -1844,14 +1844,18 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	local old_unit_type = unit_type
 	
 	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- if not built, make icon gray
-		if (SelectedProvince.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
-			unit_type = "unit-teuton-lumber-mill"
+		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+			unit_type = "unit-germanic-town-hall"
+		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
+			unit_type = "unit-germanic-carpenters-shop"
 		end
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
-		if (SelectedProvince.Civilization == "germanic" and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
-			unit_type = "unit-teuton-lumber-mill"
+		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+			unit_type = "unit-germanic-town-hall"
+		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+			unit_type = "unit-germanic-carpenters-shop"
 		end
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
@@ -2879,7 +2883,11 @@ function DrawGrandStrategyInterface()
 					end
 				end
 			elseif (InterfaceState == "town-hall") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-town-hall"), 88, 213, Fonts["game"], true, false)
+				else
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				end
 				
 				local item_y = -2
 
@@ -3090,8 +3098,8 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "lumber-mill") then
-				if (SelectedProvince.Civilization == "germanic" and FactionHasTechnologyType(GrandStrategyFaction, "masonry")) then -- special case for the germanic lumber mill
-					AddGrandStrategyLabel(GetUnitTypeName("unit-teuton-lumber-mill"), 88, 213, Fonts["game"], true, false)
+				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), 88, 213, Fonts["game"], true, false)
 				else
 					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
 				end

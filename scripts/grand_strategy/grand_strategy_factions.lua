@@ -72,11 +72,11 @@ function LoadFactions(world)
 		},
 		BavarianTribe = {
 			Name = "Bavarian Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		BurgundianTribe = {
 			Name = "Burgundian Tribe",
-			Civilization = "germanic"
+			Civilization = "goth"
 		},
 		DaneTribe = {
 			Name = "Dane Tribe",
@@ -88,7 +88,7 @@ function LoadFactions(world)
 		},
 		FrisianTribe = {
 			Name = "Frisian Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		GothTribe = {
 			Name = "Goth Tribe",
@@ -96,15 +96,15 @@ function LoadFactions(world)
 		},
 		MarcomanniTribe = {
 			Name = "Marcomanni Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		OstrogothTribe = {
 			Name = "Ostrogoth Tribe",
-			Civilization = "germanic"
+			Civilization = "goth"
 		},
 		RugianTribe = {
 			Name = "Rugian Tribe",
-			Civilization = "germanic"
+			Civilization = "goth"
 		},
 		SaxonTribe = {
 			Name = "Saxon Tribe",
@@ -120,91 +120,91 @@ function LoadFactions(world)
 		},
 		VandalTribe = {
 			Name = "Vandal Tribe",
-			Civilization = "germanic"
+			Civilization = "goth"
 		},
 		VisigothTribe = {
 			Name = "Visigoth Tribe",
-			Civilization = "germanic"
+			Civilization = "goth"
 		},
 		-- Germanic polities
 		Austria = {
 			Name = "Austria",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Duchy" -- later Archduchy
 		},
 		Bavaria = {
 			Name = "Bavaria",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Duchy"
 		},
 		Brandenburg = {
 			Name = "Brandenburg",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Margravate"
 		},
 		Burgundy = {
 			Name = "Burgundy",
-			Civilization = "germanic",
+			Civilization = "goth",
 			Title = "Kingdom"
 		},
 		Denmark = {
 			Name = "Denmark",
-			Civilization = "germanic",
+			Civilization = "norse",
 			Title = "Kingdom"
 		},
 		England = {
 			Name = "England",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Kingdom"
 		},
 		Francia = {
 			Name = "Francia",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Kingdom"
 		},
 		Galicia = { -- Suebi kingdom of Galicia
 			Name = "Galicia",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Kingdom"
 		},
 		Netherlands = {
 			Name = "Netherlands",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Republic"
 		},
 		Norway = {
 			Name = "Norway",
-			Civilization = "germanic",
+			Civilization = "norse",
 			Title = "Kingdom"
 		},
 		Prussia = {
 			Name = "Prussia",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Duchy"
 		},
 		Saxony = {
 			Name = "Saxony",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Duchy"
 		},
 		Scotland = {
 			Name = "Scotland",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Kingdom"
 		},
 		Sweden = {
 			Name = "Sweden",
-			Civilization = "germanic",
+			Civilization = "norse",
 			Title = "Kingdom"
 		},
 		Switzerland = {
 			Name = "Switzerland",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Confederation"
 		},
 		Westphalia = {
 			Name = "Westphalia",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Duchy"
 		},
 		-- Greek polities

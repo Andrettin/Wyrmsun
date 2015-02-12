@@ -41,14 +41,12 @@
 --  DefineAiHelper(list)
 --
 
---;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---  * Civilization Germanic.
---;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 DefineAiHelper(
 	--
 	-- Equivalence of units for the resource manager.
 	--
+	{"unit-equiv", "unit-germanic-town-hall",
+	"unit-teuton-town-hall"},
 	{"unit-equiv", "unit-germanic-carpenters-shop",
 	"unit-teuton-lumber-mill"}
 )

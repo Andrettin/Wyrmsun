@@ -35,7 +35,7 @@
 
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Class = "siege-engine",
-	Civilization = "germanic",
+	Civilization = "teuton",
 	Description = _("These engines of war can be of great use in battering enemy fortifications."),
 	Image = {"file", "teuton/units/catapult.png", "size", {72, 72}},
 	Animations = "animations-teuton-catapult", Icon = "icon-teuton-catapult",
@@ -68,10 +68,58 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 		"dead", "explosion"
 } } )
 
+DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
+	Class = "town-hall",
+	Civilization = "teuton",
+	Description = _("The rathaus, or town hall, is the political center of teutonic settlements."),
+	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
+	Animations = "animations-teuton-town-hall", Icon = "icon-teuton-town-hall",
+	Costs = {"time", 255, "gold", 1200, "lumber", 800},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 1000, -- 1200 with masonry
+	DrawLevel = 20,
+	TileSize = {4, 4}, BoxSize = {126, 126},
+	SightRange = 1,
+	Armor = 15, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 35, AnnoyComputerFactor = 45,
+	Points = 200,
+	Supply = 1,
+	Corpse = "unit-destroyed-4x4-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true,
+	BuildingRules = {
+		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+		"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+	},
+	CanStore = {"lumber", "gold", "coal"},
+	Variations = {
+		{
+			"variation-id", "town-hall",
+			"file", "germanic/buildings/town_hall.png",
+			"icon", "icon-germanic-town-hall",
+			"construction", "construction-germanic-town-hall",
+			"upgrade-forbidden", "upgrade-teuton-masonry"
+		},
+		{
+			"variation-id", "town-hall",
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
+	},
+	Sounds = {
+		"selected", "town-hall-selected",
+--		"acknowledge", "town-hall-acknowledge",
+--		"ready", "town-hall-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building destroyed"} } )
+
 DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
---	Class = "lumber-mill",
-	Civilization = "germanic",
---	Description = _("Germanic carpenters work hard to provide settlements with all their woodworking needs."),
+	Class = "lumber-mill",
+	Civilization = "teuton",
+	Description = _("A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques."),
 	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
 	Costs = {"time", 150, "gold", 600, "lumber", 450},
@@ -92,6 +140,18 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true, LumberImprove = true,
 	CanStore = {"lumber"},
+	Variations = {
+		{
+			"variation-id", "lumber-mill",
+			"file", "germanic/buildings/carpenters_shop.png",
+			"icon", "icon-germanic-carpenters-shop",
+			"upgrade-forbidden", "upgrade-teuton-masonry"
+		},
+		{
+			"variation-id", "lumber-mill",
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
+	},
 	Sounds = {
 		"selected", "lumber-mill-selected",
 --		"acknowledge", "elven-lumber-mill-acknowledge",
@@ -101,7 +161,7 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 
 DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Class = "watch-tower",
-	Civilization = "germanic",
+	Civilization = "teuton",
 	Description = _("These timber-made towers are built in frontier regions, keeping watch of possible attackers."),
 	Image = {"file", "teuton/buildings/watch_tower.png", "size", {64, 64}},
 	Animations = "animations-building", Icon = "icon-teuton-watch-tower",
@@ -137,7 +197,7 @@ DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 
 DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
 	Class = "guard-tower",
-	Civilization = "germanic",
+	Civilization = "teuton",
 	Description = _("Solid stone towers are an essential addition to any fortified position of strategic importance, allowing archers to shoot from a vantage position."),
 	Image = {"file", "teuton/buildings/guard_tower.png", "size", {64, 64}},
 	Animations = "animations-building", Icon = "icon-teuton-guard-tower",

@@ -414,7 +414,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
-				and WorldMapProvinces.Bavaria.Civilization == "germanic" -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
+				and (WorldMapProvinces.Bavaria.Civilization == "germanic" or WorldMapProvinces.Bavaria.Civilization == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
 			) then
 				return true
 			else

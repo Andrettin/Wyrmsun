@@ -104,7 +104,7 @@ local EarthEvents = {
 	},
 	DivitiacusPleaForAssistance = { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 		Name = "Divitiacus' Plea for Assistance",
-		Description = "The Aedui chief Divitiacus has told us of a Germanic invasion of Gaul, and asks for our assistance in pushing them back beyond the Rhine.",
+		Description = "The Aedui chief Divitiacus has told us of a German invasion of Gaul, and asks for our assistance in pushing them back beyond the Rhine.",
 		TriggeredOnly = true,
 		Options = {"~!Accept", "~!Decline"},
 		OptionEffects = {

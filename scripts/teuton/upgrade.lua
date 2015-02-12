@@ -42,7 +42,7 @@ for i = 1,table.getn(upgrades) do
 	u.Name = upgrades[i][2]
 	u.Icon = Icons[upgrades[i][3]]
 	u.Class = upgrades[i][4]
-	u.Civilization = "germanic"
+	u.Civilization = "teuton"
 	u.Description = upgrades[i][5]
 	u.Quote = upgrades[i][6]
 	u.Background = upgrades[i][7]
@@ -59,32 +59,40 @@ end
 DefineModifier("upgrade-teuton-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
-	{"apply-to", "unit-germanic-town-hall"}, {"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-germanic-barracks"},
-	{"apply-to", "unit-germanic-carpenters-shop"}, {"apply-to", "unit-germanic-smithy"},
-	{"apply-to", "unit-teuton-lumber-mill"},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-germanic-barracks"},
+	{"apply-to", "unit-germanic-smithy"},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-lumber-mill"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
-DefineModifier("upgrade-teuton-masonry",
+DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
+)
+  
+DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"}
 )
   
-DefineModifier("upgrade-teuton-masonry",
-	{"allow-unit", "unit-germanic-carpenters-shop", 0}
+DefineDependency("upgrade-teuton-masonry",
+	{"upgrade-teuton-civilization"}
 )
-  
+
+DefineDependency("unit-teuton-watch-tower",
+	{"upgrade-teuton-civilization"}
+)
+
+DefineDependency("unit-teuton-town-hall",
+	{"upgrade-teuton-civilization"}
+)
+
 DefineDependency("unit-teuton-lumber-mill",
-	{"upgrade-teuton-masonry"}
+	{"upgrade-teuton-civilization"}
 )
 
 DefineDependency("unit-teuton-guard-tower",
-	{"unit-germanic-carpenters-shop", "upgrade-teuton-masonry"},
-	"or",
 	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"unit-germanic-smithy", "unit-germanic-carpenters-shop"},
-	"or",
-	{"unit-germanic-smithy", "unit-teuton-lumber-mill"}
+	{"upgrade-teuton-civilization", "unit-germanic-smithy", "unit-teuton-lumber-mill"}
 )

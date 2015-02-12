@@ -170,6 +170,7 @@ function HandleCheats(str)
     end
 
   elseif (str == "mead of poetry") then
+	AddMessage("All Technologies Allowed")
 	for i, unitName in ipairs(Units) do
 		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
 	end

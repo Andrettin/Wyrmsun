@@ -85,7 +85,6 @@ local GermanicEvents = {
 	AsaRaid = {
 		Name = "Asa Raid!",
 		Description = "The Asa people are coming with a large force to raid us, prepare our defenses!",
-		Civilization = "germanic",
 		Faction = "VanaTribe",
 		TriggeredOnly = true,
 		Options = {"~!Defend our homeland!"},
@@ -658,12 +657,182 @@ local GermanicEvents = {
 			end
 		}
 	},
+	TeutonCultureDevelops = {
+		Name = "Teuton Culture Develops",
+		Description = "With the passage of time, our customs and language have diverged significantly from the general Germanic ones. The West Germanic tongue has become predominant amongst us, and with it the Teuton culture.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and FactionHasTechnologyType(EventFaction, "melee-weapon-1") -- must have reached the iron age
+				and FactionHasTechnologyType(EventFaction, "bronze-shield")
+				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
+				and ((EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Frank Tribe" or EventFaction.Name == "Saxon Tribe" or EventFaction.Name == "Suebi Tribe") or (EventFaction.Name == GrandStrategyFaction.Name and (EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Goth Tribe" or EventFaction.Name == "Swede Tribe")))
+				and SyncRand(50) < 1
+			) then
+				return true
+			end
+			return false
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Civilization = "teuton"
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+					if (
+						WorldMapProvinces[province_key].Civilization == "germanic"
+					) then
+						ChangeProvinceCulture(WorldMapProvinces[province_key], "teuton") -- change the culture of only one province, and let cultural spread do the rest
+						break
+					end
+				end
+			end
+		}
+	},
+	TeutonCultureSpreads = {
+		Name = "Teuton Culture Spreads",
+		Description = "The people of PROVINCE_NAME have adopted Teuton culture.",
+		Conditions = function(s)
+			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+				if (
+					WorldMapProvinces[province_key].Civilization == "germanic"
+					and SyncRand(50) < 1
+					and ProvinceBordersCulture(WorldMapProvinces[province_key], "teuton")
+				) then
+					EventProvince = WorldMapProvinces[province_key]
+					return true
+				end
+			end
+			return false
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				ChangeProvinceCulture(EventProvince, "teuton")
+			end
+		}
+	},
+	NorseCultureDevelops = {
+		Name = "Norse Culture Develops",
+		Description = "With the passage of time, our customs and language have diverged significantly from the general Germanic ones. The North Germanic tongue has become predominant amongst us, and with it the Norse culture.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and FactionHasTechnologyType(EventFaction, "melee-weapon-1") -- must have reached the iron age
+				and FactionHasTechnologyType(EventFaction, "bronze-shield")
+				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Swede Tribe")
+				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the norse civilization is not playable
+				and SyncRand(50) < 1
+			) then
+				return true
+			end
+			return false
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Civilization = "norse"
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+					if (
+						WorldMapProvinces[province_key].Civilization == "germanic"
+					) then
+						ChangeProvinceCulture(WorldMapProvinces[province_key], "norse") -- change the culture of only one province, and let cultural spread do the rest
+						break
+					end
+				end
+			end
+		}
+	},
+	NorseCultureSpreads = {
+		Name = "Norse Culture Spreads",
+		Description = "The people of PROVINCE_NAME have adopted Norse culture.",
+		Conditions = function(s)
+			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+				if (
+					WorldMapProvinces[province_key].Civilization == "germanic"
+					and SyncRand(50) < 1
+					and ProvinceBordersCulture(WorldMapProvinces[province_key], "norse")
+				) then
+					EventProvince = WorldMapProvinces[province_key]
+					return true
+				end
+			end
+			return false
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				ChangeProvinceCulture(EventProvince, "norse")
+			end
+		}
+	},
+	GothCultureDevelops = {
+		Name = "Goth Culture Develops",
+		Description = "With the passage of time, our customs and language have diverged significantly from the general Germanic ones. The East Germanic tongue has become predominant amongst us, and with it the Goth culture.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and FactionHasTechnologyType(EventFaction, "melee-weapon-1") -- must have reached the iron age
+				and FactionHasTechnologyType(EventFaction, "bronze-shield")
+				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Goth Tribe")
+				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the goth civilization is not playable
+				and SyncRand(50) < 1
+			) then
+				return true
+			end
+			return false
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Civilization = "goth"
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+					if (
+						WorldMapProvinces[province_key].Civilization == "germanic"
+					) then
+						ChangeProvinceCulture(WorldMapProvinces[province_key], "goth") -- change the culture of only one province, and let cultural spread do the rest
+						break
+					end
+				end
+			end
+		}
+	},
+	GothCultureSpreads = {
+		Name = "Goth Culture Spreads",
+		Description = "The people of PROVINCE_NAME have adopted Goth culture.",
+		Conditions = function(s)
+			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+				if (
+					WorldMapProvinces[province_key].Civilization == "germanic"
+					and SyncRand(50) < 1
+					and ProvinceBordersCulture(WorldMapProvinces[province_key], "goth")
+				) then
+					EventProvince = WorldMapProvinces[province_key]
+					return true
+				end
+			end
+			return false
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				ChangeProvinceCulture(EventProvince, "goth")
+			end
+		}
+	},
 	PytheasVoyageGoths = { -- Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 		Name = "Pytheas' Voyage",
 		Description = "A Greek scholar and explorer, Pytheas, arrived in our shores. He seemed interested in the island which is a day's sail away from us, due to the amber thrown upon its coast by waves in the spring. He also asked about our use of the material for fuel, and soon went back to the seas to continue his voyage.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
+				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "goth" or EventFaction.Civilization == "norse" or EventFaction.Civilization == "teuton")
 				and WorldMapProvinces.Gotaland.Owner == EventFaction.Name
 				and SyncRand(100) < 50
 			) then
@@ -772,8 +941,7 @@ local GermanicEvents = {
 		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son Fjolne stands in line to become our next chieftain.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -796,8 +964,7 @@ local GermanicEvents = {
 		Description = "Our chieftain Yngve fell ill. As the disease advanced, not many would be allowed to see him, and meanwhile a great mound began to be built... where he would be finally buried when his time came.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -822,8 +989,7 @@ local GermanicEvents = {
 		Description = "With the death of his father, Fjolne has become our new chieftain. Besides being a powerful warrior, Fjolne is also well-capable of maintaining the peace in his realm which his father had established.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -849,8 +1015,7 @@ local GermanicEvents = {
 		Description = "Fredfrode has become our new ruler in Leidre. He holds a great friendship for the chieftain of the Swedes, and both visit each other often.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Denmark")
+				(EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Denmark")
 			) then
 				return true
 			else
@@ -872,8 +1037,7 @@ local GermanicEvents = {
 		Description = "The chieftain of the Danes, Fredfrode, prepared a great feast for our chieftain Fjolne in his capital of Leidre. Within Fredfrode's dwelling, there were many tall vessels filled with mead. Our chieftain, while walking through a gallery during the evening, sleepy and exceedingly drunk, slipped his foot and fell into one such vessel, drowning in mead.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 				and (GetFactionProvinceCount(Factions.DaneTribe) > 0 or GetFactionProvinceCount(Factions.Denmark) > 0)
 			) then
 				return true
@@ -900,8 +1064,7 @@ local GermanicEvents = {
 		Description = "The faithful Swegde has become our chieftain.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -927,8 +1090,7 @@ local GermanicEvents = {
 		Description = "Our chieftain Swegde has gone on a journey to find Wodan and his dwelling. Travelling with twelve men, he went as far as Asia Minor and the Black Sea.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -953,8 +1115,7 @@ local GermanicEvents = {
 		Description = "After five years, Swegde returned from his journey, bringing with him a wife, Vana, and their son Vanlande. He did not manage to find Wodan, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after having drunk much, Swegde and his men saw someone near the stone... There was a man standing behind a door in it, and he invited Swegde inside, claiming Wodan to be inside. Our chieftain agreed... and once inside he was murdered and was never seen again.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -979,8 +1140,7 @@ local GermanicEvents = {
 		Description = "The mighty Vanlande has become our chieftain. He is a great warrior, and has a passion for traveling.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -1006,8 +1166,7 @@ local GermanicEvents = {
 		Description = "Our chieftain Vanlande has taken up his winter abode in Finland with Snae the Old, marrying his daughter Driva. When spring came, Vanlande set out to Sweden, promising to Driva that he would return within three years.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -1032,8 +1191,7 @@ local GermanicEvents = {
 		Description = "Vanlande did not keep his promise. Even after ten years had passed, he hadn't returned to Driva's embrace... She sent the son she had with Vanlande, Visbur, to Sweden, and then bribed the witch Huld to charm Vanlande into returning to Finland, or to kill him. Vanlande felt a sudden urge to visit Finland, but his councilors and friends advised him against it. He then became quite drowsy, and went to sleep... cries were heard from his chamber, and his men rushed there, only to find him dead. His body was burnt at the river Skytaa, and a standing stone was raised for him.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 			) then
 				return true
 			else
@@ -1060,7 +1218,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Denmark"
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic" -- because the name "Vornedskabet" is specific to the Danish language
+				and WorldMapProvinces.Jutland.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -1173,9 +1331,9 @@ local GermanicEvents = {
 		Description = "A serf from Pomerania called Martin Trampe had managed to accumulate enough money to buy his freedom for 60 reichstaler. After becoming a free man, he has been enterprising enough to gather sufficient funds to buy a large farm in the Brandenburg Uckermark, although to do so he had to willingly submit himself to hereditary subjection to the local lord. Should a man exchange his hard-won freedom for land?",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
+				EventFaction.Civilization == "teuton"
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
-				and WorldMapProvinces.Brandenburg.Civilization == "germanic"
+				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
 			) then
 				return true
 			else
@@ -1197,9 +1355,9 @@ local GermanicEvents = {
 		Description = "The farmer Hans Rutenberg, from the village of Woddrow in PROVINCE_NAME, has refused as a form of protest to do the work required of him to his lord, and as a consequence was evicted from his land.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
+				EventFaction.Civilization == "teuton"
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
-				and WorldMapProvinces.Brandenburg.Civilization == "germanic"
+				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
 			) then
 				EventProvince = WorldMapProvinces.Brandenburg
 				return true
@@ -1249,7 +1407,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Denmark"
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic"
+				and WorldMapProvinces.Jutland.Civilization == "norse"
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -1275,7 +1433,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Denmark"
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic" -- because the name "Vornedskabet" is specific to the Danish language
+				and WorldMapProvinces.Jutland.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_barracks == 2
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then

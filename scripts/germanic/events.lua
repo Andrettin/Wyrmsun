@@ -288,7 +288,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") == false) then
+		if (GetFactionExists("Asa Tribe") and PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") == false) then
 			player = GetFactionPlayer("Asa Tribe")
 			return true
 		end
@@ -314,7 +314,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-barracks") < 1 and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-warrior") < 1 and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-archer") < 1) then
+		if (GetFactionExists("Asa Tribe") and GetFactionExists("Gylfing Tribe") and PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy all of Gylve's war lodges and military units") and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-barracks") < 1 and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-warrior") < 1 and GetPlayerData(GetFactionPlayer("Gylfing Tribe"), "UnitTypesCount", "unit-germanic-archer") < 1) then
 			player = GetFactionPlayer("Asa Tribe")
 			return true
 		end
@@ -350,7 +350,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Defeat the Aedui") == false) then
+		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Defeat the Aedui") == false) then
 			player = GetFactionPlayer("Suebi Tribe")
 			return true
 		end
@@ -376,7 +376,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Defeat the Aedui") and GetNumRivals(GetFactionPlayer("Suebi Tribe")) == 0) then
+		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Defeat the Aedui") and GetNumRivals(GetFactionPlayer("Suebi Tribe")) == 0) then
 			player = GetFactionPlayer("Suebi Tribe")
 			return true
 		end

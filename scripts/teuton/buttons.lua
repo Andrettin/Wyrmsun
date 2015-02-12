@@ -39,12 +39,29 @@
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
   Key = "g", Hint = _("Attack ~!Ground"),
-  ForUnit = {"unit-teuton-catapult", "germanic-group"} } )
+  ForUnit = {"unit-teuton-catapult", "germanic-group", "teuton-group"} } )
 
 -- Simple Buildings Teuton -----------------------------------------------------
 
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
+  Action = "build", Value = "unit-teuton-town-hall",
+  Key = "h", Hint = _("Build Town ~!Hall"),
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-town-hall",
+  Action = "build", Value = "unit-teuton-town-hall",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
+  Key = "h", Hint = _("Build Rat~!haus"),
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
+  Action = "build", Value = "unit-teuton-lumber-mill",
+  Key = "l", Hint = _("Build ~!Lumber Mill"),
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
   Action = "build", Value = "unit-teuton-lumber-mill",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "l", Hint = _("Build ~!Lumber Mill"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
@@ -66,7 +83,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-teuton-masonry",
   Allowed = "check-single-research",
   Key = "m", Hint = _("Research ~!Masonry"),
-  ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"} } )
+  ForUnit = {"unit-teuton-lumber-mill"} } )
 
 -- Upgrades ---------------------------------------------------------
 

@@ -67,6 +67,14 @@ function panel(n)
 			"germanic/ui/panel_4.png",
 			"germanic/ui/panel_5.png"
 		}
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		panels = {
+			"germanic/ui/panel_1.png",
+			"germanic/ui/panel_2.png",
+			"germanic/ui/panel_3.png",
+			"germanic/ui/panel_4.png",
+			"germanic/ui/panel_5.png"
+		}
 	else
 		panels = {
 			"dwarf/ui/panel_1.png",
@@ -148,6 +156,10 @@ function AddMenuHelpers(menu)
 		g_bln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
 		g_blp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
 		g_blg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
+		g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
+		g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
 	else
 		g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
 		g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
@@ -186,6 +198,10 @@ function AddMenuHelpers(menu)
 		g_bsn = CGraphic:New("gnome/ui/widgets/button-small-normal.png")
 		g_bsp = CGraphic:New("gnome/ui/widgets/button-small-pressed.png")
 		g_bsg = CGraphic:New("gnome/ui/widgets/button-small-grayed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		g_bsn = CGraphic:New("germanic/ui/widgets/button-small-normal.png")
+		g_bsp = CGraphic:New("germanic/ui/widgets/button-small-pressed.png")
+		g_bsg = CGraphic:New("germanic/ui/widgets/button-small-grayed.png")
 	else
 		g_bsn = CGraphic:New("dwarf/ui/widgets/button-small-normal.png")
 		g_bsp = CGraphic:New("dwarf/ui/widgets/button-small-pressed.png")
@@ -225,6 +241,9 @@ function AddMenuHelpers(menu)
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
 		g_lslider_n = CGraphic:New("germanic/ui/widgets/left-arrow-normal.png")
 		g_lslider_p = CGraphic:New("germanic/ui/widgets/left-arrow-pressed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		g_lslider_n = CGraphic:New("germanic/ui/widgets/left-arrow-normal.png")
+		g_lslider_p = CGraphic:New("germanic/ui/widgets/left-arrow-pressed.png")
 	else
 		g_lslider_n = CGraphic:New("dwarf/ui/widgets/left-arrow-normal.png")
 		g_lslider_p = CGraphic:New("dwarf/ui/widgets/left-arrow-pressed.png")
@@ -247,6 +266,9 @@ function AddMenuHelpers(menu)
 		g_marker = CGraphic:New("dwarf/ui/widgets/slider-knob.png")
 		g_slider = CGraphic:New("dwarf/ui/widgets/slider-bar-normal.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_marker = CGraphic:New("germanic/ui/widgets/slider-knob.png")
+		g_slider = CGraphic:New("germanic/ui/widgets/slider-bar-normal.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_marker = CGraphic:New("germanic/ui/widgets/slider-knob.png")
 		g_slider = CGraphic:New("germanic/ui/widgets/slider-bar-normal.png")
 	else
@@ -275,6 +297,9 @@ function AddMenuHelpers(menu)
 		g_rslider_n = CGraphic:New("dwarf/ui/widgets/right-arrow-normal.png")
 		g_rslider_p = CGraphic:New("dwarf/ui/widgets/right-arrow-pressed.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_rslider_n = CGraphic:New("germanic/ui/widgets/right-arrow-normal.png")
+		g_rslider_p = CGraphic:New("germanic/ui/widgets/right-arrow-pressed.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_rslider_n = CGraphic:New("germanic/ui/widgets/right-arrow-normal.png")
 		g_rslider_p = CGraphic:New("germanic/ui/widgets/right-arrow-pressed.png")
 	else
@@ -454,6 +479,11 @@ function AddMenuHelpers(menu)
 		g_checkbox_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
 		g_checkbox_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
 		g_checkbox_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+		g_checkbox_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
+		g_checkbox_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
+		g_checkbox_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
+		g_checkbox_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
 	else
 		g_checkbox_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
 		g_checkbox_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
@@ -499,6 +529,11 @@ function AddMenuHelpers(menu)
 		g_radio_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
 		g_radio_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+		g_radio_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
+		g_radio_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
+		g_radio_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
+		g_radio_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_radio_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
 		g_radio_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
 		g_radio_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
@@ -610,8 +645,8 @@ function InitGameSettings()
 	GameSettings.Inside = false
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
-	TechLevel = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
-	MaxTechLevel = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+	TechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+	MaxTechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 end
 InitGameSettings()
 
@@ -892,9 +927,12 @@ function RunSinglePlayerGameMenu()
 
   -- create the scenario and faction lists
   local scenario_list = {}
+  local civilization_list = {_("Map Default")}
   local faction_list = {_("Map Default")}
   local world_list = { }
   local game_type_list = { }
+  local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)")}
+  local max_tech_level_list = {_("Map Default")}
   
   GrandStrategy = false
   ForTheMotherland = false
@@ -969,9 +1007,9 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases
-		if (mapinfo.description == "Chaincolt Foothills" and race:getSelected() == 1 and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
+		if (mapinfo.description == "Chaincolt Foothills" and civilization_list[race:getSelected() + 1] == "Dwarf" and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
 			MapPersonPlayer = 2
-		elseif (mapinfo.description == "Caverns of Chaincolt" and race:getSelected() == 1 and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
+		elseif (mapinfo.description == "Caverns of Chaincolt" and civilization_list[race:getSelected() + 1] == "Dwarf" and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
 			MapPersonPlayer = 1
 		end
 
@@ -980,7 +1018,13 @@ function RunSinglePlayerGameMenu()
 				GameSettings.Presets[i-1].Type = PlayerComputer
 			end
 		end
-      GameSettings.Presets[MapPersonPlayer].Race = race:getSelected()
+	  if (civilization_list[race:getSelected() + 1] == "Dwarf") then
+		  GameSettings.Presets[MapPersonPlayer].Race = 1
+	  elseif (civilization_list[race:getSelected() + 1] == "Human - Germanic") then
+		  GameSettings.Presets[MapPersonPlayer].Race = 2
+	  elseif (civilization_list[race:getSelected() + 1] == "Human - Teuton") then
+		  GameSettings.Presets[MapPersonPlayer].Race = 3
+	  end
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then
         PlayerFaction = ""
@@ -996,8 +1040,12 @@ function RunSinglePlayerGameMenu()
 	      ForTheMotherland = false
 	      GameSettings.GameType = gametype:getSelected() - 1
       end
-      TechLevel[MapPersonPlayer + 1] = tech_level:getSelected() - 1
-      MaxTechLevel[MapPersonPlayer + 1] = max_tech_level:getSelected() - 1
+	  if (tech_level:getSelected() > 0) then
+		  TechLevel[MapPersonPlayer + 1] = tech_level_list[tech_level:getSelected() + 1]
+	  end
+	  if (max_tech_level:getSelected() > 0) then
+		  MaxTechLevel[MapPersonPlayer + 1] = max_tech_level_list[max_tech_level:getSelected() + 1]
+	  end
 	  
       RunMap(mapname)
       menu:stop()
@@ -1049,12 +1097,12 @@ function RunSinglePlayerGameMenu()
   gametype:setSize(152, 20)
 
   menu:addLabel(_("~<Tech Level:~>"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-  tech_level = menu:addDropDown({_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)")}, offx + 40, offy + 10 + 300,
-    function(dd) end)
+  tech_level = menu:addDropDown(tech_level_list, offx + 40, offy + 10 + 300,
+    function(dd) TechLevelChanged() end)
   tech_level:setSize(152, 20)
 
   menu:addLabel(_("~<Max Tech Level:~>"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
-  max_tech_level = menu:addDropDown({_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)")}, offx + 220, offy + 10 + 300,
+  max_tech_level = menu:addDropDown(max_tech_level_list, offx + 220, offy + 10 + 300,
     function(dd) end)
   max_tech_level:setSize(152, 20)
 
@@ -1123,22 +1171,54 @@ function RunSinglePlayerGameMenu()
 
   function CivilizationChanged()
     faction_list = {_("Map Default")}
-	local factions_civilization = ""
-    if (race:getSelected() == 1) then
-		factions_civilization = "dwarf"
-    elseif (race:getSelected() == 2) then
-		factions_civilization = "germanic"
-	end
+	
+	local factions_civilization = civilization_list[race:getSelected() + 1]
+	factions_civilization = string.gsub(factions_civilization, "Human", "")
+	factions_civilization = string.gsub(factions_civilization, "-", "")
+	factions_civilization = string.gsub(factions_civilization, " ", "")
+	factions_civilization = string.lower(factions_civilization)
+	
 	if (race:getSelected() > 0) then
 		for i=1,table.getn(GetCivilizationFactionNames(factions_civilization)) do
-			if (GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Type") == "tribe") then
-				table.insert(faction_list, GetCivilizationFactionNames(factions_civilization)[i])
+			if ((GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
+				if (GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Playable")) then
+					table.insert(faction_list, GetCivilizationFactionNames(factions_civilization)[i])
+				end
 			end
 		end
     end
     faction:setList(faction_list)
     faction:setSize(152, 20)
     faction:setSelected(0)
+  end
+
+  function TechLevelChanged()
+	civilization_list = {_("Map Default")}
+	max_tech_level_list = {_("Map Default")}
+	
+	table.insert(civilization_list, "Dwarf")
+    if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)") then
+		table.insert(civilization_list, "Human - Germanic")
+		table.insert(max_tech_level_list, _("Agrarian (Bronze)"))
+	end
+    if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)") then
+		table.insert(max_tech_level_list, _("Agrarian (Iron)"))
+	end
+    if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)") then
+		table.insert(max_tech_level_list, _("Civilized (Bronze)"))
+	end
+	table.insert(max_tech_level_list, _("Civilized (Iron)"))
+    if (tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)") then
+		table.insert(civilization_list, "Human - Teuton")
+	end
+	
+	race:setList(civilization_list)
+    race:setSize(152, 20)
+    race:setSelected(0)
+	CivilizationChanged()
+	max_tech_level:setList(max_tech_level_list)
+    max_tech_level:setSize(152, 20)
+    max_tech_level:setSelected(0)
   end
 
   function MapChanged()
@@ -1171,7 +1251,8 @@ function RunSinglePlayerGameMenu()
   MapChanged()
 
   WorldChanged()
-
+  TechLevelChanged()
+  
   for i=1,table.getn(maps) do
 		MapWorld = ""
 		MapRequiredQuest = ""

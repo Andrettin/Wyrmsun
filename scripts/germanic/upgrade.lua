@@ -49,6 +49,13 @@ local upgrades = {
 		{   200,   300,   300,     0,     0,     0,     0,     0},
 		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
+	{"upgrade-teuton-civilization", _("Teuton Civilization"), "icon-germanic-bronze-shield", "",
+		"",
+		"",
+		"",
+		{   200,     0,     0,     0,     0,     0,     0,     0},
+		{   200,     0,     0,     0,     0,     0,     0,     0},
+		0},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -85,8 +92,16 @@ DefineModifier("upgrade-germanic-barbed-arrow",
 	{"apply-to", "unit-germanic-archer"}
 )
 
+DefineModifier("upgrade-teuton-civilization",
+	{"change-civilization-to", "teuton"}
+)
+
 DefineDependency("unit-germanic-archer",
 	{"unit-germanic-carpenters-shop"},
 	"or",
 	{"unit-teuton-lumber-mill"}
+)
+
+DefineDependency("upgrade-teuton-civilization",
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"}
 )

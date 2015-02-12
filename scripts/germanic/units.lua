@@ -299,18 +299,6 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 		"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
 	},
 	CanStore = {"lumber", "gold", "coal"},
-	Variations = {
-		{
-			"variation-id", "town-hall",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
-		},
-		{
-			"variation-id", "town-hall",
-			"file", "teuton/buildings/town_hall.png",
-			"construction", "construction-land",
-			"upgrade-required", "upgrade-teuton-masonry"
-		}
-	},
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",

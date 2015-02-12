@@ -94,41 +94,67 @@ function DefineAllowNormalUnits(flags)
 end
 
 function ApplyTechLevels()
-	for i=0,15 do
-		if (TechLevel[i + 1] == -1 and i ~= GetThisPlayer()) then
-			TechLevel[i + 1] = TechLevel[GetThisPlayer() + 1]
+	for j=0,15 do
+		if (TechLevel[j + 1] == "" and j ~= GetThisPlayer()) then
+			TechLevel[j + 1] = TechLevel[GetThisPlayer() + 1]
 		end
-		if (MaxTechLevel[i + 1] == -1 and i ~= GetThisPlayer()) then
-			MaxTechLevel[i + 1] = MaxTechLevel[GetThisPlayer() + 1]
+		if (MaxTechLevel[j + 1] == "" and j ~= GetThisPlayer()) then
+			MaxTechLevel[j + 1] = MaxTechLevel[GetThisPlayer() + 1]
 		end
 	end
 
+	local agrarian_upgrades = {
+		"upgrade-dwarven-masonry",
+		"upgrade-teuton-masonry",
+		"upgrade-goblin-masonry"
+	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"
 	}
 	local iron_upgrades = {
-		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2", "upgrade-dwarven-masonry",
-		"upgrade-teuton-masonry",
-		"upgrade-goblin-masonry"
+		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2"
 	}
-	for i, unitName in ipairs(bronze_upgrades) do
-		for j=0,15 do
-			if (TechLevel[j + 1] >= 1 and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
-				SetPlayerData(j, "HasUpgrade", unitName, true)
-			end
+	local iron_civilizations = {
+		"upgrade-teuton-civilization"
+	}
+	
+	local function IsTechnologyUnderMinimumTechLevel(technology, player)
+		if (GetArrayIncludes(bronze_upgrades, technology) and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
+			return true
+		elseif (GetArrayIncludes(agrarian_upgrades, technology) and (TechLevel[player + 1] == "Civilized (Bronze)" or TechLevel[player + 1] == "Civilized (Iron)")) then
+			return true
+		else
+			return false
 		end
 	end
-	for i, unitName in ipairs(iron_upgrades) do
-		local PlayerUnitFlag = {}
-		for j=0,15 do
-			if (MaxTechLevel[j + 1] ~= -1 and MaxTechLevel[j + 1] <= 0 and GetPlayerData(j, "Allow", unitName) == "A") then -- if max tech level is Agrarian (Bronze) or lower
-				PlayerUnitFlag[j] = "F"
-			else
-				PlayerUnitFlag[j] = GetPlayerData(j, "Allow", unitName)
-			end
+	
+	local function IsTechnologyOverMaxTechLevel(technology, player)
+		if ((GetArrayIncludes(iron_upgrades, technology) or GetArrayIncludes(iron_civilizations, technology)) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)")) then -- if max tech level is bronze or lower, iron technologies should not be researchable
+			return true
+		else
+			return false
 		end
-		DefineAllow(unitName, PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15])
+	end
+	
+	for i, unitName in ipairs(Units) do
+		if (string.find(unitName, "upgrade-") ~= nil) then
+			for j=0,15 do
+				if (IsTechnologyUnderMinimumTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
+					SetPlayerData(j, "HasUpgrade", unitName, true)
+				end
+			end
+			
+			local PlayerUnitFlag = {}
+			for j=0,15 do
+				if (MaxTechLevel[j + 1] ~= "" and IsTechnologyOverMaxTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then
+					PlayerUnitFlag[j + 1] = "F"
+				else
+					PlayerUnitFlag[j + 1] = GetPlayerData(j, "Allow", unitName)
+				end
+			end
+			DefineAllow(unitName, PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15] .. PlayerUnitFlag[16])
+		end
 	end
 end
 

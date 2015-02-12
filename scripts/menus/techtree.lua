@@ -41,24 +41,26 @@ function RunTechTreeMenu(civilization_number)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	local civilization_dd
+	local civilization_list = {"Dwarf", "Human - Germanic"}
 --	local button_quantity = 0
 
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+		table.insert(civilization_list, "Human - Teuton")
+	end
+
 	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
-	civilization_dd = menu:addDropDown({_("Dwarf"), _("Human - Germanic")}, offx + 244, offy + 10 + 15,
+	civilization_dd = menu:addDropDown(civilization_list, offx + 244, offy + 10 + 15,
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
 	civilization_dd:setSelected(civilization_number)
 	civilization_dd:setSize(152, 20)
 
 	local tech_points = 0
-	local civilization = ""
+	
+	local civilization = string.gsub(civilization_list[civilization_number + 1], "Human", "")
+	civilization = string.gsub(civilization, "-", "")
+	civilization = string.gsub(civilization, " ", "")
+	civilization = string.lower(civilization)
 
-	if (civilization_number == 0) then
-		civilization = "dwarf"
-	elseif (civilization_number == 1) then
-		civilization = "germanic"
-	elseif (civilization_number == 2) then
-		civilization = "gnome"
-	end
 	SetPlayerData(GetThisPlayer(), "RaceName", civilization)
 	
 	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
@@ -144,6 +146,8 @@ function RunTechTreeMenu(civilization_number)
 		playercolor = "red"
 	elseif (civilization == "germanic") then
 		playercolor = "orange"
+	elseif (civilization == "teuton") then
+		playercolor = "orange"
 	end
 
 	for i, unitName in ipairs(Units) do
@@ -161,13 +165,13 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "archer") then
 					tech_icon_x = 7
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
 				elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
 					tech_icon_x = 1
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
+					if ((GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0)) then
 						tech_allowed = false
 					end
 				elseif (GetUnitTypeData(unitName, "Class") == "town-hall") then
@@ -209,7 +213,7 @@ function RunTechTreeMenu(civilization_number)
 				if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
 					tech_icon_x = 3
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "melee-weapon-2") then
@@ -221,7 +225,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (CUpgrade:Get(unitName).Class == "bronze-shield") then
 					tech_icon_x = 2
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization))) then
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "iron-shield") then
@@ -257,7 +261,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (CUpgrade:Get(unitName).Class == "masonry") then
 					tech_icon_x = 8
 					tech_icon_y = 3
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization))) then
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
 				else

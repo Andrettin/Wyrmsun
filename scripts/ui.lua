@@ -289,11 +289,13 @@ DefinePanelContents(
 			Variable = "Speed", Format = "Speed: %d"}}
 	} } })
 
+Load("scripts/celt/ui.lua")
 Load("scripts/dwarf/ui.lua")
 Load("scripts/germanic/ui.lua")
 Load("scripts/gnome/ui.lua")
 Load("scripts/goblin/ui.lua")
 Load("scripts/kobold/ui.lua")
+Load("scripts/teuton/ui.lua")
 
 wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 

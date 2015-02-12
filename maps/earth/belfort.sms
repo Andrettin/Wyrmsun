@@ -39,10 +39,10 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		GenerateTown(layout, 2, "celt", "Sequani Tribe", 1, "celt", "Aedui Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
 		
-		if (MaxTechLevel[GetThisPlayer() + 1] == -1) then -- set AI max tech level to Agrarian (Iron)
+		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
 			for i=0,15 do
-				if (MaxTechLevel[i + 1] == -1 and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = 1
+				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
+					MaxTechLevel[i + 1] = "Agrarian (Iron)"
 				end
 			end
 		end
@@ -55,6 +55,9 @@ end
 SetStartView(0, Players[2].StartPos.x, Players[2].StartPos.y)
 SetPlayerData(0, "RaceName", "germanic")
 SetPlayerData(0, "Faction", "Suebi Tribe")
+if (GrandStrategy == false) then
+	SetPlayerData(0, "HasUpgrade", "upgrade-teuton-civilization", true)
+end
 
 if (GrandStrategy == false) then
 	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
