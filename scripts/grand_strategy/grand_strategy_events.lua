@@ -125,11 +125,9 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-							end
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
 						end
 					end
 					for i, unitName in ipairs(Units) do
@@ -174,11 +172,9 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-							end
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
 						end
 					end
 					for i, unitName in ipairs(Units) do
@@ -235,10 +231,8 @@ function LoadEvents(world)
 					else
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-								end
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 							end
 						end
 					end
@@ -279,9 +273,7 @@ function LoadEvents(world)
 					if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-								end
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 							end
 						end
 						WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
@@ -323,10 +315,8 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.NorthernWastelands.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-							end
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.NorthernWastelands.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
 						end
 					end
 					for i, unitName in ipairs(Units) do
@@ -378,10 +368,8 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.EasternMines.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName) + GetPlayerData(2, "UnitTypesCount", unitName) + GetPlayerData(3, "UnitTypesCount", unitName)
-							end
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.EasternMines.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName) + GetPlayerData(2, "UnitTypesCount", unitName) + GetPlayerData(3, "UnitTypesCount", unitName)
 						end
 					end
 					for i, unitName in ipairs(Units) do
@@ -430,16 +418,14 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								if (unitName ~= "unit-gnomish-recruit") then
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-									WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-								else
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-									WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-								end
+							if (unitName ~= "unit-gnomish-recruit") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							else
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
 							end
 						end
 					end
@@ -492,16 +478,14 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								if (unitName ~= "unit-gnomish-recruit") then
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-									WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-								else
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-									WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-								end
+							if (unitName ~= "unit-gnomish-recruit") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							else
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
 							end
 						end
 					end
@@ -536,16 +520,14 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								if (unitName ~= "unit-gnomish-recruit") then
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-									WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-								else
-									WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
-									WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
-									WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
-								end
+							if (unitName ~= "unit-gnomish-recruit") then
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
+							else
+								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(GetPlayerData(0, "UnitTypesCount", unitName) - 1, 0)
+								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(2, "UnitTypesCount", unitName)
+								WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(1, "UnitTypesCount", unitName)
 							end
 						end
 					end
@@ -593,7 +575,7 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker" and GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "archer") then
+							if (GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "archer") then
 								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
 								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 							end
@@ -644,7 +626,7 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker" and GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "archer") then
+							if (GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "archer") then
 								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
 								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 							end
@@ -692,10 +674,8 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-							end
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 						end
 					end
 				elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
@@ -744,10 +724,8 @@ function LoadEvents(world)
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							if (GetUnitTypeData(unitName, "Class") ~= "worker") then
-								WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
-							end
+							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
+							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
 						end
 					end
 				end

@@ -23,7 +23,7 @@ WorldMapTiles = {
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Watr", "Watr", "Watr", "Watr", "Watr", "",     "",     "",     "",     "",     "CnFr", "CnFr", "",     "Watr", "Watr", "Watr", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "",     "",     "",     "",     "Plns", "CnFr", "Plns", "Plns", "Plns", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Plns", "Plns", "CnFr", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Hill", "Hill", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Plns", "Plns", "Plns", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Plns", "Plns", "CnFr", "CnFr", "CnFr", "CnFr", "CnFr", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
-	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Mntn", "Mntn", "Plns", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Watr", "Watr", "Plns", "Plns", "CnFr", "Watr", "Watr", "Watr", "Plns", "CnFr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "CnFr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
+	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Mntn", "Mntn", "Plns", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Watr", "Watr", "Plns", "Plns", "CnFr", "Watr", "Plns", "Watr", "Plns", "CnFr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "CnFr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Watr", "Hill", "Hill", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Plns", "Plns", "Plns", "Watr", "Watr", "Plns", "Plns", "Watr", "Watr", "Watr", "Watr", "Watr", "Watr", "Plns", "Plns", "Plns", "Plns", "Watr", "Plns", "CnFr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "Plns", "Plns", "Plns", "Watr", "Mntn", "Plns", "Plns", "Plns", "Watr", "Watr", "Plns", "CnFr", "Plns", "Plns", "Plns", "CnFr", "Plns", "CnFr", "CnFr", "CnFr", "CnFr", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "Plns", "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""},
@@ -169,7 +169,7 @@ LoadEvents("Earth")
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	WorldMapProvinces.Jutland.Owner = "Dane Tribe"
+	WorldMapProvinces.Jutland.Owner = "Jute Tribe"
 	WorldMapProvinces.Jutland.Civilization = "germanic"
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
@@ -195,13 +195,16 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Gotaland.Units.unit_germanic_archer = 0
+	WorldMapProvinces.Gotland.Owner = "Goth Tribe" -- maybe should be later?
+	WorldMapProvinces.Gotland.SettlementBuildings.unit_germanic_town_hall = 2
 
 	GrandStrategyEvents.OnTheVanaquisl = nil
 	GrandStrategyEvents.AsaRaid = nil
 	GrandStrategyEvents.WestwardMigration = nil
 	GrandStrategyEvents.NorthwardsToTheSea = nil
 	GrandStrategyEvents.GylvesRealm = nil
-	GrandStrategyEvents.DagsKingdom = nil
+	GrandStrategyEvents.DagChieftainOfTheGoths = nil
+	GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe = nil
 	GrandStrategyEvents.DivisionOfDomains = nil
 	GrandStrategyEvents.AsaLawgiving = nil
 	GrandStrategyEvents.TheBirthOfSaeming = nil
@@ -215,20 +218,21 @@ end
 
 if (GrandStrategyYear >= -1600) then
 	GrandStrategyEvents.TheCurvedSwords = nil  -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
+	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy = 2 -- bronzesmithing capabilities existed in Jutland, so that these swords were crafted
 end
 
-if (GrandStrategyYear >= -2000) then -- Minoan civilization disappears; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
+if (GrandStrategyYear >= -2000) then -- Minoan civilization disappears; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23. -- FIXME, entered wrong date by mistake
 	WorldMapProvinces.Crete.Owner = ""
-	WorldMapProvinces.Crete.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Crete.SettlementBuildings.unit_teuton_town_hall = 0
 end
 
 if (GrandStrategyYear >= -1450) then -- Mycenaean Greece; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	WorldMapProvinces.Attica.Civilization = "greek"
-	WorldMapProvinces.Attica.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Attica.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Crete.Civilization = "greek"
-	WorldMapProvinces.Crete.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Crete.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Peloponnese.Civilization = "greek"
-	WorldMapProvinces.Peloponnese.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Peloponnese.SettlementBuildings.unit_teuton_town_hall = 2
 end
 
 if (GrandStrategyYear >= -1400) then
@@ -242,7 +246,7 @@ end
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	Factions.AsaTribe.Technologies.upgrade_germanic_bronze_shield = 2
 	Factions.SwedeTribe.Technologies.upgrade_germanic_bronze_shield = 2
-	Factions.DaneTribe.Technologies.upgrade_germanic_bronze_shield = 2
+	Factions.JuteTribe.Technologies.upgrade_germanic_bronze_shield = 2
 	Factions.GothTribe.Technologies.upgrade_germanic_bronze_shield = 2
 	GrandStrategyEvents.TheSunShields = nil
 end
@@ -250,7 +254,7 @@ end
 if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.SwedeTribe.Technologies.upgrade_germanic_broad_sword = 2
-	Factions.DaneTribe.Technologies.upgrade_germanic_broad_sword = 2
+	Factions.JuteTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.GothTribe.Technologies.upgrade_germanic_broad_sword = 2
 end
 
@@ -288,10 +292,19 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	-- should put it at a more proper date (when Proto-Germanic split into West Germanic, East Germanic and North Germanic, respectively represented by the Teuton, Goth and Norse cultures in the game), but this will do; update culture in Sweden, Jutland and Gotaland
 	Factions.SwedeTribe.Civilization = "norse"
 	WorldMapProvinces.Sweden.Civilization = "norse"
-	Factions.DaneTribe.Civilization = "norse"
-	WorldMapProvinces.Jutland.Civilization = "norse"
+	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Sweden.SettlementBuildings.unit_teuton_town_hall = 2
+	Factions.JuteTribe.Civilization = "teuton"
+	WorldMapProvinces.Jutland.Civilization = "teuton"
+	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Jutland.SettlementBuildings.unit_teuton_town_hall = 2
 	Factions.GothTribe.Civilization = "goth"
 	WorldMapProvinces.Gotaland.Civilization = "goth"
+	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Gotaland.SettlementBuildings.unit_teuton_town_hall = 2
+	WorldMapProvinces.Gotland.Civilization = "goth"
+	WorldMapProvinces.Gotland.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Gotland.SettlementBuildings.unit_teuton_town_hall = 2
 end
 
 if (GrandStrategyYear >= -550) then -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
@@ -304,9 +317,9 @@ end
 
 if (GrandStrategyYear >= -500) then -- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	WorldMapProvinces.Macedonia.Owner = "Persia"
-	WorldMapProvinces.Macedonia.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Macedonia.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Thrace.Owner = "Persia"
-	WorldMapProvinces.Thrace.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Thrace.SettlementBuildings.unit_teuton_town_hall = 2
 end
 
 if (GrandStrategyYear >= -431) then -- Greece in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -548,6 +561,7 @@ end
 
 if (GrandStrategyYear >= 150) then
 	WorldMapProvinces.Gotaland.Owner = ""
+	WorldMapProvinces.Gotland.Owner = ""
 	WorldMapProvinces.Prussia.Owner = "Goth Tribe" -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Prussia.Units.unit_germanic_warrior = 0
 end
@@ -795,6 +809,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	WorldMapProvinces.Jutland.Owner = "Denmark"
 	WorldMapProvinces.Gotaland.Owner = "Sweden"
 	WorldMapProvinces.Sweden.Owner = "Sweden"
+	WorldMapProvinces.Gotland.Owner = "Denmark"
 
 	WorldMapProvinces.Bavaria.Owner = "Bavaria"
 	WorldMapProvinces.Brandenburg.Owner = "Brandenburg"

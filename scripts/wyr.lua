@@ -188,11 +188,11 @@ function SetPlayerData(player, data, arg1, arg2)
 		end
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
-			res = {2000, 1000, 1000, 0, 0, 1000, 0, 0}
+			res = {2000, 1000, 1000, 0, 0, 1000, 0, 0, 0}
 		elseif (GameSettings.Resources == 2) then
-			res = {5000, 2000, 2000, 0, 0, 2000, 0, 0}
+			res = {5000, 2000, 2000, 0, 0, 2000, 0, 0, 0}
 		elseif (GameSettings.Resources == 3) then
-			res = {10000, 5000, 5000, 0, 0, 5000, 0, 0}
+			res = {10000, 5000, 5000, 0, 0, 5000, 0, 0, 0}
 		end
 		if (arg1 == "gold") then
 			if (GrandStrategy == false or GrandStrategyEventMap) then
@@ -222,6 +222,8 @@ function SetPlayerData(player, data, arg1, arg2)
 			arg2 = res[7]
 		elseif (arg1 == "prestige") then
 			arg2 = res[8]
+		elseif (arg1 == "timber") then
+			arg2 = res[9]
 		end
 	end
 

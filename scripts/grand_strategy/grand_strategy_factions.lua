@@ -80,7 +80,7 @@ function LoadFactions(world)
 		},
 		DaneTribe = {
 			Name = "Dane Tribe",
-			Civilization = "germanic"
+			Civilization = "norse"
 		},
 		FrankTribe = {
 			Name = "Frank Tribe",
@@ -92,6 +92,10 @@ function LoadFactions(world)
 		},
 		GothTribe = {
 			Name = "Goth Tribe",
+			Civilization = "germanic"
+		},
+		JuteTribe = {
+			Name = "Jute Tribe",
 			Civilization = "germanic"
 		},
 		MarcomanniTribe = {
@@ -275,7 +279,7 @@ function LoadFactions(world)
 		},
 		VanaTribe = {
 			Name = "Vana Tribe",
-			Civilization = "germanic",
+			Civilization = "celt",
 			Gold = 5000,
 			Commodities = {
 				Lumber = 2500 -- half of the gold value

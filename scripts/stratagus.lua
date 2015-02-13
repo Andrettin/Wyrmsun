@@ -165,20 +165,20 @@ SetFogOfWarGraphics("tilesets/fogofwar.png")
 --
 
 DefineDefaultIncomes(
-  0, 100, 100, 100, 100, 100, 100, 100, 100)
+  0, 100, 100, 100, 100, 100, 100, 100, 100, 100)
 
 DefineDefaultActions(
-  "stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain")
+  "stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather")
 
 DefineDefaultResourceNames(
-  "time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige")
+  "time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber")
 
 DefineDefaultResourceAmounts(
   "gold", 100000,
   "oil", 50000,
   "coal", 50000)
 
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1)
+DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
 -------------------------------------------------------------------------------
 

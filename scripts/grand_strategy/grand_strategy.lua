@@ -865,13 +865,13 @@ function AttackProvince(province, faction)
 		end
 		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige + attacker_prestige
 		if (empty_province == false) then
-			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige - defender_prestige
+			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige - attacker_prestige
 		end
 	else
-		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige - attacker_prestige
 		if (empty_province == false) then
 			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige + defender_prestige
 		end
+		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige - defender_prestige
 	end
 				
 	for i, unitName in ipairs(Units) do
@@ -4923,7 +4923,7 @@ function EqualizeProvinceUnits(faction)
 end
 
 function IsMilitaryUnit(unit_type)
-	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and string.find(unit_type, "hero") == nil) then
+	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and string.find(unit_type, "hero") == nil and GetUnitTypeData(unit_type, "Class") ~= "worker") then
 		return true
 	else
 		return false

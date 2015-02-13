@@ -249,7 +249,7 @@ local GermanicEvents = {
 	},
 	GylvesRealm = {
 		Name = "Gylve's Realm",
-		Description = "After establishing ourselves in the Jutland peninsula, we now have the opportunity to sail across this short sea... what will await us? Shall we set sail, leaving your son Skjold to rule this peninsula?",
+		Description = "After establishing ourselves in the Jutland peninsula, we now have the opportunity to sail across this short sea... what will await us? Shall we set sail, entrusting one of our chieftains to rule this peninsula?",
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
@@ -265,7 +265,7 @@ local GermanicEvents = {
 				return false
 			end
 		end,
-		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as S~!kjold"},
+		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as the ~!Jute Tribe"},
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
@@ -285,6 +285,10 @@ local GermanicEvents = {
 						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						EventFaction.Prestige = EventFaction.Prestige + 25
+						-- give Gotaland to the Goth Tribe
+						EqualizeProvinceUnits(EventFaction)
+						AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+						AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -305,9 +309,13 @@ local GermanicEvents = {
 					end
 					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 					EventFaction.Prestige = EventFaction.Prestige + 25
+					-- give Gotaland to the Goth Tribe
+					EqualizeProvinceUnits(EventFaction)
+					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+					AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 				end
-				AcquireProvince(WorldMapProvinces.Jutland, "Dane Tribe")
-				AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
+				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
+				AcquireFactionTechnologies(Factions.JuteTribe, Factions.AsaTribe)
 				DrawMinimap()
 			end,
 			function(s)
@@ -325,51 +333,52 @@ local GermanicEvents = {
 					end
 				end
 				WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+				-- give Gotaland to the Goth Tribe
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 					
-				AcquireProvince(WorldMapProvinces.Jutland, "Dane Tribe")
-				AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
-				GrandStrategyFaction = Factions.DaneTribe
+				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
+				AcquireFactionTechnologies(Factions.JuteTribe, Factions.AsaTribe)
+				GrandStrategyFaction = Factions.JuteTribe
 				DrawMinimap()
 			end
 		}
 	},
-	DagsKingdom = { -- Dag is the first legendary king of Gotaland; Source: http://www.oe.eclipse.co.uk/nom/Sturlaug.htm
-		Name = "Dag's Kingdom",
-		Description = "Our tribesmen to the south have declared Dag as their king.",
+	DagChieftainOfTheGoths = { -- Dag is the first legendary king of Gotaland; Source: http://www.oe.eclipse.co.uk/nom/Sturlaug.htm
+		Name = "Dag, Chieftain of the Goths",
+		Description = "The notable Dag has been declared our chieftain.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
-				and WorldMapProvinces.Gotaland.Owner == EventFaction.Name
-				and WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall == 2
+				EventFaction.Name == "Goth Tribe"
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		Options = {"~!OK", "This means ~!war!", "Play as ~!Dag"},
+		MinYear = -2800, -- approximately when Scandinavia was settled
+		MaxYear = -2800,
+		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
-				DrawMinimap()
+				EventFaction.Prestige = EventFaction.Prestige + 1
+				GrandStrategyEvent(Factions.SwedeTribe, GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe)
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	DagChieftainOfTheGothsSwedeTribe = { -- Dag is the first legendary king of Gotaland; Source: http://www.oe.eclipse.co.uk/nom/Sturlaug.htm
+		Name = "Dag, Chieftain of the Goths",
+		Description = "The tribesmen to our south have declared Dag as their chieftain.",
+		TriggeredOnly = true,
+		Options = {"~!OK", "Play as ~!Dag"},
+		OptionEffects = {
+			function(s)
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
-				DrawMinimap()
-				EventFaction.Diplomacy.GothTribe = "War"
-				Factions.GothTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
-			end,
-			function(s)
-				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
 				GrandStrategyFaction = Factions.GothTribe
-				DrawMinimap()
+				CenterMapOnTile(WorldMapProvinces.Gotaland.SettlementLocation[1], WorldMapProvinces.Gotaland.SettlementLocation[2])
 			end
 		}
 	},
@@ -383,6 +392,7 @@ local GermanicEvents = {
 				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
 				and WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall == 2 -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
+				and SyncRand(100) < 25
 			) then
 				return true
 			else
@@ -407,6 +417,7 @@ local GermanicEvents = {
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
 				and WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall == 2 -- a town hall is needed, since without basic political organization there can be no lawgiving
+				and SyncRand(100) < 25
 			) then
 				return true
 			else
@@ -423,25 +434,27 @@ local GermanicEvents = {
 	},
 	TheBirthOfSaeming = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "The Birth of Saeming",
-		Description = "Your wife has bore you a son, who has been named Saeming. The notables of the tribe have given you many gifts to commemorate his birth.",
+		Description = "Our chieftain's wife has bore him a son, who has been named Saeming. The notables of the tribe have given our ruler many gifts to commemorate Saeming's birth.",
 		Conditions = function(s)
 			if (
-				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
-				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				and WorldMapProvinces.Sweden.Civilization == "germanic"
 			) then
 				return true
 			else
 				return false
 			end
 		end,
+		MinYear = -2800, -- approximately when Scandinavia was settled (in the Ynglinga Saga, Saeming is born just after the settlement of Scandinavia)
+		MaxYear = -2800,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
 				EventFaction.Gold = EventFaction.Gold + 100 -- gifts
+				EventFaction.Prestige = EventFaction.Prestige + 1
 			end
 		},
-		OptionTooltips = {"+100 Gold"}
+		OptionTooltips = {"+100 Gold, +1 Prestige"}
 	},
 	TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 		Name = "The Curved Swords",
@@ -666,7 +679,7 @@ local GermanicEvents = {
 				and FactionHasTechnologyType(EventFaction, "melee-weapon-1") -- must have reached the iron age
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
-				and ((EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Frank Tribe" or EventFaction.Name == "Saxon Tribe" or EventFaction.Name == "Suebi Tribe") or (EventFaction.Name == GrandStrategyFaction.Name and (EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Goth Tribe" or EventFaction.Name == "Swede Tribe")))
+				and ((EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Frank Tribe" or EventFaction.Name == "Jute Tribe" or EventFaction.Name == "Saxon Tribe" or EventFaction.Name == "Suebi Tribe") or (EventFaction.Name == GrandStrategyFaction.Name and (EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Goth Tribe" or EventFaction.Name == "Swede Tribe")))
 				and SyncRand(50) < 1
 			) then
 				return true
@@ -1049,7 +1062,7 @@ local GermanicEvents = {
 		MaxYear = -27 + 30,
 		RequiredEvents = {
 			FjolneChieftainOfTheSwedes = true,
-			FredfrodeChieftainOfTheDanes = true
+--			FredfrodeChieftainOfTheDanes = true -- not required yet, because the Danes aren't on the map when this happens
 		},
 		Options = {"~!Oh no!"},
 		OptionEffects = {

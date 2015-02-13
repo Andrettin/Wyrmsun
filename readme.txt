@@ -52,8 +52,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed crash which could happen when conquering a province not owned by any factions.
 - Dwarven factions now start with Masonry researched in the 25 AD start date.
 - Added "Division of Domains", "Asa Lawgiving" and "The Birth of Saeming" flavor events for the Asa Tribe (or the Swede Tribe).
-- Added "Dag's Kingdom" event.
-- In the "Gylve's Realm" event, the Jutland peninsula is now granted to Skjold upon choosing to embark, who then founds the Dane Tribe.
+- In the "Gylve's Realm" event, the Jutland peninsula is now granted to a chieftain upon choosing to embark, who then founds the Jute Tribe; upon victory, Gotaland is given to another chieftain, who founds the Goth Tribe.
 - Removed the germanic "Tribal Split" event, since the Dag's Kingdom and Gylve's Realm events now perform its functions.
 - Added "Beldeg's Lands" and "Sigi's Lands" events, which create new germanic tribes when certain territories are conquered by a germanic tribe.
 - Added a few Scrub Forest tiles and a gold mine in Iberia.
@@ -62,12 +61,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "Skilled Masons", "Skilled Carpenters", "Build Observatory?", "Build Library?", "Build Monument?" and "Province Assimilates" semi-random events.
 - Fixed a bug which caused non-persistent event to re-trigger after loading a saved game.
 - Added "The Sequani's Appeal" and "The Battle of Magetobria" events.
-- Added Albania, Andalusia, Attica, Bulgaria, Crete, Macedonia, Naples, North Italy, Peloponnese, Serbia and Thrace provinces to the Earth world map.
+- Added Albania, Andalusia, Attica, Bulgaria, Crete, Gotland, Macedonia, Naples, North Italy, Peloponnese, Serbia and Thrace provinces to the Earth world map.
 - The encyclopedia can now be accessed through the menu in Grand Strategy mode.
 - Scenarios can no longer be restarted when in grand strategy mode.
 - A province can now be attacked if it is only separated from the attacker by a single water province.
 - Provinces' names now can change according to the faction that owns them, or according to the province's culture.
-- Added 11 events about the legendary rulers of the Swedes and the Danes.
+- Added 12 events about the legendary rulers of the Goths, Swedes and the Danes.
 - Added 23 events about the spread of early Christianity.
 - Added "Prestige" variable for factions (icon graphics by Jinn), which influences the likelihood of certain events, as well as trade priority. Factions with negative prestige can't declare war. Prestige can be gained by winning battles (and lost by losing them), or as a consequence of certain events.
 - War can now only be declared against factions with which you share a border with, or if both factions have a coast.

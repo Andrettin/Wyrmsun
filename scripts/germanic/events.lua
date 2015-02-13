@@ -323,7 +323,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"Gylve has accepted a honorable peace with us. He has retained his role as a king, yet became subordinated to you. We took wives of the land for ourselves, and then moved on to the north... to our final destination. We came upon a large lake, with fair fields spread around it. You founded a hall by the lake, Sigtun, from which your descendants shall rule the land for untold generations!",
+			"Gylve has accepted a honorable peace with us. He has retained his role as a king, yet became subordinated to our tribe. We took wives of the land for ourselves, entrusted the lordship over Gylve to one of our chieftains, and then moved on to the north... to our final destination. We came upon a large lake, with fair fields spread around it. You founded a hall by the lake, Sigtun, from which your descendants shall rule the land for untold generations!",
 			player,
 			{"~!Continue"},
 			{function(s)

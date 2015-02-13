@@ -175,7 +175,9 @@ DefineRaceNames(
 		"display", "Teuton",
 		"visible",
 		"species", "human",
-		"parent-civilization", "germanic"
+		"parent-civilization", "germanic",
+		"personal_name_prefixes", {"Gott", "Hel", "Wolf"},
+		"personal_name_suffixes", {"fried", "gang", "mut"}
 	},
 	"race", {
 		"name", "neutral",
@@ -229,6 +231,14 @@ DefineCivilizationFactions("celt",
 		"type", "tribe",
 		"color", "pink",
 		"secondary_color", "red"
+	},
+	-- Non-Playable Tribes
+	"faction", {
+		"name", "Vana Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "cyan",
+		"playable", false
 	}
 )
 
@@ -321,6 +331,12 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "red"
 	},
 	"faction", {
+		"name", "Jute Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
 		"name", "Marcomanni Tribe",
 		"type", "tribe",
 		"color", "orange", -- change to a better one?
@@ -380,13 +396,6 @@ DefineCivilizationFactions("germanic",
 		"type", "tribe",
 		"color", "green",
 		"secondary_color", "teal",
-		"playable", false
-	},
-	"faction", {
-		"name", "Vana Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "cyan",
 		"playable", false
 	}
 )
@@ -637,6 +646,12 @@ DefineCivilizationFactions("teuton",
 		"color", "red",
 		"secondary_color", "red",
 		"playable", false
+	},
+	"faction", {
+		"name", "Jute Tribe",
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
 	},
 	"faction", {
 		"name", "Marcomanni Tribe",
