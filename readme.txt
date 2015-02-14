@@ -39,6 +39,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Buildings
 - Added Teuton Watch Tower and Guard Tower (graphics by Jinn).
 - Added Teuton Town Hall (graphics by Jinn).
+- Added Celt Farm (graphics by Jinn).
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -53,7 +54,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven factions now start with Masonry researched in the 25 AD start date.
 - Added "Division of Domains", "Asa Lawgiving" and "The Birth of Saeming" flavor events for the Asa Tribe (or the Swede Tribe).
 - In the "Gylve's Realm" event, the Jutland peninsula is now granted to a chieftain upon choosing to embark, who then founds the Jute Tribe; upon victory, Gotaland is given to another chieftain, who founds the Goth Tribe.
-- Removed the germanic "Tribal Split" event, since the Dag's Kingdom and Gylve's Realm events now perform its functions.
+- Removed the germanic "Tribal Split" event, since the Gylve's Realm event now performs its functions.
 - Added "Beldeg's Lands" and "Sigi's Lands" events, which create new germanic tribes when certain territories are conquered by a germanic tribe.
 - Added a few Scrub Forest tiles and a gold mine in Iberia.
 - A faction can now receive more than one event in the same turn.
@@ -80,6 +81,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven Militia are now possible to be generated in dungeons.
 - Added Belfort map.
 - Added Prague map.
+- Added Salzburg map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -87,6 +89,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Gold, lumber, coal, food and score icons reworked (by Jinn).
 - Added "Civilized (Bronze)" and "Civilized (Iron)" tech level and max tech level options in the Single Player Game Setup menu.
 - The cursor now properly changes according to civilization outside of the RTS mode (in the menus and in Grand Strategy mode).
+- Scenarios can now be started directly from the quests menu.
 
 * Quests
 - Added The Battle of Magetobria quest.

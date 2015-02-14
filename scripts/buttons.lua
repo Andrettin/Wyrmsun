@@ -30,6 +30,7 @@
 
 -- Load the buttons of all races
 
+Load("scripts/celt/buttons.lua")
 Load("scripts/dwarf/buttons.lua")
 Load("scripts/germanic/buttons.lua")
 Load("scripts/gnome/buttons.lua")

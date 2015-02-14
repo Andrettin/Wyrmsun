@@ -172,7 +172,11 @@ function HandleCheats(str)
   elseif (str == "mead of poetry") then
 	AddMessage("All Technologies Allowed")
 	for i, unitName in ipairs(Units) do
-		DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
+		for j=0,15 do
+			if (string.find(unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Civilization == GetPlayerData(j, "RaceName") and GetPlayerData(j, "Allow", unitName) ~= "R") then
+				SetPlayerData(j, "Allow", unitName, "A")
+			end
+		end
 	end
 
   elseif (str == "colossus of rhodes") then -- acquire all bronze age technologies
@@ -184,7 +188,7 @@ function HandleCheats(str)
 	for i, unitName in ipairs(bronze_upgrades) do
 		for j=0,15 do
 			if (CUpgrade:Get(unitName).Civilization == GetPlayerData(j, "RaceName")) then
-				SetPlayerData(j, "HasUpgrade", unitName, true)
+				SetPlayerData(j, "Allow", unitName, "R")
 			end
 		end
 	end

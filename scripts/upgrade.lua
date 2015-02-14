@@ -28,6 +28,7 @@
 --
 
 -- Load the different races
+Load("scripts/celt/upgrade.lua")
 Load("scripts/dwarf/upgrade.lua")
 Load("scripts/germanic/upgrade.lua")
 Load("scripts/gnome/upgrade.lua")
@@ -141,7 +142,7 @@ function ApplyTechLevels()
 		if (string.find(unitName, "upgrade-") ~= nil) then
 			for j=0,15 do
 				if (IsTechnologyUnderMinimumTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
-					SetPlayerData(j, "HasUpgrade", unitName, true)
+					SetPlayerData(j, "Allow", unitName, "R")
 				end
 			end
 			
@@ -154,6 +155,13 @@ function ApplyTechLevels()
 				end
 			end
 			DefineAllow(unitName, PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15] .. PlayerUnitFlag[16])
+		end
+	end
+	for j=0,15 do
+		if (GetPlayerData(j, "RaceName") == "teuton") then
+			SetPlayerData(j, "Allow", "upgrade-teuton-civilization", "R") -- ad hoc way of setting civilization upgrades (wouldn't be necessary if they had their own workers and etc.)
+		elseif (GetPlayerData(j, "RaceName") == "celt") then
+			SetPlayerData(j, "Allow", "upgrade-celt-civilization", "R")
 		end
 	end
 end

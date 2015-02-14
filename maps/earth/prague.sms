@@ -31,7 +31,7 @@ local invader_units = {"unit-germanic-warrior", "unit-germanic-archer", "unit-ge
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "germanic", "Marcomanni Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
+		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
 			for i=0,15 do
@@ -40,9 +40,8 @@ if (LoadedGame == false) then
 				end
 			end
 		end
-		SetPlayerData(0, "HasUpgrade", "upgrade-teuton-civilization", true)
 	else
-		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "germanic", "Marcomanni Tribe", town_buildings, {}, false, {}, "low", nil)
+		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, {}, false, {}, "low", nil)
 	end
 end
 

@@ -43,7 +43,7 @@ local upgrades = {
 		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
 	{"upgrade-germanic-barbed-arrow", _("Barbed Arrow"), "icon-germanic-barbed-arrow", "ranged-projectile-1",
-		_("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +1 Damage for Skutians."),
+		_("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +1 Damage for Skutans."),
 		"",
 		"",
 		{   200,   300,   300,     0,     0,     0,     0,     0},

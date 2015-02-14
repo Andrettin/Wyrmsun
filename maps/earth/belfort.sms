@@ -53,11 +53,8 @@ end
 
 -- Suebi units
 SetStartView(0, Players[2].StartPos.x, Players[2].StartPos.y)
-SetPlayerData(0, "RaceName", "germanic")
+SetPlayerData(0, "RaceName", "teuton")
 SetPlayerData(0, "Faction", "Suebi Tribe")
-if (GrandStrategy == false) then
-	SetPlayerData(0, "HasUpgrade", "upgrade-teuton-civilization", true)
-end
 
 if (GrandStrategy == false) then
 	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})

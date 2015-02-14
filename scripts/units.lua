@@ -41,6 +41,8 @@ Units = {
 	"unit-teuton-lumber-mill",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 	"upgrade-teuton-masonry",
+	"unit-celt-farm",
+	"upgrade-celt-civilization",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-scout", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
@@ -2058,6 +2060,7 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 } )
 
 -- Load the different civilizations
+Load("scripts/celt/units.lua")
 Load("scripts/dwarf/units.lua")
 Load("scripts/germanic/units.lua")
 Load("scripts/gnome/units.lua")

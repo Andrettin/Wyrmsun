@@ -219,6 +219,7 @@ igoku:
 /graphics/dwarf/icons/shield_1.png (later modified by Jinn)
 
 João Victor G. Costa (Jinn):
+/graphics/celt/buildings/farm.png
 /graphics/dwarf/buildings/barracks.png
 /graphics/dwarf/buildings/guard_tower.png
 /graphics/dwarf/buildings/lumber_mill.png
@@ -340,7 +341,6 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/buildings/barracks.png
 /graphics/germanic/buildings/farm.png
 /graphics/germanic/buildings/farm_extra_1.png
-/graphics/germanic/buildings/farm_extra_2.png
 /graphics/germanic/buildings/town_hall.png (later modified by b_o to add the fire animation)
 /graphics/germanic/icons/warrior.png
 /graphics/germanic/icons/warrior_black_hair.png

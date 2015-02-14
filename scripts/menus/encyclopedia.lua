@@ -170,7 +170,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	end
 	encyclopedia_icon:Load()
 	local playercolor
-	if (civilization == "dwarf") then
+	if (civilization == "celt") then
+		playercolor = "green"
+	elseif (civilization == "dwarf") then
 		playercolor = "red"
 	elseif (civilization == "germanic") then
 		playercolor = "orange"

@@ -403,7 +403,7 @@ function SinglePlayerTriggers()
 					for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
 						if (string.find(unitName, "upgrade-") ~= nil) then
 							if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[string.gsub(unitName, "-", "_")] == 2) then
-								SetPlayerData(i, "HasUpgrade", unitName, true)
+								SetPlayerData(i, "Allow", unitName, "R")
 							end
 						end
 					end

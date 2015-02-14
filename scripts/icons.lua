@@ -82,6 +82,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-celt-farm",
+	Size = {46, 38},
+	File = "celt/icons/farm.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-worker",
 	Size = {46, 38},
 	File = "germanic/icons/worker.png"

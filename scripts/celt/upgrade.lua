@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the teuton dependencies and upgrades.
+--      upgrade.ccl - Define the celt dependencies and upgrades.
 --
 --      (c) Copyright 2014 by Andre Novellino Gouvêa
 --
@@ -28,13 +28,13 @@
 --
 
 local upgrades = {
-	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers upgrade to Guard Towers."),
+	{"upgrade-celt-civilization", _("Celt Civilization"), "icon-germanic-bronze-shield", "",
 		"",
 		"",
-		{   250,  1500,  1750,     0,     0,     0,     0,     0},
-		{   250,  1500,  1750,     0,     0,     0,     0,  1500},
-		1},
+		"",
+		{   200,     0,     0,     0,     0,     0,     0,     0},
+		{   200,     0,     0,     0,     0,     0,     0,     0},
+		0},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -42,7 +42,7 @@ for i = 1,table.getn(upgrades) do
 	u.Name = upgrades[i][2]
 	u.Icon = Icons[upgrades[i][3]]
 	u.Class = upgrades[i][4]
-	u.Civilization = "teuton"
+	u.Civilization = "celt"
 	u.Description = upgrades[i][5]
 	u.Quote = upgrades[i][6]
 	u.Background = upgrades[i][7]
@@ -56,43 +56,6 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
-DefineModifier("upgrade-teuton-masonry",
-	{"HitPoints", 20, "Percent"},
-	{"Armor", 5},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-germanic-barracks"},
-	{"apply-to", "unit-germanic-smithy"},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-lumber-mill"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
-)
-
-DefineModifier("upgrade-teuton-civilization",
-	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
-)
-  
-DefineModifier("upgrade-teuton-civilization",
-	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"}
-)
-
-DefineDependency("upgrade-teuton-masonry",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-watch-tower",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-lumber-mill",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-guard-tower",
-	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}
-)
-
-DefineDependency("unit-teuton-catapult",
-	{"upgrade-teuton-civilization", "unit-germanic-smithy", "unit-teuton-lumber-mill"}
+DefineDependency("unit-celt-farm",
+	{"upgrade-celt-civilization"}
 )

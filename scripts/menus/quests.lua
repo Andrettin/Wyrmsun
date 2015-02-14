@@ -45,7 +45,7 @@ function RunQuestMenu()
 	for key, value in pairs(Quests) do
 		if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
 			if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-				addQuestIcon(Quests[key].Name, menu, Quests[key].Icon, Quests[key].Description, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * Quests[key].Y), Quests[key].PlayerColor)
+				addQuestIcon(Quests[key], menu, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * Quests[key].Y))
 			end
 		end
 	end
@@ -56,24 +56,24 @@ function RunQuestMenu()
 	menu:run()
 end
 
-function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y, playercolor)
+function addQuestIcon(quest, menu, x, y)
 	local questicon
 	local b
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
-		questicon = CGraphic:New(questicon_graphics .. "_grayed.png")
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest.Name)) then
+		questicon = CGraphic:New(quest.Icon .. "_grayed.png")
 		questicon:Load()
 		b = ImageButton("")
 	else
-		questicon = CPlayerColorGraphic:New(questicon_graphics .. ".png")
+		questicon = CPlayerColorGraphic:New(quest.Icon .. ".png")
 		questicon:Load()
-		b = PlayerColorImageButton("", playercolor)
+		b = PlayerColorImageButton("", quest.PlayerColor)
 	end
 	b:setActionCallback(
 		function()
 			local quest_menu = WarGameMenu(panel(5))
 			quest_menu:setSize(352, 352)
     			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
-			quest_menu:addLabel(_("" .. quest .. ""), 176, 11)
+			quest_menu:addLabel(_(quest.Name), 176, 11)
 			local quest_menu_image = ImageWidget(questicon)
 			quest_menu:add(quest_menu_image, 153, 48)
 
@@ -82,8 +82,15 @@ function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y, 
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			l:setCaption(quest_description)
+			l:setCaption(quest.Description)
 			
+			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
+				function()
+					GetMapInfo(quest.Map)
+					RunMap(quest.Map)
+					quest_menu:stop()
+					menu:stop()
+				end)
 			quest_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
 				function()
 					quest_menu:stop()
@@ -98,5 +105,6 @@ function addQuestIcon(quest, menu, questicon_graphics, quest_description, x, y, 
 	b:setSize(46, 38)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrame(true)
+	b:setTooltip(quest.Name .. " (" .. CapitalizeString(quest.Civilization) .. ")")
 	return b
 end

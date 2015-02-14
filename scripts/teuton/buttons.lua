@@ -45,7 +45,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
   Action = "build", Value = "unit-teuton-town-hall",
-  Key = "h", Hint = _("Build Town ~!Hall"),
+  Key = "h", Hint = _("Build Chieftain's ~!Hall"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
   
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-town-hall",
@@ -56,7 +56,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-town-hall",
   
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Action = "build", Value = "unit-teuton-lumber-mill",
-  Key = "l", Hint = _("Build ~!Lumber Mill"),
+  Key = "c", Hint = _("Build ~!Carpenter's Shop"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",

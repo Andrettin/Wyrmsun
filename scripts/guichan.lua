@@ -924,6 +924,7 @@ function RunSinglePlayerGameMenu()
   local tech_level
   local max_tech_level
   MapPersonPlayer = 0
+  PlayerFaction = ""
 
   -- create the scenario and faction lists
   local scenario_list = {}
@@ -1119,7 +1120,7 @@ function RunSinglePlayerGameMenu()
 				for key, value in pairs(Quests) do
 					if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
 						if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-							if (Quests[key].Map == mapinfo.description and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
+							if (Quests[key].Map == maps[i] and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
 								incomplete_quest_present = true
 							end
 						end
@@ -1262,7 +1263,7 @@ function RunSinglePlayerGameMenu()
 			for key, value in pairs(Quests) do
 				if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
 					if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-						if (Quests[key].Map == mapinfo.description and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
+						if (Quests[key].Map == maps[i] and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
 							incomplete_quest_present = true
 						end
 					end

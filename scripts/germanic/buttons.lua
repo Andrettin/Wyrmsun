@@ -132,7 +132,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Key = "b", Hint = _("~!Build Basic Structure"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
--- simple buildings germanic -----------------------------------------------------
+-- Simple Buildings Germanic -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-farm",
   Action = "build", Value = "unit-germanic-farm",
@@ -204,6 +204,6 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-bronze-shield",
   Action = "research", Value = "upgrade-teuton-civilization",
   Allowed = "check-single-research",
-  Key = "s", Hint = _("Develop ~!Teuton Civilization"),
+  Key = "t", Hint = _("Develop ~!Teuton Civilization"),
   ForUnit = {"unit-germanic-town-hall"} } )
   

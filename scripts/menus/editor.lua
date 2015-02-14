@@ -23,6 +23,10 @@ editor_types = {
 
 --- - - - - - - - - - - - - - - - - - -
 
+   "unit-celt-farm",
+   
+--- - - - - - - - - - - - - - - - - - -
+
    "unit-dwarven-miner",
    "unit-dwarven-militia",
    "unit-dwarven-axefighter",

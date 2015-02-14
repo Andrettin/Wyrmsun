@@ -138,6 +138,7 @@ function RunTechTreeMenu(civilization_number)
 		b:setSize(46, 38)
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		b:setFrame(true)
+		b:setTooltip(unit_name)
 		return b
 	end
 
