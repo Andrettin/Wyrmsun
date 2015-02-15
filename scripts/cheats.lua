@@ -173,7 +173,7 @@ function HandleCheats(str)
 	AddMessage("All Technologies Allowed")
 	for i, unitName in ipairs(Units) do
 		for j=0,15 do
-			if (string.find(unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Civilization == GetPlayerData(j, "RaceName") and GetPlayerData(j, "Allow", unitName) ~= "R") then
+			if (((string.find(unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Civilization == GetPlayerData(j, "RaceName")) or (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == GetPlayerData(j, "RaceName"))) and GetPlayerData(j, "Allow", unitName) ~= "R") then
 				SetPlayerData(j, "Allow", unitName, "A")
 			end
 		end

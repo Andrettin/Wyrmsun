@@ -17,7 +17,10 @@ editor_types = {
 
    "unit-teuton-catapult",
    "unit-teuton-town-hall",
+   "unit-teuton-farm",
+   "unit-teuton-barracks",
    "unit-teuton-lumber-mill",
+   "unit-teuton-smithy",
    "unit-teuton-watch-tower",
    "unit-teuton-guard-tower",
 

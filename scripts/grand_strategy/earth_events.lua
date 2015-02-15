@@ -43,7 +43,7 @@ local EarthEvents = {
 			end
 		end,
 		RequiredEvents = {
-			WestwardMigration = true
+			OnTheVanaquisl = true
 		},
 		Options = {"~!OK", "This is our ~!home"},
 		OptionEffects = {

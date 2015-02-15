@@ -127,22 +127,13 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Austria = {
 			Name = "Noricum",
 			CulturalNames = {
-				Austria = "Austria",
-				Bavaria = "Austria",
-				Brandenburg = "Austria",
-				celt = "Noricum",
-				England = "Austria",
-				Germany = "Austria",
-				latin = "Noricum",
-				Netherlands = "Austria",
-				Prussia = "Austria",
-				Switzerland = "Austria",
-				Westphalia = "Austria"
+				teuton = "Austria"
 			},
 			Tiles = { {127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30} },
 			Owner = "",
@@ -150,7 +141,8 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				celt = "Vindobona",
 				germanic = "Vindobona",
-				latin = "Vindobona"
+				latin = "Vindobona",
+				teuton = "Vienna"
 			},
 			SettlementLocation = {131, 29}, -- Vienna
 			SettlementBuildings = {
@@ -178,7 +170,8 @@ function LoadProvinces(world)
 			Name = "Rugia",
 			CulturalNames = {
 				Bavaria = "Bavaria",
-				BavarianTribe = "Bavaria"
+				BavarianTribe = "Bavaria",
+				teuton = "Bavaria"
 			},
 			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
 			Owner = "",
@@ -214,7 +207,7 @@ function LoadProvinces(world)
 		Bohemia = {
 	--		Name = "Marcomannia",
 			Name = "Bohemia",
-			CulturalSettlementNames = {
+			CulturalNames = {
 				celt = "Boiohaemum",
 				germanic = "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 				latin = "Boiohaemum"
@@ -237,15 +230,8 @@ function LoadProvinces(world)
 		Brandenburg = {
 			Name = "Semnonia",
 			CulturalNames = {
-				Austria = "Brandenburg",
-				Bavaria = "Brandenburg",
-				Brandenburg = "Brandenburg",
-				England = "Brandenburg",
-				Germany = "Brandenburg",
-				Netherlands = "Brandenburg",
-				Prussia = "Brandenburg",
-				Switzerland = "Brandenburg",
-				Westphalia = "Brandenburg"
+				teuton = "Brandenburg",
+				SuebiTribe = "Semnonia"
 			},
 			Tiles = { {127, 27}, {128, 25}, {128, 26}, {128, 27}, {129, 25}, {129, 26}, {129, 27} },
 			Owner = "",
@@ -262,6 +248,9 @@ function LoadProvinces(world)
 			Name = "Armorica",
 			Tiles = { {117, 29}, {118, 29}, {118, 30} },
 			Owner = "",
+			CulturalNames = {
+				France = "Brittany"
+			},
 	--		SettlementName = "Rennes",
 			SettlementLocation = {118, 29}, -- Rennes
 			SettlementBuildings = {
@@ -330,7 +319,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Crete = {
 			Name = "Crete",
@@ -339,12 +329,13 @@ function LoadProvinces(world)
 			SettlementName = "Knossos",
 			SettlementLocation = {137, 39}, -- Knossos
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2
+				unit_teuton_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Croatia = {
 			Name = "Dalmatia",
@@ -389,7 +380,8 @@ function LoadProvinces(world)
 			Name = "Britannia",
 			CulturalNames = {
 				England = "England",
-				SaxonTribe = "England"
+				SaxonTribe = "England",
+				teuton = "England"
 			},
 			Tiles = { {117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26} },
 			Owner = "",
@@ -401,7 +393,8 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		France = {
 			Name = "Gallia Lugdunensis",
@@ -473,7 +466,8 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 4
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Gotland = {
 			Name = "Gotland",
@@ -485,7 +479,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Hungary = {
 			Name = "Pannonia",
@@ -503,6 +498,20 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plns"
 		},
+		Iceland = {
+			Name = "Iceland",
+			Tiles = { {103, 17}, {104, 17}, {104, 18}, {105, 17}, {105, 18}, {106, 17}, {106, 18}, {107, 17}, {107, 18}, {108, 17}, {109, 17} },
+			Owner = "",
+			SettlementName = "Reykjavik",
+			SettlementLocation = {104, 18}, -- Reykjavik
+			SettlementBuildings = {
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+			},
+			SettlementTerrain = "Plns",
+			Coastal = true
+		},
 		Ireland = {
 			Name = "Ireland",
 			CulturalNames = { -- cultural names can be assigned either per faction or per civilization
@@ -517,7 +526,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Latium = {
 			Name = "Latium",
@@ -535,6 +545,9 @@ function LoadProvinces(world)
 		},
 		Jutland = {
 			Name = "Jutland",
+			CulturalNames = {
+				JuteTribe = "Jutland"
+			},
 			Tiles = { {126, 23}, {126, 24}, {126, 25}, {127, 25} },
 			Owner = "",
 	--		SettlementName = "Aarhus",
@@ -546,7 +559,8 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Macedonia = {
 			Name = "Macedonia",
@@ -609,7 +623,8 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 1 -- soldiers to prevent germanic expansion here too soon
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		NorthItaly = {
 			Name = "North Italy",
@@ -620,7 +635,8 @@ function LoadProvinces(world)
 			Owner = "",
 			SettlementName = "Milan",
 			CulturalSettlementNames = {
-				latin = "Mediolanum"
+				latin = "Mediolanum",
+				teuton = "Mailand"
 			},
 			SettlementLocation = {127, 31}, -- Milan
 			SettlementBuildings = {
@@ -628,7 +644,8 @@ function LoadProvinces(world)
 			Map = "maps/earth/north-italy.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Peloponnese = {
 			Name = "Peloponnese",
@@ -641,7 +658,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Poland = {
 			Name = "Poland",
@@ -671,24 +689,14 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Prussia = {
 			Name = "Gothiscandza",
 			CulturalNames = {
-				Austria = "Prussia",
-				Bavaria = "Prussia",
-				Brandenburg = "Prussia",
-				England = "Prussia",
-				Germany = "Prussia",
-				GothTribe = "Gothiscandza",
-				Netherlands = "Prussia",
-				OstrogothTribe = "Gothiscandza",
-				Prussia = "Prussia",
-				Switzerland = "Prussia",
-				VandalTribe = "Gothiscandza",
-				VisigothTribe = "Gothiscandza",
-				Westphalia = "Prussia"
+				goth = "Gothiscandza",
+				teuton = "Prussia"
 			},
 			Tiles = { {130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25} },
 			Owner = "",
@@ -700,7 +708,8 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Rhineland = {
 			Name = "Rhineland",
@@ -724,13 +733,11 @@ function LoadProvinces(world)
 		Russia = {
 			Name = "Gardarike",
 			CulturalNames = {
-				DaneTribe = "Gardarike",
-				GothTribe = "Gardarike",
+				germanic = "Gardarike",
+				goth = "Gardarike",
+				norse = "Gardarike",
 				Muscovy = "Russia",
-				OstrogothTribe = "Gardarike",
-				Russia = "Russia",
-				VisigothTribe = "Gardarike",
-				SwedeTribe = "Gardarike"
+				Russia = "Russia"
 			},
 			Tiles = { {140, 22}, {140, 23}, {140, 24}, {140, 25}, {140, 26}, {141, 21}, {141, 22}, {141, 23}, {141, 24}, {141, 25}, {141, 26}, {142, 21}, {142, 22}, {142, 23}, {142, 24}, {142, 25}, {142, 26}, {143, 21}, {143, 22}, {143, 23}, {143, 24}, {143, 25}, {143, 26}, {144, 21}, {144, 22}, {144, 23}, {144, 24}, {144, 25}, {144, 26}, {145, 18}, {145, 19}, {145, 20}, {145, 21}, {145, 22}, {145, 23}, {145, 24}, {145, 25}, {145, 26}, {145, 27}, {146, 18}, {146, 19}, {146, 20}, {146, 21}, {146, 22}, {146, 23}, {146, 24}, {146, 25}, {146, 26}, {146, 27}, {147, 18}, {147, 19}, {147, 20}, {147, 21}, {147, 22}, {147, 23}, {147, 24}, {147, 25}, {147, 26}, {147, 27}, {148, 20}, {148, 21}, {148, 22}, {148, 23}, {148, 24}, {148, 25}, {148, 26}, {148, 27}, {148, 28}, {149, 23}, {149, 24}, {149, 25}, {149, 26}, {149, 27}, {149, 28}, {150, 23}, {150, 24}, {150, 25}, {150, 26}, {150, 27}, {151, 24}, {151, 25}, {151, 26}, {151, 27}, {151, 28}, {151, 29}, {152, 24}, {152, 25}, {152, 26}, {152, 27}, {153, 24}, {153, 25}, {153, 26}, {154, 24}, {154, 25} },
 			Owner = "",
@@ -755,7 +762,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true
 		},
 		Scotland = {
 			Name = "Caledonia",
@@ -772,7 +780,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hill",
+			Coastal = true
 		},
 		Serbia = {
 			Name = "Upper Moesia",
@@ -799,7 +808,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plns",
+			Coastal = true -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
 		},
 		Silesia = {
 			Name = "Silesia",
@@ -832,15 +842,7 @@ function LoadProvinces(world)
 		Switzerland = {
 			Name = "Helvetia",
 			CulturalNames = {
-				Austria = "Switzerland",
-				Bavaria = "Switzerland",
-				Brandenburg = "Switzerland",
-				England = "Switzerland",
-				Germany = "Switzerland",
-				Netherlands = "Switzerland",
-				Prussia = "Switzerland",
-				Switzerland = "Switzerland",
-				Westphalia = "Switzerland"
+				teuton = "Switzerland"
 			},
 			Tiles = { {125, 30}, {126, 30} },
 			Owner = "",
@@ -871,7 +873,8 @@ function LoadProvinces(world)
 		Transylvania = {
 			Name = "Transylvania",
 			CulturalNames = {
-				latin = "Upper Dacia"
+				latin = "Upper Dacia",
+				teuton = "Siebenbürgen"
 			},
 			Tiles = { {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
 			Owner = "",
@@ -887,14 +890,11 @@ function LoadProvinces(world)
 		Ukraine = {
 			Name = "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
 			CulturalNames = {
-				DaneTribe = "Danparstathir",
-				GothTribe = "Danparstathir",
+				goth = "Danparstathir",
+				norse = "Danparstathir",
 				Muscovy = "Ukraine",
-				OstrogothTribe = "Danparstathir",
 				Poland = "Ukraine",
-				Russia = "Ukraine",
-				VisigothTribe = "Danparstathir",
-				SwedeTribe = "Danparstathir"
+				Russia = "Ukraine"
 			},
 			Tiles = { {139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29} },
 			Owner = "",
@@ -1202,6 +1202,11 @@ function LoadProvinces(world)
 			Tiles = { {136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35} },
 			Owner = "Ocean"
 		},
+		AtlanticOcean = {
+			Name = "Atlantic Ocean",
+			Tiles = { {102, 16}, {102, 17}, {102, 18}, {102, 19}, {102, 20}, {102, 21}, {102, 22}, {102, 23}, {102, 24}, {102, 25}, {102, 26}, {102, 27}, {102, 28}, {102, 29}, {102, 30}, {102, 31}, {102, 32}, {102, 33}, {102, 34}, {102, 35}, {102, 36}, {102, 37}, {102, 38}, {103, 16}, {103, 18}, {103, 19}, {103, 20}, {103, 21}, {103, 22}, {103, 23}, {103, 24}, {103, 25}, {103, 26}, {103, 27}, {103, 28}, {103, 29}, {103, 30}, {103, 31}, {103, 32}, {103, 33}, {103, 34}, {103, 35}, {103, 36}, {103, 37}, {103, 38}, {104, 16}, {104, 19}, {104, 20}, {104, 21}, {104, 22}, {104, 23}, {104, 24}, {104, 25}, {104, 26}, {104, 27}, {104, 28}, {104, 29}, {104, 30}, {104, 31}, {104, 32}, {104, 33}, {104, 34}, {104, 35}, {104, 36}, {104, 37}, {104, 38}, {105, 16}, {105, 19}, {105, 20}, {105, 21}, {105, 22}, {105, 23}, {105, 24}, {105, 25}, {105, 26}, {105, 27}, {105, 28}, {105, 29}, {105, 30}, {105, 31}, {105, 32}, {105, 33}, {105, 34}, {105, 35}, {105, 36}, {105, 37}, {105, 38}, {106, 16}, {106, 19}, {106, 20}, {106, 21}, {106, 22}, {106, 23}, {106, 24}, {106, 25}, {106, 26}, {106, 27}, {106, 28}, {106, 29}, {106, 30}, {106, 31}, {106, 32}, {106, 33}, {106, 34}, {106, 35}, {106, 36}, {106, 37}, {106, 38}, {107, 16}, {107, 19}, {107, 20}, {107, 21}, {107, 22}, {107, 23}, {107, 24}, {107, 25}, {107, 26}, {107, 27}, {107, 28}, {107, 29}, {107, 30}, {107, 31}, {107, 32}, {107, 33}, {107, 34}, {107, 35}, {107, 36}, {107, 37}, {107, 38}, {108, 16}, {108, 18}, {108, 19}, {108, 20}, {108, 21}, {108, 22}, {108, 23}, {108, 24}, {108, 25}, {108, 26}, {108, 27}, {108, 28}, {108, 29}, {108, 30}, {108, 31}, {108, 32}, {108, 33}, {108, 34}, {108, 35}, {108, 36}, {108, 37}, {108, 38}, {109, 16}, {109, 18}, {109, 19}, {109, 20}, {109, 21}, {109, 22}, {109, 23}, {109, 24}, {109, 25}, {109, 26}, {109, 27}, {109, 28}, {109, 29}, {109, 30}, {109, 31}, {109, 32}, {109, 33}, {109, 34}, {109, 35}, {109, 36}, {109, 37}, {109, 38}, {110, 16}, {110, 17}, {110, 18}, {110, 19}, {110, 20}, {110, 21}, {110, 22}, {110, 23}, {110, 24}, {110, 25}, {110, 26}, {110, 27}, {110, 28}, {110, 29}, {110, 30}, {110, 31}, {110, 32}, {110, 33}, {110, 34}, {110, 35}, {110, 36}, {110, 37}, {110, 38}, {111, 16}, {111, 17}, {111, 18}, {111, 19}, {111, 20}, {111, 21}, {111, 22}, {111, 23}, {111, 24}, {111, 25}, {111, 26}, {111, 27}, {111, 28}, {111, 29}, {111, 30}, {111, 31}, {111, 32}, {111, 33}, {111, 34}, {111, 35}, {111, 36}, {111, 37}, {111, 38}, {112, 16}, {112, 17}, {112, 18}, {112, 19}, {112, 20}, {112, 21}, {112, 22}, {112, 23}, {112, 24}, {112, 25}, {112, 26}, {112, 27}, {112, 28}, {112, 29}, {112, 30}, {112, 31}, {112, 32}, {112, 33}, {112, 34}, {112, 35}, {112, 36}, {112, 37}, {112, 38}, {113, 16}, {113, 17}, {113, 18}, {113, 19}, {113, 20}, {113, 21}, {113, 22}, {113, 23}, {113, 24}, {113, 28}, {113, 29}, {113, 30}, {113, 31}, {113, 32}, {113, 33}, {113, 34}, {113, 35}, {113, 36}, {113, 37}, {113, 38}, {114, 16}, {114, 17}, {114, 18}, {114, 19}, {114, 20}, {114, 21}, {114, 22}, {114, 23}, {114, 24}, {114, 28}, {114, 29}, {114, 30}, {114, 31}, {114, 38}, {115, 16}, {115, 17}, {115, 18}, {115, 19}, {115, 20}, {115, 21}, {115, 22}, {115, 23}, {115, 24}, {115, 28}, {115, 29}, {115, 30}, {115, 38}, {116, 16}, {116, 17}, {116, 18}, {116, 19}, {116, 20}, {116, 21}, {117, 16}, {117, 17}, {117, 18}, {117, 19}, {117, 20}, {117, 21}, {118, 16}, {118, 17}, {118, 18}, {118, 19}, {118, 20}, {119, 16}, {119, 17}, {119, 18}, {119, 19}, {120, 16}, {120, 17}, {120, 18}, {120, 19}, {121, 16}, {121, 17}, {121, 18}, {121, 19}, {122, 16}, {122, 17}, {122, 18}, {122, 19}, {123, 16}, {123, 17}, {123, 18}, {123, 19}, {124, 16}, {124, 17}, {124, 18}, {124, 19}, {125, 16}, {125, 17}, {125, 18}, {126, 16}, {126, 17}, {126, 18}, {127, 16}, {127, 17}, {128, 16} },
+			Owner = "Ocean"
+		},
 		BalearicSea = {
 			Name = "Balearic Sea",
 			Tiles = { {116, 38}, {117, 38}, {118, 38}, {119, 37}, {119, 38}, {120, 35}, {120, 36}, {120, 37}, {121, 35}, {121, 36}, {121, 37}, {122, 33}, {122, 34}, {122, 35}, {122, 36}, {122, 37}, {123, 33}, {123, 34}, {123, 35}, {123, 36}, {123, 37}, {124, 33}, {124, 34}, {124, 35}, {124, 36}, {124, 37}, {125, 34}, {125, 35}, {125, 36}, {125, 37}, {126, 35} },
@@ -1232,7 +1237,8 @@ function LoadProvinces(world)
 			ReferenceProvince = "England", -- province used as a reference for this province's name
 			CulturalNames = {
 				England = "English Channel",
-				SaxonTribe = "English Channel"
+				SaxonTribe = "English Channel",
+				teuton = "England"
 			},
 			Tiles = { {116, 28}, {117, 28}, {118, 28}, {119, 28}, {120, 27}, {120, 28} },
 			Owner = "Ocean"

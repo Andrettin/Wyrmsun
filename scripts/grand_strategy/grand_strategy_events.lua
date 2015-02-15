@@ -1024,19 +1024,14 @@ function LoadEvents(world)
 		end
 	end
 	
-	if (world == "Earth") then
+	Load("scripts/grand_strategy/generic_events.lua")
+	if (world == "Earth" or world == "Random" or world == "Save") then
+		Load("scripts/grand_strategy/christianity_events.lua")
 		Load("scripts/grand_strategy/earth_events.lua")
 		Load("scripts/grand_strategy/germanic_events.lua")
-		Load("scripts/grand_strategy/christianity_events.lua")
-		Load("scripts/grand_strategy/generic_events.lua")
-	elseif (world == "Nidavellir") then
+		Load("scripts/grand_strategy/norse_events.lua")
+	end
+	if (world == "Nidavellir" or world == "Random" or world == "Save") then
 		AddEventTable(NidavellirEvents)
-		Load("scripts/grand_strategy/generic_events.lua")
-	elseif (world == "Random" or world == "Save") then -- load all events in this case
-		Load("scripts/grand_strategy/earth_events.lua")
-		Load("scripts/grand_strategy/germanic_events.lua")
-		Load("scripts/grand_strategy/christianity_events.lua")
-		AddEventTable(NidavellirEvents)
-		Load("scripts/grand_strategy/generic_events.lua")
 	end
 end

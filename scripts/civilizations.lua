@@ -176,6 +176,7 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "germanic",
+		"personal_names", {"Franz", "Heinrich", "Johann", "Kurt"},
 		"personal_name_prefixes", {"Gott", "Hel", "Wolf"},
 		"personal_name_suffixes", {"fried", "gang", "mut"}
 	},

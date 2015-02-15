@@ -94,8 +94,6 @@ Preference.IconsShift = true
 
 Preference.ShowOrders = 2
 
-SetMetaServer("stratagus.game-host.org", 7775)
-
 --  Enable/disable the short display of the orders after command.
 --  FIXME: planned
 --(set-order-feedback! #t)

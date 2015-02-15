@@ -314,7 +314,11 @@ function GenerateRandomWorldMap()
 		for i=1,1000 do
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
-			if (GetWorldMapTile(RandomX, RandomY) ~= "Watr" and TileProvinces[RandomY+1][RandomX+1] == "" and (WorldMapProvinces[key].SettlementTerrain == nil or GetWorldMapTile(RandomX, RandomY) == WorldMapProvinces[key].SettlementTerrain)) then
+			if (
+				GetWorldMapTile(RandomX, RandomY) ~= "Watr" and TileProvinces[RandomY+1][RandomX+1] == ""
+				and (WorldMapProvinces[key].SettlementTerrain == nil or GetWorldMapTile(RandomX, RandomY) == WorldMapProvinces[key].SettlementTerrain)
+				and (WorldMapProvinces[key].Coastal == nil or WorldMapProvinces[key].Coastal == false or GetWorldMapTile(RandomX - 1, RandomY) == "Water" or GetWorldMapTile(RandomX + 1, RandomY) == "Water" or GetWorldMapTile(RandomX, RandomY - 1) == "Water" or GetWorldMapTile(RandomX, RandomY + 1) == "Water")
+			) then
 				TileProvinces[RandomY+1][RandomX+1] = key
 				table.insert(WorldMapProvinces[key].Tiles, {RandomX, RandomY})
 				WorldMapProvinces[key].SettlementLocation = {RandomX, RandomY}

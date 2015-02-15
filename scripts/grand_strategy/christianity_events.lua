@@ -34,6 +34,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.England.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -110,6 +111,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -159,6 +161,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Scotland
 				return true
@@ -182,6 +185,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Scotland
 				return true
@@ -368,6 +372,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.France.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.France
 				return true
@@ -415,6 +420,7 @@ local ChristianityEvents = {
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
 				and (WorldMapProvinces.Bavaria.Civilization == "germanic" or WorldMapProvinces.Bavaria.Civilization == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				return true
 			else
@@ -437,6 +443,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Belgium.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true
@@ -483,6 +490,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Bavaria
 				return true
@@ -506,6 +514,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				return true
 			else
@@ -545,12 +554,64 @@ local ChristianityEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
-	ForannanMissionaryToFrontierOfBelgium = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
+	DicuilMonk = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
+		Name = "Dicuil, Monk",
+		Description = "Dicuil is an Irish monk who has become notable for his scholarship.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
+			) then
+				EventProvince = WorldMapProvinces.Ireland
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 825,
+		MaxYear = 825,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	DeMensuraOrbisTerrae = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
+		Name = "De Mensura Orbis Terrae",
+		Description = "The monk Dicuil has written a cosmographical work, De Mensura Orbis Terrae. In it, Dicuil laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
+--				and WorldMapProvinces.Norway.Civilization == "norse"
+				and SyncRand(100) < 10
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+--		MaxYear = , -- when did Dicuil die?
+		RequiredEvents = {
+			DicuilMonk = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	ForannanMissionaryToTheFrontierOfBelgium = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Forannan, Missionary to the Frontier of PROVINCE_NAME",
 		Description = "The Irish missionary Forannan has arrived with twelve companions in the frontier of PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Belgium.Owner == EventFaction.Name
+				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true

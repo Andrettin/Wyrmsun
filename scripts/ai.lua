@@ -47,8 +47,14 @@ DefineAiHelper(
 	--
 	{"unit-equiv", "unit-germanic-town-hall",
 	"unit-teuton-town-hall"},
+	{"unit-equiv", "unit-germanic-farm",
+	"unit-teuton-farm"},
+	{"unit-equiv", "unit-germanic-barracks",
+	"unit-teuton-barracks"},
 	{"unit-equiv", "unit-germanic-carpenters-shop",
-	"unit-teuton-lumber-mill"}
+	"unit-teuton-lumber-mill"},
+	{"unit-equiv", "unit-germanic-smithy",
+	"unit-teuton-smithy"}
 )
 
 --

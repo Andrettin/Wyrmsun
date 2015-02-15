@@ -29,7 +29,7 @@
 
 local upgrades = {
 	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers upgrade to Guard Towers."),
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to upgrade to Guard Towers."),
 		"",
 		"",
 		{   250,  1500,  1750,     0,     0,     0,     0,     0},
@@ -59,9 +59,8 @@ end
 DefineModifier("upgrade-teuton-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-germanic-barracks"},
-	{"apply-to", "unit-germanic-smithy"},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-lumber-mill"},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
@@ -70,14 +69,22 @@ DefineModifier("upgrade-teuton-civilization",
 )
   
 DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-teuton-farm"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-teuton-barracks"}
+)
+
+DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"}
 )
 
-DefineDependency("upgrade-teuton-masonry",
-	{"upgrade-teuton-civilization"}
+DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
 )
 
-DefineDependency("unit-teuton-watch-tower",
+DefineDependency("upgrade-teuton-masonry",
 	{"upgrade-teuton-civilization"}
 )
 
@@ -85,7 +92,23 @@ DefineDependency("unit-teuton-town-hall",
 	{"upgrade-teuton-civilization"}
 )
 
+DefineDependency("unit-teuton-farm",
+	{"upgrade-teuton-civilization"}
+)
+
+DefineDependency("unit-teuton-barracks",
+	{"upgrade-teuton-civilization"}
+)
+
 DefineDependency("unit-teuton-lumber-mill",
+	{"upgrade-teuton-civilization"}
+)
+
+DefineDependency("unit-teuton-smithy",
+	{"upgrade-teuton-civilization"}
+)
+
+DefineDependency("unit-teuton-watch-tower",
 	{"upgrade-teuton-civilization"}
 )
 
@@ -94,5 +117,5 @@ DefineDependency("unit-teuton-guard-tower",
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"upgrade-teuton-civilization", "unit-germanic-smithy", "unit-teuton-lumber-mill"}
+	{"upgrade-teuton-civilization", "unit-teuton-smithy", "unit-teuton-lumber-mill"}
 )

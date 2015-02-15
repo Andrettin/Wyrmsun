@@ -174,12 +174,12 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
   Action = "train-unit", Value = "unit-germanic-warrior",
   Key = "e", Hint = _("Train ~!Erala"),
-  ForUnit = {"unit-germanic-barracks"} } )
+  ForUnit = {"unit-germanic-barracks", "unit-teuton-barracks"} } )
   
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
   Action = "train-unit", Value = "unit-germanic-archer",
   Key = "s", Hint = _("Train ~!Skutan"),
-  ForUnit = {"unit-germanic-barracks"} } )
+  ForUnit = {"unit-germanic-barracks", "unit-teuton-barracks"} } )
 
 -- Researches ---------------------------------------------------------
 
@@ -187,13 +187,13 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
   Action = "research", Value = "upgrade-germanic-broad-sword",
   Allowed = "check-single-research",
   Key = "w", Hint = _("Research Broad S~!word"),
-  ForUnit = {"unit-germanic-smithy"} } )
+  ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
   Action = "research", Value = "upgrade-germanic-bronze-shield",
   Allowed = "check-single-research",
   Key = "s", Hint = _("Research Bronze ~!Shield"),
-  ForUnit = {"unit-germanic-smithy"} } )
+  ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
   Action = "research", Value = "upgrade-germanic-barbed-arrow",

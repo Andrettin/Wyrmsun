@@ -326,6 +326,7 @@ function RunGrandStrategyGameSetupMenu()
 				date_list = {
 					"3000 BC", -- begin of the last wave of Indo-European migrations, which lasted until 2800 BC
 --					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
+--					"700 BC", -- 
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
 --					"1660 AD", -- 
@@ -956,6 +957,7 @@ function CalculateProvinceBorderTiles()
 	for key, value in pairs(WorldMapProvinces) do
 		WorldMapProvinces[key]["BorderTiles"] = {}
 		WorldMapProvinces[key]["BorderProvinces"] = {}
+		WorldMapProvinces[key].Coastal = false
 		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				table.insert(WorldMapProvinces[key].BorderTiles, {WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2]})
@@ -1846,20 +1848,30 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- if not built, make icon gray
 		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-town-hall"
+		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+			unit_type = "unit-germanic-barracks"
 		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
 			unit_type = "unit-germanic-carpenters-shop"
+		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+			unit_type = "unit-germanic-smithy"
 		end
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
 		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-town-hall"
+		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+			unit_type = "unit-germanic-barracks"
 		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 			unit_type = "unit-germanic-carpenters-shop"
+		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+			unit_type = "unit-germanic-smithy"
 		end
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
 	end
+	
+	local unit_type_name = GetUnitTypeName(unit_type)
 	
 	unit_type = old_unit_type
 	
@@ -1921,11 +1933,11 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		building_function_tooltip = " (hires mercenaries)"
 	end
 	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 2) then
-		UIElements[table.getn(UIElements)]:setTooltip("Use " .. GetUnitTypeName(unit_type) .. building_function_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. building_function_tooltip)
 	elseif (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 1) then
-		UIElements[table.getn(UIElements)]:setTooltip(GetUnitTypeName(unit_type) .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
+		UIElements[table.getn(UIElements)]:setTooltip(unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Build " .. GetUnitTypeName(unit_type) .. " in " .. GetProvinceName(SelectedProvince) .. building_cost_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. building_cost_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrame(true)
 	
@@ -2969,7 +2981,11 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "barracks") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-barracks"), 88, 213, Fonts["game"], true, false)
+				else
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				end
 				
 				-- add units buttons for training
 				local item_x = 0
@@ -3140,7 +3156,11 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "smithy") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), 88, 213, Fonts["game"], true, false)
+				else
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), 88, 213, Fonts["game"], true, false)
+				end
 				
 				local item_x = 0
 				local item_y = -2
@@ -3798,7 +3818,7 @@ function AIDoDiplomacy(ai_faction)
 		for second_key, second_value in pairs(WorldMapProvinces) do
 			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean" and CanDeclareWar(ai_faction, GetFactionFromName(WorldMapProvinces[second_key].Owner))) then
 				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and (GetFactionMilitaryScore(WorldMapProvinces[second_key].Owner) * 4) < GetFactionMilitaryScore(ai_faction.Name)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
+					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and (GetFactionMilitaryScore(GetFactionFromName(WorldMapProvinces[second_key].Owner)) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
 						DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
 					end
 				end
@@ -3817,7 +3837,7 @@ end
 function AIConsiderOffers(ai_faction)
 	for key, value in pairs(Factions) do
 		if (ai_faction.Diplomacy[key] == "Peace Offered") then
-			if (round(GetFactionMilitaryScore(ai_faction.Name) * 3 / 2) < GetFactionMilitaryScore(Factions[key].Name)) then -- accept peace if enemy's forces are 50% greater than own forces
+			if (round(GetFactionMilitaryScore(ai_faction) * 3 / 2) < GetFactionMilitaryScore(Factions[key])) then -- accept peace if enemy's forces are 50% greater than own forces
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
 			elseif (FactionHasBorderWith(ai_faction, Factions[key]) == false) then -- accept peace if has no borders with enemy any longer (since ships aren't implemented yet)
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
@@ -4150,7 +4170,7 @@ end
 
 function GetFactionMilitaryScore(faction)
 	local military_score = 0
-	for province_i, key in ipairs(GetFactionFromName(faction).OwnedProvinces) do
+	for province_i, key in ipairs(faction.OwnedProvinces) do
 		military_score = military_score + GetMilitaryScore(WorldMapProvinces[key], false, true)
 	end
 	return military_score
@@ -4719,6 +4739,7 @@ function FormFaction(old_faction, new_faction)
 		new_faction.Trade[key] = old_faction.Trade[key]
 	end
 	new_faction.Research = old_faction.Research
+	new_faction.Prestige = old_faction.Prestige
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
 			new_faction.Technologies[string.gsub(unitName, "-", "_")] = old_faction.Technologies[string.gsub(unitName, "-", "_")]
