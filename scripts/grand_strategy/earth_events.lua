@@ -58,6 +58,7 @@ local EarthEvents = {
 				WorldMapProvinces.France.Units.unit_germanic_warrior = 8
 				WorldMapProvinces.Latium.Units.unit_germanic_warrior = 8
 				AcquireProvince(WorldMapProvinces.Don, "")
+				WorldMapProvinces.Don.Civilization = ""
 				AcquireFactionTechnologies(Factions.AeduiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.ArverniTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.BoiiTribe, EventFaction)

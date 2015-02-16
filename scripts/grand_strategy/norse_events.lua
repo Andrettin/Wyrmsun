@@ -366,7 +366,30 @@ local NorseEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
-	SaemundPriestOfTheParishOfOdda = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 26, 31.
+	TempleAtUpsalConverted = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 88.
+		Name = "Temple at Upsal Converted",
+		Description = "The temple at Upsal, formerly the major center of Norse pagan religion, has been converted by our king into a Christian church, and its first bishop has been ordained.", -- historically the king was Olaf the Swede, and the bishop was the Englishman Severin
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				and WorldMapProvinces.Sweden.Civilization == "norse"
+				-- should require Sweden to be Christian, and there to be a church in Sweden
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1026, -- should be removed, with better triggers being added, to make the event more dynamic (there is no reason for this event to be fixed to a particular date, since it doesn't refer to a specific person)
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	SaemundPriestOfTheParishOfOdda = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 26, 31, 70.
 		Name = "Saemund, Priest of the Parish of Odda",
 		Description = "Saemund has been ordained priest of the parish of Odda. He had studied in universities in France and Germany, and has deep knowledge of Norse traditions.",
 		Conditions = function(s)
@@ -379,7 +402,7 @@ local NorseEvents = {
 				return false
 			end
 		end,
-		MinYear = 1083, -- Year about which Saemund flourished (he was born in 1056)
+		MinYear = 1083, -- Year about which Saemund flourished (he was born in 1056/1057)
 		MaxYear = 1133, -- Saemund died in 1133
 		Options = {"~!OK"},
 		OptionEffects = {

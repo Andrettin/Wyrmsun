@@ -2620,8 +2620,8 @@ function CreateTown(layout, town_player, invader_player)
 		elseif (t == 9) then -- N/S river + bridge
 			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
 			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
 			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
 		elseif (t == 10) then -- E/W river
 			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
 			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")

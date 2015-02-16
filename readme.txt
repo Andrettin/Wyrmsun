@@ -68,7 +68,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - A province can now be attacked if it is only separated from the attacker by a single water province.
 - Provinces' names now can change according to the faction that owns them, or according to the province's culture.
 - Added 12 events about the legendary rulers of the Goths, Swedes and the Danes.
-- Added 25 events about the spread of early Christianity.
+- Added 26 events about the spread of early Christianity.
 - Added "Prestige" variable for factions (icon graphics by Jinn), which influences the likelihood of certain events, as well as trade priority. Factions with negative prestige can't declare war. Prestige can be gained by winning battles (and lost by losing them), or as a consequence of certain events.
 - War can now only be declared against factions with which you share a border with, or if both factions have a coast.
 - Crafting the Scepter of Fire now grants +100 Prestige to the Norlund Clan.

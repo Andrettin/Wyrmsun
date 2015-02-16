@@ -132,7 +132,9 @@ WorldMapTiles = {
 
 WorldMapResources = {
 	Gold = {
-		{117, 27}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59.
+		{114, 33}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{117, 27}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{117, 29}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{118, 37}, -- Copper deposits
 		{119, 29}, -- iron ore deposits
 		{123, 27}, -- this is just to provide the Franks in the Netherlands with better survival chances
@@ -141,10 +143,11 @@ WorldMapResources = {
 		{125, 28}, -- iron ore deposits
 		{125, 29}, -- iron ore deposits
 		{125, 31}, -- to help keep the Romans afloat
-		{127, 27}, -- copper ore deposits
 		{127, 25}, -- crude oil or natural gas
+		{127, 27}, -- copper ore deposits
 		{128, 28}, -- iron ore deposits
-		{129, 28}, -- iron ore deposits
+		{129, 28}, -- iron ore deposits; Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{129, 30}, -- Copper deposits (Mitterberg mines) in the Salzach Valley, near Salzburg; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
 		{130, 27}, -- Copper deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 		{131, 21}, -- iron ore deposits
 		{131, 22}, -- iron ore deposits
@@ -153,6 +156,7 @@ WorldMapResources = {
 		{136, 31}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{134, 27}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 		{152, 31} -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
+--		{159, 27} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
 	},
 	Lumber = { 
 	}
@@ -166,6 +170,10 @@ MercenaryGroups = {
 }
 
 LoadEvents("Earth")
+
+if (GrandStrategyYear >= -4000) then
+	-- Eneolithic Baden culture existed in "temperate southeastern Europe" (where, more precisely?) in the 4th millenium BC, and made use of animal traction; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
+end
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
@@ -212,8 +220,10 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6 -- to make this province less easily conquered
 end
 
-if (GrandStrategyYear >= -2000) then -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
-	WorldMapProvinces.Crete.Owner = "Crete"
+if (GrandStrategyYear >= -2000) then
+	WorldMapProvinces.Crete.Owner = "Crete" -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
+	-- Somogyvar-Vinkovci culture existed in Hungary around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
+	-- early Wietenberg culture existed in Romania around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 end
 
 if (GrandStrategyYear >= -1600) then
@@ -221,7 +231,7 @@ if (GrandStrategyYear >= -1600) then
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy = 2 -- bronzesmithing capabilities existed in Jutland, so that these swords were crafted
 end
 
-if (GrandStrategyYear >= -2000) then -- Minoan civilization disappears; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23. -- FIXME, entered wrong date by mistake
+if (GrandStrategyYear >= -1450) then -- Minoan civilization disappears in 1450 BC; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
 	WorldMapProvinces.Crete.Owner = ""
 	WorldMapProvinces.Crete.SettlementBuildings.unit_teuton_town_hall = 0
 end
@@ -766,6 +776,10 @@ if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 
 	WorldMapProvinces.Netherlands.Owner = "Francia"
 end
 
+if (GrandStrategyYear >= 785) then
+	GrandStrategyEvents.HorseFleshEatingProhibited = nil
+end
+
 if (GrandStrategyYear >= 807) then
 	GrandStrategyEvents.FerdomnachLearnedMonkOfArmagh = nil
 	GrandStrategyEvents.TheBookOfArmagh = nil
@@ -778,6 +792,10 @@ end
 
 if (GrandStrategyYear >= 970) then
 	GrandStrategyEvents.ForannanMissionaryToTheFrontierOfBelgium = nil
+end
+
+if (GrandStrategyYear >= 1026) then
+	GrandStrategyEvents.TempleAtUpsalConverted = nil -- Temple at Upsal converted into a church by laf the Swede at about 1026; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 88.
 end
 
 if (GrandStrategyYear >= 1083) then

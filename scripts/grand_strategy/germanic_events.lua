@@ -932,6 +932,32 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"+5 Prestige"}
 	},
+	HorseFleshEatingProhibited = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 69.
+		Name = "Horse-Flesh Eating Prohibited",
+		Description = "A council gathered in Mercia has declared the old custom of eating horse-flesh to be forbidden, judging it to be incompatible with Christian doctrine.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.England.Owner == EventFaction.Name
+				and (WorldMapProvinces.England.Civilization == "germanic" or WorldMapProvinces.England.Civilization == "teuton" or WorldMapProvinces.England.Civilization == "norse" or WorldMapProvinces.England.Civilization == "goth") -- eating horse-flesh was a Germanic custom
+				and SyncRand(100) < 1 -- should take a while for this to happen after Christianization
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		RequiredEvents = {
+			AugustineArchbishopOfEngland = true -- should require England to be Christian instead, to make the event more dynamic (when religions are implemented in the game)
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+				-- should increase Faith
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
 	TheEastPrussianLandOrdinance = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
 		Name = "The East Prussian Land Ordinance",
 		Description = "With the passage of a new East Prussian Land Ordinance, peasants have now lost the right of movement.",
