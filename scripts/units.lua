@@ -40,6 +40,7 @@ Units = {
 	"unit-teuton-town-hall", "unit-teuton-farm", "unit-teuton-barracks",
 	"unit-teuton-lumber-mill", "unit-teuton-smithy",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
+	"upgrade-teuton-spatha",
 	"upgrade-teuton-masonry",
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
@@ -61,6 +62,8 @@ Units = {
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-rat", "unit-slime", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
+	"unit-gold-mine",
+	"unit-coal-mine",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane",
@@ -474,7 +477,7 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 --}
 
 DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
-	Description = _("Gold is a crucial metal for most societies, as it serves as a durable means of exchange with which a myriad of goods and services can be bought."),
+	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
 	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
 	Animations = "animations-gold-mine", Icon = "icon-gold-mine",
 	NeutralMinimapColor = {255, 255, 0},
@@ -505,6 +508,7 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 		"dead", "building destroyed"} } )
 
 DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
+	Description = _("Coal is a valuable heating material."),
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
 	Animations = "animations-gold-mine", Icon = "icon-coal-mine",
 	NeutralMinimapColor = {255, 255, 0},

@@ -43,6 +43,7 @@ end
 
 function RunEncyclopediaMenu()
 
+	Load("scripts/game_concepts.lua")
 	Load("scripts/texts.lua")
 	Load("scripts/worlds.lua")
 
@@ -79,7 +80,10 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("Game ~!Concepts"), "c", offx + 208, offy + 104 + 36*5,
+		function() RunEncyclopediaGameConceptsMenu() end)
+
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*6,
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -104,7 +108,7 @@ function RunEncyclopediaUnitsMenu(state)
 	local icon_y = 0
 	for i, unitName in ipairs(Units) do
 		if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
-			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and IsHero(unitName) == (state == "heroes") and (string.find(unitName, "mercenary") ~= nil) == (state == "mercenaries")) then
+			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and IsHero(unitName) == (state == "heroes") and (string.find(unitName, "mercenary") ~= nil and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")) then
 				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
@@ -682,18 +686,23 @@ function RunEncyclopediaWorldsMenu()
 	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
 	local world_x = 0
-	if (GetTableSize(Worlds) > 26) then
+	if (GetTableSize(Worlds) > 20) then
 		world_x = -2
-	elseif (GetTableSize(Worlds) > 13) then
+	elseif (GetTableSize(Worlds) > 10) then
 		world_x = -1
 	end
 	local world_y = -3
 
 	for world_key, world_value in pairsByKeys(Worlds) do
-		menu:addFullButton(Worlds[world_key].Name, "", offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
+		local world_hotkey = ""		
+		if (string.find(_(Worlds[world_key].Name), "~!") ~= nil) then
+			world_hotkey = string.sub(string.match(_(Worlds[world_key].Name), "~!%a"), 3)
+			world_hotkey = string.lower(world_hotkey)
+		end
+		menu:addFullButton(_(Worlds[world_key].Name), world_hotkey, offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
 			function() OpenEncyclopediaWorldEntry(world_key); end)
 
-		if (world_y > 8 or (world_y > 4 and Video.Height < 600)) then
+		if (world_y > 5 or (world_y > 4 and Video.Height < 600)) then
 			world_x = world_x + 2
 			world_y = -3
 		else
@@ -771,6 +780,87 @@ function OpenEncyclopediaWorldEntry(world_key)
 		end
 	end
 
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() encyclopedia_entry_menu:stop(); end)
+	encyclopedia_entry_menu:run()
+end
+
+function RunEncyclopediaGameConceptsMenu()
+
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 2 -- change this to 0 if the number of game concepts entries becomes too large
+	else
+		height_offset = 2
+	end
+	menu:addLabel("~<Encyclopedia: Game Concepts~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+
+	local game_concept_x = 0
+	if (GetTableSize(GameConcepts) > 20) then
+		game_concept_x = -2
+	elseif (GetTableSize(GameConcepts) > 10) then
+		game_concept_x = -1
+	end
+	local game_concept_y = -3
+
+	for game_concept_key, game_concept_value in pairsByKeys(GameConcepts) do
+		local game_concept_hotkey = ""		
+		if (string.find(_(GameConcepts[game_concept_key].Name), "~!") ~= nil) then
+			game_concept_hotkey = string.sub(string.match(_(GameConcepts[game_concept_key].Name), "~!%a"), 3)
+			game_concept_hotkey = string.lower(game_concept_hotkey)
+		end
+		menu:addFullButton(_(GameConcepts[game_concept_key].Name), game_concept_hotkey, offx + 208 + (113 * game_concept_x), offy + 104 + (36 * (game_concept_y + height_offset)),
+			function() OpenEncyclopediaGameConceptEntry(game_concept_key); end)
+
+		if (game_concept_y > 5 or (game_concept_y > 4 and Video.Height < 600)) then
+			game_concept_x = game_concept_x + 2
+			game_concept_y = -3
+		else
+			game_concept_y = game_concept_y + 1
+		end
+	end
+
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+end
+
+function OpenEncyclopediaGameConceptEntry(game_concept_key)
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local encyclopedia_entry_menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	encyclopedia_entry_menu:addLabel("~<" .. GameConcepts[game_concept_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local description = ""
+	if (GameConcepts[game_concept_key].Description ~= "") then
+		description = "Description: " .. GameConcepts[game_concept_key].Description
+	end
+	l:setCaption(description)
+			
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() encyclopedia_entry_menu:stop(); end)
 	encyclopedia_entry_menu:run()

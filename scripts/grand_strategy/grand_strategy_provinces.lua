@@ -216,7 +216,8 @@ function LoadProvinces(world)
 			Owner = "",
 			SettlementName = "Prague",
 			CulturalSettlementNames = {
-				germanic = "Bubienum" -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+				germanic = "Bubienum", -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+				teuton = "Bubienum"
 			},
 			SettlementLocation = {130, 28}, -- Prague
 			SettlementBuildings = {
@@ -438,7 +439,8 @@ function LoadProvinces(world)
 			Tiles = { {114, 33}, {115, 33} },
 			Owner = "",
 			SettlementName = "Lucus Augusti",
-			SettlementLocation = {114, 33}, -- Corunna
+--			SettlementLocation = {114, 33}, -- Corunna
+			SettlementLocation = {115, 33}, -- moved here so that it is not on the same spot as the mine
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
@@ -1304,6 +1306,12 @@ function LoadProvinces(world)
 				WorldMapProvinces[key]["CulturalNames"] = {}
 				for second_key, second_value in pairs(province_table[key].CulturalNames) do
 					WorldMapProvinces[key].CulturalNames[second_key] = province_table[key].CulturalNames[second_key]
+				end
+			end
+			if (province_table[key].CulturalSettlementNames ~= nil) then
+				WorldMapProvinces[key]["CulturalSettlementNames"] = {}
+				for second_key, second_value in pairs(province_table[key].CulturalSettlementNames) do
+					WorldMapProvinces[key].CulturalSettlementNames[second_key] = province_table[key].CulturalSettlementNames[second_key]
 				end
 			end
 			if (province_table[key].Tiles ~= nil) then

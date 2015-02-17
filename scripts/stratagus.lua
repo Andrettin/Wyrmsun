@@ -394,7 +394,9 @@ function SinglePlayerTriggers()
 	
 	if (LoadedGame == false) then
 		DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
-		ApplyTechLevels()
+		if (GrandStrategy == false) then
+			ApplyTechLevels()
+		end
 		if (GrandStrategy) then
 			for i=0,14 do
 				if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then

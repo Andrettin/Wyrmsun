@@ -36,6 +36,16 @@
 
 -- General Commands -------------------------------
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
+  Action = "attack",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
+  Key = "a", Hint = _("~!Attack"),
+  ForUnit = {
+    "unit-germanic-warrior",
+	"unit-hero-greebo",
+	"germanic-group", "teuton-group"
+} } )
+
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
   Key = "g", Hint = _("Attack ~!Ground"),
@@ -99,6 +109,12 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
   ForUnit = {"unit-germanic-barracks"} } )
 
 -- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
+  Action = "research", Value = "upgrade-teuton-spatha",
+  Allowed = "check-single-research",
+  Key = "p", Hint = _("Research S~!patha"),
+  ForUnit = {"unit-teuton-smithy"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-teuton-masonry",

@@ -92,6 +92,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "Civilized (Bronze)" and "Civilized (Iron)" tech level and max tech level options in the Single Player Game Setup menu.
 - The cursor now properly changes according to civilization outside of the RTS mode (in the menus and in Grand Strategy mode).
 - Scenarios can now be started directly from the quests menu.
+- Added "Game Concepts" section to the encyclopedia, to better explain the game's features.
 
 * Quests
 - Added The Battle of Magetobria quest.
@@ -107,6 +108,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, goblins and teutons (graphics by Leo).
+- Added Spatha upgrade for the Teuton civilization.
 
 -----------------------------------------------------------------------
 - 1.0.1

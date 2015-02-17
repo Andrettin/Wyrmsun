@@ -117,16 +117,15 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery-bronze",
 	"unit-hero-greebo"
   } } )
 
---[[
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery",
   Action = "learn-ability", Value = "upgrade-sword-mastery",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
   Key = "w", Hint = "Learn S~!word Mastery (+2 damage)",
   ForUnit = {
     "unit-germanic-warrior",
     "unit-gnomish-recruit",
 	"unit-hero-greebo"
   } } )
---]]
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,

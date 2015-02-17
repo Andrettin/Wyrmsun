@@ -684,6 +684,7 @@ Leo:
 /graphics/neutral/icons/wyrm_vicious.png
 /graphics/neutral/icons/wyrm_vicious_light_green_scales.png
 /graphics/neutral/icons/wyrm_yellow_scales.png
+/graphics/teuton/icons/spatha.png
 
 Mikodrak:
 /graphics/missiles/big_fire.png (later modified by Jinn)

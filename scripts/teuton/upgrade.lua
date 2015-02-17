@@ -28,6 +28,13 @@
 --
 
 local upgrades = {
+	{"upgrade-teuton-spatha", _("Spatha"), "icon-teuton-spatha", "melee-weapon-2",
+		_("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Eralas."),
+		"",
+		_("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
+		{   250,  2400,     0,     0,     0,     0,     0,     0},
+		{   250,  2400,     0,     0,     0,     0,     0,  2400},
+		1},
 	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to upgrade to Guard Towers."),
 		"",
@@ -56,6 +63,11 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineModifier("upgrade-teuton-spatha",
+	{"PiercingDamage", 2},
+	{"apply-to", "unit-germanic-warrior"}
+)
+
 DefineModifier("upgrade-teuton-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
@@ -82,10 +94,6 @@ DefineModifier("upgrade-teuton-civilization",
 
 DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
-)
-
-DefineDependency("upgrade-teuton-masonry",
-	{"upgrade-teuton-civilization"}
 )
 
 DefineDependency("unit-teuton-town-hall",
@@ -117,5 +125,9 @@ DefineDependency("unit-teuton-guard-tower",
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"upgrade-teuton-civilization", "unit-teuton-smithy", "unit-teuton-lumber-mill"}
+	{"unit-teuton-smithy", "unit-teuton-lumber-mill"}
+)
+
+DefineDependency("upgrade-teuton-spatha",
+	{"upgrade-germanic-broad-sword"}
 )
