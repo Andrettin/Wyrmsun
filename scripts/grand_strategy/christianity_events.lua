@@ -185,6 +185,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				and WorldMapProvinces.Scotland.Civilization == "celt" -- there must be Picts in Scotland for this event to fire
 				and WorldMapProvinces.Ireland.Civilization == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Scotland
