@@ -139,6 +139,29 @@ local EarthEvents = {
 		},
 		OptionTooltips = {"+500 Gold, -5 Research"}
 	},
+	CelticAndAntediluvianAntiquities = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+		Name = "Celtic and Antediluvian Antiquities",
+		Description = "The French customs officer and amateur archaeologist, Jacques Boucher de Crèvecoeur de Perthes, after doing excavations in the Somme region, has published a his Celtic and Antediluvian Antiquities in three volumes. In his work, he established a stark division between ancient flaked tools (which he called Antediluvian) and the more recent polished ones (which he named Celtic).",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.France.Owner == EventFaction.Name
+				and WorldMapProvinces.France.Civilization == "latin" -- should be French
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1864, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1864,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
 	TheAbolitionOfSerfdomRussia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
 		Name = "The Abolition of Serfdom",
 		Description = "Serfdom has finally been abolished in Russia, paving the way for the modernization of agriculture.",
@@ -162,6 +185,29 @@ local EarthEvents = {
 			end
 		},
 		OptionTooltips = {"+100 Research"}
+	},
+	MateriauxPourLHistoireDeLHomme = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
+		Name = "Matériaux pour l'histoire de l'homme",
+		Description = "A new periodical has been founded in France, the Matériaux pour l'histoire positive et philosophique de l'homme, which preoccupies itself with research on prehistory.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.France.Owner == EventFaction.Name
+				and WorldMapProvinces.France.Civilization == "latin" -- should be French
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1864, -- to avoid the event happening too soon (should be replaced by technologies)
+		MaxYear = 1864,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
 	}
 }
 	

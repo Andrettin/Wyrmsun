@@ -1027,6 +1027,30 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"+500 Gold, -5 Research", ""}
 	},
+	Britannia = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.
+		Name = "Britannia",
+		Description = "William Camden has published Britannia, an analysis of the material remnants of ancient British peoples. One of the objects analyzed by him was the Stonehenge monument.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.England.Owner == EventFaction.Name
+				and WorldMapProvinces.England.Civilization == "teuton" -- should be English
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		-- should require some event related to Celtic culture in England to have happened
+		MinYear = 1586, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1586,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
 	MartinTrampesFarm = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 12.
 		Name = "Martin Trampe's Farm",
 		Description = "A serf from Pomerania called Martin Trampe had managed to accumulate enough money to buy his freedom for 60 reichstaler. After becoming a free man, he has been enterprising enough to gather sufficient funds to buy a large farm in the Brandenburg Uckermark, although to do so he had to willingly submit himself to hereditary subjection to the local lord. Should a man exchange his hard-won freedom for land?",
@@ -1100,6 +1124,121 @@ local GermanicEvents = {
 			end
 		},
 		OptionTooltips = {"+500 Gold, +1 Research", "+1 Prestige"}
+	},
+	PrinciplesOfGeology = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+		Name = "Principles of Geology",
+		Description = "The Scottish geologist Charles Lyell has published his Principles of Geology, in which he argues that geological processes in the past occurred the same as in the present, and throughout an enormously long period.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				and WorldMapProvinces.Scotland.Civilization == "teuton" -- should be English
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1833, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1833,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
+	OnTheOriginOfSpecies = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+		Name = "On the Origin of Species",
+		Description = "Charles Darwin has published a work entitled On the Origin of Species by Means of Natural Selection, in which he proposes that living organisms are the result of a long process of natural evolution.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.England.Owner == EventFaction.Name
+				and WorldMapProvinces.England.Civilization == "teuton" -- should be English
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1859, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1859,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
+	AntiquityOfMan = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+		Name = "Antiquity of Man",
+		Description = "The Scottish geologist Charles Lyell has published a work entitled Antiquity of Man, in which he seeks to connect theories on natural evolution, geological processes and finds of ancient objects, to provide a new understanding of prehistoric peoples.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				and WorldMapProvinces.Scotland.Civilization == "teuton" -- should be English
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1863, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1863,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
+	PrehistoricTimes = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+		Name = "Prehistoric Times",
+		Description = "Sir John Lubbock has published his Prehistoric Times, in which he divides the Stone Age between the Old Stone Age (the Palaeolithic) and the New Stone Age (the Neolithic). The former was marked by the use of flaked stone, while in the latter polished stone was used.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.England.Owner == EventFaction.Name
+				and WorldMapProvinces.England.Civilization == "teuton" -- should be English
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1865, -- events which relate to specific persons directly have dates attached to them
+		MaxYear = 1865,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
+	},
+	ArchivFuerAnthropologie = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
+		Name = "Archiv für Anthropologie",
+		Description = "The journal Archiv für Anthropologie has been founded in Germany, preoccuping itself with research on prehistory..",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Brandenburg.Owner == EventFaction.Name -- where was it actually founded? Brandenburg set here since Berlin was Germany's capital
+				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1865, -- to avoid the event happening too soon (should be replaced by technologies)
+		MaxYear = 1865,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Research = EventFaction.Research + 1
+			end
+		},
+		OptionTooltips = {"+1 Research"}
 	}
 }
 	

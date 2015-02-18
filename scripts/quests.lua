@@ -99,6 +99,17 @@ Quests = {
 		Y = 1,
 		PlayerColor = "orange"
 	},
+	TheMeadOfPoetry = {
+		Name = "The Mead of Poetry",
+		Icon = "dwarf/icons/durin",
+		Description = "Word has reached Modsognir that the dwarves Fjalar and Galar have slain our wise clainsman Thjodrorir. Modsognir has sent you, Durin, to enter their hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 3 Dwarven Technology Points.",
+		Civilization = "dwarf",
+		TechnologyPoints = 3,
+		Map = "maps/nidavellir/fjalars-and-galars-hall.smp",
+		X = 1,
+		Y = 2,
+		PlayerColor = "red"
+	},
 	ABargainIsStruck = {
 		Name = "A Bargain is Struck",
 		Icon = "dwarf/icons/rugnur",
@@ -106,7 +117,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/chaincolt-foothills.smp",
-		X = 1,
+		X = 2,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -118,7 +129,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
-		X = 2,
+		X = 3,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -130,7 +141,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/northern-wastelands.smp",
-		X = 3,
+		X = 4,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -142,7 +153,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/eastern-mines.smp",
-		X = 4,
+		X = 5,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -154,7 +165,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/shorbear-hills.smp",
-		X = 5,
+		X = 6,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -166,7 +177,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
-		X = 6,
+		X = 7,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -178,7 +189,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-flame.smp",
-		X = 7,
+		X = 8,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -190,18 +201,6 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
-		X = 8,
-		Y = 2,
-		PlayerColor = "red"
-	},
-	TheMeadOfPoetry = {
-		Name = "The Mead of Poetry",
-		Icon = "dwarf/icons/alchemy",
-		Description = "\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points.",
-		RequiredTechnology = "upgrade-dwarven-alchemy",
-		Civilization = "dwarf",
-		TechnologyPoints = 2,
-		Map = "maps/nidavellir/fjalar-and-galars-hall.smp",
 		X = 9,
 		Y = 2,
 		PlayerColor = "red"

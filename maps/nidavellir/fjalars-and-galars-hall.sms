@@ -1,4 +1,8 @@
 LoadTileModels("scripts/tilesets/dungeon.lua")
 
-GenerateRandomDungeon("dwarf", "", "unit-hero-rugnur", "", "", "", "dwarf", "Fjalar and Galar", 12, "unit-dwarven-steelclad", "Fjalar", "unit-dwarven-steelclad", "Galar", {"unit-alchemy-bench"}, "", 0)
+GenerateRandomDungeon("dwarf", "", "unit-hero-durin", "", "", "", "dwarf", "Fjalar and Galar", 12, "unit-dwarven-steelclad", "Fjalar", "unit-dwarven-steelclad", "Galar", {"unit-alchemy-bench"}, "", 0)
 
+SetPlayerData(0, "Faction", "Norlund Clan")
+CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

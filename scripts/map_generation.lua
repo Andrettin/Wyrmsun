@@ -3904,6 +3904,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SetStartView(0, RandomX, RandomY)
 							if (player_hero == "random") then
 								local available_heroes = {}
+								if (GetNumUnitsAt(-1, "unit-hero-durin", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-durin-thane", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-durin")
+								end
 								if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
 									table.insert(available_heroes, "unit-hero-rugnur")
 								end
@@ -3947,6 +3950,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SetStartView(1, RandomX, RandomY)
 							if (second_player_hero == "random") then
 								local available_heroes = {}
+								if (GetNumUnitsAt(-1, "unit-hero-durin", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-durin-thane", {0, 0}, {256, 256}) < 1) then
+									table.insert(available_heroes, "unit-hero-durin")
+								end
 								if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
 									table.insert(available_heroes, "unit-hero-rugnur")
 								end

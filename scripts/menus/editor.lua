@@ -50,6 +50,8 @@ editor_types = {
    "unit-surghan-mercenary-steelclad",
    "unit-surghan-mercenary-thane",
 
+   "unit-hero-durin",
+   "unit-hero-durin-thane",
    "unit-hero-rugnur",
    "unit-hero-rugnur-steelclad",
    "unit-hero-rugnur-thane",

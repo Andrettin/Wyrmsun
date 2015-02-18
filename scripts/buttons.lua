@@ -81,6 +81,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
     "unit-gnomish-recruit", "unit-gnomish-herbalist",
     "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
@@ -91,6 +92,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
   ForUnit = {
     "unit-dwarven-thane",
     "unit-surghan-mercenary-thane",
+	"unit-hero-durin-thane", 
     "unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
   } } )
 
@@ -104,6 +106,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
     "unit-gnomish-recruit",
     "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-surghan-mercenary-thane",
+	"unit-hero-durin-thane", 
     "unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
@@ -137,6 +140,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
     "unit-gnomish-recruit", "unit-gnomish-herbalist",
     "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )

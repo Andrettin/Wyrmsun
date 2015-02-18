@@ -526,6 +526,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-durin",
+	Size = {46, 38},
+	File = "dwarf/icons/durin.png"
+})
+
+DefineIcon({
 	Name = "icon-rugnur",
 	Size = {46, 38},
 	File = "dwarf/icons/rugnur.png"

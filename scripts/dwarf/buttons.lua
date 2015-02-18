@@ -45,6 +45,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
 	"unit-germanic-worker", "unit-germanic-builder",
@@ -63,6 +64,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
 	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
  	"unit-rat", "unit-gryphon", "unit-wyrm",
@@ -75,6 +77,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
  	"dwarf-group"
     } } )
@@ -86,6 +89,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
  	"dwarf-group"
     } } )
@@ -96,6 +100,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-miner", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-rat", "unit-gryphon", "unit-wyrm",
 	"dwarf-group"} } )
@@ -107,6 +112,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-2",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
  	"dwarf-group"
     } } )
@@ -118,6 +124,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
   ForUnit = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
  	"dwarf-group"
     } } )
@@ -177,6 +184,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
 	"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
 	"dwarf-group"
@@ -191,6 +199,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
 	"unit-gnomish-recruit", 
 	"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-durin", "unit-hero-durin-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
 	"dwarf-group"} } )
@@ -465,6 +474,12 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-surghan-mercenary-thane",
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "u", Hint = _("~!Upgrade to Thane"),
   ForUnit = {"unit-surghan-mercenary-steelclad"} } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-thane",
+  Action = "upgrade-to", Value = "unit-hero-durin-thane",
+  Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
+  Key = "u", Hint = _("~!Upgrade to Thane"),
+  ForUnit = {"unit-hero-durin"} } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-rugnur-older",
   Action = "upgrade-to", Value = "unit-hero-rugnur-thane",

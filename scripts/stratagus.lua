@@ -568,7 +568,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
 					end
 				end
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-durin-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 2) then
 						SetUnitVariable(uncount[unit1], "StartingLevel", 3)
 					end
@@ -974,9 +974,9 @@ end
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter" or unit_type == "unit-hero-rugnur") then
 		return { "unit-dwarven-steelclad" }
-	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
+	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
 		return { "unit-dwarven-thane" }
-	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
+	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
 		return { "upgrade-critical-strike" }
@@ -1031,6 +1031,8 @@ function GetUnitTypeTraits(unit_type)
 		if (GetUnitTypeData(unit_type, "Civilization") ~= "") then -- only for sapient units
 			-- insert more traits here later
 		end
+	elseif (unit_type == "unit-hero-durin" or unit_type == "unit-hero-durin-thane") then
+		table.insert(traits, "upgrade-strong")
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
 		table.insert(traits, "upgrade-keen") -- not the best fit for this character, should be replaced with something else perhaps?
 	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then
@@ -1345,9 +1347,12 @@ function CapitalizeString(str)
 end
 
 local function CompleteMissingValues(table, defaultTable)
- for key, defaultValue in pairs(defaultTable) do
-  if table[key] == nil then table[key] = defaultValue end
- end
+	for key, defaultValue in pairs(defaultTable) do
+		if table[key] == nil then table[key] = defaultValue end
+	end
+	for key, defaultValue in pairs(defaultTable.Heroes) do
+		if table.Heroes[key] == nil then table.Heroes[key] = defaultValue end
+	end
 end
 
 wyr = {preferences = {}}
@@ -1391,6 +1396,12 @@ local defaultPreferences = {
 	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",
 	Heroes = {
+		Durin = {
+			name = "Durin",
+			level = 2,
+			upgrades = { "unit-dwarven-steelclad" },
+			items = {}
+		},
 		Rugnur = {
 			name = "Rugnur",
 			level = 1,

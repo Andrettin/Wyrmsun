@@ -321,6 +321,8 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	WorldMapProvinces.Gotland.Civilization = "goth"
 	WorldMapProvinces.Gotland.SettlementBuildings.unit_germanic_town_hall = 0
 	WorldMapProvinces.Gotland.SettlementBuildings.unit_teuton_town_hall = 2
+	
+	-- Late Hallstatt in West-Central Europe between 600 and 480 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 24.
 end
 
 if (GrandStrategyYear >= -550) then -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
@@ -901,6 +903,10 @@ if (GrandStrategyYear >= 1561) then -- Source: Markus Cerman, "Villagers and Lor
 	GrandStrategyEvents.TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = nil
 end
 
+if (GrandStrategyYear >= 1586) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.
+	GrandStrategyEvents.Britannia = nil
+end
+
 if (GrandStrategyYear >= 1616) then -- The Peasants' and Shepherds' Ordinance passed in Western and Eastern Pommerania; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
 	GrandStrategyEvents.ThePeasantsAndShepherdsOrdinance = nil
 end
@@ -946,6 +952,27 @@ if (GrandStrategyYear >= 1781) then -- The Serfdom Act for Bohemia and Moravia e
 	GrandStrategyEvents.TheSerfdomActForBohemiaAndMoravia = nil
 end
 
+if (GrandStrategyYear >= 1833) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+	GrandStrategyEvents.PrinciplesOfGeology = nil
+end
+
+if (GrandStrategyYear >= 1859) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+	GrandStrategyEvents.OnTheOriginOfSpecies = nil
+end
 if (GrandStrategyYear >= 1861) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
 	GrandStrategyEvents.TheAbolitionOfSerfdomRussia = nil
+end
+
+if (GrandStrategyYear >= 1863) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+	GrandStrategyEvents.AntiquityOfMan = nil
+end
+
+if (GrandStrategyYear >= 1864) then
+	GrandStrategyEvents.CelticAndAntediluvianAntiquities = nil -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
+	GrandStrategyEvents.MateriauxPourLHistoireDeLHomme = nil -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
+end
+
+if (GrandStrategyYear >= 1865) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
+	GrandStrategyEvents.PrehistoricTimes = nil
+	GrandStrategyEvents.ArchivFuerAnthropologie = nil
 end

@@ -30,6 +30,7 @@
 if (mapinfo.description == "Fjalar's and Galar's Hall") then
 -- The Mead of Poetry initial dialogue
 -- based on the Norse myth of similar name
+--[[
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
@@ -85,6 +86,45 @@ AddTrigger(
 			)
 			end},
 			"dwarf/icons/dwarven_steelclad.png"
+		)
+		return false
+	end
+)
+--]]
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Norlund Clan")) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"A few days ago our clan's sage, Thjodrorir, disappeared during the night. Word has now reached our chieftain Modsognir that the dwarves Fjalar and Galar have captured Thjodrorir, slaying him for unknown reasons. The chieftain has sent you, Durin, to enter their hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Durin",
+				"We must wary, for these corridors are filled with the two dwarves' thugs. Let us get this over with as quickly as we can.",
+				player,
+				{"~!Continue"},
+				{function(s)
+					if (mapinfo.description == "Fjalar's and Galar's Hall") then
+						RemovePlayerObjective(player, "- Destroy the enemy")
+					end
+					AddPlayerObjective(player, "- Rescue Thjodrorir's remains")
+					AddPlayerObjective(player, "- Bring Fjalar and Galar to the clan's justice")
+				end},
+				"dwarf/icons/durin.png"
+			)
+			end}
 		)
 		return false
 	end

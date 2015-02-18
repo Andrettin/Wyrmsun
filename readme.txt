@@ -40,6 +40,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Teuton Watch Tower and Guard Tower (graphics by Jinn).
 - Added Teuton Town Hall (graphics by Jinn).
 - Added Celt Farm (graphics by Jinn).
+- Germanic farms now correctly drop food items when destroyed.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -79,11 +80,16 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Atlantic Ocean water province to the Earth world map.
 - Certain provinces are now always generated adjacent to water in the random world map.
 
+* Heroes
+- Added Durin (dwarf).
+- Clicking on heroes no longer gives the "You have [...]" in the statusline.
+
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
 - Added Belfort map.
 - Added Prague map.
 - Added Salzburg map.
+- Added Fjalar's and Galar's Hall map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).

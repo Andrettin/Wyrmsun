@@ -44,16 +44,28 @@ GameConcepts = {
 		Name = _("~!Food"),
 		Description = _("Food is produced by farms in RTS mode, and determines the maximum amount of units a player can have.")
 	},
+	GameType = {
+		Name = _("Game T~!ype"),
+		Description = _("In the Single Player Setup screen different game types can be chosen. A Melee game means that the player will stand against all AI players, while in Free for All players are hostile against every other player. Choosing Top vs Bottom or Left vs Right will create two teams, with players being assigned to them according to map position.")
+	},
 	Garrisoning = {
 		Name = _("~!Garrisoning"),
 		Description = _("Certain buildings can be garrisoned by organic units, and some of them (like towers) even allow units with ranged attacks to attacked from within them.")
+	},
+	Harvesting = {
+		Name = _("Har~!vesting"),
+		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold mines, while lumber is gathered by harvesting trees or wood piles. Coal mines are used in a similar manner to gold mines, but they only appear in specific scenarios. In grand strategy mode, resources are harvested by owning the appropriate tiles, and having a town hall in their province.")
 	},
 	Heroes = {
 		Name = _("~!Heroes"),
 		Description = _("Heroes belong to one of the normal unit types, but unlike normal units, a hero's experience level and learned abilities are saved across scenarios.")
 	},
+	Items = {
+		Name = _("Ite~!ms"),
+		Description = _("Items such as potions and food lay down on the ground, and can be used by units by moving on top of them. Food items like cheese and carrots appear when a farm is destroyed. Red potions heal units, blue potions damage them, food items heal, and gold coins give gold to the player. Additionally, destroying barrels will sometimes yield potions, and opening chests (by attacking them) will grant gold.")
+	},
 	Mercenaries = {
-		Name = _("~!Mercenaries"),
+		Name = _("Mer~!cenaries"),
 		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of gold, however. Besides mercenary squads, players can also hire a maximum of 6 thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
 	},
 	Prestige = {
