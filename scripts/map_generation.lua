@@ -1731,27 +1731,31 @@ function ApplyRawTiles()
 					end
 				end
 			elseif (RawTile(x, y) == "Wall") then
+				local wall_hp = 40
+				if (wyrmsun.tileset == "dungeon") then -- make walls practically indestructible in dungeons
+					wall_hp = 255
+				end
 				if (RawTile(x, y + 1) ~= "Wall") then
 					RandomNumber = SyncRand(4)
 					if (RandomNumber == 0) then
-						SetTile(144, x, y, 40)
+						SetTile(144, x, y, wall_hp)
 					elseif (RandomNumber == 1) then
-						SetTile(145, x, y, 40)
+						SetTile(145, x, y, wall_hp)
 					elseif (RandomNumber == 2) then
-						SetTile(146, x, y, 40)
+						SetTile(146, x, y, wall_hp)
 					elseif (RandomNumber == 3) then
-						SetTile(147, x, y, 40)
+						SetTile(147, x, y, wall_hp)
 					end
 				else
 					RandomNumber = SyncRand(4)
 					if (RandomNumber == 0) then
-						SetTile(176, x, y, 40)
+						SetTile(176, x, y, wall_hp)
 					elseif (RandomNumber == 1) then
-						SetTile(177, x, y, 40)
+						SetTile(177, x, y, wall_hp)
 					elseif (RandomNumber == 2) then
-						SetTile(178, x, y, 40)
+						SetTile(178, x, y, wall_hp)
 					elseif (RandomNumber == 3) then
-						SetTile(179, x, y, 40)
+						SetTile(179, x, y, wall_hp)
 					end
 				end
 			end

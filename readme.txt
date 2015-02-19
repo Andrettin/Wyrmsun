@@ -100,6 +100,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Scenarios can now be started directly from the quests menu.
 - Added "Game Concepts" section to the encyclopedia, to better explain the game's features.
 - Implemented numerous engine improvements by cybermind.
+- Walls are now much more resilient in dungeon maps.
 
 * Quests
 - Added The Battle of Magetobria quest.
