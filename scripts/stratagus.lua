@@ -544,7 +544,7 @@ function StandardTriggers()
 					for unit2 = 1,table.getn(inside_uncount) do
 						if (GetPlayerData(GetUnitVariable(inside_uncount[unit2], "Player"), "AiEnabled")) then
 							local nearby_uncount = 0
-							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], GetUnitVariable(inside_uncount[unit2], "SightRange") / 2, false)
+							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], GetUnitVariable(inside_uncount[unit2], "SightRange") / 2, true)
 							for unit3 = 1,table.getn(nearby_uncount) do 
 								if (Players[GetUnitVariable(inside_uncount[unit2], "Player")]:IsEnemy(Players[GetUnitVariable(nearby_uncount[unit3],"Player")])) then
 									OrderUnit(15, "unit-tree-stump", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "unload")
@@ -637,7 +637,7 @@ function StandardTriggers()
 --					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
 --					if (people_quantity > 0) then
 --						local nearby_uncount = 0
---						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, true)
+--						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, false)
 --						for unit2 = 1,table.getn(nearby_uncount) do 
 --							if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
 --								OrderUnit("any", "unit-critter", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
@@ -651,7 +651,7 @@ function StandardTriggers()
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
 						local nearby_uncount = 0
-						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, false)
+						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, true)
 						for unit2 = 1,table.getn(nearby_uncount) do 
 							if (GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
 								if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource") ~= "" and GetUnitVariable(uncount[unit1], "ResourcesHeld") > 0) then
@@ -701,7 +701,7 @@ function StandardTriggers()
 								end
 							end
 							local nearby_uncount = 0
-							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, true)
+							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, false)
 							for unit2 = 1,table.getn(nearby_uncount) do 
 								if (GetUnitVariable(nearby_uncount[unit2], "Player") ~= 15) then
 									if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-chest") then

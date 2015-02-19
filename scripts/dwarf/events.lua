@@ -129,4 +129,107 @@ AddTrigger(
 		return false
 	end
 )
+
+-- Fjalar and Galar found
+AddTrigger(
+	function()
+		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice")) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 2, GetUnitVariable(uncount[unit1],"PosY") - 2}, {GetUnitVariable(uncount[unit1],"PosX") + 2, GetUnitVariable(uncount[unit1],"PosY") + 2})
+					if (unit_quantity > 0) then
+						player = GetThisPlayer()
+						return true
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Durin",
+			"Fjalar and Galar, I am here on behalf of Modsognir due to your horrific deed against Thjodrorir. Where is his body?",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"Fjalar",
+				"We brew his remains into mead, to absorb his ancient wisdom and gift for poetry.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					"Galar",
+					"I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't have our mead!",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						"Durin",
+						"Abominable! How could you, to Thjodrorir... Foolish as you seem, the mead certainly made you none the wiser.",
+						player,
+						{"~!Continue"},
+						{function(s)
+						Event(
+							"Fjalar",
+							"Thjodrorir went down first, but you will be next!",
+							player,
+							{"~!Continue"},
+							{function(s)
+							end},
+							"dwarf/icons/dwarven_steelclad_brown_hair.png"
+						)
+						end},
+						"dwarf/icons/durin.png"
+					)
+					end},
+					"dwarf/icons/dwarven_steelclad.png"
+				)
+				end},
+				"dwarf/icons/dwarven_steelclad_brown_hair.png"
+			)
+			end},
+			"dwarf/icons/durin.png"
+		)
+		return false
+	end
+)
+
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") and GetPlayerData(GetFactionPlayer("Fjalar and Galar"), "UnitTypesCount", "unit-dwarven-steelclad") < 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Durin",
+			"It is over. I will bring the cauldron and jars to Modsognir, and have them buried in Thjodrorir's grave. It is the best that can be done...",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (player == GetThisPlayer()) then
+					if (GrandStrategy == false) then
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
+						end
+						SavePreferences()
+					end
+					ActionVictory()
+				end
+			end},
+			"dwarf/icons/durin.png"
+		)
+		return false
+	end
+)
 end

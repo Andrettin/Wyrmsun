@@ -99,10 +99,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The cursor now properly changes according to civilization outside of the RTS mode (in the menus and in Grand Strategy mode).
 - Scenarios can now be started directly from the quests menu.
 - Added "Game Concepts" section to the encyclopedia, to better explain the game's features.
+- Implemented numerous engine improvements by cybermind.
 
 * Quests
 - Added The Battle of Magetobria quest.
 - Added The Home of the Boii quest.
+- Added The Mead of Poetry quest.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
@@ -114,7 +116,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, goblins and teutons (graphics by Leo).
-- Added Spatha upgrade for the Teuton civilization.
+- Added Spatha upgrade for the Teuton civilization (graphics by Leo).
 
 -----------------------------------------------------------------------
 - 1.0.1
