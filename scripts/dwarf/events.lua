@@ -121,6 +121,7 @@ AddTrigger(
 					end
 					AddPlayerObjective(player, "- Rescue Thjodrorir's remains")
 					AddPlayerObjective(player, "- Bring Fjalar and Galar to the clan's justice")
+					AddPlayerObjective(player, "- Durin must survive")
 				end},
 				"dwarf/icons/durin.png"
 			)
@@ -138,7 +139,7 @@ AddTrigger(
 			uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
-					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 2, GetUnitVariable(uncount[unit1],"PosY") - 2}, {GetUnitVariable(uncount[unit1],"PosX") + 2, GetUnitVariable(uncount[unit1],"PosY") + 2})
+					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
 					if (unit_quantity > 0) then
 						player = GetThisPlayer()
 						return true
@@ -229,6 +230,24 @@ AddTrigger(
 			end},
 			"dwarf/icons/durin.png"
 		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durin") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durin-thane") < 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		RemovePlayerObjective(player, "- Durin must survive")
+		ActionDefeat()
 		return false
 	end
 )

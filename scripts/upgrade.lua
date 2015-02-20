@@ -43,13 +43,13 @@ function DefineAllowNormalUnits(flags)
 			local PlayerHeroUnitMax = {}
 			for j=0,15 do
 				if (string.find(unitName, "upgrade-") == nil) then
-					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and GetUnitTypeData(unitName, "TechnologyPointCost") > 0) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
+					if (GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and GetUnitTypeData(unitName, "TechnologyPointCost") > 0) then
 						PlayerUnitFlag[j] = "F"
 					else
 						PlayerUnitFlag[j] = "A"
 					end
 				else
-					if ((GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and CUpgrade:Get(unitName).TechnologyPointCost > 0) or GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
+					if (GetPlayerData(j, "AiEnabled") == false and GetArrayIncludes(wyr.preferences.TechnologyAcquired, unitName) == false and CUpgrade:Get(unitName).TechnologyPointCost > 0) then
 						PlayerUnitFlag[j] = "F"
 					elseif (flags == "RRRRRRRRRRRRRRRR") then
 						PlayerUnitFlag[j] = "R"
@@ -58,11 +58,7 @@ function DefineAllowNormalUnits(flags)
 					end
 				end
 				if (IsHero(unitName)) then
-					if (GetArrayIncludes(GetFactionForbiddenUnits(GetPlayerData(j, "Faction")), unitName)) then
-						PlayerHeroUnitMax[j] = 0
-					else
-						PlayerHeroUnitMax[j] = 1
-					end
+					PlayerHeroUnitMax[j] = 1
 				end
 			end
 			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
@@ -93,6 +89,10 @@ function DefineAllowNormalUnits(flags)
 		end
 	end
 end
+
+InitFuncs:add(function()
+	DefineAllowNormalUnits("FFFFFFFFFFFFFFFF")
+end)
 
 function ApplyTechLevels()
 	for j=0,15 do

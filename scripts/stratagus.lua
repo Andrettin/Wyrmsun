@@ -879,26 +879,6 @@ function GetFactionExists(faction)
 	return false
 end
 
-function GetFactionForbiddenUnits(faction)
-	if (faction == "Norlund Clan") then
-		return { }
-	elseif (faction == "Shinsplitter Clan") then
-		return { }
-	elseif (faction == "Shorbear Clan") then
-		return { }
-	elseif (faction == "Kal Kartha") then
-		return { }
-	elseif (faction == "Knalga") then
-		return { }
-	elseif (faction == "Lyr") then
-		return { }
-	elseif (faction == "Lggi Tribe") then
-		return { }
-	else
-		return { }
-	end
-end
-
 function GetCivilizationPlayer(civilization)
 	local loop = true
 	local loop_count = 0
