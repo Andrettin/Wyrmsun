@@ -1,7 +1,7 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","nobody","nobody","nobody","person")
-PresentMap("Salzburg", 2, 128, 128, 1)
+DefinePlayerTypes("computer","nobody","nobody","nobody","person")
+PresentMap("Salzburg", 1, 128, 128, 1)
 MapWorld = "Earth"
 MapPersonPlayer = 4
 MapRequiredQuest = "The Home of the Boii"

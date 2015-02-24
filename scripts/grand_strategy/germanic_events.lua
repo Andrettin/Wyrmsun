@@ -10,7 +10,7 @@
 --
 --      grand_strategy_events.lua - Defines the grand strategy events.
 --
---      (c) Copyright 2015 by Andre Novellino Gouvêa
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -711,7 +711,7 @@ local GermanicEvents = {
 		Name = "Teuton Culture Spreads",
 		Description = "The people of PROVINCE_NAME have adopted Teuton culture.",
 		Conditions = function(s)
-			if (EventFaction.Civilization == "teuton") then
+			if (EventFaction.Civilization ~= "goth" and EventFaction.Civilization ~= "norse") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						WorldMapProvinces[province_key].Civilization == "germanic"
@@ -774,7 +774,7 @@ local GermanicEvents = {
 		Name = "Goth Culture Spreads",
 		Description = "The people of PROVINCE_NAME have adopted Goth culture.",
 		Conditions = function(s)
-			if (EventFaction.Civilization == "goth") then
+			if (EventFaction.Civilization ~= "teuton" and EventFaction.Civilization ~= "norse") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						WorldMapProvinces[province_key].Civilization == "germanic"

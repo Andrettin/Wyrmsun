@@ -167,7 +167,7 @@ if (GrandStrategy == false) then
 		end
 	end
 
-	unit = CreateUnit("unit-dwarven-town-hall", 1, {37, 32})
+	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
@@ -308,7 +308,7 @@ elseif (GrandStrategyEventMap) then
 		end
 	end
 
-	unit = CreateUnit("unit-dwarven-town-hall", 1, {37, 32})
+	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
 
 	-- Shorbears
 	for i, unitName in ipairs(Units) do

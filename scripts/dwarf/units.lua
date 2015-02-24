@@ -10,7 +10,7 @@
 --
 --      units.ccl - Define the dwarven unit-types.
 --
---      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2013-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -575,7 +575,52 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 --		"acknowledge", "town-hall-acknowledge",
 --		"ready", "town-hall-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"} } )
+		"dead", "building destroyed"}
+} )
+
+DefineUnitType("unit-dwarven-stronghold", { Name = _("Stronghold"),
+	Class = "stronghold",
+	Civilization = "dwarf",
+	Description = _("A dwarven settlement that has reached a certain status will often oversee the construction of a stronghold, enhancing its defensive capabilities."),
+	Image = {"file", "dwarf/buildings/stronghold.png", "size", {128, 128}},
+	Animations = "animations-building", Icon = "icon-dwarven-stronghold",
+--	Costs = {"time", 200, "gold", 2000, "lumber", 1000, "oil", 200},
+	Costs = {"time", 200, "gold", 2200, "lumber", 1100},
+	TechnologyPointCost = 1,
+	RepairHp = 4,
+--	RepairCosts = {"gold", 1, "lumber", 1, "oil", 1},
+	RepairCosts = {"gold", 1, "lumber", 1},
+	ImproveProduction = {"gold", 10},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 1167, -- 1400 with masonry
+	DrawLevel = 20,
+	TileSize = {4, 4}, BoxSize = {127, 127},
+	SightRange = 3,
+	Armor = 15, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 37, AnnoyComputerFactor = 40,
+	Points = 600,
+	Supply = 1,
+	Corpse = "unit-destroyed-4x4-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, OilImprove = false,
+	BuildingRules = {
+		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+		"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+	},
+	CanStore = {"lumber", "gold", "coal"},
+	MaxOnBoard = 3,
+	CanTransport = {"LandUnit", "only", "organic", "only"},
+	AttackFromTransporter = true,
+	SaveCargo = true,
+	Sounds = {
+		"selected", "town-hall-selected",
+--		"acknowledge", "town-hall-acknowledge",
+--		"ready", "town-hall-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building destroyed"}
+} )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Class = "farm",

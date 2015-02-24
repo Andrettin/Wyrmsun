@@ -10,7 +10,7 @@
 --
 --      grand_strategy_events.lua - Defines the grand strategy events.
 --
---      (c) Copyright 2015 by Andre Novellino Gouvêa
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -69,7 +69,7 @@ local NorseEvents = {
 		Name = "Norse Culture Spreads",
 		Description = "The people of PROVINCE_NAME have adopted Norse culture.",
 		Conditions = function(s)
-			if (EventFaction.Civilization == "norse") then
+			if (EventFaction.Civilization ~= "teuton" and EventFaction.Civilization ~= "goth") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						WorldMapProvinces[province_key].Civilization == "germanic"

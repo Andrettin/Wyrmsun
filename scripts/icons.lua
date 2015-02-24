@@ -10,7 +10,7 @@
 --
 --      icons.lua - Define the icons.
 --
---      (c) Copyright 2001-2004 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2013-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -397,6 +397,12 @@ DefineIcon({
 	Name = "icon-dwarven-town-hall",
 	Size = {46, 38},
 	File = "dwarf/icons/town_hall.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-stronghold",
+	Size = {46, 38},
+	File = "dwarf/icons/stronghold.png"
 })
 
 DefineIcon({

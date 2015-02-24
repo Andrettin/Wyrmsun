@@ -225,6 +225,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/lumber_mill.png
 /graphics/dwarf/buildings/mushroom_farm.png
 /graphics/dwarf/buildings/sentry_tower.png
+/graphics/dwarf/buildings/stronghold.png
 /graphics/dwarf/buildings/town_hall.png
 /graphics/dwarf/icons/axe_2.png (modified from Ransom.00's icon)
 /graphics/dwarf/icons/baglur.png

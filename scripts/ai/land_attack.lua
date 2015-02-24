@@ -32,7 +32,7 @@ local end_loop_funcs = {
 
 -- EXPANSION AND DEFENSE
 
-  function() return AiNeed(AiCityCenter()) end,
+  function() return AiNeed(AiTownHall()) end,
   function() return AiNeed(AiLumberMill()) end,
   function() return AiNeed(AiWatchTower()) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
@@ -63,9 +63,9 @@ local end_loop_funcs = {
 
 local land_funcs = {
   function() return AiSleep(AiGetSleepCycles()) end,
-  function() return AiNeed(AiCityCenter()) end,
+  function() return AiNeed(AiTownHall()) end,
   function() return AiSet(AiWorker(), 1) end,
-  function() return AiWait(AiCityCenter()) end,
+  function() return AiWait(AiTownHall()) end,
   function() return AiWait(AiWorker()) end, -- start hangs if nothing available
 
   function() return AiSet(AiWorker(), 4) end, -- 4
@@ -109,8 +109,8 @@ local land_funcs = {
   function() return AiResearch(AiUpgradeShield2()) end,
   function() return AiResearch(AiUpgradeMasonry()) end,
   
---  function() return AiUpgradeTo(AiBetterCityCenter()) end,
---  function() return AiWait(AiBetterCityCenter()) end,
+  function() return AiUpgradeTo(AiStronghold()) end,
+  function() return AiWait(AiStronghold()) end,
   function() return AiSet(AiWorker(), 25) end,
 --  function() return AiNeed(AiStables()) end,
 
@@ -149,7 +149,7 @@ local land_funcs = {
 
 -- EXPANSION
 
-  function() return AiNeed(AiCityCenter()) end,
+  function() return AiNeed(AiTownHall()) end,
   function() return AiNeed(AiBarracks()) end,
 
 -- ATTACK!!
@@ -194,7 +194,7 @@ local land_funcs = {
 -- EXPANSION
 
   function() return AiSet(AiWorker(), 45) end,
-  function() return AiNeed(AiCityCenter()) end,
+  function() return AiNeed(AiTownHall()) end,
   function() return AiNeed(AiWatchTower()) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
   function() return AiUpgradeTo(AiGuardTower()) end,
@@ -212,7 +212,7 @@ local land_funcs = {
 --  function() return AiResearch(AiUpgradeEliteShooter3()) end,
 
   function() return AiSet(AiWorker(), 40) end,
-  function() return AiNeed(AiCityCenter()) end,
+  function() return AiNeed(AiTownHall()) end,
   
 
 -- SECOND BIG WAVE

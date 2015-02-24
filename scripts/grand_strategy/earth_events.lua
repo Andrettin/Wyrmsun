@@ -10,7 +10,7 @@
 --
 --      grand_strategy_events.lua - Defines the grand strategy events.
 --
---      (c) Copyright 2015 by Andre Novellino Gouvêa
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -77,6 +77,54 @@ local EarthEvents = {
 			end
 		}
 	},
+	TheEruptionOfThera = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 43-44.
+		Name = "The Eruption of Thera",
+		Description = "The volcano in the isle of Thera, not far from PROVINCE_NAME, has erupted!",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Crete.Owner == EventFaction.Name
+			) then
+				EventProvince = WorldMapProvinces.Crete
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -1628, -- natural disasters are linked to specific dates
+		MaxYear = -1628,
+		Options = {"Oh ~!no!"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige - 10
+				-- should perhaps cause some bad economic effects?
+			end
+		},
+		OptionTooltips = {"-10 Prestige"}
+	},
+	TheWhiteHorse = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 46.
+		Name = "The White Horse",
+		Description = "The people of PROVINCE_NAME have carved the figure of a horse on a hill, filling it with chalk afterwards, resulting in a huge symbol of a white horse.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.England.Owner == EventFaction.Name -- was made at Uffington, in southern England
+				and WorldMapProvinces.England.Civilization == "celt" -- a Celtic culture did this
+				and ProvinceHasBuildingType(WorldMapProvinces.England, "smithy") -- happened in the late bronze age, possibly required bronze age tools
+				and SyncRand(100) < 1
+			) then
+				EventProvince = WorldMapProvinces.England
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
 	AskRomeForHelp = { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 		Name = "Ask Rome for Help?",
 		Description = "We have been completely beaten by the Suebi in the battlefield, but there may still be hope for us if the Romans intervene on our side. Shall we send Divitiacus to ask for their aid?",
@@ -116,6 +164,30 @@ local EarthEvents = {
 			end
 		},
 		OptionTooltips = {"War with the Suebi Tribe", ""}
+	},
+	TheEruptionOfHekla = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 49.
+		Name = "The Eruption of Hekla",
+		Description = "The volcano of Hekla in PROVINCE_NAME has erupted, destroying a farmstead in PROVINCE_NAME's southwest!",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+			) then
+				EventProvince = WorldMapProvinces.Iceland
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 1104, -- natural disasters are linked to specific dates
+		MaxYear = 1104,
+		Options = {"Oh ~!no!"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Gold = EventFaction.Gold - 100
+				EventFaction.Prestige = EventFaction.Prestige - 1
+			end
+		},
+		OptionTooltips = {"-100 Gold, -1 Prestige"}
 	},
 	TheUlozhenieLawCode = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
 		Name = "The Ulozhenie Law Code",

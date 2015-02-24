@@ -1,6 +1,6 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","person","person")
+DefinePlayerTypes("person","computer","computer")
 PresentMap("Belfort", 2, 80, 128, 1)
 MapWorld = "Earth"
 MapRequiredQuest = "Gylve's Realm"

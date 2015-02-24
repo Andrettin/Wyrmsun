@@ -10,7 +10,7 @@
 --
 --      scepter_of_fire_events.lua - Defines events for the Scepter of Fire campaign.
 --
---      (c) Copyright 2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2014 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -3766,7 +3766,7 @@ AddTrigger(
 					end
 				end
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
-				unit = CreateUnit("unit-dwarven-town-hall", 0, {37, 32})
+				unit = CreateUnit("unit-dwarven-stronghold", 0, {37, 32})
 				if (GrandStrategy == false) then
 					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
 					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})

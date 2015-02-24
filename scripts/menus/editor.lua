@@ -40,6 +40,7 @@ editor_types = {
    "unit-dwarven-gryphon-rider",
 
    "unit-dwarven-town-hall",
+   "unit-dwarven-stronghold",
    "unit-dwarven-mushroom-farm",
    "unit-dwarven-barracks",
    "unit-dwarven-lumber-mill",

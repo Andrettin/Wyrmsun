@@ -46,7 +46,8 @@ Units = {
 	"upgrade-celt-civilization",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-scout", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-	"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
+	"unit-dwarven-town-hall", "unit-dwarven-stronghold", 
+	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
@@ -496,9 +497,14 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuildingRules = {
-		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-		"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-		"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
+		{
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"}
+		}
 	},
 	GivesResource = "gold", CanHarvest = true,
 	Sounds = {
@@ -527,9 +533,14 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuildingRules = {
-		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-		"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-		"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"}}
+		{
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"}
+		}
 	},
 	GivesResource = "coal", CanHarvest = true,
 	Sounds = {

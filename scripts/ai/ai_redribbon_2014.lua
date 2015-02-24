@@ -375,7 +375,7 @@ end
 
 function AiNephrite_Flush_2013()
 	AiSet(AiBarracks(), 0)
-	AiSet(AiCityCenter(), 0)
+	AiSet(AiTownHall(), 0)
 	AiSet(AiFarm(), 1)
 	AiSet(AiSmithy(), 0)
 	AiSet(AiLumberMill(), 0)

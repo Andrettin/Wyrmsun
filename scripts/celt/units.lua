@@ -10,7 +10,7 @@
 --
 --      units.ccl - Defines the celt unit-types.
 --
---      (c) Copyright 2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2014 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by

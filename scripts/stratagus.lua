@@ -40,7 +40,7 @@ wyrmsun.Name = "Wyrmsun"
 wyrmsun.Version = "1.0.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL v2"
-wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andre Novellino Gouvea"
+wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
 
 -------------------------------------------------------------------------------
 --  Config-Part
@@ -91,6 +91,7 @@ Preference.ShowAttackRange = false
 Preference.ShowReactionRange = false
 Preference.AiExplores = true
 Preference.IconsShift = true
+Preference.MineNotifications = true
 
 Preference.ShowOrders = 2
 

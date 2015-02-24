@@ -171,8 +171,20 @@ MercenaryGroups = {
 
 LoadEvents("Earth")
 
+if (GrandStrategyYear >= -9500) then
+	-- Pleistocene-Holocene transition around 9500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 48.
+end
+
 if (GrandStrategyYear >= -9000) then
 	-- Maglemose culture arises in Zealand in 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+end
+
+if (GrandStrategyYear >= -7400) then
+	-- Formation of the English Channel around 7400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 48.
+end
+
+if (GrandStrategyYear >= -7000) then
+	-- Foundation of pre-pottery Jericho in 7000 BC (this information could be useful later if the map is extended); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 42.
 end
 
 if (GrandStrategyYear >= -6400) then
@@ -212,6 +224,10 @@ end
 
 if (GrandStrategyYear >= -3920) then
 	-- Cattle breeding practiced in Zealand in 3920 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+end
+
+if (GrandStrategyYear >= -3200) then
+	-- Newgrange megalithic tomb built in Ireland about 3200 BC (could be an event giving prestige); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 44.
 end
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
@@ -263,6 +279,10 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Corded Ware culture (neolithic) begins in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 end
 
+if (GrandStrategyYear >= -2700) then
+	-- Egyptian pyramids built between 2700 and 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 44.
+end
+
 if (GrandStrategyYear >= -2400) then
 	-- Corded Ware culture (neolithic) ends in Zealand in 2400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 end
@@ -271,6 +291,10 @@ if (GrandStrategyYear >= -2000) then
 	WorldMapProvinces.Crete.Owner = "Crete" -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
 	-- Somogyvar-Vinkovci culture existed in Hungary around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	-- early Wietenberg culture existed in Romania around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
+end
+
+if (GrandStrategyYear >= -1628) then
+	GrandStrategyEvents.TheEruptionOfThera = nil
 end
 
 if (GrandStrategyYear >= -1600) then
@@ -294,6 +318,7 @@ end
 
 if (GrandStrategyYear >= -1400) then
 	GrandStrategyEvents.TheSunChariot = nil -- http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
+	GrandStrategyEvents.TheWhiteHorse = nil -- the white horse at Uffington was made between 1400 and 600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 46.
 end
 
 if (GrandStrategyYear >= -1365) then
@@ -849,6 +874,10 @@ end
 
 if (GrandStrategyYear >= 1083) then
 	GrandStrategyEvents.SaemundPriestOfTheParishOfOdda = nil
+end
+
+if (GrandStrategyYear >= 1104) then
+	GrandStrategyEvents.TheEruptionOfHekla = nil
 end
 
 if (GrandStrategyYear >= 1133) then -- Saemund died in 1133

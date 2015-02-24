@@ -10,7 +10,7 @@
 --
 --      techtree.lua - Defines the menu for tech trees.
 --
---      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2013-2014 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -178,6 +178,12 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "town-hall") then
 					tech_icon_x = 5
 					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "stronghold") then
+					tech_icon_x = 5
+					tech_icon_y = 3
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("masonry", civilization))) then
+						tech_allowed = false
+					end
 				elseif (GetUnitTypeData(unitName, "Class") == "farm") then
 					tech_icon_x = 6
 					tech_icon_y = 2
@@ -238,7 +244,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-1") then
 					tech_icon_x = 7
 					tech_icon_y = 4
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("archer", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("guard-tower", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization))) then
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("archer", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-2") then

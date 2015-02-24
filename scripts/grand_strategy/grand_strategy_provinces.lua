@@ -10,7 +10,7 @@
 --
 --      grand_strategy_provinces.lua - Defines the grand strategy provinces.
 --
---      (c) Copyright 2015 by Andre Novellino Gouvêa
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1160,6 +1160,7 @@ function LoadProvinces(world)
 			SettlementLocation = {33, 15},
 			SettlementBuildings = {
 				unit_dwarven_town_hall = 2,
+				unit_dwarven_stronghold = 2, -- Shorbear Hold
 				unit_dwarven_barracks = 2, -- has capability to train warriors
 				unit_dwarven_smithy = 2 -- renowned skilled crafters
 			},

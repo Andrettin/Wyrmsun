@@ -4,7 +4,7 @@
 ############################################################
 ############################################################
 
-by Andre Novellino Gouvêa (Andrettin)
+by Andrettin
 
 
 
@@ -41,6 +41,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Teuton Town Hall (graphics by Jinn).
 - Added Celt Farm (graphics by Jinn).
 - Germanic farms now correctly drop food items when destroyed.
+- Added Dwarven Stronghold (graphics by Jinn).
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -79,9 +80,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added events for the development and spread of the Teuton, Goth and Norse cultures out of the Germanic one (if the Dane, Goth, or Swede Tribe is player-controlled, then it will develop Teuton culture instead of the Norse one, since the latter is not playable).
 - Added Atlantic Ocean water province to the Earth world map.
 - Certain provinces are now always generated adjacent to water in the random world map.
+- The Shorbear Hills now start with a stronghold.
 
 * Heroes
-- Added Durin (dwarf).
+- Added Durin (dwarf) (icon by Jinn).
 - Clicking on heroes no longer gives the "You have [...]" in the statusline.
 
 * Maps
@@ -90,6 +92,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Prague map.
 - Added Salzburg map.
 - Added Fjalar's and Galar's Hall map.
+- The Shorbear Clan now starts with a stronghold instead of a mead hall in the Shorbear Hills map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -101,6 +104,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "Game Concepts" section to the encyclopedia, to better explain the game's features.
 - Implemented numerous engine improvements by cybermind.
 - Walls are now much more resilient in dungeon maps.
+- The player now receives a message when a gold mine is nearing depletion or has been depleted (thanks to cybermind).
 
 * Quests
 - Added The Battle of Magetobria quest.

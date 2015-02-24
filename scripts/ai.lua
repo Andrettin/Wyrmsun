@@ -54,17 +54,30 @@ DefineAiHelper(
 	{"unit-equiv", "unit-germanic-carpenters-shop",
 	"unit-teuton-lumber-mill"},
 	{"unit-equiv", "unit-germanic-smithy",
-	"unit-teuton-smithy"}
+	"unit-teuton-smithy"},
+	{"unit-equiv", "unit-dwarven-town-hall",
+	"unit-dwarven-stronghold"}
 )
 
 --
---  City-center of the current civilization.
+--  Town hall of the current civilization.
 --
-function AiCityCenter()
+function AiTownHall()
 	if (GetCivilizationClassUnitType("town-hall", AiGetRace()) ~= nil) then
 		return GetCivilizationClassUnitType("town-hall", AiGetRace())
 	else
 		return GetCivilizationClassUnitType("town-hall", "dwarf")
+	end
+end
+
+--
+--  Stronghold of the current civilization.
+--
+function AiStronghold()
+	if (GetCivilizationClassUnitType("stronghold", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("stronghold", AiGetRace())
+	else
+		return GetCivilizationClassUnitType("stronghold", "dwarf")
 	end
 end
 

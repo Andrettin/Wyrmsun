@@ -10,7 +10,7 @@
 --
 --      upgrade.ccl - Define the dwarven dependencies and upgrades.
 --
---      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2013-2014 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -175,7 +175,8 @@ DefineModifier("upgrade-dwarven-ballista-bolt-2",
 DefineModifier("upgrade-dwarven-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
-	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
@@ -202,6 +203,10 @@ DefineDependency("upgrade-dwarven-ballista-bolt-1",
 
 DefineDependency("upgrade-dwarven-ballista-bolt-2",
 	{"upgrade-dwarven-ballista-bolt-1", "unit-dwarven-lumber-mill"}
+)
+
+DefineDependency("unit-dwarven-stronghold",
+	{"unit-dwarven-barracks", "upgrade-dwarven-masonry"}
 )
 
 DefineDependency("unit-dwarven-guard-tower",

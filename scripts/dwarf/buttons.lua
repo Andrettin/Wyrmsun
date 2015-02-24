@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the dwarven civilization.
 --
---      (c) Copyright 2013-2014 by Andre Novellino Gouvêa
+--      (c) Copyright 2013-2014 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -275,7 +275,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
   Action = "train-unit", Value = "unit-dwarven-miner",
   Key = "m", Hint = _("Train ~!Miner"),
-  ForUnit = {"unit-dwarven-town-hall"} } )
+  ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
   Action = "train-unit", Value = "unit-dwarven-axefighter",
@@ -493,8 +493,15 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-thane",
   Key = "u", Hint = _("~!Upgrade to Thane"),
   ForUnit = {"unit-hero-baglur"} } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
+  Action = "upgrade-to", Value = "unit-dwarven-stronghold",
+  Allowed = "check-upgrade-to",
+  Key = "s", Hint = _("Upgrade to ~!Stronghold"),
+  ForUnit = {"unit-dwarven-town-hall"} } )
+  
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
   Action = "upgrade-to", Value = "unit-dwarven-guard-tower",
+  Allowed = "check-upgrade-to",
   Key = "g", Hint = _("Upgrade to ~!Guard Tower"),
   ForUnit = {"unit-dwarven-sentry-tower"} } )
 
