@@ -248,6 +248,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Gnomish caravans can now carry two units.
 - Gryphon riders now have a gray-haired variations (graphics by b_o).
 - Added Long Swordsman as a static NPC (doesn't attack and is indestructible), which sometimes appears in random dungeons giving the player extra experience (unit graphics by TaShadan and icon by Jinn).
+- Damage caused by units now has greater random variation.
+- Skutans and Goblin Archers now have greater range, but lesser damage.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

@@ -74,6 +74,18 @@ Units = {
 	"unit-hero-greebo"
 }
 
+if (OldDefineUnitType == nil) then
+  OldDefineUnitType = DefineUnitType
+end
+
+function DefineUnitType(unit_type, data)
+	if (data.Parent ~= nil) then
+		OldDefineUnitType(unit_type, {Parent = data.Parent})
+		data.Parent = nil
+	end
+	OldDefineUnitType(unit_type, data)
+end
+
 -- Load the animations for the units.
 Load("scripts/anim.lua")
 
@@ -106,7 +118,6 @@ DefineUnitType("unit-nothing-24", { Name = "Nothing 24",
 	MaxAttackRange = 1,
 	Priority = 40,
 	Type = "naval",
-	SeaUnit = true,
 	SelectableByRectangle = true,
 	Sounds = {} } )
 
@@ -122,7 +133,6 @@ DefineUnitType("unit-nothing-25", { Name = "Nothing 25",
 	MaxAttackRange = 1,
 	Priority = 40,
 	Type = "naval",
-	SeaUnit = true,
 	SelectableByRectangle = true,
 	Sounds = {} } )
 
@@ -171,7 +181,6 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	RightMouseAction = "move",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	RandomMovementProbability = 5,
 	organic = true,
 	Coward = true,
@@ -219,7 +228,6 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	RightMouseAction = "move",
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
-	AirUnit = true,
 	RandomMovementProbability = 1,
 	RandomMovementDistance = 12,
 	organic = true,
@@ -274,7 +282,6 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	RandomMovementProbability = 1,
 	Fauna = true,
@@ -351,7 +358,6 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
-	LandUnit = true,
 	RandomMovementProbability = 1,
 	NumDirections = 1,
 	organic = true,
@@ -409,7 +415,6 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
-	AirUnit = true,
 	RandomMovementProbability = 100,
 	RandomMovementDistance = 12,
 	organic = true,
@@ -460,7 +465,6 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
-	AirUnit = true,
 	RandomMovementProbability = 100,
 	RandomMovementDistance = 8,
 	organic = true,
@@ -1736,7 +1740,6 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	Type = "fly",
 	IsNotSelectable = true,
 	RightMouseAction = "move",
-	AirUnit = true,
 	RandomMovementProbability = 100,
 	NumDirections = 1,
 	NonSolid = true, 
@@ -1896,7 +1899,6 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	RightMouseAction = "harvest",
 	CanAttack = true, RepairRange = 1,
 	CanTargetLand = true,
-	LandUnit = true,
 	Coward = true,
 	organic = true,
 	SelectableByRectangle = true
@@ -1919,7 +1921,6 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true
 } )
@@ -1935,7 +1936,6 @@ DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true
 } )
@@ -1950,7 +1950,6 @@ DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true
 } )
@@ -1964,8 +1963,8 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {33, 33},
 	SightRange = 5, ComputerReactionRange = 7, PersonReactionRange = 5,
-	BasicDamage = 3, PiercingDamage = 6, Missile = "missile-arrow",
-	MaxAttackRange = 4,
+	BasicDamage = 3, PiercingDamage = 5, Missile = "missile-arrow",
+	MaxAttackRange = 5,
 	Priority = 55,
 	Points = 60,
 	Demand = 1,
@@ -1973,7 +1972,6 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
 	AttackFromTransporter = true
@@ -2281,7 +2279,6 @@ DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
 	Sounds = {
@@ -2315,7 +2312,6 @@ DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
 	Sounds = {
@@ -2346,7 +2342,6 @@ DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
-	LandUnit = true,
 	SelectableByRectangle = true,
 	Sounds = {
 --		"selected", "basic-dwarf-voices-selected-group",
@@ -2376,7 +2371,6 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 --	RightMouseAction = "attack",
 	CanAttack = false, -- since it doesn't have attack animations as of now
 --	CanTargetLand = true,
-	LandUnit = true,
 	organic = true,
 	SelectableByRectangle = true,
 	Indestructible = 1, -- because it doesn't have death animations
