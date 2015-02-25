@@ -34,32 +34,10 @@
 --
 
 DefineUnitType("unit-celt-farm", { Name = _("Farm"),
-	Class = "farm",
+	Parent = "unit-template-farm",
 	Civilization = "celt",
 	Description = _("Farms are essential for supporting a settlement's population."),
 --	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
 	Image = {"file", "celt/buildings/farm.png", "size", {64, 64}},
 	Animations = "animations-farm", Icon = "icon-celt-farm",
-	Costs = {"time", 100, "gold", 500, "lumber", 250},
-	RepairHp = 4,
-	RepairCosts = {"gold", 1, "lumber", 1},
-	Construction = "construction-land-simple",
-	Speed = 0,
-	HitPoints = 334, -- 400 with masonry
-	DrawLevel = 20,
-	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 1,
-	Armor = 15, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
-	Priority = 20, AnnoyComputerFactor = 45,
-	Points = 100,
-	Supply = 4,
-	Corpse = "unit-destroyed-2x2-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	Sounds = {
-		"selected", "click",
---		"acknowledge", "farm-acknowledge",
---		"ready", "farm-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"} } )
+} )

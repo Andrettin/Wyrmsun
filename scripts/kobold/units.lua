@@ -34,34 +34,20 @@
 --
 
 DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
-	Class = "infantry",
+	Parent = "unit-template-infantry",
 	Civilization = "kobold",
 	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},
 	Description = _("Stealthy and fierce, kobold footpads are the warriors of their race. They roam the tunnels of Nidavellir, abhorring to fight in the open. They call their swords \"fangs\" in homage to the power of a wyrm's bite."),
 	Animations = "animations-goblin-spearman", Icon = "icon-kobold-footpad",
-	Costs = {"time", 60, "gold", 600},
-	Speed = 10,
 	HitPoints = 50,
-	DrawLevel = 40,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 4, ComputerReactionRange = 6, PersonReactionRange = 4,
-	Armor = 2, BasicDamage = 3, PiercingDamage = 6, Missile = "missile-none",
-	MaxAttackRange = 1,
-	Priority = 60,
-	BasePoints = 50,
-	Demand = 1,
+	BasicDamage = 3, PiercingDamage = 6,
 	Corpse = "unit-kobold-dead-body",
-	Type = "land",
-	RightMouseAction = "attack",
-	CanAttack = true,
-	CanTargetLand = true,
-	LandUnit = true,
-	organic = true,
-	SelectableByRectangle = true,
 	Sounds = {
 		"selected", "click",
 --		"selected", "basic-goblin-voices-selected-group",
 --		"acknowledge", "basic-goblin-voices-acknowledge",
 --		"ready", "goblin-impaler-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-kobold-voices-dead"} } )
+		"dead", "basic-kobold-voices-dead"
+	}
+} )

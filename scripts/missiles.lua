@@ -43,6 +43,11 @@ DefineMissileType("missile-throwing-axe",
   ImpactSound = "throwing-axe-hit",
   DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0 } )
 
+DefineMissileType("missile-javelin",
+  { File = "missiles/javelin.png", Size = {32, 32}, Frames = 5, NumDirections = 9,
+  ImpactSound = "bow-hit",
+  DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0 } )
+
 DefineMissileType("missile-dwarven-ballista-bolt",
   { File = "missiles/dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
   DrawLevel = 50, ImpactSound = "explosion",
