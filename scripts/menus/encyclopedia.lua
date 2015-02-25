@@ -59,31 +59,34 @@ function RunEncyclopediaMenu()
 	
 	menu:addLabel(_("~<Encyclopedia~>"), offx + 320, offy + 104 + 36*-2)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208, offy + 104 + 36*-1,
+	menu:addFullButton(_("~!Civilizations"), "c", offx + 208, offy + 104 + 36*-1,
+		function() RunEncyclopediaCivilizationsMenu() end)
+
+	menu:addFullButton(_("~!Units"), "u", offx + 208, offy + 104 + 36*0,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Buildings"), "b", offx + 208, offy + 104 + 36*0,
+	menu:addFullButton(_("~!Buildings"), "b", offx + 208, offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("buildings") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208, offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("technologies") end)
 
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208, offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208, offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
---	menu:addFullButton("~!Factions", "f", offx + 208, offy + 104 + 36*3,
+--	menu:addFullButton("~!Factions", "f", offx + 208, offy + 104 + 36*4,
 --		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*5,
 		function() RunEncyclopediaWorldsMenu() end)
 
-	menu:addFullButton(_("Game ~!Concepts"), "c", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208, offy + 104 + 36*6,
 		function() RunEncyclopediaGameConceptsMenu() end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*6,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*7,
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -799,7 +802,7 @@ function RunEncyclopediaGameConceptsMenu()
 	
 	local height_offset = 2
 	if (Video.Height >= 600) then
-		height_offset = 2 -- change this to 0 if the number of game concepts entries becomes too large
+		height_offset = 2 -- change this to 0 if the number of game concept entries becomes too large
 	else
 		height_offset = 2
 	end
@@ -858,6 +861,87 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	local description = ""
 	if (GameConcepts[game_concept_key].Description ~= "") then
 		description = "Description: " .. GameConcepts[game_concept_key].Description
+	end
+	l:setCaption(description)
+			
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() encyclopedia_entry_menu:stop(); end)
+	encyclopedia_entry_menu:run()
+end
+
+function RunEncyclopediaCivilizationsMenu()
+
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 2 -- change this to 0 if the number of civilization entries becomes too large
+	else
+		height_offset = 2
+	end
+	menu:addLabel("~<Encyclopedia: Civilizations~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+
+	local civilization_x = 0
+	if (GetTableSize(CivilizationsEncyclopedia) > 20) then
+		civilization_x = -2
+	elseif (GetTableSize(CivilizationsEncyclopedia) > 10) then
+		civilization_x = -1
+	end
+	local civilization_y = -3
+
+	for civilization_key, civilization_value in pairsByKeys(CivilizationsEncyclopedia) do
+		local civilization_hotkey = ""		
+		if (string.find(_(CivilizationsEncyclopedia[civilization_key].Name), "~!") ~= nil) then
+			civilization_hotkey = string.sub(string.match(_(CivilizationsEncyclopedia[civilization_key].Name), "~!%a"), 3)
+			civilization_hotkey = string.lower(civilization_hotkey)
+		end
+		menu:addFullButton(_(CivilizationsEncyclopedia[civilization_key].Name), civilization_hotkey, offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
+			function() OpenEncyclopediaCivilizationEntry(civilization_key); end)
+
+		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < 600)) then
+			civilization_x = civilization_x + 2
+			civilization_y = -3
+		else
+			civilization_y = civilization_y + 1
+		end
+	end
+
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+end
+
+function OpenEncyclopediaCivilizationEntry(civilization_key)
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local encyclopedia_entry_menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	encyclopedia_entry_menu:addLabel("~<" .. CivilizationsEncyclopedia[civilization_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local description = ""
+	if (CivilizationsEncyclopedia[civilization_key].Description ~= "") then
+		description = "Description: " .. CivilizationsEncyclopedia[civilization_key].Description
 	end
 	l:setCaption(description)
 			
