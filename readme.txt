@@ -121,6 +121,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Skutans and Goblin Archers now have greater range, but lesser damage.
 - Units now can miss attacks, depending on their accuracy relative to their target's evasion. Buildings have 0 evasion.
 - Gnomish, goblin and kobold units now have greater accuracy and evasion, and they no longer have a greater proportion of piercing damage than others.
+- Added "Reckless" (-1 Evasion) and "Clumsy" (-1 Accuracy, -1 Evasion) traits, and changed other traits to give modifiers to accuracy/evasion where appropriate.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

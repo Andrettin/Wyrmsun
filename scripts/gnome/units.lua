@@ -73,7 +73,9 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "basic-dwarf-voices-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -104,7 +106,9 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "basic-dwarf-voices-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -136,7 +140,9 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "basic-dwarf-voices-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
 	}
 } )
 

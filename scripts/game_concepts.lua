@@ -32,6 +32,10 @@ GameConcepts = {
 		Name = _("~!Abilities"),
 		Description = _("Many units can learn new abilities when leveling up. These provide them with some form of benefit, such as increasing damage.")
 	},
+	AccuracyEvasion = {
+		Name = _("Accuracy/E~!vasion"),
+		Description = _("A unit's chance to hit another unit is determined by its accuracy relative to the target's evasion.")
+	},
 	Backstab = {
 		Name = _("~!Backstab"),
 		Description = _("Thief units will cause extra damage when attacking an organic unit from the back.")

@@ -67,7 +67,9 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 --		"acknowledge", "dwarven-miner-acknowledge",
 --		"ready", "dwarven-miner-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-human-voices-dead"
+		"dead", "basic-human-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -102,7 +104,9 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 --		"acknowledge", "dwarven-miner-acknowledge",
 --		"ready", "dwarven-miner-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-human-voices-dead"
+		"dead", "basic-human-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -176,7 +180,10 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-human-voices-dead"}
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),

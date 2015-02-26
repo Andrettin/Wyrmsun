@@ -67,7 +67,11 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 		"acknowledge", "dwarven-miner-acknowledge",
 		"ready", "dwarven-miner-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"} } )
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
 
 DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	Class = "militia",
@@ -99,7 +103,11 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 		"acknowledge", "dwarven-miner-acknowledge",
 		"ready", "dwarven-miner-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"} } )
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "axe-attack",
+		"miss", "attack-miss"
+	}
+} )
 
 DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Parent = "unit-template-infantry", -- parent has to be defined first, because when it is processed, the parent's data overwrites the unit type's
@@ -148,7 +156,9 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		"acknowledge", "basic-dwarf-voices-acknowledge",
 		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "axe-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -246,7 +256,9 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 		"acknowledge", "basic-dwarf-voices-acknowledge",
 		"ready", "dwarven-steelclad-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "axe-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -301,7 +313,9 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Thane"),
 		"acknowledge", "basic-dwarf-voices-acknowledge",
 		"ready", "dwarven-steelclad-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "axe-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -436,7 +450,8 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 		"ready", "dwarven-gryphon-rider-ready",
 --		"help", "critter-help",
 		"dead", "gryphon-dead"
-} } )
+	}
+} )
 
 DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Parent = "unit-template-town-hall",

@@ -250,6 +250,9 @@ MakeSound("spear-attack",
 	{"missiles/spear-1.wav",
 	"missiles/spear-2.wav"}
 )
+MakeSound("spear-miss",
+	"missiles/spear-miss.wav"
+)
 MakeSound("squishy-hit",
 	"missiles/squishy_hit.wav"
 )

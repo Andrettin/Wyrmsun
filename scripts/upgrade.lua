@@ -205,6 +205,7 @@ DefineModifier("upgrade-sword-mastery",
 
 -- traits
 local traits = {
+	{"upgrade-clumsy", _("Clumsy")},
 	{"upgrade-dextrous", _("Dextrous")},
 	{"upgrade-keen", _("Keen")},
 	{"upgrade-limping", _("Limping")},
@@ -212,6 +213,7 @@ local traits = {
 	{"upgrade-near-sighted", _("Near-Sighted")},
 	{"upgrade-old", _("Old")},
 	{"upgrade-quick", _("Quick")},
+	{"upgrade-reckless", _("Reckless")},
 	{"upgrade-resilient", _("Resilient")},
 	{"upgrade-slow", _("Slow")},
 	{"upgrade-strong", _("Strong")},
@@ -235,11 +237,18 @@ for i = 1,table.getn(traits) do
 	DefineAllow(traits[i][1], "AAAAAAAAAAAAAAAA")
 end
 
+DefineModifier("upgrade-clumsy",
+	{"Accuracy", -1},
+	{"Evasion", -1}
+)
+
 DefineModifier("upgrade-dextrous",
-	{"PiercingDamage", 1}
+	{"Accuracy", 1},
+	{"Evasion", 1}
 )
 
 DefineModifier("upgrade-keen",
+	{"Accuracy", 1},
 	{"SightRange", 1}
 )
 
@@ -252,6 +261,7 @@ DefineModifier("upgrade-mighty",
 )
 
 DefineModifier("upgrade-near-sighted",
+	{"Accuracy", -1},
 	{"SightRange", -1}
 )
 
@@ -262,6 +272,10 @@ DefineModifier("upgrade-old",
 
 DefineModifier("upgrade-quick",
 	{"Speed", 1}
+)
+
+DefineModifier("upgrade-reckless",
+	{"Evasion", -1}
 )
 
 DefineModifier("upgrade-resilient",

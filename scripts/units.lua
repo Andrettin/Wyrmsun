@@ -203,7 +203,10 @@ DefineUnitType("unit-rat", { Name = "Rat",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
 --		"help", "critter-help",
-		"dead", "rat-dead" }
+		"dead", "rat-dead",
+		"hit", "bite-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
@@ -259,7 +262,10 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 --		"acknowledge", "critter-acknowledge",
 		"ready", "gryphon-ready",
 --		"help", "critter-help",
-		"dead", "gryphon-dead" }
+		"dead", "gryphon-dead",
+		"hit", "claw-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
@@ -339,7 +345,10 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
 --		"help", "critter-help",
-		"dead", "drake-dead" }
+		"dead", "drake-dead",
+		"hit", "bite-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-slime", { Name = _("Slime"),
@@ -448,7 +457,9 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 		"acknowledge", "bird-selected",
 		"ready", "bird-selected",
 --		"help", "critter-help",
-		"dead", "bird-dead"
+		"dead", "bird-dead",
+		"hit", "claw-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -481,7 +492,10 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 		"acknowledge", "bat-selected",
 		"ready", "bat-selected",
 --		"help", "critter-help",
-		"dead", "rat-dead" }
+		"dead", "rat-dead",
+		"hit", "bite-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 --UnitTypeFiles["unit-gold-mine"] = {
@@ -2333,7 +2347,9 @@ DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
---		"dead", "basic-dwarf-voices-dead"
+--		"dead", "basic-dwarf-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -2383,7 +2399,9 @@ DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
---		"dead", "basic-dwarf-voices-dead"
+--		"dead", "basic-dwarf-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 } )
 

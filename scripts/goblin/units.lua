@@ -69,7 +69,9 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 		"acknowledge", "basic-goblin-voices-acknowledge",
 		"ready", "goblin-worker-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"
+		"dead", "basic-goblin-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
 	}
 } )
 
@@ -88,7 +90,11 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 		"acknowledge", "basic-goblin-voices-acknowledge",
 --		"ready", "goblin-worker-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"} } )
+		"dead", "basic-goblin-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
+} )
 
 DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Parent = "unit-template-infantry",
@@ -105,7 +111,9 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 		"acknowledge", "basic-goblin-voices-acknowledge",
 		"ready", "goblin-impaler-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"
+		"dead", "basic-goblin-voices-dead",
+		"hit", "spear-attack",
+		"miss", "spear-miss"
 	}
 } )
 
@@ -182,7 +190,8 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 		"acknowledge", "glider-flying",
 		"ready", "goblin-glider-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"}
+		"dead", "basic-goblin-voices-dead"
+	}
 } )
  
 
@@ -257,7 +266,11 @@ DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
 		"acknowledge", "basic-goblin-voices-acknowledge",
 		"ready", "goblin-impaler-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"} } )
+		"dead", "basic-goblin-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
 
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
 	Civilization = "goblin",

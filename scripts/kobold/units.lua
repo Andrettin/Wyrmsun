@@ -49,6 +49,8 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 --		"acknowledge", "basic-goblin-voices-acknowledge",
 --		"ready", "goblin-impaler-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-kobold-voices-dead"
+		"dead", "basic-kobold-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
 	}
 } )

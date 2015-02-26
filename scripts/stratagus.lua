@@ -988,14 +988,12 @@ function GetUnitTypeTraits(unit_type)
 	local traits = {}
 	if (string.find(unit_type, "hero") == nil) then
 		if (GetUnitTypeData(unit_type, "AttackRange") > 0) then
-			if (GetUnitTypeData(unit_type, "AttackRange") == 1) then
-				table.insert(traits, "upgrade-mighty")
-				table.insert(traits, "upgrade-strong")
-			end
-			if (GetUnitTypeData(unit_type, "AttackRange") > 1 or unit_type == "unit-gnomish-recruit") then -- ranged units and ones using thrusting swords can get the dextrous trait
-				table.insert(traits, "upgrade-dextrous")
-			end
+			table.insert(traits, "upgrade-mighty")
+			table.insert(traits, "upgrade-strong")
 			table.insert(traits, "upgrade-weak")
+			table.insert(traits, "upgrade-dextrous")
+			table.insert(traits, "upgrade-clumsy")
+			table.insert(traits, "upgrade-reckless")
 		end
 		if ((GetUnitTypeData(unit_type, "SightRange") - 1) >= GetUnitTypeData(unit_type, "AttackRange")) then -- don't allow near-sighted trait for units whose vision would become smaller than their range with the trait
 			table.insert(traits, "upgrade-near-sighted")
@@ -1013,7 +1011,7 @@ function GetUnitTypeTraits(unit_type)
 			-- insert more traits here later
 		end
 	elseif (unit_type == "unit-hero-durin" or unit_type == "unit-hero-durin-thane") then
-		table.insert(traits, "upgrade-strong")
+		table.insert(traits, "upgrade-dextrous")
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
 		table.insert(traits, "upgrade-keen") -- not the best fit for this character, should be replaced with something else perhaps?
 	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then
