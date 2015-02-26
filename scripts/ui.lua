@@ -76,13 +76,10 @@ DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
 local info_panel_x = 0
 local info_panel_y = 160
 
---[[
 local min_damage = Div(
 	ActiveUnitVar("PiercingDamage"),
 	2
 )
---]]
-local min_damage = 1
 local max_damage = Add(
 	ActiveUnitVar("BasicDamage"),
 	ActiveUnitVar("PiercingDamage")
@@ -197,6 +194,7 @@ DefinePanelContents(
   DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, Build = "false"},
   Contents = {
+	--[[
 	{ Pos = {16, 102}, Condition = {PiercingDamage = "only"},
 		More = {"Text", {Text = Concat(
 			"Damage: ",
@@ -205,7 +203,15 @@ DefinePanelContents(
 			String(max_damage)
 		)}}
 	},
-
+	--]]
+	{ Pos = {16, 102}, Condition = {PiercingDamage = "only"},
+		More = {"Text", {Text = Concat(
+			"Damage: ",
+			String(min_damage),
+			"-",
+			String(max_damage)
+		)}}
+	},
 --	{ Pos = {16, 102}, Condition = {AttackRange = "only", SightRange = "false"},
 --		More = {"Text", {
 --					Text = "Range: ", Variable = "AttackRange" , Stat = true}}
@@ -283,14 +289,47 @@ DefinePanelContents(
 		More = {"Text", {Text = Concat("Trait: ", UnitTrait("Active")
 								)}}
 	},
+	--[[
 	{ Pos = {16, 86}, Condition = {},
 		More = {"Text", {Text = Concat("Armor: ", String(ActiveUnitVar("Armor"))
 								)}}
 	},
+	--]]
+	{ Pos = {16, 86}, Condition = {},
+		More = {"Text", {Text = Concat(
+			"Armor: ",
+			String(ActiveUnitVar("Armor")),
+			" Ev.: ",
+			String(ActiveUnitVar("Evasion"))
+		)}}
+	},
+	--[[
 	{ Pos = {16, 133}, Condition = {Speed = "only"},
 		More = {"FormattedText", {
 			Variable = "Speed", Format = "Speed: %d"}}
-	} } })
+	}
+	--]]
+	{ Pos = {16, 133}, Condition = {Speed = "only", Accuracy = "false"},
+		More = {"Text", {Text = Concat(
+			"Speed: ",
+			String(ActiveUnitVar("Speed"))
+		)}}
+	},
+	{ Pos = {16, 133}, Condition = {Accuracy = "only", Speed = "false", Building = "false"},
+		More = {"Text", {Text = Concat(
+			"Accuracy: ",
+			String(ActiveUnitVar("Accuracy"))
+		)}}
+	},
+	{ Pos = {16, 133}, Condition = {Accuracy = "only", Speed = "only"},
+		More = {"Text", {Text = Concat(
+			"Acc.: ",
+			String(ActiveUnitVar("Accuracy")),
+			" Speed: ",
+			String(ActiveUnitVar("Speed"))
+		)}}
+	}
+  } })
 
 Load("scripts/celt/ui.lua")
 Load("scripts/dwarf/ui.lua")

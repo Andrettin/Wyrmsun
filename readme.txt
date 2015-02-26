@@ -118,11 +118,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Gnomish Caravan's graphics have been updated (by b_o).
 - The Goblin Thief's attack now sometimes displays a slashing animation instead of a thrusting one (graphics by b_o).
 - Fixed two bugs which could cause desync in multiplayer due to heroes.
-- Damage caused by units now has greater random variation.
 - Skutans and Goblin Archers now have greater range, but lesser damage.
+- Units now can miss attacks, depending on their accuracy relative to their target's evasion. Buildings have 0 evasion.
+- Gnomish, goblin and kobold units now have greater accuracy and evasion, and they no longer have a greater proportion of piercing damage than others.
 
 * Upgrades
-- Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, goblins and teutons (graphics by Leo).
+- Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
 - Added Spatha upgrade for the Teuton civilization (graphics by Leo).
 
 -----------------------------------------------------------------------
