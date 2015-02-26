@@ -340,6 +340,17 @@ if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Sour
 	Factions.GothTribe.Technologies.upgrade_germanic_broad_sword = 2
 end
 
+if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+	WorldMapProvinces.Austria.Owner = "Norici Tribe"
+	WorldMapProvinces.Austria.Civilization = "celt"
+	WorldMapProvinces.Austria.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Bavaria.Owner = "Norici Tribe"
+	WorldMapProvinces.Bavaria.Civilization = "celt"
+	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
+end
+
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	WorldMapProvinces.Attica.Owner = "Athens"
 	WorldMapProvinces.Peloponnese.Owner = "Sparta"
@@ -476,6 +487,7 @@ end
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul conquered in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.NorthItaly.Owner = "Rome"
 	WorldMapProvinces.NorthItaly.SettlementBuildings.unit_teuton_town_hall = 2
+	WorldMapProvinces.NorthItaly.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= -146) then -- Attica, Macedonia and the Peloponnese acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -600,6 +612,7 @@ end
 
 if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Hungary.Owner = "Rome"
+	WorldMapProvinces.Hungary.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= 28) then -- estimated date
@@ -778,6 +791,7 @@ end
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.Bavaria.Owner = "Bavarian Tribe"
 	AcquireFactionTechnologies(Factions.BavarianTribe, Factions.MarcomanniTribe)
+	WorldMapProvinces.Bavaria.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.Owner = "Frisian Tribe"
 	AcquireFactionTechnologies(Factions.FrisianTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

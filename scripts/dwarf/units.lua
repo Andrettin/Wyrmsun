@@ -444,10 +444,10 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Animations = "animations-building", Icon = "icon-dwarven-town-hall"
 } )
 
-DefineUnitType("unit-dwarven-stronghold", { Name = _("Stronghold"),
+DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Class = "stronghold",
 	Civilization = "dwarf",
-	Description = _("A dwarven settlement that has reached a certain status will often oversee the construction of a stronghold, enhancing its defensive capabilities."),
+	Description = _("A dwarven settlement that has reached a certain status will often oversee the construction of a bastion, enhancing its defensive capabilities."),
 	Image = {"file", "dwarf/buildings/stronghold.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-dwarven-stronghold",
 --	Costs = {"time", 200, "gold", 2000, "lumber", 1000, "oil", 200},

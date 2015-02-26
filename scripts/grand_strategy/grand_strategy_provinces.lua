@@ -497,6 +497,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
 			},
 			SettlementTerrain = "Plns"
 		},
@@ -645,6 +646,7 @@ function LoadProvinces(world)
 			},
 			Map = "maps/earth/north-italy.smp",
 			Units = {
+				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
 			},
 			SettlementTerrain = "Plns",
 			Coastal = true

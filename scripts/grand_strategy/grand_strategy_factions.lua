@@ -49,6 +49,10 @@ function LoadFactions(world)
 			Name = "Menapii Tribe",
 			Civilization = "celt"
 		},
+		NoriciTribe = {
+			Name = "Norici Tribe",
+			Civilization = "celt"
+		},
 		PictTribe = {
 			Name = "Pict Tribe",
 			Civilization = "celt"

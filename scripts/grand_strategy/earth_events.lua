@@ -51,21 +51,25 @@ local EarthEvents = {
 				WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
 				WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
 				WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
-				WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 8
-				WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 8
-				WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 8
-				WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 8
-				WorldMapProvinces.France.Units.unit_germanic_warrior = 8
-				WorldMapProvinces.Latium.Units.unit_germanic_warrior = 8
+				WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Austria.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.France.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Latium.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 4 -- make Bavaria easier to be conquered by the neighboring Celtic tribes
 				AcquireProvince(WorldMapProvinces.Don, "")
 				WorldMapProvinces.Don.Civilization = ""
 				AcquireFactionTechnologies(Factions.AeduiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.ArverniTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.BoiiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.MenapiiTribe, EventFaction)
+				AcquireFactionTechnologies(Factions.NoriciTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.SequaniTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.Rome, EventFaction)
 				AcquireProvince(WorldMapProvinces.Aquitaine, "Arverni Tribe")
+				AcquireProvince(WorldMapProvinces.Austria, "Norici Tribe")
 				AcquireProvince(WorldMapProvinces.Belgium, "Menapii Tribe")
 				AcquireProvince(WorldMapProvinces.Bohemia, "Boii Tribe")
 				AcquireProvince(WorldMapProvinces.Burgundy, "Sequani Tribe")

@@ -496,7 +496,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-thane",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
   Action = "upgrade-to", Value = "unit-dwarven-stronghold",
   Allowed = "check-upgrade-to",
-  Key = "s", Hint = _("Upgrade to ~!Stronghold"),
+  Key = "b", Hint = _("Upgrade to ~!Bastion"),
   ForUnit = {"unit-dwarven-town-hall"} } )
   
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",

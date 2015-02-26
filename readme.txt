@@ -41,7 +41,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Teuton Town Hall (graphics by Jinn).
 - Added Celt Farm (graphics by Jinn).
 - Germanic farms now correctly drop food items when destroyed.
-- Added Dwarven Stronghold (graphics by Jinn).
+- Added Dwarven Bastion (graphics by Jinn).
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -118,6 +118,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Gnomish Caravan's graphics have been updated (by b_o).
 - The Goblin Thief's attack now sometimes displays a slashing animation instead of a thrusting one (graphics by b_o).
 - Fixed two bugs which could cause desync in multiplayer due to heroes.
+- Damage caused by units now has greater random variation.
+- Skutans and Goblin Archers now have greater range, but lesser damage.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the dwarves, goblins and teutons (graphics by Leo).
@@ -248,8 +250,6 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Gnomish caravans can now carry two units.
 - Gryphon riders now have a gray-haired variations (graphics by b_o).
 - Added Long Swordsman as a static NPC (doesn't attack and is indestructible), which sometimes appears in random dungeons giving the player extra experience (unit graphics by TaShadan and icon by Jinn).
-- Damage caused by units now has greater random variation.
-- Skutans and Goblin Archers now have greater range, but lesser damage.
 
 * Upgrades
 - Added germanic bronze shield upgrade (graphics by Leo).

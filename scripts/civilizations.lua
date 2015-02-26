@@ -216,6 +216,12 @@ DefineCivilizationFactions("celt",
 		"secondary_color", "orange"
 	},
 	"faction", {
+		"name", "Norici Tribe",
+		"type", "tribe",
+		"color", "white", -- another color, perhaps?
+		"secondary_color", "white"
+	},
+	"faction", {
 		"name", "Pict Tribe",
 		"type", "tribe",
 		"color", "cyan",
