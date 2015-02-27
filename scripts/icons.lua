@@ -124,6 +124,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-germanic-archer-blond-hair",
+	Size = {46, 38},
+	File = "germanic/icons/archer_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-germanic-archer-gray-hair",
+	Size = {46, 38},
+	File = "germanic/icons/archer_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-germanic-town-hall",
 	Size = {46, 38},
 	File = "germanic/icons/town_hall.png"

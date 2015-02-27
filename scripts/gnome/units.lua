@@ -62,10 +62,10 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-worker-gray-hair"
-	--		"file", "gnome/units/gnomish_worker.png"
-	--		"gold-file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
-	--		"lumber-file-when-loaded", "gnome/units/gnomish_worker_with_lumber.png"
+			"icon", "icon-gnomish-worker-gray-hair",
+			"file", "gnome/units/gnomish_worker_gray_hair.png",
+			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_gray_hair.png"
 		}
 	},
 	Sounds = {

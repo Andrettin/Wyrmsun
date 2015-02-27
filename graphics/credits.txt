@@ -54,6 +54,8 @@ b_o:
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
+/graphics/germanic/icons/archer_blond_hair.png (modified from the Skutan icon made by Leo)
+/graphics/germanic/icons/archer_gray_hair.png (modified from the Skutan icon made by Leo)
 /graphics/germanic/units/archer.png
 /graphics/germanic/units/archer_blond_hair.png
 /graphics/germanic/units/archer_gray_hair.png
@@ -72,8 +74,11 @@ b_o:
 /graphics/gnome/units/gnomish_recruit.png
 /graphics/gnome/units/gnomish_recruit_gray_hair.png
 /graphics/gnome/units/gnomish_worker.png
+/graphics/gnome/units/gnomish_worker_gray_hair.png
 /graphics/gnome/units/gnomish_worker_with_gold.png
+/graphics/gnome/units/gnomish_worker_with_gold_gray_hair.png
 /graphics/gnome/units/gnomish_worker_with_lumber.png
+/graphics/gnome/units/gnomish_worker_with_lumber_gray_hair.png
 /graphics/goblin/decorations/goblin_banner.png
 /graphics/goblin/icons/greebo.png (later modified by Leo)
 /graphics/goblin/icons/spear_1.png (modified from the icon made by the Battle for Wesnoth team, later modified by Jinn)
@@ -86,8 +91,11 @@ b_o:
 /graphics/goblin/units/goblin_thief.png
 /graphics/goblin/units/goblin_war_machine.png
 /graphics/goblin/units/goblin_worker.png
+/graphics/goblin/units/goblin_worker_spiky_hair.png
 /graphics/goblin/units/goblin_worker_with_gold.png
+/graphics/goblin/units/goblin_worker_with_gold_spiky_hair.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
+/graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png
 /graphics/missiles/arrow.png
 /graphics/missiles/axe_twirl.png
 /graphics/missiles/catapult_flaming_rock.png

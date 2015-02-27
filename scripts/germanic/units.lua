@@ -206,11 +206,13 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		{
 			"variation-id", "gray-hair",
 			"file", "germanic/units/archer_gray_hair.png",
+			"icon", "icon-germanic-archer-gray-hair",
 			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "germanic/units/archer_blond_hair.png",
+			"icon", "icon-germanic-archer-blond-hair",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},

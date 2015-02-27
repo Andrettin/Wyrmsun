@@ -61,7 +61,10 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 			"variation-id", "bald"
 		},
 		{
-			"variation-id", "spiky-hair"
+			"variation-id", "spiky-hair",
+			"file", "goblin/units/goblin_worker_spiky_hair.png",
+			"file-when-loaded", "gold", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "lumber", "goblin/units/goblin_worker_with_lumber_spiky_hair.png"
 		}
 	},
 	Sounds = {
