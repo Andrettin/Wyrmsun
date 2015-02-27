@@ -81,6 +81,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Atlantic Ocean water province to the Earth world map.
 - Certain provinces are now always generated adjacent to water in the random world map.
 - The Shorbear Hills now start with a stronghold.
+- Fixed a bug which caused units to not be saved correctly if the player quit during a grand strategy battle.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).

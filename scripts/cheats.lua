@@ -109,44 +109,9 @@ function HandleCheats(str)
     end
 
   elseif (str == "hold off the goblin hordes") then
-	if (GrandStrategy and GrandStrategyEventMap == false) then
-		-- set the new unit quantity to the surviving units of the victorious side
-		for i, unitName in ipairs(Units) do
-			if (IsMilitaryUnit(unitName)) then
-				AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetThisPlayer(), "UnitTypesCount", unitName)
-			elseif (IsHero(unitName)) then
-				AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
-				if (GetPlayerData(GetThisPlayer(), "UnitTypesCount", unitName) >= 1) then
-					AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
-				end
-			end
-		end
-					
-		GrandStrategyBattle = false
-	end
     ActionVictory()
 
   elseif (str == "ragnarok") then
-	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyFaction ~= nil) then
-		local victorious_player = ""
-		if (Attacker == GrandStrategyFaction.Name) then
-			victorious_player = Defender
-		elseif (Defender == GrandStrategyFaction.Name) then
-			victorious_player = Attacker
-		end
-
-		-- set the new unit quantity to the surviving units of the victorious side
-		for i, unitName in ipairs(Units) do
-			if (IsMilitaryUnit(unitName)) then
-				AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName)
-			elseif (IsHero(unitName)) then
-				AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
-				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
-					AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
-				end
-			end
-		end
-	end
     ActionDefeat()
 
   elseif (str == "fenrir") then

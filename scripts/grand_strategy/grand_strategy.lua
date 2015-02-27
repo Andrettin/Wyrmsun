@@ -835,6 +835,18 @@ function AttackProvince(province, faction)
 		elseif (Defender == GrandStrategyFaction.Name) then
 			victorious_player = Attacker
 		end
+		-- set the new unit quantity to the surviving units of the victorious side
+		for i, unitName in ipairs(Units) do
+			if (IsMilitaryUnit(unitName)) then
+				AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName)
+			elseif (IsHero(unitName)) then
+				AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
+				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
+					AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
+				end
+			end
+		end
+		GrandStrategyBattle = false
 	else
 		if (GetMilitaryScore(province, true, true) > GetMilitaryScore(province, false, true)) then -- if military score is the same, then defenders win
 			victorious_player = Attacker
