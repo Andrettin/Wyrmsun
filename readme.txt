@@ -63,7 +63,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "The Sun Shields" flavor event for the Germanics.
 - Added "Skilled Masons", "Skilled Carpenters", "Build Observatory?", "Build Library?", "Build Monument?" and "Province Assimilates" semi-random events.
 - Fixed a bug which caused non-persistent event to re-trigger after loading a saved game.
-- Added "The Sequani's Appeal" and "The Battle of Magetobria" events.
+- Added "The Sequani's Appeal" and "The Battle of Magetobria" events to the Suebi Tribe.
 - Added Albania, Andalusia, Attica, Bulgaria, Crete, Gotland, Iceland, Macedonia, Naples, North Italy, Peloponnese, Serbia and Thrace provinces to the Earth world map.
 - The encyclopedia can now be accessed through the menu in Grand Strategy mode.
 - Scenarios can no longer be restarted when in grand strategy mode.
@@ -82,6 +82,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Certain provinces are now always generated adjacent to water in the random world map.
 - The Shorbear Hills now start with a stronghold.
 - Fixed a bug which caused units to not be saved correctly if the player quit during a grand strategy battle.
+- Added 3000 BC start date for Nidavellir.
+- Added The Mead of Poetry event, along with events for Durin appearing and dying.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).

@@ -337,6 +337,7 @@ function RunGrandStrategyGameSetupMenu()
 				}
 			elseif (GrandStrategyWorld == "Nidavellir") then
 				date_list = {
+					"3000 BC", -- approximate begin of the Asa's journey to Scandinavia
 					"25 AD", -- begin of The Scepter of Fire
 					"40 AD", -- end of The Scepter of Fire
 					"550 AD" -- begin of The Hammer of Thursagan
@@ -3883,6 +3884,18 @@ function IsBuildingAvailable(province, unit_type)
 		return false
 	end
 	
+	local has_required_technologies = true
+	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
+		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
+			if (GetFactionFromName(province.Owner).Technologies[string.gsub(GetUnitTypeRequiredTechnologies(unit_type)[i], "-", "_")] < 2) then
+				has_required_technologies = false
+			end
+		end
+	end
+	if (has_required_technologies == false) then
+		return false
+	end
+	
 	local has_required_buildings = true
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
@@ -4484,10 +4497,6 @@ function CanTriggerEvent(faction, event)
 		end
 	end
 	
-	if (event.Conditions ~= nil) then
-		return event.Conditions()
-	end
-	
 	if (event.Commodities ~= nil) then
 		for key, value in pairs(event.Commodities) do
 			if (faction.Commodities[key] < event.Commodities[key]) then
@@ -4591,6 +4600,10 @@ function CanTriggerEvent(faction, event)
 		end
 	end
 		
+	if (event.Conditions ~= nil) then
+		return event.Conditions()
+	end
+	
 	return true
 end
 
@@ -4920,6 +4933,11 @@ end
 function GetUnitTypeRequiredTechnologies(unit_type)
 	local required_technologies = {}
 	if (string.find(unit_type, "upgrade-") == nil) then
+		if (GetUnitTypeData(unit_type, "Class") == "stronghold") then
+			if (GetCivilizationClassUnitType("masonry", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_technologies, GetCivilizationClassUnitType("masonry", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		end
 	else
 		if (CUpgrade:Get(unit_type).Class == "melee-weapon-2") then
 			if (GetCivilizationClassUnitType("melee-weapon-1", CUpgrade:Get(unit_type).Civilization) ~= nil) then
@@ -4982,6 +5000,14 @@ end
 
 function IsGrandStrategyBuilding(unit_type)
 	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") and GetUnitTypeData(unit_type, "Class") ~= "farm" and GetUnitTypeData(unit_type, "Class") ~= "watch-tower" and GetUnitTypeData(unit_type, "Class") ~= "guard-tower" and GetUnitTypeData(unit_type, "Class") ~= "") then
+		return true
+	else
+		return false
+	end
+end
+
+function IsOffensiveMilitaryUnit(unit_type)
+	if (IsMilitaryUnit(unit_type) and GetUnitTypeData(unit_type, "Class") ~= "militia") then
 		return true
 	else
 		return false

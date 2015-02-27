@@ -105,8 +105,8 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
   Action = "train-unit", Value = "unit-teuton-catapult",
-  Key = "b", Hint = _("Build ~!Catapult"),
-  ForUnit = {"unit-germanic-barracks"} } )
+  Key = "c", Hint = _("Build ~!Catapult"),
+  ForUnit = {"unit-teuton-barracks"} } )
 
 -- Researches ---------------------------------------------------------
 

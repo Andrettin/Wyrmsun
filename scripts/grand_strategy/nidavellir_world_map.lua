@@ -74,6 +74,17 @@ MercenaryGroups = {
 
 LoadEvents("Nidavellir")
 
+if (GrandStrategyYear >= -3000) then
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin = 2
+	GrandStrategyEvents.DurinWarrior = nil
+end
+
+if (GrandStrategyYear >= -2970) then -- estimated date
+	GrandStrategyEvents.TheMeadOfPoetry = nil -- should be placed at an earlier date
+	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin = 0
+	GrandStrategyEvents.DurinDies = nil
+end
+
 if (GrandStrategyYear >= -1) then -- bronze age technologies had already been obtained by the dwarves by this point
 	Factions.NorlundClan.Technologies.upgrade_dwarven_broad_axe = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_1 = 2
@@ -95,8 +106,11 @@ if (GrandStrategyYear >= -1) then -- bronze age technologies had already been ob
 	Factions.Lyr.Technologies.upgrade_dwarven_throwing_axe_1 = 2
 	
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2 -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
+	GrandStrategyEvents.BaglurWarrior = nil
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 2 -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
+	GrandStrategyEvents.DurstornChieftainOfTheNorlundClan = nil
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2 -- Thursagan could be in the Caverns of Chaincolt at this time
+	GrandStrategyEvents.ThursaganTheSageOfFire = nil
 end
 
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan

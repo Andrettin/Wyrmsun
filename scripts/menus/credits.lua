@@ -115,6 +115,7 @@ function RunShowCreditsMenu()
 	"  Andrettin",
 	"  b_o",
 	_("Testing"),
+	"  Andrettin",
 	"  b_o",
 	"  João Victor G. Costa (Jinn)",
 	"  Leo",
