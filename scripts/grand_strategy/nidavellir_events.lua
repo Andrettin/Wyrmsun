@@ -94,8 +94,12 @@ local NidavellirEvents = {
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Norlund Clan") then
 					Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
 				end
+			end,
+			function(s)
+				Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige - 10 -- doing nothing in such a situation would be dishonorable
 			end
-		}
+		},
+		OptionTooltips = {"", "-10 Prestige"}
 	},
 	DurinDies = {
 		Name = "Durin Dies",

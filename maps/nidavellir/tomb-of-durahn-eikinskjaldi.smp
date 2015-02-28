@@ -1,0 +1,9 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "computer")
+PresentMap("Tomb of Durahn Eikinskjaldi", 1, 20, 20, 1)
+MapWorld = "Nidavellir"
+MapAttacker = 0
+MapDefender = 1
+
+-- map based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.

@@ -47,6 +47,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Gnomes now use Dwarven units for the types of unit they lack.
 - Added Celt, Goth, Greek, Latin and Norse NPC civilizations (they are essentially identical with the Germanic/Teuton civilization, but them being a different culture affects events and features in Grand Strategy mode).
 - Added Teuton civilization (the Germanic civilization can transform into it), representing West Germanic peoples.
+- Added Eikinskjaldi Clan as a dwarven faction.
 
 * Grand Strategy Mode
 - Added transitions for the conifer forest tiles (graphics by Jinn).
@@ -96,6 +97,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Salzburg map.
 - Added Fjalar's and Galar's Hall map.
 - The Shorbear Clan now starts with a stronghold instead of a mead hall in the Shorbear Hills map.
+- Added the Tomb of Durahn Eikinskjaldi map, based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -108,6 +110,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Implemented numerous engine improvements by cybermind.
 - Walls are now much more resilient in dungeon maps.
 - The player now receives a message when a gold mine is nearing depletion or has been depleted (thanks to cybermind).
+- Added "No Randomness" game setup option (for both single player and multiplayer). Choosing this option will cause damage to be constant, with critical strike chance being used as a modified to damage instead, and accuracy and evasion modifying damage instead of determining the chance to hit. With this option, unit traits also have no effect on gameplay (unless the unit is a hero, in which case the trait behaves normally).
 
 * Quests
 - Added The Battle of Magetobria quest.

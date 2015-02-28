@@ -645,6 +645,7 @@ function InitGameSettings()
 	GameSettings.Inside = false
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
+	GameSettings.NoRandomness = false
 	TechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 	MaxTechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 end
@@ -923,6 +924,7 @@ function RunSinglePlayerGameMenu()
   local descriptionl
   local tech_level
   local max_tech_level
+  local no_randomness = false
   MapPersonPlayer = 0
   PlayerFaction = ""
 
@@ -1047,6 +1049,7 @@ function RunSinglePlayerGameMenu()
 	  if (max_tech_level:getSelected() > 0) then
 		  MaxTechLevel[MapPersonPlayer + 1] = max_tech_level_list[max_tech_level:getSelected() + 1]
 	  end
+      GameSettings.NoRandomness = no_randomness
 	  
       RunMap(mapname)
       menu:stop()
@@ -1107,6 +1110,17 @@ function RunSinglePlayerGameMenu()
     function(dd) end)
   max_tech_level:setSize(152, 20)
 
+  local b = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 420,
+	function()
+		if (no_randomness == false) then
+			no_randomness = true
+		else
+			no_randomness = false
+		end
+	end
+  )
+  if (no_randomness) then b:setMarked(true) end
+  
   function WorldChanged()
 	scenario_list = {}
 

@@ -136,6 +136,8 @@ function RunJoiningMapMenu(s)
   fow:setEnabled(false)
   local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, function() end)
   revealmap:setEnabled(false)
+  local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, function() end)
+  no_randomness:setEnabled(false)
 
   menu:writeText("Civilization:", sx, sy*11)
   local race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,
@@ -183,6 +185,8 @@ function RunJoiningMapMenu(s)
     GameSettings.NoFogOfWar = not int2bool(ServerSetupState.FogOfWar)
     revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
     GameSettings.RevealMap = ServerSetupState.RevealMap
+    no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
+    GameSettings.NoRandomness = ServerSetupState.NoRandomness
     units:setSelected(ServerSetupState.UnitsOption)
     GameSettings.NumUnits = ServerSetupState.UnitsOption
     resources:setSelected(ServerSetupState.ResourcesOption)
@@ -332,6 +336,12 @@ function RunServerMultiGameMenu(map, description, numplayers)
     GameSettings.RevealMap = bool2int(dd:isMarked())
   end
   local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
+  local function no_randomnessCb(dd)
+    ServerSetupState.NoRandomness = bool2int(dd:isMarked())
+    NetworkServerResyncClients()
+    GameSettings.NoRandomness = dd:isMarked()
+  end
+  local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
 
   menu:writeText("Civilization:", sx, sy*11)
   d = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,

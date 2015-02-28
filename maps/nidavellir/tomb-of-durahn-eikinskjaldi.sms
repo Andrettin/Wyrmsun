@@ -1,0 +1,86 @@
+-- Stratagus Map Setup
+
+LoadTileModels("scripts/tilesets/dungeon.lua")
+
+RawTiles = {
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Wall",  "Wall",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Wall",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Wall",  "Wall",  "Door",  "Wall",  "Wall",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Land",  "Land",  "Land",  "Wall",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Wall",  "Wall",  "Land",  "Wall",  "Rock",  "Rock",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Door",  "Wall",  "Wall",  "Door",  "Wall",  "Wall",  "Wall",  "Wall",  "Land",  "Land",  "Land",  "Land",  "Wall",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Wall",  "Wall",  "Land",  "Land",  "Wall",  "Wall",  "Wall",  "Land",  "Land",  "Wall",  "Wall",  "Wall",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Wall",  "Wall",  "Wall",  "Land",  "Land",  "Wall",  "Wall",  "Door",  "Wall",  "Wall",  "Wall",  "Wall",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Land",  "Land",  "Wall",  "Wall",  "Land",  "Wall",  "Wall",  "Land",  "Wall",  "Land",  "Land",  "Wall",  "Rock"},
+	{"Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Wall",  "Wall",  "Land",  "Wall",  "Wall",  "Wall",  "Wall",  "Door",  "Wall",  "Land",  "Land",  "Wall",  "Rock"},
+	{"Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Wall",  "Land",  "Land",  "Wall",  "Door",  "Wall",  "Wall",  "Wall",  "Wall",  "Land",  "Wall",  "Wall",  "Land",  "Wall",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Wall",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Wall",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"},
+	{"Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock",  "Rock"}
+}
+
+ApplyRawTiles()
+
+-- Player Setup
+SetStartView(0, 1, 16)
+SetPlayerData(0, "Resources", "gold", 1000)
+SetPlayerData(0, "Resources", "lumber", 500)
+SetPlayerData(0, "Resources", "oil", 0)
+SetPlayerData(0, "RaceName", "dwarf")
+SetPlayerData(0, "Faction", "Eikinskjaldi Clan")
+SetAiType(0, "land-attack")
+SetStartView(1, 13, 104)
+SetPlayerData(1, "Resources", "gold", 2000)
+SetPlayerData(1, "Resources", "lumber", 1000)
+SetPlayerData(1, "Resources", "oil", 0)
+SetPlayerData(1, "RaceName", "gnome")
+SetPlayerData(1, "Faction", "Untersberg")
+SetPlayerData(1, "Name", "Raiders")
+SetAiType(1, "land-attack")
+SetPlayerData(15, "RaceName", "neutral")
+
+unit = CreateUnit("unit-dwarven-thane", 0, {1, 16})
+unit = CreateUnit("unit-dwarven-thane", 0, {1, 16})
+unit = CreateUnit("unit-dwarven-thane", 0, {1, 16})
+unit = CreateUnit("unit-gnomish-herbalist", 0, {1, 16})
+IncreaseUnitLevel(unit, 2, true)
+
+unit = CreateUnit("unit-gnomish-recruit", 1, {8, 9})
+IncreaseUnitLevel(unit, 1, true)
+unit = CreateUnit("unit-gnomish-recruit", 1, {9, 10})
+IncreaseUnitLevel(unit, 1, true)
+
+unit = CreateUnit("unit-gnomish-recruit", 1, {9, 7})
+IncreaseUnitLevel(unit, 1, true)
+unit = CreateUnit("unit-gnomish-recruit", 1, {10, 7})
+IncreaseUnitLevel(unit, 1, true)
+unit = CreateUnit("unit-gnomish-recruit", 1, {11, 8})
+IncreaseUnitLevel(unit, 1, true)
+unit = CreateUnit("unit-gnomish-recruit", 1, {11, 9})
+IncreaseUnitLevel(unit, 1, true)
+
+unit = CreateUnit("unit-gnomish-recruit", 1, {14, 11})
+IncreaseUnitLevel(unit, 1, true)
+unit = CreateUnit("unit-gnomish-recruit", 1, {15, 12})
+IncreaseUnitLevel(unit, 1, true)
+
+unit = CreateUnit("unit-gnomish-recruit", 1, {17, 9})
+IncreaseUnitLevel(unit, 3, true)
+unit = CreateUnit("unit-potion-of-healing", 15, {16, 9})
+
+unit = CreateUnit("unit-gnomish-recruit", 1, {17, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
+IncreaseUnitLevel(unit, 2, true)
+
+unit = CreateUnit("unit-bones", 15, {6, 8})
+unit = CreateUnit("unit-bones", 15, {7, 11})
+unit = CreateUnit("unit-bones", 15, {9, 12})
+
+--unit = CreateUnit("unit-inner-wall-decoration", 15, {8, 7})
+--unit = CreateUnit("unit-outer-wall-decoration", 15, {11, 7})
+--unit = CreateUnit("unit-inner-wall-decoration", 15, {11, 10})

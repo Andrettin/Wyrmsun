@@ -89,6 +89,7 @@ function RunShowCreditsMenu()
 	_("Maps"),
 	"  Battle for Wesnoth Team",
 	"  David White (Sirp)",
+	"  Dyson Logos", -- The Tomb of Durahn Oakenshield map
 	"  Eric S. Raymond (ESR)", -- Northern Rebirth maps and scenarios
 	"  GM1530",
 	"  John Ericson",
