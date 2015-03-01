@@ -61,7 +61,7 @@ SetRawTile(5, 8, "Rough")
 SetRawTile(8, 3, "Rough")
 SetRawTile(9, 3, "Rough")
 
-AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 -- rectify hex-conversion derived issues
 SetRawTile(15, 13, "Rock")

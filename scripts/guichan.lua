@@ -1371,16 +1371,16 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
-  menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*-1,
+  menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*0,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Multi Player Game"), "m", offx + 208, offy + 104 + 36*0,
+  menu:addFullButton(_("~!Multi Player Game"), "m", offx + 208, offy + 104 + 36*1,
     function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*1,
+  menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
     function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*2,
+  menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*3,
     function() RunLoadGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3,
-    function() RunReplayGameMenu(); menu:stop(1) end)
+--  menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
+--    function() RunReplayGameMenu(); menu:stop(1) end)
 --  menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
 --    function() RunAchievementsMenu(); menu:stop(1) end)
   menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,

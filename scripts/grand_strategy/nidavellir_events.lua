@@ -103,7 +103,7 @@ local NidavellirEvents = {
 	},
 	DurinDies = {
 		Name = "Durin Dies",
-		Description = "The meek Durin has died of natural causes.",
+		Description = "The valiant Durin has died of natural causes.",
 		Heroes = {
 			unit_hero_durin = true
 		},

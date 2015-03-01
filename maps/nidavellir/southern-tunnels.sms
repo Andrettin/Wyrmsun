@@ -51,7 +51,7 @@ for x=0,(Map.Info.MapWidth - 1) do
 	end
 end
 
-AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 -- rectify cave wall pieces which appear too much like separate small blocks
 SetRawTile(3, 23, "Rock")

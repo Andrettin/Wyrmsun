@@ -46,6 +46,7 @@ function RunEncyclopediaMenu()
 	Load("scripts/game_concepts.lua")
 	Load("scripts/texts.lua")
 	Load("scripts/worlds.lua")
+	Load("scripts/menus/encyclopedia_civilizations.lua")
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 	
@@ -62,35 +63,35 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Civilizations"), "c", offx + 208, offy + 104 + 36*-1,
 		function() RunEncyclopediaCivilizationsMenu() end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208, offy + 104 + 36*0,
+	menu:addFullButton(_("~!Factions"), "f", offx + 208, offy + 104 + 36*0,
+		function() RunEncyclopediaFactionsMenu() end)
+
+	menu:addFullButton(_("~!Units"), "u", offx + 208, offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Buildings"), "b", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Buildings"), "b", offx + 208, offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("buildings") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208, offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("technologies") end)
 
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208, offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208, offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
---	menu:addFullButton("~!Factions", "f", offx + 208, offy + 104 + 36*4,
---		function() RunEncyclopediaTextsMenu() end)
-
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*6,
 		function() RunEncyclopediaWorldsMenu() end)
 
-	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208, offy + 104 + 36*6,
+	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208, offy + 104 + 36*7,
 		function() RunEncyclopediaGameConceptsMenu() end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*7,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*8,
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() Texts = nil; Worlds = nil; menu:stop(); end)
+		function() Texts = nil; Worlds = nil; CivilizationsEncyclopedia = nil; FactionsEncyclopedia = nil; menu:stop(); end)
 
 	menu:run()
 end
@@ -942,6 +943,87 @@ function OpenEncyclopediaCivilizationEntry(civilization_key)
 	local description = ""
 	if (CivilizationsEncyclopedia[civilization_key].Description ~= "") then
 		description = "Description: " .. CivilizationsEncyclopedia[civilization_key].Description
+	end
+	l:setCaption(description)
+			
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() encyclopedia_entry_menu:stop(); end)
+	encyclopedia_entry_menu:run()
+end
+
+function RunEncyclopediaFactionsMenu()
+
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 2 -- change this to 0 if the number of faction entries becomes too large
+	else
+		height_offset = 2
+	end
+	menu:addLabel("~<Encyclopedia: Factions~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+
+	local faction_x = 0
+	if (GetTableSize(FactionsEncyclopedia) > 20) then
+		faction_x = -2
+	elseif (GetTableSize(FactionsEncyclopedia) > 10) then
+		faction_x = -1
+	end
+	local faction_y = -3
+
+	for faction_key, faction_value in pairsByKeys(FactionsEncyclopedia) do
+		local faction_hotkey = ""		
+		if (string.find(_(FactionsEncyclopedia[faction_key].Name), "~!") ~= nil) then
+			faction_hotkey = string.sub(string.match(_(FactionsEncyclopedia[faction_key].Name), "~!%a"), 3)
+			faction_hotkey = string.lower(faction_hotkey)
+		end
+		menu:addFullButton(_(FactionsEncyclopedia[faction_key].Name), faction_hotkey, offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
+			function() OpenEncyclopediaFactionEntry(faction_key); end)
+
+		if (faction_y > 5 or (faction_y > 4 and Video.Height < 600)) then
+			faction_x = faction_x + 2
+			faction_y = -3
+		else
+			faction_y = faction_y + 1
+		end
+	end
+
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+end
+
+function OpenEncyclopediaFactionEntry(faction_key)
+	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/legends_of_the_north.ogg")
+	end
+
+	local encyclopedia_entry_menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	encyclopedia_entry_menu:addLabel("~<" .. FactionsEncyclopedia[faction_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local description = ""
+	if (FactionsEncyclopedia[faction_key].Description ~= "") then
+		description = "Description: " .. FactionsEncyclopedia[faction_key].Description
 	end
 	l:setCaption(description)
 			

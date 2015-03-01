@@ -110,7 +110,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Implemented numerous engine improvements by cybermind.
 - Walls are now much more resilient in dungeon maps.
 - The player now receives a message when a gold mine is nearing depletion or has been depleted (thanks to cybermind).
-- Added "No Randomness" game setup option (for both single player and multiplayer). Choosing this option will cause damage to be constant, with critical strike chance being used as a modified to damage instead, and accuracy and evasion modifying damage instead of determining the chance to hit. With this option, unit traits also have no effect on gameplay (unless the unit is a hero, in which case the trait behaves normally).
+- Added "No Randomness" game setup option (for both single player and multiplayer). Choosing this option will cause damage to be constant, with critical strike chance being used as a modifier to damage instead, and accuracy and evasion modifying damage instead of determining the chance to hit. With this option, unit traits also have no effect on gameplay (unless the unit is a hero, in which case the trait behaves normally).
+- Added "Civilizations" and "Factions" sections to the encyclopedia.
 
 * Quests
 - Added The Battle of Magetobria quest.

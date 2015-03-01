@@ -1127,8 +1127,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
+			end
+			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("teuton")) > 0 and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "teuton")
 			end
 			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
@@ -2141,7 +2144,7 @@ function AdjustTransitions(min_x, max_x, min_y, max_y)
 			end
 
 			-- convert buildable land tiles adjacent to rock tiles into rough land
-			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Road") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Road" or RawTile(x, y) == "Mush") and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 				SetRawTile(x, y, "Rough")
 			end
 		end
