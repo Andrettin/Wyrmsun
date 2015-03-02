@@ -147,7 +147,7 @@ DefinePanelContents(
   {
   Ident = "panel-center-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
-  Condition = {ShowOpponent = false, HideNeutral = true, Center = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
+  Condition = {ShowOpponent = false, HideNeutral = true, Center = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
 	{ Pos = {16, 86}, More = {"Text", "Processing"} },
 	{ Pos = {32, 102}, More = { "Text", {Text = Concat("Gold: 100", 

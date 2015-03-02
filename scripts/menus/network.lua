@@ -186,7 +186,7 @@ function RunJoiningMapMenu(s)
     revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
     GameSettings.RevealMap = ServerSetupState.RevealMap
     no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
-    GameSettings.NoRandomness = ServerSetupState.NoRandomness
+    GameSettings.NoRandomness = int2bool(ServerSetupState.NoRandomness)
     units:setSelected(ServerSetupState.UnitsOption)
     GameSettings.NumUnits = ServerSetupState.UnitsOption
     resources:setSelected(ServerSetupState.ResourcesOption)
