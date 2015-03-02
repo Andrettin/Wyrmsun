@@ -42,11 +42,6 @@ DefineVariables("Mana", {Max = 255, Value = 84, Increase = 1, Enable = false}, "
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-critter", {})
-DefineUnitType("unit-dwarven-axefighter", {})
-DefineUnitType("unit-dwarven-steelclad", {})
-DefineUnitType("unit-goblin-spearman", {})
-DefineUnitType("unit-goblin-archer", {})
-DefineUnitType("unit-goblin-war-machine", {})
 
 -- And declare upgrade for dependency...
 

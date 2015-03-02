@@ -148,6 +148,7 @@ WorldMapResources = {
 		{128, 28}, -- iron ore deposits
 		{129, 28}, -- iron ore deposits; Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{129, 30}, -- Copper deposits (Mitterberg mines) in the Salzach Valley, near Salzburg; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
+		{129, 33}, -- to help keep the Romans afloat
 		{130, 27}, -- Copper deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 		{131, 21}, -- iron ore deposits
 		{131, 22}, -- iron ore deposits

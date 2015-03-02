@@ -532,6 +532,7 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 	Background = _("In Germanic mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>."),
 	Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
 	Icon = "icon-dwarven-lumber-mill",
+	Costs = {"time", 180, "gold", 720, "lumber", 540},
 	TechnologyPointCost = 1
 } )
 
@@ -543,6 +544,7 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	Background = _("One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the ~<Reginsmol~>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem."),
 	Image = {"file", "dwarf/buildings/smithy.png", "size", {96, 96}},
 	Icon = "icon-dwarven-smithy",
+	Costs = {"time", 180, "gold", 720, "lumber", 400},
 	TechnologyPointCost = 1,
 	PersonalNamePrefixes = {"The Black", "Brisings'", "Brokk's", "Eitri's", "The Fiery", "Ivaldi's", "Regin's"}, -- The Brisings were a group of dwarves who crafter a magnificent necklace; Brokk and Eitri were skilled dwarven smiths; Ivaldi's sons were skilled dwarven smiths; Regin was a dwarven smith in the Siegfried myth
 	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"}

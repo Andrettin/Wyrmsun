@@ -14,7 +14,7 @@ by Andrettin
 # License
 ############################################################
 
-The Stratagus engine, as well as all of the code, artwork, music and storylines included in Wyrmsun are distributed under the GPLv2 license. See the license.txt file for the text of the GPLv2.
+The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license. See the license.txt file for the text of the GPLv2.
 
 Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus
@@ -42,6 +42,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Celt Farm (graphics by Jinn).
 - Germanic farms now correctly drop food items when destroyed.
 - Added Dwarven Bastion (graphics by Jinn).
+- Dwarven Smithies are now cheaper than those of other civilizations, while their Lumber Mills are costlier.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.

@@ -77,7 +77,7 @@ FactionsEncyclopedia = {
 	},
 	EikinskjaldiClan = {
 		Name = _("~!Eikinskjaldi Clan (Dwarf)"),
-		Description = _("The Eikinskjaldi clan traces its origins to when chieftain Yngvi's bastard son Eikinskjaldi succeeded him to power in Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.")
+		Description = _("The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.")
 	},
 	MarcomanniTribe = {
 		Name = _("~!Marcomanni Tribe (Teuton)"),
@@ -85,11 +85,11 @@ FactionsEncyclopedia = {
 	},
 	NorlundClan = {
 		Name = _("~!Norlund Clan (Dwarf)"),
-		Description = _("The Norlund Clan has its origins in the Caverns of Chaincolt, and counts a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund Clan would unify much of dwarfdom into the Lordship of Knalga.")
+		Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga.")
 	},
 	ShinsplitterClan = {
 		Name = _("Shinspli~!tter Clan (Dwarf)"),
-		Description = _("The warriors of the Shinsplitter Clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass.")
+		Description = _("The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass.")
 	},
 	ShorbearClan = {
 		Name = _("Shor~!bear Clan (Dwarf)"),

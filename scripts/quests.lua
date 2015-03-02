@@ -114,6 +114,7 @@ Quests = {
 		Name = "A Bargain is Struck",
 		Icon = "dwarf/icons/rugnur",
 		Description = "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points, Caverns of Chaincolt Map.",
+		RequiredQuest = "The Mead of Poetry",
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/chaincolt-foothills.smp",
@@ -192,6 +193,18 @@ Quests = {
 		X = 8,
 		Y = 2,
 		PlayerColor = "red"
+	},
+	TheTombOfDurahnEikinskjaldi = {
+		Name = "The Tomb of Durahn Eikinskjaldi",
+		Icon = "dwarf/icons/shield_3",
+		Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi\n\nRewards: 1 Dwarven Technology Point.",
+		RequiredQuest = "The Mead of Poetry",
+		Civilization = "dwarf",
+		TechnologyPoints = 1,
+		Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
+		X = 9,
+		Y = 2,
+		PlayerColor = "brown"
 	},
 	LastStandAtTheForge = {
 		Name = "Last Stand at the Forge",

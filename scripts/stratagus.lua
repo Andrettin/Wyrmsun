@@ -777,7 +777,7 @@ function StandardTriggers()
 					IncreaseUnitLevel(uncount[unit1], 1, true)
 					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
 						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "DefaultName") ~= "") then
-							AddMessage(GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
+							AddMessage(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "DefaultName") .. " has leveled up!")
 						else
 							AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
 						end
