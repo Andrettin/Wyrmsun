@@ -349,6 +349,19 @@ function BuildOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
 
+  b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*8 + 14,
+    function()
+	if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please
+		wyr.preferences.ShowResourceBar = true
+		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+	else
+		wyr.preferences.ShowResourceBar = false
+		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+	end
+	menu:stop(1)
+    end)
+  b:setMarked(wyr.preferences.ShowResourceBar)
+
   b = menu:addImageCheckBox(_("Disable Pathlines"), offx + 16, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowOrders == 2) then

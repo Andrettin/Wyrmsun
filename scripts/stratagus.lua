@@ -1333,6 +1333,7 @@ local defaultPreferences = {
 	ShowMessages = true,
 	ShowOrders = 2,
 	Language = "English",
+	ShowResourceBar = false,
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {},
 	AchievementsCompleted = {},

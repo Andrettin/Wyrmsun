@@ -114,6 +114,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "No Randomness" game setup option (for both single player and multiplayer). Choosing this option will cause damage to be constant, with critical strike chance being used as a modifier to damage instead, and accuracy and evasion modifying damage instead of determining the chance to hit. With this option, unit traits also have no effect on gameplay (unless the unit is a hero, in which case the trait behaves normally).
 - Added "Civilizations" and "Factions" sections to the encyclopedia.
 - Fixed a few issues with multiplayer (thanks to cybermind).
+- The tips menu no longer appears at startup in multiplayer games.
+- Added option for showing a resource bar under mines.
 
 * Quests
 - Added The Battle of Magetobria quest.

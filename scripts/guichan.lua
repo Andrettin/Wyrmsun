@@ -1468,7 +1468,7 @@ Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
 
 function GameStarting()
-  if (wyr.preferences.ShowTips and not IsReplayGame()) then
+  if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
     SetGamePaused(true)
     RunTipsMenu()
   end
