@@ -110,7 +110,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 } )
 
 DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
-	Parent = "unit-template-infantry", -- parent has to be defined first, because when it is processed, the parent's data overwrites the unit type's
+	Parent = "unit-template-infantry",
 	Civilization = "dwarf",
 	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
@@ -373,6 +373,25 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 		"ready", "dwarven-scout-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
+DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
+	Parent = "unit-template-cavalry",
+	Civilization = "dwarf",
+	Description = _("Although dwarves have a stronger affinity for fighting on foot than many other peoples, they nevertheless possess formidable cavalry in the form of yale riders. These mounted dwarves are fierce in the battlefield, and their yales can easily traverse the mountainous terrain dwarves usually inhabit."),
+	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-axefighter",
+	StartingLevel = 2,
+	Corpse = "unit-dwarven-dead-body",
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "axe-attack",
+		"miss", "attack-miss"
 	}
 } )
 

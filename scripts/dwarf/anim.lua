@@ -71,19 +71,12 @@ DefineAnimations("animations-dwarven-militia", {
 -- Dwarven Axefighter
 --
 
-local AxefighterDeath = {"unbreakable begin",
-	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
-	"unbreakable end", "wait 1",}
-
 DefineAnimations("animations-dwarven-axefighter", {
   Still = UnitStill,
   Move = UnitMove,
-  Attack = {"unbreakable begin",
-  	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-  	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
-	"unbreakable end", "wait 1",},
+  Attack = UnitMeleeAttack,
   Upgrade = { "set-var LevelUp.Value -= 1", "wait 1",},
-  Death = AxefighterDeath,
+  Death = UnitDeath,
   SpellCast = {"unbreakable begin",
 	"if-var s_spell-axe-twirl == 1 axe_twirl",
 	"attack",

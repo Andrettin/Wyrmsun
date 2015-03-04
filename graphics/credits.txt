@@ -56,11 +56,13 @@ b_o:
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
 /graphics/germanic/icons/archer_blond_hair.png (modified from the Skutan icon made by Leo)
 /graphics/germanic/icons/archer_gray_hair.png (modified from the Skutan icon made by Leo)
+/graphics/germanic/icons/old_man.png
 /graphics/germanic/units/archer.png
 /graphics/germanic/units/archer_blond_hair.png
 /graphics/germanic/units/archer_gray_hair.png
 /graphics/germanic/units/builder.png
 /graphics/germanic/units/builder_red_hair.png
+/graphics/germanic/units/old_man.png
 /graphics/germanic/units/warrior.png
 /graphics/germanic/units/warrior_bronze_shield.png
 /graphics/germanic/units/worker.png
@@ -133,7 +135,6 @@ b_o:
 /graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
-/graphics/neutral/icons/old_human.png
 /graphics/neutral/items/alchemy_bench.png
 /graphics/neutral/items/axe.png
 /graphics/neutral/items/barrel.png

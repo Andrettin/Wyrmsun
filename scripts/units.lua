@@ -30,7 +30,7 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-archer",
+	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-old-man",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
@@ -206,6 +206,40 @@ DefineUnitType("unit-rat", { Name = "Rat",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-yale", { Name = "Yale",
+	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as a source of food."),
+	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 10,
+	HitPoints = 5,
+	DrawLevel = 35,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 2, PiercingDamage = 1, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	BasePoints = 15,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "move",
+	CanAttack = true,
+	CanTargetLand = true,
+	RandomMovementProbability = 5,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "critter-acknowledge",
+--		"ready", "critter-ready",
+--		"help", "critter-help",
+--		"dead", "rat-dead",
+--		"hit", "bite-attack",
+--		"miss", "attack-miss"
 	}
 } )
 
@@ -2051,7 +2085,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 
 DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Class = "cavalry",
-	Costs = {"time", 90, "gold", 800, "lumber", 100},
+	Costs = {"time", 90, "gold", 800, "lumber", 50},
 	Speed = 13,
 	HitPoints = 75,
 	DrawLevel = 40,

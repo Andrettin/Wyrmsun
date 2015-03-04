@@ -88,6 +88,17 @@ UnitMove = {"unbreakable begin",
 	"frame 20", "move 3", "wait 1", "frame 0", "move 2", "goto end",
 	"label end", "unbreakable end", "wait 1",
 }
+UnitMeleeAttack = {
+	"unbreakable begin",
+  	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+  	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
+	"unbreakable end", "wait 1",
+}
+UnitDeath = {
+	"unbreakable begin",
+	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
+	"unbreakable end", "wait 1",
+}
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
 
 Load("scripts/dwarf/anim.lua")
@@ -151,6 +162,17 @@ DefineAnimations("animations-rat", {
 	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
 	"unbreakable end", "wait 1",},
   Death = RatDeath,
+})
+
+--
+-- Yale
+--
+ 
+DefineAnimations("animations-melee-unit", {
+  Still = UnitStill,
+  Move = UnitMove,
+  Attack = UnitMeleeAttack,
+  Death = UnitDeath
 })
 
 --

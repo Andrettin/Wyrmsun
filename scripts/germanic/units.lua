@@ -111,7 +111,7 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 } )
 
 DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
-	Parent = "unit-template-infantry", -- parent has to be defined first, because when it is processed, the parent's data overwrites the unit type's
+	Parent = "unit-template-infantry",
 	Civilization = "germanic",
 	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
 	Quote = _("\"His spear he shook, | his shield he brandished, / His horse he spurred, | with his sword he hewed; / Wars he raised, | and reddened the field, / Warriors slew he, | and land he won.\" - Rigsthula"),
@@ -222,6 +222,25 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-human-voices-dead"}
+} )
+
+DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
+	Parent = "unit-germanic-warrior",
+	Civilization = "germanic",
+	Image = {"file", "germanic/units/old_man.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-old-man",
+	HitPoints = 40,
+	BasicDamage = 2, PiercingDamage = 4,
+	Corpse = "unit-human-dead-body",
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
