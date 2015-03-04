@@ -101,6 +101,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Fjalar's and Galar's Hall map.
 - The Shorbear Clan now starts with a bastion instead of a mead hall in the Shorbear Hills map.
 - Added the Tomb of Durahn Eikinskjaldi map, based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.
+- Decreased quantity of trees in the Tanais map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -139,6 +140,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "Reckless" (-1 Evasion) and "Clumsy" (-1 Accuracy, -1 Evasion) traits, and changed other traits to give modifiers to accuracy/evasion where appropriate.
 - The Skutan now has blond and gray hair-color variations for its icons (by b_o).
 - Dwarven Steelclads and Thanes now deal more damage.
+- The minimum damage in a unit's damage display now shows the minimum possible damage before armor would be applied.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

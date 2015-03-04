@@ -41,7 +41,7 @@ local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germ
 local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior"}
 
 if (LoadedGame == false) then
-	GenerateTown(layout, 1, "celt", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, false, invader_units, "medium", nil)
+	GenerateTown(layout, 1, "celt", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, false, invader_units, "low", nil)
 	
 	if (GrandStrategy == false) then
 		CreateCreeps(1, "unit-germanic-warrior", 9, 32, 112, 16, 80)

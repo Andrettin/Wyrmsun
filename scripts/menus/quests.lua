@@ -27,6 +27,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+RunningQuest = false
+
 function RunQuestMenu()
 
 	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
@@ -39,6 +41,8 @@ function RunQuestMenu()
 	local menu = WarMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
+	
+	RunningQuest = false
 	
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
@@ -86,6 +90,7 @@ function addQuestIcon(quest, menu, x, y)
 			
 			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 				function()
+					RunningQuest = true
 					GetMapInfo(quest.Map)
 					RunMap(quest.Map)
 					quest_menu:stop()

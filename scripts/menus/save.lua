@@ -3,7 +3,6 @@ function RunSaveGame(name, menu)
   HexTiles = {}
   RawTiles = nil
   RawTiles = {}
-  Quests = nil
   LoadedGame = true
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))

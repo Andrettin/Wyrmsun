@@ -81,7 +81,10 @@ local info_panel_x = 0
 local info_panel_y = 160
 
 local min_damage = Div(
-	ActiveUnitVar("PiercingDamage"),
+	Add(
+		ActiveUnitVar("BasicDamage"),
+		ActiveUnitVar("PiercingDamage")
+	),
 	2
 )
 local max_damage = Add(

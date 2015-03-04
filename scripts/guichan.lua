@@ -922,7 +922,11 @@ function RunSinglePlayerGameMenu()
   menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
   local buttonNewMap =
   menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
-    function() RunQuestMenu() end)
+    function() RunQuestMenu();
+		if (RunningQuest) then
+			menu:stop(1)
+		end
+	end)
   menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
     function() RunSinglePlayerCustomGameMenu() end)
   menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*4,
