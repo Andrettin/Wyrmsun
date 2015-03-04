@@ -106,7 +106,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
   Action = "train-unit", Value = "unit-teuton-worker",
   Key = "b", Hint = _("Train ~!Bura"),
-  ForUnit = {"unit-teuton-town-hall"} } )
+  ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
   Action = "train-unit", Value = "unit-teuton-swordsman",
@@ -143,3 +143,9 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
   Action = "upgrade-to", Value = "unit-teuton-guard-tower",
   Key = "g", Hint = _("Upgrade to ~!Guard Tower"),
   ForUnit = {"unit-teuton-watch-tower"} } )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
+  Action = "upgrade-to", Value = "unit-teuton-stronghold",
+  Allowed = "check-upgrade-to",
+  Key = "b", Hint = _("Upgrade to ~!Burg"),
+  ForUnit = {"unit-teuton-town-hall"} } )

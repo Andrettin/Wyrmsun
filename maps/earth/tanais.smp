@@ -1,7 +1,7 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person","person")
-PresentMap("Tanais", 2, 128, 96, 1)
+PresentMap("Tanais", 2, 64, 48, 1)
 MapWorld = "Earth"
 MapAttacker = 0
 MapDefender = 1

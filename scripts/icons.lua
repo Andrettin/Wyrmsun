@@ -236,7 +236,13 @@ DefineIcon({
 	Size = {46, 38},
 	File = "teuton/icons/town_hall.png"
 })
-	
+
+DefineIcon({
+	Name = "icon-teuton-stronghold",
+	Size = {46, 38},
+	File = "teuton/icons/stronghold.png"
+})
+
 DefineIcon({
 	Name = "icon-teuton-watch-tower",
 	Size = {46, 38},

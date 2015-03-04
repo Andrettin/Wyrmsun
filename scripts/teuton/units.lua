@@ -226,6 +226,15 @@ DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	}
 } )
 
+DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
+	Parent = "unit-template-stronghold",
+	Civilization = "teuton",
+	Description = _("These tall and sturdy structures are built on strategic positions, allowing for easier control and protection of its environs."),
+	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
+	Icon = "icon-teuton-stronghold",
+	TechnologyPointCost = 1
+} )
+
 DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
 	Parent = "unit-template-farm",
 	Civilization = "teuton",

@@ -2931,6 +2931,13 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	CleanRawTiles()
 
 	local RandomNumber = 0
+	
+	local block_size = 16
+	if (Map.Info.MapWidth > Map.Info.MapHeight) then
+		block_size = Map.Info.MapWidth / table.getn(layout[1])
+	else
+		block_size = Map.Info.MapHeight / table.getn(layout)
+	end
 
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 
@@ -2978,78 +2985,78 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	
 	local function BuildWaterArea(x, y, t)
 		if (t == 8) then -- N/S river
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
 		elseif (t == 9) then -- N/S river + bridge
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+			ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
 		elseif (t == 10) then -- E/W river
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			RotateArea(x, y, 16, 1)
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+			RotateArea(x, y, block_size, 1)
+			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
 		elseif (t == 11) then -- E/W river + bridge
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
-			RotateArea(x, y, 16, 1)
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+			ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+			RotateArea(x, y, block_size, 1)
+			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
 		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
-			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			RotateArea(x, y, 16, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			MakeRandomPath(x + (block_size / 2), y, x, y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+			RotateArea(x, y, block_size, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
+			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
 		elseif (t == 20 or t == 21 or t == 22 or t == 23) then -- river forks
-			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
-			MakeRandomPath(x + 8, y, x + 15, y + 8, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			RotateArea(x, y, 16, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
+			MakeRandomPath(x + (block_size / 2), y, x, y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			MakeRandomPath(x + (block_size / 2), y, x + (block_size - 1), y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+			RotateArea(x, y, block_size, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
+			AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
 		elseif (t == 30) then -- sea
-			FillArea(x, y, x + 15, y + 15, "Water", false)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
 		elseif (t == 31) then -- North coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x, y, x + 15, y + 3, "Water", false)
-			GenerateWater(0, 64, x, x + 15, y, y + 15) -- (8 (the water area goal height) * 16 (the water area goal width) - (4 * 16)) (the already filled-in area of water)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
+			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1)) -- (8 (the water area goal height) * 16 (the water area goal width) - (4 * 16)) (the already filled-in area of water)
 		elseif (t == 32) then -- East coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x + 12, y, x + 15, y + 15, "Water", false)
-			GenerateWater(0, 64, x, x + 15, y, y + 15)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
 		elseif (t == 33) then -- South coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x, y + 12, x + 15, y + 15, "Water", false)
-			GenerateWater(0, 64, x, x + 15, y, y + 15)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x, y + (block_size * 3 / 4), x + (block_size - 1), y + (block_size - 1), "Water", false)
+			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
 		elseif (t == 34) then -- West coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x, y, x + 3, y + 15, "Water", false)
-			GenerateWater(0, 64, x, x + 15, y, y + 15)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x, y, x + 3, y + (block_size - 1), "Water", false)
+			GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
 		elseif (t == 35) then -- Northwest outer coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x, y, x + 15, y + 3, "Water", false)
-			FillArea(x, y, x + 3, y + 15, "Water", false)
-			GenerateWater(0, 80, x, x + 15, y, y + 15)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
+			FillArea(x, y, x + 3, y + (block_size - 1), "Water", false)
+			GenerateWater(0, (8 * block_size - (3 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
 		elseif (t == 36) then -- Northeast outer coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x, y, x + 15, y + 3, "Water", false)
-			FillArea(x + 12, y, x + 15, y + 15, "Water", false)
-			GenerateWater(0, 80, x, x + 15, y, y + 15)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
+			FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			GenerateWater(0, (8 * block_size - (3 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
 		elseif (t == 39) then -- Northwest inner coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
 			FillArea(x, y, x + 3, y + 3, "Water", false)
-			GenerateWater(0, 48, x, x + 15, y, y + 15)
+			GenerateWater(0, (8 * block_size - (5 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
 		elseif (t == 40) then -- Northeast inner coast
-			FillArea(x, y, x + 15, y + 15, "Land", false)
-			FillArea(x + 12, y, x + 15, y + 3, "Water", false)
-			GenerateWater(0, 48, x, x + 15, y, y + 15)
+			FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+			FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + 3, "Water", false)
+			GenerateWater(0, (8 * block_size - (5 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
 		end
 	end
 
 	local function BuildArea(x, y, t)
 		if (t == 6) then -- town center
-			local town_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
+			local town_player_starting_point = {x + SyncRand(block_size - 3), y + SyncRand(block_size - 3)}
 			SetStartView(town_player, town_player_starting_point[1], town_player_starting_point[2])
 			if (town_player_civilization ~= nil) then
 				SetPlayerData(town_player, "RaceName", town_player_civilization)
@@ -3074,7 +3081,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 				end
 			end
 		elseif (t == 25) then -- invader's base
-			local invader_player_starting_point = {x + SyncRand(13), y + SyncRand(13)}
+			local invader_player_starting_point = {x + SyncRand(block_size - 3), y + SyncRand(block_size - 3)}
 			SetStartView(invader_player, invader_player_starting_point[1], invader_player_starting_point[2])
 			if (invader_player_civilization ~= nil) then
 				SetPlayerData(invader_player, "RaceName", invader_player_civilization)
@@ -3102,7 +3109,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	for ay=1,table.getn(layout) do
 		for ax=1,table.getn(layout[ay]) do
-			BuildWaterArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
+			BuildWaterArea((ax-1) * block_size, (ay-1) * block_size, layout[ay][ax])
 		end
 	end
 	
@@ -3110,7 +3117,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	for ay=1,table.getn(layout) do
 		for ax=1,table.getn(layout[ay]) do
-			BuildArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
+			BuildArea((ax-1) * block_size, (ay-1) * block_size, layout[ay][ax])
 		end
 	end
 	

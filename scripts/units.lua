@@ -38,7 +38,8 @@ Units = {
 	"upgrade-teuton-civilization",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-archer",
 	"unit-teuton-catapult",
-	"unit-teuton-town-hall", "unit-teuton-farm", "unit-teuton-barracks",
+	"unit-teuton-town-hall", "unit-teuton-stronghold",
+	"unit-teuton-farm", "unit-teuton-barracks",
 	"unit-teuton-lumber-mill", "unit-teuton-smithy",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 	"upgrade-teuton-spatha",
@@ -564,7 +565,8 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"}
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
 	},
 	GivesResource = "gold", CanHarvest = true,
@@ -602,7 +604,8 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"}
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
 	},
 	GivesResource = "coal", CanHarvest = true,
@@ -2192,6 +2195,47 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
+} )
+
+DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
+	Class = "stronghold",
+	Animations = "animations-building", 
+--	Costs = {"time", 200, "gold", 2000, "lumber", 1000, "oil", 200},
+	Costs = {"time", 200, "gold", 2200, "lumber", 1100},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+	ImproveProduction = {"gold", 10},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 1167, -- 1400 with masonry
+	DrawLevel = 20,
+	TileSize = {4, 4}, BoxSize = {127, 127},
+	SightRange = 3,
+	Armor = 15, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 37, AnnoyComputerFactor = 40,
+	Points = 600,
+	Supply = 1,
+	Corpse = "unit-destroyed-4x4-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, OilImprove = false,
+	BuildingRules = {
+		{
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
+		}
+	},
+	CanStore = {"lumber", "gold", "coal"},
+	MaxOnBoard = 3,
+	CanTransport = {"LandUnit", "only", "organic", "only"},
+	AttackFromTransporter = true,
+	SaveCargo = true,
+	Sounds = {
+		"selected", "town-hall-selected",
+--		"acknowledge", "town-hall-acknowledge",
+--		"ready", "town-hall-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building destroyed"}
 } )
 
 DefineUnitType("unit-template-farm", { Name = _("Farm"),

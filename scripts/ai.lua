@@ -61,6 +61,8 @@ DefineAiHelper(
 	"unit-teuton-swordsman"},
 	{"unit-equiv", "unit-germanic-archer",
 	"unit-teuton-archer"},
+	{"unit-equiv", "unit-teuton-town-hall",
+	"unit-teuton-stronghold"},
 	{"unit-equiv", "unit-dwarven-town-hall",
 	"unit-dwarven-stronghold"}
 )

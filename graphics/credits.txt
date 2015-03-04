@@ -485,6 +485,7 @@ João Victor G. Costa (Jinn):
 /graphics/orc/icons/spearthrower.png
 /graphics/teuton/buildings/guard_tower.png
 /graphics/teuton/buildings/lumber_mill.png
+/graphics/teuton/buildings/stronghold.png
 /graphics/teuton/buildings/town_hall.png
 /graphics/teuton/buildings/watch_tower.png
 /graphics/tilesets/cave/terrain/cave.png

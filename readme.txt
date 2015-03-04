@@ -38,13 +38,14 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Buildings
 - Added Teuton Watch Tower and Guard Tower (graphics by Jinn).
-- Added Teuton Town Hall (graphics by Jinn).
+- Added Teuton Rathaus (graphics by Jinn).
 - Added Celt Farm (graphics by Jinn).
 - Germanic farms now correctly drop food items when destroyed.
 - Added Dwarven Bastion (graphics by Jinn).
 - Dwarven Smithies are now cheaper than those of other civilizations, while their Lumber Mills are costlier.
 - Instead of being capturable, Mercenary Camps now remain owned by the neutral player, but are usable by players to hire units.
 - Increased watch tower and guard tower HP by 100%.
+- Added Teuton Burg (graphics by Jinn).
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -102,6 +103,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Shorbear Clan now starts with a bastion instead of a mead hall in the Shorbear Hills map.
 - Added the Tomb of Durahn Eikinskjaldi map, based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.
 - Decreased quantity of trees in the Tanais map.
+- Decreased the size of the Tanais map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
