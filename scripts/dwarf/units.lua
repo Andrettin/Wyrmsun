@@ -332,6 +332,7 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	MaxAttackRange = 4,
 	Speed = 11,
 	Corpse = "unit-dwarven-dead-body",
+	TechnologyPointCost = 1,
 	Variations = {
 		{
 			"variation-id", "orange-hair-short-beard",

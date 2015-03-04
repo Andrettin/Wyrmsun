@@ -16,6 +16,9 @@ editor_types = {
 
 --- - - - - - - - - - - - - - - - - - -
 
+   "unit-teuton-worker",
+   "unit-teuton-swordsman",
+   "unit-teuton-archer",
    "unit-teuton-catapult",
    "unit-teuton-town-hall",
    "unit-teuton-farm",

@@ -369,14 +369,14 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	Factions.SaxonTribe.Civilization = "teuton"
 	WorldMapProvinces.Rhineland.Civilization = "teuton"
 	WorldMapProvinces.Rhineland.SettlementBuildings.unit_teuton_town_hall = 2
-	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
+	WorldMapProvinces.Rhineland.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
 	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	Factions.FrankTribe.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.SettlementBuildings.unit_teuton_town_hall = 2
-	WorldMapProvinces.Netherlands.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
+	WorldMapProvinces.Netherlands.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
 	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
 	
 	GrandStrategyEvents.VegdegsKingdom = nil
@@ -392,6 +392,8 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	WorldMapProvinces.Jutland.Civilization = "teuton"
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 0
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_teuton_town_hall = 2
+	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Jutland.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
 	Factions.GothTribe.Civilization = "goth"
 	WorldMapProvinces.Gotaland.Civilization = "goth"
 	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 0
@@ -527,9 +529,9 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	Factions.ArverniTribe.Diplomacy["AeduiTribe"] = "War"
 	Factions.SequaniTribe.Diplomacy["AeduiTribe"] = "War"
 	
-	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 13 -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
+	WorldMapProvinces.Brandenburg.Units.unit_teuton_swordsman = 13 -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
 	
-	WorldMapProvinces.NorthItaly.Units.unit_germanic_warrior = 30 -- enough troops to vanquish Ariovistus (in reality Caesar won with less troops)
+	WorldMapProvinces.NorthItaly.Units.unit_teuton_swordsman = 30 -- enough troops to vanquish Ariovistus (in reality Caesar won with less troops)
 	
 	GrandStrategyEvents.MigrationOfTheVana = nil
 end
@@ -541,8 +543,9 @@ end
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 	WorldMapProvinces.Burgundy.Owner = "Suebi Tribe"
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_teuton_town_hall = 2
-	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 4 -- to give them something of a defense
-	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 13
+	WorldMapProvinces.Brandenburg.Units.unit_teuton_swordsman = 4 -- to give them something of a defense
+	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Burgundy.Units.unit_teuton_swordsman = 13
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 0 -- Aedui forces defeated
 	GrandStrategyEvents.TheSequanisAppeal = nil
 	GrandStrategyEvents.TheBattleOfMagetobria = nil
@@ -777,11 +780,11 @@ end
 
 if (GrandStrategyYear >= 495) then
 	WorldMapProvinces.NorthItaly.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.NorthItaly.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	WorldMapProvinces.NorthItaly.Units.unit_teuton_swordsman = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	WorldMapProvinces.Latium.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.Latium.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	WorldMapProvinces.Latium.Units.unit_teuton_swordsman = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	WorldMapProvinces.Naples.Owner = "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	WorldMapProvinces.Naples.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	WorldMapProvinces.Naples.Units.unit_teuton_swordsman = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -790,7 +793,7 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	WorldMapProvinces.Bavaria.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Sicily.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Sicily.SettlementBuildings.unit_teuton_town_hall = 2
-	WorldMapProvinces.Sicily.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	WorldMapProvinces.Sicily.Units.unit_teuton_swordsman = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.Croatia.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Bohemia.Owner = ""
 	WorldMapProvinces.Brandenburg.Owner = ""

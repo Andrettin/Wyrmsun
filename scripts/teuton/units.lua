@@ -33,6 +33,160 @@
 --	NOTE: Save can generate this table.
 --
 
+DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
+	Parent = "unit-template-worker",
+	Civilization = "teuton",
+	Description = _("Hardworking and robust, buras are the lifeblood of germanic society, tending the fields and performing most of the manual labor required."),
+	Quote = _("\"He began to grow, | and to gain in strength, / Oxen he ruled, | and plows made ready, / Houses he built, | and barns he fashioned, / Carts he made, | and the plow he managed.\" - Rigsthula"),
+	Background = _("\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."),
+	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-germanic-worker",
+	Corpse = "unit-human-dead-body",
+	CanGatherResources = {
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "gold",
+--			"harvest-from-outside",
+			"resource-capacity", 100,
+			"wait-at-resource", 150,
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_lumber.png",
+			"resource-id", "lumber",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150,
+			"terrain-harvester"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "dwarven-miner-acknowledge",
+--		"ready", "dwarven-miner-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-teuton-swordsman", { Name = _("Erala"),
+	Parent = "unit-template-infantry",
+	Civilization = "teuton",
+	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
+	Quote = _("\"His spear he shook, | his shield he brandished, / His horse he spurred, | with his sword he hewed; / Wars he raised, | and reddened the field, / Warriors slew he, | and land he won.\" - Rigsthula"),
+--	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
+	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
+	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior",
+	Corpse = "unit-human-dead-body",
+	Variations = {
+		{
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "germanic/units/warrior_bronze_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "germanic/units/warrior_brown_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/warrior_gray_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair",
+			"file", "germanic/units/warrior_red_hair_bronze_shield.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
+	Parent = "unit-template-archer",
+	Civilization = "teuton",
+	Description = _("These warriors specialize in the art of archery, which they employ against their enemies with great lethality."),
+	Quote = _("\"Within two gazed | in each other's eyes, / Fathir and Mothir, | and played with their fingers; / There sat the house-lord, | wound strings for the bow, / Shafts he fashioned, | and bows he shaped.\" - Rigsthula"),
+	Background = _("\"Skutan\" is the Proto-Germanic word for \"archer\"."),
+	Image = {"file", "germanic/units/archer.png", "size", {72, 72}},
+	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
+	Missile = "missile-arrow",
+	Corpse = "unit-human-dead-body",
+	CanCastSpell = {"spell-dagger-attack"},
+	AutoCastActive = {"spell-dagger-attack"},
+	Variations = {
+		{
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "germanic/units/archer_gray_hair.png",
+			"icon", "icon-germanic-archer-gray-hair",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "germanic/units/archer_blond_hair.png",
+			"icon", "icon-germanic-archer-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead"}
+} )
+
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Parent = "unit-template-siege-engine",
 	Civilization = "teuton",

@@ -958,8 +958,26 @@ function AcquireFactionTechnologies(faction, other_faction)
 	end
 end
 
+function ChangeFactionCulture(faction, civilization)
+	local old_civilization = faction.Civilization
+	faction.Civilization = civilization
+	
+	-- replace existent units from the previous civilization with units of the new civilization
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		for i, unitName in ipairs(Units) do
+			if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Civilization") == old_civilization and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
+				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
+				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]
+				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
+				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
+				
+			end
+		end
+	end
+end
 
 function ChangeProvinceCulture(province, civilization)
+	local old_civilization = province.Civilization
 	province.Civilization = civilization
 	
 	-- replace existent buildings from other civilizations with buildings of the new civilization
@@ -973,6 +991,17 @@ function ChangeProvinceCulture(province, civilization)
 			elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
 				province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
 			end
+		end
+	end
+	
+	-- replace existent units from the previous civilization with units of the new civilization
+	for i, unitName in ipairs(Units) do
+		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Civilization") == old_civilization and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
+			province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.Units[string.gsub(unitName, "-", "_")]
+			province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.UnderConstructionUnits[string.gsub(unitName, "-", "_")]
+			province.Units[string.gsub(unitName, "-", "_")] = 0
+			province.UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
+			
 		end
 	end
 	
@@ -4827,7 +4856,7 @@ function GetUnitTypeUpkeep(unit_type)
 		return 50
 	elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
 		return 25
-	elseif (GetUnitTypeData(unitName, "Mercenary")) then
+	elseif (GetUnitTypeData(unit_type, "Mercenary")) then
 		return 25
 	else
 		return 0

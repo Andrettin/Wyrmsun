@@ -41,7 +41,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
   Key = "a", Hint = _("~!Attack"),
   ForUnit = {
-    "unit-germanic-warrior",
+    "unit-teuton-swordsman",
 	"unit-hero-greebo",
 	"germanic-group", "teuton-group"
 } } )
@@ -56,53 +56,68 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
   Action = "build", Value = "unit-teuton-town-hall",
   Key = "h", Hint = _("Build Chieftain's ~!Hall"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
   Action = "build", Value = "unit-teuton-town-hall",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "h", Hint = _("Build Rat~!haus"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
   Action = "build", Value = "unit-teuton-farm",
   Key = "f", Hint = _("Build ~!Farm"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-teuton-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-teuton-barracks",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "b", Hint = _("Build ~!Barracks"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Action = "build", Value = "unit-teuton-lumber-mill",
   Key = "c", Hint = _("Build ~!Carpenter's Shop"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
   Action = "build", Value = "unit-teuton-lumber-mill",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "l", Hint = _("Build ~!Lumber Mill"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
   Action = "build", Value = "unit-teuton-smithy",
   Key = "s", Hint = _("Build ~!Smithy"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
   Action = "build", Value = "unit-teuton-watch-tower",
   Key = "t", Hint = _("Build Watch ~!Tower"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-teuton-worker"} } )
 
 -- Building Commands ---------------------------------------------------------
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
+  Action = "train-unit", Value = "unit-teuton-worker",
+  Key = "b", Hint = _("Train ~!Bura"),
+  ForUnit = {"unit-teuton-town-hall"} } )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
+  Action = "train-unit", Value = "unit-teuton-swordsman",
+  Key = "e", Hint = _("Train ~!Erala"),
+  ForUnit = {"unit-teuton-barracks"} } )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
+  Action = "train-unit", Value = "unit-teuton-archer",
+  Key = "s", Hint = _("Train ~!Skutan"),
+  ForUnit = {"unit-teuton-barracks"} } )
+  
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
   Action = "train-unit", Value = "unit-teuton-catapult",
   Key = "c", Hint = _("Build ~!Catapult"),

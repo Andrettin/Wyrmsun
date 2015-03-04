@@ -55,6 +55,12 @@ DefineAiHelper(
 	"unit-teuton-lumber-mill"},
 	{"unit-equiv", "unit-germanic-smithy",
 	"unit-teuton-smithy"},
+	{"unit-equiv", "unit-germanic-worker",
+	"unit-teuton-worker"},
+	{"unit-equiv", "unit-germanic-warrior",
+	"unit-teuton-swordsman"},
+	{"unit-equiv", "unit-germanic-archer",
+	"unit-teuton-archer"},
 	{"unit-equiv", "unit-dwarven-town-hall",
 	"unit-dwarven-stronghold"}
 )

@@ -198,6 +198,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	Corpse = "unit-human-dead-body",
 	CanCastSpell = {"spell-dagger-attack"},
 	AutoCastActive = {"spell-dagger-attack"},
+	TechnologyPointCost = 1,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -226,7 +227,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 
 DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
 	Parent = "unit-germanic-warrior",
-	Civilization = "germanic",
+	Class = "",
 	Image = {"file", "germanic/units/old_man.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-old-man",
 	HitPoints = 40,

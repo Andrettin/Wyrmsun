@@ -79,17 +79,17 @@ end
 
 DefineModifier("upgrade-germanic-broad-sword",
 	{"PiercingDamage", 2},
-	{"apply-to", "unit-germanic-warrior"}
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}
 )
 
 DefineModifier("upgrade-germanic-bronze-shield",
 	{"Armor", 2},
-	{"apply-to", "unit-germanic-warrior"}
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}
 )
 
 DefineModifier("upgrade-germanic-barbed-arrow",
 	{"PiercingDamage", 1},
-	{"apply-to", "unit-germanic-archer"}
+	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-teuton-civilization",
@@ -97,9 +97,7 @@ DefineModifier("upgrade-teuton-civilization",
 )
 
 DefineDependency("unit-germanic-archer",
-	{"unit-germanic-carpenters-shop"},
-	"or",
-	{"unit-teuton-lumber-mill"}
+	{"unit-germanic-carpenters-shop"}
 )
 
 DefineDependency("upgrade-teuton-civilization",

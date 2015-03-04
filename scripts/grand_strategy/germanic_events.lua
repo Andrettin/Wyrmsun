@@ -695,7 +695,7 @@ local GermanicEvents = {
 					FormFaction(EventFaction, Factions.JuteTribe)
 					EventFaction = Factions.JuteTribe
 				end
-				EventFaction.Civilization = "teuton"
+				ChangeFactionCulture(EventFaction, "teuton")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						WorldMapProvinces[province_key].Civilization == "germanic"
@@ -758,7 +758,7 @@ local GermanicEvents = {
 					FormFaction(EventFaction, Factions.GothTribe)
 					EventFaction = Factions.GothTribe
 				end
-				EventFaction.Civilization = "goth"
+				ChangeFactionCulture(EventFaction, "goth")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						WorldMapProvinces[province_key].Civilization == "germanic"

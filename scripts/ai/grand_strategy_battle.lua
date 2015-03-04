@@ -84,6 +84,8 @@ local land_funcs = {
   function() return AiForce(1, {
 	"unit-germanic-warrior", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-germanic-warrior"),
 	"unit-germanic-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-germanic-archer"),
+	"unit-teuton-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-swordsman"),
+	"unit-teuton-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-archer"),
 	"unit-teuton-catapult", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-catapult"),
 	"unit-dwarven-militia", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-militia"),
 	"unit-dwarven-axefighter", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-axefighter"),
