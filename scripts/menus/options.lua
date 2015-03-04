@@ -434,10 +434,10 @@ function RunGameOptionsMenu()
     function() RunPreferencesMenu() end)
   menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16, 40 + 36*2,
     function() RunDiplomacyMenu() end)
-  menu:addFullButton(_("~!Quests"), "q", 16, 40 + 36*3,
-    function() RunQuestMenu() end)
-  menu:addFullButton(_("~!Tech Tree"), "t", 16, 40 + 36*4,
+  menu:addFullButton(_("~!Tech Tree"), "t", 16, 40 + 36*3,
     function() RunTechTreeMenu(0) end)
+  menu:addFullButton(_("En~!cyclopedia"), "c", 16, 40 + 36*4,
+    function() RunEncyclopediaMenu() end)
   menu:addFullButton(_("Previous (~<Esc~>)"), "escape", 128 - (224 / 2), 288 - 40,
     function() menu:stop() end)
 

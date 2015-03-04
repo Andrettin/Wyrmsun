@@ -118,6 +118,7 @@ function RunShowCreditsMenu()
 	_("Testing"),
 	"  Andrettin",
 	"  b_o",
+	"  Dinomaniak",
 	"  João Victor G. Costa (Jinn)",
 	"  Leo",
 	"  TaShadan",
