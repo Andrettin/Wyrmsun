@@ -94,9 +94,19 @@ UnitMeleeAttack = {
   	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
 	"unbreakable end", "wait 1",
 }
+WorkerAttack = {
+	"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "attack", "wait 5", "frame 45", "wait 3",
+    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
+}
 UnitDeath = {
 	"unbreakable begin",
 	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
+	"unbreakable end", "wait 1",
+}
+WorkerDeath = {
+	"unbreakable begin",
+	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
 	"unbreakable end", "wait 1",
 }
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
