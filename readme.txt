@@ -118,6 +118,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed a few issues with multiplayer (thanks to cybermind).
 - The tips menu no longer appears at startup in multiplayer games.
 - Added option for showing a resource bar under mines.
+- There is now a Single Player Game submenu, from which the Quests, (Single Player) Custom Game and Tech Tree screens can be accessed (based on feedback by Dinomaniak).
 
 * Quests
 - Added The Battle of Magetobria quest.

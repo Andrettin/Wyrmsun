@@ -180,9 +180,9 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "germanic",
-		"personal_names", {"Franz", "Heinrich", "Johann", "Karl", "Kurt", "Ludwig", "Otto"},
-		"personal_name_prefixes", {"Gott", "Hel", "Wolf"},
-		"personal_name_suffixes", {"fried", "gang", "mut"}
+		"personal_names", {"Arnulf", "Bernhard", "Franz", "Friedrich", "Gerhard", "Gunther", "Gustav", "Heinrich", "Hermann", "Johann", "Hans", "Karl", "Klaus", "Kurt", "Lothar", "Ludwig", "Manfred", "Otto", "Pippin", "Walter", "Werner", "Wilhelm"},
+		"personal_name_prefixes", {"Gott", "Hel", "Karl", "Sieg", "Wolf"},
+		"personal_name_suffixes", {"fried", "gang", "mann", "mut"}
 	},
 	"race", {
 		"name", "neutral",
