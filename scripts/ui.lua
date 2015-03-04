@@ -47,7 +47,7 @@ if (CanAccessFile("ui/mana2.png")) then
 	DefineDecorations({Index = "Research", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	DefineDecorations({Index = "Training", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	DefineDecorations({Index = "UpgradeTo", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
-	if (wyr.preferences.ShowResourceBar) then
+	if (wyr.preferences.ShowResourceBar) then -- sort of ugly way to set the preferences for this, fix later please
 		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 	else
 		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
@@ -244,7 +244,7 @@ DefinePanelContents(
 	{ Pos = {12, 152}, Condition = {Research = "only"},
 		More = {"CompleteBar", {Variable = "Research", Width = 152, Height = 14, Border = false}}
 	},
-	{ Pos = {16, 86}, Condition = {Research = "only"}, More = {"Text", "Researching:"}},
+	{ Pos = {100, 86}, Condition = {Research = "only"}, More = {"Text", "Researching~|:"}},
 	{ Pos = {50, 153}, Condition = {Research = "only"}, More = {"Text", "% Complete"}},
 -- Training
 	{ Pos = {12, 152}, Condition = {Training = "only"},

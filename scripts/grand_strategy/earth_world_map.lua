@@ -590,8 +590,15 @@ if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in
 	WorldMapProvinces.GaliciaIberia.Owner = "Rome"
 end
 
-if (GrandStrategyYear >= -15) then -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	WorldMapProvinces.Austria.Owner = "Rome"
+if (GrandStrategyYear >= -15) then
+	WorldMapProvinces.Austria.Owner = "Rome" -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Austria.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Austria.SettlementBuildings.unit_teuton_town_hall = 2
+	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Bavaria.Owner = "Rome" -- Raetia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Bavaria.SettlementBuildings.unit_teuton_town_hall = 2
+	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= -14) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -616,6 +623,9 @@ if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Sou
 	WorldMapProvinces.Hungary.Units.unit_germanic_warrior = 0
 end
 
+if (GrandStrategyYear >= -15) then
+end
+
 if (GrandStrategyYear >= 28) then -- estimated date
 	GrandStrategyEvents.SwegdesJourney = nil
 end
@@ -638,9 +648,7 @@ if (GrandStrategyYear >= 63) then -- estimated date
 end
 
 if (GrandStrategyYear >= 98) then
-	WorldMapProvinces.Bavaria.Owner = "Rugian Tribe" -- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
-	WorldMapProvinces.Bavaria.SettlementBuildings.unit_teuton_town_hall = 2
-	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
+	-- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
 	AcquireFactionTechnologies(Factions.RugianTribe, Factions.AsaTribe)
 --	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
 end

@@ -167,7 +167,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plns"
 		},
 		Bavaria = {
-			Name = "Rugia",
+			Name = "Raetia",
 			CulturalNames = {
 				Bavaria = "Bavaria",
 				BavarianTribe = "Bavaria",
@@ -175,7 +175,11 @@ function LoadProvinces(world)
 			},
 			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
 			Owner = "",
-	--		SettlementName = "Ratisbon",
+			SettlementName = "Ratisbon",
+			CulturalSettlementNames = {
+				teuton = "Regina Castra",
+				teuton = "Regensburg"
+			},
 			SettlementLocation = {128, 29}, -- Regensburg
 			SettlementBuildings = {
 			},

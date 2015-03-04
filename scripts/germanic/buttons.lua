@@ -134,19 +134,19 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
 
 -- Simple Buildings Germanic -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-farm",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
+  Action = "build", Value = "unit-germanic-town-hall",
+  Key = "h", Hint = _("Build Chieftain's ~!Hall"),
+  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
   Action = "build", Value = "unit-germanic-farm",
   Key = "f", Hint = _("Build ~!Farm"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-germanic-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
-
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-town-hall",
-  Action = "build", Value = "unit-germanic-town-hall",
-  Key = "h", Hint = _("Build Chieftain's ~!Hall"),
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",

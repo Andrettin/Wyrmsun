@@ -36,7 +36,7 @@
 
 -- Simple Buildings Celt -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-celt-farm",
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-celt-farm",
   Action = "build", Value = "unit-celt-farm",
   Key = "f", Hint = _("Build ~!Farm"),
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
+  ForUnit = {"unit-germanic-worker"} } )

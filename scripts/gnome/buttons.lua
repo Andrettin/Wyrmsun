@@ -97,17 +97,17 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
 
 -- simple buildings gnome -----------------------------------------------------
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-gnomish-town-hall",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-town-hall",
   Action = "build", Value = "unit-gnomish-town-hall",
   Key = "h", Hint = _("Build Town ~!Hall"),
   ForUnit = {"unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-farm",
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-gnomish-farm",
   Action = "build", Value = "unit-gnomish-farm",
   Key = "f", Hint = _("Build ~!Farm"),
   ForUnit = {"unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-gnomish-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-gnomish-barracks",
   Action = "build", Value = "unit-gnomish-barracks",
   Key = "b", Hint = _("Build ~!Barracks"),
   ForUnit = {"unit-gnomish-worker"} } )

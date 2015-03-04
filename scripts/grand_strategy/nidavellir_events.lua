@@ -79,6 +79,12 @@ local NidavellirEvents = {
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
 					GrandStrategyEventMap = false
+					
+					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
+						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+					end
+
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)

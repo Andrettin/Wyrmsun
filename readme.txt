@@ -43,6 +43,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Germanic farms now correctly drop food items when destroyed.
 - Added Dwarven Bastion (graphics by Jinn).
 - Dwarven Smithies are now cheaper than those of other civilizations, while their Lumber Mills are costlier.
+- Instead of being capturable, Mercenary Camps now remain owned by the neutral player, but are usable by players to hire units.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -51,7 +52,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Eikinskjaldi Clan as a dwarven faction.
 
 * Grand Strategy Mode
-- Added transitions for the conifer forest tiles (graphics by Jinn).
+- Added transitions for conifer forest tiles (graphics by Jinn).
 - Forests now spawn at a decreased rate in random world maps.
 - In random world maps conifer forests now appear at high latitudes, with scrub forests appearing elsewhere.
 - Fixed crash which could happen when conquering a province not owned by any factions.
@@ -82,14 +83,14 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added events for the development and spread of the Teuton, Goth and Norse cultures out of the Germanic one (if the Dane, Goth, or Swede Tribe is player-controlled, then it will develop Teuton culture instead of the Norse one, since the latter is not playable).
 - Added Atlantic Ocean water province to the Earth world map.
 - Certain provinces are now always generated adjacent to water in the random world map.
-- The Shorbear Hills now start with a stronghold.
+- The Shorbear Hills now start with a bastion.
 - Fixed a bug which caused units to not be saved correctly if the player quit during a grand strategy battle.
 - Added 3000 BC start date for Nidavellir.
 - Added The Mead of Poetry event, along with events for Durin appearing and dying.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).
-- Clicking on heroes no longer gives the "You have [...]" in the statusline.
+- Clicking on heroes no longer displays the "You have [...]" in the statusline.
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
@@ -97,7 +98,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Prague map.
 - Added Salzburg map.
 - Added Fjalar's and Galar's Hall map.
-- The Shorbear Clan now starts with a stronghold instead of a mead hall in the Shorbear Hills map.
+- The Shorbear Clan now starts with a bastion instead of a mead hall in the Shorbear Hills map.
 - Added the Tomb of Durahn Eikinskjaldi map, based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.
 
 * Miscellaneous
@@ -105,7 +106,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added caltrops and trap objects (graphics by b_o).
 - Gold, lumber, coal, food and score icons reworked (by Jinn).
 - Added "Civilized (Bronze)" and "Civilized (Iron)" tech level and max tech level options in the Single Player Game Setup menu.
-- The cursor now properly changes according to civilization outside of the RTS mode (in the menus and in Grand Strategy mode).
+- The cursor now properly changes according to civilization outside of RTS mode (in the menus and in Grand Strategy mode).
 - Scenarios can now be started directly from the quests menu.
 - Added "Game Concepts" section to the encyclopedia, to better explain the game's features.
 - Implemented numerous engine improvements by cybermind.
@@ -121,6 +122,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added The Battle of Magetobria quest.
 - Added The Home of the Boii quest.
 - Added The Mead of Poetry quest.
+- Added The Tomb of Durahn Eikinskjaldi quest.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
@@ -134,6 +136,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Gnomish, goblin and kobold units now have greater accuracy and evasion, and they no longer have a greater proportion of piercing damage than others.
 - Added "Reckless" (-1 Evasion) and "Clumsy" (-1 Accuracy, -1 Evasion) traits, and changed other traits to give modifiers to accuracy/evasion where appropriate.
 - The Skutan now has blond and gray hair-color variations for its icons (by b_o).
+- Dwarven Steelclads and Thanes now deal more damage.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

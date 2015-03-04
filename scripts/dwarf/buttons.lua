@@ -235,17 +235,17 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
 
 -- simple buildings dwarf -----------------------------------------------------
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-town-hall",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-town-hall",
   Action = "build", Value = "unit-dwarven-town-hall",
   Key = "h", Hint = _("Build Mead ~!Hall"),
   ForUnit = {"unit-dwarven-miner"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-mushroom-farm",
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-mushroom-farm",
   Action = "build", Value = "unit-dwarven-mushroom-farm",
   Key = "f", Hint = _("Build Mushroom ~!Farm"),
   ForUnit = {"unit-dwarven-miner"} } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-barracks",
   Action = "build", Value = "unit-dwarven-barracks",
   Key = "w", Hint = _("Build ~!War Hall"),
   ForUnit = {"unit-dwarven-miner"} } )

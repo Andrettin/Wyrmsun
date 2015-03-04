@@ -703,30 +703,6 @@ function StandardTriggers()
 		end
 	)
 
-	-- create extra Surghan Mercenaries if they have been hired
-	AddTrigger(
-		function()
-			if (GameCycle == 0) then
-				return false
-			end
-			return true
-		end,
-		function()
-			local uncount = 0
-			uncount = GetUnits("any")
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "UnitTypesCount", "unit-mercenary-camp") >= 1 and GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad") then
-					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-surghan-mercenary-steelclad", GetUnitVariable(uncount[unit1], "Player"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					DefineAllow("unit-surghan-mercenary-steelclad", "FFFFFFFFFFFFFFFF")
-					return false
-				end
-			end
-			return true
-		end
-	)
-
 	AddTrigger(
 		function()
 			if (GameCycle == 0) then
