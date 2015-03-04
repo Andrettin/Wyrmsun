@@ -44,6 +44,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Dwarven Bastion (graphics by Jinn).
 - Dwarven Smithies are now cheaper than those of other civilizations, while their Lumber Mills are costlier.
 - Instead of being capturable, Mercenary Camps now remain owned by the neutral player, but are usable by players to hire units.
+- Increased watch tower and guard tower HP by 100%.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.

@@ -491,7 +491,9 @@ end
 
 function Event(event_name, event_description, player, options, option_effects, event_icon, event_image, continue_automatically)
 	if (GetThisPlayer() == player and (continue_automatically == nil or continue_automatically == false)) then
-		SetGamePaused(true)
+		if not (IsNetworkGame()) then
+			SetGamePaused(true)
+		end
 		local menu = WarGameMenu(panel(5))
 		menu:resize(352, 352)
 

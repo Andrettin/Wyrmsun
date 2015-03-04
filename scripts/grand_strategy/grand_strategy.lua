@@ -598,7 +598,7 @@ function EndTurn()
 		end
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
-				if (string.find(unitName, "mercenary") ~= nil and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
+				if (GetUnitTypeData(unitName, "Mercenary") and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
 					MercenaryGroups[string.gsub(unitName, "-", "_")] = nil
 				end
 				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")]
@@ -2771,7 +2771,7 @@ function DrawGrandStrategyInterface()
 							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
 						end
 
-						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp" and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or string.find(unitName, "mercenary") ~= nil))) then -- don't show available for training but not had units in resolution heights lower than 600
+						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp" and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
 							local icon_offset_x = 9 + (item_x * 56)
 							local icon_offset_y = 340 + (item_y * (47 + 19 + 4))
 
@@ -3338,7 +3338,7 @@ function DrawGrandStrategyInterface()
 				item_x = 0
 				item_y = 0
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName) and string.find(unitName, "mercenary") ~= nil and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's gold cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
+					if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Mercenary") and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's gold cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
 						local icon_offset_x = 9 + (item_x * 56)
 						local icon_offset_y = 340 + (item_y * 47)
 
@@ -4289,7 +4289,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 			elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (150 + flying_rider_military_score_bonus))
 			-- Mercenaries
-			elseif (string.find(unitName, "mercenary") ~= nil) then
+			elseif (GetUnitTypeData(unitName, "Mercenary")) then
 				if (unitName == "unit-surghan-mercenary-steelclad") then
 					military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (75 + infantry_military_score_bonus))
 				elseif (unitName == "unit-surghan-mercenary-thane") then
@@ -4827,7 +4827,7 @@ function GetUnitTypeUpkeep(unit_type)
 		return 50
 	elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
 		return 25
-	elseif (string.find(unit_type, "mercenary") ~= nil) then
+	elseif (GetUnitTypeData(unitName, "Mercenary")) then
 		return 25
 	else
 		return 0

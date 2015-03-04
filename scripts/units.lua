@@ -2196,7 +2196,7 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 
 DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	Class = "farm",
-	Animations = "animations-building",
+	Animations = "animations-farm",
 	Costs = {"time", 100, "gold", 500, "lumber", 250},
 	RepairHp = 4,
 	RepairCosts = {"gold", 1, "lumber", 1},
@@ -2326,7 +2326,7 @@ DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
 	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
-	HitPoints = 84, -- 100 with masonry
+	HitPoints = 167, -- 200 with masonry
 	DrawLevel = 20,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 9,
@@ -2362,7 +2362,7 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 	RepairCosts = {"gold", 1, "lumber", 1},
 	Construction = "construction-land",
 	Speed = 0,
-	HitPoints = 109, -- 130 with masonry
+	HitPoints = 217, -- 260 with masonry
 	DrawLevel = 40,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 9, ComputerReactionRange = 6, PersonReactionRange = 6,

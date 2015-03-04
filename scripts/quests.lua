@@ -110,6 +110,18 @@ Quests = {
 		Y = 2,
 		PlayerColor = "red"
 	},
+	TheTombOfDurahnEikinskjaldi = {
+		Name = "The Tomb of Durahn Eikinskjaldi",
+		Icon = "dwarf/icons/shield_3",
+		Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi\n\nRewards: 1 Dwarven Technology Point.",
+		RequiredQuest = "The Mead of Poetry",
+		Civilization = "dwarf",
+		TechnologyPoints = 1,
+		Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
+		X = 2,
+		Y = 2,
+		PlayerColor = "brown"
+	},
 	ABargainIsStruck = {
 		Name = "A Bargain is Struck",
 		Icon = "dwarf/icons/rugnur",
@@ -118,7 +130,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/chaincolt-foothills.smp",
-		X = 2,
+		X = 3,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -130,7 +142,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
-		X = 3,
+		X = 4,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -142,7 +154,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/northern-wastelands.smp",
-		X = 4,
+		X = 5,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -154,7 +166,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/eastern-mines.smp",
-		X = 5,
+		X = 6,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -166,7 +178,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/shorbear-hills.smp",
-		X = 6,
+		X = 7,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -178,7 +190,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
-		X = 7,
+		X = 8,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -190,21 +202,9 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-flame.smp",
-		X = 8,
-		Y = 2,
-		PlayerColor = "red"
-	},
-	TheTombOfDurahnEikinskjaldi = {
-		Name = "The Tomb of Durahn Eikinskjaldi",
-		Icon = "dwarf/icons/shield_3",
-		Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi\n\nRewards: 1 Dwarven Technology Point.",
-		RequiredQuest = "The Mead of Poetry",
-		Civilization = "dwarf",
-		TechnologyPoints = 1,
-		Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
 		X = 9,
 		Y = 2,
-		PlayerColor = "brown"
+		PlayerColor = "red"
 	},
 	LastStandAtTheForge = {
 		Name = "Last Stand at the Forge",
@@ -214,7 +214,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
-		X = 9,
+		X = 10,
 		Y = 2,
 		PlayerColor = "red"
 	}

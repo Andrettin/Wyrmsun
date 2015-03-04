@@ -1,8 +1,9 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person", "computer")
-PresentMap("Tomb of Durahn Eikinskjaldi", 1, 20, 20, 1)
+DefinePlayerTypes("person", "computer", "person")
+PresentMap("Tomb of Durahn Eikinskjaldi", 2, 20, 20, 1)
 MapWorld = "Nidavellir"
+MapRequiredQuest = "The Mead of Poetry"
 MapAttacker = 0
 MapDefender = 1
 

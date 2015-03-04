@@ -1541,7 +1541,21 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1) then
+		if (
+			(
+				PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Mine 10000 gold and 20000 coal") 
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
+			)
+			and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1
+			and (GetFactionExists("Baglur") == false or GetPlayerData(GetFactionPlayer("Baglur"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Baglur"), "UnitTypesCount", "unit-hero-baglur-thane") < 1)
+		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1553,17 +1567,15 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
-			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-				ActionDefeat()
-				if (GrandStrategy) then
-					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
-						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
-						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
-					end
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+			ActionDefeat()
+			if (GrandStrategy) then
+				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
+					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
+					WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
+					AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 				end
 			end
 		end
@@ -4837,7 +4849,14 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") < 1) then
+		if (
+			(
+				PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")
+				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
+			)
+			and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") < 1
+		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -4846,10 +4865,8 @@ AddTrigger(
 	function()
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Shorbear Hills") then
-			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-				ActionDefeat()
-			end
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+			ActionDefeat()
 		end
 		return false
 	end

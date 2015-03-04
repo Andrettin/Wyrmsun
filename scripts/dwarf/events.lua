@@ -125,7 +125,10 @@ AddTrigger(
 				end},
 				"dwarf/icons/durin.png"
 			)
-			end}
+			end},
+			nil,
+			nil,
+			GrandStrategy
 		)
 		return false
 	end
@@ -248,6 +251,38 @@ AddTrigger(
 	function()
 		RemovePlayerObjective(player, "- Durin must survive")
 		ActionDefeat()
+		return false
+	end
+)
+end
+
+if (mapinfo.description == "Tomb of Durahn Eikinskjaldi") then
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionExists("Raiders") and GetFactionExists("Norlund Clan")) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"The Eikinskjaldi Clan from Joruvellir has hired us to recover the skull of Durahn Eikinskjaldi, a dwarven warlord of ages past. The clan's chieftain needs the skull to prove his descent from Durahn, and thus his claim to his title.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				RemovePlayerObjective(player, "- Destroy the enemy")
+				AddPlayerObjective(player, "- Retrieve Durahn Eikinskjaldi's skull")
+				AddPlayerObjective(player, "- Durstorn and Baglur must survive")
+			end},
+			nil,
+			nil,
+			GrandStrategy
+		)
 		return false
 	end
 )
