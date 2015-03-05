@@ -295,6 +295,8 @@ function SetPlayerData(player, data, arg1, arg2)
 				Load("scripts/goblin/ui.lua")
 			elseif (arg1 == "kobold") then
 				Load("scripts/kobold/ui.lua")
+			elseif (arg1 == "teuton") then
+				Load("scripts/teuton/ui.lua")
 			end
 		end
 		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
