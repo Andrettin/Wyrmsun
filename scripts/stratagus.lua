@@ -91,6 +91,8 @@ Preference.ShowAttackRange = false
 Preference.ShowReactionRange = false
 Preference.AiExplores = true
 Preference.IconsShift = true
+Preference.IconFrameG = CGraphic:New("ui/icon_frame.png", 54, 46)
+Preference.PressedIconFrameG = CGraphic:New("ui/icon_frame_pressed.png", 54, 46)
 Preference.MineNotifications = true
 
 Preference.ShowOrders = 2

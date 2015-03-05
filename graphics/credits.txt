@@ -619,6 +619,8 @@ João Victor G. Costa (Jinn):
 /graphics/ui/gold.png
 /graphics/ui/gold_ore.png
 /graphics/ui/housing.png
+/graphics/ui/icon_frame.png
+/graphics/ui/icon_frame_pressed.png
 /graphics/ui/lumber.png
 /graphics/ui/oil.png
 /graphics/ui/potion.png

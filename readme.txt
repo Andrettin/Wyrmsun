@@ -126,6 +126,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - There is now a Single Player Game submenu, from which the Quests, (Single Player) Custom Game and Tech Tree screens can be accessed (based on feedback by Dinomaniak).
 - Changed the button tooltip for the Erala and etc. to have descriptive names in parenthesis, such as "Train Erala (Warrior)".
 - Tech tree descriptions now show for what that tech tree element is required for.
+- New icon frame (by Jinn).
 
 * Quests
 - Added The Battle of Magetobria quest.
