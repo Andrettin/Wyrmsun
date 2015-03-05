@@ -86,6 +86,7 @@ function RunTechTreeMenu(civilization_number)
 			tech_description = CUpgrade:Get(unit).Description
 			techicon_graphics = CUpgrade:Get(unit).Icon.G:getFile()
 		end
+		tech_description = tech_description .. GetTechnologyAllowsString(unit, civilization)
 		techicon_graphics = string.sub(techicon_graphics, 0, -5)
 		local techicon
 		local b
@@ -244,7 +245,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-1") then
 					tech_icon_x = 7
 					tech_icon_y = 4
-					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("archer", civilization)) or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization))) then
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("archer", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("archer", civilization)) > 0 and GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("flying-rider", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("flying-rider", civilization)) > 0) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "ranged-projectile-2") then
@@ -336,4 +337,84 @@ function GetTechnologyPointCost(civilization, technology)
 		end
 	end
 	return 0
+end
+
+function GetTechnologyAllowsString(technology, civilization)
+	local allows_string = ""
+	local allowed_technologies = {}
+	if (string.find(technology, "upgrade-") == nil) then
+		if (GetUnitTypeData(technology, "Class") == "archer") then
+			if (GetCivilizationClassUnitType("ranged-projectile-1", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("ranged-projectile-1", civilization))
+			end
+		elseif (GetUnitTypeData(technology, "Class") == "siege-engine") then
+			if (GetCivilizationClassUnitType("siege-projectile-1", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-projectile-1", civilization))
+			end
+		elseif (GetUnitTypeData(technology, "Class") == "lumber-mill") then
+			if (GetCivilizationClassUnitType("archer", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("archer", civilization))
+			end
+			if (GetCivilizationClassUnitType("siege-engine", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-engine", civilization))
+			end
+			if (GetCivilizationClassUnitType("masonry", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("masonry", civilization))
+			end
+		elseif (GetUnitTypeData(technology, "Class") == "smithy") then
+			if (GetCivilizationClassUnitType("melee-weapon-1", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("melee-weapon-1", civilization))
+			end
+			if (GetCivilizationClassUnitType("bronze-shield", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("bronze-shield", civilization))
+			end
+			if (GetCivilizationClassUnitType("siege-engine", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-engine", civilization))
+			end
+		elseif (GetUnitTypeData(technology, "Class") == "watch-tower") then
+			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))
+			end
+		end
+	else
+		if (CUpgrade:Get(technology).Class == "melee-weapon-1") then
+			if (GetCivilizationClassUnitType("melee-weapon-2", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("melee-weapon-2", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "bronze-shield") then
+			if (GetCivilizationClassUnitType("iron-shield", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-shield", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "ranged-projectile-1") then
+			if (GetCivilizationClassUnitType("ranged-projectile-2", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("ranged-projectile-2", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "siege-projectile-1") then
+			if (GetCivilizationClassUnitType("siege-projectile-2", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-projectile-2", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "masonry") then
+			if (GetCivilizationClassUnitType("stronghold", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("stronghold", civilization))
+			end
+			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))
+			end
+		end
+	end
+	if (table.getn(allowed_technologies) > 0) then
+		allows_string = "\n\nRequired For: "
+		for i=1,table.getn(allowed_technologies) do
+			if (string.find(allowed_technologies[i], "upgrade-") == nil) then
+				allows_string = allows_string .. GetUnitTypeName(allowed_technologies[i])
+			else
+				allows_string = allows_string .. CUpgrade:Get(allowed_technologies[i]).Name
+			end
+			if (i < table.getn(allowed_technologies)) then
+				allows_string = allows_string .. ", "
+			end
+		end
+		allows_string = allows_string .. "."
+	end
+	return allows_string
 end

@@ -342,6 +342,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
     GameSettings.NoRandomness = dd:isMarked()
   end
   local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
+  no_randomness:setMarked(wyr.preferences.NoRandomness)
 
   menu:writeText("Civilization:", sx, sy*11)
   d = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,

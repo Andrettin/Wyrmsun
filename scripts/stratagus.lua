@@ -1310,6 +1310,7 @@ local defaultPreferences = {
 	ShowOrders = 0,
 	Language = "English",
 	ShowResourceBar = false,
+	NoRandomness = false,
 	QuestsCompleted = {}, -- Quests Completed
 	TechnologyAcquired = {},
 	AchievementsCompleted = {},

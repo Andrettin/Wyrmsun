@@ -1,7 +1,7 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person","person")
-PresentMap("Holmgard", 2, 128, 96, 1)
+PresentMap("Holmgard", 2, 96, 72, 1)
 MapWorld = "Earth"
 MapRequiredQuest = "On the Vanaquisl"
 MapAttacker = 0

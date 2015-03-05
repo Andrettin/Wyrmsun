@@ -104,6 +104,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added the Tomb of Durahn Eikinskjaldi map, based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.
 - Decreased quantity of trees in the Tanais map.
 - Decreased the size of the Tanais map.
+- Decreased quantity of trees in the Holmgard map, and decrease its size slightly.
+- Decreased quantity of trees in the random forest maps.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -122,6 +124,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The tips menu no longer appears at startup in multiplayer games.
 - Added option for showing a resource bar under mines.
 - There is now a Single Player Game submenu, from which the Quests, (Single Player) Custom Game and Tech Tree screens can be accessed (based on feedback by Dinomaniak).
+- Changed the button tooltip for the Erala and etc. to have descriptive names in parenthesis, such as "Train Erala (Warrior)".
+- Tech tree descriptions now show for what that tech tree element is required for.
 
 * Quests
 - Added The Battle of Magetobria quest.

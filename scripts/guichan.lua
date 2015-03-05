@@ -922,13 +922,19 @@ function RunSinglePlayerGameMenu()
   menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
   local buttonNewMap =
   menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
-    function() RunQuestMenu();
-		if (RunningQuest) then
+    function()
+		RunQuestMenu();
+		if (RunningMission) then
 			menu:stop(1)
 		end
 	end)
   menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
-    function() RunSinglePlayerCustomGameMenu() end)
+    function()
+		RunSinglePlayerCustomGameMenu()
+		if (RunningMission) then
+			menu:stop(1)
+		end
+	end)
   menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*4,
     function() RunTechTreeMenu(0) end)
   menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*5,
@@ -953,7 +959,7 @@ function RunSinglePlayerCustomGameMenu()
   local descriptionl
   local tech_level
   local max_tech_level
-  local no_randomness = false
+  local no_randomness
   MapPersonPlayer = 0
   PlayerFaction = ""
 
@@ -968,6 +974,7 @@ function RunSinglePlayerCustomGameMenu()
   
   GrandStrategy = false
   ForTheMotherland = false
+  RunningMission = false
   
   local maps = {}
 
@@ -1070,7 +1077,9 @@ function RunSinglePlayerCustomGameMenu()
 	  if (max_tech_level:getSelected() > 0) then
 		  MaxTechLevel[MapPersonPlayer + 1] = max_tech_level_list[max_tech_level:getSelected() + 1]
 	  end
-      GameSettings.NoRandomness = no_randomness
+      GameSettings.NoRandomness = wyr.preferences.NoRandomness
+	  
+	  RunningMission = true
 	  
       RunMap(mapname)
       menu:stop()
@@ -1131,16 +1140,13 @@ function RunSinglePlayerCustomGameMenu()
     function(dd) end)
   max_tech_level:setSize(152, 20)
 
-  local b = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 420,
+  no_randomness = menu:addImageCheckBox(_("~<No Randomness~>"), offx + 640 - 224 - 16, offy + 10 + 300 + 3,
 	function()
-		if (no_randomness == false) then
-			no_randomness = true
-		else
-			no_randomness = false
-		end
+		wyr.preferences.NoRandomness = no_randomness:isMarked()
+		SavePreferences()
 	end
   )
-  if (no_randomness) then b:setMarked(true) end
+  no_randomness:setMarked(wyr.preferences.NoRandomness)
   
   function WorldChanged()
 	scenario_list = {}

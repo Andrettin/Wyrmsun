@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-RunningQuest = false
+RunningMission = false
 
 function RunQuestMenu()
 
@@ -42,7 +42,7 @@ function RunQuestMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	RunningQuest = false
+	RunningMission = false
 	
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
@@ -54,6 +54,14 @@ function RunQuestMenu()
 		end
 	end
 
+	no_randomness = menu:addImageCheckBox(_("~<No Randomness~>"), offx + 640 - 224 - 16, offy + 10 + 300 + 3,
+		function()
+			wyr.preferences.NoRandomness = no_randomness:isMarked()
+			SavePreferences()
+		end
+	)
+	no_randomness:setMarked(wyr.preferences.NoRandomness)
+  
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
@@ -90,8 +98,9 @@ function addQuestIcon(quest, menu, x, y)
 			
 			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 				function()
-					RunningQuest = true
+					RunningMission = true
 					GetMapInfo(quest.Map)
+					GameSettings.NoRandomness = wyr.preferences.NoRandomness
 					RunMap(quest.Map)
 					quest_menu:stop()
 					menu:stop()

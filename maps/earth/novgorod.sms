@@ -41,11 +41,11 @@ local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germ
 local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker", "unit-germanic-worker"}
 
 if (LoadedGame == false) then
-	GenerateTown(layout, 1, "celt", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, false, invader_units, "medium", nil)
+	GenerateTown(layout, 1, "celt", "Vana Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, false, invader_units, "low", nil)
 	SetPlayerData(1, "Name", "Natives")
 	
-	CreateCreeps(15, "unit-glyph", 1, 0, 16, 32, 96)
-	CreateCreeps(1, "unit-germanic-warrior", 48, 0, 128, 0, 96)
+	CreateCreeps(15, "unit-glyph", 1, 0, Map.Info.MapWidth / 8, Map.Info.MapHeight / 3, Map.Info.MapHeight)
+	CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 3 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 end
 
 if (GrandStrategy == false) then
