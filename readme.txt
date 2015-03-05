@@ -46,6 +46,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Instead of being capturable, Mercenary Camps now remain owned by the neutral player, but are usable by players to hire units.
 - Increased watch tower and guard tower HP by 100%.
 - Added Teuton Burg (graphics by Jinn).
+- Reduced the length of the Dwarven Smithy's description.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -148,6 +149,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Skutan now has blond and gray hair-color variations for its icons (by b_o).
 - Dwarven Steelclads and Thanes now deal more damage.
 - The minimum damage in a unit's damage display now shows the minimum possible damage before armor would be applied.
+- Reduced the length of the Dwarven Scout's description.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

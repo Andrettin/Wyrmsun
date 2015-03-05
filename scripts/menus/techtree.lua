@@ -327,6 +327,9 @@ function GetQuestTechnologyPoints(civilization, quest)
 end
 
 function GetTechnologyPointCost(civilization, technology)
+	if (technology == nil) then
+		return 1
+	end
 	if (string.find(technology, "upgrade-") == nil) then
 		if (civilization == GetUnitTypeData(technology, "Civilization") or civilization == "") then
 			return GetUnitTypeData(technology, "TechnologyPointCost")
