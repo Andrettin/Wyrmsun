@@ -1262,6 +1262,12 @@ end
 --  String Functions
 -------------------------------------------------------------------------------
 
+function FullyCapitalizeString(str)
+	str = (str:gsub("^%l", string.upper))
+	str = (str:gsub(" %l", string.upper))
+    return str
+end
+
 function CapitalizeString(str)
     return (str:gsub("^%l", string.upper))
 end

@@ -125,9 +125,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The tips menu no longer appears at startup in multiplayer games.
 - Added option for showing a resource bar under mines.
 - There is now a Single Player Game submenu, from which the Quests, (Single Player) Custom Game and Tech Tree screens can be accessed (based on feedback by Dinomaniak).
-- Changed the button tooltip for the Erala and etc. to have descriptive names in parenthesis, such as "Train Erala (Warrior)".
 - Tech tree descriptions now show for what that tech tree element is required for.
 - New icon frame (by Jinn).
+- The encyclopedia now displays the class of units, buildings and technologies.
+- The tech tree is now brought up when finishing a scenario, if the civilization you played that scenario with has unspent technology points.
 
 * Quests
 - Added The Battle of Magetobria quest.

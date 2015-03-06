@@ -688,6 +688,9 @@ function RunMap(map, objective, fow, revealmap)
   end
   if (NextMapDirect == false) then
 	  RunResultsMenu(s)
+	  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and not IsReplayGame() and not IsNetworkGame()) then
+		  RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
+	  end
   end
   NextMapDirect = false
 
@@ -924,14 +927,14 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
     function()
 		RunQuestMenu();
-		if (RunningMission) then
+		if (RunningScenario) then
 			menu:stop(1)
 		end
 	end)
   menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
     function()
 		RunSinglePlayerCustomGameMenu()
-		if (RunningMission) then
+		if (RunningScenario) then
 			menu:stop(1)
 		end
 	end)
@@ -974,7 +977,7 @@ function RunSinglePlayerCustomGameMenu()
   
   GrandStrategy = false
   ForTheMotherland = false
-  RunningMission = false
+  RunningScenario = false
   
   local maps = {}
 
@@ -1079,7 +1082,7 @@ function RunSinglePlayerCustomGameMenu()
 	  end
       GameSettings.NoRandomness = wyr.preferences.NoRandomness
 	  
-	  RunningMission = true
+	  RunningScenario = true
 	  
       RunMap(mapname)
       menu:stop()

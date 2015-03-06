@@ -41,12 +41,8 @@ function RunTechTreeMenu(civilization_number)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	local civilization_dd
-	local civilization_list = {"Dwarf", "Human - Germanic"}
+	local civilization_list = GetAvailableCivilizationsTechTree()
 --	local button_quantity = 0
-
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
-		table.insert(civilization_list, "Human - Teuton")
-	end
 
 	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
 	civilization_dd = menu:addDropDown(civilization_list, offx + 244, offy + 10 + 15,
@@ -63,13 +59,7 @@ function RunTechTreeMenu(civilization_number)
 
 	SetPlayerData(GetThisPlayer(), "RaceName", civilization)
 	
-	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
-		tech_points = tech_points + GetQuestTechnologyPoints(civilization, wyr.preferences.QuestsCompleted[i])
-	end
-
-	for i=1,table.getn(wyr.preferences.TechnologyAcquired) do
-		tech_points = tech_points - GetTechnologyPointCost(civilization, wyr.preferences.TechnologyAcquired[i])
-	end
+	tech_points = GetCivilizationTechnologyPoints(civilization)
 	
 	menu:addLabel(_("Technology Points: ") .. tech_points, 80 + 32, offy + 212 + (36 * 4))
 
@@ -420,4 +410,38 @@ function GetTechnologyAllowsString(technology, civilization)
 		allows_string = allows_string .. "."
 	end
 	return allows_string
+end
+
+function GetCivilizationTechnologyPoints(civilization)
+	local tech_points = 0
+	
+	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
+		tech_points = tech_points + GetQuestTechnologyPoints(civilization, wyr.preferences.QuestsCompleted[i])
+	end
+
+	for i=1,table.getn(wyr.preferences.TechnologyAcquired) do
+		tech_points = tech_points - GetTechnologyPointCost(civilization, wyr.preferences.TechnologyAcquired[i])
+	end
+	
+	return tech_points
+end
+
+function GetAvailableCivilizationsTechTree()
+	local civilization_list = {"Dwarf", "Human - Germanic"}
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+		table.insert(civilization_list, "Human - Teuton")
+	end
+	return civilization_list
+end
+
+function GetTechTreeCivilizationNumber(civilization)
+	for i=1,table.getn(GetAvailableCivilizationsTechTree()) do
+		local tech_tree_civilization = string.gsub(GetAvailableCivilizationsTechTree()[i + 1], "Human", "")
+		tech_tree_civilization = string.gsub(tech_tree_civilization, "-", "")
+		tech_tree_civilization = string.gsub(tech_tree_civilization, " ", "")
+		tech_tree_civilization = string.lower(tech_tree_civilization)
+		if (tech_tree_civilization == civilization) then
+			return i
+		end
+	end
 end

@@ -61,7 +61,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
   Action = "build", Value = "unit-teuton-town-hall",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
-  Key = "h", Hint = _("Build Rat~!haus (Town Hall)"),
+  Key = "h", Hint = _("Build Rat~!haus"),
   ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
@@ -128,7 +128,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
   Action = "research", Value = "upgrade-teuton-spatha",
   Allowed = "check-single-research",
-  Key = "p", Hint = _("Research S~!patha (Long Sword)"),
+  Key = "p", Hint = _("Research S~!patha"),
   ForUnit = {"unit-teuton-smithy"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
@@ -147,5 +147,5 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
   Action = "upgrade-to", Value = "unit-teuton-stronghold",
   Allowed = "check-upgrade-to",
-  Key = "b", Hint = _("Upgrade to ~!Burg (Keep)"),
+  Key = "b", Hint = _("Upgrade to ~!Burg"),
   ForUnit = {"unit-teuton-town-hall"} } )

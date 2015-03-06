@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-RunningMission = false
+RunningScenario = false
 
 function RunQuestMenu()
 
@@ -42,7 +42,7 @@ function RunQuestMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	RunningMission = false
+	RunningScenario = false
 	
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
@@ -98,8 +98,13 @@ function addQuestIcon(quest, menu, x, y)
 			
 			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 				function()
-					RunningMission = true
+					RunningScenario = true
 					GetMapInfo(quest.Map)
+					for i=1,mapinfo.nplayers do
+						if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
+							GameSettings.Presets[i-1].Type = PlayerComputer
+						end
+					end
 					GameSettings.NoRandomness = wyr.preferences.NoRandomness
 					RunMap(quest.Map)
 					quest_menu:stop()

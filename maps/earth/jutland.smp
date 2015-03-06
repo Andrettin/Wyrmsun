@@ -1,7 +1,7 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("nobody", "person", "nobody", "nobody", "person")
-PresentMap("Jutland", 2, 50, 96, 1)
+DefinePlayerTypes("nobody", "computer", "nobody", "nobody", "person")
+PresentMap("Jutland", 1, 50, 96, 1)
 MapWorld = "Earth"
 MapRequiredQuest = "Westward Migration"
 MapPersonPlayer = 4
