@@ -56,7 +56,7 @@ DefineCursor({
 --	* Race dwarf.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/battle.ogg" }
+wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/the_deep_path.ogg", "music/underground.ogg", "music/northern_mountains.ogg", "music/casualties_of_war.ogg", "music/battle.ogg", "music/battle-epic.ogg" }
 
 function DwarfScreen(screen_width, screen_height)
   local info_panel_x = 0
