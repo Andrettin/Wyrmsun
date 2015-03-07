@@ -419,3 +419,135 @@ DefineCursor({
   File = "ui/cursors/arrow_SE.png",
   HotSpot = {20, 18},
   Size = {24, 32}})
+
+function GetRGBA(r, g, b, a)
+	if (wyr.preferences.UseOpenGL == false) then
+		return b + g*0x100 + r*0x10000 + a*0x1000000
+	else
+		return r + g*0x100 + b*0x10000 + a*0x1000000
+	end
+end
+
+local GermanicPopupBackgroundColor = GetRGBA(0,32,96, 208)
+local GermanicPopupBorderColor = GetRGBA(192,192,255, 160)
+
+PopupFont = "game"
+
+DefinePopup({
+	Ident = "popup-commands",
+	BackgroundColor = GetRGBA(128, 128, 128, 208),
+	BorderColor = GetRGBA(192, 192, 255, 160),
+	Contents = {
+			{ 	Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			-- Description
+			{ 	Margin = {1, 1}, Condition = {HasDescription = true},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = PopupFont}}
+			}, 
+			-- Move  hint
+			{ 	Margin = {1, 1}, Condition = {ButtonAction = "move"},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			},
+			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = _("~<ALT~>-click to defend unit."), MaxWidth = Video.Width / 5}}
+			},
+			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5}}
+			},
+			-- Repair hint
+			{ 	Margin = {1, 1}, Condition = {ButtonAction = "repair"},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			},
+			{ 	Condition = {ButtonAction = "repair"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings."), MaxWidth = Video.Width / 5}}
+			},
+			-- Heal hint
+			{ 	Margin = {1, 1}, Condition = {ButtonValue = "spell-herbal-cure"},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			},
+			{ 	Condition = {ButtonValue = "spell-herbal-cure"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables autoheal ability."), MaxWidth = Video.Width / 5}}
+			}
+	}	
+})
+
+DefinePopup({
+	Ident = "popup-building",
+	BackgroundColor = GetRGBA(128, 128, 128, 208),
+	BorderColor = GetRGBA(192, 192, 255, 160),
+	Contents = {
+			{	Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			{ 	Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	More = {"Costs"}, HighlightColor = "yellow",
+			}, 
+			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
+			}, 
+			-- Description
+			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+			},
+	}	
+})
+
+DefinePopup({
+	Ident = "popup-unit",
+	BackgroundColor = GetRGBA(128, 128, 128, 208),
+	BorderColor = GetRGBA(192, 192, 255, 160),
+	Contents = {
+			{	Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			{ 	Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	More = {"Costs"}, HighlightColor = "yellow",
+			}, 
+			{ 	Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
+			},
+			{ 	HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Armor: "), Variable = "Armor"}}
+			},
+			{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Sight: "), Variable = "SightRange"}}
+			},
+			{ 	HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Range: "), Variable = "AttackRange"}}
+			},
+			{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
+				More = {"Variable", {Text = Concat(_("Damage: "),
+					String(Div(Add(TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")), 2)), "-",
+					String(Add(TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")))
+				)}}
+			},
+			{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Accuracy: "), Variable = "Accuracy"}}
+			},
+			{ 	Condition = {Evasion = "only"}, HighlightColor = "yellow",
+				More = {"Variable", {Text = _("Evasion: "), Variable = "Evasion"}}
+			},
+			
+			-- Description
+			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+			},
+	}	
+})

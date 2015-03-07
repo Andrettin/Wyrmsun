@@ -38,21 +38,21 @@
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-boots",
   Action = "move",
-  Key = "m", Hint = _("~!Move"),
+  Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
   ForUnit = {
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"gnome-group"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
   Action = "attack",
-  Key = "a", Hint = _("~!Attack"),
+  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
   ForUnit = {
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist",
 	"gnome-group"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
   Action = "patrol",
-  Key = "p", Hint = _("~!Patrol"),
+  Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
   ForUnit = {
 	"unit-gnomish-recruit", 
 	"gnome-group"
@@ -62,80 +62,80 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
   Action = "repair",
-  Key = "r", Hint = _("~!Repair"),
+  Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Action = "harvest",
-  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"),
+  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-worker"} } )
 
 -- Special Abilities ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",
   Action = "cast-spell", Value = "spell-herbal-cure",
-  Key = "h", Hint = "~!Herbal Cure (per 1 HP)",
+  Key = "h", Hint = _("~!Herbal Cure (per 1 HP)"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-herbalist"} } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-portent",
   Action = "learn-ability", Value = "upgrade-portent",
-  Key = "p", Hint = "Learn ~!Portent",
+  Key = "p", Hint = _("Learn ~!Portent"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-herbalist"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
   Action = "cast-spell", Value = "spell-portent",
   Allowed = "check-ability", AllowArg = {"upgrade-portent"},
-  Key = "p", Hint = "~!Portent",
+  Key = "p", Hint = _("~!Portent"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-herbalist"} } )
 
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
-  Key = "b", Hint = _("~!Build Basic Structure"),
+  Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-worker"} } )
 
 -- simple buildings gnome -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-town-hall",
   Action = "build", Value = "unit-gnomish-town-hall",
-  Key = "h", Hint = _("Build Town ~!Hall"),
+  Key = "h", Hint = _("Build Town ~!Hall"), Popup = "popup-building",
   ForUnit = {"unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-gnomish-farm",
   Action = "build", Value = "unit-gnomish-farm",
-  Key = "f", Hint = _("Build ~!Farm"),
+  Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-gnomish-barracks",
   Action = "build", Value = "unit-gnomish-barracks",
-  Key = "b", Hint = _("Build ~!Barracks"),
+  Key = "b", Hint = _("Build ~!Barracks"), Popup = "popup-building",
   ForUnit = {"unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "escape", Hint = _("~<ESC~> Cancel"),
+  Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-worker"} } )
 
 -- buildings commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-worker",
   Action = "train-unit", Value = "unit-gnomish-worker",
-  Key = "s", Hint = _("Train ~!Scavenger"),
+  Key = "s", Hint = _("Train ~!Scavenger"), Popup = "popup-unit",
   ForUnit = {"unit-gnomish-town-hall"} } )
 
 --DefineButton( { Pos = 2, Level = 0, Icon = "icon-gnomish-caravan",
 --  Action = "train-unit", Value = "unit-gnomish-caravan",
---  Key = "c", Hint = _("Build ~!Caravan"),
+--  Key = "c", Hint = _("Build ~!Caravan"), Popup = "popup-unit",
 --  ForUnit = {"unit-gnomish-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-recruit",
   Action = "train-unit", Value = "unit-gnomish-recruit",
-  Key = "r", Hint = _("Train ~!Recruit"),
+  Key = "r", Hint = _("Train ~!Recruit"), Popup = "popup-unit",
   ForUnit = {"unit-gnomish-barracks"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-herbalist",
   Action = "train-unit", Value = "unit-gnomish-herbalist",
-  Key = "h", Hint = _("Train ~!Herbalist"),
+  Key = "h", Hint = _("Train ~!Herbalist"), Popup = "popup-unit",
   ForUnit = {"unit-gnomish-barracks"} } )
   

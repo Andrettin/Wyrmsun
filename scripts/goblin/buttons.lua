@@ -38,97 +38,97 @@
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-spear-1",
   Action = "attack",
-  Key = "a", Hint = _("~!Attack"),
+  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
   ForUnit = {
 	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
 	"goblin-group"} } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
-  Key = "g", Hint = _("Attack ~!Ground"),
+  Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-war-machine", "goblin-group"} } )
 
 -- worker specific actions ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
   Action = "repair",
-  Key = "r", Hint = _("~!Repair"),
+  Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Action = "harvest",
-  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"),
+  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
 
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
-  Key = "b", Hint = _("~!Build Basic Structure"),
+  Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
 
 -- simple buildings goblin -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-town-hall",
   Action = "build", Value = "unit-goblin-town-hall",
-  Key = "h", Hint = _("Build Town ~!Hall"),
+  Key = "h", Hint = _("Build Town ~!Hall"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-farm",
   Action = "build", Value = "unit-goblin-farm",
-  Key = "f", Hint = _("Build ~!Farm"),
+  Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-mess-hall",
   Action = "build", Value = "unit-goblin-mess-hall",
-  Key = "m", Hint = _("Build ~!Mess Hall"),
+  Key = "m", Hint = _("Build ~!Mess Hall"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
   Action = "build", Value = "unit-goblin-lumber-mill",
-  Key = "l", Hint = _("Build ~!Lumber Mill"),
+  Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smithy",
   Action = "build", Value = "unit-goblin-smithy",
-  Key = "g", Hint = _("Build Fu~!gla Forge"),
+  Key = "g", Hint = _("Build Fu~!gla Forge"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "escape", Hint = _("~<ESC~> Cancel"),
+  Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
 
 -- Buildings Commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-worker",
   Action = "train-unit", Value = "unit-goblin-worker",
-  Key = "w", Hint = _("Train ~!Worker"),
+  Key = "w", Hint = _("Train ~!Worker"), Popup = "popup-unit",
   ForUnit = {"unit-goblin-town-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
   Action = "train-unit", Value = "unit-goblin-spearman",
-  Key = "i", Hint = _("Train ~!Impaler"),
+  Key = "i", Hint = _("Train ~!Impaler"), Popup = "popup-unit",
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-archer",
   Action = "train-unit", Value = "unit-goblin-archer",
-  Key = "a", Hint = _("Train ~!Archer"),
+  Key = "a", Hint = _("Train ~!Archer"), Popup = "popup-unit",
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-war-machine",
   Action = "train-unit", Value = "unit-goblin-war-machine",
-  Key = "m", Hint = _("Build War ~!Machine"),
+  Key = "m", Hint = _("Build War ~!Machine"), Popup = "popup-unit",
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-glider",
   Action = "train-unit", Value = "unit-goblin-glider",
-  Key = "g", Hint = _("Build ~!Glider"),
+  Key = "g", Hint = _("Build ~!Glider"), Popup = "popup-unit",
   ForUnit = {"unit-goblin-mess-hall"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
   Action = "train-unit", Value = "unit-goblin-thief",
-  Key = "t", Hint = _("Hire Goblin ~!Thief"),
+  Key = "t", Hint = _("Hire Goblin ~!Thief"), Popup = "popup-unit",
   ForUnit = {"unit-mercenary-camp"} } )
 
 -- Researches ---------------------------------------------------------
@@ -136,5 +136,5 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-goblin-masonry",
   Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"),
+  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-lumber-mill"} } )

@@ -50,22 +50,22 @@ Load("scripts/teuton/buttons.lua")
 
 DefineButton( { Pos = 9, Level = 9, Icon = "icon-cancel",
   Action = "cancel",
-  Key = "escape", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
   ForUnit = {"*"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-upgrade",
-  Key = "escape", Hint = "~<ESC~> Cancel Upgrade",
+  Key = "escape", Hint = "~<ESC~> Cancel Upgrade", Popup = "popup-commands",
   ForUnit = {"cancel-upgrade"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-train-unit",
-  Key = "escape", Hint = "~<ESC~> Cancel Unit Training",
+  Key = "escape", Hint = "~<ESC~> Cancel Unit Training", Popup = "popup-commands",
   ForUnit = {"*"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
   Action = "cancel-build",
-  Key = "escape", Hint = "~<ESC~> Cancel Construction",
+  Key = "escape", Hint = "~<ESC~> Cancel Construction", Popup = "popup-commands",
   ForUnit = {"cancel-build"} } )
 
 -- Level-Up Upgrades ------------------------------------------------------
@@ -73,7 +73,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
   Action = "button", Value = 1,
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
-  Key = "l", Hint = "Choose ~!Level-Up Upgrade",
+  Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
@@ -89,7 +89,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
   Action = "learn-ability", Value = "upgrade-axe-mastery",
-  Key = "x", Hint = "Learn A~!xe Mastery (+2 damage)",
+  Key = "x", Hint = "Learn A~!xe Mastery (+2 damage)", Popup = "popup-commands",
   ForUnit = {
     "unit-dwarven-thane",
     "unit-surghan-mercenary-thane",
@@ -99,7 +99,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
   Action = "learn-ability", Value = "upgrade-critical-strike",
-  Key = "c", Hint = "Learn ~!Critical Strike (chance to deal double damage)",
+  Key = "c", Hint = "Learn ~!Critical Strike (chance to deal double damage)", Popup = "popup-commands",
   ForUnit = {
     "unit-dwarven-thane",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
@@ -115,7 +115,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery-bronze",
   Action = "learn-ability", Value = "upgrade-sword-mastery",
-  Key = "w", Hint = "Learn S~!word Mastery (+2 damage)",
+  Key = "w", Hint = "Learn S~!word Mastery (+2 damage)", Popup = "popup-commands",
   ForUnit = {
     "unit-germanic-warrior",
 	"unit-teuton-swordsman",
@@ -126,7 +126,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery-bronze",
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery",
   Action = "learn-ability", Value = "upgrade-sword-mastery",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
-  Key = "w", Hint = "Learn S~!word Mastery (+2 damage)",
+  Key = "w", Hint = "Learn S~!word Mastery (+2 damage)", Popup = "popup-commands",
   ForUnit = {
     "unit-germanic-warrior",
 	"unit-teuton-swordsman",
@@ -136,7 +136,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery",
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "escape", Hint = "~<ESC~> Cancel",
+  Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
   ForUnit = {
     "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
@@ -148,15 +148,4 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
 	"unit-hero-durin", "unit-hero-durin-thane", 
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
-  } } )
-
--- For the Motherland Buttons ------------------------------------------------------
-
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-level-up",
-  Action = "button", Value = 2,
-  Allowed = "check-unit-variable", AllowArg = {"ForTheMotherland", "Value", ">=", "1"},
-  Key = "c", Hint = "~!Create Unit",
-  ForUnit = {
-    "unit-dwarven-thane",
-    "unit-goblin-spearman"
   } } )
