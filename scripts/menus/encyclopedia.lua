@@ -307,8 +307,8 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	b:setDisabledImage(encyclopedia_icon)
 	b:setSize(46, 38)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	b:setFrame(true)
 	b:setFrameImage(Preference.IconFrameG)
+	b:setPressedFrameImage(Preference.PressedIconFrameG)
 	b:setTooltip(tooltip_name .. " " .. tooltip_civilization)
 	return b
 end

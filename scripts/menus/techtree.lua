@@ -128,8 +128,8 @@ function RunTechTreeMenu(civilization_number)
 		b:setDisabledImage(techicon)
 		b:setSize(46, 38)
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-		b:setFrame(true)
 		b:setFrameImage(Preference.IconFrameG)
+		b:setPressedFrameImage(Preference.PressedIconFrameG)
 		b:setTooltip(unit_name)
 		return b
 	end
