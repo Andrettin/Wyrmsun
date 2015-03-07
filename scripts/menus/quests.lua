@@ -124,6 +124,7 @@ function addQuestIcon(quest, menu, x, y)
 	b:setSize(46, 38)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrame(true)
+	b:setFrameImage(Preference.IconFrameG)
 	b:setTooltip(quest.Name .. " (" .. CapitalizeString(quest.Civilization) .. ")")
 	return b
 end

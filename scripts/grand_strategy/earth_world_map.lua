@@ -350,6 +350,10 @@ if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and
 	WorldMapProvinces.Bavaria.Civilization = "celt"
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Switzerland.Owner = "Helvetii Tribe" -- already in Switzerland?
+	WorldMapProvinces.Switzerland.Civilization = "celt"
+	WorldMapProvinces.Switzerland.SettlementBuildings.unit_germanic_town_hall = 2
+	WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
@@ -569,6 +573,9 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	WorldMapProvinces.France.Owner = "Rome"
 	WorldMapProvinces.Belgium.Owner = "Rome"
 	WorldMapProvinces.Switzerland.Owner = "Rome"
+	WorldMapProvinces.Switzerland.SettlementBuildings.unit_germanic_town_hall = 0
+	WorldMapProvinces.Switzerland.SettlementBuildings.unit_teuton_town_hall = 2
+	WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 0
 end
 
 if (GrandStrategyYear >= -33) then -- Illyricum acquired by Rome in 33 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

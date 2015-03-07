@@ -129,6 +129,7 @@ function RunTechTreeMenu(civilization_number)
 		b:setSize(46, 38)
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		b:setFrame(true)
+		b:setFrameImage(Preference.IconFrameG)
 		b:setTooltip(unit_name)
 		return b
 	end
@@ -436,12 +437,12 @@ end
 
 function GetTechTreeCivilizationNumber(civilization)
 	for i=1,table.getn(GetAvailableCivilizationsTechTree()) do
-		local tech_tree_civilization = string.gsub(GetAvailableCivilizationsTechTree()[i + 1], "Human", "")
+		local tech_tree_civilization = string.gsub(GetAvailableCivilizationsTechTree()[i], "Human", "")
 		tech_tree_civilization = string.gsub(tech_tree_civilization, "-", "")
 		tech_tree_civilization = string.gsub(tech_tree_civilization, " ", "")
 		tech_tree_civilization = string.lower(tech_tree_civilization)
 		if (tech_tree_civilization == civilization) then
-			return i
+			return i - 1
 		end
 	end
 end

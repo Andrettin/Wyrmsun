@@ -58,12 +58,14 @@ local EarthEvents = {
 				WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 6
 				WorldMapProvinces.France.Units.unit_germanic_warrior = 6
 				WorldMapProvinces.Latium.Units.unit_germanic_warrior = 6
+				WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 6
 				WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 4 -- make Bavaria easier to be conquered by the neighboring Celtic tribes
 				AcquireProvince(WorldMapProvinces.Don, "")
 				WorldMapProvinces.Don.Civilization = ""
 				AcquireFactionTechnologies(Factions.AeduiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.ArverniTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.BoiiTribe, EventFaction)
+				AcquireFactionTechnologies(Factions.HelvetiiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.MenapiiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.NoriciTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.SequaniTribe, EventFaction)
@@ -75,6 +77,7 @@ local EarthEvents = {
 				AcquireProvince(WorldMapProvinces.Burgundy, "Sequani Tribe")
 				AcquireProvince(WorldMapProvinces.France, "Aedui Tribe")
 				AcquireProvince(WorldMapProvinces.Latium, "Rome")
+				AcquireProvince(WorldMapProvinces.Switzerland, "Helvetii Tribe")
 				DrawMinimap()
 			end,
 			function(s)

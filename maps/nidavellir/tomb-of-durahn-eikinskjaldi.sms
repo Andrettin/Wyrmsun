@@ -78,18 +78,21 @@ unit = CreateUnit("unit-gnomish-recruit", 1, {14, 11})
 unit = CreateUnit("unit-gnomish-recruit", 1, {15, 12})
 --IncreaseUnitLevel(unit, 1, true)
 
-unit = CreateUnit("unit-gnomish-recruit", 1, {17, 9})
+unit = CreateUnit("unit-gnomish-recruit", 1, {17, 10})
 --IncreaseUnitLevel(unit, 3, true)
 IncreaseUnitLevel(unit, 1, true)
-unit = CreateUnit("unit-potion-of-healing", 15, {16, 9})
+unit = CreateUnit("unit-potion-of-healing", 15, {16, 10})
 
-unit = CreateUnit("unit-gnomish-recruit", 1, {17, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
+unit = CreateUnit("unit-gnomish-recruit", 1, {16, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
 --IncreaseUnitLevel(unit, 2, true)
 IncreaseUnitLevel(unit, 1, true)
 
 unit = CreateUnit("unit-bones", 15, {6, 8})
 unit = CreateUnit("unit-bones", 15, {7, 11})
 unit = CreateUnit("unit-bones", 15, {9, 12})
+unit = CreateUnit("unit-bones", 15, {17, 6}) -- Durahn Eikinskjaldi's sarcophagus
+unit = CreateUnit("unit-bones", 15, {8, 2}) -- Isuldan Eikinskjaldi's remains
+unit = CreateUnit("unit-bones", 15, {17, 9}) -- Gneissus Eikinskjaldi's remains
 
 --unit = CreateUnit("unit-inner-wall-decoration", 15, {8, 7})
 --unit = CreateUnit("unit-outer-wall-decoration", 15, {11, 7})

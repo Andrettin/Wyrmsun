@@ -1993,6 +1993,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. building_cost_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrame(true)
+	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2111,6 +2112,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. cost_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrame(true)
+	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2156,6 +2158,7 @@ function AddGrandStrategyHeroButton(x, y, unit_type)
 		UIElements[table.getn(UIElements)]:setTooltip("Select " .. GetUnitTypeData(unit_type, "DefaultName"))
 	end
 	UIElements[table.getn(UIElements)]:setFrame(true)
+	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2212,6 +2215,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		UIElements[table.getn(UIElements)]:setTooltip("Hire " .. regiment_type_name)
 	end
 	UIElements[table.getn(UIElements)]:setFrame(true)
+	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	
 	return UIElements[table.getn(UIElements)]
 end

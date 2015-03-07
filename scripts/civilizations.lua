@@ -214,6 +214,12 @@ DefineCivilizationFactions("celt",
 		"secondary_color", "brown"
 	},
 	"faction", {
+		"name", "Helvetii Tribe",
+		"type", "tribe",
+		"color", "violet", -- another color, perhaps?
+		"secondary_color", "violet"
+	},
+	"faction", {
 		"name", "Menapii Tribe",
 		"type", "tribe",
 		"color", "orange",
