@@ -125,6 +125,7 @@ editor_types = {
    "unit-bird",
    "unit-bat",
    "unit-slime",
+   "unit-yale",
    "unit-gryphon",
    "unit-wyrm",
    "unit-long-swordsman",

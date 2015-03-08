@@ -152,6 +152,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven Steelclads and Thanes now deal more damage.
 - The minimum damage in a unit's damage display now shows the minimum possible damage before armor would be applied.
 - Reduced the length of the Dwarven Scout's description.
+- Added Yale critter (unit graphics by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

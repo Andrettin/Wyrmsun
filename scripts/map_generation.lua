@@ -924,7 +924,12 @@ function CreateCritters(critter_number)
 					critter_unit_type = "unit-rat"
 				end
 			elseif (wyrmsun.tileset == "swamp") then
-				critter_unit_type = "unit-slime"
+				RandomNumber = SyncRand(2)
+				if (RandomNumber == 0) then
+					critter_unit_type = "unit-slime"
+				else
+					critter_unit_type = "unit-yale"
+				end
 			elseif (wyrmsun.tileset == "cave") then
 				RandomNumber = SyncRand(2)
 				if (RandomNumber == 0) then
