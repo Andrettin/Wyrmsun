@@ -338,7 +338,7 @@ function GenerateRandomWorldMap()
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTile(RandomX, RandomY) == "Hill" or GetWorldMapTile(RandomX, RandomY) == "Mntn") then
 				if (GetArrayIncludes(WorldMapResources.Gold, {RandomX, RandomY}) == false and TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
-					table.insert(WorldMapResources.Gold, {RandomX, RandomY})
+					table.insert(WorldMapResources.Gold, {RandomX, RandomY, false})
 					break
 				end
 			end

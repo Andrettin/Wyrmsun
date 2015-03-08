@@ -136,5 +136,5 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-goblin-masonry",
   Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-commands",
+  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
   ForUnit = {"unit-goblin-lumber-mill"} } )

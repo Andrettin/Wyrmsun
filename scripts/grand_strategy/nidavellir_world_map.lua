@@ -52,13 +52,13 @@ WorldMapTiles = {
 
 WorldMapResources = {
 	Gold = {
-		{22, 29}, -- location of the Troll Hole in the Brown Hills
-		{30, 12}, 
-		{32, 13}, 
-		{35, 10}, 
-		{34, 14}, 
-		{39, 6}, 
-		{46, 5} 
+		{22, 29, true}, -- location of the Troll Hole in the Brown Hills
+		{30, 12, true}, 
+		{32, 13, true}, 
+		{35, 10, false}, 
+		{34, 14, true}, 
+		{39, 6, false}, 
+		{46, 5, false} 
 	},
 	Lumber = { 
 	}
@@ -161,6 +161,7 @@ if (GrandStrategyYear >= 29) then
 --	WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = WorldMapProvinces.EasternMines.Units.unit_goblin_spearman / 2
 	WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = 12 -- to prevent the Norlunds expanding here too soon
 	WorldMapProvinces.EasternMines.Units.unit_goblin_archer = 4
+	SetResourceProspected(39, 6, "Gold", true) -- Rugnur and his companions found the location of the gold mines in the Eastern Mines
 
 	--[[
 	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
@@ -233,6 +234,7 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.KalKartha.SettlementBuildings.unit_dwarven_town_hall = 2
 	WorldMapProvinces.KalKartha.SettlementBuildings.unit_dwarven_barracks = 2
 	WorldMapProvinces.KalKartha.Units.unit_gnomish_recruit = 0
+	SetResourceProspected(46, 5, "Gold", true)
 
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
 	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_town_hall = 2
@@ -248,6 +250,7 @@ if (GrandStrategyYear >= 500) then
 	WorldMapProvinces.HighbrookPass.Units.unit_goblin_archer = 0
 	WorldMapProvinces.HighbrookPass.Units.unit_dwarven_axefighter = 6 -- six dwarven ulfserkers
 	WorldMapProvinces.HighbrookPass.Units.unit_dwarven_thane = 1 -- Stalrag
+	SetResourceProspected(35, 10, "Gold", true)
 end
 
 if (GrandStrategyYear >= 534) then

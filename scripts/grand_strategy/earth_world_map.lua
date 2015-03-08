@@ -132,32 +132,32 @@ WorldMapTiles = {
 
 WorldMapResources = {
 	Gold = {
-		{114, 33}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-		{117, 27}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-		{117, 29}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-		{118, 37}, -- Copper deposits
-		{119, 29}, -- iron ore deposits
-		{123, 27}, -- this is just to provide the Franks in the Netherlands with better survival chances
-		{121, 33}, -- iron ore deposits
-		{124, 31}, -- to help keep the Sequani afloat
-		{125, 28}, -- iron ore deposits
-		{125, 29}, -- iron ore deposits
-		{125, 31}, -- to help keep the Romans afloat
-		{127, 25}, -- crude oil or natural gas
-		{127, 27}, -- copper ore deposits
-		{128, 28}, -- iron ore deposits
-		{129, 28}, -- iron ore deposits; Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-		{129, 30}, -- Copper deposits (Mitterberg mines) in the Salzach Valley, near Salzburg; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
-		{129, 33}, -- to help keep the Romans afloat
-		{130, 27}, -- Copper deposits; Source: "Philip's International School Atlas", 2006, p. 59.
-		{131, 21}, -- iron ore deposits
-		{131, 22}, -- iron ore deposits
-		{131, 30}, -- iron ore deposits
---		{136, 30}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
-		{136, 31}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
-		{134, 27}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
-		{152, 31} -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
---		{159, 27} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
+		{114, 33, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{117, 27, false}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{117, 29, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{118, 37, false}, -- Copper deposits
+		{119, 29, false}, -- iron ore deposits
+		{123, 27, false}, -- this is just to provide the Franks in the Netherlands with better survival chances
+		{121, 33, false}, -- iron ore deposits
+		{124, 31, false}, -- to help keep the Sequani afloat
+		{125, 28, false}, -- iron ore deposits
+		{125, 29, false}, -- iron ore deposits
+		{125, 31, false}, -- to help keep the Romans afloat
+		{127, 25, false}, -- crude oil or natural gas
+		{127, 27, false}, -- copper ore deposits
+		{128, 28, false}, -- iron ore deposits
+		{129, 28, false}, -- iron ore deposits; Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		{129, 30, false}, -- Copper deposits (Mitterberg mines) in the Salzach Valley, near Salzburg; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
+		{129, 33, false}, -- to help keep the Romans afloat
+		{130, 27, false}, -- Copper deposits; Source: "Philip's International School Atlas", 2006, p. 59.
+		{131, 21, false}, -- iron ore deposits
+		{131, 22, true}, -- iron ore deposits
+		{131, 30, false}, -- iron ore deposits
+--		{136, 30, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
+		{136, 31, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
+		{134, 27, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
+		{152, 31, true} -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
+--		{159, 27, false} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
 	},
 	Lumber = { 
 	}
@@ -240,12 +240,14 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 4 -- enough troops for them to hold their own
 	WorldMapProvinces.Jutland.Units.unit_germanic_archer = 0
+	SetResourceProspected(127, 25, "Gold", true)
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
 	WorldMapProvinces.Sweden.Civilization = "germanic"
 	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_barracks = 2 -- to prevent the Goth Tribe from conquering Sweden too easily
 	WorldMapProvinces.Sweden.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Sweden.Units.unit_germanic_archer = 0
+	SetResourceProspected(131, 21, "Gold", true)
 	WorldMapProvinces.Astrakhan.Owner = ""
 	WorldMapProvinces.Astrakhan.SettlementBuildings.unit_germanic_town_hall = 0
 	WorldMapProvinces.Astrakhan.SettlementBuildings.unit_germanic_barracks = 0
@@ -346,10 +348,12 @@ if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and
 	WorldMapProvinces.Austria.Civilization = "celt"
 	WorldMapProvinces.Austria.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0
+	SetResourceProspected(131, 30, "Gold", true)
 	WorldMapProvinces.Bavaria.Owner = "Norici Tribe"
 	WorldMapProvinces.Bavaria.Civilization = "celt"
 	WorldMapProvinces.Bavaria.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 0
+	SetResourceProspected(128, 28, "Gold", true)
 	WorldMapProvinces.Switzerland.Owner = "Helvetii Tribe" -- already in Switzerland?
 	WorldMapProvinces.Switzerland.Civilization = "celt"
 	WorldMapProvinces.Switzerland.SettlementBuildings.unit_germanic_town_hall = 2
@@ -368,6 +372,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	WorldMapProvinces.Brandenburg.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
+	SetResourceProspected(127, 27, "Gold", true)
 	
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- The Saxons are the earliest Germanic people known to inhabit the Hannover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
 	Factions.SaxonTribe.Civilization = "teuton"
@@ -375,13 +380,16 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	WorldMapProvinces.Rhineland.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Rhineland.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
 	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
+	SetResourceProspected(125, 28, "Gold", true)
 
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	Factions.FrankTribe.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Netherlands.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
+	WorldMapProvinces.Netherlands.Units.unit_germanic_swordsman = 0
 	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
+	SetResourceProspected(123, 27, "Gold", true)
 	
 	GrandStrategyEvents.VegdegsKingdom = nil
 	GrandStrategyEvents.BeldegsLands = nil
@@ -434,6 +442,7 @@ if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. 
 	WorldMapProvinces.Bohemia.Civilization = "celt"
 	WorldMapProvinces.Bohemia.SettlementBuildings.unit_germanic_town_hall = 2
 	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
+	SetResourceProspected(129, 28, "Gold", true)
 end
 
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
@@ -453,6 +462,7 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	WorldMapProvinces.Latium.SettlementBuildings.unit_germanic_barracks = 2
 	WorldMapProvinces.Latium.SettlementBuildings.unit_teuton_lumber_mill = 2
 	WorldMapProvinces.Latium.SettlementBuildings.unit_germanic_smithy = 2
+	SetResourceProspected(129, 33, "Gold", true)	
 	WorldMapProvinces.Naples.Owner = "Rome"
 	WorldMapProvinces.Naples.SettlementBuildings.unit_teuton_town_hall = 2
 end
@@ -489,12 +499,14 @@ if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and Farther Baetic
 	WorldMapProvinces.Castille.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Andalusia.Owner = "Rome"
 	WorldMapProvinces.Andalusia.SettlementBuildings.unit_teuton_town_hall = 2
+	SetResourceProspected(118, 37, "Gold", true)
 end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul conquered in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.NorthItaly.Owner = "Rome"
 	WorldMapProvinces.NorthItaly.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.NorthItaly.Units.unit_germanic_warrior = 0
+	SetResourceProspected(125, 31, "Gold", true)	
 end
 
 if (GrandStrategyYear >= -146) then -- Attica, Macedonia and the Peloponnese acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -515,14 +527,21 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	WorldMapProvinces.France.Civilization = "celt"
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 10 -- enough troops for them to be able to hold their own (except against Ariovistus)
 	WorldMapProvinces.France.SettlementBuildings.unit_germanic_town_hall = 2
+	SetResourceProspected(119, 29, "Gold", true)
+	SetResourceProspected(125, 29, "Gold", true)
+	
 	WorldMapProvinces.Aquitaine.Owner = "Arverni Tribe" -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Aquitaine.Civilization = "celt"
 	WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own
 	WorldMapProvinces.Aquitaine.SettlementBuildings.unit_germanic_town_hall = 2
+	SetResourceProspected(121, 33, "Gold", true)
+	
 	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Burgundy.Civilization = "celt"
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_germanic_town_hall = 2
+	SetResourceProspected(124, 31, "Gold", true)
+	
 	WorldMapProvinces.Belgium.Owner = "Menapii Tribe" -- Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Belgium.Civilization = "celt"
 	WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own

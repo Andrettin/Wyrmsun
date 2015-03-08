@@ -275,8 +275,8 @@ function RunGrandStrategyGameSetupMenu()
 			for x=0,table.getn(WorldMapTiles[1]) - 1 do
 				for y=0,table.getn(WorldMapTiles) - 1 do
 					if (GetWorldMapTile(x, y) == "CnFr" or GetWorldMapTile(x, y) == "ScFr") then -- add lumber resource location to forest tiles
-						if (TileHasResource(x, y, "Lumber") == false) then
-							table.insert(WorldMapResources.Lumber, {x, y})
+						if (TileHasResource(x, y, "Lumber", false) == false) then
+							table.insert(WorldMapResources.Lumber, {x, y, true})
 						end
 						if (GetWorldMapTile(x, y) == "CnFr") then -- implement variations for conifer forest tiles
 							RandomNumber = SyncRand(2) + 1
@@ -286,7 +286,7 @@ function RunGrandStrategyGameSetupMenu()
 							WorldMapTiles[y+1][x+1] = "ScFr" .. RandomNumber
 						end
 					elseif (GetWorldMapTile(x, y) == "Plns" or GetWorldMapTile(x, y) == "DkPl") then -- make plains tiles into hills if there is a mine there
-						if (TileHasResource(x, y, "Gold") == true) then
+						if (TileHasResource(x, y, "Gold", true) == true) then
 							SetWorldMapTile(x, y, "Hill")
 						end
 					elseif (GetWorldMapTile(x, y) == "Mntn") then -- implement variations for mountain tiles
@@ -714,6 +714,8 @@ function EndTurn()
 		CalculateFactionUpkeeps()
 	end
 
+	DoProspection()
+	
 	GrandStrategyYear = GrandStrategyYear + 1;
 
 	DoEvents()
@@ -1167,7 +1169,11 @@ function CalculateFactionIncomes()
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			-- collect resources
 			for i=1,table.getn(WorldMapResources.Gold) do
-				if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner) then
+				if (
+					WorldMapResources.Gold[i][3] -- if has been prospected
+					and ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "town-hall")
+					and Factions[key].Name == GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner
+				) then
 					Factions[key].Income.Gold = Factions[key].Income.Gold + math.floor(200 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "Gold") / 100)
 				end
 			end
@@ -1650,29 +1656,14 @@ function RunGrandStrategyLoadGameMenu()
 end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
-	local tooltip = ""
-	if (GetWorldMapTile(tile_x, tile_y) == "Plns") then
-		tooltip = "Plains"
-	elseif (GetWorldMapTile(tile_x, tile_y) == "DkPl") then
-		tooltip = "Dark Plains"
-	elseif (GetWorldMapTile(tile_x, tile_y) == "CnFr") then
-		tooltip = "Conifer Forest"
-	elseif (GetWorldMapTile(tile_x, tile_y) == "ScFr") then
-		tooltip = "Scrub Forest"
-	elseif (GetWorldMapTile(tile_x, tile_y) == "Hill") then
-		tooltip = "Hills"
-	elseif (GetWorldMapTile(tile_x, tile_y) == "Mntn") then
-		tooltip = "Mountains"
-	elseif (GetWorldMapTile(tile_x, tile_y) == "Watr") then
-		tooltip = "Water"
-	end
+	local tooltip = GetTerrainName(GetWorldMapTile(tile_x, tile_y))
 	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
 		if (GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) ~= nil) then
 			tooltip = "Settlement of " .. GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) .. " (" .. tooltip .. ")"
 		else
 			tooltip = "Settlement (" .. tooltip .. ")"
 		end
-	elseif (TileHasResource(tile_x, tile_y, "Gold")) then
+	elseif (TileHasResource(tile_x, tile_y, "Gold", false)) then
 		tooltip = "Gold Mine (" .. tooltip .. ")"
 	end
 	if (GetTileProvince(tile_x, tile_y) ~= nil) then
@@ -2465,12 +2456,14 @@ function DrawOnScreenTiles()
 	-- draw resources
 	for key, value in pairs(WorldMapResources) do
 		for i=1,table.getn(WorldMapResources[key]) do
-			local resource_site_graphics = ""
-			if (key == "Gold") then
-				resource_site_graphics = "tilesets/world/sites/gold_mine.png"
-			end
-			if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
-				DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
+			if (WorldMapResources[key][i][3]) then -- if is prospected
+				local resource_site_graphics = ""
+				if (key == "Gold") then
+					resource_site_graphics = "tilesets/world/sites/gold_mine.png"
+				end
+				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+					DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
+				end
 			end
 		end
 	end
@@ -4242,20 +4235,18 @@ function ProvinceHasBuildingType(province, building_type)
 end
 
 function ProvinceHasResource(province, resource)
-	for i=1,table.getn(province.Tiles) do
-		for j=1,table.getn(WorldMapResources[resource]) do
-			if (province.Tiles[i][1] == WorldMapResources[resource][j][1] and province.Tiles[i][2] == WorldMapResources[resource][j][2]) then
-				return true
-			end
+	for i=1,table.getn(WorldMapResources[resource]) do
+		if (WorldMapResources[resource][i][3] and GetTileProvince(WorldMapResources[resource][i][1], WorldMapResources[resource][i][2]) == province) then
+			return true
 		end
 	end
 
 	return false
 end
 
-function TileHasResource(tile_x, tile_y, resource)
+function TileHasResource(tile_x, tile_y, resource, ignore_prospection)
 	for i=1,table.getn(WorldMapResources[resource]) do
-		if (tile_x == WorldMapResources[resource][i][1] and tile_y == WorldMapResources[resource][i][2]) then
+		if ((WorldMapResources[resource][i][3] or ignore_prospection) and tile_x == WorldMapResources[resource][i][1] and tile_y == WorldMapResources[resource][i][2]) then
 			return true
 		end
 	end
@@ -5131,4 +5122,70 @@ function GetProvinceEfficiency(province, commodity)
 		province_efficiency = province_efficiency + 25
 	end
 	return province_efficiency
+end
+
+function SetResourceProspected(x, y, resource, prospected)
+	for i=1,table.getn(WorldMapResources[resource]) do
+		if (WorldMapResources[resource][i][1] == x and WorldMapResources[resource][i][2] == y) then
+			WorldMapResources[resource][i][3] = prospected
+		end
+	end
+end
+
+function DoProspection()
+	local resource_found = false
+	for key, value in pairs(WorldMapResources) do
+		for i=1,table.getn(WorldMapResources[key]) do
+			if (WorldMapResources[key][i][3] == false and ProvinceHasBuildingType(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]), "town-hall")) then
+				if (SyncRand(100) < 1) then -- 1% chance of discovery per turn
+					resource_found = true
+					if (GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Owner == GrandStrategyFaction.Name) then
+						local menu = WarGrandStrategyGameMenu(panel(1))
+
+						menu:addLabel(key .. " found in " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])), 128, 11)
+
+						local l = MultiLineLabel()
+						l:setFont(Fonts["game"])
+						l:setSize(228, 128)
+						l:setLineWidth(228)
+						menu:add(l, 14, 35)
+						l:setCaption("My lord, " .. key .. " has been found in the " .. string.lower(GetTerrainName(GetWorldMapTile(WorldMapResources[key][i][1], WorldMapResources[key][i][2]))) .. " of " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])) .. "!")
+
+						menu:addFullButton("E~!xcellent!", "x", 16, 248 - (36 * 0),
+							function()
+								SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
+								menu:stop()
+							end)
+
+						menu:run()
+					else
+						SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
+					end
+				end
+			end
+		end
+	end
+	
+	if (resource_found) then
+		CalculateFactionIncomes()
+	end
+end
+
+function GetTerrainName(terrain)
+	if (terrain == "Plns") then
+		return "Plains"
+	elseif (terrain == "DkPl") then
+		return "Dark Plains"
+	elseif (terrain == "CnFr") then
+		return "Conifer Forest"
+	elseif (terrain == "ScFr") then
+		return "Scrub Forest"
+	elseif (terrain == "Hill") then
+		return "Hills"
+	elseif (terrain == "Mntn") then
+		return "Mountains"
+	elseif (terrain == "Watr") then
+		return "Water"
+	end
+	return ""
 end

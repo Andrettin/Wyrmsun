@@ -128,13 +128,13 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
   Action = "research", Value = "upgrade-teuton-spatha",
   Allowed = "check-single-research",
-  Key = "p", Hint = _("Research S~!patha"), Popup = "popup-commands",
+  Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
   ForUnit = {"unit-teuton-smithy"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-teuton-masonry",
   Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-commands",
+  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
   ForUnit = {"unit-teuton-lumber-mill"} } )
 
 -- Upgrades ---------------------------------------------------------

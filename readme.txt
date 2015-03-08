@@ -91,6 +91,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added 3000 BC start date for Nidavellir.
 - Added The Mead of Poetry event, along with events for Durin appearing and dying.
 - Added "Increased Tactical Unit Quantity" option to Grand Strategy mode.
+- Gold now has to be found (there is a random chance that tiles with gold will be found every turn by their owner) before being mined.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).

@@ -551,3 +551,26 @@ DefinePopup({
 			},
 	}	
 })
+
+DefinePopup({
+	Ident = "popup-research",
+	BackgroundColor = GetRGBA(128, 128, 128, 208),
+	BorderColor = GetRGBA(192, 192, 255, 160),
+	Contents = {
+			{	Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint"}}
+			}, 
+			{ 	Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	More = {"Costs"}, HighlightColor = "yellow",
+			},
+			-- Description
+			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
+				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+			}, 
+			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+			},
+	}	
+})
