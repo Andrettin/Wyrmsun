@@ -318,11 +318,11 @@ function SetPlayerData(player, data, arg1, arg2)
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (arg1 == Attacker) then
-							for i=1,AttackingUnits[string.gsub(unitName, "-", "_")] do
+							for i=1,(AttackingUnits[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 							end
 						elseif (arg1 == Defender) then
-							for i=1,AttackedProvince.Units[string.gsub(unitName, "-", "_")] do
+							for i=1,(AttackedProvince.Units[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 							end
 						end

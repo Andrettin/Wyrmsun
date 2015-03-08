@@ -3836,7 +3836,7 @@ AddTrigger(
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-								for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+								for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 									unit = CreateUnit(unitName, 2, {40, 10})
 								end
 							end
@@ -5011,7 +5011,7 @@ AddTrigger(
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 					if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-						for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+						for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 							unit = OldCreateUnit(unitName, 1, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 							SetUnitVariable(unit, "CustomAIState", SyncRand(4)+1)
 						end

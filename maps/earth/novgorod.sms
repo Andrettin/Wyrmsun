@@ -75,7 +75,7 @@ if (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 					unit = CreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 				end
 			end

@@ -121,6 +121,7 @@ function RunShowCreditsMenu()
 	"  Dinomaniak",
 	"  João Victor G. Costa (Jinn)",
 	"  Leo",
+	"  pirro",
 	"  TaShadan",
 	_("Stratagus Patches"),
 	"  Martin Renold",

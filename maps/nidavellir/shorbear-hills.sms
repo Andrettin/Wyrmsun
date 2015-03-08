@@ -279,7 +279,7 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 				end
 			end
@@ -301,7 +301,7 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 					unit = OldCreateUnit(unitName, 2, {Players[2].StartPos.x, Players[2].StartPos.y})
 				end
 			end
@@ -321,7 +321,7 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 					unit = OldCreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 				end
 			end

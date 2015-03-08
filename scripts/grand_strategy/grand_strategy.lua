@@ -34,6 +34,11 @@ GrandStrategyBattle = false
 EventFaction = nil
 EventProvince = nil
 GrandStrategyWorld = ""
+if (wyr.preferences.GrandStrategyBattalions) then
+	BattalionMultiplier = 2
+else
+	BattalionMultiplier = 1
+end
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -63,6 +68,7 @@ function RunGrandStrategyGameSetupMenu()
 	local date
 	local faction
 	local faction_list = {}
+	local battalions
 
 	GrandStrategy = true
 
@@ -322,6 +328,19 @@ function RunGrandStrategyGameSetupMenu()
 		function(dd) end)
 	faction:setSize(152, 20)
 
+	battalions = menu:addImageCheckBox(_("~<Increased Tactical Unit Quantity~>"), offx + 40, offy + 10 + 300 + 3,
+		function()
+			wyr.preferences.GrandStrategyBattalions = battalions:isMarked()
+			SavePreferences()
+			if (wyr.preferences.GrandStrategyBattalions) then
+				BattalionMultiplier = 2
+			else
+				BattalionMultiplier = 1
+			end
+		end
+	)
+  battalions:setMarked(wyr.preferences.GrandStrategyBattalions)
+  
 	function DateChanged()
 		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
 			GrandStrategyWorld = world_list[world:getSelected() + 1]
@@ -839,7 +858,7 @@ function AttackProvince(province, faction)
 		-- set the new unit quantity to the surviving units of the victorious side
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
-				AttackingUnits[string.gsub(unitName, "-", "_")] = GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName)
+				AttackingUnits[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier)
 			elseif (IsHero(unitName)) then
 				AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then

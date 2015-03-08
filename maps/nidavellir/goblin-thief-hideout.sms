@@ -27,7 +27,7 @@ if (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
 			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,units_to_be_created[string.gsub(unitName, "-", "_")] do
+				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 				end
 			end
@@ -44,10 +44,7 @@ if (GrandStrategyEventMap) then
 		end
 	end
 
-	unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- six thieves: too little?
-	unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	for i=1, (6 * BattalionMultiplier) do
+		unit = OldCreateUnit("unit-goblin-thief", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- six thieves: too little?
+	end
 end

@@ -90,6 +90,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed a bug which caused units to not be saved correctly if the player quit during a grand strategy battle.
 - Added 3000 BC start date for Nidavellir.
 - Added The Mead of Poetry event, along with events for Durin appearing and dying.
+- Added "Increased Tactical Unit Quantity" option to Grand Strategy mode.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).
@@ -130,6 +131,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The encyclopedia now displays the class of units, buildings and technologies.
 - The tech tree is now brought up when finishing a scenario, if the civilization you played that scenario with has unspent technology points.
 - Added popups for buttons.
+- Maximum number of selectable units is now 36 (up from 18).
 
 * Quests
 - Added The Battle of Magetobria quest.

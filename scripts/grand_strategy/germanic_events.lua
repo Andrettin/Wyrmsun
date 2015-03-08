@@ -62,8 +62,8 @@ local GermanicEvents = {
 					end
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name ~= "Vana Tribe") then
@@ -98,8 +98,8 @@ local GermanicEvents = {
 					GrandStrategyEventMap = false
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 						end
 					end
 					if (GameResult == GameDefeat) then
@@ -145,8 +145,8 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(0, "UnitTypesCount", unitName)
-								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
@@ -157,7 +157,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
@@ -212,7 +212,7 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Jutland, "Asa Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(4, "UnitTypesCount", unitName)
+								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier)
 								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
 							end
 						end
@@ -224,7 +224,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 					end
@@ -279,7 +279,7 @@ local GermanicEvents = {
 						FormFaction(EventFaction, Factions.SwedeTribe)
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
@@ -292,7 +292,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+								WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 					end
@@ -878,7 +878,7 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = GetPlayerData(0, "UnitTypesCount", unitName)
+								WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 						WorldMapProvinces.France.Units.unit_germanic_warrior = 6 -- to give the Aedui something of a defense
@@ -886,7 +886,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] + GetPlayerData(1, "UnitTypesCount", unitName)
+								WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
 					end
