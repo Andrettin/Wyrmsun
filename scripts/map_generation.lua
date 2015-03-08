@@ -557,7 +557,15 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 	while (Count > 0 and WhileCount < tree_seed_number * 100) do
 		RandomX = SyncRand(max_x - min_x) + min_x
 		RandomY = SyncRand(max_y - min_y) + min_y
-		if (RawTile(RandomX, RandomY) == "Land") then
+		local near_starting_location = false
+		for i=0,14 do
+			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+				if (math.abs(Players[i].StartPos.x - RandomX) < 4 and math.abs(Players[i].StartPos.y - RandomY) < 4) then
+					near_starting_location = true
+				end
+			end
+		end
+		if (RawTile(RandomX, RandomY) == "Land" and near_starting_location == false) then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RandomX - 1) >= min_x and (RandomY - 1) >= min_y) then
 				SetRawTile(RandomX, RandomY, "Tree")
@@ -1301,7 +1309,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 			end
 		end
 	end
-
+	
 	ApplyRawTiles()
 
 	CreateDecorations()	
@@ -3135,13 +3143,13 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 	if (tree_quantity == "high") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (tree_quantity == "medium") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (tree_quantity == "low") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
-	
+
 	ApplyRawTiles()
 	CleanRawTiles()
 	
