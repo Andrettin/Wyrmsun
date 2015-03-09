@@ -260,9 +260,54 @@ DefineAnimations("animations-bird", {
 --
 
 local SlimeStill = {
-	"exact-frame 0", "wait 6", "exact-frame 1", "wait 6", "exact-frame 2", "wait 6",
+	"frame 0", "wait 6", "frame 5", "wait 6", "frame 10", "wait 6",
 }
 local SlimeMove = {"unbreakable begin",
+	"frame 15","move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"frame 20", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2",
+	"frame 15","move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"frame 20", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"frame 20", "move 1", "wait 2",
+	"move 1", "wait 2", "move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "move 1", "wait 1",
+	"move 1", "wait 1",
+	"unbreakable end", "wait 1",}
+	
+local SlimeAttack = {
+	"unbreakable begin",
+  	"frame 15", "wait 6", "frame 20", "wait 6", "frame 25", "wait 6",
+  	"frame 30", "attack", "wait 10", "frame 25", "wait 10", "frame 20", "wait 10", "frame 15",
+	"unbreakable end", "wait 1",
+}
+local SlimeDeath = {"unbreakable begin",
+	"exact-frame 3", "wait 5", "exact-frame 4", "wait 5", "exact-frame 5", "wait 5",
+	"unbreakable end", "wait 1",}
+
+DefineAnimations("animations-slime", {
+  Still = SlimeStill,
+  Move = SlimeMove,
+  Attack = SlimeAttack,
+  Death = SlimeDeath,
+})
+
+--
+-- Slime (Old)
+--
+
+local SlimeOldStill = {
+	"exact-frame 0", "wait 6", "exact-frame 1", "wait 6", "exact-frame 2", "wait 6",
+}
+local SlimeOldMove = {"unbreakable begin",
 	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
 	"move 1", "wait 2", "move 1", "wait 1",
 	"exact-frame 1", "move 1", "wait 2", "move 1", "wait 1",
@@ -282,14 +327,14 @@ local SlimeMove = {"unbreakable begin",
 	"exact-frame 2", "move 1", "wait 2", "move 1", "wait 1",
 	"move 1", "wait 1",
 	"unbreakable end", "wait 1",}
-local SlimeDeath = {"unbreakable begin",
+local SlimeOldDeath = {"unbreakable begin",
 	"exact-frame 3", "wait 5", "exact-frame 4", "wait 5", "exact-frame 5", "wait 5",
 	"unbreakable end", "wait 1",}
 
-DefineAnimations("animations-slime", {
-  Still = SlimeStill,
-  Move = SlimeMove,
-  Death = SlimeDeath,
+DefineAnimations("animations-slime-old", {
+  Still = SlimeOldStill,
+  Move = SlimeOldMove,
+  Death = SlimeOldDeath,
 })
 
 --

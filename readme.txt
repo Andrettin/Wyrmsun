@@ -90,7 +90,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed a bug which caused units to not be saved correctly if the player quit during a grand strategy battle.
 - Added 3000 BC start date for Nidavellir.
 - Added The Mead of Poetry event, along with events for Durin appearing and dying.
-- Added "Increased Tactical Unit Quantity" option to Grand Strategy mode.
+- Added "Tactical Unit Multiplier" option to Grand Strategy mode.
 - Gold now has to be found (there is a random chance that tiles with gold will be found every turn by their owner) before being mined.
 - Improved performance by making the entire minimap not be redrawn whenever a province changes hands; now only the affected province is redrawn.
 

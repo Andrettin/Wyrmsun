@@ -420,17 +420,18 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Demand = 1,
 	Type = "land",
 	RightMouseAction = "move",
---	CanAttack = true,
---	CanTargetLand = true,
+	CanAttack = true,
+	CanTargetLand = true,
 	RandomMovementProbability = 1,
 	NumDirections = 1,
 	organic = true,
-	Coward = true,
+--	Coward = true,
 	Fauna = true,
 	Variations = {
 		{
 			"variation-id", "green"
-		},
+		}
+		--[[
 		{
 			"variation-id", "red",
 			"file", "neutral/units/slime_small_red.png",
@@ -451,6 +452,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 			"file", "neutral/units/slime_small_teal.png",
 			"icon", "icon-slime-teal"
 		}
+		--]]
 	},
 	Sounds = {
 		"selected", "click",

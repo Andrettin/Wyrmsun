@@ -34,11 +34,7 @@ GrandStrategyBattle = false
 EventFaction = nil
 EventProvince = nil
 GrandStrategyWorld = ""
-if (wyr.preferences.GrandStrategyBattalions) then
-	BattalionMultiplier = 2
-else
-	BattalionMultiplier = 1
-end
+BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -328,19 +324,16 @@ function RunGrandStrategyGameSetupMenu()
 		function(dd) end)
 	faction:setSize(152, 20)
 
-	battalions = menu:addImageCheckBox(_("~<Increased Tactical Unit Quantity~>"), offx + 40, offy + 10 + 300 + 3,
-		function()
-			wyr.preferences.GrandStrategyBattalions = battalions:isMarked()
+	menu:addLabel("~<Tactical Unit Multiplier:~>", offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 40, offy + 10 + 180,
+		function(dd)
+			wyr.preferences.GrandStrategyBattalionMultiplier = battalions:getSelected() + 1
 			SavePreferences()
-			if (wyr.preferences.GrandStrategyBattalions) then
-				BattalionMultiplier = 2
-			else
-				BattalionMultiplier = 1
-			end
-		end
-	)
-  battalions:setMarked(wyr.preferences.GrandStrategyBattalions)
-  
+			BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
+		end)
+	battalions:setSize(152, 20)
+	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
+
 	function DateChanged()
 		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
 			GrandStrategyWorld = world_list[world:getSelected() + 1]

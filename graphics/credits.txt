@@ -185,6 +185,7 @@ b_o:
 /graphics/neutral/units/wyrm_red_scales.png
 /graphics/neutral/units/wyrm_yellow_scales.png
 /graphics/neutral/units/yale.png
+/graphics/orc/units/spearthrower.png
 /graphics/teuton/units/catapult.png
 /graphics/tilesets/dungeon/neutral/decorations/door_left.png
 /graphics/tilesets/dungeon/neutral/decorations/door_right.png
