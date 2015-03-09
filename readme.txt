@@ -135,6 +135,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The tech tree is now brought up when finishing a scenario, if the civilization you played that scenario with has unspent technology points.
 - Added popups for buttons.
 - Maximum number of selectable units is now 36 (up from 18).
+- Fixed bug which caused wood piles to not disappear after being depleted.
 
 * Quests
 - Added The Battle of Magetobria quest.
