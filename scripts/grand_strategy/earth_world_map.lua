@@ -379,6 +379,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	WorldMapProvinces.Rhineland.Civilization = "teuton"
 	WorldMapProvinces.Rhineland.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Rhineland.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
+	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
 	SetResourceProspected(125, 28, "Gold", true)
 
@@ -387,7 +388,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	WorldMapProvinces.Netherlands.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Netherlands.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
-	WorldMapProvinces.Netherlands.Units.unit_germanic_swordsman = 0
+	WorldMapProvinces.Netherlands.Units.unit_germanic_warrior = 0
 	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
 	SetResourceProspected(123, 27, "Gold", true)
 	

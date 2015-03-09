@@ -1041,8 +1041,8 @@ function CreateRoamingFog(fog_number)
 		local WhileCount = 0
 		-- create critters
 		while (Count > 0 and WhileCount < fog_number * 100) do
-			RandomX = SyncRand(Map.Info.MapWidth)
-			RandomY = SyncRand(Map.Info.MapHeight)
+			RandomX = SyncRand(Map.Info.MapWidth - GetUnitTypeData("unit-roaming-fog", "TileWidth"))
+			RandomY = SyncRand(Map.Info.MapHeight - GetUnitTypeData("unit-roaming-fog", "TileHeight"))
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData("unit-roaming-fog", "TileWidth") < Map.Info.MapWidth - RandomX - 1 and GetUnitTypeData("unit-roaming-fog", "TileHeight") < Map.Info.MapHeight - RandomY - 1) then
 				unit = CreateUnit("unit-roaming-fog", 15, {RandomX, RandomY})
 				Count = Count - 1

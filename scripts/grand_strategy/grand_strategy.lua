@@ -724,10 +724,6 @@ function EndTurn()
 --		GrandStrategyMenu:stop();
 --		RunGrandStrategyGame()
 --	else
-		if (attack_happened) then
-			DrawMinimap()
-		end
-
 		DrawGrandStrategyInterface()
 		DrawOnScreenTiles()
 --	end
@@ -967,6 +963,8 @@ function AcquireProvince(province, faction)
 			end
 		end
 	end
+	
+	DrawMinimapProvince(province)
 	
 	CalculateFactionIncomes()
 end
@@ -3560,19 +3558,29 @@ function DrawMinimap()
 	GrandStrategyMenu:add(UIMinimap, 0, 24)
 
 	for key, value in pairs(WorldMapProvinces) do
-		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
-			-- draw the province's tiles on the minimap
-			if (WorldMapProvinces[key].Owner ~= "") then
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile.png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
-			else
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_white.png", WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2])
-			end
-		end
+		DrawMinimapProvince(WorldMapProvinces[key])
 	end
 
 	for key, value in pairs(WorldMapWaterProvinces) do
-		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
-			DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_ocean.png", WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2])
+		DrawMinimapProvince(WorldMapWaterProvinces[key])
+	end
+end
+
+function DrawMinimapProvince(province)
+	for i=1,table.getn(province.Tiles) do
+		-- draw the province's tiles on the minimap
+		if (MinimapTiles[province.Tiles[i][2] + 1][province.Tiles[i][1] + 1] ~= nil) then
+			GrandStrategyMenu:remove(MinimapTiles[province.Tiles[i][2] + 1][province.Tiles[i][1] + 1])
+			MinimapTiles[province.Tiles[i][2] + 1][province.Tiles[i][1] + 1] = nil
+		end
+		if (province.Owner ~= "Ocean") then
+			if (province.Owner ~= "") then
+				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile.png", province.Tiles[i][1], province.Tiles[i][2])
+			else
+				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_white.png", province.Tiles[i][1], province.Tiles[i][2])
+			end
+		else
+			DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_ocean.png", province.Tiles[i][1], province.Tiles[i][2])
 		end
 	end
 end
@@ -4844,7 +4852,10 @@ function FormFaction(old_faction, new_faction)
 		GrandStrategyFaction = new_faction
 	end
 
-	DrawMinimap()
+	for province_i, province_key in ipairs(new_faction.OwnedProvinces) do
+		DrawMinimapProvince(WorldMapProvinces[province_key])
+	end
+
 	DrawGrandStrategyInterface()
 	DrawOnScreenTiles()
 end

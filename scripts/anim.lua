@@ -136,6 +136,13 @@ DefineAnimations("animations-critter", {
   Death = {"unbreakable begin", "frame 5", "wait 200", "frame 5", "unbreakable end", "wait 1",},
 })
 
+DefineAnimations("animations-melee-unit", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = UnitMeleeAttack,
+	Death = UnitDeath,
+})
+
 --
 -- Rat
 --
@@ -178,11 +185,17 @@ DefineAnimations("animations-rat", {
 -- Yale
 --
  
-DefineAnimations("animations-melee-unit", {
-  Still = UnitStill,
-  Move = UnitMove,
-  Attack = UnitMeleeAttack,
-  Death = UnitDeath
+DefineAnimations("animations-yale", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = UnitMeleeAttack,
+	Death = {
+		"unbreakable begin",
+		"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
+		"wait 200", "frame 60", "wait 200", "frame 65",
+		"wait 200", "frame 65",
+		"unbreakable end", "wait 1",
+	},
 })
 
 --
