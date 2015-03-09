@@ -166,6 +166,7 @@ DefineUnitType("unit-nothing-36", { Name = "Nothing 36",
 	Sounds = {} } )
 
 DefineUnitType("unit-rat", { Name = "Rat",
+	Class = "vermin",
 	Description = _("Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled for their carrying of diseases."),
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
@@ -215,12 +216,13 @@ DefineUnitType("unit-rat", { Name = "Rat",
 } )
 
 DefineUnitType("unit-yale", { Name = "Yale",
+	Class = "grazer",
 	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as a source of food."),
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 10,
-	HitPoints = 5,
+	HitPoints = 30,
 	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
@@ -238,7 +240,6 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	RandomMovementProbability = 1,
 	RandomMovementDistance = 6,
 	organic = true,
-	Coward = true,
 	Fauna = true,
 	IsNotSelectable = true, -- until it gets an icon
 	PersonalNames = {"Amaltheia", "Heidrun"}, -- names of mythological caprids: Aegipan (figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"), Amaltheia (female goat from Greek mythology who fed child Zeus), Heidrun (female goat from Norse mythology)
@@ -255,9 +256,8 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	}
 } )
 
--- Goat names (for the Yale): Aegipan (figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"), Amaltheia (female goat from Greek mythology who fed child Zeus), Heidrun (female goat from Norse mythology)
-
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
+--	Class = "predator",
 	Description = _("Amongst the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. It is unknown if the wild gryphons are the descendants of gryphons who avoided domestication, or if descend from gryphons escaped from captivity who managed to survive on their own. Not coincidentally, the Gryphon Mountain is the greatest nesting area for wild gryphons."),
 	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
@@ -317,6 +317,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 } )
 
 DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
+	Class = "predator",
 	Description = _("These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors, and some tribes even seek to live near a wyrm's lair, keeping it calm by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds."),
 	Quote = _("\"More wyrms there are | beneath the ash / Than an unwise ape would think; / Goin and Moin, | Grafvitnir's sons, / Grabak and Grafvolluth, / Ofnir and Svafnir | shall ever, methinks, / Gnaw at the twigs of the tree.\" - Dwarven Traditional Poetry"),
 	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon.",

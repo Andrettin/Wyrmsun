@@ -110,6 +110,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Decreased the size of the Tanais map.
 - Decreased quantity of trees in the Holmgard map, and decrease its size slightly.
 - Decreased quantity of trees in the random forest maps.
+- Wyrms now have 20% chance of appearing on a cave or swamp map.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -157,6 +158,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The minimum damage in a unit's damage display now shows the minimum possible damage before armor would be applied.
 - Reduced the length of the Dwarven Scout's description.
 - Added Yale critter (unit graphics by b_o).
+- Fauna now fights back when attacked.
+- Wyrms will now predate on organic units (including other fauna).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

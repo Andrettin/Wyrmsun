@@ -1350,9 +1350,9 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 		CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
 	end
 
---	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
---		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
---	end
+	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
+		CreateCreeps(15, "unit-wyrm", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
+	end
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
