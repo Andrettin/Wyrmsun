@@ -427,7 +427,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Variations = {
 		{
 			"variation-id", "green"
-		}
+		},
 		{
 			"variation-id", "red",
 			"file", "neutral/units/slime_small_red.png",
