@@ -290,7 +290,7 @@ local SlimeAttack = {
 	"unbreakable end", "wait 1",
 }
 local SlimeDeath = {"unbreakable begin",
-	"exact-frame 3", "wait 5", "exact-frame 4", "wait 5", "exact-frame 5", "wait 5",
+	"frame 35", "wait 5", "frame 40", "wait 5", "frame 45", "wait 5",
 	"unbreakable end", "wait 1",}
 
 DefineAnimations("animations-slime", {

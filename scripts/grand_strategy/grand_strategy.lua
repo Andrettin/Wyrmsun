@@ -602,7 +602,7 @@ function EndTurn()
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then
 					WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] = 2
-					if (GetUnitTypeData(unitName, "Class") == "town-hall" or GetUnitTypeData(unitName, "Class") == "stronghold" or GetUnitTypeData(unitName, "Class") == "lumber-mill" or GetUnitTypeData(unitName, "Class") == "smithy") then
+					if (GetUnitTypeData(unitName, "Class") == "town-hall" or GetUnitTypeData(unitName, "Class") == "lumber-mill" or GetUnitTypeData(unitName, "Class") == "smithy") then
 						CalculateFactionIncomes()
 					end
 				end
@@ -5120,9 +5120,7 @@ function GetProvinceEfficiency(province, commodity)
 	if (province.Civilization ~= GetFactionFromName(province.Owner).Civilization) then
 		province_efficiency = province_efficiency - 25
 	end
-	if (commodity == "Gold" and ProvinceHasBuildingType(province, "stronghold")) then
-		province_efficiency = province_efficiency + 10
-	elseif (commodity == "Lumber" and ProvinceHasBuildingType(province, "lumber-mill")) then
+	if (commodity == "Lumber" and ProvinceHasBuildingType(province, "lumber-mill")) then
 		province_efficiency = province_efficiency + 25
 	end
 	return province_efficiency

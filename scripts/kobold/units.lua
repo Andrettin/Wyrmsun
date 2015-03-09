@@ -42,6 +42,7 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	HitPoints = 50,
 	Accuracy = 12,
 	Evasion = 12,
+	Gender = 0, -- 0 = Not Set, 1 = Male, 2 = Female (since Kobolds are reptilian creatures, their graphics can represent both genders)
 	Corpse = "unit-kobold-dead-body",
 	Sounds = {
 		"selected", "click",
