@@ -189,7 +189,6 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	CanTargetLand = true,
 	RandomMovementProbability = 5,
 	organic = true,
-	Coward = true,
 	Fauna = true,
 	Variations = {
 		{
@@ -424,13 +423,11 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
 	organic = true,
---	Coward = true,
 	Fauna = true,
 	Variations = {
 		{
 			"variation-id", "green"
 		}
-		--[[
 		{
 			"variation-id", "red",
 			"file", "neutral/units/slime_small_red.png",
@@ -451,7 +448,6 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 			"file", "neutral/units/slime_small_teal.png",
 			"icon", "icon-slime-teal"
 		}
-		--]]
 	},
 	Sounds = {
 		"selected", "click",

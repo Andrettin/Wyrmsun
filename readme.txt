@@ -161,6 +161,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fauna now fights back when attacked.
 - Wyrms will now predate on organic units (including other fauna).
 - Fauna can now reproduce.
+- Slime unit graphics have been updated (by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
