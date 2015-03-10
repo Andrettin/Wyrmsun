@@ -98,6 +98,12 @@ b_o:
 /graphics/goblin/units/goblin_worker_with_gold_spiky_hair.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
 /graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png
+/graphics/kobold/units/kobold_footpad.png
+/graphics/kobold/units/kobold_footpad_blue_scales.png
+/graphics/kobold/units/kobold_footpad_purple_scales.png
+/graphics/kobold/units/kobold_footpad_red_scales.png
+/graphics/kobold/units/kobold_footpad_thrusting_sword.png
+/graphics/kobold/units/kobold_footpad_yellow_scales.png
 /graphics/missiles/arrow.png
 /graphics/missiles/axe_twirl.png
 /graphics/missiles/catapult_flaming_rock.png
@@ -167,8 +173,6 @@ b_o:
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png
-/graphics/neutral/units/kobold_footpad.png
-/graphics/neutral/units/kobold_footpad_thrusting_sword.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rat_black_fur.png
 /graphics/neutral/units/rat_light_gray_fur.png

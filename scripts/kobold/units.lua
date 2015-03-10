@@ -44,6 +44,27 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	Evasion = 12,
 	Gender = 0, -- 0 = Not Set, 1 = Male, 2 = Female (since Kobolds are reptilian creatures, their graphics can represent both genders)
 	Corpse = "unit-kobold-dead-body",
+	Variations = {
+		{
+			"variation-id", "brown-scales"
+		},
+		{
+			"variation-id", "blue-scales",
+			"file", "kobold/units/kobold_footpad_blue_scales.png"
+		},
+		{
+			"variation-id", "purple-scales",
+			"file", "kobold/units/kobold_footpad_purple_scales.png"
+		},
+		{
+			"variation-id", "red-scales",
+			"file", "kobold/units/kobold_footpad_red_scales.png"
+		},
+		{
+			"variation-id", "yellow-scales",
+			"file", "kobold/units/kobold_footpad_yellow_scales.png"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"selected", "basic-goblin-voices-selected-group",
