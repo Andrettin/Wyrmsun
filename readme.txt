@@ -134,8 +134,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The encyclopedia now displays the class of units, buildings and technologies.
 - The tech tree is now brought up when finishing a scenario, if the civilization you played that scenario with has unspent technology points.
 - Added popups for buttons.
-- Maximum number of selectable units is now 36 (up from 18).
 - Fixed bug which caused wood piles to not disappear after being depleted.
+- "Random" option is now selected by default in the map editor, and new maps are created with random variations of the basic tile (instead of always using the same variation).
 
 * Quests
 - Added The Battle of Magetobria quest.
@@ -158,6 +158,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Dwarven Steelclads and Thanes now deal more damage.
 - The minimum damage in a unit's damage display now shows the minimum possible damage before armor would be applied.
 - Reduced the length of the Dwarven Scout's description.
+- Maximum number of selectable units is now 36 (up from 18).
 - Added Yale critter (unit graphics by b_o).
 - Fauna now fights back when attacked.
 - Wyrms and gryphons will now predate on organic units (including other fauna).

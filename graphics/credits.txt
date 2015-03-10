@@ -486,6 +486,7 @@ João Victor G. Costa (Jinn):
 /graphics/orc/icons/sea_orc.png
 /graphics/orc/icons/shaman.png
 /graphics/orc/icons/spearthrower.png
+/graphics/orc/icons/warrior.png
 /graphics/teuton/buildings/guard_tower.png
 /graphics/teuton/buildings/lumber_mill.png
 /graphics/teuton/buildings/stronghold.png

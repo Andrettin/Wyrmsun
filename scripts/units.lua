@@ -250,8 +250,8 @@ DefineUnitType("unit-yale", { Name = "Yale",
 --		"ready", "critter-ready",
 --		"help", "critter-help",
 		"dead", "yale-dead",
---		"hit", "bite-attack",
---		"miss", "attack-miss"
+		"hit", "club-attack",
+		"miss", "attack-miss"
 	}
 } )
 
