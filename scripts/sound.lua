@@ -199,6 +199,7 @@ MakeSound("town-hall-selected", "buildings/town_hall.wav")
 
 MakeSound("gold-mine-selected", "buildings/gold_mine.wav")
 MakeSound("lumbermill", "buildings/lumbermill.wav")
+MakeSound("yale-pen-selected", "buildings/yalepen.wav")
 --transport_docking = MakeSound("transport docking", "misc/transport_docking.wav")
 MakeSound("burning", "misc/burning.wav")
     -- ready sounds
@@ -323,6 +324,16 @@ MakeSound("bird-dead", {
 	"neutral/bird/deadbird2.wav"
 })
 MakeSound("bat-selected", "neutral/bat_flapping.wav")
+MakeSound("yale-selected", {
+	"neutral/yale/yale_select01.wav",
+	"neutral/yale/yale_select02.wav"
+})
+MakeSound("yale-acknowledge", {
+	"neutral/yale/yale_ack01.wav",
+	"neutral/yale/yale_ack02.wav",
+	"neutral/yale/yale_ack03.wav"
+})
+MakeSound("yale-dead", "neutral/yale/yaledead.wav")
 
 --	Define sounds used by game
 --

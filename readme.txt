@@ -166,6 +166,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fauna will now tend to avoid settlements (except for vermin).
 - Fauna will no longer be generated in positions close to settled areas.
 - Killing fauna now yields experience points.
+- Fixed bug which caused dead units which don't have corpse units defined to appear at the wrong draw level.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

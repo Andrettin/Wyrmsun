@@ -245,11 +245,11 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	PersonalNamePrefixes = {"Aegi"},
 	PersonalNameSuffixes = {"pan"},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "critter-acknowledge",
+		"selected", "yale-selected",
+		"acknowledge", "yale-acknowledge",
 --		"ready", "critter-ready",
 --		"help", "critter-help",
---		"dead", "rat-dead",
+		"dead", "yale-dead",
 --		"hit", "bite-attack",
 --		"miss", "attack-miss"
 	}

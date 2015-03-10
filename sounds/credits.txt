@@ -49,6 +49,7 @@ Battle for Wesnoth Team:
 /sounds/ui/click.wav
 
 b_o:
+/sounds/buildings/yalepen.wav (modified from the U.S. Fish and Wildlife Service's sound)
 /sounds/dwarf/axefighter/axefighter-ready.wav
 /sounds/dwarf/ballista/ballista-ready.wav
 /sounds/dwarf/basic_voices/acknowledge-1.wav
@@ -117,9 +118,26 @@ b_o:
 /sounds/goblin/worker/goblin-worker-ready-2.wav
 /sounds/misc/rescue.wav
 /sounds/missiles/throwing_axe.wav
+/sounds/neutral/yale/yale_ack01.wav (modified from the U.S. Fish and Wildlife Service's sound)
+/sounds/neutral/yale/yale_ack02.wav (modified from the U.S. Fish and Wildlife Service's sound)
+/sounds/neutral/yale/yale_ack03.wav (modified from the U.S. Fish and Wildlife Service's sound)
+/sounds/neutral/yale/yale_select01.wav (modified from the U.S. Fish and Wildlife Service's sound)
+/sounds/neutral/yale/yale_select02.wav (modified from the U.S. Fish and Wildlife Service's sound)
+/sounds/neutral/yale/yaledead.wav (modified from the U.S. Fish and Wildlife Service's sound)
 
 David Slimp:
 /sounds/buildings/gold_mine.wav
+
+U.S. Fish and Wildlife Service (Public Domain) (http://www.fws.gov/video/sound.htm):
+/sounds/buildings/yalepen.wav (later modified by b_o)
+/sounds/neutral/bird/deadbird.wav (later modified by b_o)
+/sounds/neutral/bird/deadbird2.wav (later modified by b_o)
+/sounds/neutral/yale/yale_ack01.wav (later modified by b_o)
+/sounds/neutral/yale/yale_ack02.wav (later modified by b_o)
+/sounds/neutral/yale/yale_ack03.wav (later modified by b_o)
+/sounds/neutral/yale/yale_select01.wav (later modified by b_o)
+/sounds/neutral/yale/yale_select02.wav (later modified by b_o)
+/sounds/neutral/yale/yaledead.wav (later modified by b_o)
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav
@@ -133,8 +151,6 @@ Wolfgang Kohler:
 Sounds in the Public Domain:
 /sounds/misc/tree_chopping/tree-chopping-1.wav
 /sounds/misc/tree_chopping/tree-chopping-2.wav
-/sounds/neutral/bird/deadbird.wav (http://www.fws.gov/video/sound.htm)
-/sounds/neutral/bird/deadbird2.wav (http://www.fws.gov/video/sound.htm)
 /sounds/neutral/crow/crow1.wav (https://archive.org/details/AmericanCrow)
 /sounds/neutral/crow/crow2.wav (https://archive.org/details/AmericanCrow)
 /sounds/neutral/crow/crow3.wav (https://archive.org/details/AmericanCrow)
