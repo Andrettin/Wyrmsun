@@ -952,8 +952,15 @@ function CreateCritters(critter_number)
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
-				unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
-				Count = Count - 1
+				local unit_quantity = 0
+				for i=0,14 do
+					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
+				end
+
+				if (unit_quantity < 1) then
+					unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
+					Count = Count - 1
+				end
 			end
 			WhileCount = WhileCount + 1
 		end
@@ -997,7 +1004,7 @@ function CreateGryphons(gryphon_number)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
 			local unit_quantity = 0
 			for i=0,14 do
-				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 12, RandomY - 12}, {RandomX + 12, RandomY + 12})
 			end
 
 			if (unit_quantity < 1) then -- gryphons don't like much being near inhabited areas

@@ -256,7 +256,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 } )
 
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
---	Class = "predator",
+	Class = "predator",
 	Description = _("Amongst the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. It is unknown if the wild gryphons are the descendants of gryphons who avoided domestication, or if descend from gryphons escaped from captivity who managed to survive on their own. Not coincidentally, the Gryphon Mountain is the greatest nesting area for wild gryphons."),
 	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
@@ -400,6 +400,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 } )
 
 DefineUnitType("unit-slime", { Name = _("Slime"),
+	Class = "slime",
 	Description = _("Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch."),
 	Image = {"file", "neutral/units/slime_small.png", "size", {32, 32}},
 	Animations = "animations-slime", Icon = "icon-slime",
@@ -415,7 +416,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Evasion = 1,
 	MaxAttackRange = 1,
 	Priority = 37,
-	Points = 1,
+	Points = 2,
 	Demand = 1,
 	Type = "land",
 	RightMouseAction = "move",
@@ -428,6 +429,13 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 		{
 			"variation-id", "green"
 		},
+		--[[
+		{
+			"variation-id", "green-baby",
+			"file", "neutral/units/slime_baby.png",
+			"frame-size", {16, 16}
+		},
+		--]]
 		{
 			"variation-id", "red",
 			"file", "neutral/units/slime_small_red.png",
@@ -645,7 +653,6 @@ DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	Accuracy = 0,
 	Evasion = 0,
 	Priority = 30, AnnoyComputerFactor = 35,
-	Points = 160,
 	Corpse = "unit-destroyed-3x3-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",

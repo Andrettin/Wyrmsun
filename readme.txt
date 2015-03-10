@@ -160,9 +160,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Reduced the length of the Dwarven Scout's description.
 - Added Yale critter (unit graphics by b_o).
 - Fauna now fights back when attacked.
-- Wyrms will now predate on organic units (including other fauna).
+- Wyrms and gryphons will now predate on organic units (including other fauna).
 - Fauna can now reproduce.
 - Slime unit graphics have been updated (by b_o).
+- Fauna will now tend to avoid settlements (except for vermin).
+- Fauna will no longer be generated in positions close to settled areas.
+- Killing fauna now yields experience points.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

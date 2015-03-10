@@ -205,9 +205,6 @@ if (unit) then
 end
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {0, 34})
 
--- create some gryphon critters as scenery
-CreateGryphons(3)
-
 function NorthernWastelandsEnemy(enemy_x, enemy_y)
 	RandomNumber = SyncRand(2)
 	if (RandomNumber == 0) then
@@ -254,6 +251,9 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 end
 
 PlayMusic("music/wanderer.ogg")
+
+-- create some gryphons
+CreateGryphons(3)
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
