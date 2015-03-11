@@ -37,6 +37,7 @@ UnitMove = {"unbreakable begin",
 	"if-var v.Speed.Value == 10 speed_10",
 	"if-var v.Speed.Value == 11 speed_11",
 	"if-var v.Speed.Value >= 12 speed_12",
+	-- speed_3 16 / (3 / 10) = c. 53 waits
 	"label speed_6", -- 16 / (6 / 10) = c. 26 waits
 	"frame 0", "move 3", "wait 3", "frame 5", "move 3", "wait 2",
     "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
@@ -256,6 +257,54 @@ DefineAnimations("animations-bird", {
 })
 
 --
+-- Bee
+--
+ 
+local BeeStill = {
+	"frame 0", "wait 3",
+	"frame 5", "wait 3",
+	"frame 10", "wait 3",
+}
+local BeeMove = {"unbreakable begin",
+	"frame 0", "wait 3", "frame 0", "move 2", "wait 2",
+	"frame 5", "move 1", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 10", "move 1", "wait 3", "frame 10", "move 2", "wait 2",
+	"frame 0", "move 1", "wait 3", "frame 0", "move 2", "wait 2",
+	"frame 5", "move 1", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 10", "move 1", "wait 3", "frame 10", "move 1",
+	"frame 0", "wait 3", "frame 0", "move 2", "wait 2",
+	"frame 5", "move 1", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 10", "move 1", "wait 3", "frame 10", "move 2", "wait 2",
+	"frame 0", "move 1", "wait 3", "frame 0", "move 2", "wait 2",
+	"frame 5", "move 1", "wait 2", "frame 5", "move 2", "wait 2",
+	"frame 10", "move 1", "wait 3", "frame 10", "move 1",
+	"unbreakable end", "wait 1",}
+	
+DefineAnimations("animations-bee", {
+	Still = BeeStill,
+	Move = BeeMove,
+	Attack = {"unbreakable begin",
+		"frame 0", "wait 2",
+		"frame 5", "wait 2",
+		"frame 10", "wait 1",
+		"frame 10", "attack", "wait 1",
+		"frame 5", "wait 2",
+		"frame 0", "wait 2",
+		"frame 5", "wait 3",
+		"frame 10", "wait 3",
+		"frame 0", "wait 3",
+		"frame 5", "wait 3",
+		"frame 10", "wait 3",
+		"frame 0", "wait 3",
+		"frame 5", "wait 3",
+		"frame 10", "wait 3",
+		"frame 0", "wait 3",
+		"frame 5", "wait 3",
+		"frame 10", "wait 3",
+		"frame 0", "unbreakable end", "wait 1", }
+})
+
+--
 -- Slime
 --
 
@@ -448,8 +497,7 @@ DefineAnimations("animations-destroyed-place", {
 --  Death = {"unbreakable begin", "frame 2", "wait 200", "frame 3", "wait 200", "frame 1", "unbreakable end", "wait 1", },
 --})
 
-DefineAnimations("animations-decoration", {
-  Still = {
+local DecorationStill = {
 	"if-var v.Variation.Value == 0 variation_1",
 	"if-var v.Variation.Value == 1 variation_2",
 	"if-var v.Variation.Value == 2 variation_3",
@@ -500,7 +548,30 @@ DefineAnimations("animations-decoration", {
 	"label variation_23", "frame 22", "goto end",
 	"label variation_24", "frame 23", "goto end",
 	"label variation_25", "frame 24", "goto end",
-	"label end", "wait 1",},
+	"label end", "wait 1",}
+
+DefineAnimations("animations-decoration", {
+	Still = DecorationStill
+})
+
+DefineAnimations("animations-table", {
+	Still = DecorationStill,
+	Death = {
+		"unbreakable begin",
+		"label loop", 
+		"exact-frame 15", "wait 100", "exact-frame 15", "goto loop",
+		"unbreakable end", "wait 1",
+	}
+})
+
+DefineAnimations("animations-chair", {
+	Still = DecorationStill,
+	Death = {
+		"unbreakable begin",
+		"label loop", 
+		"exact-frame 4", "wait 100", "frame 4", "goto loop",
+		"unbreakable end", "wait 1",
+	}
 })
 
 DefineAnimations("animations-volcanic-crater", {

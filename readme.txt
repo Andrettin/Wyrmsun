@@ -162,12 +162,14 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Yale critter (unit graphics by b_o).
 - Fauna now fights back when attacked.
 - Wyrms and gryphons will now predate on organic units (including other fauna).
-- Fauna can now reproduce.
+- Fauna can now reproduce (newborn fauna only mature after a certain number of cycles; slimes reproduce asexually).
 - Slime unit graphics have been updated (by b_o).
 - Fauna will now tend to avoid settlements (except for vermin).
 - Fauna will no longer be generated in positions close to settled areas.
 - Killing fauna now yields experience points.
-- Fixed bug which caused dead units which don't have corpse units defined to appear at the wrong draw level.
+- Fixed bug which caused dead units who don't have corpse units defined to appear at the wrong draw level.
+- Added bee unit (graphics by b_o).
+- Added table, chair and shelf decoration units (graphics by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

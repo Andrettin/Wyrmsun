@@ -244,6 +244,9 @@ MakeSound("club-attack",
 MakeSound("dagger-attack",
 	"missiles/dagger.wav"
 )
+MakeSound("dart-attack",
+	"missiles/dart.wav"
+)
 MakeSound("fist-attack",
 	"missiles/fist.wav"
 )

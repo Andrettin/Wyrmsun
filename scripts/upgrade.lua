@@ -297,3 +297,41 @@ DefineModifier("upgrade-vicious",
 DefineModifier("upgrade-weak",
 	{"PiercingDamage", -1}
 )
+
+-- miscellaneous individual upgrades
+local misc_individual_upgrades = {
+	{"upgrade-child", _("Child")},
+	{"upgrade-gryphon-child", _("Gryphon Child")},
+	{"upgrade-wyrm-child", _("Wyrm Child")}
+}
+
+for i = 1,table.getn(misc_individual_upgrades) do
+	u = CUpgrade:New(misc_individual_upgrades[i][1])
+	u.Name = misc_individual_upgrades[i][2]
+	u.Icon = Icons["icon-level-up"]
+	u.Class = ""
+	u.Description = ""
+	u.Quote = ""
+	u.Background = ""
+	for j = 1,7 do
+		u.Costs[j - 1] = 0
+	end
+	u.TechnologyPointCost = 0
+	u.Ability = true
+	DefineAllow(misc_individual_upgrades[i][1], "AAAAAAAAAAAAAAAA")
+end
+
+DefineModifier("upgrade-child",
+	{"BasicDamage", -1},
+	{"PiercingDamage", -1}
+)
+
+DefineModifier("upgrade-gryphon-child",
+	{"BasicDamage", -6},
+	{"PiercingDamage", -2}
+)
+
+DefineModifier("upgrade-wyrm-child",
+	{"BasicDamage", -16},
+	{"PiercingDamage", -8}
+)

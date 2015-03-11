@@ -94,6 +94,9 @@ unit = CreateUnit("unit-bones", 15, {17, 6}) -- Durahn Eikinskjaldi's sarcophagu
 unit = CreateUnit("unit-bones", 15, {8, 2}) -- Isuldan Eikinskjaldi's remains
 unit = CreateUnit("unit-bones", 15, {17, 9}) -- Gneissus Eikinskjaldi's remains
 
+unit = CreateUnit("unit-table", 15, {16, 9}) -- table in Gneissus' crypt
+SetUnitVariable(unit, "Variation", 7)
+
 --unit = CreateUnit("unit-inner-wall-decoration", 15, {8, 7})
 --unit = CreateUnit("unit-outer-wall-decoration", 15, {11, 7})
 --unit = CreateUnit("unit-inner-wall-decoration", 15, {11, 10})

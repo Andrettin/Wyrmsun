@@ -916,11 +916,13 @@ function CreateCritters(critter_number)
 		while (Count > 0 and WhileCount < critter_number * 100) do
 			local critter_unit_type
 			if (wyrmsun.tileset == "forest") then
-				RandomNumber = SyncRand(2)
+				RandomNumber = SyncRand(3)
 				if (RandomNumber == 0) then
 					critter_unit_type = "unit-rat"
-				else
+				elseif (RandomNumber == 1) then
 					critter_unit_type = "unit-bird"
+				elseif (RandomNumber == 2) then
+					critter_unit_type = "unit-bee"
 				end
 			elseif (wyrmsun.tileset == "dungeon") then
 				RandomNumber = SyncRand(3)
@@ -1048,10 +1050,17 @@ function CreateRoamingFog(fog_number)
 		local WhileCount = 0
 		-- create critters
 		while (Count > 0 and WhileCount < fog_number * 100) do
-			RandomX = SyncRand(Map.Info.MapWidth - GetUnitTypeData("unit-roaming-fog", "TileWidth"))
-			RandomY = SyncRand(Map.Info.MapHeight - GetUnitTypeData("unit-roaming-fog", "TileHeight"))
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData("unit-roaming-fog", "TileWidth") < Map.Info.MapWidth - RandomX - 1 and GetUnitTypeData("unit-roaming-fog", "TileHeight") < Map.Info.MapHeight - RandomY - 1) then
-				unit = CreateUnit("unit-roaming-fog", 15, {RandomX, RandomY})
+			local fog_type
+			RandomNumber = SyncRand(2)
+			if (RandomNumber == 0) then
+				fog_type = "unit-roaming-fog"
+			else
+				fog_type = "unit-roaming-fog-small"
+			end
+			RandomX = SyncRand(Map.Info.MapWidth - GetUnitTypeData(fog_type, "TileWidth"))
+			RandomY = SyncRand(Map.Info.MapHeight - GetUnitTypeData(fog_type, "TileHeight"))
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData(fog_type, "TileWidth") < Map.Info.MapWidth - RandomX - 1 and GetUnitTypeData(fog_type, "TileHeight") < Map.Info.MapHeight - RandomY - 1) then
+				unit = CreateUnit(fog_type, 15, {RandomX, RandomY})
 				Count = Count - 1
 			end
 			WhileCount = WhileCount + 1
@@ -1126,8 +1135,12 @@ function CreateDecorations()
 						Count = Count - 1
 					end
 				end
-			elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
-				unit = CreateUnit("unit-outer-wall-decoration", 15, {RandomX, RandomY})
+			elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and RandomY < (Map.Info.MapHeight - 1) and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+				if (SyncRand(2) == 0) then
+					unit = CreateUnit("unit-outer-wall-decoration", 15, {RandomX, RandomY})
+				else
+					unit = CreateUnit("unit-shelf", 15, {RandomX, RandomY})
+				end
 				Count = Count - 1
 			elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-open-wall" and GetNumUnitsAt(15, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 				unit = CreateUnit("unit-inner-wall-decoration", 15, {RandomX, RandomY})
@@ -3862,7 +3875,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		-- create items
 		RandomX = 0
 		RandomY = 0
-		Count = 12
+		Count = 16
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
@@ -3878,12 +3891,16 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				if (adjacent_floor_tiles >= 8) then
 					if (GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 						RandomNumber = SyncRand(100)
-						if (RandomNumber < 40) then
+						if (RandomNumber < 35) then
 							local barrel_quantity = SyncRand(4)
 							for i=0,barrel_quantity do
 								unit = CreateUnit("unit-barrel", 15, {RandomX, RandomY})
 							end
-						elseif (RandomNumber < 80) then
+						elseif (RandomNumber < 40) then
+							unit = CreateUnit("unit-table", 15, {RandomX, RandomY})
+						elseif (RandomNumber < 45) then
+							unit = CreateUnit("unit-chair", 15, {RandomX, RandomY})
+						elseif (RandomNumber < 75) then
 							unit = CreateUnit("unit-potion-of-healing", 15, {RandomX, RandomY})
 						else
 							unit = CreateUnit("unit-potion-of-decay", 15, {RandomX, RandomY})

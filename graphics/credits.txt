@@ -126,6 +126,7 @@ b_o:
 /graphics/neutral/buildings/tree_stump_4.png
 /graphics/neutral/buildings/tree_stump_5.png
 /graphics/neutral/decorations/bones.png
+/graphics/neutral/decorations/chair.png
 /graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/inner_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/log.png
@@ -133,8 +134,10 @@ b_o:
 /graphics/neutral/decorations/mushrooms.png
 /graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/roaming_fog.png
+/graphics/neutral/decorations/shelf.png
 /graphics/neutral/decorations/small_rocks.png
 /graphics/neutral/decorations/stalagmites.png
+/graphics/neutral/decorations/table.png
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/decorations/wyrm_skeleton_horned.png
@@ -166,6 +169,7 @@ b_o:
 /graphics/neutral/items/scepter.png
 /graphics/neutral/items/trap.png
 /graphics/neutral/units/bat.png
+/graphics/neutral/units/bee.png
 /graphics/neutral/units/bird_black.png
 /graphics/neutral/units/bird_brown.png
 /graphics/neutral/units/bird_gray.png
@@ -177,6 +181,10 @@ b_o:
 /graphics/neutral/units/rat_black_fur.png
 /graphics/neutral/units/rat_light_gray_fur.png
 /graphics/neutral/units/slime_baby.png
+/graphics/neutral/units/slime_baby_blue.png
+/graphics/neutral/units/slime_baby_brown.png
+/graphics/neutral/units/slime_baby_red.png
+/graphics/neutral/units/slime_baby_teal.png
 /graphics/neutral/units/slime_big.png
 /graphics/neutral/units/slime_small.png
 /graphics/neutral/units/slime_small_blue.png

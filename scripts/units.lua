@@ -176,7 +176,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	DrawLevel = 35,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
-	BasicDamage = 1, PiercingDamage = 2, Missile = "missile-none",
+	BasicDamage = 1, PiercingDamage = 1, Missile = "missile-none",
 	MaxAttackRange = 1,
 	Accuracy = 15,
 	Evasion = 15,
@@ -190,6 +190,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	RandomMovementProbability = 5,
 	organic = true,
 	Fauna = true,
+	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
 			"variation-id", "dark-gray-fur"
@@ -241,9 +242,11 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	organic = true,
 	Fauna = true,
 	IsNotSelectable = true, -- until it gets an icon
+	PeopleAversion = true,
 	PersonalNames = {"Amaltheia", "Heidrun"}, -- names of mythological caprids: Aegipan (figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"), Amaltheia (female goat from Greek mythology who fed child Zeus), Heidrun (female goat from Norse mythology)
 	PersonalNamePrefixes = {"Aegi"},
 	PersonalNameSuffixes = {"pan"},
+	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "yale-selected",
 		"acknowledge", "yale-acknowledge",
@@ -256,7 +259,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 } )
 
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
-	Class = "predator",
+	Class = "flying-predator",
 	Description = _("Amongst the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. It is unknown if the wild gryphons are the descendants of gryphons who avoided domestication, or if descend from gryphons escaped from captivity who managed to survive on their own. Not coincidentally, the Gryphon Mountain is the greatest nesting area for wild gryphons."),
 	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
@@ -284,6 +287,9 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	RandomMovementDistance = 12,
 	organic = true,
 	Fauna = true,
+	Predator = true,
+	PeopleAversion = true,
+	ChildUpgrade = "upgrade-gryphon-child",
 	PersonalNames = {
 		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
 		"Kawn", "Krawg", -- names from the "Sceptre of Fire" Wesnoth campaign
@@ -344,6 +350,9 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	RandomMovementProbability = 1,
 	Fauna = true,
 	StartingLevel = 3,
+	PeopleAversion = true,
+	Predator = true,
+	ChildUpgrade = "upgrade-wyrm-child",
 	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
@@ -411,7 +420,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	Armor = 10,
 	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
-	BasicDamage = 1, PiercingDamage = 2, Missile = "missile-none",
+	BasicDamage = 2, PiercingDamage = 1, Missile = "missile-none",
 	Accuracy = 5,
 	Evasion = 1,
 	MaxAttackRange = 1,
@@ -423,38 +432,74 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
+	Gender = 3, -- 1 = Male, 2 = Female, 3 = Asexual
 	organic = true,
 	Fauna = true,
+	PeopleAversion = true,
+	Slime = true,
+	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
-			"variation-id", "green"
-		},
-		--[[
-		{
-			"variation-id", "green-baby",
+			"variation-id", "green",
 			"file", "neutral/units/slime_baby.png",
-			"frame-size", {16, 16}
+			"frame-size", {16, 16},
+			"upgrade-required", "upgrade-child"
 		},
-		--]]
+		{
+			"variation-id", "red",
+			"file", "neutral/units/slime_baby_red.png",
+			"icon", "icon-slime-red",
+			"frame-size", {16, 16},
+			"upgrade-required", "upgrade-child"
+		},
+		{
+			"variation-id", "brown",
+			"file", "neutral/units/slime_baby_brown.png",
+			"icon", "icon-slime-brown",
+			"frame-size", {16, 16},
+			"upgrade-required", "upgrade-child"
+		},
+		{
+			"variation-id", "blue",
+			"file", "neutral/units/slime_baby_blue.png",
+			"icon", "icon-slime-blue",
+			"frame-size", {16, 16},
+			"upgrade-required", "upgrade-child"
+		},
+		{
+			"variation-id", "teal",
+			"file", "neutral/units/slime_baby_teal.png",
+			"icon", "icon-slime-teal",
+			"frame-size", {16, 16},
+			"upgrade-required", "upgrade-child"
+		},
+		{
+			"variation-id", "green",
+			"upgrade-forbidden", "upgrade-child"
+		},
 		{
 			"variation-id", "red",
 			"file", "neutral/units/slime_small_red.png",
-			"icon", "icon-slime-red"
+			"icon", "icon-slime-red",
+			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "brown",
 			"file", "neutral/units/slime_small_brown.png",
-			"icon", "icon-slime-brown"
+			"icon", "icon-slime-brown",
+			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "blue",
 			"file", "neutral/units/slime_small_blue.png",
-			"icon", "icon-slime-blue"
+			"icon", "icon-slime-blue",
+			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "teal",
 			"file", "neutral/units/slime_small_teal.png",
-			"icon", "icon-slime-teal"
+			"icon", "icon-slime-teal",
+			"upgrade-forbidden", "upgrade-child"
 		}
 	},
 	Sounds = {
@@ -463,6 +508,44 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 --		"ready", "critter-ready",
 --		"help", "critter-help",
 		"dead", "slime-dead" }
+} )
+
+DefineUnitType("unit-bee", { Name = _("Bee"),
+	Image = {"file", "neutral/units/Bee.png", "size", {6, 6}},
+	Animations = "animations-bee", Icon = "icon-gryphon",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 1,
+	DrawLevel = 44,
+	TileSize = {1, 1}, BoxSize = {15, 15},
+	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, Missile = "missile-none",
+	Accuracy = 15,
+	Evasion = 15,
+	MaxAttackRange = 1,
+	Priority = 5,
+	Points = 1,
+	Demand = 1,
+	Type = "fly",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	RandomMovementProbability = 50,
+	RandomMovementDistance = 6,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	ChildUpgrade = "upgrade-child",
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "bird-selected",
+--		"ready", "bird-selected",
+--		"help", "critter-help",
+--		"dead", "bird-dead",
+		"hit", "dart-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-bird", { Name = _("Bird"),
@@ -484,11 +567,12 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
-	RandomMovementProbability = 100,
+	RandomMovementProbability = 50,
 	RandomMovementDistance = 12,
 	organic = true,
 	Coward = true,
 	Fauna = true,
+	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
 			"variation-id", "black",
@@ -536,11 +620,12 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
-	RandomMovementProbability = 100,
+	RandomMovementProbability = 50,
 	RandomMovementDistance = 8,
 	organic = true,
-	Coward = true,
 	Fauna = true,
+	PeopleAversion = true,
+	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -1328,6 +1413,43 @@ DefineUnitType("unit-door", { Name = _("Door"),
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
+DefineUnitType("unit-shelf", { Name = "Shelf",
+	Image = {"file", "neutral/decorations/shelf.png", "size", {32, 32}},
+	Animations = "animations-decoration", Icon = "icon-shelf",
+	Speed = 0,
+	HitPoints = 0,
+	DrawLevel = 5,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 0,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	IsNotSelectable = true,
+	Decoration = true,
+	NumDirections = 1,
+	Indestructible = 1,
+	VisibleUnderFog = true,
+	NonSolid = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		},
+		{
+			"variation-id", "5"
+		}
+	},
+	Sounds = {} }
+)
+
 DefineUnitType("unit-outer-wall-decoration", { Name = "Outer Wall Decoration",
 	Image = {"file", "neutral/decorations/outer_wall_decoration.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-outer-wall-decoration",
@@ -1660,7 +1782,112 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Indestructible = 1,
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"} } )
+		"dead", "building destroyed"
+	}
+} )
+
+DefineUnitType("unit-table", { Name = _("Table"),
+	Image = {"file", "neutral/decorations/table.png", "size", {32, 32}},
+	Animations = "animations-table", Icon = "icon-table",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 5,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		},
+		{
+			"variation-id", "5"
+		},
+		{
+			"variation-id", "6"
+		},
+		{
+			"variation-id", "7"
+		},
+		{
+			"variation-id", "8"
+		},
+		{
+			"variation-id", "9"
+		},
+		{
+			"variation-id", "10"
+		},
+		{
+			"variation-id", "11"
+		},
+		{
+			"variation-id", "12"
+		},
+		{
+			"variation-id", "13"
+		},
+		{
+			"variation-id", "14"
+		},
+		{
+			"variation-id", "15"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+		"dead", "building destroyed"
+	}
+} )
+
+DefineUnitType("unit-chair", { Name = _("Chair"),
+	Image = {"file", "neutral/decorations/chair.png", "size", {32, 32}},
+	Animations = "animations-chair", Icon = "icon-chair",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 3,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+		"dead", "building destroyed"
+	}
+} )
 
 DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
@@ -1825,6 +2052,38 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	HitPoints = 1,
 	DrawLevel = 45,
 	TileSize = {15, 8}, BoxSize = {497, 276},
+	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
+	Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+	RandomMovementProbability = 100,
+	NumDirections = 1,
+	NonSolid = true, 
+	Transparency = 50,
+	Decoration = true,
+	VisibleUnderFog = false,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "bat-selected",
+--		"ready", "bat-selected",
+--		"help", "critter-help",
+--		"dead", "rat-dead"
+	}
+} )
+
+DefineUnitType("unit-roaming-fog-small", { Name = _("Roaming Fog"),
+	Image = {"file", "neutral/decorations/roaming_fog_small.png", "size", {256, 171}},
+	Animations = "animations-roaming-fog", Icon = "icon-roaming-fog",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 1,
+	DrawLevel = 45,
+	TileSize = {8, 5}, BoxSize = {255, 169},
 	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
 	Missile = "missile-none",
 	MaxAttackRange = 1,

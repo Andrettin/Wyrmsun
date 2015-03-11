@@ -916,6 +916,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-table",
+	Size = {46, 38},
+	File = "neutral/icons/table.png"
+})
+
+DefineIcon({
+	Name = "icon-chair",
+	Size = {46, 38},
+	File = "neutral/icons/chair.png"
+})
+
+DefineIcon({
+	Name = "icon-shelf",
+	Size = {46, 38},
+	File = "neutral/icons/shelf.png"
+})
+
+DefineIcon({
 	Name = "icon-alchemy-bench",
 	Size = {46, 38},
 	File = "neutral/icons/alchemy_bench.png"

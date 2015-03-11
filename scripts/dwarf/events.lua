@@ -471,6 +471,31 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
+		if (GetNumUnitsAt(GetThisPlayer(), "units", {16, 9}, {17, 10}) > 0 and GetNumUnitsAt(GetFactionPlayer("Raiders"), "units", {16, 9}, {17, 10}) == 0) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Durstorn",
+			"There's a book on this table... merchant contacts that the raider leader used to sell off the tomb's artifacts are written on it.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"dwarf/icons/durstorn.png"
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
 		if (PlayerHasObjective(GetThisPlayer(), "- Retrieve Durahn Eikinskjaldi's skull") and GetNumUnitsAt(GetThisPlayer(), "units", {16, 6}, {17, 6}) > 0 and GetNumUnitsAt(GetFactionPlayer("Raiders"), "units", {16, 6}, {17, 6}) == 0) then
 			player = GetThisPlayer()
 			return true

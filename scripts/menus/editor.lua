@@ -111,6 +111,8 @@ editor_types = {
    "unit-gold-and-gems-chest",
    "unit-barrel",
    "unit-door",
+   "unit-chair",
+   "unit-table",
    "unit-alchemy-bench",
    "unit-potion-of-healing",
    "unit-potion-of-decay",
@@ -122,6 +124,7 @@ editor_types = {
    "unit-scepter-of-fire",
 
    "unit-rat",
+   "unit-bee",
    "unit-bird",
    "unit-bat",
    "unit-slime",
@@ -147,8 +150,10 @@ editor_types = {
    "unit-bones",
    "unit-wyrm-skeleton",
    "unit-volcanic-crater",
+   "unit-roaming-fog-small",
    "unit-roaming-fog",
    "unit-floor-decoration",
+   "unit-shelf",
    "unit-outer-wall-decoration",
    "unit-inner-wall-decoration"
 }

@@ -25,6 +25,7 @@ Battle for Wesnoth Team:
 /sounds/missiles/claws.wav
 /sounds/missiles/club.wav
 /sounds/missiles/dagger.wav
+/sounds/missiles/dart.wav
 /sounds/missiles/fist.wav
 /sounds/missiles/mace.wav
 /sounds/missiles/miss-1.wav
