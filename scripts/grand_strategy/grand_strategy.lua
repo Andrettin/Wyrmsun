@@ -1008,7 +1008,7 @@ function ChangeProvinceCulture(province, civilization)
 	
 	-- replace existent units from the previous civilization with units of the new civilization
 	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Civilization") == old_civilization and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
+		if (IsMilitaryUnit(unitName) and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
 			province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.Units[string.gsub(unitName, "-", "_")]
 			province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.UnderConstructionUnits[string.gsub(unitName, "-", "_")]
 			province.Units[string.gsub(unitName, "-", "_")] = 0

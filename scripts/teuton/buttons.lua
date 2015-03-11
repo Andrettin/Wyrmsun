@@ -74,7 +74,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
   
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-barracks",
   Action = "build", Value = "unit-teuton-barracks",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "b", Hint = _("Build ~!Barracks"), Popup = "popup-building",

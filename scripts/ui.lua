@@ -446,7 +446,7 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = PopupFont}}
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
 			}, 
 			-- Move  hint
 			{ 	Margin = {1, 1}, Condition = {ButtonAction = "move"},

@@ -248,12 +248,14 @@ DefineUnitType("unit-teuton-barracks", { Name = _("Barracks"),
 	Parent = "unit-template-barracks",
 	Civilization = "teuton",
 --	Description = _("The germanic war lodge serves as a gathering place for the tribe's warriors."),
-	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-germanic-barracks",
+	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-teuton-barracks",
 	Variations = {
 		{
 			"variation-id", "barracks",
 			"type-name", "War Lodge",
+			"file", "germanic/buildings/barracks.png",
+			"icon", "icon-germanic-barracks",
 			"upgrade-forbidden", "upgrade-teuton-masonry"
 		},
 		{

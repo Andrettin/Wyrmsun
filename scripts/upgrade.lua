@@ -301,6 +301,7 @@ DefineModifier("upgrade-weak",
 -- miscellaneous individual upgrades
 local misc_individual_upgrades = {
 	{"upgrade-child", _("Child")},
+	{"upgrade-bee-child", _("Bee Child")},
 	{"upgrade-gryphon-child", _("Gryphon Child")},
 	{"upgrade-wyrm-child", _("Wyrm Child")}
 }
@@ -324,6 +325,10 @@ end
 DefineModifier("upgrade-child",
 	{"BasicDamage", -1},
 	{"PiercingDamage", -1}
+)
+
+DefineModifier("upgrade-bee-child",
+	{"BasicDamage", -1}
 )
 
 DefineModifier("upgrade-gryphon-child",

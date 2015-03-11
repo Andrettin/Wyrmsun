@@ -47,6 +47,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Increased watch tower and guard tower HP by 100%.
 - Added Teuton Burg (graphics by Jinn).
 - Reduced the length of the Dwarven Smithy's description.
+- Added Teuton Barracks (graphics by Jinn).
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.

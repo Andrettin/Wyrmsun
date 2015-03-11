@@ -536,7 +536,7 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	organic = true,
 	Coward = true,
 	Fauna = true,
-	ChildUpgrade = "upgrade-child",
+	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
