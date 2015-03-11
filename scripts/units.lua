@@ -247,6 +247,18 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	PersonalNamePrefixes = {"Aegi"},
 	PersonalNameSuffixes = {"pan"},
 	ChildUpgrade = "upgrade-child",
+	Variations = {
+		{
+			"variation-id", "brown-fur",
+			"file", "neutral/units/yale_young.png",
+			"frame-size", {36, 36},
+			"upgrade-required", "upgrade-child"
+		},
+		{
+			"variation-id", "brown-fur",
+			"upgrade-forbidden", "upgrade-child"
+		}
+	},
 	Sounds = {
 		"selected", "yale-selected",
 		"acknowledge", "yale-acknowledge",
@@ -297,17 +309,26 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	},
 	Variations = {
 		{
-			"variation-id", "brown-feathers"
+			"variation-id", "young",
+			"file", "neutral/units/gryphon_young.png",
+			"frame-size", {50, 50},
+			"upgrade-required", "upgrade-gryphon-child"
+		},
+		{
+			"variation-id", "brown-feathers",
+			"upgrade-forbidden", "upgrade-gryphon-child"
 		},
 		{
 			"variation-id", "blue-feathers",
 			"file", "neutral/units/gryphon_blue_feathers.png",
-			"icon", "icon-gryphon-blue-feathers"
+			"icon", "icon-gryphon-blue-feathers",
+			"upgrade-forbidden", "upgrade-gryphon-child"
 		},
 		{
 			"variation-id", "gray-feathers",
 			"file", "neutral/units/gryphon_gray_feathers.png",
-			"icon", "icon-gryphon-gray-feathers"
+			"icon", "icon-gryphon-gray-feathers",
+			"upgrade-forbidden", "upgrade-gryphon-child"
 		}
 	},
 	Sounds = {
@@ -526,13 +547,13 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	Priority = 5,
 	Points = 1,
 	Demand = 1,
-	Type = "fly",
+	Type = "fly-low",
+	NonSolid = true,
 	IsNotSelectable = true,
 	RightMouseAction = "move",
 --	CanAttack = true,
 --	CanTargetLand = true,
 	RandomMovementProbability = 50,
-	RandomMovementDistance = 6,
 	organic = true,
 	Coward = true,
 	Fauna = true,

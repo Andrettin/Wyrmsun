@@ -861,7 +861,7 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	if (GameConcepts[game_concept_key].Description ~= "") then
+	if (GameConcepts[game_concept_key].Description ~= nil) then
 		description = "Description: " .. GameConcepts[game_concept_key].Description
 	end
 	l:setCaption(description)
@@ -942,8 +942,28 @@ function OpenEncyclopediaCivilizationEntry(civilization_key)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	if (CivilizationsEncyclopedia[civilization_key].Description ~= "") then
-		description = "Description: " .. CivilizationsEncyclopedia[civilization_key].Description
+	if (CivilizationsEncyclopedia[civilization_key].DevelopsFrom ~= nil) then
+		description = description .. "Develops From: "
+		for i=1,table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsFrom) do
+			description = description .. CivilizationsEncyclopedia[civilization_key].DevelopsFrom[i]
+			if (i < table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsFrom)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
+	end
+	if (CivilizationsEncyclopedia[civilization_key].DevelopsTo ~= nil) then
+		description = description .. "Develops To: "
+		for i=1,table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsTo) do
+			description = description .. CivilizationsEncyclopedia[civilization_key].DevelopsTo[i]
+			if (i < table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsTo)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
+	end
+	if (CivilizationsEncyclopedia[civilization_key].Description ~= nil) then
+		description = description .. "Description: " .. CivilizationsEncyclopedia[civilization_key].Description
 	end
 	l:setCaption(description)
 			
@@ -1023,7 +1043,7 @@ function OpenEncyclopediaFactionEntry(faction_key)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	if (FactionsEncyclopedia[faction_key].Description ~= "") then
+	if (FactionsEncyclopedia[faction_key].Description ~= nil) then
 		description = "Description: " .. FactionsEncyclopedia[faction_key].Description
 	end
 	l:setCaption(description)

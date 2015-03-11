@@ -3896,8 +3896,24 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							for i=0,barrel_quantity do
 								unit = CreateUnit("unit-barrel", 15, {RandomX, RandomY})
 							end
-						elseif (RandomNumber < 40) then
+						elseif (RandomNumber < 44) then
 							unit = CreateUnit("unit-table", 15, {RandomX, RandomY})
+							if (SyncRand(100) < 25 and GetTileTerrainHasFlag(RandomX, RandomY - 1, "land") and GetNumUnitsAt(-1, "any", {RandomX, RandomY - 1}, {RandomX, RandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
+								unit = CreateUnit("unit-chair", 15, {RandomX, RandomY - 1})
+								SetUnitVariable(unit, "Variation", 0)
+							end
+							if (SyncRand(100) < 25 and GetTileTerrainHasFlag(RandomX - 1, RandomY, "land") and GetNumUnitsAt(-1, "any", {RandomX - 1, RandomY}, {RandomX - 1, RandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {RandomX - 1, RandomY})
+								SetUnitVariable(unit, "Variation", 1)
+							end
+							if (SyncRand(100) < 25 and GetTileTerrainHasFlag(RandomX, RandomY + 1, "land") and GetNumUnitsAt(-1, "any", {RandomX, RandomY + 1}, {RandomX, RandomY + 1}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {RandomX, RandomY + 1})
+								SetUnitVariable(unit, "Variation", 2)
+							end
+							if (SyncRand(100) < 25 and GetTileTerrainHasFlag(RandomX + 1, RandomY, "land") and GetNumUnitsAt(-1, "any", {RandomX + 1, RandomY}, {RandomX + 1, RandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {RandomX + 1, RandomY})
+								SetUnitVariable(unit, "Variation", 3)
+							end
 						elseif (RandomNumber < 45) then
 							unit = CreateUnit("unit-chair", 15, {RandomX, RandomY})
 						elseif (RandomNumber < 75) then

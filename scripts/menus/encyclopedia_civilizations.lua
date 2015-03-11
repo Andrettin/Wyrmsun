@@ -42,6 +42,7 @@ CivilizationsEncyclopedia = {
 	},
 	HumanGermanic = {
 		Name = _("Human - ~!Germanic"),
+		DevelopsTo = {_("Goth"), _("Norse"), _("Teuton")},
 		Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking.")
 	},
 	HumanGreek = {
@@ -50,6 +51,7 @@ CivilizationsEncyclopedia = {
 	},
 	HumanGoth = {
 		Name = _("Human - G~!oth"),
+		DevelopsFrom = {_("Germanic")},
 		Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.")
 	},
 	HumanLatin = {
@@ -58,10 +60,12 @@ CivilizationsEncyclopedia = {
 	},
 	HumanNorse = {
 		Name = _("Human - ~!Norse"),
+		DevelopsFrom = {_("Germanic")},
 		Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.")
 	},
 	HumanTeuton = {
 		Name = _("Human - ~!Teuton"),
+		DevelopsFrom = {_("Germanic")},
 		Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".")
 	},
 	Kobold = {
