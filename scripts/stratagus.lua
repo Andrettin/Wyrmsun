@@ -304,7 +304,7 @@ function SinglePlayerTriggers()
 	AddTrigger(
 --		function() return GetNumOpponents(GetThisPlayer()) == 0 end,
 		function()
-			if (GetNumRivals(GetThisPlayer()) == 0 and PlayerHasObjective(GetThisPlayer(), "- Destroy the enemy")) then
+			if (GetNumRivals(GetThisPlayer()) == 0 and PlayerHasObjective(GetThisPlayer(), "- Defeat your enemies")) then
 				return true
 			end
 		end,
@@ -321,7 +321,7 @@ function SinglePlayerTriggers()
 		end
 
 		for key, value in pairs(CustomPlayerData) do
-			CustomPlayerData[key].Objectives = {"- Destroy the enemy"}
+			CustomPlayerData[key].Objectives = {_("Defeat your enemies")}
 		end
 	end
 

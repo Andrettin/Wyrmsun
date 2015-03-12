@@ -617,7 +617,7 @@ end
 Widget:setGlobalFont(Fonts["large"])
 
 
-DefaultObjectives = {"- Destroy the enemy"}
+DefaultObjectives = {"- Defeat your enemies"}
 --for i=0,14 do
 --	for key, value in pairs(CustomPlayerData) do
 --		if (CustomPlayerData[key].Number == i) then

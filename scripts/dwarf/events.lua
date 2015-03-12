@@ -72,7 +72,7 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 							if (mapinfo.description == "Fjalar's and Galar's Hall") then
-								RemovePlayerObjective(player, "- Destroy the enemy")
+								RemovePlayerObjective(player, "- Defeat your enemies")
 							end
 							AddPlayerObjective(player, "- Find Thjodrorir and slay him")
 						end},
@@ -117,7 +117,7 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 					if (mapinfo.description == "Fjalar's and Galar's Hall") then
-						RemovePlayerObjective(player, "- Destroy the enemy")
+						RemovePlayerObjective(player, "- Defeat your enemies")
 					end
 					AddPlayerObjective(player, "- Rescue Thjodrorir's remains")
 					AddPlayerObjective(player, "- Bring Fjalar and Galar to the clan's justice")
@@ -274,7 +274,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Destroy the enemy")
+				RemovePlayerObjective(player, "- Defeat your enemies")
 				AddPlayerObjective(player, "- Retrieve Durahn Eikinskjaldi's skull")
 				AddPlayerObjective(player, "- Durstorn and Baglur must survive")
 			end},

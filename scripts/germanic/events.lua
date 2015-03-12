@@ -48,7 +48,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Destroy the enemy")
+				RemovePlayerObjective(player, "- Defeat your enemies")
 				AddPlayerObjective(player, "- Destroy Vanaland's town hall")
 			end}
 		)
@@ -140,7 +140,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Destroy the enemy")
+				RemovePlayerObjective(player, "- Defeat your enemies")
 				AddPlayerObjective(player, "- Have a Bura stand on the glyph to the southwest")
 			end}
 		)
@@ -237,7 +237,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Destroy the enemy")
+				RemovePlayerObjective(player, "- Defeat your enemies")
 				AddPlayerObjective(player, "- Subdue the natives")
 			end}
 		)
@@ -301,7 +301,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Destroy the enemy")
+				RemovePlayerObjective(player, "- Defeat your enemies")
 				AddPlayerObjective(player, "- Destroy all of Gylve's war lodges and military units")
 			end}
 		)
@@ -363,7 +363,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				RemovePlayerObjective(player, "- Destroy the enemy")
+				RemovePlayerObjective(player, "- Defeat your enemies")
 				AddPlayerObjective(player, "- Defeat the Aedui")
 			end}
 		)

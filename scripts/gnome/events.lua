@@ -134,7 +134,7 @@ AddTrigger(
 																	player,
 																	{"~!Continue"},
 																	{function(s)
-																		RemovePlayerObjective(player, "- Destroy the enemy")
+																		RemovePlayerObjective(player, "- Defeat your enemies")
 																		AddPlayerObjective(player, "- Mine gold to fulfill Dursil's requests")
 																		AddPlayerObjective(player, "- Prepare your forces for a showdown with the dwarves")
 																		AddPlayerObjective(player, "- Pypo I must survive")

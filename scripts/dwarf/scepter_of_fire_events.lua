@@ -265,7 +265,7 @@ AddTrigger(
 																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
 																														if (mapinfo.description == "Chaincolt Foothills") then
 																															ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
-																															RemovePlayerObjective(player, "- Destroy the enemy")
+																															RemovePlayerObjective(player, "- Defeat your enemies")
 																														end
 																														SetDiplomacy(gnomish_monarch_player, "allied", player)
 																														SetSharedVision(gnomish_monarch_player, true, player)
@@ -1095,7 +1095,7 @@ AddTrigger(
 																								AddPlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 																								AddPlayerObjective(player, "- Rugnur and Baglur must survive")
 																								if (mapinfo.description == "Caverns of Chaincolt") then
-																									RemovePlayerObjective(player, "- Destroy the enemy")
+																									RemovePlayerObjective(player, "- Defeat your enemies")
 																								end
 																								KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
 																							end},
@@ -1650,7 +1650,7 @@ AddTrigger(
 											AcquireAbility(unit, "upgrade-sword-mastery")
 										end
 										if (mapinfo.description == "Northern Wastelands") then
-											RemovePlayerObjective(player, "- Destroy the enemy")
+											RemovePlayerObjective(player, "- Defeat your enemies")
 										end
 										AddPlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 										AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan and the gnomish envoy must survive")
@@ -2332,7 +2332,7 @@ AddTrigger(
 									{"~!Continue"},
 									{function(s)
 										if (mapinfo.description == "Eastern Mines") then
-											RemovePlayerObjective(player, "- Destroy the enemy")
+											RemovePlayerObjective(player, "- Defeat your enemies")
 										end
 										AddPlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 										AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
@@ -3366,11 +3366,11 @@ AddTrigger(
 																																	AcquireAbility(unit, "upgrade-sword-mastery")
 																																end
 																																if (mapinfo.description == "Shorbear Hills") then
-																																	RemovePlayerObjective(player, "- Destroy the enemy")
+																																	RemovePlayerObjective(player, "- Defeat your enemies")
 																																end
 																																AddPlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 																																AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
-																																RemovePlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Destroy the enemy")
+																																RemovePlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat your enemies")
 																																AddPlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")
 																																--[[
 																																if (GrandStrategy) then
@@ -3590,7 +3590,7 @@ AddTrigger(
 												{"~!Continue"},
 												{function(s)
 													AddPlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Destroy the enemy")
+													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
 													AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 												end},
 												"dwarf/icons/thursagan.png"
@@ -4417,7 +4417,7 @@ AddTrigger(
 										{"~!Continue"},
 										{function(s)
 											if (mapinfo.description == "Svafnir's Lair") then
-												RemovePlayerObjective(player, "- Destroy the enemy")
+												RemovePlayerObjective(player, "- Defeat your enemies")
 											end
 											AddPlayerObjective(player, "- Get all heroes to the end of the tunnel")
 											AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
@@ -4946,7 +4946,7 @@ AddTrigger(
 											{"~!Continue"},
 											{function(s)
 												if (mapinfo.description == "Caverns of Flame") then
-													RemovePlayerObjective(player, "- Destroy the enemy")
+													RemovePlayerObjective(player, "- Defeat your enemies")
 												end
 												AddPlayerObjective(player, "- Explore as much of the cave as possible")
 												AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
@@ -5098,7 +5098,7 @@ AddTrigger(
 				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "CustomAIState", 4)
 			end
-			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Destroy the enemy")
+			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
 			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 			Event(
 				"Rugnur",
