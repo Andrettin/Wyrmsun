@@ -2754,7 +2754,7 @@ function DrawOnScreenTiles()
 		end
 	end
 
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/filler-right_" .. Video.Height .. ".png")
+	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/filler-left_" .. Video.Height .. ".png")
 	ui_element:Load()
 	UIFillerRight = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIFillerRight, 0, 0)

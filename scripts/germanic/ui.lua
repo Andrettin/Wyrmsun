@@ -88,7 +88,7 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("germanic/ui/filler-right_" .. Video.Height .. ".png", 0, 0)
+AddFiller("germanic/ui/filler-left_" .. Video.Height .. ".png", 0, 0)
 AddFiller("germanic/ui/resource_" .. Video.Width .. ".png", 16, 0)
 AddFiller("germanic/ui/statusline_" .. Video.Width .. ".png", 16, Video.Height - 16)
 AddFiller("germanic/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)

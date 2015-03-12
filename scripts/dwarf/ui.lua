@@ -88,7 +88,7 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("dwarf/ui/filler-right_" .. Video.Height .. ".png", 0, 0)
+AddFiller("dwarf/ui/filler-left_" .. Video.Height .. ".png", 0, 0)
 AddFiller("dwarf/ui/resource_" .. Video.Width .. ".png", 16, 0)
 AddFiller("dwarf/ui/statusline_" .. Video.Width .. ".png", 16, Video.Height - 16)
 AddFiller("dwarf/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)
