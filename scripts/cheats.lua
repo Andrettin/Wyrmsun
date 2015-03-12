@@ -158,8 +158,14 @@ function HandleCheats(str)
 		end
 	end
 
---  elseif (str == "greebos arrows") then
---  	CreateUnit("unit-goblin-archer", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+  elseif (str == "fountain of youth") then
+		local uncount = 0
+		uncount = GetUnits("any")
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitBoolFlag(uncount[unit1], "Fauna") and UnitHasAbility(uncount[unit1], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade")) == false) then
+				AcquireIndividualUpgrade(uncount[unit1], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade"))
+			end
+		end
 
   else
     return false

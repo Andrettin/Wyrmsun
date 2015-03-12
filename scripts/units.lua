@@ -379,43 +379,56 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	Variations = {
 		{
+			"variation-id", "young",
+			"file", "neutral/units/wyrm_young.png",
+			"frame-size", {55, 54},
+			"upgrade-required", "upgrade-wyrm-child"
+		},
+		{
 			"variation-id", "green-scales",
-			"upgrade-forbidden", "upgrade-vicious"
+			"upgrade-forbidden", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "green-scales-vicious",
 			"icon", "icon-wyrm-vicious",
-			"upgrade-required", "upgrade-vicious"
+			"upgrade-required", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "blue-scales",
 			"file", "neutral/units/wyrm_blue_scales.png",
 			"icon", "icon-wyrm-blue-scales",
-			"upgrade-forbidden", "upgrade-vicious"
+			"upgrade-forbidden", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "cyan-scales",
 			"file", "neutral/units/wyrm_cyan_scales.png",
 			"icon", "icon-wyrm-cyan-scales",
-			"upgrade-forbidden", "upgrade-vicious"
+			"upgrade-forbidden", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "purple-scales",
 			"file", "neutral/units/wyrm_purple_scales.png",
 			"icon", "icon-wyrm-purple-scales",
-			"upgrade-forbidden", "upgrade-vicious"
+			"upgrade-forbidden", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "red-scales",
 			"file", "neutral/units/wyrm_red_scales.png",
 			"icon", "icon-wyrm-red-scales",
-			"upgrade-forbidden", "upgrade-vicious"
+			"upgrade-forbidden", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "yellow-scales",
 			"file", "neutral/units/wyrm_yellow_scales.png",
 			"icon", "icon-wyrm-yellow-scales",
-			"upgrade-forbidden", "upgrade-vicious"
+			"upgrade-forbidden", "upgrade-vicious",
+			"upgrade-forbidden", "upgrade-wyrm-child"
 		}
 	},
 	Sounds = {
@@ -2389,7 +2402,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 
 DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Class = "cavalry",
-	Costs = {"time", 90, "gold", 800, "lumber", 50},
+	Costs = {"time", 90, "gold", 900},
 	Speed = 13,
 	HitPoints = 75,
 	DrawLevel = 40,

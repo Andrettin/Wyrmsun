@@ -119,8 +119,10 @@ DefinePanelContents(
 	
 -- Ressource Left
 	{ Pos = {88, 86}, Condition = {ShowOpponent = false, GiveResource = "only"},
-		More = {"FormattedText2", {Format = "%s Left: %d", Variable = "GiveResource",
-					Component1 = "Name", Component2 = "Value", Centered = true}}
+		More = {"Text", {Text = Concat(
+			Concat(function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end, " Left: "),
+			String(ActiveUnitVar("GiveResource", "Value"))
+		), Centered = true}}
 	},
 
 -- Construction
@@ -267,8 +269,10 @@ DefinePanelContents(
 	{ Pos = {86, 150}, More = {"Text", {Variable = "Mana"}}, Condition = {Mana = "only"} },
 -- Resource Carry
 	{ Pos = {16, 149}, Condition = {CarryResource = "only"},
-		More = {"FormattedText2", {Format = "Carry: %d %s", Variable = "CarryResource",
-				Component1 = "Value", Component2 = "Name"}}
+		More = {"Text", {Text = Concat(
+			Concat(function() return CapitalizeString(GetUnitVariable(-1, "CurrentResourceName")) end, ": "),
+			String(ActiveUnitVar("CarryResource", "Value"))
+		)}}
 	}
 
   } },

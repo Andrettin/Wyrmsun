@@ -115,6 +115,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
+	Costs = {"time", 60, "gold", 550, "lumber", 25},
 	Corpse = "unit-dwarven-dead-body",
 	Variations = {
 		{

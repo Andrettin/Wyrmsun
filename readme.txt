@@ -171,6 +171,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed bug which caused dead units who don't have corpse units defined to appear at the wrong draw level.
 - Added bee unit (graphics by b_o).
 - Added table, chair and shelf decoration units (graphics by b_o).
+- The names of resources are now properly capitalized in the unit display.
+- The Goblin Spearman now costs lumber, and so does (to a lesser extent) the Dwarven Axefighter.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
