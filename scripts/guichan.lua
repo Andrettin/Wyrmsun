@@ -1403,7 +1403,7 @@ function BuildProgramStartMenu()
 
   menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*0,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Multi Player Game"), "m", offx + 208, offy + 104 + 36*1,
+  menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*1,
     function() RunMultiPlayerGameMenu(); menu:stop(1) end)
   menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
     function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
@@ -1421,9 +1421,9 @@ function BuildProgramStartMenu()
     function() RunLoadModMenu(); menu:stop(1) end)
   menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
     function() RunEncyclopediaMenu(); menu:stop(1) end)
-  menu:addFullButton(_("S~!how Credits"), "h", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
+  menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
 
-  menu:addFullButton(_("E~!xit Program"), "x", offx + 208, offy + 104 + 36*9,
+  menu:addFullButton(_("E~!xit"), "x", offx + 208, offy + 104 + 36*9,
     function() menu:stop() end)
 
   return menu:run()

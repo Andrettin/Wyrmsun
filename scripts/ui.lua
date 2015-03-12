@@ -77,7 +77,7 @@ DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
 --
 --  Define Panels
 --
-local info_panel_x = 0
+local info_panel_x = Video.Width - 176
 local info_panel_y = 160
 
 local min_damage = Div(

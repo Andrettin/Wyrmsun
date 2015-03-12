@@ -13,7 +13,7 @@ function WarGameMenu(background)
 
   function menu:resize(w, h)
     menu:setSize(w, h)
-    menu:setPosition(176 + (Video.Width - 176 - menu:getWidth()) / 2,
+    menu:setPosition(16 + (Video.Width - 176 - menu:getWidth()) / 2,
       (Video.Height - menu:getHeight()) / 2)
   end
 
@@ -43,7 +43,7 @@ function RunGameMenu()
     function() RunHelpMenu() end)
   menu:addFullButton("~!Objectives", "o", 16, 40 + 36*3,
     function() RunObjectivesMenu() end)
-  menu:addFullButton("~!End Scenario", "e", 16, 40 + 36*4,
+  menu:addFullButton("~!End Mission", "e", 16, 40 + 36*4,
     function() RunEndScenarioMenu() end)
   menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 288 - 40,
     function() menu:stop() end)

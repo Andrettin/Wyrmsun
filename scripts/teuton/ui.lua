@@ -88,19 +88,19 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("germanic/ui/filler-right_" .. Video.Height .. ".png", Video.Width - 16, 0)
-AddFiller("germanic/ui/resource_" .. Video.Width .. ".png", 176, 0)
-AddFiller("germanic/ui/statusline_" .. Video.Width .. ".png", 176, Video.Height - 16)
-AddFiller("germanic/ui/buttonpanel_" .. Video.Height .. ".png", 0, 336)
-AddFiller("germanic/ui/menubutton.png", 0, 0)
-AddFiller("germanic/ui/minimap.png", 0, 24)
+AddFiller("germanic/ui/filler-right_" .. Video.Height .. ".png", 0, 0)
+AddFiller("germanic/ui/resource_" .. Video.Width .. ".png", 16, 0)
+AddFiller("germanic/ui/statusline_" .. Video.Width .. ".png", 16, Video.Height - 16)
+AddFiller("germanic/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)
+AddFiller("germanic/ui/menubutton.png", Video.Width - 176, 0)
+AddFiller("germanic/ui/minimap.png", Video.Width - 176, 24)
 
-UI.InfoPanel.X = 0
+UI.InfoPanel.X = Video.Width - 176
 UI.InfoPanel.Y = 160
 UI.InfoPanel.G = CGraphic:New("germanic/ui/infopanel.png", 176, 176)
 
 b = CUIButton:new()
-b.X = 9
+b.X = Video.Width - 176 + 9
 b.Y = 160 + 9
 b.Style = FindButtonStyle("icon")
 UI.SingleSelectedButton = b
@@ -109,7 +109,7 @@ UI.SelectedButtons:clear()
 
 function AddSelectedButton(x, y)
 	b = CUIButton:new_local()
-	b.X = x
+	b.X = Video.Width - 176 + x
 	b.Y = y
 	b.Style = FindButtonStyle("icon")
 	UI.SelectedButtons:push_back(b)
@@ -130,7 +130,7 @@ UI.MaxSelectedTextX = 10
 UI.MaxSelectedTextY = 160 + 10
 
 b = CUIButton:new()
-b.X = 110
+b.X = Video.Width - 176 + 110
 b.Y = 160 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.SingleTrainingButton = b
@@ -139,7 +139,7 @@ UI.TrainingButtons:clear()
 
 function AddTrainingButton(x, y)
 	b = CUIButton:new_local()
-	b.X = x
+	b.X = Video.Width - 176 + x
 	b.Y = y
 	b.Style = FindButtonStyle("icon")
 	UI.TrainingButtons:push_back(b)
@@ -153,13 +153,13 @@ AddTrainingButton(65, 266)
 AddTrainingButton(121, 266)
 
 b = CUIButton:new()
-b.X = 110
+b.X = Video.Width - 176 + 110
 b.Y = 160 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.UpgradingButton = b
 
 b = CUIButton:new()
-b.X = 110
+b.X = Video.Width - 176 + 110
 b.Y = 160 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.ResearchingButton = b
@@ -168,7 +168,7 @@ UI.TransportingButtons:clear()
 
 function AddTransportingButton(x, y)
 	b = CUIButton:new_local()
-	b.X = x
+	b.X = Video.Width - 176 + x
 	b.Y = y
 	b.Style = FindButtonStyle("icon")
 	UI.TransportingButtons:push_back(b)
@@ -188,7 +188,7 @@ UI.ButtonPanel.Buttons:clear()
 
 function AddButtonPanelButton(x, y)
 	b = CUIButton:new_local()
-	b.X = x
+	b.X = Video.Width - 176 + x
 	b.Y = y
 	b.Style = FindButtonStyle("icon")
 	UI.ButtonPanel.Buttons:push_back(b)
@@ -204,21 +204,21 @@ AddButtonPanelButton(9, 434)
 AddButtonPanelButton(65, 434)
 AddButtonPanelButton(121, 434)
 
-UI.ButtonPanel.X = 0
+UI.ButtonPanel.X = Video.Width - 176
 UI.ButtonPanel.Y = 336
 UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
 
-UI.MapArea.X = 176
+UI.MapArea.X = 16
 UI.MapArea.Y = 16
-UI.MapArea.EndX = Video.Width - 16 - 1
+UI.MapArea.EndX = Video.Width - 176 - 1
 UI.MapArea.EndY = Video.Height - 16 - 1
 
-UI.Minimap.X = 24
+UI.Minimap.X = Video.Width - 176 + 24
 UI.Minimap.Y = 24 + 2
 UI.Minimap.W = 128
 UI.Minimap.H = 128
 
-UI.StatusLine.TextX = 2 + 176
+UI.StatusLine.TextX = 2 + 16
 UI.StatusLine.TextY = Video.Height + 2 - 16
 UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
@@ -226,33 +226,33 @@ UI.StatusLine.Font = Fonts["game"]
 -- gold
 UI.Resources[1].G = CGraphic:New("ui/gold.png", 14, 14)
 UI.Resources[1].IconFrame = 0
-UI.Resources[1].IconX = 176 + 0
+UI.Resources[1].IconX = 16 + 0
 UI.Resources[1].IconY = 0
-UI.Resources[1].TextX = 176 + 0 + 18
+UI.Resources[1].TextX = 16 + 0 + 18
 UI.Resources[1].TextY = 1
 
 -- lumber
 UI.Resources[2].G = CGraphic:New("ui/lumber.png", 14, 14)
 UI.Resources[2].IconFrame = 0
-UI.Resources[2].IconX = 176 + 75
+UI.Resources[2].IconX = 16 + 75
 UI.Resources[2].IconY = 0
-UI.Resources[2].TextX = 176 + 75 + 18
+UI.Resources[2].TextX = 16 + 75 + 18
 UI.Resources[2].TextY = 1
 
 -- oil
 --UI.Resources[3].G = CGraphic:New("ui/oil.png", 14, 14)
 --UI.Resources[3].IconFrame = 0
---UI.Resources[3].IconX = 176 + 150
+--UI.Resources[3].IconX = 16 + 150
 --UI.Resources[3].IconY = 0
---UI.Resources[3].TextX = 176 + 150 + 18
+--UI.Resources[3].TextX = 16 + 150 + 18
 --UI.Resources[3].TextY = 1
 
 -- coal
 --UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
 --UI.Resources[6].IconFrame = 0
---UI.Resources[6].IconX = 176 + 150
+--UI.Resources[6].IconX = 16 + 150
 --UI.Resources[6].IconY = 0
---UI.Resources[6].TextX = 176 + 150 + 18
+--UI.Resources[6].TextX = 16 + 150 + 18
 --UI.Resources[6].TextY = 1
 
 -- Hide Coal (should not show up in normal scenarios)
@@ -267,9 +267,9 @@ if (CanAccessFile("ui/food.png")) then
   UI.Resources[FoodCost].G = CGraphic:New("ui/food.png", 14, 14)
 end
 UI.Resources[FoodCost].IconFrame = 0
-UI.Resources[FoodCost].IconX = Video.Width - 16 - 138
+UI.Resources[FoodCost].IconX = Video.Width - 176 - 138
 UI.Resources[FoodCost].IconY = 0
-UI.Resources[FoodCost].TextX = Video.Width - 16 - 138 + 18
+UI.Resources[FoodCost].TextX = Video.Width - 176 - 138 + 18
 UI.Resources[FoodCost].TextY = 1
 
 -- score
@@ -277,9 +277,9 @@ if (CanAccessFile("ui/score.png"))then
   UI.Resources[ScoreCost].G = CGraphic:New("ui/score.png", 14, 14)
 end
 UI.Resources[ScoreCost].IconFrame = 0
-UI.Resources[ScoreCost].IconX = Video.Width - 16 - 68
+UI.Resources[ScoreCost].IconX = Video.Width - 176 - 68
 UI.Resources[ScoreCost].IconY = 0
-UI.Resources[ScoreCost].TextX = Video.Width - 16 - 68 + 18
+UI.Resources[ScoreCost].TextX = Video.Width - 176 - 68 + 18
 UI.Resources[ScoreCost].TextY = 1
 
 UI.Resources[ManaResCost].G = CGraphic:New("ui/mana_icon.png", 14, 14)
@@ -289,7 +289,7 @@ UI.Resources[ManaResCost].IconY = -100
 UI.Resources[ManaResCost].TextX = -100
 UI.Resources[ManaResCost].TextY = -100
 
-UI.MenuButton.X = 24
+UI.MenuButton.X = Video.Width - 176 + 24
 UI.MenuButton.Y = 2
 UI.MenuButton.Text = "Menu (~<F10~>)"
 UI.MenuButton.Style = FindButtonStyle("main-germanic")
@@ -302,13 +302,13 @@ UI.MenuButton:SetCallback(
 	end
   end)
 
-UI.NetworkMenuButton.X = 6
+UI.NetworkMenuButton.X = Video.Width - 176 + 6
 UI.NetworkMenuButton.Y = 2
 UI.NetworkMenuButton.Text = "Menu"
 UI.NetworkMenuButton.Style = FindButtonStyle("network-germanic")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
-UI.NetworkDiplomacyButton.X = 90
+UI.NetworkDiplomacyButton.X = Video.Width - 176 + 90
 UI.NetworkDiplomacyButton.Y = 2
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-germanic")

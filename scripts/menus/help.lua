@@ -2,7 +2,7 @@ function RunHelpMenu()
   local menu = WarGameMenu(panel(1))
 
   menu:addLabel("Help Menu", 128, 11)
-  menu:addFullButton("Keystroke ~!Help", "h", 16, 40 + 36*0,
+  menu:addFullButton("~!Hotkeys", "h", 16, 40 + 36*0,
     function() RunKeystrokeHelpMenu() end)
   menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
     function() RunTipsMenu() end)
@@ -81,7 +81,7 @@ function RunKeystrokeHelpMenu()
   s:setContent(c)
   menu:add(s, 16, 60)
 
-  menu:addLabel("Keystroke Help Menu", 352 / 2, 11)
+  menu:addLabel("Hotkey Menu", 352 / 2, 11)
   menu:addFullButton("Previous (~<Esc~>)", "escape",
     (352 / 2) - (224 / 2), 352 - 40, function() menu:stop() end)
 
@@ -96,9 +96,8 @@ local tips = {
   "Use your workers to repair damaged buildings.",
   "Explore your surroundings early in the game.",
 
---  "You can demolish trees and rocks.",
   "Keep all workers working. Use ALT-I to find idle workers.",
---  "You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon.  CTRL click again to turn off.",
+  "You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon.  CTRL click again to turn off.",
 
   -- Shift tips
   "You can give an unit an order which is executed after it finishes the current work, if you hold the SHIFT key.",
@@ -152,7 +151,7 @@ function RunTipsMenu()
   l:updateCaption()
 
   local showtips = {}
-  showtips = menu:addImageCheckBox("Show tips at startup", 14, 256 - 75,
+  showtips = menu:addImageCheckBox("Show tips when starting", 14, 256 - 75,
     function()
       wyr.preferences.ShowTips = showtips:isMarked()
       SavePreferences()
