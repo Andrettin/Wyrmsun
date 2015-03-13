@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-CFont:New("small", CGraphic:New("ui/fonts/small.png", 8, 8))
+CFont:New("small", CGraphic:New("ui/fonts/dejavusans10.png", 13, 14))
 CFont:New("game", CGraphic:New("ui/fonts/dejavusansbold10.png", 15, 14))
 CFont:New("large", CGraphic:New("ui/fonts/dejavusansbold12.png", 19, 16))
 CFont:New("small-title", CGraphic:New("ui/fonts/freesansbold14.png", 18, 19))
