@@ -146,6 +146,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added The Home of the Boii quest.
 - Added The Mead of Poetry quest.
 - Added The Tomb of Durahn Eikinskjaldi quest.
+- The Asa Tribe now correctly starts with 0 resources in the Westward Migration quest.
 
 * Terrain
 - Trees now regrow after some time.

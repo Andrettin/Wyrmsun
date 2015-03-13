@@ -180,13 +180,15 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		local uncount = 0
-		uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
-				if (GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) > 0) then
-					player = GetFactionPlayer("Asa Tribe")
-					return true
+		if (GetFactionPlayer("Asa Tribe") ~= nil) then
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
+					if (GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "unit-germanic-worker", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}) > 0) then
+						player = GetFactionPlayer("Asa Tribe")
+						return true
+					end
 				end
 			end
 		end

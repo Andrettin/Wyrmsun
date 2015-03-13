@@ -133,7 +133,7 @@ DefineDependency("unit-teuton-watch-tower",
 	{"upgrade-teuton-civilization"}
 )
 
-DefineDependency("unit-germanic-archer",
+DefineDependency("unit-teuton-archer",
 	{"unit-teuton-lumber-mill"}
 )
 

@@ -118,6 +118,7 @@ function RunShowCreditsMenu()
 	_("Testing"),
 	"  Andrettin",
 	"  b_o",
+	"  cybermind",
 	"  Dinomaniak",
 	"  João Victor G. Costa (Jinn)",
 	"  KPG",
