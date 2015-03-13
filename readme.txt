@@ -147,6 +147,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added The Mead of Poetry quest.
 - Added The Tomb of Durahn Eikinskjaldi quest.
 
+* Terrain
+- Trees now regrow after some time.
+
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
 - The Gnomish Recruit now has a gray-haired variation for its unit graphics (by b_o).
