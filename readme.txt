@@ -96,6 +96,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Gold now has to be found (there is a random chance that tiles with gold will be found every turn by their owner) before being mined.
 - Improved performance by making the entire minimap not be redrawn whenever a province changes hands; now only the affected province is redrawn.
 - The grand strategy map now scrolls by half a tile, instead of by a whole tile.
+- The grand strategy map now continuously scrolls when pressing an arrow button.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).

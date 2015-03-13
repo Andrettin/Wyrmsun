@@ -430,7 +430,7 @@ function RunGrandStrategyGame()
 	{0, 0})
 
 	-- add pseudo-buttons to allow the player to see other parts of the map
-	GrandStrategyMenu:addButton("", "up", 0, 0,
+	local b = GrandStrategyMenu:addButton("", "up", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetY > 0) then
@@ -445,7 +445,9 @@ function RunGrandStrategyGame()
 			end
 		end,
 	{0, 0})
-	GrandStrategyMenu:addButton("", "down", 0, 0,
+	b:setActsPressed(true)
+
+	b = GrandStrategyMenu:addButton("", "down", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1) then
@@ -460,8 +462,9 @@ function RunGrandStrategyGame()
 			end
 		end,
 	{0, 0})
+	b:setActsPressed(true)
 
-	GrandStrategyMenu:addButton("", "left", 0, 0,
+	b = GrandStrategyMenu:addButton("", "left", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetX > 0) then
@@ -476,7 +479,9 @@ function RunGrandStrategyGame()
 			end
 		end,
 	{0, 0})
-	GrandStrategyMenu:addButton("", "right", 0, 0,
+	b:setActsPressed(true)
+	
+	b = GrandStrategyMenu:addButton("", "right", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetX < table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
@@ -491,6 +496,7 @@ function RunGrandStrategyGame()
 			end
 		end,
 	{0, 0})
+	b:setActsPressed(true)
 
 	GrandStrategyMenu:run()
 end
