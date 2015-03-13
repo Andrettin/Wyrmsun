@@ -48,6 +48,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Teuton Burg (graphics by Jinn).
 - Reduced the length of the Dwarven Smithy's description.
 - Added Teuton Barracks (graphics by Jinn).
+- The Germanic Chieftain's Hall, Farm and War Lodge had their graphics updated (by Jinn).
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
