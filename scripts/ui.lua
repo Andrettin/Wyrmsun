@@ -432,29 +432,29 @@ function GetRGBA(r, g, b, a)
 	end
 end
 
-local GermanicPopupBackgroundColor = GetRGBA(0,32,96, 208)
-local GermanicPopupBorderColor = GetRGBA(192,192,255, 160)
+local PopupBackgroundColor = GetRGBA(28, 28, 28, 208)
+local PopupBorderColor = GetRGBA(93, 93, 93, 160)
 
 PopupFont = "game"
 
 DefinePopup({
 	Ident = "popup-commands",
-	BackgroundColor = GetRGBA(128, 128, 128, 208),
-	BorderColor = GetRGBA(192, 192, 255, 160),
+	BackgroundColor = PopupBackgroundColor,
+	BorderColor = PopupBorderColor,
 	Contents = {
 			{ 	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 			}, 
 			-- Description
 			{ 	Margin = {1, 1}, Condition = {HasDescription = true},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
 			}, 
 			-- Move  hint
 			{ 	Margin = {1, 1}, Condition = {ButtonAction = "move"},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 				More = {"Text", {Text = _("~<ALT~>-click to defend unit."), MaxWidth = Video.Width / 5}}
@@ -464,14 +464,14 @@ DefinePopup({
 			},
 			-- Repair hint
 			{ 	Margin = {1, 1}, Condition = {ButtonAction = "repair"},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonAction = "repair"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings."), MaxWidth = Video.Width / 5}}
 			},
 			-- Heal hint
 			{ 	Margin = {1, 1}, Condition = {ButtonValue = "spell-herbal-cure"},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonValue = "spell-herbal-cure"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables autoheal ability."), MaxWidth = Video.Width / 5}}
@@ -481,14 +481,14 @@ DefinePopup({
 
 DefinePopup({
 	Ident = "popup-building",
-	BackgroundColor = GetRGBA(128, 128, 128, 208),
-	BorderColor = GetRGBA(192, 192, 255, 160),
+	BackgroundColor = PopupBackgroundColor,
+	BorderColor = PopupBorderColor,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 			}, 
 			{ 	Margin = {1, 1},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	More = {"Costs"}, HighlightColor = "yellow",
 			}, 
@@ -497,7 +497,7 @@ DefinePopup({
 			}, 
 			-- Description
 			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
@@ -507,19 +507,19 @@ DefinePopup({
 
 DefinePopup({
 	Ident = "popup-unit",
-	BackgroundColor = GetRGBA(128, 128, 128, 208),
-	BorderColor = GetRGBA(192, 192, 255, 160),
+	BackgroundColor = PopupBackgroundColor,
+	BorderColor = PopupBorderColor,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 			}, 
 			{ 	Margin = {1, 1},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	More = {"Costs"}, HighlightColor = "yellow",
 			}, 
 			{ 	Margin = {1, 1},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
 				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
@@ -548,7 +548,7 @@ DefinePopup({
 			
 			-- Description
 			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
@@ -558,20 +558,20 @@ DefinePopup({
 
 DefinePopup({
 	Ident = "popup-research",
-	BackgroundColor = GetRGBA(128, 128, 128, 208),
-	BorderColor = GetRGBA(192, 192, 255, 160),
+	BackgroundColor = PopupBackgroundColor,
+	BorderColor = PopupBorderColor,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint"}}
 			}, 
 			{ 	Margin = {1, 1},
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	More = {"Costs"}, HighlightColor = "yellow",
 			},
 			-- Description
 			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
-				More = {"Line", {Width = 0, Height = 1, Color = GetRGBA(192, 192, 255, 160)}}
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}

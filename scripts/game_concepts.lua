@@ -44,6 +44,10 @@ GameConcepts = {
 		Name = _("~!Experience"),
 		Description = _("Organic units gain experience as enemy units are killed, eventually allowing them to level up. Leveling up allows the unit to upgrade to a better unit type, or to learn one new ability.")
 	},
+	Flanking = {
+		Name = _("Flan~!king"),
+		Description = _("Units who are flanked in combat get a malus to evasion. Flanking happens when two enemy units are positioned on either side of the unit, so that they face each other.")
+	},
 	Food = {
 		Name = _("~!Food"),
 		Description = _("Food is produced by farms in RTS mode, and determines the maximum amount of units a player can have.")

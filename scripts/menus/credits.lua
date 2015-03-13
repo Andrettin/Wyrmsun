@@ -120,6 +120,7 @@ function RunShowCreditsMenu()
 	"  b_o",
 	"  Dinomaniak",
 	"  João Victor G. Costa (Jinn)",
+	"  KPG",
 	"  Leo",
 	"  pirro",
 	"  TaShadan",

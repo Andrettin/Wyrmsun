@@ -94,6 +94,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added "Tactical Unit Multiplier" option to Grand Strategy mode.
 - Gold now has to be found (there is a random chance that tiles with gold will be found every turn by their owner) before being mined.
 - Improved performance by making the entire minimap not be redrawn whenever a province changes hands; now only the affected province is redrawn.
+- The grand strategy map now scrolls by half a tile, instead of by a whole tile.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).
@@ -173,6 +174,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added table, chair and shelf decoration units (graphics by b_o).
 - The names of resources are now properly capitalized in the unit display.
 - The Goblin Spearman now costs lumber, and so does (to a lesser extent) the Dwarven Axefighter.
+- Combat now features a flanking malus to evasion (only applies to organic units).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

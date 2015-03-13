@@ -35,6 +35,8 @@ EventFaction = nil
 EventProvince = nil
 GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
+GrandStrategyMapWidthIndent = false
+GrandStrategyMapHeightIndent = false
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -84,6 +86,8 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 			InterfaceState = "Province"
+			GrandStrategyMapWidthIndent = false
+			GrandStrategyMapHeightIndent = false
 			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
 
@@ -430,7 +434,12 @@ function RunGrandStrategyGame()
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetY > 0) then
-					WorldMapOffsetY = WorldMapOffsetY - 1;
+					if (GrandStrategyMapHeightIndent == false) then
+						GrandStrategyMapHeightIndent = true
+						WorldMapOffsetY = WorldMapOffsetY - 1;
+					elseif (GrandStrategyMapHeightIndent) then
+						GrandStrategyMapHeightIndent = false
+					end
 				end
 				DrawOnScreenTiles()
 			end
@@ -439,8 +448,13 @@ function RunGrandStrategyGame()
 	GrandStrategyMenu:addButton("", "down", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
-					WorldMapOffsetY = WorldMapOffsetY + 1;
+				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1) then
+					if (GrandStrategyMapHeightIndent) then
+						GrandStrategyMapHeightIndent = false
+						WorldMapOffsetY = WorldMapOffsetY + 1;
+					elseif (GrandStrategyMapHeightIndent == false) then
+						GrandStrategyMapHeightIndent = true
+					end
 				end
 				DrawOnScreenTiles()
 			end
@@ -451,7 +465,12 @@ function RunGrandStrategyGame()
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetX > 0) then
-					WorldMapOffsetX = WorldMapOffsetX - 1;
+					if (GrandStrategyMapWidthIndent == false) then
+						GrandStrategyMapWidthIndent = true
+						WorldMapOffsetX = WorldMapOffsetX - 1;
+					elseif (GrandStrategyMapWidthIndent) then
+						GrandStrategyMapWidthIndent = false
+					end
 				end
 				DrawOnScreenTiles()
 			end
@@ -461,7 +480,12 @@ function RunGrandStrategyGame()
 		function()
 			if (ProcessingEndTurn == false) then
 				if (WorldMapOffsetX < table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
-					WorldMapOffsetX = WorldMapOffsetX + 1;
+					if (GrandStrategyMapWidthIndent) then
+						GrandStrategyMapWidthIndent = false
+						WorldMapOffsetX = WorldMapOffsetX + 1;
+					elseif (GrandStrategyMapWidthIndent == false) then
+						GrandStrategyMapWidthIndent = true
+					end
 				end
 				DrawOnScreenTiles()
 			end
@@ -1648,6 +1672,14 @@ end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
 	local tooltip = GetTerrainName(GetWorldMapTile(tile_x, tile_y))
+	local width_indent = 0
+	local height_indent = 0
+	if (GrandStrategyMapWidthIndent) then
+		width_indent = -32
+	end
+	if (GrandStrategyMapHeightIndent) then
+		height_indent = -32
+	end
 	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
 		if (GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) ~= nil) then
 			tooltip = "Settlement of " .. GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) .. " (" .. tooltip .. ")"
@@ -1676,11 +1708,11 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			world_map_tile:Load()
 			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageWidget(world_map_tile) -- not really a site, but it is more expedient to use this method
 			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-				OnScreenSites[table.getn(OnScreenSites)]:setSize(32, 64)
+				OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent, 64)
 			else
 				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 			end
-			GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+			GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		end
 
 		local world_map_tile = CGraphic:New(file)
@@ -1692,12 +1724,12 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setNormalImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPressedImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32, 64)
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent, 64)
 		else
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 64)
 		end
@@ -1727,12 +1759,12 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(b, 16 + 64 * (tile_x - WorldMapOffsetX) - 10, 16 + 64 * (tile_y - WorldMapOffsetY) - 10)
+		GrandStrategyMenu:add(b, 16 + 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
 		b:setNormalImage(world_map_tile)
 		b:setPressedImage(world_map_tile)
 		b:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-			b:setSize(42, 84)
+			b:setSize(42 - width_indent, 84)
 		else
 			b:setSize(84, 84)
 		end
@@ -1762,12 +1794,12 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(32, 64)
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent, 64)
 		else
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 		end
@@ -1778,20 +1810,20 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		world_map_tile:Load()
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageWidget(world_map_tile)
 		if (tile_x == WorldMapOffsetX and tile_y == WorldMapOffsetY) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		elseif (tile_x == WorldMapOffsetX) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY) - 16)
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 		elseif (tile_y == WorldMapOffsetY) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16, 16 + 64 * (tile_y - WorldMapOffsetY))
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48, 80)
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent, 80)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 80)
 			end
 		else
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16, 16 + 64 * (tile_y - WorldMapOffsetY) - 16)
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48, 96)
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent, 96)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 96)
 			end
@@ -1802,6 +1834,14 @@ end
 function DrawSettlement(file, tile_x, tile_y, playercolor)
 	local world_map_tile = CPlayerColorGraphic:New(file)
 	world_map_tile:Load()
+	local width_indent = 0
+	local height_indent = 0
+	if (GrandStrategyMapWidthIndent) then
+		width_indent = -32
+	end
+	if (GrandStrategyMapHeightIndent) then
+		height_indent = -32
+	end
 	OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", playercolor)
 	OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 		function()
@@ -1809,12 +1849,12 @@ function DrawSettlement(file, tile_x, tile_y, playercolor)
 			DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 		end
 	)
-	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX), 16 + 64 * (tile_y - WorldMapOffsetY))
+	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 	OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 	if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-		OnScreenSites[table.getn(OnScreenSites)]:setSize(32, 64)
+		OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent, 64)
 	else
 		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 	end
@@ -2253,30 +2293,30 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 end
 
 function AddGrandStrategyCommodityButton(x, y, commodity)
-	UIElements[table.getn(UIElements) + 1] = ImageButton("")
-	UIElements[table.getn(UIElements)]:setActionCallback(
+	CommodityButtons[table.getn(CommodityButtons) + 1] = ImageButton("")
+	CommodityButtons[table.getn(CommodityButtons)]:setActionCallback(
 		function()
 			DrawGrandStrategyInterface()
 		end
 	)
-	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
-	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+	GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x, y)
+	CommodityButtons[table.getn(CommodityButtons)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 
---	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
---	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
+--	CommodityButtons[table.getn(CommodityButtons)]:setBaseColor(Color(0,0,0,0))
+--	CommodityButtons[table.getn(CommodityButtons)]:setForegroundColor(Color(0,0,0,0))
+--	CommodityButtons[table.getn(CommodityButtons)]:setBackgroundColor(Color(0,0,0,0))
 	local commodity_icon = CGraphic:New("ui/" .. commodity .. ".png", 14, 14)
 	commodity_icon:Load()
-	UIElements[table.getn(UIElements)]:setNormalImage(commodity_icon)
-	UIElements[table.getn(UIElements)]:setPressedImage(commodity_icon)
-	UIElements[table.getn(UIElements)]:setDisabledImage(commodity_icon)
-	UIElements[table.getn(UIElements)]:setSize(14, 14)
-	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
+	CommodityButtons[table.getn(CommodityButtons)]:setNormalImage(commodity_icon)
+	CommodityButtons[table.getn(CommodityButtons)]:setPressedImage(commodity_icon)
+	CommodityButtons[table.getn(CommodityButtons)]:setDisabledImage(commodity_icon)
+	CommodityButtons[table.getn(CommodityButtons)]:setSize(14, 14)
+	CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["game"])
 
 	if (commodity == "research") then
-		UIElements[table.getn(UIElements)]:setTooltip("Gain Research by building town halls, lumber mills and smithies")
+		CommodityButtons[table.getn(CommodityButtons)]:setTooltip("Gain Research by building town halls, lumber mills and smithies")
 	elseif (commodity == "prestige") then
-		UIElements[table.getn(UIElements)]:setTooltip("Prestige influences trade priority between nations, among other things")
+		CommodityButtons[table.getn(CommodityButtons)]:setTooltip("Prestige influences trade priority between nations, among other things")
 	end
 
 	local quantity_stored = 0
@@ -2306,13 +2346,16 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 	end
 
 	if (string.len(quantity_stored .. income) <= 9) then
-		AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1, Fonts["game"], false, false)
+		CommodityButtons[table.getn(CommodityButtons) + 1] = Label(quantity_stored .. income)
+		CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["game"])
+		CommodityButtons[table.getn(CommodityButtons)]:adjustSize()
+		GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x + 18, y + 1)
 	else
-		AddGrandStrategyLabel(quantity_stored .. income, x + 18, y + 1 + 2, Fonts["small"], false, false)
+		CommodityButtons[table.getn(CommodityButtons) + 1] = Label(quantity_stored .. income)
+		CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["small"])
+		CommodityButtons[table.getn(CommodityButtons)]:adjustSize()
+		GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x + 18, y + 1 + 2)
 	end
-	
-	
-	return UIElements[table.getn(UIElements)]
 end
 
 function DrawOnScreenTiles()
@@ -2342,7 +2385,7 @@ function DrawOnScreenTiles()
 	OnScreenTiles = nil
 	OnScreenTiles = {}
 	
-	for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64)) do
+	for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1) do
 		OnScreenTiles[y - WorldMapOffsetY + 1] = {}
 	end
 
@@ -2350,7 +2393,7 @@ function DrawOnScreenTiles()
 	OnScreenSites = {}
 
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
-		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64)) do
+		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1) do
 			-- set map tile terrain
 			local tile_image = ""
 			if (GetWorldMapTile(x, y) == "Plns") then
@@ -2738,7 +2781,7 @@ function DrawOnScreenTiles()
 
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
-		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64)) do
+		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1) do
 			-- set map tile terrain
 			if (GetWorldMapTile(x, y) == "") then
 				if (x == WorldMapOffsetX and y == WorldMapOffsetY) then
@@ -2763,6 +2806,37 @@ function DrawOnScreenTiles()
 	ui_element:Load()
 	UIStatusLine = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIStatusLine, 16, Video.Height - 16)
+	
+	DrawGrandStrategyResourceBar()
+end
+
+function DrawGrandStrategyResourceBar()
+	if (UIResourceBar ~= nil) then
+		GrandStrategyMenu:remove(UIResourceBar)
+	end
+
+	if (CommodityButtons ~= nil) then
+		for i=1,table.getn(CommodityButtons) do
+			GrandStrategyMenu:remove(CommodityButtons[i])
+		end
+	end
+
+	CommodityButtons = nil
+	CommodityButtons = {}
+	
+	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/resource_" .. Video.Width .. ".png")
+	ui_element:Load()
+	UIResourceBar = ImageWidget(ui_element)
+	GrandStrategyMenu:add(UIResourceBar, 16, 0)
+
+	if (GrandStrategyFaction ~= nil) then
+		-- add resource quantities
+		AddGrandStrategyCommodityButton(16 + (100 * 0), 0, "gold")
+		AddGrandStrategyCommodityButton(16 + (100 * 1), 0, "lumber")
+		AddGrandStrategyCommodityButton(16 + (100 * 2), 0, "research")
+		AddGrandStrategyCommodityButton(16 + (100 * 3), 0, "prestige")
+	end
+	
 end
 
 function DrawGrandStrategyInterface()
@@ -2786,8 +2860,6 @@ function DrawGrandStrategyInterface()
 
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel.png", Video.Width - 176, 160)
 
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/resource_" .. Video.Width .. ".png", 16, 0)
-
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/menubutton.png", Video.Width - 176, 0)
 
@@ -2801,13 +2873,7 @@ function DrawGrandStrategyInterface()
 		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. display_year, Video.Width - 176 + 88, 6, Fonts["game"], true, false)
 	end
 	
-	if (GrandStrategyFaction ~= nil) then
-		-- add resource quantities
-		AddGrandStrategyCommodityButton(16 + (100 * 0), 0, "gold")
-		AddGrandStrategyCommodityButton(16 + (100 * 1), 0, "lumber")
-		AddGrandStrategyCommodityButton(16 + (100 * 2), 0, "research")
-		AddGrandStrategyCommodityButton(16 + (100 * 3), 0, "prestige")
-	end
+	DrawGrandStrategyResourceBar()
 	
 	if (SelectedProvince ~= nil) then
 		local province_name_text = GetProvinceName(SelectedProvince)
@@ -4241,13 +4307,17 @@ function ClearGrandStrategyVariables()
 	WorldMapTiles = nil
 	WorldMapResources = nil
 	ProcessingEndTurn = nil
+	GrandStrategyMapWidthIndent = false
+	GrandStrategyMapHeightIndent = false
 
 	OnScreenTiles = nil
 	OnScreenSites = nil
 	UIFillerRight = nil
 	UIStatusLine = nil
+	UIResourceBar = nil
 
 	UIElements = nil
+	CommodityButtons = nil
 	GrandStrategyLabels = nil
 
 	UIMinimap = nil
@@ -4396,8 +4466,8 @@ function CenterMapOnTile(tile_x, tile_y)
 	WorldMapOffsetY = math.floor(tile_y - (((Video.Height - 16 - 16) / 64) / 2)) + 1
 	if (WorldMapOffsetY < 0) then
 		WorldMapOffsetY = 0
-	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
-		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)
+	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1) then
+		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1
 	end
 end
 

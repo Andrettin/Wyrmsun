@@ -250,7 +250,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	Variations = {
 		{
 			"variation-id", "brown-fur",
-			"file", "neutral/units/yale_young.png",
+--			"file", "neutral/units/yale_young.png",
 			"frame-size", {36, 36},
 			"upgrade-required", "upgrade-child"
 		},
@@ -310,7 +310,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Variations = {
 		{
 			"variation-id", "young",
-			"file", "neutral/units/gryphon_young.png",
+--			"file", "neutral/units/gryphon_young.png",
 			"frame-size", {50, 50},
 			"upgrade-required", "upgrade-gryphon-child"
 		},
@@ -380,7 +380,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Variations = {
 		{
 			"variation-id", "young",
-			"file", "neutral/units/wyrm_young.png",
+--			"file", "neutral/units/wyrm_young.png",
 			"frame-size", {55, 54},
 			"upgrade-required", "upgrade-wyrm-child"
 		},
