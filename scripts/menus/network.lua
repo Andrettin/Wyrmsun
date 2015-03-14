@@ -133,11 +133,14 @@ function RunJoiningMapMenu(s)
   local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, function() end)
   fow:setMarked(true)
   ServerSetupState.FogOfWar = 1
-  fow:setEnabled(false)
+  fow:setEnabled(true)
+  fow:setMarked(int2bool(ServerSetupState.FogOfWar))
   local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, function() end)
-  revealmap:setEnabled(false)
+  revealmap:setEnabled(true)
+  revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
   local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, function() end)
-  no_randomness:setEnabled(false)
+  no_randomness:setEnabled(true)
+  no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
 
   menu:writeText("Civilization:", sx, sy*11)
   local race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,
@@ -148,7 +151,7 @@ function RunJoiningMapMenu(s)
   race:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  local units = menu:addDropDown({_("Map Default"), _("One Worker Only"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
+  local units = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
     function(dd) end)
   units:setSize(190, 20)
   units:setEnabled(false)
@@ -342,7 +345,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
     GameSettings.NoRandomness = dd:isMarked()
   end
   local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
-  no_randomness:setMarked(wyr.preferences.NoRandomness)
+  no_randomness:setMarked(false)
 
   menu:writeText("Civilization:", sx, sy*11)
   d = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, sx + 100, sy*11,
@@ -354,7 +357,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   d:setSize(190, 20)
 
   menu:writeText("Units:", sx, sy*11+25)
-  d = menu:addDropDown({_("Map Default"), _("One Worker Only"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
+  d = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, sx + 100, sy*11+25,
     function(dd)
       GameSettings.NumUnits = dd:getSelected()
       ServerSetupState.UnitsOption = GameSettings.NumUnits

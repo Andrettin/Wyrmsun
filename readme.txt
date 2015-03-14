@@ -115,6 +115,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Decreased quantity of trees in the Holmgard map, and decrease its size slightly.
 - Decreased quantity of trees in the random forest maps.
 - Wyrms now have 20% chance of appearing on a cave or swamp map.
+- Random dungeon generation now creates more specific rooms (i.e. treasure rooms, laboratory rooms, etc.).
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).

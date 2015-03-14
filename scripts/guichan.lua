@@ -1116,7 +1116,7 @@ function RunSinglePlayerCustomGameMenu()
   resources:setSize(152, 20)
 
   menu:addLabel(_("~<Units:~>"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
-  numunits = menu:addDropDown({_("Map Default"), _("One Worker Only"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, offx + 40, offy + 10 + 240,
+  numunits = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, offx + 40, offy + 10 + 240,
     function(dd) end)
   numunits:setSize(152, 20)
 
