@@ -238,7 +238,7 @@ function AiUpgradeWeapon1()
 	if (GetCivilizationClassUnitType("melee-weapon-1", AiGetRace()) ~= nil) then
 		return GetCivilizationClassUnitType("melee-weapon-1", AiGetRace())
 	else
-		return GetCivilizationClassUnitType("melee-weapon-1", "dwarf")
+		return nil
 	end
 end
 
@@ -260,7 +260,7 @@ function AiUpgradeShield1()
 	if (GetCivilizationClassUnitType("bronze-shield", AiGetRace()) ~= nil) then
 		return GetCivilizationClassUnitType("bronze-shield", AiGetRace())
 	else
-		return GetCivilizationClassUnitType("bronze-shield", "dwarf")
+		return nil
 	end
 end
 

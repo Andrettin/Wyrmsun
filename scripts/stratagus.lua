@@ -319,7 +319,7 @@ function SinglePlayerTriggers()
 		end
 
 		for key, value in pairs(CustomPlayerData) do
-			CustomPlayerData[key].Objectives = {_("Defeat your enemies")}
+			CustomPlayerData[key].Objectives = {_("- Defeat your enemies")}
 		end
 	end
 

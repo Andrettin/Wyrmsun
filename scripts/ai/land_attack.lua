@@ -74,8 +74,8 @@ local land_funcs = {
   function() return AiSet(AiWorker(), 8) end, -- 8
   function() return AiWait(AiBarracks()) end,
   function() return AiSet(AiSmithy(), 1) end,
-  function() return AiResearch(AiUpgradeWeapon1()) end,
-  function() return AiResearch(AiUpgradeShield1()) end,
+  function() if (AiUpgradeWeapon1() ~= nil) then return AiResearch(AiUpgradeWeapon1()) end end,
+  function() if (AiUpgradeShield1() ~= nil) then return AiResearch(AiUpgradeShield1()) end end,
 
 -- FAST AND FURIOUS
   function() return AiForce(1, {AiSoldier(), 1}, true) end,
