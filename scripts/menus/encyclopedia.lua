@@ -827,7 +827,7 @@ function RunEncyclopediaGameConceptsMenu()
 		menu:addFullButton(_(GameConcepts[game_concept_key].Name), game_concept_hotkey, offx + 208 + (113 * game_concept_x), offy + 104 + (36 * (game_concept_y + height_offset)),
 			function() OpenEncyclopediaGameConceptEntry(game_concept_key); end)
 
-		if (game_concept_y > 5 or (game_concept_y > 4 and Video.Height < 600)) then
+		if (game_concept_y > 5) then
 			game_concept_x = game_concept_x + 2
 			game_concept_y = -3
 		else

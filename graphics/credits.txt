@@ -53,6 +53,7 @@ b_o:
 /graphics/dwarf/units/thane_brown_hair.png
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
+/graphics/dwarf/units/yale_rider.png
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
 /graphics/germanic/icons/archer_blond_hair.png (modified from the Skutan icon made by Leo)
 /graphics/germanic/icons/archer_gray_hair.png (modified from the Skutan icon made by Leo)
@@ -125,6 +126,7 @@ b_o:
 /graphics/neutral/buildings/tree_stump_3.png
 /graphics/neutral/buildings/tree_stump_4.png
 /graphics/neutral/buildings/tree_stump_5.png
+/graphics/neutral/decorations/bed.png
 /graphics/neutral/decorations/bones.png
 /graphics/neutral/decorations/chair.png
 /graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)

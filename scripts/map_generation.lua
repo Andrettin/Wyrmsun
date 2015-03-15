@@ -3461,10 +3461,16 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		
 		SetDiplomacy(0, "enemy", 1)
 		SetDiplomacy(0, "enemy", 2)
+		SetDiplomacy(0, "neutral", 3)
 		SetDiplomacy(1, "enemy", 0)
 		SetDiplomacy(1, "enemy", 2)
+		SetDiplomacy(1, "neutral", 3)
 		SetDiplomacy(2, "enemy", 0)
 		SetDiplomacy(2, "enemy", 1)
+		SetDiplomacy(2, "neutral", 3)
+		SetDiplomacy(3, "neutral", 0)
+		SetDiplomacy(3, "neutral", 1)
+		SetDiplomacy(3, "neutral", 2)
 
 		local function DecorateRoom(min_x, max_x, min_y, max_y)
 			local SecondRandomNumber = SyncRand(100)
@@ -3475,20 +3481,30 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			if (SecondRandomNumber < 10) then -- treasure room
 				SecondRandomX = 0
 				SecondRandomY = 0
-				SecondCount = SyncRand(2)
+				SecondCount = SyncRand(3)
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY})
-							SecondRandomNumber = SyncRand(3)
+							SecondRandomNumber = SyncRand(8)
 							if (SecondRandomNumber == 0) then
 								SetUnitVariable(unit, "Variation", 4)
 							elseif (SecondRandomNumber == 1) then
 								SetUnitVariable(unit, "Variation", 10)
 							elseif (SecondRandomNumber == 2) then
 								SetUnitVariable(unit, "Variation", 11)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 18)
+							elseif (SecondRandomNumber == 4) then
+								SetUnitVariable(unit, "Variation", 20)
+							elseif (SecondRandomNumber == 5) then
+								SetUnitVariable(unit, "Variation", 26)
+							elseif (SecondRandomNumber == 6) then
+								SetUnitVariable(unit, "Variation", 28)
+							elseif (SecondRandomNumber == 7) then
+								SetUnitVariable(unit, "Variation", 29)
 							end
 							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
 								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
@@ -3515,7 +3531,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf with treasure, or with a candle
@@ -3537,8 +3553,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					SecondRandomY = 0
 					SecondCount = 1
 					while (SecondCount > 0) do
-						SecondRandomX = SyncRand(max_x - min_x) + min_x
-						SecondRandomY = SyncRand(max_y - min_y) + min_y
+						SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+						SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 								unit = CreateUnit("unit-gnomish-herbalist", 2, {SecondRandomX, SecondRandomY}) -- create the scholar
@@ -3546,56 +3562,79 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							end
 						end
 					end
+				end
 
-					SecondRandomX = 0
-					SecondRandomY = 0
-					SecondCount = 1
-					while (SecondCount > 0) do
-						SecondRandomX = SyncRand(max_x - min_x) + min_x
-						SecondRandomY = SyncRand(max_y - min_y) + min_y
-						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
-							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-								unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create a table with the scholar's books
-								SetUnitVariable(unit, "Variation", 6 + SyncRand(3))
-								if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
-									unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
-									SetUnitVariable(unit, "Variation", 0)
-								end
-								if (SyncRand(100) < 25 and RawTile(SecondRandomX - 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX - 1, SecondRandomY}, {SecondRandomX - 1, SecondRandomY}) < 1) then
-									unit = CreateUnit("unit-chair", 15, {SecondRandomX - 1, SecondRandomY})
-									SetUnitVariable(unit, "Variation", 1)
-								end
-								if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY + 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY + 1}, {SecondRandomX, SecondRandomY + 1}) < 1) then
-									unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY + 1})
-									SetUnitVariable(unit, "Variation", 2)
-								end
-								if (SyncRand(100) < 25 and RawTile(SecondRandomX + 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX + 1, SecondRandomY}, {SecondRandomX + 1, SecondRandomY}) < 1) then
-									unit = CreateUnit("unit-chair", 15, {SecondRandomX + 1, SecondRandomY})
-									SetUnitVariable(unit, "Variation", 3)
-								end
-								SecondCount = SecondCount - 1
+				SecondRandomX = 0
+				SecondRandomY = 0
+				SecondCount = 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create a table with the scholar's books
+							SecondRandomNumber = SyncRand(4)
+							if (SecondRandomNumber == 0) then
+								SetUnitVariable(unit, "Variation", 6)
+							elseif (SecondRandomNumber == 1) then
+								SetUnitVariable(unit, "Variation", 7)
+							elseif (SecondRandomNumber == 2) then
+								SetUnitVariable(unit, "Variation", 8)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 23)
 							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
+								SetUnitVariable(unit, "Variation", 0)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX - 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX - 1, SecondRandomY}, {SecondRandomX - 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX - 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 1)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY + 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY + 1}, {SecondRandomX, SecondRandomY + 1}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY + 1})
+								SetUnitVariable(unit, "Variation", 2)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX + 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX + 1, SecondRandomY}, {SecondRandomX + 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX + 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 3)
+							end
+							SecondCount = SecondCount - 1
 						end
 					end
+				end
 
-					SecondRandomX = 0
-					SecondRandomY = min_y - 1
-					SecondCount = 1
-					while (SecondCount > 0) do
-						SecondRandomX = SyncRand(max_x - min_x) + min_x
-						if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
-							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-								unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the scholar's books
-								SecondRandomNumber = SyncRand(3)
-								if (SecondRandomNumber == 0) then
-									SetUnitVariable(unit, "Variation", 0)
-								elseif (SecondRandomNumber == 1) then
-									SetUnitVariable(unit, "Variation", 1)
-								elseif (SecondRandomNumber == 2) then
-									SetUnitVariable(unit, "Variation", 3)
-								end
-								SecondCount = SecondCount - 1
+				SecondRandomX = 0
+				SecondRandomY = min_y - 1
+				SecondCount = 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the scholar's books
+							SecondRandomNumber = SyncRand(3)
+							if (SecondRandomNumber == 0) then
+								SetUnitVariable(unit, "Variation", 0)
+							elseif (SecondRandomNumber == 1) then
+								SetUnitVariable(unit, "Variation", 1)
+							elseif (SecondRandomNumber == 2) then
+								SetUnitVariable(unit, "Variation", 3)
 							end
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+
+				SecondRandomX = 0
+				SecondRandomY = 0
+				SecondCount = 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-bed", 3, {SecondRandomX, SecondRandomY}) -- create a bed for the scholar (give it to player 3 - dungeon's dwellers - to give it a player color)
+							SecondCount = SecondCount - 1
 						end
 					end
 				end
@@ -3604,16 +3643,24 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(2) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create food table
-							SecondRandomNumber = SyncRand(2)
+							SecondRandomNumber = SyncRand(6)
 							if (SecondRandomNumber == 0) then
 								SetUnitVariable(unit, "Variation", 3)
 							elseif (SecondRandomNumber == 1) then
 								SetUnitVariable(unit, "Variation", 5)
+							elseif (SecondRandomNumber == 2) then
+								SetUnitVariable(unit, "Variation", 15)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 21)
+							elseif (SecondRandomNumber == 4) then
+								SetUnitVariable(unit, "Variation", 22)
+							elseif (SecondRandomNumber == 5) then
+								SetUnitVariable(unit, "Variation", 25)
 							end
 							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
 								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
@@ -3640,9 +3687,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(4) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-barrel", 15, {SecondRandomX, SecondRandomY}) -- create barrel
 							SecondCount = SecondCount - 1
@@ -3654,9 +3701,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-alchemy-bench", 15, {SecondRandomX, SecondRandomY}) -- create alchemy bench
 							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
@@ -3684,12 +3731,12 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(2) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create laboratory / book table
-							SecondRandomNumber = SyncRand(4)
+							SecondRandomNumber = SyncRand(7)
 							if (SecondRandomNumber == 0) then
 								SetUnitVariable(unit, "Variation", 2)
 							elseif (SecondRandomNumber == 1) then
@@ -3698,6 +3745,12 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								SetUnitVariable(unit, "Variation", 7)
 							elseif (SecondRandomNumber == 3) then
 								SetUnitVariable(unit, "Variation", 8)
+							elseif (SecondRandomNumber == 4) then
+								SetUnitVariable(unit, "Variation", 17)
+							elseif (SecondRandomNumber == 5) then
+								SetUnitVariable(unit, "Variation", 23)
+							elseif (SecondRandomNumber == 6) then
+								SetUnitVariable(unit, "Variation", 24)
 							end
 							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
 								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
@@ -3724,7 +3777,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the laboratory's books
@@ -3748,8 +3801,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(4) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							if (SyncRand(2) == 0) then
@@ -3766,18 +3819,20 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(3) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create laboratory / book table
-							SecondRandomNumber = SyncRand(3)
+							SecondRandomNumber = SyncRand(4)
 							if (SecondRandomNumber == 0) then
 								SetUnitVariable(unit, "Variation", 6)
 							elseif (SecondRandomNumber == 1) then
 								SetUnitVariable(unit, "Variation", 7)
 							elseif (SecondRandomNumber == 2) then
 								SetUnitVariable(unit, "Variation", 8)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 23)
 							end
 							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
 								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
@@ -3804,7 +3859,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the laboratory's books
@@ -3827,16 +3882,20 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(2)
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create laboratory / book table
-							SecondRandomNumber = SyncRand(2)
+							SecondRandomNumber = SyncRand(4)
 							if (SecondRandomNumber == 0) then
 								SetUnitVariable(unit, "Variation", 12)
 							elseif (SecondRandomNumber == 1) then
 								SetUnitVariable(unit, "Variation", 13)
+							elseif (SecondRandomNumber == 2) then
+								SetUnitVariable(unit, "Variation", 19)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 26)
 							end
 							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
 								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
@@ -3863,7 +3922,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the laboratory's books
@@ -3877,11 +3936,196 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SecondRandomY = 0
 				SecondCount = SyncRand(6) + 1
 				while (SecondCount > 0) do
-					SecondRandomX = SyncRand(max_x - min_x) + min_x
-					SecondRandomY = SyncRand(max_y - min_y) + min_y
-					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 							unit = CreateUnit("unit-barrel", 15, {SecondRandomX, SecondRandomY}) -- create barrel
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+			elseif (SecondRandomNumber < 45) then -- thieves' hideout
+				SecondRandomX = 0
+				SecondRandomY = 0
+				SecondCount = 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create laboratory / book table
+							SecondRandomNumber = SyncRand(4)
+							if (SecondRandomNumber == 0) then
+								SetUnitVariable(unit, "Variation", 0)
+							elseif (SecondRandomNumber == 1) then
+								SetUnitVariable(unit, "Variation", 1)
+							elseif (SecondRandomNumber == 2) then
+								SetUnitVariable(unit, "Variation", 9)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 16)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
+								SetUnitVariable(unit, "Variation", 0)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX - 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX - 1, SecondRandomY}, {SecondRandomX - 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX - 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 1)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY + 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY + 1}, {SecondRandomX, SecondRandomY + 1}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY + 1})
+								SetUnitVariable(unit, "Variation", 2)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX + 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX + 1, SecondRandomY}, {SecondRandomX + 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX + 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 3)
+							end
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+
+				SecondRandomX = 0
+				SecondRandomY = min_y - 1
+				SecondCount = SyncRand(2)
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the laboratory's books
+							SetUnitVariable(unit, "Variation", 4)
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+				
+				if (hostile_dungeon_player_civilization == "goblin") then -- only goblins have thieves for now
+					SecondRandomX = 0
+					SecondRandomY = 0
+					SecondCount = SyncRand(4) + 1
+					while (SecondCount > 0) do
+						SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+						SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
+							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-goblin-thief", 2, {SecondRandomX, SecondRandomY}) -- create thieves
+								SecondCount = SecondCount - 1
+							end
+						end
+					end
+				end
+			elseif (SecondRandomNumber < 50) then -- tavern
+				SecondRandomX = 0
+				SecondRandomY = 0
+				SecondCount = SyncRand(4) + 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create laboratory / book table
+							SecondRandomNumber = SyncRand(6)
+							if (SecondRandomNumber == 0) then
+								SetUnitVariable(unit, "Variation", 3)
+							elseif (SecondRandomNumber == 1) then
+								SetUnitVariable(unit, "Variation", 9)
+							elseif (SecondRandomNumber == 2) then
+								SetUnitVariable(unit, "Variation", 21)
+							elseif (SecondRandomNumber == 3) then
+								SetUnitVariable(unit, "Variation", 22)
+							elseif (SecondRandomNumber == 4) then
+								SetUnitVariable(unit, "Variation", 25)
+							elseif (SecondRandomNumber == 5) then
+								SetUnitVariable(unit, "Variation", 27)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
+								SetUnitVariable(unit, "Variation", 0)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX - 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX - 1, SecondRandomY}, {SecondRandomX - 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX - 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 1)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY + 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY + 1}, {SecondRandomX, SecondRandomY + 1}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY + 1})
+								SetUnitVariable(unit, "Variation", 2)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX + 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX + 1, SecondRandomY}, {SecondRandomX + 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX + 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 3)
+							end
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+
+				SecondRandomX = 0
+				SecondRandomY = min_y - 1
+				SecondCount = SyncRand(2)
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf
+							SetUnitVariable(unit, "Variation", 4)
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+			elseif (SecondRandomNumber < 70) then -- living quarters
+				SecondRandomX = 0
+				SecondRandomY = 0
+				SecondCount = 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-table", 15, {SecondRandomX, SecondRandomY}) -- create a table
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY - 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY - 1}, {SecondRandomX, SecondRandomY - 1}) < 1) then -- 25% chance that a chair will be present in either direction
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY - 1})
+								SetUnitVariable(unit, "Variation", 0)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX - 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX - 1, SecondRandomY}, {SecondRandomX - 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX - 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 1)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX, SecondRandomY + 1) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY + 1}, {SecondRandomX, SecondRandomY + 1}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX, SecondRandomY + 1})
+								SetUnitVariable(unit, "Variation", 2)
+							end
+							if (SyncRand(100) < 25 and RawTile(SecondRandomX + 1, SecondRandomY) == "Land" and GetNumUnitsAt(-1, "any", {SecondRandomX + 1, SecondRandomY}, {SecondRandomX + 1, SecondRandomY}) < 1) then
+								unit = CreateUnit("unit-chair", 15, {SecondRandomX + 1, SecondRandomY})
+								SetUnitVariable(unit, "Variation", 3)
+							end
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+
+				SecondRandomX = 0
+				SecondRandomY = min_y - 1
+				SecondCount = SyncRand(2)
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-shelf", 15, {SecondRandomX, SecondRandomY}) -- create a shelf for the scholar's books
+							SecondCount = SecondCount - 1
+						end
+					end
+				end
+
+				SecondRandomX = 0
+				SecondRandomY = 0
+				SecondCount = 1
+				while (SecondCount > 0) do
+					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
+					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
+					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
+						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+							unit = CreateUnit("unit-bed", 3, {SecondRandomX, SecondRandomY}) -- create a bed (give it to player 3 - dungeon's dwellers - to give it a player color)
 							SecondCount = SecondCount - 1
 						end
 					end
@@ -4280,7 +4524,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SetRawTile(x, y, "Dark-Rough")
 			end
 		end
-
+		
 		ApplyRawTiles()
 
 		for x=FeastHallArea[1][1] + 2,FeastHallArea[2][1] - 2 do -- make sure only non-damaged rug tiles are used for the feast hall's rug
@@ -4288,7 +4532,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				SetTile(64, x, y, 0)
 			end
 		end
-
+		
 		CreateDecorations()
 
 		-- remove mushrooms, rocks and other such things from the feast hall
@@ -4302,6 +4546,107 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			end
 		end
 
+		-- create feast hall table and chairs
+		if ((FeastHallArea[2][1] - FeastHallArea[1][1]) > (FeastHallArea[2][2] - FeastHallArea[1][2])) then -- if feast hall area's width is greater than its height
+			for x=FeastHallArea[1][1] + 2,FeastHallArea[2][1] - 2 do
+				unit = CreateUnit("unit-table", 15, {x, FeastHallArea[1][2] + 2})
+				RandomNumber = SyncRand(9)
+				if (RandomNumber == 0) then
+					SetUnitVariable(unit, "Variation", 3)
+				elseif (RandomNumber == 1) then
+					SetUnitVariable(unit, "Variation", 4)
+				elseif (RandomNumber == 2) then
+					SetUnitVariable(unit, "Variation", 9)
+				elseif (RandomNumber == 3) then
+					SetUnitVariable(unit, "Variation", 15)
+				elseif (RandomNumber == 4) then
+					SetUnitVariable(unit, "Variation", 20)
+				elseif (RandomNumber == 5) then
+					SetUnitVariable(unit, "Variation", 21)
+				elseif (RandomNumber == 6) then
+					SetUnitVariable(unit, "Variation", 22)
+				elseif (RandomNumber == 7) then
+					SetUnitVariable(unit, "Variation", 25)
+				elseif (RandomNumber == 8) then
+					SetUnitVariable(unit, "Variation", 27)
+				end
+				unit = CreateUnit("unit-chair", 15, {x, FeastHallArea[1][2] + 1})
+				SetUnitVariable(unit, "Variation", 0)
+				unit = CreateUnit("unit-table", 15, {x, FeastHallArea[2][2] - 2})
+				RandomNumber = SyncRand(9)
+				if (RandomNumber == 0) then
+					SetUnitVariable(unit, "Variation", 3)
+				elseif (RandomNumber == 1) then
+					SetUnitVariable(unit, "Variation", 4)
+				elseif (RandomNumber == 2) then
+					SetUnitVariable(unit, "Variation", 9)
+				elseif (RandomNumber == 3) then
+					SetUnitVariable(unit, "Variation", 15)
+				elseif (RandomNumber == 4) then
+					SetUnitVariable(unit, "Variation", 20)
+				elseif (RandomNumber == 5) then
+					SetUnitVariable(unit, "Variation", 21)
+				elseif (RandomNumber == 6) then
+					SetUnitVariable(unit, "Variation", 22)
+				elseif (RandomNumber == 7) then
+					SetUnitVariable(unit, "Variation", 25)
+				elseif (RandomNumber == 8) then
+					SetUnitVariable(unit, "Variation", 27)
+				end
+				unit = CreateUnit("unit-chair", 15, {x, FeastHallArea[2][2] - 1})
+				SetUnitVariable(unit, "Variation", 2)
+			end
+		else
+			for y=FeastHallArea[1][2] + 2,FeastHallArea[2][2] - 2 do
+				unit = CreateUnit("unit-table", 15, {FeastHallArea[1][1] + 2, y})
+				RandomNumber = SyncRand(9)
+				if (RandomNumber == 0) then
+					SetUnitVariable(unit, "Variation", 3)
+				elseif (RandomNumber == 1) then
+					SetUnitVariable(unit, "Variation", 4)
+				elseif (RandomNumber == 2) then
+					SetUnitVariable(unit, "Variation", 9)
+				elseif (RandomNumber == 3) then
+					SetUnitVariable(unit, "Variation", 15)
+				elseif (RandomNumber == 4) then
+					SetUnitVariable(unit, "Variation", 20)
+				elseif (RandomNumber == 5) then
+					SetUnitVariable(unit, "Variation", 21)
+				elseif (RandomNumber == 6) then
+					SetUnitVariable(unit, "Variation", 22)
+				elseif (RandomNumber == 7) then
+					SetUnitVariable(unit, "Variation", 25)
+				elseif (RandomNumber == 8) then
+					SetUnitVariable(unit, "Variation", 27)
+				end
+				unit = CreateUnit("unit-chair", 15, {FeastHallArea[1][1] + 1, y})
+				SetUnitVariable(unit, "Variation", 1)
+				unit = CreateUnit("unit-table", 15, {FeastHallArea[2][1] - 2, y})
+				RandomNumber = SyncRand(9)
+				if (RandomNumber == 0) then
+					SetUnitVariable(unit, "Variation", 3)
+				elseif (RandomNumber == 1) then
+					SetUnitVariable(unit, "Variation", 4)
+				elseif (RandomNumber == 2) then
+					SetUnitVariable(unit, "Variation", 9)
+				elseif (RandomNumber == 3) then
+					SetUnitVariable(unit, "Variation", 15)
+				elseif (RandomNumber == 4) then
+					SetUnitVariable(unit, "Variation", 20)
+				elseif (RandomNumber == 5) then
+					SetUnitVariable(unit, "Variation", 21)
+				elseif (RandomNumber == 6) then
+					SetUnitVariable(unit, "Variation", 22)
+				elseif (RandomNumber == 7) then
+					SetUnitVariable(unit, "Variation", 25)
+				elseif (RandomNumber == 8) then
+					SetUnitVariable(unit, "Variation", 27)
+				end
+				unit = CreateUnit("unit-chair", 15, {FeastHallArea[2][1] - 1, y})
+				SetUnitVariable(unit, "Variation", 3)
+			end
+		end
+		
 		-- create items
 		RandomX = 0
 		RandomY = 0
@@ -4420,6 +4765,21 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							else
 								unit = CreateUnit(player_hero, 0, {RandomX, RandomY})
 							end
+							-- create stairs beside the hero to make it seem like he came from somewhere
+							local SecondRandomX = 0
+							local SecondRandomY = 0
+							local SecondCount = 1
+							while (SecondCount > 0) do
+								SecondRandomX = SyncRand((RandomX + 1) - (RandomX - 1)) + (RandomX - 1)
+								SecondRandomY = SyncRand((RandomY + 1) - (RandomY - 1)) + (RandomY - 1)
+								if (GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "land") and GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "unpassable") == false and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "gold-pile" and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "rug" and GetNumUnitsAt(15, "unit-door", {SecondRandomX - 1, SecondRandomY - 1}, {SecondRandomX + 1, SecondRandomY + 1}) < 1) then
+									if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+										unit = CreateUnit("unit-stairs", 15, {SecondRandomX, SecondRandomY})
+										SetUnitVariable(unit, "Variation", 1)
+										SecondCount = SecondCount - 1
+									end
+								end
+							end
 							Count = Count - 1
 						end
 					end
@@ -4429,6 +4789,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 
 		-- create player 2's units
 		Count = 1
+		if (Map.Info.PlayerType[1] == PlayerNobody) then
+			Count = 0
+		end
 		while (Count > 0) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
@@ -4466,6 +4829,21 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							else
 								unit = CreateUnit(second_player_hero, 1, {RandomX, RandomY})
 							end
+							-- create stairs beside the hero to make it seem like he came from somewhere
+							local SecondRandomX = 0
+							local SecondRandomY = 0
+							local SecondCount = 1
+							while (SecondCount > 0) do
+								SecondRandomX = SyncRand((RandomX + 1) - (RandomX - 1)) + (RandomX - 1)
+								SecondRandomY = SyncRand((RandomY + 1) - (RandomY - 1)) + (RandomY - 1)
+								if (GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "land") and GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "unpassable") == false and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "gold-pile" and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "rug" and GetNumUnitsAt(15, "unit-door", {SecondRandomX - 1, SecondRandomY - 1}, {SecondRandomX + 1, SecondRandomY + 1}) < 1) then
+									if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
+										unit = CreateUnit("unit-stairs", 15, {SecondRandomX, SecondRandomY})
+										SetUnitVariable(unit, "Variation", 1)
+										SecondCount = SecondCount - 1
+									end
+								end
+							end
 							Count = Count - 1
 						end
 					end
@@ -4484,7 +4862,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						local adjacent_floor_tiles = 0
 						for x=(RandomX - 1),(RandomX + 1) do
 							for y=(RandomY - 1),(RandomY + 1) do
-								if (GetTileTerrainHasFlag(x, y, "land") and GetTileTerrainHasFlag(x, y, "unpassable") == false) then
+								if (GetTileTerrainName(x, y) == "floor" or GetTileTerrainName(x, y) == "rug" or GetTileTerrainName(x, y) == "gold-pile") then
 									adjacent_floor_tiles = adjacent_floor_tiles + 1
 								end
 							end

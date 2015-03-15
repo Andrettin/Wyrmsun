@@ -523,6 +523,11 @@ local DecorationStill = {
 	"if-var v.Variation.Value == 22 variation_23",
 	"if-var v.Variation.Value == 23 variation_24",
 	"if-var v.Variation.Value == 24 variation_25",
+	"if-var v.Variation.Value == 25 variation_26",
+	"if-var v.Variation.Value == 26 variation_27",
+	"if-var v.Variation.Value == 27 variation_28",
+	"if-var v.Variation.Value == 28 variation_29",
+	"if-var v.Variation.Value == 29 variation_30",
 	"label variation_1", "frame 0", "goto end",
 	"label variation_2", "frame 1", "goto end",
 	"label variation_3", "frame 2", "goto end",
@@ -548,6 +553,11 @@ local DecorationStill = {
 	"label variation_23", "frame 22", "goto end",
 	"label variation_24", "frame 23", "goto end",
 	"label variation_25", "frame 24", "goto end",
+	"label variation_26", "frame 25", "goto end",
+	"label variation_27", "frame 26", "goto end",
+	"label variation_28", "frame 27", "goto end",
+	"label variation_29", "frame 28", "goto end",
+	"label variation_30", "frame 29", "goto end",
 	"label end", "wait 1",}
 
 DefineAnimations("animations-decoration", {
@@ -559,7 +569,7 @@ DefineAnimations("animations-table", {
 	Death = {
 		"unbreakable begin",
 		"label loop", 
-		"exact-frame 15", "wait 100", "exact-frame 15", "goto loop",
+		"exact-frame 30", "wait 100", "exact-frame 30", "goto loop",
 		"unbreakable end", "wait 1",
 	}
 })
@@ -569,7 +579,17 @@ DefineAnimations("animations-chair", {
 	Death = {
 		"unbreakable begin",
 		"label loop", 
-		"exact-frame 4", "wait 100", "frame 4", "goto loop",
+		"exact-frame 4", "wait 100", "exact-frame 4", "goto loop",
+		"unbreakable end", "wait 1",
+	}
+})
+
+DefineAnimations("animations-bed", {
+	Still = DecorationStill,
+	Death = {
+		"unbreakable begin",
+		"label loop", 
+		"exact-frame 2", "wait 100", "exact-frame 2", "goto loop",
 		"unbreakable end", "wait 1",
 	}
 })
@@ -789,7 +809,7 @@ DefineAnimations("animations-alchemy-bench", {
 		"label use",
 		"exact-frame 2", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8", "exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8", "exact-frame 7", "wait 8",
 		"label end",
-	},
+	}
 })
 
 DefineAnimations("animations-trap", {

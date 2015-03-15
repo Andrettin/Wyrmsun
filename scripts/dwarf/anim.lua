@@ -76,7 +76,6 @@ DefineAnimations("animations-dwarven-axefighter", {
   Still = UnitStill,
   Move = UnitMove,
   Attack = UnitMeleeAttack,
-  Upgrade = { "set-var LevelUp.Value -= 1", "wait 1",},
   Death = UnitDeath,
   SpellCast = {"unbreakable begin",
 	"if-var s_spell-axe-twirl == 1 axe_twirl",

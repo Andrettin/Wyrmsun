@@ -47,7 +47,9 @@ Units = {
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-	"unit-dwarven-scout", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+	"unit-dwarven-scout",
+	"unit-dwarven-yale-rider",
+	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold", 
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
@@ -1399,7 +1401,7 @@ DefineUnitType("unit-glyph", { Name = _("Glyph"),
 DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Image = {"file", "neutral/buildings/stairs.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},
-	Animations = "animations-decoration-old", Icon = "icon-stairs",
+	Animations = "animations-decoration", Icon = "icon-stairs",
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 5,
@@ -1414,6 +1416,14 @@ DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Indestructible = 1,
 	VisibleUnderFog = true,
 	NonSolid = true, 
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		}
+	},
 	Sounds = {} }
 )
 
@@ -1767,7 +1777,7 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
 DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	Image = {"file", "neutral/items/barrel.png", "size", {32, 32}},
 	Animations = "animations-barrel", Icon = "icon-barrel",
-	NeutralMinimapColor = {255, 255, 0},
+	NeutralMinimapColor = {128, 128, 0},
 	Speed = 0,
 	HitPoints = 5,
 	DrawLevel = 30,
@@ -1799,7 +1809,7 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Image = {"file", "neutral/items/alchemy_bench.png", "size", {32, 32}},
 	Animations = "animations-alchemy-bench", Icon = "icon-alchemy-bench",
-	NeutralMinimapColor = {255, 255, 0},
+	NeutralMinimapColor = {128, 128, 0},
 	Speed = 0,
 	HitPoints = 5,
 	DrawLevel = 30,
@@ -1810,10 +1820,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Evasion = 0,
 	Priority = 0,
 	Type = "land",
-	IsNotSelectable = true,
-	Decoration = true,
 	NumDirections = 1,
-	Indestructible = 1,
 	Sounds = {
 		"selected", "click",
 		"dead", "building destroyed"
@@ -1823,7 +1830,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 DefineUnitType("unit-table", { Name = _("Table"),
 	Image = {"file", "neutral/decorations/table.png", "size", {32, 32}},
 	Animations = "animations-table", Icon = "icon-table",
-	NeutralMinimapColor = {255, 255, 0},
+	NeutralMinimapColor = {128, 128, 0},
 	Speed = 0,
 	HitPoints = 5,
 	DrawLevel = 30,
@@ -1880,6 +1887,48 @@ DefineUnitType("unit-table", { Name = _("Table"),
 		},
 		{
 			"variation-id", "15"
+		},
+		{
+			"variation-id", "16"
+		},
+		{
+			"variation-id", "17"
+		},
+		{
+			"variation-id", "18"
+		},
+		{
+			"variation-id", "19"
+		},
+		{
+			"variation-id", "20"
+		},
+		{
+			"variation-id", "21"
+		},
+		{
+			"variation-id", "22"
+		},
+		{
+			"variation-id", "23"
+		},
+		{
+			"variation-id", "24"
+		},
+		{
+			"variation-id", "25"
+		},
+		{
+			"variation-id", "26"
+		},
+		{
+			"variation-id", "27"
+		},
+		{
+			"variation-id", "28"
+		},
+		{
+			"variation-id", "29"
 		}
 	},
 	Sounds = {
@@ -1891,7 +1940,7 @@ DefineUnitType("unit-table", { Name = _("Table"),
 DefineUnitType("unit-chair", { Name = _("Chair"),
 	Image = {"file", "neutral/decorations/chair.png", "size", {32, 32}},
 	Animations = "animations-chair", Icon = "icon-chair",
-	NeutralMinimapColor = {255, 255, 0},
+	NeutralMinimapColor = {128, 128, 0},
 	Speed = 0,
 	HitPoints = 3,
 	DrawLevel = 30,
@@ -1915,6 +1964,35 @@ DefineUnitType("unit-chair", { Name = _("Chair"),
 		},
 		{
 			"variation-id", "4"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+		"dead", "building destroyed"
+	}
+} )
+
+DefineUnitType("unit-bed", { Name = _("Bed"),
+	Image = {"file", "neutral/decorations/bed.png", "size", {32, 32}},
+	Animations = "animations-bed", Icon = "icon-bed",
+	NeutralMinimapColor = {128, 128, 0},
+	Speed = 0,
+	HitPoints = 5,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
 		}
 	},
 	Sounds = {

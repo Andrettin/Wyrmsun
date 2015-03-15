@@ -116,6 +116,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Decreased quantity of trees in the random forest maps.
 - Wyrms now have 20% chance of appearing on a cave or swamp map.
 - Random dungeon generation now creates more specific rooms (i.e. treasure rooms, laboratory rooms, etc.).
+- The feast hall area in random dungeons now includes drinking tables.
+- Heroes in random dungeon maps now begin next to stairs.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).
@@ -178,10 +180,12 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Killing fauna now yields experience points.
 - Fixed bug which caused dead units who don't have corpse units defined to appear at the wrong draw level.
 - Added bee unit (graphics by b_o).
-- Added table, chair and shelf decoration units (graphics by b_o).
+- Added table, chair, shelf and bed decoration units (graphics by b_o).
 - The names of resources are now properly capitalized in the unit display.
 - The Goblin Spearman now costs lumber, and so does (to a lesser extent) the Dwarven Axefighter.
 - Combat now features a flanking malus to evasion (only applies to organic units).
+- Fixed erroneous message about supply when upgrading units.
+- Added Dwarven Yale Rider (graphics by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

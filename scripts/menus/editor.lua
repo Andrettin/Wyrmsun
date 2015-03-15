@@ -41,6 +41,7 @@ editor_types = {
    "unit-dwarven-steelclad",
    "unit-dwarven-thane",
    "unit-dwarven-scout",
+   "unit-dwarven-yale-rider",
    "unit-dwarven-ballista",
    "unit-dwarven-gryphon-rider",
 
@@ -114,6 +115,7 @@ editor_types = {
    "unit-chair",
    "unit-table",
    "unit-alchemy-bench",
+   "unit-bed",
    "unit-potion-of-healing",
    "unit-potion-of-decay",
    "unit-cheese",

@@ -529,7 +529,7 @@ function StandardTriggers()
 				end
 
 				-- fix starting level for upgraded units
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-steelclad") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-yale-rider") then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 1) then
 						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
 					end
@@ -585,6 +585,10 @@ function StandardTriggers()
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "thane") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane")
+										SavePreferences()
+									end
+									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "yale-rider") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider")
 										SavePreferences()
 									end
 								end
@@ -894,11 +898,15 @@ function GetNumPlayers()
 end
 
 function GetUnitTypeLevelUpUpgrades(unit_type)
-	if (unit_type == "unit-dwarven-axefighter" or unit_type == "unit-hero-rugnur") then
+	if (unit_type == "unit-dwarven-axefighter") then
+		return { "unit-dwarven-steelclad", "unit-dwarven-yale-rider" }
+	elseif (unit_type == "unit-hero-rugnur") then
 		return { "unit-dwarven-steelclad" }
 	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
 		return { "unit-dwarven-thane" }
 	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
+		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
+	elseif (unit_type == "unit-dwarven-yale-rider") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-scout") then
 		return { "upgrade-critical-strike" }
