@@ -178,7 +178,15 @@ local GermanicEvents = {
 				end
 				DrawMinimap()
 			end,
-			function(s)
+			function(s) -- if refused to migrate, then a part of the tribe splits and does so
+				AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
+				EqualizeProvinceUnits(EventFaction)
+				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8 -- give them enough units to continue migrating
+				AcquireProvince(WorldMapProvinces.Brandenburg, "Swede Tribe")
+				AcquireFactionTechnologies(Factions.SwedeTribe, EventFaction)
+				Factions.SwedeTribe.Gold = EventFaction.Gold / 2
+				EventFaction.Gold = EventFaction.Gold - Factions.SwedeTribe.Gold
+				Factions.SwedeTribe.Gold = Factions.SwedeTribe.Gold + 2000 -- help them stay afloat a bit
 			end
 		}
 	},
@@ -188,10 +196,11 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "Asa Tribe"
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
 				and WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior >= 6 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Jutland)
+				and WorldMapProvinces.Jutland.Owner ~= EventFaction.Name
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -202,14 +211,14 @@ local GermanicEvents = {
 		Options = {"~!Yes", "~!No"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/jutland.smp")
 					GameSettings.Presets[1].Type = PlayerComputer					
 					RunMap("maps/earth/jutland.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Jutland, "Asa Tribe")
+						AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
 								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier)
@@ -228,8 +237,8 @@ local GermanicEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
-					AcquireProvince(WorldMapProvinces.Jutland, "Asa Tribe")
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= EventFaction.Name) then
+					AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")]
@@ -253,11 +262,12 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "Asa Tribe"
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Units.unit_germanic_warrior >= 8 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Jutland)
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Gotaland)
+				and WorldMapProvinces.Gotaland.Owner == "Gylfing Tribe"
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -268,14 +278,14 @@ local GermanicEvents = {
 		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as the ~!Jute Tribe"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/malmo.smp")
 					RunMap("maps/earth/malmo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
-						AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
+						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 						FormFaction(EventFaction, Factions.SwedeTribe)
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -296,9 +306,9 @@ local GermanicEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
-					AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
-					AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= EventFaction.Name) then
+					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
+					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 					FormFaction(EventFaction, Factions.SwedeTribe)
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
@@ -322,8 +332,8 @@ local GermanicEvents = {
 			end,
 			function(s)
 				Factions.AsaTribe.Prestige = Factions.AsaTribe.Prestige + 25
-				AcquireProvince(WorldMapProvinces.Gotaland, "Asa Tribe")
-				AcquireProvince(WorldMapProvinces.Sweden, "Asa Tribe")
+				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
+				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
@@ -691,7 +701,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (EventFaction.Name == "Asa Tribe") then
+				if (EventFaction.Name == "Asa Tribe" and GetFactionProvinceCount(Factions.JuteTribe) == 0) then
 					FormFaction(EventFaction, Factions.JuteTribe)
 					EventFaction = Factions.JuteTribe
 				end
