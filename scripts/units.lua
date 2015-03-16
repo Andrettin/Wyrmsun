@@ -250,15 +250,32 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	PersonalNameSuffixes = {"pan"},
 	ChildUpgrade = "upgrade-child",
 	Variations = {
+		--[[
 		{
 			"variation-id", "brown-fur",
 --			"file", "neutral/units/yale_young.png",
 			"frame-size", {36, 36},
 			"upgrade-required", "upgrade-child"
 		},
+		--]]
 		{
-			"variation-id", "brown-fur",
-			"upgrade-forbidden", "upgrade-child"
+			"variation-id", "brown-fur"
+--			"upgrade-forbidden", "upgrade-child"
+		},
+		{
+			"variation-id", "gray-brown-fur",
+			"file", "neutral/units/yale_gray_brown_fur.png"
+--			"upgrade-forbidden", "upgrade-child"
+		},
+		{
+			"variation-id", "gray-fur",
+			"file", "neutral/units/yale_gray_fur.png"
+--			"upgrade-forbidden", "upgrade-child"
+		},
+		{
+			"variation-id", "white-fur",
+			"file", "neutral/units/yale_white_fur.png"
+--			"upgrade-forbidden", "upgrade-child"
 		}
 	},
 	Sounds = {
@@ -310,27 +327,29 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 		"Graak", "Graik", "Griak", "Grook", "Gruak" -- names from the "Gryphon Mountain" scenario of the "Heir to the Throne" Wesnoth campaign
 	},
 	Variations = {
+		--[[
 		{
 			"variation-id", "young",
 --			"file", "neutral/units/gryphon_young.png",
 			"frame-size", {50, 50},
 			"upgrade-required", "upgrade-gryphon-child"
 		},
+		--]]
 		{
-			"variation-id", "brown-feathers",
-			"upgrade-forbidden", "upgrade-gryphon-child"
+			"variation-id", "brown-feathers"
+--			"upgrade-forbidden", "upgrade-gryphon-child"
 		},
 		{
 			"variation-id", "blue-feathers",
 			"file", "neutral/units/gryphon_blue_feathers.png",
-			"icon", "icon-gryphon-blue-feathers",
-			"upgrade-forbidden", "upgrade-gryphon-child"
+			"icon", "icon-gryphon-blue-feathers"
+--			"upgrade-forbidden", "upgrade-gryphon-child"
 		},
 		{
 			"variation-id", "gray-feathers",
 			"file", "neutral/units/gryphon_gray_feathers.png",
-			"icon", "icon-gryphon-gray-feathers",
-			"upgrade-forbidden", "upgrade-gryphon-child"
+			"icon", "icon-gryphon-gray-feathers"
+--			"upgrade-forbidden", "upgrade-gryphon-child"
 		}
 	},
 	Sounds = {
@@ -380,57 +399,59 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	Variations = {
+		--[[
 		{
 			"variation-id", "young",
 --			"file", "neutral/units/wyrm_young.png",
 			"frame-size", {55, 54},
 			"upgrade-required", "upgrade-wyrm-child"
 		},
+		--]]
 		{
 			"variation-id", "green-scales",
-			"upgrade-forbidden", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-forbidden", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "green-scales-vicious",
 			"icon", "icon-wyrm-vicious",
-			"upgrade-required", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-required", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "blue-scales",
 			"file", "neutral/units/wyrm_blue_scales.png",
 			"icon", "icon-wyrm-blue-scales",
-			"upgrade-forbidden", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-forbidden", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "cyan-scales",
 			"file", "neutral/units/wyrm_cyan_scales.png",
 			"icon", "icon-wyrm-cyan-scales",
-			"upgrade-forbidden", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-forbidden", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "purple-scales",
 			"file", "neutral/units/wyrm_purple_scales.png",
 			"icon", "icon-wyrm-purple-scales",
-			"upgrade-forbidden", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-forbidden", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "red-scales",
 			"file", "neutral/units/wyrm_red_scales.png",
 			"icon", "icon-wyrm-red-scales",
-			"upgrade-forbidden", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-forbidden", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		},
 		{
 			"variation-id", "yellow-scales",
 			"file", "neutral/units/wyrm_yellow_scales.png",
 			"icon", "icon-wyrm-yellow-scales",
-			"upgrade-forbidden", "upgrade-vicious",
-			"upgrade-forbidden", "upgrade-wyrm-child"
+			"upgrade-forbidden", "upgrade-vicious"
+--			"upgrade-forbidden", "upgrade-wyrm-child"
 		}
 	},
 	Sounds = {
@@ -803,7 +824,7 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	MaxOnBoard = 1,
-	CanTransport = {"LandUnit", "only", "organic", "only"},
+	CanTransport = {"LandUnit", "only", "organic", "only", "Mounted", "false"},
 	SaveCargo = true,
 	Variations = {
 		{
@@ -1821,6 +1842,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	ExplodeWhenKilled = "missile-explosion",
 	Sounds = {
 		"selected", "click",
 		"dead", "building destroyed"
@@ -2499,6 +2521,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
+	Mounted = true,
 	SelectableByRectangle = true
 } )
 

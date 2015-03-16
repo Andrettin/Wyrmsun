@@ -94,6 +94,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
   Description = "Axe Mastery is a passive ability that increases the axe-wielding unit's piercing damage by 2.",
   ForUnit = {
     "unit-dwarven-thane",
+    "unit-dwarven-yale-rider",
     "unit-surghan-mercenary-thane",
 	"unit-hero-durin-thane", 
     "unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
@@ -105,6 +106,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
   Description = "Critical Strike is a passive ability that provides 15% chance to deal double damage in combat. In No Randomness mode it provides a 15% damage bonus instead.",
   ForUnit = {
     "unit-dwarven-thane",
+    "unit-dwarven-yale-rider",
     "unit-dwarven-scout", "unit-dwarven-gryphon-rider",
     "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-teuton-swordsman", "unit-teuton-archer",

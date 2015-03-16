@@ -109,6 +109,29 @@ MakeSound("dwarven-ballista-ready", "dwarf/ballista/ballista-ready.wav")
 MakeSound("dwarven-gryphon-rider-ready", "dwarf/gryphon_rider/gryphon-rider-ready.wav")
 MakeSound("dwarven-scout-ready", "dwarf/scout/scout-ready.wav")
 MakeSound("dwarven-steelclad-ready", "dwarf/steelclad/steelclad-ready.wav")
+MakeSound("yale-rider-selected", {
+	"dwarf/basic_voices/selected-1.wav",
+	"dwarf/basic_voices/selected-2.wav",
+	"dwarf/basic_voices/selected-3.wav",
+	"dwarf/basic_voices/selected-4.wav",
+	"dwarf/basic_voices/selected-5.wav",
+	"neutral/yale/yale_select01.wav",
+	"neutral/yale/yale_select02.wav"
+})
+MakeSoundGroup("yale-rider-selected-group",
+	"yale-rider-selected", "basic-dwarf-voices-annoyed")
+MakeSound("yale-rider-acknowledge", {
+	"dwarf/basic_voices/acknowledge-1.wav",
+	"dwarf/basic_voices/acknowledge-2.wav",
+	"dwarf/basic_voices/acknowledge-3.wav",
+	"dwarf/basic_voices/acknowledge-4.wav",
+	"dwarf/basic_voices/acknowledge-5.wav",
+	"dwarf/basic_voices/acknowledge-6.wav",
+	"dwarf/basic_voices/acknowledge-7.wav",
+	"neutral/yale/yale_ack01.wav",
+	"neutral/yale/yale_ack02.wav",
+	"neutral/yale/yale_ack03.wav"
+})
 
 ------------------------------------------------------------------------------
 --	Define simple goblin sounds.

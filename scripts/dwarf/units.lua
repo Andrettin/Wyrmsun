@@ -382,13 +382,64 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Parent = "unit-template-cavalry",
 	Civilization = "dwarf",
 	Description = _("Although dwarves have a stronger affinity for fighting on foot than many other peoples, they nevertheless possess formidable cavalry in the form of yale riders. These mounted dwarves are fierce in the battlefield, and their yales can easily traverse the mountainous terrain dwarves usually inhabit."),
-	Image = {"file", "dwarf/units/yale_rider.png", "size", {72, 72}},
+	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-steelclad",
 	StartingLevel = 2,
 	Corpse = "unit-dwarven-dead-body",
+	Variations = {
+		{
+			"variation-id", "black-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
+			"icon", "icon-dwarven-steelclad-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
+			"icon", "icon-dwarven-steelclad-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
+			"icon", "icon-dwarven-steelclad-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair-white-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
+			"icon", "icon-dwarven-steelclad-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
+			"icon", "icon-dwarven-steelclad-gray-hair",
+			"upgrade-required", "upgrade-old"
+		},
+		{
+			"variation-id", "orange-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "orange-hair-white-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair-gray-fur",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_red_hair_brown_fur.png",
+			"upgrade-forbidden", "upgrade-old"
+		}
+	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "yale-rider-selected-group",
+		"acknowledge", "yale-rider-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",

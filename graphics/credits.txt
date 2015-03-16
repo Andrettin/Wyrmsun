@@ -53,7 +53,15 @@ b_o:
 /graphics/dwarf/units/thane_brown_hair.png
 /graphics/dwarf/units/thane_gray_hair.png
 /graphics/dwarf/units/thane_orange_hair.png
-/graphics/dwarf/units/yale_rider.png
+/graphics/dwarf/units/yale_rider_black_hair_brown_fur.png
+/graphics/dwarf/units/yale_rider_blond_hair_brown_fur.png
+/graphics/dwarf/units/yale_rider_brown_hair_brown_fur.png
+/graphics/dwarf/units/yale_rider_brown_hair_white_fur.png
+/graphics/dwarf/units/yale_rider_gray_hair_gray_brown_fur.png
+/graphics/dwarf/units/yale_rider_orange_hair_brown_fur.png
+/graphics/dwarf/units/yale_rider_orange_hair_white_fur.png
+/graphics/dwarf/units/yale_rider_red_hair_brown_fur.png
+/graphics/dwarf/units/yale_rider_red_hair_gray_fur.png
 /graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
 /graphics/germanic/icons/archer_blond_hair.png (modified from the Skutan icon made by Leo)
 /graphics/germanic/icons/archer_gray_hair.png (modified from the Skutan icon made by Leo)
@@ -202,6 +210,9 @@ b_o:
 /graphics/neutral/units/wyrm_yellow_scales.png
 /graphics/neutral/units/wyrm_young.png
 /graphics/neutral/units/yale.png
+/graphics/neutral/units/yale_gray_brown_fur.png
+/graphics/neutral/units/yale_gray_fur.png
+/graphics/neutral/units/yale_white_fur.png
 /graphics/neutral/units/yale_young.png
 /graphics/orc/units/spearthrower.png
 /graphics/teuton/units/catapult.png
