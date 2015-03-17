@@ -600,6 +600,16 @@ DefineAnimations("animations-volcanic-crater", {
 	},
 })
 
+DefineAnimations("animations-yale-excrement", {
+	Still = {
+		"frame 0", "wait 3", "frame 1",
+		"frame 2", "wait 3", "frame 3",
+		"wait 3", "frame 4",
+		"wait 200", "frame 4", "die",
+		"wait 1",
+	}
+})
+
 DefineAnimations("animations-decoration-old", {
   Still = {
 	"if-var v.GraphicsVariation.Value == 1 variation_1",

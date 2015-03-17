@@ -151,6 +151,7 @@ b_o:
 /graphics/neutral/decorations/twigs.png
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/decorations/wyrm_skeleton_horned.png
+/graphics/neutral/decorations/yale_excrement.png
 /graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
@@ -184,6 +185,8 @@ b_o:
 /graphics/neutral/units/bird_brown.png
 /graphics/neutral/units/bird_gray.png
 /graphics/neutral/units/bird_white.png
+/graphics/neutral/units/bug.png
+/graphics/neutral/units/fly.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png
@@ -669,6 +672,9 @@ João Victor G. Costa (Jinn):
 J. W. Bjerk (eleazzaar):
 /graphics/gnome/icons/herbal_cure.png (later modified by Jinn)
 /graphics/gnome/icons/portent.png (later modified by Jinn)
+
+KPJ:
+/graphics/ui/fonts/KPJsWyrmSunFont.png
 
 Leo:
 /graphics/dwarf/buildings/smithy.png

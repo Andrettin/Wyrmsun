@@ -916,13 +916,17 @@ function CreateCritters(critter_number)
 		while (Count > 0 and WhileCount < critter_number * 100) do
 			local critter_unit_type
 			if (wyrmsun.tileset == "forest") then
-				RandomNumber = SyncRand(3)
+				RandomNumber = SyncRand(5)
 				if (RandomNumber == 0) then
 					critter_unit_type = "unit-rat"
 				elseif (RandomNumber == 1) then
 					critter_unit_type = "unit-bird"
 				elseif (RandomNumber == 2) then
 					critter_unit_type = "unit-bee"
+				elseif (RandomNumber == 3) then
+					critter_unit_type = "unit-fly"
+				elseif (RandomNumber == 4) then
+					critter_unit_type = "unit-bug"
 				end
 			elseif (wyrmsun.tileset == "dungeon") then
 				RandomNumber = SyncRand(3)

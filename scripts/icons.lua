@@ -952,6 +952,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-yale-excrement",
+	Size = {46, 38},
+	File = "neutral/icons/yale_excrement.png"
+})
+
+DefineIcon({
 	Name = "icon-blue-potion",
 	Size = {46, 38},
 	File = "neutral/icons/blue_potion.png"

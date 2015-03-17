@@ -125,8 +125,10 @@ editor_types = {
    "unit-trap",
    "unit-scepter-of-fire",
 
-   "unit-rat",
+   "unit-bug",
    "unit-bee",
+   "unit-fly",
+   "unit-rat",
    "unit-bird",
    "unit-bat",
    "unit-slime",

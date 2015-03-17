@@ -386,6 +386,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-steelclad",
 	StartingLevel = 2,
 	Corpse = "unit-dwarven-dead-body",
+	Excrement = "unit-yale-excrement",
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",

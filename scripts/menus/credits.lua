@@ -48,6 +48,7 @@ function RunShowCreditsMenu()
 	_("Graphics and Artwork"),
 	"  b_o",
 	"  João Victor G. Costa (Jinn)",
+	"  KPJ",
 	"  Leo",
 	"  Battle for Wesnoth Team",
 	"  Cuzco",
