@@ -603,12 +603,12 @@ DefineAnimations("animations-volcanic-crater", {
 DefineAnimations("animations-yale-excrement", {
 	Still = {
 		"frame 0", "wait 3",
-		"frame 1", "wait 3",
-		"frame 2", "wait 3",
-		"frame 3", "wait 3",
-		"frame 4", "wait 300",
-		"frame 5", "wait 100",
-		"frame 6", "wait 100",
+		"frame 5", "wait 3",
+		"frame 10", "wait 3",
+		"frame 15", "wait 3",
+		"frame 20", "wait 300",
+		"frame 25", "wait 100",
+		"frame 30", "wait 100",
 		"die",
 		"wait 1",
 	}

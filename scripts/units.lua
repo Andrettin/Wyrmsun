@@ -2129,7 +2129,7 @@ DefineUnitType("unit-bed", { Name = _("Bed"),
 } )
 
 DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
-	Image = {"file", "neutral/decorations/yale_excrement.png", "size", {32, 32}},
+	Image = {"file", "neutral/decorations/yale_excrement.png", "size", {72, 72}},
 	Animations = "animations-yale-excrement", Icon = "icon-yale-excrement",
 	Speed = 0,
 	HitPoints = 1,
@@ -2141,8 +2141,7 @@ DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
 	IsNotSelectable = true,
 	Decoration = true,
 	NonSolid = true,
-	Detritus = true,
-	NumDirections = 1
+	Detritus = true
 } )
 
 DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),

@@ -152,6 +152,7 @@ b_o:
 /graphics/neutral/decorations/wyrm_skeleton.png
 /graphics/neutral/decorations/wyrm_skeleton_horned.png
 /graphics/neutral/decorations/yale_excrement.png
+/graphics/neutral/decorations/yale_excrement_extra_1.png
 /graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
