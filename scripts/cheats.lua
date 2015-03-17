@@ -167,6 +167,15 @@ function HandleCheats(str)
 			end
 		end
 
+  elseif (str == "famine") then
+		local uncount = 0
+		uncount = GetUnits("any")
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitBoolFlag(uncount[unit1], "Fauna")) then
+				SetUnitVariable(uncount[unit1], "Hunger", 1000)
+			end
+		end
+
   else
     return false
   end

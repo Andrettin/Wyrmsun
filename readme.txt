@@ -187,6 +187,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Combat now features a flanking malus to evasion (only applies to organic units).
 - Fixed erroneous message about supply when upgrading units.
 - Added Dwarven Yale Rider (graphics by b_o).
+- Fauna will now feed on the appropriate sorts of food.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

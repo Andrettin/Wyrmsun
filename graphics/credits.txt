@@ -187,6 +187,7 @@ b_o:
 /graphics/neutral/units/bird_white.png
 /graphics/neutral/units/bug.png
 /graphics/neutral/units/fly.png
+/graphics/neutral/units/fly_extra_1.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png

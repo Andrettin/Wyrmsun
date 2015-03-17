@@ -177,7 +177,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	HitPoints = 5,
 	DrawLevel = 35,
 	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	SightRange = 3, ComputerReactionRange = 3, PersonReactionRange = 3,
 	BasicDamage = 1, PiercingDamage = 1, Missile = "missile-none",
 	MaxAttackRange = 1,
 	Accuracy = 15,
@@ -192,6 +192,8 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	RandomMovementProbability = 5,
 	organic = true,
 	Fauna = true,
+	Flesh = true,
+	Carnivore = true,
 	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
@@ -223,11 +225,11 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
-	Speed = 10,
+	Speed = 13,
 	HitPoints = 30,
 	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	SightRange = 4, ComputerReactionRange = 4, PersonReactionRange = 4,
 	BasicDamage = 2, PiercingDamage = 1, Missile = "missile-none",
 	MaxAttackRange = 1,
 	Accuracy = 10,
@@ -245,6 +247,8 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	Fauna = true,
 	IsNotSelectable = true, -- until it gets an icon
 	PeopleAversion = true,
+	Flesh = true,
+	Herbivore = true,
 	PersonalNames = {"Amaltheia", "Heidrun"}, -- names of mythological caprids: Aegipan (figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"), Amaltheia (female goat from Greek mythology who fed child Zeus), Heidrun (female goat from Norse mythology)
 	PersonalNamePrefixes = {"Aegi"},
 	PersonalNameSuffixes = {"pan"},
@@ -321,6 +325,8 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Fauna = true,
 	Predator = true,
 	PeopleAversion = true,
+	Flesh = true,
+	Carnivore = true,
 	ChildUpgrade = "upgrade-gryphon-child",
 	PersonalNames = {
 		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
@@ -395,6 +401,8 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	StartingLevel = 3,
 	PeopleAversion = true,
 	Predator = true,
+	Flesh = true,
+	Carnivore = true,
 	ChildUpgrade = "upgrade-wyrm-child",
 	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
@@ -477,7 +485,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	DrawLevel = 35,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	Armor = 10,
-	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	SightRange = 3, ComputerReactionRange = 3, PersonReactionRange = 3,
 	BasicDamage = 2, PiercingDamage = 1, Missile = "missile-none",
 	Accuracy = 5,
 	Evasion = 1,
@@ -495,6 +503,8 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Fauna = true,
 	PeopleAversion = true,
 	Slime = true,
+	Detritivore = true,	
+	Carnivore = true,	
 	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
@@ -594,6 +604,8 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	organic = true,
 	Coward = true,
 	Fauna = true,
+	Insect = true,
+	Herbivore = true,
 	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
@@ -614,7 +626,7 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 	HitPoints = 1,
 	DrawLevel = 44,
 	TileSize = {1, 1}, BoxSize = {15, 15},
-	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
+	SightRange = 3, ComputerReactionRange = 3, PersonReactionRange = 3,
 	BasicDamage = 1, Missile = "missile-none",
 	Accuracy = 15,
 	Evasion = 15,
@@ -632,6 +644,8 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 	organic = true,
 	Coward = true,
 	Fauna = true,
+	Insect = true,
+	Detritivore = true,	
 	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
@@ -670,6 +684,8 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 	organic = true,
 	Coward = true,
 	Fauna = true,
+	Insect = true,
+	Herbivore = true,
 	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
@@ -690,7 +706,7 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	HitPoints = 5,
 	DrawLevel = 45,
 	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	SightRange = 5, ComputerReactionRange = 5, PersonReactionRange = 5,
 	BasicDamage = 1, PiercingDamage = 1, Missile = "missile-none",
 	MaxAttackRange = 1,
 	Priority = 37,
@@ -706,6 +722,8 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	organic = true,
 	Coward = true,
 	Fauna = true,
+	Flesh = true,
+	Insectivore = true,
 	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
@@ -743,7 +761,7 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	HitPoints = 5,
 	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 2, ComputerReactionRange = 1, PersonReactionRange = 1,
+	SightRange = 4, ComputerReactionRange = 4, PersonReactionRange = 4,
 	BasicDamage = 1, PiercingDamage = 1, Missile = "missile-none",
 	MaxAttackRange = 1,
 	Priority = 37,
@@ -759,6 +777,8 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	organic = true,
 	Fauna = true,
 	PeopleAversion = true,
+	Flesh = true,
+	Insectivore = true,
 	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "bat-selected",
@@ -1022,7 +1042,7 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
 	Variations = {
 		{
 			"variation-id", "red"
@@ -1064,7 +1084,8 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Vegetable = true,
 	Sounds = {} }
 )
 
@@ -1092,7 +1113,8 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Vegetable = true,
 	Sounds = {} }
 )
 
@@ -1122,7 +1144,8 @@ DefineUnitType("unit-fern", { Name = "Fern",
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	NonSolid = true,
+	Vegetable = true,
 	Sounds = {} }
 )
 
@@ -1697,6 +1720,7 @@ DefineUnitType("unit-dwarven-dead-body", { Name = "Dead Body",
 	Priority = 0,
 	Type = "land",
 	Vanishes = true,
+	Detritus = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
@@ -1711,6 +1735,7 @@ DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
 	Priority = 0,
 	Type = "land",
 	Vanishes = true,
+	Detritus = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
@@ -1725,6 +1750,7 @@ DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
 	Priority = 0,
 	Type = "land",
 	Vanishes = true,
+	Detritus = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
@@ -1739,6 +1765,7 @@ DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 	Priority = 0,
 	Type = "land",
 	Vanishes = true,
+	Detritus = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
@@ -1753,6 +1780,7 @@ DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 	Priority = 0,
 	Type = "land",
 	Vanishes = true,
+	Detritus = true,
 	Sounds = {} } )
 
 --DefineUnitType("unit-dead-sea-body", { Name = "Dead Body",
@@ -2113,6 +2141,7 @@ DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
 	IsNotSelectable = true,
 	Decoration = true,
 	NonSolid = true,
+	Detritus = true,
 	NumDirections = 1
 } )
 
@@ -2192,6 +2221,7 @@ DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	Item = true, 
 	HitPointHealing = 3,
 	Food = true,
+	Vegetable = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
@@ -2484,6 +2514,7 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	CanTargetLand = true,
 	Coward = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true
 } )
 
@@ -2508,6 +2539,7 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true
 } )
 
@@ -2564,6 +2596,7 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true,
 	AttackFromTransporter = true
 } )
@@ -2590,6 +2623,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true
 } )
 
@@ -2615,6 +2649,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	CanTargetLand = true,
 	organic = true,
 	Mounted = true,
+	Flesh = true,
 	SelectableByRectangle = true
 } )
 
@@ -2640,6 +2675,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true,
 	Mana = {Enable = true}
 } )

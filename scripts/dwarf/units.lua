@@ -97,6 +97,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -493,6 +494,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	DetectCloak = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true,
 	Variations = {
 		{

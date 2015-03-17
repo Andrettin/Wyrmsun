@@ -98,6 +98,7 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 	CanTargetLand = true,
 	Coward = true,
 	organic = true,
+	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
 		"selected", "click",

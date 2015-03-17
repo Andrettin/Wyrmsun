@@ -32,7 +32,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
 
   b = menu:addLabel(_("Sound Options"), 176, 11)
 
-  b = Label(_("Effects Volume"))
+  b = Label(_("Sound Effects Volume"))
   b:setFont(CFont:Get("game"))
   b:adjustSize();
   menu:add(b, offx + 16, offy + 36 * 1)
@@ -340,6 +340,76 @@ function BuildOptionsMenu()
   end
 --]]
 
+  -- sound volume options
+  b = Label(_("Sound Effects Volume"))
+  b:setFont(CFont:Get("game"))
+  b:adjustSize();
+  menu:add(b, offx + 16, offy + 36 * 3)
+
+  -- FIXME: disable if effects turned off
+  local soundslider = {}
+  -- slider button to decrease slider value
+  soundslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
+		
+  -- slider button to increase slider value
+  soundslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
+		
+  -- slider itself
+  soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetEffectsVolume(soundslider:getValue()) end)
+
+  soundslider:setValue(GetEffectsVolume())
+
+  b = Label("min")
+  b:setFont(CFont:Get("small"))
+  b:adjustSize();
+  menu:addCentered(b, offx + 32, offy + 36 * 4 + 6)
+
+  b = Label("max")
+  b:setFont(CFont:Get("small"))
+  b:adjustSize();
+  menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
+
+  local effectscheckbox = {}
+  effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
+    function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
+  effectscheckbox:setMarked(IsEffectsEnabled())
+  effectscheckbox:adjustSize()
+
+  b = Label("Music Volume")
+  b:setFont(CFont:Get("game"))
+  b:adjustSize();
+  menu:add(b, offx + 16, offy + 36 * 5)
+
+  -- FIXME: disable if music turned off
+  local musicslider = {}
+  -- slider button to decrease slider value
+  musicslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
+		
+  -- slider button to decrease slider value
+  musicslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
+		
+  -- slider itself
+  musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 5.5, function() SetMusicVolume(musicslider:getValue()) end)
+		
+  -- set the value so the game saves it
+  musicslider:setValue(GetMusicVolume())
+
+  b = Label("min")
+  b:setFont(CFont:Get("small"))
+  b:adjustSize();
+  menu:addCentered(b, offx + 32, offy + 36 * 6 + 6)
+
+  b = Label("max")
+  b:setFont(CFont:Get("small"))
+  b:adjustSize();
+  menu:addCentered(b, offx + 224, offy + 36 * 6 + 6)
+
+  local musiccheckbox = {}
+  musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 5.5,
+    function() SetMusicEnabled(musiccheckbox:isMarked()); MusicStopped() end)
+  musiccheckbox:setMarked(IsMusicEnabled())
+  musiccheckbox:adjustSize();
+
   b = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*10 + 14,
     function()
       ToggleFullScreen()
@@ -409,6 +479,10 @@ function BuildOptionsMenu()
 --  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
 
   menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
+	wyr.preferences.EffectsVolume = GetEffectsVolume()
+	wyr.preferences.EffectsEnabled = IsEffectsEnabled()
+	wyr.preferences.MusicVolume = GetMusicVolume()
+	wyr.preferences.MusicEnabled = IsMusicEnabled()
 	SavePreferences()
 	Load("scripts/units.lua")
   	menu:stop()
