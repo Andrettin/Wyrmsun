@@ -213,3 +213,13 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#################
+## Wyrmsun Preferences and other User Data
+#################
+## Ignore temporary files and user data
+mods/
+wyr/
+stderr.txt
+stdout.txt
+wyrmsun_multiplayer.lnk
