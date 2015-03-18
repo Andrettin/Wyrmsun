@@ -266,7 +266,13 @@ DefineIcon({
 	Size = {46, 38},
 	File = "teuton/icons/guard_tower.png"
 })
-	
+
+DefineIcon({
+	Name = "icon-marbod",
+	Size = {46, 38},
+	File = "teuton/icons/marbod.png"
+})
+
 DefineIcon({
 	Name = "icon-dwarven-miner",
 	Size = {46, 38},

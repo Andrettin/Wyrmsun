@@ -34,6 +34,7 @@ function EventTriggers()
 		Load("scripts/dwarf/scepter_of_fire_events.lua")
 		Load("scripts/germanic/events.lua")
 		Load("scripts/gnome/events.lua")
+		Load("scripts/teuton/events.lua")
 	end
 
 	-- Greebo's Shinies

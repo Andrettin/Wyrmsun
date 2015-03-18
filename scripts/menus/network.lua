@@ -316,7 +316,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   local startgame
   local d
 
-  menu = WarMenu("Create MultiPlayer game")
+  menu = WarMenu("Create Multiplayer game")
 
   menu:writeLargeText("Map", sx, sy*3)
   menu:writeText("File:", sx, sy*3+30)
@@ -418,7 +418,7 @@ function RunCreateMultiGameMenu(s)
   local sx = Video.Width / 20
   local sy = Video.Height / 20
 
-  menu = WarMenu(_("Create MultiPlayer game"))
+  menu = WarMenu(_("Create Multiplayer game"))
 
   menu:writeText(_("File:"), sx, sy*3+30)
   maptext = menu:writeText(string.sub(mapfile, 6), sx+50, sy*3+30)

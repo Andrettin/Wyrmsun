@@ -102,6 +102,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).
 - Clicking on heroes no longer displays the "You have [...]" in the statusline.
+- Added Marbod (teuton) (icon by Jinn).
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.

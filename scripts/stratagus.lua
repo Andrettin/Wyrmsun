@@ -651,7 +651,7 @@ function StandardTriggers()
 									SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
 									DamageUnit(uncount[unit1], nearby_uncount[unit2], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) -- necessary to make the game display the damage and check if the unit should have died (for some reason it doesn't actually cause the damage though - probably because the damaging unit belongs to a neutral player)
 									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna")) then -- make animals eat food items
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Insect") == false) then -- make animals eat food items
 									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
 								end
 							end
@@ -912,7 +912,7 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
 		return { "upgrade-critical-strike" }
-	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-teuton-swordsman") then
+	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-teuton-swordsman" or unit_type == "unit-hero-marbod") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
 		return { "upgrade-critical-strike" }
@@ -959,6 +959,8 @@ function GetUnitTypeTraits(unit_type)
 		if (GetUnitTypeData(unit_type, "Civilization") ~= "") then -- only for sapient units
 			-- insert more traits here later
 		end
+	elseif (unit_type == "unit-hero-marbod") then
+		table.insert(traits, "upgrade-keen")
 	elseif (unit_type == "unit-hero-durin" or unit_type == "unit-hero-durin-thane") then
 		table.insert(traits, "upgrade-dextrous")
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
@@ -1333,6 +1335,12 @@ local defaultPreferences = {
 	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",
 	Heroes = {
+		Marbod = {
+			name = "Marbod",
+			level = 1,
+			upgrades = {},
+			items = {}
+		},
 		Durin = {
 			name = "Durin",
 			level = 2,

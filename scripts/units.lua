@@ -72,6 +72,7 @@ Units = {
 	"unit-coal-mine",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+	"unit-hero-marbod",
 	"unit-hero-durin", "unit-hero-durin-thane",
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane",
 	"unit-hero-baglur", "unit-hero-baglur-thane",

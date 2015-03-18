@@ -4449,7 +4449,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 			end
 		-- Heroes
 		elseif (count_defenders and IsHero(unitName) and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
-			if (unitName == "unit-hero-rugnur") then
+			if (unitName == "unit-hero-marbod" or unitName == "unit-hero-rugnur") then
 				military_score = military_score + (50 + infantry_military_score_bonus)
 			elseif (unitName == "unit-hero-durin" or unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
 				military_score = military_score + (75 + infantry_military_score_bonus)

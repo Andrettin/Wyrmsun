@@ -42,6 +42,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
   Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
   ForUnit = {
     "unit-teuton-swordsman",
+	"unit-hero-marbod",
 	"unit-hero-greebo",
 	"germanic-group", "teuton-group"
 } } )

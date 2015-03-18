@@ -65,7 +65,8 @@ end
 
 DefineModifier("upgrade-teuton-spatha",
 	{"PiercingDamage", 2},
-	{"apply-to", "unit-teuton-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"},
+	{"apply-to", "unit-hero-marbod"}
 )
 
 DefineModifier("upgrade-teuton-masonry",

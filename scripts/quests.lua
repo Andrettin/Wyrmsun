@@ -89,7 +89,7 @@ Quests = {
 	},
 	TheHomeOfTheBoii = {
 		Name = "The Home of the Boii",
-		Icon = "germanic/icons/warrior",
+		Icon = "teuton/icons/marbod",
 		Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.\n\nMap: Prague\n\nRewards: 2 Teuton Technology Points.",
 		RequiredQuest = "The Battle of Magetobria",
 		Civilization = "teuton",

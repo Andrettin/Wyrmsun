@@ -29,6 +29,8 @@ editor_types = {
    "unit-teuton-watch-tower",
    "unit-teuton-guard-tower",
 
+   "unit-hero-marbod",
+   
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-celt-farm",
@@ -538,7 +540,7 @@ function EditUnitProperties()
   local sizeY = 200 -- 288
 
   menu:resize(sizeX, sizeY)
-  menu:addLabel("Unit properties", sizeX / 2, 11)
+  menu:addLabel("Unit Properties", sizeX / 2, 11)
 
   if (GetUnitUnderCursor().Type.GivesResource == 0) then
     menu:addLabel("Artificial Intelligence", sizeX / 2, 11 + 36)

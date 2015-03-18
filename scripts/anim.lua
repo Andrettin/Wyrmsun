@@ -38,6 +38,7 @@ UnitMove = {"unbreakable begin",
 	"if-var v.Speed.Value == 11 speed_11",
 	"if-var v.Speed.Value >= 12 speed_12",
 	-- speed_3 16 / (3 / 10) = c. 53 waits
+	-- speed_4 16 / (4 / 10) = 40 waits
 	"label speed_6", -- 16 / (6 / 10) = c. 26 waits
 	"frame 0", "move 3", "wait 3", "frame 5", "move 3", "wait 2",
     "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
