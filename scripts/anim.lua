@@ -150,6 +150,9 @@ DefineAnimations("animations-melee-unit", {
 --
 
 local RatMove = {"unbreakable begin",
+	"if-var v.Speed.Value <= 3 speed_3",
+	"if-var v.Speed.Value >= 4 speed_4",
+	"label speed_3", -- 16 / (3 / 10) = c. 53 waits
 	"frame 0","move 1", "wait 2", "frame 5", "move 1", "wait 1",
 	"frame 5", "move 1", "wait 2", "frame 10", "move 1", "wait 1",
 	"frame 10", "move 1", "wait 1", "frame 0", "move 1", "wait 1",
@@ -167,8 +170,27 @@ local RatMove = {"unbreakable begin",
 	"frame 10", "move 1", "wait 1", "frame 0", "wait 1",
 	"frame 0", "move 1", "wait 2", "frame 15", "move 1", "wait 1",
 	"frame 15", "move 1", "wait 2", "frame 20", "move 1", "wait 1",
+	"frame 20", "move 1", "wait 1", "frame 0", "goto end", -- should have 7 more waits to be speed 3 more precisely
+	"label speed_4", -- 16 / (4 / 10) = 40 waits
+	"frame 0","move 1", "wait 1", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 10", "move 1", "wait 1",
+	"frame 10", "move 1", "wait 1", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 15", "move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "frame 20", "move 1", "wait 1",
 	"frame 20", "move 1", "wait 1", "frame 0",
-	"unbreakable end", "wait 1",} -- should have 2 more waits to be speed 3 more precisely
+	"frame 0","move 1", "wait 1", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 10", "move 1", "wait 1",
+	"frame 10", "move 1", "wait 1", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 1", "frame 15", "move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "frame 20", "move 1", "wait 1",
+	"frame 20", "move 1", "wait 1", "frame 0",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 10", "move 1", "wait 1",
+	"frame 10", "move 1", "wait 1", "frame 0", "wait 1",
+	"frame 0", "move 1", "wait 1", "frame 15", "move 1", "wait 1",
+	"frame 15", "move 1", "wait 2", "frame 20", "move 1", "wait 1",
+	"frame 20", "move 1", "wait 1", "frame 0", "goto end",
+	"label end", "unbreakable end", "wait 1",}
 local RatDeath = {"unbreakable begin",
 	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
 	"unbreakable end", "wait 1",}
