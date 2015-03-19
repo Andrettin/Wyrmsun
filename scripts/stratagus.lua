@@ -268,6 +268,7 @@ DefineVariables(
 	"XpRequired", {Max = 43500, Value = 200, Increase = 0, Enable = true},
 	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
+	"Slow", {Max = 1000, Value = 0, Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
@@ -650,6 +651,9 @@ function StandardTriggers()
 									end
 									SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
 									DamageUnit(uncount[unit1], nearby_uncount[unit2], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) -- necessary to make the game display the damage and check if the unit should have died (for some reason it doesn't actually cause the damage though - probably because the damaging unit belongs to a neutral player)
+									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Slows") and GetUnitVariable(nearby_uncount[unit2], "Slow") == 0 and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low") then
+									SetUnitVariable(nearby_uncount[unit2], "Slow", 1000)
 									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
 								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Insect") == false) then -- make animals eat food items
 									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))

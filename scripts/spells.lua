@@ -29,7 +29,7 @@
 
 -- For documentation see stratagus/doc/ccl/ccl.html
 
-DefineBoolFlags("isundead", "hero", "volatile", "Capturable", "Food")
+DefineBoolFlags("isundead", "hero", "volatile", "Capturable", "Food", "Slows")
 
 --
 --  Speed     : just drawing
@@ -47,7 +47,7 @@ DefineUnitType("unit-critter", {})
 
 DefineSpell("spell-herbal-cure",
 	"showname", _("Herbal Cure"),
-	"manacost", 5,
+	"manacost", 4,
 	"range", 1,
 	"target", "unit",
 	"action", {
@@ -74,6 +74,22 @@ DefineSpell("spell-portent",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"sound-when-cast", "magic-holy"
+)
+
+DefineSpell("spell-slow",
+	"showname", _("slow"),
+	"manacost", 50,
+	"range", 10,
+	"target", "unit",
+	"action", {{"adjust-variable", {Slow = 1000, Haste = 0}},
+		{"spawn-missile", "missile", "missile-magic-effect",
+			"start-point", {"base", "target"}}},
+	"condition", {
+		"Building", "false",
+		"Slow", {ExactValue = 0}},
+--	"sound-when-cast", "slow",
+	"autocast", {"range", 10, "condition", {"Coward", "false", "opponent", "only"}},
+	"ai-cast", {"range", 10, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
 
 DefineSpell("spell-dagger-attack",

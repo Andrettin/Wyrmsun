@@ -213,7 +213,7 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Civilization = "goblin",
 	Description = _("Goblin farms provide sustenance for their settlements. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."),
 	Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
-	Animations = "animations-farm", Icon = "icon-goblin-farm"
+	Icon = "icon-goblin-farm"
 } )
 
 DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),

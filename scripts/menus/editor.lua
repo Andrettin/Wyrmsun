@@ -120,6 +120,7 @@ editor_types = {
    "unit-bed",
    "unit-potion-of-healing",
    "unit-potion-of-decay",
+   "unit-potion-of-slowness",
    "unit-cheese",
    "unit-carrots",
    "unit-gryphon-feather",
@@ -128,6 +129,7 @@ editor_types = {
    "unit-scepter-of-fire",
 
    "unit-bug",
+   "unit-snail",
    "unit-bee",
    "unit-fly",
    "unit-rat",

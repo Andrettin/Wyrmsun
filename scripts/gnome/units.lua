@@ -191,7 +191,7 @@ DefineUnitType("unit-gnomish-farm", { Name = _("Farm"),
 	Civilization = "gnome",
 	Description = _("Gnomish farms provide sustenance for their settlements. Contrary to the dwarves, the gnomes tend to plant vegetables, rather than mushrooms, and they also breed livestock."),
 	Image = {"file", "gnome/buildings/farm.png", "size", {64, 64}},
-	Animations = "animations-farm", Icon = "icon-gnomish-farm"
+	Icon = "icon-gnomish-farm"
 } )
 
 DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),

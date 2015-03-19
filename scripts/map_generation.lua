@@ -916,7 +916,7 @@ function CreateCritters(critter_number)
 		while (Count > 0 and WhileCount < critter_number * 100) do
 			local critter_unit_type
 			if (wyrmsun.tileset == "forest") then
-				RandomNumber = SyncRand(5)
+				RandomNumber = SyncRand(6)
 				if (RandomNumber == 0) then
 					critter_unit_type = "unit-rat"
 				elseif (RandomNumber == 1) then
@@ -927,6 +927,8 @@ function CreateCritters(critter_number)
 					critter_unit_type = "unit-fly"
 				elseif (RandomNumber == 4) then
 					critter_unit_type = "unit-bug"
+				elseif (RandomNumber == 5) then
+					critter_unit_type = "unit-snail"
 				end
 			elseif (wyrmsun.tileset == "dungeon") then
 				RandomNumber = SyncRand(3)
@@ -960,7 +962,7 @@ function CreateCritters(critter_number)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 				local unit_quantity = 0
 				for i=0,14 do
-					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
+					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 12, RandomY - 12}, {RandomX + 12, RandomY + 12})
 				end
 
 				if (unit_quantity < 1) then
@@ -3809,10 +3811,13 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-							if (SyncRand(2) == 0) then
+							SecondRandomNumber = SyncRand(3)
+							if (SecondRandomNumber == 0) then
 								unit = CreateUnit("unit-potion-of-healing", 15, {SecondRandomX, SecondRandomY})
-							else
+							elseif (SecondRandomNumber == 1) then
 								unit = CreateUnit("unit-potion-of-decay", 15, {SecondRandomX, SecondRandomY})
+							elseif (SecondRandomNumber == 2) then
+								unit = CreateUnit("unit-potion-of-slowness", 15, {SecondRandomX, SecondRandomY})
 							end
 							SecondCount = SecondCount - 1
 						end
@@ -4697,6 +4702,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							unit = CreateUnit("unit-chair", 15, {RandomX, RandomY})
 						elseif (RandomNumber < 75) then
 							unit = CreateUnit("unit-potion-of-healing", 15, {RandomX, RandomY})
+						elseif (RandomNumber < 90) then
+							unit = CreateUnit("unit-potion-of-slowness", 15, {RandomX, RandomY})
 						else
 							unit = CreateUnit("unit-potion-of-decay", 15, {RandomX, RandomY})
 						end

@@ -174,7 +174,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
-	Speed = 3,
+	Speed = 8,
 	HitPoints = 5,
 	DrawLevel = 35,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -190,7 +190,8 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	RightMouseAction = "move",
 	CanAttack = true,
 	CanTargetLand = true,
-	RandomMovementProbability = 5,
+	RandomMovementProbability = 1,
+	RandomMovementDistance = 3,
 	organic = true,
 	Fauna = true,
 	Flesh = true,
@@ -665,7 +666,7 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 3,
 	HitPoints = 1,
-	DrawLevel = 44,
+	DrawLevel = 39,
 	TileSize = {1, 1}, BoxSize = {15, 15},
 	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
 	BasicDamage = 1, Missile = "missile-none",
@@ -682,6 +683,46 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 --	CanAttack = true,
 --	CanTargetLand = true,
 	RandomMovementProbability = 50,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Insect = true,
+	Herbivore = true,
+	ChildUpgrade = "upgrade-bee-child",
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "bird-selected",
+--		"ready", "bird-selected",
+--		"help", "critter-help",
+--		"dead", "bird-dead",
+		"hit", "dart-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-snail", { Name = _("Snail"),
+	Image = {"file", "neutral/units/snail.png", "size", {32, 32}},
+	Animations = "animations-snail", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 1,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {15, 15},
+	SightRange = 1, ComputerReactionRange = 1, PersonReactionRange = 1,
+	BasicDamage = 1, Missile = "missile-none",
+	Accuracy = 15,
+	Evasion = 15,
+	MaxAttackRange = 1,
+	Priority = 5,
+	Points = 1,
+	Demand = 1,
+	Type = "land",
+--	NonSolid = true,
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	RandomMovementProbability = 1,
 	organic = true,
 	Coward = true,
 	Fauna = true,
@@ -1901,38 +1942,6 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
 		"selected", "click",
 		"dead", "building destroyed"} } )
 
-DefineUnitType("unit-barrel", { Name = _("Barrel"),
-	Image = {"file", "neutral/items/barrel.png", "size", {32, 32}},
-	Animations = "animations-barrel", Icon = "icon-barrel",
-	NeutralMinimapColor = {128, 128, 0},
-	Speed = 0,
-	HitPoints = 5,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 0,
-	Type = "land",
-	NumDirections = 1,	
-	Variations = {
-		{
-			"variation-id", "1"
-		},
-		{
-			"variation-id", "2",
-			"file", "neutral/items/barrel_2.png"
-		},
-		{
-			"variation-id", "3",
-			"file", "neutral/items/barrel_3.png"
-		}
-	},
-	Sounds = {
-		"selected", "click",
-		"dead", "building destroyed"} } )
-
 DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Image = {"file", "neutral/items/alchemy_bench.png", "size", {32, 32}},
 	Animations = "animations-alchemy-bench", Icon = "icon-alchemy-bench",
@@ -2185,6 +2194,62 @@ DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
 		"selected", "click",
 		"dead", "potion"
 	} 
+} )
+
+DefineUnitType("unit-potion-of-slowness", { Name = _("Potion of Slowness"),
+	Image = {"file", "neutral/items/potion_purple.png", "size", {16, 16}},
+	Animations = "animations-item", Icon = "icon-purple-potion",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 1,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,	
+	Item = true,
+	Slows = true,
+	Sounds = {
+		"selected", "click",
+		"dead", "potion"
+	} 
+} )
+
+DefineUnitType("unit-barrel", { Name = _("Barrel"),
+	Image = {"file", "neutral/items/barrel.png", "size", {32, 32}},
+	Animations = "animations-barrel", Icon = "icon-barrel",
+	NeutralMinimapColor = {128, 128, 0},
+	Speed = 0,
+	HitPoints = 5,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	Drops = {"unit-potion-of-healing", "unit-potion-of-decay", "unit-potion-of-slowness"},
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "neutral/items/barrel_2.png"
+		},
+		{
+			"variation-id", "3",
+			"file", "neutral/items/barrel_3.png"
+		}
+	},
+	Sounds = {
+		"selected", "click",
+		"dead", "building destroyed"
+	}
 } )
 
 DefineUnitType("unit-cheese", { Name = _("Cheese"),
@@ -2786,7 +2851,7 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 
 DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	Class = "farm",
-	Animations = "animations-farm",
+	Animations = "animations-building",
 	Costs = {"time", 100, "gold", 500, "lumber", 250},
 	RepairHp = 4,
 	RepairCosts = {"gold", 1, "lumber", 1},
@@ -2804,6 +2869,7 @@ DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	Supply = 4,
 	Corpse = "unit-destroyed-2x2-place",
 	ExplodeWhenKilled = "missile-explosion",
+	Drops = {"unit-cheese", "unit-carrots"},
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	Sounds = {

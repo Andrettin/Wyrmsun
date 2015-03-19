@@ -197,12 +197,75 @@ local RatDeath = {"unbreakable begin",
 
 DefineAnimations("animations-rat", {
   Still = UnitStill,
-  Move = RatMove,
+  Move = UnitMove,
   Attack = {"unbreakable begin",
 	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
 	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
 	"unbreakable end", "wait 1",},
   Death = RatDeath,
+})
+
+--
+-- Snail
+--
+
+local SnailStill = {
+	"frame 0", "wait 4", "random-goto 1 idle_anim", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
+	"label idle_anim", "frame 0", "wait 6", "frame 5", "wait 6", "frame 10", "wait 6", "frame 15", "wait 6", "frame 20", "wait 12",
+	"frame 15", "wait 6", "frame 10", "wait 6", "frame 5", "wait 6", "frame 0",
+	"label no-rotate", "wait 1",
+}
+
+local SnailMove = {"unbreakable begin",
+	"if-var v.Speed.Value <= 3 speed_3",
+	"if-var v.Speed.Value >= 4 speed_4",
+	"label speed_3", -- 16 / (3 / 10) = c. 53 waits
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0",
+	"frame 0","move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 2",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "goto end",
+	"label speed_4", -- 16 / (4 / 10) = 40 waits
+	"frame 0","move 1", "wait 1", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 1", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 0",
+	"frame 0","move 1", "wait 1", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 1", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 0",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 2", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 1", "frame 5", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 0", "move 1", "wait 1",
+	"frame 0", "move 1", "wait 2", "frame 5", "move 1", "wait 1",
+	"frame 5", "move 1", "wait 1", "frame 0", "goto end",
+	"label end", "unbreakable end", "wait 1",}
+local SnailDeath = {"unbreakable begin",
+	"frame 25", "wait 3", "frame 30", "wait 100", "frame 35", "wait 100", "frame 35",
+	"unbreakable end", "wait 1",}
+
+DefineAnimations("animations-snail", {
+  Still = SnailStill,
+  Move = SnailMove,
+  Death = SnailDeath,
 })
 
 --
@@ -441,16 +504,6 @@ DefineAnimations("animations-building", {
   Research = BuildingStill,
   Train = BuildingStill,
   Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
-})
-
-DefineAnimations("animations-farm", {
-  Still = BuildingStill,
-  Research = BuildingStill,
-  Train = BuildingStill,
-  Death = {"unbreakable begin", "random-goto 50 end", "random-goto 50 drop_cheese", "goto drop_carrots",
-  "label drop_cheese", "spawn-unit unit-cheese 0 0 5 15", "goto end",
-  "label drop_carrots", "spawn-unit unit-carrots 0 0 5 15", "goto end",
-  "label end", "unbreakable end", "wait 1",}
 })
 
 DefineAnimations("animations-gold-mine", {
@@ -818,10 +871,7 @@ DefineAnimations("animations-barrel", {
 	Still = BuildingStill,
 	Death = {"unbreakable begin",
 	"frame 1", "wait 3", "frame 2", "wait 3", "frame 3", "wait 3", "frame 4", "wait 3", "frame 5", "wait 100", "frame 5", 
-	"random-goto 66 end", "random-goto 66 drop_potion_of_healing", "goto drop_potion_of_decay",
-	"label drop_potion_of_healing", "spawn-unit unit-potion-of-healing 0 0 5 15", "goto end",
-	"label drop_potion_of_decay", "spawn-unit unit-potion-of-decay 0 0 5 15", "goto end",
-	"label end", "unbreakable end", "wait 1",}
+	"unbreakable end", "wait 1",}
 })
 
 DefineAnimations("animations-door", {

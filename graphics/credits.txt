@@ -207,6 +207,7 @@ b_o:
 /graphics/neutral/units/slime_small_brown.png
 /graphics/neutral/units/slime_small_red.png
 /graphics/neutral/units/slime_small_teal.png
+/graphics/neutral/units/snail.png
 /graphics/neutral/units/wyrm.png
 /graphics/neutral/units/wyrm_blue_scales.png
 /graphics/neutral/units/wyrm_cyan_scales.png
@@ -235,6 +236,8 @@ b_o:
 /graphics/tilesets/swamp/neutral/decorations/large_flower.png
 /graphics/ui/Credits_background.png
 /graphics/ui/goblin_swordsman.png
+/graphics/ui/slow.png
+/graphics/ui/status_effect_icons.png
 
 Battle for Wesnoth Team:
 /graphics/goblin/icons/spear_1.png (later modified by b_o and Jinn)

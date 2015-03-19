@@ -104,6 +104,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Clicking on heroes no longer displays the "You have [...]" in the statusline.
 - Added Marbod (teuton) (icon by Jinn).
 
+* Items
+- Added Potion of Slowness (graphics by b_o).
+
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
 - Added Belfort map.
@@ -181,7 +184,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fauna will no longer be generated in positions close to settled areas.
 - Killing fauna now yields experience points.
 - Fixed bug which caused dead units who don't have corpse units defined to appear at the wrong draw level.
-- Added bee unit (graphics by b_o).
+- Added Bee unit (graphics by b_o).
 - Added table, chair, shelf and bed decoration units (graphics by b_o).
 - The names of resources are now properly capitalized in the unit display.
 - The Goblin Spearman now costs lumber, and so does (to a lesser extent) the Dwarven Axefighter.
@@ -189,6 +192,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed erroneous message about supply when upgrading units.
 - Added Dwarven Yale Rider (graphics by b_o).
 - Fauna will now feed on the appropriate sorts of food.
+- Rats now have increased movement speed.
+- Added Snail (graphics by b_o).
+- The Gnomish Herbalist's Herbal Cure ability now costs less mana to cast.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

@@ -260,7 +260,7 @@ DefineUnitType("unit-germanic-farm", { Name = _("Farm"),
 	Description = _("Farms are essential for supporting a settlement's population."),
 	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
 	Image = {"file", "germanic/buildings/farm.png", "size", {64, 64}},
-	Animations = "animations-farm", Icon = "icon-germanic-farm"
+	Icon = "icon-germanic-farm"
 } )
 
 DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
