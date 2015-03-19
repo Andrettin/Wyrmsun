@@ -140,6 +140,7 @@ b_o:
 /graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/inner_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
 /graphics/neutral/decorations/log.png
+/graphics/neutral/decorations/miasma.png
 /graphics/neutral/decorations/mushroom.png
 /graphics/neutral/decorations/mushrooms.png
 /graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)

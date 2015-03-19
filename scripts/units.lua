@@ -728,6 +728,7 @@ DefineUnitType("unit-snail", { Name = _("Snail"),
 	Fauna = true,
 	Insect = true,
 	Herbivore = true,
+	Detritivore = true,
 	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
@@ -2267,7 +2268,6 @@ DefineUnitType("unit-cheese", { Name = _("Cheese"),
 	NumDirections = 1,	
 	Item = true,
 	HitPointHealing = 3,
-	Food = true,
 	Sounds = {} } )
 
 DefineUnitType("unit-carrots", { Name = _("Carrots"),
@@ -2285,7 +2285,6 @@ DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	NumDirections = 1,	
 	Item = true, 
 	HitPointHealing = 3,
-	Food = true,
 	Vegetable = true,
 	Sounds = {} } )
 

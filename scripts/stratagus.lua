@@ -655,8 +655,6 @@ function StandardTriggers()
 								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Slows") and GetUnitVariable(nearby_uncount[unit2], "Slow") == 0 and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low") then
 									SetUnitVariable(nearby_uncount[unit2], "Slow", 1000)
 									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Food") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Fauna") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Insect") == false) then -- make animals eat food items
-									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
 								end
 							end
 							break
