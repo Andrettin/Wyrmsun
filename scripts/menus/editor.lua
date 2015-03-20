@@ -130,6 +130,7 @@ editor_types = {
 
    "unit-bug",
    "unit-snail",
+   "unit-slug",
    "unit-bee",
    "unit-fly",
    "unit-rat",

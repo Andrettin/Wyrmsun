@@ -35,6 +35,8 @@ Battle for Wesnoth Team:
 /sounds/missiles/spear-2.wav
 /sounds/missiles/spear-miss.wav
 /sounds/missiles/squishy_hit.wav
+/sounds/missiles/squishy_miss.wav
+/sounds/missiles/squishy_strike.wav
 /sounds/missiles/sword.wav
 /sounds/missiles/throwing_axe_hit.wav
 /sounds/neutral/bird/birds1.wav

@@ -56,7 +56,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	"unit-teuton-swordsman", "unit-teuton-archer",
 	"unit-teuton-catapult", 
 	"unit-hero-marbod",
-	"unit-rat",
+	"unit-slug", "unit-rat",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
 	"dwarf-group", "germanic-group", "teuton-group"} } )
 
@@ -74,7 +74,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
 	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 	"unit-hero-greebo",
- 	"unit-rat",
+ 	"unit-slug", "unit-rat",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
  	"dwarf-group"} } )
 
@@ -113,7 +113,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-durin", "unit-hero-durin-thane", 
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-	"unit-rat",
+	"unit-slug", "unit-rat",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
 	"dwarf-group"} } )
 

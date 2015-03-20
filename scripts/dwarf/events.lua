@@ -161,7 +161,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"Fjalar",
-				"We brew his remains into mead, to absorb his ancient wisdom and gift for poetry.",
+				"We brew his blood into mead, to absorb his ancient wisdom and gift for poetry.",
 				player,
 				{"~!Continue"},
 				{function(s)

@@ -267,6 +267,24 @@ DefineAnimations("animations-snail", {
 })
 
 --
+-- Slug
+--
+
+local SlugAttack = {
+	"unbreakable begin",
+  	"frame 0", "wait 3", "frame 5", "wait 3", "frame 10", "wait 3",
+  	"frame 15", "attack", "wait 5", "frame 20", "wait 10", "frame 20",
+	"unbreakable end", "wait 1",
+}
+ 
+DefineAnimations("animations-slug", {
+  Still = UnitStill,
+  Move = SnailMove,
+  Attack = SlugAttack,
+  Death = SnailDeath,
+})
+
+--
 -- Yale
 --
  

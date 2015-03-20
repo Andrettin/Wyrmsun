@@ -62,7 +62,7 @@ DefineMissileType("missile-catapult-flaming-rock",
   
 DefineMissileType("missile-slime-glob",
   { File = "missiles/slime_glob.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
-  ImpactSound = "squishy-hit",
+  ImpactSound = "squishy-attack",
   DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
   ImpactMissile = "missile-impact-slime", SplashFactor = 4 } )
   

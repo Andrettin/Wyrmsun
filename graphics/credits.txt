@@ -208,6 +208,8 @@ b_o:
 /graphics/neutral/units/slime_small_brown.png
 /graphics/neutral/units/slime_small_red.png
 /graphics/neutral/units/slime_small_teal.png
+/graphics/neutral/units/slug.png
+/graphics/neutral/units/slug_player_color.png
 /graphics/neutral/units/snail.png
 /graphics/neutral/units/wyrm.png
 /graphics/neutral/units/wyrm_blue_scales.png

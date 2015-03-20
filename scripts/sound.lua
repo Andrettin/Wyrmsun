@@ -283,8 +283,11 @@ MakeSound("spear-attack",
 MakeSound("spear-miss",
 	"missiles/spear-miss.wav"
 )
-MakeSound("squishy-hit",
-	"missiles/squishy_hit.wav"
+MakeSound("squishy-attack",
+	"missiles/squishy_strike.wav"
+)
+MakeSound("squishy-miss",
+	"missiles/squishy_miss.wav"
 )
 MakeSound("sword-attack",
 	"missiles/sword.wav"
@@ -342,7 +345,7 @@ MakeSound("gryphon-dead", {
 	"neutral/gryphon/gryphon_death_1.wav",
 	"neutral/gryphon/gryphon_death_2.wav"
 })
-MakeSound("slime-dead", "neutral/squishy_death.wav")
+MakeSound("squishy-hit", "neutral/squishy_hit.wav")
 MakeSound("bird-selected", {
 	"neutral/bird/birds1.wav",
 	"neutral/bird/birds2.wav",

@@ -219,7 +219,7 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
 	Parent = "unit-template-barracks",
 	Civilization = "goblin",
-	Description = _("The mess hall is where the goblin warriors gather to hone their skills and to plan raids on other settlements."),
+	Description = _("Within mess halls goblin warriors gather to hone their skills and plan raids on nearby settlements."),
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-mess-hall"
 } )
