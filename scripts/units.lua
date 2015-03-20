@@ -2309,6 +2309,7 @@ DefineUnitType("unit-cheese", { Name = _("Cheese"),
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
+	Dairy = true,
 	HitPointHealing = 3,
 	Sounds = {} } )
 
