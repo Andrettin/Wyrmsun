@@ -216,6 +216,7 @@ b_o:
 /graphics/neutral/units/slug_purple.png
 /graphics/neutral/units/slug_teal.png
 /graphics/neutral/units/slug_violet.png
+/graphics/neutral/units/slug_yellow.png
 /graphics/neutral/units/snail.png
 /graphics/neutral/units/snail_blue_purple_shell.png
 /graphics/neutral/units/snail_green_purple_shell.png

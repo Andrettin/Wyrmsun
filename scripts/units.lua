@@ -779,13 +779,17 @@ DefineUnitType("unit-slug", { Name = _("Slug"),
 		},
 		{
 			"variation-id", "green"
-		}
+		},
 		--[[
 		{
 			"variation-id", "teal",
 			"file", "neutral/units/slug_teal.png"
 		}
 		--]]
+		{
+			"variation-id", "yellow",
+			"file", "neutral/units/slug_yellow.png"
+		}
 	},
 	Sounds = {
 		"selected", "click",
