@@ -129,6 +129,7 @@ editor_types = {
    "unit-scepter-of-fire",
 
    "unit-bug",
+   "unit-worm",
    "unit-snail",
    "unit-slug",
    "unit-bee",

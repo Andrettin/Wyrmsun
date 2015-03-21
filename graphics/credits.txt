@@ -224,6 +224,7 @@ b_o:
 /graphics/neutral/units/snail_purple_blue_shell.png
 /graphics/neutral/units/snail_purple_brown_shell.png
 /graphics/neutral/units/snail_teal_green_shell.png
+/graphics/neutral/units/worm.png
 /graphics/neutral/units/wyrm.png
 /graphics/neutral/units/wyrm_blue_scales.png
 /graphics/neutral/units/wyrm_cyan_scales.png

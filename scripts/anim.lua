@@ -157,7 +157,25 @@ DefineAnimations("animations-melee-unit", {
 -- Rat
 --
 
-local RatMove = {"unbreakable begin",
+local RatDeath = {"unbreakable begin",
+	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
+	"unbreakable end", "wait 1",}
+
+DefineAnimations("animations-rat", {
+  Still = UnitStill,
+  Move = UnitMove,
+  Attack = {"unbreakable begin",
+	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
+	"unbreakable end", "wait 1",},
+  Death = RatDeath,
+})
+
+--
+-- Worm
+--
+
+local WormMove = {"unbreakable begin",
 	"if-var v.Speed.Value <= 3 speed_3",
 	"if-var v.Speed.Value >= 4 speed_4",
 	"label speed_3", -- 16 / (3 / 10) = c. 53 waits
@@ -199,13 +217,10 @@ local RatMove = {"unbreakable begin",
 	"frame 15", "move 1", "wait 2", "frame 20", "move 1", "wait 1",
 	"frame 20", "move 1", "wait 1", "frame 0", "goto end",
 	"label end", "unbreakable end", "wait 1",}
-local RatDeath = {"unbreakable begin",
-	"frame 45", "wait 3", "frame 50", "wait 3", "frame 55", "wait 100", "frame 55",
-	"unbreakable end", "wait 1",}
 
-DefineAnimations("animations-rat", {
+DefineAnimations("animations-worm", {
   Still = UnitStill,
-  Move = UnitMove,
+  Move = WormMove,
   Attack = {"unbreakable begin",
 	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
 	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
