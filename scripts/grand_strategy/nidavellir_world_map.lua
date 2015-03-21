@@ -80,7 +80,7 @@ if (GrandStrategyYear >= -3000) then
 end
 
 if (GrandStrategyYear >= -2970) then -- estimated date
-	GrandStrategyEvents.TheMeadOfPoetry = nil -- should be placed at an earlier date
+	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin = 0
 	GrandStrategyEvents.DurinDies = nil
 end

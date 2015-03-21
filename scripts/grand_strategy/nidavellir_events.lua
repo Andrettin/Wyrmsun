@@ -55,8 +55,8 @@ local NidavellirEvents = {
 			end
 		}
 	},
-	TheMeadOfPoetry = {
-		Name = "The Mead of Poetry",
+	TheMeadOfWisdom = {
+		Name = "The Mead of Wisdom",
 		Description = "Word has reached our chieftain Modsognir that the dwarves Fjalar and Galar have slain our wise clansman Thjodrorir. Modsognir's advisors suggest sending Durin to enter the two dwarves' hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
 		Heroes = {
 			unit_hero_durin = true

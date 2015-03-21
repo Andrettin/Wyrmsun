@@ -134,7 +134,7 @@ function HandleCheats(str)
       SetUnitMana(t[i], 255)
     end
 
-  elseif (str == "mead of poetry") then
+  elseif (str == "mead of wisdom") then
 	AddMessage("All Technologies Allowed")
 	for i, unitName in ipairs(Units) do
 		for j=0,15 do

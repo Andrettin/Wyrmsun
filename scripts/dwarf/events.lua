@@ -28,7 +28,7 @@
 --
 
 if (mapinfo.description == "Fjalar's and Galar's Hall") then
--- The Mead of Poetry initial dialogue
+-- The Mead of Wisdom initial dialogue
 -- based on the Norse myth of similar name
 --[[
 AddTrigger(
@@ -61,7 +61,7 @@ AddTrigger(
 				{function(s)
 				Event(
 					"Fjalar",
-					"Slaying the wise dwarf and brewing his blood into mead... a mead of poetry. The alchemical writings are clear: to drink such a mead would make us sages.",
+					"Slaying the wise dwarf and brewing his blood into mead... a mead of wisdom. The alchemical writings are clear: to drink such a mead would make us sages.",
 					player,
 					{"~!Continue"},
 					{function(s)
@@ -161,7 +161,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"Fjalar",
-				"We brew his blood into mead, to absorb his ancient wisdom and gift for poetry.",
+				"We brew his blood into mead, to absorb his ancient wisdom and gift with words.",
 				player,
 				{"~!Continue"},
 				{function(s)
@@ -222,8 +222,8 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Wisdom") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
 						end
 						SavePreferences()
 					end

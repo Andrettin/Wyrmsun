@@ -1354,6 +1354,11 @@ function BuildProgramStartMenu()
   menu:add(wyrmsun_logo_widget, Video.Width / 2 - (wyrmsun_logo_widget:getWidth() / 2), 0)
   menu:addLabel("v" .. wyrmsun.Version, Video.Width / 2 + (wyrmsun_logo_widget:getWidth() * 7 / 16), wyrmsun_logo_widget:getHeight() * 3 / 4)
   
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry")) then
+		RemoveElementFromArray(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
+		table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
+	end
+	
   if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
   	-- changes to the player's persistent data to update it to the latest game version should be done here
 	
@@ -1364,8 +1369,8 @@ function BuildProgramStartMenu()
 		wyr.preferences.GrandStrategySaveGames = nil
 		SavePreferences()
 	end
-	
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and wyr.preferences.LastVersionPlayed ~= "0.1.6" and wyr.preferences.LastVersionPlayed ~= "0.1.7" and wyr.preferences.LastVersionPlayed ~= "0.1.8" and wyr.preferences.LastVersionPlayed ~= "1.0.0" and wyr.preferences.LastVersionPlayed ~= "1.0.1") then
+
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and tonumber(string.sub(wyr.preferences.LastVersionPlayed, ".", "")) < 16) then
 		wyr.preferences.Heroes.Rugnur.upgrades = nil
 		wyr.preferences.Heroes.Rugnur.upgrades = {}
 		wyr.preferences.Heroes.Baglur.upgrades = nil
@@ -1397,6 +1402,7 @@ function BuildProgramStartMenu()
 			end)
 		warning_menu:run()
 	end
+	
 	wyr.preferences.LastVersionPlayed = wyrmsun.Version
 	SavePreferences()
   end
