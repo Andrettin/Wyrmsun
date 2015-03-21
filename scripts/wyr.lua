@@ -69,6 +69,10 @@ function ConvertUnitType(unittype, civilization, terrain)
 	if (civilization ~= GetUnitTypeData(unittype, "Civilization") and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization) ~= nil) then
 		return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization)
 	end
+	
+	if (civilization ~= GetUnitTypeData(unittype, "Civilization") and civilization == "germanic" and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), "teuton") ~= nil) then
+		return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), "teuton")
+	end
 
 	return unittype
 end
@@ -233,54 +237,69 @@ function SetPlayerData(player, data, arg1, arg2)
 
 	-- If this is 1 worker mode add the worker now
 	if (data == "RaceName") then
-		if (GameSettings.NumUnits == 1) then -- 1 Worker
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
-				local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+		if (GameCycle == 0) then
+			if (GameSettings.NumUnits == 1) then -- 1 Worker
+				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+					local unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				end
+			elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
+				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+					local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				end
+			elseif (GameSettings.NumUnits == 3) then -- Basic Squad
+				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				end
+			elseif (GameSettings.NumUnits == 4) then -- Improved Squad
+				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				end
+			elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
+				if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
+					local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+					unittype = ConvertUnitType("unit-dwarven-ballista", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+				end
 			end
-		elseif (GameSettings.NumUnits == 2) then -- Town Hall and 5 Workers
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
-				local unittype = ConvertUnitType("unit-dwarven-town-hall", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unittype = ConvertUnitType("unit-dwarven-miner", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-			end
-		elseif (GameSettings.NumUnits == 3) then -- Basic Squad
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
-				local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-			end
-		elseif (GameSettings.NumUnits == 4) then -- Improved Squad
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
-				local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-			end
-		elseif (GameSettings.NumUnits == 5) then -- Advanced Squad
-			if (player ~= 15 and Players[player].Type ~= PlayerNobody and Players[player].Type ~= PlayerNeutral) then
-				local unittype = ConvertUnitType("unit-dwarven-axefighter", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unittype = ConvertUnitType("unit-dwarven-scout", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-				unittype = ConvertUnitType("unit-dwarven-ballista", GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-				OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+			if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
+				if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
+					if (Players[player].Type == PlayerPerson) then
+						SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
+					elseif (Players[player].Type == PlayerComputer) then
+						if (GrandStrategyFaction.Name == Attacker) then
+							SetPlayerData(player, "Faction", Defender)
+						elseif (GrandStrategyFaction.Name == Defender) then
+							SetPlayerData(player, "Faction", Attacker)
+						end
+					end
+				end
 			end
 		end
 		-- load different UIs depending on player civilization at scenario begin; FIXME: should be possible to change UIs in-game
@@ -297,19 +316,6 @@ function SetPlayerData(player, data, arg1, arg2)
 				Load("scripts/kobold/ui.lua")
 			elseif (arg1 == "teuton") then
 				Load("scripts/teuton/ui.lua")
-			end
-		end
-		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
-			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
-				if (Players[player].Type == PlayerPerson) then
-					SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
-				elseif (Players[player].Type == PlayerComputer) then
-					if (GrandStrategyFaction.Name == Attacker) then
-						SetPlayerData(player, "Faction", Defender)
-					elseif (GrandStrategyFaction.Name == Defender) then
-						SetPlayerData(player, "Faction", Attacker)
-					end
-				end
 			end
 		end
 	elseif (data == "Name") then

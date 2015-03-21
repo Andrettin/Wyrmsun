@@ -772,6 +772,61 @@ DefineUnitType("unit-slug", { Name = _("Slug"),
 	Herbivore = true,
 	Detritivore = true,
 	ChildUpgrade = "upgrade-bee-child",
+	Variations = {
+		{
+			"variation-id", "brown",
+			"file", "neutral/units/slug_brown.png"
+		},
+		{
+			"variation-id", "green"
+		}
+		--[[
+		{
+			"variation-id", "teal",
+			"file", "neutral/units/slug_teal.png"
+		}
+		--]]
+	},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "bird-selected",
+--		"ready", "bird-selected",
+--		"help", "critter-help",
+		"dead", "squishy-hit",
+		"hit", "squishy-attack",
+		"miss", "squishy-miss"
+	}
+} )
+
+DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
+	Image = {"file", "neutral/units/snail_blue_purple_shell.png", "size", {32, 32}},
+	Animations = "animations-snail", Icon = "icon-rat",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 1,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {15, 15},
+	SightRange = 2, ComputerReactionRange = 2, PersonReactionRange = 2,
+	BasicDamage = 1, Missile = "missile-none",
+	Accuracy = 15,
+	Evasion = 15,
+	MaxAttackRange = 1,
+	Priority = 5,
+	Points = 1,
+	Demand = 1,
+	Type = "land",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+--	CanAttack = true,
+--	CanTargetLand = true,
+	RandomMovementProbability = 1,
+	organic = true,
+	Coward = true,
+	Fauna = true,
+	Insect = true,
+	Herbivore = true,
+	Detritivore = true,
+	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -2194,7 +2249,16 @@ DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
 	IsNotSelectable = true,
 	Decoration = true,
 	NonSolid = true,
-	Detritus = true
+	Detritus = true,
+	Variations = {
+		{
+			"variation-id", "brown"
+		},
+		{
+			"variation-id", "green",
+			"file", "neutral/decorations/yale_excrement_green.png"
+		}
+	}
 } )
 
 DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),

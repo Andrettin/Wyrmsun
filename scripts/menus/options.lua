@@ -27,6 +27,108 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+function RunGameVideoOptionsMenu()
+  local menu = WarGameMenu(panel(1))
+  local resolution_width_list
+  local resolution_height_list
+  local resolution_width = Video.Width
+  local resolution_height = Video.Height
+  local offx = 0
+  local offy = 0
+
+  menu:addLabel(_("Video Options"), 128, 11)
+
+  menu:addLabel(_("Resolution Width"), offx + (256 / 2 - (152  / 2)), offy + 34, Fonts["game"], false)
+  resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*0,
+    function(dd)
+    	if (resolution_width_list:getSelected() == 0) then
+    		resolution_width = 640
+    	elseif (resolution_width_list:getSelected() == 1) then
+    		resolution_width = 800
+    	elseif (resolution_width_list:getSelected() == 2) then
+    		resolution_width = 1024
+    	elseif (resolution_width_list:getSelected() == 3) then
+    		resolution_width = 1280
+    	elseif (resolution_width_list:getSelected() == 4) then
+    		resolution_width = 1360
+    	elseif (resolution_width_list:getSelected() == 5) then
+    		resolution_width = 1366
+    	elseif (resolution_width_list:getSelected() == 6) then
+    		resolution_width = 1400
+    	elseif (resolution_width_list:getSelected() == 7) then
+    		resolution_width = 1600
+    	elseif (resolution_width_list:getSelected() == 8) then
+    		resolution_width = 1680
+    	end
+    end)
+  resolution_width_list:setSize(152, 20)
+  if (Video.Width == 640) then
+  	resolution_width_list:setSelected(0)
+  elseif (Video.Width == 800) then
+    	resolution_width_list:setSelected(1)
+  elseif (Video.Width == 1024) then
+    	resolution_width_list:setSelected(2)
+  elseif (Video.Width == 1280) then
+    	resolution_width_list:setSelected(3)
+  elseif (Video.Width == 1360) then
+    	resolution_width_list:setSelected(4)
+  elseif (Video.Width == 1366) then
+    	resolution_width_list:setSelected(5)
+  elseif (Video.Width == 1400) then
+    	resolution_width_list:setSelected(6)
+  elseif (Video.Width == 1600) then
+    	resolution_width_list:setSelected(7)
+  elseif (Video.Width == 1680) then
+    	resolution_width_list:setSelected(8)
+  end
+
+  menu:addLabel(_("Resolution Height"), offx + (256 / 2 - (152  / 2)), offy + 34 + 26*2, Fonts["game"], false)
+  resolution_height_list = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*2,
+    function(dd)
+    	if (resolution_height_list:getSelected() == 0) then
+    		resolution_height = 480
+    	elseif (resolution_height_list:getSelected() == 1) then
+    		resolution_height = 600
+    	elseif (resolution_height_list:getSelected() == 2) then
+    		resolution_height = 768
+    	elseif (resolution_height_list:getSelected() == 3) then
+    		resolution_height = 800
+    	elseif (resolution_height_list:getSelected() == 4) then
+    		resolution_height = 960
+    	elseif (resolution_height_list:getSelected() == 5) then
+    		resolution_height = 1024
+    	elseif (resolution_height_list:getSelected() == 6) then
+    		resolution_height = 1050
+    	end
+    end)
+  resolution_height_list:setSize(152, 20)
+  if (Video.Height == 480) then
+  	resolution_height_list:setSelected(0)
+  elseif (Video.Height == 600) then
+  	resolution_height_list:setSelected(1)
+  elseif (Video.Height == 768) then
+  	resolution_height_list:setSelected(2)
+  elseif (Video.Height == 800) then
+  	resolution_height_list:setSelected(3)
+  elseif (Video.Height == 960) then
+  	resolution_height_list:setSelected(4)
+  elseif (Video.Height == 1024) then
+  	resolution_height_list:setSelected(5)
+  elseif (Video.Height == 1050) then
+  	resolution_height_list:setSelected(6)
+  end
+
+  menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
+    function()
+		SetVideoSize(resolution_width, resolution_height)
+		SetPlayerData(GetThisPlayer(), "RaceName", GetPlayerData(GetThisPlayer(), "RaceName"))
+		SavePreferences()
+		menu:stop()
+    end)
+
+  menu:run(false)
+end
+
 function AddSoundOptions(menu, offx, offy, centerx, bottom)
   local b
 
@@ -502,6 +604,8 @@ function RunGameOptionsMenu()
   local menu = WarGameMenu(panel(1))
 
   menu:addLabel(_("Game Options"), 128, 11)
+--  menu:addFullButton(_("~!Video"), "v", 16, 40 + 36*0,
+--    function() RunGameVideoOptionsMenu() end)
   menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16, 40 + 36*0,
     function() RunGameSoundOptionsMenu() end)
   menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16, 40 + 36*1,
