@@ -635,12 +635,20 @@ if (GrandStrategyYear >= -14) then -- Region around Byzantium acquired by Rome i
 	WorldMapProvinces.Thrace.Owner = "Rome"
 end
 
-if (GrandStrategyYear >= -9) then -- Maroboduus, king of the Suebic tribe of the Marcomanni, conquers Bohemia
+if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
+	GrandStrategyEvents.MarbodReturns = nil -- should happen earlier
+	GrandStrategyEvents.TheHomeOfTheBoii = nil
 	WorldMapProvinces.Bohemia.Owner = "Marcomanni Tribe"
 	WorldMapProvinces.Bohemia.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Bohemia.Civilization = "teuton"
 	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
+	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
 	AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+end
+
+if (GrandStrategyYear >= 19) then
+	GrandStrategyEvents.MarbodDeposed = nil
+	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 0
 end
 
 if (GrandStrategyYear >= 3) then -- estimated date

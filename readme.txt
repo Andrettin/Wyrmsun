@@ -98,6 +98,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The grand strategy map now scrolls by half a tile, instead of by a whole tile.
 - The grand strategy map now continuously scrolls when pressing an arrow button.
 - In the "Westward Migration" event, if the player refuses to migrate, now a portion of the tribe will split off and migrate.
+- Added events related to The Home of the Boii quest and Marbod.
 
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).

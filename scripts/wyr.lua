@@ -304,19 +304,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		end
 		-- load different UIs depending on player civilization at scenario begin; FIXME: should be possible to change UIs in-game
 		if (player == GetThisPlayer()) then
-			if (arg1 == "dwarf") then
-				Load("scripts/dwarf/ui.lua")
-			elseif (arg1 == "germanic") then
-				Load("scripts/germanic/ui.lua")
-			elseif (arg1 == "gnome") then
-				Load("scripts/gnome/ui.lua")
-			elseif (arg1 == "goblin") then
-				Load("scripts/goblin/ui.lua")
-			elseif (arg1 == "kobold") then
-				Load("scripts/kobold/ui.lua")
-			elseif (arg1 == "teuton") then
-				Load("scripts/teuton/ui.lua")
-			end
+			LoadCivilizationUI(arg1)
 		end
 	elseif (data == "Name") then
 		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
@@ -342,6 +330,22 @@ function SetPlayerData(player, data, arg1, arg2)
 				end
 			end
 		end
+	end
+end
+
+function LoadCivilizationUI(civilization)
+	if (civilization == "dwarf") then
+		Load("scripts/dwarf/ui.lua")
+	elseif (civilization == "germanic") then
+		Load("scripts/germanic/ui.lua")
+	elseif (civilization == "gnome") then
+		Load("scripts/gnome/ui.lua")
+	elseif (civilization == "goblin") then
+		Load("scripts/goblin/ui.lua")
+	elseif (civilization == "kobold") then
+		Load("scripts/kobold/ui.lua")
+	elseif (civilization == "teuton") then
+		Load("scripts/teuton/ui.lua")
 	end
 end
 

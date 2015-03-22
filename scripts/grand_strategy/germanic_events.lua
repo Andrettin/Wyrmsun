@@ -915,6 +915,120 @@ local GermanicEvents = {
 			end
 		}
 	},
+	MarbodReturns = {
+		Name = "Marbod Returns",
+		Description = "After spending long years abroad, Marbod has finally returned to lead the Suebic tribe of the Marcomanni.",
+		Conditions = function(s)
+			if (
+				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
+				WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -9,
+		MaxYear = -9 + 30, -- estimated death date
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 2
+			end
+		}
+	},
+	TheHomeOfTheBoii = {
+		Name = "The Home of the Boii",
+		Description = "Worried about the Roman presence on the Rhine, Marbod wishes to take the Marcomanni into the lands of the Boii and to establish a kingdom there, splitting off from the rest of the Suebi.",
+		Heroes = {
+			unit_hero_marbod = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Suebi Tribe"
+				and WorldMapProvinces.Bohemia.Owner == "Boii Tribe"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK", "Play as the ~!Marcomanni"},
+		OptionEffects = {
+			function(s)
+				AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
+				for i, unitName in ipairs(Units) do
+					if (IsMilitaryUnit(unitName)) then
+						WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2)
+						WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2
+					end
+				end
+				WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
+				WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
+				AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+				ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
+			end,
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/earth/prague.smp")
+					RunMap("maps/earth/prague.smp")
+					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
+						for i, unitName in ipairs(Units) do
+							if (IsMilitaryUnit(unitName)) then
+								WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							elseif (IsHero(unitName)) then
+								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+									WorldMapProvinces.Bohemia.Heroes[string.gsub(unitName, "-", "_")] = 2
+								end
+							end
+						end
+						CenterMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
+						AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+						ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
+						GrandStrategyFaction = Factions.MarcomanniTribe
+					elseif (GameResult == GameDefeat) then
+						for i, unitName in ipairs(Units) do
+							if (IsMilitaryUnit(unitName)) then
+								WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							end
+						end
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Suebi Tribe") then
+					AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2)
+							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2
+						end
+					end
+					WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
+					WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
+					ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
+					AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+				end
+			end
+		}
+	},
+	MarbodDeposed = {
+		Name = "Marbod Deposed",
+		Description = "Catualda, a Marcomanni noble who had been expelled from our lands by Marbod, has returned to Bohemia with an army behind him, yearning for revenge. The tribe's notables made a compact with him, making the deposition of Marbod a foregone conclusion.",
+		Heroes = {
+			unit_hero_marbod = true
+		},
+		MinYear = 19,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				for province_i, key in ipairs(EventFaction.OwnedProvinces) do
+					WorldMapProvinces[key].Heroes.unit_hero_marbod = 0
+				end
+			end
+		}
+	},
 	HistoriaEcclesiasticaVenerabilisBedae = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
 		Name = "Historia Ecclesiastica Venerabilis Bedae",
 		Description = "The venerable Bede has written an important work of history, the Historia Ecclesiastica Venerabilis Bedae.",

@@ -348,6 +348,7 @@ function RunGrandStrategyGameSetupMenu()
 --					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 --					"700 BC", -- 
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
+--					"10 BC",
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
 --					"1660 AD", -- 
 				}

@@ -121,7 +121,7 @@ function RunGameVideoOptionsMenu()
   menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
     function()
 		SetVideoSize(resolution_width, resolution_height)
-		SetPlayerData(GetThisPlayer(), "RaceName", GetPlayerData(GetThisPlayer(), "RaceName"))
+		LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName"))
 		SavePreferences()
 		menu:stop()
     end)
@@ -604,7 +604,7 @@ function RunGameOptionsMenu()
   local menu = WarGameMenu(panel(1))
 
   menu:addLabel(_("Game Options"), 128, 11)
---  menu:addFullButton(_("~!Video"), "v", 16, 40 + 36*0,
+--  menu:addFullButton(_("~!Video"), "v", 16, 40 + 34*0,
 --    function() RunGameVideoOptionsMenu() end)
   menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16, 40 + 36*0,
     function() RunGameSoundOptionsMenu() end)
