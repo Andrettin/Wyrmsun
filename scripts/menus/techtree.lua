@@ -78,16 +78,12 @@ function RunTechTreeMenu(civilization_number)
 		end
 		tech_description = tech_description .. GetTechnologyAllowsString(unit, civilization)
 		techicon_graphics = string.sub(techicon_graphics, 0, -5)
-		local techicon
 		local b
-		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) or GetTechnologyPointCost("", unit) <= 0) then
-			techicon = CPlayerColorGraphic:New(techicon_graphics .. ".png")
-			techicon:Load()
-			b = PlayerColorImageButton("", playercolor)
-		else
-			techicon = CGraphic:New(techicon_graphics .. "_transparent.png")
-			techicon:Load()
-			b = ImageButton("")
+		local techicon = CPlayerColorGraphic:New(techicon_graphics .. ".png")
+		techicon:Load()
+		b = PlayerColorImageButton("", playercolor)
+		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and GetTechnologyPointCost("", unit) > 0) then
+			b:setTransparency(66)
 		end
 		b:setActionCallback(
 			function()

@@ -51,14 +51,12 @@ function RunAchievementsMenu()
 end
 
 function addAchievementIcon(achievement, menu, achievementicon_graphics, achievement_description, x, y)
-	local achievementicon
-	if (GetArrayIncludes(wyr.preferences.AchievementsCompleted, achievement)) then
-		achievementicon = CGraphic:New(achievementicon_graphics .. ".png")
-	else
-		achievementicon = CGraphic:New(achievementicon_graphics .. "_transparent.png")
-	end
+	local achievementicon = CGraphic:New(achievementicon_graphics .. ".png")
 	achievementicon:Load()
 	local b = ImageButton("")
+	if (GetArrayIncludes(wyr.preferences.AchievementsCompleted, achievement) == false) then
+		b:setTransparency(66)
+	end
 --	b:setHotKey("")
 	b:setActionCallback(
 		function()
