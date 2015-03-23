@@ -134,6 +134,78 @@ MakeSound("yale-rider-acknowledge", {
 })
 
 ------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+--	Define simple gnome sounds.
+--
+MakeSound("basic-gnome-voices-ready", "gnome/basic_voices/gnome_ready.wav")
+MakeSound("basic-gnome-voices-selected", {
+	"gnome/basic_voices/selected-01.wav",
+	"gnome/basic_voices/selected-02.wav",
+	"gnome/basic_voices/selected-03.wav",
+	"gnome/basic_voices/selected-04.wav"
+})
+MakeSound("basic-gnome-voices-annoyed", {
+	"gnome/worker/annoy01.wav",
+	"gnome/worker/annoy02.wav",
+	"gnome/worker/annoy03.wav",
+	"gnome/worker/annoy04.wav",
+	"gnome/worker/annoy05.wav",
+	"gnome/worker/annoy06.wav",
+	"gnome/worker/annoy07.wav",
+	"gnome/worker/annoy08.wav",
+	"gnome/worker/annoy09.wav",
+	"gnome/worker/annoy10.wav",
+	"gnome/worker/annoy11.wav"
+})
+MakeSoundGroup("basic-gnome-voices-selected-group",
+	"basic-gnome-voices-selected", "basic-gnome-voices-annoyed")
+MakeSound("basic-gnome-voices-acknowledge", {
+	"gnome/basic_voices/acknowledge-1.wav",
+	"gnome/basic_voices/acknowledge-2.wav",
+	"gnome/basic_voices/acknowledge-3.wav"
+})
+
+------------------------------------------------------------------------------
+--	Define unit-specific gnome sounds.
+--
+MakeSound("gnomish-recruit-annoyed", {
+	"gnome/recruit/annoy01.wav",
+	"gnome/recruit/annoy02.wav",
+	"gnome/recruit/annoy03.wav",
+	"gnome/recruit/annoy04.wav",
+	"gnome/recruit/annoy05.wav",
+	"gnome/recruit/annoy06.wav"
+})
+ 
+MakeSoundGroup("gnomish-recruit-selected-group",
+	"basic-gnome-voices-selected", "gnomish-recruit-annoyed")
+ 
+ 
+MakeSound("gnomish-herbalist-annoyed", {
+	"gnome/herbalist/annoy01.wav",
+	"gnome/herbalist/annoy02.wav",
+	"gnome/herbalist/annoy03.wav",
+	"gnome/herbalist/annoy04.wav",
+	"gnome/herbalist/misc/annoy01.wav",
+	"gnome/herbalist/misc/annoy02.wav",
+	"gnome/herbalist/misc/annoy03.wav",
+	"gnome/herbalist/misc/annoy04.wav",
+	"gnome/herbalist/misc/annoy05.wav",
+	"gnome/herbalist/misc/annoy06.wav",
+	"gnome/herbalist/misc/annoy07.wav",
+	"gnome/herbalist/misc/annoy08.wav",
+	"gnome/herbalist/misc/annoy09.wav",
+	"gnome/herbalist/misc/annoy10.wav"
+})
+ 
+MakeSoundGroup("gnomish-herbalist-selected-group",
+	"basic-gnome-voices-selected", "gnomish-herbalist-annoyed")
+	
+MakeSound("gnomish-worker-ready", "gnome/worker/scavenger_ready.wav")
+MakeSound("gnomish-recruit-ready", "gnome/recruit/recruit_ready.wav")
+MakeSound("gnomish-herbalist-ready", "gnome/herbalist/herbalist_ready05.wav")
+
+------------------------------------------------------------------------------
 --	Define simple goblin sounds.
 --
 MakeSound("basic-goblin-voices-selected", {

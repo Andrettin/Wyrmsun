@@ -218,6 +218,7 @@ pip-log.txt
 ## Wyrmsun Preferences and other User Data
 #################
 ## Ignore temporary files and user data
+crash.dmp
 mods/
 wyr/
 stderr.txt
