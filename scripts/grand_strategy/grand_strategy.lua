@@ -1687,10 +1687,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	if (GrandStrategyMapHeightIndent) then
 		height_indent = -32
 	end
-	local last_tile_width_modifier = 0
-	if (Video.Width % 64 == 0) then
-		last_tile_width_modifier = -32
-	end
+	local last_tile_width_modifier = -32 + (Video.Width % 64)
 	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
 		if (GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) ~= nil) then
 			tooltip = "Settlement of " .. GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) .. " (" .. tooltip .. ")"
@@ -2543,7 +2540,7 @@ function DrawOnScreenTiles()
 				if (key == "Gold") then
 					resource_site_graphics = "tilesets/world/sites/gold_mine.png"
 				end
-				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64)) + 1) then
 					DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
 				end
 			end
