@@ -1687,6 +1687,10 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	if (GrandStrategyMapHeightIndent) then
 		height_indent = -32
 	end
+	local last_tile_width_modifier = 0
+	if (Video.Width % 64 == 0) then
+		last_tile_width_modifier = -32
+	end
 	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
 		if (GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) ~= nil) then
 			tooltip = "Settlement of " .. GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) .. " (" .. tooltip .. ")"
@@ -1715,7 +1719,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			world_map_tile:Load()
 			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageWidget(world_map_tile) -- not really a site, but it is more expedient to use this method
 			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-				OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent, 64)
+				OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 			else
 				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 			end
@@ -1736,7 +1740,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPressedImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent, 64)
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 		else
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 64)
 		end
@@ -1771,7 +1775,9 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		b:setPressedImage(world_map_tile)
 		b:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-			b:setSize(42 - width_indent, 84)
+			b:setSize(42 - width_indent + last_tile_width_modifier, 84)
+		elseif ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64)) - 1) then
+			b:setSize(84 + (last_tile_width_modifier * 5 / 16), 84)
 		else
 			b:setSize(84, 84)
 		end
@@ -1806,7 +1812,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent, 64)
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 		else
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 		end
@@ -1823,14 +1829,18 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		elseif (tile_y == WorldMapOffsetY) then
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent, 80)
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 80)
+			elseif ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64)) - 1) then
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96 + (last_tile_width_modifier / 2), 80)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 80)
 			end
 		else
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent, 96)
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 96)
+			elseif ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64)) - 1) then
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96 + (last_tile_width_modifier / 2), 96)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 96)
 			end
@@ -1861,7 +1871,7 @@ function DrawSettlement(file, tile_x, tile_y, playercolor)
 	OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 	if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
-		OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent, 64)
+		OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 	else
 		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 	end
@@ -2543,7 +2553,7 @@ function DrawOnScreenTiles()
 	for key, value in pairs(WorldMapProvinces) do
 		-- draw province borders
 		for i=1,table.getn(WorldMapProvinces[key].BorderTiles) do
-			if (WorldMapProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+			if (WorldMapProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64)) + 1) then
 				local west_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1] - 1, WorldMapProvinces[key].BorderTiles[i][2])
 				local east_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1] + 1, WorldMapProvinces[key].BorderTiles[i][2])
 				local north_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2] - 1)
@@ -2743,7 +2753,7 @@ function DrawOnScreenTiles()
 	-- draw borders between water provinces
 	for key, value in pairs(WorldMapWaterProvinces) do
 		for i=1,table.getn(WorldMapWaterProvinces[key].BorderTiles) do
-			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64)) + 1) then
 				local west_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] - 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
 				local east_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] + 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
 				local north_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2] - 1)
