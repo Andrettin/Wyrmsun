@@ -412,6 +412,42 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-yale-rider",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_rider.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-yale-rider-black-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_rider_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-yale-rider-blond-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_rider_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-yale-rider-brown-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_rider_brown_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-yale-rider-gray-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_rider_gray_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-yale-rider-orange-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_rider_orange_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-gryphon-rider",
 	Size = {46, 38},
 	File = "dwarf/icons/gryphon_rider.png"

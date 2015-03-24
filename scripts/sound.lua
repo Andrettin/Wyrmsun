@@ -137,6 +137,7 @@ MakeSound("yale-rider-acknowledge", {
 ------------------------------------------------------------------------------
 --	Define simple gnome sounds.
 --
+--[[
 MakeSound("basic-gnome-voices-ready", "gnome/basic_voices/gnome_ready.wav")
 MakeSound("basic-gnome-voices-selected", {
 	"gnome/basic_voices/selected-01.wav",
@@ -204,6 +205,7 @@ MakeSoundGroup("gnomish-herbalist-selected-group",
 MakeSound("gnomish-worker-ready", "gnome/worker/scavenger_ready.wav")
 MakeSound("gnomish-recruit-ready", "gnome/recruit/recruit_ready.wav")
 MakeSound("gnomish-herbalist-ready", "gnome/herbalist/herbalist_ready05.wav")
+--]]
 
 ------------------------------------------------------------------------------
 --	Define simple goblin sounds.
