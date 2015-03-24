@@ -313,22 +313,22 @@ function RunGrandStrategyGameSetupMenu()
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
 
-	menu:addLabel("~<World:~>", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
+	menu:addLabel("World:", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
 	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
 		function(dd) DateChanged() end)
 	world:setSize(152, 20)
 
-	menu:addLabel("~<Date:~>", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+	menu:addLabel("Date:", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
 	date = menu:addDropDown(date_list, offx + 220, offy + 10 + 120,
 		function(dd) DateChanged() end)
 	date:setSize(152, 20)
 
-	menu:addLabel("~<Faction:~>", offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
+	menu:addLabel("Faction:", offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
 	faction = menu:addDropDown(faction_list, offx + 640 - 224 - 16, offy + 10 + 120,
 		function(dd) end)
 	faction:setSize(152, 20)
 
-	menu:addLabel("~<Tactical Unit Multiplier:~>", offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+	menu:addLabel("Tactical Unit Multiplier:", offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
 	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 40, offy + 10 + 180,
 		function(dd)
 			wyr.preferences.GrandStrategyBattalionMultiplier = battalions:getSelected() + 1
@@ -3003,7 +3003,7 @@ function DrawGrandStrategyInterface()
 							if (heroic_unit_type ~= nil) then
 								selected_veterans = selected_veterans + SelectedUnits[string.gsub(heroic_unit_type, "-", "_")]
 							end
-							AddGrandStrategyLabel("~<" .. SelectedUnits[string.gsub(unitName, "-", "_")] + selected_veterans .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedUnits[string.gsub(unitName, "-", "_")] + selected_veterans, icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 2) then
@@ -3129,8 +3129,8 @@ function DrawGrandStrategyInterface()
 						b:setTooltip("Decrease bid of " .. key .. " by 100")
 					end
 
-					AddGrandStrategyLabel("~<" .. GetCommodityPrice(key) .. "~>", Video.Width - 176 + 9 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
-					AddGrandStrategyLabel("~<" .. GrandStrategyFaction.Trade[key] .. "~>", Video.Width - 176 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetCommodityPrice(key), Video.Width - 176 + 9 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
+					AddGrandStrategyLabel(GrandStrategyFaction.Trade[key], Video.Width - 176 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
 					
 					item_y = item_y + 1
 				end
@@ -3257,7 +3257,7 @@ function DrawGrandStrategyInterface()
 							end
 							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
-							AddGrandStrategyLabel("~<" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 2) then
@@ -3470,7 +3470,7 @@ function DrawGrandStrategyInterface()
 							end
 							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
-							AddGrandStrategyLabel("~<" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] .. "~>", icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 2) then

@@ -1089,33 +1089,33 @@ function RunSinglePlayerCustomGameMenu()
     end)
   menu:addFullButton(_("~!Cancel Game"), "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
 
-  menu:addLabel(_("~<World:~>"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
+  menu:addLabel(_("World:"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
   world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
     function(dd) WorldChanged() end)
   world:setSize(152, 20)
   world:setSelected(0)
 
-  menu:addLabel(_("~<Map:~>"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+  menu:addLabel(_("Map:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
   scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
     function(dd) ScenarioChanged() end)
   scenario:setSize(152, 20)
 
-  menu:addLabel(_("~<Your Civilization:~>"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+  menu:addLabel(_("Your Civilization:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
   race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, offx + 40, offy + 10 + 180,
     function(dd) CivilizationChanged() end)
   race:setSize(152, 20)
 
-  menu:addLabel(_("~<Your Faction:~>"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
+  menu:addLabel(_("Your Faction:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
   faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
     function(dd) end)
   faction:setSize(152, 20)
 
-  menu:addLabel(_("~<Resources:~>"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
+  menu:addLabel(_("Resources:"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
   resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + 640 - 224 - 16, offy + 10 + 180,
     function(dd) end)
   resources:setSize(152, 20)
 
-  menu:addLabel(_("~<Units:~>"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
+  menu:addLabel(_("Units:"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
   numunits = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, offx + 40, offy + 10 + 240,
     function(dd) end)
   numunits:setSize(152, 20)
@@ -1123,22 +1123,22 @@ function RunSinglePlayerCustomGameMenu()
   local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"),
     _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
 
-  menu:addLabel(_("~<Opponents:~>"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
+  menu:addLabel(_("Opponents:"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
   opponents = menu:addDropDown(opponents_list, offx + 220, offy + 10 + 240,
     function(dd) end)
   opponents:setSize(152, 20)
 
-  menu:addLabel(_("~<Game Type:~>"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
+  menu:addLabel(_("Game Type:"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
   gametype = menu:addDropDown(game_type_list, offx + 640 - 224 - 16, offy + 10 + 240,
     function(dd) end)
   gametype:setSize(152, 20)
 
-  menu:addLabel(_("~<Tech Level:~>"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+  menu:addLabel(_("Tech Level:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
   tech_level = menu:addDropDown(tech_level_list, offx + 40, offy + 10 + 300,
     function(dd) TechLevelChanged() end)
   tech_level:setSize(152, 20)
 
-  menu:addLabel(_("~<Max Tech Level:~>"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
+  menu:addLabel(_("Max Tech Level:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
   max_tech_level = menu:addDropDown(max_tech_level_list, offx + 220, offy + 10 + 300,
     function(dd) end)
   max_tech_level:setSize(152, 20)
