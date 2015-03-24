@@ -106,7 +106,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"A few days ago our clan's sage, Thjodrorir, disappeared during the night. Word has now reached our chieftain Modsognir that the dwarves Fjalar and Galar have captured Thjodrorir, slaying him for unknown reasons. The chieftain has sent you, Durin, to enter their hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
+			"A few days ago our clan's sage, Thjodrorir, disappeared during the night. Word has now reached our chieftain Modsognir that the dwarves Fjalar and Galar have captured Thjodrorir, for unknown reasons. The chieftain has sent you, Durin, to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to the clan's justice.",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -155,13 +155,13 @@ AddTrigger(
 	function()
 		Event(
 			"Durin",
-			"Fjalar and Galar, I am here on behalf of Modsognir due to your horrific deed against Thjodrorir. Where is his body?",
+			"Fjalar and Galar, I am here on behalf of Modsognir. Where is Thjodrorir?",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"Fjalar",
-				"We brew his blood into mead, to absorb his ancient wisdom and gift with words.",
+				"He is no more. We brew his blood into mead, to absorb his ancient wisdom and gift with words.",
 				player,
 				{"~!Continue"},
 				{function(s)
