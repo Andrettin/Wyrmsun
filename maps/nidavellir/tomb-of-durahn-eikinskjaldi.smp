@@ -3,7 +3,7 @@
 DefinePlayerTypes("person", "computer", "person")
 PresentMap("Tomb of Durahn Eikinskjaldi", 2, 20, 20, 1)
 MapWorld = "Nidavellir"
-MapRequiredQuest = "The Mead of Poetry"
+MapRequiredQuest = "The Mead of Wisdom"
 MapAttacker = 0
 MapDefender = 1
 
