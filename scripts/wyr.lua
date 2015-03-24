@@ -116,9 +116,18 @@ function CreateUnit(unittype, player, pos)
   return OldCreateUnit(unittype, player, pos)
 end
 
-
 if (OldSetPlayerData == nil) then
   OldSetPlayerData = SetPlayerData
+end
+
+--Define Player Data.
+function SetupPlayer(player, race, ai, gold, wood, oil, x, y)
+	SetStartView(player, x, y)
+	SetPlayerData(player, "Resources", "wood", wood)
+	SetPlayerData(player, "Resources", "gold", gold)
+	SetPlayerData(player, "Resources", "oil", oil)
+	SetPlayerData(player, "RaceName", race)
+	SetAiType(player, ai)
 end
 
 -- Override with game settings
@@ -408,75 +417,30 @@ function LoadTileModels(tileset)
   OldLoadTileModels("scripts/tilesets/" .. GameSettings.Tileset)
 end
 
+-- Called by Stratagus when unloading a mod.
+function CleanModGame_Lua()
+
+end
+
+-- Called by Stratagus when a game is restarted.
+function StartCustomGame_Lua()
+
+end
+
+-- Called by Stratagus when a game finished.
+function CleanCustomGame_Lua()
+
+end
+
+-- Called by Stratagus when loading a mod.
+function StartModGame_Lua()
+
+end
+
 -- Called by stratagus when a game finished
 function CleanGame_Lua()
 	print("game ends")
 	ReInitAiGameData()
-
-	-- clean FtM data
-	Blue2Temp_x = nil
-	Blue2Temp_y = nil
-	Blue2Step = nil
-	Blue2Mana = nil
-	Blue1Temp_x = nil
-	Blue1Temp_y = nil
-	Blue1Step = nil
-	Blue1Mana = nil
-	BlueTemp = nil
-	BlueTeam1 = nil
-	BlueTeam2 = nil
-	BlueTemp_x1 = nil
-	BlueTemp_y1 = nil
-	BlueTemp_x2 = nil
-	BlueTemp_y2 = nil
-	BlueTeam1_x1 = nil
-	BlueTeam1_y1 = nil
-	BlueTeam1_x2 = nil
-	BlueTeam1_y2 = nil
-	BlueTeam2_x1 = nil
-	BlueTeam2_y1 = nil
-	BlueTeam2_x2 = nil
-	BlueTeam2_y2 = nil
-	blueribbon_stepping = nil
-	BlueBarracks1_x = nil
-	BlueBarracks1_y = nil
-	BlueBarracks2_x = nil
-	BlueBarracks2_y = nil
-	BlueBarracks3_x = nil
-	BlueBarracks3_y = nil
-	BlueBarracks4_x = nil
-	BlueBarracks4_y = nil
-	BlueInventor_x = nil
-	BlueInventor_y = nil
-	BlueMageTower_x = nil
-	BlueMageTower_y = nil
-	
-	redribbon_stepping = nil
-	
-	Red1Mana = nil
-	Red1Mana = nil
-	
-	RedTemp = nil
-	RedTemp_x1 = nil
-	RedTemp_y1 = nil
-	RedTemp_x2 = nil
-	RedTemp_y2 = nil		
-	Red2Temp_x = nil
-	Red2Temp_y = nil
-	Red2Step = nil
-	Red2Mana = nil
-	Red1Temp_x = nil
-	Red1Temp_y = nil
-	Red1Step = nil
-	Red1Mana = nil
-	RedTeam1 = nil
-	RedTeam2 = nil
-	RedTeam1_x1 = nil
-	RedTeam1_y1 = nil
-	RedTeam1_x2 = nil
-	RedTeam1_y2 = nil
-	RedTeam2_x1 = nil
-	RedTeam2_y1 = nil
-	RedTeam2_x2 = nil
-	RedTeam2_y2 = nil
+	CleanCustomGame_Lua()
+	StartModGame_Lua()
 end
