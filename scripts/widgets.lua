@@ -30,19 +30,19 @@
 DefineButtonStyle("main-dwarf", {
   Size = {128, 20},
   Font = "game",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextNormalColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Center",
   TextPos = {64, 4},
   Default = {
     File = "dwarf/ui/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
   },
   Clicked = {
     File = "dwarf/ui/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     TextPos = {66, 6},
   },
 })
@@ -50,19 +50,19 @@ DefineButtonStyle("main-dwarf", {
 DefineButtonStyle("network-dwarf", {
   Size = {80, 20},
   Font = "game",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextNormalColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Center",
   TextPos = {40, 4},
   Default = {
     File = "dwarf/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
   },
   Clicked = {
     File = "dwarf/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     TextPos = {42, 6},
   },
 })
@@ -70,19 +70,19 @@ DefineButtonStyle("network-dwarf", {
 DefineButtonStyle("main-germanic", {
   Size = {128, 20},
   Font = "game",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextNormalColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Center",
   TextPos = {64, 4},
   Default = {
     File = "germanic/ui/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
   },
   Clicked = {
     File = "germanic/ui/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     TextPos = {66, 6},
   },
 })
@@ -90,19 +90,19 @@ DefineButtonStyle("main-germanic", {
 DefineButtonStyle("network-germanic", {
   Size = {80, 20},
   Font = "game",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextNormalColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Center",
   TextPos = {40, 4},
   Default = {
     File = "germanic/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
   },
   Clicked = {
     File = "germanic/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     TextPos = {42, 6},
   },
 })
@@ -110,19 +110,19 @@ DefineButtonStyle("network-germanic", {
 DefineButtonStyle("main-gnome", {
   Size = {128, 20},
   Font = "game",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextNormalColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Center",
   TextPos = {64, 4},
   Default = {
     File = "gnome/ui/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
   },
   Clicked = {
     File = "gnome/ui/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     TextPos = {66, 6},
   },
 })
@@ -130,19 +130,19 @@ DefineButtonStyle("main-gnome", {
 DefineButtonStyle("network-gnome", {
   Size = {80, 20},
   Font = "game",
-  TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextNormalColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Center",
   TextPos = {40, 4},
   Default = {
     File = "gnome/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
   },
   Clicked = {
     File = "gnome/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     TextPos = {42, 6},
   },
 })
@@ -151,7 +151,7 @@ DefineButtonStyle("icon", {
   Size = {46, 38},
   Font = "game",
   TextNormalColor = "yellow",
-  TextReverseColor = "white",
+  TextReverseColor = "yellow",
   TextAlign = "Right",
   TextPos = {46, 26},
   Default = {
@@ -160,13 +160,13 @@ DefineButtonStyle("icon", {
     },
   },
   Hover = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     Border = {
       Color = {128, 128, 128}, Size = 0,
     },
   },
   Clicked = {
-    TextNormalColor = "white",
+    TextNormalColor = "yellow",
     Border = {
       Color = {128, 128, 128}, Size = 0,
     },
