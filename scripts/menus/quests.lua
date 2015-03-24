@@ -56,7 +56,7 @@ function RunQuestMenu()
 		end
 	end
 
-	no_randomness = menu:addImageCheckBox(_("~<No Randomness~>"), offx + 640 - 224 - 16, offy + 10 + 300 + 3,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
