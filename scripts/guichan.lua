@@ -118,7 +118,12 @@ function AddMenuHelpers(menu)
   function menu:addButton(caption, hotkey, x, y, callback, size)
     local b = ButtonWidget(caption)
     b:setHotKey(hotkey)
-    b:setActionCallback(callback)
+    b:setActionCallback(
+		function()
+			PlaySound("click")
+			callback()
+		end
+	)
     if (size == nil) then size = {200, 24} end
     b:setSize(size[1], size[2])
     b:setBackgroundColor(dark)
@@ -130,7 +135,12 @@ function AddMenuHelpers(menu)
   function menu:addImageButton(caption, hotkey, x, y, callback)
     local b = ImageButton(caption)
     b:setHotKey(hotkey)
-    b:setActionCallback(callback)
+    b:setActionCallback(
+		function()
+			PlaySound("click")
+			callback()
+		end
+	)
     self:add(b, x, y)
     b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
     return b
@@ -453,7 +463,7 @@ function AddMenuHelpers(menu)
     b:setBaseColor(clear)
     b:setForegroundColor(clear)
     b:setBackgroundColor(dark)
-	if (callback ~= nil) then b:setActionCallback(function(s) callback(b, s) end) end
+	if (callback ~= nil) then b:setActionCallback(function(s) PlaySound("click"); callback(b, s) end) end
     b:setFont(Fonts["game"])
     self:add(b, x, y)
     return b
@@ -498,7 +508,7 @@ function AddMenuHelpers(menu)
 	b:setUncheckedPressedImage(g_checkbox_off2)
 	b:setCheckedNormalImage(g_checkbox_on)
 	b:setCheckedPressedImage(g_checkbox_on2)
-	if (callback ~= nil) then b:setActionCallback(function(s) callback(b, s) end) end
+	if (callback ~= nil) then b:setActionCallback(function(s) PlaySound("click"); callback(b, s) end) end
 	b:setFont(Fonts["game"])
 	self:add(b, x - 1, y - 1) -- reduced by 1 because the images are bigger than they are supposed to be, as they are graphics for radio buttons
 	return b
@@ -509,7 +519,12 @@ function AddMenuHelpers(menu)
     b:setBaseColor(dark)
     b:setForegroundColor(clear)
     b:setBackgroundColor(dark)
-    b:setActionCallback(callback)
+    b:setActionCallback(
+		function()
+			PlaySound("click")
+			callback()
+		end
+	)
     self:add(b, x, y)
     return b
   end
@@ -553,7 +568,12 @@ function AddMenuHelpers(menu)
 	b:setCheckedNormalImage(g_radio_on)
 	b:setCheckedPressedImage(g_radio_on2)
 	b:setFont(Fonts["game"])
-	b:setActionCallback(callback)
+    b:setActionCallback(
+		function()
+			PlaySound("click")
+			callback()
+		end
+	)
 	self:add(b, x, y)
 	return b
   end
@@ -562,7 +582,7 @@ function AddMenuHelpers(menu)
     local dd = DropDownWidget()
     dd:setFont(Fonts["game"])
     dd:setList(list)
-    dd:setActionCallback(function(s) callback(dd, s) end)
+    dd:setActionCallback(function(s) PlaySound("click"); callback(dd, s) end)
     dd:setBaseColor(dark)
     dd:setForegroundColor(clear)
     dd:setBackgroundColor(dark)

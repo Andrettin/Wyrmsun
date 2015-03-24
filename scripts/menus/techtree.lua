@@ -87,6 +87,8 @@ function RunTechTreeMenu(civilization_number)
 		end
 		b:setActionCallback(
 			function()
+				PlaySound("click")
+				
 				local tech_menu = WarGameMenu(panel(5))
 				tech_menu:setSize(352, 352)
 				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)

@@ -202,6 +202,8 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	local b = PlayerColorImageButton("", playercolor)
 	b:setActionCallback(
 		function()
+			PlaySound("click")
+			
 			wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 
 			if not (IsMusicPlaying()) then

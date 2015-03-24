@@ -60,6 +60,7 @@ function addAchievementIcon(achievement, menu, achievementicon_graphics, achieve
 --	b:setHotKey("")
 	b:setActionCallback(
 		function()
+			PlaySound("click")
 			local achievement_menu = WarGameMenu(panel(5))
 			achievement_menu:setSize(352, 352)
     			achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)

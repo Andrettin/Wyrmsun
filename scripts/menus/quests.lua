@@ -84,6 +84,8 @@ function addQuestIcon(quest, menu, x, y)
 	end
 	b:setActionCallback(
 		function()
+			PlaySound("click")
+			
 			local quest_menu = WarGameMenu(panel(5))
 			quest_menu:setSize(352, 352)
     			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)

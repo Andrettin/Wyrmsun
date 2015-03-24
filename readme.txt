@@ -150,6 +150,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed bug which caused wood piles to not disappear after being depleted.
 - "Random" option is now selected by default in the map editor, and new maps are created with random variations of the basic tile (instead of always using the same variation).
 - Changed transparency of non-acquired tech tree elements to 66%.
+- Menu buttons now play the "click" sound when clicked.
 
 * Quests
 - Added The Battle of Magetobria quest.

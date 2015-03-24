@@ -1728,6 +1728,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 			function()
+				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
@@ -1763,6 +1764,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenSites[table.getn(OnScreenSites) + 1] = b -- not really a site, but it is more expedient to use this method
 		b:setActionCallback(
 			function()
+				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
@@ -1800,6 +1802,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenSites[table.getn(OnScreenSites) + 1] = b
 		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 			function()
+				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
@@ -1859,6 +1862,7 @@ function DrawSettlement(file, tile_x, tile_y, playercolor)
 	OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", playercolor)
 	OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 		function()
+			PlaySound("click")
 			SetSelectedProvince(GetTileProvince(tile_x, tile_y))
 			DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 		end
@@ -1913,6 +1917,7 @@ function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 		MinimapTiles[tile_y + 1][tile_x + 1] = b
 		MinimapTiles[tile_y + 1][tile_x + 1]:setActionCallback(
 			function()
+				PlaySound("click")
 				CenterMapOnTile(tile_x, tile_y)
 				DrawOnScreenTiles()
 			end
@@ -1970,7 +1975,12 @@ function AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
 	if (hotkey ~= "") then
 		UIElements[table.getn(UIElements)]:setHotKey(hotkey)
 	end
-	UIElements[table.getn(UIElements)]:setActionCallback(callback)
+	UIElements[table.getn(UIElements)]:setActionCallback(
+		function()
+			PlaySound("click")
+			callback()
+		end
+	)
 	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
 	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	return UIElements[table.getn(UIElements)]
@@ -2016,6 +2026,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
+			PlaySound("click")
 			if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 1) then
 				BuildStructure(SelectedProvince, unit_type)
 			elseif (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] >= 2) then
@@ -2088,6 +2099,7 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
+			PlaySound("click")
 			DrawGrandStrategyInterface()
 		end
 	)
@@ -2135,6 +2147,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
+			PlaySound("click")
 			if (GrandStrategyFaction.Technologies[string.gsub(unit_type, "-", "_")] < 1) then
 				ResearchTechnology(SelectedProvince, unit_type)
 			else
@@ -2218,6 +2231,7 @@ function AddGrandStrategyHeroButton(x, y, unit_type)
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
+			PlaySound("click")
 			if (SelectedHero == unit_type) then
 				SelectedHero = ""
 			else
@@ -2264,6 +2278,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
+			PlaySound("click")
 			if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] < 1) then
 				HireMercenary(SelectedProvince, unit_type)
 			else
@@ -2310,6 +2325,7 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 	CommodityButtons[table.getn(CommodityButtons) + 1] = ImageButton("")
 	CommodityButtons[table.getn(CommodityButtons)]:setActionCallback(
 		function()
+			PlaySound("click")
 			DrawGrandStrategyInterface()
 		end
 	)
@@ -2399,7 +2415,7 @@ function DrawOnScreenTiles()
 	OnScreenTiles = nil
 	OnScreenTiles = {}
 	
-	for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1) do
+	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
 		OnScreenTiles[y - WorldMapOffsetY + 1] = {}
 	end
 
@@ -2407,7 +2423,7 @@ function DrawOnScreenTiles()
 	OnScreenSites = {}
 
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
-		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
 			-- set map tile terrain
 			local tile_image = ""
 			if (GetWorldMapTile(x, y) == "Plns") then
@@ -2795,7 +2811,7 @@ function DrawOnScreenTiles()
 
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
-		for y=WorldMapOffsetY,(WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
 			-- set map tile terrain
 			if (GetWorldMapTile(x, y) == "") then
 				if (x == WorldMapOffsetX and y == WorldMapOffsetY) then
