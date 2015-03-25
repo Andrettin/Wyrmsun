@@ -120,7 +120,7 @@ function AddMenuHelpers(menu)
     b:setHotKey(hotkey)
     b:setActionCallback(
 		function()
-			PlaySound("click")
+--			PlaySound("click")
 			callback()
 		end
 	)

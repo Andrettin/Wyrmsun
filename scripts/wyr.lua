@@ -121,9 +121,9 @@ if (OldSetPlayerData == nil) then
 end
 
 --Define Player Data.
-function SetupPlayer(player, race, ai, gold, wood, oil, x, y)
+function SetupPlayer(player, race, ai, gold, lumber, oil, x, y)
 	SetStartView(player, x, y)
-	SetPlayerData(player, "Resources", "wood", wood)
+	SetPlayerData(player, "Resources", "lumber", lumber)
 	SetPlayerData(player, "Resources", "gold", gold)
 	SetPlayerData(player, "Resources", "oil", oil)
 	SetPlayerData(player, "RaceName", race)
