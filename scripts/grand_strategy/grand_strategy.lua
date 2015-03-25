@@ -451,7 +451,7 @@ function RunGrandStrategyGame()
 	b = GrandStrategyMenu:addButton("", "down", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1) then
+				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
 					if (GrandStrategyMapHeightIndent) then
 						GrandStrategyMapHeightIndent = false
 						WorldMapOffsetY = WorldMapOffsetY + 1;
@@ -4493,11 +4493,11 @@ function CenterMapOnTile(tile_x, tile_y)
 		WorldMapOffsetX = table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)
 	end
 
-	WorldMapOffsetY = math.floor(tile_y - (((Video.Height - 16 - 16) / 64) / 2)) + 1
+	WorldMapOffsetY = math.floor(tile_y - (((Video.Height - 16 - 16) / 64) / 2))
 	if (WorldMapOffsetY < 0) then
 		WorldMapOffsetY = 0
-	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1) then
-		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64) + 1
+	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
+		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)
 	end
 end
 
