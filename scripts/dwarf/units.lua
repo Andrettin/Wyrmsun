@@ -673,7 +673,8 @@ DefineUnitType("unit-hero-durin-thane", { Name = _("Thane"),
 	DefaultName = "Durin",
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-durin"
+	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
+	Variations = {}
 } )
 
 DefineUnitType("unit-hero-rugnur", { Name = _("Axefighter"),
@@ -684,7 +685,8 @@ DefineUnitType("unit-hero-rugnur", { Name = _("Axefighter"),
 	Description = _("Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch."),
 	Image = {"file", "dwarf/units/rugnur.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
-	Gender = 1
+	Gender = 1,
+	Variations = {}
 } )
 
 DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
@@ -714,6 +716,7 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = _("Thane"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
+	Variations = {}
 } )
 
 DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
@@ -745,7 +748,8 @@ DefineUnitType("unit-hero-baglur-thane", { Name = _("Thane"),
 	DefaultName = "Baglur",
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur"
+	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
+	Variations = {}
 } )
 
 DefineUnitType("unit-hero-thursagan", { Name = _("Thane"),
@@ -758,7 +762,8 @@ DefineUnitType("unit-hero-thursagan", { Name = _("Thane"),
 	Background = "~<The Sceptre of Fire~> poem about the crafting of that artifact mentions Thursagan (as \"a runesmith\") as the maker of the scepter.",
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-thursagan",
-	Gender = 1
+	Gender = 1,
+	Variations = {}
 } )
 
 DefineUnitType("unit-hero-durstorn", { Name = _("Thane"),
@@ -769,5 +774,6 @@ DefineUnitType("unit-hero-durstorn", { Name = _("Thane"),
 	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durstorn",
-	Gender = 1
+	Gender = 1,
+	Variations = {}
 } )
