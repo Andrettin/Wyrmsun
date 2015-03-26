@@ -671,6 +671,7 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest_4.png
 /graphics/tilesets/fogofwar.png
 /graphics/ui/cursors/magnifying_glass.png
+/graphics/ui/fonts/small.png
 /graphics/ui/coal.png
 /graphics/ui/coal_extra_1.png
 /graphics/ui/food.png
