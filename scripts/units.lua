@@ -225,7 +225,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	Class = "grazer",
 	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as a source of food."),
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
-	Animations = "animations-yale", Icon = "icon-rat",
+	Animations = "animations-yale", Icon = "icon-yale",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 13,
 	HitPoints = 30,
@@ -247,7 +247,6 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	RandomMovementDistance = 6,
 	organic = true,
 	Fauna = true,
-	IsNotSelectable = true, -- until it gets an icon
 	PeopleAversion = true,
 	Flesh = true,
 	Herbivore = true,
@@ -266,22 +265,26 @@ DefineUnitType("unit-yale", { Name = "Yale",
 		},
 		--]]
 		{
-			"variation-id", "brown-fur"
+			"variation-id", "brown-fur",
+			"icon", "icon-yale"
 --			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "gray-brown-fur",
-			"file", "neutral/units/yale_gray_brown_fur.png"
+			"file", "neutral/units/yale_gray_brown_fur.png",
+			"icon", "icon-yale-gray-brown-fur"
 --			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "gray-fur",
-			"file", "neutral/units/yale_gray_fur.png"
+			"file", "neutral/units/yale_gray_fur.png",
+			"icon", "icon-yale-gray-fur"
 --			"upgrade-forbidden", "upgrade-child"
 		},
 		{
 			"variation-id", "white-fur",
-			"file", "neutral/units/yale_white_fur.png"
+			"file", "neutral/units/yale_white_fur.png",
+			"icon", "icon-yale-white-fur"
 --			"upgrade-forbidden", "upgrade-child"
 		}
 	},

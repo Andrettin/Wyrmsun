@@ -856,6 +856,30 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-yale",
+	Size = {46, 38},
+	File = "neutral/icons/yale.png"
+})
+
+DefineIcon({
+	Name = "icon-yale-gray-fur",
+	Size = {46, 38},
+	File = "neutral/icons/yale_gray_fur.png"
+})
+
+DefineIcon({
+	Name = "icon-yale-gray-brown-fur",
+	Size = {46, 38},
+	File = "neutral/icons/yale_gray_brown_fur.png"
+})
+
+DefineIcon({
+	Name = "icon-yale-white-fur",
+	Size = {46, 38},
+	File = "neutral/icons/yale_white_fur.png"
+})
+
+DefineIcon({
 	Name = "icon-gryphon",
 	Size = {46, 38},
 	File = "neutral/icons/gryphon.png"
