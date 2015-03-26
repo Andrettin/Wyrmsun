@@ -318,19 +318,9 @@ DefineUnitType("unit-hero-marbod", { Name = _("Erala"),
 	DefaultName = "Marbod",
 	Civilization = "teuton",
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
-	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
+	Image = {"file", "teuton/units/suebi_warrior.png", "size", {72, 72}},
 	Icon = "icon-marbod",
 	Gender = 1,
-	Variations = {
-		{
-			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "germanic/units/warrior_bronze_shield.png",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
-		}
-	}
+	Variations = {}
 } )
 

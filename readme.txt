@@ -103,7 +103,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Heroes
 - Added Durin (dwarf) (icon by Jinn).
 - Clicking on heroes no longer displays the "You have [...]" in the statusline.
-- Added Marbod (teuton) (icon by Jinn).
+- Added Marbod (teuton) (icon by Jinn and unit graphics by b_o).
 
 * Items
 - Added Potion of Slowness (graphics by b_o).

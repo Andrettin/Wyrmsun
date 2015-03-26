@@ -239,6 +239,7 @@ b_o:
 /graphics/neutral/units/yale_young.png
 /graphics/orc/units/spearthrower.png
 /graphics/teuton/units/catapult.png
+/graphics/teuton/units/suebi_warrior.png
 /graphics/tilesets/dungeon/neutral/decorations/door_left.png
 /graphics/tilesets/dungeon/neutral/decorations/door_right.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)

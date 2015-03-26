@@ -140,30 +140,23 @@ MakeSound("yale-rider-acknowledge", {
 --[[
 MakeSound("basic-gnome-voices-ready", "gnome/basic_voices/gnome_ready.wav")
 MakeSound("basic-gnome-voices-selected", {
-	"gnome/basic_voices/selected-01.wav",
-	"gnome/basic_voices/selected-02.wav",
-	"gnome/basic_voices/selected-03.wav",
-	"gnome/basic_voices/selected-04.wav"
+	"gnome/basic_voices/selected-1.wav",
+	"gnome/basic_voices/selected-2.wav",
+	"gnome/basic_voices/selected-3.wav"
 })
 MakeSound("basic-gnome-voices-annoyed", {
-	"gnome/worker/annoy01.wav",
-	"gnome/worker/annoy02.wav",
-	"gnome/worker/annoy03.wav",
-	"gnome/worker/annoy04.wav",
-	"gnome/worker/annoy05.wav",
-	"gnome/worker/annoy06.wav",
-	"gnome/worker/annoy07.wav",
-	"gnome/worker/annoy08.wav",
-	"gnome/worker/annoy09.wav",
-	"gnome/worker/annoy10.wav",
-	"gnome/worker/annoy11.wav"
+	"gnome/basic_voices/annoy-1.wav",
+	"gnome/basic_voices/annoy-2.wav",
+	"gnome/basic_voices/annoy-3.wav",
+	"gnome/basic_voices/annoy-4.wav"
 })
 MakeSoundGroup("basic-gnome-voices-selected-group",
 	"basic-gnome-voices-selected", "basic-gnome-voices-annoyed")
 MakeSound("basic-gnome-voices-acknowledge", {
 	"gnome/basic_voices/acknowledge-1.wav",
 	"gnome/basic_voices/acknowledge-2.wav",
-	"gnome/basic_voices/acknowledge-3.wav"
+	"gnome/basic_voices/acknowledge-3.wav",
+	"gnome/basic_voices/acknowledge-4.wav"
 })
 
 ------------------------------------------------------------------------------
