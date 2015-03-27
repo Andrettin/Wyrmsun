@@ -234,6 +234,7 @@ DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
 	HitPoints = 40,
 	BasicDamage = 2, PiercingDamage = 4,
 	Corpse = "unit-human-dead-body",
+	Variations = {},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
