@@ -1137,7 +1137,38 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 --		"ready", "dwarven-sentry-tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"} } )
+		"dead", "building destroyed"
+	}
+} )
+
+DefineUnitType("unit-hole", { Name = _("Hole"),
+	Image = {"file", "tilesets/cave/neutral/buildings/hole.png", "size", {64, 64}},
+	NeutralMinimapColor = {128, 128, 0},
+	Animations = "animations-tree-stump", Icon = "icon-hole",
+	Speed = 0,
+	HitPoints = 20,
+	DrawLevel = 20,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Type = "land",
+	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	NumDirections = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	VisibleUnderFog = true,
+	MaxOnBoard = 1,
+	CanTransport = {"LandUnit", "only", "organic", "only", "Mounted", "false"},
+	SaveCargo = true,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "dwarven-sentry-tower-acknowledge",
+--		"ready", "dwarven-sentry-tower-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building destroyed"
+	}
+} )		
 		
 DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
 	Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},

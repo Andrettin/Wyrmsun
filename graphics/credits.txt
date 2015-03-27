@@ -244,6 +244,7 @@ b_o:
 /graphics/teuton/units/catapult.png
 /graphics/teuton/units/old_man.png
 /graphics/teuton/units/suebi_warrior.png
+/graphics/tilesets/cave/neutral/buildings/hole.png (modified from Leo's volcanic crater)
 /graphics/tilesets/dungeon/neutral/decorations/door_left.png
 /graphics/tilesets/dungeon/neutral/decorations/door_right.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)

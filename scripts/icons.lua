@@ -1096,6 +1096,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-hole",
+	Size = {46, 38},
+	File = "tilesets/cave/neutral/icons/hole.png"
+})
+
+DefineIcon({
 	Name = "icon-wood-pile",
 	Size = {46, 38},
 	File = "neutral/icons/wood_pile.png"

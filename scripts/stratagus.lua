@@ -505,7 +505,7 @@ function StandardTriggers()
 				end
 				
 				-- AI units inside tree stumps get out to attack if an enemy is near
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" and GetUnitVariable(uncount[unit1], "Transport") > 0) then
+				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") and GetUnitVariable(uncount[unit1], "Transport") > 0) then
 					local inside_uncount = 0
 					inside_uncount = GetUnitsInsideUnit(uncount[unit1])
 					for unit2 = 1,table.getn(inside_uncount) do
@@ -514,7 +514,7 @@ function StandardTriggers()
 							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], GetUnitVariable(inside_uncount[unit2], "SightRange") / 2, true)
 							for unit3 = 1,table.getn(nearby_uncount) do 
 								if (Players[GetUnitVariable(inside_uncount[unit2], "Player")]:IsEnemy(Players[GetUnitVariable(nearby_uncount[unit3],"Player")])) then
-									OrderUnit(15, "unit-tree-stump", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "unload")
+									OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "unload")
 								end
 							end
 						end

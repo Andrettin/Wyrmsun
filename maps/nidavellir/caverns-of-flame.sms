@@ -384,4 +384,8 @@ wyrmsun.playlist = { "music/heroes_rite.ogg", "music/breaking_the_chains.ogg" }
 
 CreateNeutralBuildings("unit-volcanic-crater", 16, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false) -- to make the map seem more volcanic until lava tiles are implemented
 
+if (wyrmsun.tileset == "cave") then
+	CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+end
+
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

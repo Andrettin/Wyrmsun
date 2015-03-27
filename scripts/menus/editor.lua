@@ -108,6 +108,7 @@ editor_types = {
    "unit-coal-mine",
    "unit-mercenary-camp",
    "unit-tree-stump",
+   "unit-hole",
    "unit-wood-pile",
    "unit-gold-coins",
    "unit-gold-sack",

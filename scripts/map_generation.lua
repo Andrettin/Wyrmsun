@@ -1388,6 +1388,8 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+	elseif (wyrmsun.tileset == "cave") then
+		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	end
 	
 	CleanRawTiles()
@@ -3215,6 +3217,8 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	elseif (wyrmsun.tileset == "cave") then
+		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	end
 end
 
@@ -3405,6 +3409,8 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	elseif (wyrmsun.tileset == "cave") then
+		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	end
 	
 	CleanRawTiles()
@@ -5172,6 +5178,10 @@ function GenerateCave(town_halls, symmetric)
 	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
 	--end
 
+	if (wyrmsun.tileset == "cave") then
+		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	end
+	
 	if (GrandStrategy == false) then
 		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 

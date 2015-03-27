@@ -160,7 +160,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Asa Tribe now correctly starts with 0 resources in the Westward Migration quest.
 
 * Terrain
-- Trees now regrow after some time.
+- Trees now regrow after a long time has passed.
+- Added hole (appears in caves, functions as a tree stump would).
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
