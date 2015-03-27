@@ -44,6 +44,7 @@ function RunShowCreditsMenu()
 	"  Nehal Mistry",
 	"  Pali Rohar",
 	"  Russell Smith",
+	"  Chris Beck (iceiceice)",
 	"  DinkyDyeAussie",
 	_("Graphics and Artwork"),
 	"  b_o",

@@ -36,7 +36,7 @@ Units = {
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-teuton-civilization",
-	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-archer",
+	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-old-man",
 	"unit-teuton-catapult",
 	"unit-teuton-town-hall", "unit-teuton-stronghold",
 	"unit-teuton-farm", "unit-teuton-barracks",

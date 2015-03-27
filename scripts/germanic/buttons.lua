@@ -45,6 +45,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
 	"unit-germanic-old-man",
 	"unit-teuton-worker",
 	"unit-teuton-swordsman",
+	"unit-teuton-old-man",
 	"unit-hero-marbod",
 	"unit-hero-greebo",
 	"germanic-group", "teuton-group"
@@ -72,6 +73,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 	"unit-teuton-worker",
 	"unit-teuton-swordsman", "unit-teuton-archer",
 	"unit-teuton-catapult",
+	"unit-teuton-old-man",
 	"unit-hero-marbod",
 	"germanic-group", "teuton-group"
 } } )

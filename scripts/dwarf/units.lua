@@ -396,6 +396,12 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
+			"variation-id", "black-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
+			"icon", "icon-dwarven-yale-rider-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
 			"variation-id", "blond-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-blond-hair",

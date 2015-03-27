@@ -203,6 +203,25 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	}
 } )
 
+DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
+	Parent = "unit-teuton-swordsman",
+	Class = "",
+	Image = {"file", "teuton/units/old_man.png", "size", {72, 72}},
+	Animations = "animations-dwarven-miner", Icon = "icon-old-man",
+	HitPoints = 40,
+	BasicDamage = 2, PiercingDamage = 4,
+	Corpse = "unit-human-dead-body",
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "basic-dwarf-voices-acknowledge",
+--		"ready", "dwarven-axefighter-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Parent = "unit-template-town-hall",
 	Civilization = "teuton",
