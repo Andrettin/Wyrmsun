@@ -915,7 +915,7 @@ function CreateCritters(critter_number)
 		-- create critters
 		while (Count > 0 and WhileCount < critter_number * 100) do
 			local critter_unit_type
-			if (wyrmsun.tileset == "forest") then
+			if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
 				RandomNumber = SyncRand(8)
 				if (RandomNumber == 0) then
 					critter_unit_type = "unit-rat"
@@ -1172,10 +1172,10 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if ((wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("teuton")) > 0 and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("teuton")) > 0 and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "teuton")
 			end
 			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
@@ -1300,7 +1300,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 	
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
@@ -1312,7 +1312,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
-	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
@@ -1386,7 +1386,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 		CreateCreeps(15, "unit-wyrm", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 	end
 
-	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
@@ -3215,7 +3215,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
-	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
@@ -3363,13 +3363,13 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	
 --	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 --		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
 	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-	if (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 --		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
@@ -3407,7 +3407,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 --		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
 --	end
 
-	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)

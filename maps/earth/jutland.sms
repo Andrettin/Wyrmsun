@@ -1,6 +1,10 @@
 -- Stratagus Map Setup
 
-LoadTileModels("scripts/tilesets/forest.lua")
+if (SyncRand(2) == 0) then
+	LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+else
+	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
+end
 
 RawTiles = {
 	{"Water", "Water", "Land",  "Land",  "Rough", "Rough", "Rough", "Rough", "Rough", "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Land",  "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr", "DpWtr"},
@@ -236,6 +240,4 @@ end
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
-	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-end
+CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)

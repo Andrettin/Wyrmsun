@@ -36,7 +36,7 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave" or wyrmsun.tileset =
 	DefineUnitType("unit-fern", {
 		Image = {"file", "tilesets/swamp/neutral/decorations/fern.png", "size", {48, 48}},
 	} )
-elseif (wyrmsun.tileset == "forest" or wyrmsun.tileset == "fairlimbed_forest") then
+elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 	DefineUnitType("unit-fern", {
 		Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
 	} )

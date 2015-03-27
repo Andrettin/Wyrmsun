@@ -1,6 +1,10 @@
 -- Stratagus Map Setup
 
-LoadTileModels("scripts/tilesets/forest.lua")
+if (SyncRand(2) == 0) then
+	LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+else
+	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
+end
 
 SetTile(16, 0, 0, 0)
 SetTile(17, 1, 0, 0)

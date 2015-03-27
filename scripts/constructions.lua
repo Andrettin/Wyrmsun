@@ -33,8 +33,9 @@ end
 
 local files = {
   cave = "neutral/buildings/land_construction_site.png",
+  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
+  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
-  forest = "neutral/buildings/land_construction_site.png",
   fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
@@ -57,8 +58,9 @@ DefineConstruction("construction-none", {
 
 local files = {
   cave = "neutral/buildings/land_construction_site.png",
+  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
+  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
-  forest = "neutral/buildings/land_construction_site.png",
   fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
@@ -129,8 +131,9 @@ DefineConstruction("construction-dwarven-sentry-tower", {
 
 local files = {
   cave = "neutral/buildings/land_construction_site.png",
+  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
+  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
-  forest = "neutral/buildings/land_construction_site.png",
   fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
@@ -150,8 +153,9 @@ DefineConstruction("construction-land2", {
 
 local files = {
   cave = "neutral/buildings/land_construction_site.png",
+  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
+  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
   dungeon = "neutral/buildings/land_construction_site.png",
-  forest = "neutral/buildings/land_construction_site.png",
   fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }

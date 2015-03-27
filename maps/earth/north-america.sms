@@ -1,6 +1,10 @@
 -- Stratagus Map Setup
 
-LoadTileModels("scripts/tilesets/forest.lua")
+if (SyncRand(2) == 0) then
+	LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+else
+	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
+end
 
 RawTiles = {
 	{"Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Tree",  "Land",  "Land",  "Tree",  "Land",  "Rough", "Rough", "Water", "Water", "Water", "Land",  "Rough", "Tree",  "Tree",  "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water"},

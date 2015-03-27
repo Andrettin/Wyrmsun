@@ -254,6 +254,7 @@ b_o:
 /graphics/tilesets/forest/neutral/decorations/large_flower.png
 /graphics/tilesets/forest/terrain/deciduous_tree_autumn.png
 /graphics/tilesets/forest/terrain/forest.png (dark dirt, dark grass, grass, grass-dirt transition and tree tiles)
+/graphics/tilesets/forest/terrain/pine_tree_autumn.png
 /graphics/tilesets/swamp/neutral/decorations/fern.png
 /graphics/tilesets/swamp/neutral/decorations/flowers.png
 /graphics/tilesets/swamp/neutral/decorations/large_flower.png

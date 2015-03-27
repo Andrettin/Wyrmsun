@@ -8,9 +8,9 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      forest.ccl - Define the forest tileset.
+--      conifer_forest_autumn.lua - Define the conifer forest (autumn) tileset.
 --
---      (c) Copyright 2000-2003 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software-- you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -32,12 +32,12 @@
 --
 --	(define-tileset ident class name image palette slots animations)
 --
-DefineTileset("name", "Forest",
+DefineTileset("name", "Conifer Forest (Autumn)",
   "image", "tilesets/forest/terrain/forest.png",
   -- Slots descriptions
   "slots", { "special", {
-    "top-one-tree", 121, "mid-one-tree", 122, "bot-one-tree", 123,
-    "removed-tree", 126,
+    "top-one-tree", 48, "mid-one-tree", 64, "bot-one-tree", 80,
+    "removed-tree", 16,
     "growing-tree", { -1, -1, },
     "top-one-rock", 158, "mid-one-rock", 159, "bot-one-rock", 160,
     "removed-rock", 163, },
@@ -55,16 +55,16 @@ DefineTileset("name", "Forest",
     { 346, 347, 348, 346}},						-- 050
   "solid", { "dark-grass", "land",
     { 349, 350, 351, 349}},						-- 060
-  "solid", { "tree", "land", "forest", "unpassable",
-    { 125, 125, 125, 125}},						-- 070
+  "solid", { "pine-tree", "image", "tilesets/forest/terrain/pine_tree_autumn.png", "land", "forest", "unpassable",
+    { 18, 18, 18, 18}},							-- 070
   "solid", { "rock", "land", "rock", "unpassable",
     { 162, 174, 175, 162}},						-- 080
-  "solid", { "unused-human-closed-wall", "land", "human", "wall", "unpassable",
-    {  11,   0,  11,   0, 464}},					-- 090
+  "solid", { "unused",
+    {}},								-- 090
   "solid", { "unused",
     {}},								-- 0A0
-  "solid", { "unused-human-open-wall", "land", "human", "wall", "unpassable",
-    {  17,   0,  17,   0, 464}},					-- 0B0
+  "solid", { "unused",
+    {}},								-- 0B0
   "solid", { "unused",
     {}},								-- 0C0
   "solid", { "unused",
@@ -74,22 +74,22 @@ DefineTileset("name", "Forest",
   "solid", { "unused",
     {}},								-- 0F0
   "mixed", { "deep-water", "shallow-water", "water",
-    { 177, 177},							-- 100
-    { 178, 178},							-- 110
+    { 177, 177},								-- 100
+    { 178, 178},								-- 110
     { 179, 180, 181},							-- 120
-    { 182, 182},							-- 130
+    { 182, 182},								-- 130
     { 183, 184, 185},							-- 140
-    { 186, 187},							-- 150
-    { 188, 188},							-- 160
-    { 189, 189},							-- 170
-    { 190, 191},							-- 180
+    { 186, 187},								-- 150
+    { 188, 188},								-- 160
+    { 189, 189},								-- 170
+    { 190, 191},								-- 180
     { 192, 193, 194},							-- 190
-    { 195, 195},							-- 1A0
+    { 195, 195},								-- 1A0
     { 196, 197, 198},							-- 1B0
-    { 199, 199},							-- 1C0
-    { 200, 200},							-- 1D0
-    {},									-- 1E0
-    {}},								-- 1F0
+    { 199, 199},								-- 1C0
+    { 200, 200},								-- 1D0
+    {},											-- 1E0
+    {}},										-- 1F0
   "mixed", { "shallow-water", "dirt", "coast",
     { 201, 202, 201},							-- 200
     { 203, 204, 203},							-- 210
@@ -105,8 +105,8 @@ DefineTileset("name", "Forest",
     { 224, 225, 226},							-- 2B0
     { 227, 228, 227},							-- 2C0
     { 229, 230, 229},							-- 2D0
-    {},									-- 2E0
-    {}},								-- 2F0
+    {},											-- 2E0
+    {}},										-- 2F0
   "mixed", { "dark-dirt", "dirt", "land", "no-building",
     { 279, 288, 279},							-- 300
     { 296, 297, 296},							-- 310
@@ -122,8 +122,8 @@ DefineTileset("name", "Forest",
     { 317, 318, 319},							-- 3B0
     { 320, 321, 320},							-- 3C0
     { 322, 323, 322},							-- 3D0
-    {},									-- 3E0
-    {}},								-- 3F0
+    {},											-- 3E0
+    {}},										-- 3F0
   "mixed", { "rock", "dirt", "land", "rock", "unpassable",
     { 147, 170, 147},							-- 400
     { 139, 164, 139},							-- 410
@@ -139,8 +139,8 @@ DefineTileset("name", "Forest",
     { 143, 167, 176},							-- 4B0
     { 145, 131, 145},							-- 4C0
     { 142, 129, 142},							-- 4D0
-    {},									-- 4E0
-    {}},								-- 4F0
+    {},											-- 4E0
+    {}},										-- 4F0
   "mixed", { "dirt", "grass", "land", "no-building",
     { 264, 265, 264},							-- 500
     { 266, 267, 266},							-- 510
@@ -156,8 +156,8 @@ DefineTileset("name", "Forest",
     { 289, 290, 291},							-- 5B0
     { 292, 293, 292},							-- 5C0
     { 294, 295, 294},							-- 5D0
-    {},									-- 5E0
-    {}},								-- 5F0
+    {},											-- 5E0
+    {}},										-- 5F0
   "mixed", { "dark-grass", "grass", "land",
     { 239, 240, 239},							-- 600
     { 237, 238, 237},							-- 610
@@ -173,46 +173,29 @@ DefineTileset("name", "Forest",
     { 241, 242, 243},							-- 6B0
     { 255, 256, 255},							-- 6C0
     { 257, 258, 257},							-- 6D0
-    {},									-- 6E0
-    {}},								-- 6F0
-  "mixed", { "tree", "grass", "land", "forest", "unpassable",
-    { 110, 110, 110},							-- 700
-    { 102, 102, 102},							-- 710
-    { 124, 124, 124},							-- 720
-    { 107, 107, 107},							-- 730
-    { 109, 109, 109},							-- 740
-    { 114, 114, 114},							-- 750
-    { 111, 111, 111},							-- 760
-    { 104, 104, 104},							-- 770
-    { 113, 113, 113},							-- 780
-    { 103, 103, 103},							-- 790
-    { 112, 112, 112},							-- 7A0
-    { 106, 106, 106},							-- 7B0
-    { 108, 108, 108},							-- 7C0
-    { 105, 105, 105},							-- 7D0
-    {},									-- 7E0
-    {}},								-- 7F0
-  "mixed", { "human-wall", "dark-grass", "land", "human", "wall", "unpassable",
-    {  17,   0,  17,   0,  464},					-- 800
-    {  11,   0,  11,   0,  464},					-- 810
-    {  17,   0,  17,   0,  464},					-- 820
-    {  11,   0,  11,   0,  464},					-- 830
-    {  17,  17,   0,  17,  17,   0,  464,  464},			-- 840
-    {  11,   0,  11,   0,  464},					-- 850
-    {  17,   0,  17,   0,  464},					-- 860
-    {  11,   0,  11,   0,  464},					-- 870
-    {  17,   0,  17,   0,  464},					-- 880
-    {  11,  11,   0,  11,  11,   0,  464,  464},			-- 890
-    {  17,   0,  17,   0,  464},					-- 8A0
-    {  11,   0,  11,   0,  464},					-- 8B0
-    {  17,   0,  17,   0,  464},					-- 8C0
-    {  11,   0,  11,   0,  464},					-- 8D0
-    {},									-- 8E0
-    {}}									-- 8F0
+    {},											-- 6E0
+    {}},										-- 6F0
+  "mixed", { "pine-tree", "grass", "land", "forest", "unpassable",
+    { 35, 35, 35},								-- 700
+    { 33, 33, 33},								-- 710
+    { 34, 34, 34},								-- 720
+    { 3, 3, 3},									-- 730
+    { 19, 19, 19},								-- 740
+    { 30, 30, 30},								-- 750
+    { 27, 27, 27},								-- 760
+    { 1, 1, 1},									-- 770
+    { 14, 14, 14},								-- 780
+    { 17, 17, 17},								-- 790
+    { 26, 26, 26},								-- 7A0
+    { 2, 2, 2},									-- 7B0
+    { 11, 11, 11},								-- 7C0
+    { 10, 10, 10},								-- 7D0
+    {},											-- 7E0
+    {}}											-- 7F0
   })
 
 BuildTilesetTables()
 
-wyrmsun.tileset = "forest"
+wyrmsun.tileset = "conifer_forest_autumn"
 Load("scripts/scripts.lua")
 
