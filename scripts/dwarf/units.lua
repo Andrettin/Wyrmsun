@@ -503,6 +503,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	DetectCloak = true,
 	organic = true,
 	Flesh = true,
+	Mounted = true,
 	SelectableByRectangle = true,
 	Variations = {
 		{

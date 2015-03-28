@@ -514,8 +514,16 @@ function StandardTriggers()
 							nearby_uncount = GetUnitsAroundUnit(uncount[unit1], GetUnitVariable(inside_uncount[unit2], "SightRange") / 2, true)
 							for unit3 = 1,table.getn(nearby_uncount) do 
 								if (Players[GetUnitVariable(inside_uncount[unit2], "Player")]:IsEnemy(Players[GetUnitVariable(nearby_uncount[unit3],"Player")])) then
-									OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "unload")
+									OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit3],"PosX"), GetUnitVariable(nearby_uncount[unit3],"PosY")}, "unload")
 								end
+							end
+						elseif (GetUnitTypeData(GetUnitVariable(inside_uncount[unit2], "Ident"), "Fauna")) then -- animals hiding within holes or stumps exit if a faction's unit is nearby
+							local unit_quantity = 0
+							for i=0,14 do
+								unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {GetUnitVariable(uncount[unit1],"PosX") - (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2), GetUnitVariable(uncount[unit1],"PosY") - (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2)}, {GetUnitVariable(uncount[unit1],"PosX") + (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2), GetUnitVariable(uncount[unit1],"PosY") + (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2)})
+							end
+							if (unit_quantity > 0) then
+								OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, "unload")
 							end
 						end
 					end

@@ -190,6 +190,7 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",

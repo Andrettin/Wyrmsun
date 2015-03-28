@@ -299,8 +299,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 	-- create initial rock seeds
 	Count = rock_seed_number
 	while (Count > 0 and WhileCount < rock_seed_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == base_tile_type) then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Rock")) then
@@ -337,8 +337,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 	-- expand rocks
 	Count = rock_expansions_number
 	while (Count > 0 and WhileCount < rock_expansions_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Rock") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Rock") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Rock") and (RawTile(RandomX - 1, RandomY - 1) ~= "Rock" or RawTile(RandomX - 1, RandomY) ~= "Rock" or RawTile(RandomX, RandomY - 1) ~= "Rock")) then
@@ -388,8 +388,8 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 	-- create initial water seeds
 	Count = water_seed_number
 	while (Count > 0 and WhileCount < water_seed_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Land") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water")) then
@@ -426,8 +426,8 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 	-- expand water
 	Count = water_expansions_number
 	while (Count > 0 and WhileCount < water_expansions_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Water") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Water") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Water") and (RawTile(RandomX - 1, RandomY - 1) ~= "Water" or RawTile(RandomX - 1, RandomY) ~= "Water" or RawTile(RandomX, RandomY - 1) ~= "Water")) then
@@ -555,8 +555,8 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 	-- create initial tree seeds
 	Count = tree_seed_number
 	while (Count > 0 and WhileCount < tree_seed_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		local near_starting_location = false
 		for i=0,14 do
 			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
@@ -601,8 +601,8 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 	-- expand trees
 	Count = tree_expansions_number
 	while (Count > 0 and WhileCount < tree_expansions_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Tree") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Tree") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Tree") and (RawTile(RandomX - 1, RandomY - 1) ~= "Tree" or RawTile(RandomX - 1, RandomY) ~= "Tree" or RawTile(RandomX, RandomY - 1) ~= "Tree") and (RandomX - 1) >= min_x and (RandomY - 1) >= min_y) then
@@ -641,8 +641,8 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 	-- create initial dark land seeds
 	Count = dark_land_seed_number
 	while (Count > 0 and WhileCount < dark_land_seed_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Land") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Dark-Land") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Dark-Land") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Dark-Land")) then
@@ -679,8 +679,8 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 	-- expand dark land
 	Count = dark_land_expansions_number
 	while (Count > 0 and WhileCount < dark_land_expansions_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Dark-Land") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Dark-Land") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Dark-Land") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Dark-Land") and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Land" or RawTile(RandomX - 1, RandomY) ~= "Dark-Land" or RawTile(RandomX, RandomY - 1) ~= "Dark-Land")) then
@@ -719,8 +719,8 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 	-- create initial dark rough land seeds
 	Count = dark_rough_land_seed_number
 	while (Count > 0 and WhileCount < dark_rough_land_seed_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == base_tile_type) then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough")) then
@@ -757,8 +757,8 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 	-- expand dark rough land
 	Count = dark_rough_land_expansions_number
 	while (Count > 0 and WhileCount < dark_rough_land_expansions_number * 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Dark-Rough") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough")) then
@@ -982,24 +982,26 @@ function CreateCritters(critter_number)
 end
 
 function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max_y)
-	local RandomX = 0
-	local RandomY = 0
-	local Count = 0
-	Count = creep_number
-	while (Count > 0) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
-		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
-			local unit_quantity = 0
-			for i=0,14 do
-				if (i ~= player) then
-					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
+	if (LoadedGame == false) then
+		local RandomX = 0
+		local RandomY = 0
+		local Count = 0
+		Count = creep_number
+		while (Count > 0) do
+			RandomX = SyncRand(max_x - min_x + 1) + min_x
+			RandomY = SyncRand(max_y - min_y + 1) + min_y
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+				local unit_quantity = 0
+				for i=0,14 do
+					if (i ~= player) then
+						unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
+					end
 				end
-			end
 
-			if (unit_quantity < 1) then -- creeps shouldn't start near a settlement, or the player will likely be destroyed
-				unit = CreateUnit(creep_type, player, {RandomX, RandomY})
-				Count = Count - 1
+				if (unit_quantity < 1) then -- creeps shouldn't start near a settlement, or the player will likely be destroyed
+					unit = CreateUnit(creep_type, player, {RandomX, RandomY})
+					Count = Count - 1
+				end
 			end
 		end
 	end
@@ -1192,7 +1194,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				local starting_point_found = false
 				while (starting_point_found == false and WhileCount < 1000) do
 					if (symmetric == false) then
-						player_spawn_point = {SyncRand(max_x - min_x) + min_x, SyncRand(max_y - min_y) + min_y}
+						player_spawn_point = {SyncRand(max_x - min_x + 1) + min_x, SyncRand(max_y - min_y + 1) + min_y}
 					else
 						if (i == 0 or i == 4 or i == 8 or i == 12) then
 							player_spawn_point = {SyncRand((max_x / 2) - min_x) + min_x, SyncRand((max_y / 2) - min_y) + min_y}
@@ -1821,8 +1823,8 @@ function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 	local WhileCount = 0
 	local location_found = false
 	while (location_found == false and WhileCount < 1000) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			local unit_quantity = 0
@@ -1899,8 +1901,8 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 			RandomX = SyncRand((Map.Info.MapWidth / 2) - 24)
 			RandomY = SyncRand((Map.Info.MapHeight / 2) - 24)
 		else
-			RandomX = SyncRand(max_x - min_x) + min_x
-			RandomY = SyncRand(max_y - min_y) + min_y
+			RandomX = SyncRand(max_x - min_x + 1) + min_x
+			RandomY = SyncRand(max_y - min_y + 1) + min_y
 		end
 		
 		local unit_quantity = GetNumUnitsAt(15, "unit-gold-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
@@ -1921,8 +1923,8 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 	local location_found = false
 	local WhileCount = 0
 	while (location_found == false and WhileCount < 100) do
-		RandomX = SyncRand(max_x - min_x) + min_x
-		RandomY = SyncRand(max_y - min_y) + min_y
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		
 		local in_buildable_land = true
 		for x_offset=0, (GetUnitTypeData(building_type, "TileWidth") - 1) do
@@ -5173,6 +5175,7 @@ function GenerateCave(town_halls, symmetric)
 	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+	CreateCreeps(15, "unit-bat", (Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 
 	--if (SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
 	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
@@ -5180,7 +5183,17 @@ function GenerateCave(town_halls, symmetric)
 
 	if (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+				if (SyncRand(2) == 0) then
+					unit = CreateUnitInTransporter("unit-bat", 15, uncount[unit1])
+				end
+			end
+		end
 	end
+
 	
 	if (GrandStrategy == false) then
 		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)

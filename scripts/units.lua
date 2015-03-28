@@ -1109,7 +1109,7 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	MaxOnBoard = 1,
-	CanTransport = {"LandUnit", "only", "organic", "only", "Mounted", "false"},
+	CanTransport = {"organic", "only", "Mounted", "false"},
 	SaveCargo = true,
 	Variations = {
 		{
@@ -1159,7 +1159,7 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	MaxOnBoard = 1,
-	CanTransport = {"LandUnit", "only", "organic", "only", "Mounted", "false"},
+	CanTransport = {"organic", "only", "Mounted", "false"},
 	SaveCargo = true,
 	Sounds = {
 		"selected", "click",
