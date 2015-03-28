@@ -332,6 +332,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	PeopleAversion = true,
 	Flesh = true,
 	Carnivore = true,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ChildUpgrade = "upgrade-gryphon-child",
 	PersonalNames = {
 		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
