@@ -3473,10 +3473,27 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		local SuitableArea = true
 		local FeastHallArea = nil
 		local WhileCount = 0
+		local possible_civilizations = {}
 
+		if (player_civilization == "random") then
+			possible_civilizations = {"dwarf", "teuton"}
+			player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
+			possible_civilizations = nil
+		end
+		
+		if (second_player_civilization == "random") then
+			possible_civilizations = {"dwarf"}
+			if (player_civilization ~= "teuton") then -- there's only one teuton hero so far, so both players can't have it
+				table.insert(possible_civilizations, "teuton")
+			end
+			second_player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
+			possible_civilizations = nil
+		end
+		
 		if (hostile_dungeon_player_civilization == "random") then
-			local possible_civilizations = {"dwarf", "germanic", "gnome", "goblin", "kobold"}
+			possible_civilizations = {"dwarf", "germanic", "gnome", "goblin", "kobold"}
 			hostile_dungeon_player_civilization = possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1]
+			possible_civilizations = nil
 		end
 		
 		SetDiplomacy(0, "enemy", 1)

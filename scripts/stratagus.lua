@@ -1347,7 +1347,7 @@ local defaultPreferences = {
 	Heroes = {
 		Marbod = {
 			name = "Marbod",
-			level = 1,
+			level = 2,
 			upgrades = {},
 			items = {}
 		},
