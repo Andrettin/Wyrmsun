@@ -139,6 +139,7 @@ editor_types = {
    "unit-rat",
    "unit-bird",
    "unit-bat",
+   "unit-blood-bat",
    "unit-dread-bat",
    "unit-slime",
    "unit-yale",

@@ -953,12 +953,14 @@ function CreateCritters(critter_number)
 					critter_unit_type = "unit-snigill"
 				end
 			elseif (wyrmsun.tileset == "cave") then
-				RandomNumber = SyncRand(3)
+				RandomNumber = SyncRand(4)
 				if (RandomNumber == 0) then
 					critter_unit_type = "unit-slime"
 				elseif (RandomNumber == 1) then
 					critter_unit_type = "unit-snigill"
 				elseif (RandomNumber == 2) then
+					critter_unit_type = "unit-blood-bat"
+				elseif (RandomNumber == 3) then
 					critter_unit_type = "unit-dread-bat"
 				end
 			else
@@ -5207,7 +5209,14 @@ function GenerateCave(town_halls, symmetric)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
 				if (SyncRand(2) == 0) then
-					unit = CreateUnitInTransporter("unit-bat", 15, uncount[unit1])
+					RandomNumber = SyncRand(3)
+					if (RandomNumber == 0) then
+						unit = CreateUnitInTransporter("unit-bat", 15, uncount[unit1])
+					elseif (RandomNumber == 1) then
+						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+					elseif (RandomNumber == 2) then
+						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+					end
 				end
 			end
 		end
