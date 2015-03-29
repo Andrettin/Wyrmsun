@@ -73,13 +73,11 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 	}
 } )
 
-DefineUnitType("unit-teuton-swordsman", { Name = _("Erala"),
+DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Parent = "unit-template-infantry",
 	Civilization = "teuton",
-	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
-	Quote = _("\"His spear he shook, | his shield he brandished, / His horse he spurred, | with his sword he hewed; / Wars he raised, | and reddened the field, / Warriors slew he, | and land he won.\" - Rigsthula"),
---	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
-	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
+	Description = _("The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat."),
+	Background = _("\"Krieger\" is the German word for \"warrior\"."),
 	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior",
 	Corpse = "unit-human-dead-body",
@@ -332,7 +330,7 @@ DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
 	TechnologyPointCost = 1
 } )
 
-DefineUnitType("unit-hero-marbod", { Name = _("Erala"),
+DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 	Parent = "unit-teuton-swordsman",
 	Class = "",
 	DefaultName = "Marbod",
