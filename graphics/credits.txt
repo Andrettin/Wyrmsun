@@ -191,7 +191,9 @@ b_o:
 /graphics/neutral/units/bird_brown.png
 /graphics/neutral/units/bird_gray.png
 /graphics/neutral/units/bird_white.png
+/graphics/neutral/units/blood_bat.png
 /graphics/neutral/units/bug.png
+/graphics/neutral/units/dread_bat.png
 /graphics/neutral/units/fly.png
 /graphics/neutral/units/fly_extra_1.png
 /graphics/neutral/units/gryphon.png
