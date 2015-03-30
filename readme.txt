@@ -201,7 +201,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Snail (graphics by b_o).
 - The Gnomish Herbalist's Herbal Cure ability now costs less mana to cast.
 - Added Slug (graphics by b_o).
-- Added Dread Bat (graphics by b_o).
+- Added Blood Bat and Dread Bat (graphics by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
