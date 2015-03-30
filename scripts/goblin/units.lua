@@ -107,8 +107,10 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
 	Costs = {"time", 60, "gold", 500, "lumber", 50},
 	HitPoints = 50,
+	BasicDamage = 4, PiercingDamage = 2, -- reduced damage, since it has a bonus against mounted units
 	Accuracy = 12,
 	Evasion = 12,
+	BonusAgainstMounted = 100,
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",

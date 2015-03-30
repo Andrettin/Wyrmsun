@@ -3561,13 +3561,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			local SecondRandomNumber = SyncRand(100)
 			local SecondRandomX = 0
 			local SecondRandomY = 0
+			local SecondWhileCount = 0
 			local SecondCount = 0
 			
 			if (SecondRandomNumber < 10) then -- treasure room
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(3)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3610,12 +3612,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -3629,6 +3633,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 				
 				GenerateDarkLand(1, SyncRand(6), min_x, max_x, min_y, max_y)
@@ -3637,7 +3642,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					SecondRandomX = 0
 					SecondRandomY = 0
 					SecondCount = 1
-					while (SecondCount > 0) do
+					SecondWhileCount = 0
+					while (SecondCount > 0 and SecondWhileCount < 100) do
 						SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 						SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
@@ -3646,13 +3652,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								SecondCount = SecondCount - 1
 							end
 						end
+						SecondWhileCount = SecondWhileCount + 1
 					end
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3687,12 +3695,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -3708,12 +3718,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3722,12 +3734,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			elseif (SecondRandomNumber < 20) then -- food room
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(2) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3766,12 +3780,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 				
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(4) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3780,12 +3796,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			elseif (SecondRandomNumber < 25) then -- laboratory
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3810,12 +3828,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 				
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(2) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3856,12 +3876,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -3879,13 +3901,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 				
 				-- create potions
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(4) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
@@ -3901,12 +3925,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			elseif (SecondRandomNumber < 30) then -- study room
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(3) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -3941,12 +3967,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -3964,12 +3992,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			elseif (SecondRandomNumber < 40) then -- storage room
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(2)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -4004,12 +4034,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -4018,12 +4050,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 				
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(6) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -4032,12 +4066,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			elseif (SecondRandomNumber < 45) then -- thieves' hideout
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -4072,12 +4108,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -4086,13 +4124,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 				
 				if (hostile_dungeon_player_civilization == "goblin") then -- only goblins have thieves for now
 					SecondRandomX = 0
 					SecondRandomY = 0
 					SecondCount = SyncRand(4) + 1
-					while (SecondCount > 0) do
+					SecondWhileCount = 0
+					while (SecondCount > 0 and SecondWhileCount < 100) do
 						SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 						SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
@@ -4101,13 +4141,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								SecondCount = SecondCount - 1
 							end
 						end
+						SecondWhileCount = SecondWhileCount + 1
 					end
 				end
 			elseif (SecondRandomNumber < 50) then -- tavern
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = SyncRand(4) + 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -4146,12 +4188,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -4160,12 +4204,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			elseif (SecondRandomNumber < 70) then -- living quarters
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -4190,12 +4236,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = min_y - 1
 				SecondCount = SyncRand(2)
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					if (RawTile(SecondRandomX, SecondRandomY) == "Wall" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Wall") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
@@ -4203,12 +4251,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 
 				SecondRandomX = 0
 				SecondRandomY = 0
 				SecondCount = 1
-				while (SecondCount > 0) do
+				SecondWhileCount = 0
+				while (SecondCount > 0 and SecondWhileCount < 100) do
 					SecondRandomX = SyncRand(max_x - min_x + 1) + min_x
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
@@ -4217,6 +4267,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondCount = SecondCount - 1
 						end
 					end
+					SecondWhileCount = SecondWhileCount + 1
 				end
 			end
 		end
@@ -4739,7 +4790,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		RandomX = 0
 		RandomY = 0
 		Count = 16
-		while (Count > 0) do
+		WhileCount = 0
+		while (Count > 0 and WhileCount < 1000) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -4790,13 +4842,15 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					end
 				end
 			end
+			WhileCount = WhileCount + 1
 		end
 
 		-- create stairs
 		--RandomX = 0
 		--RandomY = 0
 		--Count = 1
-		--while (Count > 0) do
+		--WhileCount = 0
+		--while (Count > 0 and WhileCount < 100) do
 		--	RandomX = SyncRand(Map.Info.MapWidth)
 		--	RandomY = SyncRand(Map.Info.MapHeight)
 		--	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -4814,11 +4868,13 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		--			Count = Count - 1
 		--		end
 		--	end
+		--	WhileCount = WhileCount + 1
 		--end
 
 		-- create player 1's units
 		Count = 1
-		while (Count > 0) do
+		WhileCount = 0
+		while (Count > 0 and WhileCount < 10000) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -4865,7 +4921,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							local SecondRandomX = 0
 							local SecondRandomY = 0
 							local SecondCount = 1
-							while (SecondCount > 0) do
+							local SecondWhileCount = 0
+							while (SecondCount > 0 and SecondWhileCount < 100) do
 								SecondRandomX = SyncRand((RandomX + 1) - (RandomX - 1)) + (RandomX - 1)
 								SecondRandomY = SyncRand((RandomY + 1) - (RandomY - 1)) + (RandomY - 1)
 								if (GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "land") and GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "unpassable") == false and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "gold-pile" and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "rug" and GetNumUnitsAt(15, "unit-door", {SecondRandomX - 1, SecondRandomY - 1}, {SecondRandomX + 1, SecondRandomY + 1}) < 1) then
@@ -4875,12 +4932,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										SecondCount = SecondCount - 1
 									end
 								end
+								SecondWhileCount = SecondWhileCount + 1
 							end
 							Count = Count - 1
 						end
 					end
 				end
 			end
+			WhileCount = WhileCount + 1			
 		end
 
 		-- create player 2's units
@@ -4888,7 +4947,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		if (Map.Info.PlayerType[1] == PlayerNobody) then
 			Count = 0
 		end
-		while (Count > 0) do
+		WhileCount = 0
+		while (Count > 0 and WhileCount < 10000) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -4935,7 +4995,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							local SecondRandomX = 0
 							local SecondRandomY = 0
 							local SecondCount = 1
-							while (SecondCount > 0) do
+							local SecondWhileCount = 0
+							while (SecondCount > 0 and SecondWhileCount < 100) do
 								SecondRandomX = SyncRand((RandomX + 1) - (RandomX - 1)) + (RandomX - 1)
 								SecondRandomY = SyncRand((RandomY + 1) - (RandomY - 1)) + (RandomY - 1)
 								if (GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "land") and GetTileTerrainHasFlag(SecondRandomX, SecondRandomY, "unpassable") == false and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "gold-pile" and GetTileTerrainName(SecondRandomX, SecondRandomY) ~= "rug" and GetNumUnitsAt(15, "unit-door", {SecondRandomX - 1, SecondRandomY - 1}, {SecondRandomX + 1, SecondRandomY + 1}) < 1) then
@@ -4945,18 +5006,21 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										SecondCount = SecondCount - 1
 									end
 								end
+								SecondWhileCount = SecondWhileCount + 1
 							end
 							Count = Count - 1
 						end
 					end
 				end
 			end
+			WhileCount = WhileCount + 1
 		end
 
 		-- create dungeon boss(es)
 		if (dungeon_boss ~= "") then
 			Count = 1
-			while (Count > 0) do
+			WhileCount = 0
+			while (Count > 0 and WhileCount < 10000) do
 				RandomX = SyncRand(Map.Info.MapWidth)
 				RandomY = SyncRand(Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -4990,12 +5054,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						end
 					end
 				end
+				WhileCount = WhileCount + 1
 			end
 		end
 	
 		-- create hostile creeps
 		Count = hostile_creep_number
-		while (Count > 0) do
+		WhileCount = 0
+		while (Count > 0 and WhileCount < hostile_creep_number * 1000) do
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -5052,12 +5118,14 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					end
 				end
 			end
+			WhileCount = WhileCount + 1
 		end
 		
 		if (passive_dungeon_player_name ~= "") then
 			-- create workers to represent the dwellers of the hall, as scenery
 			Count = passive_dweller_number
-			while (Count > 0) do
+			WhileCount = 0
+			while (Count > 0 and WhileCount < passive_dweller_number * 100) do
 				RandomX = SyncRand(Map.Info.MapWidth)
 				RandomY = SyncRand(Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -5129,6 +5197,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						end
 					end
 				end
+				WhileCount = WhileCount + 1
 			end
 		end
 

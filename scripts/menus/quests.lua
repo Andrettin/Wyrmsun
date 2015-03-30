@@ -28,6 +28,7 @@
 --
 
 RunningScenario = false
+CurrentQuest = ""
 
 function RunQuestMenu()
 
@@ -110,7 +111,9 @@ function addQuestIcon(quest, menu, x, y)
 						end
 					end
 					GameSettings.NoRandomness = wyr.preferences.NoRandomness
+					CurrentQuest = quest.Name
 					RunMap(quest.Map)
+					CurrentQuest = ""
 					quest_menu:stop()
 					menu:stop()
 				end)
@@ -131,4 +134,13 @@ function addQuestIcon(quest, menu, x, y)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
 	b:setTooltip(quest.Name .. " (" .. CapitalizeString(quest.Civilization) .. ")")
 	return b
+end
+
+function GetQuestFromName(quest_name)
+	for key, value in pairs(Quests) do
+		if (Quests[key].Name == quest_name) then
+			return Quests[key]
+		end
+	end
+	return nil
 end

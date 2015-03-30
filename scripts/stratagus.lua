@@ -384,6 +384,10 @@ function SinglePlayerTriggers()
 		EventTriggers()
 	end
 
+	if (CurrentQuest ~= "" and GetQuestFromName(CurrentQuest).Scenario ~= nil) then
+		Load(GetQuestFromName(CurrentQuest).Scenario)
+	end
+
 	-- setup graphics variations
 	local uncount = 0
 	uncount = GetUnits("any")

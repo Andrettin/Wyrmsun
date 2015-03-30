@@ -1180,22 +1180,8 @@ function RunSinglePlayerCustomGameMenu()
 		GetMapInfo(maps[i])
 		if (_(MapWorld) == _(world_list[world:getSelected() + 1])) then
 			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
-				local incomplete_quest_present = false
-				for key, value in pairs(Quests) do
-					if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
-						if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-							if (Quests[key].Map == maps[i] and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
-								incomplete_quest_present = true
-							end
-						end
-					end
-				end
 				local map_description = _(mapinfo.description)
-				if (incomplete_quest_present) then
-					table.insert(scenario_list, "~<" .. map_description .. "~>")
-				else
-					table.insert(scenario_list, map_description)
-				end
+				table.insert(scenario_list, map_description)
 			end
 		end
 	end
@@ -1318,40 +1304,6 @@ function RunSinglePlayerCustomGameMenu()
   WorldChanged()
   TechLevelChanged()
   
-  for i=1,table.getn(maps) do
-		MapWorld = ""
-		MapRequiredQuest = ""
-		GetMapInfo(maps[i])
-		if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
-			local incomplete_quest_present = false
-			for key, value in pairs(Quests) do
-				if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
-					if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-						if (Quests[key].Map == maps[i] and GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name) == false) then
-							incomplete_quest_present = true
-						end
-					end
-				end
-			end
-			local map_description = _(mapinfo.description)
-			if (incomplete_quest_present) then
-				for j=1,table.getn(world_list) do
-					if (_(MapWorld) == _(world_list[j])) then
-						world:setSelected(j - 1)
-						WorldChanged()
-					end
-				end
-				for j=1,table.getn(scenario_list) do
-					if ("~<" .. map_description .. "~>" == scenario_list[j]) then
-						scenario:setSelected(j - 1)
-						ScenarioChanged()
-					end
-				end
-				break
-			end
-		end
-  end
-
   menu:run()
 end
 

@@ -77,7 +77,9 @@ local NidavellirEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Norlund Clan") then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
+					CurrentQuest = "The Mead of Wisdom"
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
+					CurrentQuest = ""
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
