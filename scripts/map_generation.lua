@@ -1396,6 +1396,22 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+				if (SyncRand(2) == 0) then
+					local RandomNumber = SyncRand(3)
+					if (RandomNumber == 0) then
+						unit = CreateUnitInTransporter("unit-bat", 15, uncount[unit1])
+					elseif (RandomNumber == 1) then
+						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+					elseif (RandomNumber == 2) then
+						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+					end
+				end
+			end
+		end
 	end
 	
 	CleanRawTiles()
@@ -3225,6 +3241,20 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+				if (SyncRand(2) == 0) then
+					RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+					elseif (RandomNumber == 1) then
+						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+					end
+				end
+			end
+		end
 	end
 end
 
@@ -3417,6 +3447,20 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+				if (SyncRand(2) == 0) then
+					local RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+					elseif (RandomNumber == 1) then
+						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+					end
+				end
+			end
+		end
 	end
 	
 	CleanRawTiles()
