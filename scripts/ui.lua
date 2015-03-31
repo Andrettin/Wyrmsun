@@ -564,7 +564,7 @@ DefinePopup({
 	BorderColor = PopupBorderColor,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Hint"}}
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 			}, 
 			{ 	Margin = {1, 1},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

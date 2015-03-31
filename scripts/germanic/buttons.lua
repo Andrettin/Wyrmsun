@@ -219,7 +219,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
   Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
   ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"} } )
   
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-bronze-shield",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-civilization",
   Action = "research", Value = "upgrade-teuton-civilization",
   Allowed = "check-single-research",
   Key = "t", Hint = _("Develop ~!Teuton Civilization"), Popup = "popup-research",

@@ -28,7 +28,7 @@
 --
 
 local upgrades = {
-	{"upgrade-celt-civilization", _("Celt Civilization"), "icon-germanic-bronze-shield", "",
+	{"upgrade-celt-civilization", _("Celt Civilization"), "icon-teuton-civilization", "",
 		"",
 		"",
 		"",

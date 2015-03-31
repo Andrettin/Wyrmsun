@@ -49,7 +49,7 @@ local upgrades = {
 		{   200,   300,   300,     0,     0,     0,     0,     0},
 		{   200,   300,   300,     0,     0,     0,     0,   800},
 		1},
-	{"upgrade-teuton-civilization", _("Teuton Civilization"), "icon-germanic-bronze-shield", "",
+	{"upgrade-teuton-civilization", _("Teuton Civilization"), "icon-teuton-civilization", "",
 		"",
 		"",
 		"",
