@@ -493,7 +493,10 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	More = {"Costs"}, HighlightColor = "yellow",
-			}, 
+			},
+			{ 	HighlightColor = "yellow",
+				More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type"))}}
+			},
 			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
 				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
 			}, 
@@ -522,7 +525,10 @@ DefinePopup({
 			}, 
 			{ 	Margin = {1, 1},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
-			}, 
+			},
+			{ 	HighlightColor = "yellow",
+				More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type"))}}
+			},
 			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
 				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
 			},

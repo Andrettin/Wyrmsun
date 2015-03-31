@@ -3963,7 +3963,7 @@ function AIDoTurn(ai_faction)
 								break
 							end
 						end
-					elseif (GetUnitTypeData(unitName, "Class") == "archer" and desired_archers_in_province > 0) then
+					elseif (GetUnitTypeData(unitName, "Class") == "shooter" and desired_archers_in_province > 0) then
 						for j=1,desired_archers_in_province do
 							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
 								TrainUnit(WorldMapProvinces[key], unitName)
@@ -4453,7 +4453,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (75 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "heroic-infantry") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "archer") then
+			elseif (GetUnitTypeData(unitName, "Class") == "shooter") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (60 + archer_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "thief") then
 				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * 30)
@@ -4993,7 +4993,7 @@ end
 function GetUnitTypeUpkeep(unit_type)
 	if (GetUnitTypeData(unit_type, "Class") == "infantry" or GetUnitTypeData(unit_type, "Class") == "veteran-infantry" or GetUnitTypeData(unit_type, "Class") == "heroic-infantry") then
 		return 25
-	elseif (GetUnitTypeData(unit_type, "Class") == "archer") then
+	elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "thief") then
 		return 25
@@ -5016,7 +5016,7 @@ function GetUnitTypeInterfaceState(unit_type)
 	if (string.find(unit_type, "upgrade-") == nil) then
 		if (GetUnitTypeData(unit_type, "Class") == "infantry") then
 			return "barracks"
-		elseif (GetUnitTypeData(unit_type, "Class") == "archer") then
+		elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			return "barracks"
@@ -5051,7 +5051,7 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
 			end
-		elseif (GetUnitTypeData(unit_type, "Class") == "archer") then
+		elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
 			end

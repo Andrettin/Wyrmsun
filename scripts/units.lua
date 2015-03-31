@@ -2922,7 +2922,7 @@ DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
 } )
 
 DefineUnitType("unit-template-archer", { Name = _("Archer"),
-	Class = "archer",
+	Class = "shooter",
 	Costs = {"time", 70, "gold", 500, "lumber", 50},
 	Speed = 10,
 	HitPoints = 40,

@@ -192,10 +192,10 @@ end
 --  Shooter of the current civilization.
 --
 function AiShooter()
-	if (GetCivilizationClassUnitType("archer", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("archer", AiGetRace())
+	if (GetCivilizationClassUnitType("shooter", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("shooter", AiGetRace())
 	else
-		return GetCivilizationClassUnitType("archer", "dwarf")
+		return GetCivilizationClassUnitType("shooter", "dwarf")
 	end
 end
 
