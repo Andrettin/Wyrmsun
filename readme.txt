@@ -55,6 +55,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Celt, Goth, Greek, Latin and Norse NPC civilizations (they are essentially identical with the Germanic/Teuton civilization, but them being a different culture affects events and features in Grand Strategy mode).
 - Added Teuton civilization (the Germanic civilization can transform into it), representing West Germanic peoples.
 - Added Eikinskjaldi Clan as a dwarven faction.
+- Added Modsogning Clan as a dwarven faction.
 
 * Grand Strategy Mode
 - Added transitions for conifer forest tiles (graphics by Jinn).

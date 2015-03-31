@@ -682,6 +682,8 @@ DefineUnitType("unit-hero-durin-thane", { Name = _("Thane"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
+	Hero = true,
+	Gender = 1,
 	Variations = {}
 } )
 
@@ -705,6 +707,8 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
+	Hero = true,
+	Gender = 1,
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -725,6 +729,8 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = _("Thane"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
+	Hero = true,
+	Gender = 1,
 	Variations = {}
 } )
 
@@ -759,6 +765,8 @@ DefineUnitType("unit-hero-baglur-thane", { Name = _("Thane"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
+	Hero = true,
+	Gender = 1,
 	Variations = {}
 } )
 

@@ -265,6 +265,12 @@ DefineCivilizationFactions("dwarf",
 		"secondary_color", "brown"
 	},
 	"faction", {
+		"name", "Modsogning Clan", -- clan of Modsognir
+		"type", "tribe",
+		"color", "white",
+		"secondary_color", "white"
+	},
+	"faction", {
 		"name", "Norlund Clan",
 		"type", "tribe",
 		"color", "red",

@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetPlayerData(0, "Faction", "Norlund Clan")
+SetPlayerData(0, "Faction", "Modsogning Clan")
 
 if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -38,8 +38,8 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsOffensiveMilitaryUnit(unitName)) then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 2)
-			WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] / 2)
+			WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
 		end
 	end
 	for i, unitName in ipairs(Units) do
@@ -122,8 +122,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Norlund Clan")) then
-			player = GetFactionPlayer("Norlund Clan")
+		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Modsogning Clan")) then
+			player = GetFactionPlayer("Modsogning Clan")
 			return true
 		end
 		return false
@@ -192,7 +192,7 @@ AddTrigger(
 				{function(s)
 				Event(
 					"Galar",
-					"I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't have our mead!",
+					"I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't drink any!",
 					player,
 					{"~!Continue"},
 					{function(s)

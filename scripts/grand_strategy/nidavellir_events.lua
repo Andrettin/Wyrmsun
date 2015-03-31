@@ -34,8 +34,8 @@ local NidavellirEvents = {
 		Conditions = function(s)
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
-				WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
-				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				WorldMapProvinces.Svarinshaug.Owner == EventFaction.Name
+				and WorldMapProvinces.Svarinshaug.Civilization == "dwarf"
 			) then
 				return true
 			else
@@ -48,9 +48,9 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin_thane = 2
+					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin_thane = 2
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin = 2
+					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 2
 				end
 			end
 		}
@@ -63,7 +63,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Norlund Clan"
+				EventFaction.Name == "Modsogning Clan"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -74,7 +74,7 @@ local NidavellirEvents = {
 		Options = {"Send ~!Durin", "Do ~!nothing"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Norlund Clan") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
 					CurrentQuest = "The Mead of Wisdom"
@@ -88,22 +88,22 @@ local NidavellirEvents = {
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
 							end
 						end
 					end
 					if (GameResult == GameVictory) then
-						Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
+						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Norlund Clan") then
-					Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
 				end
 			end,
 			function(s)
-				Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige - 10 -- doing nothing in such a situation would be dishonorable
+				Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige - 10 -- doing nothing in such a situation would be dishonorable
 			end
 		},
 		OptionTooltips = {"", "-10 Prestige"}
@@ -122,6 +122,120 @@ local NidavellirEvents = {
 				WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
 			end
 		end}
+	},
+	TheNorlundClan = {
+		Name = "The Norlund Clan",
+		Description = "Our clansfolk in the Caverns of Chaincolt have split off to form the Norlund clan.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "dwarf"
+				and WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
+				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				and ProvinceHasBuildingType(WorldMapProvinces.CavernsOfChaincolt, "town-hall")
+				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK", "This means ~!war!", "Play as the ~!Norlund clan"},
+		OptionEffects = {
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
+				AcquireFactionTechnologies(Factions.NorlundClan, EventFaction)
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
+				AcquireFactionTechnologies(Factions.NorlundClan, EventFaction)
+				EventFaction.Diplomacy.NorlundClan = "War"
+				Factions.NorlundClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
+				AcquireFactionTechnologies(Factions.NorlundClan, EventFaction)
+				GrandStrategyFaction = Factions.NorlundClan
+			end
+		}
+	},
+	TheShinsplitterClan = {
+		Name = "The Shinsplitter Clan",
+		Description = "Our clansfolk in the Southern Tunnels have split off to form the Shinsplitter clan.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "dwarf"
+				and WorldMapProvinces.SouthernTunnels.Owner == EventFaction.Name
+				and WorldMapProvinces.SouthernTunnels.Civilization == "dwarf"
+				and ProvinceHasBuildingType(WorldMapProvinces.SouthernTunnels, "town-hall")
+				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK", "This means ~!war!", "Play as the ~!Shinsplitter clan"},
+		OptionEffects = {
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
+				AcquireFactionTechnologies(Factions.ShinsplitterClan, EventFaction)
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
+				AcquireFactionTechnologies(Factions.ShinsplitterClan, EventFaction)
+				EventFaction.Diplomacy.ShinsplitterClan = "War"
+				Factions.ShinsplitterClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
+				AcquireFactionTechnologies(Factions.ShinsplitterClan, EventFaction)
+				GrandStrategyFaction = Factions.ShinsplitterClan
+			end
+		}
+	},
+	TheShorbearClan = {
+		Name = "The Shorbear Clan",
+		Description = "Our clansfolk in the Shorbear Hills have split off to form the Shorbear clan.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "dwarf"
+				and WorldMapProvinces.ShorbearHills.Owner == EventFaction.Name
+				and WorldMapProvinces.ShorbearHills.Civilization == "dwarf"
+				and ProvinceHasBuildingType(WorldMapProvinces.ShorbearHills, "town-hall")
+				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK", "This means ~!war!", "Play as the ~!Shorbear clan"},
+		OptionEffects = {
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
+				AcquireFactionTechnologies(Factions.ShorbearClan, EventFaction)
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
+				AcquireFactionTechnologies(Factions.ShorbearClan, EventFaction)
+				EventFaction.Diplomacy.ShorbearClan = "War"
+				Factions.ShorbearClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
+				AcquireFactionTechnologies(Factions.ShorbearClan, EventFaction)
+				GrandStrategyFaction = Factions.ShorbearClan
+			end
+		}
 	},
 	BaglurWarrior = {
 		Name = "Baglur, Warrior",
@@ -970,12 +1084,19 @@ local NidavellirEvents = {
 	TheFoundingOfKnalga = {
 		Name = "The Founding of Knalga",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Knalga!",
-		Civilization = "dwarf",
-		FactionType = "tribe",
-		Provinces = {
-			CavernsOfChaincolt = true,
-			SouthernTunnels = true
-		},
+		Conditions = function(s)
+			if (
+				GetFactionProvinceCount(Factions.Knalga) == 0
+				and EventFaction.Civilization == "dwarf"
+				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
+				and WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
+				and WorldMapProvinces.SouthernTunnels.Owner == EventFaction.Name
+			) then
+				return true
+			else
+				return false
+			end
+		end,
 		Persistent = true, -- can happen multiple times, so that tribes that conquer a lordship can become a polity
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
@@ -987,11 +1108,18 @@ local NidavellirEvents = {
 	TheFoundingOfKalKartha = {
 		Name = "The Founding of Kal Kartha",
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Kal Kartha!",
-		Civilization = "dwarf",
-		FactionType = "tribe",
-		Provinces = {
-			KalKartha = true
-		},
+		Conditions = function(s)
+			if (
+				GetFactionProvinceCount(Factions.Knalga) == 0
+				and EventFaction.Civilization == "dwarf"
+				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
+				and WorldMapProvinces.KalKartha.Owner == EventFaction.Name
+			) then
+				return true
+			else
+				return false
+			end
+		end,
 		Persistent = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)

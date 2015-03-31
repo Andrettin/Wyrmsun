@@ -2223,6 +2223,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Type = "land",
 	NumDirections = 1,
 	ExplodeWhenKilled = "missile-explosion",
+	VisibleUnderFog = true,
 	Sounds = {
 		"selected", "click",
 		"dead", "building destroyed"
@@ -2244,6 +2245,7 @@ DefineUnitType("unit-table", { Name = _("Table"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	VisibleUnderFog = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2354,6 +2356,7 @@ DefineUnitType("unit-chair", { Name = _("Chair"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	VisibleUnderFog = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2389,6 +2392,7 @@ DefineUnitType("unit-bed", { Name = _("Bed"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	VisibleUnderFog = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2507,6 +2511,7 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	Type = "land",
 	NumDirections = 1,
 	Drops = {"unit-potion-of-healing", "unit-potion-of-decay", "unit-potion-of-slowness"},
+	VisibleUnderFog = true,
 	Variations = {
 		{
 			"variation-id", "1"

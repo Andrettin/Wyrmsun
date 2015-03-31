@@ -87,6 +87,10 @@ FactionsEncyclopedia = {
 		Name = _("~!Marcomanni Tribe (Teuton)"),
 		Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".")
 	},
+	ModsogningClan = {
+		Name = _("M~!odsogning Clan (Dwarf)"),
+		Description = _("The Modsogning clan is one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.")
+	},
 	NorlundClan = {
 		Name = _("~!Norlund Clan (Dwarf)"),
 		Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga.")

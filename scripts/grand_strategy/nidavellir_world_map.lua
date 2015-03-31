@@ -58,7 +58,8 @@ WorldMapResources = {
 		{35, 10, false}, 
 		{34, 14, true}, 
 		{39, 6, false}, 
-		{46, 5, false} 
+		{46, 5, false},
+		{47, 11, true} -- to give the Modsogning clan a proper start
 	},
 	Lumber = { 
 	}
@@ -75,17 +76,47 @@ MercenaryGroups = {
 LoadEvents("Nidavellir")
 
 if (GrandStrategyYear >= -3000) then
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin = 2
+	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 2
 	GrandStrategyEvents.DurinWarrior = nil
 end
 
 if (GrandStrategyYear >= -2970) then -- estimated date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durin = 0
+	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 0
 	GrandStrategyEvents.DurinDies = nil
 end
 
-if (GrandStrategyYear >= -1) then -- bronze age technologies had already been obtained by the dwarves by this point
+if (GrandStrategyYear >= -1) then
+	GrandStrategyEvents.TheNorlundClan = nil
+	GrandStrategyEvents.TheShinsplitterClan = nil
+	GrandStrategyEvents.TheShorbearClan = nil
+	WorldMapProvinces.CavernsOfChaincolt.Owner = "Norlund Clan"
+	WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_town_hall = 2
+	WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_barracks = 2 -- has capability to train warriors
+	WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_smithy = 2 -- Durstorn has runesmiths under his employ
+	WorldMapProvinces.CavernsOfChaincolt.Units.unit_goblin_spearman = 0
+--	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_steelclad = 4 -- Neglur, Glinar, Kuhnar, Theganli
+--	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_scout = 1 -- Noiraran
+	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = 4 -- 4 Dwarven Guardsmen (5 if easy mode)
+	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_steelclad = 2 -- Neglur, Glinar
+	WorldMapProvinces.ShorbearHills.Owner = "Shorbear Clan"
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_town_hall = 2
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_stronghold = 2 -- Shorbear Hold
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_barracks = 2 -- has capability to train warriors
+	WorldMapProvinces.ShorbearHills.SettlementBuildings.unit_dwarven_smithy = 2 -- renowned skilled crafters
+	WorldMapProvinces.ShorbearHills.Units.unit_goblin_spearman = 0
+	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 1 -- Glonoin
+	WorldMapProvinces.SouthernTunnels.Owner = "Shinsplitter Clan"
+	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_dwarven_town_hall = 2
+	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_dwarven_barracks = 2 -- has capability to train warriors
+	WorldMapProvinces.SouthernTunnels.Units.unit_goblin_spearman = 0
+	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = 3 -- Glildur, Glindur, Kalnar
+	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
+
+	-- bronze age technologies had already been obtained by the dwarves by this point
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_broad_axe = 2
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_shield_1 = 2
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_broad_axe = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_1 = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
@@ -123,6 +154,7 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 	WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
 	WorldMapProvinces.SouthernTunnels.SettlementBuildings.unit_dwarven_lumber_mill = 2 -- had capability to train scouts by then
 
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_masonry = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_masonry = 2 -- dwarves already had castles built of stone masonry by then
 	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_masonry = 2
 	Factions.ShorbearClan.Technologies.upgrade_dwarven_masonry = 2
@@ -270,6 +302,10 @@ if (GrandStrategyYear >= 550) then
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_thane = 4 -- Karrag
 	
 	-- late iron age technologies already obtained by the dwarves by this point
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_great_axe = 2
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_shield_2 = 2
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_great_axe = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_2 = 2
 	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2

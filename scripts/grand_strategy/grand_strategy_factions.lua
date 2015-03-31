@@ -342,6 +342,10 @@ function LoadFactions(world)
 			}
 		},
 		-- Dwarven clans
+		ModsogningClan = {
+			Name = "Modsogning Clan",
+			Civilization = "dwarf"
+		},
 		NorlundClan = {
 			Name = "Norlund Clan",
 			Civilization = "dwarf",

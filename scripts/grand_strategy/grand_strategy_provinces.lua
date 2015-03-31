@@ -969,25 +969,14 @@ function LoadProvinces(world)
 		CavernsOfChaincolt = {
 			Name = "Caverns of Chaincolt",
 			Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {29, 19}, {29, 20}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {30, 20}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
-			Owner = "Norlund Clan",
-			Civilization = "dwarf",
+			Owner = "",
 			SettlementLocation = {30, 13},
-			SettlementBuildings = {
-				unit_dwarven_town_hall = 2,
-				unit_dwarven_barracks = 2, -- has capability to train warriors
-				unit_dwarven_smithy = 2 -- Durstorn has runesmiths under his employ
-			},
+			SettlementBuildings = {},
 			Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 			Units = {
-	--			unit_dwarven_axefighter = 5, -- Rugnur, 4 Dwarven Guardsmen (5 if easy mode)
-	--			unit_dwarven_steelclad = 6, -- Baglur, Durstorn, Neglur, Glinar, Kuhnar, Theganli
-	--			unit_dwarven_scout = 1 -- Noiraran
-				unit_dwarven_axefighter = 4, -- 4 Dwarven Guardsmen (5 if easy mode)
-				unit_dwarven_steelclad = 2, -- Neglur, Glinar
-				unit_gnomish_recruit = 0
+				unit_goblin_spearman = 4
 			},
-			Heroes = {
-			},
+			Heroes = {},
 			SettlementTerrain = "Mntn" -- for random map generation
 		},
 		CavernsOfFlame = {
@@ -1057,7 +1046,7 @@ function LoadProvinces(world)
 		},
 		HighPass = {
 			Name = "High Pass",
-			Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {40, 13}, {40, 14}, {41, 10}, {41, 11}, {41, 12}, {41, 13}, {41, 14}, {42, 11}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {48, 10}, {48, 11}, {48, 12}, {49, 11} },
+			Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {41, 10}, {41, 11}, {41, 12}, {42, 11} },
 			Owner = "",
 			SettlementLocation = {40, 12},
 			SettlementBuildings = {},
@@ -1160,19 +1149,13 @@ function LoadProvinces(world)
 		ShorbearHills = {
 			Name = "Shorbear Hills",
 			Tiles = { {31, 16}, {31, 17}, {31, 18}, {32, 15}, {32, 16}, {32, 17}, {32, 18}, {32, 19}, {33, 14}, {33, 15}, {33, 16}, {33, 17}, {33, 18}, {33, 19}, {34, 14}, {34, 15}, {34, 16}, {34, 17} },
-			Owner = "Shorbear Clan",
-			Civilization = "dwarf",
+			Owner = "",
 			SettlementName = "Shorbear Hold",
 			SettlementLocation = {33, 15},
-			SettlementBuildings = {
-				unit_dwarven_town_hall = 2,
-				unit_dwarven_stronghold = 2, -- Shorbear Hold
-				unit_dwarven_barracks = 2, -- has capability to train warriors
-				unit_dwarven_smithy = 2 -- renowned skilled crafters
-			},
+			SettlementBuildings = {},
 			Map = "maps/nidavellir/shorbear-hills.smp",
 			Units = {
-				unit_dwarven_thane = 1 -- Glonoin
+				unit_goblin_spearman = 4
 			},
 			Heroes = {
 			},
@@ -1181,18 +1164,29 @@ function LoadProvinces(world)
 		SouthernTunnels = {
 			Name = "Southern Tunnels",
 			Tiles = { {31, 14}, {32, 13}, {32, 14}, {33, 12}, {33, 13}, {34, 12}, {34, 13}, {35, 13} },
-			Owner = "Shinsplitter Clan",
-			Civilization = "dwarf",
+			Owner = "",
 			SettlementName = "Knalga",
 			SettlementLocation = {32, 14},
-			SettlementBuildings = {
-				unit_dwarven_town_hall = 2,
-				unit_dwarven_barracks = 2 -- has capability to train warriors
-			},
+			SettlementBuildings = {},
 			Map = "maps/nidavellir/southern-tunnels.smp",
 			Units = {
-				unit_dwarven_steelclad = 3, -- Glildur, Glindur, Kalnar
-				unit_dwarven_thane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
+				unit_goblin_spearman = 4
+			},
+			Heroes = {
+			},
+			SettlementTerrain = "Hill"
+		},
+		Svarinshaug = {
+			Name = "Svarinshaug",
+			Tiles = { {40, 13}, {40, 14}, {41, 13}, {41, 14}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {48, 10}, {48, 11}, {48, 12}, {49, 11} },
+			Owner = "Modsogning Clan",
+			Civilization = "dwarf",
+			SettlementLocation = {44, 11},
+			SettlementBuildings = {
+				unit_dwarven_town_hall = 2
+			},
+			Map = "maps/random_maps/random-map-swamp.smp",
+			Units = {
 			},
 			Heroes = {
 			},
