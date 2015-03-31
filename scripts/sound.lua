@@ -137,21 +137,22 @@ MakeSound("yale-rider-acknowledge", {
 ------------------------------------------------------------------------------
 --	Define simple gnome sounds.
 --
---[[
-MakeSound("basic-gnome-voices-ready", "gnome/basic_voices/gnome_ready.wav")
 MakeSound("basic-gnome-voices-selected", {
-	"gnome/basic_voices/selected-1.wav",
+--	"gnome/basic_voices/selected-1.wav",
 	"gnome/basic_voices/selected-2.wav",
-	"gnome/basic_voices/selected-3.wav"
+	"gnome/basic_voices/selected-3.wav",
+	"gnome/basic_voices/selected-4.wav",
+	"gnome/basic_voices/selected-5.wav",
+--	"gnome/basic_voices/selected-6.wav",
+	"gnome/basic_voices/selected-7.wav"
 })
 MakeSound("basic-gnome-voices-annoyed", {
-	"gnome/basic_voices/annoy-1.wav",
-	"gnome/basic_voices/annoy-2.wav",
-	"gnome/basic_voices/annoy-3.wav",
-	"gnome/basic_voices/annoy-4.wav"
+	"gnome/basic_voices/annoy-3.wav"
 })
 MakeSoundGroup("basic-gnome-voices-selected-group",
 	"basic-gnome-voices-selected", "basic-gnome-voices-annoyed")
+--[[
+MakeSound("basic-gnome-voices-ready", "gnome/basic_voices/gnome_ready.wav")
 MakeSound("basic-gnome-voices-acknowledge", {
 	"gnome/basic_voices/acknowledge-1.wav",
 	"gnome/basic_voices/acknowledge-2.wav",
