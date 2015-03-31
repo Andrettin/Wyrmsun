@@ -253,6 +253,7 @@ DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
 	Animations = "animations-goblin-swordsman", Icon = "icon-greebo",
 	Gender = 1,
+	Hero = true,
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",

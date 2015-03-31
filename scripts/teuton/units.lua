@@ -338,6 +338,7 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
 	Image = {"file", "teuton/units/suebi_warrior.png", "size", {72, 72}},
 	Icon = "icon-marbod",
+	Hero = true,
 	Gender = 1,
 	Variations = {}
 } )

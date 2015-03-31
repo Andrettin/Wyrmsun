@@ -5193,7 +5193,7 @@ function IsOffensiveMilitaryUnit(unit_type)
 end
 
 function IsMilitaryUnit(unit_type)
-	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and string.find(unit_type, "hero") == nil and GetUnitTypeData(unit_type, "Class") ~= "worker") then
+	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and GetUnitTypeData(unit_type, "Hero") == false and GetUnitTypeData(unit_type, "Class") ~= "worker") then
 		return true
 	else
 		return false
@@ -5201,7 +5201,7 @@ function IsMilitaryUnit(unit_type)
 end
 
 function IsHero(unit_type)
-	if (string.find(unit_type, "upgrade-") == nil and string.find(unit_type, "hero") ~= nil) then
+	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Hero")) then
 		return true
 	else
 		return false

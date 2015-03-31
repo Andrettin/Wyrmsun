@@ -660,6 +660,7 @@ DefineUnitType("unit-hero-durin", { Name = _("Steelclad"),
 	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves."),
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
+	Hero = true,
 	Gender = 1,
 	Variations = {
 		{
@@ -692,6 +693,7 @@ DefineUnitType("unit-hero-rugnur", { Name = _("Axefighter"),
 	Description = _("Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch."),
 	Image = {"file", "dwarf/units/rugnur.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
+	Hero = true,
 	Gender = 1,
 	Variations = {}
 } )
@@ -735,6 +737,7 @@ DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
 --	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
 	Image = {"file", "dwarf/units/dwarven_steelclad_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
+	Hero = true,
 	Gender = 1,
 	Variations = {
 		{
@@ -769,6 +772,7 @@ DefineUnitType("unit-hero-thursagan", { Name = _("Thane"),
 	Background = "~<The Sceptre of Fire~> poem about the crafting of that artifact mentions Thursagan (as \"a runesmith\") as the maker of the scepter.",
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-thursagan",
+	Hero = true,
 	Gender = 1,
 	Variations = {}
 } )
@@ -781,6 +785,7 @@ DefineUnitType("unit-hero-durstorn", { Name = _("Thane"),
 	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durstorn",
+	Hero = true,
 	Gender = 1,
 	Variations = {}
 } )

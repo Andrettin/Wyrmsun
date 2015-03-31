@@ -160,7 +160,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	if (string.find(unit_name, "upgrade-") == nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		civilization = GetUnitTypeData(unit_name, "Civilization")
-		if (string.find(unit_name, "hero") == nil) then
+		if (GetUnitTypeData(unit_name, "Hero") == false) then
 			tooltip_name = GetUnitTypeData(unit_name, "Name")
 		else
 			tooltip_name = GetUnitTypeData(unit_name, "DefaultName")

@@ -775,7 +775,7 @@ AddTrigger(
 				local uncount = 0
 				uncount = GetUnits(0)
 				for unit1 = 1,table.getn(uncount) do 
-					if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "hero") ~= nil or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit") then
+					if (GetUnitBoolFlag(uncount[unit1], "Hero") or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit") then
 						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
 --							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
 							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
