@@ -113,7 +113,6 @@ function addQuestIcon(quest, menu, x, y)
 					GameSettings.NoRandomness = wyr.preferences.NoRandomness
 					CurrentQuest = quest.Name
 					RunMap(quest.Map)
-					CurrentQuest = ""
 					quest_menu:stop()
 					menu:stop()
 				end)

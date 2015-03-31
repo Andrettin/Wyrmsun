@@ -79,7 +79,6 @@ local NidavellirEvents = {
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
 					CurrentQuest = "The Mead of Wisdom"
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
-					CurrentQuest = ""
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
@@ -285,6 +284,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
+				CurrentQuest = "A Bargain is Struck"
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
@@ -332,6 +332,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
+				CurrentQuest = "A Bargain is Struck"
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
@@ -376,6 +377,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
+				CurrentQuest = "Closing the Gates"
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
@@ -425,6 +427,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
+				CurrentQuest = "Closing the Gates"
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
@@ -475,6 +478,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/northern-wastelands.smp")
+				CurrentQuest = "Searching for the Runecrafter"
 				RunMap("maps/nidavellir/northern-wastelands.smp")
 				GrandStrategyEventMap = false
 
@@ -528,6 +532,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/eastern-mines.smp")
+				CurrentQuest = "Gathering Materials"
 				RunMap("maps/nidavellir/eastern-mines.smp")
 				GrandStrategyEventMap = false
 
@@ -578,6 +583,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
+				CurrentQuest = "Hills of the Shorbear Clan"
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
@@ -638,6 +644,7 @@ local NidavellirEvents = {
 				GameSettings.Presets[1].Type = PlayerComputer
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
+				CurrentQuest = "Hills of the Shorbear Clan"
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
@@ -680,6 +687,7 @@ local NidavellirEvents = {
 				GameSettings.Presets[2].Type = PlayerComputer
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
+				CurrentQuest = "Hills of the Shorbear Clan"
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
@@ -735,6 +743,7 @@ local NidavellirEvents = {
 			
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
+				CurrentQuest = "The Wyrm"
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
@@ -786,6 +795,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = true
 				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
+				CurrentQuest = "The Wyrm"
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
@@ -834,6 +844,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
+				CurrentQuest = "Caverns of Flame"
 				RunMap("maps/nidavellir/caverns-of-flame.smp")
 				GrandStrategyEventMap = false
 
@@ -884,6 +895,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = true
 				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
+				CurrentQuest = "Caverns of Flame"
 				RunMap("maps/nidavellir/caverns-of-flame.smp")
 				GrandStrategyEventMap = false
 

@@ -52,6 +52,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
+					CurrentQuest = "On the Vanaquisl"
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -94,6 +95,7 @@ local GermanicEvents = {
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					GameSettings.Presets[0].Type = PlayerComputer
+					CurrentQuest = "On the Vanaquisl"
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					for i, unitName in ipairs(Units) do
@@ -139,6 +141,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/novgorod.smp")
+					CurrentQuest = "Westward Migration"
 					RunMap("maps/earth/novgorod.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -215,6 +218,7 @@ local GermanicEvents = {
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/jutland.smp")
 					GameSettings.Presets[1].Type = PlayerComputer					
+					CurrentQuest = "Northwards to the Sea"
 					RunMap("maps/earth/jutland.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -281,6 +285,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/malmo.smp")
+					CurrentQuest = "Gylve's Realm"
 					RunMap("maps/earth/malmo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -882,6 +887,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/belfort.smp")
+					CurrentQuest = "The Battle of Magetobria"
 					RunMap("maps/earth/belfort.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -973,6 +979,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/prague.smp")
+					CurrentQuest = "The Home of the Boii"
 					RunMap("maps/earth/prague.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
