@@ -1,7 +1,11 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person", "person", "person", "person")
-PresentMap("Eastern Mines", 4, 80, 80, 1)
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person", "computer", "computer", "computer")
+else
+	DefinePlayerTypes("person", "person", "person", "person")
+end
+PresentMap("Eastern Mines", 1, 80, 80, 1)
 MapWorld = "Nidavellir"
 MapRequiredQuest = "Searching for the Runecrafter"
 MapAttacker = 0

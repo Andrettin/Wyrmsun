@@ -168,7 +168,7 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ABargainIsStruckShinsplitterClan = nil
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
-	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
+	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 1
 	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "War"
 	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "War"
 	Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)

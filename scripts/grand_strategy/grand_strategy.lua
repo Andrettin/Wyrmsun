@@ -2015,7 +2015,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 			unit_type = "unit-germanic-smithy"
 		end
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
-		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
+		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
 	end
 	
 	local unit_type_name = GetUnitTypeName(unit_type)
@@ -2109,7 +2109,7 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 --	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
 --	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
 --	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
-	local unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
+	local unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
 	unit_icon:Load()
 	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
 	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
@@ -2141,7 +2141,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 		unit_icon = CGraphic:New(string.sub(CUpgrade:Get(unit_type).Icon.G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
-		unit_icon = CPlayerColorGraphic:New(CUpgrade:Get(unit_type).Icon.G:getFile(), 46, 38)
+		unit_icon = CUpgrade:Get(unit_type).Icon.G
 	end
 	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
@@ -2225,7 +2225,7 @@ function AddGrandStrategyHeroButton(x, y, unit_type)
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
-		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
+		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
 	end
 	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
@@ -2272,7 +2272,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
-		unit_icon = CPlayerColorGraphic:New(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 46, 38)
+		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
 	end
 	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b

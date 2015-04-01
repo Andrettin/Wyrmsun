@@ -140,7 +140,6 @@ AddTrigger(
 	end
 )
 
-if (mapinfo.description == "Caverns of Flame") then
 -- Caverns of Flame initial dialogue
 -- based on the Caverns of Flame scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 AddTrigger(
@@ -814,4 +813,3 @@ AddTrigger(
 		return false
 	end
 )
-end

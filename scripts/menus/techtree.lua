@@ -65,21 +65,19 @@ function RunTechTreeMenu(civilization_number)
 
 	function addTechItemIcon(unit, menu, x, y, playercolor)
 		local unit_name = ""
-		local techicon_graphics
 		local tech_description
+		local techicon
 		if (string.find(unit, "upgrade-") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
-			techicon_graphics = CIcon:Get(GetUnitTypeData(unit, "Icon")).G:getFile()
+			techicon = CIcon:Get(GetUnitTypeData(unit, "Icon")).G
 		else
 			unit_name = CUpgrade:Get(unit).Name
 			tech_description = CUpgrade:Get(unit).Description
-			techicon_graphics = CUpgrade:Get(unit).Icon.G:getFile()
+			techicon = CUpgrade:Get(unit).Icon.G
 		end
 		tech_description = tech_description .. GetTechnologyAllowsString(unit, civilization)
-		techicon_graphics = string.sub(techicon_graphics, 0, -5)
 		local b
-		local techicon = CPlayerColorGraphic:New(techicon_graphics .. ".png")
 		techicon:Load()
 		b = PlayerColorImageButton("", playercolor)
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and GetTechnologyPointCost("", unit) > 0) then

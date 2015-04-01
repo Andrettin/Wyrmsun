@@ -1,7 +1,11 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","computer")
-PresentMap("Prague", 2, 128, 96, 1)
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person","computer")
+else
+	DefinePlayerTypes("person","person")
+end
+PresentMap("Prague", 1, 128, 96, 1)
 MapWorld = "Earth"
 MapRequiredQuest = "The Battle of Magetobria"
 MapAttacker = 0

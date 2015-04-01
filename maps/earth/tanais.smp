@@ -1,6 +1,10 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","person")
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person","computer")
+else
+	DefinePlayerTypes("person","person")
+end
 PresentMap("Tanais", 2, 64, 48, 1)
 MapWorld = "Earth"
 MapAttacker = 0
