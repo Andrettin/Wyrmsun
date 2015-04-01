@@ -312,6 +312,18 @@ function SinglePlayerTriggers()
 		end
 	)
 
+	if (GrandStrategy and GrandStrategyEventMap == false) then
+		AddTrigger(
+			function()
+				return true
+			end,
+			function()
+				AddMessage("Battle in " .. GetProvinceName(AttackedProvince))
+				return false
+			end
+		)
+	end
+	
 	if (LoadedGame == false) then
 		for key, value in pairs(CustomPlayerData) do
 			for i=1,table.getn(CustomPlayerData[key].Objectives) do

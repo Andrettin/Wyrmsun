@@ -55,6 +55,10 @@ function RunResultsMenu()
   menu:addLabel("Outcome", offx + 106, offy + top_offset)
   menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
 
+  if (GrandStrategy and GrandStrategyEventMap == false) then
+	menu:addLabel("Province", Video.Width - offx - 106, offy + top_offset)
+	menu:addLabel(GetProvinceName(AttackedProvince), Video.Width - offx - 106, offy + top_offset + 21, Fonts["large-title"])
+  end
   menu:addLabel("Units", offx + 50, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Gold", offx + 230, offy + bottom_offset, Fonts["large"], true)
@@ -105,10 +109,11 @@ function RunResultsMenu()
     end
   end
 
-  menu:addFullButton("~!Save Replay", "s", offx + 150, offy + 440,
-    function() RunSaveReplayMenu() end)
+--  menu:addFullButton("~!Save Replay", "s", offx + 150, offy + 440,
+--    function() RunSaveReplayMenu() end)
 
-  menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
+--  menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
+  menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112, offy + 440,
     function() StopMusic(); menu:stop() end)
 
   menu:run()
