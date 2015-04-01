@@ -220,6 +220,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Slug (graphics by b_o).
 - Added Blood Bat and Dread Bat (graphics by b_o).
 - Goblin Spearmen now have a bonus against cavalry, but have lower normal damage.
+- Added voiceovers for the gnomes.
 - Added new sounds for when a worker is repairing/building (by Wildfire Games).
 
 * Upgrades

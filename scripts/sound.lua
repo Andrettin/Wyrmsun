@@ -151,15 +151,18 @@ MakeSound("basic-gnome-voices-annoyed", {
 })
 MakeSoundGroup("basic-gnome-voices-selected-group",
 	"basic-gnome-voices-selected", "basic-gnome-voices-annoyed")
---[[
-MakeSound("basic-gnome-voices-ready", "gnome/basic_voices/gnome_ready.wav")
+MakeSound("basic-gnome-voices-ready", {
+	"gnome/basic_voices/ready-1.wav",
+	"gnome/basic_voices/ready-2.wav"
+})
 MakeSound("basic-gnome-voices-acknowledge", {
-	"gnome/basic_voices/acknowledge-1.wav",
-	"gnome/basic_voices/acknowledge-2.wav",
-	"gnome/basic_voices/acknowledge-3.wav",
-	"gnome/basic_voices/acknowledge-4.wav"
+	"gnome/basic_voices/acknowledge-01.wav",
+	"gnome/basic_voices/acknowledge-02.wav",
+	"gnome/basic_voices/acknowledge-03.wav",
+	"gnome/basic_voices/acknowledge-04.wav"
 })
 
+--[[
 ------------------------------------------------------------------------------
 --	Define unit-specific gnome sounds.
 --
@@ -492,6 +495,7 @@ DefineGameSounds(
   "building-construction", {"teuton", building_construction},
 
 --  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
+  "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
 
   "rescue", {"celt", rescue},
   "rescue", {"dwarf", rescue},
