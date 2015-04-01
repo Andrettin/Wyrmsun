@@ -1289,7 +1289,7 @@ DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
 		}
 	},
 	Sounds = {
---		"selected", "gold-mine-selected",
+		"selected", "tree-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
@@ -3084,7 +3084,7 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
---		"ready", "town-hall-ready",
+		"ready", "town-hall-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
@@ -3124,9 +3124,9 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	Sounds = {
-		"selected", "town-hall-selected",
+		"selected", "fortress-selected",
 --		"acknowledge", "town-hall-acknowledge",
---		"ready", "town-hall-ready",
+		"ready", "fortress-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"}
 } )
@@ -3156,9 +3156,9 @@ DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
 	Sounds = {
-		"selected", "click",
+		"selected", "farm-selected",
 --		"acknowledge", "farm-acknowledge",
---		"ready", "farm-ready",
+		"ready", "farm-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
@@ -3187,9 +3187,9 @@ DefineUnitType("unit-template-barracks", { Name = _("Barracks"),
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
 	Sounds = {
-		"selected", "click",
+		"selected", "barracks-selected",
 --		"acknowledge", "barracks-acknowledge",
---		"ready", "barracks-ready",
+		"ready", "barracks-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
@@ -3222,7 +3222,7 @@ DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
 	Sounds = {
 		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
---		"ready", "dwarven-lumber-mill-ready",
+		"ready", "storehouse-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
@@ -3252,9 +3252,9 @@ DefineUnitType("unit-template-smithy", { Name = _("Smithy"),
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
 	Sounds = {
---		"selected", "lumber-mill-selected",
+		"selected", "smithy-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
---		"ready", "dwarven-lumber-mill-ready",
+		"ready", "smithy-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
@@ -3289,9 +3289,9 @@ DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
 	SaveCargo = true,
 	BuilderOutside = true,
 	Sounds = {
-		"selected", "click",
+		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
---		"ready", "dwarven-sentry-tower-ready",
+		"ready", "tower-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}
@@ -3326,9 +3326,9 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	Sounds = {
-		"selected", "click",
+		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
---		"ready", "dwarven-sentry-tower-ready",
+		"ready", "tower-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building destroyed"
 	}

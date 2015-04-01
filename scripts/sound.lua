@@ -287,13 +287,28 @@ placement_success = MakeSound("placement success", "ui/placement_success.wav")
 rescue = MakeSound("rescue", "misc/rescue.wav")
 
     -- building selection sounds
-MakeSound("town-hall-selected", "buildings/town_hall.wav")
---MakeSound("farm-selected", "buildings/farm.wav")
---MakeSound("barracks-selected", "buildings/barracks.wav")
-
+MakeSound("town-hall-selected", "buildings/sel_civ_center.wav")
+MakeSound("farm-selected", "buildings/sel_farmstead.wav")
+MakeSound("corral-selected", "buildings/sel_corral.wav")
+MakeSound("barracks-selected", "buildings/sel_barracks.wav")
 MakeSound("gold-mine-selected", "buildings/gold_mine.wav")
-MakeSound("lumbermill", "buildings/lumbermill.wav")
+MakeSound("lumber-mill-selected", "buildings/lumbermill.wav")
+MakeSound("smithy-selected", "buildings/sel_blacksmith.wav")
 MakeSound("yale-pen-selected", "buildings/yalepen.wav")
+MakeSound("fortress-selected", "buildings/sel_fortress.wav")
+MakeSound("tower-selected", "buildings/sel_tower.wav")
+
+MakeSound("town-hall-ready", "buildings/complete_civ_center.wav")
+MakeSound("farm-ready", "buildings/complete_farmstead.wav")
+MakeSound("corral-ready", "buildings/complete_corral.wav")
+MakeSound("barracks-ready", "buildings/complete_barracks.wav")
+MakeSound("storehouse-ready", "buildings/complete_storehouse.wav")
+MakeSound("smithy-ready", "buildings/complete_blacksmith.wav")
+MakeSound("fortress-ready", "buildings/complete_fortress.wav")
+MakeSound("tower-ready", "buildings/complete_tower.wav")
+
+MakeSound("tree-selected", "misc/sel_tree_01.wav")
+
 --transport_docking = MakeSound("transport docking", "misc/transport_docking.wav")
 MakeSound("burning", "misc/burning.wav")
     -- ready sounds
@@ -374,6 +389,11 @@ MakeSound("attack-miss",
 	"missiles/miss-3.wav"}
 )
 
+MakeSound("construction-stone", {
+	"misc/construction/con_stone_10.wav",
+	"misc/construction/con_stone_11.wav"
+} )
+
 MakeSound("construction-wood", {
 	"misc/construction/con_wood_18.wav",
 	"misc/construction/con_wood_10.wav",
@@ -413,7 +433,6 @@ MakeSound("magic-holy",
     --	acknowledge sounds
     --	 ready sounds
     --	 selection sounds
-MapSound("lumber-mill-selected", "lumbermill")
     --	attack sounds
 
 MapSound("gold-mine-help", "basic-dwarf-voices-help")

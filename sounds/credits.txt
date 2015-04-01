@@ -1,5 +1,4 @@
 Battle for Wesnoth Team:
-/sounds/buildings/town_hall.wav
 /sounds/dwarf/basic_voices/dead-1.wav
 /sounds/dwarf/basic_voices/dead-2.wav
 /sounds/goblin/basic_voices/goblin-die-1.wav
@@ -144,6 +143,23 @@ U.S. Fish and Wildlife Service (Public Domain) (http://www.fws.gov/video/sound.h
 /sounds/neutral/yale/yaledead.wav (later modified by b_o)
 
 Wildfire Games (http://www.wildfiregames.com/):
+/sounds/buildings/complete_barracks.wav
+/sounds/buildings/complete_blacksmith.wav
+/sounds/buildings/complete_civ_center.wav
+/sounds/buildings/complete_corral.wav
+/sounds/buildings/complete_farmstead.wav
+/sounds/buildings/complete_fortress.wav
+/sounds/buildings/complete_storehouse.wav
+/sounds/buildings/complete_tower.wav
+/sounds/buildings/sel_barracks.wav
+/sounds/buildings/sel_blacksmith.wav
+/sounds/buildings/sel_civ_center.wav
+/sounds/buildings/sel_corral.wav
+/sounds/buildings/sel_farmstead.wav
+/sounds/buildings/sel_fortress.wav
+/sounds/buildings/sel_tower.wav
+/sounds/misc/construction/con_stone_10.wav
+/sounds/misc/construction/con_stone_11.wav
 /sounds/misc/construction/con_wood_10.wav
 /sounds/misc/construction/con_wood_11.wav
 /sounds/misc/construction/con_wood_12.wav
@@ -153,6 +169,7 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/misc/construction/con_wood_16.wav
 /sounds/misc/construction/con_wood_17.wav
 /sounds/misc/construction/con_wood_18.wav
+/sounds/misc/sel_tree_01.wav
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav

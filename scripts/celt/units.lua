@@ -40,4 +40,11 @@ DefineUnitType("unit-celt-farm", { Name = _("Farm"),
 --	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
 	Image = {"file", "celt/buildings/farm.png", "size", {64, 64}},
 	Icon = "icon-celt-farm",
+	Sounds = {
+		"selected", "corral-selected",
+--		"acknowledge", "farm-acknowledge",
+		"ready", "corral-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building destroyed"
+	}
 } )

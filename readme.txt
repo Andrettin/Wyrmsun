@@ -16,6 +16,23 @@ by Andrettin
 
 The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
 
+/sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_corral.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_farmstead.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_fortress.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_storehouse.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_tower.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_barracks.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_blacksmith.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_civ_center.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_corral.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_farmstead.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_fortress.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_tower.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_stone_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_stone_11.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/construction/con_wood_10.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/construction/con_wood_11.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/construction/con_wood_12.wav (licensed under the CC-BY-SA 3.0)
@@ -25,6 +42,7 @@ The Stratagus engine, as well as all of the code, artwork, music and story eleme
 /sounds/misc/construction/con_wood_16.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/construction/con_wood_17.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/construction/con_wood_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/sel_tree_01.wav (licensed under the CC-BY-SA 3.0)
 
 See the license.txt file for the text of the GPLv2. The contents of the CC-BY-SA license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
 

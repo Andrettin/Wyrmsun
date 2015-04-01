@@ -34,12 +34,6 @@
 DefineAnimations("animations-dwarven-miner", {
   Still = UnitStill,
   Move = UnitMove,
---  Move = {"unbreakable begin", "frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1", -- miner after movement speed boosting upgrade
---    "frame 5", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
---    "frame 10", "move 3", "wait 1", "frame 0", "move 2", "wait 1",
---    "frame 0", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
---    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
---    "frame 20", "move 3", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",},
   Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "wait 5", "frame 45", "wait 3",
     "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
@@ -48,7 +42,7 @@ DefineAnimations("animations-dwarven-miner", {
     "frame 25", "wait 9", "frame 25",
 	"wait 1",},
   Repair = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
+    "frame 40", "sound construction-stone", "wait 5", "frame 45", "wait 3",
     "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
   Death = {"unbreakable begin", "frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
     "frame 60", "unbreakable end", "wait 1",},

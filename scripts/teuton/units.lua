@@ -40,7 +40,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 	Quote = _("\"He began to grow, | and to gain in strength, / Oxen he ruled, | and plows made ready, / Houses he built, | and barns he fashioned, / Carts he made, | and the plow he managed.\" - Rigsthula"),
 	Background = _("\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."),
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
-	Animations = "animations-dwarven-miner", Icon = "icon-germanic-worker",
+	Animations = "animations-germanic-worker", Icon = "icon-germanic-worker",
 	Corpse = "unit-human-dead-body",
 	CanGatherResources = {
 		{
@@ -205,7 +205,7 @@ DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
 	Parent = "unit-teuton-swordsman",
 	Class = "",
 	Image = {"file", "teuton/units/old_man.png", "size", {72, 72}},
-	Animations = "animations-dwarven-miner", Icon = "icon-old-man",
+	Animations = "animations-germanic-worker", Icon = "icon-old-man",
 	HitPoints = 40,
 	BasicDamage = 2, PiercingDamage = 4,
 	Corpse = "unit-human-dead-body",
@@ -259,7 +259,14 @@ DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
 --	Description = _("Farms are essential for supporting a settlement's population."),
 --	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
 	Image = {"file", "germanic/buildings/farm.png", "size", {64, 64}},
-	Icon = "icon-germanic-farm"
+	Icon = "icon-germanic-farm",
+	Sounds = {
+		"selected", "corral-selected",
+--		"acknowledge", "farm-acknowledge",
+		"ready", "corral-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building destroyed"
+	}
 } )
 
 DefineUnitType("unit-teuton-barracks", { Name = _("Barracks"),

@@ -59,8 +59,8 @@ DefineTileset("name", "Swamp",
     { 125, 125, 125, 125}},						-- 070
   "solid", { "rock", "image", "tilesets/swamp/terrain/rock.png", "land", "rock", "unpassable",
     { 17, 20, 23, 17}},							-- 080
-  "solid", { "unused-human-closed-wall", "land", "human", "wall", "unpassable",
-    {  11,   0,  11,   0, 464}},					-- 090
+  "solid", { "unused",
+    {}},								-- 090
   "solid", { "unused",
     {}},								-- 0A0
   "solid", { "unused",
