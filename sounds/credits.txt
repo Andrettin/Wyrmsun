@@ -143,6 +143,17 @@ U.S. Fish and Wildlife Service (Public Domain) (http://www.fws.gov/video/sound.h
 /sounds/neutral/yale/yale_select02.wav (later modified by b_o)
 /sounds/neutral/yale/yaledead.wav (later modified by b_o)
 
+Wildfire Games (http://www.wildfiregames.com/):
+/sounds/misc/construction/con_wood_10.wav
+/sounds/misc/construction/con_wood_11.wav
+/sounds/misc/construction/con_wood_12.wav
+/sounds/misc/construction/con_wood_13.wav
+/sounds/misc/construction/con_wood_14.wav
+/sounds/misc/construction/con_wood_15.wav
+/sounds/misc/construction/con_wood_16.wav
+/sounds/misc/construction/con_wood_17.wav
+/sounds/misc/construction/con_wood_18.wav
+
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav
 /sounds/misc/building_construction.wav

@@ -77,6 +77,7 @@ function RunShowCreditsMenu()
 	"  David Slimp",
 	"  J. W. Bjerk (eleazzaar)",
 	"  Lari Nieminen (zookeeper)",
+	"  Wildfire Games",
 	"  Wolfgang Kohler",
 	_("Music"),
 	"  Battle for Wesnoth Team",

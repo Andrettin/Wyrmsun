@@ -371,6 +371,18 @@ MakeSound("attack-miss",
 	"missiles/miss-3.wav"}
 )
 
+MakeSound("construction-wood", {
+	"misc/construction/con_wood_18.wav",
+	"misc/construction/con_wood_10.wav",
+	"misc/construction/con_wood_11.wav",
+	"misc/construction/con_wood_12.wav",
+	"misc/construction/con_wood_13.wav",
+	"misc/construction/con_wood_14.wav",
+	"misc/construction/con_wood_15.wav",
+	"misc/construction/con_wood_16.wav",
+	"misc/construction/con_wood_17.wav"
+} )
+
 MakeSound("tree-chopping",
 	{"misc/tree_chopping/tree-chopping-1.wav",
 	"misc/tree_chopping/tree-chopping-2.wav"}

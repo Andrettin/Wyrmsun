@@ -14,7 +14,19 @@ by Andrettin
 # License
 ############################################################
 
-The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license. See the license.txt file for the text of the GPLv2.
+The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
+
+/sounds/misc/construction/con_wood_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_18.wav (licensed under the CC-BY-SA 3.0)
+
+See the license.txt file for the text of the GPLv2. The contents of the CC-BY-SA license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
 
 Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus
@@ -49,6 +61,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Reduced the length of the Dwarven Smithy's description.
 - Added Teuton Barracks (graphics by Jinn).
 - The Germanic Chieftain's Hall, Farm and War Lodge had their graphics updated (by Jinn).
+- Buildings are now constructed from outside.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -160,6 +173,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added The Mead of Wisdom quest.
 - Added The Tomb of Durahn Eikinskjaldi quest.
 - The Asa Tribe now correctly starts with 0 resources in the Westward Migration quest.
+- Increased quantity of resources the Asa Tribe starts with in the Northwards to the Sea quest.
+- The natives can no longer research Broad Sword, Bronze Shield and Barbed Arrow in the Northwards to the Sea quest.
 
 * Terrain
 - Trees now regrow after a long time has passed.
@@ -205,6 +220,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Slug (graphics by b_o).
 - Added Blood Bat and Dread Bat (graphics by b_o).
 - Goblin Spearmen now have a bonus against cavalry, but have lower normal damage.
+- Added new sounds for when a worker is repairing/building (by Wildfire Games).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

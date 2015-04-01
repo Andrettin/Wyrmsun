@@ -161,8 +161,8 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 end
 SetAiType(1, "land-attack")
 SetStartView(4, 44, 85) -- Germanics / Hanseatic League
-SetPlayerData(4, "Resources", "gold", 2000)
-SetPlayerData(4, "Resources", "lumber", 1000)
+SetPlayerData(4, "Resources", "gold", 5000)
+SetPlayerData(4, "Resources", "lumber", 2500)
 SetPlayerData(4, "Resources", "oil", 0)
 SetPlayerData(4, "RaceName", "germanic")
 SetPlayerData(4, "Faction", "Asa Tribe")
