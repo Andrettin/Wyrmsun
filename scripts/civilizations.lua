@@ -313,7 +313,8 @@ DefineCivilizationFactions("germanic",
 --		"name", "Alamanni Tribe",
 --		"type", "tribe",
 --		"color", "blue",
---		"secondary_color", "blue"
+--		"secondary_color", "blue",
+--		"playable", false
 --	},
 	"faction", {
 		"name", "Asa Tribe",
@@ -325,7 +326,8 @@ DefineCivilizationFactions("germanic",
 		"name", "Bavarian Tribe",
 		"type", "tribe",
 		"color", "cyan",
-		"secondary_color", "white"
+		"secondary_color", "white",
+		"playable", false
 	},
 	"faction", {
 		"name", "Burgundian Tribe",
@@ -343,13 +345,15 @@ DefineCivilizationFactions("germanic",
 		"name", "Frank Tribe",
 		"type", "tribe",
 		"color", "green",
-		"secondary_color", "orange"
+		"secondary_color", "orange",
+		"playable", false
 	},
 	"faction", {
 		"name", "Frisian Tribe",
 		"type", "tribe",
 		"color", "violet", -- change to a better one?
-		"secondary_color", "purple"
+		"secondary_color", "purple",
+		"playable", false
 	},
 	"faction", {
 		"name", "Goth Tribe",
@@ -367,31 +371,36 @@ DefineCivilizationFactions("germanic",
 		"name", "Marcomanni Tribe",
 		"type", "tribe",
 		"color", "orange", -- change to a better one?
-		"secondary_color", "red"
+		"secondary_color", "red",
+		"playable", false
 	},
 	"faction", {
 		"name", "Ostrogoth Tribe",
 		"type", "tribe",
 		"color", "red",
-		"secondary_color", "red"
+		"secondary_color", "red",
+		"playable", false
 	},
 	"faction", {
 		"name", "Rugian Tribe",
 		"type", "tribe",
 		"color", "red", -- change to a better one?
-		"secondary_color", "orange"
+		"secondary_color", "orange",
+		"playable", false
 	},
 	"faction", {
 		"name", "Saxon Tribe",
 		"type", "tribe",
 		"color", "pink",
-		"secondary_color", "pink"
+		"secondary_color", "pink",
+		"playable", false
 	},
 	"faction", {
 		"name", "Suebi Tribe",
 		"type", "tribe",
 		"color", "black",
-		"secondary_color", "black"
+		"secondary_color", "black",
+		"playable", false
 	},
 	"faction", {
 		"name", "Swede Tribe",
@@ -403,19 +412,22 @@ DefineCivilizationFactions("germanic",
 --		"name", "Thuringian Tribe",
 --		"type", "tribe",
 --		"color", "yellow",
---		"secondary_color", "yellow"
+--		"secondary_color", "yellow",
+--		"playable", false
 --	},
 	"faction", {
 		"name", "Vandal Tribe",
 		"type", "tribe",
 		"color", "cyan",
-		"secondary_color", "blue"
+		"secondary_color", "blue",
+		"playable", false
 	},
 	"faction", {
 		"name", "Visigoth Tribe",
 		"type", "tribe",
 		"color", "pink",
-		"secondary_color", "pink"
+		"secondary_color", "pink",
+		"playable", false
 	},
 	-- Non-Playable Tribes
 	"faction", {
