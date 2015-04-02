@@ -163,7 +163,7 @@ local files = {
 DefineConstruction("construction-wall", {
   Files = {
     File = files[wyrmsun.tileset],
-    Size = {32, 32}},
+    Size = {64, 64}},
   Constructions = {
    {Percent = 0,
     File = "construction",
