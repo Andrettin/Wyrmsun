@@ -198,6 +198,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Trees now regrow after a long time has passed.
 - Added hole (appears in caves, functions as a tree stump would).
 - The Conifer Forest tileset now has different trees for Summer and Autumn (the season is chosen randomly when starting a scenario).
+- Land-based decoration units are now properly removed if they are on top of a tree, rock or wall tile.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
