@@ -69,9 +69,9 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 		}
 	},
 	Sounds = {
-		"selected", "basic-gnome-voices-selected-group",
+		"selected", "gnomish-worker-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
-		"ready", "basic-gnome-voices-ready",
+		"ready", "gnomish-worker-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
@@ -104,7 +104,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Sounds = {
 		"selected", "basic-gnome-voices-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
-		"ready", "basic-gnome-voices-ready",
+		"ready", "gnomish-recruit-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "sword-attack",
@@ -138,7 +138,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	Sounds = {
 		"selected", "basic-gnome-voices-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
-		"ready", "basic-gnome-voices-ready",
+		"ready", "gnomish-herbalist-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "dagger-attack",
@@ -174,7 +174,7 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
---		"ready", "ballista-ready",
+		"ready", "gnomish-caravan-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "explosion"} } )
 
