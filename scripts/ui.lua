@@ -92,6 +92,17 @@ local max_damage = Add(
 	ActiveUnitVar("PiercingDamage")
 )
 
+Load("scripts/celt/ui.lua")
+Load("scripts/dwarf/ui.lua")
+Load("scripts/germanic/ui.lua")
+Load("scripts/gnome/ui.lua")
+Load("scripts/goblin/ui.lua")
+Load("scripts/kobold/ui.lua")
+Load("scripts/teuton/ui.lua")
+
+local info_panel_x = UI.InfoPanel.X
+local info_panel_y = UI.InfoPanel.Y
+
 DefinePanelContents(
 -- Default presentation. ------------------------
   {
@@ -341,14 +352,6 @@ DefinePanelContents(
 		)}}
 	}
   } })
-
-Load("scripts/celt/ui.lua")
-Load("scripts/dwarf/ui.lua")
-Load("scripts/germanic/ui.lua")
-Load("scripts/gnome/ui.lua")
-Load("scripts/goblin/ui.lua")
-Load("scripts/kobold/ui.lua")
-Load("scripts/teuton/ui.lua")
 
 wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
 

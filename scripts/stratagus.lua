@@ -1439,9 +1439,6 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 Preference.ShowOrders = wyr.preferences.ShowOrders
 Preference.ShowMessages = wyr.preferences.ShowMessages
 
-info_panel_x = Video.Width - 176 -- moved here so that they can be redefined by mods
-info_panel_y = 160
-
 --- Uses Stratagus Library path!
 Load("scripts/civilizations.lua")
 Load("scripts/icons.lua")
