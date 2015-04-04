@@ -191,8 +191,7 @@ MakeSound("gnomish-herbalist-annoyed", {
 	"gnome/herbalist/annoy-1.wav",
 	"gnome/herbalist/annoy-2.wav",
 	"gnome/herbalist/annoy-3.wav",
-	"gnome/herbalist/annoy-4.wav",
-	"gnome/herbalist/annoy-5.wav"
+	"gnome/herbalist/annoy-4.wav"
 })
 MakeSoundGroup("gnomish-herbalist-selected-group",
 	"basic-gnome-voices-selected", "gnomish-herbalist-annoyed")
