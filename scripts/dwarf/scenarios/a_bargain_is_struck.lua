@@ -63,309 +63,320 @@ AddTrigger(
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
 			"",
-			"Ay, the Scepter of Fire. The scepter has a long, glorious, and fearful history. But I am not here to tell you how the jewel within it was obtained by Pypo I. Nor will I tell the story of Rubezahl I, king of Untersberg by virtue of the Scepter.",
+			"The land of the gnomes' banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\n\nSo now I tell from whence it came -\nThe Fire-scepter great -\nAnd of the makers of the same,\nTheir tale I now relate...",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"",
-				"I am here to tell you of its making. Of its crafting, deep in the caverns of dwarfdom. And of the dwarves who made it; for they were great, they were. They are counted among the greatest of the heroes of ancient Knalga.",
+				"Ay, the Scepter of Fire. The scepter has a long, glorious, and fearful history. But I am not here to tell you how the jewel within it was obtained by Pypo I. Nor will I tell the story of Rubezahl I, king of Untersberg by virtue of the Scepter.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
 					"",
-					"Our story begins in a small border outpost in the southern hills of Knalga, with a young dwarf, named Rugnur, in charge of it. And with the gnomish king of Untersberg, Pypo I, riding up the road from the Brown Hills with an army behind him...",
+					"I am here to tell you of its making. Of its crafting, deep in the caverns of dwarfdom. And of the dwarves who made it; for they were great, they were. They are counted among the greatest of the heroes of ancient Knalga.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Rugnur",
-						"Gnomes, halt! Who dares bring an army into the dwarven hills?",
+						"",
+						"Our story begins in a small border outpost in the southern hills of Knalga, with a young dwarf, named Rugnur, in charge of it. And with the gnomish king of Untersberg, Pypo I, riding up the road from the Brown Hills with an army behind him...",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Pypo I",
-							"We come to make a bargain with you.",
+							"Rugnur",
+							"Gnomes, halt! Who dares bring an army into the dwarven hills?",
 							player,
-							{"~!Listen to him", "~!Up axes! (Forego Quest)"},
+							{"~!Continue"},
 							{function(s)
 							Event(
-								"Rugnur",
-								"Well, state yer business and be done with it. And if we don't like what ye say, ye leave!",
+								"Pypo I",
+								"We come to make a bargain with you.",
 								player,
-								{"~!Continue"},
+								{"~!Listen to him", "~!Up axes! (Forego Quest)"},
 								{function(s)
 								Event(
-									"Pypo I",
-									"Have you heard of the Ruby of Fire?",
+									"Rugnur",
+									"Well, state yer business and be done with it. And if we don't like what ye say, ye leave!",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Rugnur",
-										"Aye... yer deceased king brought it from the west, right? Ye own it.",
+										"Pypo I",
+										"Have you heard of the Ruby of Fire?",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Pypo I",
-											"Correct. However, we have a problem with it.",
+											"Rugnur",
+											"Aye... yer deceased king brought it from the west, right? Ye own it.",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Rugnur",
-												"What sort of problem?",
+												"Pypo I",
+												"Correct. However, we have a problem with it.",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Pypo I",
-													"The stone is very atypical. To cut and insert it would require more skill than my best craftsmen have...",
+													"Rugnur",
+													"What sort of problem?",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Rugnur",
-														"And what... ye want us to do this, cut the stone? And make an artifact of some kind?",
+														"Pypo I",
+														"The stone is very atypical. To cut and insert it would require more skill than my best craftsmen have...",
 														player,
 														{"~!Continue"},
 														{function(s)
 														Event(
-															"Pypo I",
-															"I want you to craft it into a mighty artifact, that will embody the power of my will and be a symbol of the legitimacy of my rule.",
+															"Rugnur",
+															"And what... ye want us to do this, cut the stone? And make an artifact of some kind?",
 															player,
 															{"~!Continue"},
 															{function(s)
 															Event(
-																"Rugnur",
-																"Well... I think we can make a deal, but I'm not sure. I'll have to ask the tribal leaders.",
+																"Pypo I",
+																"I want you to craft it into a mighty artifact, that will embody the power of my will and be a symbol of the legitimacy of my rule.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Pypo I",
-																	"If you are not authorized to make a deal, send out someone who is, and I will bargain with him.",
+																	"Rugnur",
+																	"Well... I think we can make a deal, but I'm not sure. I'll have to ask the tribal leaders.",
 																	player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Rugnur",
-																		"They would refuse to come. Ye must come into the caves, and go to the city in person, or send a representative.",
+																		"Pypo I",
+																		"If you are not authorized to make a deal, send out someone who is, and I will bargain with him.",
 																		player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Pypo I",
-																			"I can always take my offer to another tribe more friendly to its potential patrons. You are not the only smiths in these lands!",
+																			"Rugnur",
+																			"They would refuse to come. Ye must come into the caves, and go to the city in person, or send a representative.",
 																			player,
-																			{"~!Discuss his offer", "~!No deal (Forego Quest)"},
+																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Rugnur",
-																				"Uh, no, wait! Let's talk business - how much will ye pay us to do this for ye?",
+																				"Pypo I",
+																				"I can always take my offer to another tribe more friendly to its potential patrons. You are not the only smiths in these lands!",
 																				player,
-																				{"~!Continue"},
+																				{"~!Discuss his offer", "~!No deal (Forego Quest)"},
 																				{function(s)
 																				Event(
-																					"Pypo I",
-																					"Five thousand pieces of silver.",
+																					"Rugnur",
+																					"Uh, no, wait! Let's talk business - how much will ye pay us to do this for ye?",
 																					player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Rugnur",
-																						"Ye said ye wanted a potent artifact, not a child's playtoy! So... twenty thousand, minimum. The crafting of this will take us many years, ye must pay us well.",
+																						"Pypo I",
+																						"Five thousand pieces of silver.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Pypo I",
-																							"Ten thousand.",
+																							"Rugnur",
+																							"Ye said ye wanted a potent artifact, not a child's playtoy! So... twenty thousand, minimum. The crafting of this will take us many years, ye must pay us well.",
 																							player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								"Rugnur",
-																								"Nothing below fifteen!",
+																								"Pypo I",
+																								"Ten thousand.",
 																								player,
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									"Pypo I",
-																									"Then no deal. I'll gather my things and go to another dwarven clan now.",
+																									"Rugnur",
+																									"Nothing below fifteen!",
 																									player,
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										"Rugnur",
-																										"Fine then - ten thousand... now, what exactly do ye want us to make the stone into?",
+																										"Pypo I",
+																										"Then no deal. I'll gather my things and go to another dwarven clan now.",
 																										player,
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
-																											"Pypo I",
-																											"I want you to make it into a scepter, a scepter of fire.",
+																											"Rugnur",
+																											"Fine then - ten thousand... now, what exactly do ye want us to make the stone into?",
 																											player,
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												"Rugnur",
-																												"I'll see what I can do. But I will need five thousand silver in advance, to pay for the materials.",
+																												"Pypo I",
+																												"I want you to make it into a scepter, a scepter of fire.",
 																												player,
 																												{"~!Continue"},
 																												{function(s)
 																												Event(
-																													"Pypo I",
-																													"Very well. I have the silver here, ready to ship, and I will send someone over with the stone itself. He will stay with you as you make the scepter, and make sure you are going to get it done on time. I expect it done before my reign as king is ended.",
+																													"Rugnur",
+																													"I'll see what I can do. But I will need five thousand silver in advance, to pay for the materials.",
 																													player,
 																													{"~!Continue"},
 																													{function(s)
-																														unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
-																														IncreaseUnitLevel(unit, 1, true)
-																														AcquireAbility(unit, "upgrade-sword-mastery")
-																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																															OrderUnit(player, "unit-gnomish-recruit", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
-																														end
-																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
-																														end
-																														local transporter = unit
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
-																														end
-																														transporter = unit
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
-																														end
-																														transporter = unit
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
-																														if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-																															-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																															OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
-																														end
-																														transporter = unit
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
-																														if (mapinfo.description == "Chaincolt Foothills") then
-																															ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
-																															RemovePlayerObjective(player, "- Defeat your enemies")
-																														end
-																														SetDiplomacy(gnomish_monarch_player, "allied", player)
-																														SetSharedVision(gnomish_monarch_player, true, player)
-																														SetDiplomacy(player, "allied", gnomish_monarch_player)
-																														SetSharedVision(player, true, gnomish_monarch_player)
-																														AddPlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-																														AddPlayerObjective(player, "- Rugnur must survive")
-																														AddPlayerObjective(player, "- The gnomish envoy must survive")
+																													Event(
+																														"Pypo I",
+																														"Very well. I have the silver here, ready to ship, and I will send someone over with the stone itself. He will stay with you as you make the scepter, and make sure you are going to get it done on time. I expect it done before my reign as king is ended.",
+																														player,
+																														{"~!Continue"},
+																														{function(s)
+																															unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
+																															IncreaseUnitLevel(unit, 1, true)
+																															AcquireAbility(unit, "upgrade-sword-mastery")
+																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																																OrderUnit(player, "unit-gnomish-recruit", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																															end
+																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																															end
+																															local transporter = unit
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																															end
+																															transporter = unit
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																															end
+																															transporter = unit
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
+																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																															end
+																															transporter = unit
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															unit = CreateUnitInTransporter("unit-gold-chest", 15, transporter)
+																															if (mapinfo.description == "Chaincolt Foothills") then
+																																ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
+																																RemovePlayerObjective(player, "- Defeat your enemies")
+																															end
+																															SetDiplomacy(gnomish_monarch_player, "allied", player)
+																															SetSharedVision(gnomish_monarch_player, true, player)
+																															SetDiplomacy(player, "allied", gnomish_monarch_player)
+																															SetSharedVision(player, true, gnomish_monarch_player)
+																															AddPlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
+																															AddPlayerObjective(player, "- Rugnur must survive")
+																															AddPlayerObjective(player, "- The gnomish envoy must survive")
+																														end},
+																														"gnome/icons/gnomish_recruit.png"
+																													)
 																													end},
-																													"gnome/icons/gnomish_recruit.png"
+																													"dwarf/icons/rugnur.png"
 																												)
 																												end},
-																												"dwarf/icons/rugnur.png"
+																												"gnome/icons/gnomish_recruit.png"
 																											)
 																											end},
-																											"gnome/icons/gnomish_recruit.png"
+																											"dwarf/icons/rugnur.png"
 																										)
 																										end},
-																										"dwarf/icons/rugnur.png"
+																										"gnome/icons/gnomish_recruit.png"
 																									)
 																									end},
-																									"gnome/icons/gnomish_recruit.png"
+																									"dwarf/icons/rugnur.png"
 																								)
 																								end},
-																								"dwarf/icons/rugnur.png"
+																								"gnome/icons/gnomish_recruit.png"
 																							)
 																							end},
-																							"gnome/icons/gnomish_recruit.png"
+																							"dwarf/icons/rugnur.png"
 																						)
 																						end},
-																						"dwarf/icons/rugnur.png"
+																						"gnome/icons/gnomish_recruit.png"
 																					)
 																					end},
-																					"gnome/icons/gnomish_recruit.png"
+																					"dwarf/icons/rugnur.png"
 																				)
+																				end,
+																				function(s)
+																					SetDiplomacy(gnomish_monarch_player, "neutral", player)
+																					SetDiplomacy(player, "neutral", gnomish_monarch_player)
+																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
+																					if (GrandStrategy) then -- if is grand strategy, end map now if no agreement was reached
+																						ActionDraw()
+																					end
 																				end},
-																				"dwarf/icons/rugnur.png"
+																				"gnome/icons/gnomish_recruit.png"
 																			)
-																			end,
-																			function(s)
-																				SetDiplomacy(gnomish_monarch_player, "neutral", player)
-																				SetDiplomacy(player, "neutral", gnomish_monarch_player)
-																				KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
-																				if (GrandStrategy) then -- if is grand strategy, end map now if no agreement was reached
-																					ActionDraw()
-																				end
 																			end},
-																			"gnome/icons/gnomish_recruit.png"
+																			"dwarf/icons/rugnur.png"
 																		)
 																		end},
-																		"dwarf/icons/rugnur.png"
+																		"gnome/icons/gnomish_recruit.png"
 																	)
 																	end},
-																	"gnome/icons/gnomish_recruit.png"
+																	"dwarf/icons/rugnur.png"
 																)
 																end},
-																"dwarf/icons/rugnur.png"
+																"gnome/icons/gnomish_recruit.png"
 															)
 															end},
-															"gnome/icons/gnomish_recruit.png"
+															"dwarf/icons/rugnur.png"
 														)
 														end},
-														"dwarf/icons/rugnur.png"
+														"gnome/icons/gnomish_recruit.png"
 													)
 													end},
-													"gnome/icons/gnomish_recruit.png"
+													"dwarf/icons/rugnur.png"
 												)
 												end},
-												"dwarf/icons/rugnur.png"
+												"gnome/icons/gnomish_recruit.png"
 											)
 											end},
-											"gnome/icons/gnomish_recruit.png"
+											"dwarf/icons/rugnur.png"
 										)
 										end},
-										"dwarf/icons/rugnur.png"
+										"gnome/icons/gnomish_recruit.png"
 									)
 									end},
-									"gnome/icons/gnomish_recruit.png"
+									"dwarf/icons/rugnur.png"
 								)
+								end,
+								function(s)
+									SetSharedVision(gnomish_monarch_player, false, player)
+									SetSharedVision(player, false, gnomish_monarch_player)
+									SetDiplomacy(gnomish_monarch_player, "enemy", player)
+									SetDiplomacy(player, "enemy", gnomish_monarch_player)
+
+									Players[GetFactionPlayer("Shinsplitter Clan")].Type = PlayerNeutral
+
+									KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
+									if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Untersberg if Rugnur decided to attack the gnomish monarch
+										Factions.NorlundClan.Diplomacy.Untersberg = "War"
+										Factions.Untersberg.Diplomacy.NorlundClan = "War"
+									end
 								end},
-								"dwarf/icons/rugnur.png"
+								"gnome/icons/gnomish_recruit.png"
 							)
-							end,
-							function(s)
-								SetSharedVision(gnomish_monarch_player, false, player)
-								SetSharedVision(player, false, gnomish_monarch_player)
-								SetDiplomacy(gnomish_monarch_player, "enemy", player)
-								SetDiplomacy(player, "enemy", gnomish_monarch_player)
-
-								Players[GetFactionPlayer("Shinsplitter Clan")].Type = PlayerNeutral
-
-								KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
-								if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Untersberg if Rugnur decided to attack the gnomish monarch
-									Factions.NorlundClan.Diplomacy.Untersberg = "War"
-									Factions.Untersberg.Diplomacy.NorlundClan = "War"
-								end
 							end},
-							"gnome/icons/gnomish_recruit.png"
+							"dwarf/icons/rugnur.png"
 						)
 						end},
-						"dwarf/icons/rugnur.png"
+						nil,
+						nil,
+						GrandStrategy
 					)
 					end},
 					nil,

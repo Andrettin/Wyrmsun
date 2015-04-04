@@ -173,10 +173,26 @@ MakeSound("gnomish-worker-annoyed", {
 MakeSoundGroup("gnomish-worker-selected-group",
 	"basic-gnome-voices-selected", "gnomish-worker-annoyed")
 MakeSound("gnomish-recruit-ready", "gnome/recruit/recruit-ready-1.wav")
+MakeSound("gnomish-recruit-annoyed", {
+	"gnome/recruit/annoy-1.wav",
+	"gnome/recruit/annoy-2.wav",
+	"gnome/recruit/annoy-3.wav"
+})
+MakeSoundGroup("gnomish-recruit-selected-group",
+	"basic-gnome-voices-selected", "gnomish-recruit-annoyed")
 MakeSound("gnomish-herbalist-ready", {
 	"gnome/herbalist/herbalist-ready-1.wav",
 	"gnome/herbalist/herbalist-ready-2.wav"
 })
+MakeSound("gnomish-herbalist-annoyed", {
+	"gnome/herbalist/annoy-1.wav",
+	"gnome/herbalist/annoy-2.wav",
+	"gnome/herbalist/annoy-3.wav",
+	"gnome/herbalist/annoy-4.wav",
+	"gnome/herbalist/annoy-5.wav"
+})
+MakeSoundGroup("gnomish-herbalist-selected-group",
+	"basic-gnome-voices-selected", "gnomish-herbalist-annoyed")
 MakeSound("gnomish-caravan-ready", {
 	"gnome/caravan/caravan-ready-1.wav",
 	"gnome/caravan/caravan-ready-2.wav",

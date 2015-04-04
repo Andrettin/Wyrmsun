@@ -706,6 +706,7 @@ function RunMap(map, objective, fow, revealmap)
       loop = false
     end
   end
+  CurrentQuest = ""
   if (NextMapDirect == false) then
 	  RunResultsMenu(s)
 	  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and not IsReplayGame() and not IsNetworkGame() and not GrandStrategy) then

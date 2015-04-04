@@ -399,7 +399,6 @@ function SinglePlayerTriggers()
 	if (CurrentQuest ~= "" and GetQuestFromName(CurrentQuest).Scenario ~= nil) then
 		Load(GetQuestFromName(CurrentQuest).Scenario)
 	end
-	CurrentQuest = ""
 
 	-- setup graphics variations
 	local uncount = 0

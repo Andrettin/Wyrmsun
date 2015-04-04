@@ -102,7 +102,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		}
 	},
 	Sounds = {
-		"selected", "basic-gnome-voices-selected-group",
+		"selected", "gnomish-recruit-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
 		"ready", "gnomish-recruit-ready",
 --		"help", "basic-dwarf-voices-help",
@@ -136,7 +136,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 		}
 	},
 	Sounds = {
-		"selected", "basic-gnome-voices-selected-group",
+		"selected", "gnomish-herbalist-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
 		"ready", "gnomish-herbalist-ready",
 --		"help", "basic-dwarf-voices-help",
