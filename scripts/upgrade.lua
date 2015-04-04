@@ -115,7 +115,7 @@ function ApplyTechLevels()
 	}
 	local iron_upgrades = {
 		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
-		"upgrade-teuton-spatha"
+		"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"
 	}
 	local iron_civilizations = {
 		"upgrade-teuton-civilization"

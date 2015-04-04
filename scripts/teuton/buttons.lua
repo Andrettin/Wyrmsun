@@ -37,15 +37,27 @@
 -- General Commands -------------------------------
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
-  Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-    "unit-teuton-swordsman",
-	"unit-hero-marbod",
-	"unit-hero-greebo",
-	"germanic-group", "teuton-group"
-} } )
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-swordsman",
+		"unit-hero-marbod",
+		"unit-hero-greebo",
+		"germanic-group", "teuton-group"
+	}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
+	Action = "stop",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
+	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-swordsman",
+		"unit-hero-marbod",
+		"germanic-group", "teuton-group"
+	}
+} )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
@@ -127,10 +139,18 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
-  Action = "research", Value = "upgrade-teuton-spatha",
-  Allowed = "check-single-research",
-  Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
-  ForUnit = {"unit-teuton-smithy"} } )
+	Action = "research", Value = "upgrade-teuton-spatha",
+	Allowed = "check-single-research",
+	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-smithy"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
+	Action = "research", Value = "upgrade-teuton-iron-shield",
+	Allowed = "check-single-research",
+	Key = "p", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-smithy"}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-teuton-masonry",

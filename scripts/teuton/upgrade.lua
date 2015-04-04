@@ -29,11 +29,18 @@
 
 local upgrades = {
 	{"upgrade-teuton-spatha", _("Spatha"), "icon-teuton-spatha", "melee-weapon-2",
-		_("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Eralas."),
+		_("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers."),
 		"",
 		_("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
 		{   250,  2400,     0,     0,     0,     0,     0,     0},
 		{   250,  2400,     0,     0,     0,     0,     0,  2400},
+		1},
+	{"upgrade-teuton-iron-shield", _("Iron Shield"), "icon-teuton-iron-shield", "iron-shield",
+		_("The development of iron working makes the crafting of sturdier shield possible..\n\nEffect: +2 Armor for Kriegers."),
+		"",
+		"",
+		{   250,   900,   500,     0,     0,     0,     0,     0},
+		{   250,   900,   500,     0,     0,     0,     0,  2400},
 		1},
 	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to upgrade to Guard Towers."),
@@ -67,6 +74,12 @@ DefineModifier("upgrade-teuton-spatha",
 	{"PiercingDamage", 2},
 	{"apply-to", "unit-teuton-swordsman"},
 --	{"apply-to", "unit-teuton-old-man"},
+	{"apply-to", "unit-hero-marbod"}
+)
+
+DefineModifier("upgrade-teuton-iron-shield",
+	{"Armor", 2},
+	{"apply-to", "unit-teuton-swordsman"},
 	{"apply-to", "unit-hero-marbod"}
 )
 
@@ -153,6 +166,10 @@ DefineDependency("unit-teuton-catapult",
 
 DefineDependency("upgrade-teuton-spatha",
 	{"upgrade-germanic-broad-sword"}
+)
+
+DefineDependency("upgrade-teuton-iron-shield",
+	{"upgrade-germanic-bronze-shield"}
 )
 
 DefineDependency("unit-teuton-stronghold",

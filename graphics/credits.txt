@@ -559,6 +559,8 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/buildings/stronghold.png
 /graphics/teuton/buildings/town_hall.png
 /graphics/teuton/buildings/watch_tower.png
+/graphics/teuton/icons/iron_shield.png
+/graphics/teuton/icons/iron_shield_extra_1.png
 /graphics/teuton/icons/marbod.png
 /graphics/tilesets/cave/terrain/cave.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles)

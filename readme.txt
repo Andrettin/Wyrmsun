@@ -248,6 +248,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
 - Added Spatha upgrade for the Teuton civilization (graphics by Leo).
 - Ballista bolt upgrades now cost lumber as well as gold.
+- Added Iron Shield upgrade for the Teuton civilization (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.0.1
