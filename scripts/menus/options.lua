@@ -558,6 +558,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
+  --[[
   checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 160 + 24, offy + 55 + 26*10 + 14,
     function()
       if (checkTexture:isMarked()) then
@@ -579,6 +580,7 @@ function BuildOptionsMenu()
     end)
   checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
 --  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
+  --]]
 
   menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 	wyr.preferences.EffectsVolume = GetEffectsVolume()
