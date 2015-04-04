@@ -168,7 +168,10 @@ MakeSound("gnomish-worker-ready", {
 	"gnome/scavenger/scavenger-ready-2.wav"
 })
 MakeSound("gnomish-worker-annoyed", {
-	"gnome/scavenger/scavenger-annoyed-1.wav"
+	"gnome/scavenger/scavenger-annoyed-1.wav",
+	"gnome/scavenger/scavenger-annoyed-2.wav",
+	"gnome/scavenger/scavenger-annoyed-3.wav",
+	"gnome/scavenger/scavenger-annoyed-4.wav"
 })
 MakeSoundGroup("gnomish-worker-selected-group",
 	"basic-gnome-voices-selected", "gnomish-worker-annoyed")
