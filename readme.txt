@@ -184,6 +184,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - "Random" option is now selected by default in the map editor, and new maps are created with random variations of the basic tile (instead of always using the same variation).
 - Changed transparency of non-acquired tech tree elements to 66%.
 - Menu buttons now play the "click" sound when clicked.
+- The yellow targeting cursor is now displayed when hovering over resources if a worker is selected, and the red targeting cursor is displaying when hovering over enemy units if a military unit is selected.
+- When clicking a unit's button that brings up the targeting cursor, it now turns green when hovering over a friendly unit, yellow when hovering over a neutral unit, and red when hovering over an enemy unit.
 
 * Quests
 - Added The Battle of Magetobria quest.
