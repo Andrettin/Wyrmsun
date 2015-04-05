@@ -28,7 +28,7 @@
 --
 
 function RunShowCreditsMenu()
-  local menu = WarMenu(nil, "ui/Credits_background.png")
+  local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
 

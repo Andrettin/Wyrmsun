@@ -47,13 +47,13 @@ DefineTileset("name", "Conifer Forest (Summer)",
     { 324, 325, 325, 326}},						-- 010
   "solid", { "unused",
     {}},								-- 020
-  "solid", { "dirt", "land", "no-building",
+  "solid", { "dirt", "land", "no-building", "mud",
     { 330, 331, 332, 330}},						-- 030
-  "solid", { "dark-dirt", "land", "no-building",
+  "solid", { "dark-dirt", "land", "no-building", "mud",
     { 333, 334, 335, 333}},						-- 040
-  "solid", { "grass", "land",
+  "solid", { "grass", "land", "grass",
     { 346, 347, 348, 346}},						-- 050
-  "solid", { "dark-grass", "land",
+  "solid", { "dark-grass", "land", "grass",
     { 349, 350, 351, 349}},						-- 060
   "solid", { "pine-tree", "land", "forest", "unpassable",
     { 125, 125, 125, 125}},						-- 070
@@ -107,7 +107,7 @@ DefineTileset("name", "Conifer Forest (Summer)",
     { 229, 230, 229},							-- 2D0
     {},									-- 2E0
     {}},								-- 2F0
-  "mixed", { "dark-dirt", "dirt", "land", "no-building",
+  "mixed", { "dark-dirt", "dirt", "land", "no-building", "mud",
     { 279, 288, 279},							-- 300
     { 296, 297, 296},							-- 310
     { 298, 299, 300},							-- 320
@@ -141,7 +141,7 @@ DefineTileset("name", "Conifer Forest (Summer)",
     { 142, 129, 142},							-- 4D0
     {},									-- 4E0
     {}},								-- 4F0
-  "mixed", { "dirt", "grass", "land", "no-building",
+  "mixed", { "dirt", "grass", "land", "no-building", "mud",
     { 264, 265, 264},							-- 500
     { 266, 267, 266},							-- 510
     { 268, 269, 270},							-- 520
@@ -158,7 +158,7 @@ DefineTileset("name", "Conifer Forest (Summer)",
     { 294, 295, 294},							-- 5D0
     {},									-- 5E0
     {}},								-- 5F0
-  "mixed", { "dark-grass", "grass", "land",
+  "mixed", { "dark-grass", "grass", "land", "grass",
     { 239, 240, 239},							-- 600
     { 237, 238, 237},							-- 610
     { 244, 245, 246},							-- 620

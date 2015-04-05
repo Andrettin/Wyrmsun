@@ -47,11 +47,11 @@ DefineTileset("name", "Swamp",
     { 324, 325, 325, 326}},						-- 010
   "solid", { "unused",
     {}},								-- 020
-  "solid", { "mud", "land", "no-building",
+  "solid", { "mud", "land", "no-building", "mud",
     { 330, 331, 332, 330}},						-- 030
   "solid", { "unused",
     {}},								-- 040
-  "solid", { "dry-mud", "land",
+  "solid", { "dry-mud", "land", "mud",
     { 346, 347, 348, 346}},						-- 050
   "solid", { "unused",
     {}},								-- 060
@@ -107,7 +107,7 @@ DefineTileset("name", "Swamp",
     { 229, 230, 229},							-- 2D0
     {},									-- 2E0
     {}},								-- 2F0
-  "mixed", { "dark-mud", "mud", "land", "no-building",
+  "mixed", { "dark-mud", "mud", "land", "no-building", "mud",
     { 177, 177},							-- 300
     { 178, 178},							-- 310
     { 179, 180, 181},							-- 320
@@ -141,7 +141,7 @@ DefineTileset("name", "Swamp",
     { 9, 11, 9},							-- 4D0
     {},									-- 4E0
     {}},								-- 4F0
-  "mixed", { "mud", "dry-mud", "land", "no-building",
+  "mixed", { "mud", "dry-mud", "land", "no-building", "mud",
     { 264, 265, 264},							-- 500
     { 266, 267, 266},							-- 510
     { 268, 269, 270},							-- 520
@@ -158,7 +158,7 @@ DefineTileset("name", "Swamp",
     { 294, 295, 294},							-- 5D0
     {},									-- 5E0
     {}},								-- 5F0
-  "mixed", { "dark-dry-mud", "dry-mud", "land",
+  "mixed", { "dark-dry-mud", "dry-mud", "land", "mud",
     { 233, 234},							-- 600
     { 235, 236},							-- 610
     { 237, 238, 239},							-- 620
