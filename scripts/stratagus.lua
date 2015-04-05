@@ -1333,7 +1333,7 @@ local defaultPreferences = {
 	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	LeaveStopScrolling = true,      --  Enable/disable stopping scrolling when mouse leave.
-	MaxOpenGLTexture = 0,
+--	MaxOpenGLTexture = 0,
 	MinimapWithTerrain = true,      --  Choose your default for minimap with/without terrain.
 	MouseScrollSpeed = 1,
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
@@ -1345,8 +1345,8 @@ local defaultPreferences = {
 	ShowTips = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
-	UseFancyBuildings = false,       --  Enable/disable fancy building (random mirroring buildings)
-	UseOpenGL = false,
+--	UseFancyBuildings = false,       --  Enable/disable fancy building (random mirroring buildings)
+--	UseOpenGL = false,
 	VideoFullScreen = false,
 	VideoHeight = 600,
 	VideoWidth = 800,
@@ -1412,7 +1412,7 @@ CompleteMissingValues(wyr.preferences, defaultPreferences)
 SetDoubleClickDelay(wyr.preferences.DoubleClickDelayInMs)
 SetEffectsEnabled(wyr.preferences.EffectsEnabled)
 SetEffectsVolume(wyr.preferences.EffectsVolume)
-SetFancyBuildings(wyr.preferences.UseFancyBuildings)
+SetFancyBuildings(false)
 SetFogOfWar(wyr.preferences.FogOfWar)
 SetFogOfWarOpacity(wyr.preferences.FogOfWarOpacity)
 SetGameSpeed(wyr.preferences.GameSpeed)
@@ -1422,7 +1422,7 @@ SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(wyr.preferences.LeaveStopScrolling)
 SetLocalPlayerName("") -- Andrettin: in single-player games the local player shouldn't use his nick
-SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
+SetMaxOpenGLTexture(0)
 SetMinimapTerrain(wyr.preferences.MinimapWithTerrain)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
@@ -1431,7 +1431,7 @@ SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
 SetMusicEnabled(wyr.preferences.MusicEnabled)
 SetMusicVolume(wyr.preferences.MusicVolume)
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-SetUseOpenGL(wyr.preferences.UseOpenGL)
+SetUseOpenGL(false)
 SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey

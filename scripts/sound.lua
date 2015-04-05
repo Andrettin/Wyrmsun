@@ -10,7 +10,7 @@
 --
 --      sound.lua - Define the used sounds.
 --
---      (c) Copyright 1999-2006 by Fabrice Rossi, Lutz Sammer, and Jimmy Salmon
+--      (c) Copyright 1999-2015 by Fabrice Rossi, Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -161,6 +161,24 @@ MakeSound("basic-gnome-voices-acknowledge", {
 	"gnome/basic_voices/acknowledge-02.wav",
 	"gnome/basic_voices/acknowledge-03.wav",
 	"gnome/basic_voices/acknowledge-04.wav"
+})
+MakeSound("basic-gnome-voices-dead", {
+	"gnome/basic_voices/death-1.wav",
+	"gnome/basic_voices/death-2.wav",
+	"gnome/basic_voices/death-3.wav",
+	"gnome/basic_voices/death-4.wav",
+	"gnome/basic_voices/death-5.wav",
+	"gnome/basic_voices/death-6.wav"
+})
+MakeSound("basic-gnome-voices-help", {
+	"gnome/basic_voices/help-1.wav",
+	"gnome/basic_voices/help-2.wav",
+	"gnome/basic_voices/help-3.wav",
+	"gnome/basic_voices/help-4.wav"
+})
+MakeSound("basic-gnome-voices-help-town", {
+	"gnome/basic_voices/helptown-1.wav",
+	"gnome/basic_voices/helptown-2.wav"
 })
 
 MakeSound("gnomish-worker-ready", {
@@ -513,6 +531,8 @@ DefineGameSounds(
 
 --  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
   "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
+
+  "research-complete", {"gnome", MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")},
 
   "rescue", {"celt", rescue},
   "rescue", {"dwarf", rescue},

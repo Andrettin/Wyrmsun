@@ -72,8 +72,8 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 		"selected", "gnomish-worker-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
 		"ready", "gnomish-worker-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
+		"help", "basic-gnome-voices-help",
+		"dead", "basic-gnome-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -105,8 +105,8 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		"selected", "gnomish-recruit-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
 		"ready", "gnomish-recruit-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
+		"help", "basic-gnome-voices-help",
+		"dead", "basic-gnome-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
 	}
@@ -139,8 +139,8 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 		"selected", "gnomish-herbalist-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",
 		"ready", "gnomish-herbalist-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
+		"help", "basic-gnome-voices-help",
+		"dead", "basic-gnome-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
 	}
@@ -175,7 +175,7 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "gnomish-caravan-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-gnome-voices-help",
 		"dead", "explosion"} } )
 
 DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
@@ -183,7 +183,14 @@ DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Civilization = "gnome",
 	Description = _("The town hall is the center of a gnomish settlement's life."),
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
-	Animations = "animations-building", Icon = "icon-gnomish-town-hall"
+	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
+	Sounds = {
+		"selected", "town-hall-selected",
+--		"acknowledge", "town-hall-acknowledge",
+		"ready", "town-hall-ready",
+		"help", "basic-gnome-voices-help-town",
+		"dead", "building destroyed"
+	}
 } )
 
 DefineUnitType("unit-gnomish-farm", { Name = _("Farm"),
@@ -191,7 +198,14 @@ DefineUnitType("unit-gnomish-farm", { Name = _("Farm"),
 	Civilization = "gnome",
 	Description = _("Gnomish farms provide sustenance for their settlements. Contrary to the dwarves, the gnomes tend to plant vegetables, rather than mushrooms, and they also breed livestock."),
 	Image = {"file", "gnome/buildings/farm.png", "size", {64, 64}},
-	Icon = "icon-gnomish-farm"
+	Icon = "icon-gnomish-farm",
+	Sounds = {
+		"selected", "farm-selected",
+--		"acknowledge", "farm-acknowledge",
+		"ready", "farm-ready",
+		"help", "basic-gnome-voices-help-town",
+		"dead", "building destroyed"
+	}
 } )
 
 DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
@@ -199,5 +213,12 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 	Civilization = "gnome",
 	Description = _("The gnomish barracks serves as a place for military training and arregimentation for the gnomes."),
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-gnomish-barracks"
+	Animations = "animations-building", Icon = "icon-gnomish-barracks",
+	Sounds = {
+		"selected", "barracks-selected",
+--		"acknowledge", "barracks-acknowledge",
+		"ready", "barracks-ready",
+		"help", "basic-gnome-voices-help-town",
+		"dead", "building destroyed"
+	}
 } )

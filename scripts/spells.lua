@@ -47,11 +47,11 @@ DefineUnitType("unit-critter", {})
 
 DefineSpell("spell-herbal-cure",
 	"showname", _("Herbal Cure"),
-	"manacost", 4,
+	"manacost", 1,
 	"range", 1,
 	"target", "unit",
 	"action", {
-		{"adjust-vitals", "hit-points", 1},
+		{"adjust-vitals", "hit-points", 1, "max-multi-cast", 4},
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {

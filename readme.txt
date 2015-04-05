@@ -66,6 +66,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.2
 -----------------------------------------------------------------------
 
+* Abilities
+- The Gnomish Herbalist's Herbal Cure can now be instantaneously cast multiple times only up to 4 times, and it costs 1 mana per HP.
+
 * Buildings
 - Added Teuton Watch Tower and Guard Tower (graphics by Jinn).
 - Added Teuton Rathaus (graphics by Jinn).
@@ -243,6 +246,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Goblin Spearmen now have a bonus against cavalry, but have lower normal damage.
 - Added voiceovers for the gnomes.
 - Added new sounds for when a worker is repairing/building (by Wildfire Games).
+- Rats will now sometimes be hiding within tree stumps.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

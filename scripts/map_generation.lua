@@ -1394,6 +1394,20 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
+					if (SyncRand(2) == 0) then
+						local RandomNumber = SyncRand(3)
+						if (RandomNumber == 0) then
+							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
+						end
+					end
+				end
+			end
+		end
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 		local uncount = 0
@@ -3239,6 +3253,20 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
+					if (SyncRand(2) == 0) then
+						local RandomNumber = SyncRand(3)
+						if (RandomNumber == 0) then
+							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
+						end
+					end
+				end
+			end
+		end
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 		local uncount = 0
@@ -3445,6 +3473,20 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
+					if (SyncRand(2) == 0) then
+						local RandomNumber = SyncRand(3)
+						if (RandomNumber == 0) then
+							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
+						end
+					end
+				end
+			end
+		end
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 		local uncount = 0
