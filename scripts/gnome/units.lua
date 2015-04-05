@@ -176,7 +176,12 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "gnomish-caravan-ready",
 		"help", "basic-gnome-voices-help",
-		"dead", "explosion"} } )
+		"dead", "explosion",
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
+} )
 
 DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Parent = "unit-template-town-hall",

@@ -468,6 +468,30 @@ MakeSound("foraging", {
 	"misc/foraging/leaves_18.wav"
 })
 
+MakeSound("step-grass", {
+	"movement/step_grass/fs_grass8.wav",
+	"movement/step_grass/fs_grass1.wav",
+	"movement/step_grass/fs_grass2.wav",
+	"movement/step_grass/fs_grass3.wav",
+	"movement/step_grass/fs_grass4.wav",
+	"movement/step_grass/fs_grass5.wav",
+	"movement/step_grass/fs_grass6.wav",
+	"movement/step_grass/fs_grass7.wav"
+})
+SetSoundRange("step-grass", 32)
+
+MakeSound("step-rock", {
+	"movement/step_rock/fs_rock8.wav",
+	"movement/step_rock/fs_rock1.wav",
+	"movement/step_rock/fs_rock2.wav",
+	"movement/step_rock/fs_rock3.wav",
+	"movement/step_rock/fs_rock4.wav",
+	"movement/step_rock/fs_rock5.wav",
+	"movement/step_rock/fs_rock6.wav",
+	"movement/step_rock/fs_rock7.wav"
+})
+SetSoundRange("step-rock", 32)
+
 MakeSound("gold-coins", "misc/gold_coins.wav")
 MakeSound("heal", "misc/heal.wav")
 MakeSound("open-chest", "misc/open_chest.wav")
@@ -525,7 +549,7 @@ MakeSound("yale-acknowledge", {
 })
 MakeSound("yale-dead", "neutral/yale/yaledead.wav")
 
---	Define sounds used by game
+--	Define sounds used by the game
 --
 DefineGameSounds(
 

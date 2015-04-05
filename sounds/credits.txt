@@ -207,6 +207,22 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/missiles/sword/swordhit_18a.wav
 /sounds/missiles/sword/swordhit_19.wav
 /sounds/missiles/sword/swordhit_19a.wav
+/sounds/movement/step_grass/fs_grass8.wav
+/sounds/movement/step_grass/fs_grass1.wav
+/sounds/movement/step_grass/fs_grass2.wav
+/sounds/movement/step_grass/fs_grass3.wav
+/sounds/movement/step_grass/fs_grass4.wav
+/sounds/movement/step_grass/fs_grass5.wav
+/sounds/movement/step_grass/fs_grass6.wav
+/sounds/movement/step_grass/fs_grass7.wav
+/sounds/movement/step_rock/fs_rock8.wav
+/sounds/movement/step_rock/fs_rock1.wav
+/sounds/movement/step_rock/fs_rock2.wav
+/sounds/movement/step_rock/fs_rock3.wav
+/sounds/movement/step_rock/fs_rock4.wav
+/sounds/movement/step_rock/fs_rock5.wav
+/sounds/movement/step_rock/fs_rock6.wav
+/sounds/movement/step_rock/fs_rock7.wav
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav

@@ -81,6 +81,22 @@ The Stratagus engine, as well as all of the code, artwork, music and story eleme
 /sounds/missiles/sword/swordhit_18a.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_19.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_19a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass8.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass4.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass5.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass6.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_grass/fs_grass7.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock8.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock4.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock5.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock6.wav (licensed under the CC-BY-SA 3.0)
+/sounds/movement/step_rock/fs_rock7.wav (licensed under the CC-BY-SA 3.0)
 
 
 See the license.txt file for the text of the GPLv2. The contents of the CC-BY-SA license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
@@ -286,6 +302,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added voiceovers for the gnomes.
 - Added new sounds for when a worker is repairing/building (by Wildfire Games).
 - Rats will now sometimes be hiding within tree stumps.
+- Units now make a sound when stepping.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

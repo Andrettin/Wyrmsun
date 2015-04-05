@@ -217,7 +217,10 @@ DefineUnitType("unit-rat", { Name = "Rat",
 --		"help", "critter-help",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
-		"miss", "attack-miss"
+		"miss", "attack-miss",
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
 	}
 } )
 
@@ -295,7 +298,10 @@ DefineUnitType("unit-yale", { Name = "Yale",
 --		"help", "critter-help",
 		"dead", "yale-dead",
 		"hit", "club-attack",
-		"miss", "attack-miss"
+		"miss", "attack-miss",
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
 	}
 } )
 
@@ -476,7 +482,10 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 --		"help", "critter-help",
 		"dead", "drake-dead",
 		"hit", "bite-attack",
-		"miss", "attack-miss"
+		"miss", "attack-miss",
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
 	}
 } )
 
@@ -583,7 +592,10 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 --		"help", "critter-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
-		"miss", "squishy-miss"
+		"miss", "squishy-miss",
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
 	}
 } )
 
@@ -2861,7 +2873,12 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	Coward = true,
 	organic = true,
 	Flesh = true,
-	SelectableByRectangle = true
+	SelectableByRectangle = true,
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
@@ -2886,7 +2903,12 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 	CanTargetLand = true,
 	organic = true,
 	Flesh = true,
-	SelectableByRectangle = true
+	SelectableByRectangle = true,
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
@@ -2944,7 +2966,12 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
-	AttackFromTransporter = true
+	AttackFromTransporter = true,
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-thief", { Name = _("Thief"),
@@ -2970,7 +2997,12 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	CanTargetLand = true,
 	organic = true,
 	Flesh = true,
-	SelectableByRectangle = true
+	SelectableByRectangle = true,
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
@@ -2996,7 +3028,12 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	organic = true,
 	Mounted = true,
 	Flesh = true,
-	SelectableByRectangle = true
+	SelectableByRectangle = true,
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-priest", { Name = _("Priest"),
@@ -3023,7 +3060,12 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
-	Mana = {Enable = true}
+	Mana = {Enable = true},
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
@@ -3050,7 +3092,12 @@ DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
 	CanGroundAttack = true,
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true,
-	SelectableByRectangle = true
+	SelectableByRectangle = true,
+	Sounds = {
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
+	}
 } )
 
 DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),

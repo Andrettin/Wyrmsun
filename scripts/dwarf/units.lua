@@ -106,7 +106,10 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
-		"miss", "attack-miss"
+		"miss", "attack-miss",
+		"step", "step-grass",
+		"step-rock", "step-rock",
+		"step-grass", "step-grass"
 	}
 } )
 
