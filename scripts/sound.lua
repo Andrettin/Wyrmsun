@@ -378,10 +378,10 @@ MakeSound("fist-attack",
 MakeSound("mace-attack",
 	"missiles/mace.wav"
 )
-MakeSound("spear-attack",
-	{"missiles/spear-1.wav",
-	"missiles/spear-2.wav"}
-)
+MakeSound("spear-attack", {
+	"missiles/spear-1.wav",
+	"missiles/spear-2.wav"
+})
 MakeSound("spear-miss",
 	"missiles/spear-miss.wav"
 )
@@ -391,9 +391,35 @@ MakeSound("squishy-attack",
 MakeSound("squishy-miss",
 	"missiles/squishy_miss.wav"
 )
-MakeSound("sword-attack",
-	"missiles/sword.wav"
-)
+MakeSound("sword-attack", {
+	"missiles/sword/swordhit_12a.wav",
+	"missiles/sword/swordhit_10.wav",
+	"missiles/sword/swordhit_10a.wav",
+	"missiles/sword/swordhit_11.wav",
+	"missiles/sword/swordhit_11a.wav",
+	"missiles/sword/swordhit_11b.wav",
+	"missiles/sword/swordhit_12.wav",
+	"missiles/sword/swordhit_15.wav",
+	"missiles/sword/swordhit_12b.wav",
+	"missiles/sword/swordhit_13.wav",
+	"missiles/sword/swordhit_13a.wav",
+	"missiles/sword/swordhit_13b.wav",
+	"missiles/sword/swordhit_14.wav",
+	"missiles/sword/swordhit_14a.wav",
+	"missiles/sword/swordhit_14b.wav",
+	"missiles/sword/swordhit_18.wav",
+	"missiles/sword/swordhit_15a.wav",
+	"missiles/sword/swordhit_15b.wav",
+	"missiles/sword/swordhit_16.wav",
+	"missiles/sword/swordhit_16a.wav",
+	"missiles/sword/swordhit_16b.wav",
+	"missiles/sword/swordhit_17.wav",
+	"missiles/sword/swordhit_17a.wav",
+	"missiles/sword/swordhit_17b.wav",
+	"missiles/sword/swordhit_19a.wav",
+	"missiles/sword/swordhit_18a.wav",
+	"missiles/sword/swordhit_19.wav"
+})
 MakeSound("bow", "missiles/bow.wav")
 MakeSound("bow-hit", "missiles/bow_hit.wav")
 MakeSound("throwing-axe", "missiles/throwing_axe.wav")
@@ -422,11 +448,25 @@ MakeSound("construction-wood", {
 	"misc/construction/con_wood_17.wav"
 } )
 
-MakeSound("tree-chopping",
-	{"misc/tree_chopping/tree-chopping-1.wav",
-	"misc/tree_chopping/tree-chopping-2.wav"}
-)
+MakeSound("tree-chopping", {
+	"misc/tree_chopping/tree-chopping-1.wav",
+	"misc/tree_chopping/tree-chopping-2.wav"
+})
 SetSoundRange("tree-chopping", 32)
+
+MakeSound("foraging", {
+	"misc/foraging/leaves_19.wav",
+	"misc/foraging/leaves_1a.wav",
+	"misc/foraging/leaves_10.wav",
+	"misc/foraging/leaves_11.wav",
+	"misc/foraging/leaves_12.wav",
+	"misc/foraging/leaves_13.wav",
+	"misc/foraging/leaves_14.wav",
+	"misc/foraging/leaves_15.wav",
+	"misc/foraging/leaves_16.wav",
+	"misc/foraging/leaves_17.wav",
+	"misc/foraging/leaves_18.wav"
+})
 
 MakeSound("gold-coins", "misc/gold_coins.wav")
 MakeSound("heal", "misc/heal.wav")

@@ -59,7 +59,7 @@ DefineSpell("spell-herbal-cure",
 		"Building", "false",
 		"HitPoints", {MaxValuePercent = 100}
 	},
-	"sound-when-cast", "heal",
+	"sound-when-cast", "foraging",
 	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
 	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
 )
