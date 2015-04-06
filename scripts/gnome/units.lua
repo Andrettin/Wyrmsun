@@ -192,7 +192,7 @@ DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
-		"ready", "town-hall-ready",
+		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town",
 		"dead", "building destroyed"
 	}
@@ -207,7 +207,7 @@ DefineUnitType("unit-gnomish-farm", { Name = _("Farm"),
 	Sounds = {
 		"selected", "farm-selected",
 --		"acknowledge", "farm-acknowledge",
-		"ready", "farm-ready",
+		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town",
 		"dead", "building destroyed"
 	}
@@ -222,7 +222,7 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 	Sounds = {
 		"selected", "barracks-selected",
 --		"acknowledge", "barracks-acknowledge",
-		"ready", "barracks-ready",
+		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town",
 		"dead", "building destroyed"
 	}
