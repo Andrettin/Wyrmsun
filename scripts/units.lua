@@ -1117,7 +1117,7 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 	Description = _("Coal is a valuable heating material."),
@@ -1156,7 +1156,7 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	Class = "mercenary-camp",
@@ -1186,7 +1186,7 @@ DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 --		"acknowledge", "barracks-acknowledge",
 --		"ready", "barracks-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	Image = {"file", "neutral/buildings/tree_stump.png", "size", {72, 72}},
@@ -1234,7 +1234,7 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 --		"ready", "dwarven-sentry-tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -1263,7 +1263,7 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 --		"ready", "dwarven-sentry-tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )		
 		
@@ -1305,7 +1305,7 @@ DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
---		"dead", "building destroyed"
+--		"dead", "building-destroyed"
 	} } )
 
 DefineUnitType("unit-mushroom", { Name = "Mushroom",
@@ -1835,7 +1835,7 @@ DefineUnitType("unit-glyph", { Name = _("Glyph"),
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building destroyed"} }
+		"dead", "building-destroyed"} }
 )
 
 DefineUnitType("unit-stairs", { Name = _("Stairs"),
@@ -1895,7 +1895,7 @@ DefineUnitType("unit-door", { Name = _("Door"),
 	},
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 DefineUnitType("unit-shelf", { Name = "Shelf",
 	Image = {"file", "neutral/decorations/shelf.png", "size", {32, 32}},
@@ -2198,7 +2198,7 @@ DefineUnitType("unit-gold-chest", { Name = _("Chest"),
 	NumDirections = 1,	
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
 	Image = {"file", "neutral/items/chest.png", "size", {32, 32}},
@@ -2217,7 +2217,7 @@ DefineUnitType("unit-gold-and-gems-chest", { Name = _("Chest"),
 	NumDirections = 1,	
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Image = {"file", "neutral/items/alchemy_bench.png", "size", {32, 32}},
@@ -2238,7 +2238,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	VisibleUnderFog = true,
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -2349,7 +2349,7 @@ DefineUnitType("unit-table", { Name = _("Table"),
 	},
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -2385,7 +2385,7 @@ DefineUnitType("unit-chair", { Name = _("Chair"),
 	},
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -2415,7 +2415,7 @@ DefineUnitType("unit-bed", { Name = _("Bed"),
 	},
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -2539,7 +2539,7 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	},
 	Sounds = {
 		"selected", "click",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3133,7 +3133,7 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 --		"acknowledge", "town-hall-acknowledge",
 		"ready", "town-hall-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3175,7 +3175,7 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 --		"acknowledge", "town-hall-acknowledge",
 		"ready", "fortress-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"}
+		"dead", "building-destroyed"}
 } )
 
 DefineUnitType("unit-template-farm", { Name = _("Farm"),
@@ -3207,7 +3207,7 @@ DefineUnitType("unit-template-farm", { Name = _("Farm"),
 --		"acknowledge", "farm-acknowledge",
 		"ready", "farm-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3238,7 +3238,7 @@ DefineUnitType("unit-template-barracks", { Name = _("Barracks"),
 --		"acknowledge", "barracks-acknowledge",
 		"ready", "barracks-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3271,7 +3271,7 @@ DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
 		"ready", "storehouse-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3303,7 +3303,7 @@ DefineUnitType("unit-template-smithy", { Name = _("Smithy"),
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
 		"ready", "smithy-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3340,7 +3340,7 @@ DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 		"ready", "tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3377,7 +3377,7 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 		"ready", "tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -3578,7 +3578,7 @@ DefineUnitType("unit-human-wall", { Name = _("Wall"),
 --		"acknowledge", "human-wall-acknowledge",
 --		"ready", "human-wall-ready",
 --		"help", "basic human voices help 2",
-		"dead", "building destroyed"} } )
+		"dead", "building-destroyed"} } )
 
 -- Hardcoded unit-types, moved from Stratagus to games
 UnitTypeHumanWall = UnitTypeByIdent("unit-human-wall");

@@ -90,6 +90,7 @@ MakeSound("basic-dwarf-voices-dead", {
 	"dwarf/basic_voices/dead-1.wav",
 	"dwarf/basic_voices/dead-2.wav"
 })
+SetSoundRange("basic-dwarf-voices-dead", 32)
 
 ------------------------------------------------------------------------------
 --	Define unit-specific dwarf sounds.
@@ -170,6 +171,7 @@ MakeSound("basic-gnome-voices-dead", {
 	"gnome/basic_voices/death-5.wav",
 	"gnome/basic_voices/death-6.wav"
 })
+SetSoundRange("basic-gnome-voices-dead", 32)
 MakeSound("basic-gnome-voices-help", {
 	"gnome/basic_voices/help-1.wav",
 	"gnome/basic_voices/help-2.wav",
@@ -264,6 +266,7 @@ MakeSound("basic-goblin-voices-dead", {
 	"goblin/basic_voices/goblin-die-1.wav",
 	"goblin/basic_voices/goblin-die-2.wav"
 })
+SetSoundRange("basic-goblin-voices-dead", 32)
 
 ------------------------------------------------------------------------------
 --	Define unit-specific goblin sounds.
@@ -286,11 +289,13 @@ MakeSound("basic-human-voices-dead", {
 	"human/basic_voices/human-die-2.wav",
 	"human/basic_voices/human-die-3.wav"
 })
+SetSoundRange("basic-human-voices-dead", 32)
 
 ------------------------------------------------------------------------------
 --	Define simple kobold sounds.
 --
 MakeSound("basic-kobold-voices-dead", "neutral/hiss_death.wav")
+SetSoundRange("basic-kobold-voices-dead", 32)
 
 ------------------------------------------------------------------------------
 --	Define simple misc sounds.
@@ -351,46 +356,74 @@ MakeSound("burning", "misc/burning.wav")
     --	Other sounds ---------------------------------------------------------
     --
 MakeSound("explosion", "misc/explosion.wav")
-MakeSound("building destroyed",
+SetSoundRange("explosion", 32)
+MakeSound("building-destroyed",
 	{"misc/building_explosion/1.wav",
 	"misc/building_explosion/2.wav"})
+SetSoundRange("building-destroyed", 32)
 MakeSound("axe-attack",
 	"missiles/axe.wav"
 )
+SetSoundRange("axe-attack", 32)
 MakeSound("bite-attack",
 	"missiles/bite.wav"
 )
+SetSoundRange("bite-attack", 32)
 MakeSound("claw-attack",
 	"missiles/claws.wav"
 )
+SetSoundRange("claw-attack", 32)
 MakeSound("club-attack",
 	"missiles/club.wav"
 )
+SetSoundRange("club-attack", 32)
 MakeSound("dagger-attack",
 	"missiles/dagger.wav"
 )
+SetSoundRange("dagger-attack", 32)
 MakeSound("dart-attack",
 	"missiles/dart.wav"
 )
+SetSoundRange("dart-attack", 32)
 MakeSound("fist-attack",
 	"missiles/fist.wav"
 )
-MakeSound("mace-attack",
-	"missiles/mace.wav"
-)
+SetSoundRange("fist-attack", 32)
+MakeSound("mace-attack", {
+	"missiles/shield_metal/shieldimpmetal_22.wav",
+	"missiles/shield_metal/shieldimpmetal_21.wav",
+	"missiles/shield_metal/shieldimpmetal_26.wav",
+	"missiles/shield_metal/shieldimpmetal_23.wav",
+	"missiles/shield_metal/shieldimpmetal_24.wav",
+	"missiles/shield_metal/shieldimpmetal_25.wav",
+	"missiles/shield_metal/shieldimpmetal_213.wav",
+	"missiles/shield_metal/shieldimpmetal_27.wav",
+	"missiles/shield_metal/shieldimpmetal_28.wav",
+	"missiles/shield_metal/shieldimpmetal_29.wav",
+	"missiles/shield_metal/shieldimpmetal_210.wav",
+	"missiles/shield_metal/shieldimpmetal_211.wav",
+	"missiles/shield_metal/shieldimpmetal_212.wav",
+	"missiles/shield_metal/shieldimpmetal_215.wav",
+	"missiles/shield_metal/shieldimpmetal_214.wav"
+})
+SetSoundRange("mace-attack", 32)
 MakeSound("spear-attack", {
 	"missiles/spear-1.wav",
 	"missiles/spear-2.wav"
 })
+SetSoundRange("spear-attack", 32)
 MakeSound("spear-miss",
 	"missiles/spear-miss.wav"
 )
+SetSoundRange("spear-miss", 32)
 MakeSound("squishy-attack",
 	"missiles/squishy_strike.wav"
 )
+SetSoundRange("squishy-attack", 32)
 MakeSound("squishy-miss",
 	"missiles/squishy_miss.wav"
 )
+SetSoundRange("squishy-miss", 32)
 MakeSound("sword-attack", {
 	"missiles/sword/swordhit_12a.wav",
 	"missiles/sword/swordhit_10.wav",
@@ -420,10 +453,15 @@ MakeSound("sword-attack", {
 	"missiles/sword/swordhit_18a.wav",
 	"missiles/sword/swordhit_19.wav"
 })
+SetSoundRange("sword-attack", 32)
 MakeSound("bow", "missiles/bow.wav")
+SetSoundRange("bow", 32)
 MakeSound("bow-hit", "missiles/bow_hit.wav")
+SetSoundRange("bow-hit", 32)
 MakeSound("throwing-axe", "missiles/throwing_axe.wav")
+SetSoundRange("throwing-axe", 32)
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
+SetSoundRange("throwing-axe-hit", 32)
 
 MakeSound("attack-miss",
 	{"missiles/miss-1.wav",
@@ -479,6 +517,7 @@ MakeSound("step-grass", {
 	"movement/step_grass/fs_grass7.wav"
 })
 SetSoundRange("step-grass", 32)
+SetSoundVolumePercent("step-grass", 50)
 
 MakeSound("step-rock", {
 	"movement/step_rock/fs_rock8.wav",
@@ -491,11 +530,15 @@ MakeSound("step-rock", {
 	"movement/step_rock/fs_rock7.wav"
 })
 SetSoundRange("step-rock", 32)
+SetSoundVolumePercent("step-rock", 50)
 
 MakeSound("gold-coins", "misc/gold_coins.wav")
+SetSoundRange("gold-coins", 32)
 MakeSound("heal", "misc/heal.wav")
 MakeSound("open-chest", "misc/open_chest.wav")
+SetSoundRange("open-chest", 32)
 MakeSound("potion", "misc/potion.wav")
+SetSoundRange("potion", 32)
 MakeSound("rumble", "misc/rumble.wav")
 
 MakeSound("magic-holy",
@@ -518,7 +561,9 @@ MakeSound("magic-holy",
 MapSound("gold-mine-help", "basic-dwarf-voices-help")
 MapSound("critter-help", "basic-dwarf-voices-help")
 MakeSound("drake-dead", "neutral/drake_death.wav")
+SetSoundRange("drake-dead", 32)
 MakeSound("rat-dead", "neutral/rat_death.wav")
+SetSoundRange("rat-dead", 32)
 MakeSound("gryphon-ready", {
 	"neutral/gryphon/gryphon_shriek_1.wav",
 	"neutral/gryphon/gryphon_shriek_2.wav"
@@ -527,7 +572,9 @@ MakeSound("gryphon-dead", {
 	"neutral/gryphon/gryphon_death_1.wav",
 	"neutral/gryphon/gryphon_death_2.wav"
 })
+SetSoundRange("gryphon-dead", 32)
 MakeSound("squishy-hit", "neutral/squishy_hit.wav")
+SetSoundRange("squishy-hit", 32)
 MakeSound("bird-selected", {
 	"neutral/bird/birds1.wav",
 	"neutral/bird/birds2.wav",
@@ -548,6 +595,7 @@ MakeSound("yale-acknowledge", {
 	"neutral/yale/yale_ack03.wav"
 })
 MakeSound("yale-dead", "neutral/yale/yaledead.wav")
+SetSoundRange("yale-dead", 32)
 
 --	Define sounds used by the game
 --

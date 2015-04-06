@@ -295,5 +295,6 @@ DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building destroyed"} }
-)
+		"dead", "building-destroyed"
+	}
+})

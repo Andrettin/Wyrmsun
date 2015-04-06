@@ -194,7 +194,7 @@ DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 --		"acknowledge", "town-hall-acknowledge",
 		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -209,7 +209,7 @@ DefineUnitType("unit-gnomish-farm", { Name = _("Farm"),
 --		"acknowledge", "farm-acknowledge",
 		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
@@ -224,6 +224,6 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 --		"acknowledge", "barracks-acknowledge",
 		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )

@@ -265,7 +265,7 @@ DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
 --		"acknowledge", "farm-acknowledge",
 		"ready", "corral-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building destroyed"
+		"dead", "building-destroyed"
 	}
 } )
 
