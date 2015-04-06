@@ -54,8 +54,7 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 		"resource-capacity", 100,
 		"resource-step", 2,
 		"wait-at-resource", 24,
-		"wait-at-depot", 150,
-		"terrain-harvester"}},
+		"wait-at-depot", 150}},
 	Variations = {
 		{
 			"variation-id", "bald"

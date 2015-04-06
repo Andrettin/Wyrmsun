@@ -58,8 +58,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 			"resource-capacity", 100,
 			"resource-step", 2,
 			"wait-at-resource", 24,
-			"wait-at-depot", 150,
-			"terrain-harvester"
+			"wait-at-depot", 150
 		}
 	},
 	Sounds = {
