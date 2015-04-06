@@ -224,7 +224,7 @@ DefinePanelContents(
 		)}}
 	},
 	--]]
-	{ Pos = {16, 102}, Condition = {PiercingDamage = "only"},
+	{ Pos = {16, 102}, Condition = {BasicDamage = "only"},
 		More = {"Text", {Text = Concat(
 			"Damage: ",
 			String(min_damage),

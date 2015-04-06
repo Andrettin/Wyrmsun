@@ -192,7 +192,7 @@ for i = 1,table.getn(upgrades) do
 end
 
 DefineModifier("upgrade-axe-mastery",
-	{"PiercingDamage", 2}
+	{"BasicDamage", 2}
 )
 
 DefineModifier("upgrade-critical-strike",
@@ -200,7 +200,7 @@ DefineModifier("upgrade-critical-strike",
 )
 
 DefineModifier("upgrade-sword-mastery",
-	{"PiercingDamage", 2}
+	{"BasicDamage", 2}
 )
 
 -- traits
@@ -295,7 +295,7 @@ DefineModifier("upgrade-vicious",
 )
 
 DefineModifier("upgrade-weak",
-	{"PiercingDamage", -1}
+	{"BasicDamage", -1}
 )
 
 -- miscellaneous individual upgrades
@@ -323,8 +323,7 @@ for i = 1,table.getn(misc_individual_upgrades) do
 end
 
 DefineModifier("upgrade-child",
-	{"BasicDamage", -1},
-	{"PiercingDamage", -1}
+	{"BasicDamage", -2}
 )
 
 DefineModifier("upgrade-bee-child",
@@ -332,11 +331,9 @@ DefineModifier("upgrade-bee-child",
 )
 
 DefineModifier("upgrade-gryphon-child",
-	{"BasicDamage", -6},
-	{"PiercingDamage", -2}
+	{"BasicDamage", -8}
 )
 
 DefineModifier("upgrade-wyrm-child",
-	{"BasicDamage", -16},
-	{"PiercingDamage", -8}
+	{"BasicDamage", -24}
 )

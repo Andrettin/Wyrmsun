@@ -78,7 +78,7 @@ for i = 1,table.getn(upgrades) do
 end
 
 DefineModifier("upgrade-germanic-broad-sword",
-	{"PiercingDamage", 2},
+	{"BasicDamage", 2},
 	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"},
 --	{"apply-to", "unit-germanic-old-man"}, {"apply-to", "unit-teuton-old-man"},
 	{"apply-to", "unit-hero-marbod"}
@@ -92,7 +92,7 @@ DefineModifier("upgrade-germanic-bronze-shield",
 )
 
 DefineModifier("upgrade-germanic-barbed-arrow",
-	{"PiercingDamage", 1},
+	{"BasicDamage", 1},
 	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"}
 )
 

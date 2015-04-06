@@ -207,7 +207,7 @@ DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
 	Image = {"file", "teuton/units/old_man.png", "size", {72, 72}},
 	Animations = "animations-germanic-worker", Icon = "icon-old-man",
 	HitPoints = 40,
-	BasicDamage = 2, PiercingDamage = 4,
+	BasicDamage = 6,
 	Corpse = "unit-human-dead-body",
 	Variations = {},
 	Sounds = {

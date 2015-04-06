@@ -71,7 +71,7 @@ for i = 1,table.getn(upgrades) do
 end
 
 DefineModifier("upgrade-teuton-spatha",
-	{"PiercingDamage", 2},
+	{"BasicDamage", 2},
 	{"apply-to", "unit-teuton-swordsman"},
 --	{"apply-to", "unit-teuton-old-man"},
 	{"apply-to", "unit-hero-marbod"}
