@@ -54,7 +54,7 @@ function RunEncyclopediaMenu()
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -104,7 +104,7 @@ function RunEncyclopediaUnitsMenu(state)
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -210,7 +210,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				PlayMusic("music/legends_of_the_north.ogg")
 			end
 
-			local encyclopedia_entry_menu = WarMenu()
+			local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 			local offx = (Video.Width - 640) / 2
 			local offy = (Video.Height - 480) / 2
 
@@ -323,7 +323,7 @@ function RunEncyclopediaTextsMenu()
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -354,7 +354,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local encyclopedia_entry_menu = WarMenu()
+	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -680,7 +680,7 @@ function RunEncyclopediaWorldsMenu()
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -731,7 +731,7 @@ function OpenEncyclopediaWorldEntry(world_key)
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local encyclopedia_entry_menu = WarMenu()
+	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -800,7 +800,7 @@ function RunEncyclopediaGameConceptsMenu()
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -851,7 +851,7 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local encyclopedia_entry_menu = WarMenu()
+	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -881,7 +881,7 @@ function RunEncyclopediaCivilizationsMenu()
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -932,7 +932,7 @@ function OpenEncyclopediaCivilizationEntry(civilization_key)
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local encyclopedia_entry_menu = WarMenu()
+	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -982,7 +982,7 @@ function RunEncyclopediaFactionsMenu()
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local menu = WarMenu()
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1033,7 +1033,7 @@ function OpenEncyclopediaFactionEntry(faction_key)
 		PlayMusic("music/legends_of_the_north.ogg")
 	end
 
-	local encyclopedia_entry_menu = WarMenu()
+	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 

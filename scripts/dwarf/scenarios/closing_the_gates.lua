@@ -674,7 +674,6 @@ AddTrigger(
 		return false
 	end
 )
-end
 
 -- If Baglur dies, any quests of the Scepter of Fire campaign currently being pursued fail
 AddTrigger(

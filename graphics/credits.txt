@@ -284,6 +284,9 @@ Bos Wars Team:
 /graphics/ui/cursors/small_green_cross.png
 /graphics/ui/cursors/yellow.png
 
+Brian Brickwagon Jennings:
+/graphics/dwarf/ui/the_first_dwarves.png
+
 Cuzco:
 /graphics/missiles/siege_projectile_impact.png (later modified by Jinn)
 /graphics/ui/Menu_background_with_title.png
