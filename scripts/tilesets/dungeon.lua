@@ -39,9 +39,9 @@ DefineTileset("name", "Dungeon",
     "top-one-tree", 121, "mid-one-tree", 122, "bot-one-tree", 123,
     "removed-tree", 126,
     "growing-tree", { -1, -1, },
-    "top-one-rock", 173, "mid-one-rock", 174, "bot-one-rock", 175,
-    "removed-rock", 152, },
-  "solid", { "unused",
+	"top-one-rock", 173, "mid-one-rock", 174, "bot-one-rock", 175,
+	"removed-rock", 152, },
+	"solid", { "unused",
     {}},								-- 000
   "solid", { "unused",
     {}},								-- 010
@@ -58,7 +58,7 @@ DefineTileset("name", "Dungeon",
   "solid", { "unused",
     {}},								-- 070
   "solid", { "cave-wall", "land", "rock", "unpassable", "air-unpassable",
-    { 151, 151, 151, 151}},						-- 080
+    { 151, 151, 151, 151}},					-- 080
   "solid", { "dwarf-closed-wall", "land", "human", "wall", "unpassable",
     {  16, 18, 19, 20,   0,  16, 18, 19, 20,   0, 464, 465, 466, 467}},	-- 090
   "solid", { "unused",

@@ -32,8 +32,8 @@ local upgrades = {
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
 		"",
 		"",
-		{   250,  1500,   875,     0,     0,     0,     0,     0},
-		{   250,  1500,   875,     0,     0,     0,     0,  1500},
+		{   250,  1500,   655,   220,     0,     0,     0,     0},
+		{   250,  1500,   655,   220,     0,     0,     0,  1500},
 		1},
 }
 

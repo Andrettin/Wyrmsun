@@ -180,9 +180,14 @@ DefinePanelContents(
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
-	{ Pos = {84, 134}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
+--	{ Pos = {84, 134}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
+--									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
+--										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
+--										"" ))}}
+--    },
+	{ Pos = {84, 134}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("Stone: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
     },
 
@@ -194,15 +199,21 @@ DefinePanelContents(
   Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
 	{ Pos = {16, 86}, Condition = {LumberImprove = "only"}, More = {"Text", "Processing"} },
-	{ Pos = {16, 86}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
+--	{ Pos = {16, 86}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
+	{ Pos = {16, 86}, Condition = {StoneImprove = "only"}, More = {"Text", "Processing"} },
 	{ Pos = {32, 102}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
 									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
-	{ Pos = {84, 102}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
+--	{ Pos = {84, 102}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
+--									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
+--										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
+--										"" ))}}
+--    },
+	{ Pos = {84, 102}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("Stone: 100", 
+									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
     },
 

@@ -302,6 +302,8 @@ function GenerateRandomWorldMap()
 		Gold = {
 		},
 		Lumber = { 
+		},
+		Stone = { 
 		}
 	}
 	

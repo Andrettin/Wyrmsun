@@ -160,6 +160,8 @@ WorldMapResources = {
 --		{159, 27, false} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
 	},
 	Lumber = { 
+	},
+	Stone = { 
 	}
 }
 

@@ -42,24 +42,39 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
 	Corpse = "unit-dwarven-dead-body",
 	CanGatherResources = {
-	 {"file-when-loaded", "dwarf/units/miner_with_gold.png",
-		"resource-id", "gold",
---		"harvest-from-outside",
-		"resource-capacity", 100,
-		"wait-at-resource", 120,
-		"wait-at-depot", 150},
-	 {"file-when-loaded", "dwarf/units/miner_with_lumber.png",
-		"resource-id", "lumber",
-		"harvest-from-outside",
-		"resource-capacity", 100,
-		"resource-step", 2,
-		"wait-at-resource", 29,
-		"wait-at-depot", 150},
-	 {"file-when-loaded", "dwarf/units/miner_with_coal.png",
-		"resource-id", "coal",
-		"resource-capacity", 100,
-		"wait-at-resource", 120,
-		"wait-at-depot", 150}
+		{
+			"file-when-loaded", "dwarf/units/miner_with_gold.png",
+			"resource-id", "gold",
+--			"harvest-from-outside",
+			"resource-capacity", 100,
+			"wait-at-resource", 120,
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
+			"resource-id", "lumber",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 29,
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "dwarf/units/miner_with_gold.png",
+			"resource-id", "stone",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "dwarf/units/miner_with_coal.png",
+			"resource-id", "coal",
+			"resource-capacity", 100,
+			"wait-at-resource", 120,
+			"wait-at-depot", 150
+		}
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -545,7 +560,9 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Description = _("The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls ever built is that of Lyr."),
 	Background = _("Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the ~<Voluspo~> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the ~<Svipdagsmol~>."),
 	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
-	Animations = "animations-building", Icon = "icon-dwarven-town-hall"
+	Icon = "icon-dwarven-town-hall",
+	Costs = {"time", 255, "gold", 1200, "lumber", 600, "stone", 200},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1}
 } )
 
 DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
@@ -555,6 +572,8 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Quote = _("\"Durin spake: 'Now answer me, warder, | the question I ask, / For now the truth would I know: / What call they the hall, | encompassed here / With flickering magic flames?'\" - Dwarven Traditional Poetry"),
 	Image = {"file", "dwarf/buildings/stronghold.png", "size", {128, 128}},
 	Icon = "icon-dwarven-stronghold",
+	Costs = {"time", 200, "gold", 2200, "lumber", 275, "stone", 825},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1
 } )
 
@@ -564,7 +583,10 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Description = _("For aeons, dwarves have practiced mushroom farming underground. At first, their crude agricultural methods allowed them only to use mushroom farming as a supplementary means of nutrition, so that they could remain in a given area for a longer time before migrating. Eventually, however, dwarven mushroom farming techniques developed to the point that dwarves were able to establish their first permanent communities."),
 	Quote = _("\"This is how we get our food, me lad. Since we are a tad close to the surface here, some sunlight shines down through the cracks in the roof. If we baby the plants, we can usually get enough. They taste unco' foul but that's how we ha' survived all these long years.\" - Hamel, Lord of Knalga"),
 	Image = {"file", "dwarf/buildings/mushroom_farm.png", "size", {64, 64}},
-	Animations = "animations-building", Icon = "icon-dwarven-mushroom-farm"
+	Icon = "icon-dwarven-mushroom-farm",
+	Costs = {"time", 100, "gold", 500, "lumber", 190, "stone", 60},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	Drops = {"unit-wood-pile"}
 } )
 
 DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
@@ -573,7 +595,9 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	Description = _("The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily."),
 	Quote = _("\"Loud roar the dwarves | by the doors of stone, / The masters of the rocks: | would you know yet more?\" - Dwarven Traditional Poetry"),
 	Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-dwarven-barracks"
+	Icon = "icon-dwarven-barracks",
+	Costs = {"time", 200, "gold", 700, "lumber", 340, "stone", 110},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1}
 } )
 
 DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
@@ -583,7 +607,9 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 	Background = _("In Germanic mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>."),
 	Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
 	Icon = "icon-dwarven-lumber-mill",
-	Costs = {"time", 165, "gold", 660, "lumber", 495},
+--	Costs = {"time", 165, "gold", 660, "lumber", 495},
+	Costs = {"time", 165, "gold", 660, "lumber", 370, "stone", 125},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1
 } )
 
@@ -596,7 +622,9 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	Background = _("One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the ~<Reginsmol~>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem."),
 	Image = {"file", "dwarf/buildings/smithy.png", "size", {96, 96}},
 	Icon = "icon-dwarven-smithy",
-	Costs = {"time", 190, "gold", 810, "lumber", 450},
+--	Costs = {"time", 190, "gold", 810, "lumber", 450},
+	Costs = {"time", 190, "gold", 810, "lumber", 340, "stone", 110},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
 	PersonalNamePrefixes = {"The Black", "Brisings'", "Brokk's", "Eitri's", "The Fiery", "Ivaldi's", "Regin's"}, -- The Brisings were a group of dwarves who crafter a magnificent necklace; Brokk and Eitri were skilled dwarven smiths; Ivaldi's sons were skilled dwarven smiths; Regin was a dwarven smith in the Siegfried myth
 	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"}
@@ -608,6 +636,8 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	Description = _("In these towers dwarves keep watch of threats approaching their settlements."),
 	Image = {"file", "dwarf/buildings/sentry_tower.png", "size", {64, 64}},
 	Animations = "animations-dwarven-sentry-tower", Icon = "icon-dwarven-sentry-tower",
+	Costs = {"time", 60, "gold", 550, "lumber", 50, "stone", 150},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
 	Construction = "construction-dwarven-sentry-tower"
 } )
@@ -618,6 +648,8 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = _("Guard Tower"),
 	Description = _("Often garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's defenses."),
 	Image = {"file", "dwarf/buildings/guard_tower.png", "size", {64, 64}},
 	Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
+	Costs = {"time", 140, "gold", 500, "lumber", 40, "stone", 110},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1
 } )
 

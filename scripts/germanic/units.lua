@@ -59,6 +59,15 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 			"resource-step", 2,
 			"wait-at-resource", 24,
 			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "stone",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150
 		}
 	},
 	Sounds = {

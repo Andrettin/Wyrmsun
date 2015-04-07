@@ -88,8 +88,8 @@ local upgrades = {
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to upgrade to Guard Towers."),
 		"",
 		"",
-		{   250,  1500,   875,     0,     0,     0,     0,     0},
-		{   250,  1500,   875,     0,     0,     0,     0,  1500},
+		{   250,  1500,   440,   435,     0,     0,     0,     0},
+		{   250,  1500,   440,   435,     0,     0,     0,  1500},
 		1},
 }
 

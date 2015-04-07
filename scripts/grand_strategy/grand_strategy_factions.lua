@@ -75,7 +75,8 @@ function LoadFactions(world)
 			Civilization = "germanic",
 			Gold = 3000,
 			Commodities = {
-				Lumber = 1500 -- half of the gold value
+				Lumber = 1500, -- half of the gold value
+				Stone = 1500 -- half of the gold value
 			}
 		},
 		BavarianTribe = {
@@ -278,7 +279,8 @@ function LoadFactions(world)
 			Civilization = "germanic",
 			Gold = 5000,
 			Commodities = {
-				Lumber = 2500 -- half of the gold value
+				Lumber = 2500, -- half of the gold value
+				Stone = 2500 -- half of the gold value
 			}
 		},
 		MinoanTribe = {
@@ -290,7 +292,8 @@ function LoadFactions(world)
 			Civilization = "celt",
 			Gold = 5000,
 			Commodities = {
-				Lumber = 2500 -- half of the gold value
+				Lumber = 2500, -- half of the gold value
+				Stone = 2500 -- half of the gold value
 			}
 		},
 		-- Non-Playable Polities
@@ -338,7 +341,8 @@ function LoadFactions(world)
 			Title = "Kingdom",
 			Gold = 7500,
 			Commodities = {
-				Lumber = 3750 -- half of the gold value
+				Lumber = 3750, -- half of the gold value
+				Stone = 3750 -- half of the gold value
 			}
 		},
 		-- Dwarven clans
@@ -351,7 +355,8 @@ function LoadFactions(world)
 			Civilization = "dwarf",
 			Gold = 3000,
 			Commodities = {
-				Lumber = 1500 -- half of the gold value
+				Lumber = 1500, -- half of the gold value
+				Stone = 1500 -- half of the gold value
 			}
 		},
 		ShinsplitterClan = {
@@ -359,7 +364,8 @@ function LoadFactions(world)
 			Civilization = "dwarf",
 			Gold = 7500,
 			Commodities = {
-				Lumber = 3750 -- half of the gold value
+				Lumber = 3750, -- half of the gold value
+				Stone = 3750 -- half of the gold value
 			}
 		},
 		ShorbearClan = {
@@ -367,7 +373,8 @@ function LoadFactions(world)
 			Civilization = "dwarf",
 			Gold = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit gold cost in Wyrmsun)
 			Commodities = {
-				Lumber = 4500 -- half of the gold value
+				Lumber = 4500, -- half of the gold value
+				Stone = 4500 -- half of the gold value
 			}
 		},
 		-- Dwarven polities
@@ -392,7 +399,8 @@ function LoadFactions(world)
 			Civilization = "goblin",
 			Gold = 750,
 			Commodities = {
-				Lumber = 375 -- half of the gold value
+				Lumber = 375, -- half of the gold value
+				Stone = 375 -- half of the gold value
 			}
 		},
 		LggiTribe = {
@@ -400,7 +408,8 @@ function LoadFactions(world)
 			Civilization = "goblin",
 			Gold = 2700,
 			Commodities = {
-				Lumber = 1350 -- half of the gold value
+				Lumber = 1350, -- half of the gold value
+				Stone = 1350 -- half of the gold value
 			}
 		}
 	}
@@ -420,6 +429,9 @@ function LoadFactions(world)
 			if (faction_table[key].Commodities ~= nil) then
 				if (faction_table[key].Commodities.Lumber ~= nil) then
 					Factions[key].Commodities["Lumber"] = faction_table[key].Commodities.Lumber
+				end
+				if (faction_table[key].Commodities.Stone ~= nil) then
+					Factions[key].Commodities["Stone"] = faction_table[key].Commodities.Stone
 				end
 			end
 			Factions[key]["Technologies"] = {}

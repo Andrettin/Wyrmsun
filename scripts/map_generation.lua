@@ -1244,6 +1244,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 
 				SetPlayerData(i, "Resources", "gold", 10000)
 				SetPlayerData(i, "Resources", "lumber", 3000)
+				SetPlayerData(i, "Resources", "stone", 1000)
 				SetPlayerData(i, "Resources", "oil", 1000)
 				SetAiType(i, "land-attack")
 			end

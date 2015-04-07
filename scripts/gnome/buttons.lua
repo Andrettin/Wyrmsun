@@ -66,9 +66,10 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
   ForUnit = {"unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
-  Action = "harvest",
-  Key = "h", Hint = _("~!Harvest Lumber/Mine Gold"), Popup = "popup-commands",
-  ForUnit = {"unit-gnomish-worker"} } )
+	Action = "harvest",
+	Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
+	ForUnit = {"unit-gnomish-worker"}
+} )
 
 -- Special Abilities ---------------------------------------------------
 

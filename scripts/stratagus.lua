@@ -61,7 +61,7 @@ function InitGameVariables()
   end
 end
 
-DefineBoolFlags("Center", "LumberImprove", "OilImprove")
+DefineBoolFlags("Center", "LumberImprove", "OilImprove", "StoneImprove")
 
 --  Edit the next sections to get your look and feel.
 --  Note, some of those values are overridden by user preferences,
@@ -177,6 +177,7 @@ DefineDefaultResourceAmounts(
   "gold", 100000,
   "lumber", 100,
   "oil", 50000,
+  "stone", 100,
   "coal", 50000)
 
 DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
@@ -533,7 +534,7 @@ function StandardTriggers()
 									OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit3],"PosX"), GetUnitVariable(nearby_uncount[unit3],"PosY")}, "unload")
 								end
 							end
-						elseif (GetUnitTypeData(GetUnitVariable(inside_uncount[unit2], "Ident"), "Fauna")) then -- animals hiding within holes or stumps exit if a faction's unit is nearby
+						elseif (GetUnitVariable(inside_uncount[unit2], "Player") == 15 and GetUnitTypeData(GetUnitVariable(inside_uncount[unit2], "Ident"), "Fauna")) then -- animals hiding within holes or stumps exit if a faction's unit is nearby
 							local unit_quantity = 0
 							for i=0,14 do
 								unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {GetUnitVariable(uncount[unit1],"PosX") - (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2), GetUnitVariable(uncount[unit1],"PosY") - (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2)}, {GetUnitVariable(uncount[unit1],"PosX") + (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2) + 1, GetUnitVariable(uncount[unit1],"PosY") + (GetUnitVariable(inside_uncount[unit2], "SightRange") / 2) + 1})

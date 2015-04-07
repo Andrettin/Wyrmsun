@@ -62,6 +62,8 @@ WorldMapResources = {
 		{47, 11, true} -- to give the Modsogning clan a proper start
 	},
 	Lumber = { 
+	},
+	Stone = { 
 	}
 }
 

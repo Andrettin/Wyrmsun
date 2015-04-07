@@ -132,11 +132,12 @@ if (OldSetPlayerData == nil) then
 end
 
 --Define Player Data.
-function SetupPlayer(player, race, ai, gold, lumber, oil, x, y)
+function SetupPlayer(player, race, ai, gold, lumber, oil, stone, x, y)
 	SetStartView(player, x, y)
 	SetPlayerData(player, "Resources", "lumber", lumber)
 	SetPlayerData(player, "Resources", "gold", gold)
 	SetPlayerData(player, "Resources", "oil", oil)
+	SetPlayerData(player, "Resources", "stone", stone)
 	SetPlayerData(player, "RaceName", race)
 	SetAiType(player, ai)
 end
@@ -242,7 +243,11 @@ function SetPlayerData(player, data, arg1, arg2)
 		elseif (arg1 == "ore") then
 			arg2 = res[4]
 		elseif (arg1 == "stone") then
-			arg2 = res[5]
+			if (GrandStrategy == false or GrandStrategyEventMap) then
+				arg2 = res[5]
+			else
+				arg2 = 0
+			end
 		elseif (arg1 == "coal") then
 			if (GrandStrategy == false or GrandStrategyEventMap) then
 				arg2 = res[6]

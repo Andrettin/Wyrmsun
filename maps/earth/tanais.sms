@@ -6,10 +6,12 @@ end
 
 SetPlayerData(0, "Resources", "gold", 2000)
 SetPlayerData(0, "Resources", "lumber", 1000)
+SetPlayerData(0, "Resources", "stone", 500)
 SetPlayerData(0, "Resources", "oil", 0)
 SetAiType(0, "land-attack")
 SetPlayerData(1, "Resources", "gold", 2000)
 SetPlayerData(1, "Resources", "lumber", 1000)
+SetPlayerData(1, "Resources", "stone", 500)
 SetPlayerData(1, "Resources", "oil", 0)
 SetAiType(1, "passive")
 SetPlayerData(15, "RaceName", "neutral")

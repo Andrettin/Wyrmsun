@@ -97,6 +97,9 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyCommodities["Lumber"] = {}
 			GrandStrategyCommodities.Lumber["BasePrice"] = 100
 			GrandStrategyCommodities.Lumber["Price"] = 100
+			GrandStrategyCommodities["Stone"] = {}
+			GrandStrategyCommodities.Stone["BasePrice"] = 100
+			GrandStrategyCommodities.Stone["Price"] = 100
 --			GrandStrategyCommodities["Coal"] = {}
 --			GrandStrategyCommodities.Coal["BasePrice"] = 100
 --			GrandStrategyCommodities.Coal["Price"] = 100
@@ -111,6 +114,9 @@ function RunGrandStrategyGameSetupMenu()
 				end
 				if (Factions[key].Commodities.Lumber == nil) then
 					Factions[key].Commodities["Lumber"] = 1500
+				end
+				if (Factions[key].Commodities.Stone == nil) then
+					Factions[key].Commodities["Stone"] = 1500
 				end
 				if (Factions[key].Commodities.Coal == nil) then
 					Factions[key].Commodities["Coal"] = 0
@@ -154,6 +160,9 @@ function RunGrandStrategyGameSetupMenu()
 				end
 				if (Factions[key].Trade.Lumber == nil) then
 					Factions[key].Trade["Lumber"] = 0
+				end
+				if (Factions[key].Trade.Stone == nil) then
+					Factions[key].Trade["Stone"] = 0
 				end
 				
 				-- provinces owned by the faction, to not have to loop through the provinces each time
@@ -290,6 +299,9 @@ function RunGrandStrategyGameSetupMenu()
 							SetWorldMapTile(x, y, "Hill")
 						end
 					elseif (GetWorldMapTile(x, y) == "Mntn") then -- implement variations for mountain tiles
+						if (TileHasResource(x, y, "Stone", false) == false) then
+							table.insert(WorldMapResources.Stone, {x, y, true})
+						end
 						RandomNumber = SyncRand(1) + 1
 						WorldMapTiles[y+1][x+1] = "Mntn" .. RandomNumber
 					elseif (GetWorldMapTile(x, y) == "Watr") then -- implement variations for water tiles
@@ -523,6 +535,7 @@ function EndTurn()
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
 			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
+			Factions[key].Commodities.Stone = Factions[key].Commodities.Stone + Factions[key].Income.Stone
 			Factions[key].Research = Factions[key].Research + Factions[key].Income.Research
 			Factions[key].Prestige = Factions[key].Prestige + Factions[key].Income.Prestige
 		end
@@ -532,12 +545,15 @@ function EndTurn()
 	local player_trade_preferences = {}
 	if (GrandStrategyFaction ~= nil) then
 		player_trade_preferences["Lumber"] = GrandStrategyFaction.Trade.Lumber
+		player_trade_preferences["Stone"] = GrandStrategyFaction.Trade.Stone
 	end
 
 	local province_consumed_commodity = {}
 	province_consumed_commodity["Lumber"] = {}
+	province_consumed_commodity["Stone"] = {}
 	for key, value in pairs(WorldMapProvinces) do
 		province_consumed_commodity["Lumber"][key] = false
+		province_consumed_commodity["Stone"][key] = false
 	end
 	
 	local function trade_priority( a, b )
@@ -555,6 +571,12 @@ function EndTurn()
 					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
 					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
+				end
+				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall")) then
+					Factions[key].Commodities.Stone = Factions[key].Commodities.Stone - GetProvinceCommodityDemand("Stone")
+					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100)
+					Factions[key].Trade["Stone"] = Factions[key].Trade["Stone"] - GetProvinceCommodityDemand("Stone")
+					province_consumed_commodity.Stone[province_key] = true
 				end
 			end
 		end
@@ -575,6 +597,20 @@ function EndTurn()
 					end
 				end
 			end
+			
+			if (Factions[key].Trade.Stone < 0) then -- if wants to import stone
+				for second_key, second_value in pairsByKeys(Factions, trade_priority) do
+					if (Factions[second_key].Trade.Stone > 0) then -- if second faction wants to export stone
+						PerformTrade(Factions[key], Factions[second_key], "Stone")
+					end
+				end
+			elseif (Factions[key].Trade.Stone > 0) then -- if wants to export stone
+				for second_key, second_value in pairsByKeys(Factions, trade_priority) do
+					if (Factions[second_key].Trade.Stone < 0) then -- if second faction wants to import stone
+						PerformTrade(Factions[second_key], Factions[key], "Stone")
+					end
+				end
+			end
 		end
 	end
 	
@@ -587,14 +623,23 @@ function EndTurn()
 					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
+				
+				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+					Factions[key].Commodities.Stone = Factions[key].Commodities.Stone - GetProvinceCommodityDemand("Stone")
+					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100)
+					Factions[key].Trade["Stone"] = Factions[key].Trade["Stone"] - GetProvinceCommodityDemand("Stone")
+					province_consumed_commodity.Stone[province_key] = true
+				end
 			end
 		end
 	end
 
 	-- check whether offers or bids have been greater, and change the commodity's price accordingly (disabled for now since the trade system isn't robust enough yet to not make lumber become worthless over time)
 	local remaining_wanted_trade_lumber = 0
+	local remaining_wanted_trade_stone = 0
 	for key, value in pairs(Factions) do
 		remaining_wanted_trade_lumber = remaining_wanted_trade_lumber + Factions[key].Trade.Lumber
+		remaining_wanted_trade_stone = remaining_wanted_trade_stone + Factions[key].Trade.Stone
 	end
 	
 	for province_key, province_value in pairs(WorldMapProvinces) do
@@ -602,15 +647,24 @@ function EndTurn()
 			if (province_consumed_commodity.Lumber[province_key] == false) then
 				remaining_wanted_trade_lumber = remaining_wanted_trade_lumber - GetProvinceCommodityDemand("Lumber")
 			end
+			if (province_consumed_commodity.Stone[province_key] == false) then
+				remaining_wanted_trade_stone = remaining_wanted_trade_stone - GetProvinceCommodityDemand("Stone")
+			end
 		end
 	end
 	
 --	GrandStrategyCommodities.Lumber["Difference"] = remaining_wanted_trade_lumber -- for debugging	
-	
+
 	if (remaining_wanted_trade_lumber > 0 and GrandStrategyCommodities.Lumber.Price > 1) then -- more offers than bids
 		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price - 1
 	elseif (remaining_wanted_trade_lumber < 0) then -- more bids than offers
 		GrandStrategyCommodities.Lumber.Price = GrandStrategyCommodities.Lumber.Price + 1
+	end
+
+	if (remaining_wanted_trade_stone > 0 and GrandStrategyCommodities.Stone.Price > 1) then -- more offers than bids
+		GrandStrategyCommodities.Stone.Price = GrandStrategyCommodities.Stone.Price - 1
+	elseif (remaining_wanted_trade_stone < 0) then -- more bids than offers
+		GrandStrategyCommodities.Stone.Price = GrandStrategyCommodities.Stone.Price + 1
 	end
 
 	-- keep human player's trading preferences
@@ -623,6 +677,15 @@ function EndTurn()
 			player_trade_preferences.Lumber = math.floor(GrandStrategyFaction.Gold / GetCommodityPrice("Lumber") * 100) * -1
 		end
 		GrandStrategyFaction.Trade.Lumber = player_trade_preferences.Lumber
+		
+		if (player_trade_preferences.Stone > 0 and GrandStrategyFaction.Commodities.Stone < player_trade_preferences.Stone) then
+			player_trade_preferences.Stone = GrandStrategyFaction.Commodities.Stone
+		elseif (player_trade_preferences.Stone < 0 and GrandStrategyFaction.Gold < 0) then
+			player_trade_preferences.Stone = 0
+		elseif (player_trade_preferences.Stone < 0 and GrandStrategyFaction.Gold < player_trade_preferences.Stone * -1 * GetCommodityPrice("Stone") / 100) then
+			player_trade_preferences.Stone = math.floor(GrandStrategyFaction.Gold / GetCommodityPrice("Stone") * 100) * -1
+		end
+		GrandStrategyFaction.Trade.Stone = player_trade_preferences.Stone
 	end
 	
 	for key, value in pairs(WorldMapProvinces) do
@@ -950,6 +1013,7 @@ function AttackProvince(province, faction)
 			Factions[defender_faction_key].Diplomacy[key] = "Peace"
 		end
 		Factions[defender_faction_key].Trade.Lumber = 0 -- remove offers and bids from the eliminated faction
+		Factions[defender_faction_key].Trade.Stone = 0 -- remove offers and bids from the eliminated faction
 	end
 	Attacker = ""
 	Defender = ""
@@ -1185,6 +1249,7 @@ function CalculateFactionIncomes()
 		Factions[key]["Income"] = {}
 		Factions[key].Income["Gold"] = 0
 		Factions[key].Income["Lumber"] = 0
+		Factions[key].Income["Stone"] = 0
 		Factions[key].Income["Research"] = 0
 		Factions[key].Income["Prestige"] = 0
 
@@ -1202,6 +1267,11 @@ function CalculateFactionIncomes()
 			for i=1,table.getn(WorldMapResources.Lumber) do
 				if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner) then
 					Factions[key].Income.Lumber = Factions[key].Income.Lumber + math.floor(100 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Lumber") / 100)
+				end
+			end
+			for i=1,table.getn(WorldMapResources.Stone) do
+				if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]), "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Owner) then
+					Factions[key].Income.Stone = Factions[key].Income.Stone + math.floor(10 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]), "Stone") / 100)
 				end
 			end
 			
@@ -2064,6 +2134,14 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		end
 		building_cost_tooltip = building_cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "lumber") .. " Lumber"
 	end
+	if (GetUnitTypeData(unit_type, "Costs", "stone") > 0) then
+		if (building_cost_tooltip == "") then
+			building_cost_tooltip = " (costs "
+		else
+			building_cost_tooltip = building_cost_tooltip .. " and "
+		end
+		building_cost_tooltip = building_cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "stone") .. " Stone"
+	end
 	if (building_cost_tooltip ~= "") then
 		building_cost_tooltip = building_cost_tooltip .. ")"
 	end
@@ -2192,6 +2270,14 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 			cost_tooltip = cost_tooltip .. ", "
 		end
 		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[2] .. " Lumber"
+	end
+	if (CUpgrade:Get(unit_type).GrandStrategyCosts[5] > 0) then -- stone cost
+		if (cost_tooltip == "") then
+			cost_tooltip = " (costs "
+		else
+			cost_tooltip = cost_tooltip .. ", "
+		end
+		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[5] .. " Stone"
 	end
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[8] > 0) then -- prestige cost
 		if (cost_tooltip == "") then
@@ -2863,8 +2949,9 @@ function DrawGrandStrategyResourceBar()
 		-- add resource quantities
 		AddGrandStrategyCommodityButton(16 + (100 * 0), 0, "gold")
 		AddGrandStrategyCommodityButton(16 + (100 * 1), 0, "lumber")
-		AddGrandStrategyCommodityButton(16 + (100 * 2), 0, "research")
-		AddGrandStrategyCommodityButton(16 + (100 * 3), 0, "prestige")
+		AddGrandStrategyCommodityButton(16 + (100 * 2), 0, "stone")
+		AddGrandStrategyCommodityButton(16 + (100 * 3), 0, "research")
+		AddGrandStrategyCommodityButton(16 + (100 * 4), 0, "prestige")
 	end
 	
 end
@@ -3257,6 +3344,14 @@ function DrawGrandStrategyInterface()
 								end
 								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "lumber") .. " Lumber"
 							end
+							if (GetUnitTypeData(unitName, "Costs", "stone") > 0) then
+								if (cost_tooltip == "") then
+									cost_tooltip = " (costs "
+								else
+									cost_tooltip = cost_tooltip .. " and "
+								end
+								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "stone") .. " Stone"
+							end
 							if (cost_tooltip ~= "") then
 								cost_tooltip = cost_tooltip .. ")"
 							end
@@ -3469,6 +3564,14 @@ function DrawGrandStrategyInterface()
 									cost_tooltip = cost_tooltip .. " and "
 								end
 								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "lumber") .. " Lumber"
+							end
+							if (GetUnitTypeData(unitName, "Costs", "stone") > 0) then
+								if (cost_tooltip == "") then
+									cost_tooltip = " (costs "
+								else
+									cost_tooltip = cost_tooltip .. " and "
+								end
+								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "stone") .. " Stone"
 							end
 							if (cost_tooltip ~= "") then
 								cost_tooltip = cost_tooltip .. ")"
@@ -4011,6 +4114,16 @@ function AIDoTurn(ai_faction)
 	elseif (ai_faction.Commodities.Lumber > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
 		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 4)
 	end
+
+	ai_faction.Trade.Stone = 0
+	-- do trade
+	if (ai_faction.Commodities.Stone < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
+		ai_faction.Trade.Stone = ai_faction.Trade.Stone - (800 - ai_faction.Commodities.Stone)
+	elseif (ai_faction.Commodities.Stone > 800 * 2 and ai_faction.Income.Stone > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
+		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (ai_faction.Commodities.Stone - 800 * 2)
+	elseif (ai_faction.Commodities.Stone > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
+		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (ai_faction.Commodities.Stone - 800 * 4)
+	end
 end
 
 function AIDoDiplomacy(ai_faction)
@@ -4100,7 +4213,7 @@ function CanBuildStructure(province, unit_type)
 		return false
 	end
 
-	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber")) then
+	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionFromName(province.Owner).Commodities.Stone < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 	
@@ -4120,6 +4233,7 @@ function BuildStructure(province, unit_type)
 		province.SettlementBuildings[string.gsub(unit_type, "-", "_")] = 1
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
 	end
 end
 
@@ -4128,11 +4242,12 @@ function CancelBuildStructure(province, unit_key)
 		province.SettlementBuildings[string.gsub(unit_type, "-", "_")] = 0
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
 	end
 end
 
 function CanTrainUnit(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber")) then
+	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionFromName(province.Owner).Commodities.Stone < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 
@@ -4179,6 +4294,7 @@ function TrainUnit(province, unit_type)
 		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] + 1
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
 	end
 end
 
@@ -4187,11 +4303,12 @@ function TrainUnitCancel(province, unit_type)
 		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] - 1
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
 	end
 end
 
 function CanHireMercenary(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber")) then
+	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionFromName(province.Owner).Commodities.Stone < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 
@@ -4216,6 +4333,7 @@ function HireMercenary(province, unit_type)
 		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = mercenary_quantity
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
 	end
 end
 
@@ -4224,6 +4342,7 @@ function CancelHireMercenary(province, unit_type)
 		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = 0
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
 	end
 end
 
@@ -4275,7 +4394,7 @@ function IsTechnologyAvailable(province, unit_type)
 end
 
 function CanResearchTechnology(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionFromName(province.Owner).Commodities.Lumber < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionFromName(province.Owner).Research < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
+	if (GetFactionFromName(province.Owner).Gold < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionFromName(province.Owner).Commodities.Lumber < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionFromName(province.Owner).Commodities.Stone < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionFromName(province.Owner).Research < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
 		return false
 	end
 	
@@ -4295,6 +4414,7 @@ function ResearchTechnology(province, unit_type)
 		GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] = 1
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - CUpgrade:Get(unit_type).GrandStrategyCosts[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - CUpgrade:Get(unit_type).GrandStrategyCosts[2]
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - CUpgrade:Get(unit_type).GrandStrategyCosts[5]
 		GetFactionFromName(province.Owner).Research = GetFactionFromName(province.Owner).Research - CUpgrade:Get(unit_type).GrandStrategyCosts[7]
 	end
 end
@@ -4304,6 +4424,7 @@ function CancelResearchTechnology(province, unit_type)
 		GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] = 0
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + CUpgrade:Get(unit_type).GrandStrategyCosts[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + CUpgrade:Get(unit_type).GrandStrategyCosts[2]
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + CUpgrade:Get(unit_type).GrandStrategyCosts[5]
 		GetFactionFromName(province.Owner).Research = GetFactionFromName(province.Owner).Research + CUpgrade:Get(unit_type).GrandStrategyCosts[7]
 	end
 end
@@ -4894,6 +5015,8 @@ function GetProvinceCommodityDemand(commodity)
 		local commodity_demand = 0
 		if (commodity == "Lumber") then
 			commodity_demand = 50
+		elseif (commodity == "Stone") then
+			commodity_demand = 25
 		end
 		commodity_demand = math.floor(commodity_demand * GrandStrategyCommodities[commodity].BasePrice / GrandStrategyCommodities[commodity].Price)
 --		GrandStrategyCommodities[commodity]["Demand"] = commodity_demand -- for debugging

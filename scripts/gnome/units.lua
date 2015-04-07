@@ -43,19 +43,32 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Evasion = 10,
 	Corpse = "unit-gnomish-dead-body",
 	CanGatherResources = {
-	 {"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
-		"resource-id", "gold",
---		"harvest-from-outside",
-		"resource-capacity", 100,
-		"wait-at-resource", 150,
-		"wait-at-depot", 150},
-	 {"file-when-loaded", "gnome/units/gnomish_worker_with_lumber.png",
-		"resource-id", "lumber",
-		"harvest-from-outside",
-		"resource-capacity", 100,
-		"resource-step", 2,
-		"wait-at-resource", 24,
-		"wait-at-depot", 150}},
+		{
+			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
+			"resource-id", "gold",
+--			"harvest-from-outside",
+			"resource-capacity", 100,
+			"wait-at-resource", 150,
+			"wait-at-depot", 150},
+		{
+			"file-when-loaded", "gnome/units/gnomish_worker_with_lumber.png",
+			"resource-id", "lumber",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
+			"resource-id", "stone",
+			"harvest-from-outside",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150
+		}
+	},
 	Variations = {
 		{
 			"variation-id", "blond-hair"

@@ -63,6 +63,7 @@ function RunResultsMenu()
   menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Gold", offx + 230, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Lumber", offx + 320, offy + bottom_offset, Fonts["large"], true)
+  menu:addLabel("Stone", offx + 410, offy + bottom_offset, Fonts["large"], true)
 --  menu:addLabel("Oil", offx + 410, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Kills", offx + 500, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Razings", offx + 590, offy + bottom_offset, Fonts["large"], true)
@@ -93,6 +94,9 @@ function RunResultsMenu()
         offy + bottom_offset + description_offset + line_spacing * c + 5,
         Fonts["large"], true)
       menu:addLabel(GetPlayerData(i, "TotalResources", "lumber"), offx + 280 + 40,
+        offy + bottom_offset + description_offset + line_spacing * c + 5,
+        Fonts["large"], true)
+      menu:addLabel(GetPlayerData(i, "TotalResources", "stone"), offx + 370 + 40,
         offy + bottom_offset + description_offset + line_spacing * c + 5,
         Fonts["large"], true)
 --      menu:addLabel(GetPlayerData(i, "TotalResources", "oil"), offx + 370 + 40,

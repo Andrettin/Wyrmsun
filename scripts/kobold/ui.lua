@@ -239,6 +239,14 @@ UI.Resources[2].IconY = 0
 UI.Resources[2].TextX = 176 + 75 + 18
 UI.Resources[2].TextY = 1
 
+-- stone
+UI.Resources[5].G = CGraphic:New("ui/stone.png", 14, 14)
+UI.Resources[5].IconFrame = 0
+UI.Resources[5].IconX = 16 + 150
+UI.Resources[5].IconY = 0
+UI.Resources[5].TextX = 16 + 150 + 18
+UI.Resources[5].TextY = 1
+
 -- oil
 --UI.Resources[3].G = CGraphic:New("ui/oil.png", 14, 14)
 --UI.Resources[3].IconFrame = 0

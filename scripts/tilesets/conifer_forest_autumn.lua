@@ -39,8 +39,8 @@ DefineTileset("name", "Conifer Forest (Autumn)",
     "top-one-tree", 48, "mid-one-tree", 64, "bot-one-tree", 80,
     "removed-tree", 16,
     "growing-tree", { -1, -1, },
-    "top-one-rock", 158, "mid-one-rock", 159, "bot-one-rock", 160,
-    "removed-rock", 163, },
+    "top-one-rock", 48, "mid-one-rock", 64, "bot-one-rock", 80,
+    "removed-rock", 16, },
   "solid", { "unused",
     {}},								-- 000
   "solid", { "shallow-water", "water",
@@ -57,8 +57,8 @@ DefineTileset("name", "Conifer Forest (Autumn)",
     { 349, 350, 351, 349}},						-- 060
   "solid", { "pine-tree", "image", "tilesets/forest/terrain/pine_tree_autumn.png", "land", "forest", "unpassable",
     { 18, 18, 18, 18}},							-- 070
-  "solid", { "rock", "land", "rock", "unpassable",
-    { 162, 174, 175, 162}},						-- 080
+  "solid", { "rock", "image", "tilesets/forest/terrain/rock.png", "land", "rock", "unpassable",
+    { 18, 21, 24, 18}},						-- 080
   "solid", { "unused",
     {}},								-- 090
   "solid", { "unused",
@@ -125,22 +125,22 @@ DefineTileset("name", "Conifer Forest (Autumn)",
     {},											-- 3E0
     {}},										-- 3F0
   "mixed", { "rock", "dirt", "land", "rock", "unpassable",
-    { 147, 170, 147},							-- 400
-    { 139, 164, 139},							-- 410
-    { 161, 173, 137},							-- 420
-    { 144, 168, 144},							-- 430
-    { 146, 169, 127},							-- 440
-    { 151, 172, 151},							-- 450
-    { 148, 134, 148},							-- 460
-    { 141, 166, 141},							-- 470
-    { 150, 171, 150},							-- 480
-    { 140, 165, 138},							-- 490
-    { 149, 130, 149},							-- 4A0
-    { 143, 167, 176},							-- 4B0
-    { 145, 131, 145},							-- 4C0
-    { 142, 129, 142},							-- 4D0
-    {},											-- 4E0
-    {}},										-- 4F0
+    { 35, 38, 35},							-- 400
+    { 33, 36, 33},							-- 410
+    { 34, 37, 40},							-- 420
+    { 3, 6, 3},								-- 430
+    { 19, 22, 25},							-- 440
+    { 30, 31, 30},							-- 450
+    { 27, 29, 27},							-- 460
+    { 1, 4, 1},								-- 470
+    { 14, 15, 14},							-- 480
+    { 17, 20, 23},							-- 490
+    { 26, 28, 26},							-- 4A0
+    { 2, 5, 8},								-- 4B0
+    { 11, 13, 11},							-- 4C0
+    { 10, 12, 10},							-- 4D0
+    {},										-- 4E0
+    {}},									-- 4F0
   "mixed", { "dirt", "grass", "land", "no-building", "mud",
     { 264, 265, 264},							-- 500
     { 266, 267, 266},							-- 510

@@ -396,6 +396,7 @@ function RunEditorPlayerProperties()
   menu:addLabel("AI", offxAI, 36)
   menu:addLabel("Gold", offxGold, 36)
   menu:addLabel("Lumber", offxLumber, 36)
+  menu:addLabel("Stone", offxOil, 36)
 --  menu:addLabel("Oil", offxOil, 36)
 
   local playersProp = {nil, nil, nil, nil, nil,
@@ -408,7 +409,8 @@ function RunEditorPlayerProperties()
       ai = nil,
       gold = nil,
       lumber = nil,
-      oil = nil
+      oil = nil,
+      stone = nil
     }
     local offy_i = 36 + 25 * (i + 1)
     local index = i -- use for local function
@@ -419,6 +421,7 @@ function RunEditorPlayerProperties()
       playersProp[1 + ind].ai:setVisible(b)
       playersProp[1 + ind].gold:setVisible(b)
       playersProp[1 + ind].lumber:setVisible(b)
+      playersProp[1 + ind].stone:setVisible(b)
 --      playersProp[1 + ind].oil:setVisible(b)
     end
 
@@ -442,6 +445,7 @@ function RunEditorPlayerProperties()
 
     playersProp[1 + i].gold = menu:addTextInputField(Players[i].Resources[1], offxGold - 20, offy_i, 40)
     playersProp[1 + i].lumber = menu:addTextInputField(Players[i].Resources[2], offxLumber - 20, offy_i, 40)
+    playersProp[1 + i].stone = menu:addTextInputField(Players[i].Resources[5], offxOil - 20, offy_i, 40)
 --    playersProp[1 + i].oil = menu:addTextInputField(Players[i].Resources[3], offxOil - 20, offy_i, 40)
     updateProp(i)
   end
@@ -454,6 +458,7 @@ function RunEditorPlayerProperties()
         Players[i].AiName = ais[1 + playersProp[1 + i].ai:getSelected()]
         Players[i].Resources[1] = playersProp[1 + i].gold:getText()
         Players[i].Resources[2] = playersProp[1 + i].lumber:getText()
+        Players[i].Resources[5] = playersProp[1 + i].stone:getText()
 --        Players[i].Resources[3] = playersProp[1 + i].oil:getText()
       end
       menu:stop()
@@ -558,7 +563,8 @@ function EditUnitProperties()
     menu:addHalfButton("~!Ok", "o", 24, sizeY - 40,
       function() GetUnitUnderCursor().Active = activeCheckBox:isMarked();  menu:stop() end)
   else
-    local resourceName = {"gold", "lumber", "oil"}
+--    local resourceName = {"gold", "lumber", "oil"}
+    local resourceName = {"gold", "lumber", "stone"}
     local resource = GetUnitUnderCursor().Type.GivesResource - 1
     menu:addLabel("Amount of " .. resourceName[1 + resource] .. " :", 24, 11 + 36, nil, false)
 	local resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + 36 * 2, 60)

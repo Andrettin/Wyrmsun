@@ -39,8 +39,8 @@ DefineTileset("name", "Cave",
     "top-one-tree", 121, "mid-one-tree", 122, "bot-one-tree", 123,
     "removed-tree", 126,
     "growing-tree", { -1, -1, },
-    "top-one-rock", 173, "mid-one-rock", 174, "bot-one-rock", 175,
-    "removed-rock", 152, },
+    "top-one-rock", 48, "mid-one-rock", 64, "bot-one-rock", 80,
+    "removed-rock", 16, },
   "solid", { "unused",
     {}},								-- 000
   "solid", { "shallow-water", "water",
@@ -57,8 +57,8 @@ DefineTileset("name", "Cave",
     {}},								-- 060
   "solid", { "unused",
     {}},								-- 070
-  "solid", { "cave-wall", "land", "rock", "unpassable", "air-unpassable",
-    { 151, 151, 151, 151}},						-- 080
+  "solid", { "cave-wall", "image", "tilesets/cave/terrain/rock.png", "land", "rock", "unpassable", "air-unpassable",
+    { 18, 18, 18, 18}},					-- 080
   "solid", { "unused",
     {}},								-- 090
   "solid", { "unused",
@@ -125,22 +125,22 @@ DefineTileset("name", "Cave",
     {},									-- 3E0
     {}},								-- 3F0
   "mixed", { "cave-wall", "rockbound-cave-floor", "land", "rock", "unpassable", "air-unpassable",
-    { 136, 159, 172},							-- 400
-    { 128, 153, 171},							-- 410
-    { 150, 162, 167},							-- 420
-    { 133, 157, 170},							-- 430
-    { 135, 158, 168},							-- 440
-    { 140, 161, 140},							-- 450
-    { 137, 137, 137},							-- 460
-    { 130, 155, 169},							-- 470
-    { 139, 160, 139},							-- 480
-    { 129, 141, 154},							-- 490
-    { 138, 138, 138},							-- 4A0
-    { 132, 156, 166},							-- 4B0
-    { 134, 134, 134},							-- 4C0
-    { 131, 131, 131},							-- 4D0
-    {},									-- 4E0
-    {}},								-- 4F0
+    { 35, 38, 35},							-- 400
+    { 33, 36, 33},							-- 410
+    { 34, 37, 40},							-- 420
+    { 3, 6, 3},								-- 430
+    { 19, 22, 25},							-- 440
+    { 30, 31, 30},							-- 450
+    { 27, 27, 27},							-- 460
+    { 1, 4, 1},								-- 470
+    { 14, 15, 14},							-- 480
+    { 17, 20, 23},							-- 490
+    { 26, 26, 26},							-- 4A0
+    { 2, 5, 8},								-- 4B0
+    { 11, 11, 11},							-- 4C0
+    { 10, 10, 10},							-- 4D0
+    {},										-- 4E0
+    {}},									-- 4F0
   "mixed", { "rockbound-cave-floor", "cave-floor", "land", "no-building", "rock-floor",
     { 272, 273, 272},							-- 500
     { 274, 275, 274},							-- 510
