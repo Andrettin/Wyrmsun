@@ -85,7 +85,7 @@ DefineModifier("upgrade-teuton-iron-shield",
 
 DefineModifier("upgrade-teuton-masonry",
 	{"HitPoints", 20, "Percent"},
-	{"Armor", 5},
+	{"Armor", 15},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},

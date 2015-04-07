@@ -58,7 +58,7 @@ end
 
 DefineModifier("upgrade-goblin-masonry",
 	{"HitPoints", 20, "Percent"},
-	{"Armor", 5},
+	{"Armor", 15},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"})
 	
