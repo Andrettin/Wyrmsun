@@ -153,6 +153,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Teuton Barracks (graphics by Jinn).
 - The Germanic Chieftain's Hall, Farm and War Lodge had their graphics updated (by Jinn).
 - Buildings are now constructed from outside.
+- Buildings can now leave a (harvestable) wood pile when destroyed.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
@@ -274,6 +275,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added hole (appears in caves, functions as a tree stump would).
 - The Conifer Forest tileset now has different trees for Summer and Autumn (the season is chosen randomly when starting a scenario).
 - Land-based decoration units are now properly removed if they are on top of a tree, rock or wall tile.
+- Logs are now harvestable for lumber.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).

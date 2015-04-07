@@ -1485,7 +1485,6 @@ function ApplyRawTiles()
 			elseif (RawTile(x, y) == "Tree" and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon")) then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
-				SetResourcesHeld(unit, 100)
 			elseif (RawTile(x, y) == "Door") then
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-door", 15, {x, y})
@@ -2020,7 +2019,6 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 			elseif (RawTile(x, y) == "Tree" and wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
-				SetResourcesHeld(unit, 100)
 			elseif (RawTile(x, y) == "DpWtr") then -- no tilesets have Deep Water yet, so it should be treated as normal water for now
 				SetRawTile(x, y, "Water")
 			end

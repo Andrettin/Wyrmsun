@@ -1158,6 +1158,49 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 --		"help", "gold-mine-help",
 		"dead", "building-destroyed"} } )
 
+DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
+	Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},
+	Animations = "animations-decoration", Icon = "icon-wood-pile",
+	NeutralMinimapColor = {128, 0, 0},
+	Costs = {"time", 150},
+	Speed = 0,
+	HitPoints = 25500,
+	DrawLevel = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+--	Corpse = "unit-destroyed-3x3-place",
+--	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	StartingResources = 100,
+	Building = true, VisibleUnderFog = true,
+	GivesResource = "lumber", CanHarvest = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2"
+		},
+		{
+			"variation-id", "3"
+		},
+		{
+			"variation-id", "4"
+		}
+	},
+	Sounds = {
+		"selected", "tree-selected",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+--		"dead", "building-destroyed"
+	}
+} )
+
 DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	Class = "mercenary-camp",
 	Description = _("This camp houses a number of mercenary groups, who will offer their talents for hire."),
@@ -1181,6 +1224,7 @@ DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "barracks-acknowledge",
@@ -1266,48 +1310,7 @@ DefineUnitType("unit-hole", { Name = _("Hole"),
 		"dead", "building-destroyed"
 	}
 } )		
-		
-DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
-	Image = {"file", "neutral/buildings/wood_pile.png", "size", {43, 43}},
-	Animations = "animations-decoration", Icon = "icon-wood-pile",
-	NeutralMinimapColor = {128, 0, 0},
-	Costs = {"time", 150},
-	Speed = 0,
-	HitPoints = 25500,
-	DrawLevel = 40,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	Armor = 20, BasicDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 0,
---	Corpse = "unit-destroyed-3x3-place",
---	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	GivesResource = "lumber", CanHarvest = true,
-	Variations = {
-		{
-			"variation-id", "1"
-		},
-		{
-			"variation-id", "2"
-		},
-		{
-			"variation-id", "3"
-		},
-		{
-			"variation-id", "4"
-		}
-	},
-	Sounds = {
-		"selected", "tree-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
---		"dead", "building-destroyed"
-	} } )
-
+	
 DefineUnitType("unit-mushroom", { Name = "Mushroom",
 	Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},
 	Animations = "animations-mushroom-patch", Icon = "icon-mushroom",
@@ -1568,6 +1571,7 @@ DefineUnitType("unit-twigs", { Name = _("Twigs"),
 DefineUnitType("unit-log", { Name = "Log",
 	Image = {"file", "neutral/decorations/log.png", "size", {56, 56}},
 	Animations = "animations-decoration-old", Icon = "icon-log",
+	NeutralMinimapColor = {128, 0, 0},
 	Speed = 0,
 	HitPoints = 0,
 	DrawLevel = 30,
@@ -1576,11 +1580,11 @@ DefineUnitType("unit-log", { Name = "Log",
 	BasicDamage = 0, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
-	IsNotSelectable = true,
-	Decoration = true,
 	NumDirections = 1,
 	Indestructible = 1,
 	VisibleUnderFog = true,
+	StartingResources = 100,
+	GivesResource = "lumber", CanHarvest = true,
 	Sounds = {} }
 )
 
@@ -3128,6 +3132,7 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 		"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
 	},
 	CanStore = {"lumber", "gold", "coal"},
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -3170,6 +3175,7 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	CanTransport = {"LandUnit", "only", "organic", "only"},
 	AttackFromTransporter = true,
 	SaveCargo = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "fortress-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -3198,7 +3204,7 @@ DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	Supply = 4,
 	Corpse = "unit-destroyed-2x2-place",
 	ExplodeWhenKilled = "missile-explosion",
-	Drops = {"unit-cheese", "unit-carrots"},
+	Drops = {"unit-cheese", "unit-carrots", "unit-wood-pile"},
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
@@ -3233,6 +3239,7 @@ DefineUnitType("unit-template-barracks", { Name = _("Barracks"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "barracks-selected",
 --		"acknowledge", "barracks-acknowledge",
@@ -3266,6 +3273,7 @@ DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
 	Building = true, VisibleUnderFog = true, LumberImprove = true,
 	CanStore = {"lumber"},
 	BuilderOutside = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -3298,6 +3306,7 @@ DefineUnitType("unit-template-smithy", { Name = _("Smithy"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "smithy-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -3335,6 +3344,7 @@ DefineUnitType("unit-template-watch-tower", { Name = _("Watch Tower"),
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	BuilderOutside = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
@@ -3372,6 +3382,7 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 	CanTransport = {"LandUnit", "only", "organic", "only"},
 	AttackFromTransporter = true,
 	SaveCargo = true,
+	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
