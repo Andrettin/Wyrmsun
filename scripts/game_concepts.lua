@@ -46,7 +46,7 @@ GameConcepts = {
 	},
 	Flanking = {
 		Name = _("Flan~!king"),
-		Description = _("Units who are flanked in combat get a malus to evasion. Flanking happens when two enemy units are positioned on either side of the unit, so that they face each other.")
+		Description = _("Units who are flanked in combat get a malus to evasion. Flanking happens when the unit is attacked from behind or from the side.")
 	},
 	Food = {
 		Name = _("~!Food"),
