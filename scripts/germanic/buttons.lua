@@ -145,7 +145,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-return-goods",
 
 -- build basic/advanced structs -----------------------------------------------
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
   Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder", "unit-teuton-worker"} } )
@@ -177,7 +177,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder", "unit-teuton-worker"} } )

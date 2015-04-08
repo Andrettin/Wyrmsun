@@ -492,6 +492,35 @@ MakeSound("tree-chopping", {
 })
 SetSoundRange("tree-chopping", 32)
 
+MakeSound("stone-mining", {
+	"misc/stone_mining/mine_stone_01.wav",
+	"misc/stone_mining/mine_stone_02.wav",
+	"misc/stone_mining/mine_stone_03.wav",
+	"misc/stone_mining/mine_stone_04.wav",
+	"misc/stone_mining/mine_stone_05.wav",
+	"misc/stone_mining/mine_stone_06.wav",
+	"misc/stone_mining/mine_stone_07.wav",
+	"misc/stone_mining/mine_stone_08.wav",
+	"misc/stone_mining/mine_stone_09.wav",
+	"misc/stone_mining/mine_stone_10.wav",
+	"misc/stone_mining/mine_stone_11.wav",
+	"misc/stone_mining/mine_stone_12.wav",
+	"misc/stone_mining/mine_stone_13.wav",
+	"misc/stone_mining/mine_stone_14.wav",
+	"misc/stone_mining/mine_stone_15.wav",
+	"misc/stone_mining/mine_stone_16.wav",
+	"misc/stone_mining/mine_stone_17.wav",
+	"misc/stone_mining/mine_stone_18.wav",
+	"misc/stone_mining/mine_stone_19.wav",
+	"misc/stone_mining/mine_stone_20.wav",
+	"misc/stone_mining/mine_stone_21.wav",
+	"misc/stone_mining/mine_stone_22.wav",
+	"misc/stone_mining/mine_stone_23.wav",
+	"misc/stone_mining/mine_stone_24.wav",
+	"misc/stone_mining/mine_stone_25.wav"
+})
+SetSoundRange("stone-mining", 32)
+
 MakeSound("foraging", {
 	"misc/foraging/leaves_19.wav",
 	"misc/foraging/leaves_1a.wav",

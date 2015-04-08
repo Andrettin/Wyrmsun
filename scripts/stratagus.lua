@@ -93,6 +93,9 @@ Preference.AiExplores = true
 Preference.IconsShift = true
 Preference.IconFrameG = CGraphic:New("ui/icon_frame.png", 54, 46)
 Preference.PressedIconFrameG = CGraphic:New("ui/icon_frame_pressed.png", 54, 46)
+Preference.CommandButtonFrameG = CGraphic:New("ui/command_button_frame.png", 56, 46)
+Preference.BarFrameG = CGraphic:New("ui/bar_frame.png", 58, 12)
+Preference.InfoPanelFrameG = CGraphic:New("ui/infopanel_frame.png", 214, 88)
 Preference.MineNotifications = true
 Preference.NoStatusLineTooltips = true
 
@@ -266,7 +269,7 @@ DefineVariables(
 	"BasePoints", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 --	"Points",
-	"XpRequired", {Max = 43500, Value = 200, Increase = 0, Enable = true},
+	"XpRequired", {Enable = true},
 	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
 	"Slow", {Max = 1000, Value = 0, Enable = true},

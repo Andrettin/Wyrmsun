@@ -344,6 +344,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/throwing_axe_1.png
 /graphics/dwarf/icons/throwing_axe_2.png
 /graphics/dwarf/icons/throwing_axe_3.png
+/graphics/dwarf/ui/buttonpanel.png
 /graphics/dwarf/ui/buttonpanel_480.png
 /graphics/dwarf/ui/buttonpanel_600.png
 /graphics/dwarf/ui/buttonpanel_768.png
@@ -361,6 +362,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/filler-left_1050.png
 /graphics/dwarf/ui/filler-left_1200.png
 /graphics/dwarf/ui/infopanel.png
+/graphics/dwarf/ui/infopanel_old.png
 /graphics/dwarf/ui/menubutton.png
 /graphics/dwarf/ui/minimap.png
 /graphics/dwarf/ui/panel_1.png
@@ -368,6 +370,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/panel_3.png
 /graphics/dwarf/ui/panel_4.png
 /graphics/dwarf/ui/panel_5.png
+/graphics/dwarf/ui/resource.png
 /graphics/dwarf/ui/resource_640.png
 /graphics/dwarf/ui/resource_800.png
 /graphics/dwarf/ui/resource_1024.png
@@ -405,6 +408,8 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/widgets/button-thin-medium-pressed.png
 /graphics/dwarf/ui/widgets/button-thin-small-normal.png
 /graphics/dwarf/ui/widgets/button-thin-small-pressed.png
+/graphics/dwarf/ui/widgets/button-thinest-medium-normal.png
+/graphics/dwarf/ui/widgets/button-thinest-medium-pressed.png
 /graphics/dwarf/ui/widgets/left-arrow-normal.png
 /graphics/dwarf/ui/widgets/left-arrow-pressed.png
 /graphics/dwarf/ui/widgets/right-arrow-normal.png
@@ -426,6 +431,7 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/icons/warrior_brown_hair.png
 /graphics/germanic/icons/warrior_gray_hair.png
 /graphics/germanic/icons/warrior_red_hair.png
+/graphics/germanic/ui/buttonpanel.png
 /graphics/germanic/ui/buttonpanel_480.png
 /graphics/germanic/ui/buttonpanel_600.png
 /graphics/germanic/ui/buttonpanel_768.png
@@ -443,6 +449,7 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/filler-left_1050.png
 /graphics/germanic/ui/filler-left_1200.png
 /graphics/germanic/ui/infopanel.png
+/graphics/germanic/ui/infopanel_old.png
 /graphics/germanic/ui/menubutton.png
 /graphics/germanic/ui/minimap.png
 /graphics/germanic/ui/panel_1.png
@@ -450,6 +457,7 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/panel_3.png
 /graphics/germanic/ui/panel_4.png
 /graphics/germanic/ui/panel_5.png
+/graphics/germanic/ui/resource.png
 /graphics/germanic/ui/resource_640.png
 /graphics/germanic/ui/resource_800.png
 /graphics/germanic/ui/resource_1024.png
@@ -476,6 +484,8 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/widgets/button-thin-medium-pressed.png
 /graphics/germanic/ui/widgets/button-thin-small-normal.png
 /graphics/germanic/ui/widgets/button-thin-small-pressed.png
+/graphics/germanic/ui/widgets/button-thinest-medium-normal.png
+/graphics/germanic/ui/widgets/button-thinest-medium-pressed.png
 /graphics/germanic/ui/widgets/left-arrow-normal.png
 /graphics/germanic/ui/widgets/left-arrow-pressed.png
 /graphics/germanic/ui/widgets/right-arrow-normal.png
@@ -690,8 +700,10 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/fogofwar.png
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/fonts/small.png
+/graphics/ui/bar_frame.png
 /graphics/ui/coal.png
 /graphics/ui/coal_extra_1.png
+/graphics/ui/command_button_frame.png
 /graphics/ui/food.png
 /graphics/ui/fuel.png
 /graphics/ui/gold.png
@@ -699,6 +711,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/housing.png
 /graphics/ui/icon_frame.png
 /graphics/ui/icon_frame_pressed.png
+/graphics/ui/infopanel_frame.png
 /graphics/ui/lumber.png
 /graphics/ui/oil.png
 /graphics/ui/potion.png

@@ -88,20 +88,16 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("dwarf/ui/filler-left_" .. Video.Height .. ".png", 0, 0)
-AddFiller("dwarf/ui/resource_" .. Video.Width .. ".png", 16, 0)
-AddFiller("dwarf/ui/statusline_" .. Video.Width .. ".png", 16, Video.Height - 16)
-AddFiller("dwarf/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)
-AddFiller("dwarf/ui/menubutton.png", Video.Width - 176, 0)
-AddFiller("dwarf/ui/minimap.png", Video.Width - 176, 24)
+AddFiller("dwarf/ui/resource.png", 0, 0)
+AddFiller("dwarf/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
+AddFiller("dwarf/ui/infopanel.png", 0, Video.Height - 200)
 
-UI.InfoPanel.X = Video.Width - 176
-UI.InfoPanel.Y = 160
-UI.InfoPanel.G = CGraphic:New("dwarf/ui/infopanel.png", 176, 176)
+UI.InfoPanel.X = 162
+UI.InfoPanel.Y = Video.Height - 186
 
 b = CUIButton:new()
-b.X = Video.Width - 176 + 9
-b.Y = 160 + 9
+b.X = 169
+b.Y = Video.Height - 166
 b.Style = FindButtonStyle("icon")
 UI.SingleSelectedButton = b
 
@@ -109,29 +105,29 @@ UI.SelectedButtons:clear()
 
 function AddSelectedButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 176 + x
-	b.Y = y
+	b.X = 162 + x
+	b.Y = Video.Height - 186 + y
 	b.Style = FindButtonStyle("icon")
 	UI.SelectedButtons:push_back(b)
 end
 
-AddSelectedButton(9, 160 + 9)
-AddSelectedButton(65, 160 + 9)
-AddSelectedButton(121, 160 + 9)
-AddSelectedButton(9, 160 + 63)
-AddSelectedButton(65, 160 + 63)
-AddSelectedButton(121, 160 + 63)
-AddSelectedButton(9, 160 + 117)
-AddSelectedButton(65, 160 + 117)
-AddSelectedButton(121, 160 + 117)
+AddSelectedButton(9, 9)
+AddSelectedButton(65, 9)
+AddSelectedButton(121, 9)
+AddSelectedButton(9, 63)
+AddSelectedButton(65, 63)
+AddSelectedButton(121, 63)
+AddSelectedButton(9, 117)
+AddSelectedButton(65, 117)
+AddSelectedButton(121, 117)
 
 UI.MaxSelectedFont = Fonts["game"]
-UI.MaxSelectedTextX = Video.Width - 176 + 10
-UI.MaxSelectedTextY = 160 + 10
+UI.MaxSelectedTextX = 162 + 10
+UI.MaxSelectedTextY = Video.Height - 186 + 10
 
 b = CUIButton:new()
-b.X = Video.Width - 176 + 110
-b.Y = 160 + 11 + 70
+b.X = 162 + 110
+b.Y = Video.Height - 186 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.SingleTrainingButton = b
 
@@ -139,28 +135,28 @@ UI.TrainingButtons:clear()
 
 function AddTrainingButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 176 + x
-	b.Y = y
+	b.X = 162 + x
+	b.Y = Video.Height - 186 + y
 	b.Style = FindButtonStyle("icon")
 	UI.TrainingButtons:push_back(b)
 end
 
-AddTrainingButton(9, 219)
-AddTrainingButton(65, 219)
-AddTrainingButton(121, 219)
-AddTrainingButton(9, 266)
-AddTrainingButton(65, 266)
-AddTrainingButton(121, 266)
+AddTrainingButton(9, 59)
+AddTrainingButton(65, 59)
+AddTrainingButton(121, 59)
+AddTrainingButton(9, 106)
+AddTrainingButton(65, 106)
+AddTrainingButton(121, 106)
 
 b = CUIButton:new()
-b.X = Video.Width - 176 + 110
-b.Y = 160 + 11 + 70
+b.X = 162 + 110
+b.Y = Video.Height - 186 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.UpgradingButton = b
 
 b = CUIButton:new()
-b.X = Video.Width - 176 + 110
-b.Y = 160 + 11 + 70
+b.X = 162 + 110
+b.Y = Video.Height - 186 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.ResearchingButton = b
 
@@ -168,18 +164,18 @@ UI.TransportingButtons:clear()
 
 function AddTransportingButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 176 + x
-	b.Y = y
+	b.X = Video.Width - 243 + x
+	b.Y = Video.Height - 186 + y
 	b.Style = FindButtonStyle("icon")
 	UI.TransportingButtons:push_back(b)
 end
 
-AddTransportingButton(9, 387)
-AddTransportingButton(65, 387)
-AddTransportingButton(121, 387)
-AddTransportingButton(9, 434)
-AddTransportingButton(65, 434)
-AddTransportingButton(121, 434)
+AddTransportingButton(17, 65)
+AddTransportingButton(73, 65)
+AddTransportingButton(129, 65)
+AddTransportingButton(17, 119)
+AddTransportingButton(73, 119)
+AddTransportingButton(129, 119)
 
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
 UI.CompletedBarShadow = true
@@ -188,37 +184,44 @@ UI.ButtonPanel.Buttons:clear()
 
 function AddButtonPanelButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 176 + x
-	b.Y = y
+	b.X = Video.Width - 243 + x
+	b.Y = Video.Height - 186 + y
 	b.Style = FindButtonStyle("icon")
 	UI.ButtonPanel.Buttons:push_back(b)
 end
 
-AddButtonPanelButton(9, 340)
-AddButtonPanelButton(65, 340)
-AddButtonPanelButton(121, 340)
-AddButtonPanelButton(9, 387)
-AddButtonPanelButton(65, 387)
-AddButtonPanelButton(121, 387)
-AddButtonPanelButton(9, 434)
-AddButtonPanelButton(65, 434)
-AddButtonPanelButton(121, 434)
+AddButtonPanelButton(17, 11)
+AddButtonPanelButton(73, 11)
+AddButtonPanelButton(129, 11)
+AddButtonPanelButton(185, 11)
+AddButtonPanelButton(17, 54)
+AddButtonPanelButton(73, 54)
+AddButtonPanelButton(129, 54)
+AddButtonPanelButton(185, 54)
+AddButtonPanelButton(17, 97)
+AddButtonPanelButton(73, 97)
+AddButtonPanelButton(129, 97)
+AddButtonPanelButton(185, 97)
+AddButtonPanelButton(17, 140)
+AddButtonPanelButton(73, 140)
+AddButtonPanelButton(129, 140)
+AddButtonPanelButton(185, 140)
 
-UI.ButtonPanel.X = Video.Width - 176
-UI.ButtonPanel.Y = 336
+UI.ButtonPanel.X = Video.Width - 243
+UI.ButtonPanel.Y = Video.Height - 186
 UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
 
-UI.MapArea.X = 16
+UI.MapArea.X = 0
 UI.MapArea.Y = 16
-UI.MapArea.EndX = Video.Width - 176 - 1
-UI.MapArea.EndY = Video.Height - 16 - 1
+UI.MapArea.EndX = Video.Width - 1
+UI.MapArea.EndY = Video.Height - 1
 
-UI.Minimap.X = Video.Width - 176 + 24
-UI.Minimap.Y = 24 + 2
+UI.Minimap.X = 17
+UI.Minimap.Y = Video.Height - 156
 UI.Minimap.W = 128
 UI.Minimap.H = 128
 
-UI.StatusLine.TextX = 2 + 16
+UI.StatusLine.TextX = 2
 UI.StatusLine.TextY = Video.Height + 2 - 16
 UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
@@ -226,41 +229,41 @@ UI.StatusLine.Font = Fonts["game"]
 -- gold
 UI.Resources[1].G = CGraphic:New("ui/gold.png", 14, 14)
 UI.Resources[1].IconFrame = 0
-UI.Resources[1].IconX = 16 + 0
+UI.Resources[1].IconX = 154 + 0
 UI.Resources[1].IconY = 0
-UI.Resources[1].TextX = 16 + 0 + 18
+UI.Resources[1].TextX = 154 + 0 + 18
 UI.Resources[1].TextY = 1
 
 -- lumber
 UI.Resources[2].G = CGraphic:New("ui/lumber.png", 14, 14)
 UI.Resources[2].IconFrame = 0
-UI.Resources[2].IconX = 16 + 75
+UI.Resources[2].IconX = 154 + 75
 UI.Resources[2].IconY = 0
-UI.Resources[2].TextX = 16 + 75 + 18
+UI.Resources[2].TextX = 154 + 75 + 18
 UI.Resources[2].TextY = 1
 
 -- stone
 UI.Resources[5].G = CGraphic:New("ui/stone.png", 14, 14)
 UI.Resources[5].IconFrame = 0
-UI.Resources[5].IconX = 16 + 150
+UI.Resources[5].IconX = 154 + 150
 UI.Resources[5].IconY = 0
-UI.Resources[5].TextX = 16 + 150 + 18
+UI.Resources[5].TextX = 154 + 150 + 18
 UI.Resources[5].TextY = 1
 
 -- oil
 --UI.Resources[3].G = CGraphic:New("ui/oil.png", 14, 14)
 --UI.Resources[3].IconFrame = 0
---UI.Resources[3].IconX = 16 + 150
+--UI.Resources[3].IconX = 154 + 150
 --UI.Resources[3].IconY = 0
---UI.Resources[3].TextX = 16 + 150 + 18
+--UI.Resources[3].TextX = 154 + 150 + 18
 --UI.Resources[3].TextY = 1
 
 -- coal
 --UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
 --UI.Resources[6].IconFrame = 0
---UI.Resources[6].IconX = 16 + 150
+--UI.Resources[6].IconX = 154 + 150
 --UI.Resources[6].IconY = 0
---UI.Resources[6].TextX = 16 + 150 + 18
+--UI.Resources[6].TextX = 154 + 150 + 18
 --UI.Resources[6].TextY = 1
 
 -- Hide Coal (should not show up in normal scenarios)
@@ -297,8 +300,8 @@ UI.Resources[ManaResCost].IconY = -100
 UI.Resources[ManaResCost].TextX = -100
 UI.Resources[ManaResCost].TextY = -100
 
-UI.MenuButton.X = Video.Width - 176 + 24
-UI.MenuButton.Y = 2
+UI.MenuButton.X = 26
+UI.MenuButton.Y = 1
 UI.MenuButton.Text = "Menu (~<F10~>)"
 UI.MenuButton.Style = FindButtonStyle("main-dwarf")
 UI.MenuButton:SetCallback(
@@ -310,14 +313,14 @@ UI.MenuButton:SetCallback(
 	end
   end)
 
-UI.NetworkMenuButton.X = Video.Width - 176 + 6
-UI.NetworkMenuButton.Y = 2
+UI.NetworkMenuButton.X = 1
+UI.NetworkMenuButton.Y = 1
 UI.NetworkMenuButton.Text = "Menu"
 UI.NetworkMenuButton.Style = FindButtonStyle("network-dwarf")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
-UI.NetworkDiplomacyButton.X = Video.Width - 176 + 90
-UI.NetworkDiplomacyButton.Y = 2
+UI.NetworkDiplomacyButton.X = 28
+UI.NetworkDiplomacyButton.Y = 1
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-dwarf")
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)

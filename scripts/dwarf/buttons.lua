@@ -245,7 +245,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-return-goods",
 
 -- build basic/advanced structs -----------------------------------------------
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
   Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
   ForUnit = {"unit-dwarven-miner"} } )
@@ -277,12 +277,12 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-sentry-tower",
   Action = "build", Value = "unit-dwarven-sentry-tower",
   Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
   ForUnit = {"unit-dwarven-miner"} } )

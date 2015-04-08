@@ -28,22 +28,22 @@
 --
 
 DefineButtonStyle("main-dwarf", {
-  Size = {128, 20},
+  Size = {99, 13},
   Font = "game",
   TextNormalColor = "white",
   TextReverseColor = "yellow",
   TextAlign = "Center",
-  TextPos = {64, 4},
+  TextPos = {50, 0},
   Default = {
-    File = "dwarf/ui/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
+    File = "dwarf/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
   },
   Hover = {
     TextNormalColor = "yellow",
   },
   Clicked = {
-    File = "dwarf/ui/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
+    File = "dwarf/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
     TextNormalColor = "yellow",
-    TextPos = {66, 6},
+    TextPos = {51, 1},
   },
 })
 
@@ -68,22 +68,22 @@ DefineButtonStyle("network-dwarf", {
 })
 
 DefineButtonStyle("main-germanic", {
-  Size = {128, 20},
+  Size = {99, 13},
   Font = "game",
   TextNormalColor = "white",
   TextReverseColor = "yellow",
   TextAlign = "Center",
-  TextPos = {64, 4},
+  TextPos = {50, 0},
   Default = {
-    File = "germanic/ui/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
+    File = "germanic/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
   },
   Hover = {
     TextNormalColor = "yellow",
   },
   Clicked = {
-    File = "germanic/ui/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
+    File = "germanic/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
     TextNormalColor = "yellow",
-    TextPos = {66, 6},
+    TextPos = {51, 1},
   },
 })
 
@@ -108,22 +108,22 @@ DefineButtonStyle("network-germanic", {
 })
 
 DefineButtonStyle("main-gnome", {
-  Size = {128, 20},
+  Size = {99, 13},
   Font = "game",
   TextNormalColor = "white",
   TextReverseColor = "yellow",
   TextAlign = "Center",
-  TextPos = {64, 4},
+  TextPos = {50, 0},
   Default = {
-    File = "gnome/ui/widgets/button-thin-medium-normal.png", Size = {128, 20}, Frame = 0,
+    File = "dwarf/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
   },
   Hover = {
     TextNormalColor = "yellow",
   },
   Clicked = {
-    File = "gnome/ui/widgets/button-thin-medium-pressed.png", Size = {128, 20}, Frame = 0,
+    File = "dwarf/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
     TextNormalColor = "yellow",
-    TextPos = {66, 6},
+    TextPos = {51, 1},
   },
 })
 

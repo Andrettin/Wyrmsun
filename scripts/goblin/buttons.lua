@@ -62,7 +62,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 
 -- build basic/advanced structs -----------------------------------------------
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
   Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
@@ -94,7 +94,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smithy",
   Key = "g", Hint = _("Build Fu~!gla Forge"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )

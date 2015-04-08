@@ -2975,7 +2975,7 @@ function DrawGrandStrategyInterface()
 	GrandStrategyLabels = nil
 	GrandStrategyLabels = {}
 
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel.png", Video.Width - 176, 160)
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel_old.png", Video.Width - 176, 160)
 
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/menubutton.png", Video.Width - 176, 0)

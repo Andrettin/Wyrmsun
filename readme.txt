@@ -69,6 +69,31 @@ The Stratagus engine, as well as all of the code, artwork, music and story eleme
 /sounds/missiles/shield_metal/shieldimpmetal_213.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_214.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_215.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_02.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_03.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_04.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_05.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_06.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_07.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_08.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_09.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_19.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_20.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_21.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_22.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_23.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_24.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_25.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_10.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_10a.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_11.wav (licensed under the CC-BY-SA 3.0)
@@ -261,6 +286,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The yellow targeting cursor is now displayed when hovering over resources if a worker is selected, and the red targeting cursor is displaying when hovering over enemy units if a military unit is selected.
 - When clicking a unit's button that brings up the targeting cursor, it now turns green when hovering over a friendly unit, yellow when hovering over a neutral unit, and red when hovering over an enemy unit.
 - Added stone as a resource, which can be harvested from rocks. Stone is generally used for fortifications, but normal dwarven structures also require stone.
+- Added new UI for the dwarves and the germanics (graphics by Jinn).
 
 * Quests
 - Added The Battle of Magetobria quest.

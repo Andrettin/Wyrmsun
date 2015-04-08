@@ -48,29 +48,29 @@ Load("scripts/teuton/buttons.lua")
 
 -- general cancel button ------------------------------------------------------
 
-DefineButton( { Pos = 9, Level = 9, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 9, Icon = "icon-cancel",
   Action = "cancel",
   Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
   ForUnit = {"*"} } )
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
   Action = "cancel-upgrade",
   Key = "escape", Hint = "~<ESC~> Cancel Upgrade", Popup = "popup-commands",
   ForUnit = {"cancel-upgrade"} } )
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
   Action = "cancel-train-unit",
   Key = "escape", Hint = "~<ESC~> Cancel Unit Training", Popup = "popup-commands",
   ForUnit = {"*"} } )
 
-DefineButton( { Pos = 9, Level = 0, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
   Action = "cancel-build",
   Key = "escape", Hint = "~<ESC~> Cancel Construction", Popup = "popup-commands",
   ForUnit = {"cancel-build"} } )
 
 -- Level-Up Upgrades ------------------------------------------------------
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
   Action = "button", Value = 1,
   Allowed = "check-unit-variable", AllowArg = {"LevelUp", "Value", ">=", "1"},
   Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
@@ -89,7 +89,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-level-up",
     "unit-hero-greebo"
   } } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-axe-mastery",
   Action = "learn-ability", Value = "upgrade-axe-mastery",
   Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-commands",
   Description = "Axe Mastery is a passive ability that increases the axe-wielding unit's piercing damage by 2.",
@@ -101,7 +101,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
     "unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
   } } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
   Action = "learn-ability", Value = "upgrade-critical-strike",
   Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-commands",
   Description = "Critical Strike is a passive ability that provides 15% chance to deal double damage in combat. In No Randomness mode it provides a 15% damage bonus instead.",
@@ -120,7 +120,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-critical-strike",
     "unit-hero-greebo"
   } } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery-bronze",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery-bronze",
   Action = "learn-ability", Value = "upgrade-sword-mastery",
   Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
   Description = "Sword Mastery is a passive ability that increases the sword-wielding unit's piercing damage by 2.",
@@ -132,7 +132,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery-bronze",
 	"unit-hero-greebo"
   } } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery",
   Action = "learn-ability", Value = "upgrade-sword-mastery",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
   Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
@@ -145,7 +145,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-sword-mastery",
 	"unit-hero-greebo"
   } } )
 
-DefineButton( { Pos = 9, Level = 1, Icon = "icon-cancel",
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
   Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
   ForUnit = {

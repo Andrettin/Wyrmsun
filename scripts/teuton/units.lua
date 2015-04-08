@@ -345,7 +345,7 @@ DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
 	TechnologyPointCost = 1
 } )
 
-DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
+DefineUnitType("unit-hero-marbod", { Name = _("Erala"),
 	Parent = "unit-teuton-swordsman",
 	Class = "",
 	DefaultName = "Marbod",

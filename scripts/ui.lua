@@ -109,26 +109,43 @@ DefinePanelContents(
   Ident = "panel-general-contents",
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Contents = {
-	{ Pos = {8, 54}, Condition = {ShowOpponent = false, HideNeutral = true},
+	{ Pos = {70, 21}, Condition = {ShowOpponent = false, HideNeutral = true},
 		More = {"LifeBar", {Variable = "HitPoints", Height = 4, Width = 50}}
 	},
+	{ Pos = {67, 26}, Condition = {ShowOpponent = false, HideNeutral = true},
+		More = {"FormattedText2", {
+			Font = "small", Variable = "HitPoints", Format = "HP: %d/%d",
+			Component1 = "Value", Component2 = "Max"}
+		}
+	},
+	{ Pos = {70, 45}, Condition = {ShowOpponent = false, HideNeutral = true, Mana = "only"},
+		More = {"LifeBar", {Variable = "Mana", Height = 4, Width = 50}}
+	},
+	{ Pos = {67, 50}, Condition = {ShowOpponent = false, HideNeutral = true, Mana = "only"},
+		More = {"FormattedText2", {
+			Font = "small", Variable = "Mana", Format = "Mana: %d/%d",
+			Component1 = "Value", Component2 = "Max"}
+		}
+	},
+	{ Pos = {70, 67}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
+		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
+	},
+	--[[
 	{ Pos = {35, 61}, Condition = {ShowOpponent = false, HideNeutral = true},
 		More = {"FormattedText2", {
 			Font = "small", Variable = "HitPoints", Format = "%d/%d",
 			Component1 = "Value", Component2 = "Max", Centered = true}}
 	},
+	--]]
 
-	{ Pos = {114, 11}, More = {"Text", {Text = Line(1, UnitName("Active"), 110, "game"), Centered = true}} },
-	{ Pos = {114, 25}, More = {"Text", {Text = Line(2, UnitName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {173, 26}, More = {"Text", {Text = Line(1, UnitName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {173, 37}, More = {"Text", {Text = Line(2, UnitName("Active"), 110, "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
-	{ Pos = {114, 27}, Condition = {ShowOpponent = true, Building = "false"}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
-	{ Pos = {114, 41}, Condition = {ShowOpponent = true, Building = "false"}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
-
-	{ Pos = {114, 41}, Condition = {ShowOpponent = true, Building = "only"}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
-	{ Pos = {114, 55}, Condition = {ShowOpponent = true, Building = "only"}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {173, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {173, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
 	
--- Ressource Left
+-- Resource Left
 	{ Pos = {88, 86}, Condition = {ShowOpponent = false, GiveResource = "only"},
 		More = {"Text", {Text = Concat(
 			Concat(function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end, " Left: "),
@@ -154,12 +171,15 @@ DefinePanelContents(
   Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false"},
   Contents = {
 -- Food building
-	{ Pos = {16, 71}, More = {"Text", "Usage"} },
-	{ Pos = {58, 86}, More = {"Text", {Text = "Supply: ", Variable = "Supply", Component = "Max"}} },
-	{ Pos = {51, 102}, More = { "Text", {Text = Concat("Demand: ",
-									If(GreaterThan(ActiveUnitVar("Demand", "Max"), ActiveUnitVar("Supply", "Max")),
+	{ Pos = {9, 103}, More = {"Text", "Usage"} },
+	{ Pos = {9, 116}, More = {"Text", {Text = "Supply:"}} },
+	{ Pos = {76, 116}, Condition = {},
+		More = {"Text", {Text = String(ActiveUnitVar("Supply"))}}
+	},
+	{ Pos = {9, 130}, More = { "Text", {Text = "Demand:"}} },
+	{ Pos = {76, 130}, More = { "Text", {Text = If(GreaterThan(ActiveUnitVar("Demand", "Max"), ActiveUnitVar("Supply", "Max")),
 										InverseVideo(String(ActiveUnitVar("Demand", "Max"))),
-										String(ActiveUnitVar("Demand", "Max")) ))}}
+										String(ActiveUnitVar("Demand", "Max")) )}}
     }
 
   } },
@@ -169,15 +189,23 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, Center = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
-	{ Pos = {16, 86}, More = {"Text", "Processing"} },
-	{ Pos = {32, 102}, More = { "Text", {Text = Concat("Gold: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100),
+	{ Pos = {9, 103}, More = {"Text", "Processing"} },
+	{ Pos = {9, 116}, More = { "Text", {Text = "Gold:"}}},
+	{ Pos = {76, 116}, More = { "Text", {Text = Concat("100", 
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100)))),
+										""))}}
+    },
+	{ Pos = {9, 130}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = "Lumber:"}}},
+	{ Pos = {76, 130}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("100",
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
-	{ Pos = {32, 118}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
+	{ Pos = {9, 144}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = "Stone:"}}},
+	{ Pos = {76, 144}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("100", 
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
+										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
     },
 --	{ Pos = {84, 134}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
@@ -185,11 +213,6 @@ DefinePanelContents(
 --										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
 --										"" ))}}
 --    },
-	{ Pos = {84, 134}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("Stone: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
-										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
-										"" ))}}
-    },
 
   } },
   --res inmprovement
@@ -198,21 +221,18 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, Center = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
-	{ Pos = {16, 86}, Condition = {LumberImprove = "only"}, More = {"Text", "Processing"} },
---	{ Pos = {16, 86}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
-	{ Pos = {16, 86}, Condition = {StoneImprove = "only"}, More = {"Text", "Processing"} },
-	{ Pos = {32, 102}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("Lumber: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
+	{ Pos = {9, 103}, Condition = {LumberImprove = "only"}, More = {"Text", "Processing"} },
+	{ Pos = {9, 103}, Condition = {StoneImprove = "only"}, More = {"Text", "Processing"} },
+--	{ Pos = {9, 103}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
+	{ Pos = {9, 116}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = "Lumber:"}}},
+	{ Pos = {76, 116}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("100",
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
---	{ Pos = {84, 102}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
---									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
---										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
---										"" ))}}
---    },
-	{ Pos = {84, 102}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("Stone: 100", 
-									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
+	{ Pos = {9, 116}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = "Stone:"}}},
+	{ Pos = {76, 116}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("100", 
+										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
     },
@@ -235,37 +255,33 @@ DefinePanelContents(
 		)}}
 	},
 	--]]
-	{ Pos = {16, 102}, Condition = {BasicDamage = "only"},
+	{ Pos = {9, 116}, Condition = {BasicDamage = "only"},
+		More = {"Text", {Text = "Damage:"}}
+	},
+	{ Pos = {76, 116}, Condition = {BasicDamage = "only"},
 		More = {"Text", {Text = Concat(
-			"Damage: ",
 			String(min_damage),
 			"-",
 			String(max_damage)
 		)}}
 	},
---	{ Pos = {16, 102}, Condition = {AttackRange = "only", SightRange = "false"},
---		More = {"Text", {
---					Text = "Range: ", Variable = "AttackRange" , Stat = true}}
---	},
-	{ Pos = {16, 118}, Condition = {AttackRange = "only", SightRange = "false"},
-		More = {"Text", {Text = Concat(
-			"Range: ",
-			String(ActiveUnitVar("AttackRange"))
-		)}}
+	{ Pos = {115, 116}, Condition = {Accuracy = "only", Building = "false"},
+		More = {"Text", {Text = "Accuracy:"}}
 	},
-	{ Pos = {16, 118}, Condition = {SightRange = "only", AttackRange = "false", Building = "false"},
-		More = {"Text", {Text = Concat(
-			"Sight: ",
-			String(ActiveUnitVar("SightRange"))
-		)}}
+	{ Pos = {192, 116}, Condition = {Accuracy = "only", Building = "false"},
+		More = {"Text", {Text = String(ActiveUnitVar("Accuracy"))}}
 	},
-	{ Pos = {16, 118}, Condition = {AttackRange = "only", SightRange = "only"},
-		More = {"Text", {Text = Concat(
-			"Range: ",
-			String(ActiveUnitVar("AttackRange")),
-			" Sight: ",
-			String(ActiveUnitVar("SightRange"))
-		)}}
+	{ Pos = {9, 144}, Condition = {AttackRange = "only"},
+		More = {"Text", {Text = "Range:"}}
+	},
+	{ Pos = {76, 144}, Condition = {AttackRange = "only"},
+		More = {"Text", {Text = String(ActiveUnitVar("AttackRange"))}}
+	},
+	{ Pos = {115, 144}, Condition = {SightRange = "only", Building = "false"},
+		More = {"Text", {Text = "Sight:"}}
+	},
+	{ Pos = {192, 144}, Condition = {SightRange = "only", Building = "false"},
+		More = {"Text", {Text = String(ActiveUnitVar("SightRange"))}}
 	},
 -- Research
 	{ Pos = {12, 152}, Condition = {Research = "only"},
@@ -284,11 +300,6 @@ DefinePanelContents(
 	},
 	{ Pos = {23,  86}, More = {"Text", "Upgrading:"}, Condition = {UpgradeTo = "only"} },
 	{ Pos = {50, 153}, More = {"Text", "% Complete"}, Condition = {UpgradeTo = "only"} },
--- Mana
-	{ Pos = {16, 148}, Condition = {Mana = "only"},
-		More = {"CompleteBar", {Variable = "Mana", Height = 16, Width = 140, Border = false, Color = "light-blue"}}
-	},
-	{ Pos = {86, 150}, More = {"Text", {Variable = "Mana"}}, Condition = {Mana = "only"} },
 -- Resource Carry
 	{ Pos = {16, 149}, Condition = {CarryResource = "only"},
 		More = {"Text", {Text = Concat(
@@ -307,60 +318,38 @@ DefinePanelContents(
   Contents = {
 -- Unit caracteristics
 
---	{ Pos = {114, 41},
---		More = {"FormattedText", {Centered = true, Variable = "Level", Format = "Level: ~<%d~>"}}
---	},
---	{ Pos = {114, 56},
---		More = {"FormattedText2", {Centered = true,
---			Variable1 = "Xp", Variable2 = "Kill", Format = "XP: ~<%d~> Kills: ~<%d~>"}}
---	},
-	{ Pos = {114, 56}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
-		More = {"FormattedText2", {Centered = true,
-			Variable1 = "Level", Variable2 = "Xp", Format = "Lv.: %d XP: %d"}}
+	{ Pos = {7, 72}, Condition = {organic = "only"},
+		More = {"Text", {Text = "Level:"}}
 	},
-	{ Pos = {16, 71}, Condition = {organic = "only"},
-		More = {"Text", {Text = Concat("Trait: ", UnitTrait("Active")
-								)}}
+	{ Pos = {55, 72}, Condition = {organic = "only"},
+		More = {"Text", {Text = String(ActiveUnitVar("Level"))}}
 	},
-	--[[
-	{ Pos = {16, 86}, Condition = {},
-		More = {"Text", {Text = Concat("Armor: ", String(ActiveUnitVar("Armor"))
-								)}}
+	{ Pos = {67, 72}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
+		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XpRequired"))), Font = "small"}}
+    },
+	{ Pos = {9, 103}, Condition = {organic = "only"},
+		More = {"Text", {Text = "Trait:"}}
 	},
-	--]]
-	{ Pos = {16, 86}, Condition = {},
-		More = {"Text", {Text = Concat(
-			"Armor: ",
-			String(ActiveUnitVar("Armor")),
-			" Ev.: ",
-			String(ActiveUnitVar("Evasion"))
-		)}}
+	{ Pos = {76, 103}, Condition = {organic = "only"},
+		More = {"Text", {Text = UnitTrait("Active")}}
 	},
-	--[[
-	{ Pos = {16, 133}, Condition = {Speed = "only"},
-		More = {"FormattedText", {
-			Variable = "Speed", Format = "Speed: %d"}}
-	}
-	--]]
-	{ Pos = {16, 133}, Condition = {Speed = "only", Accuracy = "false"},
-		More = {"Text", {Text = Concat(
-			"Speed: ",
-			String(ActiveUnitVar("Speed"))
-		)}}
+	{ Pos = {9, 130}, Condition = {},
+		More = {"Text", {Text = "Armor:"}}
 	},
-	{ Pos = {16, 133}, Condition = {Accuracy = "only", Speed = "false", Building = "false"},
-		More = {"Text", {Text = Concat(
-			"Accuracy: ",
-			String(ActiveUnitVar("Accuracy"))
-		)}}
+	{ Pos = {76, 130}, Condition = {},
+		More = {"Text", {Text = String(ActiveUnitVar("Armor"))}}
 	},
-	{ Pos = {16, 133}, Condition = {Accuracy = "only", Speed = "only"},
-		More = {"Text", {Text = Concat(
-			"Acc.: ",
-			String(ActiveUnitVar("Accuracy")),
-			" Speed: ",
-			String(ActiveUnitVar("Speed"))
-		)}}
+	{ Pos = {115, 130}, Condition = {},
+		More = {"Text", {Text = "Evasion:"}}
+	},
+	{ Pos = {192, 130}, Condition = {},
+		More = {"Text", {Text = String(ActiveUnitVar("Evasion"))}}
+	},
+	{ Pos = {9, 157}, Condition = {Speed = "only"},
+		More = {"Text", {Text = "Speed:"}}
+	},
+	{ Pos = {76, 157}, Condition = {Speed = "only"},
+		More = {"Text", {Text = String(ActiveUnitVar("Speed"))}}
 	}
   } })
 
