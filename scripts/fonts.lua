@@ -28,6 +28,7 @@
 --
 
 CFont:New("small", CGraphic:New("ui/fonts/small.png", 10, 11))
+--CFont:New("game", CGraphic:New("ui/fonts/KPJsWyrmSunFont.png", 17, 17))
 CFont:New("game", CGraphic:New("ui/fonts/dejavusansbold10.png", 15, 14))
 CFont:New("large", CGraphic:New("ui/fonts/dejavusansbold12.png", 19, 16))
 CFont:New("small-title", CGraphic:New("ui/fonts/freesansbold14.png", 18, 19))
