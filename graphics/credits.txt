@@ -717,6 +717,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/potion.png
 /graphics/ui/prestige.png
 /graphics/ui/prestige_extra_1.png
+/graphics/ui/progress_bar.png
 /graphics/ui/research.png
 /graphics/ui/score.png
 /graphics/ui/score_extra_1.png

@@ -126,7 +126,8 @@ UI.MaxSelectedTextX = 162 + 10
 UI.MaxSelectedTextY = Video.Height - 186 + 10
 
 b = CUIButton:new()
-b.X = 162 + 110
+--b.X = 162 + 110
+b.X = 162 + 112
 b.Y = Video.Height - 186 + 11 + 70
 b.Style = FindButtonStyle("icon")
 UI.SingleTrainingButton = b
@@ -141,12 +142,9 @@ function AddTrainingButton(x, y)
 	UI.TrainingButtons:push_back(b)
 end
 
-AddTrainingButton(9, 59)
-AddTrainingButton(65, 59)
-AddTrainingButton(121, 59)
-AddTrainingButton(9, 106)
-AddTrainingButton(65, 106)
-AddTrainingButton(121, 106)
+AddTrainingButton(112, 81)
+AddTrainingButton(56, 81)
+AddTrainingButton(0, 81)
 
 b = CUIButton:new()
 b.X = 162 + 110
@@ -178,7 +176,7 @@ AddTransportingButton(73, 119)
 AddTransportingButton(129, 119)
 
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
-UI.CompletedBarShadow = true
+UI.CompletedBarShadow = false
 
 UI.ButtonPanel.Buttons:clear()
 

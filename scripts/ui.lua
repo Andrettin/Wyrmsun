@@ -127,9 +127,18 @@ DefinePanelContents(
 			Component1 = "Value", Component2 = "Max"}
 		}
 	},
-	{ Pos = {70, 67}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
+	{ Pos = {70, 45}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "false"},
 		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
 	},
+	{ Pos = {67, 50}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "false"},
+		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XpRequired"))), Font = "small"}}
+    },
+	{ Pos = {70, 67}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "only"},
+		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
+	},
+	{ Pos = {67, 72}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "only"},
+		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XpRequired"))), Font = "small"}}
+    },
 	--[[
 	{ Pos = {35, 61}, Condition = {ShowOpponent = false, HideNeutral = true},
 		More = {"FormattedText2", {
@@ -138,12 +147,12 @@ DefinePanelContents(
 	},
 	--]]
 
-	{ Pos = {173, 26}, More = {"Text", {Text = Line(1, UnitName("Active"), 110, "game"), Centered = true}} },
-	{ Pos = {173, 37}, More = {"Text", {Text = Line(2, UnitName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {170, 26}, More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
-	{ Pos = {173, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 110, "game"), Centered = true}} },
-	{ Pos = {173, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 110, "game"), Centered = true}} },
+	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 96, "game"), Centered = true}} },
 	
 -- Resource Left
 	{ Pos = {88, 86}, Condition = {ShowOpponent = false, GiveResource = "only"},
@@ -268,7 +277,7 @@ DefinePanelContents(
 	{ Pos = {115, 116}, Condition = {Accuracy = "only", Building = "false"},
 		More = {"Text", {Text = "Accuracy:"}}
 	},
-	{ Pos = {192, 116}, Condition = {Accuracy = "only", Building = "false"},
+	{ Pos = {184, 116}, Condition = {Accuracy = "only", Building = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("Accuracy"))}}
 	},
 	{ Pos = {9, 144}, Condition = {AttackRange = "only"},
@@ -280,7 +289,7 @@ DefinePanelContents(
 	{ Pos = {115, 144}, Condition = {SightRange = "only", Building = "false"},
 		More = {"Text", {Text = "Sight:"}}
 	},
-	{ Pos = {192, 144}, Condition = {SightRange = "only", Building = "false"},
+	{ Pos = {184, 144}, Condition = {SightRange = "only", Building = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("SightRange"))}}
 	},
 -- Research
@@ -318,15 +327,12 @@ DefinePanelContents(
   Contents = {
 -- Unit caracteristics
 
-	{ Pos = {7, 72}, Condition = {organic = "only"},
+	{ Pos = {3, 72}, Condition = {organic = "only"},
 		More = {"Text", {Text = "Level:"}}
 	},
-	{ Pos = {55, 72}, Condition = {organic = "only"},
+	{ Pos = {51, 72}, Condition = {organic = "only"},
 		More = {"Text", {Text = String(ActiveUnitVar("Level"))}}
 	},
-	{ Pos = {67, 72}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only"},
-		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XpRequired"))), Font = "small"}}
-    },
 	{ Pos = {9, 103}, Condition = {organic = "only"},
 		More = {"Text", {Text = "Trait:"}}
 	},
@@ -342,7 +348,7 @@ DefinePanelContents(
 	{ Pos = {115, 130}, Condition = {},
 		More = {"Text", {Text = "Evasion:"}}
 	},
-	{ Pos = {192, 130}, Condition = {},
+	{ Pos = {184, 130}, Condition = {},
 		More = {"Text", {Text = String(ActiveUnitVar("Evasion"))}}
 	},
 	{ Pos = {9, 157}, Condition = {Speed = "only"},

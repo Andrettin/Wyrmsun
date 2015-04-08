@@ -96,6 +96,7 @@ Preference.PressedIconFrameG = CGraphic:New("ui/icon_frame_pressed.png", 54, 46)
 Preference.CommandButtonFrameG = CGraphic:New("ui/command_button_frame.png", 56, 46)
 Preference.BarFrameG = CGraphic:New("ui/bar_frame.png", 58, 12)
 Preference.InfoPanelFrameG = CGraphic:New("ui/infopanel_frame.png", 214, 88)
+Preference.ProgressBarG = CGraphic:New("ui/progress_bar.png", 160, 24)
 Preference.MineNotifications = true
 Preference.NoStatusLineTooltips = true
 
