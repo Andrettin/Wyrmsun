@@ -179,6 +179,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Germanic Chieftain's Hall, Farm and War Lodge had their graphics updated (by Jinn).
 - Buildings are now constructed from outside.
 - Buildings can now leave a (harvestable) wood pile when destroyed.
+- Improved the shadows of the Dwarven Mead Hall and the Dwarven Mushroom Farm.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.
