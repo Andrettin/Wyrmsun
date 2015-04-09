@@ -353,6 +353,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/buttonpanel_1024.png
 /graphics/dwarf/ui/buttonpanel_1050.png
 /graphics/dwarf/ui/buttonpanel_1200.png
+/graphics/dwarf/ui/filler_bottom.png
 /graphics/dwarf/ui/filler-left_480.png
 /graphics/dwarf/ui/filler-left_600.png
 /graphics/dwarf/ui/filler-left_768.png
@@ -440,6 +441,7 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/buttonpanel_1024.png
 /graphics/germanic/ui/buttonpanel_1050.png
 /graphics/germanic/ui/buttonpanel_1200.png
+/graphics/germanic/ui/filler_bottom.png
 /graphics/germanic/ui/filler-left_480.png
 /graphics/germanic/ui/filler-left_600.png
 /graphics/germanic/ui/filler-left_768.png

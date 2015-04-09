@@ -310,11 +310,11 @@ DefinePanelContents(
 	{ Pos = {23,  86}, More = {"Text", "Upgrading:"}, Condition = {UpgradeTo = "only"} },
 	{ Pos = {50, 153}, More = {"Text", "% Complete"}, Condition = {UpgradeTo = "only"} },
 -- Resource Carry
-	{ Pos = {16, 149}, Condition = {CarryResource = "only"},
-		More = {"Text", {Text = Concat(
-			Concat(function() return CapitalizeString(GetUnitVariable(-1, "CurrentResourceName")) end, ": "),
-			String(ActiveUnitVar("CarryResource", "Value"))
-		)}}
+	{ Pos = {115, 157}, Condition = {CarryResource = "only"},
+		More = {"Text", {Text = Concat(function() return CapitalizeString(GetUnitVariable(-1, "CurrentResourceName")) end, ":")}}
+	},
+	{ Pos = {184, 157}, Condition = {SightRange = "only", Building = "false"},
+		More = {"Text", {Text = String(ActiveUnitVar("CarryResource", "Value"))}}
 	}
 
   } },

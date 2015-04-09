@@ -88,6 +88,7 @@ function AddFiller(file, x, y)
 	end
 end
 
+AddFiller("germanic/ui/filler_bottom.png", 380, Video.Height - 176)
 AddFiller("germanic/ui/resource.png", 0, 0)
 AddFiller("germanic/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
 AddFiller("germanic/ui/infopanel.png", 0, Video.Height - 200)
@@ -212,7 +213,7 @@ UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
 UI.MapArea.X = 0
 UI.MapArea.Y = 16
 UI.MapArea.EndX = Video.Width - 1
-UI.MapArea.EndY = Video.Height - 1
+UI.MapArea.EndY = Video.Height - 176 - 1
 
 UI.Minimap.X = 17
 UI.Minimap.Y = Video.Height - 156
