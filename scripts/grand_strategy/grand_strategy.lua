@@ -37,6 +37,8 @@ GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 GrandStrategyMapWidthIndent = false
 GrandStrategyMapHeightIndent = false
+GrandStrategyMapWidth = Video.Width - 16 - 176
+GrandStrategyMapHeight = Video.Height - 16 - 16
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -463,7 +465,7 @@ function RunGrandStrategyGame()
 	b = GrandStrategyMenu:addButton("", "down", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
+				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor(GrandStrategyMapHeight / 64)) then
 					if (GrandStrategyMapHeightIndent) then
 						GrandStrategyMapHeightIndent = false
 						WorldMapOffsetY = WorldMapOffsetY + 1;
@@ -497,7 +499,7 @@ function RunGrandStrategyGame()
 	b = GrandStrategyMenu:addButton("", "right", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetX < table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
+				if (WorldMapOffsetX < table.getn(WorldMapTiles[1]) - 1 - math.floor(GrandStrategyMapWidth / 64)) then
 					if (GrandStrategyMapWidthIndent) then
 						GrandStrategyMapWidthIndent = false
 						WorldMapOffsetX = WorldMapOffsetX + 1;
@@ -1785,7 +1787,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			end
 			world_map_tile:Load()
 			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageWidget(world_map_tile) -- not really a site, but it is more expedient to use this method
-			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 			else
 				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
@@ -1807,7 +1809,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setNormalImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPressedImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setDisabledImage(world_map_tile)
-		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 		else
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 64)
@@ -1843,9 +1845,9 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		b:setNormalImage(world_map_tile)
 		b:setPressedImage(world_map_tile)
 		b:setDisabledImage(world_map_tile)
-		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 			b:setSize(42 - width_indent + last_tile_width_modifier, 84)
-		elseif ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64)) - 1) then
+		elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
 			b:setSize(84 + (last_tile_width_modifier * 5 / 16), 84)
 		else
 			b:setSize(84, 84)
@@ -1881,7 +1883,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
-		if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 		else
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
@@ -1898,18 +1900,18 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 		elseif (tile_y == WorldMapOffsetY) then
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
-			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 80)
-			elseif ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64)) - 1) then
+			elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96 + (last_tile_width_modifier / 2), 80)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 80)
 			end
 		else
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
-			if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 96)
-			elseif ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64)) - 1) then
+			elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96 + (last_tile_width_modifier / 2), 96)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 96)
@@ -1941,7 +1943,7 @@ function DrawSettlement(file, tile_x, tile_y, playercolor)
 	OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
-	if ((tile_x - WorldMapOffsetX) >= (math.floor((Video.Width - 16 - 176) / 64))) then
+	if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 		OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 	else
 		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
@@ -2501,15 +2503,15 @@ function DrawOnScreenTiles()
 	OnScreenTiles = nil
 	OnScreenTiles = {}
 	
-	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
+	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
 		OnScreenTiles[y - WorldMapOffsetY + 1] = {}
 	end
 
 	OnScreenSites = nil
 	OnScreenSites = {}
 
-	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
-		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
+	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
 			-- set map tile terrain
 			local tile_image = ""
 			if (GetWorldMapTile(x, y) == "Plns") then
@@ -2642,7 +2644,7 @@ function DrawOnScreenTiles()
 				if (key == "Gold") then
 					resource_site_graphics = "tilesets/world/sites/gold_mine.png"
 				end
-				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64)) + 1) then
+				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64)) + 1) then
 					DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
 				end
 			end
@@ -2652,7 +2654,7 @@ function DrawOnScreenTiles()
 	for key, value in pairs(WorldMapProvinces) do
 		-- draw province borders
 		for i=1,table.getn(WorldMapProvinces[key].BorderTiles) do
-			if (WorldMapProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64)) + 1) then
+			if (WorldMapProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64)) + 1) then
 				local west_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1] - 1, WorldMapProvinces[key].BorderTiles[i][2])
 				local east_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1] + 1, WorldMapProvinces[key].BorderTiles[i][2])
 				local north_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2] - 1)
@@ -2782,7 +2784,7 @@ function DrawOnScreenTiles()
 
 
 		-- draw province settlement
-		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64))) then
+		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
 			if (WorldMapProvinces[key].Owner ~= "" and ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall")) then
 				local settlement_graphics = ""
 				if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
@@ -2852,7 +2854,7 @@ function DrawOnScreenTiles()
 	-- draw borders between water provinces
 	for key, value in pairs(WorldMapWaterProvinces) do
 		for i=1,table.getn(WorldMapWaterProvinces[key].BorderTiles) do
-			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + ((Video.Width - 16 - 176) / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + ((Video.Height - 16 - 16) / 64)) + 1) then
+			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64)) + 1) then
 				local west_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] - 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
 				local east_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] + 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
 				local north_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2] - 1)
@@ -2896,8 +2898,8 @@ function DrawOnScreenTiles()
 	end
 
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
-	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor((Video.Width - 16 - 176) / 64)) do
-		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor((Video.Height - 16 - 16) / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
+	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
 			-- set map tile terrain
 			if (GetWorldMapTile(x, y) == "") then
 				if (x == WorldMapOffsetX and y == WorldMapOffsetY) then
@@ -4607,18 +4609,18 @@ function GetMilitaryScore(province, attacker, count_defenders)
 end
 
 function CenterMapOnTile(tile_x, tile_y)
-	WorldMapOffsetX = math.floor(tile_x - (((Video.Width - 16 - 176) / 64) / 2)) + 1
+	WorldMapOffsetX = math.floor(tile_x - ((GrandStrategyMapWidth / 64) / 2)) + 1
 	if (WorldMapOffsetX < 0) then
 		WorldMapOffsetX = 0
-	elseif (WorldMapOffsetX > table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)) then
-		WorldMapOffsetX = table.getn(WorldMapTiles[1]) - 1 - math.floor((Video.Width - 16 - 176) / 64)
+	elseif (WorldMapOffsetX > table.getn(WorldMapTiles[1]) - 1 - math.floor(GrandStrategyMapWidth / 64)) then
+		WorldMapOffsetX = table.getn(WorldMapTiles[1]) - 1 - math.floor(GrandStrategyMapWidth / 64)
 	end
 
-	WorldMapOffsetY = math.floor(tile_y - (((Video.Height - 16 - 16) / 64) / 2))
+	WorldMapOffsetY = math.floor(tile_y - ((GrandStrategyMapHeight / 64) / 2))
 	if (WorldMapOffsetY < 0) then
 		WorldMapOffsetY = 0
-	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)) then
-		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor((Video.Height - 16 - 16) / 64)
+	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor(GrandStrategyMapHeight / 64)) then
+		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor(GrandStrategyMapHeight / 64)
 	end
 end
 
