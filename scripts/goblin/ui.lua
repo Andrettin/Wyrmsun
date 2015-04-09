@@ -277,9 +277,9 @@ if (CanAccessFile("ui/food.png")) then
   UI.Resources[FoodCost].G = CGraphic:New("ui/food.png", 14, 14)
 end
 UI.Resources[FoodCost].IconFrame = 0
-UI.Resources[FoodCost].IconX = Video.Width - 138
+UI.Resources[FoodCost].IconX = Video.Width - 138 - 99 - 26
 UI.Resources[FoodCost].IconY = 0
-UI.Resources[FoodCost].TextX = Video.Width - 138 + 18
+UI.Resources[FoodCost].TextX = Video.Width - 138 + 18 - 99 - 26
 UI.Resources[FoodCost].TextY = 1
 
 -- score
@@ -287,9 +287,9 @@ if (CanAccessFile("ui/score.png"))then
   UI.Resources[ScoreCost].G = CGraphic:New("ui/score.png", 14, 14)
 end
 UI.Resources[ScoreCost].IconFrame = 0
-UI.Resources[ScoreCost].IconX = Video.Width - 68
+UI.Resources[ScoreCost].IconX = Video.Width - 68 - 99 - 26
 UI.Resources[ScoreCost].IconY = 0
-UI.Resources[ScoreCost].TextX = Video.Width - 68 + 18
+UI.Resources[ScoreCost].TextX = Video.Width - 68 + 18 - 99 - 26
 UI.Resources[ScoreCost].TextY = 1
 
 UI.Resources[ManaResCost].G = CGraphic:New("ui/mana_icon.png", 14, 14)
@@ -312,14 +312,14 @@ UI.MenuButton:SetCallback(
 	end
   end)
 
-UI.NetworkMenuButton.X = 1
+UI.NetworkMenuButton.X = 26
 UI.NetworkMenuButton.Y = 1
 UI.NetworkMenuButton.Text = "Menu"
-UI.NetworkMenuButton.Style = FindButtonStyle("network-gnome")
+UI.NetworkMenuButton.Style = FindButtonStyle("main-gnome")
 UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
 
-UI.NetworkDiplomacyButton.X = 28
+UI.NetworkDiplomacyButton.X = Video.Width - 99 - 26
 UI.NetworkDiplomacyButton.Y = 1
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("network-gnome")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-gnome")
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)

@@ -218,9 +218,9 @@ wyrmsun.playlist = { "music/suspense.ogg" }
 -- show coal in the UI
 UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
 UI.Resources[6].IconFrame = 0
-UI.Resources[6].IconX = 176 + 150
+UI.Resources[6].IconX = 154 + 225
 UI.Resources[6].IconY = 0
-UI.Resources[6].TextX = 176 + 150 + 18
+UI.Resources[6].TextX = 154 + 225 + 18
 UI.Resources[6].TextY = 1
 
 CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
