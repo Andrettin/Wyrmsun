@@ -39,8 +39,8 @@ DefineTileset("name", "Swamp",
     "top-one-tree", 121, "mid-one-tree", 122, "bot-one-tree", 123,
     "removed-tree", 126,
     "growing-tree", { -1, -1, },
-    "top-one-rock", 15, "mid-one-rock", 31, "bot-one-rock", 47,
-    "removed-rock", 41, },
+    "top-one-rock", 48, "mid-one-rock", 64, "bot-one-rock", 80,
+    "removed-rock", 16, },
   "solid", { "unused",
     {}},								-- 000
   "solid", { "shallow-water", "water",
@@ -58,7 +58,7 @@ DefineTileset("name", "Swamp",
   "solid", { "tree", "land", "forest", "unpassable",
     { 125, 125, 125, 125}},						-- 070
   "solid", { "rock", "image", "tilesets/swamp/terrain/rock.png", "land", "rock", "unpassable",
-    { 17, 20, 23, 17}},							-- 080
+    { 18, 21, 24, 18}},						-- 080
   "solid", { "unused",
     {}},								-- 090
   "solid", { "unused",
@@ -125,20 +125,20 @@ DefineTileset("name", "Swamp",
     {},									-- 3E0
     {}},								-- 3F0
   "mixed", { "rock", "mud", "land", "rock", "unpassable",
-    { 34, 37, 34},							-- 400
-    { 32, 35, 32},							-- 410
-    { 33, 36, 39},							-- 420
-    { 2, 5, 2},								-- 430
-    { 18, 21, 24},							-- 440
-    { 29, 30, 29},							-- 450
-    { 26, 28, 26},							-- 460
-    { 3, 6, 3},								-- 470
-    { 13, 14, 13},							-- 480
-    { 16, 19, 22},							-- 490
-    { 25, 27, 25},							-- 4A0
-    { 1, 4, 7},								-- 4B0
-    { 10, 12, 10},							-- 4C0
-    { 9, 11, 9},							-- 4D0
+    { 35, 38, 35},							-- 400
+    { 33, 36, 33},							-- 410
+    { 34, 37, 40},							-- 420
+    { 3, 6, 3},								-- 430
+    { 19, 22, 25},							-- 440
+    { 30, 31, 30},							-- 450
+    { 27, 29, 27},							-- 460
+    { 1, 4, 1},								-- 470
+    { 14, 15, 14},							-- 480
+    { 17, 20, 23},							-- 490
+    { 26, 28, 26},							-- 4A0
+    { 2, 5, 8},								-- 4B0
+    { 11, 13, 11},							-- 4C0
+    { 10, 12, 10},							-- 4D0
     {},									-- 4E0
     {}},								-- 4F0
   "mixed", { "mud", "dry-mud", "land", "no-building", "mud",
