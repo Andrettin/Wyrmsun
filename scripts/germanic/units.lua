@@ -127,6 +127,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 --	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
 	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
 	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
+	Shadow = {"file", "germanic/units/warrior_shadow.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior",
 	Corpse = "unit-human-dead-body",
 	Variations = {
@@ -137,35 +138,34 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		},
 		{
 			"variation-id", "brown-hair",
-			"file", "germanic/units/warrior_brown_hair.png",
+			"hair-file", "germanic/units/brown_hair_warrior.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "germanic/units/warrior_gray_hair.png",
+			"hair-file", "germanic/units/gray_hair_warrior.png",
 			"icon", "icon-germanic-warrior-gray-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-required", "upgrade-old"
 		},
 		{
 			"variation-id", "red-hair",
-			"file", "germanic/units/warrior_red_hair.png",
+			"hair-file", "germanic/units/red_hair_warrior.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "germanic/units/warrior.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
-			"file", "germanic/units/warrior_brown_hair.png",
+			"hair-file", "germanic/units/brown_hair_warrior.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
@@ -173,7 +173,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "germanic/units/warrior_gray_hair.png",
+			"hair-file", "germanic/units/gray_hair_warrior.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
@@ -181,7 +181,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		},
 		{
 			"variation-id", "red-hair",
-			"file", "germanic/units/warrior_red_hair.png",
+			"hair-file", "germanic/units/red_hair_warrior.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
