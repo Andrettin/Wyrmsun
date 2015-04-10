@@ -143,9 +143,10 @@ function AddTrainingButton(x, y)
 	UI.TrainingButtons:push_back(b)
 end
 
-AddTrainingButton(112, 81)
-AddTrainingButton(56, 81)
-AddTrainingButton(0, 81)
+AddTrainingButton(160, 80)
+AddTrainingButton(108, 80)
+AddTrainingButton(56, 80)
+AddTrainingButton(4, 80)
 
 b = CUIButton:new()
 b.X = 162 + 110

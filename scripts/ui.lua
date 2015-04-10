@@ -163,7 +163,7 @@ DefinePanelContents(
 	},
 
 -- Construction
-	{ Pos = {12, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
+	{ Pos = {25, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 14, Border = false}}
 	},
 	{ Pos = {50, 153}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
@@ -293,18 +293,18 @@ DefinePanelContents(
 		More = {"Text", {Text = String(ActiveUnitVar("SightRange"))}}
 	},
 -- Research
-	{ Pos = {12, 152}, Condition = {Research = "only"},
+	{ Pos = {25, 152}, Condition = {Research = "only"},
 		More = {"CompleteBar", {Variable = "Research", Width = 152, Height = 14, Border = false}}
 	},
 	{ Pos = {100, 86}, Condition = {Research = "only"}, More = {"Text", "Researching~|:"}},
 	{ Pos = {50, 153}, Condition = {Research = "only"}, More = {"Text", "% Complete"}},
 -- Training
-	{ Pos = {12, 152}, Condition = {Training = "only"},
+	{ Pos = {25, 152}, Condition = {Training = "only"},
 		More = {"CompleteBar", {Variable = "Training", Width = 152, Height = 14, Border = false}}
 	},
 	{ Pos = {50, 153}, Condition = {Training = "only"}, More = {"Text", "% Complete"}},
 -- Upgrading To
-	{ Pos = {12, 152}, Condition = {UpgradeTo = "only"},
+	{ Pos = {25, 152}, Condition = {UpgradeTo = "only"},
 		More = {"CompleteBar", {Variable = "UpgradeTo", Width = 152, Height = 14, Border = false}}
 	},
 	{ Pos = {23,  86}, More = {"Text", "Upgrading:"}, Condition = {UpgradeTo = "only"} },
