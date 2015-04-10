@@ -579,9 +579,11 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/icons/iron_shield_extra_1.png
 /graphics/teuton/icons/marbod.png
 /graphics/tilesets/cave/terrain/cave.png
+/graphics/tilesets/cave/terrain/rock.png
 /graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles)
 /graphics/tilesets/forest/neutral/icons/rat.png
 /graphics/tilesets/forest/terrain/forest.png (dirt and water tiles)
+/graphics/tilesets/forest/terrain/rock.png
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
 /graphics/tilesets/swamp/neutral/icons/rat.png
 /graphics/tilesets/swamp/terrain/rock.png
