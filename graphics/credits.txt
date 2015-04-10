@@ -70,6 +70,7 @@ b_o:
 /graphics/germanic/units/archer.png
 /graphics/germanic/units/archer_blond_hair.png
 /graphics/germanic/units/archer_gray_hair.png
+/graphics/germanic/units/bronze_shield.png
 /graphics/germanic/units/builder.png
 /graphics/germanic/units/builder_red_hair.png
 /graphics/germanic/units/militia.png
