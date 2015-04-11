@@ -148,14 +148,14 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	Evasion = 12,
 	Missile = "missile-goblin-arrow",
 	Corpse = "unit-goblin-dead-body",
-	CanCastSpell = {"spell-dagger-attack"},
-	AutoCastActive = {"spell-dagger-attack"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
 		"ready", "goblin-archer-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-goblin-voices-dead"
+		"dead", "basic-goblin-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
 	}
 } )
 

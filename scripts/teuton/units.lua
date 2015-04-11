@@ -169,8 +169,6 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
 	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
-	CanCastSpell = {"spell-dagger-attack"},
-	AutoCastActive = {"spell-dagger-attack"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -194,7 +192,10 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-human-voices-dead"}
+		"dead", "basic-human-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),

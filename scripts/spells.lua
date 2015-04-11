@@ -92,21 +92,6 @@ DefineSpell("spell-slow",
 	"ai-cast", {"range", 10, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
 
-DefineSpell("spell-dagger-attack",
-	"showname", _("dagger attack"),
-	"manacost", 0,
-	"range", 1,
-	"target", "unit",
-	"action", {
-		{"adjust-vitals", "hit-points", -4, "max-multi-cast", 1}
-	},
-	"condition", {
-		"AirUnit", "false"
-	},
-	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}},
-	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
-)
-
 DefineSpell("spell-war-machine-spear-attack",
 	"showname", _("war machine spear attack"),
 	"manacost", 0,

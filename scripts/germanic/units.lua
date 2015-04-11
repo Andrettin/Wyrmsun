@@ -209,8 +209,6 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
 	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
-	CanCastSpell = {"spell-dagger-attack"},
-	AutoCastActive = {"spell-dagger-attack"},
 	TechnologyPointCost = 1,
 	Variations = {
 		{
@@ -235,7 +233,10 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
 --		"ready", "dwarven-axefighter-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "basic-human-voices-dead"}
+		"dead", "basic-human-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
 } )
 
 DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),

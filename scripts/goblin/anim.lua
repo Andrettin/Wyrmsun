@@ -105,20 +105,20 @@ local GoblinArcherDeath = {"unbreakable begin", "frame 55", "wait 3", "frame 60"
 DefineAnimations("animations-goblin-archer", {
 	Still = GoblinArcherStill,
 	Move = UnitMove,
-	Attack = {"unbreakable begin", "frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
-		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50", "unbreakable end", "wait 1",},
-	Death = GoblinArcherDeath,
-  SpellCast = {"unbreakable begin",
-	"if-var s_spell-dagger-attack == 1 dagger_attack",
-	"goto end",
-	"label dagger_attack",
-	"frame 80", "wait 3", "frame 85", "wait 3", "frame 90", "wait 3",
-	"frame 95", "attack", "sound dagger-attack", "wait 5", "frame 0", "wait 10",
-	"frame 0",
-	"goto end",
-	"label end",
-	"unbreakable end",
-	"wait 1",}
+	Attack = {
+		"unbreakable begin",
+		"frame 80", "wait 3", "frame 85", "wait 3", "frame 90", "wait 3",
+		"frame 95", "attack", "wait 5", "frame 0", "wait 10",
+		"frame 0",
+		"unbreakable end", "wait 1",
+	},
+	RangedAttack = {
+		"unbreakable begin",
+		"frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
+		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50",
+		"unbreakable end", "wait 1",
+	},
+	Death = GoblinArcherDeath
 })
 
 --
