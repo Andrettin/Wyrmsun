@@ -316,6 +316,7 @@ MakeSound("gold-mine-selected", "buildings/gold_mine.wav")
 MakeSound("lumber-mill-selected", "buildings/lumbermill.wav")
 MakeSound("smithy-selected", "buildings/sel_blacksmith.wav")
 MakeSound("yale-pen-selected", "buildings/yalepen.wav")
+SetSoundVolumePercent("yale-pen-selected", 50)
 MakeSound("fortress-selected", "buildings/sel_fortress.wav")
 MakeSound("tower-selected", "buildings/sel_tower.wav")
 
@@ -618,6 +619,7 @@ MakeSound("yale-selected", {
 	"neutral/yale/yale_select01.wav",
 	"neutral/yale/yale_select02.wav"
 })
+SetSoundVolumePercent("yale-selected", 50)
 MakeSound("yale-acknowledge", {
 	"neutral/yale/yale_ack01.wav",
 	"neutral/yale/yale_ack02.wav",
