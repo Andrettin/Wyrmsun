@@ -56,7 +56,7 @@ DefineCursor({
 --	* Civilization Germanic.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/legends_of_the_north.ogg", "music/journeys_end.ogg", "music/wanderer.ogg", "music/casualties_of_war.ogg", "music/battle.ogg", "music/battle-epic.ogg" }
+wyrmsun.playlist = { "music/honor_bound.ogg", "music/legends_of_the_north.ogg", "music/journeys_end.ogg", "music/wanderer.ogg", "music/casualties_of_war.ogg", "music/battle.ogg", "music/battle-epic.ogg" }
 
 function GermanicScreen(screen_width, screen_height)
   local info_panel_x = 0

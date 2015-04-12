@@ -16,6 +16,7 @@ by Andrettin
 
 The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
 
+/music/honor_bound.ogg (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)

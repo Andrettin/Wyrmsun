@@ -1,0 +1,26 @@
+Battle for Wesnoth Team:
+/music/battle.ogg
+/music/battle-epic.ogg
+/music/breaking_the_chains.ogg
+/music/casualties_of_war.ogg
+/music/defeat.ogg
+/music/heroes_rite.ogg
+/music/journeys_end.ogg
+/music/knalgan_theme.ogg
+/music/knolls.ogg
+/music/legends_of_the_north.ogg
+/music/loyalists.ogg
+/music/northern_mountains.ogg
+/music/suspense.ogg
+/music/the_city_falls.ogg
+/music/the_dangerous_symphony.ogg
+/music/the_deep_path.ogg
+/music/the_king_is_dead.ogg
+/music/traveling_minstrels.ogg
+/music/underground.ogg
+/music/vengeful.ogg
+/music/victory2.ogg
+/music/wanderer.ogg
+
+Wildfire Games (http://www.wildfiregames.com/):
+/music/honor_bound.ogg

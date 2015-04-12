@@ -56,7 +56,7 @@ DefineCursor({
 --	* Civilization Teuton.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/loyalists.ogg", "music/heroes_rite.ogg", "music/the_king_is_dead.ogg", "music/traveling_minstrels.ogg", "music/casualties_of_war.ogg", "music/battle.ogg", "music/battle-epic.ogg" }
+wyrmsun.playlist = { "music/honor_bound.ogg", "music/loyalists.ogg", "music/heroes_rite.ogg", "music/the_king_is_dead.ogg", "music/traveling_minstrels.ogg", "music/casualties_of_war.ogg", "music/battle.ogg", "music/battle-epic.ogg" }
 
 function TeutonScreen(screen_width, screen_height)
   local info_panel_x = 0

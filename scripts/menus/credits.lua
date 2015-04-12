@@ -10,7 +10,7 @@
 --
 --      credits.lua - Define the menu for credits.
 --
---      (c) Copyright 2006-2010 by Jimmy Salmon and Pali Rohár
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -91,6 +91,7 @@ function RunShowCreditsMenu()
 	"  Mattias Westlund (West)",
 	"  Ryan Reilly (Rain)",
 	"  Timothy Pinkham (TimothyP)",
+	"  Wildfire Games",
 	_("Maps"),
 	"  Battle for Wesnoth Team",
 	"  David White (Sirp)",
