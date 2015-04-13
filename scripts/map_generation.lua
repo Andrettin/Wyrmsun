@@ -1364,6 +1364,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 			end
 		end
 
+		CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, symmetric)
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
@@ -1493,6 +1494,11 @@ function ApplyRawTiles()
 				SetRawTile(x, y, "Water")
 			elseif (RawTile(x, y) == "Road") then
 				SetRawTile(x, y, "Land")
+			elseif (RawTile(x, y) == "Gold Rock") then
+				SetRawTile(x, y, "Land")
+				if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
+					unit = CreateUnit("unit-gold-rock", 15, {x, y})
+				end
 			elseif (RawTile(x, y) == "Gold Mine") then
 				unit = CreateUnit("unit-gold-mine", 15, {x, y})
 				SetResourcesHeld(unit, 50000)
@@ -3223,6 +3229,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	CleanRawTiles()
 	
 	if (GrandStrategy == false) then
+		CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, false)
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 		
 		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
@@ -3323,7 +3330,7 @@ function CreateStartingGoldMine(player, x, y)
 			end
 			for sub_x=0,2 do
 				for sub_y=0,2 do
-					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Gold Mine")
+					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Gold Rock")
 				end
 			end
 			gold_mine_built = true
@@ -3451,6 +3458,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	end
 
 	if (GrandStrategy == false) then
+		CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, symmetric)
 		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
@@ -5347,6 +5355,7 @@ function GenerateCave(town_halls, symmetric)
 
 	ApplyRawTiles()
 
+	CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, symmetric)
 	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

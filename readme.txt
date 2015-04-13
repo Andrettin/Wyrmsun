@@ -298,6 +298,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Asa Tribe now correctly starts with 0 resources in the Westward Migration quest.
 - Increased quantity of resources the Asa Tribe starts with in the Northwards to the Sea quest.
 - The natives can no longer research Broad Sword, Bronze Shield and Barbed Arrow in the Northwards to the Sea quest.
+- Added The Sack of Iuvavum quest.
 
 * Terrain
 - Trees now regrow after a long time has passed.
@@ -305,6 +306,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - The Conifer Forest tileset now has different trees for Summer and Autumn (the season is chosen randomly when starting a scenario).
 - Land-based decoration units are now properly removed if they are on top of a tree, rock or wall tile.
 - Logs are now harvestable for lumber.
+- Added harvestable gold rocks (graphics by Jinn).
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).

@@ -104,12 +104,13 @@ editor_types = {
 
 --- - - - - - - - - - - - - - - - - - -
 
+   "unit-gold-rock",
    "unit-gold-mine",
+   "unit-wood-pile",
    "unit-coal-mine",
    "unit-mercenary-camp",
    "unit-tree-stump",
    "unit-hole",
-   "unit-wood-pile",
    "unit-gold-coins",
    "unit-gold-sack",
    "unit-gold-chest",

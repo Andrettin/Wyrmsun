@@ -88,7 +88,7 @@ function AddFiller(file, x, y)
 	end
 end
 
-AddFiller("germanic/ui/filler_bottom.png", 380, Video.Height - 176)
+AddFiller("germanic/ui/filler_bottom.png", 380, Video.Height - 181)
 AddFiller("germanic/ui/resource.png", 0, 0)
 AddFiller("germanic/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
 AddFiller("germanic/ui/infopanel.png", 0, Video.Height - 200)
@@ -127,9 +127,8 @@ UI.MaxSelectedTextX = 162 + 10
 UI.MaxSelectedTextY = Video.Height - 186 + 10
 
 b = CUIButton:new()
---b.X = 162 + 110
-b.X = 162 + 112
-b.Y = Video.Height - 186 + 11 + 70
+b.X = 162 + 160
+b.Y = Video.Height - 186 + 80
 b.Style = FindButtonStyle("icon")
 UI.SingleTrainingButton = b
 
