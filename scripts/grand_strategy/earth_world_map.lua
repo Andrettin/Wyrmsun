@@ -712,6 +712,10 @@ if (GrandStrategyYear >= 150) then
 	WorldMapProvinces.Prussia.Units.unit_germanic_warrior = 0
 end
 
+if (GrandStrategyYear >= 170) then
+	GrandStrategyEvents.TheSackOfIuvavum = nil
+end
+
 if (GrandStrategyYear >= 200) then
 	WorldMapProvinces.Prussia.Owner = ""
 	WorldMapProvinces.Ukraine.Owner = "Ostrogoth Tribe" -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
