@@ -94,7 +94,7 @@ local land_funcs = {
   function() return AiNeed(AiLumberMill()) end, -- moved here, as it is necessary for the stronghold to be available
   function() return AiWait(AiLumberMill()) end,
   function() return AiResearch(AiUpgradeMissile1()) end,
-  function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") end end,
+  function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") else return false end end,
 
   function() return AiSet(AiBarracks(), 2) end,
   function() return AiForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
@@ -116,9 +116,9 @@ local land_funcs = {
 
 -- BUILDING A DEFENSE
 -- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
- function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
+  function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
 
-  function() return AiSet(AiGlider(), 1) end,
+  function() if (AiGetRace() == "goblin") then return AiSet(AiGlider(), 1) else return false end end,
 -- function() return AiUpgradeTo(AiBestCityCenter()) end,
 -- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
  function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 2, AiSiegeWeapon(), 0}) end,

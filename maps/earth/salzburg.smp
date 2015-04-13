@@ -1,7 +1,13 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("computer","nobody","nobody","nobody","person")
+if (GrandStrategy == false) then
+	DefinePlayerTypes("computer","nobody","nobody","nobody","person")
+else
+	DefinePlayerTypes("person","nobody","nobody","nobody","person")
+end
 PresentMap("Salzburg", 1, 128, 128, 1)
 MapWorld = "Earth"
 MapPersonPlayer = 4
 MapRequiredQuest = "The Home of the Boii"
+MapAttacker = 4
+MapDefender = 0

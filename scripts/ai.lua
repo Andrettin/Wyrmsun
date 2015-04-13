@@ -45,22 +45,6 @@ DefineAiHelper(
 	--
 	-- Equivalence of units for the resource manager.
 	--
-	{"unit-equiv", "unit-germanic-town-hall",
-	"unit-teuton-town-hall"},
-	{"unit-equiv", "unit-germanic-farm",
-	"unit-teuton-farm"},
-	{"unit-equiv", "unit-germanic-barracks",
-	"unit-teuton-barracks"},
-	{"unit-equiv", "unit-germanic-carpenters-shop",
-	"unit-teuton-lumber-mill"},
-	{"unit-equiv", "unit-germanic-smithy",
-	"unit-teuton-smithy"},
-	{"unit-equiv", "unit-germanic-worker",
-	"unit-teuton-worker"},
-	{"unit-equiv", "unit-germanic-warrior",
-	"unit-teuton-swordsman"},
-	{"unit-equiv", "unit-germanic-archer",
-	"unit-teuton-archer"},
 	{"unit-equiv", "unit-teuton-town-hall",
 	"unit-teuton-stronghold"},
 	{"unit-equiv", "unit-dwarven-town-hall",

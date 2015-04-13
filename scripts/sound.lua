@@ -492,6 +492,7 @@ MakeSound("tree-chopping", {
 	"misc/tree_chopping/tree-chopping-2.wav"
 })
 SetSoundRange("tree-chopping", 32)
+SetSoundVolumePercent("tree-chopping", 75)
 
 MakeSound("stone-mining", {
 	"misc/stone_mining/mine_stone_01.wav",

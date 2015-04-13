@@ -1522,8 +1522,8 @@ function ApplyRawTiles()
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
-			elseif (string.sub(RawTile(x, y), 0, 5) == "Smithy") then
-				unit = CreateUnit("unit-dwarven-smithy", tonumber(string.sub(RawTile(x, y), 6)), {x, y})
+			elseif (string.sub(RawTile(x, y), 0, 6) == "Smithy") then
+				unit = CreateUnit("unit-dwarven-smithy", tonumber(string.sub(RawTile(x, y), 7)), {x, y})
 				for sub_x=0,2 do
 					for sub_y=0,2 do
 						SetRawTile(x + sub_x, y + sub_y, "Land")

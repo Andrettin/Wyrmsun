@@ -105,6 +105,19 @@ Quests = {
 		Y = 1,
 		PlayerColor = "orange"
 	},
+	TheSackOfIuvavum = {
+		Name = "The Sack of Iuvavum",
+		Icon = "teuton/icons/spatha",
+		Description = "Almost two centuries after the time of Marbod, the Marcomanni chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire.\n\nMap: Salzburg\n\nRewards: 1 Teuton Technology Point.",
+		RequiredQuest = "The Home of the Boii",
+		Civilization = "teuton",
+		TechnologyPoints = 1,
+		Map = "maps/earth/salzburg.smp",
+		Scenario = "scripts/teuton/scenarios/the_sack_of_iuvavum.lua",
+		X = 7,
+		Y = 1,
+		PlayerColor = "orange"
+	},
 	TheMeadOfWisdom = {
 		Name = "The Mead of Wisdom",
 		Icon = "dwarf/icons/durin",

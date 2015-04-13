@@ -535,7 +535,6 @@ AddTrigger(
 					end},
 					"gnome/icons/gnomish_recruit.png"
 				)
-
 				return false
 			end
 		)

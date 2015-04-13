@@ -1036,6 +1036,62 @@ local GermanicEvents = {
 			end
 		}
 	},
+	TheSackOfIuvavum = {
+		Name = "The Sack of Iuvavum",
+		Description = "Our chieftain Ballomar has obtained the agreement of more than a dozen Germanic tribes to invade the Roman Empire. Shall we go through with this plan?",
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Marcomanni Tribe"
+				and WorldMapProvinces.Austria.Owner == "Rome"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 170,
+		Options = {"~!Yes", "~!No"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/earth/salzburg.smp")
+					CurrentQuest = "The Sack of Iuvavum"
+					RunMap("maps/earth/salzburg.smp")
+					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
+						for i, unitName in ipairs(Units) do
+							if (IsMilitaryUnit(unitName)) then
+								WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier)
+							elseif (IsHero(unitName)) then
+								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
+									WorldMapProvinces.Austria.Heroes[string.gsub(unitName, "-", "_")] = 2
+								end
+							end
+						end
+						CenterMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
+					elseif (GameResult == GameDefeat) then
+						for i, unitName in ipairs(Units) do
+							if (IsMilitaryUnit(unitName)) then
+								WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							end
+						end
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Marcomanni Tribe") then
+					AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")])
+							WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = 0
+						end
+					end
+				end
+			end,
+			function(s)
+			end
+		}
+	},
 	HistoriaEcclesiasticaVenerabilisBedae = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
 		Name = "Historia Ecclesiastica Venerabilis Bedae",
 		Description = "The venerable Bede has written an important work of history, the Historia Ecclesiastica Venerabilis Bedae.",
