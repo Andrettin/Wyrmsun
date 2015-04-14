@@ -36,7 +36,7 @@ local upgrades = {
 		{   250,  2400,     0,     0,     0,     0,     0,  2400},
 		1},
 	{"upgrade-teuton-iron-shield", _("Iron Shield"), "icon-teuton-iron-shield", "iron-shield",
-		_("The development of iron working makes the crafting of sturdier shield possible..\n\nEffect: +2 Armor for Kriegers."),
+		_("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
 		"",
 		"",
 		{   250,   900,   500,     0,     0,     0,     0,     0},
