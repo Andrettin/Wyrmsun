@@ -1337,13 +1337,11 @@ function BuildProgramStartMenu()
 	
 	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
 		wyr.preferences.SavedGrandStrategyGames = nil
-		SavePreferences()
 	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
 		wyr.preferences.GrandStrategySaveGames = nil
-		SavePreferences()
 	end
 
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and tonumber(string.sub(wyr.preferences.LastVersionPlayed, ".", "")) < 16) then
+	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", ""))) < 16) then
 		wyr.preferences.Heroes.Rugnur.upgrades = nil
 		wyr.preferences.Heroes.Rugnur.upgrades = {}
 		wyr.preferences.Heroes.Baglur.upgrades = nil
@@ -1355,7 +1353,6 @@ function BuildProgramStartMenu()
 
 		wyr.preferences.TechnologyAcquired = nil
 		wyr.preferences.TechnologyAcquired = {}
-		SavePreferences()
 
 		local warning_menu = WarGameMenu(panel(2))
 		warning_menu:setSize(288, 256)
