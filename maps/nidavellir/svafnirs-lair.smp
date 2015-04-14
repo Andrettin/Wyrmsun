@@ -5,5 +5,4 @@ PresentMap("Svafnir's Lair", 2, 66, 64, 1)
 MapWorld = "Nidavellir"
 MapAttacker = 1
 MapDefender = 0
-MapRequiredQuest = "Hills of the Shorbear Clan"
 --MapForTheMotherland = true

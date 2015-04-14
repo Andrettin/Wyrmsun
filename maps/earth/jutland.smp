@@ -7,7 +7,6 @@ else
 end
 PresentMap("Jutland", 1, 50, 96, 1)
 MapWorld = "Earth"
-MapRequiredQuest = "Westward Migration"
 MapPersonPlayer = 4
 MapAttacker = 4
 MapDefender = 1

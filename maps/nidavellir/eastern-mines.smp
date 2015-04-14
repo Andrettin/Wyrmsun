@@ -7,6 +7,5 @@ else
 end
 PresentMap("Eastern Mines", 1, 80, 80, 1)
 MapWorld = "Nidavellir"
-MapRequiredQuest = "Searching for the Runecrafter"
 MapAttacker = 0
 MapDefender = 1

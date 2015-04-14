@@ -9,4 +9,3 @@ PresentMap("Caverns of Flame", 2, 68, 68, 1)
 MapWorld = "Nidavellir"
 MapAttacker = 0
 MapDefender = 4
-MapRequiredQuest = "The Wyrm"

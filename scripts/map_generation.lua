@@ -1616,6 +1616,13 @@ function ApplyRawTiles()
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
+			elseif (string.sub(RawTile(x, y), 0, 11) == "Guard Tower") then
+				unit = CreateUnit("unit-teuton-guard-tower", tonumber(string.sub(RawTile(x, y), 12)), {x, y})
+				for sub_x=0,1 do
+					for sub_y=0,1 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
 			end
 		end
 	end
@@ -3422,7 +3429,7 @@ end
 function CreateStartingBuilding(player, building_type)
 	local width
 	local height
-	if (building_type == "Farm") then
+	if (building_type == "Farm" or building_type == "Guard Tower") then
 		width = 2
 		height = 2
 	elseif (building_type == "Lumber Mill" or building_type == "Smithy") then

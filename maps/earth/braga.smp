@@ -5,7 +5,7 @@ if (GrandStrategy == false) then
 else
 	DefinePlayerTypes("person","person")
 end
-PresentMap("Prague", 1, 128, 96, 1)
+PresentMap("Braga", 1, 128, 96, 1)
 MapWorld = "Earth"
 MapAttacker = 0
 MapDefender = 1

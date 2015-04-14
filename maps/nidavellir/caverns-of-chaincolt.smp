@@ -3,7 +3,6 @@
 DefinePlayerTypes("person","person","computer")
 PresentMap("Caverns of Chaincolt", 2, 56, 66, 1)
 MapWorld = "Nidavellir"
-MapRequiredQuest = "A Bargain is Struck"
 MapSiteType = "Dwarven Fortified Outpost"
 WorldMapPosition = {4, 1}
 MapAttacker = 1

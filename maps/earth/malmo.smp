@@ -3,6 +3,5 @@
 DefinePlayerTypes("person","person")
 PresentMap("Malmo", 2, 128, 112, 1)
 MapWorld = "Earth"
-MapRequiredQuest = "Northwards to the Sea"
 MapAttacker = 0
 MapDefender = 1

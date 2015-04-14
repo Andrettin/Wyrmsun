@@ -8,6 +8,5 @@ end
 PresentMap("Salzburg", 1, 128, 128, 1)
 MapWorld = "Earth"
 MapPersonPlayer = 4
-MapRequiredQuest = "The Home of the Boii"
 MapAttacker = 4
 MapDefender = 0

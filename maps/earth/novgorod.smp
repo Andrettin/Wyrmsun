@@ -3,6 +3,5 @@
 DefinePlayerTypes("person","person")
 PresentMap("Holmgard", 2, 96, 72, 1)
 MapWorld = "Earth"
-MapRequiredQuest = "On the Vanaquisl"
 MapAttacker = 0
 MapDefender = 1
