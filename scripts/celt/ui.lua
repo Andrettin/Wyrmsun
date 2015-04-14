@@ -56,7 +56,7 @@ DefineCursor({
 --	* Civilization Celt.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/battle.ogg" }
+wyrmsun.playlist = { "music/battle.ogg", "music/battle-epic.ogg", "music/taiko_1.ogg", "music/taiko_2.ogg" }
 
 function CeltScreen(screen_width, screen_height)
   local info_panel_x = 0

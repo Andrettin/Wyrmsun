@@ -19,8 +19,18 @@ Battle for Wesnoth Team:
 /music/traveling_minstrels.ogg
 /music/underground.ogg
 /music/vengeful.ogg
+/music/victory.ogg
 /music/victory2.ogg
 /music/wanderer.ogg
 
 Wildfire Games (http://www.wildfiregames.com/):
+/music/an_old_warhorse_goes_to_pasture.ogg
+/music/calm_before_the_storm.ogg
+/music/harvest_festival.ogg
+/music/highland_mist.ogg
 /music/honor_bound.ogg
+/music/taiko_1.ogg
+/music/taiko_2.ogg
+/music/the_road_ahead.ogg
+/music/waters_edge.ogg
+/music/you_are_victorious.ogg

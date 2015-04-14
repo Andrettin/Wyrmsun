@@ -12,16 +12,19 @@ function RunResultsMenu()
       PlayMusic("music/victory.ogg")
     else
       background = dvictory
-      PlayMusic("music/victory.ogg")
+      PlayMusic("music/you_are_victorious.ogg")
     end
   elseif (GameResult == GameDefeat) then
     result = "Defeat!"
     if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
       background = ddefeat
-      PlayMusic("music/dwarf_defeat.ogg")
+      PlayMusic("music/defeat2.ogg")
+    elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+      background = ddefeat
+      PlayMusic("music/dried_tears.ogg")
     else
       background = ddefeat
-      PlayMusic("music/dwarf_defeat.ogg")
+      PlayMusic("music/dried_tears.ogg")
     end
   elseif (GameResult == GameDraw) then
     result = "Draw!"

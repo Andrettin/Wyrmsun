@@ -799,6 +799,70 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 	end
 end
 
+function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric)
+	local Count = 0
+	-- create gold mines
+	Count = gold_mine_number
+	local WhileCount = 0
+	while (Count > 0 and WhileCount < gold_mine_number * 100) do
+		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
+		if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generate, 50% a group of gold rocks will be generated instead
+			unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+			Count = Count - 1
+			if (symmetric) then
+				local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
+				if (mirrored_tile_x < 0) then
+					mirrored_tile_x = mirrored_tile_x * -1
+				end
+
+				local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
+				if (mirrored_tile_y < 0) then
+					mirrored_tile_y = mirrored_tile_y * -1
+				end
+
+				unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x, gold_mine_spawn_point[2]})
+				Count = Count - 1
+
+				unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], mirrored_tile_y})
+				Count = Count - 1
+
+				unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x, mirrored_tile_y})
+				Count = Count - 1
+			end
+		else
+			for sub_x=0,2 do
+				for sub_y=0,2 do
+					if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
+						unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
+						if (symmetric) then
+							local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
+							if (mirrored_tile_x < 0) then
+								mirrored_tile_x = mirrored_tile_x * -1
+							end
+
+							local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
+							if (mirrored_tile_y < 0) then
+								mirrored_tile_y = mirrored_tile_y * -1
+							end
+
+							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x + sub_x, gold_mine_spawn_point[2] + sub_y})
+
+							unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y + sub_y})
+
+							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x + sub_x, mirrored_tile_y + sub_y})
+						end
+					end
+				end
+			end
+			Count = Count - 1
+			if (symmetric) then
+				Count = Count - 3
+			end
+		end
+		WhileCount = WhileCount + 1
+	end
+end
+
 function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, max_y, symmetric)
 	local Count = 0
 	-- create gold mines
@@ -1364,8 +1428,7 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 			end
 		end
 
-		CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, symmetric)
-		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
@@ -1494,17 +1557,35 @@ function ApplyRawTiles()
 				SetRawTile(x, y, "Water")
 			elseif (RawTile(x, y) == "Road") then
 				SetRawTile(x, y, "Land")
-			elseif (RawTile(x, y) == "Gold Rock") then
-				SetRawTile(x, y, "Land")
-				if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
-					unit = CreateUnit("unit-gold-rock", 15, {x, y})
-				end
-			elseif (RawTile(x, y) == "Gold Mine") then
+			elseif (RawTile(x, y) == "Starting Gold Mine") then
+				-- for starting gold locations, generate gold rocks and the gold deposit
 				unit = CreateUnit("unit-gold-mine", 15, {x, y})
 				SetResourcesHeld(unit, 50000)
 				for sub_x=0,2 do
 					for sub_y=0,2 do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
+						if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
+							unit = CreateUnit("unit-gold-rock", 15, {x + sub_x, y + sub_y})
+						end
+					end
+				end
+			elseif (RawTile(x, y) == "Gold Mine") then
+				if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generate, 50% a group of gold rocks will be generated instead
+					unit = CreateUnit("unit-gold-mine", 15, {x, y})
+					SetResourcesHeld(unit, 50000)
+					for sub_x=0,2 do
+						for sub_y=0,2 do
+							SetRawTile(x + sub_x, y + sub_y, "Land")
+						end
+					end
+				else
+					for sub_x=0,2 do
+						for sub_y=0,2 do
+							SetRawTile(x + sub_x, y + sub_y, "Land")
+							if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
+								unit = CreateUnit("unit-gold-rock", 15, {x + sub_x, y + sub_y})
+							end
+						end
 					end
 				end
 			elseif (string.sub(RawTile(x, y), 0, 9) == "Town Hall") then
@@ -3229,8 +3310,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	CleanRawTiles()
 	
 	if (GrandStrategy == false) then
-		CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, false)
-		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
+		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 		
 		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
@@ -3330,7 +3410,7 @@ function CreateStartingGoldMine(player, x, y)
 			end
 			for sub_x=0,2 do
 				for sub_y=0,2 do
-					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Gold Rock")
+					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Starting Gold Mine")
 				end
 			end
 			gold_mine_built = true
@@ -3458,8 +3538,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	end
 
 	if (GrandStrategy == false) then
-		CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, symmetric)
-		CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 50000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
@@ -5355,8 +5434,7 @@ function GenerateCave(town_halls, symmetric)
 
 	ApplyRawTiles()
 
-	CreateNeutralBuildings("unit-gold-rock", (Map.Info.MapWidth * Map.Info.MapHeight) / 512, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, symmetric)
-	CreateGoldMines((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 150000, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+	CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 	CreateCreeps(15, "unit-bat", (Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
