@@ -121,6 +121,8 @@ function RunShowCreditsMenu()
 	_("Historical and Mythological Research"),
 	"  Andrettin",
 	"  b_o",
+	"  Galaahd",
+	"  Rey",
 	_("Testing"),
 	"  Andrettin",
 	"  b_o",
