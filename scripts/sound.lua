@@ -330,6 +330,7 @@ MakeSound("fortress-ready", "buildings/complete_fortress.wav")
 MakeSound("tower-ready", "buildings/complete_tower.wav")
 
 MakeSound("tree-selected", "misc/sel_tree_01.wav")
+MakeSound("metal-selected", "misc/sel_metal_01.wav")
 
 --transport_docking = MakeSound("transport docking", "misc/transport_docking.wav")
 MakeSound("burning", "misc/burning.wav")
@@ -493,6 +494,34 @@ MakeSound("tree-chopping", {
 })
 SetSoundRange("tree-chopping", 32)
 SetSoundVolumePercent("tree-chopping", 75)
+
+MakeSound("metal-mining", {
+	"misc/metal_mining/mine_metal_01.wav",
+	"misc/metal_mining/mine_metal_02.wav",
+	"misc/metal_mining/mine_metal_03.wav",
+	"misc/metal_mining/mine_metal_04.wav",
+	"misc/metal_mining/mine_metal_05.wav",
+	"misc/metal_mining/mine_metal_06.wav",
+	"misc/metal_mining/mine_metal_07.wav",
+	"misc/metal_mining/mine_metal_08.wav",
+	"misc/metal_mining/mine_metal_09.wav",
+	"misc/metal_mining/mine_metal_10.wav",
+	"misc/metal_mining/mine_metal_11.wav",
+	"misc/metal_mining/mine_metal_12.wav",
+	"misc/metal_mining/mine_metal_13.wav",
+	"misc/metal_mining/mine_metal_14.wav",
+	"misc/metal_mining/mine_metal_15.wav",
+	"misc/metal_mining/mine_metal_16.wav",
+	"misc/metal_mining/mine_metal_17.wav",
+	"misc/metal_mining/mine_metal_18.wav",
+	"misc/metal_mining/mine_metal_19.wav",
+	"misc/metal_mining/mine_metal_20.wav",
+	"misc/metal_mining/mine_metal_21.wav",
+	"misc/metal_mining/mine_metal_22.wav",
+	"misc/metal_mining/mine_metal_23.wav",
+	"misc/metal_mining/mine_metal_24.wav"
+})
+SetSoundRange("metal-mining", 32)
 
 MakeSound("stone-mining", {
 	"misc/stone_mining/mine_stone_01.wav",
