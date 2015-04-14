@@ -230,6 +230,8 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
+			Heroes = {
+			},
 			SettlementTerrain = "Plns"
 		},
 		Brandenburg = {
@@ -246,6 +248,8 @@ function LoadProvinces(world)
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
+			},
+			Heroes = {
 			},
 			SettlementTerrain = "Plns"
 		},

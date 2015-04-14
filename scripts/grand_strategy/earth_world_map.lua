@@ -468,6 +468,8 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	SetResourceProspected(129, 33, "Gold", true)	
 	WorldMapProvinces.Naples.Owner = "Rome"
 	WorldMapProvinces.Naples.SettlementBuildings.unit_teuton_town_hall = 2
+	
+	Factions.Rome.Technologies.upgrade_teuton_masonry = 2 -- Rome should already have masonry technology by then
 end
 
 if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -645,6 +647,7 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	WorldMapProvinces.Bohemia.Civilization = "teuton"
 	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
+	WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman = 4
 	AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
 end
 

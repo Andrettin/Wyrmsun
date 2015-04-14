@@ -178,7 +178,7 @@ DefineModifier("upgrade-dwarven-ballista-bolt-2",
 
 DefineModifier("upgrade-dwarven-masonry",
 	{"HitPoints", 20, "Percent"},
-	{"Armor", 15},
+	{"Armor", 5},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},

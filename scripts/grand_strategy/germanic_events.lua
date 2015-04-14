@@ -1054,6 +1054,7 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe") then
+					GameSettings.Presets[0].Type = PlayerComputer
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/salzburg.smp")
 					CurrentQuest = "The Sack of Iuvavum"
