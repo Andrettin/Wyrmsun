@@ -37,7 +37,7 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 elseif (GrandStrategyEventMap) then
 	SetAiType(0, "grand-strategy-battle")
-	SetAiType(4, "grand-strategy-battle")
+	SetAiType(1, "grand-strategy-battle")
 	
 	local units_to_be_created = {}
 	
@@ -45,27 +45,7 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")]
-			WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = CreateUnit(unitName, 4, {Players[4].StartPos.x, Players[4].StartPos.y})
-				end
-			end
-		end
-	end
---	unit = CreateUnit("unit-hero-marbod", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
---	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 0
-	
-	-- Roman units
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] / 4)
+			units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")]
 			WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
 		end
 	end
@@ -78,15 +58,35 @@ elseif (GrandStrategyEventMap) then
 			end
 		end
 	end
+--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
+--	WorldMapProvinces.Austria.Heroes.unit_hero_marbod = 0
+	
+	-- Roman units
+	for i, unitName in ipairs(Units) do
+		if (IsMilitaryUnit(unitName)) then
+			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] / 4)
+			WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+		end
+	end
+	for i, unitName in ipairs(Units) do
+		if (IsMilitaryUnit(unitName)) then
+			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
+					unit = CreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+				end
+			end
+		end
+	end
 end
 
--- The Sack of Iuvavum introduction
+-- The Razing of Opitergium introduction
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Leave no building standing") == false) then
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Destroy Opitergium") == false) then
 			player = GetFactionPlayer("Marcomanni Tribe")
 			return true
 		end
@@ -95,18 +95,18 @@ AddTrigger(
 	function()
 		Event(
 			"",
-			"Almost two centuries after the time of Marbod, the Marcomanni chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire.",
+			"Leaving a trail of destruction behind us, we have reached Italy under the leadership of our chieftain Ballomar, and now lay siege to the Roman city of Opitergium.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"",
-				"We now approach the Roman town of Iuvavum - renowned for its wealth derived from the salt trade. Our warriors yearn for these riches... Sack this city, for all it is worth!",
+				"The time has come to show the Romans what we are truly made of, and force them to provide us with riches and suitable lands.",
 				player,
 				{"~!Continue"},
 				{function(s)
 					RemovePlayerObjective(player, "- Defeat your enemies")
-					AddPlayerObjective(player, "- Leave no building standing")
+					AddPlayerObjective(player, "- Destroy Opitergium")
 				end}
 			)
 			end},
@@ -123,7 +123,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Leave no building standing") and GetPlayerData(GetFactionPlayer("Rome"), "NumBuildings") == 0) then
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnits") == 0) then
 			player = GetFactionPlayer("Marcomanni Tribe")
 			return true
 		end
@@ -132,19 +132,27 @@ AddTrigger(
 	function()
 		Event(
 			"",
-			"All that was of worth in Iuvavum has been pillaged... let us march on, to Italy itself!",
+			"Opitergium became naught but ashes. Our next goal, Aquileia, would soon be besieged by our warriors.",
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (player == GetThisPlayer()) then
-					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Sack of Iuvavum") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Sack of Iuvavum")
+			Event(
+				"",
+				"But the Romans resisted. They managed to put off our siege, and pursued us until we had been driven beyond the Danube. That, however, was enough for the Roman Emperor Marcus Aurelius - he desired to make a new Roman province out of our lands. Fortunately, domestic troubles forced him to turn his attentions elsewhere, leaving us to our own devices. The Marcomanni live on!",
+				player,
+				{"~!Continue"},
+				{function(s)
+					if (player == GetThisPlayer()) then
+						if (GrandStrategy == false) then
+							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Razing of Opitergium") == false) then
+								table.insert(wyr.preferences.QuestsCompleted, "The Razing of Opitergium")
+							end
+							SavePreferences()
 						end
-						SavePreferences()
+						ActionVictory()
 					end
-					ActionVictory()
-				end
+				end}
+			)
 			end}
 		)
 		return false

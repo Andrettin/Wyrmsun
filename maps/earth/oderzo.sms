@@ -35,7 +35,7 @@ local town_buildings = {"Farm", "Farm", "Smithy", "Lumber Mill"}
 
 local town_units = {}
 
-local invader_units = {"unit-teuton-swordsman", "unit-teuton-archer"}
+local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer"}
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then

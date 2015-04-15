@@ -118,6 +118,19 @@ Quests = {
 		Y = 1,
 		PlayerColor = "orange"
 	},
+	TheRazingOfOpitergium = {
+		Name = "The Razing of Opitergium",
+		Icon = "neutral/icons/attack_ground",
+		Description = "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo\n\nRewards: 1 Teuton Technology Point.",
+		RequiredQuest = "The Sack of Iuvavum",
+		Civilization = "teuton",
+		TechnologyPoints = 1,
+		Map = "maps/earth/oderzo.smp",
+		Scenario = "scripts/teuton/scenarios/the_razing_of_opitergium.lua",
+		X = 8,
+		Y = 1,
+		PlayerColor = "orange"
+	},
 	MovingIntoGalicia = { -- happened in 411 AD
 		Name = "Moving into Galicia",
 		Icon = "teuton/icons/town_hall",

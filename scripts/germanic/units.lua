@@ -48,7 +48,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 			"resource-id", "gold",
 			"resource-capacity", 100,
 			"resource-step", 2,
-			"wait-at-resource", 24,
+			"wait-at-resource", 3,
 			"wait-at-depot", 150
 		},
 		{

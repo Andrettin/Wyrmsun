@@ -335,6 +335,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Increased quantity of resources the Asa Tribe starts with in the Northwards to the Sea quest.
 - The natives can no longer research Broad Sword, Bronze Shield and Barbed Arrow in the Northwards to the Sea quest.
 - Added The Sack of Iuvavum quest.
+- Added The Razing of Opitergium quest.
+- Added Moving into Galicia quest.
 
 * Terrain
 - Trees now regrow after a long time has passed.
