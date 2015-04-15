@@ -1,0 +1,11 @@
+-- Stratagus Map Presentation
+
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person","computer")
+else
+	DefinePlayerTypes("person","person")
+end
+PresentMap("Oderzo", 1, 128, 80, 1)
+MapWorld = "Earth"
+MapAttacker = 0
+MapDefender = 1

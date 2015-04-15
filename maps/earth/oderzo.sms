@@ -17,20 +17,21 @@ SetAiType(1, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 local layout = {
-	{-1, -1, -1, -1, -1, -1, -1, -1},
-	{-1,  0,  0,  0,  0,  0,  0, 18},
-	{ 0,  0,  0,  6,  0,  0, 18, 16},
-	{ 0,  0,  0,  0,  0,  0,  8,  0},
-	{ 0,  0,  0,  0, 18, 11, 16,  0},
-	{10, 10, 10, 10, 16, -1, -1, -1}
+	{-1, -1,  0,  0,  8,  0,  0,  0},
+	{-1,  0,  0,  0,  8,  0, 18, 10},
+	{-1,  0,  0,  6,  8,  0,  8, -1},
+	{-1,  0,  0,  0, 17, 10, 16, -1},
+	{-1, -1,  0,  0,  0, -1, -1, -1}
 }
 
+--[[
 local rock_generation = {
 	{112, 128, 48, 80},
 	{0, 16, 32, 80}
 }
+--]]
 
-local town_buildings = {"Farm", "Farm", "Smithy", "Lumber Mill", "Guard Tower", "Guard Tower", "Guard Tower"}
+local town_buildings = {"Farm", "Farm", "Smithy", "Lumber Mill"}
 
 local town_units = {}
 
@@ -38,7 +39,7 @@ local invader_units = {"unit-teuton-swordsman", "unit-teuton-archer"}
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Suebi Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
+		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, true, invader_units, "low", nil)
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
 			for i=0,15 do
@@ -48,6 +49,6 @@ if (LoadedGame == false) then
 			end
 		end
 	else
-		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Suebi Tribe", town_buildings, {}, false, {}, "low", rock_generation)
+		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Marcomanni Tribe", town_buildings, {}, false, {}, "low", nil)
 	end
 end
