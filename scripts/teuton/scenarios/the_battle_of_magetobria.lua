@@ -90,6 +90,8 @@ AddTrigger(
 									table.insert(wyr.preferences.QuestsCompleted, "The Battle of Magetobria")
 								end
 								SavePreferences()
+								NextMap = "maps/earth/prague.smp"
+								CurrentQuest = "The Home of the Boii"
 							end
 							ActionVictory()
 						end

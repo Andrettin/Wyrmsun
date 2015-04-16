@@ -138,7 +138,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"",
-				"But the Romans resisted. They managed to put off our siege, and pursued us until we had been driven beyond the Danube. That, however, was enough for the Roman Emperor Marcus Aurelius - he desired to make a new Roman province out of our lands. Fortunately, domestic troubles forced him to turn his attentions elsewhere, leaving us to our own devices. The Marcomanni live on!",
+				"But the Romans resisted. They managed to put off our siege, and pursued us until we had been driven beyond the Danube. That, however, was not enough for the Roman Emperor Marcus Aurelius - he desired to make a new Roman province out of our lands. Fortunately, domestic troubles forced him to turn his attention elsewhere, leaving us to our own devices. The Marcomanni live on!",
 				player,
 				{"~!Continue"},
 				{function(s)
@@ -148,6 +148,8 @@ AddTrigger(
 								table.insert(wyr.preferences.QuestsCompleted, "The Razing of Opitergium")
 							end
 							SavePreferences()
+							NextMap = "maps/earth/braga.smp"
+							CurrentQuest = "Moving into Galicia"
 						end
 						ActionVictory()
 					end
