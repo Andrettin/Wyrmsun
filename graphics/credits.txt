@@ -262,7 +262,6 @@ b_o:
 /graphics/tilesets/swamp/neutral/decorations/flowers.png
 /graphics/tilesets/swamp/neutral/decorations/large_flower.png
 /graphics/ui/Credits_background.png
-/graphics/ui/goblin_swordsman.png
 /graphics/ui/slow.png
 /graphics/ui/status_effect_icons.png
 
