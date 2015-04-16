@@ -139,6 +139,7 @@ editor_types = {
    "unit-fly",
    "unit-rat",
    "unit-bird",
+   "unit-crow",
    "unit-bat",
    "unit-blood-bat",
    "unit-dread-bat",

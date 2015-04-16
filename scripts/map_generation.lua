@@ -980,7 +980,7 @@ function CreateCritters(critter_number)
 		while (Count > 0 and WhileCount < critter_number * 100) do
 			local critter_unit_type
 			if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
-				RandomNumber = SyncRand(8)
+				RandomNumber = SyncRand(9)
 				if (RandomNumber == 0) then
 					critter_unit_type = "unit-rat"
 				elseif (RandomNumber == 1) then
@@ -997,6 +997,8 @@ function CreateCritters(critter_number)
 					critter_unit_type = "unit-slug"
 				elseif (RandomNumber == 7) then
 					critter_unit_type = "unit-worm"
+				elseif (RandomNumber == 8) then
+					critter_unit_type = "unit-crow"
 				end
 			elseif (wyrmsun.tileset == "dungeon") then
 				RandomNumber = SyncRand(3)
