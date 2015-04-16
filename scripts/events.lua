@@ -72,8 +72,7 @@ function EventTriggers()
 						end
 						SetPlayerData(greebo_player, "Name", "Greebo")
 					end},
-					nil,
-					"ui/goblin_swordsman.png"
+					nil
 				)
 
 				-- Greebo's speech
