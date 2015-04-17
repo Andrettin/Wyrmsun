@@ -1,3 +1,6 @@
+bart (http://opengameart.org):
+/music/the_adventure_begins.ogg
+
 Battle for Wesnoth Team:
 /music/battle.ogg
 /music/battle-epic.ogg
@@ -26,14 +29,10 @@ Battle for Wesnoth Team:
 cynicmusic:
 /music/battle_theme_a.ogg
 
-Wildfire Games (http://www.wildfiregames.com/):
-/music/an_old_warhorse_goes_to_pasture.ogg
-/music/calm_before_the_storm.ogg
-/music/harvest_festival.ogg
-/music/highland_mist.ogg
-/music/honor_bound.ogg
-/music/taiko_1.ogg
-/music/taiko_2.ogg
-/music/the_road_ahead.ogg
-/music/waters_edge.ogg
-/music/you_are_victorious.ogg
+Écrivain:
+/music/icy_heights.ogg
+
+yd:
+/music/war_on_water_1.ogg
+/music/war_on_water_2.ogg
+/music/war_on_water_3.ogg

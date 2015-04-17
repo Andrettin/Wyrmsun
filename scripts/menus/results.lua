@@ -12,7 +12,7 @@ function RunResultsMenu()
       PlayMusic("music/victory.ogg")
     else
       background = dvictory
-      PlayMusic("music/you_are_victorious.ogg")
+      PlayMusic("music/victory.ogg")
     end
   elseif (GameResult == GameDefeat) then
     result = "Defeat!"
@@ -21,10 +21,10 @@ function RunResultsMenu()
       PlayMusic("music/defeat2.ogg")
     elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
       background = ddefeat
-      PlayMusic("music/dried_tears.ogg")
+      PlayMusic("music/defeat.ogg")
     else
       background = ddefeat
-      PlayMusic("music/dried_tears.ogg")
+      PlayMusic("music/defeat.ogg")
     end
   elseif (GameResult == GameDraw) then
     result = "Draw!"

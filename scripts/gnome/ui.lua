@@ -56,7 +56,7 @@ DefineCursor({
 --	* Race gnome.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/battle.ogg", "music/battle-epic.ogg", "music/taiko_1.ogg", "music/taiko_2.ogg" }
+wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/knolls.ogg", "music/battle.ogg", "music/battle-epic.ogg", "music/battle_theme_a.ogg", "music/the_adventure_begins.ogg" }
 
 function GnomeScreen(screen_width, screen_height)
   local info_panel_x = 0

@@ -16,16 +16,6 @@ by Andrettin
 
 The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
 
-/music/an_old_warhorse_goes_to_pasture.ogg (licensed under the CC-BY-SA 3.0)
-/music/calm_before_the_storm.ogg (licensed under the CC-BY-SA 3.0)
-/music/harvest_festival.ogg (licensed under the CC-BY-SA 3.0)
-/music/highland_mist.ogg (licensed under the CC-BY-SA 3.0)
-/music/honor_bound.ogg (licensed under the CC-BY-SA 3.0)
-/music/taiko_1.ogg (licensed under the CC-BY-SA 3.0)
-/music/taiko_2.ogg (licensed under the CC-BY-SA 3.0)
-/music/the_road_ahead.ogg (licensed under the CC-BY-SA 3.0)
-/music/waters_edge.ogg (licensed under the CC-BY-SA 3.0)
-/music/you_are_victorious.ogg (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)

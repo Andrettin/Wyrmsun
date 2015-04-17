@@ -360,6 +360,10 @@ function SetPlayerData(player, data, arg1, arg2)
 end
 
 function LoadCivilizationUI(civilization)
+	if (civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+		StopMusic()
+		MusicStopped()
+	end
 	if (civilization == "dwarf") then
 		Load("scripts/dwarf/ui.lua")
 	elseif (civilization == "germanic") then
