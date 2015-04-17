@@ -359,7 +359,7 @@ DefinePanelContents(
 	}
   } })
 
-wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 UI.MessageFont = Fonts["game"]
 UI.MessageScrollSpeed = 5

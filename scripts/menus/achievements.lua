@@ -29,11 +29,11 @@
 
 function RunAchievementsMenu()
 
-	wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
-		PlayMusic("music/legends_of_the_north.ogg")
+		PlayMusic("music/battle_theme_a.ogg")
 	end
 
 	local menu = WarMenu()

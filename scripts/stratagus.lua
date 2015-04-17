@@ -70,13 +70,13 @@ DefineBoolFlags("Center", "LumberImprove", "OilImprove", "StoneImprove")
 --  Enter your default title screen.
 SetTitleScreens(
 -- FIXME: No good title image yet
---  {Image = "ui/title.png", Music = "music/legends_of_the_north.ogg", Timeout = 20}
+--  {Image = "ui/title.png", Music = "music/battle_theme_a.ogg", Timeout = 20}
 )
 
 -------------------------------------------------------------------------------
 --	Music play list -	Insert your titles here
 -------------------------------------------------------------------------------
-wyrmsun.playlist = { "music/legends_of_the_north.ogg" }
+wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 --  Set the game name. It's used so we can mantain different savegames
 --  and setting. Might also be used for multiplayer.

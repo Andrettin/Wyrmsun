@@ -23,6 +23,9 @@ Battle for Wesnoth Team:
 /music/victory2.ogg
 /music/wanderer.ogg
 
+cynicmusic:
+/music/battle_theme_a.ogg
+
 Wildfire Games (http://www.wildfiregames.com/):
 /music/an_old_warhorse_goes_to_pasture.ogg
 /music/calm_before_the_storm.ogg
