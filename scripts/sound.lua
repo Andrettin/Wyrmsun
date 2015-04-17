@@ -163,7 +163,8 @@ MakeSound("basic-gnome-voices-acknowledge", {
 	"gnome/basic_voices/acknowledge-03.wav",
 	"gnome/basic_voices/acknowledge-04.wav",
 	"gnome/basic_voices/acknowledge-05.wav",
-	"gnome/basic_voices/acknowledge-06.wav"
+	"gnome/basic_voices/acknowledge-06.wav",
+	"gnome/basic_voices/acknowledge-07.wav"
 })
 MakeSound("basic-gnome-voices-attack", {
 	"gnome/basic_voices/attack1.wav",
