@@ -246,6 +246,7 @@ b_o:
 /graphics/orc/units/spearthrower.png
 /graphics/teuton/units/catapult.png
 /graphics/teuton/units/old_man.png
+/graphics/teuton/units/saxon_swordsman.png
 /graphics/teuton/units/suebi_warrior.png
 /graphics/tilesets/cave/neutral/buildings/hole.png (modified from Leo's volcanic crater)
 /graphics/tilesets/dungeon/neutral/decorations/door_left.png

@@ -132,8 +132,12 @@ Brian Brickwagon Jennings:
 /sounds/gnome/basic_voices/acknowledge-02.wav
 /sounds/gnome/basic_voices/acknowledge-03.wav
 /sounds/gnome/basic_voices/acknowledge-04.wav
+/sounds/gnome/basic_voices/acknowledge-05.wav
+/sounds/gnome/basic_voices/acknowledge-06.wav
 /sounds/gnome/basic_voices/annoy-1.wav
 /sounds/gnome/basic_voices/annoy-2.wav
+/sounds/gnome/basic_voices/attack1.wav
+/sounds/gnome/basic_voices/attack2.wav
 /sounds/gnome/basic_voices/deal-1.wav
 /sounds/gnome/basic_voices/deal-2.wav
 /sounds/gnome/basic_voices/deal-3.wav
@@ -157,6 +161,13 @@ Brian Brickwagon Jennings:
 /sounds/gnome/basic_voices/help-4.wav
 /sounds/gnome/basic_voices/helptown-1.wav
 /sounds/gnome/basic_voices/helptown-2.wav
+/sounds/gnome/basic_voices/need-coal.wav
+/sounds/gnome/basic_voices/need-farms.wav
+/sounds/gnome/basic_voices/need-gold.wav
+/sounds/gnome/basic_voices/need-stone.wav
+/sounds/gnome/basic_voices/need-wood.wav
+/sounds/gnome/basic_voices/ranged-attack1.wav
+/sounds/gnome/basic_voices/ranged-attack2.wav
 /sounds/gnome/basic_voices/ready-1.wav
 /sounds/gnome/basic_voices/ready-2.wav
 /sounds/gnome/basic_voices/research-done-1.wav
@@ -194,6 +205,7 @@ Brian Brickwagon Jennings:
 /sounds/gnome/recruit/annoy-2.wav
 /sounds/gnome/recruit/annoy-3.wav
 /sounds/gnome/recruit/recruit-ready-1.wav
+/sounds/gnome/scavenger/repair-acknowledge.wav
 /sounds/gnome/scavenger/scavenger-annoyed-1.wav
 /sounds/gnome/scavenger/scavenger-annoyed-2.wav
 /sounds/gnome/scavenger/scavenger-annoyed-3.wav

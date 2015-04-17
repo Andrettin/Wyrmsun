@@ -161,7 +161,13 @@ MakeSound("basic-gnome-voices-acknowledge", {
 	"gnome/basic_voices/acknowledge-01.wav",
 	"gnome/basic_voices/acknowledge-02.wav",
 	"gnome/basic_voices/acknowledge-03.wav",
-	"gnome/basic_voices/acknowledge-04.wav"
+	"gnome/basic_voices/acknowledge-04.wav",
+	"gnome/basic_voices/acknowledge-05.wav",
+	"gnome/basic_voices/acknowledge-06.wav"
+})
+MakeSound("basic-gnome-voices-attack", {
+	"gnome/basic_voices/attack1.wav",
+	"gnome/basic_voices/attack2.wav"
 })
 MakeSound("basic-gnome-voices-dead", {
 	"gnome/basic_voices/death-1.wav",
@@ -195,6 +201,10 @@ MakeSound("gnomish-worker-annoyed", {
 })
 MakeSoundGroup("gnomish-worker-selected-group",
 	"basic-gnome-voices-selected", "gnomish-worker-annoyed")
+MakeSound("gnomish-worker-repair", {
+	"gnome/scavenger/repair-acknowledge.wav"
+})
+
 MakeSound("gnomish-recruit-ready", "gnome/recruit/recruit-ready-1.wav")
 MakeSound("gnomish-recruit-annoyed", {
 	"gnome/recruit/annoy-1.wav",
@@ -706,6 +716,13 @@ DefineGameSounds(
   "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
 
   "research-complete", {"gnome", MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")},
+
+  "not-enough-res", {"coal", "gnome", MakeSound("basic-gnome-voices-not-enough-coal", "gnome/basic_voices/need-coal.wav")},
+  "not-enough-res", {"gold", "gnome", MakeSound("basic-gnome-voices-not-enough-gold", "gnome/basic_voices/need-gold.wav")},
+  "not-enough-res", {"lumber", "gnome", MakeSound("basic-gnome-voices-not-enough-lumber", "gnome/basic_voices/need-wood.wav")},
+  "not-enough-res", {"stone", "gnome", MakeSound("basic-gnome-voices-not-enough-stone", "gnome/basic_voices/need-stone.wav")},
+
+  "not-enough-food", {"gnome", MakeSound("basic-gnome-voices-not-enough-food", "gnome/basic_voices/need-farms.wav")},
 
   "rescue", {"celt", rescue},
   "rescue", {"dwarf", rescue},

@@ -84,68 +84,9 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Civilization = "teuton",
 	Description = _("The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat."),
 	Background = _("\"Krieger\" is the German word for \"warrior\"."),
-	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
-	Shadow = {"file", "germanic/units/warrior_shadow.png", "size", {72, 72}},
+	Image = {"file", "teuton/units/saxon_swordsman.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior",
 	Corpse = "unit-human-dead-body",
-	Variations = {
-		{
-			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"hair-file", "germanic/units/brown_hair_warrior.png",
-			"icon", "icon-germanic-warrior-brown-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "gray-hair",
-			"hair-file", "germanic/units/gray_hair_warrior.png",
-			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-required", "upgrade-old"
-		},
-		{
-			"variation-id", "red-hair",
-			"hair-file", "germanic/units/red_hair_warrior.png",
-			"icon", "icon-germanic-warrior-red-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"shield-file", "germanic/units/bronze_shield.png",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"hair-file", "germanic/units/brown_hair_warrior.png",
-			"shield-file", "germanic/units/bronze_shield.png",
-			"icon", "icon-germanic-warrior-brown-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "gray-hair",
-			"hair-file", "germanic/units/gray_hair_warrior.png",
-			"shield-file", "germanic/units/bronze_shield.png",
-			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-required", "upgrade-old"
-		},
-		{
-			"variation-id", "red-hair",
-			"hair-file", "germanic/units/red_hair_warrior.png",
-			"shield-file", "germanic/units/bronze_shield.png",
-			"icon", "icon-germanic-warrior-red-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-old"
-		}
-	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -325,7 +266,7 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
 	Parent = "unit-template-smithy",
 	Civilization = "teuton",
---	Description = _("It is in these smithies that germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
+	Description = _("It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
 	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
 	Icon = "icon-germanic-smithy"
 } )

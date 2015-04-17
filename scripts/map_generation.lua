@@ -820,18 +820,18 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 					mirrored_tile_y = mirrored_tile_y * -1
 				end
 
-				unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x, gold_mine_spawn_point[2]})
+				unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1), gold_mine_spawn_point[2]})
 				Count = Count - 1
 
-				unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], mirrored_tile_y})
+				unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1)})
 				Count = Count - 1
 
-				unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x, mirrored_tile_y})
+				unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1)})
 				Count = Count - 1
 			end
 		else
-			for sub_x=0,2 do
-				for sub_y=0,2 do
+			for sub_x=0,(GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) do
+				for sub_y=0,(GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) do
 					if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
 						unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
 						if (symmetric) then
@@ -845,11 +845,11 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 								mirrored_tile_y = mirrored_tile_y * -1
 							end
 
-							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x + sub_x, gold_mine_spawn_point[2] + sub_y})
+							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) + sub_x, gold_mine_spawn_point[2] + sub_y})
 
-							unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y + sub_y})
+							unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) + sub_y})
 
-							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x + sub_x, mirrored_tile_y + sub_y})
+							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) + sub_y})
 						end
 					end
 				end
@@ -884,15 +884,15 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 				mirrored_tile_y = mirrored_tile_y * -1
 			end
 
-			unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x, gold_mine_spawn_point[2]})
+			unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1), gold_mine_spawn_point[2]})
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 
-			unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], mirrored_tile_y})
+			unit = CreateUnit("unit-gold-mine", 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) })
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 
-			unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x, mirrored_tile_y})
+			unit = CreateUnit("unit-gold-mine", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) })
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 		end
@@ -920,15 +920,15 @@ function CreateCoalMines(coal_mine_number, coal_quantity, min_x, max_x, min_y, m
 				mirrored_tile_y = mirrored_tile_y * -1
 			end
 
-			unit = CreateUnit("unit-coal-mine", 15, {mirrored_tile_x, coal_mine_spawn_point[2]})
+			unit = CreateUnit("unit-coal-mine", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1), coal_mine_spawn_point[2]})
 			SetResourcesHeld(unit, coal_quantity)
 			Count = Count - 1
 
-			unit = CreateUnit("unit-coal-mine", 15, {coal_mine_spawn_point[1], mirrored_tile_y})
+			unit = CreateUnit("unit-coal-mine", 15, {coal_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) })
 			SetResourcesHeld(unit, coal_quantity)
 			Count = Count - 1
 
-			unit = CreateUnit("unit-coal-mine", 15, {mirrored_tile_x, mirrored_tile_y})
+			unit = CreateUnit("unit-coal-mine", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-mine", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) })
 			SetResourcesHeld(unit, coal_quantity)
 			Count = Count - 1
 		end
@@ -955,13 +955,13 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 					mirrored_tile_y = mirrored_tile_y * -1
 				end
 
-				unit = CreateUnit(building_type, 15, {mirrored_tile_x, building_spawn_point[2]})
+				unit = CreateUnit(building_type, 15, {mirrored_tile_x - (GetUnitTypeData(building_type, "TileWidth") - 1), building_spawn_point[2]})
 				Count = Count - 1
 
-				unit = CreateUnit(building_type, 15, {building_spawn_point[1], mirrored_tile_y})
+				unit = CreateUnit(building_type, 15, {building_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(building_type, "TileHeight") - 1)})
 				Count = Count - 1
 
-				unit = CreateUnit(building_type, 15, {mirrored_tile_x, mirrored_tile_y})
+				unit = CreateUnit(building_type, 15, {mirrored_tile_x - (GetUnitTypeData(building_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(building_type, "TileHeight") - 1)})
 				Count = Count - 1
 			end
 			WhileCount = WhileCount + 1
@@ -1270,11 +1270,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 							player_spawn_point = {SyncRand((max_x / 2) - min_x) + min_x, SyncRand((max_y / 2) - min_y) + min_y}
 							symmetric_starting_location = player_spawn_point
 						elseif (i == 1 or i == 5 or i == 9 or i == 13) then
-							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)), symmetric_starting_location[2]}
+							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
 						elseif (i == 2 or i == 6 or i == 10 or i == 14) then
-							player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1))}
+							player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
 						elseif (i == 3 or i == 7 or i == 11) then
-							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)), math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1))}
+							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
 						end
 					end
 					starting_point_found = true
@@ -1563,8 +1563,8 @@ function ApplyRawTiles()
 				-- for starting gold locations, generate gold rocks and the gold deposit
 				unit = CreateUnit("unit-gold-mine", 15, {x, y})
 				SetResourcesHeld(unit, 50000)
-				for sub_x=0,2 do
-					for sub_y=0,2 do
+				for sub_x=0,(GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) do
+					for sub_y=0,(GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 						if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
 							unit = CreateUnit("unit-gold-rock", 15, {x + sub_x, y + sub_y})
@@ -1575,14 +1575,14 @@ function ApplyRawTiles()
 				if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generate, 50% a group of gold rocks will be generated instead
 					unit = CreateUnit("unit-gold-mine", 15, {x, y})
 					SetResourcesHeld(unit, 50000)
-					for sub_x=0,2 do
-						for sub_y=0,2 do
+					for sub_x=0,(GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) do
+						for sub_y=0,(GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 						end
 					end
 				else
-					for sub_x=0,2 do
-						for sub_y=0,2 do
+					for sub_x=0,(GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) do
+						for sub_y=0,(GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 							if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
 								unit = CreateUnit("unit-gold-rock", 15, {x + sub_x, y + sub_y})
@@ -3417,8 +3417,8 @@ function CreateStartingGoldMine(player, x, y)
 					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add road so that there are no transition issues
 				end
 			end
-			for sub_x=0,2 do
-				for sub_y=0,2 do
+			for sub_x=0,(GetUnitTypeData("unit-gold-mine", "TileWidth") - 1) do
+				for sub_y=0,(GetUnitTypeData("unit-gold-mine", "TileHeight") - 1) do
 					SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Starting Gold Mine")
 				end
 			end
@@ -5453,7 +5453,7 @@ function GenerateCave(town_halls, symmetric)
 	--end
 
 	if (wyrmsun.tileset == "cave") then
-		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 		local uncount = 0
 		uncount = GetUnits(15)
 		for unit1 = 1,table.getn(uncount) do 
@@ -5474,7 +5474,7 @@ function GenerateCave(town_halls, symmetric)
 
 	
 	if (GrandStrategy == false) then
-		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
+		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		for i=0,14 do
 			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
