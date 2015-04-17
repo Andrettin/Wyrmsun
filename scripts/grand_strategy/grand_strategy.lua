@@ -362,7 +362,6 @@ function RunGrandStrategyGameSetupMenu()
 --					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 --					"700 BC", -- 
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
-					"150 AD",
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
 --					"1660 AD", -- 
 				}
@@ -987,9 +986,9 @@ function AttackProvince(province, faction)
 		if (GrandStrategyFaction ~= nil and Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
 			InterfaceState = "Province"
 		end
-		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige + attacker_prestige
+		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige + attacker_prestige + 5 -- plus five for acquiring the territory
 		if (empty_province == false) then
-			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige - attacker_prestige
+			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige - attacker_prestige - 5 -- minus five for losing the territory
 		end
 	else
 		if (empty_province == false) then

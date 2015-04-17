@@ -1199,14 +1199,17 @@ local NidavellirEvents = {
 						end
 					end
 					
-					if (GameResult == GameDefeat) then -- if lost the battle, lose the gold
+					if (GameResult == GameVictory) then
+						EventFaction.Prestige = EventFaction.Prestige + 1
+					elseif (GameResult == GameDefeat) then -- if lost the battle, lose the gold
 						EventFaction.Gold = EventFaction.Gold - 500
+						EventFaction.Prestige = EventFaction.Prestige - 1
 					end
 				end
 			end,
 			function(s)
 				EventFaction.Gold = EventFaction.Gold - 500
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				EventFaction.Prestige = EventFaction.Prestige - 2
 			end
 		},
 		OptionTooltips = {"Fight the goblin thieves", "-500 Gold, -1 Prestige"}

@@ -107,7 +107,7 @@ function CreateUnit(unittype, player, pos)
 		or (
 			GrandStrategy
 			and GrandStrategyEventMap == false
-			and (unittype == "unit-gold-mine" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp")
+			and (unittype == "unit-gold-mine" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp" or GetUnitTypeData(unittype, "Building"))
 		)
 	) then
     return
