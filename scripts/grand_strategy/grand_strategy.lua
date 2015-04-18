@@ -1905,6 +1905,11 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		elseif (tile_x == WorldMapOffsetX) then
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
+			if ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(80, 48 - height_indent)
+			else
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(80, 96)
+			end
 		elseif (tile_y == WorldMapOffsetY) then
 			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
@@ -2975,7 +2980,9 @@ function DrawGrandStrategyInterface()
 
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/filler_bottom.png", 380, Video.Height - 181)
 
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel_grand_strategy.png", 0, Video.Height - 200)
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/minimap_top_grand_strategy.png", 0, Video.Height - 200)
+
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel_grand_strategy.png", 162, Video.Height - 200)
 
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
 
