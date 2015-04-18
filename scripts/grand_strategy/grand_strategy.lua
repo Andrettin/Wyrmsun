@@ -1844,7 +1844,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(b, 16 + 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
+		GrandStrategyMenu:add(b, 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
 		b:setNormalImage(world_map_tile)
 		b:setPressedImage(world_map_tile)
 		b:setDisabledImage(world_map_tile)
@@ -3682,10 +3682,10 @@ function DrawGrandStrategyInterface()
 			end
 		elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
 			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "War") then
-				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 4, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
+				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
 				-- add a button for offering peace
-				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 176 + 24, 340, function()
+				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 243 + 57, Video.Height - (22 * 5) - 8, function()
 					OfferPeace(GrandStrategyFaction.Name, SelectedProvince.Owner)
 					DrawGrandStrategyInterface()
 				end)
@@ -3701,10 +3701,10 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
-				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 4, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
+				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(SelectedProvince.Owner))) then
 				-- add a button for declaring war
-				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 176 + 24, 340, function()
+				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 243 + 57, Video.Height - (22 * 5) - 8, function()
 					DeclareWar(GrandStrategyFaction.Name, SelectedProvince.Owner)
 					DrawGrandStrategyInterface()
 				end)
