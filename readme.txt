@@ -381,6 +381,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Units now make a sound when stepping.
 - Added Crow (graphics by b_o).
 - Added Teuton Krieger (unit graphics by b_o).
+- Fixed issue which caused unit sight to not be perfectly symmetric vertically.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
