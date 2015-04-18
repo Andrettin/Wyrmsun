@@ -37,8 +37,8 @@ GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 GrandStrategyMapWidthIndent = false
 GrandStrategyMapHeightIndent = false
-GrandStrategyMapWidth = Video.Width - 16 - 176
-GrandStrategyMapHeight = Video.Height - 16 - 16
+GrandStrategyMapWidth = Video.Width
+GrandStrategyMapHeight = Video.Height - 16 - 186
 
 function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
@@ -1788,10 +1788,12 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageWidget(world_map_tile) -- not really a site, but it is more expedient to use this method
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
+			elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 32 - height_indent)
 			else
 				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 			end
-			GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+			GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		end
 
 		local world_map_tile = CGraphic:New(file)
@@ -1804,12 +1806,14 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setNormalImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPressedImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent + last_tile_width_modifier, 64)
+		elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 32 - height_indent)
 		else
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 64)
 		end
@@ -1840,7 +1844,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(b, 16 + 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
+		GrandStrategyMenu:add(b, 16 + 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
 		b:setNormalImage(world_map_tile)
 		b:setPressedImage(world_map_tile)
 		b:setDisabledImage(world_map_tile)
@@ -1848,6 +1852,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			b:setSize(42 - width_indent + last_tile_width_modifier, 84)
 		elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
 			b:setSize(84 + (last_tile_width_modifier * 5 / 16), 84)
+		elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+			b:setSize(84, 52 - height_indent)
 		else
 			b:setSize(84, 84)
 		end
@@ -1878,12 +1884,14 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
+		elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 32 - height_indent)
 		else
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 		end
@@ -1894,24 +1902,28 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		world_map_tile:Load()
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageWidget(world_map_tile)
 		if (tile_x == WorldMapOffsetX and tile_y == WorldMapOffsetY) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		elseif (tile_x == WorldMapOffsetX) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 		elseif (tile_y == WorldMapOffsetY) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 80)
 			elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96 + (last_tile_width_modifier / 2), 80)
+			elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 40 - height_indent)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 80)
 			end
 		else
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 16 + 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
+			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 96)
 			elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96 + (last_tile_width_modifier / 2), 96)
+			elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 48 - height_indent)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 96)
 			end
@@ -1938,12 +1950,14 @@ function DrawSettlement(file, tile_x, tile_y, playercolor)
 			DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 		end
 	)
-	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 16 + 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 64 * (tile_y - WorldMapOffsetY) + height_indent)
 	OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
 	OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 	if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 		OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
+	elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 32 - height_indent)
 	else
 		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 	end
@@ -1994,9 +2008,9 @@ function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 			end
 		)
 		if (table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) then
-			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], Video.Width - 176 + 24 + minimap_offset_x + minimap_tile_size_x * tile_x, 26 + minimap_offset_y + minimap_tile_size_y * tile_y)
+			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], UI.Minimap.X + minimap_offset_x + minimap_tile_size_x * tile_x, UI.Minimap.Y + minimap_offset_y + minimap_tile_size_y * tile_y)
 		elseif (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0) then -- if one of the sides of the map is larger than 128, then only draw minimap tiles for one of every four tiles
-			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], Video.Width - 176 + 24 + minimap_offset_x + minimap_tile_size_x * (tile_x / 2), 26 + minimap_offset_y + minimap_tile_size_y * (tile_y / 2))
+			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], UI.Minimap.X + minimap_offset_x + minimap_tile_size_x * (tile_x / 2), UI.Minimap.Y + minimap_offset_y + minimap_tile_size_y * (tile_y / 2))
 		end
 		MinimapTiles[tile_y + 1][tile_x + 1]:setNormalImage(minimap_tile)
 		MinimapTiles[tile_y + 1][tile_x + 1]:setPressedImage(minimap_tile)
@@ -2297,8 +2311,8 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. cost_tooltip)
 	end
-	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
-	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
+	UIElements[table.getn(UIElements)]:setFrameImage(Preference.CommandButtonFrameG)
+	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.CommandButtonFrameG)
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2492,17 +2506,10 @@ function DrawOnScreenTiles()
 		end
 	end
 
-	if (UIFillerRight ~= nil) then
-		GrandStrategyMenu:remove(UIFillerRight)
-	end
-	if (UIStatusLine ~= nil) then
-		GrandStrategyMenu:remove(UIStatusLine)
-	end
-
 	OnScreenTiles = nil
 	OnScreenTiles = {}
 	
-	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
+	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
 		OnScreenTiles[y - WorldMapOffsetY + 1] = {}
 	end
 
@@ -2510,7 +2517,7 @@ function DrawOnScreenTiles()
 	OnScreenSites = {}
 
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
-		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
 			-- set map tile terrain
 			local tile_image = ""
 			if (GetWorldMapTile(x, y) == "Plns") then
@@ -2643,7 +2650,7 @@ function DrawOnScreenTiles()
 				if (key == "Gold") then
 					resource_site_graphics = "tilesets/world/sites/gold_mine.png"
 				end
-				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64)) + 1) then
+				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
 					DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
 				end
 			end
@@ -2653,7 +2660,7 @@ function DrawOnScreenTiles()
 	for key, value in pairs(WorldMapProvinces) do
 		-- draw province borders
 		for i=1,table.getn(WorldMapProvinces[key].BorderTiles) do
-			if (WorldMapProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64)) + 1) then
+			if (WorldMapProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
 				local west_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1] - 1, WorldMapProvinces[key].BorderTiles[i][2])
 				local east_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1] + 1, WorldMapProvinces[key].BorderTiles[i][2])
 				local north_tile_province = GetTileProvince(WorldMapProvinces[key].BorderTiles[i][1], WorldMapProvinces[key].BorderTiles[i][2] - 1)
@@ -2853,7 +2860,7 @@ function DrawOnScreenTiles()
 	-- draw borders between water provinces
 	for key, value in pairs(WorldMapWaterProvinces) do
 		for i=1,table.getn(WorldMapWaterProvinces[key].BorderTiles) do
-			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64)) + 1) then
+			if (WorldMapWaterProvinces[key].BorderTiles[i][1] >= WorldMapOffsetX and WorldMapWaterProvinces[key].BorderTiles[i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapWaterProvinces[key].BorderTiles[i][2] >= WorldMapOffsetY and WorldMapWaterProvinces[key].BorderTiles[i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
 				local west_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] - 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
 				local east_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1] + 1, WorldMapWaterProvinces[key].BorderTiles[i][2])
 				local north_tile_province = GetTileProvince(WorldMapWaterProvinces[key].BorderTiles[i][1], WorldMapWaterProvinces[key].BorderTiles[i][2] - 1)
@@ -2898,7 +2905,7 @@ function DrawOnScreenTiles()
 
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
-		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64) + 1), (table.getn(WorldMapTiles) - 1)) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
 			-- set map tile terrain
 			if (GetWorldMapTile(x, y) == "") then
 				if (x == WorldMapOffsetX and y == WorldMapOffsetY) then
@@ -2914,17 +2921,7 @@ function DrawOnScreenTiles()
 		end
 	end
 
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/filler-left_" .. Video.Height .. ".png")
-	ui_element:Load()
-	UIFillerRight = ImageWidget(ui_element)
-	GrandStrategyMenu:add(UIFillerRight, 0, 0)
-
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/statusline_" .. Video.Width .. ".png")
-	ui_element:Load()
-	UIStatusLine = ImageWidget(ui_element)
-	GrandStrategyMenu:add(UIStatusLine, 16, Video.Height - 16)
-	
-	DrawGrandStrategyResourceBar()
+	DrawGrandStrategyInterface()
 end
 
 function DrawGrandStrategyResourceBar()
@@ -2941,18 +2938,18 @@ function DrawGrandStrategyResourceBar()
 	CommodityButtons = nil
 	CommodityButtons = {}
 	
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/resource_" .. Video.Width .. ".png")
+	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/resource.png")
 	ui_element:Load()
 	UIResourceBar = ImageWidget(ui_element)
-	GrandStrategyMenu:add(UIResourceBar, 16, 0)
+	GrandStrategyMenu:add(UIResourceBar, 0, 0)
 
 	if (GrandStrategyFaction ~= nil) then
 		-- add resource quantities
-		AddGrandStrategyCommodityButton(16 + (100 * 0), 0, "gold")
-		AddGrandStrategyCommodityButton(16 + (100 * 1), 0, "lumber")
-		AddGrandStrategyCommodityButton(16 + (100 * 2), 0, "stone")
-		AddGrandStrategyCommodityButton(16 + (100 * 3), 0, "research")
-		AddGrandStrategyCommodityButton(16 + (100 * 4), 0, "prestige")
+		AddGrandStrategyCommodityButton(154 + (100 * 0), 0, "gold")
+		AddGrandStrategyCommodityButton(154 + (100 * 1), 0, "lumber")
+		AddGrandStrategyCommodityButton(154 + (100 * 2), 0, "stone")
+		AddGrandStrategyCommodityButton(154 + (100 * 3), 0, "research")
+		AddGrandStrategyCommodityButton(154 + (100 * 4), 0, "prestige")
 	end
 	
 end
@@ -2976,11 +2973,14 @@ function DrawGrandStrategyInterface()
 	GrandStrategyLabels = nil
 	GrandStrategyLabels = {}
 
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel_old.png", Video.Width - 176, 160)
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/filler_bottom.png", 380, Video.Height - 181)
 
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel_" .. Video.Height .. ".png", Video.Width - 176, 336)
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/menubutton.png", Video.Width - 176, 0)
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel_grand_strategy.png", 0, Video.Height - 200)
 
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
+
+	DrawGrandStrategyResourceBar()
+	
 	local display_year
 	if (GrandStrategyYear >= 0) then
 		display_year = GrandStrategyYear .. " AD"
@@ -2988,10 +2988,8 @@ function DrawGrandStrategyInterface()
 		display_year = (GrandStrategyYear * -1) .. " BC"
 	end
 	if (GrandStrategyFaction ~= nil) then
-		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. display_year, Video.Width - 176 + 88, 6, Fonts["game"], true, false)
+		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. display_year, Video.Width - 176 + 88, 1, Fonts["game"], true, false)
 	end
-	
-	DrawGrandStrategyResourceBar()
 	
 	if (SelectedProvince ~= nil) then
 		local province_name_text = GetProvinceName(SelectedProvince)
@@ -3003,7 +3001,7 @@ function DrawGrandStrategyInterface()
 				province_name_text = province_name_text .. GetFactionFromName(SelectedProvince.Owner).Title .. " of " .. SelectedProvince.Owner
 			end
 		end
-		AddGrandStrategyLabel(province_name_text, Video.Width - 176 + 4, 171, Fonts["game"], true, true)
+		AddGrandStrategyLabel(province_name_text, UI.InfoPanel.X + 27, UI.InfoPanel.Y + 11, Fonts["game"], true, true)
 
 		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting
 		if (GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name) then
@@ -3023,8 +3021,8 @@ function DrawGrandStrategyInterface()
 						end
 
 						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp" and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + (item_y * (47 + 19 + 4))
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
 							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
@@ -3110,7 +3108,7 @@ function DrawGrandStrategyInterface()
 							AddGrandStrategyLabel(SelectedUnits[string.gsub(unitName, "-", "_")] + selected_veterans, icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
-							if (item_x > 2) then
+							if (item_x > 3) then
 								item_x = 0
 								item_y = item_y + 1
 							end
@@ -3124,12 +3122,12 @@ function DrawGrandStrategyInterface()
 				end
 
 				local item_x = 0
-				local item_y = -2
+				local item_y = -3
 				for i, unitName in ipairs(Units) do
 					if (IsGrandStrategyBuilding(unitName)) then
 						if (IsBuildingAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + (item_y * 47) -- change to 343 to make six buildings fit -- was 340, changed to make more than six buildings fit into the screen
+							local icon_offset_x = UI.InfoPanel.X + 30 + (item_x * 56)
+							local icon_offset_y = UI.InfoPanel.Y + 180 + (item_y * 47) -- change to 343 to make six buildings fit -- was 340, changed to make more than six buildings fit into the screen
 
 							AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, unitName)
 
@@ -3150,7 +3148,7 @@ function DrawGrandStrategyInterface()
 					if (IsHero(unitName)) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							-- add a button to show the heroes in the province (but only if there is actually a hero there)
-							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 								InterfaceState = "Heroes"
 								DrawGrandStrategyInterface()
 							end)
@@ -3171,23 +3169,24 @@ function DrawGrandStrategyInterface()
 				end
 			elseif (InterfaceState == "town-hall" or InterfaceState == "stronghold") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-town-hall"), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-town-hall"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_y = -2
 
-				AddGrandStrategyLabel("Province Culture: " .. CapitalizeString(SelectedProvince.Civilization), Video.Width - 176 + 4, 340 + (item_y * 47), Fonts["game"], true, true)
+				AddGrandStrategyLabel("Province Culture: " .. CapitalizeString(SelectedProvince.Civilization), UI.InfoPanel.X + 27, UI.InfoPanel.Y + 180 + (item_y * 47), Fonts["game"], true, true)
 				item_y = item_y + 1
 
+				item_y = 0
 				for key, value in pairs(GrandStrategyCommodities) do
-					local icon_offset_y = 340 + (item_y * 47)
+					local icon_offset_y = Video.Height - 186 + 8 + (item_y * 47)
 
-					AddUIElement("ui/" .. string.lower(key) .. ".png", Video.Width - 176 + 9, icon_offset_y + 3)
+					AddUIElement("ui/" .. string.lower(key) .. ".png", Video.Width - 243 + 12, icon_offset_y + 3)
 
 					-- add trade bid/offer arrows
-					local b = AddGrandStrategyImageButton("", "", Video.Width - 176 + 112 - 2 - 24, icon_offset_y, function()
+					local b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 - 2 - 24, icon_offset_y, function()
 						if (GrandStrategyFaction.Trade[key] > 0 and GrandStrategyFaction.Trade[key] < 100) then
 							GrandStrategyFaction.Trade[key] = 0
 						elseif (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade[key] - 100) * GetCommodityPrice(key) / 100) then
@@ -3210,7 +3209,7 @@ function DrawGrandStrategyInterface()
 						b:setTooltip("Decrease offer of " .. key .. " by 100")
 					end
 
-					local b = AddGrandStrategyImageButton("", "", Video.Width - 176 + 112 + 2 + 46 - 20, icon_offset_y, function()
+					local b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 + 2 + 46 - 20, icon_offset_y, function()
 						if (GrandStrategyFaction.Trade[key] < 0 and GrandStrategyFaction.Trade[key] > -100) then
 							GrandStrategyFaction.Trade[key] = 0
 						elseif (GrandStrategyFaction.Commodities[key] >= GrandStrategyFaction.Trade[key] + 100) then
@@ -3233,14 +3232,14 @@ function DrawGrandStrategyInterface()
 						b:setTooltip("Decrease bid of " .. key .. " by 100")
 					end
 
-					AddGrandStrategyLabel(GetCommodityPrice(key), Video.Width - 176 + 9 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
-					AddGrandStrategyLabel(GrandStrategyFaction.Trade[key], Video.Width - 176 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetCommodityPrice(key), Video.Width - 243 + 12 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
+					AddGrandStrategyLabel(GrandStrategyFaction.Trade[key], Video.Width - 243 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
 					
 					item_y = item_y + 1
 				end
 				
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -3257,9 +3256,9 @@ function DrawGrandStrategyInterface()
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "barracks") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
-					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-barracks"), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-barracks"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				-- add units buttons for training
@@ -3278,8 +3277,8 @@ function DrawGrandStrategyInterface()
 						end
 
 						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + ((item_y - 1) * (47 + 19 + 4))
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
 							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
@@ -3381,7 +3380,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -3398,18 +3397,18 @@ function DrawGrandStrategyInterface()
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "lumber-mill") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
-					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
-				local item_y = -2
+				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (string.find(unitName, "upgrade-") ~= nil) then
 						if (GetUnitTypeInterfaceState(unitName) == InterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + (item_y * 47)
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
 							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
 							
@@ -3423,7 +3422,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -3440,18 +3439,18 @@ function DrawGrandStrategyInterface()
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "smithy") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
-					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
-				local item_y = -2
+				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (string.find(unitName, "upgrade-") ~= nil) then
 						if (GetUnitTypeInterfaceState(unitName) == InterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + (item_y * 47)
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
 							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
 							
@@ -3465,7 +3464,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -3481,7 +3480,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "mercenary-camp") then
-				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				-- add units buttons for hiring generic mercenaries
 				local item_x = 0
@@ -3499,8 +3498,8 @@ function DrawGrandStrategyInterface()
 						end
 
 						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + ((item_y - 1) * (47 + 19 + 4))
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
 							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
@@ -3603,11 +3602,11 @@ function DrawGrandStrategyInterface()
 				
 				-- add units buttons for hiring specific mercenary groups
 				item_x = 0
-				item_y = 0
+				item_y = 1
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Mercenary") and IsMercenaryAvailableForHiring(SelectedProvince, unitName)) then -- the unit's gold cost is required to be more than 0 to avoid upgraded versions of the same mercenary group to be available for hiring as well
-						local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-						local icon_offset_y = 340 + (item_y * 47)
+						local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+						local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47) + 19 + 4
 
 						AddGrandStrategyMercenaryButton(icon_offset_x, icon_offset_y, unitName)
 							
@@ -3620,7 +3619,7 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -3636,15 +3635,15 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Heroes") then
-				AddGrandStrategyLabel("Heroes", Video.Width - 176 + 88, 213, Fonts["game"], true, false)
+				AddGrandStrategyLabel("Heroes", UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				local item_x = 0
-				local item_y = -2
+				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
-							local icon_offset_x = Video.Width - 176 + 9 + (item_x * 56)
-							local icon_offset_y = 340 + (item_y * 47)
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
 							AddGrandStrategyHeroButton(icon_offset_x, icon_offset_y, unitName)
 							
@@ -3658,7 +3657,7 @@ function DrawGrandStrategyInterface()
 				end
 				
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 176 + 24, Video.Height - (22 * 3) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
@@ -3676,7 +3675,7 @@ function DrawGrandStrategyInterface()
 			end
 		elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
 			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "War") then
-				AddGrandStrategyLabel("At War with Us", Video.Width - 176 + 4, 213, Fonts["game"], true, true)
+				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 4, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
 				-- add a button for offering peace
 				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 176 + 24, 340, function()
@@ -3695,7 +3694,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(128, 20)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
-				AddGrandStrategyLabel("At War with Us (Peace Offered)", Video.Width - 176 + 4, 213, Fonts["game"], true, true)
+				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 4, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(SelectedProvince.Owner))) then
 				-- add a button for declaring war
 				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 176 + 24, 340, function()
@@ -3718,7 +3717,7 @@ function DrawGrandStrategyInterface()
 	end
 
 	-- add an end turn button
-	local b = AddGrandStrategyImageButton("~!End Turn", "e", Video.Width - 176 + 24, Video.Height - (22 * 2) - 8, function()
+	local b = AddGrandStrategyImageButton("~!End Turn", "e", Video.Width - 243 + 57, Video.Height - (22 * 1) - 8, function()
 		if (ProcessingEndTurn == false) then
 			EndTurn()
 		end
@@ -3736,7 +3735,7 @@ function DrawGrandStrategyInterface()
 	b:setFont(Fonts["game"])
 	
 	-- add a menu button
-	local b = AddGrandStrategyImageButton("Menu (~<F10~>)", "", Video.Width - 176 + 24, Video.Height - (22 * 1) - 8, function()
+	local b = AddGrandStrategyImageButton("Menu (~<F10~>)", "", 26, 1, function()
 		if (ProcessingEndTurn == false) then
 			RunGrandStrategyGameMenu()
 		end
@@ -3744,13 +3743,13 @@ function DrawGrandStrategyInterface()
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
-	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 	g_btn:Load()
 	g_btp:Load()
 	b:setNormalImage(g_btn)
 	b:setPressedImage(g_btp)
-	b:setSize(128, 20)
+	b:setSize(99, 13)
 	b:setFont(Fonts["game"])
 end
 
@@ -3776,10 +3775,11 @@ function DrawMinimap()
 		MinimapTiles[y] = {}
 	end
 	
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/minimap.png")
+	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/infopanel.png")
 	ui_element:Load()
 	UIMinimap = ImageWidget(ui_element)
-	GrandStrategyMenu:add(UIMinimap, Video.Width - 176, 24)
+	UIMinimap:setSize(162, 200)
+	GrandStrategyMenu:add(UIMinimap, 0, Video.Height - 200)
 
 	for key, value in pairs(WorldMapProvinces) do
 		DrawMinimapProvince(WorldMapProvinces[key])
@@ -4464,8 +4464,6 @@ function ClearGrandStrategyVariables()
 
 	OnScreenTiles = nil
 	OnScreenSites = nil
-	UIFillerRight = nil
-	UIStatusLine = nil
 	UIResourceBar = nil
 
 	UIElements = nil
