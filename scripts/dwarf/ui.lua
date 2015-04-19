@@ -112,15 +112,15 @@ function AddSelectedButton(x, y)
 	UI.SelectedButtons:push_back(b)
 end
 
-AddSelectedButton(9, 9)
-AddSelectedButton(65, 9)
-AddSelectedButton(121, 9)
-AddSelectedButton(9, 63)
-AddSelectedButton(65, 63)
-AddSelectedButton(121, 63)
-AddSelectedButton(9, 117)
-AddSelectedButton(65, 117)
-AddSelectedButton(121, 117)
+AddSelectedButton(30, 15)
+AddSelectedButton(86, 15)
+AddSelectedButton(142, 15)
+AddSelectedButton(30, 69)
+AddSelectedButton(86, 69)
+AddSelectedButton(142, 69)
+AddSelectedButton(30, 123)
+AddSelectedButton(86, 123)
+AddSelectedButton(142, 123)
 
 UI.MaxSelectedFont = Fonts["game"]
 UI.MaxSelectedTextX = 162 + 10

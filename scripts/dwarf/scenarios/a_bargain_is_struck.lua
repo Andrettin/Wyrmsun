@@ -549,7 +549,13 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+			if (
+				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
+				and GetPlayerData(i, "RaceName") == "dwarf"
+				and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+				and (IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
+				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
+			) then
 				player = i
 				return true
 			end
@@ -572,7 +578,10 @@ AddTrigger(
 					end
 				end
 				
-				if (IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and caravans_loaded) then
+				if (
+					(IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(player, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
+					and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
+					and caravans_loaded) then
 					Event(
 						"Pypo I",
 						"All the silver is there too. Proceed with the task, Rugnur!",
@@ -618,7 +627,13 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan")) then
+			if (
+				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
+				and GetPlayerData(i, "RaceName") == "dwarf"
+				and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
+				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
+			) then
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
@@ -637,7 +652,10 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		if (IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+		if (
+			(IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
+			and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
+		) then
 			Event(
 				"Rugnur",
 				"That's the last caravan! We will commence work immediately.",
@@ -691,7 +709,16 @@ AddTrigger(
 		end
 		for i=0,14 do
 			-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
-			if ((SyncRand(100) + 1) <= 10 and PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") and IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") and IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit")) then
+			if (
+				(SyncRand(100) + 1) <= 10
+				and PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
+				and GetPlayerData(i, "RaceName") == "dwarf"
+				and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
+				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
+				and (IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
+				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
+			) then
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))

@@ -505,7 +505,14 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") and (GameCycle > 1500 or (GrandStrategy and GameCycle > 500)) and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (
+					GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")
+					and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+					and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1
+					and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1
+					and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1
+					and (GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 or GetPlayerData(i, "UnitTypesCount", "unit-dwarven-stronghold") >= 1)
+				) then
 					player = i
 					return true
 				end
@@ -760,6 +767,7 @@ AddTrigger(
 				RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 				RemovePlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
 				KillUnitAt("unit-dwarven-town-hall", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-town-hall"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-stronghold", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-stronghold"), {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-mushroom-farm", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-mushroom-farm"), {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-barracks", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-barracks"), {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-smithy", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-smithy"), {0, 0}, {256, 256})

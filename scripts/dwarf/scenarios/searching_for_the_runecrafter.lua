@@ -174,7 +174,7 @@ AddTrigger(
 				{function(s)
 				Event(
 					"Baglur",
-					"We need to find the mage Thursagan and convince him to return to the citadel with us. He's somewhere up here.",
+					"We need to find the sage Thursagan and convince him to return to the citadel with us. He's somewhere up here.",
 					player,
 					{"~!Continue"},
 					{function(s)
@@ -593,7 +593,10 @@ AddTrigger(
 AddTrigger(
 	function()
 		for i=0,14 do
-			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-town-hall")) then
+			if (
+				PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall")
+				and (IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-stronghold"))
+			) then
 				player = i
 				return true
 			end

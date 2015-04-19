@@ -418,8 +418,8 @@ function RunGrandStrategyGame()
 	local offy = (Video.Height - 480) / 2
 
 	DrawOnScreenTiles()
-	DrawGrandStrategyInterface()
 	DrawMinimap()
+	DrawGrandStrategyInterface()
 	
 	-- add a pseudo-button to bring up the menu
 	GrandStrategyMenu:addButton("", "f10", 0, 0,
@@ -780,7 +780,7 @@ function EndTurn()
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						if (WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] > 0) then
+						if (WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] > 0 and GetUnitTypeUpkeep(unitName) > 0) then
 							if (disband_quota > WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)) then
 								disband_quota = disband_quota - WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
 								WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = 0
@@ -2052,7 +2052,7 @@ function AddGrandStrategyLabel(text, x, y, font, center, multiline)
 		GrandStrategyLabels[table.getn(GrandStrategyLabels)]:setFont(font)
 		GrandStrategyLabels[table.getn(GrandStrategyLabels)]:adjustSize()
 		if (center == nil or center == true) then -- center text by default
-			x = x - GrandStrategyLabels[table.getn(GrandStrategyLabels)]:getWidth() / 2
+			x = math.max((x - GrandStrategyLabels[table.getn(GrandStrategyLabels)]:getWidth() / 2), 1)
 		end
 	end
 	GrandStrategyMenu:add(GrandStrategyLabels[table.getn(GrandStrategyLabels)], x, y)
@@ -2217,11 +2217,11 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 
 	local veterans = 0
 	local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unit_type, "Class"), GetUnitTypeData(unit_type, "Civilization"))
-	if (veteran_unit_type ~= nil) then
+	if (veteran_unit_type ~= nil and GetUnitTypeData(unit_type, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
 		veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
 	end
 	local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unit_type, "Class"), GetUnitTypeData(unit_type, "Civilization"))
-	if (heroic_unit_type ~= nil) then
+	if (heroic_unit_type ~= nil and GetUnitTypeData(unit_type, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
 		veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
 	end
 
@@ -2995,7 +2995,7 @@ function DrawGrandStrategyInterface()
 		display_year = (GrandStrategyYear * -1) .. " BC"
 	end
 	if (GrandStrategyFaction ~= nil) then
-		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. display_year, Video.Width - 176 + 88, 1, Fonts["game"], true, false)
+		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. display_year, 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 	end
 	
 	if (SelectedProvince ~= nil) then
@@ -3021,13 +3021,17 @@ function DrawGrandStrategyInterface()
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
 							veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
+						else
+							veteran_unit_type = nil
 						end
 						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (heroic_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
 							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
+						else
+							heroic_unit_type = nil
 						end
 
-						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp" and Video.Height >= 600) or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
+						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp") or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
@@ -3119,9 +3123,7 @@ function DrawGrandStrategyInterface()
 								item_x = 0
 								item_y = item_y + 1
 							end
-							if (item_y > 0 and Video.Height <= 480) then -- don't show more than 3 units if the resolution height is too small to show that
-								break
-							elseif (item_y > 2 and Video.Height <= 600) then -- don't show more than 9 units if the resolution height is too small to show that
+							if (item_y > 2) then
 								break
 							end
 						end
@@ -3155,20 +3157,20 @@ function DrawGrandStrategyInterface()
 					if (IsHero(unitName)) then
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							-- add a button to show the heroes in the province (but only if there is actually a hero there)
-							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 								InterfaceState = "Heroes"
 								DrawGrandStrategyInterface()
 							end)
 							b:setBaseColor(Color(0,0,0,0))
 							b:setForegroundColor(Color(0,0,0,0))
 							b:setBackgroundColor(Color(0,0,0,0))
-							local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-							local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+							local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+							local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 							g_btn:Load()
 							g_btp:Load()
 							b:setNormalImage(g_btn)
 							b:setPressedImage(g_btp)
-							b:setSize(128, 20)
+							b:setSize(99, 13)
 							b:setFont(Fonts["game"])
 							break
 						end
@@ -3246,20 +3248,20 @@ function DrawGrandStrategyInterface()
 				end
 				
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "barracks") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
@@ -3378,7 +3380,7 @@ function DrawGrandStrategyInterface()
 							AddGrandStrategyLabel(SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
-							if (item_x > 2) then
+							if (item_x > 3) then
 								item_x = 0
 								item_y = item_y + 1
 							end
@@ -3387,20 +3389,20 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "lumber-mill") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
@@ -3420,7 +3422,7 @@ function DrawGrandStrategyInterface()
 							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
 							
 							item_x = item_x + 1
-							if (item_x > 2) then
+							if (item_x > 3) then
 								item_x = 0
 								item_y = item_y + 1
 							end
@@ -3429,20 +3431,20 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "smithy") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
@@ -3462,7 +3464,7 @@ function DrawGrandStrategyInterface()
 							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
 							
 							item_x = item_x + 1
-							if (item_x > 2) then
+							if (item_x > 3) then
 								item_x = 0
 								item_y = item_y + 1
 							end
@@ -3471,20 +3473,20 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "mercenary-camp") then
 				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
@@ -3599,7 +3601,7 @@ function DrawGrandStrategyInterface()
 							AddGrandStrategyLabel(SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
-							if (item_x > 2) then
+							if (item_x > 3) then
 								item_x = 0
 								item_y = item_y + 1
 							end
@@ -3618,7 +3620,7 @@ function DrawGrandStrategyInterface()
 						AddGrandStrategyMercenaryButton(icon_offset_x, icon_offset_y, unitName)
 							
 						item_x = item_x + 1
-						if (item_x > 2) then
+						if (item_x > 3) then
 							item_x = 0
 							item_y = item_y + 1
 						end
@@ -3626,20 +3628,20 @@ function DrawGrandStrategyInterface()
 				end
 
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (InterfaceState == "Heroes") then
 				AddGrandStrategyLabel("Heroes", UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
@@ -3655,7 +3657,7 @@ function DrawGrandStrategyInterface()
 							AddGrandStrategyHeroButton(icon_offset_x, icon_offset_y, unitName)
 							
 							item_x = item_x + 1
-							if (item_x > 2) then
+							if (item_x > 3) then
 								item_x = 0
 								item_y = item_y + 1
 							end
@@ -3664,20 +3666,20 @@ function DrawGrandStrategyInterface()
 				end
 				
 				-- add a button to go back to the main province interface
-				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 57, Video.Height - (22 * 2) - 8, function()
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
 					InterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			end
 		elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
@@ -3685,46 +3687,46 @@ function DrawGrandStrategyInterface()
 				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
 				-- add a button for offering peace
-				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 243 + 57, Video.Height - (22 * 5) - 8, function()
+				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
 					OfferPeace(GrandStrategyFaction.Name, SelectedProvince.Owner)
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
 				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(SelectedProvince.Owner))) then
 				-- add a button for declaring war
-				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 243 + 57, Video.Height - (22 * 5) - 8, function()
+				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
 					DeclareWar(GrandStrategyFaction.Name, SelectedProvince.Owner)
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
 				b:setForegroundColor(Color(0,0,0,0))
 				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 				g_btn:Load()
 				g_btp:Load()
 				b:setNormalImage(g_btn)
 				b:setPressedImage(g_btp)
-				b:setSize(128, 20)
+				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			end
 		end
 	end
 
 	-- add an end turn button
-	local b = AddGrandStrategyImageButton("~!End Turn", "e", Video.Width - 243 + 57, Video.Height - (22 * 1) - 8, function()
+	local b = AddGrandStrategyImageButton("~!End Turn", "e", Video.Width - 243 + 72, Video.Height - (15 * 1) - 8, function()
 		if (ProcessingEndTurn == false) then
 			EndTurn()
 		end
@@ -3732,13 +3734,13 @@ function DrawGrandStrategyInterface()
 	b:setBaseColor(Color(0,0,0,0))
 	b:setForegroundColor(Color(0,0,0,0))
 	b:setBackgroundColor(Color(0,0,0,0))
-	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-normal.png")
-	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thin-medium-pressed.png")
+	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
 	g_btn:Load()
 	g_btp:Load()
 	b:setNormalImage(g_btn)
 	b:setPressedImage(g_btp)
-	b:setSize(128, 20)
+	b:setSize(99, 13)
 	b:setFont(Fonts["game"])
 	
 	-- add a menu button
@@ -5124,6 +5126,8 @@ function GetUnitTypeUpkeep(unit_type)
 		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 		return 25
+	elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
+		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "thief") then
 		return 25
 	elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
@@ -5147,6 +5151,8 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 			return "barracks"
+		elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
+			return "stables" -- should be barracks, but keep it that way for now, to make it not be trainable
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
@@ -5322,7 +5328,7 @@ function IsOffensiveMilitaryUnit(unit_type)
 end
 
 function IsMilitaryUnit(unit_type)
-	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and GetUnitTypeData(unit_type, "Hero") == false and GetUnitTypeData(unit_type, "Class") ~= "worker") then
+	if (string.find(unit_type, "upgrade-") == nil and GetUnitTypeData(unit_type, "Building") == false and GetUnitTypeData(unit_type, "Demand") > 0 and GetUnitTypeData(unit_type, "Hero") == false and GetUnitTypeData(unit_type, "Class") ~= "worker" and GetUnitTypeData(unit_type, "Class") ~= "caravan") then
 		return true
 	else
 		return false
