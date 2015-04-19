@@ -30,7 +30,7 @@
 CivilizationsEncyclopedia = {
 	Dwarf = {
 		Name = _("~!Dwarf"),
-		Description = _("Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many dwarves.")
+		Description = _("Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them.")
 	},
 	Gnome = {
 		Name = _("Gno~!me"),
