@@ -1043,6 +1043,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
 				and WorldMapProvinces.Austria.Owner == "Rome"
+				and WorldMapProvinces.Bohemia.Owner == "Marcomanni Tribe"
 			) then
 				return true
 			else
@@ -1053,6 +1054,7 @@ local GermanicEvents = {
 		Options = {"~!Yes", "~!No"},
 		OptionEffects = {
 			function(s)
+				DeclareWar(EventFaction.Name, "Rome")
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe") then
 					GameSettings.Presets[0].Type = PlayerComputer
 					GrandStrategyEventMap = true
@@ -1090,6 +1092,63 @@ local GermanicEvents = {
 				end
 			end,
 			function(s)
+			end
+		}
+	},
+	TheRazingOfOpitergium = {
+		Name = "The Razing of Opitergium",
+		Description = "Leaving a trail of destruction behind us, we have now reached Italy and lay siege to the Roman city of Opitergium.",
+		RequiredEvents = {
+			TheSackOfIuvavum = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Marcomanni Tribe"
+				and WorldMapProvinces.NorthItaly.Owner == "Rome"
+				and WorldMapProvinces.Austria.Owner == "Marcomanni Tribe"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/earth/oderzo.smp")
+					CurrentQuest = "The Razing of Opitergium"
+					RunMap("maps/earth/oderzo.smp")
+					GrandStrategyEventMap = false
+					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
+						for i, unitName in ipairs(Units) do
+							if (IsMilitaryUnit(unitName)) then
+								WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							elseif (IsHero(unitName)) then
+								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+									WorldMapProvinces.NorthItaly.Heroes[string.gsub(unitName, "-", "_")] = 2
+								end
+							end
+						end
+						CenterMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
+					elseif (GameResult == GameDefeat) then
+						for i, unitName in ipairs(Units) do
+							if (IsMilitaryUnit(unitName)) then
+								WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							end
+						end
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Marcomanni Tribe") then
+					AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")])
+							WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = 0
+						end
+					end
+				end
 			end
 		}
 	},

@@ -301,7 +301,7 @@ function RunGrandStrategyGameSetupMenu()
 							SetWorldMapTile(x, y, "Hill")
 						end
 					elseif (GetWorldMapTile(x, y) == "Mntn") then -- implement variations for mountain tiles
-						if (TileHasResource(x, y, "Stone", false) == false) then
+						if (TileHasResource(x, y, "Stone", false) == false and TileHasResource(x, y, "Gold", true) == false) then -- only add stone resource if has no gold
 							table.insert(WorldMapResources.Stone, {x, y, true})
 						end
 						RandomNumber = SyncRand(1) + 1
@@ -4745,8 +4745,8 @@ function WarGrandStrategyGameMenu(background)
 
 	function menu:resize(w, h)
 		menu:setSize(w, h)
-		menu:setPosition(16 + (Video.Width - 176 - menu:getWidth()) / 2,
-			(Video.Height - menu:getHeight()) / 2)
+		menu:setPosition((Video.Width - menu:getWidth()) / 2,
+      (Video.Height - menu:getHeight()) / 2)
 	end
 
 	menu:resize(256, 288)

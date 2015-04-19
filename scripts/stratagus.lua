@@ -376,6 +376,10 @@ function SinglePlayerTriggers()
 		end
 	end
 	
+	if (CurrentQuest ~= "" and GetQuestFromName(CurrentQuest).Scenario ~= nil) then
+		Load(GetQuestFromName(CurrentQuest).Scenario)
+	end
+
 	if (LoadedGame == false) then
 		DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
 		if (GrandStrategy == false) then
@@ -399,10 +403,6 @@ function SinglePlayerTriggers()
 	-- for now events are limited to single player
 	if (not IsNetworkGame()) then
 		EventTriggers()
-	end
-
-	if (CurrentQuest ~= "" and GetQuestFromName(CurrentQuest).Scenario ~= nil) then
-		Load(GetQuestFromName(CurrentQuest).Scenario)
 	end
 
 	-- setup graphics variations

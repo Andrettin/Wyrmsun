@@ -153,7 +153,10 @@ AddTrigger(
 						end
 						ActionVictory()
 					end
-				end}
+				end},
+				nil,
+				nil,
+				GrandStrategy
 			)
 			end}
 		)
