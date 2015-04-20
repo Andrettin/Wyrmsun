@@ -894,8 +894,17 @@ DefineAnimations("animations-mushroom-patch", {
 })
 
 DefineAnimations("animations-item", {
-  Still = BuildingStill,
-  Death = BuildingStill,
+	Still = BuildingStill,
+	Death = BuildingStill,
+})
+
+DefineAnimations("animations-potion", {
+	Still = BuildingStill,
+	Death = {
+		"unbreakable begin",
+		"exact-frame 0", "wait 3", "exact-frame 1", "wait 3", "exact-frame 2", "wait 100", "exact-frame 3", "wait 100", "exact-frame 4",
+		"unbreakable end", "wait 1",
+	},
 })
 
 DefineAnimations("animations-gold-chest", {

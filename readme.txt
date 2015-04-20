@@ -265,6 +265,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Items
 - Added Potion of Slowness (graphics by b_o).
+- Added death animations for potions (graphics by b_o).
 
 * Maps
 - Dwarven Militia are now possible to be generated in dungeons.
