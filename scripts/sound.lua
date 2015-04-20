@@ -87,7 +87,8 @@ MakeSound("basic-dwarf-voices-acknowledge", {
 })
 MakeSound("basic-dwarf-voices-attack", {
 	"dwarf/basic_voices/attack-01.wav",
-	"dwarf/basic_voices/attack-02.wav"
+	"dwarf/basic_voices/attack-02.wav",
+	"dwarf/basic_voices/move-02.wav"
 })
 MakeSound("basic-dwarf-voices-move", {
 	"dwarf/basic_voices/move-01.wav",
