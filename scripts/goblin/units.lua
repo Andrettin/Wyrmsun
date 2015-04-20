@@ -10,7 +10,7 @@
 --
 --      units.ccl - Define the goblin unit-types.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -82,8 +82,10 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
+		"repair", "basic-goblin-voices-repair",
+		"attack", "basic-goblin-voices-attack",
 		"ready", "goblin-worker-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -103,8 +105,9 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
 --		"ready", "goblin-worker-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -127,8 +130,9 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
 		"ready", "goblin-impaler-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead",
 		"hit", "spear-attack",
 		"miss", "spear-miss"
@@ -149,8 +153,9 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
 		"ready", "goblin-archer-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -171,7 +176,7 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "explosion"
 	}
 } )
@@ -208,8 +213,9 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",
+		"attack", "basic-goblin-voices-attack",
 		"ready", "goblin-glider-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead"
 	}
 } )
@@ -220,7 +226,10 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 	Civilization = "goblin",
 	Description = _("The town hall is the center of a goblin settlement's life."),
 	Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
-	Animations = "animations-building", Icon = "icon-goblin-town-hall"
+	Animations = "animations-building", Icon = "icon-goblin-town-hall",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
@@ -228,7 +237,10 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Civilization = "goblin",
 	Description = _("Goblin farms provide sustenance for their settlements. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."),
 	Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
-	Icon = "icon-goblin-farm"
+	Icon = "icon-goblin-farm",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
@@ -236,7 +248,10 @@ DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
 	Civilization = "goblin",
 	Description = _("Within mess halls goblin warriors gather to hone their skills and plan raids on nearby settlements."),
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-goblin-mess-hall"
+	Animations = "animations-building", Icon = "icon-goblin-mess-hall",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
@@ -244,7 +259,10 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 	Civilization = "goblin",
 	Description = _("Although exhibiting a crude exterior, the goblin lumber mills carry saws as technologically advanced as that of other societies"),
 	Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
-	Icon = "icon-goblin-lumber-mill"
+	Icon = "icon-goblin-lumber-mill",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
@@ -253,7 +271,10 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	Description = _("Goblins construct their forges out of the skulls of massive birds found on Nidavellir."),
 	Background = _("The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'."),
 	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
-	Icon = "icon-goblin-smithy"
+	Icon = "icon-goblin-smithy",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
@@ -269,8 +290,9 @@ DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-acknowledge",
 		"ready", "goblin-impaler-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"

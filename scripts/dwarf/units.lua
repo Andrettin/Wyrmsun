@@ -78,8 +78,9 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -115,8 +116,9 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "dwarven-miner-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss",
@@ -172,8 +174,9 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
@@ -272,8 +275,9 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-steelclad-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
@@ -329,8 +333,9 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Thane"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-steelclad-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
@@ -389,8 +394,9 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-scout-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
 } )
@@ -466,8 +472,9 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Sounds = {
 		"selected", "yale-rider-selected-group",
 		"acknowledge", "yale-rider-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "yale-rider-ready",
+		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
@@ -485,7 +492,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "dwarven-ballista-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "explosion"
 } } )
 
@@ -547,8 +554,9 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-gryphon-rider-ready",
---		"help", "critter-help",
+		"help", "basic-dwarf-voices-help",
 		"dead", "gryphon-dead"
 	}
 } )
@@ -562,7 +570,10 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Shadow = {"file", "dwarf/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-dwarven-town-hall",
 	Costs = {"time", 255, "gold", 1200, "lumber", 600, "stone", 200},
-	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1}
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
@@ -574,7 +585,10 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Icon = "icon-dwarven-stronghold",
 	Costs = {"time", 200, "gold", 2200, "lumber", 275, "stone", 825},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
@@ -587,7 +601,10 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Icon = "icon-dwarven-mushroom-farm",
 	Costs = {"time", 100, "gold", 500, "lumber", 190, "stone", 60},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
-	Drops = {"unit-wood-pile"}
+	Drops = {"unit-wood-pile"},
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
@@ -598,7 +615,10 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
 	Icon = "icon-dwarven-barracks",
 	Costs = {"time", 200, "gold", 700, "lumber", 340, "stone", 110},
-	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1}
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
@@ -611,7 +631,10 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 --	Costs = {"time", 165, "gold", 660, "lumber", 495},
 	Costs = {"time", 165, "gold", 660, "lumber", 370, "stone", 125},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
@@ -628,7 +651,10 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
 	PersonalNamePrefixes = {"The Black", "Brisings'", "Brokk's", "Eitri's", "The Fiery", "Ivaldi's", "Regin's"}, -- The Brisings were a group of dwarves who crafter a magnificent necklace; Brokk and Eitri were skilled dwarven smiths; Ivaldi's sons were skilled dwarven smiths; Regin was a dwarven smith in the Siegfried myth
-	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"}
+	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"},
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
@@ -640,7 +666,10 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	Costs = {"time", 60, "gold", 550, "lumber", 50, "stone", 150},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
-	Construction = "construction-dwarven-sentry-tower"
+	Construction = "construction-dwarven-sentry-tower",
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-dwarven-guard-tower", { Name = _("Guard Tower"),
@@ -651,7 +680,10 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = _("Guard Tower"),
 	Animations = "animations-dwarven-guard-tower", Icon = "icon-dwarven-guard-tower",
 	Costs = {"time", 140, "gold", 500, "lumber", 40, "stone", 110},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),

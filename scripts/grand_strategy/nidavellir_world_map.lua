@@ -273,7 +273,6 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
 	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_town_hall = 2
 	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_barracks = 2
-	WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
 	WorldMapProvinces.Lyr.Units.unit_dwarven_axefighter = 0
 end
 

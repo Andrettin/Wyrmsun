@@ -375,7 +375,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Slug (graphics by b_o).
 - Added Blood Bat and Dread Bat (graphics by b_o).
 - Goblin Spearmen now have a bonus against cavalry, but have lower normal damage.
-- Added voiceovers for the gnomes.
+- Added voiceovers for the gnomes (by Brian Jennings).
 - Added new sounds for when a worker is repairing/building (by Wildfire Games).
 - Rats will now sometimes be hiding within tree stumps.
 - Units now make a sound when stepping.
@@ -383,6 +383,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added Teuton Krieger (unit graphics by b_o).
 - Fixed issue which caused unit sight to not be perfectly symmetric vertically.
 - "Coward" units (i.e. workers) now attack back if their attacker is also "coward", or has 3 HP or less.
+- Added more voice sounds for the dwarves and goblins (by b_o).
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

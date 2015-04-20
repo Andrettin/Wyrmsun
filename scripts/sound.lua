@@ -85,7 +85,20 @@ MakeSound("basic-dwarf-voices-acknowledge", {
 	"dwarf/basic_voices/acknowledge-6.wav",
 	"dwarf/basic_voices/acknowledge-7.wav"
 })
-MakeSound("basic-dwarf-voices-help", "misc/fanfare_short.wav")
+MakeSound("basic-dwarf-voices-attack", {
+	"dwarf/basic_voices/attack-01.wav",
+	"dwarf/basic_voices/attack-02.wav"
+})
+MakeSound("basic-dwarf-voices-move", {
+	"dwarf/basic_voices/move-01.wav",
+	"dwarf/basic_voices/move-02.wav"
+})
+MakeSound("basic-dwarf-voices-help", {
+	"dwarf/basic_voices/help-01.wav"
+})
+MakeSound("basic-dwarf-voices-help-town", {
+	"dwarf/basic_voices/town-attack.wav"
+})
 MakeSound("basic-dwarf-voices-dead", {
 	"dwarf/basic_voices/dead-1.wav",
 	"dwarf/basic_voices/dead-2.wav"
@@ -133,6 +146,7 @@ MakeSound("yale-rider-acknowledge", {
 	"neutral/yale/yale_ack02.wav",
 	"neutral/yale/yale_ack03.wav"
 })
+MakeSound("dwarven-yale-rider-ready", "dwarf/yale_rider/yale-rider-ready.wav")
 
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -273,6 +287,21 @@ MakeSound("basic-goblin-voices-acknowledge", {
 	"goblin/basic_voices/acknowledge-10.wav",
 	"goblin/basic_voices/acknowledge-11.wav"
 })
+MakeSound("basic-goblin-voices-attack", {
+	"goblin/basic_voices/attack-1.wav",
+	"goblin/basic_voices/attack-2.wav",
+	"goblin/basic_voices/attack-3.wav",
+	"goblin/basic_voices/attack-4.wav"
+})
+MakeSound("basic-goblin-voices-repair", {
+	"goblin/basic_voices/repair.wav"
+})
+MakeSound("basic-goblin-voices-help", {
+	"goblin/basic_voices/under-attack.wav"
+})
+MakeSound("basic-goblin-voices-help-town", {
+	"goblin/basic_voices/town-attack.wav"
+})
 MakeSound("basic-goblin-voices-dead", {
 	"goblin/basic_voices/goblin-die-1.wav",
 	"goblin/basic_voices/goblin-die-2.wav"
@@ -288,6 +317,7 @@ MakeSound("goblin-worker-ready", {
 })
 MakeSound("goblin-impaler-ready", "goblin/impaler/goblin-impaler-ready.wav")
 MakeSound("goblin-archer-ready", "goblin/archer/goblin-archer-ready.wav")
+MakeSound("goblin-assassin-ready", "goblin/assassin/assassin-ready.wav")
 MakeSound("goblin-shaman-ready", "goblin/shaman/goblin-shaman-ready.wav")
 MakeSound("goblin-glider-ready", "goblin/glider/glider-ready.wav")
 MakeSound("glider-flying", "goblin/glider/glider-flying.wav")
@@ -473,6 +503,7 @@ MakeSound("bow-hit", "missiles/bow_hit.wav")
 SetSoundRange("bow-hit", 32)
 MakeSound("throwing-axe", "missiles/throwing_axe.wav")
 SetSoundRange("throwing-axe", 32)
+SetSoundVolumePercent("throwing-axe", 75)
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
 SetSoundRange("throwing-axe-hit", 32)
 
@@ -713,17 +744,28 @@ DefineGameSounds(
   "building-construction", {"norse", building_construction},
   "building-construction", {"teuton", building_construction},
 
---  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/basic_voices/work_complete.wav")},
+  "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")},
   "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
+  "work-complete", {"goblin", MakeSound("basic-goblin-voices-work-complete", "gnome/worker/built.wav")},
 
   "research-complete", {"gnome", MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")},
 
+  "not-enough-res", {"coal", "dwarf", MakeSound("basic-dwarf-voices-not-enough-coal", "dwarf/basic_voices/need-coal.wav")},
   "not-enough-res", {"coal", "gnome", MakeSound("basic-gnome-voices-not-enough-coal", "gnome/basic_voices/need-coal.wav")},
+  "not-enough-res", {"coal", "goblin", MakeSound("basic-goblin-voices-not-enough-coal", "goblin/basic_voices/need-coal.wav")},
+  "not-enough-res", {"gold", "dwarf", MakeSound("basic-dwarf-voices-not-enough-gold", "dwarf/basic_voices/need-gold.wav")},
   "not-enough-res", {"gold", "gnome", MakeSound("basic-gnome-voices-not-enough-gold", "gnome/basic_voices/need-gold.wav")},
+  "not-enough-res", {"gold", "goblin", MakeSound("basic-goblin-voices-not-enough-gold", "goblin/basic_voices/need-gold.wav")},
+  "not-enough-res", {"lumber", "dwarf", MakeSound("basic-dwarf-voices-not-enough-lumber", "dwarf/basic_voices/need-wood.wav")},
   "not-enough-res", {"lumber", "gnome", MakeSound("basic-gnome-voices-not-enough-lumber", "gnome/basic_voices/need-wood.wav")},
+  "not-enough-res", {"lumber", "goblin", MakeSound("basic-goblin-voices-not-enough-lumber", "goblin/basic_voices/need-wood.wav")},
+  "not-enough-res", {"stone", "dwarf", MakeSound("basic-dwarf-voices-not-enough-stone", "dwarf/basic_voices/need-stone.wav")},
   "not-enough-res", {"stone", "gnome", MakeSound("basic-gnome-voices-not-enough-stone", "gnome/basic_voices/need-stone.wav")},
+  "not-enough-res", {"stone", "goblin", MakeSound("basic-goblin-voices-not-enough-stone", "goblin/basic_voices/need-stone.wav")},
 
+  "not-enough-food", {"dwarf", MakeSound("basic-dwarf-voices-not-enough-food", "dwarf/basic_voices/need-farms.wav")},
   "not-enough-food", {"gnome", MakeSound("basic-gnome-voices-not-enough-food", "gnome/basic_voices/need-farms.wav")},
+  "not-enough-food", {"goblin", MakeSound("basic-goblin-voices-not-enough-food", "goblin/basic_voices/need-farms.wav")},
 
   "rescue", {"celt", rescue},
   "rescue", {"dwarf", rescue},

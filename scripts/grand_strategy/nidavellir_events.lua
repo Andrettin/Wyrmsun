@@ -1140,8 +1140,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Lyr)
-			WorldMapProvinces.Lyr.Map = nil
-			WorldMapProvinces.Lyr.Map = "maps/nidavellir/hall-of-lyr.smp"
 			EventFaction.Prestige = EventFaction.Prestige + 10
 		end},
 		OptionTooltips = {"Our faction becomes Lyr, +10 Prestige"}
