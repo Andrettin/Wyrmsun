@@ -115,9 +115,9 @@ if (GrandStrategy == false) then
 	end
 	
 	-- Gold Mines
-	unit = CreateUnit("unit-gold-mine", 15, {2, 47})
+	unit = CreateUnit("unit-gold-deposit", 15, {2, 47})
 	SetResourcesHeld(unit, 125000)
-	unit = CreateUnit("unit-gold-mine", 15, {29, 20})
+	unit = CreateUnit("unit-gold-deposit", 15, {29, 20})
 	SetResourcesHeld(unit, 12500)
 
 	-- Knalgan outpost

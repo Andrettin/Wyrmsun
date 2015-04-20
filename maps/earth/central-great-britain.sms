@@ -208,9 +208,9 @@ SetAiType(1, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {124, 111}) -- gold mine for the Northumbria starting position
+unit = CreateUnit("unit-gold-deposit", 15, {124, 111}) -- gold mine for the Northumbria starting position
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {38, 2}) -- gold mine for the Picts/Scots starting position
+unit = CreateUnit("unit-gold-deposit", 15, {38, 2}) -- gold mine for the Picts/Scots starting position
 SetResourcesHeld(unit, 50000)
 
 unit = CreateUnit("unit-germanic-town-hall", 0, {125, 118})

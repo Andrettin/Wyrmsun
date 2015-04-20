@@ -205,6 +205,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Buildings are now constructed from outside.
 - Buildings can now leave a (harvestable) wood pile when destroyed.
 - Improved the shadows of the Dwarven Mead Hall and the Dwarven Mushroom Farm.
+- Gold mines now need to be built on top of gold deposits before gold can be extracted from them.
 
 * Civilizations
 - The Gnomes now use Dwarven units for the types of unit they lack.

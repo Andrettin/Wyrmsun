@@ -164,19 +164,19 @@ SetAiType(3, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {31, 14})
+unit = CreateUnit("unit-gold-deposit", 15, {31, 14})
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {22, 47})
+unit = CreateUnit("unit-gold-deposit", 15, {22, 47})
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {43, 45})
+unit = CreateUnit("unit-gold-deposit", 15, {43, 45})
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {73, 73}) -- silver mine
+unit = CreateUnit("unit-gold-deposit", 15, {73, 73}) -- silver mine
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {98, 14}) -- silver mine
+unit = CreateUnit("unit-gold-deposit", 15, {98, 14}) -- silver mine
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {31, 78}) -- silver mine
+unit = CreateUnit("unit-gold-deposit", 15, {31, 78}) -- silver mine
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {59, 7}) -- silver mine (71, 7 would be a more appropriate location, but it is too close to a town hall).
+unit = CreateUnit("unit-gold-deposit", 15, {59, 7}) -- silver mine (71, 7 would be a more appropriate location, but it is too close to a town hall).
 SetResourcesHeld(unit, 50000)
 
 unit = CreateUnit("unit-germanic-town-hall", 0, {8, 59})

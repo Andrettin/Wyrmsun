@@ -126,11 +126,11 @@ if (GrandStrategy == false) then
 	end
 
 	-- Gold Mines
-	unit = CreateUnit("unit-gold-mine", 15, {35, 8})
+	unit = CreateUnit("unit-gold-deposit", 15, {35, 8})
 	SetResourcesHeld(unit, 12500)
-	unit = CreateUnit("unit-gold-mine", 15, {43, 54})
+	unit = CreateUnit("unit-gold-deposit", 15, {43, 54})
 	SetResourcesHeld(unit, 25000)
-	unit = CreateUnit("unit-gold-mine", 15, {4, 52})
+	unit = CreateUnit("unit-gold-deposit", 15, {4, 52})
 	SetResourcesHeld(unit, 6250)
 
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})

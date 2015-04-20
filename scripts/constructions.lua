@@ -94,6 +94,26 @@ DefineConstruction("construction-land-simple", {
     Frame = 1}}
 })
 
+DefineConstruction("construction-gold-mine", {
+	Constructions = {
+		{
+			Percent = 0,
+			File = "main",
+			Frame = 1
+		},
+		{
+			Percent = 25,
+			File = "main",
+			Frame = 1
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		}
+	}
+})
+
 DefineConstruction("construction-germanic-town-hall", {
   Files = {
     File = files[wyrmsun.tileset],

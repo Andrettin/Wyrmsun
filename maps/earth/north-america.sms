@@ -181,13 +181,13 @@ SetAiType(3, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {54, 42}) -- gold mine for the Sioux starting position
+unit = CreateUnit("unit-gold-deposit", 15, {54, 42}) -- gold mine for the Sioux starting position
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {30, 13}) -- gold mine for the Russian starting position
+unit = CreateUnit("unit-gold-deposit", 15, {30, 13}) -- gold mine for the Russian starting position
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {75, 54}) -- gold mine for the English starting position
+unit = CreateUnit("unit-gold-deposit", 15, {75, 54}) -- gold mine for the English starting position
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {82, 22}) -- gold mine for the French starting position
+unit = CreateUnit("unit-gold-deposit", 15, {82, 22}) -- gold mine for the French starting position
 SetResourcesHeld(unit, 50000)
 
 unit = CreateUnit("unit-germanic-town-hall", 0, {60, 51})

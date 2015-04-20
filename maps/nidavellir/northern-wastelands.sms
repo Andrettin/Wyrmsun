@@ -116,7 +116,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-miner", 0, {8, 60})
 end
 
-unit = CreateUnit("unit-gold-mine", 15, {14, 52})
+unit = CreateUnit("unit-gold-deposit", 15, {14, 52})
 SetResourcesHeld(unit, 50000)
 
 if (GrandStrategy == false) then

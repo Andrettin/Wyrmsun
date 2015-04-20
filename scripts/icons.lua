@@ -1090,6 +1090,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gold-deposit",
+	Size = {46, 38},
+	File = "neutral/icons/gold_deposit.png"
+})
+
+DefineIcon({
+	Name = "icon-gold-mine",
+	Size = {46, 38},
+	File = "neutral/icons/gold_mine.png"
+})
+
+DefineIcon({
 	Name = "icon-coal-mine",
 	Size = {46, 38},
 	File = "neutral/icons/coal_mine.png"
@@ -1170,12 +1182,6 @@ DefineIcon({
 -- tileset-dependent icons
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
-	DefineIcon({
-		Name = "icon-gold-mine",
-		Size = {46, 38},
-		File = "tilesets/swamp/neutral/icons/gold_mine.png"
-	})
-
 	DefineIcon({
 		Name = "icon-dwarven-ballista",
 		Size = {46, 38},
@@ -1303,12 +1309,6 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	})
 elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 	DefineIcon({
-		Name = "icon-gold-mine",
-		Size = {46, 38},
-		File = "tilesets/forest/neutral/icons/gold_mine.png"
-	})
-
-	DefineIcon({
 		Name = "icon-dwarven-ballista",
 		Size = {46, 38},
 		File = "tilesets/forest/dwarf/icons/dwarven_ballista.png"
@@ -1434,12 +1434,6 @@ elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conife
 		File = "tilesets/forest/neutral/icons/wyrm_skeleton.png"
 	})
 else	
-	DefineIcon({
-		Name = "icon-gold-mine",
-		Size = {46, 38},
-		File = "tilesets/swamp/neutral/icons/gold_mine.png"
-	})
-
 	DefineIcon({
 		Name = "icon-dwarven-ballista",
 		Size = {46, 38},

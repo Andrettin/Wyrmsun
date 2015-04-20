@@ -217,15 +217,15 @@ SetAiType(4, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {160, 59}) -- iron mine slightly to the north of Donawitz
+unit = CreateUnit("unit-gold-deposit", 15, {160, 59}) -- iron mine slightly to the north of Donawitz
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {191, 21}) -- hard coal in the surroundings of Ostrava and Koprivnica
+unit = CreateUnit("unit-gold-deposit", 15, {191, 21}) -- hard coal in the surroundings of Ostrava and Koprivnica
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {138, 3}) -- iron ore around Teplice, Litvinov and Chomutov
+unit = CreateUnit("unit-gold-deposit", 15, {138, 3}) -- iron ore around Teplice, Litvinov and Chomutov
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {114, 34}) -- iron ore to the northeast of Nuremberg
+unit = CreateUnit("unit-gold-deposit", 15, {114, 34}) -- iron ore to the northeast of Nuremberg
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {46, 14}) -- iron ore to the west of Mainz
+unit = CreateUnit("unit-gold-deposit", 15, {46, 14}) -- iron ore to the west of Mainz
 SetResourcesHeld(unit, 50000)
 
 unit = CreateUnit("unit-germanic-town-hall", 0, {177, 50})

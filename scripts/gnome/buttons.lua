@@ -108,7 +108,13 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-gnomish-farm",
   Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-gnomish-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-gold-mine",
+	Action = "build", Value = "unit-gold-mine",
+	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
+	ForUnit = {"unit-gnomish-worker"}
+} )
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-gnomish-barracks",
   Action = "build", Value = "unit-gnomish-barracks",
   Key = "b", Hint = _("Build ~!Barracks"), Popup = "popup-building",
   ForUnit = {"unit-gnomish-worker"} } )

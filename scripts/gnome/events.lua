@@ -103,7 +103,7 @@ AddTrigger(
 												player,
 												{"~!Continue"},
 												{function(s)
-												PlaySound("gold-coins")
+												--PlaySound("gold-coins")
 												Event(
 													"",
 													"(The gnome tears a single hair from Dursil's scalp, and then throws a bag of gold at his feet.)",

@@ -273,9 +273,9 @@ SetPlayerData(15, "RaceName", "neutral")
 
 if (GrandStrategy == false) then
 	-- Gold Mines
-	unit = CreateUnit("unit-gold-mine", 15, {22, 28})
+	unit = CreateUnit("unit-gold-deposit", 15, {22, 28})
 	SetResourcesHeld(unit, 50000)
-	unit = CreateUnit("unit-gold-mine", 15, {63, 42})
+	unit = CreateUnit("unit-gold-deposit", 15, {63, 42})
 	SetResourcesHeld(unit, 50000)
 end
 

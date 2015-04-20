@@ -82,34 +82,40 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
   Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-gold-mine",
+	Action = "build", Value = "unit-gold-mine",
+	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+} )
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-teuton-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
   
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-barracks",
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-barracks",
   Action = "build", Value = "unit-teuton-barracks",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "b", Hint = _("Build ~!Barracks"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
   
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Action = "build", Value = "unit-teuton-lumber-mill",
   Key = "c", Hint = _("Build ~!Carpenter's Shop"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
 
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-teuton-lumber-mill",
   Action = "build", Value = "unit-teuton-lumber-mill",
   Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
   Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
 
-DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-germanic-smithy",
   Action = "build", Value = "unit-teuton-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
   
-DefineButton( { Pos = 6, Level = 1, Icon = "icon-teuton-watch-tower",
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
   Action = "build", Value = "unit-teuton-watch-tower",
   Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )

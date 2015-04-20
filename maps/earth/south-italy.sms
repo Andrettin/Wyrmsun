@@ -196,9 +196,9 @@ SetAiType(1, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {34, 21}) -- gold mine for the Neapolitan start location
+unit = CreateUnit("unit-gold-deposit", 15, {34, 21}) -- gold mine for the Neapolitan start location
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {82, 45}) -- gold mine for the Bari start location
+unit = CreateUnit("unit-gold-deposit", 15, {82, 45}) -- gold mine for the Bari start location
 SetResourcesHeld(unit, 50000)
 
 unit = CreateUnit("unit-germanic-town-hall", 0, {42, 28})

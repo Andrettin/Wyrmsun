@@ -105,6 +105,7 @@ editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-gold-rock",
+   "unit-gold-deposit",
    "unit-gold-mine",
    "unit-wood-pile",
    "unit-coal-mine",

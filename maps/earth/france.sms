@@ -172,19 +172,19 @@ SetAiType(4, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {44, 20}) -- iron ore deposits in Normandy
+unit = CreateUnit("unit-gold-deposit", 15, {44, 20}) -- iron ore deposits in Normandy
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {40, 34}) -- iron ore deposits between Rennes and Nantes
+unit = CreateUnit("unit-gold-deposit", 15, {40, 34}) -- iron ore deposits between Rennes and Nantes
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {103, 22}) -- iron ore deposits in Lorraine
+unit = CreateUnit("unit-gold-deposit", 15, {103, 22}) -- iron ore deposits in Lorraine
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {96, 59}) -- coal deposits near Saint-Étienne
+unit = CreateUnit("unit-gold-deposit", 15, {96, 59}) -- coal deposits near Saint-Étienne
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {96, 47}) -- coal deposits to the north of Mâcon and east of Nevers
+unit = CreateUnit("unit-gold-deposit", 15, {96, 47}) -- coal deposits to the north of Mâcon and east of Nevers
 SetResourcesHeld(unit, 50000)
---unit = CreateUnit("unit-gold-mine", 15, {97, 72}) -- bauxite deposits near Montpellier
+--unit = CreateUnit("unit-gold-deposit", 15, {97, 72}) -- bauxite deposits near Montpellier
 --SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {83, 75}) -- iron ore deposits near Perpignan
+unit = CreateUnit("unit-gold-deposit", 15, {83, 75}) -- iron ore deposits near Perpignan
 SetResourcesHeld(unit, 50000)
 
 unit = CreateUnit("unit-germanic-town-hall", 0, {112, 73})

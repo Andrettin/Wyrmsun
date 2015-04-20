@@ -68,7 +68,7 @@ Units = {
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-rat",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
-	"unit-gold-mine",
+	"unit-gold-deposit", "unit-gold-mine",
 	"unit-coal-mine",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -1111,14 +1111,11 @@ DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	}
 } )
 
---UnitTypeFiles["unit-gold-mine"] = {
---	swamp = "tilesets/swamp/neutral/buildings/gold_mine.png"
---}
-
-DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
-	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
-	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
-	Animations = "animations-gold-mine", Icon = "icon-gold-mine",
+DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
+	Description = _("Gold deposits often contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place."),
+	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-gold-deposit",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
 	Construction = "construction-land2",
@@ -1147,13 +1144,53 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
 	},
+	GivesResource = "gold",
+	Sounds = {
+		"selected", "gold-mine-selected",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+		"dead", "building-destroyed"
+	}
+} )
+
+--UnitTypeFiles["unit-gold-mine"] = {
+--	swamp = "tilesets/swamp/neutral/buildings/gold_mine.png"
+--}
+
+DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
+	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
+	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-gold-mine",
+	NeutralMinimapColor = {255, 255, 0},
+	Costs = {"time", 200, "gold", 700, "lumber", 450},
+	Construction = "construction-gold-mine",
+	Speed = 0,
+	HitPoints = 650,
+	DrawLevel = 40,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 20, AnnoyComputerFactor = 20,
+	Points = 160,
+	Corpse = "unit-destroyed-3x3-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	BuilderOutside = true,
+	BuildingRules = { { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
 	GivesResource = "gold", CanHarvest = true,
 	Sounds = {
 		"selected", "gold-mine-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
 --		"help", "gold-mine-help",
-		"dead", "building-destroyed"} } )
+		"dead", "building-destroyed"
+	}
+} )
 
 DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 	Description = _("Coal is a valuable heating material."),
@@ -3221,8 +3258,12 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
 	BuildingRules = {
-		{ "distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
-		"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"} }
+		{
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
+		}
 	},
 	CanStore = {"gold", "lumber", "stone", "coal"},
 	Drops = {"unit-wood-pile"},
@@ -3259,6 +3300,8 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, StoneImprove = true, OilImprove = false,
 	BuildingRules = {
 		{
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
 		}

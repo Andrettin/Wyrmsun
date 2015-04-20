@@ -178,7 +178,7 @@ unit = CreateUnit("unit-volcanic-crater", 15, {30, 52})
 unit = CreateUnit("unit-volcanic-crater", 15, {33, 52})
 
 if (GrandStrategy == false) then
-	unit = CreateUnit("unit-gold-mine", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
+	unit = CreateUnit("unit-gold-deposit", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
 
 	if (ForTheMotherland) then
@@ -384,7 +384,7 @@ elseif (GrandStrategyEventMap) then
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
 	
-	unit = CreateUnit("unit-gold-mine", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
+	unit = CreateUnit("unit-gold-deposit", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
 	
 	-- Rugnur

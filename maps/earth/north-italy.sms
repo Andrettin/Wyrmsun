@@ -221,13 +221,13 @@ SetAiType(3, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 -- Gold Mines
-unit = CreateUnit("unit-gold-mine", 15, {14, 32}) -- gold mine for the Savoyard start location
+unit = CreateUnit("unit-gold-deposit", 15, {14, 32}) -- gold mine for the Savoyard start location
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {39, 29}) -- gold mine for the Milanese start location
+unit = CreateUnit("unit-gold-deposit", 15, {39, 29}) -- gold mine for the Milanese start location
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {82, 33}) -- gold mine for the Venetian start location
+unit = CreateUnit("unit-gold-deposit", 15, {82, 33}) -- gold mine for the Venetian start location
 SetResourcesHeld(unit, 50000)
-unit = CreateUnit("unit-gold-mine", 15, {107, 102}) -- gold mine for the Roman start location
+unit = CreateUnit("unit-gold-deposit", 15, {107, 102}) -- gold mine for the Roman start location
 SetResourcesHeld(unit, 50000)
 
 if (GrandStrategy == false or GrandStrategyEventMap) then

@@ -162,17 +162,23 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
   Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-gold-mine",
+	Action = "build", Value = "unit-gold-mine",
+	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
+	ForUnit = {"unit-germanic-worker", "unit-germanic-builder"}
+} )
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-germanic-barracks",
   Key = "w", Hint = _("Build ~!War Lodge"), Popup = "popup-building",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-carpenters-shop",
   Action = "build", Value = "unit-germanic-carpenters-shop",
   Key = "c", Hint = _("Build ~!Carpenter's Shop"), Popup = "popup-building",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )
 
-DefineButton( { Pos = 5, Level = 1, Icon = "icon-germanic-smithy",
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-germanic-smithy",
   Action = "build", Value = "unit-germanic-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder"} } )

@@ -746,7 +746,7 @@ DefineGameSounds(
 
   "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")},
   "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
-  "work-complete", {"goblin", MakeSound("basic-goblin-voices-work-complete", "gnome/worker/built.wav")},
+  "work-complete", {"goblin", MakeSound("basic-goblin-voices-work-complete", "goblin/worker/built.wav")},
 
   "research-complete", {"gnome", MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")},
 

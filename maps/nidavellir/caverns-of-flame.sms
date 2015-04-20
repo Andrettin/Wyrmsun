@@ -133,9 +133,9 @@ SetAiType(5, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 if (GrandStrategy == false) then
-	unit = CreateUnit("unit-gold-mine", 15, {16, 31})
+	unit = CreateUnit("unit-gold-deposit", 15, {16, 31})
 	SetResourcesHeld(unit, 100000)
-	unit = CreateUnit("unit-gold-mine", 15, {57, 38})
+	unit = CreateUnit("unit-gold-deposit", 15, {57, 38})
 	SetResourcesHeld(unit, 100000)
 
 	unit = CreateUnit("unit-glyph", 15, {36, 46})
@@ -248,9 +248,9 @@ if (GrandStrategy == false) then
 	SetDiplomacy(5, "enemy", 0)
 	SetDiplomacy(5, "enemy", 1)
 elseif (GrandStrategyEventMap) then
-	unit = CreateUnit("unit-gold-mine", 15, {16, 31})
+	unit = CreateUnit("unit-gold-deposit", 15, {16, 31})
 	SetResourcesHeld(unit, 100000)
-	unit = CreateUnit("unit-gold-mine", 15, {57, 38})
+	unit = CreateUnit("unit-gold-deposit", 15, {57, 38})
 	SetResourcesHeld(unit, 100000)
 
 	unit = CreateUnit("unit-glyph", 15, {36, 46})
