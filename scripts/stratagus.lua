@@ -665,39 +665,29 @@ function StandardTriggers()
 						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, true)
 						for unit2 = 1,table.getn(nearby_uncount) do 
 							if (GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
-								if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource") ~= "" and GetUnitVariable(uncount[unit1], "ResourcesHeld") > 0) then
-									if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-										AddMessage("Gained " .. GetUnitVariable(uncount[unit1], "ResourcesHeld") .. " " .. GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"))
-									end
-									
-									SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource"), GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "GivesResource")) + GetUnitVariable(uncount[unit1], "ResourcesHeld"))
-									
-									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") > 0 and GetUnitVariable(nearby_uncount[unit2], "HitPoints") < GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max")) then
-									local hp_healed = 0
-									if ((GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")) < GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) then
-										hp_healed = GetUnitVariable(nearby_uncount[unit2], "HitPoints", "Max") - GetUnitVariable(nearby_uncount[unit2], "HitPoints")
-									else
-										hp_healed = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")
-									end
-									if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-										AddMessage("Healed " .. hp_healed .. " HP")
-									end
-									SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_healed)
-									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing") < 0 and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low") then
-									if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-										AddMessage("Suffered " .. (-1 * GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) .. " HP loss")
-									end
-									SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing"))
-									DamageUnit(uncount[unit1], nearby_uncount[unit2], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HitPointHealing")) -- necessary to make the game display the damage and check if the unit should have died (for some reason it doesn't actually cause the damage though - probably because the damaging unit belongs to a neutral player)
-									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Slows") and GetUnitVariable(nearby_uncount[unit2], "Slow") == 0 and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low") then
-									SetUnitVariable(nearby_uncount[unit2], "Slow", 1000)
-									DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
-								end
+								AcquireItem(nearby_uncount[unit2], uncount[unit1])
+								return true
 							end
-							break
+						end
+					end
+				end
+
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Trap") and GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
+					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+					if (people_quantity > 0) then
+						local nearby_uncount = 0
+						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, true)
+						for unit2 = 1,table.getn(nearby_uncount) do 
+							if ((GetUnitVariable(uncount[unit1], "BasicDamage") > 0 or GetUnitVariable(uncount[unit1], "PiercingDamage") > 0) and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
+								local hp_lost = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "BasicDamage") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "PiercingDamage")
+								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
+									AddMessage("Suffered " .. hp_lost .. " HP loss")
+								end
+--								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_lost)
+								DamageUnit(uncount[unit1], nearby_uncount[unit2], hp_lost)
+								DamageUnit(nearby_uncount[unit2], uncount[unit1], GetUnitVariable(uncount[unit1], "HitPoints"))
+								return true
+							end
 						end
 					end
 				end
@@ -727,7 +717,7 @@ function StandardTriggers()
 										PlaySound("gold-coins")
 										SetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold", GetPlayerData(GetUnitVariable(nearby_uncount[unit2], "Player"), "Resources", "gold") + 750)
 									end
-       									break
+       								break
 								end
 							end
 						end

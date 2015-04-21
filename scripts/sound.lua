@@ -292,7 +292,8 @@ MakeSound("basic-goblin-voices-attack", {
 	"goblin/basic_voices/attack-1.wav",
 	"goblin/basic_voices/attack-2.wav",
 	"goblin/basic_voices/attack-3.wav",
-	"goblin/basic_voices/attack-4.wav"
+	"goblin/basic_voices/attack-4.wav",
+	"goblin/basic_voices/acknowledge-01.wav"
 })
 MakeSound("basic-goblin-voices-repair", {
 	"goblin/basic_voices/repair.wav"

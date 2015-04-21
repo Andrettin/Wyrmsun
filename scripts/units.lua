@@ -2266,7 +2266,7 @@ DefineUnitType("unit-scepter-of-fire", { Name = _("Scepter of Fire"),
 	Item = true,
 	Sounds = {
 		"selected", "click",
-		"dead", "gold-coins"
+		"used", "gold-coins"
 	} 
 } )
 
@@ -2288,7 +2288,7 @@ DefineUnitType("unit-gold-coins", { Name = _("Gold Coins"),
 	StartingResources = 5,
 	Sounds = {
 		"selected", "click",
-		"dead", "gold-coins"
+		"used", "gold-coins"
 	} 
 } )
 
@@ -2311,7 +2311,7 @@ DefineUnitType("unit-gold-sack", { Name = _("Gold Sack"),
 	StartingResources = 100,
 	Sounds = {
 		"selected", "click",
-		"dead", "gold-coins"
+		"used", "gold-coins"
 	} 
 } )
 
@@ -2595,7 +2595,7 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	HitPointHealing = 45,
 	Sounds = {
 		"selected", "click",
-		"dead", "potion"
+		"used", "potion"
 	} 
 } )
 
@@ -2616,7 +2616,7 @@ DefineUnitType("unit-potion-of-decay", { Name = _("Potion of Decay"),
 	HitPointHealing = -15,
 	Sounds = {
 		"selected", "click",
-		"dead", "potion"
+		"used", "potion"
 	} 
 } )
 
@@ -2637,7 +2637,7 @@ DefineUnitType("unit-potion-of-slowness", { Name = _("Potion of Slowness"),
 	Slows = true,
 	Sounds = {
 		"selected", "click",
-		"dead", "potion"
+		"used", "potion"
 	} 
 } )
 
@@ -2738,12 +2738,11 @@ DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
-	BasicDamage = 0, Missile = "missile-none",
+	PiercingDamage = 10, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,	
-	Item = true,
-	HitPointHealing = -10,
+	Trap = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2778,12 +2777,11 @@ DefineUnitType("unit-trap", { Name = _("Trap"),
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
-	BasicDamage = 0, Missile = "missile-none",
+	PiercingDamage = 15, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,	
-	Item = true,
-	HitPointHealing = -15,
+	Trap = true,
 	Sounds = {
 		"selected", "click",
 		"dead", "axe-attack"
