@@ -165,7 +165,7 @@ SetFogOfWarGraphics("tilesets/fogofwar.png")
 --    'start-resource-medium 5000
 --    'start-resource-high 10000
 --    'income 100)
---  FIXME: Must describe how geting resources work.
+--  FIXME: Must describe how getting resources work.
 --
 
 DefineDefaultIncomes(
@@ -178,7 +178,7 @@ DefineDefaultResourceNames(
   "time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber")
 
 DefineDefaultResourceAmounts(
-  "gold", 100000,
+  "gold", 50000,
   "lumber", 100,
   "oil", 50000,
   "stone", 100,
