@@ -315,7 +315,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
   Key = "b", Hint = _("Build ~!Ballista"), Popup = "popup-unit",
   ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"} } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
   Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
   Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",
   ForUnit = {"unit-mercenary-camp"} } )

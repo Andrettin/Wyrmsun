@@ -48,9 +48,9 @@ if (CanAccessFile("ui/mana2.png")) then
 	DefineDecorations({Index = "Training", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	DefineDecorations({Index = "UpgradeTo", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	if (wyr.preferences.ShowResourceBar) then -- sort of ugly way to set the preferences for this, fix later please
-		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 	else
-		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 	end
 	DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 end
@@ -154,15 +154,15 @@ DefinePanelContents(
 	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96, "game"), Centered = true}} },
 	{ Pos = {170, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 96, "game"), Centered = true}} },
 	
--- Resource Left
-	{ Pos = {88, 86}, Condition = {ShowOpponent = false, GiveResource = "only"},
-		More = {"Text", {Text = Concat(
-			Concat(function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end, " Left: "),
-			String(ActiveUnitVar("GiveResource", "Value"))
-		), Centered = true}}
+	-- Resource Left
+	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Build = "false"},
+		More = {"Text", {Text = Concat(function() return CapitalizeString(GetUnitVariable(-1, "GiveResourceTypeName")) end, " Left:")}}
+	},
+	{ Pos = {115, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Build = "false"},
+		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Value"))}}
 	},
 
--- Construction
+	-- Construction
 	{ Pos = {25, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 14, Border = false}}
 	},
