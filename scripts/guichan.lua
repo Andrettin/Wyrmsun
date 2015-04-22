@@ -706,7 +706,6 @@ function RunMap(map, objective, fow, revealmap)
       loop = false
     end
   end
-  CurrentQuest = ""
   if (NextMapDirect == false) then
 	  RunResultsMenu(s)
 	  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and not IsReplayGame() and not IsNetworkGame() and not GrandStrategy) then
@@ -725,6 +724,7 @@ function RunMap(map, objective, fow, revealmap)
 	Load(current_next_map)
 	RunMap(current_next_map)
   end
+  CurrentQuest = ""
 end
 
 mapname = "maps/nidavellir/chaincolt-foothills.smp"
