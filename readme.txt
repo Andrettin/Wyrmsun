@@ -318,6 +318,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added stone as a resource, which can be harvested from rocks. Stone is generally used for fortifications, but normal dwarven structures also require stone.
 - Added new UI for the dwarves and the germanics (graphics by Jinn).
 - If the player only has farms, he now loses the match without it being necessary for all of them to be destroyed.
+- Quest objectives now appear in the top left of the screen.
 
 * Quests
 - Added The Battle of Magetobria quest.

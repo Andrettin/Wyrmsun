@@ -1142,7 +1142,7 @@ function AddPlayerObjective(player, objective)
 	for key, value in pairs(CustomPlayerData) do
 		if (CustomPlayerData[key].Number == player) then
 			if (player == GetThisPlayer()) then
-				AddMessage(_("New Objective: ") .. _(objective))
+				AddObjective(_(objective))
 			end
 			table.insert(CustomPlayerData[key].Objectives, objective)
 		end
@@ -1153,6 +1153,16 @@ function RemovePlayerObjective(player, objective)
 	for key, value in pairs(CustomPlayerData) do
 		if (CustomPlayerData[key].Number == player) then
 			RemoveElementFromArray(CustomPlayerData[key].Objectives, objective)
+		end
+	end
+	if (player == GetThisPlayer()) then
+		ClearObjectives()
+		for key, value in pairs(CustomPlayerData) do
+			if (CustomPlayerData[key].Number == player and table.getn(CustomPlayerData[key].Objectives) > 0) then
+				for i=1,table.getn(CustomPlayerData[key].Objectives) do
+					AddObjective(_(CustomPlayerData[key].Objectives[i]))
+				end
+			end
 		end
 	end
 end
