@@ -123,12 +123,12 @@ SetRawTile(41, 18, "Rough")
 
 for x=34,36 do
 	for y=91,93 do
-		SetRawTile(x, y, "Gold Mine") -- gold mine for the Saxon starting position
+		SetRawTile(x, y, "Starting Gold Mine") -- gold mine for the Saxon starting position
 	end
 end
 for x=33,35 do
 	for y=40,42 do
-		SetRawTile(x, y, "Gold Mine") -- gold mine for the Danish starting position
+		SetRawTile(x, y, "Starting Gold Mine") -- gold mine for the Danish starting position
 	end
 end
 

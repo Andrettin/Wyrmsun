@@ -317,6 +317,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - When clicking a unit's button that brings up the targeting cursor, it now turns green when hovering over a friendly unit, yellow when hovering over a neutral unit, and red when hovering over an enemy unit.
 - Added stone as a resource, which can be harvested from rocks. Stone is generally used for fortifications, but normal dwarven structures also require stone.
 - Added new UI for the dwarves and the germanics (graphics by Jinn).
+- If the player only has farms, he now loses the match without it being necessary for all of them to be destroyed.
 
 * Quests
 - Added The Battle of Magetobria quest.
@@ -386,6 +387,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed issue which caused unit sight to not be perfectly symmetric vertically.
 - "Coward" units (i.e. workers) now attack back if their attacker is also "coward", or has 3 HP or less.
 - Added more voice sounds for the dwarves and goblins (by b_o).
+- Giving an order to build while multiple workers are selected will now make all of them work on constructing the building.
+- Units controlled by the human player now properly attack back.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
