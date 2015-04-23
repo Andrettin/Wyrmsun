@@ -320,7 +320,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - If the player only has farms, he now loses the match without it being necessary for all of them to be destroyed.
 - Quest objectives now appear in the top left of the screen.
 - Added 720 resolution width.
-- Missiles can no longer fly over cave walls or dungeon walls.
+- Missiles can no longer fly over cave walls, dungeon walls or doors.
 
 * Quests
 - Added The Battle of Magetobria quest.
@@ -341,6 +341,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Land-based decoration units are now properly removed if they are on top of a tree, rock or wall tile.
 - Logs are now harvestable for lumber.
 - Added harvestable gold rocks (graphics by Jinn).
+- Tree stumps are now harvestable for 50 lumber.
 
 * Units
 - The Germanic Skutan now has gray-haired and blond variations for its unit graphics (by b_o).
@@ -392,6 +393,8 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added more voice sounds for the dwarves and goblins (by b_o).
 - Giving an order to build while multiple workers are selected will now make all of them work on constructing the building.
 - Units controlled by the human player now properly attack back.
+- A worker right-clicking on an enemy now results in the worker attacking the enemy.
+- Units now attack barrels and doors if they are right-clicked.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).

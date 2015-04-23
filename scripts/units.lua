@@ -1381,6 +1381,9 @@ DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	MaxOnBoard = 1,
 	CanTransport = {"organic", "only", "Mounted", "false"},
 	SaveCargo = true,
+	StartingResources = 50,
+	GivesResource = "lumber", CanHarvest = true,
+	HarvestFromOutside = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2020,6 +2023,8 @@ DefineUnitType("unit-door", { Name = _("Door"),
 	NumDirections = 1,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
+	Obstacle = true,
+	AirUnpassable = true,
 	Variations = {
 		{
 			"variation-id", "left"
@@ -2660,6 +2665,7 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 	NumDirections = 1,
 	Drops = {"unit-potion-of-healing", "unit-potion-of-decay", "unit-potion-of-slowness"},
 	VisibleUnderFog = true,
+	Obstacle = true,
 	Variations = {
 		{
 			"variation-id", "1"
