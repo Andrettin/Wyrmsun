@@ -317,7 +317,7 @@ function BuildOptionsMenu()
   local offy = (Video.Height - 352) / 2
   local checkTexture
   local b
-  local resolution_width_list = {"640", "800", "854", "1024", "1067", "1280", "1360", "1366", "1400", "1600", "1680"}
+  local resolution_width_list = {"640", "720", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}
   local resolution_width_dd
   local resolution_height_list = {"480", "600", "768", "800", "960", "1024", "1050"}
   local resolution_height_dd

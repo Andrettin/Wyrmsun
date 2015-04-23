@@ -319,7 +319,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Added new UI for the dwarves and the germanics (graphics by Jinn).
 - If the player only has farms, he now loses the match without it being necessary for all of them to be destroyed.
 - Quest objectives now appear in the top left of the screen.
-- Added 854 and 1067 resolution widths.
+- Added 720 resolution width.
 
 * Quests
 - Added The Battle of Magetobria quest.
