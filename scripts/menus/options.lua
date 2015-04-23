@@ -29,8 +29,8 @@
 
 function RunGameVideoOptionsMenu()
   local menu = WarGameMenu(panel(1))
-  local resolution_width_list
-  local resolution_height_list
+  local resolution_width_dd
+  local resolution_height_dd
   local resolution_width = Video.Width
   local resolution_height = Video.Height
   local offx = 0
@@ -39,83 +39,83 @@ function RunGameVideoOptionsMenu()
   menu:addLabel(_("Video Options"), 128, 11)
 
   menu:addLabel(_("Resolution Width"), offx + (256 / 2 - (152  / 2)), offy + 34, Fonts["game"], false)
-  resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*0,
+  resolution_width_dd = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*0,
     function(dd)
-    	if (resolution_width_list:getSelected() == 0) then
+    	if (resolution_width_dd:getSelected() == 0) then
     		resolution_width = 640
-    	elseif (resolution_width_list:getSelected() == 1) then
+    	elseif (resolution_width_dd:getSelected() == 1) then
     		resolution_width = 800
-    	elseif (resolution_width_list:getSelected() == 2) then
+    	elseif (resolution_width_dd:getSelected() == 2) then
     		resolution_width = 1024
-    	elseif (resolution_width_list:getSelected() == 3) then
+    	elseif (resolution_width_dd:getSelected() == 3) then
     		resolution_width = 1280
-    	elseif (resolution_width_list:getSelected() == 4) then
+    	elseif (resolution_width_dd:getSelected() == 4) then
     		resolution_width = 1360
-    	elseif (resolution_width_list:getSelected() == 5) then
+    	elseif (resolution_width_dd:getSelected() == 5) then
     		resolution_width = 1366
-    	elseif (resolution_width_list:getSelected() == 6) then
+    	elseif (resolution_width_dd:getSelected() == 6) then
     		resolution_width = 1400
-    	elseif (resolution_width_list:getSelected() == 7) then
+    	elseif (resolution_width_dd:getSelected() == 7) then
     		resolution_width = 1600
-    	elseif (resolution_width_list:getSelected() == 8) then
+    	elseif (resolution_width_dd:getSelected() == 8) then
     		resolution_width = 1680
     	end
     end)
-  resolution_width_list:setSize(152, 20)
+  resolution_width_dd:setSize(152, 20)
   if (Video.Width == 640) then
-  	resolution_width_list:setSelected(0)
+  	resolution_width_dd:setSelected(0)
   elseif (Video.Width == 800) then
-    	resolution_width_list:setSelected(1)
+    	resolution_width_dd:setSelected(1)
   elseif (Video.Width == 1024) then
-    	resolution_width_list:setSelected(2)
+    	resolution_width_dd:setSelected(2)
   elseif (Video.Width == 1280) then
-    	resolution_width_list:setSelected(3)
+    	resolution_width_dd:setSelected(3)
   elseif (Video.Width == 1360) then
-    	resolution_width_list:setSelected(4)
+    	resolution_width_dd:setSelected(4)
   elseif (Video.Width == 1366) then
-    	resolution_width_list:setSelected(5)
+    	resolution_width_dd:setSelected(5)
   elseif (Video.Width == 1400) then
-    	resolution_width_list:setSelected(6)
+    	resolution_width_dd:setSelected(6)
   elseif (Video.Width == 1600) then
-    	resolution_width_list:setSelected(7)
+    	resolution_width_dd:setSelected(7)
   elseif (Video.Width == 1680) then
-    	resolution_width_list:setSelected(8)
+    	resolution_width_dd:setSelected(8)
   end
 
   menu:addLabel(_("Resolution Height"), offx + (256 / 2 - (152  / 2)), offy + 34 + 26*2, Fonts["game"], false)
-  resolution_height_list = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*2,
+  resolution_height_dd = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*2,
     function(dd)
-    	if (resolution_height_list:getSelected() == 0) then
+    	if (resolution_height_dd:getSelected() == 0) then
     		resolution_height = 480
-    	elseif (resolution_height_list:getSelected() == 1) then
+    	elseif (resolution_height_dd:getSelected() == 1) then
     		resolution_height = 600
-    	elseif (resolution_height_list:getSelected() == 2) then
+    	elseif (resolution_height_dd:getSelected() == 2) then
     		resolution_height = 768
-    	elseif (resolution_height_list:getSelected() == 3) then
+    	elseif (resolution_height_dd:getSelected() == 3) then
     		resolution_height = 800
-    	elseif (resolution_height_list:getSelected() == 4) then
+    	elseif (resolution_height_dd:getSelected() == 4) then
     		resolution_height = 960
-    	elseif (resolution_height_list:getSelected() == 5) then
+    	elseif (resolution_height_dd:getSelected() == 5) then
     		resolution_height = 1024
-    	elseif (resolution_height_list:getSelected() == 6) then
+    	elseif (resolution_height_dd:getSelected() == 6) then
     		resolution_height = 1050
     	end
     end)
-  resolution_height_list:setSize(152, 20)
+  resolution_height_dd:setSize(152, 20)
   if (Video.Height == 480) then
-  	resolution_height_list:setSelected(0)
+  	resolution_height_dd:setSelected(0)
   elseif (Video.Height == 600) then
-  	resolution_height_list:setSelected(1)
+  	resolution_height_dd:setSelected(1)
   elseif (Video.Height == 768) then
-  	resolution_height_list:setSelected(2)
+  	resolution_height_dd:setSelected(2)
   elseif (Video.Height == 800) then
-  	resolution_height_list:setSelected(3)
+  	resolution_height_dd:setSelected(3)
   elseif (Video.Height == 960) then
-  	resolution_height_list:setSelected(4)
+  	resolution_height_dd:setSelected(4)
   elseif (Video.Height == 1024) then
-  	resolution_height_list:setSelected(5)
+  	resolution_height_dd:setSelected(5)
   elseif (Video.Height == 1050) then
-  	resolution_height_list:setSelected(6)
+  	resolution_height_dd:setSelected(6)
   end
 
   menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
@@ -317,92 +317,38 @@ function BuildOptionsMenu()
   local offy = (Video.Height - 352) / 2
   local checkTexture
   local b
-  local resolution_width_list
-  local resolution_height_list
+  local resolution_width_list = {"640", "800", "854", "1024", "1067", "1280", "1360", "1366", "1400", "1600", "1680"}
+  local resolution_width_dd
+  local resolution_height_list = {"480", "600", "768", "800", "960", "1024", "1050"}
+  local resolution_height_dd
   local resolution_width = Video.Width
   local resolution_height = Video.Height
 
   menu:addLabel(_("Options"), offx + 176, offy + 1)
   menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
-  resolution_width_list = menu:addDropDown({"640", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680"}, offx + 8, offy + 55 + 26*0,
+  resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
     function(dd)
-    	if (resolution_width_list:getSelected() == 0) then
-    		resolution_width = 640
-    	elseif (resolution_width_list:getSelected() == 1) then
-    		resolution_width = 800
-    	elseif (resolution_width_list:getSelected() == 2) then
-    		resolution_width = 1024
-    	elseif (resolution_width_list:getSelected() == 3) then
-    		resolution_width = 1280
-    	elseif (resolution_width_list:getSelected() == 4) then
-    		resolution_width = 1360
-    	elseif (resolution_width_list:getSelected() == 5) then
-    		resolution_width = 1366
-    	elseif (resolution_width_list:getSelected() == 6) then
-    		resolution_width = 1400
-    	elseif (resolution_width_list:getSelected() == 7) then
-    		resolution_width = 1600
-    	elseif (resolution_width_list:getSelected() == 8) then
-    		resolution_width = 1680
-    	end
+   		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
   	SetVideoSize(resolution_width, resolution_height) menu:stop(1)
     end)
-  resolution_width_list:setSize(152, 20)
-  if (Video.Width == 640) then
-  	resolution_width_list:setSelected(0)
-  elseif (Video.Width == 800) then
-    	resolution_width_list:setSelected(1)
-  elseif (Video.Width == 1024) then
-    	resolution_width_list:setSelected(2)
-  elseif (Video.Width == 1280) then
-    	resolution_width_list:setSelected(3)
-  elseif (Video.Width == 1360) then
-    	resolution_width_list:setSelected(4)
-  elseif (Video.Width == 1366) then
-    	resolution_width_list:setSelected(5)
-  elseif (Video.Width == 1400) then
-    	resolution_width_list:setSelected(6)
-  elseif (Video.Width == 1600) then
-    	resolution_width_list:setSelected(7)
-  elseif (Video.Width == 1680) then
-    	resolution_width_list:setSelected(8)
+  resolution_width_dd:setSize(152, 20)
+  for i = 1,table.getn(resolution_width_list) do
+	if (tonumber(resolution_width_list[i]) == Video.Width) then
+		resolution_width_dd:setSelected(i - 1)
+	end
   end
 
   menu:addLabel(_("Resolution Height"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
-  resolution_height_list = menu:addDropDown({"480", "600", "768", "800", "960", "1024", "1050"}, offx + 16 + 152 + 24, offy + 55 + 26*0,
+  resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
     function(dd)
-    	if (resolution_height_list:getSelected() == 0) then
-    		resolution_height = 480
-    	elseif (resolution_height_list:getSelected() == 1) then
-    		resolution_height = 600
-    	elseif (resolution_height_list:getSelected() == 2) then
-    		resolution_height = 768
-    	elseif (resolution_height_list:getSelected() == 3) then
-    		resolution_height = 800
-    	elseif (resolution_height_list:getSelected() == 4) then
-    		resolution_height = 960
-    	elseif (resolution_height_list:getSelected() == 5) then
-    		resolution_height = 1024
-    	elseif (resolution_height_list:getSelected() == 6) then
-    		resolution_height = 1050
-    	end
+   		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
   	SetVideoSize(resolution_width, resolution_height) menu:stop(1)
     end)
-  resolution_height_list:setSize(152, 20)
-  if (Video.Height == 480) then
-  	resolution_height_list:setSelected(0)
-  elseif (Video.Height == 600) then
-  	resolution_height_list:setSelected(1)
-  elseif (Video.Height == 768) then
-  	resolution_height_list:setSelected(2)
-  elseif (Video.Height == 800) then
-  	resolution_height_list:setSelected(3)
-  elseif (Video.Height == 960) then
-  	resolution_height_list:setSelected(4)
-  elseif (Video.Height == 1024) then
-  	resolution_height_list:setSelected(5)
-  elseif (Video.Height == 1050) then
-  	resolution_height_list:setSelected(6)
+  resolution_height_dd:setSize(152, 20)
+  for i = 1,table.getn(resolution_height_list) do
+	if (tonumber(resolution_height_list[i]) == Video.Height) then
+		resolution_height_dd:setSelected(i - 1)
+	end
   end
 
 --[[

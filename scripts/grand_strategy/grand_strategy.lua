@@ -37,10 +37,10 @@ GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 GrandStrategyMapWidthIndent = false
 GrandStrategyMapHeightIndent = false
-GrandStrategyMapWidth = Video.Width
-GrandStrategyMapHeight = Video.Height - 16 - 186
 
 function RunGrandStrategyGameSetupMenu()
+	GrandStrategyMapWidth = Video.Width + 64
+	GrandStrategyMapHeight = Video.Height - 16 - 186
 	WorldMapOffsetX = 0
 	WorldMapOffsetY = 0
 	GrandStrategyYear = 25
