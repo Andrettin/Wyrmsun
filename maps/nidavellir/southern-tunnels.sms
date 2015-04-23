@@ -171,9 +171,11 @@ SetRawTile(58, 40, "Rock")
 SetRawTile(59, 47, "Rock")
 SetRawTile(59, 54, "Rock")
 SetRawTile(60, 8, "Rough")
+SetRawTile(60, 38, "Rough")
 SetRawTile(60, 49, "Rough")
 SetRawTile(61, 9, "Rock")
 SetRawTile(61, 16, "Rock")
+SetRawTile(61, 39, "Rock")
 SetRawTile(61, 48, "Rock")
 SetRawTile(62, 7, "Rough")
 SetRawTile(62, 55, "Rock")
@@ -296,26 +298,24 @@ unit = CreateUnit("unit-dwarven-mushroom-farm", 3, {49, 50})
 unit = CreateUnit("unit-dwarven-sentry-tower", 3, {47, 48})
 unit = CreateUnit("unit-dwarven-sentry-tower", 3, {51, 48})
 
-PlayMusic("music/knolls.ogg")
---wyrmsun.playlist = { "music/knalgan_theme.ogg", "music/revelation.ogg" }
-wyrmsun.playlist = { "music/knalgan_theme.ogg" }
+if (LoadedGame == false) then
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 
-CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
-
-CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-local uncount = 0
-uncount = GetUnits(15)
-for unit1 = 1,table.getn(uncount) do 
-	if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
-		if (SyncRand(2) == 0) then
-			local RandomNumber = SyncRand(2)
-			if (RandomNumber == 0) then
-				unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-			elseif (RandomNumber == 1) then
-				unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+	CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	local uncount = 0
+	uncount = GetUnits(15)
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+			if (SyncRand(2) == 0) then
+				local RandomNumber = SyncRand(2)
+				if (RandomNumber == 0) then
+					unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+				elseif (RandomNumber == 1) then
+					unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+				end
 			end
 		end
 	end
-end
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+end

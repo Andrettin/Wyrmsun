@@ -198,4 +198,3 @@ BuildTilesetTables()
 
 wyrmsun.tileset = "conifer_forest_summer"
 Load("scripts/scripts.lua")
-

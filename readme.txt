@@ -320,6 +320,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - If the player only has farms, he now loses the match without it being necessary for all of them to be destroyed.
 - Quest objectives now appear in the top left of the screen.
 - Added 720 resolution width.
+- Missiles can no longer fly over cave walls or dungeon walls.
 
 * Quests
 - Added The Battle of Magetobria quest.
