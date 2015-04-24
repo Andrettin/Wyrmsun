@@ -99,17 +99,17 @@ DefineConstruction("construction-gold-mine", {
 		{
 			Percent = 0,
 			File = "main",
-			Frame = 1
+			Frame = 2
 		},
 		{
 			Percent = 25,
 			File = "main",
-			Frame = 1
+			Frame = 2
 		},
 		{
 			Percent = 50,
 			File = "main",
-			Frame = 1
+			Frame = 2
 		}
 	}
 })

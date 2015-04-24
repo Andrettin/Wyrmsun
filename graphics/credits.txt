@@ -537,6 +537,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/gold_deposit.png
 /graphics/neutral/buildings/gold_deposit_shadow.png
 /graphics/neutral/buildings/gold_mine.png
+/graphics/neutral/buildings/gold_mine_light.png
 /graphics/neutral/buildings/gold_mine_shadow.png
 /graphics/neutral/buildings/gold_rock_1.png
 /graphics/neutral/buildings/gold_rock_1_shadow.png

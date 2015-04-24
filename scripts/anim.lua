@@ -561,10 +561,16 @@ DefineAnimations("animations-building", {
   Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
 })
 
-DefineAnimations("animations-gold-mine", {
-  Still = {"label start", "if-var v.ResourceActive.Value >= 1 active",
-			"frame 0", "wait 4", "frame 0", "wait 1", "goto start",
-			"label active", "frame 1", "wait 4", "frame 1", "wait 1"}
+
+local MineStill = {
+	"label start", "if-var v.ResourceActive.Value >= 1 active",
+	"frame 0", "wait 4", "frame 0", "wait 1", "goto start",
+	"label active", "frame 1", "wait 4", "frame 1", "wait 1"
+}
+DefineAnimations("animations-mine", {
+  Still = MineStill,
+  Research = MineStill,
+  Train = MineStill
 })
 
 --
