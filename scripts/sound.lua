@@ -519,6 +519,7 @@ MakeSound("construction-stone", {
 	"misc/construction/con_stone_10.wav",
 	"misc/construction/con_stone_11.wav"
 } )
+SetSoundRange("construction-stone", 32)
 
 MakeSound("construction-wood", {
 	"misc/construction/con_wood_18.wav",
@@ -531,6 +532,7 @@ MakeSound("construction-wood", {
 	"misc/construction/con_wood_16.wav",
 	"misc/construction/con_wood_17.wav"
 } )
+SetSoundRange("construction-wood", 32)
 
 MakeSound("tree-chopping", {
 	"misc/tree_chopping/tree-chopping-1.wav",
@@ -672,6 +674,7 @@ MakeSound("gryphon-ready", {
 	"neutral/gryphon/gryphon_shriek_1.wav",
 	"neutral/gryphon/gryphon_shriek_2.wav"
 })
+SetSoundRange("gryphon-ready", 32)
 MakeSound("gryphon-dead", {
 	"neutral/gryphon/gryphon_death_1.wav",
 	"neutral/gryphon/gryphon_death_2.wav"
@@ -684,16 +687,30 @@ MakeSound("bird-selected", {
 	"neutral/bird/birds2.wav",
 	"neutral/bird/birds3.wav"
 })
+SetSoundRange("bird-selected", 32)
 MakeSound("bird-dead", {
 	"neutral/bird/deadbird.wav",
 	"neutral/bird/deadbird2.wav"
 })
+MakeSound("crow-selected", {
+	"neutral/crow/crow1.wav",
+	"neutral/crow/crow2.wav",
+	"neutral/crow/crow3.wav",
+	"neutral/crow/crow4.wav",
+	"neutral/crow/crow5.wav",
+	"neutral/crow/crow6.wav",
+	"neutral/crow/crow7.wav",
+	"neutral/crow/crow8.wav",
+	"neutral/crow/crow9.wav"
+})
+SetSoundRange("crow-selected", 32)
 MakeSound("bat-selected", "neutral/bat_flapping.wav")
 MakeSound("yale-selected", {
 	"neutral/yale/yale_select01.wav",
 	"neutral/yale/yale_select02.wav"
 })
-SetSoundVolumePercent("yale-selected", 50)
+SetSoundRange("yale-selected", 32)
+SetSoundVolumePercent("yale-selected", 25)
 MakeSound("yale-acknowledge", {
 	"neutral/yale/yale_ack01.wav",
 	"neutral/yale/yale_ack02.wav",
