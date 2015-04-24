@@ -947,7 +947,7 @@ function RunSinglePlayerGameMenu()
   local buttonNewMap =
   menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
     function()
-		RunQuestMenu();
+		RunQuestWorldMenu();
 		if (RunningScenario) then
 			menu:stop(1)
 		end

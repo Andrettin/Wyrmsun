@@ -30,7 +30,40 @@
 RunningScenario = false
 CurrentQuest = ""
 
-function RunQuestMenu()
+function RunQuestWorldMenu()
+  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+
+  if not (IsMusicPlaying()) then
+    PlayMusic("music/battle_theme_a.ogg")
+  end
+
+  local menu = WarMenu()
+  local offx = (Video.Width - 640) / 2
+  local offy = (Video.Height - 480) / 2
+
+  menu:addLabel(_("~<Quests~>"), offx + 320, offy + 212 - 25 - (36 * 1))
+  local buttonNewMap =
+  menu:addFullButton(_("~!Earth"), "e", offx + 208, offy + 104 + 36*2,
+    function()
+		RunQuestMenu("Earth");
+		if (RunningScenario) then
+			menu:stop(1)
+		end
+	end)
+  menu:addFullButton(_("~!Nidavellir"), "n", offx + 208, offy + 104 + 36*3,
+    function()
+		RunQuestMenu("Nidavellir");
+		if (RunningScenario) then
+			menu:stop(1)
+		end
+	end)
+  menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*4,
+    function() menu:stop() end)
+  return menu:run()
+end
+
+function RunQuestMenu(world)
 
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -48,10 +81,10 @@ function RunQuestMenu()
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
 	for key, value in pairs(Quests) do
-		if (Quests[key].Hidden == nil or Quests[key].Hidden == false) then
+		if ((Quests[key].Hidden == nil or Quests[key].Hidden == false) and Quests[key].World == world) then
 			if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
 				if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-					addQuestIcon(Quests[key], menu, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * Quests[key].Y))
+					addQuestIcon(Quests[key], menu, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * (Quests[key].Y + 1))) -- increase Y by 1 because right now there aren't all that many quests, so that it makes sense to make the existing quests more centralized in the interface
 				end
 			end
 		end
