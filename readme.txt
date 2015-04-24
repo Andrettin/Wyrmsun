@@ -395,6 +395,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Units controlled by the human player now properly attack back.
 - A worker right-clicking on an enemy now results in the worker attacking the enemy.
 - Units now attack barrels and doors if they are right-clicked.
+- Some fauna units now play idle sounds.
 
 * Upgrades
 - Added Masonry upgrade (increases building HP and armor, and allows upgrade to guard towers) for the Dwarves, Goblins and Teutons (graphics by Leo).
