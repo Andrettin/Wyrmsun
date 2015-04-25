@@ -1401,8 +1401,8 @@ function BuildProgramStartMenu()
     function() RunOptionsMenu(); menu:stop(1) end)
   menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
     function() RunEditorMenu(); menu:stop(1) end)
-  menu:addFullButton(_("Load Mo~!d"), "d", offx + 208, offy + 104 + 36*6,
-    function() RunLoadModMenu(); menu:stop(1) end)
+  menu:addFullButton(_("Mo~!ds"), "d", offx + 208, offy + 104 + 36*6,
+    function() RunModsMenu(); menu:stop(1) end)
   menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
     function() RunEncyclopediaMenu(); menu:stop(1) end)
   menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
@@ -1411,40 +1411,6 @@ function BuildProgramStartMenu()
     function() menu:stop() end)
 
   return menu:run()
-end
-
-function RunLoadModMenu()
-  buttonStatut = 0
-  local menu = WarMenu(nil, panel(5), false)
-  menu:setSize(352, 352)
-  menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
-  menu:setDrawMenusUnder(true)
-
-  menu:addLabel(_("Load Mod"), 176, 8)
-
-  local browser = menu:addBrowser("mods/", ".lua$",
-    24, 140, 300, 108, nil, false)
-
-  local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
-
-  local function cb(s)
-    l:setCaption(browser:getSelectedItem())
-    l:adjustSize()
-  end
-  browser:setActionCallback(cb)
-
-  menu:addHalfButton(_("~!OK"), "o", 48, 318,
-    function()
-      if (browser:getSelected() < 0) then
-        return
-      end
-      Load(browser.path .. browser:getSelectedItem())
-      menu:stop()
-    end)
-  menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
-    function() buttonStatut = 2; menu:stop() end)
-
-  menu:run()
 end
 
 LoadGameFile = nil
@@ -1478,8 +1444,12 @@ Load("scripts/menus/network.lua")
 Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
 Load("scripts/menus/achievements.lua")
+Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
+
+-- load mods now
+LoadMods()
 
 function GameStarting()
   if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then

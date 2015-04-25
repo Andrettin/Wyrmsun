@@ -324,7 +324,7 @@ function BuildOptionsMenu()
   local resolution_width = Video.Width
   local resolution_height = Video.Height
 
-  menu:addLabel(_("Options"), offx + 176, offy + 1)
+  menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
   menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
   resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
     function(dd)

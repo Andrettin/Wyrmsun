@@ -322,6 +322,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Quest objectives now appear in the top left of the screen.
 - Added 720 resolution width.
 - Missiles can no longer fly over cave walls, dungeon walls or doors.
+- New mod loading interface, which allows saving which mods you want enabled.
 
 * Quests
 - Added The Battle of Magetobria quest.

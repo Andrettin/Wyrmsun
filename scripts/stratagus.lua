@@ -1388,6 +1388,7 @@ local defaultPreferences = {
 	TechnologyAcquired = {},
 	AchievementsCompleted = {},
 	LastVersionPlayed = "0.0.0",
+	EnabledMods = {},
 	Heroes = {
 		Marbod = {
 			name = "Marbod",
