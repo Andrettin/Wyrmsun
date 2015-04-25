@@ -2,4 +2,3 @@
 
 DefinePlayerTypes("person","person","person","computer")
 PresentMap("Random Cave (Symmetric)", 3, 128, 128, 1)
-MapWorld = "Random"

@@ -1047,6 +1047,7 @@ function RunSinglePlayerCustomGameMenu()
 	end
   end
   table.sort(world_list)
+  table.insert(world_list, _("Custom"))
 
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
   descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
@@ -1179,7 +1180,7 @@ function RunSinglePlayerCustomGameMenu()
 		MapWorld = ""
 		MapRequiredQuest = ""
 		GetMapInfo(maps[i])
-		if (_(MapWorld) == _(world_list[world:getSelected() + 1])) then
+		if (_(MapWorld) == _(world_list[world:getSelected() + 1]) or MapWorld == "" and world_list[world:getSelected() + 1] == "Custom") then
 			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
 				local map_description = _(mapinfo.description)
 				table.insert(scenario_list, map_description)
@@ -1187,10 +1188,6 @@ function RunSinglePlayerCustomGameMenu()
 		end
 	end
 
-	--table.sort(scenario_list)
-	if (world_list[world:getSelected() + 1] == "Random") then
-		table.insert(scenario_list, _("Custom Map"))
-	end
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
 	scenario:setSelected(0)
@@ -1207,15 +1204,6 @@ function RunSinglePlayerCustomGameMenu()
 		end
 	end
 
-	if (scenario_list[scenario:getSelected() + 1] == _("Custom Map")) then
-		local oldmapname = mapname
-		RunSelectScenarioMenu()
-		if (mapname ~= oldmapname) then
-			GetMapInfo(mapname)
-			MapChanged()
-		end
-		mapl:setCaption(string.sub(mapname, 6))
-	end
 	MapForTheMotherland = false
 	GetMapInfo(mapname)
 	MapChanged()

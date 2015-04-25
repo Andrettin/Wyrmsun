@@ -6,4 +6,4 @@ if (GrandStrategy == false) then
 else
 	PresentMap("Random Valley", 4, 64, 64, 1)
 end
-MapWorld = "Random"
+
