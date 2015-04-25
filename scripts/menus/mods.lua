@@ -65,6 +65,8 @@ function RunModsMenu()
 	-- build the mods list
 	for i=1,table.getn(mods) do
 		ModName = ""
+		ModDescription = ""
+		ModDependencies = nil
 		Load(mods[i])
 		if (ModName ~= "") then
 			table.insert(mod_list, ModName)
@@ -75,22 +77,49 @@ function RunModsMenu()
 --	menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
 	mod_dd = menu:addDropDown(mod_list, offx + 8 + 42, offy + 55 + 26*0,
 		function(dd)
---	 		ModChanged()
+			ModName = ""
+			ModDescription = ""
+			ModDependencies = nil
+			Load(mods[i])
 		end
 	)
 	mod_dd:setSize(252, 20)
 	mod_dd:setSelected(0)
 
+	menu:addLabel(_("Description: " .. ModDescription), Video.Width / 2, offy + 34 + 60*1.5, Fonts["game"], true)
+
+	if (ModDependencies ~= nil) then
+		local dependencies_string = "Dependencies: "
+		for i=1,table.getn(ModDependencies) do
+			dependencies_string = dependencies_string .. ModDependencies[i]
+			if (i < table.getn(ModDependencies)) then
+				dependencies_string = dependencies_string .. ", "
+			end
+		end
+		menu:addLabel(_(dependencies_string), Video.Width / 2, offy + 34 + 60*2.5, Fonts["game"], true)
+	end
+
 	local mod_enabled = {}
-	mod_enabled = menu:addImageCheckBox("Enabled (Restart Required)", offx + 48, offy + 36 * 3.5,
+	mod_enabled = menu:addImageCheckBox("Enabled (Restart Required)", offx + 48, offy + 36 * 8.5,
 		function()
 			if (GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])) then
 				RemoveElementFromArray(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
 				SavePreferences()
 			else
-				table.insert(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
-				SavePreferences()
+				local has_required_dependencies = true
+				if (ModDependencies ~= nil) then
+					for i=1,table.getn(ModDependencies) do
+						if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+							has_required_dependencies = false
+						end
+					end
+				end
+				if (has_required_dependencies) then
+					table.insert(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
+					SavePreferences()
+				end
 			end
+			mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
 		end
 	)
 	mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))

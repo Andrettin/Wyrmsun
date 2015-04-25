@@ -2,3 +2,5 @@
 
 DefinePlayerTypes("person","computer","nobody","nobody","computer","nobody","computer","computer")
 PresentMap("Venice", 5, 128, 128, 1)
+--MapWorld = "Earth"
+MapWorld = "None"
