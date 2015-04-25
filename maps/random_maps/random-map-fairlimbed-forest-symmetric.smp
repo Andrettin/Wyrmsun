@@ -2,3 +2,4 @@
 
 DefinePlayerTypes("person","person","person","computer")
 PresentMap("Random Fairlimbed Forest (Symmetric)", 3, 128, 128, 1)
+MapWorld = "Random"

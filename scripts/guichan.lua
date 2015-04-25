@@ -1002,6 +1002,7 @@ function RunSinglePlayerCustomGameMenu()
   
   local maps = {}
 
+  local custom_map_present = false
   for map_directory=1,table.getn(MapDirectories) do
 	-- load the maps
 	local i
@@ -1041,13 +1042,17 @@ function RunSinglePlayerCustomGameMenu()
 	for i=1,table.getn(maps) do
 		MapWorld = ""
 		GetMapInfo(maps[i])
-		if (MapWorld ~= "" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
+		if (MapWorld ~= "" and MapWorld ~= "None" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
 			table.insert(world_list, _(MapWorld))
+		elseif (MapWorld == "") then
+			custom_map_present = true
 		end
 	end
   end
   table.sort(world_list)
-  table.insert(world_list, _("Custom"))
+  if (custom_map_present) then
+	  table.insert(world_list, _("Custom"))
+  end
 
   mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
   descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
@@ -1180,9 +1185,12 @@ function RunSinglePlayerCustomGameMenu()
 		MapWorld = ""
 		MapRequiredQuest = ""
 		GetMapInfo(maps[i])
-		if (_(MapWorld) == _(world_list[world:getSelected() + 1]) or MapWorld == "" and world_list[world:getSelected() + 1] == "Custom") then
+		if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
 			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
 				local map_description = _(mapinfo.description)
+				if (map_description == "") then
+					map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
+				end
 				table.insert(scenario_list, map_description)
 			end
 		end
@@ -1198,7 +1206,19 @@ function RunSinglePlayerCustomGameMenu()
 	for i=1,table.getn(maps) do
 		MapWorld = ""
 		GetMapInfo(maps[i])
-		if ((_(mapinfo.description) == scenario_list[scenario:getSelected() + 1] or "~<" .. _(mapinfo.description) .. "~>" == scenario_list[scenario:getSelected() + 1]) and _(MapWorld) == _(world_list[world:getSelected() + 1])) then
+		if (
+			(
+				_(mapinfo.description) == scenario_list[scenario:getSelected() + 1]
+				or string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "") == scenario_list[scenario:getSelected() + 1]
+			)
+			and (
+				_(MapWorld) == _(world_list[world:getSelected() + 1])
+				or (
+					MapWorld == ""
+					and world_list[world:getSelected() + 1] == "Custom"
+				)
+			)
+		) then
 			mapname = maps[i]
 			mapl:setCaption(string.sub(mapname, 6))
 		end

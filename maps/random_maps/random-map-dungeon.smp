@@ -2,4 +2,4 @@
 
 DefinePlayerTypes("person","person","computer","neutral")
 PresentMap("Random Dungeon", 2, 64, 64, 1)
-
+MapWorld = "Random"

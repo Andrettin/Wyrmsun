@@ -286,7 +286,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Heroes in random dungeon maps now begin next to stairs.
 - Added Oderzo map.
 - Added Braga map.
-- Custom maps now appear automatically under the "Custom" world in the single player setup screen (and the random maps have been moved there as well).
+- Custom maps now appear automatically under the "Custom" world in the single player setup screen.
 
 * Miscellaneous
 - Three new unit settings have been added to the Single Player Game Setup: Basic Squad (four infantry units), Improved Squad (three infantry units and two ranged units) and Advanced Squad (five infantry units, three ranged units and one siege weapon).

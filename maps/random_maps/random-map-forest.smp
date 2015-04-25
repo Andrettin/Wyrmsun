@@ -6,3 +6,4 @@ if (GrandStrategy == false) then
 else
 	PresentMap("Random Forest", 3, 64, 64, 1)
 end
+MapWorld = "Random"
