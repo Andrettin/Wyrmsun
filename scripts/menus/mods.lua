@@ -146,6 +146,7 @@ function LoadMods()
 		ModName = ""
 		Load(tostring(string.gsub(mods[i], "main", "info")))
 		if (GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
+			table.insert(MapDirectories, tostring(string.gsub(mods[i], "main.lua", "maps/")))
 			Load(mods[i])
 		end
 	end

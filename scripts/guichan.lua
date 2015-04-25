@@ -1018,7 +1018,7 @@ function RunSinglePlayerCustomGameMenu()
 	end
 
 	-- get maps in the main maps folder
-	u = 1
+	u = table.getn(maps) + 1
 	local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
 	for i,f in ipairs(fileslist) do
 		if (string.find(f, "^.*%.smp%.?g?z?$")) then
@@ -1196,6 +1196,7 @@ function RunSinglePlayerCustomGameMenu()
 		end
 	end
 
+	table.sort(scenario_list)
 	scenario:setList(scenario_list)
 	scenario:setSize(152, 20)
 	scenario:setSelected(0)
