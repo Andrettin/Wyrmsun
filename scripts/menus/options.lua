@@ -534,7 +534,6 @@ function BuildOptionsMenu()
 	wyr.preferences.MusicVolume = GetMusicVolume()
 	wyr.preferences.MusicEnabled = IsMusicEnabled()
 	SavePreferences()
-	Load("scripts/units.lua")
   	menu:stop()
   end)
 

@@ -29,7 +29,14 @@
 
 -- Set the unit type graphics to the correct tileset
 table.foreach(UnitTypeFiles,
-	function(k, v) DefineUnitType(k, {Image = {"file", v[wyrmsun.tileset]}}) end)
+	function(k, v)
+		if (v[wyrmsun.tileset] ~= nil) then
+			DefineUnitType(k, {Image = {"file", v[wyrmsun.tileset]}})
+		else
+			DefineUnitType(k, {Image = {"file", v["conifer_forest_summer"]}}) -- use the conifer forest as default if the image is not defined for this tileset
+		end
+	end
+)
 
 -- different ferns depending on tileset (normal graphic-per-tileset setting was resulting in bugs with the fern)
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then

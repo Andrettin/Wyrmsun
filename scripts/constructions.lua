@@ -28,7 +28,7 @@
 --
 
 if (wyrmsun.tileset == nil) then
-  wyrmsun.tileset = "swamp"
+  wyrmsun.tileset = "conifer_forest_summer"
 end
 
 local files = {
@@ -39,6 +39,10 @@ local files = {
   fairlimbed_forest = "neutral/buildings/land_construction_site.png",
   swamp = "neutral/buildings/land_construction_site.png"
 }
+
+if (files[wyrmsun.tileset] == nil) then
+  files[wyrmsun.tileset] = files["conifer_forest_summer"]
+end
 
 DefineConstruction("construction-none", {
   Files = {
@@ -55,15 +59,6 @@ DefineConstruction("construction-none", {
     File = "main",
     Frame = 1}}
 })
-
-local files = {
-  cave = "neutral/buildings/land_construction_site.png",
-  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
-  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
-  dungeon = "neutral/buildings/land_construction_site.png",
-  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
-  swamp = "neutral/buildings/land_construction_site.png"
-}
 
 DefineConstruction("construction-land", {
   Files = {
@@ -148,15 +143,6 @@ DefineConstruction("construction-dwarven-sentry-tower", {
     File = "main",
     Frame = 2}}
 })
-
-local files = {
-  cave = "neutral/buildings/land_construction_site.png",
-  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
-  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
-  dungeon = "neutral/buildings/land_construction_site.png",
-  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
-  swamp = "neutral/buildings/land_construction_site.png"
-}
 
 DefineConstruction("construction-land2", {
   Files = {
