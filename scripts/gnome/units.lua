@@ -192,9 +192,12 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 		"ready", "gnomish-caravan-ready",
 		"help", "basic-gnome-voices-help",
 		"dead", "explosion",
-		"step", "step-grass",
-		"step-rock", "step-rock",
-		"step-grass", "step-grass"
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-grass", "step-grass",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 	}
 } )
 

@@ -47,9 +47,9 @@ DefineTileset("name", "Fairlimbed Forest",
     { 324, 325, 325, 326}},						-- 010
   "solid", { "unused",
     {}},								-- 020
-  "solid", { "dirt", "land", "no-building", "mud",
+  "solid", { "dirt", "land", "no-building", "dirt",
     { 330, 331, 332, 330}},						-- 030
-  "solid", { "dark-dirt", "land", "no-building", "mud",
+  "solid", { "dark-dirt", "land", "no-building", "dirt",
     { 333, 334, 335, 333}},						-- 040
   "solid", { "grass", "land", "grass",
     { 346, 347, 348, 346}},						-- 050
@@ -107,7 +107,7 @@ DefineTileset("name", "Fairlimbed Forest",
     { 229, 230, 229},							-- 2D0
     {},											-- 2E0
     {}},										-- 2F0
-  "mixed", { "dark-dirt", "dirt", "land", "no-building", "mud",
+  "mixed", { "dark-dirt", "dirt", "land", "no-building", "dirt",
     { 279, 288, 279},							-- 300
     { 296, 297, 296},							-- 310
     { 298, 299, 300},							-- 320
@@ -141,7 +141,7 @@ DefineTileset("name", "Fairlimbed Forest",
     { 10, 12, 10},							-- 4D0
     {},										-- 4E0
     {}},									-- 4F0
-  "mixed", { "dirt", "grass", "land", "no-building", "mud",
+  "mixed", { "dirt", "grass", "land", "no-building", "dirt",
     { 264, 265, 264},							-- 500
     { 266, 267, 266},							-- 510
     { 268, 269, 270},							-- 520

@@ -146,22 +146,6 @@ The Stratagus engine, as well as all of the code, artwork, music and story eleme
 /sounds/missiles/sword/swordhit_18a.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_19.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_19a.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass8.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass1.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass2.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass3.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass4.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass5.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass6.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_grass/fs_grass7.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock8.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock1.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock2.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock3.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock4.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock5.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock6.wav (licensed under the CC-BY-SA 3.0)
-/sounds/movement/step_rock/fs_rock7.wav (licensed under the CC-BY-SA 3.0)
 
 
 See the license.txt file for the text of the GPLv2. The contents of the CC-BY-SA license can be found at: http://creativecommons.org/licenses/by-sa/3.0/

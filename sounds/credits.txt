@@ -253,6 +253,30 @@ Brian Brickwagon Jennings:
 David Slimp:
 /sounds/buildings/gold_mine.wav
 
+Jute:
+/sounds/movement/step_dirt/stepdirt_1.wav
+/sounds/movement/step_dirt/stepdirt_2.wav
+/sounds/movement/step_dirt/stepdirt_3.wav
+/sounds/movement/step_dirt/stepdirt_4.wav
+/sounds/movement/step_dirt/stepdirt_5.wav
+/sounds/movement/step_dirt/stepdirt_6.wav
+/sounds/movement/step_dirt/stepdirt_7.wav
+/sounds/movement/step_dirt/stepdirt_8.wav
+/sounds/movement/step_stone/stepstone_1.wav
+/sounds/movement/step_stone/stepstone_2.wav
+/sounds/movement/step_stone/stepstone_3.wav
+/sounds/movement/step_stone/stepstone_4.wav
+/sounds/movement/step_stone/stepstone_5.wav
+/sounds/movement/step_stone/stepstone_6.wav
+/sounds/movement/step_stone/stepstone_7.wav
+/sounds/movement/step_stone/stepstone_8.wav
+
+TinyWorlds:
+/sounds/movement/step_gravel/step_gravel.wav
+/sounds/movement/step_leaves/step_leaves_1.wav
+/sounds/movement/step_leaves/step_leaves_2.wav
+/sounds/movement/step_mud/step_mud.wav
+
 U.S. Fish and Wildlife Service (Public Domain) (http://www.fws.gov/video/sound.htm):
 /sounds/buildings/yalepen.wav (later modified by b_o)
 /sounds/neutral/bird/deadbird.wav (later modified by b_o)
@@ -395,22 +419,6 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/missiles/shield_metal/shieldimpmetal_213.wav
 /sounds/missiles/shield_metal/shieldimpmetal_214.wav
 /sounds/missiles/shield_metal/shieldimpmetal_215.wav
-/sounds/movement/step_grass/fs_grass8.wav
-/sounds/movement/step_grass/fs_grass1.wav
-/sounds/movement/step_grass/fs_grass2.wav
-/sounds/movement/step_grass/fs_grass3.wav
-/sounds/movement/step_grass/fs_grass4.wav
-/sounds/movement/step_grass/fs_grass5.wav
-/sounds/movement/step_grass/fs_grass6.wav
-/sounds/movement/step_grass/fs_grass7.wav
-/sounds/movement/step_rock/fs_rock8.wav
-/sounds/movement/step_rock/fs_rock1.wav
-/sounds/movement/step_rock/fs_rock2.wav
-/sounds/movement/step_rock/fs_rock3.wav
-/sounds/movement/step_rock/fs_rock4.wav
-/sounds/movement/step_rock/fs_rock5.wav
-/sounds/movement/step_rock/fs_rock6.wav
-/sounds/movement/step_rock/fs_rock7.wav
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav

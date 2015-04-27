@@ -218,8 +218,11 @@ DefineUnitType("unit-rat", { Name = "Rat",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -301,8 +304,11 @@ DefineUnitType("unit-yale", { Name = "Yale",
 		"dead", "yale-dead",
 		"hit", "club-attack",
 		"miss", "attack-miss",
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -487,8 +493,11 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 		"dead", "drake-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -597,8 +606,11 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss",
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3021,8 +3033,11 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3051,8 +3066,11 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3114,8 +3132,11 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	SelectableByRectangle = true,
 	AttackFromTransporter = true,
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3145,8 +3166,11 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3177,8 +3201,11 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3209,8 +3236,11 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	SelectableByRectangle = true,
 	Mana = {Enable = true},
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )
@@ -3241,8 +3271,11 @@ DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
 	CanTargetLand = true, CanTargetSea = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"step", "step-grass",
-		"step-rock", "step-rock",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
 		"step-grass", "step-grass"
 	}
 } )

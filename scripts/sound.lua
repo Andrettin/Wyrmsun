@@ -612,31 +612,47 @@ MakeSound("foraging", {
 	"misc/foraging/leaves_18.wav"
 })
 
-MakeSound("step-grass", {
-	"movement/step_grass/fs_grass8.wav",
-	"movement/step_grass/fs_grass1.wav",
-	"movement/step_grass/fs_grass2.wav",
-	"movement/step_grass/fs_grass3.wav",
-	"movement/step_grass/fs_grass4.wav",
-	"movement/step_grass/fs_grass5.wav",
-	"movement/step_grass/fs_grass6.wav",
-	"movement/step_grass/fs_grass7.wav"
+MakeSound("step-dirt", {
+	"movement/step_dirt/stepdirt_1.wav",
+	"movement/step_dirt/stepdirt_2.wav",
+	"movement/step_dirt/stepdirt_3.wav",
+	"movement/step_dirt/stepdirt_4.wav",
+	"movement/step_dirt/stepdirt_5.wav",
+	"movement/step_dirt/stepdirt_6.wav",
+	"movement/step_dirt/stepdirt_7.wav",
+	"movement/step_dirt/stepdirt_8.wav"
 })
-SetSoundRange("step-grass", 32)
-SetSoundVolumePercent("step-grass", 50)
+SetSoundRange("step-dirt", 32)
+SetSoundVolumePercent("step-dirt", 33)
 
-MakeSound("step-rock", {
-	"movement/step_rock/fs_rock8.wav",
-	"movement/step_rock/fs_rock1.wav",
-	"movement/step_rock/fs_rock2.wav",
-	"movement/step_rock/fs_rock3.wav",
-	"movement/step_rock/fs_rock4.wav",
-	"movement/step_rock/fs_rock5.wav",
-	"movement/step_rock/fs_rock6.wav",
-	"movement/step_rock/fs_rock7.wav"
+MakeSound("step-gravel", {
+	"movement/step_gravel/step_gravel.wav"
 })
-SetSoundRange("step-rock", 32)
-SetSoundVolumePercent("step-rock", 50)
+SetSoundRange("step-gravel", 32)
+
+MakeSound("step-leaves", {
+	"movement/step_leaves/step_leaves_1.wav",
+	"movement/step_leaves/step_leaves_2.wav"
+})
+SetSoundRange("step-leaves", 32)
+
+MakeSound("step-mud", {
+	"movement/step_mud/step_mud.wav"
+})
+SetSoundRange("step-mud", 32)
+
+MakeSound("step-stone", {
+	"movement/step_stone/stepstone_1.wav",
+	"movement/step_stone/stepstone_2.wav",
+	"movement/step_stone/stepstone_3.wav",
+	"movement/step_stone/stepstone_4.wav",
+	"movement/step_stone/stepstone_5.wav",
+	"movement/step_stone/stepstone_6.wav",
+	"movement/step_stone/stepstone_7.wav",
+	"movement/step_stone/stepstone_8.wav"
+})
+SetSoundRange("step-stone", 32)
+SetSoundVolumePercent("step-stone", 50)
 
 MakeSound("gold-coins", "misc/gold_coins.wav")
 SetSoundRange("gold-coins", 32)
@@ -675,6 +691,7 @@ MakeSound("gryphon-ready", {
 	"neutral/gryphon/gryphon_shriek_2.wav"
 })
 SetSoundRange("gryphon-ready", 32)
+SetSoundVolumePercent("gryphon-ready", 50)
 MakeSound("gryphon-dead", {
 	"neutral/gryphon/gryphon_death_1.wav",
 	"neutral/gryphon/gryphon_death_2.wav"
