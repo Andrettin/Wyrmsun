@@ -1133,4 +1133,4 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 ############################################################
 # Credits
 ############################################################
-(see in-game credits and the /graphics/credits.txt and /sounds/credits.txt files)
+(see in-game credits and the /graphics/credits.txt, /music/credits.txt and /sounds/credits.txt files)

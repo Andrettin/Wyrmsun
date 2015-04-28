@@ -68,9 +68,6 @@ local land_funcs = {
   function() return AiWait(AiTownHall()) end,
   function() return AiWait(AiWorker()) end, -- start hangs if nothing available
 
-  function() return AiSet("unit-gold-mine", 1) end,
-  function() return AiWait("unit-gold-mine") end,
-  
   function() return AiSet(AiWorker(), 4) end, -- 4
 
   function() return AiNeed(AiBarracks()) end,
@@ -153,7 +150,6 @@ local land_funcs = {
 -- EXPANSION
 
   function() return AiNeed(AiTownHall()) end,
-  function() return AiSet("unit-gold-mine", 2) end,
   function() return AiNeed(AiBarracks()) end,
 
 -- ATTACK!!
