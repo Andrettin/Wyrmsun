@@ -176,18 +176,20 @@ editor_types = {
    "unit-inner-wall-decoration"
 }
 
+editor_tilesets = { "cave", "conifer_forest_summer", "conifer_forest_autumn", "dungeon", "fairlimbed_forest", "swamp"}
+
 --  Menu for new map to edit
 local function RunEditorNewMapMenu()
   local menu = WarMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
-  local tilesets = { "cave", "conifer_forest_summer", "conifer_forest_autumn", "dungeon", "fairlimbed_forest", "swamp"}
+  local tilesets = editor_tilesets
   local mapSizes = {"32", "64", "96", "128", "256"}
 
   menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
   local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
   menu:addLabel("Terrain:", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
-  local dropDownTileset = menu:addDropDown(tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
+  local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
 
   menu:addLabel("Size:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
   local mapSizex = menu:addDropDown(mapSizes, offx + 208 + 50, offy + 104 + 32 * 3, function() end)
@@ -202,7 +204,55 @@ local function RunEditorNewMapMenu()
       Map.Info.Description = mapDescription:getText()
       Map.Info.MapWidth = mapSizes[1 + mapSizex:getSelected()]
       Map.Info.MapHeight = mapSizes[1 + mapSizey:getSelected()]
-      LoadTileModels("scripts/tilesets/" .. string.gsub(tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+	  if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+	  else -- check if any mod has this tileset
+			local mods = {}
+		  
+			local i
+			local f
+			local u = 1
+
+			-- list the subdirectories in the mods folder
+			local dirlist = {}
+			local dirs = ListDirsInDirectory("mods/")
+			for i,f in ipairs(dirs) do
+				dirlist[u] = f .. "/"
+				u = u + 1
+			end
+
+			u = 1
+			-- get mods in the subdirectories of the mods folder
+			for j=1,table.getn(dirlist) do
+				local fileslist = ListFilesInDirectory("mods/" .. dirlist[j])
+				for i,f in ipairs(fileslist) do
+					if (string.find(f, "info.lua")) then
+						mods[u] = "mods/" .. dirlist[j] .. f
+						u = u + 1
+					end
+				end
+			end
+
+			u = 1
+			-- get mod main files in the subdirectories of the mods folder
+			for j=1,table.getn(dirlist) do
+				local fileslist = ListFilesInDirectory("mods/" .. dirlist[j])
+				for i,f in ipairs(fileslist) do
+					if (string.find(f, "main.lua")) then
+						mods[u] = "mods/" .. dirlist[j] .. f
+						u = u + 1
+					end
+				end
+			end
+
+			for i=1,table.getn(mods) do
+				ModName = ""
+				Load(tostring(string.gsub(mods[i], "main", "info")))
+				if (CanAccessFile(string.gsub(mods[i], "main.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+					LoadTileModels(string.gsub(mods[i], "main.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+				end
+			end		
+	  end
       menu:stop()
       StartEditor(nil)
       RunEditorMenu()
@@ -499,8 +549,11 @@ function RunEditorMapProperties()
   menu:addLabel("Tileset : ", 45, 36 * 4, nil, false)
 
   local list = { "Cave", "Conifer Forest (Summer)", "Conifer Forest (Autumn)", "Dungeon", "Fairlimbed Forest", "Swamp"}
+  for i=table.getn(list)+1, table.getn(editor_tilesets) do
+	table.insert(list, FullyCapitalizeString(string.gsub(editor_tilesets[i], "_", " ")))
+  end
   local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
-  for i = 0,3 do
+  for i = 0,table.getn(list)-1 do
     if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)
     end
   end
