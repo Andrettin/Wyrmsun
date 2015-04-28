@@ -1079,6 +1079,28 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 	end
 end
 
+function CreateDecorationObjects(unit_type, unit_number, base_tile, min_x, max_x, min_y, max_y)
+	if (LoadedGame == false) then
+		local RandomX = 0
+		local RandomY = 0
+		local Count = unit_number
+		local WhileCount = 0
+		while (Count > 0 and WhileCount < unit_number * 100) do
+			RandomX = SyncRand(max_x - min_x - (GetUnitTypeData(unit_type, "TileWidth") - 1) + 1) + min_x
+			RandomY = SyncRand(max_y - min_y - (GetUnitTypeData(unit_type, "TileHeight") - 1) + 1) + min_y
+			if (GetTileTerrainName(RandomX, RandomY) == base_tile) then
+				local unit_quantity = GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY})
+
+				if (unit_quantity < 1) then -- tile should be empty
+					unit = CreateUnit(unit_type, 15, {RandomX, RandomY})
+					Count = Count - 1
+				end
+			end
+			WhileCount = WhileCount + 1
+		end
+	end
+end
+
 function CreateGryphons(gryphon_number)
 	local RandomX = 0
 	local RandomY = 0
