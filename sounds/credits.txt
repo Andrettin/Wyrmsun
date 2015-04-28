@@ -154,6 +154,7 @@ b_o:
 /sounds/neutral/yale/yale_select01.wav (modified from the U.S. Fish and Wildlife Service's sound)
 /sounds/neutral/yale/yale_select02.wav (modified from the U.S. Fish and Wildlife Service's sound)
 /sounds/neutral/yale/yaledead.wav (modified from the U.S. Fish and Wildlife Service's sound)
+/sounds/neutral/frog.wav
 
 Brian Brickwagon Jennings:
 /sounds/gnome/basic_voices/acknowledge-01.wav

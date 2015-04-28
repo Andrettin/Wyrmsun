@@ -183,7 +183,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	MaxAttackRange = 1,
 	Accuracy = 15,
 	Evasion = 15,
-	Priority = 37,
+	Priority = 10,
 	Points = 1,
 	Demand = 1,
 	Type = "land",
@@ -223,7 +223,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -309,7 +309,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -498,7 +498,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -611,7 +611,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -913,6 +913,76 @@ DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
 		"hit", "squishy-attack",
 		"miss", "squishy-miss"
 	}
+} )
+
+DefineUnitType("unit-frog", { Name = _("Frog"),
+	--Description = _("Frog"),
+	--Background = _(" A \"Frog\" is a kind of \"Amphibian\"."),
+	Image = {"file", "graphics/neutral/units/frog.png", "size", {18, 18}},
+	Animations = "animations-frog", Icon = "icon-slime",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 4,
+	HitPoints = 5,
+	DrawLevel = 35,
+	TileSize = {1, 1}, BoxSize = {32, 32},
+	SightRange = 3, ComputerReactionRange = 3, PersonReactionRange = 3,
+	Armor = 0, BasicDamage = 1, Missile = "missile-none",
+	Accuracy = 15,
+	Evasion = 15,
+	MaxAttackRange = 1,
+	Priority = 5,
+	BasePoints = 2,
+	Demand = 1,
+	Type = "land",
+	IsNotSelectable = true,
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	RandomMovementProbability = 1,
+	RandomMovementDistance = 1,
+	organic = true,
+	Fauna = true,
+	Flesh = true,
+	Insectivore = true,
+	ChildUpgrade = "upgrade-child",
+	Variations = {
+		{
+			"variation-id", "green"
+		},
+		{
+			"variation-id", "teal",
+			"file", "graphics/neutral/units/frog_teal.png"
+		},
+		{
+			"variation-id", "brown",
+			"file", "graphics/neutral/units/frog_brown.png"
+		},
+		{
+			"variation-id", "blue",
+			"file", "graphics/neutral/units/frog_blue.png"
+		},
+		{
+			"variation-id", "purple",
+			"file", "graphics/neutral/units/frog_purple.png"
+		},
+		{
+			"variation-id", "red",
+			"file", "graphics/neutral/units/frog_red.png"
+		},
+		{
+			"variation-id", "yellow",
+			"file", "graphics/neutral/units/frog_yellow.png"
+		}
+	},
+	Sounds = {
+		"selected", "frog-ribbit",
+		"ready", "frog-ribbit",
+		"acknowledge", "frog-ribbit",
+		"dead", "squishy-hit",
+		"idle", "frog-ribbit",
+		"miss", "frog-tongue",
+		"hit", "frog-tongue"
+	  }
 } )
 
 DefineUnitType("unit-bird", { Name = _("Bird"),
@@ -3039,7 +3109,7 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -3072,7 +3142,7 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -3138,7 +3208,7 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -3172,7 +3242,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -3207,7 +3277,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -3242,7 +3312,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 
@@ -3277,7 +3347,7 @@ DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
 		"step-gravel", "step-gravel",
 		"step-mud", "step-mud",
 		"step-stone", "step-stone",
-		"step-grass", "step-grass"
+		"step-grass", "step-leaves"
 	}
 } )
 

@@ -197,6 +197,13 @@ b_o:
 /graphics/neutral/units/dread_bat.png
 /graphics/neutral/units/fly.png
 /graphics/neutral/units/fly_extra_1.png
+/graphics/neutral/units/frog.png
+/graphics/neutral/units/frog_blue.png
+/graphics/neutral/units/frog_brown.png
+/graphics/neutral/units/frog_purple.png
+/graphics/neutral/units/frog_red.png
+/graphics/neutral/units/frog_teal.png
+/graphics/neutral/units/frog_yellow.png
 /graphics/neutral/units/gryphon.png
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png

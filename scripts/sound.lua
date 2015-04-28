@@ -509,6 +509,7 @@ SetSoundVolumePercent("throwing-axe", 75)
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
 SetSoundRange("throwing-axe-hit", 32)
 
+
 MakeSound("attack-miss",
 	{"missiles/miss-1.wav",
 	"missiles/miss-2.wav",
@@ -722,6 +723,17 @@ MakeSound("crow-selected", {
 })
 SetSoundRange("crow-selected", 32)
 MakeSound("bat-selected", "neutral/bat_flapping.wav")
+
+MakeSound("frog-ribbit", {
+	"neutral/frog.wav"
+})
+SetSoundRange("frog-ribbit", 32)
+SetSoundVolumePercent("frog-ribbit", 25)
+MakeSound("frog-tongue", {
+	"missiles/miss-2.wav"
+})
+SetSoundRange("frog-tongue", 32)
+
 MakeSound("yale-selected", {
 	"neutral/yale/yale_select01.wav",
 	"neutral/yale/yale_select02.wav"

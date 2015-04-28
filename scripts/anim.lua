@@ -446,6 +446,58 @@ DefineAnimations("animations-bee", {
 })
 
 --
+-- Frog
+--
+
+local FrogStill = {
+--	"unbreakable begin",
+	"frame 0", "wait 8",
+	"frame 5", "wait 3",
+	"frame 10", "wait 3",
+	"frame 15", "wait 3",
+	"frame 20", "wait 3",
+	"frame 0", "wait 7",
+	"frame 0",
+--	"unbreakable end", "wait 1",
+}
+
+local FrogMove = {
+	"unbreakable begin", "frame 25", "wait 1",
+	"frame 25", "move 0", "wait 10",
+	"frame 30", "move 5", "wait 3",
+	"frame 35", "move 6", "wait 4",
+	"frame 40", "move 7", "wait 4",
+	"frame 45", "move 6", "wait 3",
+	"frame 50", "move 5", "wait 3",
+	"frame 55", "move 3", "wait 3",
+	"frame 25", "unbreakable end", "wait 1",
+}
+local FrogDeath = {
+	"unbreakable begin",
+	"frame 90", "wait 70",
+	"frame 95", "wait 100",
+	"frame 100", "wait 100",
+	"frame 100", "unbreakable end", "wait 1",
+}
+
+DefineAnimations("animations-frog", {
+	Still = FrogStill,
+	Move = FrogMove,
+	Attack = {
+		"unbreakable begin",
+		"frame 60", "wait 7",
+		"frame 65", "attack", "wait 2",
+		"frame 70", "wait 1",
+		"frame 75", "wait 1",
+		"frame 80", "wait 3",
+		"frame 85", "wait 3",
+		"frame 0", "wait 3",
+		"frame 0", "unbreakable end", "wait 1",
+	},
+	Death = FrogDeath,
+})
+
+--
 -- Slime
 --
 
