@@ -3596,7 +3596,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	elseif (tree_quantity == "medium") then
 		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (tree_quantity == "low") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
 
 	ApplyRawTiles()
