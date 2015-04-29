@@ -1,5 +1,12 @@
 LoadTileModels("scripts/tilesets/fairlimbed_forest.lua")
 
 if (LoadedGame == false) then
-	GenerateRandomMap(128, 128, true, true, "medium")
+	GenerateRandomMap({
+		Symmetric = true,
+		MixedCivilizations = true,
+		TreeQuantity = "medium",
+		WaterQuantity = "low",
+		DarkLandQuantity = "medium",
+		DarkRoughLandQuantity = "medium"
+	})
 end

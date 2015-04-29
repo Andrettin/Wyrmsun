@@ -723,30 +723,70 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == base_tile_type) then
 			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough")) then
-				SetRawTile(RandomX, RandomY, "Dark-Rough")
-				SetRawTile(RandomX - 1, RandomY - 1, "Dark-Rough")
-				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
-				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == base_tile_type or RawTile(RandomX + 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough")) then
-				SetRawTile(RandomX, RandomY, "Dark-Rough")
-				SetRawTile(RandomX + 1, RandomY - 1, "Dark-Rough")
-				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
-				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == base_tile_type or RawTile(RandomX + 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough")) then
-				SetRawTile(RandomX, RandomY, "Dark-Rough")
-				SetRawTile(RandomX + 1, RandomY + 1, "Dark-Rough")
-				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
-				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == base_tile_type or RawTile(RandomX - 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough")) then
-				SetRawTile(RandomX, RandomY, "Dark-Rough")
-				SetRawTile(RandomX - 1, RandomY + 1, "Dark-Rough")
-				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
-				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
-				Count = Count - 1
+			if (RandomNumber == 0) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Rough")
+					SetRawTile(RandomX - 1, RandomY - 1, "Dark-Rough")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 1) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Rough")
+					SetRawTile(RandomX + 1, RandomY - 1, "Dark-Rough")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 2) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Rough")
+					SetRawTile(RandomX + 1, RandomY + 1, "Dark-Rough")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 3) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Rough")
+					SetRawTile(RandomX - 1, RandomY + 1, "Dark-Rough")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
+					Count = Count - 1
+				end
 			end
 		end
 		WhileCount = WhileCount + 1
@@ -761,41 +801,227 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		if (RawTile(RandomX, RandomY) == "Dark-Rough") then
 			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == base_tile_type or RawTile(RandomX - 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough")) then
-				SetRawTile(RandomX - 1, RandomY - 1, "Dark-Rough")
-				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
-				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) == base_tile_type or RawTile(RandomX + 1, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX, RandomY - 1) == base_tile_type or RawTile(RandomX, RandomY - 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough")) then
-				SetRawTile(RandomX + 1, RandomY - 1, "Dark-Rough")
-				SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
-				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) == base_tile_type or RawTile(RandomX + 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY) == base_tile_type or RawTile(RandomX + 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX + 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
-				SetRawTile(RandomX + 1, RandomY + 1, "Dark-Rough")
-				SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
-				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
-				Count = Count - 1
-			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) == base_tile_type or RawTile(RandomX - 1, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY) == base_tile_type or RawTile(RandomX - 1, RandomY) == "Dark-Rough") and (RawTile(RandomX, RandomY + 1) == base_tile_type or RawTile(RandomX, RandomY + 1) == "Dark-Rough") and (RawTile(RandomX - 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
-				SetRawTile(RandomX - 1, RandomY + 1, "Dark-Rough")
-				SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
-				SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
-				Count = Count - 1
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX - 1, RandomY - 1, "Dark-Rough")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX, RandomY - 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX + 1, RandomY - 1, "Dark-Rough")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Rough")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX + 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX + 1, RandomY + 1, "Dark-Rough")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Rough")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) ~= "Dark-Rough" or RawTile(RandomX - 1, RandomY) ~= "Dark-Rough" or RawTile(RandomX, RandomY + 1) ~= "Dark-Rough")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= base_tile_type and RawTile(x, y) ~= "Dark-Rough") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX - 1, RandomY + 1, "Dark-Rough")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Rough")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Rough")
+					Count = Count - 1
+				end
+			end
+		end
+		WhileCount = WhileCount + 1
+	end
+end
+
+function GenerateDarkWater(dark_water_seed_number, dark_water_expansions_number, min_x, max_x, min_y, max_y)
+	local RandomNumber = 0
+	local RandomX = 0
+	local RandomY = 0
+	local Count = 0
+	local WhileCount = 0
+
+	-- create initial dark water seeds
+	Count = dark_water_seed_number
+	while (Count > 0 and WhileCount < dark_water_seed_number * 100) do
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
+		if (RawTile(RandomX, RandomY) == "Water") then
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Water")
+					SetRawTile(RandomX - 1, RandomY - 1, "Dark-Water")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Water")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Water")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 1) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Water")
+					SetRawTile(RandomX + 1, RandomY - 1, "Dark-Water")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Water")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Water")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 2) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Water")
+					SetRawTile(RandomX + 1, RandomY + 1, "Dark-Water")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Water")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Water")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 3) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX, RandomY, "Dark-Water")
+					SetRawTile(RandomX - 1, RandomY + 1, "Dark-Water")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Water")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Water")
+					Count = Count - 1
+				end
 			end
 		end
 		WhileCount = WhileCount + 1
 	end
 
+	WhileCount = 0
 
-	if (base_tile_type == "Rough") then
-		-- convert buildable land tiles adjacent to dark rough land tiles into rough land
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
-				if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Dark-Rough" or RawTile(x, y - 1) == "Dark-Rough" or RawTile(x - 1, y) == "Dark-Rough" or RawTile(x + 1, y) == "Dark-Rough" or RawTile(x - 1, y - 1) == "Dark-Rough" or RawTile(x + 1, y - 1) == "Dark-Rough" or RawTile(x - 1, y + 1) == "Dark-Rough" or RawTile(x + 1, y + 1) == "Dark-Rough")) then
-					SetRawTile(x, y, "Rough")
+	-- expand dark water
+	Count = dark_water_expansions_number
+	while (Count > 0 and WhileCount < dark_water_expansions_number * 100) do
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
+		if (RawTile(RandomX, RandomY) == "Dark-Water") then
+			RandomNumber = SyncRand(4)
+			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) ~= "Dark-Water" or RawTile(RandomX - 1, RandomY) ~= "Dark-Water" or RawTile(RandomX, RandomY - 1) ~= "Dark-Water")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX - 1, RandomY - 1, "Dark-Water")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Water")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Water")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 1 and (RawTile(RandomX + 1, RandomY - 1) ~= "Dark-Water" or RawTile(RandomX, RandomY - 1) ~= "Dark-Water" or RawTile(RandomX + 1, RandomY) ~= "Dark-Water")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 2, RandomY + 1 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX + 1, RandomY - 1, "Dark-Water")
+					SetRawTile(RandomX, RandomY - 1, "Dark-Water")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Water")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 2 and (RawTile(RandomX + 1, RandomY + 1) ~= "Dark-Water" or RawTile(RandomX + 1, RandomY) ~= "Dark-Water" or RawTile(RandomX, RandomY + 1) ~= "Dark-Water")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 1, RandomX + 2 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX + 1, RandomY + 1, "Dark-Water")
+					SetRawTile(RandomX + 1, RandomY, "Dark-Water")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Water")
+					Count = Count - 1
+				end
+			elseif (RandomNumber == 3 and (RawTile(RandomX - 1, RandomY + 1) ~= "Dark-Water" or RawTile(RandomX - 1, RandomY) ~= "Dark-Water" or RawTile(RandomX, RandomY + 1) ~= "Dark-Water")) then
+				local appropriate_surroundings = true
+				for x = RandomX - 2, RandomX + 1 do
+					for y = RandomY - 1, RandomY + 2 do
+						if (RawTile(x, y) ~= "Water" and RawTile(x, y) ~= "Dark-Water") then
+							appropriate_surroundings = false
+						end
+					end
+				end
+				if (appropriate_surroundings) then
+					SetRawTile(RandomX - 1, RandomY + 1, "Dark-Water")
+					SetRawTile(RandomX - 1, RandomY, "Dark-Water")
+					SetRawTile(RandomX, RandomY + 1, "Dark-Water")
+					Count = Count - 1
 				end
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -1079,7 +1305,7 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 	end
 end
 
-function CreateDecorationObjects(unit_type, unit_number, base_tile, min_x, max_x, min_y, max_y)
+function CreateDecorationObjects(unit_type, unit_number, base_tile, mixed_tile, min_x, max_x, min_y, max_y)
 	if (LoadedGame == false) then
 		local RandomX = 0
 		local RandomY = 0
@@ -1088,8 +1314,8 @@ function CreateDecorationObjects(unit_type, unit_number, base_tile, min_x, max_x
 		while (Count > 0 and WhileCount < unit_number * 100) do
 			RandomX = SyncRand(max_x - min_x - (GetUnitTypeData(unit_type, "TileWidth") - 1) + 1) + min_x
 			RandomY = SyncRand(max_y - min_y - (GetUnitTypeData(unit_type, "TileHeight") - 1) + 1) + min_y
-			if (GetTileTerrainName(RandomX, RandomY) == base_tile) then
-				local unit_quantity = GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX, RandomY})
+			if (GetTileTerrainName(RandomX, RandomY) == base_tile and (GetTileTerrainMixedName(RandomX, RandomY) == mixed_tile or mixed_tile == "any")) then
+				local unit_quantity = GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX + (GetUnitTypeData(unit_type, "TileWidth") - 1), RandomY + (GetUnitTypeData(unit_type, "TileHeight") - 1)})
 
 				if (unit_quantity < 1) then -- tile should be empty
 					unit = CreateUnit(unit_type, 15, {RandomX, RandomY})
@@ -1378,7 +1604,7 @@ function SetMapBorders(tile_type, replace_tile)
 	end
 end
 
-function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_quantity)
+function GenerateRandomMap(arg)
 	CleanRawTiles()
 
 	for x=0,(Map.Info.MapWidth - 1) do
@@ -1387,9 +1613,25 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 		end
 	end
 	
+	local symmetric = false
+	if (arg.Symmetric) then
+		symmetric = true
+	end
+	
+	local mixed_civilizations = false
+	if (arg.MixedCivilizations) then
+		mixed_civilizations = true
+	end
+	
 	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, true, symmetric)
 
-	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	if (arg.WaterQuantity == "high") then
+		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.WaterQuantity == "medium") then
+		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.WaterQuantity == "low") then
+		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
@@ -1397,20 +1639,36 @@ function GenerateRandomMap(width, height, symmetric, mixed_civilizations, tree_q
 	
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (arg.DarkRoughLandQuantity == "high") then
+		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+	elseif (arg.DarkRoughLandQuantity == "medium") then
 		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+	elseif (arg.DarkRoughLandQuantity == "low") then
+		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
-	if (tree_quantity == "high") then
+	if (arg.TreeQuantity == "high") then
 		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-	elseif (tree_quantity == "medium") then
+	elseif (arg.TreeQuantity == "medium") then
 		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
-	elseif (tree_quantity == "low") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.TreeQuantity == "low") then
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 128, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
-	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (arg.DarkLandQuantity == "high") then
+		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.DarkLandQuantity == "medium") then
 		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.DarkLandQuantity == "low") then
+		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
+
+	if (arg.DarkWaterQuantity == "high") then
+		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.DarkWaterQuantity == "medium") then
+		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.DarkWaterQuantity == "low") then
+		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
 	if (symmetric) then
@@ -1579,8 +1837,6 @@ function ApplyRawTiles()
 			elseif (RawTile(x, y) == "Door") then
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-door", 15, {x, y})
-			elseif (RawTile(x, y) == "DpWtr") then -- no tilesets have Deep Water yet, so it should be treated as normal water for now
-				SetRawTile(x, y, "Water")
 			elseif (RawTile(x, y) == "Road") then
 				SetRawTile(x, y, "Land")
 			elseif (RawTile(x, y) == "Starting Gold Mine") then
@@ -1659,9 +1915,15 @@ function ApplyRawTiles()
 		for y=0,(Map.Info.MapHeight - 1) do
 			local solid_slot = 0
 			local mixed_slot = 0
+			local non_transitional_tile_types = {}
+			table.insert(non_transitional_tile_types, RawTile(x, y))
 			if (RawTile(x, y) == "Water") then
 				solid_slot = 1
 				mixed_slot = 2
+				table.insert(non_transitional_tile_types, "Dark-Water")
+			elseif (RawTile(x, y) == "Dark-Water") then
+				solid_slot = 2
+				mixed_slot = 1
 			elseif (RawTile(x, y) == "Rough") then
 				solid_slot = 3
 				mixed_slot = 5
@@ -1680,8 +1942,8 @@ function ApplyRawTiles()
 				solid_slot = 8
 				mixed_slot = 4
 			end
-			if (RawTile(x, y) == "Water" or RawTile(x, y) == "Dark-Rough" or RawTile(x, y) == "Land" or RawTile(x, y) == "Dark-Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Rock") then
-				if (mixed_slot ~= 0 and RawTile(x, y + 1) ~= RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y)) then
+			if (RawTile(x, y) == "Water" or RawTile(x, y) == "Dark-Water" or RawTile(x, y) == "Dark-Rough" or RawTile(x, y) == "Land" or RawTile(x, y) == "Dark-Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Rock") then
+				if (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 2 * 16, x, y, 0)
@@ -1690,7 +1952,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 2 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x, y - 1) ~= RawTile(x, y) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y + 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 11 * 16, x, y, 0)
@@ -1699,7 +1961,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 11 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y) ~= RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 4 * 16, x, y, 0)
@@ -1708,7 +1970,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 4 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x - 1, y) ~= RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x + 1, y + 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 9 * 16, x, y, 0)
@@ -1717,7 +1979,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 9 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and (RawTile(x, y - 1) ~= RawTile(x, y) or RawTile(x - 1, y) ~= RawTile(x, y)) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x + 1, y + 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and (GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) == false or GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) == false) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 7 * 16, x, y, 0)
@@ -1726,7 +1988,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 7 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and (RawTile(x, y - 1) ~= RawTile(x, y) or RawTile(x + 1, y) ~= RawTile(x, y)) and RawTile(x, y + 1) == RawTile(x, y) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and (GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) == false or GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) == false) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 3 * 16, x, y, 0)
@@ -1735,7 +1997,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 3 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and (RawTile(x, y + 1) ~= RawTile(x, y) or RawTile(x + 1, y) ~= RawTile(x, y)) and RawTile(x - 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and (GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) == false or GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) == false) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 0 * 16, x, y, 0)
@@ -1744,7 +2006,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 0 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and (RawTile(x, y + 1) ~= RawTile(x, y) or RawTile(x - 1, y) ~= RawTile(x, y)) and RawTile(x + 1, y) == RawTile(x, y) and RawTile(x, y - 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and (GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) == false or GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) == false) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 1 * 16, x, y, 0)
@@ -1753,7 +2015,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 1 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) ~= RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 6 * 16, x, y, 0)
@@ -1762,7 +2024,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 6 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) ~= RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 12 * 16, x, y, 0)
@@ -1771,7 +2033,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 12 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) ~= RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 10 * 16, x, y, 0)
@@ -1780,7 +2042,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 10 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) ~= RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1)) == false) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 13 * 16, x, y, 0)
@@ -1789,7 +2051,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 13 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) ~= RawTile(x, y) and RawTile(x + 1, y - 1) == RawTile(x, y) and RawTile(x - 1, y + 1) == RawTile(x, y) and RawTile(x - 1, y - 1) ~= RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1)) == false) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 5 * 16, x, y, 0)
@@ -1798,7 +2060,7 @@ function ApplyRawTiles()
 					elseif (RandomNumber == 2) then
 						SetTile(mixed_slot * 256 + 5 * 16 + 2, x, y, 0)
 					end
-				elseif (mixed_slot ~= 0 and RawTile(x + 1, y + 1) == RawTile(x, y) and RawTile(x + 1, y - 1) ~= RawTile(x, y) and RawTile(x - 1, y + 1) ~= RawTile(x, y) and RawTile(x - 1, y - 1) == RawTile(x, y)) then
+				elseif (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y + 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y + 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1))) then
 					RandomNumber = SyncRand(3)
 					if (RandomNumber == 0) then
 						SetTile(mixed_slot * 256 + 8 * 16, x, y, 0)
@@ -2140,8 +2402,6 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 			elseif (RawTile(x, y) == "Tree" and wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
-			elseif (RawTile(x, y) == "DpWtr") then -- no tilesets have Deep Water yet, so it should be treated as normal water for now
-				SetRawTile(x, y, "Water")
 			end
 		end
 	end
@@ -3336,7 +3596,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	elseif (tree_quantity == "medium") then
 		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (tree_quantity == "low") then
-		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
 
 	ApplyRawTiles()
