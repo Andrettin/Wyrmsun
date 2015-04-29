@@ -1640,7 +1640,7 @@ function GenerateRandomMap(arg)
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
 	if (arg.DarkRoughLandQuantity == "high") then
-		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	elseif (arg.DarkRoughLandQuantity == "medium") then
 		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	elseif (arg.DarkRoughLandQuantity == "low") then
@@ -1656,7 +1656,7 @@ function GenerateRandomMap(arg)
 	end
 
 	if (arg.DarkLandQuantity == "high") then
-		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.DarkLandQuantity == "medium") then
 		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.DarkLandQuantity == "low") then
