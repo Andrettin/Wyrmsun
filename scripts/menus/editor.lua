@@ -155,6 +155,7 @@ editor_types = {
 
    "unit-goblin-banner",
    "unit-glyph",
+   "unit-runestone",
    "unit-stairs",
    "unit-mushroom",
    "unit-mushroom-patch",

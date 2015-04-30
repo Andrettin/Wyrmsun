@@ -2067,6 +2067,32 @@ DefineUnitType("unit-glyph", { Name = _("Glyph"),
 		"dead", "building-destroyed"} }
 )
 
+DefineUnitType("unit-runestone", { Name = _("Runestone"),
+	Image = {"file", "neutral/buildings/runestone.png", "size", {55, 68}},
+	Animations = "animations-building", Icon = "icon-runestone",
+	NeutralMinimapColor = {255, 255, 0},
+	Costs = {"time", 175, "gold", 900, "lumber", 500},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	Construction = "construction-land2",
+	Speed = 0,
+	HitPoints = 200,
+	DrawLevel = 40,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, PiercingDamage = 0, Missile = "missile-none",
+	Priority = 15, AnnoyComputerFactor = 35,
+	Points = 150,
+	Corpse = "unit-destroyed-2x2-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true, BuilderOutside = true,
+	Sounds = {
+		"selected", "click",
+		"dead", "building-destroyed"
+	}
+} )
+
 DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Image = {"file", "neutral/buildings/stairs.png", "size", {32, 32}},
 	NeutralMinimapColor = {128, 128, 0},

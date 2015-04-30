@@ -753,6 +753,9 @@ J. W. Bjerk (eleazzaar):
 /graphics/gnome/icons/herbal_cure.png (later modified by Jinn)
 /graphics/gnome/icons/portent.png (later modified by Jinn)
 
+Jim16:
+/graphics/neutral/buildings/runestone.png (later modified by Nikita_Sadkov)
+
 KPJ:
 /graphics/ui/fonts/KPJsWyrmSunFont.png
 
@@ -824,6 +827,8 @@ Mikodrak:
 /graphics/missiles/big_fire_extra_1.png (later modified by Jinn)
 /graphics/missiles/small_fire.png (later modified by Jinn)
 
+Nikita_Sadkov:
+/graphics/neutral/buildings/runestone.png (modified from Jim16's runestone)
 
 Oray Studios:
 /graphics/ui/gold_extra_1.png
