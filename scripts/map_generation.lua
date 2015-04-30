@@ -1664,11 +1664,11 @@ function GenerateRandomMap(arg)
 	end
 
 	if (arg.DarkWaterQuantity == "high") then
-		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.DarkWaterQuantity == "medium") then
-		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.DarkWaterQuantity == "low") then
-		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
 	if (symmetric) then

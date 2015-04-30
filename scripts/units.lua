@@ -1891,6 +1891,7 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
 	Indestructible = 1,
 	VisibleUnderFog = true,
 	NonSolid = true,
+	Gravel = true, -- makes them play the gravel step sound when stepped upon
 	Variations = {
 		{
 			"variation-id", "1"
