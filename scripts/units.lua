@@ -2069,6 +2069,7 @@ DefineUnitType("unit-glyph", { Name = _("Glyph"),
 
 DefineUnitType("unit-runestone", { Name = _("Runestone"),
 	Image = {"file", "neutral/buildings/runestone.png", "size", {55, 68}},
+	Shadow = {"file", "neutral/buildings/runestone_shadow.png", "size", {55, 68}},
 	Animations = "animations-building", Icon = "icon-runestone",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 175, "gold", 900, "lumber", 500},
