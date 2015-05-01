@@ -170,6 +170,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.3
 -----------------------------------------------------------------------
 
+* Modding
+- Fixed bug with the mod screen which happened when no mods were present.
+
 * Terrain
 - Fixed bug which caused trees to not regrow correctly.
 
