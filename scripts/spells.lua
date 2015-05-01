@@ -98,7 +98,7 @@ DefineSpell("spell-war-machine-spear-attack",
 	"range", 1,
 	"target", "unit",
 	"action", {
-		{"demolish", "range", 1, "basic-damage", 3, "piercing-damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
+		{"demolish", "range", 1, "basic-damage", 9, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
 	},
 	"condition", {
 		"alliance", "false",
@@ -116,7 +116,7 @@ DefineSpell("spell-axe-twirl",
 	"target", "self",
 	"force-use-animation",
 	"action", {
-		{"demolish", "range", 1, "basic-damage", 3, "piercing-damage", 6, "damage-self", false, "damage-friendly", false, "damage-terrain", false}
+		{"demolish", "range", 1, "basic-damage", 9, "damage-self", false, "damage-friendly", false, "damage-terrain", false}
 --		{"spawn-missile", "missile", "missile-axe-twirl", "start-point", {"base", "caster"}}
 	},
 --	"condition", {
@@ -135,7 +135,7 @@ DefineSpell("spell-equip-axe-of-perun",
 	"target", "self",
 	"action", {
 		{"adjust-variable", {AxeOfPerun = {Value = 2}}}
---		{"adjust-variable", {PiercingDamageBonus = {AddValue = 2}}}
+--		{"adjust-variable", {BasicDamageBonus = {AddValue = 2}}}
 	},
 	"condition", {
 		"AxeOfPerun", {MinValue = 0, MaxValue = 2}
