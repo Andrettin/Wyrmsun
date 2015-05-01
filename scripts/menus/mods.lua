@@ -28,6 +28,10 @@
 --
 
 function RunModsMenu()
+	ModName = ""
+	ModDescription = ""
+	ModDependencies = nil
+		
 	local menu = WarMenu()
 	local offx = (Video.Width - 352) / 2
 	local offy = (Video.Height - 352) / 2
@@ -84,46 +88,48 @@ function RunModsMenu()
 		end
 	)
 	mod_dd:setSize(252, 20)
-	mod_dd:setSelected(0)
+	if (table.getn(mod_list) > 0) then
+		mod_dd:setSelected(0)
 
-	menu:addLabel(_("Description: " .. ModDescription), Video.Width / 2, offy + 34 + 60*1.5, Fonts["game"], true)
+		menu:addLabel(_("Description: " .. ModDescription), Video.Width / 2, offy + 34 + 60*1.5, Fonts["game"], true)
 
-	if (ModDependencies ~= nil) then
-		local dependencies_string = "Dependencies: "
-		for i=1,table.getn(ModDependencies) do
-			dependencies_string = dependencies_string .. ModDependencies[i]
-			if (i < table.getn(ModDependencies)) then
-				dependencies_string = dependencies_string .. ", "
+		if (ModDependencies ~= nil) then
+			local dependencies_string = "Dependencies: "
+			for i=1,table.getn(ModDependencies) do
+				dependencies_string = dependencies_string .. ModDependencies[i]
+				if (i < table.getn(ModDependencies)) then
+					dependencies_string = dependencies_string .. ", "
+				end
 			end
+			menu:addLabel(_(dependencies_string), Video.Width / 2, offy + 34 + 60*2.5, Fonts["game"], true)
 		end
-		menu:addLabel(_(dependencies_string), Video.Width / 2, offy + 34 + 60*2.5, Fonts["game"], true)
-	end
 
-	local mod_enabled = {}
-	mod_enabled = menu:addImageCheckBox("Enabled (Restart Required)", offx + 48, offy + 36 * 8.5,
-		function()
-			if (GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])) then
-				RemoveElementFromArray(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
-				SavePreferences()
-			else
-				local has_required_dependencies = true
-				if (ModDependencies ~= nil) then
-					for i=1,table.getn(ModDependencies) do
-						if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
-							has_required_dependencies = false
+		local mod_enabled = {}
+		mod_enabled = menu:addImageCheckBox("Enabled (Restart Required)", offx + 48, offy + 36 * 8.5,
+			function()
+				if (GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])) then
+					RemoveElementFromArray(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
+					SavePreferences()
+				else
+					local has_required_dependencies = true
+					if (ModDependencies ~= nil) then
+						for i=1,table.getn(ModDependencies) do
+							if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+								has_required_dependencies = false
+							end
 						end
 					end
+					if (has_required_dependencies) then
+						table.insert(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
+						SavePreferences()
+					end
 				end
-				if (has_required_dependencies) then
-					table.insert(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
-					SavePreferences()
-				end
+				mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
 			end
-			mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
-		end
-	)
-	mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
-	mod_enabled:adjustSize()
+		)
+		mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
+		mod_enabled:adjustSize()
+	end
 
 	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 		menu:stop()
