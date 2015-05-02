@@ -96,8 +96,6 @@ AddTrigger(
 								table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
 							end
 							SavePreferences()
-							NextMap = "maps/earth/novgorod.smp"
-							CurrentQuest = "Westward Migration"
 						end
 						ActionVictory()
 					end

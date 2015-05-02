@@ -172,9 +172,13 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Miscellaneous
 - Improvements to gold gathering algorithm.
+- Fixed issue with the objectives being drawn at an incorrect height when a message was scrolling down.
 
 * Modding
 - Fixed bug with the mod screen which happened when no mods were present.
+
+* Quests
+- Instead of going directly to the next mission, quests now return the player to the quest screen for the last played quest's world.
 
 * Terrain
 - Fixed bug which caused trees to not regrow correctly.

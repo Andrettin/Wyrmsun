@@ -1221,10 +1221,6 @@ AddTrigger(
 				end
 				SavePreferences()
 			end
-			if (GrandStrategy == false) then
-				NextMap = "maps/nidavellir/svafnirs-lair.smp"
-				CurrentQuest = "The Wyrm"
-			end
 			ActionVictory()
 		end
 		return false

@@ -671,9 +671,6 @@ function InitGameSettings()
 end
 InitGameSettings()
 
-NextMap = ""
-NextMapDirect = false
-
 function RunMap(map, objective, fow, revealmap)
   if (LoadedGame == false) then
 	  for key, value in pairs(CustomPlayerData) do
@@ -706,24 +703,14 @@ function RunMap(map, objective, fow, revealmap)
       loop = false
     end
   end
-  if (NextMapDirect == false) then
-	  RunResultsMenu(s)
-	  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and not IsReplayGame() and not IsNetworkGame() and not GrandStrategy) then
-		  RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
-	  end
+  RunResultsMenu(s)
+  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and not IsReplayGame() and not IsNetworkGame() and not GrandStrategy) then
+	  RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
   end
-  NextMapDirect = false
 
   InitGameSettings()
   SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
   
-  if (NextMap ~= "") then
-  	local current_next_map = NextMap
-  	NextMap = ""
-	GetMapInfo(current_next_map)
-	Load(current_next_map)
-	RunMap(current_next_map)
-  end
   CurrentQuest = ""
 end
 
@@ -948,9 +935,6 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
     function()
 		RunQuestWorldMenu();
-		if (RunningScenario) then
-			menu:stop(1)
-		end
 	end)
   menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
     function()

@@ -596,10 +596,6 @@ AddTrigger(
 								SavePreferences()
 							end
 							if (mapinfo.description == "Chaincolt Foothills") then
-								if (GrandStrategy == false) then
-									NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
-									CurrentQuest = "Closing the Gates"
-								end
 								if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 									ActionVictory()
 								else
@@ -670,10 +666,6 @@ AddTrigger(
 						SavePreferences()
 					end
 					if (mapinfo.description == "Chaincolt Foothills") then
-						if (GrandStrategy == false) then
-							NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
-							CurrentQuest = "Closing the Gates"
-						end
 						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 							ActionVictory()
 						else
@@ -745,10 +737,6 @@ AddTrigger(
 			SavePreferences()
 		end
 		if (mapinfo.description == "Chaincolt Foothills") then
-			if (GrandStrategy == false) then
-				NextMap = "maps/nidavellir/caverns-of-chaincolt.smp"
-				CurrentQuest = "Closing the Gates"
-			end
 			if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 				ActionVictory()
 			else

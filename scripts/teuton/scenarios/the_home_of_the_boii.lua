@@ -135,8 +135,6 @@ AddTrigger(
 							table.insert(wyr.preferences.QuestsCompleted, "The Home of the Boii")
 						end
 						SavePreferences()
-						NextMap = "maps/earth/salzburg.smp"
-						CurrentQuest = "The Sack of Iuvavum"
 					end
 					ActionVictory()
 				end

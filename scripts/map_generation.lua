@@ -5660,8 +5660,6 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		--			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-stairs") then
 		--				local people_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 		--				if (people_quantity > 0) then
-		--					NextMap = "maps/nidavellir/fjalars-and-galars-hall.smp"
-		--					NextMapDirect = true
 		--					ActionVictory()					
 		--				end
 		--			end

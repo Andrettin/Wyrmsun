@@ -148,8 +148,6 @@ AddTrigger(
 								table.insert(wyr.preferences.QuestsCompleted, "The Razing of Opitergium")
 							end
 							SavePreferences()
-							NextMap = "maps/earth/braga.smp"
-							CurrentQuest = "Moving into Galicia"
 						end
 						ActionVictory()
 					end

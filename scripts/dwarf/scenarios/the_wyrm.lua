@@ -607,10 +607,6 @@ AddTrigger(
 							end
 							SavePreferences()
 						end
-						if (GrandStrategy == false) then
-							NextMap = "maps/nidavellir/caverns-of-flame.smp"
-							CurrentQuest = "Caverns of Flame"
-						end
 						ActionVictory()
 					elseif (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then
 						Event(

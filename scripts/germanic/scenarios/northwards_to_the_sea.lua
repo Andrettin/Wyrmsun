@@ -84,8 +84,6 @@ AddTrigger(
 							table.insert(wyr.preferences.QuestsCompleted, "Northwards to the Sea")
 						end
 						SavePreferences()
-						NextMap = "maps/earth/malmo.smp"
-						CurrentQuest = "Gylve's Realm"
 					end
 					ActionVictory()
 				end

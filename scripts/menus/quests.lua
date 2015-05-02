@@ -47,16 +47,10 @@ function RunQuestWorldMenu()
   menu:addFullButton(_("~!Earth"), "e", offx + 208, offy + 104 + 36*2,
     function()
 		RunQuestMenu("Earth");
-		if (RunningScenario) then
-			menu:stop(1)
-		end
 	end)
   menu:addFullButton(_("~!Nidavellir"), "n", offx + 208, offy + 104 + 36*3,
     function()
 		RunQuestMenu("Nidavellir");
-		if (RunningScenario) then
-			menu:stop(1)
-		end
 	end)
   menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*4,
     function() menu:stop() end)
@@ -148,6 +142,7 @@ function addQuestIcon(quest, menu, x, y)
 					RunMap(quest.Map)
 					quest_menu:stop()
 					menu:stop()
+					RunQuestMenu(quest.World)
 				end)
 			quest_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
 				function()

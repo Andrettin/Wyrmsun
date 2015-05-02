@@ -750,10 +750,7 @@ AddTrigger(
 																											SavePreferences()
 																										end
 																										if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
-																											if (GrandStrategy == false) then
-																												NextMap = "maps/nidavellir/eastern-mines.smp"
-																												CurrentQuest = "Gathering Materials"
-																											else
+																											if (GrandStrategy) then
 																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0
 																											end
 																											ActionVictory()

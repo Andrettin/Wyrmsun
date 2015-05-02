@@ -532,10 +532,6 @@ AddTrigger(
 																																									Factions.NorlundClan.Commodities["Coal"] = 20000
 																																								end
 																																								if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-																																									if (GrandStrategy == false) then
-																																										NextMap = "maps/nidavellir/shorbear-hills.smp"
-																																										CurrentQuest = "Hills of the Shorbear Clan"
-																																									end
 																																									ActionVictory()
 																																								end
 																																							end},
@@ -873,10 +869,6 @@ AddTrigger(
 																																						Factions.NorlundClan.Commodities["Coal"] = 20000
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-																																						if (GrandStrategy == false) then
-																																							NextMap = "maps/nidavellir/shorbear-hills.smp"
-																																							CurrentQuest = "Hills of the Shorbear Clan"
-																																						end
 																																						ActionVictory()
 																																					end
 																																				end},

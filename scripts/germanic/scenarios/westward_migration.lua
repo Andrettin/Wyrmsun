@@ -116,8 +116,6 @@ AddTrigger(
 							table.insert(wyr.preferences.QuestsCompleted, "Westward Migration")
 						end
 						SavePreferences()
-						NextMap = "maps/earth/jutland.smp"
-						CurrentQuest = "Northwards to the Sea"
 					end
 					ActionVictory()
 				end

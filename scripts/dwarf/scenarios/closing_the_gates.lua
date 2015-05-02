@@ -546,10 +546,6 @@ AddTrigger(
 																																				SavePreferences()
 																																			end
 																																			if (mapinfo.description == "Caverns of Chaincolt") then
-																																				if (GrandStrategy == false) then
-																																					NextMap = "maps/nidavellir/northern-wastelands.smp"
-																																					CurrentQuest = "Searching for the Runecrafter"
-																																				end
 																																				if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 																																					ActionVictory()
 																																				else

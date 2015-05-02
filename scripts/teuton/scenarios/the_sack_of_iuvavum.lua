@@ -142,8 +142,6 @@ AddTrigger(
 							table.insert(wyr.preferences.QuestsCompleted, "The Sack of Iuvavum")
 						end
 						SavePreferences()
-						NextMap = "maps/earth/oderzo.smp"
-						CurrentQuest = "The Razing of Opitergium"
 					end
 					ActionVictory()
 				end
