@@ -170,6 +170,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.3
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Improvements to gold gathering algorithm.
+
 * Modding
 - Fixed bug with the mod screen which happened when no mods were present.
 
