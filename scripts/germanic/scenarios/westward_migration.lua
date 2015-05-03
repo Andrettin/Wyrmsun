@@ -29,6 +29,16 @@
 
 SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
 
+-- reveal area near the glyph
+local uncount = 0
+uncount = GetUnits(15)
+for unit1 = 1,table.getn(uncount) do 
+	if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
+		unit = CreateUnit("unit-revealer", GetFactionPlayer("Asa Tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+		KillUnitAt("unit-revealer", GetFactionPlayer("Asa Tribe"), 1, {0, 0}, {256, 256})
+	end
+end
+
 -- Westward Migration introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 AddTrigger(
