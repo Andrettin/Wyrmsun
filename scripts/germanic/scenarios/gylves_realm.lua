@@ -27,7 +27,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+if (LoadedGame == false) then
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+end
 
 -- Gylve's Realm introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis

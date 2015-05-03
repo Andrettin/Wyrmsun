@@ -178,6 +178,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Improvements to gold gathering algorithm.
 - Fixed issue with the objectives being drawn at an incorrect height when a message was scrolling down.
 - Fixed bug with accessing the encyclopedia or tech tree from within a scenario which caused the player's civilization to change and the music to be set to the main menu one.
+- Fixed bug which caused saved games from some quests to crash the game.
 
 * Modding
 - Fixed bug with the mod screen which happened when no mods were present.

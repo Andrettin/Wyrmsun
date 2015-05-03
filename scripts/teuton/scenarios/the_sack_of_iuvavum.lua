@@ -27,53 +27,55 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (GrandStrategy == false) then
-	local rome_player = GetFactionPlayer("Rome")
-	SetPlayerData(rome_player, "Allow", "upgrade-teuton-civilization", "R")
-	SetPlayerData(rome_player, "RaceName", "latin")
-	SetPlayerData(rome_player, "Faction", "Rome")
-	SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+if (LoadedGame == false) then
+	if (GrandStrategy == false) then
+		local rome_player = GetFactionPlayer("Rome")
+		SetPlayerData(rome_player, "Allow", "upgrade-teuton-civilization", "R")
+		SetPlayerData(rome_player, "RaceName", "latin")
+		SetPlayerData(rome_player, "Faction", "Rome")
+		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
 
---	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
-elseif (GrandStrategyEventMap) then
-	SetAiType(0, "grand-strategy-battle")
-	SetAiType(4, "grand-strategy-battle")
-	
-	local units_to_be_created = {}
-	
-	-- Marcomanni units
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")]
-			WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+	--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
+	elseif (GrandStrategyEventMap) then
+		SetAiType(0, "grand-strategy-battle")
+		SetAiType(4, "grand-strategy-battle")
+		
+		local units_to_be_created = {}
+		
+		-- Marcomanni units
+		for i, unitName in ipairs(Units) do
+			if (IsMilitaryUnit(unitName)) then
+				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+				units_to_be_created[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")]
+				WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			end
 		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = CreateUnit(unitName, 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+		for i, unitName in ipairs(Units) do
+			if (IsMilitaryUnit(unitName)) then
+				if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+					for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
+						unit = CreateUnit(unitName, 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+					end
 				end
 			end
 		end
-	end
---	unit = CreateUnit("unit-hero-marbod", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
---	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 0
-	
-	-- Roman units
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] / 4)
-			WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+	--	unit = CreateUnit("unit-hero-marbod", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
+	--	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 0
+		
+		-- Roman units
+		for i, unitName in ipairs(Units) do
+			if (IsMilitaryUnit(unitName)) then
+				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] / 4)
+				WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			end
 		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = CreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		for i, unitName in ipairs(Units) do
+			if (IsMilitaryUnit(unitName)) then
+				if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+					for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
+						unit = CreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+					end
 				end
 			end
 		end

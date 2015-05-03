@@ -27,15 +27,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+if (LoadedGame == false) then
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
 
--- reveal area near the glyph
-local uncount = 0
-uncount = GetUnits(15)
-for unit1 = 1,table.getn(uncount) do 
-	if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
-		unit = CreateUnit("unit-revealer", GetFactionPlayer("Asa Tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-		KillUnitAt("unit-revealer", GetFactionPlayer("Asa Tribe"), 1, {0, 0}, {256, 256})
+	-- reveal area near the glyph
+	local uncount = 0
+	uncount = GetUnits(15)
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-glyph") then
+			unit = CreateUnit("unit-revealer", GetFactionPlayer("Asa Tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+			KillUnitAt("unit-revealer", GetFactionPlayer("Asa Tribe"), 1, {0, 0}, {256, 256})
+		end
 	end
 end
 

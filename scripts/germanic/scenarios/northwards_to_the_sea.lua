@@ -27,10 +27,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetPlayerData(4, "Allow", "upgrade-teuton-civilization", "F")
-SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
-SetPlayerData(1, "Allow", "upgrade-germanic-broad-sword", "F")
-SetPlayerData(1, "Allow", "upgrade-germanic-barbed-arrow", "F")
+if (LoadedGame == false) then
+	SetPlayerData(4, "Allow", "upgrade-teuton-civilization", "F")
+	SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
+	SetPlayerData(1, "Allow", "upgrade-germanic-broad-sword", "F")
+	SetPlayerData(1, "Allow", "upgrade-germanic-barbed-arrow", "F")
+end
 
 -- Northwards to the Sea introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis

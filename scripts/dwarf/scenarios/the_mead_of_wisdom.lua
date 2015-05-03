@@ -27,26 +27,28 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetPlayerData(0, "Faction", "Modsogning Clan")
+if (LoadedGame == false) then
+	SetPlayerData(0, "Faction", "Modsogning Clan")
 
-if (GrandStrategy == false) then
-	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-elseif (GrandStrategyEventMap) then
-	local units_to_be_created = {}
-	for i, unitName in ipairs(Units) do
-		if (IsOffensiveMilitaryUnit(unitName)) then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] / 2)
-			WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+	if (GrandStrategy == false) then
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	elseif (GrandStrategyEventMap) then
+		local units_to_be_created = {}
+		for i, unitName in ipairs(Units) do
+			if (IsOffensiveMilitaryUnit(unitName)) then
+				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] / 2)
+				WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			end
 		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsOffensiveMilitaryUnit(unitName)) then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		for i, unitName in ipairs(Units) do
+			if (IsOffensiveMilitaryUnit(unitName)) then
+				if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+					for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
+						unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+					end
 				end
 			end
 		end
