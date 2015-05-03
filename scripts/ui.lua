@@ -466,7 +466,7 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = _("~<ALT~>-click to defend unit."), MaxWidth = Video.Width / 5}}
+				More = {"Text", {Text = _("~<ALT~>-click to defend a unit."), MaxWidth = Video.Width / 5}}
 			},
 			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 				More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5}}

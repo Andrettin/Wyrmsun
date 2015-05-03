@@ -48,10 +48,12 @@ function RunEncyclopediaMenu()
 	Load("scripts/worlds.lua")
 	Load("scripts/menus/encyclopedia_civilizations.lua")
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-	
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+		
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -98,10 +100,12 @@ end
 
 function RunEncyclopediaUnitsMenu(state)
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -204,10 +208,12 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		function()
 			PlaySound("click")
 			
-			wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+			if (RunningScenario == false) then
+				wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-			if not (IsMusicPlaying()) then
-				PlayMusic("music/battle_theme_a.ogg")
+				if not (IsMusicPlaying()) then
+					PlayMusic("music/battle_theme_a.ogg")
+				end
 			end
 
 			local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -317,10 +323,12 @@ end
 
 function RunEncyclopediaTextsMenu()
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -348,10 +356,12 @@ function RunEncyclopediaTextsMenu()
 end
 
 function OpenEncyclopediaText(text_key, chosen_chapter)
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -674,10 +684,12 @@ end
 
 function RunEncyclopediaWorldsMenu()
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -725,10 +737,12 @@ function RunEncyclopediaWorldsMenu()
 end
 
 function OpenEncyclopediaWorldEntry(world_key)
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -794,10 +808,12 @@ end
 
 function RunEncyclopediaGameConceptsMenu()
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -845,10 +861,12 @@ function RunEncyclopediaGameConceptsMenu()
 end
 
 function OpenEncyclopediaGameConceptEntry(game_concept_key)
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -875,10 +893,12 @@ end
 
 function RunEncyclopediaCivilizationsMenu()
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -926,10 +946,12 @@ function RunEncyclopediaCivilizationsMenu()
 end
 
 function OpenEncyclopediaCivilizationEntry(civilization_key)
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -976,10 +998,12 @@ end
 
 function RunEncyclopediaFactionsMenu()
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
@@ -1027,10 +1051,12 @@ function RunEncyclopediaFactionsMenu()
 end
 
 function OpenEncyclopediaFactionEntry(faction_key)
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")

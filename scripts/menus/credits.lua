@@ -140,6 +140,7 @@ function RunShowCreditsMenu()
 	"  Leo",
 	"  pirro",
 	"  TaShadan",
+	"  X3M",
 	_("Stratagus Patches"),
 	"  Martin Renold",
 	"  Carlos Perello Marin",

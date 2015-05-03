@@ -30,11 +30,13 @@
 
 function RunTechTreeMenu(civilization_number)
 
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+	if (RunningScenario == false) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+		
+		if not (IsMusicPlaying()) then
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu()
@@ -57,7 +59,9 @@ function RunTechTreeMenu(civilization_number)
 	civilization = string.gsub(civilization, " ", "")
 	civilization = string.lower(civilization)
 
-	SetPlayerData(GetThisPlayer(), "RaceName", civilization)
+	if (RunningScenario == false) then
+		SetPlayerData(GetThisPlayer(), "RaceName", civilization)
+	end
 	
 	tech_points = GetCivilizationTechnologyPoints(civilization)
 	
