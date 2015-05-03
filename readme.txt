@@ -183,6 +183,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Modding
 - Fixed bug with the mod screen which happened when no mods were present.
+- Added support for scrolling mission briefings for modded-in quests.
 
 * Quests
 - Instead of going directly to the next mission, quests now return the player to the quest screen for the last played quest's world.

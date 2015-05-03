@@ -139,6 +139,9 @@ function addQuestIcon(quest, menu, x, y)
 					end
 					GameSettings.NoRandomness = wyr.preferences.NoRandomness
 					CurrentQuest = quest.Name
+					if (quest.Briefing) then
+						Briefing(quest)
+					end
 					RunMap(quest.Map)
 					quest_menu:stop()
 					menu:stop()
@@ -170,4 +173,38 @@ function GetQuestFromName(quest_name)
 		end
 	end
 	return nil
+end
+
+function Briefing(quest)
+	if (quest.Civilization ~= nil) then
+		SetPlayerData(GetThisPlayer(), "RaceName", quest.Civilization)
+	end
+
+	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+
+	if (quest.Name ~= nil) then
+		menu:addLabel(quest.Name, Video.Width / 2, 28 * Video.Height / 480, Fonts["large"], true)
+	end
+
+	local t = quest.Briefing
+	t = "\n\n\n\n\n\n\n\n\n\n" .. t .. "\n\n\n\n\n\n\n\n\n\n\n\n\n"
+	local sw = ScrollingWidget(320, 170 * Video.Height / 480)
+	sw:setBackgroundColor(Color(0,0,0,0))
+	sw:setSpeed(0.28)
+	local l = MultiLineLabel(t)
+	l:setFont(Fonts["large"])
+	l:setAlignment(MultiLineLabel.LEFT)
+	l:setVerticalAlignment(MultiLineLabel.TOP)
+	l:setLineWidth(320)
+	l:adjustSize()
+	sw:add(l, 0, 0)
+	menu:add(sw, Video.Width / 2 - (l:getWidth() / 2), 80 * Video.Height / 480)
+
+	menu:addFullButton(_("~!Continue"), "c", Video.Width / 2 - 112, 440 * Video.Height / 480,
+		function()
+			menu:stop()
+		end
+	)
+
+	menu:run()
 end
