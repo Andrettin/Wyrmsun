@@ -170,6 +170,10 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - 1.0.3
 -----------------------------------------------------------------------
 
+* AI
+- Fixed issue which caused the AI to sometimes abandon under-construction buildings, never to complete them.
+- AI workers now are more cooperative when constructing buildings.
+
 * Miscellaneous
 - Improvements to gold gathering algorithm.
 - Fixed issue with the objectives being drawn at an incorrect height when a message was scrolling down.
