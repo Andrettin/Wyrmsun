@@ -1382,6 +1382,7 @@ local defaultPreferences = {
 	ShowOrders = 0,
 	Language = "English",
 	ShowResourceBar = false,
+	PopupDescriptionFont = "small",
 	NoRandomness = false,
 	GrandStrategyBattalionMultiplier = 1,
 	QuestsCompleted = {}, -- Quests Completed

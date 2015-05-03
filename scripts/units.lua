@@ -1247,6 +1247,7 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 --}
 
 DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
+	Class = "gold-mine",
 	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
 	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},

@@ -444,12 +444,13 @@ end
 local PopupBackgroundColor = GetRGBA(28, 28, 28, 208)
 local PopupBorderColor = GetRGBA(93, 93, 93, 160)
 
-PopupFont = "game"
+local PopupFont = "game"
 
 DefinePopup({
 	Ident = "popup-commands",
 	BackgroundColor = PopupBackgroundColor,
 	BorderColor = PopupBorderColor,
+	DefaultFont = wyr.preferences.PopupDescriptionFont,
 	Contents = {
 			{ 	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -459,31 +460,31 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			}, 
 			-- Move  hint
 			{ 	Margin = {1, 1}, Condition = {ButtonAction = "move"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = _("~<ALT~>-click to defend a unit."), MaxWidth = Video.Width / 5}}
+				More = {"Text", {Text = _("~<ALT~>-click to defend a unit."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5}}
+				More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			-- Repair hint
 			{ 	Margin = {1, 1}, Condition = {ButtonAction = "repair"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonAction = "repair"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings."), MaxWidth = Video.Width / 5}}
+				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			-- Heal hint
 			{ 	Margin = {1, 1}, Condition = {ButtonValue = "spell-herbal-cure"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {ButtonValue = "spell-herbal-cure"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables autoheal ability."), MaxWidth = Video.Width / 5}}
+				More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables autoheal ability."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			}
 	}	
 })
@@ -492,6 +493,8 @@ DefinePopup({
 	Ident = "popup-building",
 	BackgroundColor = PopupBackgroundColor,
 	BorderColor = PopupBorderColor,
+	MinWidth = 128,
+	DefaultFont = wyr.preferences.PopupDescriptionFont,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -502,17 +505,17 @@ DefinePopup({
 			{ 	More = {"Costs"}, HighlightColor = "yellow",
 			},
 			{ 	HighlightColor = "yellow",
-				More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type"))}}
+				More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
+				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 			}, 
 			-- Description
 			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 	}	
 })
@@ -521,6 +524,8 @@ DefinePopup({
 	Ident = "popup-unit",
 	BackgroundColor = PopupBackgroundColor,
 	BorderColor = PopupBorderColor,
+	MinWidth = 128,
+	DefaultFont = wyr.preferences.PopupDescriptionFont,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -534,31 +539,31 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	HighlightColor = "yellow",
-				More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type"))}}
+				More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints"}}
+				More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Armor: "), Variable = "Armor"}}
+				More = {"Variable", {Text = _("Armor: "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Sight: "), Variable = "SightRange"}}
+				More = {"Variable", {Text = _("Sight: "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Range: "), Variable = "AttackRange"}}
+				More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 				More = {"Variable", {Text = Concat(_("Damage: "),
 					String(Div(Add(TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")), 2)), "-",
 					String(Add(TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")))
-				)}}
+				), Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Accuracy: "), Variable = "Accuracy"}}
+				More = {"Variable", {Text = _("Accuracy: "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {Evasion = "only"}, HighlightColor = "yellow",
-				More = {"Variable", {Text = _("Evasion: "), Variable = "Evasion"}}
+				More = {"Variable", {Text = _("Evasion: "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			
 			-- Description
@@ -566,7 +571,7 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 	}	
 })
@@ -575,6 +580,8 @@ DefinePopup({
 	Ident = "popup-research",
 	BackgroundColor = PopupBackgroundColor,
 	BorderColor = PopupBorderColor,
+	MinWidth = 128,
+	DefaultFont = wyr.preferences.PopupDescriptionFont,
 	Contents = {
 			{	Margin = {1, 1}, HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -589,7 +596,7 @@ DefinePopup({
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5}}
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 	}	
 })

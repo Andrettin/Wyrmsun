@@ -480,6 +480,18 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.ShowResourceBar)
 
+  b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 160 + 24, offy + 55 + 26*8 + 14,
+    function()
+		if (wyr.preferences.PopupDescriptionFont == "small") then
+			wyr.preferences.PopupDescriptionFont = "game"
+		elseif (wyr.preferences.PopupDescriptionFont == "game") then
+			wyr.preferences.PopupDescriptionFont = "small"
+		end
+		Load("scripts/ui.lua")
+		menu:stop(1)
+    end)
+  b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
+
   b = menu:addImageCheckBox(_("Disable Pathlines"), offx + 16, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowOrders == 2) then
