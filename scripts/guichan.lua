@@ -1437,10 +1437,12 @@ Load("scripts/menus/encyclopedia.lua")
 LoadMods()
 
 function GameStarting()
+	--[[
   if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
     SetGamePaused(true)
     RunTipsMenu()
   end
+  --]]
 end
 
 if (Editor.Running == EditorCommandLine) then

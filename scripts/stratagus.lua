@@ -363,7 +363,7 @@ function SinglePlayerTriggers()
 		end
 	end
 
-	-- make the players have the correct names in grand strategy mode
+	-- make players have the correct names in grand strategy mode
 	for i=0,14 do
 		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
@@ -805,6 +805,361 @@ function StandardTriggers()
 			return true
 		end
 	)
+	
+	-- Tips
+	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Level Up") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "LevelUp") >= 1 and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Level Up", "Your unit has leveled up! Click on the \"Choose Level-Up Upgrade\" button in its command button panel to select a level-up upgrade for it.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Bura") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-worker") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Bura", "The Bura is the worker unit of the Germanic civilization. It is used to build structures, harvest resources and repair buildings. Buras can be trained at the Chieftain's Hall.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Erala") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-warrior") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Erala", "The Erala is the melee infantry unit of the Germanic civilization. It is the most basic military unit available for it. Eralas can be trained at the War Lodge.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Skutan") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-archer") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Skutan", "The Skutan is the shooter unit of the Germanic civilization, and can attack from a distance. It is available for training at the War Lodge, if a Carpenter's Shop is built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Krieger") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Krieger", "The Krieger is the melee infantry unit of the Teuton civilization, replacing the Erala.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Catapult") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-catapult") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Catapult", "The Catapult is the siege weapon of the Teuton civilization. It can attack from a long distance, and deals splash damage. It is available for training at the Barracks, if a Lumber Mill and a Smithy are built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Miner") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-miner") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Miner", "The Miner is the worker unit of the Dwarven civilization. It is used to build structures, harvest resources and repair buildings. Miners can be trained at the Mead Hall. Miners have a gathering rate bonus when harvesting gold, and a malus when gathering lumber.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Axefighter") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-axefighter") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Axefighter", "The Axefighter is the melee infantry unit of the Dwarven civilization. It is the most basic military unit available for it. Axefighters can be trained at the War Hall.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scout") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-scout") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Scout", "The Scout is the shooter unit of the Dwarven civilization, and can attack from a distance. It is available for training at the War Hall, if a Lumber Mill is built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Ballista") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-ballista") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Ballista", "The Ballista is the siege weapon of the Dwarven civilization. It can attack from a long distance, and deals splash damage. It is available for training at the War Hall, if a Lumber Mill and a Smithy are built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scavenger") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Scavenger", "The Scavenger is the worker unit of the Gnomish civilization. It is used to build structures, harvest resources and repair buildings. Scavengers can be trained at the Town Hall.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Recruit") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-recruit") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Recruit", "The Recruit is the melee infantry unit of the Gnomish civilization. It is the most basic military unit available for it. Recruits can be trained at the Barracks.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Herbalist") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-herbalist") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Herbalist", "The Herbalist is the priest unit of the Gnomish civilization. It can heal and see far away locations.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "War Machine") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-war-machine") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("War Machine", "The War Machine is the siege weapon of the Goblin civilization. It can attack from a long distance, and deals splash damage. Although it has less HP than the siege weapons of other civilizations, the Goblin War Machine has a melee attack. It is available for training at the Barracks, if a Lumber Mill and a Fugla Forge are built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wyrm") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-wyrm") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Wyrm", "Wyrms are extremely dangerous creatures, which can fell even a group of experienced warriors. Avoid if possible.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mercenary Camp") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-mercenary-camp") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Mercenary Camp", "The Mercenary Camp can be used to hire thieves, as well as mercenary companies.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Gold Rock") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gold-rock") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Gold Rock", "Gold rocks can be mined for gold.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Gold Deposit") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gold-deposit") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Gold Deposit", "Gold deposits are the most durable source of gold. Build a gold mine on top of it to harvest the gold within.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wood Pile") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-wood-pile") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Wood Pile", "Wood piles can be harvested for lumber. When a building is destroyed, it has a chance to spawn a wood pile.")
+					return false
+				end
+			)
+		end		
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Log") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-log") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Log", "Logs can be harvested for lumber.")
+					return false
+				end
+			)
+		end		
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Tree Stump") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-tree-stump") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Tree Stump", "A unit can hide from its enemies within a tree stump. Tree stumps can also be chopped for lumber.")
+					return false
+				end
+			)
+		end		
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Hole") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-hole") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Hole", "A unit can hide from its enemies within a hole.")
+					return false
+				end
+			)
+		end		
+	end
 end
 
 --[[
@@ -1370,7 +1725,7 @@ local defaultPreferences = {
 	MusicVolume = 128,
 	PlayerName = "Player",
 	ShowCommandKey = true,
-	ShowTips = false,
+	ShowTips = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
 --	UseFancyBuildings = false,       --  Enable/disable fancy building (random mirroring buildings)
@@ -1385,9 +1740,10 @@ local defaultPreferences = {
 	PopupDescriptionFont = "small",
 	NoRandomness = false,
 	GrandStrategyBattalionMultiplier = 1,
-	QuestsCompleted = {}, -- Quests Completed
+	QuestsCompleted = {},
 	TechnologyAcquired = {},
 	AchievementsCompleted = {},
+	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
 	Heroes = {

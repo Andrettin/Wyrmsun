@@ -180,6 +180,9 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 - Fixed bug with accessing the encyclopedia or tech tree from within a scenario which caused the player's civilization to change and the music to be set to the main menu one.
 - Fixed bug which caused saved games from some quests to crash the game.
 - Added option to have larger popup text.
+- Tips now pop up when certain unit types are first clicked, to explain their function.
+- Added option to display/hide tips in the options menu.
+- A tip now popups up when the player first has a unit level up.
 
 * Modding
 - Fixed bug with the mod screen which happened when no mods were present.

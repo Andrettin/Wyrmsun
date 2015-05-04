@@ -467,6 +467,17 @@ function BuildOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
 
+  b = menu:addImageCheckBox(_("Show Tips"), offx + 160 + 24, offy + 55 + 26*10 + 14,
+    function()
+	if (wyr.preferences.ShowTips == false) then
+		wyr.preferences.ShowTips = true
+	else
+		wyr.preferences.ShowTips = false
+	end
+	menu:stop(1)
+    end)
+  b:setMarked(wyr.preferences.ShowTips)
+  
   b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*8 + 14,
     function()
 	if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please

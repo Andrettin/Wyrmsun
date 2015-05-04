@@ -548,3 +548,33 @@ function Event(event_name, event_description, player, options, option_effects, e
 		option_effects[1]()
 	end
 end
+
+function Tip(tip_name, tip_description)
+	if not (IsNetworkGame()) then
+		SetGamePaused(true)
+	end
+	local menu = WarGameMenu(panel(2))
+	menu:resize(288, 256)
+
+	menu:addLabel(_(tip_name), 144, 11)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(260, 128)
+	l:setLineWidth(260)
+	menu:add(l, 14, 35 * 1.5)
+	l:setCaption(_(tip_description))
+
+	menu:addHalfButton("~!Close", "c", 288 / 2 - (106 / 2), 256 - 40,
+		function()
+			if (GetArrayIncludes(wyr.preferences.TipsShown, tip_name) == false) then
+				table.insert(wyr.preferences.TipsShown, tip_name)
+				SavePreferences()
+			end
+			SetGamePaused(false)
+			menu:stop()
+		end
+	)
+	
+	menu:run(false)
+end

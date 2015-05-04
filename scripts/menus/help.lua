@@ -4,8 +4,8 @@ function RunHelpMenu()
   menu:addLabel("Help Menu", 128, 11)
   menu:addFullButton("~!Hotkeys", "h", 16, 40 + 36*0,
     function() RunKeystrokeHelpMenu() end)
-  menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
-    function() RunTipsMenu() end)
+--  menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
+--    function() RunTipsMenu() end)
   menu:addFullButton("Previous (~<Esc~>)", "escape", 128 - (224 / 2), 248,
     function() menu:stop() end)
 
