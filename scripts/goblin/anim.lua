@@ -115,7 +115,7 @@ DefineAnimations("animations-goblin-archer", {
 	RangedAttack = {
 		"unbreakable begin",
 		"frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
-		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 38", "frame 50",
+		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 13", "frame 50",
 		"unbreakable end", "wait 1",
 	},
 	Death = GoblinArcherDeath

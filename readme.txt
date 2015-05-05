@@ -197,6 +197,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 
 * Units
 - Fixed bug which caused a crash when an archer's missile arrived at a dead unit.
+- Dwarven Scouts, Germanic Skutans and Goblin Archers now have increased attack speed.
 
 -----------------------------------------------------------------------
 - 1.0.2
