@@ -5769,3 +5769,11 @@ function GenerateCave(town_halls, symmetric)
 		end
 	end
 end
+
+function SpawnUnitBlock(player, unit, x, y, width, height)
+    for loopx = 0, width-1 do
+        for loopy = 0, height-1 do
+            CreateUnit(unit, player, {(x+loopx), (y+loopy)})
+        end
+    end
+end

@@ -1540,6 +1540,19 @@ function GetPlayerObjectives(player)
 	return nil
 end
 
+function OrderUnitBlock(player, unit, fromx, fromy, width, height, tox, toy, order)
+    if (order == nil) then order = "attack" end
+    if (height == nil) then height = 1 end
+    if (width == nil) then width = 1 end
+    for loopx = 0, width-1 do
+        for loopy = 0, height-1 do
+            if (GetNumUnitsAt(player, unit, {fromx+loopx,fromy+loopy}, {fromx+loopx,fromy+loopy}) > 0) then
+                OrderUnit(player, unit, {fromx+loopx,fromy+loopy,fromx+loopx,fromy+loopy}, {tox+width,toy+loopy,tox+width,toy+loopy}, order)
+            end
+        end
+    end
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------
