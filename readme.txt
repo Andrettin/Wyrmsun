@@ -161,6 +161,13 @@ https://launchpad.net/stratagus
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.4
+-----------------------------------------------------------------------
+
+* AI
+- The AI no longer tries to build gold mines with workers if it lacks the resources - instead it will now use those workers for other tasks until there are enough resources to build the gold mine.
+
+-----------------------------------------------------------------------
 - 1.0.3
 -----------------------------------------------------------------------
 
