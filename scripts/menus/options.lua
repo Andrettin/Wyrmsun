@@ -229,7 +229,7 @@ function RunPreferencesMenu()
   menu:addLabel("Preferences", 128, 11)
 
   local fog = {}
-  fog = menu:addImageCheckBox("Fog of War", 16, 40 + 36 * 0,
+  fog = menu:addImageCheckBox("Fog of War", 16, 40 + 26 * 0,
     function() SetFogOfWar(fog:isMarked()) end)
   fog:setMarked(GetFogOfWar())
   if (IsReplayGame() or IsNetworkGame()) then
@@ -237,9 +237,19 @@ function RunPreferencesMenu()
   end
 
   local ckey = {}
-  ckey = menu:addImageCheckBox("Show Command Key", 16, 40 + 36 * 1,
+  ckey = menu:addImageCheckBox("Show Command Key", 16, 40 + 26 * 1,
     function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
   ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
+  
+  local mouse_grabbing = {}
+  mouse_grabbing = menu:addImageCheckBox("Mouse Grabbing", 16, 40 + 26 * 2,
+	function()
+		wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
+		SetGrabMouse(wyr.preferences.GrabMouse)
+		SavePreferences()
+	end
+  )
+  mouse_grabbing:setMarked(GetGrabMouse())
 
   menu:addLabel("Game Speed", 16, 40 + 36 * 2, Fonts["game"], false)
 
@@ -457,6 +467,19 @@ function BuildOptionsMenu()
     function() SetMusicEnabled(musiccheckbox:isMarked()); MusicStopped() end)
   musiccheckbox:setMarked(IsMusicEnabled())
   musiccheckbox:adjustSize();
+
+  b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*7 + 14,
+    function()
+		if (wyr.preferences.GrabMouse == false) then
+			wyr.preferences.GrabMouse = true
+		elseif (wyr.preferences.GrabMouse == true) then
+			wyr.preferences.GrabMouse = false
+		end
+		SetGrabMouse(wyr.preferences.GrabMouse)
+		SavePreferences()
+		menu:stop(1)
+    end)
+  b:setMarked(wyr.preferences.GrabMouse)
 
   b = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*10 + 14,
     function()
