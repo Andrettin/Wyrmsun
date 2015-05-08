@@ -157,12 +157,6 @@ For the source code of the Stratagus engine itself, see:
 https://launchpad.net/stratagus
 
 ############################################################
-# Installation Instructions
-############################################################
-
-To install Wyrmsun, just extract the contents of the archive to the desired location (i.e. C:\Program Files\). When updating from a previous version, delete all subfolders and files except for the "wyr" folder and its contents. Then extract the contents of the archive to the location where Wyrmsun is installed.
-
-############################################################
 # Changelog
 ############################################################
 
