@@ -192,6 +192,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Quests
 - Instead of going directly to the next mission, quests now return the player to the quest screen for the last played quest's world.
 - In the Westward Migration quest (Germanic), the area around the glyph now starts revealed.
+- Fixed issue which caused the AI to be passive in the last three Teuton scenarios.
 
 * Terrain
 - Fixed bug which caused trees to not regrow correctly.
@@ -199,6 +200,7 @@ To install Wyrmsun, just extract the contents of the archive to the desired loca
 * Units
 - Fixed bug which caused a crash when an archer's missile arrived at a dead unit.
 - Dwarven Scouts, Germanic Skutans and Goblin Archers now have increased attack speed.
+- Added portrait for the Teuton Krieger (by Jinn).
 
 -----------------------------------------------------------------------
 - 1.0.2

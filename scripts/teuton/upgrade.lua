@@ -128,30 +128,6 @@ DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-old-man"}, {"convert-to", "unit-teuton-old-man"}
 )
 
-DefineDependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-farm",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-barracks",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-lumber-mill",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-smithy",
-	{"upgrade-teuton-civilization"}
-)
-
-DefineDependency("unit-teuton-watch-tower",
-	{"upgrade-teuton-civilization"}
-)
-
 DefineDependency("unit-teuton-archer",
 	{"unit-teuton-lumber-mill"}
 )

@@ -30,9 +30,6 @@
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
-		SetPlayerData(rome_player, "Allow", "upgrade-teuton-civilization", "R")
-		SetPlayerData(rome_player, "RaceName", "latin")
-		SetPlayerData(rome_player, "Faction", "Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
 
 	--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later

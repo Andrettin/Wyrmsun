@@ -127,9 +127,9 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
   Key = "b", Hint = _("Train ~!Bura"), Popup = "popup-unit",
   ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"} } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-warrior",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-swordsman",
   Action = "train-unit", Value = "unit-teuton-swordsman",
-  Key = "e", Hint = _("Train ~!Erala"), Popup = "popup-unit",
+  Key = "k", Hint = _("Train ~!Krieger"), Popup = "popup-unit",
   ForUnit = {"unit-teuton-barracks"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",

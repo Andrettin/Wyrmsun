@@ -30,9 +30,6 @@
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
-		SetPlayerData(rome_player, "Allow", "upgrade-teuton-civilization", "R")
-		SetPlayerData(rome_player, "RaceName", "latin")
-		SetPlayerData(rome_player, "Faction", "Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")

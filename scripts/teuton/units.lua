@@ -85,7 +85,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Description = _("The dauntless West Germanic swordsmen ravage the battlefield with their longswords, being second to few other warriors in combat."),
 	Background = _("\"Krieger\" is the German word for \"warrior\"."),
 	Image = {"file", "teuton/units/saxon_swordsman.png", "size", {72, 72}},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior-red-hair",
+	Animations = "animations-dwarven-axefighter", Icon = "icon-teuton-swordsman",
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 		"selected", "click",
