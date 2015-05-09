@@ -174,12 +174,28 @@ MercenaryGroups = {
 
 LoadEvents("Earth")
 
+if (GrandStrategyYear >= -38000) then
+	-- Upper Paleolithic begins around 38,000 BC, and during this period use by modern humans of stone and bone projectile tips became widespread (); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 111.
+end
+
+if (GrandStrategyYear >= -33000) then
+	-- Upper Paleolithic ends around 33,000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 111.
+end
+
+if (GrandStrategyYear >= -30000) then
+	-- Bone projectile point in Grimaldi, Italy c. 30,000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 111.
+end
+
 if (GrandStrategyYear >= -9500) then
 	-- Pleistocene-Holocene transition around 9500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 48.
 end
 
 if (GrandStrategyYear >= -9000) then
 	-- Maglemose culture arises in Zealand in 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+end
+
+if (GrandStrategyYear >= -7500) then
+	-- Late Mesolithic site at Ofnet Cave (Germany) from 7500 BC, two caches containing 38 skulls as war trophies; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 111.
 end
 
 if (GrandStrategyYear >= -7400) then
