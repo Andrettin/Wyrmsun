@@ -167,6 +167,9 @@ https://launchpad.net/stratagus
 * AI
 - The AI no longer tries to build gold mines with workers if it lacks the resources - instead it will now use those workers for other tasks until there are enough resources to build the gold mine.
 
+* Miscellaneous
+- Autocast and autorepair icon borders now properly show up.
+
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
 
