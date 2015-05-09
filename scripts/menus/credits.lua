@@ -134,6 +134,7 @@ function RunShowCreditsMenu()
 	"  Andrettin",
 	"  b_o",
 	"  cybermind",
+	"  ferk",
 	"  Dinomaniak",
 	"  João Victor G. Costa (Jinn)",
 	"  KPG",

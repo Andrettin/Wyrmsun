@@ -172,6 +172,7 @@ https://launchpad.net/stratagus
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
+- When multiple builders construct a mine, now all of them will harvest it when completed (previously only the one to initiate the building did).
 
 -----------------------------------------------------------------------
 - 1.0.3
