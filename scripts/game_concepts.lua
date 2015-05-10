@@ -38,7 +38,7 @@ GameConcepts = {
 	},
 	Backstab = {
 		Name = _("~!Backstab"),
-		Description = _("Thief units will cause extra damage when attacking an organic unit from the back.")
+		Description = _("Thief units cause extra damage when attacking an organic unit from the back.")
 	},
 	Experience = {
 		Name = _("~!Experience"),
@@ -98,7 +98,7 @@ GameConcepts = {
 	},
 	Traits = {
 		Name = _("Tra~!its"),
-		Description = _("Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.")
+		Description = _("Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.\n\nClumsy: -1 Accuracy, -1 Evasion\nDextrous: +1 Accuracy, +1 Evasion\nKeen: +1 Accuracy, +1 Sight\nLimping: -2 Speed\nMighty: +2 Damage\nNear-Sighted: -1 Accuracy, -1 Sight\nOld: -1 Sight, -1 Speed\nQuick: +1 Speed\nReckless: -1 Evasion\nResilient: +5 HP\nSlow: -1 Speed\nStrong: +1 Damage \nVicious: +2 Damage\nWeak: -1 Damage")
 	},
 	Upkeep = {
 		Name = _("~!Upkeep"),

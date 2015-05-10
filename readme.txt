@@ -169,6 +169,7 @@ https://launchpad.net/stratagus
 
 * Miscellaneous
 - Autocast and autorepair icon borders now properly show up.
+- Added list of traits to the "Traits" entry in the "Game Concepts" section of the encyclopedia.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
