@@ -14,7 +14,7 @@ by Andrettin
 # License
 ############################################################
 
-The Stratagus engine, as well as the code, artwork, sounds, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
+The Stratagus engine, as well as the code, artwork, sounds, music and story elements included in Wyrmsun are distributed under the GPL 2.0 license, with the exception of the following files:
 
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
@@ -148,7 +148,7 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /sounds/missiles/sword/swordhit_19a.wav (licensed under the CC-BY-SA 3.0)
 
 
-See the license.txt file for the text of the GPLv2. The contents of the CC-BY-SA license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
+See the license.txt file for the text of the GPL 2.0. The contents of the CC-BY-SA 3.0 license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
 
 Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus

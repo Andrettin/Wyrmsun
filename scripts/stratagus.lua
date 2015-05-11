@@ -39,7 +39,7 @@ wyrmsun = {}
 wyrmsun.Name = "Wyrmsun"
 wyrmsun.Version = "1.0.4"
 wyrmsun.Homepage = ""
-wyrmsun.Licence = "GPL v2"
+wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
 
 -------------------------------------------------------------------------------

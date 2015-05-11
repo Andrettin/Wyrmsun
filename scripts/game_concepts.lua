@@ -38,7 +38,7 @@ GameConcepts = {
 	},
 	Backstab = {
 		Name = _("~!Backstab"),
-		Description = _("Thief units cause extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking from the back itself.")
+		Description = _("Thief units cause extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking directly from behind.")
 	},
 	Experience = {
 		Name = _("~!Experience"),
