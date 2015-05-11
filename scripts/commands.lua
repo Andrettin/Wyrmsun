@@ -14,6 +14,9 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
   elseif (key == "f9") then
     if (not IsNetworkGame()) then SetGamePaused(true) end
     RunDiplomacyMenu()
+  elseif ((key == "g" and alt)) then
+	wyr.preferences.GrabMouse = GetGrabMouse()
+	SavePreferences()
   elseif ((key == "m" and alt) or key == "f10" or key == "backspace") then
     if (not IsNetworkGame()) then SetGamePaused(true) end
     RunGameMenu()

@@ -853,3 +853,6 @@ TaShadan:
 
 Veneteaou:
 /graphics/tilesets/world/terrain/province_tile_ocean.png
+
+yd:
+/graphics/ui/backgrounds/castle.png

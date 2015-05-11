@@ -73,6 +73,7 @@ function RunShowCreditsMenu()
 	"  Tina Petersen Jensen",
 	"  TimberDragon",
 	"  Veneteaou",
+	"  yd",
 	_("Sound Effects"),
 	"  b_o",
 	"  Battle for Wesnoth Team",

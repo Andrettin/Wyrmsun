@@ -42,6 +42,7 @@ local keystrokes = {
   {"Ctrl-#", "- define group"},
   {"Shift-#", "- add to group"},
   {"Alt-#", "- add to alternate group"},
+  {".", "- select next idle worker"},
   {"F2-F4", "- recall map position"},
   {"Shift F2-F4", "- save map postition"},
   {"F5", "- game options"},

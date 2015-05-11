@@ -1435,6 +1435,8 @@ Load("scripts/menus/encyclopedia.lua")
 
 -- load mods now
 LoadMods()
+SetGrabMouse(wyr.preferences.GrabMouse)
+
 
 function GameStarting()
 	--[[

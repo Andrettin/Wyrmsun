@@ -174,6 +174,8 @@ https://github.com/Andrettin/Wyrmsun
 - Autocast and autorepair icon borders now properly show up.
 - Added list of traits to the "Traits" entry in the "Game Concepts" section of the encyclopedia.
 - Moved "Load Game" button from the main menu to the "Single Player Game" submenu.
+- Added information about "." selecting the next idle worker to the hotkeys submenu.
+- Fixed issue with mouse grabbing not getting properly saved.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
