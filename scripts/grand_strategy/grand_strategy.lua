@@ -3242,7 +3242,12 @@ function DrawGrandStrategyInterface()
 					end
 
 					AddGrandStrategyLabel(GetCommodityPrice(key), Video.Width - 243 + 12 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
-					AddGrandStrategyLabel(GrandStrategyFaction.Trade[key], Video.Width - 243 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					AddGrandStrategyLabel(math.abs(GrandStrategyFaction.Trade[key]), Video.Width - 243 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					if (GrandStrategyFaction.Trade[key] < 0) then
+						AddGrandStrategyLabel("Bid", Video.Width - 243 + 112 + 2 + 46 - 20 + 56 - 10, icon_offset_y + 3 + 1, Fonts["game"], false, false)
+					elseif (GrandStrategyFaction.Trade[key] > 0) then
+						AddGrandStrategyLabel("Offer", Video.Width - 243 + 112 + 2 + 46 - 20 + 56 - 10, icon_offset_y + 3 + 1, Fonts["game"], false, false)
+					end
 					
 					item_y = item_y + 1
 				end

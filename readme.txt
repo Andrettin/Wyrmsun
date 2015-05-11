@@ -170,6 +170,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - The AI no longer tries to build gold mines with workers if it lacks the resources - instead it will now use those workers for other tasks until there are enough resources to build the gold mine.
 
+* Grand Strategy
+- In the trade interface, "Bid" or "Offer" will be displayed for each commodity, instead of using negative and positive numbers to represent that.
+
 * Miscellaneous
 - Autocast and autorepair icon borders now properly show up.
 - Added list of traits to the "Traits" entry in the "Game Concepts" section of the encyclopedia.
