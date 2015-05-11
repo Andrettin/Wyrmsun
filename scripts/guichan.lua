@@ -943,9 +943,11 @@ function RunSinglePlayerGameMenu()
 			menu:stop(1)
 		end
 	end)
-  menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*4,
+  menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*4,
+    function() RunLoadGameMenu(); end)
+  menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*5,
     function() RunTechTreeMenu(0) end)
-  menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*5,
+  menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*6,
     function() menu:stop() end)
   return menu:run()
 end
@@ -1370,14 +1372,12 @@ function BuildProgramStartMenu()
 	SavePreferences()
   end
 
-  menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*0,
+  menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*1,
     function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*1,
+  menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
     function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
+  menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*3,
     function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*3,
-    function() RunLoadGameMenu(); menu:stop(1) end)
 --  menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
 --    function() RunReplayGameMenu(); menu:stop(1) end)
 --  menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,

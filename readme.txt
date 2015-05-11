@@ -14,7 +14,7 @@ by Andrettin
 # License
 ############################################################
 
-The Stratagus engine, as well as all of the code, artwork, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
+The Stratagus engine, as well as the code, artwork, sounds, music and story elements included in Wyrmsun are distributed under the GPLv2 license, with the exception of the following files:
 
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
@@ -156,6 +156,9 @@ https://github.com/Andrettin/Wyrmgus
 For the source code of the Stratagus engine itself, see:
 https://launchpad.net/stratagus
 
+Wyrmsun's data repository can be found here:
+https://github.com/Andrettin/Wyrmsun
+
 ############################################################
 # Changelog
 ############################################################
@@ -170,6 +173,7 @@ https://launchpad.net/stratagus
 * Miscellaneous
 - Autocast and autorepair icon borders now properly show up.
 - Added list of traits to the "Traits" entry in the "Game Concepts" section of the encyclopedia.
+- Moved "Load Game" button from the main menu to the "Single Player Game" submenu.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.

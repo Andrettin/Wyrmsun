@@ -314,6 +314,10 @@ if (GrandStrategyYear >= -2000) then
 	-- early Wietenberg culture existed in Romania around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 end
 
+if (GrandStrategyYear >= -1700) then
+	-- Late Bronze Age begins around 1700 BC, and during this period cremation became the burial tradition in almost all of Europe; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
+end
+
 if (GrandStrategyYear >= -1628) then
 	GrandStrategyEvents.TheEruptionOfThera = nil
 end
@@ -340,10 +344,16 @@ end
 if (GrandStrategyYear >= -1400) then
 	GrandStrategyEvents.TheSunChariot = nil -- http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 	GrandStrategyEvents.TheWhiteHorse = nil -- the white horse at Uffington was made between 1400 and 600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 46.
+	
+	-- Late Bronze Age ends around 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
 end
 
 if (GrandStrategyYear >= -1365) then
 	GrandStrategyEvents.NoblemansBurial = nil -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
+end
+
+if (GrandStrategyYear >= -1250) then
+	-- Defenses of Mycenaean strongholds strengthened c. 1250 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 114.
 end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
@@ -442,6 +452,8 @@ if (GrandStrategyYear >= -550) then -- Greek and Phoenician settlements about 55
 	WorldMapProvinces.Naples.Civilization = "greek" -- Magna Graecia
 	WorldMapProvinces.Sicily.Civilization = "greek"
 	WorldMapProvinces.Thrace.Civilization = "greek"
+	
+	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
 end
 
 if (GrandStrategyYear >= -500) then -- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
@@ -449,6 +461,8 @@ if (GrandStrategyYear >= -500) then -- Persian Empire about 500 BC; Source: Will
 	WorldMapProvinces.Macedonia.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Thrace.Owner = "Persia"
 	WorldMapProvinces.Thrace.SettlementBuildings.unit_teuton_town_hall = 2
+	
+	-- Maiden Castle hill fort build around 500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 119.
 end
 
 if (GrandStrategyYear >= -431) then -- Greece in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
