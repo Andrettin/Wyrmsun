@@ -180,6 +180,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added information about "." selecting the next idle worker to the hotkeys submenu.
 - Fixed issue with mouse grabbing not getting properly saved.
 
+* Quests
+- Fixed bug which caused the Caverns of Flame scenario to not be winnable.
+- Significantly reduced the quantity of time until the volcano erupts in the Caverns of Flame scenario.
+
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
 - When multiple builders construct a mine, now all of them will harvest it when completed (previously only the one to initiate the building did).
