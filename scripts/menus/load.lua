@@ -16,6 +16,7 @@ function LoadGame(s)
 
   InitGameSettings()
   SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+  RunningScenario = false
 end
 
 function AddLoadGameItems(menu)
