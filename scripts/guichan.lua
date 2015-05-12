@@ -944,7 +944,11 @@ function RunSinglePlayerGameMenu()
 		end
 	end)
   menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*4,
-    function() RunLoadGameMenu(); end)
+    function()
+		RunLoadGameMenu();
+		menu:stop(1)
+	end
+  )
   menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*5,
     function() RunTechTreeMenu(0) end)
   menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*6,

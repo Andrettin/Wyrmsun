@@ -5,6 +5,7 @@ function LoadGame(s)
   while (loop) do
     InitGameVariables()
     LoadedGame = true
+	RunningScenario = true
     StartSavedGame(s)
     if (GameResult ~= GameRestart) then
       loop = false

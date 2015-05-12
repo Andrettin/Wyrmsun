@@ -179,6 +179,7 @@ https://github.com/Andrettin/Wyrmsun
 - Moved "Load Game" button from the main menu to the "Single Player Game" submenu.
 - Added information about "." selecting the next idle worker to the hotkeys submenu.
 - Fixed issue with mouse grabbing not getting properly saved.
+- Fixed bug which caused players with special names to have their name overridden by their faction's name when loading a saved game.
 
 * Quests
 - Fixed bug which caused the Caverns of Flame scenario to not be winnable.
