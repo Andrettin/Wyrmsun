@@ -184,6 +184,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Fixed bug which caused the Caverns of Flame scenario to not be winnable.
 - Significantly reduced the quantity of time until the volcano erupts in the Caverns of Flame scenario.
+- Added two speech lines for Marbod in the Home of the Boii quest.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
