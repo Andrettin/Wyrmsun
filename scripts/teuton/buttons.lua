@@ -59,6 +59,32 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	}
 } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-catapult"
+	}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-1"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-catapult"
+	}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-2"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-catapult"
+	}
+} )
+
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
   Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
@@ -155,6 +181,20 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "p", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-smithy"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
+	Action = "research", Value = "upgrade-teuton-catapult-projectile-1",
+	Allowed = "check-single-research",
+	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-smithy"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
+	Action = "research", Value = "upgrade-teuton-catapult-projectile-2",
+	Allowed = "check-single-research",
+	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 

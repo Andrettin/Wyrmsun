@@ -114,8 +114,11 @@ function ApplyTechLevels()
 		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"
 	}
 	local iron_upgrades = {
-		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
-		"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"
+		"upgrade-teuton-spatha", "upgrade-teuton-iron-shield",
+		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
+		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2",
+		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
+		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2"
 	}
 	local iron_civilizations = {
 		"upgrade-teuton-civilization"

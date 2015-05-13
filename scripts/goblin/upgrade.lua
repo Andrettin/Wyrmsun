@@ -28,6 +28,20 @@
 --
 
 local upgrades = {
+	{"upgrade-goblin-catapult-projectile-1", _("Catapult Granite Projectile"), "icon-catapult-projectile-2", "siege-projectile-1",
+		_("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage war machines can cause.\n\nEffect: +15 Damage for War Machines."),
+		"",
+		"",
+		{   250,   900,     0,     0,     0,   300,     0,     0},
+		{   250,   900,     0,     0,     0,   300,     0,  1500},
+		1},
+	{"upgrade-goblin-catapult-projectile-2", _("Catapult Metal Projectile"), "icon-catapult-projectile-3", "siege-projectile-2",
+		_("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +15 Damage for War Machines."),
+		"",
+		"",
+		{   250,  4000,     0,     0,     0,     0,     0,     0},
+		{   250,  4000,     0,     0,     0,     0,     0,  4000},
+		1},
 	{"upgrade-goblin-masonry", _("Masonry"), "icon-masonry", "masonry",
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
 		"",
@@ -56,6 +70,16 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineModifier("upgrade-goblin-catapult-projectile-1",
+	{"BasicDamage", 15},
+	{"apply-to", "unit-goblin-war-machine"}
+)
+
+DefineModifier("upgrade-goblin-catapult-projectile-2",
+	{"BasicDamage", 15},
+	{"apply-to", "unit-goblin-war-machine"}
+)
+
 DefineModifier("upgrade-goblin-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
@@ -70,3 +94,11 @@ DefineDependency("unit-goblin-war-machine",
 
 DefineDependency("unit-goblin-glider",
 	{"unit-goblin-lumber-mill"})
+
+DefineDependency("upgrade-goblin-catapult-projectile-1",
+	{"unit-goblin-lumber-mill"}
+)
+
+DefineDependency("upgrade-goblin-catapult-projectile-2",
+	{"upgrade-goblin-catapult-projectile-1", "unit-goblin-lumber-mill"}
+)

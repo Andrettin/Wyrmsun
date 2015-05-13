@@ -82,6 +82,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-catapult-projectile-1",
+	Size = {46, 38},
+	File = "neutral/icons/catapult_projectile_sandstone.png"
+})
+
+DefineIcon({
+	Name = "icon-catapult-projectile-2",
+	Size = {46, 38},
+	File = "neutral/icons/catapult_projectile_granite.png"
+})
+
+DefineIcon({
+	Name = "icon-catapult-projectile-3",
+	Size = {46, 38},
+	File = "neutral/icons/catapult_projectile_metal.png"
+})
+
+DefineIcon({
 	Name = "icon-celt-farm",
 	Size = {46, 38},
 	File = "celt/icons/farm.png"

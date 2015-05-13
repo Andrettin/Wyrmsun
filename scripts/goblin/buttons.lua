@@ -43,6 +43,32 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-spear-1",
 	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
 	"goblin-group"} } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-war-machine"
+	}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-catapult-projectile-1"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-war-machine"
+	}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-catapult-projectile-2"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-war-machine"
+	}
+} )
+
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Action = "attack-ground",
   Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
@@ -138,6 +164,20 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
   ForUnit = {"unit-mercenary-camp"} } )
 
 -- Researches ---------------------------------------------------------
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
+	Action = "research", Value = "upgrade-goblin-catapult-projectile-1",
+	Allowed = "check-single-research",
+	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-smithy"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
+	Action = "research", Value = "upgrade-goblin-catapult-projectile-2",
+	Allowed = "check-single-research",
+	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-smithy"}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-goblin-masonry",
