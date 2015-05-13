@@ -173,6 +173,9 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - In the trade interface, "Bid" or "Offer" will be displayed for each commodity, instead of using negative and positive numbers to represent that.
 
+* Maps
+- Added Regensburg map.
+
 * Miscellaneous
 - Autocast and autorepair icon borders now properly show up.
 - Added list of traits to the "Traits" entry in the "Game Concepts" section of the encyclopedia.
@@ -185,6 +188,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed bug which caused the Caverns of Flame scenario to not be winnable.
 - Significantly reduced the quantity of time until the volcano erupts in the Caverns of Flame scenario.
 - Added two speech lines for Marbod in the Home of the Boii quest.
+- Added The Blue Danube quest.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.

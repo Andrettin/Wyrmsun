@@ -1,0 +1,11 @@
+-- Stratagus Map Presentation
+
+if (GrandStrategy == false) then
+	DefinePlayerTypes("person","computer")
+else
+	DefinePlayerTypes("person","person")
+end
+PresentMap("Regensburg", 1, 128, 64, 1)
+MapWorld = "Earth"
+MapAttacker = 0
+MapDefender = 1

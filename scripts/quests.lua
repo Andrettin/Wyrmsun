@@ -127,7 +127,7 @@ Quests = {
 	},
 	TheRazingOfOpitergium = {
 		Name = "The Razing of Opitergium",
-		Icon = "neutral/icons/attack_ground",
+		Icon = "neutral/icons/catapult_projectile_sandstone",
 		Description = "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo\n\nRewards: 1 Teuton Technology Point.",
 		RequiredQuest = "The Sack of Iuvavum",
 		World = "Earth",
@@ -152,6 +152,20 @@ Quests = {
 		X = 9,
 		Y = 1,
 		PlayerColor = "black"
+	},
+	TheBlueDanube = {
+		Name = "The Blue Danube",
+		Icon = "teuton/icons/saxon_swordsman",
+		Description = "As time passed, the Marcomanni abandoned their old name and adopted a new one - that of the Bavarians. Expelled from Bohemia by the Lombards, they must now seek a home on the margins of the Danube, facing the forces of the crumbling Roman Empire, if need be.\n\nMap: Regensburg\n\nRewards: 2 Teuton Technology Points.",
+		RequiredQuest = "The Razing of Opitergium",
+		World = "Earth",
+		Civilization = "teuton",
+		TechnologyPoints = 2,
+		Map = "maps/earth/regensburg.smp",
+		Scenario = "scripts/teuton/scenarios/the_blue_danube.lua",
+		X = 1,
+		Y = 2,
+		PlayerColor = "cyan"
 	},
 	TheMeadOfWisdom = {
 		Name = "The Mead of Wisdom",
