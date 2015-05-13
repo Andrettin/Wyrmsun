@@ -113,6 +113,58 @@ AddTrigger(
 	end
 )
 
+-- Marbod speaks about his ambition to found a great realm, and the difficulties of doing so nearer to the Romans
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii") and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-farm") >= 4) then
+			player = GetFactionPlayer("Marcomanni Tribe")
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Marbod",
+			"So near the Romans as we used to be, no realm could succeed and become great. But here... we have a chance.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"teuton/icons/marbod.png"
+		)
+		return false
+	end
+)
+
+-- Marbod speaks about his time in Rome
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii") and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-farm") >= 4 and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-barracks") >= 1 and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-swordsman") >= 8) then
+			player = GetFactionPlayer("Marcomanni Tribe")
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"Marbod",
+			"I keep remembering my younger years in Rome... they taught me much about statecraft and military organization. Already, we have a disciplined army to pursue our dangerous - albeit rewarding - task. The Emperor was most kind to me... should we succeed here, will our realms one day clash?",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end},
+			"teuton/icons/marbod.png"
+		)
+		return false
+	end
+)
+
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
