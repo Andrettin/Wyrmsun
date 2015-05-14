@@ -154,7 +154,7 @@ AddTrigger(
 	function()
 		Event(
 			"Marbod",
-			"I keep remembering my younger years in Rome... they taught me much about statecraft and military organization. Already, we have a disciplined army to pursue our dangerous - albeit rewarding - task. The Emperor was most kind to me... should we succeed here, will our realms one day clash?",
+			"Much did I learn about statecraft and military organization during my younger years in Rome. Already, we have a disciplined army to pursue our dangerous - albeit rewarding - task. The Boii shall be no match for us!",
 			player,
 			{"~!Continue"},
 			{function(s)
