@@ -175,6 +175,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Added Regensburg map.
+- Increased starting lumber in the Brown Hills, Caverns of Chaincolt, Chaincolt Foothills and Northern Wastelands maps.
 
 * Miscellaneous
 - Autocast and autorepair icon borders now properly show up.
