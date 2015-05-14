@@ -32,9 +32,9 @@ local rock_generation = {
 
 local town_buildings = {"Farm", "Farm", "Smithy", "Lumber Mill", "Guard Tower", "Guard Tower", "Guard Tower"}
 
-local town_units = {}
+local town_units = {"unit-teuton-archer", "unit-teuton-archer", "unit-teuton-catapult"}
 
-local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer"}
+local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer"}
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then

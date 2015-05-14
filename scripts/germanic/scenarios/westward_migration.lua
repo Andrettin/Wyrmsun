@@ -29,6 +29,12 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-town-hall", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-farm", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-barracks", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-carpenters-shop", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-smithy", "F")
+	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-gold-mine", "F")
 
 	-- reveal area near the glyph
 	local uncount = 0
@@ -57,7 +63,7 @@ AddTrigger(
 	function()
 		Event(
 			"",
-			"After wandering out of our home in the east, we came to this land crossed by a great river. Our journey continues, however, for our eyes have been set to the lands further to the southwest. But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.",
+			"After wandering out of our home in the east, we came to this land crossed by a great river. Our journey continues, however, for our eyes have been set to the lands further to the southwest. But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.\n\n(This is a migration mission. You cannot build any structures or train any units.)",
 			player,
 			{"~!Continue"},
 			{function(s)

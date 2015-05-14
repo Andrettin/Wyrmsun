@@ -189,6 +189,8 @@ https://github.com/Andrettin/Wyrmsun
 - Significantly reduced the quantity of time until the volcano erupts in the Caverns of Flame scenario.
 - Added two speech lines for Marbod in the Home of the Boii quest.
 - Added The Blue Danube quest.
+- Deactivated the building construction buttons for the Westward Migration mission, as they served no purpose (the player starts with 0 resources and thus cannot build anything) and could help confuse the player.
+- Added information in Westward Migration's introduction that no buildings can be constructed and no units can be trained during the scenario.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.

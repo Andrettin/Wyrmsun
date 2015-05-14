@@ -96,7 +96,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"",
-				"Our scouts report that remnant forces of the crumbling Roman Empire can be found here - we must locate and destroy them, to make way for our settlement in these lands.",
+				"After a long time traveling south, we are now close to the great river. Our scouts report that remnant forces of the crumbling Roman Empire can be found here - we must locate and destroy them, to make way for our settlement in these lands.",
 				player,
 				{"~!Continue"},
 				{function(s)
