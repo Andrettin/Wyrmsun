@@ -1391,7 +1391,7 @@ function BuildProgramStartMenu()
   menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
     function() RunEditorMenu(); menu:stop(1) end)
   menu:addFullButton(_("Mo~!ds"), "d", offx + 208, offy + 104 + 36*6,
-    function() RunModsMenu(); menu:stop(1) end)
+    function() RunModsMenu(0); menu:stop(1) end)
   menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
     function() RunEncyclopediaMenu(); menu:stop(1) end)
   menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)

@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function RunModsMenu()
+function RunModsMenu(selected_mod)
 	ModName = ""
 	ModDescription = ""
 	ModDependencies = nil
@@ -84,12 +84,18 @@ function RunModsMenu()
 			ModName = ""
 			ModDescription = ""
 			ModDependencies = nil
-			Load(mods[i])
+			Load(mods[mod_dd:getSelected() + 1])
+			menu:stop()
+			RunModsMenu(mod_dd:getSelected())
 		end
 	)
 	mod_dd:setSize(252, 20)
 	if (table.getn(mod_list) > 0) then
-		mod_dd:setSelected(0)
+		mod_dd:setSelected(selected_mod)
+		ModName = ""
+		ModDescription = ""
+		ModDependencies = nil
+		Load(mods[selected_mod + 1])
 
 		menu:addLabel(_("Description: " .. ModDescription), Video.Width / 2, offy + 34 + 60*1.5, Fonts["game"], true)
 
