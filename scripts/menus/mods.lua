@@ -48,7 +48,7 @@ function RunModsMenu(selected_mod)
 
 	-- list the subdirectories in the mods folder
 	local dirlist = {}
-	local dirs = ListDirsInDirectory("mods/")
+	local dirs = ListDirsInDirectory(ModDirectory)
 	for i,f in ipairs(dirs) do
 		dirlist[u] = f .. "/"
 		u = u + 1
@@ -57,10 +57,10 @@ function RunModsMenu(selected_mod)
 	u = 1
 	-- get mods in the subdirectories of the mods folder
 	for j=1,table.getn(dirlist) do
-		local fileslist = ListFilesInDirectory("mods/" .. dirlist[j])
+		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "info.lua")) then
-				mods[u] = "mods/" .. dirlist[j] .. f
+				mods[u] = ModDirectory .. dirlist[j] .. f
 				u = u + 1
 			end
 		end
@@ -153,7 +153,7 @@ function LoadMods()
 
 	-- list the subdirectories in the mods folder
 	local dirlist = {}
-	local dirs = ListDirsInDirectory("mods/")
+	local dirs = ListDirsInDirectory(ModDirectory)
 	for i,f in ipairs(dirs) do
 		dirlist[u] = f .. "/"
 		u = u + 1
@@ -162,10 +162,10 @@ function LoadMods()
 	u = 1
 	-- get mods in the subdirectories of the mods folder
 	for j=1,table.getn(dirlist) do
-		local fileslist = ListFilesInDirectory("mods/" .. dirlist[j])
+		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "info.lua")) then
-				mods[u] = "mods/" .. dirlist[j] .. f
+				mods[u] = ModDirectory .. dirlist[j] .. f
 				u = u + 1
 			end
 		end
@@ -174,10 +174,10 @@ function LoadMods()
 	u = 1
 	-- get mod main files in the subdirectories of the mods folder
 	for j=1,table.getn(dirlist) do
-		local fileslist = ListFilesInDirectory("mods/" .. dirlist[j])
+		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "main.lua")) then
-				mods[u] = "mods/" .. dirlist[j] .. f
+				mods[u] = ModDirectory .. dirlist[j] .. f
 				u = u + 1
 			end
 		end
