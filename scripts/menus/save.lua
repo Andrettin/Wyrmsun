@@ -24,7 +24,7 @@ function RunConfirmErase(name, menu)
   confirm:resize(300,120)
 
   confirm:addLabel(name, 300 / 2, 11)
-  confirm:addLabel("File exists, are you sure ?", 300 / 2, 31)
+  confirm:addLabel("File exists, are you sure?", 300 / 2, 31)
 
   confirm:addHalfButton("~!Yes", "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
     function()
