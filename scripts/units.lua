@@ -42,7 +42,7 @@ Units = {
 	"unit-teuton-farm", "unit-teuton-barracks",
 	"unit-teuton-lumber-mill", "unit-teuton-smithy",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
-	"upgrade-teuton-spatha", "upgrade-teuton-iron-shield",
+	"upgrade-teuton-spatha", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 	"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
 	"upgrade-teuton-masonry",
 	"unit-celt-farm",

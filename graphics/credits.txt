@@ -560,6 +560,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/wood_pile.png
 /graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/axe_mastery.png
+/graphics/neutral/icons/bodkin_arrow.png
 /graphics/neutral/icons/build_basic_structure.png
 /graphics/neutral/icons/cancel.png
 /graphics/neutral/icons/cancel_extra_1.png

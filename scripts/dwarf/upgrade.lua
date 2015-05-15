@@ -63,13 +63,15 @@ local upgrades = {
 		{   200,   300,   450,     0,     0,     0,     0,     0},
 		{   200,   300,   450,     0,     0,     0,     0,  1200},
 		1},
-	{"upgrade-dwarven-throwing-axe-2", _("Bearded Throwing Axe"), "icon-dwarven-throwing-axe-3", "ranged-projectile-2",
+	{
+		"upgrade-dwarven-throwing-axe-2", _("Bearded Throwing Axe"), "icon-dwarven-throwing-axe-3", "ranged-projectile-2",
 		_("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
 		"",
 		"",
 		{   250,   900,   750,     0,     0,     0,     0,     0},
 		{   250,   900,   750,     0,     0,     0,     0,  2400},
-		1},
+		1
+	},
 	{"upgrade-dwarven-ballista-bolt-1", _("Broadhead Ballista Bolt"), "icon-dwarven-ballista-bolt-2", "siege-projectile-1",
 		_("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas."),
 		"",
@@ -166,7 +168,8 @@ DefineModifier("upgrade-dwarven-throwing-axe-1",
 
 DefineModifier("upgrade-dwarven-throwing-axe-2",
 	{"BasicDamage", 1},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
+)
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
 	{"BasicDamage", 15},

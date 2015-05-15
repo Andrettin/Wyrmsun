@@ -34,35 +34,48 @@ local upgrades = {
 		_("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
 		{   250,  2400,     0,     0,     0,     0,     0,     0},
 		{   250,  2400,     0,     0,     0,     0,     0,  2400},
-		1},
+		1
+	},
 	{"upgrade-teuton-iron-shield", _("Iron Shield"), "icon-teuton-iron-shield", "iron-shield",
 		_("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
 		"",
 		"",
 		{   250,   900,   750,     0,     0,     0,     0,     0},
 		{   250,   900,   750,     0,     0,     0,     0,  2400},
-		1},
+		1
+	},
+	{"upgrade-teuton-bodkin-arrow", _("Bodkin Arrow"), "icon-bodkin-arrow", "ranged-projectile-2",
+		_("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability."),
+		"",
+		"",
+		{   250,   900,   750,     0,     0,     0,     0,     0},
+		{   250,   900,   750,     0,     0,     0,     0,  2400},
+		1
+	},
 	{"upgrade-teuton-catapult-projectile-1", _("Catapult Granite Projectile"), "icon-catapult-projectile-2", "siege-projectile-1",
 		_("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +15 Damage for Catapults."),
 		"",
 		"",
 		{   250,   900,     0,     0,     0,   300,     0,     0},
 		{   250,   900,     0,     0,     0,   300,     0,  1500},
-		1},
+		1
+	},
 	{"upgrade-teuton-catapult-projectile-2", _("Catapult Metal Projectile"), "icon-catapult-projectile-3", "siege-projectile-2",
 		_("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +15 Damage for Catapults."),
 		"",
 		"",
 		{   250,  4000,     0,     0,     0,     0,     0,     0},
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
-		1},
+		1
+	},
 	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to upgrade to Guard Towers."),
 		"",
 		"",
 		{   250,   900,   500,     0,     0,   250,     0,     0},
 		{   250,   900,   500,     0,     0,   250,     0,  2400},
-		1},
+		1
+	},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -95,6 +108,11 @@ DefineModifier("upgrade-teuton-iron-shield",
 	{"Armor", 2},
 	{"apply-to", "unit-teuton-swordsman"},
 	{"apply-to", "unit-hero-marbod"}
+)
+
+DefineModifier("upgrade-teuton-bodkin-arrow",
+	{"BasicDamage", 1},
+	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-teuton-catapult-projectile-1",
@@ -170,6 +188,10 @@ DefineDependency("upgrade-teuton-spatha",
 
 DefineDependency("upgrade-teuton-iron-shield",
 	{"upgrade-germanic-bronze-shield"}
+)
+
+DefineDependency("upgrade-teuton-bodkin-arrow",
+	{"upgrade-germanic-barbed-arrow"}
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-1",

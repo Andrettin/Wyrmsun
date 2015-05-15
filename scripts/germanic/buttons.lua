@@ -90,11 +90,12 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
 } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-arrow",
-  Action = "attack",
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-germanic-archer", "unit-teuton-archer", "unit-goblin-archer"
-  } } )
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-archer", "unit-teuton-archer", "unit-goblin-archer"
+	}
+} )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
   Action = "attack",

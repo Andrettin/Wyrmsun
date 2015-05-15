@@ -192,6 +192,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added The Blue Danube quest.
 - Deactivated the building construction buttons for the Westward Migration mission, as they served no purpose (the player starts with 0 resources and thus cannot build anything) and could help confuse the player.
 - Added information in Westward Migration's introduction that no buildings can be constructed and no units can be trained during the scenario.
+- The Battle of Magetobria quest now gives 2 technology points instead of 1.
 
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
@@ -200,6 +201,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - Added Granite Catapult Projectile and Metal Catapult Projectile upgrades for the Teutons and Goblins (graphics by Jinn).
+- Added Bodkin Arrow upgrade for the Teutons (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.0.3

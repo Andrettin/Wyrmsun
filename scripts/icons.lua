@@ -82,6 +82,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-bodkin-arrow",
+	Size = {46, 38},
+	File = "neutral/icons/bodkin_arrow.png"
+})
+
+DefineIcon({
 	Name = "icon-catapult-projectile-1",
 	Size = {46, 38},
 	File = "neutral/icons/catapult_projectile_sandstone.png"

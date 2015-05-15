@@ -160,12 +160,13 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
   } } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
-  Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-throwing-axe-2"},
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
-  } } )
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-throwing-axe-2"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
+	}
+} )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-1",
 	Action = "attack",
@@ -370,10 +371,11 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
   ForUnit = {"unit-dwarven-lumber-mill"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
-  Action = "research", Value = "upgrade-dwarven-throwing-axe-2",
-  Allowed = "check-single-research",
-  Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
-  ForUnit = {"unit-dwarven-lumber-mill"} } )
+	Action = "research", Value = "upgrade-dwarven-throwing-axe-2",
+	Allowed = "check-single-research",
+	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-lumber-mill"}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
   Action = "research", Value = "upgrade-dwarven-masonry",

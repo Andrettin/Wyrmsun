@@ -59,6 +59,15 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	}
 } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-bodkin-arrow",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-bodkin-arrow"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-archer"
+	}
+} )
+
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
@@ -182,6 +191,13 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "p", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-smithy"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-bodkin-arrow",
+	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
+	Allowed = "check-single-research",
+	Key = "a", Hint = _("~!Research Bodkin ~!Arrow"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
