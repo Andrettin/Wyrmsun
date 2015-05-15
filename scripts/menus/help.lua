@@ -2,11 +2,13 @@ function RunHelpMenu()
   local menu = WarGameMenu(panel(1))
 
   menu:addLabel("Help Menu", 128, 11)
-  menu:addFullButton("~!Hotkeys", "h", 16, 40 + 36*0,
+  menu:addFullButton(_("En~!cyclopedia"), "c", 16, 40 + 36*0,
+    function() RunEncyclopediaMenu() end)
+  menu:addFullButton("~!Hotkeys", "h", 16, 40 + 36*1,
     function() RunKeystrokeHelpMenu() end)
 --  menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
 --    function() RunTipsMenu() end)
-  menu:addFullButton("Previous (~<Esc~>)", "escape", 128 - (224 / 2), 248,
+  menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 128 - (224 / 2), 248,
     function() menu:stop() end)
 
   menu:run(false)
@@ -83,7 +85,7 @@ function RunKeystrokeHelpMenu()
   menu:add(s, 16, 60)
 
   menu:addLabel("Hotkey Menu", 352 / 2, 11)
-  menu:addFullButton("Previous (~<Esc~>)", "escape",
+  menu:addFullButton("Previous Menu (~<Esc~>)", "escape",
     (352 / 2) - (224 / 2), 352 - 40, function() menu:stop() end)
 
   menu:run(false)

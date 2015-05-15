@@ -1437,9 +1437,10 @@ Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
 
+SetGrabMouse(wyr.preferences.GrabMouse)
+
 -- load mods now
 LoadMods()
-SetGrabMouse(wyr.preferences.GrabMouse)
 
 
 function GameStarting()

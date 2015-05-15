@@ -1556,11 +1556,11 @@ function RunGrandStrategyGameMenu()
 
 	menu:addLabel("Game Menu", 128, 11)
 
-	menu:addHalfButton("Save (~<F11~>)", "f11", 16, 40,
+	menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 36*0,
 		function() menu:stop(); RunGrandStrategySaveMenu() end)
-	menu:addHalfButton("Load (~<F12~>)", "f12", 16 + 12 + 106, 40,
+	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 36*1,
 		function() menu:stop(); RunGrandStrategyLoadGameMenu() end)
-	menu:addFullButton("Encyclopedia (~<F5~>)", "f5", 16, 40 + 36*1,
+	menu:addFullButton("Encyclopedia (~<F5~>)", "f5", 16, 40 + 36*2,
 		function()
 			RunEncyclopediaMenu()
 			menu:stop()
@@ -1571,7 +1571,7 @@ function RunGrandStrategyGameMenu()
 --		function() RunHelpMenu() end)
 --	menu:addFullButton("~!Objectives", "o", 16, 40 + 36*3,
 --		function() RunObjectivesMenu() end)
-	menu:addFullButton("~!End Game", "e", 16, 40 + 36*4,
+	menu:addFullButton("~!End Game", "e", 16, 40 + 36*3,
 		function() RunEndGrandStrategyGameMenu() end)
 	menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 288 - 40,
 		function()
@@ -1594,11 +1594,11 @@ function RunEndGrandStrategyGameMenu()
 --	end
 --	menu:addFullButton("~!Surrender", "s", 16, 40 + (36 * 1),
 --		function() RunSurrenderConfirmMenu() end)
-	menu:addFullButton("~!Quit to Menu", "q", 16, 40 + (36 * 2),
+	menu:addFullButton("~!Quit Game", "q", 16, 40 + (36 * 1),
 		function() RunGrandStrategyQuitToMenuConfirmMenu() end)
-	menu:addFullButton("E~!xit to Desktop", "x", 16, 40 + (36 * 3),
+	menu:addFullButton("E~!xit to Desktop", "x", 16, 40 + (36 * 2),
 		function() RunExitConfirmMenu() end)
-	menu:addFullButton("Previous (~<Esc~>)", "escape", 16, 248,
+	menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 16, 248,
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -1607,10 +1607,8 @@ end
 function RunGrandStrategyQuitToMenuConfirmMenu()
 	local menu = WarGameMenu(panel(1))
 
-	menu:addLabel("Are you sure you", 128, 11)
-	menu:addLabel("want to quit to", 128, 11 + (24 * 1))
-	menu:addLabel("the main menu?", 128, 11 + (24 * 2))
-	menu:addFullButton("~!Quit to Menu", "q", 16, 11 + (24 * 3) + 29,
+	menu:addLabel("Are you sure?", 128, 11)
+	menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
 		function()
 			StopMusic();
 			GrandStrategyMenu:stop() 
@@ -1618,7 +1616,7 @@ function RunGrandStrategyQuitToMenuConfirmMenu()
 			ClearGrandStrategyVariables()
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
-	menu:addFullButton("Cancel (~<Esc~>)", "escape", 16, 248,
+	menu:addFullButton("~!No", "n", 16, 11 + (36 * 3) + 29,
 		function() menu:stop() end)
 
 	menu:run(false)
