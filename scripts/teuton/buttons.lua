@@ -196,7 +196,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
-	Key = "a", Hint = _("~!Research Bodkin ~!Arrow"), Popup = "popup-research",
+	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
