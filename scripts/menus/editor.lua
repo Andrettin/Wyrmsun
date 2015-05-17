@@ -582,11 +582,11 @@ function RunInEditorMenu()
 
   menu:addLabel("Editor Menu", 128, 11)
 
-  menu:addHalfButton("Save (~<F11~>)", "f11", 16, 40, RunEditorSaveMenu)
+  menu:addFullButton("Save (~<F11~>)", "f11", 16, 40, RunEditorSaveMenu)
   local buttonEditorLoad = -- To be removed when enabled.
-  menu:addHalfButton("Load (~<F12~>)", "f12", 16 + 118, 40, RunEditorLoadMenu)
-  menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 36 * 1, RunEditorMapProperties)
-  menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 36 * 2, RunEditorPlayerProperties)
+  menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 36 * 1, RunEditorLoadMenu)
+  menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 36 * 2, RunEditorMapProperties)
+  menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 36 * 3, RunEditorPlayerProperties)
 
   buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
