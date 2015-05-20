@@ -197,6 +197,9 @@ https://github.com/Andrettin/Wyrmsun
 - The Battle of Magetobria quest now gives 2 technology points instead of 1.
 - Improvements to the text of the On the Vanaquisl and Westward Migration quests.
 
+* Terrain
+- Fixed issue which allowed buildings to be constructed on top of destroyed rocks.
+
 * Units
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
 - When multiple builders construct a mine, now all of them will harvest it when completed (previously only the one to initiate the building did).
