@@ -186,6 +186,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed bug which caused players with special names to have their name overridden by their faction's name when loading a saved game.
 - Updated Wyrmsun icon.
 - Added option to change resolution while playing a scenario.
+- Added 1920 resolution width.
 
 * Quests
 - Fixed bug which caused the Caverns of Flame scenario to not be winnable.
@@ -205,6 +206,7 @@ https://github.com/Andrettin/Wyrmsun
 - When multiple builders construct a mine, now all of them will harvest it when completed (previously only the one to initiate the building did).
 - Added base attack icon for the Teuton Catapult.
 - Fixed bug which caused the quantity of carried resources to appear in the interface of units which weren't carrying any resources.
+- Units controlled by the human player no longer attack back if having already been ordered to move or etc.
 
 * Upgrades
 - Added Granite Catapult Projectile and Metal Catapult Projectile upgrades for the Teutons and Goblins (graphics by Jinn).
@@ -458,7 +460,7 @@ https://github.com/Andrettin/Wyrmsun
 - "Coward" units (i.e. workers) now attack back if their attacker is also "coward", or has 3 HP or less.
 - Added more voice sounds for the dwarves and goblins (by b_o).
 - Giving an order to build while multiple workers are selected will now make all of them work on constructing the building.
-- Units controlled by the human player now properly attack back.
+- Units controlled by the human player now attack back.
 - A worker right-clicking on an enemy now results in the worker attacking the enemy.
 - Units now attack barrels and doors if they are right-clicked.
 - Some fauna units now play idle sounds.
