@@ -88,7 +88,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				"",
-				"With expansion across the Vanaquisl being denied to us, many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
+				"With expansion across the Vanaquisl being denied to us, we now face a dilemma. The lands where we live are not enough to sustain our growing tribe, and we face frequent attacks from other tribes which are in a similar situation. Many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
 				player,
 				{"~!Continue"},
 				{function(s)

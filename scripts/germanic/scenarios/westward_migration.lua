@@ -63,7 +63,7 @@ AddTrigger(
 	function()
 		Event(
 			"",
-			"After wandering out of our home in the east, we came to this land crossed by a great river. Our journey continues, however, for our eyes have been set to the lands further to the southwest. But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.\n\n(This is a migration mission. You cannot build any structures or train any units.)",
+			"Our tribe has made its choice: we are to migrate and find new lands which can feed our growing population. After wandering out of our home in the east, we came to this land crossed by a great river. Our journey continues, however, for our eyes have been set to the lands further to the southwest. But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.\n\n(This is a migration mission. You cannot build any structures or train any units.)",
 			player,
 			{"~!Continue"},
 			{function(s)
