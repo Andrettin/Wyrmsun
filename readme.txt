@@ -186,7 +186,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed bug which caused players with special names to have their name overridden by their faction's name when loading a saved game.
 - Updated Wyrmsun icon.
 - Added option to change resolution while playing a scenario.
-- Added 1920 resolution width.
+- Added 1920 resolution width and 720 resolution height.
 
 * Quests
 - Fixed bug which caused the Caverns of Flame scenario to not be winnable.
