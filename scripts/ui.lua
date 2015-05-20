@@ -313,7 +313,7 @@ DefinePanelContents(
 	{ Pos = {115, 157}, Condition = {CarryResource = "only"},
 		More = {"Text", {Text = Concat(function() return CapitalizeString(GetUnitVariable(-1, "CurrentResourceName")) end, ":")}}
 	},
-	{ Pos = {184, 157}, Condition = {SightRange = "only", Building = "false"},
+	{ Pos = {184, 157}, Condition = {CarryResource = "only"},
 		More = {"Text", {Text = String(ActiveUnitVar("CarryResource", "Value"))}}
 	}
 

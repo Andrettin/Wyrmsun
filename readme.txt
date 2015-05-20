@@ -199,6 +199,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed bug which caused archers to throw arrows when doing their melee attack against buildings.
 - When multiple builders construct a mine, now all of them will harvest it when completed (previously only the one to initiate the building did).
 - Added base attack icon for the Teuton Catapult.
+- Fixed bug which caused the quantity of carried resources to appear in the interface of units which weren't carrying any resources.
 
 * Upgrades
 - Added Granite Catapult Projectile and Metal Catapult Projectile upgrades for the Teutons and Goblins (graphics by Jinn).
