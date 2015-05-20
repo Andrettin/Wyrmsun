@@ -34,7 +34,9 @@ function RunGameMenu()
   menu:addLabel("Game Menu", 128, 11)
 
   menu:addFullButton("Options (~<F5~>)", "f5", 16, 40,
-    function() RunGameOptionsMenu() end)
+    function()
+		RunGameOptionsMenu(menu)
+	end)
   menu:addFullButton("Help (~<F1~>)", "f1", 16, 40 + 34*1,
     function() RunHelpMenu() end)
   menu:addFullButton("~!Objectives", "o", 16, 40 + 34*2,
