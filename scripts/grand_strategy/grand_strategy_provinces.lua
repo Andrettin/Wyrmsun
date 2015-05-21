@@ -147,7 +147,7 @@ function LoadProvinces(world)
 			SettlementLocation = {131, 29}, -- Vienna
 			SettlementBuildings = {
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/earth/salzburg.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
@@ -183,7 +183,7 @@ function LoadProvinces(world)
 			SettlementLocation = {128, 29}, -- Regensburg
 			SettlementBuildings = {
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/earth/regensburg.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Asa Tribe from expanding here
 			},
@@ -226,7 +226,7 @@ function LoadProvinces(world)
 			SettlementLocation = {130, 28}, -- Prague
 			SettlementBuildings = {
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/earth/prague.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
@@ -652,7 +652,7 @@ function LoadProvinces(world)
 			SettlementLocation = {127, 31}, -- Milan
 			SettlementBuildings = {
 			},
-			Map = "maps/earth/north-italy.smp",
+			Map = "maps/earth/oderzo.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
 			},
@@ -698,7 +698,7 @@ function LoadProvinces(world)
 			SettlementLocation = {114, 36}, -- Lisbon
 			SettlementBuildings = {
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/earth/braga.smp",
 			Units = {
 			},
 			SettlementTerrain = "Plns",
@@ -886,7 +886,7 @@ function LoadProvinces(world)
 			Name = "Transylvania",
 			CulturalNames = {
 				latin = "Upper Dacia",
-				teuton = "Siebenbürgen"
+				teuton = "SiebenbÃ¼rgen"
 			},
 			Tiles = { {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
 			Owner = "",

@@ -172,6 +172,11 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - In the trade interface, "Bid" or "Offer" will be displayed for each commodity, instead of using negative and positive numbers to represent that.
+- The province of Austria now uses the Salzburg map as its battle map.
+- The province of Bohemia now uses the Prague map as its battle map.
+- The province of Portugal now uses the Braga map as its battle map.
+- The province of North Italy now uses the Oderzo map as its battle map.
+- The province of Bavaria now uses the Regensburg map as its battle map.
 
 * Maps
 - Added Regensburg map.
