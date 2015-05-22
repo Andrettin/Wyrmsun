@@ -207,6 +207,7 @@ function RunShowCreditsMenu()
 	"  paipan",
 	"  pirro",
 	"  Spfnym",
+	"  Szunti",
 	"  TaShadan",
 	"  X3M",
 	"",

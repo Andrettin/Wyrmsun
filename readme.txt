@@ -164,6 +164,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.5
+-----------------------------------------------------------------------
+
+* Units
+- Fixed issue which happened when multiple workers were told to build a structure and less than twice the amount of needed resources were stored, causing the other workers to not help constructing the building.
+
+-----------------------------------------------------------------------
 - 1.0.4
 -----------------------------------------------------------------------
 
