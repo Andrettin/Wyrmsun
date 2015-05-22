@@ -199,6 +199,7 @@ function RunShowCreditsMenu()
 	"  cybermind",
 	"  Dinomaniak",
 	"  Ferk",
+	"  Jeff",
 	"  João Victor G. Costa (Jinn)",
 	"  KPJ",
 	"  Kyran",
