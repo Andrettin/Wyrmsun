@@ -1839,6 +1839,8 @@ function ApplyRawTiles()
 				unit = CreateUnit("unit-door", 15, {x, y})
 			elseif (RawTile(x, y) == "Road") then
 				SetRawTile(x, y, "Land")
+			elseif (RawTile(x, y) == "DpWtr") then
+				SetRawTile(x, y, "Water")
 			elseif (RawTile(x, y) == "Starting Gold Mine") then
 				-- for starting gold locations, generate gold rocks and the gold deposit
 				unit = CreateUnit("unit-gold-deposit", 15, {x, y})
