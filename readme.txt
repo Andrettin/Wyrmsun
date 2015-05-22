@@ -167,6 +167,12 @@ https://github.com/Andrettin/Wyrmsun
 - 1.0.5
 -----------------------------------------------------------------------
 
+* Buildings
+- Reduced the armor of the gold mine.
+
+* Terrain
+- Fixed a bug which caused a crash when the game tried to regenerate forests on the border of the map.
+
 * Units
 - Fixed issue which happened when multiple workers were told to build a structure and less than twice the amount of needed resources were stored, causing the other workers to not help constructing the building.
 
