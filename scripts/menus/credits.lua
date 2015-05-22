@@ -108,6 +108,7 @@ function RunShowCreditsMenu()
 	"  Juan Pablo",
 	"  Phil Hannent",
 	"  Alexander MacLean",
+	"  Szunti",
 	_("Graphics and Artwork"),
 	"  b_o",
 	"  Brian Brickwagon Jennings",
