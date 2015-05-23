@@ -383,14 +383,39 @@ end
 
 unit = CreateUnit("unit-gold-deposit", 15, {34, 40}) -- Shorbear Hold Gold Mine
 SetResourcesHeld(unit, 100000)
+unit = CreateUnit("unit-gold-rock", 15, {35, 41})
+unit = CreateUnit("unit-gold-rock", 15, {35, 41})
+unit = CreateUnit("unit-gold-rock", 15, {35, 41})
+unit = CreateUnit("unit-gold-rock", 15, {35, 41})
+unit = CreateUnit("unit-gold-rock", 15, {35, 41})
 unit = CreateUnit("unit-gold-deposit", 15, {13, 0}) -- Norlund Gold Mine
 SetResourcesHeld(unit, 50000)
+unit = CreateUnit("unit-gold-rock", 15, {14, 11})
+unit = CreateUnit("unit-gold-rock", 15, {14, 11})
+unit = CreateUnit("unit-gold-rock", 15, {14, 11})
+unit = CreateUnit("unit-gold-rock", 15, {14, 11})
+unit = CreateUnit("unit-gold-rock", 15, {14, 11})
 unit = CreateUnit("unit-gold-deposit", 15, {4, 73}) -- Shinsplitter Gold Mine
 SetResourcesHeld(unit, 50000)
+unit = CreateUnit("unit-gold-rock", 15, {5, 74})
+unit = CreateUnit("unit-gold-rock", 15, {5, 74})
+unit = CreateUnit("unit-gold-rock", 15, {5, 74})
+unit = CreateUnit("unit-gold-rock", 15, {5, 74})
+unit = CreateUnit("unit-gold-rock", 15, {5, 74})
 unit = CreateUnit("unit-gold-deposit", 15, {68, 61}) -- 2nd Shinsplitter Gold Mine
 SetResourcesHeld(unit, 50000)
+unit = CreateUnit("unit-gold-rock", 15, {69, 62})
+unit = CreateUnit("unit-gold-rock", 15, {69, 62})
+unit = CreateUnit("unit-gold-rock", 15, {69, 62})
+unit = CreateUnit("unit-gold-rock", 15, {69, 62})
+unit = CreateUnit("unit-gold-rock", 15, {69, 62})
 unit = CreateUnit("unit-gold-deposit", 15, {41, 0}) -- 3rd Shinsplitter Gold Mine
 SetResourcesHeld(unit, 50000)
+unit = CreateUnit("unit-gold-rock", 15, {42, 1})
+unit = CreateUnit("unit-gold-rock", 15, {42, 1})
+unit = CreateUnit("unit-gold-rock", 15, {42, 1})
+unit = CreateUnit("unit-gold-rock", 15, {42, 1})
+unit = CreateUnit("unit-gold-rock", 15, {42, 1})
 
 unit = CreateUnit("unit-glyph", 15, {69, 14}) -- cave entrance marker
 

@@ -164,6 +164,22 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.6
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Added debug executable.
+- Added "Urist" to the dwarven personal names list.
+
+* Maps
+- Players now start with five workers in the Chaincolt Foothills, Caverns of Chaincolt, Northern Wastelands and Eastern Mines maps.
+- Added gold rocks to the Chaincolt Foothills, Caverns of Chaincolt, Northern Wastelands, Shorbear Hills, Svafnir's Lair and Caverns of Flame maps.
+
+* Quests
+- Added two healing potions to the Tomb of Durahn Eikinskjaldi mission, to tone down the quest's difficulty.
+- Choosing the "No deal" option in the A Bargain is Struck mission now results in a draw.
+
+-----------------------------------------------------------------------
 - 1.0.5
 -----------------------------------------------------------------------
 

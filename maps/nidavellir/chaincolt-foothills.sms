@@ -128,13 +128,30 @@ if (GrandStrategy == false) then
 	-- Gold Mines
 	unit = CreateUnit("unit-gold-deposit", 15, {35, 8})
 	SetResourcesHeld(unit, 12500)
+	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
 	unit = CreateUnit("unit-gold-deposit", 15, {43, 54})
 	SetResourcesHeld(unit, 25000)
+	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
 	unit = CreateUnit("unit-gold-deposit", 15, {4, 52})
 	SetResourcesHeld(unit, 6250)
+	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
 
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
+	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
+	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
+	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
+	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
 	unit = CreateUnit("unit-dwarven-miner", 0, {46, 10})
 
 	-- Rugnur
@@ -157,6 +174,7 @@ if (GrandStrategy == false) then
 	end
 
 	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
+	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 
 	-- Bandits
 	unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 61})
@@ -165,6 +183,10 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
 
+	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})

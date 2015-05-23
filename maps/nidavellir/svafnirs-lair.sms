@@ -180,6 +180,11 @@ unit = CreateUnit("unit-volcanic-crater", 15, {33, 52})
 if (GrandStrategy == false) then
 	unit = CreateUnit("unit-gold-deposit", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
 
 	if (ForTheMotherland) then
 		-- dwarves' glyphs
@@ -386,6 +391,11 @@ elseif (GrandStrategyEventMap) then
 	
 	unit = CreateUnit("unit-gold-deposit", 15, {4, 11}) -- Shinsplitter Camp Gold Mine
 	SetResourcesHeld(unit, 100000)
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
+	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
 	
 	-- Rugnur
 	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then

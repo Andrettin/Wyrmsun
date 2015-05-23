@@ -314,9 +314,7 @@ AddTrigger(
 																					SetDiplomacy(gnomish_monarch_player, "neutral", player)
 																					SetDiplomacy(player, "neutral", gnomish_monarch_player)
 																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
-																					if (GrandStrategy) then -- if is grand strategy, end map now if no agreement was reached
-																						ActionDraw()
-																					end
+																					ActionDraw()
 																				end},
 																				"gnome/icons/gnomish_recruit.png"
 																			)

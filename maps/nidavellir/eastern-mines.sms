@@ -144,6 +144,10 @@ end
 
 unit = CreateUnit("unit-dwarven-town-hall", 0, {19, 47})
 unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
+unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
+unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
+unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
+unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
 
 if (GrandStrategy == false) then
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
@@ -182,6 +186,10 @@ end
 
 unit = CreateUnit("unit-goblin-town-hall", 1, {59, 53})
 unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
+unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
+unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
+unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
+unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
 unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 IncreaseUnitLevel(unit, 1, true)
 if (unit) then
@@ -190,6 +198,10 @@ end
 
 unit = CreateUnit("unit-goblin-town-hall", 2, {55, 29})
 unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
+unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
+unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
+unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
+unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
 unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 IncreaseUnitLevel(unit, 1, true)
 if (unit) then
@@ -197,6 +209,10 @@ if (unit) then
 end
 
 unit = CreateUnit("unit-goblin-town-hall", 3, {35, 17})
+unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
+unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
+unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
+unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
 unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
 unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 IncreaseUnitLevel(unit, 1, true)

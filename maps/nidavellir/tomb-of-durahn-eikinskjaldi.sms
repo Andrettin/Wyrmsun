@@ -106,3 +106,7 @@ SetUnitVariable(unit, "Variation", 1)
 
 --unit = CreateUnit("unit-inner-wall-decoration", 15, {8, 7})
 --unit = CreateUnit("unit-inner-wall-decoration", 15, {11, 10})
+
+-- extra potions to make the scenario less difficult
+unit = CreateUnit("unit-potion-of-healing", 15, {7, 9})
+unit = CreateUnit("unit-potion-of-healing", 15, {7, 11})
