@@ -164,6 +164,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.7
+-----------------------------------------------------------------------
+
+* Buildings
+- Buildings can now be selected by rectangle.
+- Multiple buildings of the same type can now be selected at the same time.
+
+* Miscellaneous
+- Units no longer inherit the selection group of the building that trained them.
+
+-----------------------------------------------------------------------
 - 1.0.6
 -----------------------------------------------------------------------
 
