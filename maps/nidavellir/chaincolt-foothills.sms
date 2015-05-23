@@ -117,6 +117,7 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 end
 
 if (GrandStrategy == false) then
+	--[[
 	if (MaxTechLevel[GetThisPlayer() + 1] == "") then
 		for i=0,15 do
 			if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
@@ -124,6 +125,7 @@ if (GrandStrategy == false) then
 			end
 		end
 	end
+	--]]
 
 	-- Gold Mines
 	unit = CreateUnit("unit-gold-deposit", 15, {35, 8})
@@ -173,6 +175,7 @@ if (GrandStrategy == false) then
 		end
 	end
 
+	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
 

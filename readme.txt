@@ -177,10 +177,15 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Players now start with five workers in the Brown Hills map.
 - Added gold rocks to the Brown Hills map.
+- Increased rock quantity in the France map.
+- The gnomes in the Chaincolt Foothills now have one additional worker.
 
 * Miscellaneous
 - Units no longer inherit the selection group of the building that trained them.
 - Resource costs displayed in popups now have a larger font if the "Larger Popup Text" option is enabled.
+
+* Quests
+- The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
 
 -----------------------------------------------------------------------
 - 1.0.6

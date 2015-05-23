@@ -99,6 +99,8 @@ RawTiles = {
 	{"Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Rough", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Land",  "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water", "Water"}
 }
 
+GenerateRocks(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, "Rough", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
 AdjustRawMapTileIrregularities(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, 4, true)
