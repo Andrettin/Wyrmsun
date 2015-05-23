@@ -158,24 +158,28 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
 -- Building Commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-worker",
-  Action = "train-unit", Value = "unit-teuton-worker",
-  Key = "b", Hint = _("Train ~!Bura"), Popup = "popup-unit",
-  ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"} } )
+	Action = "train-unit", Value = "unit-teuton-worker",
+	Key = "b", Hint = _("Train ~!Bura"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-town-hall", "unit-teuton-stronghold"}
+} )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-swordsman",
-  Action = "train-unit", Value = "unit-teuton-swordsman",
-  Key = "k", Hint = _("Train ~!Krieger"), Popup = "popup-unit",
-  ForUnit = {"unit-teuton-barracks"} } )
+	Action = "train-unit", Value = "unit-teuton-swordsman",
+	Key = "k", Hint = _("Train ~!Krieger"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
-  Action = "train-unit", Value = "unit-teuton-archer",
-  Key = "s", Hint = _("Train ~!Skutan"), Popup = "popup-unit",
-  ForUnit = {"unit-teuton-barracks"} } )
+	Action = "train-unit", Value = "unit-teuton-archer",
+	Key = "s", Hint = _("Train ~!Skutan"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
   
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
-  Action = "train-unit", Value = "unit-teuton-catapult",
-  Key = "c", Hint = _("Build ~!Catapult"), Popup = "popup-unit",
-  ForUnit = {"unit-teuton-barracks"} } )
+	Action = "train-unit", Value = "unit-teuton-catapult",
+	Key = "c", Hint = _("Build ~!Catapult"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
 
 -- Researches ---------------------------------------------------------
 
