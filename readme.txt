@@ -167,6 +167,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.0.7
 -----------------------------------------------------------------------
 
+* AI
+- Fixed an issue which caused AI gold mine construction to sometimes not occur.
+
 * Buildings
 - Buildings can now be selected by rectangle.
 - Multiple buildings of the same type can now be selected at the same time.
