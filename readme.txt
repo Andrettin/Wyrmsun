@@ -171,6 +171,10 @@ https://github.com/Andrettin/Wyrmsun
 - Buildings can now be selected by rectangle.
 - Multiple buildings of the same type can now be selected at the same time.
 
+* Maps
+- Players now start with five workers in the Brown Hills map.
+- Added gold rocks to the Brown Hills map.
+
 * Miscellaneous
 - Units no longer inherit the selection group of the building that trained them.
 
