@@ -505,7 +505,7 @@ if not (GameRunning) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	More = {"Costs"}, HighlightColor = "yellow",
+				{ 	More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
@@ -536,7 +536,7 @@ if not (GameRunning) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	More = {"Costs"}, HighlightColor = "yellow",
+				{ 	More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				}, 
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -592,7 +592,7 @@ if not (GameRunning) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	More = {"Costs"}, HighlightColor = "yellow",
+				{ 	More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 

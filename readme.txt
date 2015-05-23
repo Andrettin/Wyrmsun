@@ -177,6 +177,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Units no longer inherit the selection group of the building that trained them.
+- Resource costs displayed in popups now have a larger font if the "Larger Popup Text" option is enabled.
 
 -----------------------------------------------------------------------
 - 1.0.6
