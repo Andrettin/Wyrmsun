@@ -189,6 +189,7 @@ https://github.com/Andrettin/Wyrmsun
 - Full screen now functions on all resolutions (except for resolutions higher than your native resolution).
 - Mod screen display improvements.
 - Custom games no longer have tech tree restrictions.
+- Added hint in the Attack command popup information about how to attack-move.
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.

@@ -475,6 +475,13 @@ if not (GameRunning) then
 				{ 	Condition = {ButtonAction = "move"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				-- Attack hint
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "attack"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "attack"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Click on an empty space to attack-move."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Repair hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "repair"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
