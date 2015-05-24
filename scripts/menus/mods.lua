@@ -97,7 +97,7 @@ function RunModsMenu(selected_mod)
 		ModDependencies = nil
 		Load(mods[selected_mod + 1])
 
-		menu:addLabel(_("Description: " .. ModDescription), Video.Width / 2, offy + 34 + 60*1.5, Fonts["game"], true)
+		menu:addMultiLineLabel(_("Description: " .. ModDescription), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 
 		if (ModDependencies ~= nil) then
 			local dependencies_string = "Dependencies: "

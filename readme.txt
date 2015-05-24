@@ -186,6 +186,7 @@ https://github.com/Andrettin/Wyrmsun
 - Resource costs displayed in popups now have a larger font if the "Larger Popup Text" option is enabled.
 - Fixed Teuton Iron Shield hotkey.
 - Full screen now functions on all resolutions (except for resolutions higher than your native resolution).
+- Mod screen display improvements.
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
