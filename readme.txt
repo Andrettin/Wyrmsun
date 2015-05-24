@@ -185,6 +185,7 @@ https://github.com/Andrettin/Wyrmsun
 - Units no longer inherit the selection group of the building that trained them.
 - Resource costs displayed in popups now have a larger font if the "Larger Popup Text" option is enabled.
 - Fixed Teuton Iron Shield hotkey.
+- Full screen now functions on all resolutions (except for resolutions higher than your native resolution).
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
