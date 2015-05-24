@@ -169,6 +169,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - Fixed an issue which caused AI gold mine construction to sometimes not occur.
+- The AI now researches the level 2 ranged projectile upgrade by default when it researches the level 2 melee weapon and shield upgrades.
 
 * Buildings
 - Buildings can now be selected by rectangle.
@@ -191,6 +192,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
+- The Romans no longer build catapults in the Sack of Iuvavum quest.
 
 -----------------------------------------------------------------------
 - 1.0.6

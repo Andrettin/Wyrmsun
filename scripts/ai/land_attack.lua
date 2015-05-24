@@ -107,6 +107,7 @@ local land_funcs = {
 
   function() return AiResearch(AiUpgradeWeapon2()) end,
   function() return AiResearch(AiUpgradeShield2()) end,
+  function() return AiResearch(AiUpgradeMissile2()) end,
   function() return AiResearch(AiUpgradeMasonry()) end,
   
   function() return AiUpgradeTo(AiStronghold()) end,
