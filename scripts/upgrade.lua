@@ -37,7 +37,7 @@ Load("scripts/teuton/upgrade.lua")
 
 function DefineAllowNormalUnits(flags)
 	-- Allow units for human players only if they have been acquired
-	if ((flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") and (not IsNetworkGame())) then
+	if ((flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") and (not IsNetworkGame()) and CurrentQuest ~= "") then
 		for i, unitName in ipairs(Units) do
 			local PlayerUnitFlag = {}
 			local PlayerHeroUnitMax = {}
