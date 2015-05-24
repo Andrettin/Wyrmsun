@@ -1735,7 +1735,7 @@ local defaultPreferences = {
 	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	LeaveStopScrolling = true,      --  Enable/disable stopping scrolling when mouse leave.
---	MaxOpenGLTexture = 0,
+	MaxOpenGLTexture = 0,
 	MinimapWithTerrain = true,      --  Choose your default for minimap with/without terrain.
 	MouseScrollSpeed = 1,
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
@@ -1748,7 +1748,7 @@ local defaultPreferences = {
 	StratagusTranslation = "",
 	TipNumber = 0,
 --	UseFancyBuildings = false,       --  Enable/disable fancy building (random mirroring buildings)
---	UseOpenGL = false,
+	UseOpenGL = false,
 	VideoFullScreen = false,
 	VideoHeight = 600,
 	VideoWidth = 800,
@@ -1827,7 +1827,7 @@ SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(wyr.preferences.LeaveStopScrolling)
 SetLocalPlayerName("") -- Andrettin: in single-player games the local player shouldn't use his nick
-SetMaxOpenGLTexture(0)
+SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
 SetMinimapTerrain(wyr.preferences.MinimapWithTerrain)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
@@ -1836,7 +1836,7 @@ SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
 SetMusicEnabled(wyr.preferences.MusicEnabled)
 SetMusicVolume(wyr.preferences.MusicVolume)
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-SetUseOpenGL(false)
+SetUseOpenGL(wyr.preferences.UseOpenGL)
 SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey

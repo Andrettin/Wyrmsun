@@ -276,6 +276,7 @@ function BuildOptionsMenu()
   local offx = (Video.Width - 352) / 2
   local offy = (Video.Height - 352) / 2
   local checkTexture
+  local checkOpenGL
   local b
   local resolution_width_list = {"640", "720", "800", "1024", "1280", "1360", "1366", "1400", "1600", "1680", "1920"}
   local resolution_width_dd
@@ -431,16 +432,7 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.GrabMouse)
 
-  b = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*10 + 14,
-    function()
-      ToggleFullScreen()
-      wyr.preferences.VideoFullScreen = Video.FullScreen
-      SavePreferences()
-      menu:stop(1)
-    end)
-  b:setMarked(Video.FullScreen)
-
-  b = menu:addImageCheckBox(_("Show Tips"), offx + 160 + 24, offy + 55 + 26*10 + 14,
+  b = menu:addImageCheckBox(_("Show Tips"), offx + 160 + 24, offy + 55 + 26*7 + 14,
     function()
 	if (wyr.preferences.ShowTips == false) then
 		wyr.preferences.ShowTips = true
@@ -451,6 +443,15 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.ShowTips)
   
+  b = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*10 + 14,
+    function()
+      ToggleFullScreen()
+      wyr.preferences.VideoFullScreen = Video.FullScreen
+      SavePreferences()
+      menu:stop(1)
+    end)
+  b:setMarked(Video.FullScreen)
+
   b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*8 + 14,
     function()
 	if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please
@@ -500,7 +501,6 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-  --[[
   checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 160 + 24, offy + 55 + 26*10 + 14,
     function()
       if (checkTexture:isMarked()) then
@@ -511,7 +511,7 @@ function BuildOptionsMenu()
       SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
       SavePreferences()
     end)
-  if (wyr.preferences.MaxOpenGLTexture == 128) then checkTexture:setMarked(true) end
+  if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
 
   checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*11 + 14,
     function()
@@ -522,7 +522,6 @@ function BuildOptionsMenu()
     end)
   checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
 --  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
-  --]]
 
   menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 	wyr.preferences.EffectsVolume = GetEffectsVolume()
