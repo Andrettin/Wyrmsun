@@ -173,6 +173,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Buildings can now be selected by rectangle.
 - Multiple buildings of the same type can now be selected at the same time.
+- Fixed Celtic farm under-construction animation.
 
 * Maps
 - Players now start with five workers in the Brown Hills map.
@@ -183,6 +184,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Units no longer inherit the selection group of the building that trained them.
 - Resource costs displayed in popups now have a larger font if the "Larger Popup Text" option is enabled.
+- Fixed Teuton Iron Shield hotkey.
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.

@@ -193,7 +193,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
-	Key = "p", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
+	Key = "s", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
