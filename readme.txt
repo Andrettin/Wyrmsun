@@ -190,6 +190,8 @@ https://github.com/Andrettin/Wyrmsun
 - Custom games no longer have tech tree restrictions.
 - Added hint in the Attack command popup information about how to attack-move.
 - Restored OpenGL support.
+- Removed debug executable, as it required a DLL that players were unlikely to have, thus greatly reducing its usefulness.
+- Fixed issue which prevented some players from using the game in their native resolution at full screen.
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
