@@ -38,17 +38,6 @@ table.foreach(UnitTypeFiles,
 	end
 )
 
--- different ferns depending on tileset (normal graphic-per-tileset setting was resulting in bugs with the fern)
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then
-	DefineUnitType("unit-fern", {
-		Image = {"file", "tilesets/swamp/neutral/decorations/fern.png", "size", {48, 48}},
-	} )
-elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
-	DefineUnitType("unit-fern", {
-		Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
-	} )
-end
-
 -- Icon and construction graphics also depend on the tileset
 
 Load("scripts/icons.lua")

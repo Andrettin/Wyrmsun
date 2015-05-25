@@ -419,30 +419,32 @@ function SinglePlayerTriggers()
 	local uncount = 0
 	uncount = GetUnits("any")
 	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
-			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest"))) then
-				SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-				SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
+		if (uncount[unit1]) then
+			if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
+				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
+					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
+				elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
+					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
+				elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest"))) then
+					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
+				elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+					SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
+				end
 			end
-		end
-		if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
-			SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
-		end
-		if (GetUnitVariable(uncount[unit1], "XpRequired") == 0) then
-			local xp_required = GetUnitVariable(uncount[unit1], "XpRequired")
-			xp_required = xp_required + math.floor(GetUnitVariable(uncount[unit1], "BasePoints") / (GetUnitVariable(uncount[unit1], "StartingLevel") + 1) * 4 * 2)
-			SetUnitVariable(uncount[unit1], "XpRequired", xp_required)
-		end
-		if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
-			IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
-		end
-		if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
-			AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
+			if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
+				SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
+			end
+			if (GetUnitVariable(uncount[unit1], "XpRequired") == 0) then
+				local xp_required = GetUnitVariable(uncount[unit1], "XpRequired")
+				xp_required = xp_required + math.floor(GetUnitVariable(uncount[unit1], "BasePoints") / (GetUnitVariable(uncount[unit1], "StartingLevel") + 1) * 4 * 2)
+				SetUnitVariable(uncount[unit1], "XpRequired", xp_required)
+			end
+			if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
+				IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
+			end
+			if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
+				AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
+			end
 		end
 	end
 

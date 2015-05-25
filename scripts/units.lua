@@ -79,7 +79,8 @@ Units = {
 	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane",
 	"unit-hero-baglur", "unit-hero-baglur-thane",
 	"unit-hero-thursagan", "unit-hero-durstorn",
-	"unit-hero-greebo"
+	"unit-hero-greebo",
+	"unit-carrots", "unit-cheese", "unit-potion-of-healing"
 }
 
 if (OldDefineUnitType == nil) then
@@ -1244,10 +1245,6 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 	}
 } )
 
---UnitTypeFiles["unit-gold-mine"] = {
---	swamp = "tilesets/swamp/neutral/buildings/gold_mine.png"
---}
-
 DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 	Class = "gold-mine",
 	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
@@ -1606,17 +1603,8 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 	Sounds = {} }
 )
 
-UnitTypeFiles["unit-flowers"] = {
-	cave = "tilesets/swamp/neutral/decorations/flowers.png",
-	conifer_forest_summer = "tilesets/forest/neutral/decorations/flowers.png",
-	conifer_forest_autumn = "tilesets/forest/neutral/decorations/flowers.png",
-	dungeon = "tilesets/swamp/neutral/decorations/flowers.png",
-	fairlimbed_forest = "tilesets/forest/neutral/decorations/flowers.png",
-	swamp = "tilesets/swamp/neutral/decorations/flowers.png"
-}
-
 DefineUnitType("unit-flowers", { Name = "Flowers",
-	Image = {"size", {32, 32}},
+	Image = {"file", "tilesets/forest/neutral/decorations/flowers.png", "size", {32, 32}},
 	Animations = "animations-decoration-old", Icon = "icon-flowers",
 	Speed = 0,
 	HitPoints = 0,
@@ -1633,20 +1621,40 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 	VisibleUnderFog = true,
 	NonSolid = true,
 	Vegetable = true,
-	Sounds = {} }
-)
-
-UnitTypeFiles["unit-large-flower"] = {
-	cave = "tilesets/swamp/neutral/decorations/large_flower.png",
-	conifer_forest_autumn = "tilesets/forest/neutral/decorations/large_flower.png",
-	conifer_forest_summer = "tilesets/forest/neutral/decorations/large_flower.png",
-	dungeon = "tilesets/swamp/neutral/decorations/large_flower.png",
-	fairlimbed_forest = "tilesets/forest/neutral/decorations/large_flower.png",
-	swamp = "tilesets/swamp/neutral/decorations/large_flower.png"
-}
+	Variations = {
+		{
+			"variation-id", "conifer-forest-autumn",
+			"tileset", "Conifer Forest (Autumn)"
+		},
+		{
+			"variation-id", "conifer-forest-summer",
+			"tileset", "Conifer Forest (Summer)"
+		},
+		{
+			"variation-id", "fairlimbed-forest",
+			"tileset", "Fairlimbed Forest"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "tilesets/swamp/neutral/decorations/flowers.png",
+			"tileset", "Swamp"
+		},
+		{
+			"variation-id", "cave",
+			"file", "tilesets/swamp/neutral/decorations/flowers.png",
+			"tileset", "Cave"
+		},
+		{
+			"variation-id", "dungeon",
+			"file", "tilesets/swamp/neutral/decorations/flowers.png",
+			"tileset", "Dungeon"
+		}
+	},
+	Sounds = {}
+} )
 
 DefineUnitType("unit-large-flower", { Name = "Large Flower",
-	Image = {"size", {32, 32}},
+	Image = {"file", "tilesets/forest/neutral/decorations/large_flower.png", "size", {32, 32}},
 	Animations = "animations-decoration-old", Icon = "icon-large-flower",
 	Speed = 0,
 	HitPoints = 0,
@@ -1663,19 +1671,37 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	VisibleUnderFog = true,
 	NonSolid = true,
 	Vegetable = true,
-	Sounds = {} }
-)
-
---[[
-UnitTypeFiles["unit-fern"] = {
-	cave = "tilesets/swamp/neutral/decorations/fern.png",
-	conifer_forest_autumn = "tilesets/forest/neutral/decorations/fern.png",
-	conifer_forest_summer = "tilesets/forest/neutral/decorations/fern.png",
-	dungeon = "tilesets/swamp/neutral/decorations/fern.png",
-	fairlimbed_forest = "tilesets/forest/neutral/decorations/fern.png",
-	swamp = "tilesets/swamp/neutral/decorations/fern.png"
-}
---]]
+	Variations = {
+		{
+			"variation-id", "conifer-forest-autumn",
+			"tileset", "Conifer Forest (Autumn)"
+		},
+		{
+			"variation-id", "conifer-forest-summer",
+			"tileset", "Conifer Forest (Summer)"
+		},
+		{
+			"variation-id", "fairlimbed-forest",
+			"tileset", "Fairlimbed Forest"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
+			"tileset", "Swamp"
+		},
+		{
+			"variation-id", "cave",
+			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
+			"tileset", "Cave"
+		},
+		{
+			"variation-id", "dungeon",
+			"file", "tilesets/swamp/neutral/decorations/large_flower.png",
+			"tileset", "Dungeon"
+		}
+	},
+	Sounds = {}
+} )
 
 DefineUnitType("unit-fern", { Name = "Fern",
 	Image = {"file", "tilesets/forest/neutral/decorations/fern.png", "size", {48, 48}},
@@ -1695,8 +1721,37 @@ DefineUnitType("unit-fern", { Name = "Fern",
 	VisibleUnderFog = true,
 	NonSolid = true,
 	Vegetable = true,
-	Sounds = {} }
-)
+	Variations = {
+		{
+			"variation-id", "conifer-forest-autumn",
+			"tileset", "Conifer Forest (Autumn)"
+		},
+		{
+			"variation-id", "conifer-forest-summer",
+			"tileset", "Conifer Forest (Summer)"
+		},
+		{
+			"variation-id", "fairlimbed-forest",
+			"tileset", "Fairlimbed Forest"
+		},
+		{
+			"variation-id", "swamp",
+			"file", "tilesets/swamp/neutral/decorations/fern.png",
+			"tileset", "Swamp"
+		},
+		{
+			"variation-id", "cave",
+			"file", "tilesets/swamp/neutral/decorations/fern.png",
+			"tileset", "Cave"
+		},
+		{
+			"variation-id", "dungeon",
+			"file", "tilesets/swamp/neutral/decorations/fern.png",
+			"tileset", "Dungeon"
+		}
+	},
+	Sounds = {}
+} )
 
 DefineUnitType("unit-twigs", { Name = _("Twigs"),
 	Image = {"file", "neutral/decorations/twigs.png", "size", {32, 32}},

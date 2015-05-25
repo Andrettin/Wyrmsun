@@ -192,11 +192,15 @@ https://github.com/Andrettin/Wyrmsun
 - Restored OpenGL support.
 - Removed debug executable, as it required a DLL that players were unlikely to have, thus greatly reducing its usefulness.
 - Fixed issue which prevented some players from using the game in their native resolution at full screen.
+- Fixed a couple of crashes which randomly occurred when loading a map in the editor.
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
 - The Romans no longer build catapults in the Sack of Iuvavum quest.
 - The Shinsplitter Clan now starts with 3 workers in the A Bargain is Struck scenario (previously they started with 5).
+
+* Terrain
+- Fixed issues with fern graphics display.
 
 -----------------------------------------------------------------------
 - 1.0.6

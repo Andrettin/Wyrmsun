@@ -1812,13 +1812,17 @@ end
 
 function ApplyRawTiles()
 	if (Editor.Running == EditorNotRunning) then
-		-- destroy mushrooms that ended up in inappropriate locations
-		local uncount = 0
-		uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-				if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
-					KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+		if (GetNumUnitsAt(15, "unit-mushroom-patch", {0, 0}, {256, 256}) >= 1) then
+			-- destroy mushrooms that ended up in inappropriate locations
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (uncount[unit1]) then
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+						if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+							SetUnitVariable(uncount[unit1], "HitPoints", 0)
+						end
+					end
 				end
 			end
 		end
@@ -2586,13 +2590,17 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 	end
 
 	-- destroy mushrooms that ended up in inappropriate locations
-	local uncount = 0
-	uncount = GetUnits(15)
-	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-			if (GetUnitVariable(uncount[unit1],"PosX") >= min_x and GetUnitVariable(uncount[unit1],"PosX") <= max_x and GetUnitVariable(uncount[unit1],"PosY") >= min_y and GetUnitVariable(uncount[unit1],"PosY") <= max_y) then
-				if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
-					KillUnitAt("unit-mushroom-patch", 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
+	if (GetNumUnitsAt(15, "unit-mushroom-patch", {0, 0}, {256, 256}) >= 1) then
+		local uncount = 0
+		uncount = GetUnits(15)
+		for unit1 = 1,table.getn(uncount) do 
+			if (uncount[unit1]) then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
+					if (GetUnitVariable(uncount[unit1],"PosX") >= min_x and GetUnitVariable(uncount[unit1],"PosX") <= max_x and GetUnitVariable(uncount[unit1],"PosY") >= min_y and GetUnitVariable(uncount[unit1],"PosY") <= max_y) then
+						if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+							SetUnitVariable(uncount[unit1], "HitPoints", 0)
+						end
+					end
 				end
 			end
 		end
@@ -3638,11 +3646,13 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 			local uncount = 0
 			uncount = GetUnits(15)
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
-					if (SyncRand(2) == 0) then
-						local RandomNumber = SyncRand(3)
-						if (RandomNumber == 0) then
-							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
+				if (uncount[unit1]) then
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
+						if (SyncRand(2) == 0) then
+							local RandomNumber = SyncRand(3)
+							if (RandomNumber == 0) then
+								CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
+							end
 						end
 					end
 				end
@@ -3653,13 +3663,15 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 		local uncount = 0
 		uncount = GetUnits(15)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
-				if (SyncRand(2) == 0) then
-					RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-					elseif (RandomNumber == 1) then
-						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+			if (uncount[unit1]) then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+					if (SyncRand(2) == 0) then
+						RandomNumber = SyncRand(2)
+						if (RandomNumber == 0) then
+							CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+						elseif (RandomNumber == 1) then
+							CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+						end
 					end
 				end
 			end
