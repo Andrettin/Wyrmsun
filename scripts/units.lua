@@ -70,7 +70,7 @@ Units = {
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-rat",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
-	"unit-gold-deposit", "unit-gold-mine",
+	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
 	"unit-coal-mine",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
