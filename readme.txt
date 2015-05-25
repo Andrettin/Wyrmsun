@@ -193,6 +193,8 @@ https://github.com/Andrettin/Wyrmsun
 - Removed debug executable, as it required a DLL that players were unlikely to have, thus greatly reducing its usefulness.
 - Fixed issue which prevented some players from using the game in their native resolution at full screen.
 - Fixed a couple of crashes which randomly occurred when loading a map in the editor.
+- Added 1440 resolution width.
+- Added 864 and 900 resolution heights.
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
