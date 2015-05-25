@@ -189,8 +189,6 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
-	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
-	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
 	if (unit) then

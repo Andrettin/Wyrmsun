@@ -194,6 +194,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
 - The Romans no longer build catapults in the Sack of Iuvavum quest.
+- The Shinsplitter Clan now starts with 3 workers in the A Bargain is Struck scenario (previously they started with 5).
 
 -----------------------------------------------------------------------
 - 1.0.6
