@@ -1328,27 +1328,29 @@ function CreateDecorationObjects(unit_type, unit_number, base_tile, mixed_tile, 
 end
 
 function CreateGryphons(gryphon_number)
-	local RandomX = 0
-	local RandomY = 0
-	local Count = 0
-	local WhileCount = 0
+	if (LoadedGame == false) then
+		local RandomX = 0
+		local RandomY = 0
+		local Count = 0
+		local WhileCount = 0
 
-	Count = gryphon_number
-	while (Count > 0 and WhileCount < gryphon_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
-		if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
-			local unit_quantity = 0
-			for i=0,14 do
-				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 12, RandomY - 12}, {RandomX + 12, RandomY + 12})
-			end
+		Count = gryphon_number
+		while (Count > 0 and WhileCount < gryphon_number * 100) do
+			RandomX = SyncRand(Map.Info.MapWidth)
+			RandomY = SyncRand(Map.Info.MapHeight)
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
+				local unit_quantity = 0
+				for i=0,14 do
+					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 12, RandomY - 12}, {RandomX + 12, RandomY + 12})
+				end
 
-			if (unit_quantity < 1) then -- gryphons don't like much being near inhabited areas
-				unit = CreateUnit("unit-gryphon", 15, {RandomX, RandomY})
-				Count = Count - 1
+				if (unit_quantity < 1) then -- gryphons don't like much being near inhabited areas
+					unit = CreateUnit("unit-gryphon", 15, {RandomX, RandomY})
+					Count = Count - 1
+				end
 			end
+			WhileCount = WhileCount + 1
 		end
-		WhileCount = WhileCount + 1
 	end
 end
 
