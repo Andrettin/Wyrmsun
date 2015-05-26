@@ -350,6 +350,17 @@ function SinglePlayerTriggers()
 			CustomPlayerData[key].Objectives = {_("- Defeat your enemies")}
 		end
 	end
+	
+	if (LoadedGame) then -- if loading a game, add objectives to the display
+		ClearObjectives()
+		for key, value in pairs(CustomPlayerData) do
+			if (CustomPlayerData[key].Number == GetThisPlayer() and table.getn(CustomPlayerData[key].Objectives) > 0) then
+				for i=1,table.getn(CustomPlayerData[key].Objectives) do
+					AddObjective(_(CustomPlayerData[key].Objectives[i]))
+				end
+			end
+		end
+	end
 
 --	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 --		Load("scripts/dwarf/ui.lua")
@@ -1642,6 +1653,16 @@ function pairsByKeys(t, f)
 		end
 	end
 	return iter
+end
+
+function copy(obj, seen)
+	if type(obj) ~= 'table' then return obj end
+	if seen and seen[obj] then return seen[obj] end
+	local s = seen or {}
+	local res = setmetatable({}, getmetatable(obj))
+	s[obj] = res
+	for k, v in pairs(obj) do res[copy(k, s)] = copy(v, s) end
+	return res
 end
 
 -------------------------------------------------------------------------------

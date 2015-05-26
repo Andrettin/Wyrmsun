@@ -4,6 +4,13 @@ function RunSaveGame(name, menu)
   RawTiles = nil
   RawTiles = {}
   LoadedGame = true
+  local saved_globals = {}
+  saved_globals.Quests = copy(Quests)
+  saved_globals.Achievements = copy(Achievements)
+  saved_globals.Preferences = copy(wyr.preferences)
+  Quests = nil
+  Achievements = nil
+  wyr.preferences = nil
   if (SaveGame(name) == -1) then
     local confirm = WarGameMenu(panel(3))
     confirm:resize(300,120)
@@ -15,6 +22,9 @@ function RunSaveGame(name, menu)
     UI.StatusLine:Set("Saved game to: " .. name)
     menu:stop()
   end
+  Quests = copy(saved_globals.Quests)
+  Achievements = copy(saved_globals.Achievements)
+  wyr.preferences = copy(saved_globals.Preferences)
   LoadedGame = false
 end
 

@@ -173,8 +173,12 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Increased the dwarves' starting resources in the Northern Wastelands map.
 
+* Miscellaneous
+- Fixed an issue which caused a player's preferences to be saved and loaded in scenario save files.
+
 * Quests
 - Increased the time until the second and third goblin "waves" are spawned in the Searching for the Runecrafter scenario.
+- Fixed bug which would cause quest objectives to not appear in the top-left corner of the screen when a game is loaded.
 
 -----------------------------------------------------------------------
 - 1.0.7
