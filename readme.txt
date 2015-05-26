@@ -167,6 +167,12 @@ https://github.com/Andrettin/Wyrmsun
 - 1.0.9
 -----------------------------------------------------------------------
 
+* Buildings
+- Lumber Mill processing bonus for lumber reduced to 10.
+
+* Quests
+- Added a few new dialogues to the On the Vanaquisl quest.
+
 * Units
 - Unit trait generation now occurs immediately upon unit creation, instead of within moments of that happening.
 

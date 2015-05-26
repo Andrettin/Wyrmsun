@@ -485,7 +485,7 @@ function EventTriggers()
 	end
 end
 
-function Event(event_name, event_description, player, options, option_effects, event_icon, event_image, continue_automatically)
+function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically)
 	if (GetThisPlayer() == player and (continue_automatically == nil or continue_automatically == false)) then
 		if not (IsNetworkGame()) then
 			SetGamePaused(true)
@@ -493,13 +493,17 @@ function Event(event_name, event_description, player, options, option_effects, e
 		local menu = WarGameMenu(panel(5))
 		menu:resize(352, 352)
 
-		menu:addLabel(_(event_name), 176, 11)
+		if (type(speaker) == "number") then
+			menu:addLabel(_(GetUnitVariable(speaker, "Name")), 176, 11)
+		elseif (type(speaker) == "string") then
+			menu:addLabel(_(speaker), 176, 11)
+		end
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
 		l:setSize(324, 208)
 		l:setLineWidth(324)
-		if (event_icon == nil) then
+		if (event_icon == nil and type(speaker) == "string") then
 			menu:add(l, 14, 76)
 		else
 			menu:add(l, 14, 112)
@@ -512,7 +516,12 @@ function Event(event_name, event_description, player, options, option_effects, e
 			end
 		end
 
-		if (event_icon ~= nil) then
+		if (type(speaker) == "number") then
+			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
+			event_icon:Load()
+			local b = PlayerColorImageWidget(event_icon, GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
+			menu:add(b, 153, 48)
+		elseif (event_icon ~= nil) then
 			event_icon = CGraphic:New(event_icon)
 			event_icon:Load()
 			local b = ImageWidget(event_icon)

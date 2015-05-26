@@ -73,6 +73,81 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's town hall")) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Vana Tribe"))
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+					if (unit_quantity > 0) then
+						player = GetFactionPlayer("Asa Tribe")
+						return true
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		local vana_unit
+		local asa_unit
+		
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Vana Tribe"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+				local nearby_uncount = 0
+				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
+				for unit2 = 1,table.getn(nearby_uncount) do 
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Asa Tribe")) then
+						vana_unit = uncount[unit1]
+						asa_unit = nearby_uncount[unit2]
+						break
+					end
+				end
+			end
+		end
+		
+		if (not vana_unit or not asa_unit) then
+			return true
+		end
+			
+		Event(
+			vana_unit,
+			"The Asa! What are you here for?",
+			player,
+			{"~!Continue"},
+			{function(s)
+				Event(
+					asa_unit,
+					"We are here for Vanaland.",
+					player,
+					{"~!Continue"},
+					{function(s)
+						if (GetUnitTypeData(GetUnitVariable(vana_unit, "Ident"), "Coward") == false) then
+							Event(
+								vana_unit,
+								"You shall have our homelands... as your burial ground.",
+								player,
+								{"~!Continue"},
+								{function(s)
+								end}
+							)
+						end
+					end}
+				)
+			end}
+		)
+		return false
+	end
+)
+
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
 		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's town hall") and GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-town-hall") < 1) then
 			player = GetFactionPlayer("Asa Tribe")
 			return true
@@ -80,30 +155,47 @@ AddTrigger(
 		return false
 	end,
 	function()
+		local vana_unit = FindUnit("unit-germanic-warrior", GetFactionPlayer("Vana Tribe"))
+		
+		if not (vana_unit) then
+			vana_unit = ""
+		end
+		
 		Event(
-			"",
-			"We ravaged Vanaland and pillaged its wealth, but victory did not quite fall within our grasp. A number of Vanaland's warriors still loomed at large, and reorganized themselves for an attack on us: our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
+			vana_unit,
+			"What is this disturbance in our home?",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"",
-				"With expansion across the Vanaquisl being denied to us, we now face a dilemma. The lands where we live are not enough to sustain our growing tribe, and we face frequent attacks from other tribes which are in a similar situation. Many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
+				"We ravaged Vanaland and pillaged its wealth, but victory did not quite fall within our grasp. A number of Vanaland's warriors still loomed at large, and reorganized themselves for an attack on us: our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
 				player,
 				{"~!Continue"},
 				{function(s)
-					if (player == GetThisPlayer()) then
-						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
+				Event(
+					"",
+					"With expansion across the Vanaquisl being denied to us, we now face a dilemma. The lands where we live are not enough to sustain our growing tribe, and we face frequent attacks from other tribes which are in a similar situation. Many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
+					player,
+					{"~!Continue"},
+					{function(s)
+						if (player == GetThisPlayer()) then
+							if (GrandStrategy == false) then
+								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
+									table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
+								end
+								SavePreferences()
 							end
-							SavePreferences()
+							ActionVictory()
 						end
-						ActionVictory()
-					end
+					end}
+				)
 				end}
 			)
-			end}
+			end},
+			nil,
+			nil,
+			vana_unit == ""
 		)
 		Event(
 			"",

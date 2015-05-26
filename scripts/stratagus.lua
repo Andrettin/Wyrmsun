@@ -1571,6 +1571,24 @@ function OrderUnitBlock(player, unit, fromx, fromy, width, height, tox, toy, ord
     end
 end
 
+function FindUnit(unit_type, player)
+	local uncount = 0
+	
+	if (player) then
+		uncount = GetUnits(player)
+	else
+		uncount = GetUnits("any")
+	end
+	
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == unit_type) then
+			return uncount[unit1]
+		end
+	end
+	
+	return nil
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------
