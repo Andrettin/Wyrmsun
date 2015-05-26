@@ -175,6 +175,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed an issue which caused a player's preferences to be saved and loaded in scenario save files.
+- Fixed an issue which caused a crash if an organic unit was clicked in the moment just after being trained.
 
 * Quests
 - Increased the time until the second and third goblin "waves" are spawned in the Searching for the Runecrafter scenario.
