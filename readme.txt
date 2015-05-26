@@ -181,6 +181,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added gold rocks to the Brown Hills map.
 - Increased rock quantity in the France map.
 - The gnomes in the Chaincolt Foothills now have one additional worker.
+- Fixed issue which caused a crash when loading a saved game using the Northern Wastelands map.
 
 * Miscellaneous
 - Units no longer inherit the selection group of the building that trained them.
