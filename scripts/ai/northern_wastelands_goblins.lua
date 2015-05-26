@@ -30,18 +30,18 @@
 function AiNorthernWastelandsGoblins()
 	local loop_funcs = {
 		function()
-			AiForce(0, {AiSoldier(), 1})
-			if not AiCheckForce(0) then AiForce(0, {AiShooter(), 1}) end
+			AiForce(1, {AiSoldier(), 1}, true)
+			if not AiCheckForce(1) then AiForce(1, {AiShooter(), 1}, true) end
 			return AiSleep(4500)
 		end,
-		function() return AiAttackWithForce(0) end,
+		function() return AiAttackWithForce(1) end,
       
 		function()
-			AiForce(0, {AiShooter(), 1})
-			if not AiCheckForce(0) then AiForce(0, {AiSoldier(), 1}) end
+			AiForce(1, {AiShooter(), 1}, true)
+			if not AiCheckForce(1) then AiForce(1, {AiSoldier(), 1}, true) end
 			return AiSleep(4500)
 		end,
-		function() return AiAttackWithForce(0) end,
+		function() return AiAttackWithForce(1) end,
       
 		function()
 			stratagus.gameData.AIState.loop_index[1 + AiPlayer()] = 0

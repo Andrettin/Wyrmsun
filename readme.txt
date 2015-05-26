@@ -164,6 +164,19 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.0.8
+-----------------------------------------------------------------------
+
+* AI
+- Improvements to Northern Wastelands Goblins AI.
+
+* Maps
+- Increased the dwarves' starting resources in the Northern Wastelands map.
+
+* Quests
+- Increased the time until the second and third goblin "waves" are spawned in the Searching for the Runecrafter scenario.
+
+-----------------------------------------------------------------------
 - 1.0.7
 -----------------------------------------------------------------------
 

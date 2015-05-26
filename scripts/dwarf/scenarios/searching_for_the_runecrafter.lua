@@ -242,7 +242,7 @@ AddTrigger(
 
 AddTrigger(
 	function()
-		if (GameCycle > 5000) then
+		if (GameCycle > 7500) then
 			return true
 		end
 		return false
@@ -257,7 +257,7 @@ AddTrigger(
 
 AddTrigger(
 	function()
-		if (GameCycle > 15000) then
+		if (GameCycle > 22500) then
 			return true
 		end
 		return false
