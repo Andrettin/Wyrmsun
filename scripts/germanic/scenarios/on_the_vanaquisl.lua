@@ -142,6 +142,61 @@ AddTrigger(
 	end
 )
 
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's town hall")) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Vana Tribe"))
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3 + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TileWidth"), GetUnitVariable(uncount[unit1],"PosY") + 3 + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TileHeight")})
+					if (unit_quantity > 0) then
+						player = GetFactionPlayer("Asa Tribe")
+						return true
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		local vana_unit
+		local asa_unit
+		
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Vana Tribe"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
+				local nearby_uncount = 0
+				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
+				for unit2 = 1,table.getn(nearby_uncount) do 
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Asa Tribe")) then
+						vana_unit = uncount[unit1]
+						asa_unit = nearby_uncount[unit2]
+						break
+					end
+				end
+			end
+		end
+		
+		if (not vana_unit or not asa_unit) then
+			return true
+		end
+			
+		Event(
+			asa_unit,
+			"Ah, the great Vanaquisl! These riverlands could help feed many mouths.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			end}
+		)
+		return false
+	end
+)
 
 AddTrigger(
 	function()
