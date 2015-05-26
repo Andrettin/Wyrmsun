@@ -187,7 +187,6 @@ https://github.com/Andrettin/Wyrmsun
 - Units no longer inherit the selection group of the building that trained them.
 - Resource costs displayed in popups now have a larger font if the "Larger Popup Text" option is enabled.
 - Fixed Teuton Iron Shield hotkey.
-- Mod screen display improvements.
 - Custom games no longer have tech tree restrictions.
 - Added hint in the Attack command popup information about how to attack-move.
 - Restored OpenGL support.
@@ -196,6 +195,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a couple of crashes which randomly occurred when loading a map in the editor.
 - Added 1440 resolution width.
 - Added 864 and 900 resolution heights.
+
+* Modding
+- Mod screen display improvements.
+- Added support for "ThornsDamage" field for units (damages the unit's attacker when hit at melee range).
 
 * Quests
 - The Shinsplitter Clan no longer builds a smithy or lumber mill during the A Bargain is Struck scenario.
