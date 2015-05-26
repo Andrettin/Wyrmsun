@@ -88,9 +88,19 @@ if (OldDefineUnitType == nil) then
 end
 
 function DefineUnitType(unit_type, data)
+	local organic = false
+	if (data.organic) then
+		organic = true
+	end
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
+		if (GetUnitTypeData(unit_type, "organic") and data.organic == nil) then
+			organic = true
+		end
+	end
+	if (organic) then
+		data.OnInit = GenerateTrait
 	end
 	OldDefineUnitType(unit_type, data)
 end

@@ -453,9 +453,6 @@ function SinglePlayerTriggers()
 			if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
 				IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 			end
-			if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
-				AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
-			end
 		end
 	end
 
@@ -659,10 +656,6 @@ function StandardTriggers()
 							end
 						end
 					end
-				end
-
-				if (GetUnitVariable(uncount[unit1], "Trait") == "" and GetUnitBoolFlag(uncount[unit1], "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))) > 0) then
-					AcquireTrait(uncount[unit1], GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(uncount[unit1], "Ident")))) + 1])
 				end
 
 				-- make certain critters retaliate if people get too near
@@ -1389,6 +1382,12 @@ function GetUnitTypeTraits(unit_type)
 		table.insert(traits, "upgrade-strong") -- seems appropriate, but maybe something else for this character would be better?
 	end
 	return traits
+end
+
+function GenerateTrait(unit)
+	if (GetUnitVariable(unit, "Trait") == "" and GetUnitBoolFlag(unit, "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))) > 0) then
+		AcquireTrait(unit, GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident")))) + 1])
+	end
 end
 
 function GetRandomCharacterName(civilization, gender, is_monarch)
