@@ -164,6 +164,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.1.0
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Fixed crash related to resource-harvesting.
+- Unit variations are now properly saved in a saved game.
+
+* Multiplayer
+- Solved a bug with selecting multiplayer options.
+
+-----------------------------------------------------------------------
 - 1.0.9
 -----------------------------------------------------------------------
 

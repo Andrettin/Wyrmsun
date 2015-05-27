@@ -310,6 +310,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-guard-tower",
+	Size = {46, 38},
+	File = "teuton/icons/guard_tower.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-spatha",
 	Size = {46, 38},
 	File = "teuton/icons/spatha.png"
@@ -322,9 +328,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-teuton-guard-tower",
+	Name = "icon-teuton-coinage",
 	Size = {46, 38},
-	File = "teuton/icons/guard_tower.png"
+	File = "teuton/icons/coinage.png"
 })
 
 DefineIcon({
