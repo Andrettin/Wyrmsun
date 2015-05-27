@@ -174,6 +174,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Added a few new dialogues to the On the Vanaquisl and Westward Migration quests.
 
+* Terrain
+- Trees and rocks now store exactly how much has been taken from them, instead of being removed only after a full harvest.
+
 * Units
 - Unit trait generation now occurs immediately upon unit creation, instead of within moments of that happening.
 
