@@ -171,6 +171,9 @@ https://github.com/Andrettin/Wyrmsun
 - The Gnomes no longer attack their enemies in the Chaincolt Foothills map, restricting themselves to protecting their settlement.
 - The Gnomes now have increased gold quantity in their starting location.
 
+* Modding
+- Made it easier to load files within a mod's folder.
+
 * Quests
 - Added a few new dialogues to the On the Vanaquisl and Westward Migration quests.
 

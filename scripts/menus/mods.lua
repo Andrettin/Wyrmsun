@@ -144,7 +144,9 @@ function RunModsMenu(selected_mod)
 	return menu:run()
 end
 
+ModPath = ""
 function LoadMods()
+	ModPath = ""
 	local mods = {}
   
 	local i
@@ -185,10 +187,13 @@ function LoadMods()
 
 	for i=1,table.getn(mods) do
 		ModName = ""
+		ModPath = tostring(string.gsub(mods[i], "main.lua", ""))
 		Load(tostring(string.gsub(mods[i], "main", "info")))
 		if (GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
 			table.insert(MapDirectories, tostring(string.gsub(mods[i], "main.lua", "maps/")))
 			Load(mods[i])
 		end
 	end
+	
+	ModPath = ""
 end
