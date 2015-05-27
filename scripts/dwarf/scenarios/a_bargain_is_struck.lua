@@ -64,6 +64,8 @@ AddTrigger(
 	end,
 	function() 
 		local gnomish_monarch_player = GetCivilizationPlayer("gnome")
+		local rugnur = FindHero("Rugnur")
+		local pypo_i = FindUnit("unit-gnomish-recruit", gnomish_monarch_player)
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
 			"",
@@ -90,145 +92,145 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Rugnur",
+							rugnur,
 							"Gnomes, halt! Who dares bring an army into the dwarven hills?",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Pypo I",
+								pypo_i,
 								"We come to make a bargain with you.",
 								player,
 								{"~!Listen to him", "~!Up axes! (Forego Quest)"},
 								{function(s)
 								Event(
-									"Rugnur",
+									rugnur,
 									"Well, state yer business and be done with it. And if we don't like what ye say, ye leave!",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Pypo I",
+										pypo_i,
 										"Have you heard of the Ruby of Fire?",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Rugnur",
+											rugnur,
 											"Aye... yer deceased king brought it from the west, right? Ye own it.",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Pypo I",
+												pypo_i,
 												"Correct. However, we have a problem with it.",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Rugnur",
+													rugnur,
 													"What sort of problem?",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Pypo I",
+														pypo_i,
 														"The stone is very atypical. To cut and insert it would require more skill than my best craftsmen have...",
 														player,
 														{"~!Continue"},
 														{function(s)
 														Event(
-															"Rugnur",
+															rugnur,
 															"And what... ye want us to do this, cut the stone? And make an artifact of some kind?",
 															player,
 															{"~!Continue"},
 															{function(s)
 															Event(
-																"Pypo I",
+																pypo_i,
 																"I want you to craft it into a mighty artifact, that will embody the power of my will and be a symbol of the legitimacy of my rule.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Rugnur",
+																	rugnur,
 																	"Well... I think we can make a deal, but I'm not sure. I'll have to ask the tribal leaders.",
 																	player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Pypo I",
+																		pypo_i,
 																		"If you are not authorized to make a deal, send out someone who is, and I will bargain with him.",
 																		player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Rugnur",
+																			rugnur,
 																			"They would refuse to come. Ye must come into the caves, and go to the city in person, or send a representative.",
 																			player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Pypo I",
+																				pypo_i,
 																				"I can always take my offer to another tribe more friendly to its potential patrons. You are not the only smiths in these lands!",
 																				player,
 																				{"~!Discuss his offer", "~!No deal (Forego Quest)"},
 																				{function(s)
 																				Event(
-																					"Rugnur",
+																					rugnur,
 																					"Uh, no, wait! Let's talk business - how much will ye pay us to do this for ye?",
 																					player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Pypo I",
+																						pypo_i,
 																						"Five thousand pieces of silver.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Rugnur",
+																							rugnur,
 																							"Ye said ye wanted a potent artifact, not a child's playtoy! So... twenty thousand, minimum. The crafting of this will take us many years, ye must pay us well.",
 																							player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								"Pypo I",
+																								pypo_i,
 																								"Ten thousand.",
 																								player,
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									"Rugnur",
+																									rugnur,
 																									"Nothing below fifteen!",
 																									player,
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										"Pypo I",
+																										pypo_i,
 																										"Then no deal. I'll gather my things and go to another dwarven clan now.",
 																										player,
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
-																											"Rugnur",
+																											rugnur,
 																											"Fine then - ten thousand... now, what exactly do ye want us to make the stone into?",
 																											player,
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												"Pypo I",
+																												pypo_i,
 																												"I want you to make it into a scepter, a scepter of fire.",
 																												player,
 																												{"~!Continue"},
 																												{function(s)
 																												Event(
-																													"Rugnur",
+																													rugnur,
 																													"I'll see what I can do. But I will need five thousand silver in advance, to pay for the materials.",
 																													player,
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														"Pypo I",
+																														pypo_i,
 																														"Very well. I have the silver here, ready to ship, and I will send someone over with the stone itself. He will stay with you as you make the scepter, and make sure you are going to get it done on time. I expect it done before my reign as king is ended.",
 																														player,
 																														{"~!Continue"},
@@ -283,35 +285,25 @@ AddTrigger(
 																															AddPlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 																															AddPlayerObjective(player, "- Rugnur must survive")
 																															AddPlayerObjective(player, "- The gnomish envoy must survive")
-																														end},
-																														"gnome/icons/gnomish_recruit.png"
+																														end}
 																													)
-																													end},
-																													"dwarf/icons/rugnur.png"
+																													end}
 																												)
-																												end},
-																												"gnome/icons/gnomish_recruit.png"
+																												end}
 																											)
-																											end},
-																											"dwarf/icons/rugnur.png"
+																											end}
 																										)
-																										end},
-																										"gnome/icons/gnomish_recruit.png"
+																										end}
 																									)
-																									end},
-																									"dwarf/icons/rugnur.png"
+																									end}
 																								)
-																								end},
-																								"gnome/icons/gnomish_recruit.png"
+																								end}
 																							)
-																							end},
-																							"dwarf/icons/rugnur.png"
+																							end}
 																						)
-																						end},
-																						"gnome/icons/gnomish_recruit.png"
+																						end}
 																					)
-																					end},
-																					"dwarf/icons/rugnur.png"
+																					end}
 																				)
 																				end,
 																				function(s)
@@ -319,41 +311,29 @@ AddTrigger(
 																					SetDiplomacy(player, "neutral", gnomish_monarch_player)
 																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
 																					ActionDraw()
-																				end},
-																				"gnome/icons/gnomish_recruit.png"
+																				end}
 																			)
-																			end},
-																			"dwarf/icons/rugnur.png"
+																			end}
 																		)
-																		end},
-																		"gnome/icons/gnomish_recruit.png"
+																		end}
 																	)
-																	end},
-																	"dwarf/icons/rugnur.png"
+																	end}
 																)
-																end},
-																"gnome/icons/gnomish_recruit.png"
+																end}
 															)
-															end},
-															"dwarf/icons/rugnur.png"
+															end}
 														)
-														end},
-														"gnome/icons/gnomish_recruit.png"
+														end}
 													)
-													end},
-													"dwarf/icons/rugnur.png"
+													end}
 												)
-												end},
-												"gnome/icons/gnomish_recruit.png"
+												end}
 											)
-											end},
-											"dwarf/icons/rugnur.png"
+											end}
 										)
-										end},
-										"gnome/icons/gnomish_recruit.png"
+										end}
 									)
-									end},
-									"dwarf/icons/rugnur.png"
+									end}
 								)
 								end,
 								function(s)
@@ -369,11 +349,9 @@ AddTrigger(
 										Factions.NorlundClan.Diplomacy.Untersberg = "War"
 										Factions.Untersberg.Diplomacy.NorlundClan = "War"
 									end
-								end},
-								"gnome/icons/gnomish_recruit.png"
+								end}
 							)
-							end},
-							"dwarf/icons/rugnur.png"
+							end}
 						)
 						end},
 						nil,
@@ -411,6 +389,7 @@ AddTrigger(
 				return false
 			end,
 			function() 
+				local rugnur = FindHero("Rugnur")
 				local gnomish_monarch_player = GetCivilizationPlayer("gnome")
 				local loop = true
 				local loop_count = 0
@@ -429,14 +408,7 @@ AddTrigger(
 				SavePreferences()
 				unit = CreateUnit("unit-revealer", player, {Players[bandit_player].StartPos.x, Players[bandit_player].StartPos.y})
 				
-				local raider_leader_name = ""
-				local uncount = 0
-				uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
-						raider_leader_name = GetUnitVariable(uncount[unit1], "Name")
-					end
-				end
+				local raider_leader = FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"))
 				
 				local event_player = player
 				if (GetThisPlayer() == bandit_player) then
@@ -449,37 +421,37 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					Event(
-						raider_leader_name,
+						raider_leader,
 						"Hey! Ye can't do that - this road belongs to the Shinsplitter Clan. We're not letting ye transport gold and jewels on it without paying a toll.",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Rugnur",
+							rugnur,
 							"What are ye talking about?! This road has always been open to all.",
 							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								raider_leader_name,
+								raider_leader,
 								"Aye, we have allowed people to use it, but it is our road.",
 								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Rugnur",
+									rugnur,
 									"Not true! This is Norlund land; if anything, it's our road!",
 									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										raider_leader_name,
+										raider_leader,
 										"Nevertheless, if ye try to move yer caravans here ye have to pay the toll, or face our wrath!",
 										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Rugnur",
+											rugnur,
 											"Very well. I have no problem with slaying ye if ye stand in our way. I advise ye to leave the shipment alone, but not doing so is yer choice.",
 											event_player,
 											{"~!Continue"},
@@ -516,23 +488,17 @@ AddTrigger(
 													Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
 													Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 												end
-											end},
-											"dwarf/icons/rugnur.png"
+											end}
 										)
-										end},
-										"dwarf/icons/dwarven_steelclad.png"
+										end}
 									)
-									end},
-									"dwarf/icons/rugnur.png"
+									end}
 								)
-								end},
-								"dwarf/icons/dwarven_steelclad.png"
+								end}
 							)
-							end},
-							"dwarf/icons/rugnur.png"
+							end}
 						)
-						end},
-						"dwarf/icons/dwarven_steelclad.png"
+						end}
 					)
 					end},
 					"gnome/icons/gnomish_recruit.png"
@@ -585,7 +551,7 @@ AddTrigger(
 					and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 					and caravans_loaded) then
 					Event(
-						"Pypo I",
+						FindUnit("unit-gnomish-recruit", gnomish_monarch_player),
 						"All the silver is there too. Proceed with the task, Rugnur!",
 						player,
 						{"~!Continue"},
@@ -607,8 +573,7 @@ AddTrigger(
 									Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 								end
 							end
-						end},
-						"gnome/icons/gnomish_recruit.png"
+						end}
 					)
 				end
 			end},
@@ -655,7 +620,7 @@ AddTrigger(
 			and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
 		) then
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"That's the last caravan! We will commence work immediately.",
 				player,
 				{"~!Continue"},
@@ -677,18 +642,16 @@ AddTrigger(
 							Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 						end
 					end
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
 		else
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"We have all of the silver, now all we need is the stone.",
 				player,
 				{"~!Continue"},
 				{function(s)
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
 		end
 		return false
@@ -772,7 +735,7 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
-			"Pypo I",
+			FindUnit("unit-gnomish-recruit", gnomish_monarch_player),
 			"You just let a caravan, with ~<my~> money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
 			event_player,
 			{"~!Continue"},
@@ -783,8 +746,7 @@ AddTrigger(
 						ActionDefeat()
 					end
 				end
-			end},
-			"gnome/icons/gnomish_recruit.png"
+			end}
 		)
 		return false
 	end
@@ -820,7 +782,7 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
-			"Pypo I",
+			FindUnit("unit-gnomish-recruit", gnomish_monarch_player),
 			"Rugnur, you fool! You just let a caravan's cargo fall away! If I can't trust you to keep my property secure, the deal's off.",
 			event_player,
 			{"~!Continue"},
@@ -831,8 +793,7 @@ AddTrigger(
 						ActionDefeat()
 					end
 				end
-			end},
-			"gnome/icons/gnomish_recruit.png"
+			end}
 		)
 		return false
 	end

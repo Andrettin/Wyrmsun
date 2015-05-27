@@ -84,7 +84,7 @@ Units = {
 }
 
 if (OldDefineUnitType == nil) then
-  OldDefineUnitType = DefineUnitType
+	OldDefineUnitType = DefineUnitType
 end
 
 function DefineUnitType(unit_type, data)

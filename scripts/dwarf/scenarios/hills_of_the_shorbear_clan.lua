@@ -204,163 +204,163 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Rugnur",
+					FindHero("Rugnur"),
 					"If I understand it correctly, we're here to bargain with the Shorbears, and arrange for us to use their tools to cut the ruby.",
 					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Thursagan",
+						FindHero("Thursagan"),
 						"Exactly.",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Durstorn",
+							FindHero("Durstorn"),
 							"And I'll be doing the talking; I remember what happened last time ye negotiated a deal! We lost five thousand pieces of silver.",
 							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Glonoin",
+								FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 								"Och, it's some o' them cave-dwarves. What business do ye have here?",
 								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Durstorn",
+									FindHero("Durstorn"),
 									"I'm Lord Durstorn, king of my tribe. I have been told ye are great jeweler-workers, and so we come to rent some of yer tools for a short time, a few years at most.",
 									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Glonoin",
+										FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 										"Yer a king?! Must be a pretty small kingdom for ye to come yerself to bargain with us!",
 										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Durstorn",
+											FindHero("Durstorn"),
 											"Ye insult me! Do ye want my business, or not?",
 											event_player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Glonoin",
+												FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 												"Well, fine, I'll hear yer offer.",
 												event_player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Durstorn",
+													FindHero("Durstorn"),
 													"We'd like to rent yer best tools for a short period of time. We'll only be cutting one jewel with it. My starting offer is two hundred silver.",
 													event_player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Glonoin",
+														FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 														"It must be worth a lot for ye to come this way and offer that much! How much are ye going to sell it for, eh?",
 														event_player,
 														{"~!Continue"},
 														{function(s)
 														Event(
-															"Durstorn",
+															FindHero("Durstorn"),
 															"That's none of yer concern!",
 															event_player,
 															{"~!Continue"},
 															{function(s)
 															Event(
-																"Glonoin",
+																FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 																"I'll take twenty-five hundred, minimum.",
 																event_player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Rugnur",
+																	FindHero("Rugnur"),
 																	"(Whisper) Durstorn, that would be a quarter of all our gains!",
 																	event_player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Durstorn",
+																		FindHero("Durstorn"),
 																		"I know that. Uh, Glonoin, how about five hundred?",
 																		event_player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Glonoin",
+																			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 																			"Twenty-three hundred is my lowest offer. I can tell I don't need the money as much as ye need the jewel cut!",
 																			event_player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Durstorn",
+																				FindHero("Durstorn"),
 																				"Ye must be mad! I'll offer one thousand, but no higher!",
 																				event_player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					"Glonoin",
+																					FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 																					"Two thousand, and I'll go no lower!",
 																					event_player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Rugnur",
+																						FindHero("Rugnur"),
 																						"(Whisper) What are we going to do? We can't go much higher!",
 																						event_player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Baglur",
+																							FindHero("Baglur"),
 																							"(Whisper) Offer him fifteen hundred, but don't go up, even if he refuses.",
 																							event_player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								"Durstorn",
+																								FindHero("Durstorn"),
 																								"(Whisper) Bah! Getting this cut isn't worth that much; what with Rugnur's mistake earlier, and all the other expenses, if we pay more than a thousand we'll barely even make a profit!",
 																								event_player,
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									"Thursagan",
+																									FindHero("Thursagan"),
 																									"(Whisper) So what are ye going to do?",
 																									event_player,
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										"Durstorn",
+																										FindHero("Durstorn"),
 																										"(Whisper) Fight him, and take the tools by force.",
 																										event_player,
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
-																											"Thursagan",
+																											FindHero("Thursagan"),
 																											"(Whisper) Are ye mad?!",
 																											event_player,
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												"Durstorn",
+																												FindHero("Durstorn"),
 																												"Of course not! Now, Glonoin; one thousand was my final offer. If ye won't accept it, we will take the tools from ye by force!",
 																												event_player,
 																												{"~!Continue"},
 																												{function(s)
 																												Event(
-																													"Glonoin",
+																													FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 																													"I'd like to see ye try!",
 																													event_player,
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														"Thursagan",
+																														FindHero("Thursagan"),
 																														"Yer making a mistake, Durstorn.",
 																														event_player,
 																														{"~!Continue"},
 																														{function(s)
 																														Event(
-																															"Durstorn",
+																															FindHero("Durstorn"),
 																															"Shut up, all of ye! Attack them!",
 																															event_player,
 																															{"~!Continue"},
@@ -383,8 +383,7 @@ AddTrigger(
 																																	Factions.ShorbearClan.Diplomacy.NorlundClan = "War"
 																																end
 																																--]]
-																															end},
-																															"dwarf/icons/durstorn.png"
+																															end}
 																														)
 																														end},
 																														"dwarf/icons/thursagan.png"
@@ -392,8 +391,7 @@ AddTrigger(
 																													end},
 																													"dwarf/icons/thane_gray_hair.png"
 																												)
-																												end},
-																												"dwarf/icons/durstorn.png"
+																												end}
 																											)
 																											end},
 																											"dwarf/icons/thursagan.png",
@@ -401,7 +399,7 @@ AddTrigger(
 																											event_player ~= GetFactionPlayer("Norlund Clan")
 																										)
 																										end},
-																										"dwarf/icons/durstorn.png",
+																										nil,
 																										nil,
 																										event_player ~= GetFactionPlayer("Norlund Clan")
 																									)
@@ -411,7 +409,7 @@ AddTrigger(
 																									event_player ~= GetFactionPlayer("Norlund Clan")
 																								)
 																								end},
-																								"dwarf/icons/durstorn.png",
+																								nil,
 																								nil,
 																								event_player ~= GetFactionPlayer("Norlund Clan")
 																							)
@@ -428,14 +426,12 @@ AddTrigger(
 																					end},
 																					"dwarf/icons/thane_gray_hair.png"
 																				)
-																				end},
-																				"dwarf/icons/durstorn.png"
+																				end}
 																			)
 																			end},
 																			"dwarf/icons/thane_gray_hair.png"
 																		)
-																		end},
-																		"dwarf/icons/durstorn.png"
+																		end}
 																	)
 																	end},
 																	"dwarf/icons/rugnur.png",
@@ -445,32 +441,28 @@ AddTrigger(
 																end},
 																"dwarf/icons/thane_gray_hair.png"
 															)
-															end},
-															"dwarf/icons/durstorn.png"
+															end}
 														)
 														end},
 														"dwarf/icons/thane_gray_hair.png"
 													)
-													end},
-													"dwarf/icons/durstorn.png"
+													end}
 												)
 												end},
 												"dwarf/icons/thane_gray_hair.png"
 											)
-											end},
-											"dwarf/icons/durstorn.png"
+											end}
 										)
 										end},
 										"dwarf/icons/thane_gray_hair.png"
 									)
-									end},
-									"dwarf/icons/durstorn.png"
+									end}
 								)
 								end},
 								"dwarf/icons/thane_gray_hair.png"
 							)
 							end},
-							"dwarf/icons/durstorn.png",
+							nil,
 							nil,
 							event_player ~= GetFactionPlayer("Norlund Clan")
 						)
@@ -525,15 +517,6 @@ AddTrigger(
 			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, {8, 64}, "move")
 		end
 
-		local shinsplitter_thane_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-		
 		local event_player = player
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			event_player = GetFactionPlayer("Shinsplitter Clan")
@@ -542,61 +525,61 @@ AddTrigger(
 		end
 
 		Event(
-			shinsplitter_thane_name,
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 			"Aha! I've spent years looking for ye Norlunds, but now I've found ye! Prepare to die!",
 			event_player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Glonoin",
+				FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 				"Who the devil are ye?",
 				event_player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Rugnur",
+					FindHero("Rugnur"),
 					"I thought we left the Shinsplitters behind at the gates four years ago! It seems we have two enemies now.",
 					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Glonoin",
+						FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 						"So, Shinsplitters, are ye against these dwarves too? They're attacking my clan for absolutely no reason!",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							shinsplitter_thane_name,
+							FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 							"I see. So ye don't have the ruby?",
 							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Glonoin",
+								FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 								"No, they do. They wanted to rent my tools to cut it, but they didn't offer me nearly enough!",
 								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									shinsplitter_thane_name,
+									FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 									"How about this - I help ye defeat them, and ye let me keep the ruby when we have?",
 									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Glonoin",
+										FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
 										"Deal!",
 										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Durstorn",
+											FindHero("Durstorn"),
 											"Ah, they don't scare me! We can take both of them!",
 											event_player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Thursagan",
+												FindHero("Thursagan"),
 												"Don't be a fool! We can't take the Shinsplitters, and it was a mistake to attack the Shorbears, but if we have to fight we should retreat once we get what we came for, the tools!",
 												event_player,
 												{"~!Continue"},
@@ -607,8 +590,7 @@ AddTrigger(
 												end},
 												"dwarf/icons/thursagan.png"
 											)
-											end},
-											"dwarf/icons/durstorn.png"
+											end}
 										)
 										end},
 										"dwarf/icons/thane_gray_hair.png"
@@ -652,19 +634,19 @@ AddTrigger(
 	function()
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		Event(
-			"Durstorn",
+			FindHero("Durstorn"),
 			"Ha! Now we can get those tools easily, and go back to our own caves.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Thursagan",
+				FindHero("Thursagan"),
 				"And how do ye plan on doing that? There are Shinsplitters swarming these hills, trying to kill us.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Durstorn",
+					FindHero("Durstorn"),
 					"Ye are right... well, we will be able to break out eventually, and while we're here, we'll be able to finally make the scepter.",
 					player,
 					{"~!Continue"},
@@ -672,38 +654,36 @@ AddTrigger(
 					if (GetNumUnitsAt(1, "units", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "units", {26, 23}, {51, 44}) >= 1) then
 						if ((GetNumUnitsAt(player, "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(player, "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(player, "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
 							Event(
-								"Thursagan",
+								FindHero("Thursagan"),
 								"Well, back to the battle - we are all in the caves, but there are still enemies in here also!",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Durstorn",
+									FindHero("Durstorn"),
 									"Indeed. Kill them! And make sure no more enter. Then we can close the gates.",
 									player,
 									{"~!Continue"},
 									{function(s)
-									end},
-									"dwarf/icons/durstorn.png"
+									end}
 								)
 								end},
 								"dwarf/icons/thursagan.png"
 							)
 						else
 							Event(
-								"Thursagan",
+								FindHero("Thursagan"),
 								"Well, back to the battle - we need everyone to get into the Shorbear caves. And then stop any enemies from coming in here.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Durstorn",
+									FindHero("Durstorn"),
 									"Indeed. Everyone to the caves, and kill those still inside!",
 									player,
 									{"~!Continue"},
 									{function(s)
-									end},
-									"dwarf/icons/durstorn.png"
+									end}
 								)
 								end},
 								"dwarf/icons/thursagan.png"
@@ -711,26 +691,24 @@ AddTrigger(
 						end
 					elseif (((GetNumUnitsAt(player, "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(player, "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(player, "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) == false) then
 						Event(
-							"Thursagan",
+							FindHero("Thursagan"),
 							"Well, back to the battle - we need everyone to get into the Shorbear caves. And then stop any enemies from coming in here.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Durstorn",
+								FindHero("Durstorn"),
 								"Indeed. Everyone to the caves, and kill those still inside!",
 								player,
 								{"~!Continue"},
 								{function(s)
-								end},
-								"dwarf/icons/durstorn.png"
+								end}
 							)
 							end},
 							"dwarf/icons/thursagan.png"
 						)
 					end
-					end},
-					"dwarf/icons/durstorn.png"
+					end}
 				)
 				end},
 				"dwarf/icons/thursagan.png"
@@ -759,7 +737,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Durstorn",
+			FindHero("Durstorn"),
 			"We have driven all of the Shorbears and Shinsplitters out of these caves! Now, seal the gates!",
 			player,
 			{"~!Continue"},
@@ -911,84 +889,75 @@ AddTrigger(
 		return false
 	end,
 	function()
-		local shinsplitter_thane_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-		
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"Well, Thursagan has reached a conclusion. He can't make the scepter with the materials he has here, but he has the final plans for it, and all the jewels and gold he needs. Shouldn't we leave now?",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Durstorn",
+				FindHero("Durstorn"),
 				"All this time and he couldn't make it? Fine, we should try to leave... but it's not like we could leave if we wanted to. We're surrounded!",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Baglur",
+					FindHero("Baglur"),
 					"If ye'll permit me to say so, sir, yer wrong. We could-",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Durstorn",
+						FindHero("Durstorn"),
 						"Shut up, Baglur! Ye don't know what yer talking about. I've analyzed the situation, and we're doomed. Our best hope is to surrender. Perhaps if we give the Shinsplitters the plans for the Scepter of Fire they will let us survive.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Rugnur",
+							FindHero("Rugnur"),
 							"Yes, of course, let's just all be cowards! What happened to your honor, Durstorn?!",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Durstorn",
+								FindHero("Durstorn"),
 								"Ye little fool, honor is less important than life! So, I'm ordering Thursagan to give the plans and the ruby to the Shinsplitters, as a peace offering. Then maybe we'll walk out of here alive.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Thursagan",
+									FindHero("Thursagan"),
 									"Ye don't have authority over me, Durstorn. And I wouldn't give the Scepter to them even if ye did. It's not yers to give, it's mine, and Rugnur's, and Baglur's. The gryphon riders have done more for its existence than ye have! And yet, ye still get the profits from selling it to Pypo.",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Durstorn",
+										FindHero("Durstorn"),
 										"So what, all of ye want to die? Fine by me, but I won't die with ye! And if ye won't give the Scepter to the Shinsplitters, I'll take it from ye!",
 										player,
 										{"~!Continue"},
 										{function(s)
 										PlaySound("attack-miss")
 										Event(
-											"Thursagan",
+											FindHero("Thursagan"),
 											"Nice try, Durstorn, but ye missed. Now, I'd say that attacking an ally constitutes treason, wouldn't ye?",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Durstorn",
+												FindHero("Durstorn"),
 												"Yer not my ally. Yer more against me than the Shinsplitters are; all they want is the ruby, but ye want us dead!",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Rugnur",
+													FindHero("Rugnur"),
 													"If that's what yer thinking, yer not fit to be ruler over us! So step down, or we'll force ye.",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Durstorn",
+														FindHero("Durstorn"),
 														"Never!",
 														player,
 														{"~!Continue"},
@@ -996,19 +965,19 @@ AddTrigger(
 															PlaySound("axe-attack")
 															KillUnitAt("unit-hero-durstorn", player, 1, {0, 0}, {256, 256})
 															Event(
-																"Rugnur",
+																FindHero("Rugnur"),
 																"Well, I suppose we were right to silence him, but I don't like this. In any case, now we should try to get out of here.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Thursagan",
+																	FindHero("Thursagan"),
 																	"Aye. So, see the area to the northeast of us?",
 																	player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Thursagan",
+																		FindHero("Thursagan"),
 																		"That's where there are the least Shinsplitter guards, so we have the greatest chance of success there. I think we should try to get to it.",
 																		player,
 																		{"~!Continue"},
@@ -1020,13 +989,13 @@ AddTrigger(
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Thursagan",
+																				FindHero("Thursagan"),
 																				"I don't know if we will be cornered. That cave looks like it goes deep, and we can lose the Shinsplitters in the caves. Once we get out, we'll make our way back to Knalga.",
 																				player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					"Rugnur",
+																					FindHero("Rugnur"),
 																					"The country between here and Knalga will be swarming with Shinsplitter warriors. We had better head back to the abandoned mines north of the Arkan-thoria, where we gathered our gold and coal. At least there the gnomes will have some hope of finding us.",
 																					player,
 																					{"~!Continue"},
@@ -1038,13 +1007,13 @@ AddTrigger(
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Rugnur",
+																							FindHero("Rugnur"),
 																							"Well, ye are a member of the army of Untersberg. Why don't ye rejoin it? See if ye can run past those Shinsplitters to our southeast...",
 																							player,
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								"Rugnur",
+																								FindHero("Rugnur"),
 																								"... and then ride south until ye reach one of yer outposts.",
 																								player,
 																								{"~!Continue"},
@@ -1056,7 +1025,7 @@ AddTrigger(
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										"Thursagan",
+																										FindHero("Thursagan"),
 																										"Ye going south has more of a chance of success for ye than staying here or going back to the mines! And getting news to Pypo of what has happened is also the best way to get help to us.",
 																										player,
 																										{"~!Continue"},
@@ -1068,7 +1037,7 @@ AddTrigger(
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												shinsplitter_thane_name,
+																												FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 																												"Come out, Norlunds, and surrender! Or die in that cave, yer choice.",
 																												player,
 																												{"~!Continue"},
@@ -1165,7 +1134,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"My gnomish friend, ride as fast as ye can south. Tell Pypo we are heading northeast, towards the old eastern mines, and if he wants his precious scepter he should send forces to meet us there as soon as he can!",
 			player,
 			{"~!Continue"},
@@ -1190,7 +1159,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"I don't know what is in these caves, but whatever it is can't be worse than staying here to die.",
 			player,
 			{"~!Continue"},

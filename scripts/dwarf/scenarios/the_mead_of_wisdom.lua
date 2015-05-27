@@ -138,7 +138,7 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Durin",
+				FindHero("Durin"),
 				"We must wary, for these corridors are filled with the two dwarves' thugs. Let us get this over with as quickly as we can.",
 				player,
 				{"~!Continue"},
@@ -180,32 +180,44 @@ AddTrigger(
 		return false
 	end,
 	function()
+		local fjalar = nil
+		local galar = nil
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" and GetUnitVariable(uncount[unit1], "Name") == "Fjalar") then
+				fjalar = uncount[unit1]
+			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" and GetUnitVariable(uncount[unit1], "Name") == "Galar") then
+				galar = uncount[unit1]
+			end
+		end
+	
 		Event(
-			"Durin",
+			FindHero("Durin"),
 			"Fjalar and Galar, I am here on behalf of Modsognir. Where is Thjodrorir?",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Fjalar",
+				fjalar,
 				"He is no more. We brew his blood into mead, to absorb his ancient wisdom and gift with words.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Galar",
+					galar,
 					"I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't drink any!",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Durin",
+						FindHero("Durin"),
 						"Abominable! How could you, to Thjodrorir... Foolish as you seem, the mead certainly made you none the wiser.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Fjalar",
+							fjalar,
 							"Thjodrorir went down first, but you will be next!",
 							player,
 							{"~!Continue"},
@@ -242,7 +254,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Durin",
+			FindHero("Durin"),
 			"It is over. I will bring the cauldron and jars to Modsognir, and have them buried in Thjodrorir's grave. It is the best that can be done...",
 			player,
 			{"~!Continue"},

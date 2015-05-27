@@ -96,7 +96,7 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Marbod",
+				FindHero("Marbod"),
 				"Germania is under ever-greater peril from the Romans. My warriors, there is no turning back - we must take the Boii's lands, or perish!",
 				player,
 				{"~!Continue"},
@@ -127,7 +127,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Marbod",
+			FindHero("Marbod"),
 			"So near the Romans as we used to be, no realm could succeed and become great. But here... we have a chance.",
 			player,
 			{"~!Continue"},
@@ -153,7 +153,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Marbod",
+			FindHero("Marbod"),
 			"Much did I learn about statecraft and military organization during my younger years in Rome. Already, we have a disciplined army to pursue our dangerous - albeit rewarding - task. The Boii shall be no match for us!",
 			player,
 			{"~!Continue"},
@@ -178,7 +178,7 @@ AddTrigger(
 	end,
 	function() 
 		Event(
-			"Marbod",
+			FindHero("Marbod"),
 			"The Boii's capital has become naught but a burning ruin. On its ashes we shall build our own settlement of Bubienum, the center of our new Marcomannic kingdom!",
 			player,
 			{"~!Continue"},

@@ -74,7 +74,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Baglur",
+			FindHero("Baglur"),
 			"Gnomish raiders looting the tomb... bad news.",
 			player,
 			{"~!Continue"},
@@ -99,13 +99,13 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Baglur",
+			FindHero("Baglur"),
 			"The ceiling of this antechamber bears a mosaic... depicting a dwarven noble with gold armor and a huge axe.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Durstorn",
+				FindHero("Durstorn"),
 				"Fit for a chieftain.",
 				player,
 				{"~!Continue"},
@@ -133,7 +133,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Baglur",
+			FindHero("Baglur"),
 			"The walls here have niches, which must have contained dwarven corpses before the raiders scoured this room for valuable objects.",
 			player,
 			{"~!Continue"},
@@ -158,7 +158,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Baglur",
+			FindHero("Baglur"),
 			"The remains of a dwarf... the regalia does not seem Durahn's. This must be Isuldan, his son.",
 			player,
 			{"~!Continue"},
@@ -191,16 +191,16 @@ AddTrigger(
 		return false
 	end,
 	function()
-		local gnomish_raider_name = ""
+		local gnomish_raider = nil
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Raiders"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit" and GetUnitVariable(uncount[unit1], "Level") == 4) then
-				gnomish_raider_name = GetUnitVariable(uncount[unit1], "Name")
+				gnomish_raider = uncount[unit1]
 			end
 		end
 		Event(
-			gnomish_raider_name,
+			gnomish_raider,
 			"Bloody dwarves! We were almost finishing with this tomb... prepare to be gutted.",
 			player,
 			{"~!Continue"},
@@ -225,7 +225,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Baglur",
+			FindHero("Baglur"),
 			"The skeleton of a female dwarf... Durahn's wife Gneissus, I suppose.",
 			player,
 			{"~!Continue"},
@@ -250,7 +250,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Durstorn",
+			FindHero("Durstorn"),
 			"There's a book on this table... merchant contacts that the raider leader used to sell off the tomb's artifacts are written on it.",
 			player,
 			{"~!Continue"},
@@ -275,7 +275,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Durstorn",
+			FindHero("Durstorn"),
 			"There's Durahn's skeleton! Let us bring his skull back to the Eikinskjaldis for a nice reward.",
 			player,
 			{"~!Continue"},

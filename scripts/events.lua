@@ -510,12 +510,6 @@ function Event(speaker, event_description, player, options, option_effects, even
 		end
 		l:setCaption(_(event_description))
 
-		if (not IsNetworkGame()) then
-			if (event_icon == "dwarf/icons/rugnur.png" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-				event_icon = "dwarf/icons/rugnur_older.png"
-			end
-		end
-
 		if (type(speaker) == "number") then
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
 			event_icon:Load()

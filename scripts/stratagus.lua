@@ -1589,6 +1589,24 @@ function FindUnit(unit_type, player)
 	return nil
 end
 
+function FindHero(hero, player)
+	local uncount = 0
+	
+	if (player) then
+		uncount = GetUnits(player)
+	else
+		uncount = GetUnits("any")
+	end
+	
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Name") == hero) then
+			return uncount[unit1]
+		end
+	end
+	
+	return nil
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------

@@ -173,19 +173,19 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Baglur",
+					FindHero("Baglur"),
 					"We need to find the sage Thursagan and convince him to return to the citadel with us. He's somewhere up here.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Rugnur",
+						FindHero("Rugnur"),
 						"Well, how are we supposed to find him?",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Baglur",
+							FindHero("Baglur"),
 							"His will probably be the only house up here. No one else is insane enough to live this far north! Even the Shinsplitters won't challenge us here.",
 							player,
 							{"~!Continue"},
@@ -197,7 +197,7 @@ AddTrigger(
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Baglur",
+									FindHero("Baglur"),
 									"Right. We'll probably have to fight our way through to his house.",
 									player,
 									{"~!Continue"},
@@ -321,7 +321,7 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Baglur",
+					FindHero("Baglur"),
 					"Is that... is that a gryphon?",
 					player,
 					{"~!Continue"},
@@ -333,7 +333,7 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Rugnur",
+							FindHero("Rugnur"),
 							"What do ye want, gryphon rider?",
 							player,
 							{"~!Continue"},
@@ -345,7 +345,7 @@ AddTrigger(
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Rugnur",
+									FindHero("Rugnur"),
 									"Well, um, aye. Why, can ye help us?",
 									player,
 									{"~!Continue"},
@@ -357,7 +357,7 @@ AddTrigger(
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Baglur",
+											FindHero("Baglur"),
 											"Sure, we'll help ye fight goblins.",
 											player,
 											{"~!Continue"},
@@ -421,7 +421,7 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Baglur",
+				FindHero("Baglur"),
 				"He doesn't want to talk to the gryphon riders, apparently. I think we'll have to get someone there he will talk to...",
 				player,
 				{"~!Continue"},
@@ -458,73 +458,73 @@ AddTrigger(
 	function()
 		unit = CreateUnit("unit-hero-thursagan", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
 		Event(
-			"Thursagan",
+			FindHero("Thursagan"),
 			"What do ye people want?! Leave me alone!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"Old sage, we come with a message from Lord Durstorn. He asks ye to come back to the city.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Thursagan",
+					FindHero("Thursagan"),
 					"Ha! That fool thinks he can order me around. Why does he want me to go back, anyway?",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Baglur",
+						FindHero("Baglur"),
 						"We have entered into a bargain with the king of Untersberg to craft a scepter for him.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Thursagan",
+							FindHero("Thursagan"),
 							"Oh, and now I suppose Durstorn wants me to craft it, eh? Well I'm not going to.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Rugnur",
+								FindHero("Rugnur"),
 								"Ye don't want to make a scepter imbued with the mighty ruby of fire? Very well, yer choice is made.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Thursagan",
+									FindHero("Thursagan"),
 									"The ruby of fire, what is that, some worthless gnomish gem?",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Baglur",
+										FindHero("Baglur"),
 										"It is a gnomish gem, but it is also supposedly the most flawless precious stone ever seen.",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Thursagan",
+											FindHero("Thursagan"),
 											"Oh, really? And what does the gnomish king want us to do with it?",
 											player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Rugnur",
+												FindHero("Rugnur"),
 												"Cut it and insert it into a scepter, creating a powerful symbol of the gnomish monarchy.",
 												player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Thursagan",
+													FindHero("Thursagan"),
 													"I see. Fine then, I will help ye craft this scepter... into the greatest artifact ever seen. This will be a true test of my skill. I expect it will take many years.",
 													player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Baglur",
+														FindHero("Baglur"),
 														"Good. Now, there are still wild animals and goblins here... We have to get back into the caves.",
 														player,
 														{"~!Continue"},
@@ -605,7 +605,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Thursagan",
+			FindHero("Thursagan"),
 			"Well, now we are near the caves again! Come on, back south, to the city.",
 			player,
 			{"~!Continue"},
@@ -617,7 +617,7 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Rugnur",
+					FindHero("Rugnur"),
 					"Lord Durstorn, we have succeeded in our mission. Thursagan is here.",
 					player,
 					{"~!Continue"},
@@ -629,13 +629,13 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Baglur",
+							FindHero("Baglur"),
 							"Aye, we did.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Thursagan",
+								FindHero("Thursagan"),
 								"Now, where is this ruby that I am to work with, eh Durstorn?",
 								player,
 								{"~!Continue"},
@@ -647,7 +647,7 @@ AddTrigger(
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Thursagan",
+										FindHero("Thursagan"),
 										"Ha! ~<Ye~> don't trust ~<me~>?",
 										player,
 										{"~!Continue"},
@@ -659,7 +659,7 @@ AddTrigger(
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Thursagan",
+												FindHero("Thursagan"),
 												"Ye don't dictate what I am to do, Durstorn! I will do as I please, and don't stop me if ye want me to make this scepter.",
 												player,
 												{"~!Continue"},
@@ -671,7 +671,7 @@ AddTrigger(
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Rugnur",
+														FindHero("Rugnur"),
 														"Uh, technically it's Pypo's, and I think that if Thursagan needs to see it to plan this scepter, we must allow it.",
 														player,
 														{"~!Continue"},
@@ -683,13 +683,13 @@ AddTrigger(
 															{"~!Continue"},
 															{function(s)
 															Event(
-																"Thursagan",
+																FindHero("Thursagan"),
 																"Hm... a most interesting jewel. I will start drawing up plans for the scepter immediately.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Thursagan",
+																	FindHero("Thursagan"),
 																	"Now, I will need certain materials to make this scepter.",
 																	player,
 																	{"~!Continue"},
@@ -701,7 +701,7 @@ AddTrigger(
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Thursagan",
+																			FindHero("Thursagan"),
 																			"I would say probably ten stone of artifact-quality gold and twenty stone of the finest coal, and many of the finest jewels in the land - we'll need others to search for those, though. I'll also need to have the jeweler cut the ruby once I have the plans done.",
 																			player,
 																			{"~!Continue"},
@@ -713,19 +713,19 @@ AddTrigger(
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					"Thursagan",
+																					FindHero("Thursagan"),
 																					"Ye try my patience, Durstorn. Ye know yers aren't acceptable, but ye have to give me something or I can't make the scepter!",
 																					player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Baglur",
+																						FindHero("Baglur"),
 																						"Wait, wait. The gold and coal... I think we can find those in the abandoned eastern mines, north of the Arkan-thoria. Goblins ha' overrun them, but earlier they were the source of the finest smithing materials.",
 																						player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Rugnur",
+																							FindHero("Rugnur"),
 																							"So, we will go to the eastern mines!",
 																							player,
 																							{"~!Continue"},
@@ -737,7 +737,7 @@ AddTrigger(
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									"Thursagan",
+																									FindHero("Thursagan"),
 																									"That is acceptable. Durstorn, send some miners along with us to the eastern mines.",
 																									player,
 																									{"~!Continue"},

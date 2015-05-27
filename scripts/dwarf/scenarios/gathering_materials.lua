@@ -147,31 +147,31 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Rugnur",
+					FindHero("Rugnur"),
 					"Well, these are the eastern mines. Goblins live here, be prepared to fight them; also be prepared to spend quite some time here - mining can take a while.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Thursagan",
+						FindHero("Thursagan"),
 						"For me to make the artifact Pypo wants, I need a special type of gold. I do not know where it was found, but Baglur said these mines were the source of it.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Baglur",
+							FindHero("Baglur"),
 							"Also, the only coal that wi' melt this gold is here.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Rugnur",
+								FindHero("Rugnur"),
 								"So we're down here to, what, mine this gold and coal? That should be easy enough.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Thursagan",
+									FindHero("Thursagan"),
 									"Aye. But beware, there are goblins and such down here...",
 									player,
 									{"~!Continue"},
@@ -181,20 +181,15 @@ AddTrigger(
 										end
 										AddPlayerObjective(player, "- Mine 10000 gold and 20000 coal")
 										AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
-									end},
-									"dwarf/icons/thursagan.png"
+									end}
 								)
-								end},
-								"dwarf/icons/rugnur.png"
+								end}
 							)
-							end},
-							"dwarf/icons/baglur.png"
+							end}
 						)
-						end},
-						"dwarf/icons/thursagan.png"
+						end}
 					)
-					end},
-					"dwarf/icons/rugnur.png"
+					end}
 				)
 				end},
 				nil,
@@ -225,13 +220,12 @@ AddTrigger(
 	function()
 		if (GetPlayerData(player, "UnitTypesCount", "unit-dwarven-miner") < 1) then
 			Event(
-				"Thursagan",
+				FindHero("Thursagan"),
 				"Don't forget to recruit the miners. Our warriors can clear the tunnels of goblins and worse, but once we find the gold and coal we need the miners to acquire it.",
 				player,
 				{"~!Continue"},
 				{function(s)
-				end},
-				"dwarf/icons/thursagan.png"
+				end}
 			)
 		end
 		return false
@@ -256,13 +250,12 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"Here is some of the coal that we need! Bring the miners to take it!",
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -286,13 +279,12 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"Here is a mine of the precious gold! Send the miners this way.",
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -310,14 +302,14 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"That's the last load of coal we need.",
 			player,
 			{"~!Continue"},
 			{function(s)
 				if (GetPlayerData(i, "Resources", "gold") >= 10000) then
 					Event(
-						"Thursagan",
+						FindHero("Thursagan"),
 						"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
 						player,
 						{"~!Continue"},
@@ -335,7 +327,7 @@ AddTrigger(
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Thursagan",
+									FindHero("Thursagan"),
 									"We don't. Not everything is about ye. We need to talk to Theganli.",
 									player,
 									{"~!Continue"},
@@ -347,7 +339,7 @@ AddTrigger(
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Thursagan",
+											FindHero("Thursagan"),
 											"I need to make the plans for the scepter, then have him cut the ruby to match them.",
 											player,
 											{"~!Continue"},
@@ -359,7 +351,7 @@ AddTrigger(
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Rugnur",
+													FindHero("Rugnur"),
 													"What are ye talking about, sir? Ye knew all along the jewel would have to be cut to make the scepter out of.",
 													player,
 													{"~!Continue"},
@@ -395,13 +387,13 @@ AddTrigger(
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Thursagan",
+																			FindHero("Thursagan"),
 																			"He doesn't need to come here, I'll take the jewel to his shop. He'll need his tools anyway.",
 																			player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Thursagan",
+																				FindHero("Thursagan"),
 																				"Well, Theganli, what do ye think of this jewel?",
 																				player,
 																				{"~!Continue"},
@@ -413,7 +405,7 @@ AddTrigger(
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Thursagan",
+																						FindHero("Thursagan"),
 																						"Do ye think ye could cut it in the manner my plans specify?",
 																						player,
 																						{"~!Continue"},
@@ -425,7 +417,7 @@ AddTrigger(
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								"Thursagan",
+																								FindHero("Thursagan"),
 																								"Very well. See what ye can do.",
 																								player,
 																								{"~!Continue"},
@@ -449,7 +441,7 @@ AddTrigger(
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												"Thursagan",
+																												FindHero("Thursagan"),
 																												"So what do ye propose we do? We need this jewel cut in a very specific way to make sure... well, it doesn't matter why.",
 																												player,
 																												{"~!Continue"},
@@ -461,7 +453,7 @@ AddTrigger(
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														"Rugnur",
+																														FindHero("Rugnur"),
 																														"Who are they?",
 																														player,
 																														{"~!Continue"},
@@ -479,7 +471,7 @@ AddTrigger(
 																																{"~!Continue"},
 																																{function(s)
 																																Event(
-																																	"Baglur",
+																																	FindHero("Baglur"),
 																																	"We can't just go in there and take their property. We'll have to buy, or rent, it from them.",
 																																	player,
 																																	{"~!Continue"},
@@ -491,7 +483,7 @@ AddTrigger(
 																																		{"~!Continue"},
 																																		{function(s)
 																																		Event(
-																																			"Rugnur",
+																																			FindHero("Rugnur"),
 																																			"Very well. We'll go south now.",
 																																			player,
 																																			{"~!Continue"},
@@ -546,14 +538,12 @@ AddTrigger(
 																																				end},
 																																				"dwarf/icons/durstorn.png"
 																																			)
-																																			end},
-																																			"dwarf/icons/rugnur.png"
+																																			end}
 																																		)
 																																		end},
 																																		"dwarf/icons/durstorn.png"
 																																	)
-																																	end},
-																																	"dwarf/icons/baglur.png"
+																																	end}
 																																)
 																																end},
 																																"dwarf/icons/durstorn.png"
@@ -561,14 +551,12 @@ AddTrigger(
 																															end},
 																															"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																														)
-																														end},
-																														"dwarf/icons/rugnur.png"
+																														end}
 																													)
 																													end},
 																													"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																												)
-																												end},
-																												"dwarf/icons/thursagan.png"
+																												end}
 																											)
 																											end},
 																											"dwarf/icons/dwarven_steelclad_gray_hair.png"
@@ -578,23 +566,19 @@ AddTrigger(
 																									)
 																									end}
 																								)
-																								end},
-																								"dwarf/icons/thursagan.png"
+																								end}
 																							)
 																							end},
 																							"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																						)
-																						end},
-																						"dwarf/icons/thursagan.png"
+																						end}
 																					)
 																					end},
 																					"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																				)
-																				end},
-																				"dwarf/icons/thursagan.png"
+																				end}
 																			)
-																			end},
-																			"dwarf/icons/thursagan.png"
+																			end}
 																		)
 																		end},
 																		"dwarf/icons/dwarven_steelclad_gray_hair.png"
@@ -611,32 +595,27 @@ AddTrigger(
 														end},
 														"dwarf/icons/durstorn.png"
 													)
-													end},
-													"dwarf/icons/rugnur.png"
+													end}
 												)
 												end},
 												"dwarf/icons/durstorn.png"
 											)
-											end},
-											"dwarf/icons/thursagan.png"
+											end}
 										)
 										end},
 										"dwarf/icons/durstorn.png"
 									)
-									end},
-									"dwarf/icons/thursagan.png"
+									end}
 								)
 								end},
 								"dwarf/icons/durstorn.png"
 							)
 							end}
 						)
-						end},
-						"dwarf/icons/thursagan.png"
+						end}
 					)
 				end
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -654,7 +633,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Thursagan",
+			FindHero("Thursagan"),
 			"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",
 			player,
 			{"~!Continue"},
@@ -672,7 +651,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Thursagan",
+						FindHero("Thursagan"),
 						"We don't. Not everything is about ye. We need to talk to Theganli.",
 						player,
 						{"~!Continue"},
@@ -684,7 +663,7 @@ AddTrigger(
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Thursagan",
+								FindHero("Thursagan"),
 								"I need to make the plans for the scepter, then have him cut the ruby to match them.",
 								player,
 								{"~!Continue"},
@@ -696,7 +675,7 @@ AddTrigger(
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Rugnur",
+										FindHero("Rugnur"),
 										"What are ye talking about, sir? Ye knew all along the jewel would have to be cut to make the scepter out of.",
 										player,
 										{"~!Continue"},
@@ -732,13 +711,13 @@ AddTrigger(
 															{"~!Continue"},
 															{function(s)
 															Event(
-																"Thursagan",
+																FindHero("Thursagan"),
 																"He doesn't need to come here, I'll take the jewel to his shop. He'll need his tools anyway.",
 																player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Thursagan",
+																	FindHero("Thursagan"),
 																	"Well, Theganli, what do ye think of this jewel?",
 																	player,
 																	{"~!Continue"},
@@ -750,7 +729,7 @@ AddTrigger(
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Thursagan",
+																			FindHero("Thursagan"),
 																			"Do ye think ye could cut it in the manner my plans specify?",
 																			player,
 																			{"~!Continue"},
@@ -762,7 +741,7 @@ AddTrigger(
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					"Thursagan",
+																					FindHero("Thursagan"),
 																					"Very well. See what ye can do.",
 																					player,
 																					{"~!Continue"},
@@ -786,7 +765,7 @@ AddTrigger(
 																								{"~!Continue"},
 																								{function(s)
 																								Event(
-																									"Thursagan",
+																									FindHero("Thursagan"),
 																									"So what do ye propose we do? We need this jewel cut in a very specific way to make sure... well, it doesn't matter why.",
 																									player,
 																									{"~!Continue"},
@@ -798,7 +777,7 @@ AddTrigger(
 																										{"~!Continue"},
 																										{function(s)
 																										Event(
-																											"Rugnur",
+																											FindHero("Rugnur"),
 																											"Who are they?",
 																											player,
 																											{"~!Continue"},
@@ -816,7 +795,7 @@ AddTrigger(
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														"Baglur",
+																														FindHero("Baglur"),
 																														"We can't just go in there and take their property. We'll have to buy, or rent, it from them.",
 																														player,
 																														{"~!Continue"},
@@ -828,7 +807,7 @@ AddTrigger(
 																															{"~!Continue"},
 																															{function(s)
 																															Event(
-																																"Rugnur",
+																																FindHero("Rugnur"),
 																																"Very well. We'll go south now.",
 																																player,
 																																{"~!Continue"},
@@ -883,14 +862,12 @@ AddTrigger(
 																																	end},
 																																	"dwarf/icons/durstorn.png"
 																																)
-																																end},
-																																"dwarf/icons/rugnur.png"
+																																end}
 																															)
 																															end},
 																															"dwarf/icons/durstorn.png"
 																														)
-																														end},
-																														"dwarf/icons/baglur.png"
+																														end}
 																													)
 																													end},
 																													"dwarf/icons/durstorn.png"
@@ -898,14 +875,12 @@ AddTrigger(
 																												end},
 																												"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																											)
-																											end},
-																											"dwarf/icons/rugnur.png"
+																											end}
 																										)
 																										end},
 																										"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																									)
-																									end},
-																									"dwarf/icons/thursagan.png"
+																									end}
 																								)
 																								end},
 																								"dwarf/icons/dwarven_steelclad_gray_hair.png"
@@ -915,23 +890,19 @@ AddTrigger(
 																						)
 																						end}
 																					)
-																					end},
-																					"dwarf/icons/thursagan.png"
+																					end}
 																				)
 																				end},
 																				"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																			)
-																			end},
-																			"dwarf/icons/thursagan.png"
+																			end}
 																		)
 																		end},
 																		"dwarf/icons/dwarven_steelclad_gray_hair.png"
 																	)
-																	end},
-																	"dwarf/icons/thursagan.png"
+																	end}
 																)
-																end},
-																"dwarf/icons/thursagan.png"
+																end}
 															)
 															end},
 															"dwarf/icons/dwarven_steelclad_gray_hair.png"
@@ -948,28 +919,24 @@ AddTrigger(
 											end},
 											"dwarf/icons/durstorn.png"
 										)
-										end},
-										"dwarf/icons/rugnur.png"
+										end}
 									)
 									end},
 									"dwarf/icons/durstorn.png"
 								)
-								end},
-								"dwarf/icons/thursagan.png"
+								end}
 							)
 							end},
 							"dwarf/icons/durstorn.png"
 						)
-						end},
-						"dwarf/icons/thursagan.png"
+						end}
 					)
 					end},
 					"dwarf/icons/durstorn.png"
 				)
 				end}
 			)
-			end},
-			"dwarf/icons/thursagan.png"
+			end}
 		)
 	end
 )

@@ -165,49 +165,49 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"Well, I think we've gotten a good distance ahead of the Shinsplitters. What do we do now?",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Thursagan",
+					FindHero("Thursagan"),
 					"We should keep going. This seems to be a volcano... I think we should try to cause it to erupt. It will kill all the Shinsplitters, and we might be able to find a safe place so the lava doesn't kill us.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Rugnur",
+						FindHero("Rugnur"),
 						"This sounds... plausible.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Baglur",
+							FindHero("Baglur"),
 							"Aye, an interesting plan. How do ye propose we do this?",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Thursagan",
+								FindHero("Thursagan"),
 								"I have a suspicion that there is an opening somewhere near here that leads to the surface. I have heard of ancient constructions such as I have seen here, of dwarven machinery of some kind that can cause the lava to flow.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Rugnur",
+									FindHero("Rugnur"),
 									"Very well. We will continue to explore until we find it.",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Gryphon Rider",
+										FindUnit("unit-dwarven-gryphon-rider", GetFactionPlayer("Norlund Clan")),
 										"My gryphon smells something... probably goblins in this cave!",
 										player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											"Thursagan",
+											FindHero("Thursagan"),
 											"Indeed, there may be goblins lurking here. We should beware of them.",
 											player,
 											{"~!Continue"},
@@ -217,29 +217,21 @@ AddTrigger(
 												end
 												AddPlayerObjective(player, "- Explore as much of the cave as possible")
 												AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
-											end},
-											"dwarf/icons/thursagan.png"
+											end}
 										)
-										end},
-										"dwarf/icons/gryphon_rider.png"
+										end}
 									)
-									end},
-									"dwarf/icons/baglur.png"
+									end}
 								)
-								end},
-								"dwarf/icons/thursagan.png"
+								end}
 							)
-							end},
-							"dwarf/icons/baglur.png"
+							end}
 						)
-						end},
-						"dwarf/icons/rugnur.png"
+						end}
 					)
-					end},
-					"dwarf/icons/thursagan.png"
+					end}
 				)
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
 			end},
 			nil,
@@ -287,22 +279,13 @@ AddTrigger(
 			end
 		end
 			
-		local shinsplitter_thane_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-
 		local event_player = player
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 
 		Event(
-			shinsplitter_thane_name,
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 			"We have caught up to the Norlunds. Now, prepare to destroy them!",
 			event_player,
 			{"~!Continue"},
@@ -368,25 +351,22 @@ AddTrigger(
 			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
 			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"Thursagan! The Shinsplitters are right on our tail; what should we do?",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Thursagan",
+					FindHero("Thursagan"),
 					"We could try to set off the volcano as soon as possible. Meanwhile, we should draw the Shinsplitters further into the caves, so they can't escape when it does erupt.",
 					player,
 					{"~!Continue"},
 					{function(s)
-					end},
-					"dwarf/icons/thursagan.png"
+					end}
 				)
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
-			end},
-			"dwarf/icons/thane.png"
+			end}
 		)
 		return false
 	end
@@ -412,23 +392,21 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"These goblins appear to be guarding something.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Thursagan",
+				FindHero("Thursagan"),
 				"It is probably the ancient mechanism. Attack them!",
 				player,
 				{"~!Continue"},
 				{function(s)
 					AddPlayerObjective(player, "- Move onto one of the glyphs in the center of the volcano")
-				end},
-				"dwarf/icons/thursagan.png"
+				end}
 			)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -525,7 +503,7 @@ AddTrigger(
 		PlaySound("rumble")
 		PlaySound("rumble")
 		Event(
-			"Thursagan",
+			FindHero("Thursagan"),
 			"That's it! The volcano will erupt soon now that ye've triggered it.",
 			player,
 			{"~!Continue"},
@@ -533,7 +511,7 @@ AddTrigger(
 			PlaySound("rumble")
 			PlaySound("rumble")
 			Event(
-				"Baglur",
+				FindHero("Baglur"),
 				"Well, we've succeeded in stopping the Shinsplitters from getting the Scepter, I would say. But what do we do now?!",
 				player,
 				{"~!Continue"},
@@ -541,7 +519,7 @@ AddTrigger(
 				PlaySound("rumble")
 				PlaySound("rumble")
 				Event(
-					"Thursagan",
+					FindHero("Thursagan"),
 					"Now, we must fight the goblins until we die, it's our only option.",
 					player,
 					{"~!Continue"},
@@ -549,7 +527,7 @@ AddTrigger(
 					PlaySound("rumble")
 					PlaySound("rumble")
 					Event(
-						"Rugnur",
+						FindHero("Rugnur"),
 						"We cannot let any of the Shinsplitters or their mercenaries escape; they would tell where the Scepter of Fire is. Make sure they all die!",
 						player,
 						{"~!Continue"},
@@ -557,7 +535,7 @@ AddTrigger(
 						PlaySound("rumble")
 						PlaySound("rumble")
 						Event(
-							"Thursagan",
+							FindHero("Thursagan"),
 							"We have to kill them quickly, before they realize what is happening.",
 							player,
 							{"~!Continue"},
@@ -572,20 +550,15 @@ AddTrigger(
 								end
 							end
 							AddPlayerObjective(player, "- Distract the Shinsplitters until the volcano erupts and kills them")
-							end},
-							"dwarf/icons/thursagan.png"
+							end}
 						)
-						end},
-						"dwarf/icons/rugnur.png"
+						end}
 					)
-					end},
-					"dwarf/icons/thursagan.png"
+					end}
 				)
-				end},
-				"dwarf/icons/baglur.png"
+				end}
 			)
-			end},
-			"dwarf/icons/thursagan.png"
+			end}
 		)
 		return false
 	end
@@ -611,23 +584,13 @@ AddTrigger(
 		PlaySound("rumble")
 		PlaySound("rumble")
 
-		local shinsplitter_thane_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-
 		Event(
-			shinsplitter_thane_name,
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 			"Wait, what's going on? The volcano is going to erupt! Everyone, try to get out of these caves!",
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/thane.png"
+			end}
 		)
 		return false
 	end
@@ -653,22 +616,13 @@ AddTrigger(
 		PlaySound("rumble")
 		PlaySound("rumble")
 
-		local shinsplitter_thane_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-				shinsplitter_thane_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-
 		local event_player = player
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		
 		Event(
-			shinsplitter_thane_name,
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
 			"Aghh!! The volcano is erupting, and now our exit has been blocked off!!",
 			event_player,
 			{"~!Continue"},
@@ -680,8 +634,7 @@ AddTrigger(
 				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
 				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
 				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
-			end},
-			"dwarf/icons/thane.png"
+			end}
 		)
 		return false
 	end
@@ -700,7 +653,7 @@ AddTrigger(
 	end,
 	function()
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"We have hidden the Scepter well, but now the volcano is going to erupt and kill us all.",
 			player,
 			{"~!Continue"},
@@ -719,7 +672,7 @@ AddTrigger(
 			KillUnitAt("unit-hero-baglur-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane"), {0, 0}, {256, 256})
 			KillUnitAt("unit-hero-thursagan", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan"), {0, 0}, {256, 256})
 			Event(
-				"Gryphon Rider",
+				FindUnit("unit-dwarven-gryphon-rider", GetFactionPlayer("Norlund Clan")),
 				"Hm... I'll leave now!",
 				player,
 				{"~!Continue"},
@@ -797,11 +750,9 @@ AddTrigger(
 					)
 					end}
 				)
-				end},
-				"dwarf/icons/gryphon_rider.png"
+				end}
 			)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		Event(
 			"",

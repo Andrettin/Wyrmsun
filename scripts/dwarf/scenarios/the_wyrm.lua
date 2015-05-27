@@ -165,13 +165,13 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"Well, Thursagan, we've reached the eastern mines, but the Shinsplitters are hot on our trail. What do we do now?",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Thursagan",
+					FindHero("Thursagan"),
 					"Well, we have two choices. We may either stand and fight, and assuredly die, or run as quickly as possible down this path into the depths of the cave, where we may find something that will help us. Also, remember, the Shinsplitters will take some time to have their full strength here, so we may be able to get ahead of them and perhaps lay a trap.",
 					player,
 					{"~!Continue"},
@@ -183,25 +183,25 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Rugnur",
+							FindHero("Rugnur"),
 							"If we give them the ruby, then what? They'll probably kill us anyway. And, that ruby is very valuable, they could use it to gain funds and become even more dangerous. We can't let it fall into the wrong hands.",
 							player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Thursagan",
+								FindHero("Thursagan"),
 								"Then we shall run.",
 								player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									"Baglur",
+									FindHero("Baglur"),
 									"So we're running away, eh? I dinna' like that, but it seems it's our only option.",
 									player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Rugnur",
+										FindHero("Rugnur"),
 										"If it makes ye feel any better, we'll probably die this way, too.",
 										player,
 										{"~!Continue"},
@@ -269,8 +269,15 @@ AddTrigger(
 			uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
+				if (GetUnitVariable(uncount[unit1],"Level") >= 2 and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
 					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
+					local nearby_uncount = 0
+					nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 6, true)
+					for unit2 = 1,table.getn(nearby_uncount) do 
+						if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Norlund Clan") or GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Svafnir")) then
+							OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
+						end
+					end
 				end
 			end
 			
@@ -278,9 +285,16 @@ AddTrigger(
 				uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Svafnir"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (IsUnitIdle(uncount[unit1])) then
+--					if (IsUnitIdle(uncount[unit1])) then
 						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
-					end
+						local nearby_uncount = 0
+						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 6, true)
+						for unit2 = 1,table.getn(nearby_uncount) do 
+							if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Norlund Clan") or GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Shinsplitter Clan")) then
+								OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
+							end
+						end
+--					end
 				end
 			end
 		end
@@ -356,19 +370,19 @@ AddTrigger(
 	end,
 	function() 
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"Look, there's a wyrm in these caves!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Thursagan",
+				FindHero("Thursagan"),
 				"I wonder which of the great wyrms this is...",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"Rugnur",
+					FindHero("Rugnur"),
 					"I'd rather face one powerful wyrm than hundreds of mighty dwarves. Continue!",
 					player,
 					{"~!Continue"},
@@ -407,13 +421,13 @@ AddTrigger(
 	end,
 	function() 
 		Event(
-			"Thursagan",
+			FindHero("Thursagan"),
 			"What's this? This isn't a normal dwarven soldier!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Baglur",
+				FindHero("Baglur"),
 				"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.",
 				player,
 				{"~!Continue"},
@@ -455,7 +469,7 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Thursagan",
+				FindHero("Thursagan"),
 				"It looks like a forge, heated by lava. It looks ancient, and it looks hot enough to make the Scepter.",
 				player,
 				{"~!Continue"},
@@ -491,7 +505,7 @@ AddTrigger(
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
 				Event(
-					"Thursagan",
+					FindHero("Thursagan"),
 					"This forge will work perfectly. Give me a few days here, and I can reforge the Scepter of Fire to become a proper artifact.",
 					player,
 					{"~!Continue"},
@@ -527,28 +541,45 @@ AddTrigger(
 		end
 		return false
 	end,
-	function() 
+	function()
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Svafnir"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+			end
+		end
+					
+		local kobold_footpad_a = nil
+		local kobold_footpad_b = nil
+	
+		local uncount = 0
+		uncount = GetUnits("any")
+		
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-kobold-footpad") then
+				if (kobold_footpad_a == nil) then
+					kobold_footpad_a = uncount[unit1]
+				else
+					kobold_footpad_b = uncount[unit1]
+				end
+			end
+		end
+	
 		Event(
-			"Kobold Footpad A",
+			kobold_footpad_a,
 			"By the fiery Wyrmsun! The breastlings are attacking the ancient beast...!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Kobold Footpad B",
+				kobold_footpad_b,
 				"We cannot allow one of the few surviving great wyrms to be slain! Get at them!",
 				player,
 				{"~!Continue"},
 				{function(s)
-					local uncount = 0
-					uncount = GetUnits(GetFactionPlayer("Svafnir"))
-					for unit1 = 1,table.getn(uncount) do 
-						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
-							unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-							unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-							unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-						end
-					end
 				end},
 				"kobold/icons/kobold_footpad.png"
 			)
@@ -585,13 +616,13 @@ AddTrigger(
 			end
 		end
 		Event(
-			"Thursagan",
+			FindHero("Thursagan"),
 			"I have completed my work. Now it is truly the Scepter of Fire, a mighty artifact.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"Good. Now, let's get out of this cave, before the dwarves or kobolds kill us!",
 				player,
 				{"~!Continue"},

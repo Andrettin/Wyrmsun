@@ -90,15 +90,6 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 
-		local closing_the_gates_raider_leader_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
-				closing_the_gates_raider_leader_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-
 		unit = CreateUnit("unit-revealer", player, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
 		Event(
 			"",
@@ -107,7 +98,7 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Rugnur",
+				FindHero("Rugnur"),
 				"These Shinsplitter raiders are right behind me! We have to go warn the council of this attack...!",
 				event_player,
 				{"~!Continue"},
@@ -119,55 +110,55 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Rugnur",
+						FindHero("Rugnur"),
 						"Aye, that sounds good. I'll stay here and try to defend the gates...",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							closing_the_gates_raider_leader_name,
+							FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
 							"I see ye have sent a messenger to the city. Good idea, but will it really help? We have more troops and more provisions, and we are going to enter those caves and kill ye!",
 							event_player,
 							{"~!Continue"},
 							{function(s)
 							Event(
-								"Rugnur",
+								FindHero("Rugnur"),
 								"(~<Gulp~>)",
 								event_player,
 								{"~!Continue"},
 								{function(s)
 								Event(
-									closing_the_gates_raider_leader_name,
+									FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
 									"Ha! I thought as much. Well then, surrender!",
 									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
-										"Rugnur",
+										FindHero("Rugnur"),
 										"Um... on what terms?",
 										event_player,
 										{"~!Continue"},
 										{function(s)
 										Event(
-											closing_the_gates_raider_leader_name,
+											FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
 											"Unconditional.",
 											event_player,
 											{"~!Continue"},
 											{function(s)
 											Event(
-												"Baglur",
+												FindHero("Baglur"),
 												"Wait! Rugnur, dinna' they tell ye ~<anything~> when ye took command here?!",
 												event_player,
 												{"~!Continue"},
 												{function(s)
 												Event(
-													"Rugnur",
+													FindHero("Rugnur"),
 													"Not really. This was supposedly a time of peace. Who are ye?",
 													event_player,
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Baglur",
+														FindHero("Baglur"),
 														"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders... Well, listen here. This entrance to the city can be closed. There's a gate. If we can close it, the raiders will no' be able to enter. And ye Shinsplitters; begone from here!",
 														event_player,
 														{"~!Continue"},
@@ -179,55 +170,55 @@ AddTrigger(
 															possible_options = {"~!Continue"}
 														end
 														Event(
-															closing_the_gates_raider_leader_name,
+															FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
 															"Cease yer meddling, old dwarf! Rugnur is in charge here, and it is he who will bargain with us.",
 															event_player,
 															possible_options,
 															{function(s)
 															Event(
-																"Rugnur",
+																FindHero("Rugnur"),
 																"Baglur, how do ye close the gates?",
 																event_player,
 																{"~!Continue"},
 																{function(s)
 																Event(
-																	"Baglur",
+																	FindHero("Baglur"),
 																	"Och, well that's the difficulty. It's an impregnable gate, made of thick layers of solid rock. Almost indestructible. But that means it can only be closed by a special mechanism. Ye need to position a warrior on each of the six glyphs. When all are occupied, the gates wi' close. Then the Shinsplitters will be shut out of the caves forever, at least through this entrance.",
 																	event_player,
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Rugnur",
+																		FindHero("Rugnur"),
 																		"Don't we have troops positioned near these glyphs, to unlock them?",
 																		event_player,
 																		{"~!Continue"},
 																		{function(s)
 																		Event(
-																			"Baglur",
+																			FindHero("Baglur"),
 																			"Och, well, no. Lately goblins have been more in charge of those caves where the glyphs are than we dwarves have.",
 																			event_player,
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Rugnur",
+																				FindHero("Rugnur"),
 																				"Well, where are they located?",
 																				event_player,
 																				{"~!Continue"},
 																				{function(s)
 																				Event(
-																					"Baglur",
+																					FindHero("Baglur"),
 																					"Two are down a side passage in the northwest, another two are in a similar location in the southeast, and two are right next to the front gate.",
 																					event_player,
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						closing_the_gates_raider_leader_name,
+																						FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
 																						"Have ye made up yer mind yet about surrendering? If ye will not give up, prepare for battle!",
 																						event_player,
 																						{"~!Continue"},
 																						{function(s)
 																						Event(
-																							"Rugnur",
+																							FindHero("Rugnur"),
 																							"Ye may be more powerful than us, but I doubt even ye can blast through our stonecraft. We refuse - now let's close these gates!",
 																							event_player,
 																							{"~!Continue"},
@@ -238,29 +229,21 @@ AddTrigger(
 																									RemovePlayerObjective(player, "- Defeat your enemies")
 																								end
 																								KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
-																							end},
-																							"dwarf/icons/rugnur.png"
+																							end}
 																						)
-																						end},
-																						"dwarf/icons/dwarven_steelclad.png"
+																						end}
 																					)
-																					end},
-																					"dwarf/icons/baglur.png"
+																					end}
 																				)
-																				end},
-																				"dwarf/icons/rugnur.png"
+																				end}
 																			)
-																			end},
-																			"dwarf/icons/baglur.png"
+																			end}
 																		)
-																		end},
-																		"dwarf/icons/rugnur.png"
+																		end}
 																	)
-																	end},
-																	"dwarf/icons/baglur.png"
+																	end}
 																)
-																end},
-																"dwarf/icons/rugnur.png"
+																end}
 															)
 															end,
 															function(s)
@@ -272,41 +255,30 @@ AddTrigger(
 																	AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 																end
 																ActionDefeat()
-															end},
-															"dwarf/icons/dwarven_steelclad.png"
+															end}
 														)
-														end},
-														"dwarf/icons/baglur.png"
+														end}
 													)
-													end},
-													"dwarf/icons/rugnur.png"
+													end}
 												)
-												end},
-												"dwarf/icons/baglur.png"
+												end}
 											)
-											end},
-											"dwarf/icons/dwarven_steelclad.png"
+											end}
 										)
-										end},
-										"dwarf/icons/rugnur.png"
+										end}
 									)
-									end},
-									"dwarf/icons/dwarven_steelclad.png"
+									end}
 								)
-								end},
-								"dwarf/icons/rugnur.png"
+								end}
 							)
-							end},
-							"dwarf/icons/dwarven_steelclad.png"
+							end}
 						)
-						end},
-						"dwarf/icons/rugnur.png"
+						end}
 					)
 					end},
 					"gnome/icons/gnomish_recruit.png"
 				)
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
 			end},
 			nil,
@@ -337,41 +309,32 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 
-		local closing_the_gates_raider_leader_name = ""
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
-				closing_the_gates_raider_leader_name = GetUnitVariable(uncount[unit1], "Name")
-			end
-		end
-		
 		Event(
-			"Rugnur",
+			FindHero("Rugnur"),
 			"We have everyone positioned on the glyphs! What do we do now?",
 			event_player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"Baglur",
+				FindHero("Baglur"),
 				"Just watch. The gates wi' close very soon. Then the raiders outside - and, unfortunately, our clansfolk who are still out there - wi' become irrelevant.",
 				event_player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					closing_the_gates_raider_leader_name,
+					FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
 					"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give Pypo back his jewel. And when ye do, we will be ready for ye.",
 					event_player,
 					{"~!Continue"},
 					{function(s)
 					Event(
-						"Baglur",
+						FindHero("Baglur"),
 						"If that is what ye choose to do, fine, but be prepared to wait for many years.",
 						event_player,
 						{"~!Continue"},
 						{function(s)
 						Event(
-							"Rugnur",
+							FindHero("Rugnur"),
 							"Well, now I should go down to the city and report. I'm late already...",
 							player,
 							{"~!Continue"},
@@ -413,7 +376,7 @@ AddTrigger(
 													{"~!Continue"},
 													{function(s)
 													Event(
-														"Rugnur",
+														FindHero("Rugnur"),
 														"Hey, Durstorn, have we started yet? King Pypo came by just now, wanted to talk to ye...",
 														player,
 														{"~!Continue"},
@@ -425,7 +388,7 @@ AddTrigger(
 															{"~!Continue"},
 															{function(s)
 															Event(
-																"Rugnur",
+																FindHero("Rugnur"),
 																"Huh? Didn't a messenger come and tell ye?",
 																player,
 																{"~!Continue"},
@@ -437,7 +400,7 @@ AddTrigger(
 																	{"~!Continue"},
 																	{function(s)
 																	Event(
-																		"Baglur",
+																		FindHero("Baglur"),
 																		"I think ye'd better let me explain. King Pypo I of Untersberg came to the gate. Then we had to close it, which took considerable time.",
 																		player,
 																		{"~!Continue"},
@@ -449,7 +412,7 @@ AddTrigger(
 																			{"~!Continue"},
 																			{function(s)
 																			Event(
-																				"Rugnur",
+																				FindHero("Rugnur"),
 																				"He wanted to make a deal with us. He gave us a magnificent stone, called the 'Ruby of Fire', and told us to make a scepter out of it, to symbolize his power, or something like that. We closed the doors because Shinsplitter raiders were attacking us.",
 																				player,
 																				{"~!Continue"},
@@ -461,7 +424,7 @@ AddTrigger(
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						"Rugnur",
+																						FindHero("Rugnur"),
 																						"He paid us five thousand silver in advance, and he'll give us five thousand more when we deliver the finished scepter if we are done before he dies.",
 																						player,
 																						{"~!Continue"},
@@ -473,7 +436,7 @@ AddTrigger(
 																							{"~!Continue"},
 																							{function(s)
 																							Event(
-																								"Rugnur",
+																								FindHero("Rugnur"),
 																								"Sorry, lord, but he said he would move on to another tribe if I left.",
 																								player,
 																								{"~!Continue"},
@@ -485,7 +448,7 @@ AddTrigger(
 																									{"~!Continue"},
 																									{function(s)
 																									Event(
-																										"Baglur",
+																										FindHero("Baglur"),
 																										"Well, since this boy bargained so badly, why not make him fulfill the contract himself? If he fails, it's on his head.",
 																										player,
 																										{"~!Continue"},
@@ -497,7 +460,7 @@ AddTrigger(
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												"Baglur",
+																												FindHero("Baglur"),
 																												"Ye mean the insane dwarf who lives in the far north?!",
 																												player,
 																												{"~!Continue"},
@@ -509,7 +472,7 @@ AddTrigger(
 																													{"~!Continue"},
 																													{function(s)
 																													Event(
-																														"Rugnur",
+																														FindHero("Rugnur"),
 																														"Very well, my lord. We will go into the north to find Thursagan. Do ye have any idea where he is?",
 																														player,
 																														{"~!Continue"},
@@ -563,56 +526,47 @@ AddTrigger(
 																															end},
 																															"dwarf/icons/durstorn.png"
 																														)
-																														end},
-																														"dwarf/icons/rugnur.png"
+																														end}
 																													)
 																													end},
 																													"dwarf/icons/durstorn.png"
 																												)
-																												end},
-																												"dwarf/icons/baglur.png"
+																												end}
 																											)
 																											end},
 																											"dwarf/icons/durstorn.png"
 																										)
-																										end},
-																										"dwarf/icons/baglur.png"
+																										end}
 																									)
 																									end},
 																									"dwarf/icons/durstorn.png"
 																								)
-																								end},
-																								"dwarf/icons/rugnur.png"
+																								end}
 																							)
 																							end},
 																							"dwarf/icons/durstorn.png"
 																						)
-																						end},
-																						"dwarf/icons/rugnur.png"
+																						end}
 																						)
 																					end},
 																					"dwarf/icons/dwarven_scout.png"
 																				)
-																				end},
-																				"dwarf/icons/rugnur.png"
+																				end}
 																			)
 																			end},
 																			"dwarf/icons/dwarven_steelclad.png"
 																		)
-																		end},
-																		"dwarf/icons/baglur.png"
+																		end}
 																	)
 																	end},
 																	"dwarf/icons/durstorn.png"
 																)
-																end},
-																"dwarf/icons/rugnur.png"
+																end}
 															)
 															end},
 															"dwarf/icons/durstorn.png"
 														)
-														end},
-														"dwarf/icons/rugnur.png"
+														end}
 													)
 													end},
 													"dwarf/icons/durstorn.png"
@@ -631,20 +585,16 @@ AddTrigger(
 								)
 								end}
 							)
-							end},
-							"dwarf/icons/rugnur.png"
+							end}
 						)
-						end},
-						"dwarf/icons/baglur.png"
+						end}
 					)
 					end},
 					"dwarf/icons/dwarven_steelclad.png"
 				)
-				end},
-				"dwarf/icons/baglur.png"
+				end}
 			)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
