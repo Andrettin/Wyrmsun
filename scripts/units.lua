@@ -92,16 +92,38 @@ function DefineUnitType(unit_type, data)
 	if (data.organic) then
 		organic = true
 	end
+	
+	local town_hall = false
+	if (data.Class == "town-hall" or data.Class == "stronghold") then
+		town_hall = true
+	end
+	
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
 		if (GetUnitTypeData(unit_type, "organic") and data.organic == nil) then
 			organic = true
 		end
+		if ((GetUnitTypeData(unit_type, "Class") == "town-hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
+			town_hall = true
+		end
 	end
+	
 	if (organic) then
 		data.OnInit = GenerateTrait
 	end
+	
+	if (town_hall) then
+		data.BuildingRules = {
+			{
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
+			}
+		}
+	end
+	
 	OldDefineUnitType(unit_type, data)
 end
 
@@ -3472,14 +3494,6 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
-		}
-	},
 	CanStore = {"gold", "lumber", "stone", "coal"},
 	Drops = {"unit-wood-pile"},
 	SelectableByRectangle = true,
@@ -3514,14 +3528,6 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, StoneImprove = true, OilImprove = false,
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
-		}
-	},
 	CanStore = {"gold", "lumber", "stone", "coal"},
 	MaxOnBoard = 3,
 	CanTransport = {"LandUnit", "only", "organic", "only"},
