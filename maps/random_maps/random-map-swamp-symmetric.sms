@@ -4,7 +4,10 @@ if (LoadedGame == false) then
 	GenerateRandomMap({
 		Symmetric = true,
 		MixedCivilizations = true,
+		MercenaryCamp = true,
+		RockQuantity = "low",
 		TreeQuantity = "medium",
-		WaterQuantity = "low"
+		WaterQuantity = "low",
+		WorkerQuantity = 5
 	})
 end

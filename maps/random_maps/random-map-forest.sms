@@ -7,9 +7,11 @@ end
 if (LoadedGame == false) then
 	GenerateRandomMap({
 		MixedCivilizations = true,
+		RockQuantity = "low",
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
 		DarkLandQuantity = "medium",
-		DarkRoughLandQuantity = "medium"
+		DarkRoughLandQuantity = "medium",
+		WorkerQuantity = 5
 	})
 end

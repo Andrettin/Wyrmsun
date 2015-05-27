@@ -1032,7 +1032,7 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 	local WhileCount = 0
 	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
-		if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generate, 50% a group of gold rocks will be generated instead
+		if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generated, 50% a group of gold rocks will be generated instead
 			unit = CreateUnit("unit-gold-deposit", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
@@ -1084,6 +1084,45 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 			if (symmetric) then
 				Count = Count - 3
 			end
+		end
+		WhileCount = WhileCount + 1
+	end
+end
+
+function CreateGoldRocks(gold_mine_number, min_x, max_x, min_y, max_y, symmetric)
+	local Count = 0
+	-- create gold mines
+	Count = gold_mine_number
+	local WhileCount = 0
+	while (Count > 0 and WhileCount < gold_mine_number * 100) do
+		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
+		for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
+			for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+				if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
+					unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
+					if (symmetric) then
+						local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
+						if (mirrored_tile_x < 0) then
+							mirrored_tile_x = mirrored_tile_x * -1
+						end
+
+						local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
+						if (mirrored_tile_y < 0) then
+							mirrored_tile_y = mirrored_tile_y * -1
+						end
+
+						unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, gold_mine_spawn_point[2] + sub_y})
+
+						unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+
+						unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+					end
+				end
+			end
+		end
+		Count = Count - 1
+		if (symmetric) then
+			Count = Count - 3
 		end
 		WhileCount = WhileCount + 1
 	end
@@ -1487,7 +1526,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,14 do
@@ -1558,7 +1597,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						end
 					end
 				end
-				CreateStartingGoldMine(i) -- create the player's gold mine
+				if (starting_gold_mine) then
+					CreateStartingGoldMine(i) -- create the player's gold mine
+				end
 
 				SetPlayerData(i, "Resources", "gold", 10000)
 				SetPlayerData(i, "Resources", "lumber", 3000)
@@ -1625,7 +1666,7 @@ function GenerateRandomMap(arg)
 		mixed_civilizations = true
 	end
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, true, symmetric)
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits)
 
 	if (arg.WaterQuantity == "high") then
 		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
@@ -1635,7 +1676,14 @@ function GenerateRandomMap(arg)
 		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
-	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	if (arg.RockQuantity == "high") then
+		GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.RockQuantity == "medium") then
+		GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 16), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (arg.RockQuantity == "low") then
+		GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
+	
 
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	
@@ -1704,19 +1752,23 @@ function GenerateRandomMap(arg)
 	CreateDecorations()	
 
 	if (GrandStrategy == false) then
-		for i=0,14 do
-			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+		if (arg.WorkerQuantity) then
+			for i=0,14 do
+				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+					for j=1,arg.WorkerQuantity do
+						unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+					end
+				end
 			end
 		end
 
-		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		if (arg.NoDeposits) then
+			CreateGoldRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		else
+			CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		end
 
-		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+		if (arg.MercenaryCamp) then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 		end
 	end
@@ -1735,7 +1787,7 @@ function GenerateRandomMap(arg)
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
-	if (wyrmsun.tileset == "swamp") then
+	if (wyrmsun.tileset == "swamp" and not arg.NoFlyingCreeps) then
 		CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
 	end
 
@@ -3804,7 +3856,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false, true)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -3812,7 +3864,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false)
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false, true)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -5704,7 +5756,7 @@ function GenerateCave(town_halls, symmetric)
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric)
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric, true)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
