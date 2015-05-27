@@ -167,8 +167,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.0.9
 -----------------------------------------------------------------------
 
-* Buildings
-- Lumber Mill processing bonus for lumber reduced to 10.
+* Maps
+- The Gnomes no longer attack their enemies in the Chaincolt Foothills map, restricting themselves to protecting their settlement.
+- The Gnomes now have increased gold quantity in their starting location.
 
 * Quests
 - Added a few new dialogues to the On the Vanaquisl and Westward Migration quests.

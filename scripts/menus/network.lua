@@ -177,7 +177,7 @@ function RunJoiningMapMenu(s)
   local function readycb(dd)
      LocalSetupState.Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
   end
-  menu:addImageCheckBox("~!Ready", sx*11,  sy*14, readycb)
+  menu:addImageCheckBox("Ready", sx*11,  sy*14, readycb)
 
   local updatePlayersList = addPlayersList(menu, numplayers)
 
