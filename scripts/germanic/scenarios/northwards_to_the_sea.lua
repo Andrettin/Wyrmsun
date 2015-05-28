@@ -67,6 +67,86 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Subdue the natives")) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Natives"))
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+					if (unit_quantity > 0) then
+						player = GetFactionPlayer("Asa Tribe")
+						return true
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		local native_unit
+		local asa_unit
+		
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Natives"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+				local nearby_uncount = 0
+				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
+				for unit2 = 1,table.getn(nearby_uncount) do 
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Asa Tribe")) then
+						native_unit = uncount[unit1]
+						asa_unit = nearby_uncount[unit2]
+						break
+					end
+				end
+			end
+		end
+		
+		if (not native_unit or not asa_unit) then
+			return true
+		end
+			
+		Event(
+			native_unit,
+			"Who are you, strangers? And what do you seek here?",
+			player,
+			{"~!Continue"},
+			{function(s)
+				Event(
+					asa_unit,
+					"We are the Asa, and we seek a new home for our desolate people.",
+					player,
+					{"~!Continue"},
+					{function(s)
+						Event(
+							native_unit,
+							"You are... too many! We do not have enough space here, you must turn away and go elsewhere.",
+							player,
+							{"~!Continue"},
+							{function(s)
+							Event(
+								asa_unit,
+								"Our feet grow tired, long have we wandered. There is no turning back, and if you will not accede to our wishes peacefully - then it is war that you have brought upon yourselves!",
+								player,
+								{"~!Continue"},
+								{function(s)
+								end}
+							)
+							end}
+						)
+					end}
+				)
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
 		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Subdue the natives") and GetNumRivals(GetFactionPlayer("Asa Tribe")) == 0) then
 			player = GetFactionPlayer("Asa Tribe")
 			return true

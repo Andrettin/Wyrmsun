@@ -168,7 +168,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Quests
-- Fixed icon color and hair variation of many units in the dialogues of the dwarven quests, and in the Home of the Boii Teuton quest.
+- Fixed icon player color and hair variation of many units in the dialogues of the dwarven quests, and in the Home of the Boii Teuton quest.
+- Added a new dialogue to the Northwards to the Sea mission.
 
 -----------------------------------------------------------------------
 - 1.1.0
