@@ -174,6 +174,10 @@ https://github.com/Andrettin/Wyrmsun
 * Civilizations
 - The Germanics and Teutons now properly have voices.
 
+* Miscellaneous
+- Fixed unit selection rectangle in OpenGL (it was off by one pixel).
+- Fixed a bug with unit type BuildingRules, and another regarding variables, both of which could lead to a crash.
+
 * Quests
 - Fixed icon player color and hair variation of many units in the dialogues of the dwarven quests, and in the Home of the Boii Teuton quest.
 - Added a new dialogue to the Northwards to the Sea mission.
