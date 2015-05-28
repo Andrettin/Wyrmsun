@@ -341,6 +341,49 @@ MakeSound("basic-kobold-voices-dead", "neutral/hiss_death.wav")
 SetSoundRange("basic-kobold-voices-dead", 32)
 
 ------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+--	Define simple teuton sounds.
+--
+MakeSound("basic-teuton-voices-ready", "teuton/basic_voices/ready.wav")
+SetSoundVolumePercent("basic-teuton-voices-ready", 10000)
+MakeSound("basic-teuton-voices-selected", {
+	"teuton/basic_voices/selected_01.wav",
+	"teuton/basic_voices/selected_02.wav",
+	"teuton/basic_voices/selected_03.wav",
+	"teuton/basic_voices/selected_04.wav"
+})
+SetSoundVolumePercent("basic-teuton-voices-selected", 10000)
+MakeSound("basic-teuton-voices-annoyed", {
+	"teuton/basic_voices/annoyed_01.wav",
+	"teuton/basic_voices/annoyed_02.wav",
+	"teuton/basic_voices/annoyed_03.wav"
+})
+SetSoundVolumePercent("basic-teuton-voices-annoyed", 10000)
+MakeSoundGroup("basic-teuton-voices-selected-group",
+	"basic-teuton-voices-selected", "basic-teuton-voices-annoyed")
+MakeSound("basic-teuton-voices-acknowledge", {
+	"teuton/basic_voices/acknowledge_01.wav",
+	"teuton/basic_voices/acknowledge_02.wav",
+	"teuton/basic_voices/acknowledge_03.wav",
+	"teuton/basic_voices/acknowledge_04.wav"
+})
+SetSoundVolumePercent("basic-teuton-voices-acknowledge", 10000)
+MakeSound("basic-teuton-voices-help", {
+	"teuton/basic_voices/help.wav"
+})
+SetSoundVolumePercent("basic-teuton-voices-help", 10000)
+MakeSound("basic-teuton-voices-help-town", {
+	"teuton/basic_voices/town_help.wav"
+})
+SetSoundVolumePercent("basic-teuton-voices-help-town", 10000)
+
+------------------------------------------------------------------------------
+--	Define unit-specific dwarf sounds.
+--
+MakeSound("teuton-bauer-ready", "teuton/bauer/bauer_ready.wav")
+SetSoundVolumePercent("teuton-bauer-ready", 10000)
+
+------------------------------------------------------------------------------
 --	Define simple misc sounds.
 --
 building_construction = MakeSound("building construction", "misc/building_construction.wav")
@@ -793,27 +836,39 @@ DefineGameSounds(
   "building-construction", {"teuton", building_construction},
 
   "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")},
+  "work-complete", {"germanic", MakeSound("basic-germanic-voices-work-complete", "teuton/bauer/work_complete.wav")},
   "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
   "work-complete", {"goblin", MakeSound("basic-goblin-voices-work-complete", "goblin/worker/built.wav")},
+  "work-complete", {"teuton", MakeSound("basic-teuton-voices-work-complete", "teuton/bauer/work_complete.wav")},
 
   "research-complete", {"gnome", MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")},
 
   "not-enough-res", {"coal", "dwarf", MakeSound("basic-dwarf-voices-not-enough-coal", "dwarf/basic_voices/need-coal.wav")},
+  "not-enough-res", {"coal", "germanic", MakeSound("basic-germanic-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
   "not-enough-res", {"coal", "gnome", MakeSound("basic-gnome-voices-not-enough-coal", "gnome/basic_voices/need-coal.wav")},
   "not-enough-res", {"coal", "goblin", MakeSound("basic-goblin-voices-not-enough-coal", "goblin/basic_voices/need-coal.wav")},
+  "not-enough-res", {"coal", "teuton", MakeSound("basic-teuton-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
   "not-enough-res", {"gold", "dwarf", MakeSound("basic-dwarf-voices-not-enough-gold", "dwarf/basic_voices/need-gold.wav")},
+  "not-enough-res", {"gold", "germanic", MakeSound("basic-germanic-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
   "not-enough-res", {"gold", "gnome", MakeSound("basic-gnome-voices-not-enough-gold", "gnome/basic_voices/need-gold.wav")},
   "not-enough-res", {"gold", "goblin", MakeSound("basic-goblin-voices-not-enough-gold", "goblin/basic_voices/need-gold.wav")},
+  "not-enough-res", {"gold", "teuton", MakeSound("basic-teuton-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
   "not-enough-res", {"lumber", "dwarf", MakeSound("basic-dwarf-voices-not-enough-lumber", "dwarf/basic_voices/need-wood.wav")},
+  "not-enough-res", {"lumber", "germanic", MakeSound("basic-germanic-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
   "not-enough-res", {"lumber", "gnome", MakeSound("basic-gnome-voices-not-enough-lumber", "gnome/basic_voices/need-wood.wav")},
   "not-enough-res", {"lumber", "goblin", MakeSound("basic-goblin-voices-not-enough-lumber", "goblin/basic_voices/need-wood.wav")},
+  "not-enough-res", {"lumber", "teuton", MakeSound("basic-teuton-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
   "not-enough-res", {"stone", "dwarf", MakeSound("basic-dwarf-voices-not-enough-stone", "dwarf/basic_voices/need-stone.wav")},
+  "not-enough-res", {"stone", "germanic", MakeSound("basic-germanic-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
   "not-enough-res", {"stone", "gnome", MakeSound("basic-gnome-voices-not-enough-stone", "gnome/basic_voices/need-stone.wav")},
   "not-enough-res", {"stone", "goblin", MakeSound("basic-goblin-voices-not-enough-stone", "goblin/basic_voices/need-stone.wav")},
+  "not-enough-res", {"stone", "teuton", MakeSound("basic-teuton-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
 
   "not-enough-food", {"dwarf", MakeSound("basic-dwarf-voices-not-enough-food", "dwarf/basic_voices/need-farms.wav")},
+  "not-enough-food", {"germanic", MakeSound("basic-germanic-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
   "not-enough-food", {"gnome", MakeSound("basic-gnome-voices-not-enough-food", "gnome/basic_voices/need-farms.wav")},
   "not-enough-food", {"goblin", MakeSound("basic-goblin-voices-not-enough-food", "goblin/basic_voices/need-farms.wav")},
+  "not-enough-food", {"teuton", MakeSound("basic-teuton-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
 
   "rescue", {"celt", rescue},
   "rescue", {"dwarf", rescue},
@@ -827,3 +882,16 @@ DefineGameSounds(
   "rescue", {"norse", rescue},
   "rescue", {"teuton", rescue}
 )
+
+SetSoundVolumePercent("basic-germanic-voices-work-complete", 10000)
+SetSoundVolumePercent("basic-teuton-voices-work-complete", 10000)
+SetSoundVolumePercent("basic-germanic-voices-not-enough-coal", 10000)
+SetSoundVolumePercent("basic-germanic-voices-not-enough-gold", 10000)
+SetSoundVolumePercent("basic-germanic-voices-not-enough-lumber", 10000)
+SetSoundVolumePercent("basic-germanic-voices-not-enough-stone", 10000)
+SetSoundVolumePercent("basic-germanic-voices-not-enough-food", 10000)
+SetSoundVolumePercent("basic-teuton-voices-not-enough-coal", 10000)
+SetSoundVolumePercent("basic-teuton-voices-not-enough-gold", 10000)
+SetSoundVolumePercent("basic-teuton-voices-not-enough-lumber", 10000)
+SetSoundVolumePercent("basic-teuton-voices-not-enough-stone", 10000)
+SetSoundVolumePercent("basic-teuton-voices-not-enough-food", 10000)

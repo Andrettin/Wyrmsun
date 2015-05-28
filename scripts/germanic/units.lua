@@ -69,10 +69,10 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 		}
 	},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "dwarven-miner-acknowledge",
---		"ready", "dwarven-miner-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "teuton-bauer-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -107,10 +107,10 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "dwarven-miner-acknowledge",
---		"ready", "dwarven-miner-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "teuton-bauer-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -187,10 +187,10 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		}
 	},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -227,10 +227,10 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		}
 	},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -247,10 +247,10 @@ DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
 	Corpse = "unit-human-dead-body",
 	Variations = {},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -263,7 +263,10 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Description = _("The chieftain's hall serves both as the dwelling of a germanic tribe's chieftain and as the center of its political life."),
 	Image = {"file", "germanic/buildings/town_hall.png", "size", {128, 128}},
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",
-	Construction = "construction-germanic-town-hall"
+	Construction = "construction-germanic-town-hall",
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-germanic-farm", { Name = _("Farm"),
@@ -275,9 +278,8 @@ DefineUnitType("unit-germanic-farm", { Name = _("Farm"),
 	Icon = "icon-germanic-farm",
 	Sounds = {
 		"selected", "corral-selected",
---		"acknowledge", "farm-acknowledge",
 		"ready", "corral-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-teuton-voices-help-town",
 		"dead", "building-destroyed"
 	}
 } )
@@ -287,7 +289,10 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 	Civilization = "germanic",
 	Description = _("The germanic war lodge serves as a gathering place for the tribe's warriors."),
 	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-germanic-barracks"
+	Animations = "animations-building", Icon = "icon-germanic-barracks",
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
@@ -296,7 +301,10 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	Description = _("Germanic carpenters work hard to provide settlements with all their woodworking needs."),
 	Image = {"file", "germanic/buildings/carpenters_shop.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
@@ -305,5 +313,8 @@ DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
 	Description = _("It is in these smithies that germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
 	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
 	Icon = "icon-germanic-smithy",
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )

@@ -167,9 +167,15 @@ https://github.com/Andrettin/Wyrmsun
 - 1.1.1
 -----------------------------------------------------------------------
 
+* Civilizations
+- The Germanics and Teutons now properly have voices.
+
 * Quests
 - Fixed icon player color and hair variation of many units in the dialogues of the dwarven quests, and in the Home of the Boii Teuton quest.
 - Added a new dialogue to the Northwards to the Sea mission.
+
+* Units
+- Workers now properly play their sounds when they've completed building a structure.
 
 -----------------------------------------------------------------------
 - 1.1.0

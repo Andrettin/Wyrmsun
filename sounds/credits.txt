@@ -272,6 +272,30 @@ Jute:
 /sounds/movement/step_stone/stepstone_7.wav
 /sounds/movement/step_stone/stepstone_8.wav
 
+Manuel Senfft:
+/sounds/teuton/basic_voices/acknowledge_01.wav
+/sounds/teuton/basic_voices/acknowledge_02.wav
+/sounds/teuton/basic_voices/acknowledge_03.wav
+/sounds/teuton/basic_voices/acknowledge_04.wav
+/sounds/teuton/basic_voices/annoyed_01.wav
+/sounds/teuton/basic_voices/annoyed_02.wav
+/sounds/teuton/basic_voices/annoyed_03.wav
+/sounds/teuton/basic_voices/help.wav
+/sounds/teuton/basic_voices/not_enough_coal.wav
+/sounds/teuton/basic_voices/not_enough_food.wav
+/sounds/teuton/basic_voices/not_enough_gold.wav
+/sounds/teuton/basic_voices/not_enough_lumber.wav
+/sounds/teuton/basic_voices/not_enough_stone.wav
+/sounds/teuton/basic_voices/ready.wav
+/sounds/teuton/basic_voices/selected_01.wav
+/sounds/teuton/basic_voices/selected_02.wav
+/sounds/teuton/basic_voices/selected_03.wav
+/sounds/teuton/basic_voices/selected_04.wav
+/sounds/teuton/basic_voices/town_help.wav
+/sounds/teuton/bauer/bauer_ready.wav
+/sounds/teuton/bauer/work_complete.wav
+/sounds/teuton/bauer/work_complete_extra_1.wav
+
 TinyWorlds:
 /sounds/movement/step_gravel/step_gravel.wav
 /sounds/movement/step_leaves/step_leaves_1.wav

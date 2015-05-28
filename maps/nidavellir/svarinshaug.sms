@@ -10,3 +10,7 @@ if (LoadedGame == false) then
 		NoDeposits = true
 	})
 end
+
+CreateCreeps(15, "unit-yale", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	
+CreateCreeps(15, "unit-slime", 12, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)

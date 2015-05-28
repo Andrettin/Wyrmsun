@@ -146,6 +146,7 @@ function RunShowCreditsMenu()
 	"  J. W. Bjerk (eleazzaar)",
 	"  Jute",
 	"  Lari Nieminen (zookeeper)",
+	"  Manuel Senfft",
 	"  TinyWorlds",
 	"  Wildfire Games",
 	"  Wolfgang Kohler",

@@ -37,8 +37,6 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 
-	CreateCreeps(15, "unit-yale", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	
 	SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
@@ -53,3 +51,10 @@ end
 -- Gather 400 lumber and 200 stone
 -- Modsognir must survive
 -- Durin must survive
+
+
+
+
+-- Modsognir: My clansfolk, if we are to survive, we will need food and materials to build shelters for our people.
+-- Durin: Aye. There are plenty of yales here, we should hunt some.
+-- Thjodrorir: By nightfall the bats - or worse - will come out into the open, we need to be ready before then.

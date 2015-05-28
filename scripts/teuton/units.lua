@@ -69,10 +69,10 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 		}
 	},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "dwarven-miner-acknowledge",
---		"ready", "dwarven-miner-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "teuton-bauer-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -88,10 +88,10 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-teuton-swordsman",
 	Corpse = "unit-human-dead-body",
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -127,10 +127,10 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 		}
 	},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -148,7 +148,7 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-teuton-voices-help",
 		"dead", "explosion"
 	}
 } )
@@ -163,10 +163,10 @@ DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
 	Corpse = "unit-human-dead-body",
 	Variations = {},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -193,6 +193,9 @@ DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 			"variation-id", "town-hall",
 			"upgrade-required", "upgrade-teuton-masonry"
 		}
+	},
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -202,7 +205,10 @@ DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
 	Description = _("These tall and sturdy structures are built on strategic positions, allowing for easier control and protection of their environs."),
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
@@ -214,9 +220,8 @@ DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
 	Icon = "icon-germanic-farm",
 	Sounds = {
 		"selected", "corral-selected",
---		"acknowledge", "farm-acknowledge",
 		"ready", "corral-ready",
---		"help", "basic-dwarf-voices-help",
+		"help", "basic-teuton-voices-help-town",
 		"dead", "building-destroyed"
 	}
 } )
@@ -239,6 +244,9 @@ DefineUnitType("unit-teuton-barracks", { Name = _("Barracks"),
 			"variation-id", "barracks",
 			"upgrade-required", "upgrade-teuton-masonry"
 		}
+	},
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -260,6 +268,9 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 			"variation-id", "lumber-mill",
 			"upgrade-required", "upgrade-teuton-masonry"
 		}
+	},
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
 	}
 } )
 
@@ -268,7 +279,10 @@ DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
 	Civilization = "teuton",
 	Description = _("It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
 	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
-	Icon = "icon-germanic-smithy"
+	Icon = "icon-germanic-smithy",
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
@@ -277,7 +291,10 @@ DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Description = _("These timber-made towers are built in frontier regions, keeping watch of possible attackers."),
 	Image = {"file", "teuton/buildings/watch_tower.png", "size", {64, 64}},
 	Icon = "icon-teuton-watch-tower",
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
@@ -286,7 +303,10 @@ DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
 	Description = _("Solid stone towers are an essential addition to any fortified position of strategic importance, allowing archers to shoot from a vantage position."),
 	Image = {"file", "teuton/buildings/guard_tower.png", "size", {64, 64}},
 	Icon = "icon-teuton-guard-tower",
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
 } )
 
 DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
