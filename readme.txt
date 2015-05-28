@@ -169,6 +169,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue with AI worker code (thanks to Szunti).
+- The mouse scroll arrow no longer appears if the edge of the map has been reached.
 
 -----------------------------------------------------------------------
 - 1.1.1
