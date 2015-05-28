@@ -164,6 +164,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.1.2
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Fixed issue with AI worker code (thanks to Szunti).
+
+-----------------------------------------------------------------------
 - 1.1.1
 -----------------------------------------------------------------------
 
@@ -172,7 +179,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which prevented building from being multi-selected via SHIFT-clicking.
 
 * Civilizations
-- The Germanics and Teutons now properly have voices.
+- The Germanics and Teutons now have voices.
 
 * Miscellaneous
 - Fixed unit selection rectangle in OpenGL (it was off by one pixel).
