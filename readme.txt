@@ -167,6 +167,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.1.1
 -----------------------------------------------------------------------
 
+* Buildings
+- Training orders now behave properly when given to multiple selected buildings.
+- Fixed issue which prevented building from being multi-selected via SHIFT-clicking.
+
 * Civilizations
 - The Germanics and Teutons now properly have voices.
 

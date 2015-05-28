@@ -345,20 +345,17 @@ SetSoundRange("basic-kobold-voices-dead", 32)
 --	Define simple teuton sounds.
 --
 MakeSound("basic-teuton-voices-ready", "teuton/basic_voices/ready.wav")
-SetSoundVolumePercent("basic-teuton-voices-ready", 10000)
 MakeSound("basic-teuton-voices-selected", {
 	"teuton/basic_voices/selected_01.wav",
 	"teuton/basic_voices/selected_02.wav",
 	"teuton/basic_voices/selected_03.wav",
 	"teuton/basic_voices/selected_04.wav"
 })
-SetSoundVolumePercent("basic-teuton-voices-selected", 10000)
 MakeSound("basic-teuton-voices-annoyed", {
 	"teuton/basic_voices/annoyed_01.wav",
 	"teuton/basic_voices/annoyed_02.wav",
 	"teuton/basic_voices/annoyed_03.wav"
 })
-SetSoundVolumePercent("basic-teuton-voices-annoyed", 10000)
 MakeSoundGroup("basic-teuton-voices-selected-group",
 	"basic-teuton-voices-selected", "basic-teuton-voices-annoyed")
 MakeSound("basic-teuton-voices-acknowledge", {
@@ -367,21 +364,17 @@ MakeSound("basic-teuton-voices-acknowledge", {
 	"teuton/basic_voices/acknowledge_03.wav",
 	"teuton/basic_voices/acknowledge_04.wav"
 })
-SetSoundVolumePercent("basic-teuton-voices-acknowledge", 10000)
 MakeSound("basic-teuton-voices-help", {
 	"teuton/basic_voices/help.wav"
 })
-SetSoundVolumePercent("basic-teuton-voices-help", 10000)
 MakeSound("basic-teuton-voices-help-town", {
 	"teuton/basic_voices/town_help.wav"
 })
-SetSoundVolumePercent("basic-teuton-voices-help-town", 10000)
 
 ------------------------------------------------------------------------------
 --	Define unit-specific dwarf sounds.
 --
 MakeSound("teuton-bauer-ready", "teuton/bauer/bauer_ready.wav")
-SetSoundVolumePercent("teuton-bauer-ready", 10000)
 
 ------------------------------------------------------------------------------
 --	Define simple misc sounds.
@@ -882,16 +875,3 @@ DefineGameSounds(
   "rescue", {"norse", rescue},
   "rescue", {"teuton", rescue}
 )
-
-SetSoundVolumePercent("basic-germanic-voices-work-complete", 10000)
-SetSoundVolumePercent("basic-teuton-voices-work-complete", 10000)
-SetSoundVolumePercent("basic-germanic-voices-not-enough-coal", 10000)
-SetSoundVolumePercent("basic-germanic-voices-not-enough-gold", 10000)
-SetSoundVolumePercent("basic-germanic-voices-not-enough-lumber", 10000)
-SetSoundVolumePercent("basic-germanic-voices-not-enough-stone", 10000)
-SetSoundVolumePercent("basic-germanic-voices-not-enough-food", 10000)
-SetSoundVolumePercent("basic-teuton-voices-not-enough-coal", 10000)
-SetSoundVolumePercent("basic-teuton-voices-not-enough-gold", 10000)
-SetSoundVolumePercent("basic-teuton-voices-not-enough-lumber", 10000)
-SetSoundVolumePercent("basic-teuton-voices-not-enough-stone", 10000)
-SetSoundVolumePercent("basic-teuton-voices-not-enough-food", 10000)
