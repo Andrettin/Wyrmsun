@@ -84,7 +84,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
     "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-marbod",
-	"unit-hero-durin", "unit-hero-durin-thane", 
+	"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
@@ -97,7 +97,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-axe-mastery",
     "unit-dwarven-thane",
     "unit-dwarven-yale-rider",
     "unit-surghan-mercenary-thane",
-	"unit-hero-durin-thane", 
+	"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
     "unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
   } } )
 
@@ -115,7 +115,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
     "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-surghan-mercenary-thane",
 	"unit-hero-marbod",
-	"unit-hero-durin-thane", 
+	"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
     "unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )
@@ -158,7 +158,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
     "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
     "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"unit-hero-marbod",
-	"unit-hero-durin", "unit-hero-durin-thane", 
+	"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
     "unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
     "unit-hero-greebo"
   } } )

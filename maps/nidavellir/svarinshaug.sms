@@ -11,6 +11,23 @@ if (LoadedGame == false) then
 	})
 end
 
-CreateCreeps(15, "unit-yale", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+CreateCreeps(15, "unit-yale", 12 - GetPlayerData(15, "UnitTypesCount", "unit-yale"), 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	
 CreateCreeps(15, "unit-slime", 12, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+
+if (LoadedGame == false) then
+	local uncount = 0
+	uncount = GetUnits(15)
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" and GetUnitVariable(uncount[unit1], "Transport") < 1) then
+			if (SyncRand(2) == 0) then
+				local RandomNumber = SyncRand(2)
+				if (RandomNumber == 0) then
+					unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+				elseif (RandomNumber == 1) then
+					unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+				end
+			end
+		end
+	end
+end

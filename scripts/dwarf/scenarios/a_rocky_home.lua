@@ -34,6 +34,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetPlayerData(0, "RaceName", "dwarf")
 	SetPlayerData(0, "Faction", "Modsogning Clan")
+	unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 
@@ -43,18 +44,165 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "unit-dwarven-smithy", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
-	SetPlayerData(0, "Allow", "unit-dwarven-gold-mine", "F")
+	SetPlayerData(0, "Allow", "unit-gold-mine", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-miner", "F")
 end
 
--- Kill 8 Yales
--- Gather 400 lumber and 200 stone
--- Modsognir must survive
--- Durin must survive
+RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
 
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Kill 8 Yales")) then
+			player = GetFactionPlayer("Modsogning Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"",
+			"After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home...",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				FindHero("Modsognir"),
+				"My clansfolk, if we are to survive, we will need food and materials to build shelters for our people.",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					FindHero("Durin"),
+					"Aye. There are plenty of yales here, we should hunt some.",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						FindHero("Modsognir"), -- should be Thjodrorir
+						"By nightfall the blood bats - or worse - will come out into the open, we need to be ready before then.",
+						player,
+						{"~!Continue"},
+						{function(s)
+							AddPlayerObjective(player, "- Kill 8 Yales")
+							AddPlayerObjective(player, "- Gather 400 lumber and 200 stone")
+							AddPlayerObjective(player, "- Modsognir must survive")
+							AddPlayerObjective(player, "- Durin must survive")
+						end}
+					)
+					end}
+				)
+				end}
+			)
+			end},
+			nil,
+			nil,
+			GrandStrategy
+		)
+		return false
+	end
+)
 
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Kill 8 Yales") and GetPlayerData(15, "UnitTypesCount", "unit-yale") <= 4) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			FindHero("Durin"),
+			"We have hunted enough yales to last for a while. Ah, nothing like the taste of a roasted yale...",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 400 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 200) then
+					if (GrandStrategy == false) then
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Rocky Home") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "A Rocky Home")
+						end
+						SavePreferences()
+					end
+					ActionVictory()
+				end
+			end}
+		)
+		return false
+	end
+)
 
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Gather 400 lumber and 200 stone") and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 400 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 200) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			FindHero("Modsognir"), -- should be Thjodrorir?
+			"The materials we need have been collected. It is time to build our new homes by these rocks!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				if (player == GetThisPlayer() and GetPlayerData(15, "UnitTypesCount", "unit-yale") <= 4) then
+					if (GrandStrategy == false) then
+						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Rocky Home") == false) then
+							table.insert(wyr.preferences.QuestsCompleted, "A Rocky Home")
+						end
+						SavePreferences()
+					end
+					ActionVictory()
+				end
+			end}
+		)
+		return false
+	end
+)
 
--- Modsognir: My clansfolk, if we are to survive, we will need food and materials to build shelters for our people.
--- Durin: Aye. There are plenty of yales here, we should hunt some.
--- Thjodrorir: By nightfall the bats - or worse - will come out into the open, we need to be ready before then.
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Modsognir must survive") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-modsognir") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-modsognir-thane") < 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		RemovePlayerObjective(player, "- Modsognir must survive")
+		ActionDefeat()
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durin") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durin-thane") < 1) then
+			player = GetThisPlayer()
+			return true
+		end
+		return false
+	end,
+	function()
+		RemovePlayerObjective(player, "- Durin must survive")
+		ActionDefeat()
+		return false
+	end
+)

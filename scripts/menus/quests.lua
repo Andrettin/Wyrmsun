@@ -76,7 +76,7 @@ function RunQuestMenu(world)
 
 	for key, value in pairs(Quests) do
 		if ((Quests[key].Hidden == nil or Quests[key].Hidden == false) and Quests[key].World == world) then
-			if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest)) then
+			if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest) or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name)) then
 				if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
 					addQuestIcon(Quests[key], menu, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * (Quests[key].Y + 1))) -- increase Y by 1 because right now there aren't all that many quests, so that it makes sense to make the existing quests more centralized in the interface
 				end

@@ -167,18 +167,32 @@ Quests = {
 		Y = 2,
 		PlayerColor = "cyan"
 	},
+	ARockyHome = {
+		Name = "A Rocky Home",
+		Icon = "dwarf/icons/modsognir",
+		Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?\n\nMap: Svarinshaug\n\nRewards: 1 Dwarven Technology Point.",
+		World = "Nidavellir",
+		Civilization = "dwarf",
+		TechnologyPoints = 1,
+		Map = "maps/nidavellir/svarinshaug.smp",
+		Scenario = "scripts/dwarf/scenarios/a_rocky_home.lua",
+		X = 1,
+		Y = 1,
+		PlayerColor = "white"
+	},
 	TheMeadOfWisdom = {
 		Name = "The Mead of Wisdom",
 		Icon = "dwarf/icons/durin",
 		Description = "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points.",
+		RequiredQuest = "A Rocky Home",
 		World = "Nidavellir",
 		Civilization = "dwarf",
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/fjalars-and-galars-hall.smp",
 		Scenario = "scripts/dwarf/scenarios/the_mead_of_wisdom.lua",
-		X = 1,
+		X = 2,
 		Y = 1,
-		PlayerColor = "red"
+		PlayerColor = "white"
 	},
 	TheTombOfDurahnEikinskjaldi = {
 		Name = "The Tomb of Durahn Eikinskjaldi",
@@ -190,7 +204,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
 		Scenario = "scripts/dwarf/scenarios/the_tomb_of_durahn_eikinskjaldi.lua",
-		X = 2,
+		X = 3,
 		Y = 1,
 		PlayerColor = "brown"
 	},
@@ -204,7 +218,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/chaincolt-foothills.smp",
 		Scenario = "scripts/dwarf/scenarios/a_bargain_is_struck.lua",
-		X = 3,
+		X = 4,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -218,7 +232,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 		Scenario = "scripts/dwarf/scenarios/closing_the_gates.lua",
-		X = 4,
+		X = 5,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -232,7 +246,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/northern-wastelands.smp",
 		Scenario = "scripts/dwarf/scenarios/searching_for_the_runecrafter.lua",
-		X = 5,
+		X = 6,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -246,7 +260,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/eastern-mines.smp",
 		Scenario = "scripts/dwarf/scenarios/gathering_materials.lua",
-		X = 6,
+		X = 7,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -260,7 +274,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/shorbear-hills.smp",
 		Scenario = "scripts/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
-		X = 7,
+		X = 8,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -274,7 +288,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
 		Scenario = "scripts/dwarf/scenarios/the_wyrm.lua",
-		X = 8,
+		X = 9,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -288,8 +302,8 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/caverns-of-flame.smp",
 		Scenario = "scripts/dwarf/scenarios/caverns_of_flame.lua",
-		X = 9,
-		Y = 1,
+		X = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	LastStandAtTheForge = {

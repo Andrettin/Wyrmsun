@@ -595,7 +595,7 @@ function StandardTriggers()
 						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
 					end
 				end
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-durin-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-modsognir-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-durin-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 2) then
 						SetUnitVariable(uncount[unit1], "StartingLevel", 3)
 					end
@@ -1054,7 +1054,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Wyrm", "Wyrms are extremely dangerous creatures, which can fell even a group of experienced warriors. Avoid if possible.")
+					Tip("Wyrm", "Wyrms are extremely dangerous creatures which can fell even a group of experienced warriors. Avoid if possible.")
 					return false
 				end
 			)
@@ -1309,9 +1309,9 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "unit-dwarven-steelclad", "unit-dwarven-yale-rider" }
 	elseif (unit_type == "unit-hero-rugnur") then
 		return { "unit-dwarven-steelclad" }
-	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
+	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-modsognir" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
 		return { "unit-dwarven-thane" }
-	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
+	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-modsognir-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
 	elseif (unit_type == "unit-dwarven-yale-rider") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
@@ -1368,6 +1368,8 @@ function GetUnitTypeTraits(unit_type)
 		end
 	elseif (unit_type == "unit-hero-marbod") then
 		table.insert(traits, "upgrade-keen")
+	elseif (unit_type == "unit-hero-modsognir" or unit_type == "unit-hero-modsognir-thane") then
+		table.insert(traits, "upgrade-mighty")
 	elseif (unit_type == "unit-hero-durin" or unit_type == "unit-hero-durin-thane") then
 		table.insert(traits, "upgrade-dextrous")
 	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
@@ -1828,6 +1830,12 @@ local defaultPreferences = {
 			name = "Marbod",
 			level = 2,
 			upgrades = {},
+			items = {}
+		},
+		Modsognir = {
+			name = "Modsognir",
+			level = 2,
+			upgrades = { "unit-dwarven-steelclad" },
 			items = {}
 		},
 		Durin = {

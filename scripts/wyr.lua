@@ -82,7 +82,9 @@ function CreateUnit(unittype, player, pos)
 
   if (not IsNetworkGame()) then
 	-- if Rugnur has a persistent level of 2 or higher, create him as his older version already
-	if (unittype == "unit-hero-durin" and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
+	if (unittype == "unit-hero-modsognir" and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
+		unittype = "unit-hero-modsognir-thane"
+	elseif (unittype == "unit-hero-durin" and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
 		unittype = "unit-hero-durin-thane"
 	elseif ((unittype == "unit-hero-rugnur" or unittype == "unit-hero-rugnur-steelclad") and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
 		unittype = "unit-hero-rugnur-thane"

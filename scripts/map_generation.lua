@@ -1579,6 +1579,13 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 							end
 						end
 					end
+					for sub_x=-4,7 do
+						for sub_y=-4,7 do
+							if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Rock")) then
+								starting_point_found = false
+							end
+						end
+					end
 					WhileCount = WhileCount + 1
 				end
 				
@@ -1806,6 +1813,21 @@ function GenerateRandomMap(arg)
 						local RandomNumber = SyncRand(3)
 						if (RandomNumber == 0) then
 							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
+						end
+					end
+				end
+			end
+		elseif (wyrmsun.tileset == "swamp") then
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
+					if (SyncRand(2) == 0) then
+						local RandomNumber = SyncRand(2)
+						if (RandomNumber == 0) then
+							unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+						elseif (RandomNumber == 1) then
+							unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
 						end
 					end
 				end
@@ -5389,6 +5411,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										table.insert(available_heroes, "unit-hero-marbod")
 									end
 								elseif (player_civilization == "dwarf") then
+									if (GetNumUnitsAt(-1, "unit-hero-modsognir", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-modsognir-thane", {0, 0}, {256, 256}) < 1) then
+										table.insert(available_heroes, "unit-hero-modsognir")
+									end
 									if (GetNumUnitsAt(-1, "unit-hero-durin", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-durin-thane", {0, 0}, {256, 256}) < 1) then
 										table.insert(available_heroes, "unit-hero-durin")
 									end
@@ -5463,6 +5488,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										table.insert(available_heroes, "unit-hero-marbod")
 									end
 								elseif (second_player_civilization == "dwarf") then
+									if (GetNumUnitsAt(-1, "unit-hero-modsognir", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-modsognir-thane", {0, 0}, {256, 256}) < 1) then
+										table.insert(available_heroes, "unit-hero-modsognir")
+									end
 									if (GetNumUnitsAt(-1, "unit-hero-durin", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-durin-thane", {0, 0}, {256, 256}) < 1) then
 										table.insert(available_heroes, "unit-hero-durin")
 									end

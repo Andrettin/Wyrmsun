@@ -670,6 +670,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-modsognir",
+	Size = {46, 38},
+	File = "dwarf/icons/modsognir.png"
+})
+
+DefineIcon({
 	Name = "icon-durin",
 	Size = {46, 38},
 	File = "dwarf/icons/durin.png"

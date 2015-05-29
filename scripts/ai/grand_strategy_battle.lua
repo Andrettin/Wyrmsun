@@ -106,6 +106,8 @@ local land_funcs = {
 	"unit-surghan-mercenary-steelclad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-steelclad"),
 	"unit-surghan-mercenary-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-surghan-mercenary-thane"),
 	"unit-hero-marbod", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-hero-marbod"),
+	"unit-hero-modsognir", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-hero-modsognir"),
+	"unit-hero-modsognir-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-hero-modsognir-thane"),
 	"unit-hero-durin", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-hero-durin"),
 	"unit-hero-durin-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-hero-durin-thane"),
 	"unit-hero-rugnur", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-hero-rugnur"),

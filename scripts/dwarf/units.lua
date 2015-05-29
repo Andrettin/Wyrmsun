@@ -192,6 +192,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Description = _("The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."),
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
+	Costs = {"time", 90, "gold", 825, "lumber", 75},
 	Armor = 4,
 	Variations = {
 		{
@@ -719,6 +720,42 @@ DefineUnitType("unit-surghan-mercenary-thane", { Name = _("Surghan Mercenary"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-thane"
+} )
+
+DefineUnitType("unit-hero-modsognir", { Name = _("Steelclad"),
+	Parent = "unit-dwarven-steelclad",
+	Class = "",
+	DefaultName = "Modsognir",
+	Civilization = "dwarf",
+	Description = _("The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."),
+	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."),
+	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-modsognir",
+	Hero = true,
+	Gender = 1,
+	Variations = {
+		{
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		}
+	}
+} )
+
+DefineUnitType("unit-hero-modsognir-thane", { Name = _("Thane"),
+	Parent = "unit-dwarven-thane",
+	Class = "",
+	DefaultName = "Modsognir",
+	Civilization = "dwarf",
+	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-modsognir",
+	Hero = true,
+	Gender = 1,
+	Variations = {}
 } )
 
 DefineUnitType("unit-hero-durin", { Name = _("Steelclad"),

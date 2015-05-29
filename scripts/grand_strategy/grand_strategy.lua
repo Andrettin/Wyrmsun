@@ -240,6 +240,10 @@ function RunGrandStrategyGameSetupMenu()
 				end
 				
 				-- load heroes' upgraded versions, if those have been acquired
+				if (WorldMapProvinces[key].Heroes.unit_hero_modsognir == 2 and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
+					WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
+					WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 2
+				end
 				if (WorldMapProvinces[key].Heroes.unit_hero_durin == 2 and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
 					WorldMapProvinces[key].Heroes.unit_hero_durin = 0
 					WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 2
@@ -4607,9 +4611,9 @@ function GetMilitaryScore(province, attacker, count_defenders)
 		elseif (count_defenders and IsHero(unitName) and ((attacker == false and province.Heroes[string.gsub(unitName, "-", "_")] == 2) or (attacker == true and province.Heroes[string.gsub(unitName, "-", "_")] == 3))) then
 			if (unitName == "unit-hero-marbod" or unitName == "unit-hero-rugnur") then
 				military_score = military_score + (50 + infantry_military_score_bonus)
-			elseif (unitName == "unit-hero-durin" or unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
+			elseif (unitName == "unit-hero-modsognir" or unitName == "unit-hero-durin" or unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
 				military_score = military_score + (75 + infantry_military_score_bonus)
-			elseif (unitName == "unit-hero-durin-thane" or unitName == "unit-hero-rugnur-thane" or unitName == "unit-hero-baglur-thane" or unitName == "unit-hero-thursagan" or unitName == "unit-hero-durstorn") then
+			elseif (unitName == "unit-hero-modsognir-thane" or unitName == "unit-hero-durin-thane" or unitName == "unit-hero-rugnur-thane" or unitName == "unit-hero-baglur-thane" or unitName == "unit-hero-thursagan" or unitName == "unit-hero-durstorn") then
 				military_score = military_score + (100 + infantry_military_score_bonus + (10 * (wyr.preferences.Heroes[GetUnitTypeData(unitName, "DefaultName")].level - GetUnitTypeData(unitName, "StartingLevel"))))
 			end
 		end

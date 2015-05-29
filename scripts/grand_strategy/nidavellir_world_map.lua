@@ -78,13 +78,17 @@ MercenaryGroups = {
 LoadEvents("Nidavellir")
 
 if (GrandStrategyYear >= -3000) then
+	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 2
 	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 2
+	GrandStrategyEvents.ModsognirTribalChieftain = nil
 	GrandStrategyEvents.DurinWarrior = nil
 end
 
 if (GrandStrategyYear >= -2970) then -- estimated date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
+	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 0
 	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 0
+	GrandStrategyEvents.ModsognirDies = nil
 	GrandStrategyEvents.DurinDies = nil
 end
 

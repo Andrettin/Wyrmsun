@@ -28,6 +28,33 @@
 --
 
 local NidavellirEvents = {
+	ModsognirTribalChieftain = {
+		Name = "Modsognir, Tribal Chieftain",
+		Description = "The mighty Modsognir has become the leader of our tribe.",
+		Conditions = function(s)
+			if (
+				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
+				WorldMapProvinces.Svarinshaug.Owner == EventFaction.Name
+				and WorldMapProvinces.Svarinshaug.Civilization == "dwarf"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -3000,
+		MaxYear = -3000 + 30, -- estimated death date
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				if (GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
+					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir_thane = 2
+				else
+					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 2
+				end
+			end
+		}
+	},
 	DurinWarrior = {
 		Name = "Durin, Warrior",
 		Description = "The crafty warrior Durin has come to renown for his skills in combat.",
@@ -59,6 +86,7 @@ local NidavellirEvents = {
 		Name = "The Mead of Wisdom",
 		Description = "Word has reached our chieftain Modsognir that the dwarves Fjalar and Galar have slain our wise clansman Thjodrorir. Modsognir's advisors suggest sending Durin to enter the two dwarves' hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
 		Heroes = {
+			unit_hero_modsognir = true,
 			unit_hero_durin = true
 		},
 		Conditions = function(s)
@@ -107,6 +135,21 @@ local NidavellirEvents = {
 			end
 		},
 		OptionTooltips = {"", "-10 Prestige"}
+	},
+	ModsognirDies = {
+		Name = "Modsognir Dies",
+		Description = "The mighty Modsognir has died of natural causes.",
+		Heroes = {
+			unit_hero_modsognir = true
+		},
+		MinYear = -3000 + 30, -- estimated death date
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
+				WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
+				WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
+			end
+		end}
 	},
 	DurinDies = {
 		Name = "Durin Dies",

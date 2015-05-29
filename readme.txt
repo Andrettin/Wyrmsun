@@ -167,9 +167,15 @@ https://github.com/Andrettin/Wyrmsun
 - 1.1.2
 -----------------------------------------------------------------------
 
+* Heroes
+- Added hero Modsognir (dwarf).
+
 * Miscellaneous
 - Fixed issue with AI worker code (thanks to Szunti).
 - The mouse scroll arrow no longer appears if the edge of the map has been reached.
+
+* Quests
+- Added A Rocky Home quest (dwarf).
 
 -----------------------------------------------------------------------
 - 1.1.1
