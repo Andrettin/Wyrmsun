@@ -173,6 +173,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed issue with AI worker code (thanks to Szunti).
 - The mouse scroll arrow no longer appears if the edge of the map has been reached.
+- The default action when right clicking on fauna with units is now to attack.
 
 * Quests
 - Added A Rocky Home quest (dwarf).

@@ -119,7 +119,7 @@ AddTrigger(
 	function()
 		Event(
 			FindHero("Durin"),
-			"We have hunted enough yales to last for a while. Ah, nothing like the taste of a roasted yale...",
+			"We have hunted enough yales to last for a while. Ah, nothing like the taste of roasted yale...",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -150,9 +150,13 @@ AddTrigger(
 		return false
 	end,
 	function()
+		local modsognir_text = "The materials we need have been collected."
+		if (GetPlayerData(15, "UnitTypesCount", "unit-yale") <= 4) then
+			modsognir_text = "The materials we need have been collected. It is time to build our new homes by these rocks!"
+		end
 		Event(
 			FindHero("Modsognir"), -- should be Thjodrorir?
-			"The materials we need have been collected. It is time to build our new homes by these rocks!",
+			modsognir_text,
 			player,
 			{"~!Continue"},
 			{function(s)
