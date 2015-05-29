@@ -109,6 +109,10 @@ function ApplyTechLevels()
 		"upgrade-teuton-masonry",
 		"upgrade-goblin-masonry"
 	}
+	local civilized_upgrades = {
+		"upgrade-dwarven-coinage",
+		"upgrade-teuton-coinage"
+	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"
@@ -136,6 +140,8 @@ function ApplyTechLevels()
 	
 	local function IsTechnologyOverMaxTechLevel(technology, player)
 		if ((GetArrayIncludes(iron_upgrades, technology) or GetArrayIncludes(iron_civilizations, technology)) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)")) then -- if max tech level is bronze or lower, iron technologies should not be researchable
+			return true
+		elseif (GetArrayIncludes(civilized_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Agrarian (Iron)")) then
 			return true
 		else
 			return false

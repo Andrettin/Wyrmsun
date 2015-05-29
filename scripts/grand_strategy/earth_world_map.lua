@@ -500,6 +500,7 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	WorldMapProvinces.Naples.SettlementBuildings.unit_teuton_town_hall = 2
 	
 	Factions.Rome.Technologies.upgrade_teuton_masonry = 2 -- Rome should already have masonry technology by then
+	Factions.Rome.Technologies.upgrade_teuton_coinage = 2 -- Rome should already have coinage technology by then
 end
 
 if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

@@ -68,12 +68,22 @@ local upgrades = {
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
 		1
 	},
-	{"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
+	{
+		"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
 		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to upgrade to Guard Towers."),
 		"",
 		"",
 		{   250,   900,   500,     0,     0,   250,     0,     0},
 		{   250,   900,   500,     0,     0,   250,     0,  2400},
+		1
+	},
+	{
+		"upgrade-teuton-coinage", _("Coinage"), "icon-teuton-coinage", "coinage",
+		_("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
+		"",
+		"",
+		{   250,  1500,     0,     0,     0,     0,     0,     0},
+		{   250,  1500,     0,     0,     0,     0,     0,  1500},
 		1
 	},
 }
@@ -132,6 +142,11 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
+)
+
+DefineModifier("upgrade-teuton-coinage",
+	{"improve-production", "gold", 10},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
 )
 
 DefineModifier("upgrade-teuton-civilization",
@@ -206,3 +221,6 @@ DefineDependency("unit-teuton-stronghold",
 	{"unit-teuton-barracks", "upgrade-teuton-masonry"}
 )
 
+DefineDependency("upgrade-teuton-coinage",
+	{"unit-teuton-smithy"}
+)

@@ -129,6 +129,17 @@ function AiUpgradeMasonry()
 end
 
 --
+--  Coinage upgrade of the current civilization.
+--
+function AiUpgradeCoinage()
+	if (GetCivilizationClassUnitType("coinage", AiGetRace()) ~= nil) then
+		return GetCivilizationClassUnitType("coinage", AiGetRace())
+	else
+		return GetCivilizationClassUnitType("coinage", "teuton")
+	end
+end
+
+--
 --  Smithy of the current civilization.
 --
 function AiSmithy()

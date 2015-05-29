@@ -263,6 +263,15 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
+				elseif (CUpgrade:Get(unitName).Class == "coinage") then
+					tech_icon_x = 5
+					tech_icon_y = 4
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
+						tech_allowed = false
+					end
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
+						tech_allowed = false
+					end
 				else
 					tech_allowed = false
 				end
@@ -368,6 +377,10 @@ function GetTechnologyAllowsString(technology, civilization)
 		elseif (GetUnitTypeData(technology, "Class") == "watch-tower") then
 			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))
+			end
+		elseif (GetUnitTypeData(technology, "Class") == "stronghold") then
+			if (GetCivilizationClassUnitType("coinage", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("coinage", civilization))
 			end
 		end
 	else

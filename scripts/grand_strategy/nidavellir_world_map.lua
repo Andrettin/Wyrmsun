@@ -278,6 +278,15 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_town_hall = 2
 	WorldMapProvinces.Lyr.SettlementBuildings.unit_dwarven_barracks = 2
 	WorldMapProvinces.Lyr.Units.unit_dwarven_axefighter = 0
+	
+	-- The Dwarves should already have Coinage technology by then
+	Factions.ModsogningClan.Technologies.upgrade_dwarven_coinage = 2
+	Factions.NorlundClan.Technologies.upgrade_dwarven_coinage = 2
+	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_coinage = 2
+	Factions.ShorbearClan.Technologies.upgrade_dwarven_coinage = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_coinage = 2
+	Factions.KalKartha.Technologies.upgrade_dwarven_coinage = 2
+	Factions.Lyr.Technologies.upgrade_dwarven_coinage = 2
 end
 
 if (GrandStrategyYear >= 500) then

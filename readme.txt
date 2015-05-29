@@ -177,6 +177,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Added A Rocky Home quest (dwarf).
+- The Razing of Opitergium quest now provides 2 technology points instead of 1.
+
+* Upgrades
+- Added Coinage upgrade for the Dwarves and the Teutons.
 
 -----------------------------------------------------------------------
 - 1.1.1

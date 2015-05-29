@@ -219,10 +219,18 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
-  Action = "research", Value = "upgrade-teuton-masonry",
-  Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-  ForUnit = {"unit-teuton-lumber-mill"} } )
+	Action = "research", Value = "upgrade-teuton-masonry",
+	Allowed = "check-single-research",
+	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-lumber-mill"}
+} )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+	Action = "research", Value = "upgrade-teuton-coinage",
+	Allowed = "check-single-research",
+	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-stronghold"}
+} )
 
 -- Upgrades ---------------------------------------------------------
 
@@ -234,5 +242,5 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
   Action = "upgrade-to", Value = "unit-teuton-stronghold",
   Allowed = "check-upgrade-to",
-  Key = "b", Hint = _("Upgrade to ~!Burg"), Popup = "popup-building",
+  Key = "u", Hint = _("Upgrade to B~!urg"), Popup = "popup-building",
   ForUnit = {"unit-teuton-town-hall"} } )

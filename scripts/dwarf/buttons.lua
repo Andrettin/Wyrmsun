@@ -378,10 +378,18 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
-  Action = "research", Value = "upgrade-dwarven-masonry",
-  Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-  ForUnit = {"unit-dwarven-lumber-mill"} } )
+	Action = "research", Value = "upgrade-dwarven-masonry",
+	Allowed = "check-single-research",
+	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-lumber-mill"}
+} )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+	Action = "research", Value = "upgrade-dwarven-coinage",
+	Allowed = "check-single-research",
+	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-stronghold"}
+} )
 
 -- Upgrades ---------------------------------------------------------
 

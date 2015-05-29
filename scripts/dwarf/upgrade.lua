@@ -93,6 +93,15 @@ local upgrades = {
 		{   250,   900,   375,     0,     0,   375,     0,     0},
 		{   250,   900,   375,     0,     0,   375,     0,  2400},
 		1},
+	{
+		"upgrade-dwarven-coinage", _("Coinage"), "icon-teuton-coinage", "coinage",
+		_("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
+		"",
+		"",
+		{   250,  1500,     0,     0,     0,     0,     0,     0},
+		{   250,  1500,     0,     0,     0,     0,     0,  1500},
+		1
+	},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -192,6 +201,11 @@ DefineModifier("upgrade-dwarven-masonry",
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
 
+DefineModifier("upgrade-dwarven-coinage",
+	{"improve-production", "gold", 10},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
+)
+
 DefineDependency("unit-dwarven-scout",
 	{"unit-dwarven-lumber-mill"}
 )
@@ -220,6 +234,10 @@ DefineDependency("unit-dwarven-stronghold",
 	{"unit-dwarven-barracks", "upgrade-dwarven-masonry"}
 )
 
+DefineDependency("upgrade-dwarven-coinage",
+	{"upgrade-dwarven-smithy"}
+)
+
 DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"}
 )
@@ -227,9 +245,3 @@ DefineDependency("unit-dwarven-guard-tower",
 DefineDependency("unit-dwarven-ballista",
 	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}
 )
-
---DefineDependency("unit-dwarven-steelclad",
---	{"unit-dwarven-smithy"})
-
---DefineDependency("unit-hero-rugnur-steelclad",
---	{"unit-dwarven-smithy"})

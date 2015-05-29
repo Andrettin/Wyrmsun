@@ -5180,6 +5180,8 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "smithy"
 		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "masonry") then
 			return "lumber-mill"
+		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
+			return "smithy"
 		else
 			return ""
 		end
@@ -5244,6 +5246,13 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			end
 			if (GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization))
+			end
+		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
+			if (GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization))
+			end
+			if (GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization))
 			end
 		end
 	end

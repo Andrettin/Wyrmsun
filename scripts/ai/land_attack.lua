@@ -126,6 +126,8 @@ local land_funcs = {
  function() return AiSet(AiWorker(), 30) end,
 -- function() return AiWait(AiBestCityCenter()) end,
 
+  function() return AiResearch(AiUpgradeCoinage()) end,
+
 -- UPGRADING CAVALRY STUFF
 
 --  function() return AiNeed(AiTemple()) end,
