@@ -122,7 +122,7 @@ AddTrigger(
 	function()
 		Event(
 			FindHero("Durin"),
-			"We have hunted enough yales to last for a while. Ah, nothing like the taste of roasted yale...",
+			"We have hunted enough of them to last for a while. Ah, nothing like the taste of roasted yale...",
 			player,
 			{"~!Continue"},
 			{function(s)
