@@ -105,6 +105,9 @@ AddTrigger(
 	end
 )
 
+-- Durin: Thjodrorir, when I was young ye were already old. Ye, wisest of our clan... what does the future have in store for us?
+-- Thjodrorir: Aye, much do I know, but in this case little can I tell. 
+
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
