@@ -176,6 +176,7 @@ https://github.com/Andrettin/Wyrmsun
 - The default action when right clicking on fauna with units is now to attack.
 - Added an option to display a player color rectangle below units and buildings.
 - Fixed issue which caused the Germanic cursor to appear in the Dwarven tech tree screen if the Germanic tech tree screen had been selected previously.
+- Fixed issue which prevented tooltips to be displayed in the menus or in grand strategy mode if OpenGL were activated.
 
 * Quests
 - Added A Rocky Home quest (dwarf).

@@ -4923,6 +4923,7 @@ function GrandStrategyEvent(faction, event)
 	if (faction == GrandStrategyFaction) then
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
+		menu:setDrawMenusUnder(true)
 
 		local event_name = event.Name
 		if (EventProvince ~= nil) then
