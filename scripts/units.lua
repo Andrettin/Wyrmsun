@@ -3484,7 +3484,7 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	Speed = 0,
 	HitPoints = 1000, -- 1200 with masonry
 	DrawLevel = 40,
-	TileSize = {4, 4}, BoxSize = {126, 126},
+	TileSize = {4, 4}, BoxSize = {127, 127},
 	SightRange = 1,
 	Armor = 5, BasicDamage = 0, Missile = "missile-none",
 	Accuracy = 0,

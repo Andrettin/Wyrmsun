@@ -637,8 +637,6 @@ if (ForTheMotherland) then
 	aiftm_quantity[1][16] = 1
 end
 
-PlayMusic("music/knalgan_theme.ogg")
-
 CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 local uncount = 0
 uncount = GetUnits(15)

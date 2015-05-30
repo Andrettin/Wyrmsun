@@ -228,9 +228,6 @@ CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.I
 CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
 CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
 
-PlayMusic("music/underground.ogg")
-wyrmsun.playlist = { "music/suspense.ogg" }
-
 -- show coal in the UI
 UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
 UI.Resources[6].IconFrame = 0

@@ -432,7 +432,7 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.GrabMouse)
 
-  b = menu:addImageCheckBox(_("Show Tips"), offx + 160 + 24, offy + 55 + 26*7 + 14,
+  b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*11 + 14,
     function()
 	if (wyr.preferences.ShowTips == false) then
 		wyr.preferences.ShowTips = true
@@ -477,6 +477,18 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
 
+  b = menu:addImageCheckBox(_("Show Player Color Rectangle"), offx + 160 + 24, offy + 55 + 26*7 + 14,
+    function()
+	if (wyr.preferences.PlayerColorCircle == false) then
+		wyr.preferences.PlayerColorCircle = true
+	else
+		wyr.preferences.PlayerColorCircle = false
+	end
+	Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
+	menu:stop(1)
+    end)
+  b:setMarked(wyr.preferences.PlayerColorCircle)
+
   b = menu:addImageCheckBox(_("Disable Pathlines"), offx + 16, offy + 55 + 26*9 + 14,
     function()
 	if (wyr.preferences.ShowOrders == 2) then
@@ -501,7 +513,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-  checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 160 + 24, offy + 55 + 26*10 + 14,
+  checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 160 + 24, offy + 55 + 26*11 + 14,
     function()
       if (checkTexture:isMarked()) then
         wyr.preferences.MaxOpenGLTexture = 256
@@ -513,7 +525,7 @@ function BuildOptionsMenu()
     end)
   if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
 
-  checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*11 + 14,
+  checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 160 + 24, offy + 55 + 26*10 + 14,
     function()
 --TODO: Add function for immediately change state of OpenGL
       wyr.preferences.UseOpenGL = checkOpenGL:isMarked()

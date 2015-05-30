@@ -1817,6 +1817,7 @@ local defaultPreferences = {
 	Language = "English",
 	ShowResourceBar = false,
 	PopupDescriptionFont = "small",
+	PlayerColorCircle = false,
 	NoRandomness = false,
 	GrandStrategyBattalionMultiplier = 1,
 	QuestsCompleted = {},
@@ -1909,6 +1910,7 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 Preference.ShowOrders = wyr.preferences.ShowOrders
 Preference.ShowMessages = wyr.preferences.ShowMessages
+Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 
 --- Uses Stratagus Library path!
 Load("scripts/civilizations.lua")

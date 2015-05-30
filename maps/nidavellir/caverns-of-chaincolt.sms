@@ -276,9 +276,6 @@ unit = CreateUnit("unit-glyph", 15, {15, 24})
 unit = CreateUnit("unit-glyph", 15, {23, 7})
 unit = CreateUnit("unit-glyph", 15, {51, 43})
 
-PlayMusic("music/battle.ogg")
-wyrmsun.playlist = { "music/the_city_falls.ogg" }
-
 if (GrandStrategy) then
 	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_smithy == 2) then
 		unit = CreateUnit("unit-dwarven-smithy", 0, {38, 21})

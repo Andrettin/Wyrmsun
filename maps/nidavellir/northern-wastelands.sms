@@ -268,8 +268,6 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 	end
 end
 
-PlayMusic("music/wanderer.ogg")
-
 if (LoadedGame == false) then
 	-- create some gryphons
 	CreateGryphons(3)
