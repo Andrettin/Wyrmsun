@@ -94,7 +94,7 @@ local upgrades = {
 		{   250,   900,   375,     0,     0,   375,     0,  2400},
 		1},
 	{
-		"upgrade-dwarven-coinage", _("Coinage"), "icon-teuton-coinage", "coinage",
+		"upgrade-dwarven-coinage", _("Coinage"), "icon-dwarven-coinage", "coinage",
 		_("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
 		"",
 		"",

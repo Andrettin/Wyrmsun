@@ -384,7 +384,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-coinage",
 	Action = "research", Value = "upgrade-dwarven-coinage",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
