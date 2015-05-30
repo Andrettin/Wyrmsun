@@ -767,6 +767,7 @@ Jim16:
 /graphics/neutral/buildings/runestone.png (later modified by Nikita_Sadkov)
 
 KPJ:
+/graphics/dwarf/icons/coinage.png
 /graphics/teuton/icons/coinage.png
 /graphics/ui/fonts/KPJsWyrmSunFont.png
 
