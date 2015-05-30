@@ -235,7 +235,7 @@ DefineDependency("unit-dwarven-stronghold",
 )
 
 DefineDependency("upgrade-dwarven-coinage",
-	{"upgrade-dwarven-smithy"}
+	{"unit-dwarven-smithy"}
 )
 
 DefineDependency("unit-dwarven-guard-tower",
