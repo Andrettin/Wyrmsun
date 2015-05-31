@@ -164,6 +164,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.1.3
+-----------------------------------------------------------------------
+
+* Units
+- Fixed issue which caused the Skutan to display his attack animation wrongly when attacking dungeon walls.
+
+* Upgrades
+- Fixed bug when researching Iron Shield, Bodkin Arrow, Granite Catapult Projectile, Metal Catapult Projectile or Coinage in Grand Strategy mode.
+
+-----------------------------------------------------------------------
 - 1.1.2
 -----------------------------------------------------------------------
 

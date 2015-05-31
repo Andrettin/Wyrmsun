@@ -1282,9 +1282,9 @@ function CalculateFactionIncomes()
 			
 			-- faction's research is 10 if all provinces have town halls, lumber mills and smithies
 			Factions[key].Income.Research = math.floor(
-				6 * GetFactionBuildingTypeCount(Factions[key], "town-hall") / GetFactionProvinceCount(Factions[key])
-				+ 2 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
-				+ 2 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
+				60 * GetFactionBuildingTypeCount(Factions[key], "town-hall") / GetFactionProvinceCount(Factions[key])
+				+ 20 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
+				+ 20 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
 			)
 		end
 	end
@@ -2509,7 +2509,9 @@ function DrawOnScreenTiles()
 	
 	if (OnScreenSites ~= nil) then
 		for i=1,table.getn(OnScreenSites) do
-			GrandStrategyMenu:remove(OnScreenSites[i])
+			if (OnScreenSites[i] ~= nil) then
+				GrandStrategyMenu:remove(OnScreenSites[i])
+			end
 		end
 	end
 
@@ -2938,7 +2940,9 @@ function DrawGrandStrategyResourceBar()
 
 	if (CommodityButtons ~= nil) then
 		for i=1,table.getn(CommodityButtons) do
-			GrandStrategyMenu:remove(CommodityButtons[i])
+			if (CommodityButtons[i] ~= nil) then
+				GrandStrategyMenu:remove(CommodityButtons[i])
+			end
 		end
 	end
 
@@ -2964,13 +2968,17 @@ end
 function DrawGrandStrategyInterface()
 	if (UIElements ~= nil) then
 		for i=1,table.getn(UIElements) do
-			GrandStrategyMenu:remove(UIElements[i])
+			if (UIElements[i] ~= nil) then
+				GrandStrategyMenu:remove(UIElements[i])
+			end
 		end
 	end
 	
 	if (GrandStrategyLabels ~= nil) then
 		for i=1,table.getn(GrandStrategyLabels) do
-			GrandStrategyMenu:remove(GrandStrategyLabels[i])
+			if (GrandStrategyLabels[i] ~= nil) then
+				GrandStrategyMenu:remove(GrandStrategyLabels[i])
+			end
 		end
 	end
 
