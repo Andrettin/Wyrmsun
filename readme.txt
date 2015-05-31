@@ -169,6 +169,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused the Skutan to display his attack animation wrongly when attacking dungeon walls.
+- Workers now attack fauna and obstacles as their default right-click action when clicking on them.
+- Units now display the red hair cursor when the mouse is hovered over a fauna unit.
 
 * Upgrades
 - Fixed bug when researching Iron Shield, Bodkin Arrow, Granite Catapult Projectile, Metal Catapult Projectile or Coinage in Grand Strategy mode.
