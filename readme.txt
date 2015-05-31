@@ -168,7 +168,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Grand Strategy
-- Add a "Load Game" button to the Grand Strategy setup screen.
+- Added a "Load Game" button to the Grand Strategy setup screen.
 
 -----------------------------------------------------------------------
 - 1.1.4
