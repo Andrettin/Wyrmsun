@@ -74,7 +74,7 @@ function RunGrandStrategyGameSetupMenu()
 
 	menu:addLabel("~<Grand Strategy Game Setup~>", offx + 640/2 + 12, offy + 72)
 
-	menu:addFullButton("~!Start Game", "s", offx + 208, offy + 212 + (36 * 5),
+	menu:addFullButton("~!Start Game", "s", offx + 208, offy + 212 + (36 * 4),
 		function()
 			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
 			if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
@@ -323,6 +323,13 @@ function RunGrandStrategyGameSetupMenu()
 			
 			RunGrandStrategyGame()
 			menu:stop()
+		end)
+	menu:addFullButton("~!Load Game", "l", offx + 208, offy + 212 + (36 * 5),
+		function()
+			RunGrandStrategyLoadGameMenu()
+			if not (GrandStrategy) then
+				menu:stop()
+			end
 		end)
 	menu:addFullButton("~!Cancel Game", "c", offx + 208, offy + 212 + (36 * 6),
 		function()
@@ -1723,7 +1730,9 @@ function RunGrandStrategyLoadGameMenu()
 			wyr[saved_games_list[saved_games:getSelected() + 1]] = nil
 			
 			menu:stop()
-			GrandStrategyMenu:stop();
+			if (GrandStrategyMenu) then
+				GrandStrategyMenu:stop();
+			end
 			RunGrandStrategyGame()
 		end)
 --	menu:addHalfButton("Delete", "", 384 - ((384 - 300 - 18) / 2) - 212, 256 - 16 - 27,
@@ -1747,7 +1756,7 @@ function RunGrandStrategyLoadGameMenu()
 			RunGrandStrategyGame()
 		end)
 
-	menu:run(false)
+	menu:run()
 end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
