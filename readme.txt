@@ -170,6 +170,11 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added a "Load Game" button to the Grand Strategy setup screen.
 
+* Miscellaneous
+- Changed the optional player-colored rectangle into a player-colored (filled) semi-transparent circle.
+- The optional player-colored circles no longer appear under dead units.
+- A slight fix to building selection by rectangle.
+
 -----------------------------------------------------------------------
 - 1.1.4
 -----------------------------------------------------------------------

@@ -477,7 +477,7 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
 
-  b = menu:addImageCheckBox(_("Show Player Color Rectangle"), offx + 160 + 24, offy + 55 + 26*7 + 14,
+  b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 160 + 24, offy + 55 + 26*7 + 14,
     function()
 	if (wyr.preferences.PlayerColorCircle == false) then
 		wyr.preferences.PlayerColorCircle = true
