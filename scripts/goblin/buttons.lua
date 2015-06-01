@@ -169,6 +169,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-1",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
+	Description = "+15 Damage for War Machines.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -176,11 +177,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
+	Description = "+15 Damage for War Machines.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
-  Action = "research", Value = "upgrade-goblin-masonry",
-  Allowed = "check-single-research",
-  Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-  ForUnit = {"unit-goblin-lumber-mill"} } )
+	Action = "research", Value = "upgrade-goblin-masonry",
+	Allowed = "check-single-research",
+	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
+	Description = "+20% Hit Points and +5 Armor for buildings.",
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )

@@ -175,6 +175,9 @@ https://github.com/Andrettin/Wyrmsun
 - The optional player-colored circles no longer appear under dead units.
 - A slight fix to building selection by rectangle.
 
+* Upgrades
+- The effects of upgrades now appear in their popups.
+
 -----------------------------------------------------------------------
 - 1.1.4
 -----------------------------------------------------------------------

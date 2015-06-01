@@ -70,7 +70,7 @@ local upgrades = {
 	},
 	{
 		"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to upgrade to Guard Towers."),
+		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs."),
 		"",
 		"",
 		{   250,   900,   500,     0,     0,   250,     0,     0},

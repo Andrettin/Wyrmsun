@@ -209,26 +209,33 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
-  Action = "research", Value = "upgrade-germanic-broad-sword",
-  Allowed = "check-single-research",
-  Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
-  ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"} } )
+	Action = "research", Value = "upgrade-germanic-broad-sword",
+	Allowed = "check-single-research",
+	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
+	Description = "+2 Damage for Eralas and Kriegers.",
+	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
-  Action = "research", Value = "upgrade-germanic-bronze-shield",
-  Allowed = "check-single-research",
-  Key = "s", Hint = _("Research Bronze ~!Shield"), Popup = "popup-research",
-  ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"} } )
+	Action = "research", Value = "upgrade-germanic-bronze-shield",
+	Allowed = "check-single-research",
+	Key = "s", Hint = _("Research Bronze ~!Shield"), Popup = "popup-research",
+	Description = "+2 Armor for Eralas and Kriegers.",
+	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"}
+} )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
-  Action = "research", Value = "upgrade-germanic-barbed-arrow",
-  Allowed = "check-single-research",
-  Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
-  ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"} } )
+	Action = "research", Value = "upgrade-germanic-barbed-arrow",
+	Allowed = "check-single-research",
+	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
+	Description = "+1 Damage for Skutans.",
+	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
+} )
   
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-civilization",
-  Action = "research", Value = "upgrade-teuton-civilization",
-  Allowed = "check-single-research",
-  Key = "t", Hint = _("Develop ~!Teuton Civilization"), Popup = "popup-research",
-  ForUnit = {"unit-germanic-town-hall"} } )
+	Action = "research", Value = "upgrade-teuton-civilization",
+	Allowed = "check-single-research",
+	Key = "t", Hint = _("Develop ~!Teuton Civilization"), Popup = "popup-research",
+	ForUnit = {"unit-germanic-town-hall"}
+} )
   

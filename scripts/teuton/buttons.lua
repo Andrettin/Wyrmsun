@@ -187,6 +187,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
 	Action = "research", Value = "upgrade-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
+	Description = "+2 Damage for Kriegers.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
@@ -194,6 +195,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
+	Description = "+2 Armor for Kriegers.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
@@ -201,6 +203,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
+	Description = "+1 Damage for Skutans.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -208,6 +211,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-1",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
+	Description = "+15 Damage for Catapults.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
@@ -215,6 +219,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
+	Description = "+15 Damage for Catapults.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
@@ -222,12 +227,14 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-teuton-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
+	Description = "+20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
+	Description = "+10% Gold Processing.",
 	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
