@@ -760,6 +760,9 @@ function EndTurn()
 							Factions[key].Technologies[string.gsub(second_unitName, "-", "_")] = 2
 						end
 					end
+					if (CUpgrade:Get(unitName).Class == "coinage") then
+						CalculateFactionIncomes()
+					end
 				end
 			end
 		end
@@ -5419,6 +5422,9 @@ function GetProvinceEfficiency(province, commodity)
 	local province_efficiency = 100
 	if (province.Civilization ~= GetFactionFromName(province.Owner).Civilization) then
 		province_efficiency = province_efficiency - 25
+	end
+	if (commodity == "Gold" and FactionHasTechnologyType(GetFactionFromName(province.Owner), "coinage") and (ProvinceHasBuildingType(province, "town-hall") or ProvinceHasBuildingType(province, "stronghold"))) then
+		province_efficiency = province_efficiency + 10
 	end
 	if (commodity == "Lumber" and ProvinceHasBuildingType(province, "lumber-mill")) then
 		province_efficiency = province_efficiency + 25
