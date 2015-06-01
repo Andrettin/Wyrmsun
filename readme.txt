@@ -170,6 +170,9 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Researching Coinage now correctly gives a 10% Gold bonus in Grand Strategy mode.
 
+* Upgrades
+- Slight update to the Dwarven Coinage icon.
+
 -----------------------------------------------------------------------
 - 1.1.5
 -----------------------------------------------------------------------
