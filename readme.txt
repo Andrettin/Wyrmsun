@@ -169,6 +169,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Added a "Load Game" button to the Grand Strategy setup screen.
+- Added the "A Rocky Home" quest as a Grand Strategy event.
 
 * Miscellaneous
 - Changed the optional player-colored rectangle into a player-colored (filled) semi-transparent circle.

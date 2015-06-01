@@ -1289,9 +1289,9 @@ function CalculateFactionIncomes()
 			
 			-- faction's research is 10 if all provinces have town halls, lumber mills and smithies
 			Factions[key].Income.Research = math.floor(
-				60 * GetFactionBuildingTypeCount(Factions[key], "town-hall") / GetFactionProvinceCount(Factions[key])
-				+ 20 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
-				+ 20 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
+				6 * GetFactionBuildingTypeCount(Factions[key], "town-hall") / GetFactionProvinceCount(Factions[key])
+				+ 2 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
+				+ 2 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
 			)
 		end
 	end

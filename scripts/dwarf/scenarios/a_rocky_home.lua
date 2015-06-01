@@ -34,9 +34,36 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetPlayerData(0, "RaceName", "dwarf")
 	SetPlayerData(0, "Faction", "Modsogning Clan")
-	unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-	unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	
+	if not (GrandStrategy) then
+		unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	elseif (GrandStrategyEventMap) then
+		local units_to_be_created = {}
+		for i, unitName in ipairs(Units) do
+			if (IsOffensiveMilitaryUnit(unitName)) then
+				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")])
+				WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			elseif (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
+				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			end
+		end
+		for i, unitName in ipairs(Units) do
+			if (IsOffensiveMilitaryUnit(unitName)) then
+				if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
+					for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
+						unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+					end
+				end
+			end
+		end
+		
+		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	end
 
 	SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")

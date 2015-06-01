@@ -82,12 +82,75 @@ local NidavellirEvents = {
 			end
 		}
 	},
+	ARockyHome = {
+		Name = "A Rocky Home",
+		Description = "Our clan, led by Modsognir, has arrived in Svarinshaug seeking a new home. Beset by hostile natural forces on all sides, can we survive our first winter?",
+		Heroes = {
+			unit_hero_modsognir = true,
+			unit_hero_durin = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Modsogning Clan"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"OK"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/nidavellir/svarinshaug.smp")
+					CurrentQuest = "A Rocky Home"
+					RunMap("maps/nidavellir/svarinshaug.smp")
+					GrandStrategyEventMap = false
+					
+					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
+						WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
+						WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+					end
+
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+						elseif (IsHero(unitName)) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+							end
+						end
+					end
+					if (GameResult == GameVictory) then
+						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for successfully settling Svarinshaug
+						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 800 -- food gained from the yales
+						Factions.ModsogningClan.Commodities.Lumber = Factions.ModsogningClan.Commodities.Lumber + 400 -- lumber gained from the mission
+						Factions.ModsogningClan.Commodities.Stone = Factions.ModsogningClan.Commodities.Stone + 200 -- stone gained from the mission
+					elseif (GameResult == GameDefeat) then
+						AcquireProvince(WorldMapProvinces.Svarinshaug, "")
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for successfully settling Svarinshaug
+					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 800 -- food gained from the yales
+					Factions.ModsogningClan.Commodities.Lumber = Factions.ModsogningClan.Commodities.Lumber + 400 -- lumber gained from the mission
+					Factions.ModsogningClan.Commodities.Stone = Factions.ModsogningClan.Commodities.Stone + 200 -- stone gained from the mission
+				end
+			end
+		},
+		OptionTooltips = {""}
+	},
 	TheMeadOfWisdom = {
 		Name = "The Mead of Wisdom",
 		Description = "Word has reached our chieftain Modsognir that the dwarves Fjalar and Galar have slain our wise clansman Thjodrorir. Modsognir's advisors suggest sending Durin to enter the two dwarves' hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
 		Heroes = {
 			unit_hero_modsognir = true,
 			unit_hero_durin = true
+		},
+		RequiredEvents = {
+			ARockyHome = true
 		},
 		Conditions = function(s)
 			if (
