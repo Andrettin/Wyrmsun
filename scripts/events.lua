@@ -570,7 +570,7 @@ function Tip(tip_name, tip_description)
 
 	menu:addHalfButton("~!Close", "c", 288 / 2 - (106 / 2), 256 - 40,
 		function()
-			if (GetArrayIncludes(wyr.preferences.TipsShown, tip_name) == false) then
+			if (tip_name ~= "" and GetArrayIncludes(wyr.preferences.TipsShown, tip_name) == false) then
 				table.insert(wyr.preferences.TipsShown, tip_name)
 				SavePreferences()
 			end

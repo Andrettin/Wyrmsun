@@ -1171,6 +1171,22 @@ function StandardTriggers()
 				end
 			)
 		end		
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Food") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-cheese" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-carrots")) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Food", "Food items provide healing to units.")
+					return false
+				end
+			)
+		end
 	end
 end
 

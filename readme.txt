@@ -172,6 +172,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Improvements to unit selection.
+- Added tip for food items.
+
+* Quests
+- Added tip to the A Bargain is Struck scenario.
 
 * Upgrades
 - Slight update to the Dwarven Coinage icon.

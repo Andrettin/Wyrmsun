@@ -487,6 +487,18 @@ AddTrigger(
 													Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 													Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
 													Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+												else
+													if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
+														AddTrigger(
+															function()
+																return true
+															end,
+															function()
+																Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
+																return false
+															end
+														)
+													end
 												end
 											end}
 										)
