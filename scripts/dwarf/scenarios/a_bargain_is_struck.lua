@@ -489,15 +489,7 @@ AddTrigger(
 													Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 												else
 													if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
-														AddTrigger(
-															function()
-																return true
-															end,
-															function()
-																Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
-																return false
-															end
-														)
+														Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
 													end
 												end
 											end}

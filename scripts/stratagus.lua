@@ -884,6 +884,70 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Chieftain's Hall") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-town-hall") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Chieftain's Hall", "The Chieftain's Hall can be used to train worker units. It also serves as a place where workers can return resources to, after harvesting.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "War Lodge") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-barracks") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("War Lodge", "The War Lodge can be used to train military units.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Carpenter's Shop") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-carpenters-shop") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Carpenter's Shop", "The Carpenter's Shop can be used to research some technologies, and its presence gives a lumber processing bonus of 25%.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Smithy") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy")) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Smithy", "The Smithy can be used to research technologies improving your melee units and siege weapons.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Krieger") == false) then
 			AddTrigger(
 				function()
@@ -911,6 +975,38 @@ function StandardTriggers()
 				end,
 				function()
 					Tip("Catapult", "The Catapult is the siege weapon of the Teuton civilization. It can attack from a long distance, and deals splash damage. It is available for training at the Barracks, if a Lumber Mill and a Smithy are built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Watch Tower") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-watch-tower") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Watch Tower", "The Watch Tower provides you with extended vision, and you can use it to garrison a unit inside. A ranged unit garrisoned in a Watch Tower can perform attacks from within.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Guard Tower") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-guard-tower" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-guard-tower")) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Guard Tower", "The Guard Tower provides you with extended vision, as well as space for two units to garrison inside. Ranged units garrisoned in a Guard Tower can perform attacks from within.")
 					return false
 				end
 			)
@@ -975,6 +1071,70 @@ function StandardTriggers()
 				end,
 				function()
 					Tip("Ballista", "The Ballista is the siege weapon of the Dwarven civilization. It can attack from a long distance, and deals splash damage. It is available for training at the War Hall, if a Lumber Mill and a Smithy are built.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mead Hall") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-town-hall") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Mead Hall", "The Mead Hall can be used to train worker units. It also serves as a place where workers can return resources to, after harvesting.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "War Hall") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-barracks") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("War Hall", "The War Hall can be used to train military units.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Lumber Mill") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-lumber-mill" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-lumber-mill" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-lumber-mill")) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Lumber Mill", "The Lumber Mill can be used to research some technologies, and its presence gives a lumber processing bonus of 25%.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Sentry Tower") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-sentry-tower") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Sentry Tower", "The Sentry Tower provides you with extended vision, and you can use it to garrison a unit inside. A ranged unit garrisoned in a Sentry Tower can perform attacks from within.")
 					return false
 				end
 			)

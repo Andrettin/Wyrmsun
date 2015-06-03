@@ -842,6 +842,7 @@ function EndTurn()
 		for key, value in pairs(Factions) do
 			if (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Accepted") then
 				local menu = WarGrandStrategyGameMenu(panel(1))
+				menu:setDrawMenusUnder(true)
 
 				menu:addLabel("Peace Offer Accepted!", 128, 11)
 
@@ -861,6 +862,7 @@ function EndTurn()
 				menu:run()
 			elseif (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Rejected") then
 				local menu = WarGrandStrategyGameMenu(panel(1))
+				menu:setDrawMenusUnder(true)
 
 				menu:addLabel("Peace Offer Rejected!", 128, 11)
 
@@ -3787,6 +3789,28 @@ function DrawGrandStrategyInterface()
 	b:setPressedImage(g_btp)
 	b:setSize(99, 13)
 	b:setFont(Fonts["game"])
+	
+	if (wyr.preferences.ShowTips) then
+		if (SelectedProvince ~= nil) then
+			if (GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name) then
+				if (InterfaceState == "Province") then
+					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected. Use the arrows to select or deselect units.")
+				elseif (InterfaceState == "town-hall" or InterfaceState == "stronghold") then
+					Tip("Town Hall Interface", "A province's culture determines what is available in it. A province that has a different culture than your faction will suffer a penalty to economic efficiency. The number beside each commodity icon represents its price in gold, while the one between the arrows represents its quantity currently bid or offered by your faction - use the arrows to change it.")
+				elseif (InterfaceState == "barracks") then
+					Tip("Barracks Interface", "Here you can recruit new units. The number on each unit icon represents how many units of that type are present in the province, while the number between the arrows represents how many are currently being trained. Use the arrows to change the quantity of units being trained.")
+				elseif (InterfaceState == "lumber-mill") then
+					Tip("Lumber Mill Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn. The presence of a lumber mill in a province increases its lumber output by 25%.")
+				elseif (InterfaceState == "smithy") then
+					Tip("Smithy Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn.")
+				elseif (InterfaceState == "mercenary-camp") then
+					Tip("Mercenary Camp Interface", "Here you can recruit thief units as you would normal units, as well as hire unique mercenary squads.")
+				end
+			elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
+				Tip("Diplomacy Interface", "This is a foreign province. Here you can declare war against this province's owner, or offer peace if you are currently at war.")
+			end
+		end				
+	end
 end
 
 function DrawMinimap()
@@ -4665,6 +4689,7 @@ function DeclareWar(faction_from, faction_to)
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
 		local menu = WarGrandStrategyGameMenu(panel(1))
+		menu:setDrawMenusUnder(true)
 
 		menu:addLabel("War Declared!", 128, 11)
 
@@ -4692,6 +4717,7 @@ function OfferPeace(faction_from, faction_to)
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
 		local menu = WarGrandStrategyGameMenu(panel(1))
+		menu:setDrawMenusUnder(true)
 
 		menu:addLabel("Peace Offered", 128, 11)
 
@@ -5449,6 +5475,7 @@ function DoProspection()
 					resource_found = true
 					if (GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Owner == GrandStrategyFaction.Name) then
 						local menu = WarGrandStrategyGameMenu(panel(1))
+						menu:setDrawMenusUnder(true)
 
 						menu:addLabel(key .. " found in " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])), 128, 11)
 
@@ -5462,6 +5489,9 @@ function DoProspection()
 						menu:addFullButton("E~!xcellent!", "x", 16, 248 - (36 * 0),
 							function()
 								SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
+								if (wyr.preferences.ShowTips) then
+									Tip("Gold Discovery in Province", "Congratulations! You have found gold in one of your provinces. Each gold mine provides you with 200 gold per turn, if a town hall is built in its province.")
+								end
 								menu:stop()
 							end)
 

@@ -553,31 +553,49 @@ function Event(speaker, event_description, player, options, option_effects, even
 end
 
 function Tip(tip_name, tip_description)
-	if not (IsNetworkGame()) then
+	if (GetArrayIncludes(wyr.preferences.TipsShown, tip_name)) then
+		return
+	end
+
+	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
 	end
-	local menu = WarGameMenu(panel(2))
+	local menu
+	
+	if (GrandStrategy == false) then
+		menu = WarGameMenu(panel(2))
+	else
+		menu = WarGrandStrategyGameMenu(panel(2))
+		menu:setDrawMenusUnder(true)
+	end
 	menu:resize(288, 256)
 
 	menu:addLabel(_(tip_name), 144, 11)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
-	l:setSize(260, 128)
+	l:setSize(260, 128 + 36)
 	l:setLineWidth(260)
 	menu:add(l, 14, 35 * 1.5)
 	l:setCaption(_(tip_description))
 
+	if (tip_name ~= "" and GetArrayIncludes(wyr.preferences.TipsShown, tip_name) == false) then
+		table.insert(wyr.preferences.TipsShown, tip_name)
+		SavePreferences()
+	end
+			
 	menu:addHalfButton("~!Close", "c", 288 / 2 - (106 / 2), 256 - 40,
 		function()
-			if (tip_name ~= "" and GetArrayIncludes(wyr.preferences.TipsShown, tip_name) == false) then
-				table.insert(wyr.preferences.TipsShown, tip_name)
-				SavePreferences()
+			if (GameRunning and not IsNetworkGame()) then
+				SetGamePaused(false)
 			end
-			SetGamePaused(false)
 			menu:stop()
 		end
 	)
 	
-	menu:run(false)
+	if (GrandStrategy == false) then
+		menu:run(false)
+	else
+		menu:run()
+	end
 end

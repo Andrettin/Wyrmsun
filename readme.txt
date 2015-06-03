@@ -167,8 +167,13 @@ https://github.com/Andrettin/Wyrmsun
 - 1.1.6
 -----------------------------------------------------------------------
 
+* Buildings
+- Added tips for the Chieftain's Hall, War Lodge, Carpenter's Shop, Smithy, Watch Tower, Guard Tower, Mead Hall, War Hall, Lumber Mill and Sentry Tower.
+
 * Grand Strategy
 - Researching Coinage now correctly gives a 10% Gold bonus in Grand Strategy mode.
+- Added tips for the province, town hall, barracks, lumber mill, smithy, mercenary camp and diplomacy interfaces.
+- Added tip for gold discovery.
 
 * Miscellaneous
 - Improvements to unit selection.
