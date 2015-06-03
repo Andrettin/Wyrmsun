@@ -49,6 +49,14 @@ function RunGrandStrategyGameSetupMenu()
 	SelectedHero = nil
 	Attacker = ""
 	Defender = ""
+	GrandStrategyEventMap = false
+	GrandStrategyBattle = false
+	EventFaction = nil
+	EventProvince = nil
+	GrandStrategyWorld = ""
+	BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
+	GrandStrategyMapWidthIndent = false
+	GrandStrategyMapHeightIndent = false
 	ProcessingEndTurn = false
 
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
