@@ -153,19 +153,16 @@ function SetPlayerData(player, data, arg1, arg2)
 	local res = {arg2, arg2, arg2, arg2, arg2, arg2, arg2, arg2}
 
 	if (data == "RaceName") then
-		-- FIXME: support multiplayer
-		if (ThisPlayer ~= nil and ThisPlayer.Index == player) then
-			if (GameSettings.Presets[player].Race == 1) then
-				arg1 = "dwarf"
-			elseif (GameSettings.Presets[player].Race == 2) then
-				arg1 = "germanic"
-			elseif (GameSettings.Presets[player].Race == 3) then
-				arg1 = "teuton"
---			elseif (GameSettings.Presets[player].Race == 3) then
---				arg1 = "gnome"
---			elseif (GameSettings.Presets[player].Race == 4) then
---				arg1 = "goblin"
-			end
+		if (GameSettings.Presets[player].Race == 1) then
+			arg1 = "dwarf"
+		elseif (GameSettings.Presets[player].Race == 2) then
+			arg1 = "germanic"
+		elseif (GameSettings.Presets[player].Race == 3) then
+			arg1 = "teuton"
+--		elseif (GameSettings.Presets[player].Race == 3) then
+--			arg1 = "gnome"
+--		elseif (GameSettings.Presets[player].Race == 4) then
+--			arg1 = "goblin"
 		end
 		
 		if (GrandStrategy and GrandStrategyFaction ~= nil) then
@@ -222,11 +219,11 @@ function SetPlayerData(player, data, arg1, arg2)
 		end
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
-			res = {2000, 1000, 1000, 0, 0, 1000, 0, 0, 0}
+			res = {2000, 1000, 1000, 0, 1000, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 2) then
-			res = {5000, 2000, 2000, 0, 0, 2000, 0, 0, 0}
+			res = {5000, 2000, 2000, 0, 2000, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 3) then
-			res = {10000, 5000, 5000, 0, 0, 5000, 0, 0, 0}
+			res = {10000, 5000, 5000, 0, 5000, 0, 0, 0, 0}
 		end
 		if (arg1 == "gold") then
 			if (GrandStrategy == false or GrandStrategyEventMap) then
