@@ -175,9 +175,12 @@ https://github.com/Andrettin/Wyrmsun
 - Added tips for the province, town hall, barracks, lumber mill, smithy, mercenary camp and diplomacy interfaces.
 - Added tip for gold discovery.
 
+* Items
+- Added tip for food items.
+
 * Miscellaneous
 - Improvements to unit selection.
-- Added tip for food items.
+* Miscellaneous engine improvements.
 
 * Quests
 - Added tip to the A Bargain is Struck scenario.
