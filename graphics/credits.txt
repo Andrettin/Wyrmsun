@@ -306,12 +306,19 @@ igoku:
 João Victor G. Costa (Jinn):
 /graphics/celt/buildings/farm.png
 /graphics/dwarf/buildings/barracks.png
+/graphics/dwarf/buildings/barracks_shadow.png
 /graphics/dwarf/buildings/guard_tower.png
+/graphics/dwarf/buildings/guard_tower_shadow.png
 /graphics/dwarf/buildings/lumber_mill.png
+/graphics/dwarf/buildings/lumber_mill_shadow.png
 /graphics/dwarf/buildings/mushroom_farm.png
+/graphics/dwarf/buildings/mushroom_farm_shadow.png
 /graphics/dwarf/buildings/sentry_tower.png
+/graphics/dwarf/buildings/sentry_tower_shadow.png
 /graphics/dwarf/buildings/stronghold.png
+/graphics/dwarf/buildings/stronghold_shadow.png
 /graphics/dwarf/buildings/town_hall.png
+/graphics/dwarf/buildings/town_hall_shadow.png
 /graphics/dwarf/icons/axe_2.png (modified from Ransom.00's icon)
 /graphics/dwarf/icons/baglur.png
 /graphics/dwarf/icons/boots.png (modified from igoku's icon)

@@ -167,6 +167,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.1.7
 -----------------------------------------------------------------------
 
+* Buildings
+- Dwarven building shadows reworked (by Jinn).
+
 * Miscellaneous
 - Choosing "Low", "Medium" or "High" resources now correctly makes the player start with stone.
 - Fixed issue with civilizations in multiplayer not reflecting player setup choices.
