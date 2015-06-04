@@ -315,6 +315,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/mushroom_farm_shadow.png
 /graphics/dwarf/buildings/sentry_tower.png
 /graphics/dwarf/buildings/sentry_tower_shadow.png
+/graphics/dwarf/buildings/smithy_shadow.png
 /graphics/dwarf/buildings/stronghold.png
 /graphics/dwarf/buildings/stronghold_shadow.png
 /graphics/dwarf/buildings/town_hall.png
