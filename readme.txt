@@ -173,6 +173,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Choosing "Low", "Medium" or "High" resources now correctly makes the player start with stone.
 - Fixed issue with civilizations in multiplayer not reflecting player setup choices.
+- Fixed crash related to fauna trying to eat something which had already been "removed" from the game.
 
 -----------------------------------------------------------------------
 - 1.1.6
