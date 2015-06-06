@@ -1,6 +1,6 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","person","person","computer")
+DefinePlayerTypes("person","person","person","person")
 if (GrandStrategy == false) then
 	PresentMap("Random Swamp", 3, 128, 128, 1)
 else

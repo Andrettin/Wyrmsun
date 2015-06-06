@@ -1,5 +1,5 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person","person","person","computer")
+DefinePlayerTypes("person","person","person","person")
 PresentMap("Random Swamp (Symmetric)", 3, 128, 128, 1)
 MapWorld = "Random"

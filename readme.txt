@@ -170,6 +170,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Dwarven building shadows reworked (by Jinn).
 
+* Maps
+- Random maps now correctly have no computer-controlled players in multiplayer.
+
 * Miscellaneous
 - Choosing "Low", "Medium" or "High" resources now correctly makes the player start with stone.
 - Fixed issue with civilizations in multiplayer not reflecting player setup choices.
