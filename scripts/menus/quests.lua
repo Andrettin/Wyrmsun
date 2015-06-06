@@ -31,8 +31,8 @@ RunningScenario = false
 CurrentQuest = ""
 
 function RunQuestWorldMenu()
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
   SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
   if not (IsMusicPlaying()) then
     PlayMusic("music/battle_theme_a.ogg")
@@ -58,9 +58,8 @@ function RunQuestWorldMenu()
 end
 
 function RunQuestMenu(world)
-
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
 		PlayMusic("music/battle_theme_a.ogg")

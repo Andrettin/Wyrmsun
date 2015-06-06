@@ -529,7 +529,6 @@ AddTrigger(
 														player,
 														{"~!Continue"},
 														{function(s)
-															PlayMusic("music/knolls.ogg")
 															NorthernWastelandsEnemy(32, 69)
 															NorthernWastelandsEnemy(2, 47)
 															NorthernWastelandsEnemy(52, 47)

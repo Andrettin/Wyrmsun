@@ -43,8 +43,8 @@ table.foreach(UnitTypeFiles,
 Load("scripts/icons.lua")
 Load("scripts/constructions.lua")
 
-StopMusic()
-MusicStopped()
+--StopMusic()
+--MusicStopped()
 
 if (wyrmsun.tileset == "cave") then -- ugly way to make sure the cave water appears properly
 	ClearAllColorCyclingRange()

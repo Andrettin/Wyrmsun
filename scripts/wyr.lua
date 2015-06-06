@@ -361,7 +361,6 @@ end
 function LoadCivilizationUI(civilization)
 	if (civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
-		MusicStopped()
 	end
 	if (civilization == "dwarf") then
 		Load("scripts/dwarf/ui.lua")
@@ -375,6 +374,12 @@ function LoadCivilizationUI(civilization)
 		Load("scripts/kobold/ui.lua")
 	elseif (civilization == "teuton") then
 		Load("scripts/teuton/ui.lua")
+	end
+	if not (RunningScenario) then
+		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	end
+	if (civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+		MusicStopped()
 	end
 end
 

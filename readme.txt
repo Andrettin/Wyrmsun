@@ -175,6 +175,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with civilizations in multiplayer not reflecting player setup choices.
 - Fixed crash related to fauna trying to eat something which had already been "removed" from the game.
 - Miscellaneous engine improvements.
+- Improvements to music playing code.
 
 -----------------------------------------------------------------------
 - 1.1.6

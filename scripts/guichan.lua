@@ -935,8 +935,8 @@ function RunWorldMapMenu(world, maps)
 end
 
 function RunSinglePlayerGameMenu()
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
   SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
   if not (IsMusicPlaying()) then
     PlayMusic("music/battle_theme_a.ogg")
@@ -1324,8 +1324,8 @@ function RunSinglePlayerCustomGameMenu()
 end
 
 function BuildProgramStartMenu()
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
   SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
   if not (IsMusicPlaying()) then
     PlayMusic("music/battle_theme_a.ogg")
