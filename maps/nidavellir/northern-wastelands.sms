@@ -243,19 +243,31 @@ function NorthernWastelandsEnemy(enemy_x, enemy_y)
 		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
 	end
 
-	-- added two more goblins per group, as it was too easy to find Thursagan
-	RandomNumber = SyncRand(2)
-	if (RandomNumber == 0) then
-		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
-	elseif (RandomNumber == 1) then
-		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+		-- added two more goblins per group, as it was too easy to find Thursagan
+		RandomNumber = SyncRand(2)
+		if (RandomNumber == 0) then
+			unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+		elseif (RandomNumber == 1) then
+			unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+		end
+
+		RandomNumber = SyncRand(2)
+		if (RandomNumber == 0) then
+			unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+		elseif (RandomNumber == 1) then
+			unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+		end
 	end
 
-	RandomNumber = SyncRand(2)
-	if (RandomNumber == 0) then
-		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
-	elseif (RandomNumber == 1) then
-		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		-- added two more goblins per group, as it was too easy to find Thursagan
+		RandomNumber = SyncRand(2)
+		if (RandomNumber == 0) then
+			unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+		elseif (RandomNumber == 1) then
+			unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+		end
 	end
 end
 
@@ -265,6 +277,13 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 		NorthernWastelandsEnemy(25, 33)
 		NorthernWastelandsEnemy(40, 53) --NorthernWastelandsEnemy(42, 54)
 		NorthernWastelandsEnemy(42, 22)
+		
+		if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+			NorthernWastelandsEnemy(50, 44)
+		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+			NorthernWastelandsEnemy(50, 44)
+			NorthernWastelandsEnemy(34, 8)
+		end
 	end
 end
 

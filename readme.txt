@@ -176,6 +176,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash related to fauna trying to eat something which had already been "removed" from the game.
 - Miscellaneous engine improvements.
 - Improvements to music playing code.
+- Added four difficulty settings for custom games and quests: Easy, Normal, Hard and Brutal.
 
 -----------------------------------------------------------------------
 - 1.1.6

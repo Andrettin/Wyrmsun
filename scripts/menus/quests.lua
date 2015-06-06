@@ -90,6 +90,19 @@ function RunQuestMenu(world)
 		end
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
+	
+	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
+	local difficulty = nil
+	
+	menu:addLabel(_("Difficulty:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
+	difficulty = menu:addDropDown(difficulty_list, offx + 220, offy + 10 + 300,
+		function(dd)
+			wyr.preferences.Difficulty = difficulty:getSelected() + 1
+			SavePreferences()
+		end
+	)
+	difficulty:setSize(152, 20)
+	difficulty:setSelected(wyr.preferences.Difficulty - 1)
   
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
@@ -137,6 +150,7 @@ function addQuestIcon(quest, menu, x, y)
 						end
 					end
 					GameSettings.NoRandomness = wyr.preferences.NoRandomness
+					GameSettings.Difficulty = wyr.preferences.Difficulty
 					CurrentQuest = quest.Name
 					if (quest.Briefing) then
 						Briefing(quest)

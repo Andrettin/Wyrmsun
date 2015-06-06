@@ -45,22 +45,22 @@ local end_loop_funcs = {
   function() return AiNeed(AiWatchTower()) end,
   function() return AiUpgradeTo(AiGuardTower()) end,
 
---  function() return AiForce(0, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
-  function() return AiForce(0, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
-  function() return AiForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
---  function() return AiForce(7, {AiFlyer(), 4}, true) end,
+--  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
+  function() return AiDifficultyForce(0, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(7, {AiFlyer(), 4}, true) end,
   function() return AiWaitForce(6) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 
 --  function() return AiWaitForce(7) end,
---  function() return AiForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
   function() stratagus.gameData.AIState.loop_index[1 + AiPlayer()] = 0; return false end,
 }
 
 local land_funcs = {
-  function() return AiSleep(AiGetSleepCycles()) end,
+  function() return AiDifficultySleep(AiGetSleepCycles()) end,
   function() return AiNeed(AiTownHall()) end,
   function() return AiSet(AiWorker(), 1) end,
   function() return AiWait(AiTownHall()) end,
@@ -76,11 +76,11 @@ local land_funcs = {
   function() if (AiUpgradeShield1() ~= nil) then return AiResearch(AiUpgradeShield1()) end end,
 
 -- FAST AND FURIOUS
-  function() return AiForce(1, {AiSoldier(), 1}, true) end,
+  function() return AiDifficultyForce(1, {AiSoldier(), 1}, true) end,
   function() return AiWaitForce(1) end,
 
 -- SECOND FAST ATTACK
-  function() return AiForce(1, {AiSoldier(), 4}, true) end,
+  function() return AiDifficultyForce(1, {AiSoldier(), 4}, true) end,
   function() return AiWaitForce(1) end,
   function() return AiSet(AiWorker(), 12) end,
   function() return AiSet("unit-surghan-mercenary-steelclad", 4) end, -- make the AI build mercenaries if it manages to get ahold of a mercenary camp
@@ -93,8 +93,8 @@ local land_funcs = {
   function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") else return false end end,
 
   function() return AiSet(AiBarracks(), 2) end,
-  function() return AiForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
-  function() return AiForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
+  function() return AiDifficultyForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
+  function() return AiDifficultyForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
   function() return AiSet(AiWorker(), 20) end,
   function() return AiWaitForce(1) end,
 
@@ -111,13 +111,13 @@ local land_funcs = {
 --  function() return AiNeed(AiStables()) end,
 
 -- BUILDING A DEFENSE
--- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
-  function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
+-- function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
+  function() return AiDifficultyForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
 
   function() if (AiGetRace() == "goblin") then return AiSet(AiGlider(), 1) else return false end end,
 -- function() return AiUpgradeTo(AiBestCityCenter()) end,
--- function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
- function() return AiForce(0, {AiSoldier(), 2, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
+-- function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
+ function() return AiDifficultyForce(0, {AiSoldier(), 2, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
  function() return AiSet(AiWorker(), 30) end,
 -- function() return AiWait(AiBestCityCenter()) end,
 
@@ -129,21 +129,21 @@ local land_funcs = {
   
 -- PREPARING SECOND ATTACK
 
---  function() return AiForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 6, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiForce(7, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
-  function() return AiForce(4, {AiSoldier(), 10, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(5, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiForce(6, {AiSoldier(), 6, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(7, {AiSoldier(), 4, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(8, {AiSoldier(), 3, AiShooter(), 0, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 6, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(4, {AiSoldier(), 10, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 6, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(7, {AiSoldier(), 4, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(8, {AiSoldier(), 3, AiShooter(), 0, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
   function() return AiSet(AiWorker(), 35) end,
-  function() return AiForce(0, {AiSoldier(), 0}) end,
+  function() return AiDifficultyForce(0, {AiSoldier(), 0}) end,
   function() return AiWaitForce(0) end,
---  function() return AiForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0}) end,
-  function() return AiForce(0, {AiSoldier(), 4, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
+--  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0}) end,
+  function() return AiDifficultyForce(0, {AiSoldier(), 4, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
 
 -- EXPANSION
 
@@ -157,25 +157,25 @@ local land_funcs = {
   function() return AiWaitForce(6) end,
   function() return AiWaitForce(7) end,
   function() return AiWaitForce(8) end,
---  function() return AiForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 22, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 18, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 14, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(8, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(4, {AiSoldier(), 22, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiForce(5, {AiSoldier(), 18, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 14, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 22, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 18, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 14, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(4, {AiSoldier(), 22, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 18, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 14, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiSet(AiWorker(), 40) end,
 
   function() return AiWaitForce(4) end,
---  function() return AiForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(5) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(6) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 
 -- EXPANSION
 
@@ -203,28 +203,28 @@ local land_funcs = {
 
 -- SECOND BIG WAVE
 
---  function() return AiForce(4, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 12, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 5, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiForce(7, {AiSoldier(), 0, AiEliteShooter(), 1, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(4, {AiSoldier(), 12, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(5, {AiSoldier(), 10, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiForce(6, {AiSoldier(), 5, AiShooter(), 2, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiForce(7, {AiSoldier(), 3, AiShooter(), 1, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 12, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 5, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 1, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(4, {AiSoldier(), 12, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 10, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 5, AiShooter(), 2, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(7, {AiSoldier(), 3, AiShooter(), 1, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 
   function() return AiWaitForce(4) end,
---  function() return AiForce(4, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(5) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(6) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(7) end,
 
---  function() return AiForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 
 -- EXPANSION, AGAIN
 
@@ -242,22 +242,22 @@ local land_funcs = {
 --  function() return AiNeed(AiAirport()) end,
 --  function() return AiWait(AiAirport()) end,
 
---  function() return AiForce(5, {AiFlyer(), 3}, true) end,
+--  function() return AiDifficultyForce(5, {AiFlyer(), 3}, true) end,
 
 -- THIRD ATTACK
 
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 15, AiShooter(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiForce(7, {AiSoldier(), 20, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 15, AiShooter(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+  function() return AiDifficultyForce(7, {AiSoldier(), 20, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
 --  function() return AiWaitForce(5) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(6) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(7) end,
---  function() return AiForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 
 
   function() return AiNeed(AiWatchTower()) end,
@@ -286,19 +286,19 @@ local land_funcs = {
   function() return AiNeed(AiBarracks()) end,
   function() return AiNeed(AiBarracks()) end,
 
---  function() return AiForce(5, {AiSoldier(), 0, AiEliteShooter(), 15, AiCavalry(), 0, AiCavalryMage(), 40, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiForce(5, {AiSoldier(), 40, AiShooter(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiForce(7, {AiFlyer(), 4}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 15, AiCavalry(), 0, AiCavalryMage(), 40, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 40, AiShooter(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiFlyer(), 4}, true) end,
   function() return AiWaitForce(5) end,
---  function() return AiForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiWaitForce(6) end,
---  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 --  function() return AiWaitForce(7) end,
---  function() return AiForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
 
 -- LITTLE DEFENSE
 

@@ -192,6 +192,9 @@ unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
 unit = CreateUnit("unit-goblin-worker", 1, {59, 53})
 unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 IncreaseUnitLevel(unit, 1, true)
+if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	IncreaseUnitLevel(unit, 1, true)
+end
 if (unit) then
 	AcquireAbility(unit, "upgrade-critical-strike")
 end
@@ -204,6 +207,9 @@ unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
 unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
 unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 IncreaseUnitLevel(unit, 1, true)
+if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	IncreaseUnitLevel(unit, 1, true)
+end
 if (unit) then
 	AcquireAbility(unit, "upgrade-critical-strike")
 end
@@ -216,6 +222,9 @@ unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
 unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
 unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 IncreaseUnitLevel(unit, 1, true)
+if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	IncreaseUnitLevel(unit, 1, true)
+end
 if (unit) then
 	AcquireAbility(unit, "upgrade-critical-strike")
 end

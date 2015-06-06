@@ -51,7 +51,15 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Name", "Natives")
 	
 	CreateCreeps(15, "unit-glyph", 1, 0, Map.Info.MapWidth / 8, Map.Info.MapHeight / 3, Map.Info.MapHeight)
-	CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 3 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 1 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 3 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 6 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 12 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
 end
 
 if (GrandStrategy == false) then

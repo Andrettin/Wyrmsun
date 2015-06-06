@@ -373,6 +373,50 @@ end
 --  Some functions used by Ai
 --
 
+function AiDifficultyForce(num, units)
+	if (GameSettings.Difficulty == -1) then
+		return AiForce(num, units)
+	end
+	if (num == 0) then
+		return
+	end
+	local transporter = false
+	--[[
+	for i = 1, table.getn(units)/2 do
+		if units[i*2 - 1] == AiTransporter() then
+			transporter = true
+			break
+		end
+	end
+	--]]
+	local add
+	if transporter == true then
+		add = math.min(0, GameSettings.Difficulty - 2)
+	else
+		add = GameSettings.Difficulty - 2
+	end
+
+	for i = 1, table.getn(units)/2 do
+		units[i*2] = math.max(1, units[i*2] + add)
+	end
+	return AiForce(num, units)
+end
+
+function AiDifficultySleep(cycles)
+	if (GameSettings.Difficulty == 1) then
+		return AiSleep(5 * cycles)
+--	elseif (GameSettings.Difficulty == 2) then
+--		return AiSleep(math.floor(1.25 * cycles))
+	elseif (GameSettings.Difficulty == 2) then
+		return AiSleep(math.floor(cycles))
+	elseif (GameSettings.Difficulty == 3) then
+		return AiSleep(math.floor(cycles / 2))
+	elseif (GameSettings.Difficulty == 4) then
+		return AiSleep(math.floor(cycles / 3))
+	end
+	return AiSleep(cycles)
+end
+
 -- Create some counters used by ai
 local function CreateAiGameData()
 	if stratagus == nil then
@@ -405,8 +449,24 @@ function DebugMessage(message)
 	DebugPrint(message .. "\n")
 end
 
+function AiCheat(gold, lumber, stone)
+	if (gold == nil) then gold = 0 end
+	if (lumber == nil) then lumber = 0 end
+	if (stone == nil) then stone = 0 end
+	SetPlayerData(AiPlayer(), "Resources", "gold", GetPlayerData(AiPlayer(), "Resources", "gold") + gold)
+	SetPlayerData(AiPlayer(), "Resources", "lumber", GetPlayerData(AiPlayer(), "Resources", "lumber") + lumber)
+	SetPlayerData(AiPlayer(), "Resources", "stone", GetPlayerData(AiPlayer(), "Resources", "stone") + stone)
+end
+
 function AiLoop(loop_funcs, indexes)
 	local playerIndex = AiPlayer() + 1
+	
+	-- Some AI cheating for harder levels
+	if (GameSettings.Difficulty == 3) then
+		AiCheat(50, 35, 25)
+	elseif (GameSettings.Difficulty == 4) then
+		AiCheat(100, 75, 50)
+	end
 
 	while (true) do
 		local ret = loop_funcs[indexes[playerIndex]]()

@@ -533,6 +533,12 @@ AddTrigger(
 															NorthernWastelandsEnemy(2, 47)
 															NorthernWastelandsEnemy(52, 47)
 															NorthernWastelandsEnemy(2, 33)
+															if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+																NorthernWastelandsEnemy(54, 2)
+															elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+																NorthernWastelandsEnemy(54, 2)
+																NorthernWastelandsEnemy(54, 65)
+															end
 															AddTrigger(
 																function()
 																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-thursagan") < 1) then

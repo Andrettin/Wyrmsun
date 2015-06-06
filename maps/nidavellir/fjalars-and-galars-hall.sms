@@ -1,3 +1,29 @@
 LoadTileModels("scripts/tilesets/dungeon.lua")
 
-GenerateRandomDungeon("dwarf", "", "unit-hero-durin", "", "", "", "dwarf", "Fjalar and Galar", 12, "unit-dwarven-steelclad", "Fjalar", "unit-dwarven-steelclad", "Galar", {"unit-alchemy-bench"}, "", 0)
+local fjalar_and_galars_unit_type = "unit-dwarven-steelclad"
+local enemy_quantity = 12
+if (GameSettings.Difficulty == 1) then -- if difficulty is easy
+	enemy_quantity = 6
+elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
+	fjalar_and_galars_unit_type = "unit-dwarven-thane"
+	enemy_quantity = 24
+elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	fjalar_and_galars_unit_type = "unit-dwarven-thane"
+	enemy_quantity = 48
+end
+
+
+GenerateRandomDungeon("dwarf", "", "unit-hero-durin", "", "", "", "dwarf", "Fjalar and Galar", enemy_quantity, fjalar_and_galars_unit_type, "Fjalar", fjalar_and_galars_unit_type, "Galar", {"unit-alchemy-bench"}, "", 0)
+
+if (LoadedGame == false) then
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		local uncount = 0
+		uncount = GetUnits(2)
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
+				IncreaseUnitLevel(uncount[unit1], 3 - GetUnitVariable(uncount[unit1], "Level"), false)
+				IncreaseUnitLevel(uncount[unit1], 1) -- make Fjalar's and Galar's level be 4
+			end
+		end
+	end
+end

@@ -32,14 +32,14 @@ function AiNorthernWastelandsGoblins()
 		function()
 			AiForce(1, {AiSoldier(), 1}, true)
 			if not AiCheckForce(1) then AiForce(1, {AiShooter(), 1}, true) end
-			return AiSleep(4500)
+			return AiDifficultySleep(4500)
 		end,
 		function() return AiAttackWithForce(1) end,
       
 		function()
 			AiForce(1, {AiShooter(), 1}, true)
 			if not AiCheckForce(1) then AiForce(1, {AiSoldier(), 1}, true) end
-			return AiSleep(4500)
+			return AiDifficultySleep(4500)
 		end,
 		function() return AiAttackWithForce(1) end,
       

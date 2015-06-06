@@ -294,12 +294,15 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
 		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
 
-		-- extra mercenary for normal difficulty and beyond
-		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+		-- extra mercenary for hard difficulty and beyond
+		if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+			unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+		end
 
-		-- two extra mercenaries for hard difficulty
-	--	unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-	--	unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+		-- two extra mercenaries for brutal difficulty
+		if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+			unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
+		end
 
 		unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
 		unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})

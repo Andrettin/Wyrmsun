@@ -1995,6 +1995,7 @@ local defaultPreferences = {
 	PopupDescriptionFont = "small",
 	PlayerColorCircle = false,
 	NoRandomness = false,
+	Difficulty = 2,
 	GrandStrategyBattalionMultiplier = 1,
 	QuestsCompleted = {},
 	TechnologyAcquired = {},

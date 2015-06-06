@@ -672,6 +672,7 @@ function InitGameSettings()
 		GameSettings.Presets[i].Team = -1
 		GameSettings.Presets[i].Type = -1
 	end
+	GameSettings.Difficulty = -1
 	GameSettings.Resources = -1
 	GameSettings.NumUnits = -1
 	GameSettings.Opponents = -1
@@ -1001,6 +1002,8 @@ function RunSinglePlayerCustomGameMenu()
   local game_type_list = { }
   local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)")}
   local max_tech_level_list = {_("Map Default")}
+  local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
+  local difficulty = nil
   
   GrandStrategy = false
   ForTheMotherland = false
@@ -1100,6 +1103,7 @@ function RunSinglePlayerCustomGameMenu()
       end
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
+	  GameSettings.Difficulty = difficulty:getSelected() + 1
       if (game_type_list[gametype:getSelected() + 1] == "For the Motherland") then
 	      ForTheMotherland = true
 	      GameSettings.GameType = -1
@@ -1132,6 +1136,16 @@ function RunSinglePlayerCustomGameMenu()
   scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
     function(dd) ScenarioChanged() end)
   scenario:setSize(152, 20)
+
+  menu:addLabel(_("Difficulty:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
+  difficulty = menu:addDropDown(difficulty_list, offx + 640 - 224 - 16, offy + 10 + 120,
+    function(dd)
+		wyr.preferences.Difficulty = difficulty:getSelected() + 1
+		SavePreferences()
+	end
+  )
+  difficulty:setSize(152, 20)
+  difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
   menu:addLabel(_("Your Civilization:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
   race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, offx + 40, offy + 10 + 180,

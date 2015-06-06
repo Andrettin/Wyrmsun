@@ -187,10 +187,25 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-steelclad", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+	end
 
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+		unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
+	end
 	
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
 	if (unit) then

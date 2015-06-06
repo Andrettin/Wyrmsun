@@ -299,6 +299,10 @@ AddTrigger(
 				SetUnitVariable(unit, "CustomAIState", 2)
 				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "CustomAIState", 2)
+				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 2)
+				end
 				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				IncreaseUnitLevel(unit, 2, true)
 				AcquireAbility(unit, "upgrade-critical-strike")
@@ -315,6 +319,12 @@ AddTrigger(
 				IncreaseUnitLevel(unit, 2, true)
 				AcquireAbility(unit, "upgrade-critical-strike")
 				SetUnitVariable(unit, "CustomAIState", 2)
+				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 2)
+				end
 				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "CustomAIState", 3)
 				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
@@ -323,6 +333,10 @@ AddTrigger(
 				SetUnitVariable(unit, "CustomAIState", 3)
 				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "CustomAIState", 3)
+				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 3)
+				end
 				unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				IncreaseUnitLevel(unit, 2, true)
 				AcquireAbility(unit, "upgrade-critical-strike")
@@ -339,14 +353,29 @@ AddTrigger(
 				IncreaseUnitLevel(unit, 2, true)
 				AcquireAbility(unit, "upgrade-critical-strike")
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 4)
+				end
+				unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 1, true)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 1, true)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 1, true)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+				IncreaseUnitLevel(unit, 1, true)
 				SetUnitVariable(unit, "CustomAIState", 4)
+				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 1, true)
+					SetUnitVariable(unit, "CustomAIState", 4)
+				end
 			end
 			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
 			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
@@ -631,6 +660,7 @@ AddTrigger(
 				KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+				KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {256, 256})
 				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
 				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
 				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
@@ -662,6 +692,7 @@ AddTrigger(
 			KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
 			KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
 			KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
+			KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {256, 256})
 			KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
 			KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
 			KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})

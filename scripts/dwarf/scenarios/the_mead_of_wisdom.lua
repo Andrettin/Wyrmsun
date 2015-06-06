@@ -168,7 +168,7 @@ AddTrigger(
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
 					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
 					if (unit_quantity > 0) then
 						player = GetThisPlayer()
@@ -185,9 +185,9 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" and GetUnitVariable(uncount[unit1], "Name") == "Fjalar") then
+			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Fjalar") then
 				fjalar = uncount[unit1]
-			elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" and GetUnitVariable(uncount[unit1], "Name") == "Galar") then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Galar") then
 				galar = uncount[unit1]
 			end
 		end
@@ -246,7 +246,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") and GetPlayerData(GetFactionPlayer("Fjalar and Galar"), "UnitTypesCount", "unit-dwarven-steelclad") < 1) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") and GetPlayerData(GetFactionPlayer("Fjalar and Galar"), "UnitTypesCount", "unit-dwarven-steelclad") < 1 and GetPlayerData(GetFactionPlayer("Fjalar and Galar"), "UnitTypesCount", "unit-dwarven-thane") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
