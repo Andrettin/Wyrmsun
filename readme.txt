@@ -170,6 +170,9 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Added six Custom maps from the Stratagus Media Project: Central Park, Little Island, Looking Upwards, Northern Lakes, North-South Conflict and Time for Decisions.
 
+* Miscellaneous
+- A slight reorganization of the multiplayer map selection screen.
+
 -----------------------------------------------------------------------
 - 1.1.7
 -----------------------------------------------------------------------
