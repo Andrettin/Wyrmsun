@@ -1243,60 +1243,8 @@ function CreateCritters(critter_number)
 		local WhileCount = 0
 		-- create critters
 		while (Count > 0 and WhileCount < critter_number * 100) do
-			local critter_unit_type
-			if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
-				RandomNumber = SyncRand(10)
-				if (RandomNumber == 0) then
-					critter_unit_type = "unit-rat"
-				elseif (RandomNumber == 1) then
-					critter_unit_type = "unit-bird"
-				elseif (RandomNumber == 2) then
-					critter_unit_type = "unit-bee"
-				elseif (RandomNumber == 3) then
-					critter_unit_type = "unit-fly"
-				elseif (RandomNumber == 4) then
-					critter_unit_type = "unit-bug"
-				elseif (RandomNumber == 5) then
-					critter_unit_type = "unit-snail"
-				elseif (RandomNumber == 6) then
-					critter_unit_type = "unit-slug"
-				elseif (RandomNumber == 7) then
-					critter_unit_type = "unit-worm"
-				elseif (RandomNumber == 8) then
-					critter_unit_type = "unit-crow"
-				elseif (RandomNumber == 9) then
-					critter_unit_type = "unit-frog"
-				end
-			elseif (wyrmsun.tileset == "dungeon") then
-				RandomNumber = SyncRand(3)
-				if (RandomNumber == 0) then
-					critter_unit_type = "unit-slime"
-				elseif (RandomNumber == 1) then
-					critter_unit_type = "unit-bat"
-				elseif (RandomNumber == 2) then
-					critter_unit_type = "unit-rat"
-				end
-			elseif (wyrmsun.tileset == "swamp") then
-				RandomNumber = SyncRand(3)
-				if (RandomNumber == 0) then
-					critter_unit_type = "unit-slime"
-				elseif (RandomNumber == 1) then
-					critter_unit_type = "unit-yale"
-				elseif (RandomNumber == 2) then
-					critter_unit_type = "unit-snigill"
-				end
-			elseif (wyrmsun.tileset == "cave") then
-				RandomNumber = SyncRand(4)
-				if (RandomNumber == 0) then
-					critter_unit_type = "unit-slime"
-				elseif (RandomNumber == 1) then
-					critter_unit_type = "unit-snigill"
-				elseif (RandomNumber == 2) then
-					critter_unit_type = "unit-blood-bat"
-				elseif (RandomNumber == 3) then
-					critter_unit_type = "unit-dread-bat"
-				end
-			else
+			local critter_unit_type = GetRandomCritterUnitType()
+			if (critter_unit_type == "") then
 				Count = 0
 				break
 			end
@@ -1316,6 +1264,67 @@ function CreateCritters(critter_number)
 			WhileCount = WhileCount + 1
 		end
 	end
+end
+
+function GetRandomCritterUnitType()
+	local critter_unit_type
+	local RandomNumber = 0
+	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+		RandomNumber = SyncRand(10)
+		if (RandomNumber == 0) then
+			critter_unit_type = "unit-rat"
+		elseif (RandomNumber == 1) then
+			critter_unit_type = "unit-bird"
+		elseif (RandomNumber == 2) then
+			critter_unit_type = "unit-bee"
+		elseif (RandomNumber == 3) then
+			critter_unit_type = "unit-fly"
+		elseif (RandomNumber == 4) then
+			critter_unit_type = "unit-bug"
+		elseif (RandomNumber == 5) then
+			critter_unit_type = "unit-snail"
+		elseif (RandomNumber == 6) then
+			critter_unit_type = "unit-slug"
+		elseif (RandomNumber == 7) then
+			critter_unit_type = "unit-worm"
+		elseif (RandomNumber == 8) then
+			critter_unit_type = "unit-crow"
+		elseif (RandomNumber == 9) then
+			critter_unit_type = "unit-frog"
+		end
+	elseif (wyrmsun.tileset == "dungeon") then
+		RandomNumber = SyncRand(3)
+		if (RandomNumber == 0) then
+			critter_unit_type = "unit-slime"
+		elseif (RandomNumber == 1) then
+			critter_unit_type = "unit-bat"
+		elseif (RandomNumber == 2) then
+			critter_unit_type = "unit-rat"
+		end
+	elseif (wyrmsun.tileset == "swamp") then
+		RandomNumber = SyncRand(3)
+		if (RandomNumber == 0) then
+			critter_unit_type = "unit-slime"
+		elseif (RandomNumber == 1) then
+			critter_unit_type = "unit-yale"
+		elseif (RandomNumber == 2) then
+			critter_unit_type = "unit-snigill"
+		end
+	elseif (wyrmsun.tileset == "cave") then
+		RandomNumber = SyncRand(4)
+		if (RandomNumber == 0) then
+			critter_unit_type = "unit-slime"
+		elseif (RandomNumber == 1) then
+			critter_unit_type = "unit-snigill"
+		elseif (RandomNumber == 2) then
+			critter_unit_type = "unit-blood-bat"
+		elseif (RandomNumber == 3) then
+			critter_unit_type = "unit-dread-bat"
+		end
+	else
+		critter_unit_type = ""
+	end
+	return critter_unit_type
 end
 
 function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max_y)
