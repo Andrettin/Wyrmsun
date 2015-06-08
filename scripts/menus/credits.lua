@@ -195,6 +195,8 @@ function RunShowCreditsMenu()
 	"  b_o",
 	"  Galaahd",
 	"  Rey",
+	_("Translation"),
+	"  Dmitry Shamshurin",
 	_("Testing"),
 	"  Andrettin",
 	"  b_o",

@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wyrmsun\n"
+"POT-Creation-Date: 2014-10-04 18:46+0100\n"
+"PO-Revision-Date: 2014-10-04 19:07+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: c:/Program Files/Wyrmsun/scripts\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
+
+msgid "- Kill 8 Yales"
+msgstr "- Убить 8 йейлов"
+
+msgid "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
+msgstr "После долгих скитаний клан дворфов под предводительством Модсогнира прибыл в Свариншауг в поисках нового дома..."
+
+msgid "~!Continue"
+msgstr "~!Далее"
+
+msgid "Modsognir"
+msgstr "Модсогнир"
+
+msgid "My clansfolk, if we are to survive, we will need food and materials to build shelters for our people."
+msgstr "Братья! Если мы хотим выжить, нам нужно раздобыть еду и построить дома для нашего народа."
+
+msgid "Durin"
+msgstr "Дурин"
+
+msgid "Aye. There are plenty of yales here, we should hunt some."
+msgstr "Да!  Я видел здесь много йейлов. Время для охоты!"
+
+msgid "By nightfall the blood bats - or worse - will come out into the open, we need to be ready before then."
+msgstr "С наступлением ночи вылезут летучие мыши-кровопийцы или ещё кто похуже. Мы должны быть готовы к этому."
+
+msgid "- Gather 400 lumber and 200 stone"
+msgstr "- Собрать 400 древесины и 200 камня"
+
+msgid "- Modsognir must survive"
+msgstr "- Модсогнир должен выжить"
+
+msgid "- Durin must survive"
+msgstr "- Дурин должен выжить"
+
+msgid "Thjodrorir"
+msgstr "Тьодрёрир"
+
+msgid "Thjodrorir, when I was young ye were already old. Ye, wisest of our clan... what does the future have in store for us?"
+msgstr "Тьодрёрир, в пору моей юности ты уже был стар. Мудрейший из нашего клана, скажи, что день грядущий нам готовит?"
+
+msgid "Aye, much do I know, but in this case little can I tell."
+msgstr "О, во многом я сведущ, да здесь сказать мало могу."
+
+msgid "We have hunted enough of them to last for a while. Ah, nothing like the taste of roasted yale..."
+msgstr "Славная охота! Еды у нас теперь вдоволь. Эх, что может быть лучше зажаренного йейла..."
+
+msgid "A Rocky Home"
+msgstr "Скалистый дом"
+
+msgid "The materials we need have been collected."
+msgstr "Все необходимые материалы собраны."
+
+msgid "The materials we need have been collected. It is time to build our new homes by these rocks!"
+msgstr "Все необходимые материалы собраны. Время построить новые дома возле тех скал!"

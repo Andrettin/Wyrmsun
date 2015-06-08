@@ -457,6 +457,7 @@ function RunCreateMultiGameMenu(s)
   end
 
   Load(mapfile)
+  --[[
   local browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$", sx*10, sy*2+20, sx*8, sy*11)
   local function cb(s)
     mapfile = browser.path .. browser:getSelectedItem()
@@ -465,7 +466,129 @@ function RunCreateMultiGameMenu(s)
     maptext:adjustSize()
   end
   browser:setActionCallback(cb)
+  --]]
+  
+  local world
+  local scenario
+  local scenario_list = {}
+  local world_list = {}
+  
+  local maps = {}
 
+  local custom_map_present = false
+  for map_directory=1,table.getn(MapDirectories) do
+	-- load the maps
+	local i
+	local f
+	local u = 1
+
+	-- list the subdirectories in the maps folder
+	local dirlist = {}
+	local dirs = ListDirsInDirectory(MapDirectories[map_directory])
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	-- get maps in the main maps folder
+	u = table.getn(maps) + 1
+	local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
+	for i,f in ipairs(fileslist) do
+		if (string.find(f, "^.*%.smp%.?g?z?$")) then
+			maps[u] = MapDirectories[map_directory] .. f
+			u = u + 1
+		end
+	end
+
+	-- get maps in subdirectories of the maps folder
+	for j=1,table.getn(dirlist) do
+		fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
+		for i,f in ipairs(fileslist) do
+			if (string.find(f, "^.*%.smp%.?g?z?$")) then
+				maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
+				u = u + 1
+			end
+		end
+	end
+
+	-- build the world list from world references in the maps
+	for i=1,table.getn(maps) do
+		MapWorld = ""
+		Load(maps[i])
+		if (MapWorld ~= "" and MapWorld ~= "None" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
+			table.insert(world_list, _(MapWorld))
+		elseif (MapWorld == "") then
+			custom_map_present = true
+		end
+	end
+  end
+  table.sort(world_list)
+  if (custom_map_present) then
+	  table.insert(world_list, _("Custom"))
+  end
+
+  menu:addLabel(_("World:"), sx*10, sy*2+20, Fonts["game"], false)
+  world = menu:addDropDown(world_list, sx*10, sy*2+20 + 20,
+    function(dd) WorldChanged() end)
+  world:setSize(152, 20)
+  world:setSelected(0)
+  
+  menu:addLabel(_("Map:"), sx*10, sy*4+20, Fonts["game"], false)
+  scenario = menu:addDropDown(scenario_list, sx*10, sy*4+20 + 20,
+    function(dd) ScenarioChanged() end)
+  scenario:setSize(152, 20)
+
+  function WorldChanged()
+	scenario_list = {}
+
+	for i=1,table.getn(maps) do
+		MapWorld = ""
+		MapRequiredQuest = ""
+		Load(maps[i])
+		if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
+			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
+				local map_description = _(description)
+				if (map_description == "") then
+					map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
+				end
+				table.insert(scenario_list, map_description)
+			end
+		end
+	end
+
+	table.sort(scenario_list)
+	scenario:setList(scenario_list)
+	scenario:setSize(152, 20)
+	scenario:setSelected(0)
+	ScenarioChanged()
+  end
+
+  function ScenarioChanged()
+	for i=1,table.getn(maps) do
+		MapWorld = ""
+		Load(maps[i])
+		if (
+			(
+				_(description) == scenario_list[scenario:getSelected() + 1]
+				or string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "") == scenario_list[scenario:getSelected() + 1]
+			)
+			and (
+				_(MapWorld) == _(world_list[world:getSelected() + 1])
+				or (
+					MapWorld == ""
+					and world_list[world:getSelected() + 1] == "Custom"
+				)
+			)
+		) then
+			mapfile = maps[i]
+			Load(mapfile)
+			maptext:setCaption(string.sub(mapfile, 6))
+			maptext:adjustSize()
+			break
+		end
+	end
+  end
+  
   menu:addFullButton("~!Create Game", "c", sx,  sy*11,
     function(s)
 --      if (browser:getSelected() < 0) then
@@ -475,6 +598,8 @@ function RunCreateMultiGameMenu(s)
       menu:stop()
     end
   )
+  
+  WorldChanged()
 
   menu:addFullButton(_("Cancel (~<Esc~>)"), "escape", sx,  sy*12+25,
     function() menu:stop() end)
