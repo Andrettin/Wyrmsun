@@ -173,6 +173,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - The multiplayer map selection screen now uses dropdowns similar to the map selection in the Single Player custom game screen.
 
+* Quests
+- Slight change to the dialogue in the Hills of the Shorbear Clan quest.
+
 -----------------------------------------------------------------------
 - 1.1.7
 -----------------------------------------------------------------------

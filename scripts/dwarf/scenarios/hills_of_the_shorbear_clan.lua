@@ -229,13 +229,13 @@ AddTrigger(
 								{function(s)
 								Event(
 									FindHero("Durstorn"),
-									"I'm Lord Durstorn, king of my tribe. I have been told ye are great jeweler-workers, and so we come to rent some of yer tools for a short time, a few years at most.",
+									"I'm Lord Durstorn, heir of Modsognir and king of my tribe. I have been told ye are great jeweler-workers, and so we come to rent some of yer tools for a short time, a few years at most.",
 									event_player,
 									{"~!Continue"},
 									{function(s)
 									Event(
 										FindUnit("unit-dwarven-thane", GetFactionPlayer("Shorbear Clan")),
-										"Yer a king?! Must be a pretty small kingdom for ye to come yerself to bargain with us!",
+										"Heirs of Modsognir there are many, and yers must be a pretty small kingdom for ye to come yerself to bargain with us!",
 										event_player,
 										{"~!Continue"},
 										{function(s)
