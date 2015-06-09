@@ -73,6 +73,7 @@ Units = {
 	"unit-rat",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
+	"unit-silver-rock",
 	"unit-coal-mine",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -122,6 +123,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-rock"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-rock"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
 			}
 		}
@@ -1362,7 +1364,6 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 
 DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
 	Image = {"file", "neutral/buildings/gold_rock_1.png", "size", {43, 43}},
---	Offset = {0, -8},
 	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-gold-rock",
 	NeutralMinimapColor = {255, 255, 0},
@@ -1402,6 +1403,58 @@ DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
 			"variation-id", "4",
 			"file", "neutral/buildings/gold_rock_4.png",
 			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
+		}
+	},
+	Sounds = {
+		"selected", "metal-selected",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+--		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-silver-rock", { Name = _("Silver Rock"),
+	Image = {"file", "neutral/buildings/silver_rock_1.png", "size", {43, 43}},
+--	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
+	Animations = "animations-building", Icon = "icon-silver-rock",
+	NeutralMinimapColor = {255, 255, 0},
+	Costs = {"time", 150},
+	Speed = 0,
+	HitPoints = 25500,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+--	Corpse = "unit-destroyed-3x3-place",
+--	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	StartingResources = 1000,
+	NumDirections = 1,
+	Building = false, VisibleUnderFog = true,
+	GivesResource = "silver", CanHarvest = true,
+	HarvestFromOutside = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "neutral/buildings/silver_rock_2.png",
+--			"shadow-file", "neutral/buildings/gold_rock_2_shadow.png"
+		},
+		{
+			"variation-id", "3",
+			"file", "neutral/buildings/silver_rock_3.png",
+--			"shadow-file", "neutral/buildings/gold_rock_3_shadow.png"
+		},
+		{
+			"variation-id", "4",
+			"file", "neutral/buildings/silver_rock_4.png",
+--			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
 		}
 	},
 	Sounds = {
@@ -3497,7 +3550,7 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, StoneImprove = true,
 	BuilderOutside = true,
-	CanStore = {"gold", "lumber", "stone", "coal"},
+	CanStore = {"gold", "silver", "copper", "lumber", "stone", "coal"},
 	Drops = {"unit-wood-pile"},
 	SelectableByRectangle = true,
 	Sounds = {
@@ -3529,7 +3582,7 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Center = true, LumberImprove = true, StoneImprove = true, OilImprove = false,
-	CanStore = {"gold", "lumber", "stone", "coal"},
+	CanStore = {"gold", "silver", "copper", "lumber", "stone", "coal"},
 	MaxOnBoard = 3,
 	CanTransport = {"LandUnit", "only", "organic", "only"},
 	AttackFromTransporter = true,

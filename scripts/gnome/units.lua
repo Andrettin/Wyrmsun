@@ -49,7 +49,28 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 			"resource-capacity", 100,
 			"resource-step", 2,
 			"wait-at-resource", 3,
-			"wait-at-depot", 150},
+			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
+			"resource-id", "silver",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 3,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 50
+		},
+		{
+			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
+			"resource-id", "copper",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 3,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 25
+		},
 		{
 			"file-when-loaded", "gnome/units/gnomish_worker_with_lumber.png",
 			"resource-id", "lumber",

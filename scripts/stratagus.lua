@@ -175,22 +175,28 @@ SetFogOfWarGraphics("tilesets/fogofwar.png")
 --
 
 DefineDefaultIncomes(
-  0, 100, 100, 100, 100, 100, 100, 100, 100, 100)
+	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+)
 
 DefineDefaultActions(
-  "stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather")
+	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather", "mine", "mine"
+)
 
 DefineDefaultResourceNames(
-  "time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber")
+	"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper"
+)
 
 DefineDefaultResourceAmounts(
-  "gold", 50000,
-  "lumber", 100,
-  "oil", 50000,
-  "stone", 100,
-  "coal", 50000)
+	"gold", 50000,
+	"lumber", 100,
+	"oil", 50000,
+	"stone", 100,
+	"coal", 50000,
+	"silver", 50000,
+	"copper", 50000
+)
 
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
 -------------------------------------------------------------------------------
 
@@ -1268,6 +1274,22 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Silver Rock") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-silver-rock") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Silver Rock", "Silver rocks can be mined for silver, which when processed is converted to gold at a 50% rate.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wood Pile") == false) then
 			AddTrigger(
 				function()
@@ -1971,7 +1993,7 @@ local defaultPreferences = {
 	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	LeaveStopScrolling = true,      --  Enable/disable stopping scrolling when mouse leave.
-	MaxOpenGLTexture = 0,
+	MaxOpenGLTexture = 256,
 	MinimapWithTerrain = true,      --  Choose your default for minimap with/without terrain.
 	MouseScrollSpeed = 1,
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
@@ -1984,7 +2006,7 @@ local defaultPreferences = {
 	StratagusTranslation = "",
 	TipNumber = 0,
 --	UseFancyBuildings = false,       --  Enable/disable fancy building (random mirroring buildings)
-	UseOpenGL = false,
+	UseOpenGL = true,
 	VideoFullScreen = false,
 	VideoHeight = 600,
 	VideoWidth = 800,

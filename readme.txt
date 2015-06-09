@@ -164,6 +164,20 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.1.9
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- OpenGL is now active by default.
+
+* Terrain
+- Added harvestable silver rocks (graphics by KPJ).
+- Added day/night cycles.
+
+* Units
+- Human units now have a sight malus at night.
+
+-----------------------------------------------------------------------
 - 1.1.8
 -----------------------------------------------------------------------
 

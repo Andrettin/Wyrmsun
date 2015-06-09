@@ -51,6 +51,26 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 			"wait-at-depot", 150
 		},
 		{
+			"file-when-loaded", "dwarf/units/miner_with_gold.png",
+			"resource-id", "silver",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 2,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 50
+		},
+		{
+			"file-when-loaded", "dwarf/units/miner_with_gold.png",
+			"resource-id", "copper",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 2,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 25
+		},
+		{
 			"file-when-loaded", "dwarf/units/miner_with_lumber.png",
 			"resource-id", "lumber",
 			"resource-capacity", 100,

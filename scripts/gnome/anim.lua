@@ -32,38 +32,60 @@
 --
 
 DefineAnimations("animations-gnomish-worker", {
-  Still = {
-	"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "goto no-rotate",
-	"label no-rotate", "wait 1",},
-  Move = UnitMove,
-  Attack = {"unbreakable begin",
-  	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-  	"frame 40", "attack", "wait 5", "frame 45", "wait 3",
-  	"frame 25", "wait 7", "frame 25",
-	"unbreakable end", "wait 1",},
-  Harvest_gold = {
-	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-	"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
-	"frame 25", "wait 7", "frame 25",
-	"wait 1",},
-  Harvest_lumber = {
-	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-	"frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
-	"frame 25", "wait 7", "frame 25",
-	"wait 1",},
-  Harvest_stone = {
-	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-	"frame 40", "sound stone-mining", "wait 5", "frame 45", "wait 3",
-	"frame 25", "wait 7", "frame 25",
-	"wait 1",},
-  Repair = {"unbreakable begin",
-	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-	"frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
-	"frame 25", "wait 7", "frame 25",
-	"unbreakable end", "wait 1",},
-  Death = {"unbreakable begin",
-	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
-	"unbreakable end", "wait 1",},
+	Still = {
+		"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 65", "wait 6", "frame 70", "wait 6", "frame 0", "goto no-rotate",
+		"label no-rotate", "wait 1",
+	},
+	Move = UnitMove,
+	Attack = {
+		"unbreakable begin",
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "attack", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"unbreakable end", "wait 1",
+	},
+	Harvest_gold = {
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"wait 1",
+	},
+	Harvest_silver = {
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"wait 1",
+	},
+	Harvest_copper = {
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"wait 1",
+	},
+	Harvest_lumber = {
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"wait 1",
+	},
+	Harvest_stone = {
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound stone-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"wait 1",
+	},
+	Repair = {
+		"unbreakable begin",
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25",
+		"unbreakable end", "wait 1",
+	},
+	Death = {
+		"unbreakable begin",
+		"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
+		"unbreakable end", "wait 1",
+	},
 })
 
 --

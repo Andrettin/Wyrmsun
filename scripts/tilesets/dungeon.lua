@@ -215,3 +215,4 @@ BuildTilesetTables()
 
 wyrmsun.tileset = "dungeon"
 Load("scripts/scripts.lua")
+GameSettings.Inside = true

@@ -32,28 +32,52 @@
 --
 
 DefineAnimations("animations-dwarven-miner", {
-  Still = UnitStill,
-  Move = UnitMove,
-  Attack = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "attack", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
-  Harvest_gold = {"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
-    "frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 9", "frame 25",
-	"wait 1",},
-  Harvest_lumber = {"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
-    "frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 9", "frame 25",
-	"wait 1",},
-  Harvest_stone = {"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
-    "frame 40", "sound stone-mining", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 9", "frame 25",
-	"wait 1",},
-  Repair = {"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-    "frame 40", "sound construction-stone", "wait 5", "frame 45", "wait 3",
-    "frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",},
-  Death = {"unbreakable begin", "frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
-    "frame 60", "unbreakable end", "wait 1",},
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = {
+		"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "attack", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
+	},
+	Harvest_gold = {
+		"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 9", "frame 25",
+		"wait 1",
+	},
+	Harvest_silver = {
+		"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 9", "frame 25",
+		"wait 1",
+	},
+	Harvest_copper = {
+		"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+		"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 9", "frame 25",
+		"wait 1",
+	},
+	Harvest_lumber = {
+		"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+		"frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 9", "frame 25",
+		"wait 1",
+	},
+	Harvest_stone = {
+		"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+		"frame 40", "sound stone-mining", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 9", "frame 25",
+		"wait 1",
+	},
+	Repair = {
+		"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound construction-stone", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
+	},
+	Death = {
+		"unbreakable begin", "frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100",
+		"frame 60", "unbreakable end", "wait 1",
+	},
 })
 
 --

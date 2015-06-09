@@ -776,6 +776,10 @@ Jim16:
 
 KPJ:
 /graphics/dwarf/icons/coinage.png
+/graphics/neutral/buildings/silver_rock_1.png
+/graphics/neutral/buildings/silver_rock_2.png
+/graphics/neutral/buildings/silver_rock_3.png
+/graphics/neutral/buildings/silver_rock_4.png
 /graphics/teuton/icons/coinage.png
 /graphics/ui/fonts/KPJsWyrmSunFont.png
 

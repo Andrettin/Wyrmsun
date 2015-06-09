@@ -1030,9 +1030,11 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 	-- create gold mines
 	Count = gold_mine_number
 	local WhileCount = 0
+	local RandomNumber = 0
 	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
-		if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generated, 50% a group of gold rocks will be generated instead
+		RandomNumber = SyncRand(3)
+		if (RandomNumber == 0) then -- 33% chance a gold mine will be generated, 33% a group of gold rocks will be generated, and 33% a group of silver rocks will be generated
 			unit = CreateUnit("unit-gold-deposit", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
@@ -1055,7 +1057,7 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 				unit = CreateUnit("unit-gold-deposit", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1)})
 				Count = Count - 1
 			end
-		else
+		elseif (RandomNumber == 1) then
 			for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
 				for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
 					if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
@@ -1084,6 +1086,35 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 			if (symmetric) then
 				Count = Count - 3
 			end
+		elseif (RandomNumber == 2) then
+			for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
+				for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+					if (SyncRand(100) <= 50) then -- give a chance of a silver rock not being generated, to make the shape of the silver rock group seem more natural
+						unit = CreateUnit("unit-silver-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
+						if (symmetric) then
+							local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
+							if (mirrored_tile_x < 0) then
+								mirrored_tile_x = mirrored_tile_x * -1
+							end
+
+							local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
+							if (mirrored_tile_y < 0) then
+								mirrored_tile_y = mirrored_tile_y * -1
+							end
+
+							unit = CreateUnit("unit-silver-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, gold_mine_spawn_point[2] + sub_y})
+
+							unit = CreateUnit("unit-silver-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+
+							unit = CreateUnit("unit-silver-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+						end
+					end
+				end
+			end
+			Count = Count - 1
+			if (symmetric) then
+				Count = Count - 3
+			end
 		end
 		WhileCount = WhileCount + 1
 	end
@@ -1094,35 +1125,68 @@ function CreateGoldRocks(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 	-- create gold mines
 	Count = gold_mine_number
 	local WhileCount = 0
+	local RandomNumber = 0
 	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
-		for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
-			for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
-				if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
-					unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
-					if (symmetric) then
-						local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
-						if (mirrored_tile_x < 0) then
-							mirrored_tile_x = mirrored_tile_x * -1
+		RandomNumber = SyncRand(2)
+		if (RandomNumber == 0) then
+			for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
+				for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+					if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
+						unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
+						if (symmetric) then
+							local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
+							if (mirrored_tile_x < 0) then
+								mirrored_tile_x = mirrored_tile_x * -1
+							end
+
+							local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
+							if (mirrored_tile_y < 0) then
+								mirrored_tile_y = mirrored_tile_y * -1
+							end
+
+							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, gold_mine_spawn_point[2] + sub_y})
+
+							unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+
+							unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
 						end
-
-						local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
-						if (mirrored_tile_y < 0) then
-							mirrored_tile_y = mirrored_tile_y * -1
-						end
-
-						unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, gold_mine_spawn_point[2] + sub_y})
-
-						unit = CreateUnit("unit-gold-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
-
-						unit = CreateUnit("unit-gold-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
 					end
 				end
 			end
-		end
-		Count = Count - 1
-		if (symmetric) then
-			Count = Count - 3
+			Count = Count - 1
+			if (symmetric) then
+				Count = Count - 3
+			end
+		elseif (RandomNumber == 1) then
+			for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
+				for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+					if (SyncRand(100) <= 50) then -- give a chance of a silver rock not being generated, to make the shape of the silver rock group seem more natural
+						unit = CreateUnit("unit-silver-rock", 15, {gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y})
+						if (symmetric) then
+							local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
+							if (mirrored_tile_x < 0) then
+								mirrored_tile_x = mirrored_tile_x * -1
+							end
+
+							local mirrored_tile_y = gold_mine_spawn_point[2] + 1 - 128
+							if (mirrored_tile_y < 0) then
+								mirrored_tile_y = mirrored_tile_y * -1
+							end
+
+							unit = CreateUnit("unit-silver-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, gold_mine_spawn_point[2] + sub_y})
+
+							unit = CreateUnit("unit-silver-rock", 15, {gold_mine_spawn_point[1] + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+
+							unit = CreateUnit("unit-silver-rock", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) + sub_x, mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) + sub_y})
+						end
+					end
+				end
+			end
+			Count = Count - 1
+			if (symmetric) then
+				Count = Count - 3
+			end
 		end
 		WhileCount = WhileCount + 1
 	end
@@ -1896,6 +1960,8 @@ function RawTile(x, y)
 end
 
 function ApplyRawTiles()
+	local RandomNumber = 0
+
 	if (Editor.Running == EditorNotRunning) then
 		if (GetNumUnitsAt(15, "unit-mushroom-patch", {0, 0}, {256, 256}) >= 1) then
 			-- destroy mushrooms that ended up in inappropriate locations
@@ -1943,7 +2009,8 @@ function ApplyRawTiles()
 					end
 				end
 			elseif (RawTile(x, y) == "Gold Mine") then
-				if (SyncRand(100) <= 50) then -- 50% chance a gold mine will be generate, 50% a group of gold rocks will be generated instead
+				RandomNumber = SyncRand(3)
+				if (RandomNumber == 0) then
 					unit = CreateUnit("unit-gold-deposit", 15, {x, y})
 					SetResourcesHeld(unit, 50000)
 					for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
@@ -1951,12 +2018,21 @@ function ApplyRawTiles()
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 						end
 					end
-				else
+				elseif (RandomNumber == 1) then
 					for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
 						for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 							if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
 								unit = CreateUnit("unit-gold-rock", 15, {x + sub_x, y + sub_y})
+							end
+						end
+					end
+				elseif (RandomNumber == 2) then
+					for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
+						for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+							SetRawTile(x + sub_x, y + sub_y, "Land")
+							if (SyncRand(100) <= 50) then
+								unit = CreateUnit("unit-silver-rock", 15, {x + sub_x, y + sub_y})
 							end
 						end
 					end
@@ -1999,8 +2075,6 @@ function ApplyRawTiles()
 			end
 		end
 	end
-
-	local RandomNumber = 0
 
 	for x=0,(Map.Info.MapWidth - 1) do
 		for y=0,(Map.Info.MapHeight - 1) do

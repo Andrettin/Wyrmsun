@@ -42,6 +42,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-germanic-worker", Icon = "icon-germanic-worker",
 	Corpse = "unit-human-dead-body",
+	NightSightRangeMalus = 1,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "germanic/units/worker_with_gold.png",
@@ -50,6 +51,26 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 			"resource-step", 2,
 			"wait-at-resource", 3,
 			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "silver",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 3,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 50
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "copper",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 3,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 25
 		},
 		{
 			"file-when-loaded", "germanic/units/worker_with_lumber.png",
@@ -87,6 +108,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Image = {"file", "teuton/units/saxon_swordsman.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-teuton-swordsman",
 	Corpse = "unit-human-dead-body",
+	NightSightRangeMalus = 1,
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -108,6 +130,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
 	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
+	NightSightRangeMalus = 1,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -162,6 +185,7 @@ DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
 	BasicDamage = 6,
 	Corpse = "unit-human-dead-body",
 	Variations = {},
+	NightSightRangeMalus = 1,
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",

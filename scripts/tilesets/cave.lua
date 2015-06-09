@@ -164,3 +164,4 @@ BuildTilesetTables()
 
 wyrmsun.tileset = "cave"
 Load("scripts/scripts.lua")
+GameSettings.Inside = true

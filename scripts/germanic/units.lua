@@ -42,6 +42,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-germanic-worker", Icon = "icon-germanic-worker",
 	Corpse = "unit-human-dead-body",
+	NightSightRangeMalus = 1,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "germanic/units/worker_with_gold.png",
@@ -50,6 +51,26 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 			"resource-step", 2,
 			"wait-at-resource", 3,
 			"wait-at-depot", 150
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "silver",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 3,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 50
+		},
+		{
+			"file-when-loaded", "germanic/units/worker_with_gold.png",
+			"resource-id", "copper",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 3,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 25
 		},
 		{
 			"file-when-loaded", "germanic/units/worker_with_lumber.png",
@@ -94,6 +115,7 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 	MaxAttackRange = 1,
 	Accuracy = 8,
 	Evasion = 9,
+	NightSightRangeMalus = 1,
 	Priority = 50,
 	BasePoints = 30,
 	Demand = 1,
@@ -128,6 +150,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Shadow = {"file", "germanic/units/warrior_shadow.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior",
 	Corpse = "unit-human-dead-body",
+	NightSightRangeMalus = 1,
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -208,6 +231,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
 	TechnologyPointCost = 1,
+	NightSightRangeMalus = 1,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -246,6 +270,7 @@ DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
 	BasicDamage = 6,
 	Corpse = "unit-human-dead-body",
 	Variations = {},
+	NightSightRangeMalus = 1,
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",
