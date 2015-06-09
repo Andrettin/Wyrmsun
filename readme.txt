@@ -167,6 +167,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.1.9
 -----------------------------------------------------------------------
 
+* Buildings
+- Germanic and Teuton building shadows reworked (by Jinn).
+
 * Miscellaneous
 - OpenGL is now active by default.
 
