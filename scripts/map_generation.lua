@@ -2398,6 +2398,23 @@ function ApplyRawTiles()
 		end
 	end
 	
+	if (Editor.Running == EditorNotRunning) then
+		if ((GetNumUnitsAt(15, "unit-gold-rock", {0, 0}, {256, 256}) + GetNumUnitsAt(15, "unit-silver-rock", {0, 0}, {256, 256})) >= 1) then
+			-- destroy gold and silver rocks that ended up in inappropriate locations
+			local uncount = 0
+			uncount = GetUnits(15)
+			for unit1 = 1,table.getn(uncount) do 
+				if (uncount[unit1]) then
+					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock") then
+						if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
+							SetUnitVariable(uncount[unit1], "HitPoints", 0)
+						end
+					end
+				end
+			end
+		end
+	end
+	
 	CleanRawTiles()
 end
 

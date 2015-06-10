@@ -79,6 +79,9 @@ end
 
 -- Convert unit type to the player's race
 function CreateUnit(unittype, player, pos)
+	if (unittype == "unit-silver-rock") then
+		unittype = "unit-gold-rock"
+	end
 
   if (not IsNetworkGame()) then
 	-- if Rugnur has a persistent level of 2 or higher, create him as his older version already

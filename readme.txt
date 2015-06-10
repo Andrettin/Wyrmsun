@@ -170,12 +170,15 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Germanic and Teuton building shadows reworked (by Jinn).
 
+* Maps
+- Added new landbridge to the Regensburg map.
+
 * Miscellaneous
 - OpenGL is now active by default.
 
 * Terrain
-- Added harvestable silver rocks (graphics by KPJ). Silver is converted at a 50% rate to gold when processed.
 - Added day/night cycles.
+- Fixed very rare issue with map generation which led to gold rocks appearing on top of trees and other unsuitable terrain.
 
 * Units
 - Human units now have a sight bonus at day, and a sight malus at night.
