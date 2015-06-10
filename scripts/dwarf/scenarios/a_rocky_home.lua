@@ -73,6 +73,8 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
 	SetPlayerData(0, "Allow", "unit-gold-mine", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-miner", "F")
+	
+	GameTimeOfDay = 2
 end
 
 RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
@@ -238,5 +240,22 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Durin must survive")
 		ActionDefeat()
 		return false
+	end
+)
+
+-- it is always day during this scenario
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GameTimeOfDay >= 4) then
+			return true
+		end
+		return false
+	end,
+	function()
+		GameTimeOfDay = 2
+		return true
 	end
 )
