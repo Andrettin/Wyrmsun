@@ -192,6 +192,7 @@ https://github.com/Andrettin/Wyrmsun
 - Goblin and kobold units now have a sight malus at day, and a sight bonus at night.
 - Bats now have a sight malus at day, and a sight bonus at night.
 - Units now use their sight range as their reaction range.
+- Animals now have increased hunger after breeding.
 
 -----------------------------------------------------------------------
 - 1.1.8
