@@ -26,15 +26,17 @@ local layout = {
 	{-1, -1, -1, -1, -1, -1, -1, -1}
 }
 
-local town_buildings = {}
+local town_buildings = {"Farm", "Farm"}
 
 local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-archer"}
+
+local invader_buildings = {"Farm", "Farm"}
 
 local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-archer"}
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_units, "low", nil)
+		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", nil)
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == "") then
 			for i=0,15 do
@@ -44,7 +46,7 @@ if (LoadedGame == false) then
 			end
 		end
 	else
-		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, "low", nil)
+		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, {}, "low", nil)
 	end
 end
 

@@ -28,6 +28,9 @@ local layout = {
 }
 
 local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smithy"}
+
+local invader_buildings = {"Farm", "Farm"}
+
 local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer"}
 
 local rock_generation = {
@@ -45,7 +48,7 @@ local rock_generation = {
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 0, "latin", "Rome", 4, "teuton", "Marcomanni Tribe", town_buildings, {}, true, invader_units, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
+		GenerateTown(layout, 0, "latin", "Rome", 4, "teuton", "Marcomanni Tribe", town_buildings, {}, true, invader_buildings, invader_units, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
 			for i=0,15 do
@@ -55,7 +58,7 @@ if (LoadedGame == false) then
 			end
 		end
 	else
-		GenerateTown(layout, 0, "latin", "Rome", 4, "teuton", "Marcomanni Tribe", town_buildings, {}, false, {}, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
+		GenerateTown(layout, 0, "latin", "Rome", 4, "teuton", "Marcomanni Tribe", town_buildings, {}, false, {}, {}, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
 	end
 end
 

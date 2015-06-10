@@ -3578,7 +3578,7 @@ function ReplaceTiles(x1, y1, x2, y2, from, to)
 	end
 end
 
-function GenerateTown(layout, town_player, town_player_civilization, town_player_faction, invader_player, invader_player_civilization, invader_player_faction, town_buildings, town_units, invader_base, invader_units, tree_quantity, rock_generation)
+function GenerateTown(layout, town_player, town_player_civilization, town_player_faction, invader_player, invader_player_civilization, invader_player_faction, town_buildings, town_units, invader_base, invader_buildings, invader_units, tree_quantity, rock_generation)
 	CleanRawTiles()
 
 	local RandomNumber = 0
@@ -3752,6 +3752,11 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 					end
 				end
 				CreateStartingGoldMine(invader_player) -- create the invader player's gold mine
+				if (invader_buildings) then
+					for i=1,table.getn(invader_buildings) do
+						CreateStartingBuilding(invader_player, invader_buildings[i]) -- create the town player's initial farms
+					end
+				end
 			end
 		elseif (t == 27) then -- extra gold mine
 			CreateStartingGoldMine(15, x, y)
@@ -3925,7 +3930,7 @@ function CreateStartingBuilding(player, building_type)
 				road_found = true
 			end
 		end
-		RandomNumber = SyncRand(4) -- which direction the gold mine will be created
+		RandomNumber = SyncRand(4) -- which direction the building will be created
 		local building_spawn_point
 		if (RandomNumber == 0) then -- north
 			building_spawn_point = {(road_tile[1] - SyncRand(width)), (road_tile[2] - height)}
@@ -3940,6 +3945,9 @@ function CreateStartingBuilding(player, building_type)
 		for sub_x=0,width+1 do
 			for sub_y=0,height+1 do
 					if (RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Road") then
+						free_square = false
+					end
+					if (building_spawn_point[1] + sub_x - 1 < 0 or building_spawn_point[1] + sub_x - 1 >= Map.Info.MapWidth or building_spawn_point[2] + sub_y - 1 < 0 or building_spawn_point[2] + sub_y - 1 >= Map.Info.MapHeight) then
 						free_square = false
 					end
 			end

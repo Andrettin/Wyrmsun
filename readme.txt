@@ -175,6 +175,13 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - OpenGL is now active by default.
+- When increasing and decreasing game speed with the "-" and "+" buttons, the game now says exactly to what speed it was increased/decreased to.
+- The game speed number which appears on the interface now has "Speed:" written before it.
+- Removed in-game option to remove the fog of war.
+- Added in-game option to reverse the direction of mouse wheel scrolling.
+
+* Quests
+- In many of the Germanic and Teuton quests, the player now starts with two farms already built.
 
 * Terrain
 - Added day/night cycles.

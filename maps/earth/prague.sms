@@ -33,11 +33,13 @@ local town_buildings = {"Farm", "Farm"}
 
 local town_units = {"unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-archer"}
 
+local invader_buildings = {"Farm", "Farm"}
+
 local invader_units = {"unit-teuton-swordsman", "unit-teuton-archer"}
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, true, invader_units, "low", rock_generation)
+		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", rock_generation)
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
 			for i=0,15 do
@@ -47,6 +49,6 @@ if (LoadedGame == false) then
 			end
 		end
 	else
-		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, false, invader_units, "low", rock_generation)
+		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, false, {}, invader_units, "low", rock_generation)
 	end
 end
