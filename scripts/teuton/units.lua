@@ -42,7 +42,8 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-germanic-worker", Icon = "icon-germanic-worker",
 	Corpse = "unit-human-dead-body",
-	NightSightRangeMalus = 1,
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "germanic/units/worker_with_gold.png",
@@ -108,7 +109,8 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Image = {"file", "teuton/units/saxon_swordsman.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-teuton-swordsman",
 	Corpse = "unit-human-dead-body",
-	NightSightRangeMalus = 1,
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -130,7 +132,8 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
 	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
-	NightSightRangeMalus = 1,
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -185,7 +188,8 @@ DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
 	BasicDamage = 6,
 	Corpse = "unit-human-dead-body",
 	Variations = {},
-	NightSightRangeMalus = 1,
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -311,6 +315,7 @@ DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
 	Civilization = "teuton",
 	Description = _("It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
 	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
+	Shadow = {"file", "germanic/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-smithy",
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"

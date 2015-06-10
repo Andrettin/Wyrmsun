@@ -178,7 +178,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added day/night cycles.
 
 * Units
-- Human units now have a sight malus at night.
+- Human units now have a sight bonus at day, and a sight malus at night.
+- Goblin and kobold units now have a sight malus at day, and a sight bonus at night.
+- Bats now have a sight malus at day, and a sight bonus at night.
+- Units now use their sight range as their reaction range.
 
 -----------------------------------------------------------------------
 - 1.1.8
