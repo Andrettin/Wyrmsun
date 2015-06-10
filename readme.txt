@@ -174,7 +174,7 @@ https://github.com/Andrettin/Wyrmsun
 - OpenGL is now active by default.
 
 * Terrain
-- Added harvestable silver rocks (graphics by KPJ).
+- Added harvestable silver rocks (graphics by KPJ). Silver is converted at a 50% rate to gold when processed.
 - Added day/night cycles.
 
 * Units
