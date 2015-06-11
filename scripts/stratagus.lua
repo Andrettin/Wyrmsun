@@ -432,36 +432,6 @@ function SinglePlayerTriggers()
 		EventTriggers()
 	end
 
-	-- setup graphics variations
-	local uncount = 0
-	uncount = GetUnits("any")
-	for unit1 = 1,table.getn(uncount) do 
-		if (uncount[unit1]) then
-			if (GetUnitVariable(uncount[unit1],"GraphicsVariation") == 0) then
-				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
-					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(12) + 1))
-				elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
-					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(4) + 1))
-				elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(uncount[unit1], "Ident") == "unit-large-flower" and (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest"))) then
-					SetUnitVariable(uncount[unit1], "GraphicsVariation", (SyncRand(3) + 1))
-				elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom" or GetUnitVariable(uncount[unit1], "Ident") == "unit-mushroom-patch") then
-					SetUnitVariable(uncount[unit1], "LifeStage", (SyncRand(13) + 1))
-				end
-			end
-			if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
-				SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
-			end
-			if (GetUnitVariable(uncount[unit1], "XpRequired") == 0) then
-				local xp_required = GetUnitVariable(uncount[unit1], "XpRequired")
-				xp_required = xp_required + math.floor(GetUnitVariable(uncount[unit1], "BasePoints") / (GetUnitVariable(uncount[unit1], "StartingLevel") + 1) * 4 * 2)
-				SetUnitVariable(uncount[unit1], "XpRequired", xp_required)
-			end
-			if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
-				IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
-			end
-		end
-	end
-
 	LoadedGame = false
 end
 
@@ -608,21 +578,9 @@ function StandardTriggers()
 				end
 
 				if (not IsNetworkGame()) then
-					if (GetUnitBoolFlag(uncount[unit1], "Hero")) then
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Hero")) then
 						for key, value in pairs(wyr.preferences.Heroes) do
 							if (wyr.preferences.Heroes[key].name == GetUnitVariable(uncount[unit1], "Name")) then
-								-- apply persistent hero levels
-								if (GetUnitVariable(uncount[unit1], "Level") < wyr.preferences.Heroes[key].level) then
-									IncreaseUnitLevel(uncount[unit1], (wyr.preferences.Heroes[key].level - GetUnitVariable(uncount[unit1], "Level")), true)
-								end
-
-								-- load upgrades
-								for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
-									if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade-") ~= nil and UnitHasAbility(uncount[unit1], wyr.preferences.Heroes[key].upgrades[i]) == false) then
-										AcquireAbility(uncount[unit1], wyr.preferences.Heroes[key].upgrades[i])
-									end
-								end
-
 								if (GetUnitVariable(uncount[unit1], "LevelUp") > 0 and GetUnitVariable(uncount[unit1], "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) + GetUnitVariable(uncount[unit1], "StartingLevel")) then
 									SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + (15 * GetUnitVariable(uncount[unit1], "LevelUp")), "Max")
 									SetUnitVariable(uncount[unit1], "LevelUp", 0)
@@ -1587,6 +1545,59 @@ end
 function GenerateTrait(unit)
 	if (GetUnitVariable(unit, "Trait") == "" and GetUnitBoolFlag(unit, "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))) > 0) then
 		AcquireTrait(unit, GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident")))) + 1])
+	end
+end
+
+function InitializeUnit(unit)
+	if (GetUnitVariable(unit,"GraphicsVariation") == 0) then
+		if ((GetUnitVariable(unit, "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
+			SetUnitVariable(unit, "GraphicsVariation", (SyncRand(12) + 1))
+		elseif ((GetUnitVariable(unit, "Ident") == "unit-fern" and wyrmsun.tileset == "swamp")) then
+			SetUnitVariable(unit, "GraphicsVariation", (SyncRand(4) + 1))
+		elseif ((GetUnitVariable(unit, "Ident") == "unit-flowers" and wyrmsun.tileset == "swamp") or (GetUnitVariable(unit, "Ident") == "unit-large-flower" and (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest"))) then
+			SetUnitVariable(unit, "GraphicsVariation", (SyncRand(3) + 1))
+		elseif (GetUnitVariable(unit, "Ident") == "unit-mushroom" or GetUnitVariable(unit, "Ident") == "unit-mushroom-patch") then
+			SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
+		end
+	end
+	if (GetUnitVariable(unit, "Points") == 0 and GetUnitVariable(unit, "BasePoints") > 0) then
+		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "BasePoints"))
+	end
+	if (GetUnitVariable(unit, "XpRequired") == 0) then
+		local xp_required = GetUnitVariable(unit, "XpRequired")
+		xp_required = xp_required + math.floor(GetUnitVariable(unit, "BasePoints") / (GetUnitVariable(unit, "StartingLevel") + 1) * 4 * 2)
+		SetUnitVariable(unit, "XpRequired", xp_required)
+	end
+	if (GetUnitVariable(unit, "Level") < GetUnitVariable(unit, "StartingLevel")) then
+		IncreaseUnitLevel(unit, (GetUnitVariable(unit, "StartingLevel") - GetUnitVariable(unit, "Level")), false)
+	end
+			
+	if (GetUnitTypeData(GetUnitVariable(unit, "Ident"), "Hero")) then
+		InitializeHero(unit)
+	end
+	
+	if (GetUnitTypeData(GetUnitVariable(unit, "Ident"), "organic")) then
+		GenerateTrait(unit)
+	end
+end
+
+function InitializeHero(unit)
+	if (not IsNetworkGame()) then
+		for key, value in pairs(wyr.preferences.Heroes) do
+			if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name")) then
+				-- apply persistent hero levels
+				if (GetUnitVariable(unit, "Level") < wyr.preferences.Heroes[key].level) then
+					IncreaseUnitLevel(unit, (wyr.preferences.Heroes[key].level - GetUnitVariable(unit, "Level")), true)
+				end
+
+				-- load upgrades
+				for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
+					if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade-") ~= nil and UnitHasAbility(unit, wyr.preferences.Heroes[key].upgrades[i]) == false) then
+						AcquireAbility(unit, wyr.preferences.Heroes[key].upgrades[i])
+					end
+				end
+			end
+		end
 	end
 end
 

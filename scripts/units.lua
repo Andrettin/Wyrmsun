@@ -92,11 +92,6 @@ if (OldDefineUnitType == nil) then
 end
 
 function DefineUnitType(unit_type, data)
-	local organic = false
-	if (data.organic) then
-		organic = true
-	end
-	
 	local town_hall = false
 	if (data.Class == "town-hall" or data.Class == "stronghold") then
 		town_hall = true
@@ -105,17 +100,12 @@ function DefineUnitType(unit_type, data)
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
-		if (GetUnitTypeData(unit_type, "organic") and data.organic == nil) then
-			organic = true
-		end
 		if ((GetUnitTypeData(unit_type, "Class") == "town-hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
 			town_hall = true
 		end
 	end
 	
-	if (organic) then
-		data.OnInit = GenerateTrait
-	end
+	data.OnInit = InitializeUnit
 	
 	if (town_hall) then
 		data.BuildingRules = {
