@@ -640,17 +640,19 @@ if (ForTheMotherland) then
 	aiftm_quantity[1][16] = 1
 end
 
-CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-local uncount = 0
-uncount = GetUnits(15)
-for unit1 = 1,table.getn(uncount) do 
-	if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
-		if (SyncRand(2) == 0) then
-			local RandomNumber = SyncRand(2)
-			if (RandomNumber == 0) then
-				unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-			elseif (RandomNumber == 1) then
-				unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+if (LoadedGame == false) then
+	CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	local uncount = 0
+	uncount = GetUnits(15)
+	for unit1 = 1,table.getn(uncount) do 
+		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
+			if (SyncRand(2) == 0) then
+				local RandomNumber = SyncRand(2)
+				if (RandomNumber == 0) then
+					unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
+				elseif (RandomNumber == 1) then
+					unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
+				end
 			end
 		end
 	end

@@ -2790,7 +2790,7 @@ function AdjustTransitions(min_x, max_x, min_y, max_y)
 	for x=min_x,max_x do
 		for y=min_y,max_y do
 			-- convert buildable land tiles adjacent to water tiles into rough land
-			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Road") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
+			if ((RawTile(x, y) == "Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Road" or RawTile(x, y) == "Mush") and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
 				SetRawTile(x, y, "Rough")
 			end
 

@@ -172,6 +172,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Added new landbridge to the Regensburg map.
+- Fixed water/land transition issues in some of the Nidavellir cave maps.
 
 * Miscellaneous
 - OpenGL is now active by default.
@@ -179,6 +180,7 @@ https://github.com/Andrettin/Wyrmsun
 - The game speed number which appears on the interface now has "Speed:" written before it.
 - Removed in-game option to remove the fog of war.
 - Added in-game option to reverse the direction of mouse wheel scrolling.
+- Fixed issue which caused strange shapes to appear behind the minimap if OpenGL were active.
 
 * Quests
 - In many of the Germanic and Teuton quests, the player now starts with two farms already built.
