@@ -175,7 +175,6 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed water/land transition issues in some of the Nidavellir cave maps.
 
 * Miscellaneous
-- OpenGL is now active by default.
 - When increasing and decreasing game speed with the "-" and "+" buttons, the game now says exactly to what speed it was increased/decreased to.
 - The game speed number which appears on the interface now has "Speed:" written before it.
 - Removed in-game option to remove the fog of war.
