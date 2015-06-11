@@ -66,3 +66,189 @@ msgstr "Все необходимые материалы собраны."
 
 msgid "The materials we need have been collected. It is time to build our new homes by these rocks!"
 msgstr "Все необходимые материалы собраны. Время построить новые дома возле тех скал!"
+
+msgid "Modsogning Clan"
+msgstr ""
+
+msgid "Svarinshaug"
+msgstr ""
+
+msgid "Fjalar"
+msgstr ""
+
+msgid "Galar"
+msgstr ""
+
+msgid "Fjalar and Galar"
+msgstr ""
+
+msgid "A few days ago our clan's sage, Thjodrorir, disappeared during the night. Word has now reached our chieftain Modsognir that the dwarves Fjalar and Galar have captured Thjodrorir, for unknown reasons. The chieftain has sent you, Durin, to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to the clan's justice."
+msgstr ""
+
+msgid "We must wary, for these corridors are filled with the two dwarves' thugs. Let us get this over with as quickly as we can."
+msgstr ""
+
+msgid "Fjalar's and Galar's Hall"
+msgstr ""
+
+msgid "- Defeat your enemies"
+msgstr ""
+
+msgid "- Rescue Thjodrorir's remains"
+msgstr ""
+
+msgid "- Bring Fjalar and Galar to the clan's justice"
+msgstr ""
+
+msgid "Fjalar and Galar, I am here on behalf of Modsognir. Where is Thjodrorir?"
+msgstr ""
+
+msgid "He is no more. We brew his blood into mead, to absorb his ancient wisdom and gift with words."
+msgstr ""
+
+msgid "I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't drink any!"
+msgstr ""
+
+msgid "Abominable! How could you, to Thjodrorir... Foolish as you seem, the mead certainly made you none the wiser."
+msgstr ""
+
+msgid "Thjodrorir went down first, but you will be next!"
+msgstr ""
+
+msgid "It is over. I will bring the cauldron and jars to Modsognir, and have them buried in Thjodrorir's grave. It is the best that can be done..."
+msgstr ""
+
+msgid "The Mead of Wisdom"
+msgstr ""
+
+msgid "Raiders"
+msgstr ""
+
+msgid "Norlund Clan"
+msgstr ""
+
+msgid "The Eikinskjaldi Clan from Joruvellir has hired us to recover the skull of Durahn Eikinskjaldi, a dwarven warlord of ages past. The clan's chieftain needs the skull to prove his descent from Durahn, and thus his claim to his title."
+msgstr ""
+
+msgid "- Retrieve Durahn Eikinskjaldi's skull"
+msgstr ""
+
+msgid "- Durstorn and Baglur must survive"
+msgstr ""
+
+msgid "Baglur"
+msgstr ""
+
+msgid "Gnomish raiders looting the tomb... bad news."
+msgstr ""
+
+msgid "The ceiling of this antechamber bears a mosaic... depicting a dwarven noble with gold armor and a huge axe."
+msgstr ""
+
+msgid "Durstorn"
+msgstr ""
+
+msgid "Fit for a chieftain."
+msgstr ""
+
+msgid "The walls here have niches, which must have contained dwarven corpses before the raiders scoured this room for valuable objects."
+msgstr ""
+
+msgid "The remains of a dwarf... the regalia does not seem Durahn's. This must be Isuldan, his son."
+msgstr ""
+
+msgid "Bloody dwarves! We were almost finishing with this tomb... prepare to be gutted."
+msgstr ""
+
+msgid "The skeleton of a female dwarf... Durahn's wife Gneissus, I suppose."
+msgstr ""
+
+msgid "There's a book on this table... merchant contacts that the raider leader used to sell off the tomb's artifacts are written on it."
+msgstr ""
+
+msgid "There's Durahn's skeleton! Let us bring his skull back to the Eikinskjaldis for a nice reward."
+msgstr ""
+
+msgid "The Tomb of Durahn Eikinskjaldi"
+msgstr ""
+
+msgid "Tomb of Durahn Eikinskjaldi"
+msgstr ""
+
+msgid "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?\n\nMap: Svarinshaug\n\nRewards: 1 Dwarven Technology Point."
+msgstr ""
+
+msgid "Nidavellir"
+msgstr ""
+
+msgid "Dwarf"
+msgstr ""
+
+msgid "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi\n\nRewards: 1 Dwarven Technology Point."
+msgstr ""
+
+msgid "A Bargain is Struck"
+msgstr ""
+
+msgid "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "Chaincolt Foothills"
+msgstr ""
+
+msgid "Closing the Gates"
+msgstr ""
+
+msgid "Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "Caverns of Chaincolt"
+msgstr ""
+
+msgid "Searching for the Runecrafter"
+msgstr ""
+
+msgid "Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "Northern Wastelands"
+msgstr ""
+
+msgid "Gathering Materials"
+msgstr ""
+
+msgid "Rugnur and his brave companions, having spent two years harvesting materials in the tunnels of the eastern mines, now venture into the very heart of the goblins' territory to obtain the last materials needed...\n\nMap: Eastern Mines\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "Eastern Mines"
+msgstr ""
+
+msgid "Hills of the Shorbear Clan"
+msgstr ""
+
+msgid "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "Shorbear Hills"
+msgstr ""
+
+msgid "The Wyrm"
+msgstr ""
+
+msgid "Wyrm"
+msgstr ""
+
+msgid "Rugnur's dwarves dwelve deep into underground caves, seeking to escape from the Shinsplitter Clan. However, the section of the old eastern mines that they reached had long since become the lair of Svafnir... the wyrm.\n\nMap: Wyrm's Lair\n\nRewards: 2 Dwarven Technology Points."
+msgstr ""
+
+msgid "Svafnir's Lair"
+msgstr ""
+
+msgid "Caverns of Flame"
+msgstr ""
+
+msgid "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame\n\nRewards: 1 Dwarven Technology Point."
+msgstr ""
