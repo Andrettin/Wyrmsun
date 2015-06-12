@@ -167,6 +167,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.0
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Pressing 'Q' will now select the player's entire army.
+- Pressing 'W' will now select all visible units of the same type as the first of the currently selected ones, while pressing 'W' twice will select all units of that type.
+
 * Units
 - Fixed issue with workers trying to harvest a mine which was still under construction.
 
@@ -374,7 +378,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * AI
-- Improvements to Northern Wastelands Goblins AI.
+- Improvements to the Northern Wastelands Goblins AI.
 
 * Maps
 - Increased the dwarves' starting resources in the Northern Wastelands map.
