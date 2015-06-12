@@ -161,7 +161,7 @@ SetPlayerData(1, "RaceName", "germanic")
 if (GrandStrategy == false or GrandStrategyEventMap) then
 	SetPlayerData(1, "Name", "Natives")
 end
-SetAiType(1, "land-attack")
+SetAiType(1, "land-attack-defensive")
 SetStartView(4, 44, 85) -- Germanics / Hanseatic League
 SetPlayerData(4, "Resources", "gold", 5000)
 SetPlayerData(4, "Resources", "lumber", 2500)

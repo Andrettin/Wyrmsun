@@ -171,6 +171,12 @@ https://github.com/Andrettin/Wyrmsun
 - Pressing 'Q' will now select the player's entire army.
 - Pressing 'W' will now select all visible units of the same type as the first of the currently selected ones, while pressing 'W' twice will select all units of that type.
 
+* Quests
+- The AI in the "Northwards to the Sea" quest is now defensive.
+
+* Terrain
+- Further fix to the very rare issue with map generation which led to gold rocks appearing on top of trees and other unsuitable terrain.
+
 * Units
 - Fixed issue with workers trying to harvest a mine which was still under construction.
 

@@ -2407,7 +2407,7 @@ function ApplyRawTiles()
 				if (uncount[unit1]) then
 					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock") then
 						if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
-							SetUnitVariable(uncount[unit1], "HitPoints", 0)
+							KillUnitAt(GetUnitVariable(uncount[unit1], "Ident"), 15, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 						end
 					end
 				end
