@@ -167,9 +167,13 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.0
 -----------------------------------------------------------------------
 
+* AI
+- The AI is now more conservative with shuffling workers between the harvesting of different resources.
+
 * Miscellaneous
 - Pressing 'Q' will now select the player's entire army.
 - Pressing 'W' will now select all visible units of the same type as the first of the currently selected ones, while pressing 'W' twice will select all units of that type.
+- The screen is now properly centered in the player's starting position after loading a saved game.
 
 * Quests
 - The AI in the "Northwards to the Sea" quest is now defensive.
