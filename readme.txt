@@ -177,6 +177,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The AI in the "Northwards to the Sea" quest is now defensive.
+- Improved the ending of the "On the Vanaquisl" quest.
 
 * Terrain
 - Further fix to the very rare issue with map generation which led to gold rocks appearing on top of trees and other unsuitable terrain.

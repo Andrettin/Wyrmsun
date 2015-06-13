@@ -222,35 +222,72 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			Event(
-				"",
-				"We ravaged Vanaland and pillaged its wealth, but victory did not quite fall within our grasp. A number of Vanaland's warriors still loomed at large, and reorganized themselves for an attack on us: our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
-				player,
-				{"~!Continue"},
-				{function(s)
-				Event(
-					"",
-					"With expansion across the Vanaquisl being denied to us, we now face a dilemma. The lands where we live are not enough to sustain our growing tribe, and we face frequent attacks from other tribes which are in a similar situation. Many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
-					player,
-					{"~!Continue"},
-					{function(s)
-						if (player == GetThisPlayer()) then
-							if (GrandStrategy == false) then
-								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
-									table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
-								end
-								SavePreferences()
-							end
-							ActionVictory()
+				CreateCreeps(1, "unit-germanic-warrior", 9 - GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-warrior"), math.floor(Map.Info.MapWidth / 4), math.floor(Map.Info.MapWidth * 7 / 8), math.floor(Map.Info.MapHeight / 6), math.floor(Map.Info.MapHeight * 4 / 6))
+				
+				local asa_warrior = nil
+			
+				local uncount = 0
+				uncount = GetUnits(GetFactionPlayer("Asa Tribe"))
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1],"Ident") == "unit-germanic-warrior") then
+						asa_warrior = uncount[unit1]
+					end
+				end
+
+				if (asa_warrior) then
+					uncount = 0
+					uncount = GetUnits(GetFactionPlayer("Vana Tribe"))
+					for unit1 = 1,table.getn(uncount) do 
+						if (GetUnitVariable(uncount[unit1],"Ident") == "unit-germanic-warrior") then
+							OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, "attack")
 						end
-					end}
-				)
-				end}
-			)
+					end
+				end
 			end},
 			nil,
 			nil,
 			vana_unit == ""
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Destroy Vanaland's town hall") and GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-town-hall") < 1 and (GetPlayerData(GetFactionPlayer("Asa Tribe"), "UnitTypesCount", "unit-germanic-warrior") <= 4 or GetPlayerData(GetFactionPlayer("Vana Tribe"), "UnitTypesCount", "unit-germanic-warrior") == 0)) then
+			player = GetFactionPlayer("Asa Tribe")
+			return true
+		end
+		return false
+	end,
+	function()
+		Event(
+			"",
+			"We ravaged Vanaland and pillaged its wealth, but victory did not quite fall within our grasp. A number of Vanaland's warriors still loomed at large, and reorganized themselves for an attack on us: our remaining forces were not enough to assure their defeat. We had no option but to make peace - for the prolongation of this war would bring naught but great damage to our people.",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				"",
+				"With expansion across the Vanaquisl being denied to us, we now face a dilemma. The lands where we live are not enough to sustain our growing tribe, and we face frequent attacks from other tribes which are in a similar situation. Many of our chieftains are now clamoring for us to head northwest, to find a new home and leave these crowded steppes well behind.",
+				player,
+				{"~!Continue"},
+				{function(s)
+					if (player == GetThisPlayer()) then
+						if (GrandStrategy == false) then
+							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
+								table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
+							end
+							SavePreferences()
+						end
+						ActionVictory()
+					end
+				end}
+			)
+			end}
 		)
 		Event(
 			"",
