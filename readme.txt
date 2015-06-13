@@ -167,6 +167,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.1
 -----------------------------------------------------------------------
 
+* Quests
+- Reduced quantity of axefighters Durin starts out with in the Mead of Wisdom quest in hard and brutal difficulties.
+
 -----------------------------------------------------------------------
 - 1.2.0
 -----------------------------------------------------------------------
