@@ -168,7 +168,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * AI
-- The AI is now more conservative with shuffling workers between the harvesting of different resources.
+- The AI algorithm for shuffling workers between the harvesting of different resources is now more efficient.
 
 * Miscellaneous
 - Pressing 'Q' will now select the player's entire army.
