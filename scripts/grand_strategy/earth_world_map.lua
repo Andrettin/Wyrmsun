@@ -615,6 +615,19 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	WorldMapProvinces.Burgundy.Owner = ""
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 10 -- to make the province harder to conquer
+	
+	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
+--	Factions.AeduiTribe.Technologies.upgrade_teuton_coinage = 2
+--	Factions.SequaniTribe.Technologies.upgrade_teuton_coinage = 2
+
+--	Factions.ArverniTribe.Technologies.upgrade_teuton_coinage = 2 -- in southern Gaul there was currency, mostly of silver however; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+--	Factions.MenapiiTribe.Technologies.upgrade_teuton_coinage = 2 -- in Belgic Gaul there was currency, mostly of gold, but using a different weight; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+
+	-- gold staters also present in Bohemia and the Danubian valley, as well as the Black Forest, the Rhine, Central Gaul, Armorica and the Channel Islands; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+--	Factions.BoiiTribe.Technologies.upgrade_teuton_coinage = 2
+
+	-- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
+	Factions.Rome.Technologies.upgrade_teuton_coinage = 2
 end
 
 if (GrandStrategyYear >= -57) then -- estimated date
@@ -766,6 +779,10 @@ if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: Will
 --	WorldMapProvinces.Wallachia.Owner = ""
 end
 
+if (GrandStrategyYear >= 325) then
+	-- decree by Emperor Constantine in 325 AD regulating the issue of gold solidi for Sicily, Sardinia and Corsica; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 186.
+end
+
 if (GrandStrategyYear >= 395) then
 	WorldMapProvinces.Ireland.Owner = "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	WorldMapProvinces.Scotland.Owner = "Pict Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -903,6 +920,24 @@ if (GrandStrategyYear >= 563) then
 	GrandStrategyEvents.MohonnaMissionaryToThePicts = nil
 end
 
+if (GrandStrategyYear >= 565) then
+	-- beginning of Justin II's reign in the Eastern Roman Empire in 565 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+end
+
+if (GrandStrategyYear >= 573) then
+	Factions.VisigothTribe.Technologies.upgrade_teuton_coinage = 2 -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
+end
+
+if (GrandStrategyYear >= 578) then
+	Factions.Francia.Technologies.upgrade_teuton_coinage = 2 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+	
+	-- end of Justin II's reign in the Eastern Roman Empire in 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+end
+
+if (GrandStrategyYear >= 584) then
+	-- beginning of Maurice's reign in the Eastern Roman Empire in 584 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+end
+
 if (GrandStrategyYear >= 596) then
 	GrandStrategyEvents.TheMissionOfAugustine = nil
 end
@@ -924,6 +959,10 @@ end
 
 if (GrandStrategyYear >= 612) then
 	GrandStrategyEvents.ColumbanusMissionaryToFrance = nil
+end
+
+if (GrandStrategyYear >= 613) then
+	-- end of Maurice's reign in the Eastern Roman Empire in 613 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 end
 
 if (GrandStrategyYear >= 625) then

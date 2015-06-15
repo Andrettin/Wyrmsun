@@ -81,7 +81,7 @@ local upgrades = {
 		"upgrade-teuton-coinage", _("Coinage"), "icon-teuton-coinage", "coinage",
 		_("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
 		"",
-		"",
+		_("West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."),
 		{   250,  1500,     0,     0,     0,     0,     0,     0},
 		{   250,  1500,     0,     0,     0,     0,     0,  1500},
 		1

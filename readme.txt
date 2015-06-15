@@ -170,6 +170,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Reduced quantity of axefighters Durin starts out with in the Mead of Wisdom quest in hard and brutal difficulties.
 
+* Upgrades
+- Added background description to the Teuton Coinage.
+
 -----------------------------------------------------------------------
 - 1.2.0
 -----------------------------------------------------------------------
