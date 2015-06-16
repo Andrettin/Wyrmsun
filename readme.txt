@@ -174,6 +174,9 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Fixed issue which caused units to disappear if the province they were in happened to be assimilated to the faction's culture, and that culture used the same unit type for that class as the faction's culture.
 
+* Miscellaneous
+- Improved rectangle drawing under OpenGL.
+
 * Quests
 - Reduced quantity of axefighters Durin starts out with in the Mead of Wisdom quest in hard and brutal difficulties.
 
