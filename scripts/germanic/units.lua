@@ -10,7 +10,7 @@
 --
 --      units.ccl - Defines the germanic unit-types.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -91,10 +91,11 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "teuton-bauer-ready",
-		"help", "basic-teuton-voices-help",
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -131,10 +132,11 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "teuton-bauer-ready",
-		"help", "basic-teuton-voices-help",
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -213,10 +215,11 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -255,10 +258,11 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		}
 	},
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -277,10 +281,11 @@ DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
 		"dead", "basic-human-voices-dead",
 		"hit", "dagger-attack",
 		"miss", "attack-miss"
@@ -296,7 +301,7 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",
 	Construction = "construction-germanic-town-hall",
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+		"help", "basic-germanic-voices-help-town"
 	}
 } )
 
@@ -311,7 +316,7 @@ DefineUnitType("unit-germanic-farm", { Name = _("Farm"),
 	Sounds = {
 		"selected", "corral-selected",
 		"ready", "corral-ready",
-		"help", "basic-teuton-voices-help-town",
+		"help", "basic-germanic-voices-help-town",
 		"dead", "building-destroyed"
 	}
 } )
@@ -324,7 +329,7 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-barracks",
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+		"help", "basic-germanic-voices-help-town"
 	}
 } )
 
@@ -337,7 +342,7 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	Icon = "icon-germanic-carpenters-shop",
 	TechnologyPointCost = 1,
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+		"help", "basic-germanic-voices-help-town"
 	}
 } )
 
@@ -350,6 +355,6 @@ DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
 	Icon = "icon-germanic-smithy",
 	TechnologyPointCost = 1,
 	Sounds = {
-		"help", "basic-teuton-voices-help-town"
+		"help", "basic-germanic-voices-help-town"
 	}
 } )

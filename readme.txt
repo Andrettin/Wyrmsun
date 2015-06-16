@@ -177,6 +177,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Reduced quantity of axefighters Durin starts out with in the Mead of Wisdom quest in hard and brutal difficulties.
 
+* Units
+- Added voices in Proto-Germanic for the Germanic units (by Manuel Senfft).
+
 * Upgrades
 - Added background description to the Teuton Coinage.
 

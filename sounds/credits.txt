@@ -273,6 +273,19 @@ Jute:
 /sounds/movement/step_stone/stepstone_8.wav
 
 Manuel Senfft:
+/sounds/germanic/basic_voices/acknowledge_01.wav
+/sounds/germanic/basic_voices/acknowledge_02.wav
+/sounds/germanic/basic_voices/acknowledge_03.wav
+/sounds/germanic/basic_voices/acknowledge_04.wav
+/sounds/germanic/basic_voices/annoyed_01.wav
+/sounds/germanic/basic_voices/annoyed_02.wav
+/sounds/germanic/basic_voices/attack_01.wav
+/sounds/germanic/basic_voices/attack_02.wav
+/sounds/germanic/basic_voices/attack_03.wav
+/sounds/germanic/basic_voices/ready.wav
+/sounds/germanic/basic_voices/selected_01.wav
+/sounds/germanic/basic_voices/selected_02.wav
+/sounds/germanic/bura/work_complete.wav
 /sounds/teuton/basic_voices/acknowledge_01.wav
 /sounds/teuton/basic_voices/acknowledge_02.wav
 /sounds/teuton/basic_voices/acknowledge_03.wav

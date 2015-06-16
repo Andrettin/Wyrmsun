@@ -342,6 +342,39 @@ SetSoundRange("basic-kobold-voices-dead", 32)
 
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
+--	Define simple germanic sounds.
+--
+MakeSound("basic-germanic-voices-ready", "germanic/basic_voices/ready.wav")
+MakeSound("basic-germanic-voices-selected", {
+	"germanic/basic_voices/selected_01.wav",
+	"germanic/basic_voices/selected_02.wav"
+})
+MakeSound("basic-germanic-voices-annoyed", {
+	"germanic/basic_voices/annoyed_01.wav",
+	"germanic/basic_voices/annoyed_02.wav"
+})
+MakeSoundGroup("basic-germanic-voices-selected-group",
+	"basic-germanic-voices-selected", "basic-germanic-voices-annoyed")
+MakeSound("basic-germanic-voices-acknowledge", {
+	"germanic/basic_voices/acknowledge_01.wav",
+	"germanic/basic_voices/acknowledge_02.wav",
+	"germanic/basic_voices/acknowledge_03.wav",
+	"germanic/basic_voices/acknowledge_04.wav"
+})
+MakeSound("basic-germanic-voices-attack", {
+	"germanic/basic_voices/attack_01.wav",
+	"germanic/basic_voices/attack_02.wav",
+	"germanic/basic_voices/attack_03.wav"
+})
+MakeSound("basic-germanic-voices-help", {
+	"teuton/basic_voices/help.wav"
+})
+MakeSound("basic-germanic-voices-help-town", {
+	"teuton/basic_voices/town_help.wav"
+})
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 --	Define simple teuton sounds.
 --
 MakeSound("basic-teuton-voices-ready", "teuton/basic_voices/ready.wav")
@@ -372,7 +405,7 @@ MakeSound("basic-teuton-voices-help-town", {
 })
 
 ------------------------------------------------------------------------------
---	Define unit-specific dwarf sounds.
+--	Define unit-specific teuton sounds.
 --
 MakeSound("teuton-bauer-ready", "teuton/bauer/bauer_ready.wav")
 
@@ -829,7 +862,7 @@ DefineGameSounds(
   "building-construction", {"teuton", building_construction},
 
   "work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")},
-  "work-complete", {"germanic", MakeSound("basic-germanic-voices-work-complete", "teuton/bauer/work_complete.wav")},
+  "work-complete", {"germanic", MakeSound("basic-germanic-voices-work-complete", "germanic/bura/work_complete.wav")},
   "work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
   "work-complete", {"goblin", MakeSound("basic-goblin-voices-work-complete", "goblin/worker/built.wav")},
   "work-complete", {"teuton", MakeSound("basic-teuton-voices-work-complete", "teuton/bauer/work_complete.wav")},
