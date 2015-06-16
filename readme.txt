@@ -178,7 +178,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved rectangle drawing under OpenGL.
 
 * Quests
-- Reduced quantity of axefighters Durin starts out with in the Mead of Wisdom quest in hard and brutal difficulties.
+- Reduced quantity of axefighters Durin starts out with in the Mead of Wisdom quest in the hard and brutal difficulties.
 
 * Units
 - Added voices in Proto-Germanic for the Germanic units (by Manuel Senfft).
