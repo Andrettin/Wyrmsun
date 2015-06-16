@@ -167,6 +167,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.1
 -----------------------------------------------------------------------
 
+* AI
+- The AI on "easy" difficulty now takes more time to go through its orders.
+- Computer opponents are now hostile to each other by default.
+
 * Grand Strategy
 - Fixed issue which caused units to disappear if the province they were in happened to be assimilated to the faction's culture, and that culture used the same unit type for that class as the faction's culture.
 

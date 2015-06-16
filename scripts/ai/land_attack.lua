@@ -45,6 +45,14 @@ local end_loop_funcs = {
   function() return AiNeed(AiWatchTower()) end,
   function() return AiUpgradeTo(AiGuardTower()) end,
 
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(1000)
+	else
+		return false
+	end
+  end,
+  
 --  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
 --  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
   function() return AiDifficultyForce(0, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
@@ -80,12 +88,26 @@ local land_funcs = {
 -- FAST AND FURIOUS
   function() return AiDifficultyForce(1, {AiSoldier(), 1}, true) end,
   function() return AiWaitForce(1) end,
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(2500)
+	else
+		return false
+	end
+  end,
   function() return AiAttackWithForce(1) end,
 
 -- SECOND FAST ATTACK
   function() return AiDifficultyForce(1, {AiSoldier(), 4}, true) end,
   function() return AiWaitForce(1) end,
   function() return AiSet(AiWorker(), 12) end,
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(1000)
+	else
+		return false
+	end
+  end,
   function() return AiAttackWithForce(1) end,
   function() return AiSet("unit-surghan-mercenary-steelclad", 4) end, -- make the AI build mercenaries if it manages to get ahold of a mercenary camp
 
@@ -101,6 +123,13 @@ local land_funcs = {
   function() return AiDifficultyForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
   function() return AiSet(AiWorker(), 20) end,
   function() return AiWaitForce(1) end,
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(2500)
+	else
+		return false
+	end
+  end,
   function() return AiAttackWithForce(1) end,
 
 -- NOW UPGRADING
@@ -157,6 +186,13 @@ local land_funcs = {
 
 -- ATTACK!!
 
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(2500)
+	else
+		return false
+	end
+  end,
   function() return AiWaitForce(4) end,
   function() return AiAttackWithForce(4) end,
   function() return AiWaitForce(5) end,
@@ -181,6 +217,13 @@ local land_funcs = {
   function() return AiDifficultyForce(6, {AiSoldier(), 14, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
   function() return AiSet(AiWorker(), 40) end,
 
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(1000)
+	else
+		return false
+	end
+  end,
   function() return AiWaitForce(4) end,
   function() return AiAttackWithForce(4) end,
 --  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
@@ -229,6 +272,13 @@ local land_funcs = {
   function() return AiDifficultyForce(6, {AiSoldier(), 5, AiShooter(), 2, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
   function() return AiDifficultyForce(7, {AiSoldier(), 3, AiShooter(), 1, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
 
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(2500)
+	else
+		return false
+	end
+  end,
   function() return AiWaitForce(4) end,
   function() return AiAttackWithForce(4) end,
 --  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
@@ -270,6 +320,14 @@ local land_funcs = {
 
 -- THIRD ATTACK
 
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(2500)
+	else
+		return false
+	end
+  end,
+  
 --  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
 --  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
   function() return AiDifficultyForce(6, {AiSoldier(), 15, AiShooter(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
@@ -313,6 +371,14 @@ local land_funcs = {
   function() return AiNeed(AiBarracks()) end,
   function() return AiNeed(AiBarracks()) end,
 
+  function()
+	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
+		return AiSleep(2500)
+	else
+		return false
+	end
+  end,
+  
 --  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 15, AiCavalry(), 0, AiCavalryMage(), 40, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
 --  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
   function() return AiDifficultyForce(5, {AiSoldier(), 40, AiShooter(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
