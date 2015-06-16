@@ -45,7 +45,7 @@ local upgrades = {
 		1
 	},
 	{"upgrade-teuton-bodkin-arrow", _("Bodkin Arrow"), "icon-bodkin-arrow", "ranged-projectile-2",
-		_("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability."),
+		_("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +1 Damage for Skutans."),
 		"",
 		"",
 		{   250,   900,   750,     0,     0,     0,     0,     0},
