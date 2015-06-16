@@ -373,9 +373,12 @@ end
 --  Some functions used by Ai
 --
 
-function AiDifficultyForce(num, units)
+function AiDifficultyForce(num, units, reset_force)
+	if (reset_force == nil) then
+		reset_force = false
+	end
 	if (GameSettings.Difficulty == -1) then
-		return AiForce(num, units)
+		return AiForce(num, units, reset_force)
 	end
 	if (num == 0) then
 		return
@@ -399,7 +402,7 @@ function AiDifficultyForce(num, units)
 	for i = 1, table.getn(units)/2 do
 		units[i*2] = math.max(1, units[i*2] + add)
 	end
-	return AiForce(num, units)
+	return AiForce(num, units, reset_force)
 end
 
 function AiDifficultySleep(cycles)

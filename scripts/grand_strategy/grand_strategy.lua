@@ -727,12 +727,12 @@ function EndTurn()
 				if (GetUnitTypeData(unitName, "Mercenary") and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
 					MercenaryGroups[string.gsub(unitName, "-", "_")] = nil
 				end
-				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")]
-				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-				WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] = 0
 				if (WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] < 0 or WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] == nil) then
 					WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
 				end
+				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")]
+				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
+				WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] = 0
 			end
 		end
 		for i, unitName in ipairs(Units) do
@@ -1097,7 +1097,12 @@ function ChangeFactionCulture(faction, civilization)
 	-- replace existent units from the previous civilization with units of the new civilization
 	for province_i, key in ipairs(faction.OwnedProvinces) do
 		for i, unitName in ipairs(Units) do
-			if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Civilization") == old_civilization and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
+			if (
+				IsMilitaryUnit(unitName)
+				and GetUnitTypeData(unitName, "Civilization") == old_civilization
+				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
+				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
+			) then
 				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
 				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]
 				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
@@ -1128,7 +1133,12 @@ function ChangeProvinceCulture(province, civilization)
 	
 	-- replace existent units from the previous civilization with units of the new civilization
 	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
+		if (
+			IsMilitaryUnit(unitName)
+			and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName
+			and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
+			and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
+		) then
 			province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.Units[string.gsub(unitName, "-", "_")]
 			province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.UnderConstructionUnits[string.gsub(unitName, "-", "_")]
 			province.Units[string.gsub(unitName, "-", "_")] = 0

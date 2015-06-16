@@ -509,6 +509,30 @@ local ChristianityEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
+	LiafwinFoundsOratory = { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+		Name = "Liafwin Founds Oratory",
+		Description = "After journeying from Utrecht to the Ijssel river, the Anglo-Saxon missionary Liafwin has founded an oratory on its left bank.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
+				and WorldMapProvinces.England.Civilization == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
+			) then
+				EventProvince = WorldMapProvinces.Netherlands
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = 765,
+		MaxYear = 765,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
 	FerdomnachLearnedMonkOfArmagh = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "Ferdomnach, Learned Monk of Armagh",
 		Description = "Ferdomnach was a learned monk belonging to the monastery of Armagh, who worked as a scribe and compiled many of the religious works extant at the time.",
@@ -581,7 +605,7 @@ local ChristianityEvents = {
 	},
 	DeMensuraOrbisTerrae = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
 		Name = "De Mensura Orbis Terrae",
-		Description = "The monk Dicuil has written a cosmographical work, De Mensura Orbis Terrae. In it, Dicuil laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen.",
+		Description = "The monk Dicuil has written a cosmographical work, \"De Mensura Orbis Terrae\". In it, Dicuil laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen.",
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
@@ -598,6 +622,60 @@ local ChristianityEvents = {
 		RequiredEvents = {
 			DicuilMonk = true
 		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	ChurchOfUtrechtGrantCharter = { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
+		Name = "Church of Utrecht Grant Charter", -- this happened in 834 AD
+		Description = "A charter has been enacted granting the church of Utrecht estates in the Arnhem region.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
+				and WorldMapProvinces.Netherlands.Civilization == "teuton"
+--				and ProvinceHasBuildingType(WorldMapProvinces.Netherlands, "temple")
+				and SyncRand(100) < 5
+				-- should add some check for Christianity being present
+			) then
+				EventProvince = WorldMapProvinces.Netherlands
+				return true
+			else
+				return false
+			end
+		end,
+		FactionType = "polity",
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				EventFaction.Prestige = EventFaction.Prestige + 1
+				EventFaction.Gold = EventFaction.Gold - 100
+			end
+		},
+		OptionTooltips = {"+1 Prestige, -100 Gold"}
+	},
+	VitaSanctiLebuiniAntiqua = { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+		Name = "Vita sancti Lebuini antiqua",
+		Description = "The work \"Vita sancti Lebuini antiqua\" described the life of Liafwin (Lebuin), an Anglo-Saxon missionary who made extensive efforts to convert the Saxons, penetrating deep into their country, even undertaking as risky an act as appearing in the annual assembly of the pagan Saxons to spread his faith.",
+		Conditions = function(s)
+			if (
+				WorldMapProvinces.Rhineland.Owner == EventFaction.Name
+				and WorldMapProvinces.Rhineland.Civilization == "teuton"
+			) then
+				EventProvince = WorldMapProvinces.Rhineland
+				return true
+			else
+				return false
+			end
+		end,
+		RequiredEvents = {
+			LiafwinFoundsOratory = true -- proxy for Liafwin having existed
+		},
+		MinYear = 849,
+		MaxYear = 849,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)

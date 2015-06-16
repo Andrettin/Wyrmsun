@@ -783,6 +783,10 @@ if (GrandStrategyYear >= 325) then
 	-- decree by Emperor Constantine in 325 AD regulating the issue of gold solidi for Sicily, Sardinia and Corsica; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 186.
 end
 
+if (GrandStrategyYear >= 358) then
+	-- The Salii (Salic Franks) were attacked by the Frankish tribe of the Chamavi in 358 AD in the Batavian isle, being saved by the Romans; previously the Salii had been driven out of the region near the river Isala (in the area of Wesel) by the Chamavi; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+end
+
 if (GrandStrategyYear >= 395) then
 	WorldMapProvinces.Ireland.Owner = "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	WorldMapProvinces.Scotland.Owner = "Pict Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -879,6 +883,10 @@ if (GrandStrategyYear >= 495) then
 	WorldMapProvinces.Naples.Units.unit_teuton_swordsman = 0 -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 end
 
+if (GrandStrategyYear >= 500) then
+	GrandStrategyEvents.HistoriaNova = nil
+end
+
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	WorldMapProvinces.Austria.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
@@ -969,6 +977,10 @@ if (GrandStrategyYear >= 625) then
 	GrandStrategyEvents.PaulinusAppointedArchbishopOfYork = nil
 end
 
+if (GrandStrategyYear >= 650) then
+	-- "Cosmographia" by the Geographer of Ravenna written about 650 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+end
+
 if (GrandStrategyYear >= 680) then
 	GrandStrategyEvents.KilianMissionaryToFranconia = nil
 	GrandStrategyEvents.EloquiusMissionaryToBelgium = nil
@@ -990,6 +1002,10 @@ if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 
 	WorldMapProvinces.Netherlands.Owner = "Francia"
 end
 
+if (GrandStrategyYear >= 765) then
+	GrandStrategyEvents.LiafwinFoundsOratory = nil
+end
+
 if (GrandStrategyYear >= 785) then
 	GrandStrategyEvents.HorseFleshEatingProhibited = nil
 end
@@ -1004,8 +1020,25 @@ if (GrandStrategyYear >= 825) then
 	GrandStrategyEvents.DeMensuraOrbisTerrae = nil
 end
 
+if (GrandStrategyYear >= 834) then
+	GrandStrategyEvents.ChurchOfUtrechtGrantCharter = nil
+end
+
+if (GrandStrategyYear >= 849) then
+	GrandStrategyEvents.VitaSanctiLebuiniAntiqua = nil
+	-- "Vita sancti Liudgeri" written about 841-849 AD by Altfried; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+end
+
+if (GrandStrategyYear >= 965) then
+	-- Bishop Dietrich of Metz ordained in 965 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
+end
+
 if (GrandStrategyYear >= 970) then
 	GrandStrategyEvents.ForannanMissionaryToTheFrontierOfBelgium = nil
+end
+
+if (GrandStrategyYear >= 984) then
+	-- Bishop Dietrich of Metz died in 984 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
 end
 
 if (GrandStrategyYear >= 1026) then
