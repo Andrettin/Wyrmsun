@@ -2022,7 +2022,7 @@ local defaultPreferences = {
 	VideoHeight = 600,
 	VideoWidth = 800,
 	ShowMessages = true,
-	ShowOrders = 0,
+	ShowPathlines = false,
 	Language = "English",
 	ShowResourceBar = false,
 	PopupDescriptionFont = "small",
@@ -2118,7 +2118,7 @@ SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
-Preference.ShowOrders = wyr.preferences.ShowOrders
+Preference.ShowPathlines = wyr.preferences.ShowPathlines
 Preference.ShowMessages = wyr.preferences.ShowMessages
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 

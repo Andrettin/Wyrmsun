@@ -501,17 +501,17 @@ function BuildOptionsMenu()
     end)
   b:setMarked(wyr.preferences.PlayerColorCircle)
 
-  b = menu:addImageCheckBox(_("Disable Pathlines"), offx + 16, offy + 55 + 26*9 + 14,
+  b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16, offy + 55 + 26*9 + 14,
     function()
-	if (wyr.preferences.ShowOrders == 2) then
-		wyr.preferences.ShowOrders = 0
+	if (wyr.preferences.ShowPathlines == false) then
+		wyr.preferences.ShowPathlines = true
 	else
-		wyr.preferences.ShowOrders = 2
+		wyr.preferences.ShowPathlines = false
 	end
-	Preference.ShowOrders = wyr.preferences.ShowOrders
+	Preference.ShowPathlines = wyr.preferences.ShowPathlines
 	menu:stop(1)
     end)
-  if (wyr.preferences.ShowOrders == 0) then b:setMarked(true) end
+  b:setMarked(wyr.preferences.ShowPathlines)
 
   b = menu:addImageCheckBox(_("Disable Messages"), offx + 160 + 24, offy + 55 + 26*9 + 14,
     function()

@@ -1369,6 +1369,14 @@ function BuildProgramStartMenu()
 	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
 		wyr.preferences.GrandStrategySaveGames = nil
 	end
+	
+	if (wyr.preferences.ShowOrders ~= nil) then
+		if (wyr.preferences.ShowOrders == 2) then
+			wyr.preferences.ShowPathlines = true
+			Preference.ShowPathlines = wyr.preferences.ShowPathlines
+		end
+		wyr.preferences.ShowOrders = nil
+	end
 
 	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", ""))) < 16) then
 		wyr.preferences.Heroes.Rugnur.upgrades = nil

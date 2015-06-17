@@ -171,6 +171,14 @@ https://github.com/Andrettin/Wyrmsun
 - The Romans now start with more troops in the Sack of Iuvavum quest, to prevent early attacks from easily defeating them.
 
 -----------------------------------------------------------------------
+- 1.2.2
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Changed "Disable Pathlines" option to "Show Pathlines".
+- The location of queued buildings is now marked when pressing Shift, even if pathlines are disabled.
+
+-----------------------------------------------------------------------
 - 1.2.1
 -----------------------------------------------------------------------
 
