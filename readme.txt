@@ -167,16 +167,16 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.2
 -----------------------------------------------------------------------
 
-* Quests
-- The Romans now start with more troops in the Sack of Iuvavum quest, to prevent early attacks from easily defeating them.
-
------------------------------------------------------------------------
-- 1.2.2
------------------------------------------------------------------------
+* Buildings
+- A building's quantity of garrison spaces now appear in that building's popup description.
 
 * Miscellaneous
 - Changed "Disable Pathlines" option to "Show Pathlines".
 - The location of queued buildings is now marked when pressing Shift, even if pathlines are disabled.
+- Ctrl + click when moving now makes the selected unit(s) stand ground after moving.
+
+* Quests
+- The Romans now start with more troops in the Sack of Iuvavum quest, to prevent early attacks from easily defeating them.
 
 -----------------------------------------------------------------------
 - 1.2.1

@@ -288,9 +288,10 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-smithy",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
-  Action = "build", Value = "unit-dwarven-sentry-tower",
-  Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+	Action = "build", Value = "unit-dwarven-sentry-tower",
+	Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
+} )
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
@@ -330,7 +331,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-2",
 	Action = "research", Value = "upgrade-dwarven-broad-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Broad ~!Axe"), Popup = "popup-research",
-	Description = "+2 Damage for Axefighters, Steelclads, Thanes and Yale Riders.",
+	Description = _("+2 Damage for Axefighters, Steelclads, Thanes and Yale Riders."),
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
@@ -338,7 +339,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-3",
 	Action = "research", Value = "upgrade-dwarven-great-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Great ~!Axe"), Popup = "popup-research",
-	Description = "+2 Damage for Axefighters, Steelclads, Thanes and Yale Riders.",
+	Description = _("+2 Damage for Axefighters, Steelclads, Thanes and Yale Riders."),
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
@@ -346,7 +347,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
 	Action = "research", Value = "upgrade-dwarven-shield-1",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Heater ~!Shield"), Popup = "popup-research",
-	Description = "+2 Armor for Axefighters, Steelclads, Thanes and Yale Riders.",
+	Description = _("+2 Armor for Axefighters, Steelclads, Thanes and Yale Riders."),
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
@@ -354,7 +355,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
 	Action = "research", Value = "upgrade-dwarven-shield-2",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Thrymgjol ~!Shield"), Popup = "popup-research",
-	Description = "+2 Armor for Axefighters, Steelclads, Thanes and Yale Riders.",
+	Description = _("+2 Armor for Axefighters, Steelclads, Thanes and Yale Riders."),
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
@@ -362,7 +363,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-1",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Broadhead Ballista ~!Bolt"), Popup = "popup-research",
-	Description = "+15 Damage for Ballistas.",
+	Description = _("+15 Damage for Ballistas."),
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
@@ -370,7 +371,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-2",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Penetrating Ballista ~!Bolt"), Popup = "popup-research",
-	Description = "+15 Damage for Ballistas.",
+	Description = _("+15 Damage for Ballistas."),
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
@@ -378,7 +379,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
 	Action = "research", Value = "upgrade-dwarven-throwing-axe-1",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
-	Description = "+1 Damage for Scouts and Gryphon Riders.",
+	Description = _("+1 Damage for Scouts and Gryphon Riders."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -386,14 +387,14 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
 	Action = "research", Value = "upgrade-dwarven-throwing-axe-2",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
-	Description = "+1 Damage for Scouts and Gryphon Riders.",
+	Description = _("+1 Damage for Scouts and Gryphon Riders."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-dwarven-masonry",
 	Allowed = "check-single-research",
-	Description = "+20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
+	Description = _("+20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
@@ -401,7 +402,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-coinage",
 	Action = "research", Value = "upgrade-dwarven-coinage",
 	Allowed = "check-single-research",
-	Description = "+10% Gold Processing.",
+	Description = _("+10% Gold Processing."),
 	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
