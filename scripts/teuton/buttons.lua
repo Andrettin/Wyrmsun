@@ -99,6 +99,25 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
   Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
   ForUnit = {"unit-teuton-catapult", "germanic-group", "teuton-group"} } )
 
+-- Building Commands -----------------------------------------------
+
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
+	Action = "move",
+	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-teuton-barracks"
+	}
+} )
+
+-- build basic/advanced structs -----------------------------------------------
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
+	Action = "button", Value = 1,
+	Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
+	ForUnit = {"unit-teuton-worker"}
+} )
+
 -- Simple Buildings Teuton -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",

@@ -144,12 +144,24 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-return-goods",
   Key = "g", Hint = _("Return with ~!Goods"), Popup = "popup-commands",
   ForUnit = {"unit-germanic-worker", "unit-teuton-worker"} } )
 
+-- Building Commands -----------------------------------------------
+
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
+	Action = "move",
+	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-town-hall",
+		"unit-germanic-barracks"
+	}
+} )
+
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
-  Action = "button", Value = 1,
-  Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
-  ForUnit = {"unit-germanic-worker", "unit-germanic-builder", "unit-teuton-worker"} } )
+	Action = "button", Value = 1,
+	Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
+	ForUnit = {"unit-germanic-worker", "unit-germanic-builder"}
+} )
 
 -- Simple Buildings Germanic -----------------------------------------------------
 

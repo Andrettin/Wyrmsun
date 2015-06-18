@@ -48,6 +48,7 @@ function RunShowCreditsMenu()
 	"  Chris Beck (iceiceice)",
 	"  DinkyDyeAussie",
 	"  Dmitry Marakasov",
+	"  Spfnym",
 	"  Szunti",
 	"  Martin Renold",
 	"  Carlos Perello Marin",

@@ -89,6 +89,17 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
   Key = "p", Hint = _("~!Portent"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-herbalist"} } )
 
+-- Building Commands -----------------------------------------------
+
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
+	Action = "move",
+	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-gnomish-town-hall",
+		"unit-gnomish-barracks"
+	}
+} )
+
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",

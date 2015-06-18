@@ -86,6 +86,17 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
   Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
 
+-- Building Commands -----------------------------------------------
+
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
+	Action = "move",
+	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-town-hall",
+		"unit-goblin-barracks"
+	}
+} )
+
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",

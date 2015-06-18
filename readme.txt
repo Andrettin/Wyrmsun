@@ -174,6 +174,7 @@ https://github.com/Andrettin/Wyrmsun
 - Changed "Disable Pathlines" option to "Show Pathlines".
 - The location of queued buildings is now marked when pressing Shift, even if pathlines are disabled.
 - Ctrl + click when moving now makes the selected unit(s) stand ground after moving.
+- Added rally point command button for buildings which can train units (button graphics by Jinn).
 
 * Quests
 - The Romans now start with more troops in the Sack of Iuvavum quest, to prevent early attacks from easily defeating them.
