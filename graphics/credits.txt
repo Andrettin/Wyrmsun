@@ -111,6 +111,9 @@ b_o:
 /graphics/goblin/units/goblin_worker_with_gold_spiky_hair.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
 /graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png
+/graphics/human/units/human_body.png
+/graphics/human/units/human_left_arm.png
+/graphics/human/units/human_right_arm.png
 /graphics/kobold/units/kobold_footpad.png
 /graphics/kobold/units/kobold_footpad_blue_scales.png
 /graphics/kobold/units/kobold_footpad_purple_scales.png
