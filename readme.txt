@@ -176,6 +176,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Changed "Disable Pathlines" option to "Show Pathlines".
 - Ctrl + click when moving now makes the selected unit(s) stand ground after moving.
+- Fixed an issue which could cause a crash in multiplayer, or send an erroneous "out of sync" message.
 
 * Quests
 - The Romans now start with more troops in the Sack of Iuvavum quest, to prevent early attacks from easily defeating them.
