@@ -102,11 +102,12 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 -- Building Commands -----------------------------------------------
 
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
-	Action = "move",
+	Action = "rally-point",
 	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-teuton-barracks"
+		"unit-teuton-barracks",
+		"unit-teuton-watch-tower", "unit-teuton-guard-tower"
 	}
 } )
 
@@ -250,7 +251,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Gold Processing.",

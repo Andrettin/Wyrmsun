@@ -89,7 +89,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 -- Building Commands -----------------------------------------------
 
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
-	Action = "move",
+	Action = "rally-point",
 	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-goblin-town-hall",

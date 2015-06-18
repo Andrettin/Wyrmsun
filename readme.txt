@@ -169,15 +169,19 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - A building's quantity of garrison spaces now appear in that building's popup description.
+- The location of queued buildings is now marked when pressing Shift, even if pathlines are disabled.
+- Added rally point command button for buildings which can train or garrison units (button graphics by Jinn).
+- A building's rally point now appears even if pathlines are disabled, when pressing Shift or setting a new rally point.
 
 * Miscellaneous
 - Changed "Disable Pathlines" option to "Show Pathlines".
-- The location of queued buildings is now marked when pressing Shift, even if pathlines are disabled.
 - Ctrl + click when moving now makes the selected unit(s) stand ground after moving.
-- Added rally point command button for buildings which can train units (button graphics by Jinn).
 
 * Quests
 - The Romans now start with more troops in the Sack of Iuvavum quest, to prevent early attacks from easily defeating them.
+
+* Upgrades
+- Changed location of the Coinage research button.
 
 -----------------------------------------------------------------------
 - 1.2.1
