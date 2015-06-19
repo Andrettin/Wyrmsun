@@ -114,6 +114,7 @@ b_o:
 /graphics/human/units/human_body.png
 /graphics/human/units/human_left_arm.png
 /graphics/human/units/human_right_arm.png
+/graphics/human/units/human_shadow.png
 /graphics/kobold/units/kobold_footpad.png
 /graphics/kobold/units/kobold_footpad_blue_scales.png
 /graphics/kobold/units/kobold_footpad_purple_scales.png
