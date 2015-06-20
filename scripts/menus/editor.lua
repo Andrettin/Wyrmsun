@@ -614,23 +614,23 @@ function EditUnitProperties()
   local sizeY = 288 -- 288
 
   menu:resize(sizeX, sizeY)
-  menu:addLabel("Unit Properties", sizeX / 2, 11)
+  menu:addLabel(_("Unit Properties"), sizeX / 2, 11)
 
   if (GetUnitUnderCursor().Type.GivesResource == 0) then
-    menu:addLabel("Artificial Intelligence", sizeX / 2, 11 + 36)
-    local activeCheckBox = menu:addImageCheckBox("Active", 15, 11 + 72)
+    menu:addLabel(_("Artificial Intelligence"), sizeX / 2, 11 + 36)
+    local activeCheckBox = menu:addImageCheckBox(_("Active"), 15, 11 + 72)
     activeCheckBox:setMarked(GetUnitUnderCursor().Active)
 
-    menu:addHalfButton("~!OK", "o", 20, sizeY - 40,
+    menu:addHalfButton(_("~!OK"), "o", 20, sizeY - 40,
       function() GetUnitUnderCursor().Active = activeCheckBox:isMarked();  menu:stop() end)
   else
 --    local resourceName = {"gold", "lumber", "oil"}
     local resourceName = {"gold", "lumber", "stone"}
     local resource = GetUnitUnderCursor().Type.GivesResource - 1
-    menu:addLabel("Amount of " .. CapitalizeString(resourceName[1 + resource]) .. ":", 24, 11 + 36, nil, false)
+    menu:addLabel(_("Amount of") .. " " .. _(CapitalizeString(resourceName[1 + resource])) .. ":", 24, 11 + 36, nil, false)
 	local resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + 36 * 2, 60)
 
-    menu:addHalfButton("~!OK", "o", 20, sizeY - 40,
+    menu:addHalfButton(_("~!OK"), "o", 20, sizeY - 40,
       function() GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();  menu:stop() end)
   end
   menu:addHalfButton(_("~!Cancel"), "c", 130, sizeY - 40,
@@ -652,7 +652,7 @@ function EditUnitTypeProperties(unit_type)
 	local sizeY = 352
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(GetUnitTypeName(unit_type) .. " Properties", sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
 	menu:addFullButton(_("~!Stats"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
 		function()
@@ -666,7 +666,13 @@ function EditUnitTypeProperties(unit_type)
 		end
 	)
 		
-	menu:addFullButton(_("~!OK"), "ok", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
+	menu:addFullButton(_("~!Sounds"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
+		function()
+			EditUnitTypePropertiesSounds(unit_type)
+		end
+	)
+		
+	menu:addFullButton(_("~!OK"), "ok", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
 		function()
 			menu:stop()
 		end
@@ -685,51 +691,51 @@ function EditUnitTypePropertiesStats(unit_type)
 	local sizeY = 352
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(GetUnitTypeName(unit_type) .. " Properties", sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
-	menu:addLabel("Hit Points:", 10, 12 + 36 * 1, Fonts["game"], false)
+	menu:addLabel(_("Hit Points:"), 10, 12 + 36 * 1, Fonts["game"], false)
 	local hp_value = menu:addTextInputField(GetUnitTypeData(unit_type, "HitPoints"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
 
-	menu:addLabel("Speed:", (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
+	menu:addLabel(_("Speed:"), (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
 	local speed_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Speed"), sizeX - 60 - 10, 11 + 36 * 1, 60)
 
-	menu:addLabel("Damage:", 10, 12 + 36 * 2, Fonts["game"], false)
+	menu:addLabel(_("Damage:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local basic_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BasicDamage"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
 
-	menu:addLabel("Armor:", (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
+	menu:addLabel(_("Armor:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
 	local armor_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Armor"), sizeX - 60 - 10, 11 + 36 * 2, 60)
 
-	menu:addLabel("Accuracy:", 10, 12 + 36 * 3, Fonts["game"], false)
+	menu:addLabel(_("Accuracy:"), 10, 12 + 36 * 3, Fonts["game"], false)
 	local accuracy_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Accuracy"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
 
-	menu:addLabel("Evasion:", (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
+	menu:addLabel(_("Evasion:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
 	local evasion_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Evasion"), sizeX - 60 - 10, 11 + 36 * 3, 60)
 
-	menu:addLabel("Range:", 10, 12 + 36 * 4, Fonts["game"], false)
+	menu:addLabel(_("Range:"), 10, 12 + 36 * 4, Fonts["game"], false)
 	local range_value = menu:addTextInputField(GetUnitTypeData(unit_type, "AttackRange"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
 
-	menu:addLabel("Sight:", (sizeX / 2) + 10, 12 + 36 * 4, Fonts["game"], false)
+	menu:addLabel(_("Sight:"), (sizeX / 2) + 10, 12 + 36 * 4, Fonts["game"], false)
 	local sight_value = menu:addTextInputField(GetUnitTypeData(unit_type, "SightRange"), sizeX - 60 - 10, 11 + 36 * 4, 60)
 
-	menu:addLabel("Crit. Chance:", 10, 12 + 36 * 5, Fonts["game"], false)
+	menu:addLabel(_("Crit. Chance:"), 10, 12 + 36 * 5, Fonts["game"], false)
 	local critical_strike_chance_value = menu:addTextInputField(GetUnitTypeData(unit_type, "CriticalStrikeChance"), (sizeX / 2) - 60 - 10, 11 + 36 * 5, 60)
 
-	menu:addLabel("Backstab:", (sizeX / 2) + 10, 12 + 36 * 5, Fonts["game"], false)
+	menu:addLabel(_("Backstab:"), (sizeX / 2) + 10, 12 + 36 * 5, Fonts["game"], false)
 	local backstab_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Backstab"), sizeX - 60 - 10, 11 + 36 * 5, 60)
 
-	menu:addLabel("Vs. Mounted:", 10, 12 + 36 * 6, Fonts["game"], false)
+	menu:addLabel(_("Vs. Mounted:"), 10, 12 + 36 * 6, Fonts["game"], false)
 	local bonus_against_mounted_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BonusAgainstMounted"), (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
 
-	menu:addLabel("Thorns Dam.:", (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
+	menu:addLabel(_("Thorns Dam.:"), (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
 	local thorns_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ThornsDamage"), sizeX - 60 - 10, 11 + 36 * 6, 60)
 
-	menu:addLabel("Day Sight:", 10, 12 + 36 * 7, Fonts["game"], false)
+	menu:addLabel(_("Day Sight:"), 10, 12 + 36 * 7, Fonts["game"], false)
 	local day_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "DaySightRangeBonus"), (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
 
-	menu:addLabel("Night Sight:", (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
+	menu:addLabel(_("Night Sight:"), (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
 	local night_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "NightSightRangeBonus"), sizeX - 60 - 10, 11 + 36 * 7, 60)
 
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
 				SetMapStat(unit_type, "HitPoints", hp_value:getText(), "Value")
@@ -821,30 +827,30 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	local sizeY = 352
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(GetUnitTypeName(unit_type) .. " Properties", sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
-	menu:addLabel("Time Cost:", 10, 12 + 36 * 1, Fonts["game"], false)
+	menu:addLabel(_("Time Cost:"), 10, 12 + 36 * 1, Fonts["game"], false)
 	local time_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "time"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
 
-	menu:addLabel("Gold Cost:", (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
+	menu:addLabel(_("Gold Cost:"), (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
 	local gold_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "gold"), sizeX - 60 - 10, 11 + 36 * 1, 60)
 
-	menu:addLabel("Lumber Cost:", 10, 12 + 36 * 2, Fonts["game"], false)
+	menu:addLabel(_("Lumber Cost:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local lumber_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "lumber"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
 
-	menu:addLabel("Stone Cost:", (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
+	menu:addLabel(_("Stone Cost:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
 	local stone_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "stone"), sizeX - 60 - 10, 11 + 36 * 2, 60)
 
-	menu:addLabel("Gold Proc.:", 10, 12 + 36 * 3, Fonts["game"], false)
+	menu:addLabel(_("Gold Proc.:"), 10, 12 + 36 * 3, Fonts["game"], false)
 	local gold_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "gold"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
 
-	menu:addLabel("Lumber Proc.:", (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
+	menu:addLabel(_("Lumber Proc.:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
 	local lumber_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "lumber"),  sizeX - 60 - 10, 11 + 36 * 3, 60)
 
-	menu:addLabel("Stone Proc.:", 10, 12 + 36 * 4, Fonts["game"], false)
+	menu:addLabel(_("Stone Proc.:"), 10, 12 + 36 * 4, Fonts["game"], false)
 	local stone_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "stone"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
 
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
 				SetMapStat(unit_type, "Costs", time_cost_value:getText(), "time")
@@ -866,6 +872,89 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 			end
 			if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
 				SetMapStat(unit_type, "ImproveProduction", stone_processing_value:getText(), "stone")
+			end
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
+
+	menu:run(false)
+end
+
+function EditUnitTypePropertiesSounds(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+
+	local sound_list = GetSounds()
+	table.insert(sound_list, "") -- for instances where the unit does not have a sound of a particular type
+  
+	menu:addLabel(_("Selected:"), 10, 14 + 36 * 1, Fonts["game"], false)
+	local selected_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) end)
+	selected_sound:setSize(236, 20)
+	selected_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "selected")) - 1)
+	
+	menu:addLabel(_("Acknowledge:"), 10, 14 + 36 * 2, Fonts["game"], false)
+	local acknowledge_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) end)
+	acknowledge_sound:setSize(236, 20)
+	acknowledge_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "acknowledge")) - 1)
+	
+	menu:addLabel(_("Attack:"), 10, 14 + 36 * 3, Fonts["game"], false)
+	local attack_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) end)
+	attack_sound:setSize(236, 20)
+	attack_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "attack")) - 1)
+	
+	menu:addLabel(_("Ready:"), 10, 14 + 36 * 4, Fonts["game"], false)
+	local ready_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
+	ready_sound:setSize(236, 20)
+	ready_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "ready")) - 1)
+	
+	menu:addLabel(_("Idle:"), 10, 14 + 36 * 5, Fonts["game"], false)
+	local idle_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
+	idle_sound:setSize(236, 20)
+	idle_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "idle")) - 1)
+	
+	menu:addLabel(_("Help:"), 10, 14 + 36 * 6, Fonts["game"], false)
+	local help_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 6, function(dd) end)
+	help_sound:setSize(236, 20)
+	help_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "help")) - 1)
+	
+	menu:addLabel(_("Dead:"), 10, 14 + 36 * 7, Fonts["game"], false)
+	local dead_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 7, function(dd) end)
+	dead_sound:setSize(236, 20)
+	dead_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "dead")) - 1)
+	
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			if (sound_list[selected_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "selected")) then
+				SetMapSound(unit_type, sound_list[selected_sound:getSelected() + 1], "selected")
+			end
+			if (sound_list[acknowledge_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "acknowledge")) then
+				SetMapSound(unit_type, sound_list[acknowledge_sound:getSelected() + 1], "acknowledge")
+			end
+			if (sound_list[attack_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "attack")) then
+				SetMapSound(unit_type, sound_list[attack_sound:getSelected() + 1], "attack")
+			end
+			if (sound_list[ready_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "ready")) then
+				SetMapSound(unit_type, sound_list[ready_sound:getSelected() + 1], "ready")
+			end
+			if (sound_list[idle_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "idle")) then
+				SetMapSound(unit_type, sound_list[idle_sound:getSelected() + 1], "idle")
+			end
+			if (sound_list[help_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "help")) then
+				SetMapSound(unit_type, sound_list[help_sound:getSelected() + 1], "help")
+			end
+			if (sound_list[dead_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "dead")) then
+				SetMapSound(unit_type, sound_list[dead_sound:getSelected() + 1], "dead")
 			end
 			menu:stop()
 		end

@@ -169,6 +169,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Editor
 - It is now possible to alter unit stats with the map editor (those modifications are valid only for that map).
+- It is now possible to alter unit sounds with the map editor (those modifications are valid only for that map).
 
 * Miscellaneous
 - The "X" marker which appears after clicking now appears over the fog of war as well.
