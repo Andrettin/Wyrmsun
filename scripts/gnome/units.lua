@@ -195,7 +195,7 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	HitPoints = 110,
 	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {63, 63},
-	SightRange = 9, ComputerReactionRange = 11, PersonReactionRange = 9,
+	SightRange = 9,
 	Priority = 70,
 	Points = 100,
 	Demand = 1,
@@ -204,7 +204,7 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	RightMouseAction = "move",
 	SelectableByRectangle = true,
 	MaxOnBoard = 2,
-	CanTransport = {"GroundAttack", "false", "Fauna", "false", "LoseCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidden "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
+	CanTransport = {"GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidden "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	Sounds = {

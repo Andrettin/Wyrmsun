@@ -70,9 +70,15 @@ b_o:
 /graphics/germanic/units/archer.png
 /graphics/germanic/units/archer_blond_hair.png
 /graphics/germanic/units/archer_gray_hair.png
+/graphics/germanic/units/broad_bronze_sword.png
+/graphics/germanic/units/bronze_helmet.png
 /graphics/germanic/units/bronze_shield.png
 /graphics/germanic/units/builder.png
 /graphics/germanic/units/builder_red_hair.png
+/graphics/germanic/units/coat.png
+/graphics/germanic/units/coat_left_arm.png
+/graphics/germanic/units/coat_right_arm.png
+/graphics/germanic/units/coat_warrior.png
 /graphics/germanic/units/militia.png
 /graphics/germanic/units/old_man.png
 /graphics/germanic/units/warrior.png
@@ -112,9 +118,12 @@ b_o:
 /graphics/goblin/units/goblin_worker_with_lumber.png
 /graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png
 /graphics/human/units/human_body.png
+/graphics/human/units/human_body_warrior.png
 /graphics/human/units/human_left_arm.png
 /graphics/human/units/human_right_arm.png
 /graphics/human/units/human_shadow.png
+/graphics/human/units/pants.png
+/graphics/human/units/shoes.png
 /graphics/kobold/units/kobold_footpad.png
 /graphics/kobold/units/kobold_footpad_blue_scales.png
 /graphics/kobold/units/kobold_footpad_purple_scales.png
@@ -258,6 +267,7 @@ b_o:
 /graphics/teuton/units/catapult.png
 /graphics/teuton/units/old_man.png
 /graphics/teuton/units/saxon_swordsman.png
+/graphics/teuton/units/suebi_hair.png
 /graphics/teuton/units/suebi_warrior.png
 /graphics/tilesets/cave/neutral/buildings/hole.png (modified from Leo's volcanic crater)
 /graphics/tilesets/dungeon/neutral/decorations/door_left.png

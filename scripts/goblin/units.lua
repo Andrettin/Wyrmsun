@@ -221,7 +221,7 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	HitPoints = 20,
 	DrawLevel = 60,
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 9, ComputerReactionRange = 19, PersonReactionRange = 15,
+	SightRange = 9,
 	Armor = 2, Missile = "missile-none",
 	Accuracy = 8,
 	Evasion = 8, -- hard to escape attacks on a glider
