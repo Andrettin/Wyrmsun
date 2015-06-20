@@ -1042,6 +1042,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-raft",
+	Size = {46, 38},
+	File = "neutral/icons/raft.png"
+})
+
+DefineIcon({
 	Name = "icon-scepter",
 	Size = {46, 38},
 	File = "neutral/icons/scepter.png"

@@ -119,6 +119,7 @@ editor_types = {
    "unit-gold-sack",
    "unit-gold-chest",
    "unit-gold-and-gems-chest",
+   "unit-raft",
    "unit-barrel",
    "unit-door",
    "unit-chair",

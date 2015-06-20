@@ -2520,6 +2520,24 @@ DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 --	Vanishes = true,
 --	Sounds = {} } )
 
+DefineUnitType("unit-raft", { Name = _("Raft"),
+	Image = {"file", "neutral/units/raft.png", "size", {72, 72}},
+	Animations = "animations-item", Icon = "icon-raft",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 15,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "naval",
+	Bridge = true,
+	Sounds = {
+		"selected", "click"
+	} 
+} )
+
 DefineUnitType("unit-scepter-of-fire", { Name = _("Scepter of Fire"),
 	Image = {"file", "neutral/items/scepter.png", "size", {32, 32}},
 	Animations = "animations-item", Icon = "icon-scepter",

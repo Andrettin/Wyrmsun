@@ -221,6 +221,7 @@ b_o:
 /graphics/neutral/units/gryphon_blue_feathers.png
 /graphics/neutral/units/gryphon_gray_feathers.png
 /graphics/neutral/units/gryphon_young.png
+/graphics/neutral/units/raft.png
 /graphics/neutral/units/rat.png
 /graphics/neutral/units/rat_black_fur.png
 /graphics/neutral/units/rat_light_gray_fur.png
