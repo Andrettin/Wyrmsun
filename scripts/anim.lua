@@ -165,7 +165,7 @@ DefineAnimations("animations-melee-unit-new", {
 	Still = UnitStill,
 	Move = UnitMove,
 	Attack = WorkerAttack,
-	Death = UnitDeath
+	Death = WorkerDeath
 })
 
 --
