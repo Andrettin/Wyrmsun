@@ -563,7 +563,7 @@ function RunEditorMapProperties()
   end
   dropDownTileset:setEnabled(false) -- TODO : manage this properties
 
-  menu:addHalfButton("~!Ok", "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+  menu:addHalfButton("~!OK", "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
     function()
       Map.Info.Description = desc:getText()
       -- TODO : Add others properties
@@ -602,7 +602,7 @@ function RunInEditorMenu()
 end
 
 --
---  Function to edit unit properties in Editor
+--  Function to edit unit properties in the editor
 --
 function EditUnitProperties()
 
@@ -611,7 +611,7 @@ function EditUnitProperties()
   end
   local menu = WarGameMenu(panel(1))
   local sizeX = 256
-  local sizeY = 200 -- 288
+  local sizeY = 288 -- 288
 
   menu:resize(sizeX, sizeY)
   menu:addLabel("Unit Properties", sizeX / 2, 11)
@@ -621,19 +621,258 @@ function EditUnitProperties()
     local activeCheckBox = menu:addImageCheckBox("Active", 15, 11 + 72)
     activeCheckBox:setMarked(GetUnitUnderCursor().Active)
 
-    menu:addHalfButton("~!Ok", "o", 24, sizeY - 40,
+    menu:addHalfButton("~!OK", "o", 20, sizeY - 40,
       function() GetUnitUnderCursor().Active = activeCheckBox:isMarked();  menu:stop() end)
   else
 --    local resourceName = {"gold", "lumber", "oil"}
     local resourceName = {"gold", "lumber", "stone"}
     local resource = GetUnitUnderCursor().Type.GivesResource - 1
-    menu:addLabel("Amount of " .. resourceName[1 + resource] .. " :", 24, 11 + 36, nil, false)
+    menu:addLabel("Amount of " .. CapitalizeString(resourceName[1 + resource]) .. ":", 24, 11 + 36, nil, false)
 	local resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + 36 * 2, 60)
 
-    menu:addHalfButton("~!Ok", "o", 24, sizeY - 40,
+    menu:addHalfButton("~!OK", "o", 20, sizeY - 40,
       function() GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();  menu:stop() end)
   end
-  menu:addHalfButton(_("~!Cancel"), "c", 134, sizeY - 40,
+  menu:addHalfButton(_("~!Cancel"), "c", 130, sizeY - 40,
     function() menu:stop() end)
   menu:run(false)
+end
+
+
+--
+--  Function to edit unit type properties in the editor
+--
+function EditUnitTypeProperties(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(GetUnitTypeName(unit_type) .. " Properties", sizeX / 2, 11)
+
+	menu:addFullButton(_("~!Stats"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
+		function()
+			EditUnitTypePropertiesStats(unit_type)
+		end
+	)
+		
+	menu:addFullButton(_("~!Resource Stats"), "r", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 5),
+		function()
+			EditUnitTypePropertiesResourceStats(unit_type)
+		end
+	)
+		
+	menu:addFullButton(_("~!OK"), "ok", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
+		function()
+			menu:stop()
+		end
+	)
+
+	menu:run(false)
+end
+
+function EditUnitTypePropertiesStats(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(GetUnitTypeName(unit_type) .. " Properties", sizeX / 2, 11)
+
+	menu:addLabel("Hit Points:", 10, 12 + 36 * 1, Fonts["game"], false)
+	local hp_value = menu:addTextInputField(GetUnitTypeData(unit_type, "HitPoints"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
+
+	menu:addLabel("Speed:", (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
+	local speed_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Speed"), sizeX - 60 - 10, 11 + 36 * 1, 60)
+
+	menu:addLabel("Damage:", 10, 12 + 36 * 2, Fonts["game"], false)
+	local basic_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BasicDamage"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel("Armor:", (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
+	local armor_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Armor"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel("Accuracy:", 10, 12 + 36 * 3, Fonts["game"], false)
+	local accuracy_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Accuracy"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+
+	menu:addLabel("Evasion:", (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
+	local evasion_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Evasion"), sizeX - 60 - 10, 11 + 36 * 3, 60)
+
+	menu:addLabel("Range:", 10, 12 + 36 * 4, Fonts["game"], false)
+	local range_value = menu:addTextInputField(GetUnitTypeData(unit_type, "AttackRange"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
+
+	menu:addLabel("Sight:", (sizeX / 2) + 10, 12 + 36 * 4, Fonts["game"], false)
+	local sight_value = menu:addTextInputField(GetUnitTypeData(unit_type, "SightRange"), sizeX - 60 - 10, 11 + 36 * 4, 60)
+
+	menu:addLabel("Crit. Chance:", 10, 12 + 36 * 5, Fonts["game"], false)
+	local critical_strike_chance_value = menu:addTextInputField(GetUnitTypeData(unit_type, "CriticalStrikeChance"), (sizeX / 2) - 60 - 10, 11 + 36 * 5, 60)
+
+	menu:addLabel("Backstab:", (sizeX / 2) + 10, 12 + 36 * 5, Fonts["game"], false)
+	local backstab_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Backstab"), sizeX - 60 - 10, 11 + 36 * 5, 60)
+
+	menu:addLabel("Vs. Mounted:", 10, 12 + 36 * 6, Fonts["game"], false)
+	local bonus_against_mounted_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BonusAgainstMounted"), (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
+
+	menu:addLabel("Thorns Dam.:", (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
+	local thorns_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ThornsDamage"), sizeX - 60 - 10, 11 + 36 * 6, 60)
+
+	menu:addLabel("Day Sight:", 10, 12 + 36 * 7, Fonts["game"], false)
+	local day_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "DaySightRangeBonus"), (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
+
+	menu:addLabel("Night Sight:", (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
+	local night_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "NightSightRangeBonus"), sizeX - 60 - 10, 11 + 36 * 7, 60)
+
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
+				SetMapStat(unit_type, "HitPoints", hp_value:getText(), "Value")
+				SetMapStat(unit_type, "HitPoints", hp_value:getText(), "Max")
+				SetMapStat(unit_type, "HitPoints", 1, "Enable")
+			end
+			if (basic_damage_value:getText() ~= GetUnitTypeData(unit_type, "BasicDamage")) then
+				SetMapStat(unit_type, "BasicDamage", basic_damage_value:getText(), "Value")
+				SetMapStat(unit_type, "BasicDamage", basic_damage_value:getText(), "Max")
+				SetMapStat(unit_type, "BasicDamage", 1, "Enable")
+			end
+			if (armor_value:getText() ~= GetUnitTypeData(unit_type, "Armor")) then
+				SetMapStat(unit_type, "Armor", armor_value:getText(), "Value")
+				SetMapStat(unit_type, "Armor", armor_value:getText(), "Max")
+				SetMapStat(unit_type, "Armor", 1, "Enable")
+			end
+			if (accuracy_value:getText() ~= GetUnitTypeData(unit_type, "Accuracy")) then
+				SetMapStat(unit_type, "Accuracy", accuracy_value:getText(), "Value")
+				SetMapStat(unit_type, "Accuracy", accuracy_value:getText(), "Max")
+				SetMapStat(unit_type, "Accuracy", 1, "Enable")
+			end
+			if (evasion_value:getText() ~= GetUnitTypeData(unit_type, "Evasion")) then
+				SetMapStat(unit_type, "Evasion", evasion_value:getText(), "Value")
+				SetMapStat(unit_type, "Evasion", evasion_value:getText(), "Max")
+				SetMapStat(unit_type, "Evasion", 1, "Enable")
+			end
+			if (range_value:getText() ~= GetUnitTypeData(unit_type, "AttackRange")) then
+				SetMapStat(unit_type, "AttackRange", range_value:getText(), "Value")
+				SetMapStat(unit_type, "AttackRange", range_value:getText(), "Max")
+				SetMapStat(unit_type, "AttackRange", 1, "Enable")
+			end
+			if (sight_value:getText() ~= GetUnitTypeData(unit_type, "SightRange")) then
+				SetMapStat(unit_type, "SightRange", sight_value:getText(), "Value")
+				SetMapStat(unit_type, "SightRange", sight_value:getText(), "Max")
+				SetMapStat(unit_type, "SightRange", 1, "Enable")
+			end
+			if (speed_value:getText() ~= GetUnitTypeData(unit_type, "Speed")) then
+				SetMapStat(unit_type, "Speed", speed_value:getText(), "Value")
+				SetMapStat(unit_type, "Speed", speed_value:getText(), "Max")
+				SetMapStat(unit_type, "Speed", 1, "Enable")
+			end
+			if (critical_strike_chance_value:getText() ~= GetUnitTypeData(unit_type, "CriticalStrikeChance")) then
+				SetMapStat(unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText(), "Value")
+				SetMapStat(unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText(), "Max")
+				SetMapStat(unit_type, "CriticalStrikeChance", 1, "Enable")
+			end
+			if (backstab_value:getText() ~= GetUnitTypeData(unit_type, "Backstab")) then
+				SetMapStat(unit_type, "Backstab", backstab_value:getText(), "Value")
+				SetMapStat(unit_type, "Backstab", backstab_value:getText(), "Max")
+				SetMapStat(unit_type, "Backstab", 1, "Enable")
+			end
+			if (bonus_against_mounted_value:getText() ~= GetUnitTypeData(unit_type, "BonusAgainstMounted")) then
+				SetMapStat(unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText(), "Value")
+				SetMapStat(unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText(), "Max")
+				SetMapStat(unit_type, "BonusAgainstMounted", 1, "Enable")
+			end
+			if (thorns_damage_value:getText() ~= GetUnitTypeData(unit_type, "ThornsDamage")) then
+				SetMapStat(unit_type, "ThornsDamage", thorns_damage_value:getText(), "Value")
+				SetMapStat(unit_type, "ThornsDamage", thorns_damage_value:getText(), "Max")
+				SetMapStat(unit_type, "ThornsDamage", 1, "Enable")
+			end
+			if (day_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "DaySightRangeBonus")) then
+				SetMapStat(unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText(), "Value")
+				SetMapStat(unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText(), "Max")
+				SetMapStat(unit_type, "DaySightRangeBonus", 1, "Enable")
+			end
+			if (night_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "NightSightRangeBonus")) then
+				SetMapStat(unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText(), "Value")
+				SetMapStat(unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText(), "Max")
+				SetMapStat(unit_type, "NightSightRangeBonus", 1, "Enable")
+			end
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
+
+	menu:run(false)
+end
+
+function EditUnitTypePropertiesResourceStats(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(GetUnitTypeName(unit_type) .. " Properties", sizeX / 2, 11)
+
+	menu:addLabel("Time Cost:", 10, 12 + 36 * 1, Fonts["game"], false)
+	local time_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "time"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
+
+	menu:addLabel("Gold Cost:", (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
+	local gold_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "gold"), sizeX - 60 - 10, 11 + 36 * 1, 60)
+
+	menu:addLabel("Lumber Cost:", 10, 12 + 36 * 2, Fonts["game"], false)
+	local lumber_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "lumber"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel("Stone Cost:", (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
+	local stone_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "stone"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel("Gold Proc.:", 10, 12 + 36 * 3, Fonts["game"], false)
+	local gold_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "gold"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+
+	menu:addLabel("Lumber Proc.:", (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
+	local lumber_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "lumber"),  sizeX - 60 - 10, 11 + 36 * 3, 60)
+
+	menu:addLabel("Stone Proc.:", 10, 12 + 36 * 4, Fonts["game"], false)
+	local stone_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "stone"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
+
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
+				SetMapStat(unit_type, "Costs", time_cost_value:getText(), "time")
+			end
+			if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
+				SetMapStat(unit_type, "Costs", gold_cost_value:getText(), "gold")
+			end
+			if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
+				SetMapStat(unit_type, "Costs", lumber_cost_value:getText(), "lumber")
+			end
+			if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
+				SetMapStat(unit_type, "Costs", stone_cost_value:getText(), "stone")
+			end
+			if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
+				SetMapStat(unit_type, "ImproveProduction", gold_processing_value:getText(), "gold")
+			end
+			if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
+				SetMapStat(unit_type, "ImproveProduction", lumber_processing_value:getText(), "lumber")
+			end
+			if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
+				SetMapStat(unit_type, "ImproveProduction", stone_processing_value:getText(), "stone")
+			end
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
+
+	menu:run(false)
 end

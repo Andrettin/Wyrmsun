@@ -1083,9 +1083,11 @@ function RunSinglePlayerCustomGameMenu()
 			MapPersonPlayer = 1
 		end
 
-		for i=1,mapinfo.nplayers do
-			if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
-				GameSettings.Presets[i-1].Type = PlayerComputer
+		if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
+			for i=1,mapinfo.nplayers do
+				if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
+					GameSettings.Presets[i-1].Type = PlayerComputer
+				end
 			end
 		end
 	  if (civilization_list[race:getSelected() + 1] == "Dwarf") then
