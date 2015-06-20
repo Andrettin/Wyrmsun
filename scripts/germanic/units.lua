@@ -153,6 +153,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
 	Shadow = {"file", "germanic/units/warrior_shadow.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-germanic-warrior",
+	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,

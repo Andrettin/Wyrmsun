@@ -144,7 +144,7 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
 	Description = _("Due to their small size, the goblin infantry soldiers use the spear as their weapon of choice, as with it they can target their enemies' vital points, relying less on their lackluster strength."),
 	Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
-	Costs = {"time", 60, "gold", 500, "lumber", 50},
+	Costs = {"time", 50, "gold", 500, "lumber", 50},
 	HitPoints = 50,
 	BasicDamage = 6, -- reduced damage, since it has a bonus against mounted units
 	Accuracy = 12,

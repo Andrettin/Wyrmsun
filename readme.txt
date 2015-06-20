@@ -173,6 +173,10 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - The "X" marker which appears after clicking now appears over the fog of war as well.
 
+* Units
+- Dwarven Axefighters are now slightly cheaper to train.
+- Germanic Eralas, Teuton Kriegers and Goblin Spearmen are now slightly faster to train.
+
 -----------------------------------------------------------------------
 - 1.2.2
 -----------------------------------------------------------------------
