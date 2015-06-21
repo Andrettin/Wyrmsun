@@ -112,6 +112,11 @@ UnitMeleeAttack = {
   	"frame 40", "attack", "wait 5", "frame 0", "wait 10", "frame 0",
 	"unbreakable end", "wait 1",
 }
+UnitMeleeAttackNew = {
+	"unbreakable begin", "frame 30", "wait 3", "frame 35", "wait 3",
+    "frame 40", "attack", "wait 5", "frame 45", "wait 3",
+    "frame 25", "wait 10", "frame 25", "unbreakable end", "wait 1",
+}
 WorkerAttack = {
 	"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "wait 5", "frame 45", "wait 3",
@@ -164,7 +169,7 @@ DefineAnimations("animations-melee-unit", {
 DefineAnimations("animations-melee-unit-new", {
 	Still = UnitStill,
 	Move = UnitMove,
-	Attack = WorkerAttack,
+	Attack = UnitMeleeAttackNew,
 	Death = WorkerDeath
 })
 

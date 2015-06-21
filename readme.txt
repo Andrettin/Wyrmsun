@@ -177,6 +177,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Dwarven Axefighters are now slightly cheaper to train.
 - Germanic Eralas, Teuton Kriegers and Goblin Spearmen are now slightly faster to train.
+- Improvements to the heading calculation of units when attacking, building and repairing.
 
 -----------------------------------------------------------------------
 - 1.2.2
