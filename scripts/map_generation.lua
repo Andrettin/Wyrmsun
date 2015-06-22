@@ -5984,3 +5984,37 @@ function SpawnUnitBlock(player, unit, x, y, width, height)
         end
     end
 end
+
+function FindNearestTerrainTile(terrain, starting_x, starting_y)
+	local search_range = 0
+	
+	while (search_range < Map.Info.MapWidth and search_range < Map.Info.MapHeight) do
+		for x=(starting_x - search_range), (starting_x + search_range) do
+			for y=(starting_y - search_range), (starting_y + search_range) do
+				if (GetTileTerrainName(x, y) == terrain or GetTileTerrainMixedName(x, y) == terrain) then
+					return {x, y}
+				end
+			end
+		end
+		search_range = search_range + 1
+	end
+	
+	return nil
+end
+
+function FindNearestTerrainFlagTile(terrain_flag, starting_x, starting_y)
+	local search_range = 0
+	
+	while (search_range < Map.Info.MapWidth and search_range < Map.Info.MapHeight) do
+		for x=(starting_x - search_range), (starting_x + search_range) do
+			for y=(starting_y - search_range), (starting_y + search_range) do
+				if (GetTileTerrainHasFlag(x, y, terrain_flag)) then
+					return {x, y}
+				end
+			end
+		end
+		search_range = search_range + 1
+	end
+	
+	return nil
+end

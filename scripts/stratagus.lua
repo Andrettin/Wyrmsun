@@ -1312,6 +1312,22 @@ function StandardTriggers()
 			)
 		end		
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Raft") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-raft") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Raft", "Rafts can be used by units to traverse water bodies. To use a raft, place a unit on top of it, and then it will use the raft to move when ordered to pass through water.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Food") == false) then
 			AddTrigger(
 				function()

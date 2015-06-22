@@ -198,6 +198,12 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
 	unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
 	unit = CreateUnit("unit-germanic-archer", 4, {44, 85})
+	
+	-- create a raft in the nearest coast tile to the native settlement
+	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
+	if (nearest_coast ~= nil) then
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
+	end
 elseif (GrandStrategyEventMap) then
 	SetAiType(1, "grand-strategy-battle")
 	SetAiType(4, "grand-strategy-battle")
@@ -238,6 +244,12 @@ elseif (GrandStrategyEventMap) then
 				end
 			end
 		end
+	end
+	
+	-- create a raft in the nearest coast tile to the native settlement
+	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
+	if (nearest_coast ~= nil) then
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
 	end
 end
 

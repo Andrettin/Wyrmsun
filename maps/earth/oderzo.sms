@@ -53,4 +53,10 @@ if (LoadedGame == false) then
 	else
 		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Marcomanni Tribe", town_buildings, {}, false, {}, {}, "low", nil)
 	end
+	
+	-- create rafts in the nearest coast tile to the Roman settlement
+	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
+	if (nearest_coast ~= nil) then
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
+	end
 end

@@ -2533,6 +2533,7 @@ DefineUnitType("unit-raft", { Name = _("Raft"),
 	Priority = 0,
 	Type = "naval",
 	Bridge = true,
+	VisibleUnderFog = true,
 	Sounds = {
 		"selected", "click",
 		"dead", "ship-destroyed"
