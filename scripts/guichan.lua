@@ -737,6 +737,7 @@ mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},
   description = "",
   nplayers = 1,
+  npersonplayers = 1,
   w = 32,
   h = 32,
   id = 0
@@ -768,6 +769,14 @@ function GetMapInfo(mapname)
       local t = mapinfo.playertypes[i]
       if (t == "person" or t == "computer") then
         mapinfo.nplayers = mapinfo.nplayers + 1
+      end
+    end
+	
+    mapinfo.npersonplayers = 0
+    for i=0,15 do
+      local t = mapinfo.playertypes[i]
+      if (t == "person") then
+        mapinfo.npersonplayers = mapinfo.npersonplayers + 1
       end
     end
   end

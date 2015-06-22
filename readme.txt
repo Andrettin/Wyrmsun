@@ -175,6 +175,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - The "X" marker which appears after clicking now appears over the fog of war as well.
+- Maps with only one player are no longer available for the multiplayer map selection.
 
 * Units
 - Dwarven Axefighters are now slightly cheaper to train.

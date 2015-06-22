@@ -495,8 +495,11 @@ function RunCreateMultiGameMenu(s)
 	local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
 	for i,f in ipairs(fileslist) do
 		if (string.find(f, "^.*%.smp%.?g?z?$")) then
-			maps[u] = MapDirectories[map_directory] .. f
-			u = u + 1
+			GetMapInfo(MapDirectories[map_directory] .. f)
+			if (mapinfo.npersonplayers > 1) then
+				maps[u] = MapDirectories[map_directory] .. f
+				u = u + 1
+			end
 		end
 	end
 
@@ -505,8 +508,11 @@ function RunCreateMultiGameMenu(s)
 		fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "^.*%.smp%.?g?z?$")) then
-				maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
-				u = u + 1
+				GetMapInfo(MapDirectories[map_directory] .. dirlist[j] .. f)
+				if (mapinfo.npersonplayers > 1) then
+					maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
+					u = u + 1
+				end
 			end
 		end
 	end
