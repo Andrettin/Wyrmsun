@@ -4,6 +4,12 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
+-- reduce the armor of the town hall to zero just for this map
+SetMapStat("unit-germanic-town-hall", "Armor", 0, "Value")
+SetMapStat("unit-germanic-town-hall", "Armor", 0, "Max")
+SetMapStat("unit-germanic-town-hall", "Armor", 1, "Enable")
+SetMapStat("unit-germanic-town-hall", "Armor", 0, "Increase")
+
 SetPlayerData(0, "Resources", "gold", 2000)
 SetPlayerData(0, "Resources", "lumber", 1000)
 SetPlayerData(0, "Resources", "stone", 500)
