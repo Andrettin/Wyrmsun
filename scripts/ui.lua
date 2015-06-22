@@ -466,16 +466,16 @@ if not (GameRunning) then
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
 				-- Move  hint
-				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Building = "false"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "move", Building = "false"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "move", Speed = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<ALT~>-click to defend a unit."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "move", Building = "false"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "move", Speed = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "move", Building = "false"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "move", Speed = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<CTRL~>-click to stand ground after moving."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Attack hint

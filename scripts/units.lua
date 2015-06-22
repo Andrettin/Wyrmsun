@@ -2522,19 +2522,20 @@ DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 
 DefineUnitType("unit-raft", { Name = _("Raft"),
 	Image = {"file", "neutral/units/raft.png", "size", {72, 72}},
-	Animations = "animations-item", Icon = "icon-raft",
-	NeutralMinimapColor = {255, 255, 0},
+	Animations = "animations-raft", Icon = "icon-raft",
+	NeutralMinimapColor = {128, 128, 0},
 	Speed = 0,
 	HitPoints = 15,
 	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
+	TileSize = {1, 1}, BoxSize = {33, 33},
 	SightRange = 1,
 	BasicDamage = 0, Missile = "missile-none",
 	Priority = 0,
 	Type = "naval",
 	Bridge = true,
 	Sounds = {
-		"selected", "click"
+		"selected", "click",
+		"dead", "ship-destroyed"
 	} 
 } )
 

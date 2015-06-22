@@ -1073,3 +1073,20 @@ DefineAnimations("animations-roaming-fog", {
 	"move 1", "wait 1",
 	"unbreakable end", "wait 1",}
 })
+
+DefineAnimations("animations-raft", {
+	Still = BuildingStill,
+	Move = {
+		"unbreakable begin",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2",
+		"unbreakable end", "wait 1",
+	},
+	Death = BuildingStill,
+})

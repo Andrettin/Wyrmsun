@@ -415,6 +415,8 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/misc/stone_mining/mine_stone_25.wav
 /sounds/misc/sel_metal_01.wav
 /sounds/misc/sel_tree_01.wav
+/sounds/misc/warship_death_01.wav
+/sounds/misc/warship_death_02.wav
 /sounds/missiles/sword/swordhit_10.wav
 /sounds/missiles/sword/swordhit_10a.wav
 /sounds/missiles/sword/swordhit_11.wav

@@ -104,6 +104,8 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /sounds/misc/stone_mining/mine_stone_25.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/sel_metal_01.wav (licensed under the CC-BY-SA 3.0)
 /sounds/misc/sel_tree_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/warship_death_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/warship_death_02.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_21.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_22.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/shield_metal/shieldimpmetal_23.wav (licensed under the CC-BY-SA 3.0)
@@ -178,6 +180,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven Axefighters are now slightly cheaper to train.
 - Germanic Eralas, Teuton Kriegers and Goblin Spearmen are now slightly faster to train.
 - Improvements to the heading calculation of units when attacking, building and repairing.
+- Added a raft, which units can use to travel through bodies of water.
 
 -----------------------------------------------------------------------
 - 1.2.2
