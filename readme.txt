@@ -210,6 +210,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused ranged units to display their melee animation if attacking a flying unit that was close to them.
+- Fixed issue which caused ranged units to use the raft to move to close range, instead of moving only the amount necessary to be able to attack their targets.
 
 -----------------------------------------------------------------------
 - 1.2.3

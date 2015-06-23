@@ -266,7 +266,14 @@ b_o:
 /graphics/neutral/units/yale_young.png
 /graphics/orc/units/spearthrower.png
 /graphics/teuton/units/catapult.png
+/graphics/teuton/units/chainmail.png
+/graphics/teuton/units/chainmail_left_arm.png
+/graphics/teuton/units/chainmail_right_arm.png
+/graphics/teuton/units/iron_helm.png
+/graphics/teuton/units/leather_shoes.png
+/graphics/teuton/units/long_iron_sword.png
 /graphics/teuton/units/old_man.png
+/graphics/teuton/units/saxon_shield.png
 /graphics/teuton/units/saxon_swordsman.png
 /graphics/teuton/units/suebi_hair.png
 /graphics/teuton/units/suebi_warrior.png
