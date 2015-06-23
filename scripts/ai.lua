@@ -66,11 +66,7 @@ end
 --  Stronghold of the current civilization.
 --
 function AiStronghold()
-	if (GetCivilizationClassUnitType("stronghold", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("stronghold", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("stronghold", "dwarf")
-	end
+	return GetCivilizationClassUnitType("stronghold", AiGetRace())
 end
 
 --
@@ -121,22 +117,14 @@ end
 --  Masonry upgrade of the current civilization.
 --
 function AiUpgradeMasonry()
-	if (GetCivilizationClassUnitType("masonry", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("masonry", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("masonry", "dwarf")
-	end
+	return GetCivilizationClassUnitType("masonry", AiGetRace())
 end
 
 --
 --  Coinage upgrade of the current civilization.
 --
 function AiUpgradeCoinage()
-	if (GetCivilizationClassUnitType("coinage", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("coinage", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("coinage", "teuton")
-	end
+	return GetCivilizationClassUnitType("coinage", AiGetRace())
 end
 
 --
@@ -230,88 +218,56 @@ end
 --  Upgrade melee weapon 1 of the current civilization.
 --
 function AiUpgradeWeapon1()
-	if (GetCivilizationClassUnitType("melee-weapon-1", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("melee-weapon-1", AiGetRace())
-	else
-		return nil
-	end
+	return GetCivilizationClassUnitType("melee-weapon-1", AiGetRace())
 end
 
 --
 --  Upgrade melee weapon 2 of the current civilization.
 --
 function AiUpgradeWeapon2()
-	if (GetCivilizationClassUnitType("melee-weapon-2", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("melee-weapon-2", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("melee-weapon-2", "dwarf")
-	end
+	return GetCivilizationClassUnitType("melee-weapon-2", AiGetRace())
 end
 
 --
 --  Upgrade shield 1 of the current civilization.
 --
 function AiUpgradeShield1()
-	if (GetCivilizationClassUnitType("bronze-shield", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("bronze-shield", AiGetRace())
-	else
-		return nil
-	end
+	return GetCivilizationClassUnitType("bronze-shield", AiGetRace())
 end
 
 --
 --  Upgrade shield 2 of the current civilization.
 --
 function AiUpgradeShield2()
-	if (GetCivilizationClassUnitType("iron-shield", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("iron-shield", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("iron-shield", "dwarf")
-	end
+	return GetCivilizationClassUnitType("iron-shield", AiGetRace())
 end
 
 --
 --  Upgrade missile 1 of the current civilization.
 --
 function AiUpgradeMissile1()
-	if (GetCivilizationClassUnitType("ranged-projectile-1", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("ranged-projectile-1", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("ranged-projectile-1", "dwarf")
-	end
+	return GetCivilizationClassUnitType("ranged-projectile-1", AiGetRace())
 end
 
 --
 --  Upgrade missile 2 of the current civilization.
 --
 function AiUpgradeMissile2()
-	if (GetCivilizationClassUnitType("ranged-projectile-2", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("ranged-projectile-2", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("ranged-projectile-2", "dwarf")
-	end
+	return GetCivilizationClassUnitType("ranged-projectile-2", AiGetRace())
 end
 
 --
 --  Siege weapon upgrade 1 of the current civilization.
 --
 function AiUpgradeSiegeProjectile1()
-	if (GetCivilizationClassUnitType("siege-projectile-1", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("siege-projectile-1", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("siege-projectile-1", "dwarf")
-	end
+	return GetCivilizationClassUnitType("siege-projectile-1", AiGetRace())
 end
 
 --
 --  Siege weapon upgrade 1 of the current civilization.
 --
 function AiUpgradeSiegeProjectile2()
-	if (GetCivilizationClassUnitType("siege-projectile-2", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("siege-projectile-2", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("siege-projectile-2", "dwarf")
-	end
+	return GetCivilizationClassUnitType("siege-projectile-2", AiGetRace())
 end
 
 --

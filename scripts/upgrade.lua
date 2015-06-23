@@ -86,6 +86,13 @@ function DefineAllowNormalUnits(flags)
 					DefineUnitAllow(unitName, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 				end
 			end
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "thief") then
+				if (flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") then
+					DefineUnitAllow(unitName, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+				else
+					DefineUnitAllow(unitName, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+				end
+			end
 		end
 	end
 end

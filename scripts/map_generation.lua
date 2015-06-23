@@ -1626,12 +1626,12 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				local WhileCount = 0
 				local player_spawn_point
 				local starting_point_found = false
-				while (starting_point_found == false and WhileCount < 1000) do
+				while (starting_point_found == false and WhileCount < 10000) do
 					if (symmetric == false) then
 						player_spawn_point = {SyncRand(max_x - min_x + 1) + min_x, SyncRand(max_y - min_y + 1) + min_y}
 					else
 						if (i == 0 or i == 4 or i == 8 or i == 12) then
-							player_spawn_point = {SyncRand((max_x / 2) - min_x) + min_x, SyncRand((max_y / 2) - min_y) + min_y}
+							player_spawn_point = {SyncRand(math.floor(max_x / 2) - min_x) + min_x, SyncRand(math.floor(max_y / 2) - min_y) + min_y}
 							symmetric_starting_location = player_spawn_point
 						elseif (i == 1 or i == 5 or i == 9 or i == 13) then
 							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
@@ -1642,19 +1642,28 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 						end
 					end
 					starting_point_found = true
-					if ((player_spawn_point[1] + 4) > Map.Info.MapWidth or (player_spawn_point[2] + 4) > Map.Info.MapHeight or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
+					if ((player_spawn_point[1] + 4) > (Map.Info.MapWidth - 1) or (player_spawn_point[2] + 4) > (Map.Info.MapHeight - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
 						starting_point_found = false
 					end
 					for j=0,14 do
 						if (j < i and (Map.Info.PlayerType[j] == PlayerPerson or Map.Info.PlayerType[j] == PlayerComputer)) then
-							if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then
+							if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then -- shouldn't start too close to another player
 								starting_point_found = false
 							end
 						end
 					end
+					
+					if (symmetric) then -- if is symmetric, shouldn't be too close to the end of the quadrant (since then the starting point would be generated too close to another player)
+						if (i == 0 or i == 4 or i == 8 or i == 12) then -- only need to check the players who set the spawn point to be replicated
+							if (math.abs(player_spawn_point[1] - math.floor(max_x / 2)) < 16 and math.abs(player_spawn_point[2] - math.floor(max_y / 2)) < 16) then
+								starting_point_found = false
+							end
+						end
+					end
+					
 					for sub_x=-4,7 do
 						for sub_y=-4,7 do
-							if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Rock")) then
+							if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Rock") then
 								starting_point_found = false
 							end
 						end
@@ -1662,30 +1671,32 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					WhileCount = WhileCount + 1
 				end
 				
-				SetStartView(i, player_spawn_point[1], player_spawn_point[2])
+				if (Map.Info.PlayerType[i] ~= PlayerNobody) then
+					SetStartView(i, player_spawn_point[1], player_spawn_point[2])
 
-				SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
-				for sub_x=-1,4 do
-					for sub_y=-1,4 do
-						SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
-					end
-				end
-				if (town_halls) then
-					for sub_x=0,3 do
-						for sub_y=0,3 do
-							SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+					SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+					for sub_x=-1,4 do
+						for sub_y=-1,4 do
+							SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
 						end
 					end
-				end
-				if (starting_gold_mine) then
-					CreateStartingGoldMine(i) -- create the player's gold mine
-				end
+					if (town_halls) then
+						for sub_x=0,3 do
+							for sub_y=0,3 do
+								SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Town Hall " .. i)
+							end
+						end
+					end
+					if (starting_gold_mine) then
+						CreateStartingGoldMine(i) -- create the player's gold mine
+					end
 
-				SetPlayerData(i, "Resources", "gold", 10000)
-				SetPlayerData(i, "Resources", "lumber", 3000)
-				SetPlayerData(i, "Resources", "stone", 1000)
-				SetPlayerData(i, "Resources", "oil", 1000)
-				SetAiType(i, "land-attack")
+					SetPlayerData(i, "Resources", "gold", 10000)
+					SetPlayerData(i, "Resources", "lumber", 3000)
+					SetPlayerData(i, "Resources", "stone", 1000)
+					SetPlayerData(i, "Resources", "oil", 1000)
+					SetAiType(i, "land-attack")
+				end
 			end
 		end
 	end

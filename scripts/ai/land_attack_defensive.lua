@@ -8,9 +8,9 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      land_attack.lua - Strong land attack. By José Ignacio Rodríguez and Carlo Almario
+--      land_attack_defensive.lua - Default land attack AI, but doesn't attack.
 --
---      (c) Copyright 2000-2004 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,375 +27,216 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local end_loop_funcs = {
-  function() DebugPrint("Looping !\n") return false end,
+local force_attacking = {}
 
--- EXPANSION AND DEFENSE
-
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiLumberMill()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(1000)
-	else
-		return false
+function AiLandAttackDefensive()
+	if (force_attacking[AiPlayer()] == nil) then -- init variables
+		force_attacking[AiPlayer()] = false
+		if (AiGetRace() == "dwarf") then -- dwarves collect more stone than other civilizations
+			AiSetCollect({0, 40, 40, 0, 0, 20, 0, 0, 0, 0, 0, 0})
+		else
+			AiSetCollect({0, 45, 45, 0, 0, 10, 0, 0, 0, 0, 0, 0})
+		end
 	end
-  end,
-  
---  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(7, {AiFlyer(), 4}, true) end,
-  function() return AiWaitForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-
---  function() return AiWaitForce(7) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() stratagus.gameData.AIState.loop_index[1 + AiPlayer()] = 0; return false end,
-}
-
-local land_funcs = {
-  function() return AiDifficultySleep(AiGetSleepCycles()) end,
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiSet(AiWorker(), 1) end,
-  function() return AiWait(AiTownHall()) end,
-  function() return AiWait(AiWorker()) end, -- start hangs if nothing available
-
-  function() return AiSet(AiWorker(), 4) end, -- 4
-
-  function() return AiNeed(AiBarracks()) end,
-  function() return AiSet(AiWorker(), 8) end, -- 8
-  function() return AiWait(AiBarracks()) end,
-  function() return AiSet(AiSmithy(), 1) end,
-  function() if (AiUpgradeWeapon1() ~= nil) then return AiResearch(AiUpgradeWeapon1()) end end,
-  function() if (AiUpgradeShield1() ~= nil) then return AiResearch(AiUpgradeShield1()) end end,
-
--- FAST AND FURIOUS
-  function() return AiDifficultyForce(1, {AiSoldier(), 1}, true) end,
-  function() return AiWaitForce(1) end,
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(2500)
-	else
-		return false
+	
+	local town_halls = GetPlayerData(AiPlayer(), "UnitTypesCount", AiTownHall())
+	if (AiStronghold() ~= nil) then
+		town_halls = town_halls + GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold())
 	end
-  end,
-
--- SECOND FAST ATTACK
-  function() return AiDifficultyForce(1, {AiSoldier(), 4}, true) end,
-  function() return AiWaitForce(1) end,
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(1000)
-	else
-		return false
+	
+	if (CheckDependency(AiPlayer(), AiTownHall()) and town_halls < 1) then
+		AiSet(AiTownHall(), 1)
 	end
-  end,
-  function() return AiSet(AiWorker(), 12) end,
-  function() return AiSet("unit-surghan-mercenary-steelclad", 4) end, -- make the AI build mercenaries if it manages to get ahold of a mercenary camp
-
--- PREPARING FIRST SERIOUS ATTACK
-
-  function() return AiNeed(AiLumberMill()) end, -- moved here, as it is necessary for the stronghold to be available
-  function() return AiWait(AiLumberMill()) end,
-  function() return AiResearch(AiUpgradeMissile1()) end,
-  function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") else return false end end,
-
-  function() return AiSet(AiBarracks(), 2) end,
-  function() return AiDifficultyForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
-  function() return AiSet(AiWorker(), 20) end,
-  function() return AiWaitForce(1) end,
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(2500)
-	else
-		return false
+	if (CheckDependency(AiPlayer(), AiWorker()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 1) then
+		AiSet(AiWorker(), 1)
 	end
-  end,
-
--- NOW UPGRADING
-
-  function() return AiResearch(AiUpgradeWeapon2()) end,
-  function() return AiResearch(AiUpgradeShield2()) end,
-  function() return AiResearch(AiUpgradeMissile2()) end,
-  function() return AiResearch(AiUpgradeMasonry()) end,
-  
-  function() return AiUpgradeTo(AiStronghold()) end,
-  function() return AiWait(AiStronghold()) end,
-  function() return AiSet(AiWorker(), 25) end,
---  function() return AiNeed(AiStables()) end,
-
--- BUILDING A DEFENSE
--- function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
-
-  function() if (AiGetRace() == "goblin") then return AiSet(AiGlider(), 1) else return false end end,
--- function() return AiUpgradeTo(AiBestCityCenter()) end,
--- function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
- function() return AiDifficultyForce(0, {AiSoldier(), 2, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
- function() return AiSet(AiWorker(), 30) end,
--- function() return AiWait(AiBestCityCenter()) end,
-
-  function() return AiResearch(AiUpgradeCoinage()) end,
-
--- UPGRADING CAVALRY STUFF
-
---  function() return AiNeed(AiTemple()) end,
-  
--- PREPARING SECOND ATTACK
-
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 6, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 10, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 6, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 4, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(8, {AiSoldier(), 3, AiShooter(), 0, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
-  function() return AiSet(AiWorker(), 35) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 0}) end,
-  function() return AiWaitForce(0) end,
---  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0}) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 4, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
-
--- EXPANSION
-
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiBarracks()) end,
-
--- ATTACK!!
-
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(2500)
-	else
-		return false
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < 5) then
+		AiSet(AiWorker(), 5)
 	end
-  end,
-  function() return AiWaitForce(4) end,
-  function() return AiWaitForce(5) end,
-  function() return AiWaitForce(6) end,
-  function() return AiWaitForce(7) end,
-  function() return AiWaitForce(8) end,
---  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 22, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 18, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 14, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 22, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 18, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 14, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiSet(AiWorker(), 40) end,
-
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(1000)
-	else
-		return false
+	
+	if (
+		town_halls >= 1
+		and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 5
+	) then -- only begin building more structures if there is at least one town hall and a minimum quantity of workers is present
+		if (CheckDependency(AiPlayer(), AiBarracks()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 1 and (GameCycle >= 2500 or GameSettings.Difficulty ~= 1)) then -- wait a bit with doing things for easy difficulty
+			AiSet(AiBarracks(), 1)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 5 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) < (10 * town_halls)) then
+			AiSet(AiWorker(), (10 * town_halls)) -- 10 workers per town hall
+		end
+		if (CheckDependency(AiPlayer(), AiLumberMill()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1 and (GameCycle >= 5000 or GameSettings.Difficulty ~= 1)) then
+			AiSet(AiLumberMill(), 1)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
+			AiSet(AiBarracks(), 2)
+		end
+		
+		if (
+			CheckDependency(AiPlayer(), AiSmithy())
+			and (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "Shorbear Clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
+			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) < 1
+			and (GameCycle >= 10000 or GameSettings.Difficulty ~= 1)
+		) then
+			AiSet(AiSmithy(), 1)
+		end
+		
+		if (
+			(GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "Shorbear Clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
+			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10
+			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) >= 1
+		) then -- if has a smithy and two barracks, begin researching upgrades
+			if (AiUpgradeWeapon1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon1())) then
+				AiResearch(AiUpgradeWeapon1())
+			end
+			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
+				if (AiUpgradeShield1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeShield1())) then
+					AiResearch(AiUpgradeShield1())
+				end
+			end
+			if (AiUpgradeWeapon2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon2())) then
+				AiResearch(AiUpgradeWeapon2())
+			end
+			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
+				if (AiUpgradeShield2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeShield2())) then
+					AiResearch(AiUpgradeShield2())
+				end
+			end
+		end
+		
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then -- if has a lumber mill and two barracks, begin researching upgrades
+			if (AiUpgradeMissile1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMissile1())) then
+				AiResearch(AiUpgradeMissile1())
+			end
+			if (AiUpgradeMissile2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMissile2())) then
+				AiResearch(AiUpgradeMissile2())
+			end
+		end
+		if (AiGetRace() == "germanic" and CheckDependency(AiPlayer(), "upgrade-teuton-civilization")) then -- if is Germanic and can develop Teuton civilization, do so now
+			AiResearch("upgrade-teuton-civilization")
+		end
+		
+		if (
+			GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2
+			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10
+			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1
+			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) >= 1
+			and (AiUpgradeWeapon2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeWeapon2()) == "R")
+			and (AiUpgradeShield2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeShield2()) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
+			and (AiUpgradeMissile2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeMissile2()) == "R")
+			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)
+		) then -- research masonry and upgrade to stronghold
+			if (AiUpgradeMasonry() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMasonry())) then
+				AiResearch(AiUpgradeMasonry())
+			end
+			if (AiStronghold() ~= nil and CheckDependency(AiPlayer(), AiStronghold()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) < 1) then
+				-- check if there's no town hall already upgrading to a stronghold
+				local town_hall_upgrading = false
+				local uncount = GetUnits(AiPlayer())
+				for unit1 = 1,table.getn(uncount) do 
+					if (GetUnitVariable(uncount[unit1], "Ident") == AiTownHall() and GetUnitVariable(uncount[unit1], "UpgradeTo", "Max") > 0) then -- the "max" value of "UpgradeTo" is the time cost of the unit type to which the hall is being upgraded
+						town_hall_upgrading = true
+					end
+				end
+				if not (town_hall_upgrading) then
+					AiUpgradeTo(AiStronghold())
+				end
+			end
+			if (AiGetRace() == "goblin") then -- if is goblin, train a glider
+				AiSet(AiGlider(), 1)
+			end
+		end
+		
+		if (AiStronghold() ~= nil and GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) >= 1) then
+			if (AiUpgradeCoinage() ~= nil and CheckDependency(AiPlayer(), AiUpgradeCoinage())) then
+				AiResearch(AiUpgradeCoinage()) -- if has a stronghold, research coinage
+			end
+			AiSet(AiTownHall(), 2) -- make an expansion
+		end
+		
+		if (AiStronghold() ~= nil and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) >= 1) then -- if has a stronghold, a smithy and two barracks, begin researching siege projectile upgrades
+			if (AiUpgradeSiegeProjectile1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeSiegeProjectile1())) then
+				AiResearch(AiUpgradeSiegeProjectile1())
+			end
+			if (AiUpgradeSiegeProjectile2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeSiegeProjectile2())) then
+				AiResearch(AiUpgradeSiegeProjectile2())
+			end
+		end
 	end
-  end,
-  function() return AiWaitForce(4) end,
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-
--- EXPANSION
-
-  function() return AiSet(AiWorker(), 45) end,
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-
--- UPGRADING SHOOTERS
-
---  function() return AiResearch(AiUpgradeEliteShooter()) end,
---  function() return AiResearch(AiUpgradeEliteShooter1()) end,
---  function() return AiResearch(AiUpgradeEliteShooter2()) end,
---  function() return AiResearch(AiUpgradeEliteShooter3()) end,
-
-  function() return AiSet(AiWorker(), 40) end,
-  function() return AiNeed(AiTownHall()) end,
-  
-
--- SECOND BIG WAVE
-
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 12, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 5, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 1, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 12, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 10, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 5, AiShooter(), 2, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 3, AiShooter(), 1, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(2500)
-	else
-		return false
+	
+	-- train units / attack
+	if (CheckDependency(AiPlayer(), AiSoldier()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 3 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiSoldier(), 3)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 3 and force_attacking[AiPlayer()] == false) then
+			AiForce(1, {AiSoldier(), 3})
+			AiSet(AiSoldier(), 0)
+			force_attacking[AiPlayer()] = true
+		end
+	elseif (CheckDependency(AiPlayer(), AiSoldier()) and CheckDependency(AiPlayer(), AiShooter()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 3 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiSoldier(), 3)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 1 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiShooter(), 1)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) >= 1 and force_attacking[AiPlayer()] == false) then
+			AiForce(1, {AiSoldier(), 3, AiShooter(), 1})
+			AiSet(AiSoldier(), 0)
+			AiSet(AiShooter(), 0)
+			force_attacking[AiPlayer()] = true
+		end
+	elseif (CheckDependency(AiPlayer(), AiSoldier()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 6 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiSoldier(), 6)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 6 and force_attacking[AiPlayer()] == false) then
+			AiForce(1, {AiSoldier(), 6})
+			AiSet(AiSoldier(), 0)
+			force_attacking[AiPlayer()] = true
+		end
+	elseif (CheckDependency(AiPlayer(), AiSoldier()) and CheckDependency(AiPlayer(), AiShooter()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and (AiStronghold() == nil or GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) < 1)) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 6 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiSoldier(), 6)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 3 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiShooter(), 3)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 6 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) >= 3 and force_attacking[AiPlayer()] == false) then
+			AiForce(1, {AiSoldier(), 6, AiShooter(), 3})
+			AiSet(AiSoldier(), 0)
+			AiSet(AiShooter(), 0)
+			force_attacking[AiPlayer()] = true
+		end
+	elseif (AiStronghold() ~= nil and CheckDependency(AiPlayer(), AiSoldier()) and CheckDependency(AiPlayer(), AiShooter()) and CheckDependency(AiPlayer(), AiSiegeWeapon()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) >= 1) then -- if has stronghold, begin building siege weapons
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) < 12 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiSoldier(), 12)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) < 6 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiShooter(), 6)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSiegeWeapon()) < 2 and force_attacking[AiPlayer()] == false) then
+			AiSet(AiSiegeWeapon(), 2)
+		end
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) >= 6 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSiegeWeapon()) >= 2 and force_attacking[AiPlayer()] == false) then
+			AiForce(1, {AiSoldier(), 12, AiShooter(), 6, AiSiegeWeapon(), 2})
+			AiSet(AiSoldier(), 0)
+			AiSet(AiShooter(), 0)
+			AiSet(AiSiegeWeapon(), 0)
+			force_attacking[AiPlayer()] = true
+		end
 	end
-  end,
-  function() return AiWaitForce(4) end,
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(7) end,
-
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-
--- EXPANSION, AGAIN
-
---  function() return AiNeed(AiAirport()) end,
---  function() return AiNeed(AiAirport()) end,
-
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-
--- AEREAL UNITS
---  function() return AiNeed(AiAirport()) end,
---  function() return AiWait(AiAirport()) end,
-
---  function() return AiDifficultyForce(5, {AiFlyer(), 3}, true) end,
-
--- THIRD ATTACK
-
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(2500)
-	else
-		return false
+	
+	if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiSoldier()) == 0 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiShooter()) == 0 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSiegeWeapon()) == 0 and force_attacking[AiPlayer()] == true) then
+		force_attacking[AiPlayer()] = false
 	end
-  end,
-  
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 15, AiShooter(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 20, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiWaitForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(7) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-
-
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-
--- ANOTHER EXPANSION, ANOTHER BIG ATTACK
-
-  function() return AiNeed(AiBarracks()) end,
-  function() return AiNeed(AiBarracks()) end,
-
-  function()
-	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
-		return AiSleep(2500)
-	else
-		return false
+	
+	-- every once in a while, give some free resources to the AI if under the higher difficulties
+	if (GameSettings.Difficulty == 3) then
+		AiCheat(50, 35, 25)
+	elseif (GameSettings.Difficulty == 4) then
+		AiCheat(100, 75, 50)
 	end
-  end,
-  
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 15, AiCavalry(), 0, AiCavalryMage(), 40, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 40, AiShooter(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(7, {AiFlyer(), 4}, true) end,
-  function() return AiWaitForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiWaitForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiWaitForce(7) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-
--- LITTLE DEFENSE
-
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
---  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-
-
-  -- Everything researched...
-
-  function() return AiLoop(end_loop_funcs, stratagus.gameData.AIState.loop_index) end,
-}
-
-function AiLandAttackDefensive() AiLoop(land_funcs, stratagus.gameData.AIState.index); end
+end
 
 DefineAi("land-attack-defensive", "*", "land-attack-defensive", AiLandAttackDefensive)
-

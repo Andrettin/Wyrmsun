@@ -11,6 +11,33 @@ by Andrettin
 
 
 ############################################################
+# Introduction
+############################################################
+
+Wyrmsun is an open-source RTS game which features elements of mythology, history and fiction.
+
+In the Wyrmsun universe a myriad of inhabited planets exist. Humans dwell on Earth, while dwarves inhabit Nidavellir and elves nourish the world of Alfheim. These peoples struggle to carve a place for themselves with their tools of stone, bronze and iron. And perhaps one day they will meet one another, beyond the stars...
+
+Features:
+- Retro-style graphics
+- 2 playable civilizations, and a number of non-playable ones
+- 20 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
+- 38 units, 30 buildings and 18 technologies
+- Units that can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
+- Persistent heroes, who carry over their level and abilities throughout scenarios
+- Personal names and traits for units
+- Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets
+- 35 maps of real and fictional locations to choose from, as well as random maps
+- Living environment, with fauna reproduction and predation
+- Very moddable game, with mod-loading capability built in
+- Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level
+- In-game encyclopedia, allowing players to learn more about the units, buildings and other elements of the game, as well as their historical and mythological sources of inspiration
+
+Wyrmsun's lore is based on history and mythology, and on the lore of other open-source fantasy games, such as Battle for Wesnoth.
+
+Getting Wyrmsun on Steam (http://store.steampowered.com/app/370070) provides you with benefits such as streamlined installation, automatic updates and Steam Workshop integration.
+
+############################################################
 # License
 ############################################################
 
@@ -169,8 +196,20 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.4
 -----------------------------------------------------------------------
 
+* AI
+- The AI build order has been revamped.
+
+* Maps
+- Improved map generation algorithm so that players aren't generated too close to one another on random maps.
+
+* Miscellaneous
+- Fixed crash related to workers trying to return goods to a non-existent building.
+
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.
+
+* Units
+- Fixed issue which caused ranged units to display their melee animation if attacking a flying unit that was close to them.
 
 -----------------------------------------------------------------------
 - 1.2.3
