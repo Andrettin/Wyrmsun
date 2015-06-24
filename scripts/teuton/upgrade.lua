@@ -103,7 +103,7 @@ DefineUpgrade("upgrade-teuton-masonry", {
 })
 
 DefineUpgrade("upgrade-teuton-coinage", {
-	Parent = "upgrade-masonry",
+	Parent = "upgrade-coinage",
 	Civilization = "teuton",
 	Icon = "icon-teuton-coinage",
 	Background = _("West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."),

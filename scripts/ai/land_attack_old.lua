@@ -83,7 +83,7 @@ local land_funcs = {
   function() return AiWait(AiBarracks()) end,
   function() return AiSet(AiSmithy(), 1) end,
   function() if (AiUpgradeWeapon1() ~= nil) then return AiResearch(AiUpgradeWeapon1()) end end,
-  function() if (AiUpgradeShield1() ~= nil) then return AiResearch(AiUpgradeShield1()) end end,
+  function() if (GetAiUnitType("bronze-shield") ~= nil) then return AiResearch(GetAiUnitType("bronze-shield")) end end,
 
 -- FAST AND FURIOUS
   function() return AiDifficultyForce(1, {AiSoldier(), 1}, true) end,
@@ -135,7 +135,7 @@ local land_funcs = {
 -- NOW UPGRADING
 
   function() return AiResearch(AiUpgradeWeapon2()) end,
-  function() return AiResearch(AiUpgradeShield2()) end,
+  function() return AiResearch(GetAiUnitType("iron-shield")) end,
   function() return AiResearch(AiUpgradeMissile2()) end,
   function() return AiResearch(GetAiUnitType("masonry")) end,
   

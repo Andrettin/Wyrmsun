@@ -207,6 +207,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.
+- The On the Vanaquisl quest now yields 2 technology points instead of 1.
+- The Sack of Iuvavum quest now yields 2 technology points instead of 1.
 
 * Units
 - Fixed issue which caused ranged units to display their melee animation if attacking a flying unit that was close to them.
@@ -214,7 +216,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Teuton Krieger and Marbod now display different graphics depending on which weapon and shield technologies are researched.
 
 * Upgrades
-- Added Wood Plow and Iron-Tipped Wood Plow upgrades (both increase farm food supply) (graphics by Jinn).
+- Added Wood Plow and Iron-Tipped Wood Plow upgrades (both increase farm food supply) for the Dwarves, the Germanic/Teutons and the Goblins (graphics by Jinn).
+- Developing the Teuton civilization now requires having researched Wood Plow.
 
 -----------------------------------------------------------------------
 - 1.2.3

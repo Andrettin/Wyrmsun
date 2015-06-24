@@ -266,7 +266,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (CUpgrade:Get(unitName).Class == "iron-tipped-wood-plow") then
 					tech_icon_x = 6
 					tech_icon_y = 4
-					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("wood-plow", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("wood-plow", civilization)) > 0) then
+					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("wood-plow", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "iron-plow") then

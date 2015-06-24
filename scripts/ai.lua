@@ -222,20 +222,6 @@ function AiUpgradeWeapon2()
 end
 
 --
---  Upgrade shield 1 of the current civilization.
---
-function AiUpgradeShield1()
-	return GetCivilizationClassUnitType("bronze-shield", AiGetRace())
-end
-
---
---  Upgrade shield 2 of the current civilization.
---
-function AiUpgradeShield2()
-	return GetCivilizationClassUnitType("iron-shield", AiGetRace())
-end
-
---
 --  Upgrade missile 1 of the current civilization.
 --
 function AiUpgradeMissile1()

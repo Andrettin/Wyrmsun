@@ -89,16 +89,16 @@ function AiLandAttackDefensive()
 				AiResearch(AiUpgradeWeapon1())
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
-				if (AiUpgradeShield1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeShield1())) then
-					AiResearch(AiUpgradeShield1())
+				if (GetAiUnitType("bronze-shield") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("bronze-shield"))) then
+					AiResearch(GetAiUnitType("bronze-shield"))
 				end
 			end
 			if (AiUpgradeWeapon2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon2())) then
 				AiResearch(AiUpgradeWeapon2())
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
-				if (AiUpgradeShield2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeShield2())) then
-					AiResearch(AiUpgradeShield2())
+				if (GetAiUnitType("iron-shield") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("iron-shield"))) then
+					AiResearch(GetAiUnitType("iron-shield"))
 				end
 			end
 		end
@@ -121,7 +121,7 @@ function AiLandAttackDefensive()
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) >= 1
 			and (AiUpgradeWeapon2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeWeapon2()) == "R")
-			and (AiUpgradeShield2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeShield2()) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
+			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
 			and (AiUpgradeMissile2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeMissile2()) == "R")
 			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)
 		) then -- research masonry and upgrade to stronghold

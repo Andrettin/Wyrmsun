@@ -76,9 +76,9 @@ local land_funcs = {
 --  function() return AiWait(AiBarracks()) end,
 --  function() return AiSet(AiSmithy(), 1) end,
 --  function() return AiResearch(AiUpgradeWeapon1()) end,
---  function() return AiResearch(AiUpgradeShield1()) end,
+--  function() return AiResearch(GetAiUnitType("bronze-shield")) end,
 --  function() return AiResearch(AiUpgradeWeapon2()) end,
---  function() return AiResearch(AiUpgradeShield2()) end,
+--  function() return AiResearch(GetAiUnitType("iron-shield")) end,
 
 -- FAST AND FURIOUS
   function() return AiForce(1, {
