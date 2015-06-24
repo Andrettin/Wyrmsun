@@ -196,6 +196,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		},
 		{
 			"variation-id", "blond-hair",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -203,6 +204,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"variation-id", "brown-hair",
 			"hair-file", "human/units/brown_hair_warrior.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
@@ -211,6 +213,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"variation-id", "gray-hair",
 			"hair-file", "human/units/gray_hair_warrior.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
@@ -219,6 +222,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"variation-id", "red-hair",
 			"hair-file", "human/units/red_hair_warrior.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",

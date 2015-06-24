@@ -120,6 +120,7 @@ b_o:
 /graphics/human/units/human_body.png
 /graphics/human/units/human_body_warrior.png
 /graphics/human/units/human_left_arm.png
+/graphics/human/units/human_left_arm_shield.png
 /graphics/human/units/human_right_arm.png
 /graphics/human/units/human_shadow.png
 /graphics/human/units/pants.png
