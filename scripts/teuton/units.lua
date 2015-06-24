@@ -118,12 +118,57 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	ShoesImage = {"file", "teuton/units/leather_shoes.png"},
 	HelmetImage = {"file", "teuton/units/iron_helm.png"},
 	WeaponImage = {"file", "teuton/units/long_iron_sword.png"},
-	ShieldImage = {"file", "teuton/units/saxon_shield.png"},
 	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
 	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	Variations = {
+		{
+			"variation-id", "red-hair", -- no shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "red-hair", -- bronze shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "red-hair", -- iron shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"shield-file", "germanic/units/bronze_shield.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "red-hair", -- no shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "red-hair", -- bronze shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"shield-file", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"shield-file", "teuton/units/saxon_shield.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-teuton-iron-shield"
+		}
+	},
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",
@@ -367,25 +412,67 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 	DefaultName = "Marbod",
 	Civilization = "teuton",
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
-	Image = {"file", "teuton/units/suebi_warrior_original.png", "size", {72, 72}},
-	HairImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	LeftArmImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	RightArmImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	ClothingImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	ClothingLeftArmImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	ClothingRightArmImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	PantsImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	ShoesImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	HelmetImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	WeaponImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	ShieldImage = {"file", "teuton/units/suebi_warrior_original.png"},
-	Animations = "animations-melee-unit",
---	HairImage = {"file", "teuton/units/suebi_warrior_hair.png"},
---	PantsImage = {"file", "human/units/pants.png"},
---	Shadow = {"file", "teuton/units/suebi_warrior_shadow.png", "size", {72, 72}},
+	Image = {"file", "human/units/human_body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
+	HairImage = {"file", "teuton/units/suebi_hair.png"},
+	LeftArmImage = {"file", "human/units/human_left_arm.png"},
+	RightArmImage = {"file", "human/units/human_right_arm.png"},
+	ClothingImage = {"file", "human/units/leather_strap.png"},
+	ClothingLeftArmImage = {"file", ""},
+	ClothingRightArmImage = {"file", ""},
+	PantsImage = {"file", "human/units/pants.png"},
+	ShoesImage = {"file", "teuton/units/leather_shoes.png"},
+	HelmetImage = {"file", ""},
+	WeaponImage = {"file", "teuton/units/long_iron_sword.png"},
+	ShieldImage = {"file", ""},
 	Icon = "icon-marbod",
 	Hero = true,
 	Gender = 1,
-	Variations = {}
+	Variations = {
+		{
+			"variation-id", "blond-hair", -- no shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- bronze shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- iron shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"shield-file", "germanic/units/bronze_shield.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- no shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- bronze shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"shield-file", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair",
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"shield-file", "teuton/units/saxon_shield.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-teuton-iron-shield"
+		}
+	}
 } )
 
