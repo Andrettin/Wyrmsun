@@ -134,18 +134,19 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 		{
 			"variation-id", "red-hair", -- bronze shield, bronze sword
 			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
+			"shield-file", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- iron shield, bronze sword
 			"weapon-file", "germanic/units/broad_bronze_sword.png",
 			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "germanic/units/bronze_shield.png",
+			"shield-file", "teuton/units/saxon_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"upgrade-required", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- no shield, long iron sword
@@ -164,7 +165,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
-			"variation-id", "red-hair",
+			"variation-id", "red-hair", -- iron shield, long iron sword
 			"weapon-file", "teuton/units/long_iron_sword.png",
 			"left-arm-file", "human/units/human_left_arm_shield.png",
 			"shield-file", "teuton/units/saxon_shield.png",
@@ -442,15 +443,17 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 		{
 			"variation-id", "blond-hair", -- bronze shield, bronze sword
 			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
+			"shield-file", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- iron shield, bronze sword
 			"weapon-file", "germanic/units/broad_bronze_sword.png",
 			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "germanic/units/bronze_shield.png",
+			"shield-file", "teuton/units/saxon_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield"
 		},
