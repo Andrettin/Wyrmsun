@@ -114,17 +114,10 @@ function AiLumberMill()
 end
 
 --
---  Masonry upgrade of the current civilization.
+--  Get unit type of this class for the current AI's civilization
 --
-function AiUpgradeMasonry()
-	return GetCivilizationClassUnitType("masonry", AiGetRace())
-end
-
---
---  Coinage upgrade of the current civilization.
---
-function AiUpgradeCoinage()
-	return GetCivilizationClassUnitType("coinage", AiGetRace())
+function GetAiUnitType(unit_class)
+	return GetCivilizationClassUnitType(unit_class, AiGetRace())
 end
 
 --

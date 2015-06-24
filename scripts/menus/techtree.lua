@@ -10,7 +10,7 @@
 --
 --      techtree.lua - Defines the menu for tech trees.
 --
---      (c) Copyright 2013-2014 by Andrettin
+--      (c) Copyright 2013-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -257,6 +257,24 @@ function RunTechTreeMenu(civilization_number)
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("siege-projectile-1", civilization))) then
 						tech_allowed = false
 					end
+				elseif (CUpgrade:Get(unitName).Class == "wood-plow") then
+					tech_icon_x = 6
+					tech_icon_y = 3
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "iron-tipped-wood-plow") then
+					tech_icon_x = 6
+					tech_icon_y = 4
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("wood-plow", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("wood-plow", civilization)) > 0) then
+						tech_allowed = false
+					end
+				elseif (CUpgrade:Get(unitName).Class == "iron-plow") then
+					tech_icon_x = 6
+					tech_icon_y = 5
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("iron-plow", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("iron-plow", civilization)) > 0) then
+						tech_allowed = false
+					end
 				elseif (CUpgrade:Get(unitName).Class == "masonry") then
 					tech_icon_x = 8
 					tech_icon_y = 3
@@ -361,6 +379,15 @@ function GetTechnologyAllowsString(technology, civilization)
 			if (GetCivilizationClassUnitType("siege-engine", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-engine", civilization))
 			end
+			if (GetCivilizationClassUnitType("wood-plow", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("wood-plow", civilization))
+			end
+			if (GetCivilizationClassUnitType("iron-tipped-wood-plow", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-tipped-wood-plow", civilization))
+			end
+			if (GetCivilizationClassUnitType("iron-plow", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-plow", civilization))
+			end
 			if (GetCivilizationClassUnitType("masonry", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("masonry", civilization))
 			end
@@ -399,6 +426,14 @@ function GetTechnologyAllowsString(technology, civilization)
 		elseif (CUpgrade:Get(technology).Class == "siege-projectile-1") then
 			if (GetCivilizationClassUnitType("siege-projectile-2", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-projectile-2", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "wood-plow") then
+			if (GetCivilizationClassUnitType("iron-tipped-wood-plow", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-tipped-wood-plow", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "iron-tipped-wood-plow") then
+			if (GetCivilizationClassUnitType("iron-plow", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("iron-plow", civilization))
 			end
 		elseif (CUpgrade:Get(technology).Class == "masonry") then
 			if (GetCivilizationClassUnitType("stronghold", civilization) ~= nil) then

@@ -303,6 +303,10 @@ end
 if (GrandStrategyYear >= 534) then
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = 4 -- 4 Dwarven Stalwarts
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 1 -- Hamel
+
+	-- Mushroom Farms existent in Knalga
+	Factions.Knalga.Technologies.upgrade_dwarven_wood_plow = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_iron_edged_wood_plow = 2
 end
 
 if (GrandStrategyYear >= 535) then

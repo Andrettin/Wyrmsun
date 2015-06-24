@@ -448,8 +448,7 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 			"weapon-file", "germanic/units/broad_bronze_sword.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"upgrade-required", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- no shield, long iron sword
@@ -467,7 +466,7 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "blond-hair", -- iron shield, long iron sword
 			"weapon-file", "teuton/units/long_iron_sword.png",
 			"shield-file", "teuton/units/saxon_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",

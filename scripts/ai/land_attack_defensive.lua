@@ -125,8 +125,8 @@ function AiLandAttackDefensive()
 			and (AiUpgradeMissile2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeMissile2()) == "R")
 			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)
 		) then -- research masonry and upgrade to stronghold
-			if (AiUpgradeMasonry() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMasonry())) then
-				AiResearch(AiUpgradeMasonry())
+			if (GetAiUnitType("masonry") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("masonry"))) then
+				AiResearch(GetAiUnitType("masonry"))
 			end
 			if (AiStronghold() ~= nil and CheckDependency(AiPlayer(), AiStronghold()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) < 1) then
 				-- check if there's no town hall already upgrading to a stronghold
@@ -147,8 +147,8 @@ function AiLandAttackDefensive()
 		end
 		
 		if (AiStronghold() ~= nil and GetPlayerData(AiPlayer(), "UnitTypesCount", AiStronghold()) >= 1) then
-			if (AiUpgradeCoinage() ~= nil and CheckDependency(AiPlayer(), AiUpgradeCoinage())) then
-				AiResearch(AiUpgradeCoinage()) -- if has a stronghold, research coinage
+			if (GetAiUnitType("coinage") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("coinage"))) then
+				AiResearch(GetAiUnitType("coinage")) -- if has a stronghold, research coinage
 			end
 			AiSet(AiTownHall(), 2) -- make an expansion
 		end

@@ -185,12 +185,13 @@ DefinePanelContents(
 	{ Pos = {9, 103}, More = {"Text", "Usage"} },
 	{ Pos = {9, 116}, More = {"Text", {Text = "Supply:"}} },
 	{ Pos = {76, 116}, Condition = {},
-		More = {"Text", {Text = String(ActiveUnitVar("Supply"))}}
+		More = {"Text", {Text = String(PlayerData(ActiveUnitVar("Player", "Value"), "Supply"))}}
 	},
 	{ Pos = {9, 130}, More = { "Text", {Text = "Demand:"}} },
-	{ Pos = {76, 130}, More = { "Text", {Text = If(GreaterThan(ActiveUnitVar("Demand", "Max"), ActiveUnitVar("Supply", "Max")),
-										InverseVideo(String(ActiveUnitVar("Demand", "Max"))),
-										String(ActiveUnitVar("Demand", "Max")) )}}
+	{ Pos = {76, 130}, More = { "Text", {Text = If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Demand"),
+										PlayerData(ActiveUnitVar("Player", "Value"), "Supply")),
+										InverseVideo(String(PlayerData(ActiveUnitVar("Player", "Value"), "Demand"))),
+										String(PlayerData(ActiveUnitVar("Player", "Value"), "Demand")) )}}
     }
 
   } },

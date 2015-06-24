@@ -67,25 +67,7 @@ local upgrades = {
 		{   250,  4000,     0,     0,     0,     0,     0,     0},
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
 		1
-	},
-	{
-		"upgrade-teuton-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs."),
-		"",
-		"",
-		{   250,   900,   500,     0,     0,   250,     0,     0},
-		{   250,   900,   500,     0,     0,   250,     0,  2400},
-		1
-	},
-	{
-		"upgrade-teuton-coinage", _("Coinage"), "icon-teuton-coinage", "coinage",
-		_("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
-		"",
-		_("West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."),
-		{   250,  1500,     0,     0,     0,     0,     0,     0},
-		{   250,  1500,     0,     0,     0,     0,     0,  1500},
-		1
-	},
+	}
 }
 
 for i = 1,table.getn(upgrades) do
@@ -106,6 +88,27 @@ for i = 1,table.getn(upgrades) do
 	u.TechnologyPointCost = upgrades[i][10]
 	u.Ability = false
 end
+
+DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {
+	Parent = "upgrade-iron-tipped-wood-plow",
+	Civilization = "teuton",
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-teuton-masonry", {
+	Parent = "upgrade-masonry",
+	Civilization = "teuton",
+	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Watch Towers to be upgraded to Guard Towers and Rathauses to Burgs."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-teuton-coinage", {
+	Parent = "upgrade-masonry",
+	Civilization = "teuton",
+	Icon = "icon-teuton-coinage",
+	Background = _("West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."),
+	TechnologyPointCost = 1
+})
 
 DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
@@ -133,6 +136,11 @@ DefineModifier("upgrade-teuton-catapult-projectile-1",
 DefineModifier("upgrade-teuton-catapult-projectile-2",
 	{"BasicDamage", 15},
 	{"apply-to", "unit-teuton-catapult"}
+)
+
+DefineModifier("upgrade-teuton-iron-tipped-wood-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-teuton-farm"}
 )
 
 DefineModifier("upgrade-teuton-masonry",
@@ -215,6 +223,10 @@ DefineDependency("upgrade-teuton-catapult-projectile-1",
 
 DefineDependency("upgrade-teuton-catapult-projectile-2",
 	{"upgrade-teuton-catapult-projectile-1", "unit-teuton-lumber-mill"}
+)
+
+DefineDependency("upgrade-teuton-iron-tipped-wood-plow",
+	{"upgrade-germanic-wood-plow"}
 )
 
 DefineDependency("unit-teuton-stronghold",

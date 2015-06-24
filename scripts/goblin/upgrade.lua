@@ -10,7 +10,7 @@
 --
 --      upgrade.ccl - Define the goblin dependencies and upgrades.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -42,13 +42,6 @@ local upgrades = {
 		{   250,  4000,     0,     0,     0,     0,     0,     0},
 		{   250,  4000,     0,     0,     0,     0,     0,  4000},
 		1},
-	{"upgrade-goblin-masonry", _("Masonry"), "icon-masonry", "masonry",
-		_("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
-		"",
-		"",
-		{   250,   900,   500,     0,     0,   250,     0,     0},
-		{   250,   900,   500,     0,     0,   250,     0,  2400},
-		1},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -70,6 +63,25 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineUpgrade("upgrade-goblin-wood-plow", {
+	Parent = "upgrade-wood-plow",
+	Civilization = "goblin",
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-goblin-iron-tipped-wood-plow", {
+	Parent = "upgrade-iron-tipped-wood-plow",
+	Civilization = "goblin",
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-goblin-masonry", {
+	Parent = "upgrade-masonry",
+	Civilization = "goblin",
+	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
+	TechnologyPointCost = 1
+})
+
 DefineModifier("upgrade-goblin-catapult-projectile-1",
 	{"BasicDamage", 15},
 	{"apply-to", "unit-goblin-war-machine"}
@@ -85,7 +97,17 @@ DefineModifier("upgrade-goblin-masonry",
 	{"Armor", 5},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"})
-	
+
+DefineModifier("upgrade-goblin-wood-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-goblin-farm"}
+)
+
+DefineModifier("upgrade-goblin-iron-tipped-wood-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-goblin-farm"}
+)
+
 DefineDependency("unit-goblin-archer",
 	{"unit-goblin-lumber-mill"})
 
@@ -102,3 +124,8 @@ DefineDependency("upgrade-goblin-catapult-projectile-1",
 DefineDependency("upgrade-goblin-catapult-projectile-2",
 	{"upgrade-goblin-catapult-projectile-1", "unit-goblin-lumber-mill"}
 )
+
+DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
+	{"upgrade-goblin-wood-plow"}
+)
+

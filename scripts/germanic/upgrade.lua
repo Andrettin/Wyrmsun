@@ -10,7 +10,7 @@
 --
 --      upgrade.ccl - Define the germanic dependencies and upgrades.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -77,6 +77,12 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineUpgrade("upgrade-germanic-wood-plow", {
+	Parent = "upgrade-wood-plow",
+	Civilization = "germanic",
+	TechnologyPointCost = 1
+})
+
 DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"},
@@ -96,6 +102,11 @@ DefineModifier("upgrade-germanic-barbed-arrow",
 	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"}
 )
 
+DefineModifier("upgrade-germanic-wood-plow",
+	{"Supply", 1},
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-teuton-farm"}
+)
+
 DefineModifier("upgrade-teuton-civilization",
 	{"change-civilization-to", "teuton"}
 )
@@ -105,5 +116,5 @@ DefineDependency("unit-germanic-archer",
 )
 
 DefineDependency("upgrade-teuton-civilization",
-	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"}
+	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )

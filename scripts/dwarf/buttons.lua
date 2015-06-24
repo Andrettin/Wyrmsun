@@ -403,7 +403,33 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-wood-plow",
+	Action = "research", Value = "upgrade-dwarven-wood-plow",
+	Allowed = "check-single-research",
+	Description = _("+1 Food supply for Mushroom Farms."),
+	Key = "p", Hint = _("Research Wood ~!Plow"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-lumber-mill"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-tipped-wood-plow",
+	Action = "research", Value = "upgrade-dwarven-iron-tipped-wood-plow",
+	Allowed = "check-single-research",
+	Description = _("+1 Food supply for Mushroom Farms."),
+	Key = "p", Hint = _("Research Iron-Tipped Wood ~!Plow"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-lumber-mill"}
+} )
+
+--[[
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-plow",
+	Action = "research", Value = "upgrade-dwarven-iron-plow",
+	Allowed = "check-single-research",
+	Description = _("+1 Food supply for Mushroom Farms."),
+	Key = "p", Hint = _("Research Iron ~!Plow"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-lumber-mill"}
+} )
+--]]
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-dwarven-masonry",
 	Allowed = "check-single-research",
 	Description = _("+20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),

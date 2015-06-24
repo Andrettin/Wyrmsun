@@ -137,7 +137,7 @@ local land_funcs = {
   function() return AiResearch(AiUpgradeWeapon2()) end,
   function() return AiResearch(AiUpgradeShield2()) end,
   function() return AiResearch(AiUpgradeMissile2()) end,
-  function() return AiResearch(AiUpgradeMasonry()) end,
+  function() return AiResearch(GetAiUnitType("masonry")) end,
   
   function() return AiUpgradeTo(AiStronghold()) end,
   function() return AiWait(AiStronghold()) end,
@@ -155,7 +155,7 @@ local land_funcs = {
  function() return AiSet(AiWorker(), 30) end,
 -- function() return AiWait(AiBestCityCenter()) end,
 
-  function() return AiResearch(AiUpgradeCoinage()) end,
+  function() return AiResearch(GetAiUnitType("coinage")) end,
 
 -- UPGRADING CAVALRY STUFF
 

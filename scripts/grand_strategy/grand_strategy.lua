@@ -5243,6 +5243,7 @@ function GetUnitTypeInterfaceState(unit_type)
 	else
 		if (CUpgrade:Get(unit_type).Class == "melee-weapon-1" or CUpgrade:Get(unit_type).Class == "melee-weapon-2" or CUpgrade:Get(unit_type).Class == "bronze-shield" or CUpgrade:Get(unit_type).Class == "iron-shield" or CUpgrade:Get(unit_type).Class == "siege-projectile-1" or CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
 			return "smithy"
+--		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
 		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "masonry") then
 			return "lumber-mill"
 		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
@@ -5301,7 +5302,7 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			if (GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization))
 			end
-		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "masonry") then
+		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
 			if (GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization))
 			end

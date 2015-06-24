@@ -228,10 +228,20 @@ if (GrandStrategyYear >= -4990) then
 	-- Fish and boat landing area belonging to the Ertebolle culture existed in Zealand in 4990 BC (could be relevant for setting factions' technologies or resource production); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 end
 
+if (GrandStrategyYear >= -4500) then
+	-- Use of cattle in traction, probably for plowing, in the Late Neolithic in the Northern Balkans, c. 4500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
+end
+
 if (GrandStrategyYear >= -4000) then
 	-- Indo-European spoken at least partly in the Pontic-Caspian region between 4000 and 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 108.
 	
+	-- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	Factions.AsaTribe.Technologies.upgrade_germanic_wood_plow = 2
+	Factions.VanaTribe.Technologies.upgrade_germanic_wood_plow = 2
+	
 	-- Eneolithic Baden culture existed in "temperate southeastern Europe" (where, more precisely?) in the 4th millenium BC, and made use of animal traction; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
+	
+	-- Use of plows begins in Northwestern Europe c. 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
 end
 
 if (GrandStrategyYear >= -3950) then
@@ -243,6 +253,11 @@ end
 
 if (GrandStrategyYear >= -3920) then
 	-- Cattle breeding practiced in Zealand in 3920 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+end
+
+if (GrandStrategyYear >= -3600) then
+	-- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+	Factions.GylfingTribe.Technologies.upgrade_germanic_wood_plow = 2
 end
 
 if (GrandStrategyYear >= -3200) then
@@ -302,6 +317,10 @@ end
 
 if (GrandStrategyYear >= -2700) then
 	-- Egyptian pyramids built between 2700 and 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 44.
+end
+
+if (GrandStrategyYear >= -2500) then
+	-- Plowing well-disseminated in Europe by 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
 end
 
 if (GrandStrategyYear >= -2400) then

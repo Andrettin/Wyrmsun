@@ -10,7 +10,7 @@
 --
 --      upgrade.lua - Define the dependencies and upgrades.
 --
---      (c) Copyright 2001-2004 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2001-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,7 +27,102 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Load the different races
+function DefineUpgrade(upgrade, data)
+	upgrade = CUpgrade:New(upgrade)
+	if (data.Parent ~= nil) then
+		upgrade.Name = CUpgrade:Get(data.Parent).Name
+		upgrade.Icon = CUpgrade:Get(data.Parent).Icon
+		upgrade.Class = CUpgrade:Get(data.Parent).Class
+		upgrade.Civilization = CUpgrade:Get(data.Parent).Civilization
+		upgrade.Description = CUpgrade:Get(data.Parent).Description
+		upgrade.Quote = CUpgrade:Get(data.Parent).Quote
+		upgrade.Background = CUpgrade:Get(data.Parent).Background
+		for i = 1,MaxCosts do
+			upgrade.Costs[i - 1] = CUpgrade:Get(data.Parent).Costs[i - 1]
+			upgrade.GrandStrategyCosts[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyCosts[i - 1]
+		end
+		upgrade.TechnologyPointCost = CUpgrade:Get(data.Parent).TechnologyPointCost
+		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
+	end
+	if (data.Name ~= nil) then
+		upgrade.Name = data.Name
+	end
+	if (data.Icon ~= nil) then
+		upgrade.Icon = Icons[data.Icon]
+	end
+	if (data.Class ~= nil) then
+		upgrade.Class = data.Class
+	end
+	if (data.Civilization ~= nil) then
+		upgrade.Civilization = data.Civilization
+	end
+	if (data.Description ~= nil) then
+		upgrade.Description = data.Description
+	end
+	if (data.Quote ~= nil) then
+		upgrade.Quote = data.Quote
+	end
+	if (data.Background ~= nil) then
+		upgrade.Background = data.Background
+	end
+	if (data.Costs ~= nil) then
+		for i = 1,table.getn(data.Costs),2 do
+			upgrade.Costs[GetResourceID(data.Costs[i])] = data.Costs[i + 1]
+		end
+	end
+	if (data.GrandStrategyCosts ~= nil) then
+		for i = 1,table.getn(data.GrandStrategyCosts),2 do
+			upgrade.GrandStrategyCosts[GetResourceID(data.GrandStrategyCosts[i])] = data.GrandStrategyCosts[i + 1]
+		end
+	end
+	if (data.TechnologyPointCost ~= nil) then
+		upgrade.TechnologyPointCost = data.TechnologyPointCost
+	end
+	if (data.Ability ~= nil) then
+		upgrade.Ability = data.Ability
+	end
+end
+
+DefineUpgrade("upgrade-wood-plow", {
+	Name = _("Wood Plow"),
+	Class = "wood-plow",
+	Icon = "icon-wood-plow",
+	Description = _("While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."),
+	Costs = {"time", 200, "gold", 300, "lumber", 450},
+	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 450, "research", 1200},
+	Ability = false
+})
+
+DefineUpgrade("upgrade-iron-tipped-wood-plow", {
+	Name = _("Iron-Tipped Wood Plow"),
+	Class = "iron-tipped-wood-plow",
+	Icon = "icon-iron-tipped-wood-plow",
+	Description = _("The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms."),
+	Costs = {"time", 250, "gold", 900, "lumber", 750},
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
+	Ability = false
+})
+
+DefineUpgrade("upgrade-masonry", {
+	Name = _("Masonry"),
+	Class = "masonry",
+	Icon = "icon-masonry",
+	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar."),
+	Costs = {"time", 250, "gold", 900, "lumber", 500, "stone", 250},
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 500, "stone", 250, "research", 2400},
+	Ability = false
+})
+
+DefineUpgrade("upgrade-coinage", {
+	Name = _("Coinage"),
+	Class = "coinage",
+	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
+	Costs = {"time", 250, "gold", 1500},
+	GrandStrategyCosts = {"time", 250, "gold", 1500, "research", 1500},
+	Ability = false
+})
+
+-- Load the different civilizations
 Load("scripts/celt/upgrade.lua")
 Load("scripts/dwarf/upgrade.lua")
 Load("scripts/germanic/upgrade.lua")
@@ -122,14 +217,20 @@ function ApplyTechLevels()
 	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",
-		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow"
+		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
+		"upgrade-dwarven-wood-plow",
+		"upgrade-goblin-wood-plow",
+		"upgrade-germanic-wood-plow"
 	}
 	local iron_upgrades = {
 		"upgrade-teuton-spatha", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
+		"upgrade-teuton-iron-tipped-wood-plow",
 		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2",
 		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
-		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2"
+		"upgrade-dwarven-iron-tipped-wood-plow",
+		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
+		"upgrade-goblin-iron-tipped-wood-plow"
 	}
 	local iron_civilizations = {
 		"upgrade-teuton-civilization"

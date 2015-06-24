@@ -244,6 +244,14 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 } )
   
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-wood-plow",
+	Action = "research", Value = "upgrade-germanic-wood-plow",
+	Allowed = "check-single-research",
+	Description = _("+1 Food supply for Farms."),
+	Key = "p", Hint = _("Research Wood ~!Plow"), Popup = "popup-research",
+	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
+} )
+
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-civilization",
 	Action = "research", Value = "upgrade-teuton-civilization",
 	Allowed = "check-single-research",

@@ -192,7 +192,23 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-wood-plow",
+	Action = "research", Value = "upgrade-goblin-wood-plow",
+	Allowed = "check-single-research",
+	Description = _("+1 Food supply for Farms."),
+	Key = "p", Hint = _("Research Wood ~!Plow"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-tipped-wood-plow",
+	Action = "research", Value = "upgrade-goblin-iron-tipped-wood-plow",
+	Allowed = "check-single-research",
+	Description = _("+1 Food supply for Farms."),
+	Key = "p", Hint = _("Research Iron-Tipped Wood ~!Plow"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-goblin-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
