@@ -1663,7 +1663,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					
 					for sub_x=-4,7 do
 						for sub_y=-4,7 do
-							if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Rock") then
+							if (RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Rock" or RawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y) == "Water") then
 								starting_point_found = false
 							end
 						end
@@ -1757,8 +1757,6 @@ function GenerateRandomMap(arg)
 		mixed_civilizations = true
 	end
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits)
-
 	if (arg.WaterQuantity == "high") then
 		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.WaterQuantity == "medium") then
@@ -1778,6 +1776,8 @@ function GenerateRandomMap(arg)
 
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits) -- generate players after rocks and water
+
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
 	if (arg.DarkRoughLandQuantity == "high") then

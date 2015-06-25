@@ -201,6 +201,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Improved map generation algorithm so that players aren't generated too close to one another on random maps.
+- Fixed rare issue which could cause a player's starting location to be enclosed by rocks in random maps.
 
 * Miscellaneous
 - Fixed crash related to workers trying to return goods to a non-existent building.
