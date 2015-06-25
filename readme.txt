@@ -215,6 +215,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused ranged units to display their melee animation if attacking a flying unit that was close to them.
 - Fixed issue which caused ranged units to use the raft to move to close range, instead of moving only the amount necessary to be able to attack their targets.
 - The Teuton Krieger and Marbod now display different graphics depending on which weapon and shield technologies are researched.
+- The Dwarven Thane has been renamed to Stonelord.
 
 * Upgrades
 - Added Wood Plow and Iron-Tipped Wood Plow upgrades (both increase farm food supply) for the Dwarves, the Germanic/Teutons and the Goblins (graphics by Jinn).

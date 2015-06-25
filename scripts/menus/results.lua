@@ -146,7 +146,7 @@ DefineRanks("dwarf", {
 --  105000, "General",
 --  125000, "Admiral",
 --  145000, "Marshall",
-  165000, "Thane",
+  165000, "Stonelord",
 --  185000, "Grand Admiral",
   205000, "Highlord",
   230000, "Thundergod",

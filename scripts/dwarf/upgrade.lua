@@ -30,7 +30,7 @@
 local upgrades = {
 	{
 		"upgrade-dwarven-broad-axe", _("Broad Axe"), "icon-dwarven-axe-2", "melee-weapon-1",
-		_("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Thanes and Yale Riders."),
+		_("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
 		"",
 		"",
 		{   200,   500,   150,     0,     0,     0,     0,     0},
@@ -39,7 +39,7 @@ local upgrades = {
 	},
 	{
 		"upgrade-dwarven-great-axe", _("Great Axe"), "icon-dwarven-axe-3", "melee-weapon-2",
-		_("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Thanes and Yale Riders."),
+		_("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
 		"",
 		"",
 		{   250,  1500,   450,     0,     0,     0,     0,     0},
@@ -48,7 +48,7 @@ local upgrades = {
 	},
 	{
 		"upgrade-dwarven-shield-1", _("Heater Shield"), "icon-dwarven-shield-2", "bronze-shield",
-		_("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Thanes and Yale Riders."),
+		_("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
 		"",
 		"",
 		{   200,   300,   450,     0,     0,     0,     0,      0},
@@ -57,7 +57,7 @@ local upgrades = {
 	},
 	{
 		"upgrade-dwarven-shield-2", _("Thrymgjol Shield"), "icon-dwarven-shield-3", "iron-shield",
-		_("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Thanes and Yale Riders."),
+		_("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
 		_("The Warder: \"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry"),
 		_("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
 		{   250,   900,   750,     0,     0,     0,     0,     0},

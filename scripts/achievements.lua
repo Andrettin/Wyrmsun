@@ -45,7 +45,7 @@ Achievements = {
 	RugnursBravery = {
 		Name = "Rugnur's Bravery",
 		Icon = "dwarf/icons/rugnur_older",
-		Description = "Upgrade Rugnur to a Thane.",
+		Description = "Upgrade Rugnur to a Stonelord.",
 		X = 3,
 		Y = 1
 	}

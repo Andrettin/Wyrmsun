@@ -308,10 +308,10 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-thane", { Name = _("Thane"),
+DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "dwarf",
-	Description = _("Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Thanes can yield varied political power, ranging from local chiefs to rulers of realms. One of the first thanes was Modsognir, the legendary chief who led his tribe through the depths of the Heart Mountains."),
+	Description = _("Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first thanes was Modsognir, the legendary chief who led his tribe through the depths of the Heart Mountains."),
 	Quote = _("\"There was Modsognir | the mightiest made / Of all the dwarfs, | and Durin next; / Many a likeness | of apes they made, / The dwarfs in the earth, | as Durin said.\" - Dwarven Traditional Poetry"),
 	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them."),
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
@@ -772,7 +772,7 @@ DefineUnitType("unit-hero-modsognir", { Name = _("Steelclad"),
 	}
 } )
 
-DefineUnitType("unit-hero-modsognir-thane", { Name = _("Thane"),
+DefineUnitType("unit-hero-modsognir-thane", { Name = _("Stonelord"),
 	Parent = "unit-dwarven-thane",
 	Class = "",
 	DefaultName = "Modsognir",
@@ -808,7 +808,7 @@ DefineUnitType("unit-hero-durin", { Name = _("Steelclad"),
 	}
 } )
 
-DefineUnitType("unit-hero-durin-thane", { Name = _("Thane"),
+DefineUnitType("unit-hero-durin-thane", { Name = _("Stonelord"),
 	Parent = "unit-dwarven-thane",
 	Class = "",
 	DefaultName = "Durin",
@@ -855,7 +855,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
 	}
 } )
 
-DefineUnitType("unit-hero-rugnur-thane", { Name = _("Thane"),
+DefineUnitType("unit-hero-rugnur-thane", { Name = _("Stonelord"),
 	Parent = "unit-dwarven-thane",
 	Class = "",
 	DefaultName = "Rugnur",
@@ -891,7 +891,7 @@ DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
 	}
 } )
 
-DefineUnitType("unit-hero-baglur-thane", { Name = _("Thane"),
+DefineUnitType("unit-hero-baglur-thane", { Name = _("Stonelord"),
 	Parent = "unit-dwarven-thane",
 	Class = "",
 	DefaultName = "Baglur",
@@ -903,7 +903,7 @@ DefineUnitType("unit-hero-baglur-thane", { Name = _("Thane"),
 	Variations = {}
 } )
 
-DefineUnitType("unit-hero-thursagan", { Name = _("Thane"),
+DefineUnitType("unit-hero-thursagan", { Name = _("Stonelord"),
 	Parent = "unit-dwarven-thane",
 	Class = "",
 	DefaultName = "Thursagan",
@@ -918,7 +918,7 @@ DefineUnitType("unit-hero-thursagan", { Name = _("Thane"),
 	Variations = {}
 } )
 
-DefineUnitType("unit-hero-durstorn", { Name = _("Thane"),
+DefineUnitType("unit-hero-durstorn", { Name = _("Stonelord"),
 	Parent = "unit-dwarven-thane",
 	Class = "",
 	DefaultName = "Durstorn",
