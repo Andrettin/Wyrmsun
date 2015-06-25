@@ -204,6 +204,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed crash related to workers trying to return goods to a non-existent building.
+- Right-clicking on chairs, beds and tables now attacks them.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.

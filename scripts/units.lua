@@ -2685,6 +2685,7 @@ DefineUnitType("unit-table", { Name = _("Table"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	Obstacle = true,
 	VisibleUnderFog = true,
 	Variations = {
 		{
@@ -2796,6 +2797,7 @@ DefineUnitType("unit-chair", { Name = _("Chair"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	Obstacle = true,
 	VisibleUnderFog = true,
 	Variations = {
 		{
@@ -2832,6 +2834,7 @@ DefineUnitType("unit-bed", { Name = _("Bed"),
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
+	Obstacle = true,
 	VisibleUnderFog = true,
 	Variations = {
 		{
