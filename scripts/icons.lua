@@ -912,7 +912,7 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-iron-tipped-wood-plow",
 	Size = {46, 38},
-	File = "neutral/icons/iron_edged_wood_plow.png"
+	File = "neutral/icons/iron_tipped_wood_plow.png"
 })
 
 DefineIcon({

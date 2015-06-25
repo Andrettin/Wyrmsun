@@ -67,8 +67,13 @@ function AiLandAttack()
 		if (CheckDependency(AiPlayer(), AiLumberMill()) and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) < 1 and (GameCycle >= 5000 or GameSettings.Difficulty ~= 1)) then
 			AiSet(AiLumberMill(), 1)
 		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
-			AiSet(AiBarracks(), 2)
+		if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesCount", AiBarracks()) < 2) then
+				AiSet(AiBarracks(), 2)
+			end
+			if (GetAiUnitType("wood-plow") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("wood-plow"))) then
+				AiResearch(GetAiUnitType("wood-plow"))
+			end
 		end
 		
 		if (
@@ -107,6 +112,9 @@ function AiLandAttack()
 			if (AiUpgradeMissile1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMissile1())) then
 				AiResearch(AiUpgradeMissile1())
 			end
+			if (GetAiUnitType("iron-tipped-wood-plow") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("iron-tipped-wood-plow"))) then
+				AiResearch(GetAiUnitType("iron-tipped-wood-plow"))
+			end
 			if (AiUpgradeMissile2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMissile2())) then
 				AiResearch(AiUpgradeMissile2())
 			end
@@ -123,6 +131,7 @@ function AiLandAttack()
 			and (AiUpgradeWeapon2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeWeapon2()) == "R")
 			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
 			and (AiUpgradeMissile2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeMissile2()) == "R")
+			and (GetAiUnitType("iron-tipped-wood-plow") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-tipped-wood-plow")) == "R")
 			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)
 		) then -- research masonry and upgrade to stronghold
 			if (GetAiUnitType("masonry") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("masonry"))) then

@@ -442,6 +442,8 @@ function SinglePlayerTriggers()
 		EventTriggers()
 	end
 
+	FlavorDialogueTriggers()
+		
 	LoadedGame = false
 end
 
@@ -1818,7 +1820,7 @@ function FindUnit(unit_type, player)
 	end
 	
 	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1], "Ident") == unit_type) then
+		if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
 			return uncount[unit1]
 		end
 	end

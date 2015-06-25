@@ -306,7 +306,7 @@ if (GrandStrategyYear >= 534) then
 
 	-- Mushroom Farms existent in Knalga
 	Factions.Knalga.Technologies.upgrade_dwarven_wood_plow = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_iron_edged_wood_plow = 2
+	Factions.Knalga.Technologies.upgrade_dwarven_iron_tipped_wood_plow = 2
 end
 
 if (GrandStrategyYear >= 535) then
