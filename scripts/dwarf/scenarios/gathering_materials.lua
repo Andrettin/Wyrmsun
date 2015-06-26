@@ -8,9 +8,9 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      scepter_of_fire_events.lua - Defines events for the Scepter of Fire campaign.
+--      gathering_materials.lua - Defines the Gathering Materials scenario.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -26,6 +26,96 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+-- based on the Gathering Materials scenario of the Sceptre of Fire campaign from Battle for Wesnoth
+
+if (LoadedGame == false) then
+	if (GrandStrategy == false or GrandStrategyEventMap) then
+		SetPlayerData(0, "Faction", "Norlund Clan")
+		SetPlayerData(1, "Name", "Goblins")
+		SetPlayerData(2, "Name", "Goblins")
+		SetPlayerData(3, "Name", "Goblins")
+		
+		SetDiplomacy(0, "enemy", 1)
+		SetDiplomacy(0, "enemy", 2)
+		SetDiplomacy(0, "enemy", 3)
+		SetDiplomacy(1, "enemy", 0)
+		SetDiplomacy(1, "enemy", 2)
+		SetDiplomacy(1, "enemy", 3)
+		SetDiplomacy(2, "enemy", 0)
+		SetDiplomacy(2, "enemy", 1)
+		SetDiplomacy(2, "enemy", 3)
+		SetDiplomacy(3, "enemy", 0)
+		SetDiplomacy(3, "enemy", 1)
+		SetDiplomacy(3, "enemy", 2)
+	end
+
+	if (GrandStrategy == false) then
+		unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
+		unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
+		unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+	elseif (GrandStrategyEventMap) then
+		-- Rugnur
+		if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
+			unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
+			WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
+		elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2) then
+			unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {19, 47})
+			WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
+		elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) then
+			unit = CreateUnit("unit-hero-rugnur-thane", 0, {19, 47})
+			WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+		end
+
+		-- Baglur
+		if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2) then
+			unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
+			WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+		elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) then
+			unit = CreateUnit("unit-hero-baglur-thane", 0, {19, 47})
+			WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 0
+		end
+
+		-- Thursagan
+		if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan == 2) then
+			unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+			WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+		end
+	end
+	
+	unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+	IncreaseUnitLevel(unit, 1, true)
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		IncreaseUnitLevel(unit, 1, true)
+	end
+	AcquireAbility(unit, "upgrade-critical-strike")
+	
+	unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+	IncreaseUnitLevel(unit, 1, true)
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		IncreaseUnitLevel(unit, 1, true)
+	end
+	AcquireAbility(unit, "upgrade-critical-strike")
+	
+	unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+	IncreaseUnitLevel(unit, 1, true)
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		IncreaseUnitLevel(unit, 1, true)
+	end
+	AcquireAbility(unit, "upgrade-critical-strike")
+		
+	CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
+	CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
+end
+
+-- show coal in the UI
+UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
+UI.Resources[6].G:Load()
+UI.Resources[6].IconFrame = 0
+UI.Resources[6].IconX = 154 + 225
+UI.Resources[6].IconY = 0
+UI.Resources[6].TextX = 154 + 225 + 18
+UI.Resources[6].TextY = 1
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
 AddTrigger(
@@ -116,7 +206,6 @@ AddTrigger(
 )
 
 -- Gathering Materials initial dialogue
--- based on the Gathering Materials scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 
 AddTrigger(
 	function()

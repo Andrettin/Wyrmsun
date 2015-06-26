@@ -199,6 +199,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - The AI build order has been revamped.
 
+* Buildings
+- Fixed issue which caused gold mines to unbuildable over gold deposits which had a decoration unit (like mushrooms) under them.
+
 * Editor
 - It is now possible to set a unit's personal name through the map editor.
 - It is now possible to set an organic unit's trait through the map editor.
@@ -222,11 +225,13 @@ https://github.com/Andrettin/Wyrmsun
 - Some barrels (approximately 10%) are now explosive, and cause damage upon destruction to nearby units.
 - The explosion following the destruction of an alchemy bench now causes damage to nearby units.
 - The alchemy bench is now attacked when right-clicking on it.
+- Pathfinder improvements.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.
 - The On the Vanaquisl quest now yields 2 technology points instead of 1.
 - The Sack of Iuvavum quest now yields 2 technology points instead of 1.
+- Added The Treasures of Svarinshaug (dwarf) quest.
 
 * Terrain
 - Fixed issue which caused minimap representation of removed tree or rock tiles to be affected by the time of the day when they were removed.
@@ -238,6 +243,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Teuton Krieger and Marbod now display different graphics depending on which weapon and shield technologies are researched.
 - The Dwarven Thane has been renamed to Stonelord.
 - Fixed issue which allowed ranged units to shoot through doors in dungeon maps.
+- The slimes, blood bats and dread bats have been strengthened.
 
 * Upgrades
 - Added Wood Plow and Iron-Tipped Wood Plow upgrades (both increase farm food supply) for the Dwarves, the Germanic/Teutons and the Goblins (graphics by Jinn).

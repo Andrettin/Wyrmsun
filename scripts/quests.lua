@@ -197,23 +197,22 @@ Quests = {
 	TheTreasuresOfSvarinshaug = {
 		Name = "The Treasures of Svarinshaug",
 		Icon = "dwarf/icons/smithy",
-		Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: ?\n\nRewards: 1 Dwarven Technology Point.",
+		Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredQuest = "The Mead of Wisdom",
 		World = "Nidavellir",
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
-		Map = "maps/nidavellir/draupnirs_hideout.smp",
+		Map = "maps/nidavellir/eastern-mines.smp",
 		Scenario = "scripts/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
 		X = 3,
 		Y = 1,
-		Hidden = true,
 		PlayerColor = "white"
 	},
 	TheNecklaceOfTheBrisings = {
 		Name = "The Necklace of the Brisings",
 		Icon = "dwarf/icons/smithy",
 		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!\n\nMap: Draupnir's Hideout\n\nRewards: 1 Dwarven Technology Point.",
---		RequiredQuest = "The Treasures of Svarinshaug",
+		RequiredQuest = "The Treasures of Svarinshaug",
 		World = "Nidavellir",
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
@@ -221,7 +220,6 @@ Quests = {
 		Scenario = "scripts/dwarf/scenarios/the_necklace_of_the_brisings.lua",
 		X = 4,
 		Y = 1,
-		Hidden = true,
 		PlayerColor = "white"
 	},
 	TheBindingOfGrafvitnir = {
@@ -249,7 +247,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
 		Scenario = "scripts/dwarf/scenarios/the_tomb_of_durahn_eikinskjaldi.lua",
-		X = 3,
+		X = 5,
 		Y = 1,
 		PlayerColor = "brown"
 	},
@@ -263,7 +261,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/chaincolt-foothills.smp",
 		Scenario = "scripts/dwarf/scenarios/a_bargain_is_struck.lua",
-		X = 4,
+		X = 6,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -277,7 +275,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 		Scenario = "scripts/dwarf/scenarios/closing_the_gates.lua",
-		X = 5,
+		X = 7,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -291,7 +289,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/northern-wastelands.smp",
 		Scenario = "scripts/dwarf/scenarios/searching_for_the_runecrafter.lua",
-		X = 6,
+		X = 8,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -305,7 +303,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/eastern-mines.smp",
 		Scenario = "scripts/dwarf/scenarios/gathering_materials.lua",
-		X = 7,
+		X = 9,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -319,8 +317,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/shorbear-hills.smp",
 		Scenario = "scripts/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
-		X = 8,
-		Y = 1,
+		X = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	TheWyrm = {
@@ -333,8 +331,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
 		Scenario = "scripts/dwarf/scenarios/the_wyrm.lua",
-		X = 9,
-		Y = 1,
+		X = 2,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	CavernsOfFlame = {
@@ -347,7 +345,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/caverns-of-flame.smp",
 		Scenario = "scripts/dwarf/scenarios/caverns_of_flame.lua",
-		X = 1,
+		X = 3,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -360,8 +358,8 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
-		X = 10,
-		Y = 1,
+		X = 4,
+		Y = 2,
 		PlayerColor = "red"
 	}
 }
