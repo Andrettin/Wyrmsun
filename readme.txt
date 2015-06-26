@@ -212,6 +212,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash related to workers trying to return goods to a non-existent building.
 - Right-clicking on chairs, beds and tables now attacks them.
 - Dungeon walls no longer are attacked when right-clicking on them.
+- Some barrels (approximately 10%) are now explosive, and cause damage upon destruction to nearby units.
+- The explosion following the destruction of an alchemy bench now causes damage to nearby units.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.

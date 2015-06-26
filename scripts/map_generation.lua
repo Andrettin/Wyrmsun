@@ -4425,7 +4425,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-							unit = CreateUnit("unit-barrel", 15, {SecondRandomX, SecondRandomY}) -- create barrel
+							if (SyncRand(10) == 0) then
+								unit = CreateUnit("unit-explosive-barrel", 15, {SecondRandomX, SecondRandomY}) -- create explosive barrel
+							else
+								unit = CreateUnit("unit-barrel", 15, {SecondRandomX, SecondRandomY}) -- create barrel
+							end
 							SecondCount = SecondCount - 1
 						end
 					end
@@ -4695,7 +4699,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 					if (RawTile(SecondRandomX, SecondRandomY) == "Land" and RawTile(SecondRandomX - 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX + 1, SecondRandomY) ~= "Door" and RawTile(SecondRandomX, SecondRandomY - 1) ~= "Door" and RawTile(SecondRandomX, SecondRandomY + 1) ~= "Door") then
 						if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-							unit = CreateUnit("unit-barrel", 15, {SecondRandomX, SecondRandomY}) -- create barrel
+							if (SyncRand(10) == 0) then
+								unit = CreateUnit("unit-explosive-barrel", 15, {SecondRandomX, SecondRandomY}) -- create explosive barrel
+							else
+								unit = CreateUnit("unit-barrel", 15, {SecondRandomX, SecondRandomY}) -- create barrel
+							end
 							SecondCount = SecondCount - 1
 						end
 					end
@@ -5442,7 +5450,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						if (RandomNumber < 35) then
 							local barrel_quantity = SyncRand(4)
 							for i=0,barrel_quantity do
-								unit = CreateUnit("unit-barrel", 15, {RandomX, RandomY})
+								if (SyncRand(10) == 0) then
+									unit = CreateUnit("unit-explosive-barrel", 15, {RandomX, RandomY}) -- create explosive barrel
+								else
+									unit = CreateUnit("unit-barrel", 15, {RandomX, RandomY}) -- create barrel
+								end
 							end
 						elseif (RandomNumber < 44) then
 							unit = CreateUnit("unit-table", 15, {RandomX, RandomY})

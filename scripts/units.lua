@@ -10,7 +10,7 @@
 --
 --      units.lua - Define the used unit-types.
 --
---      (c) Copyright 1998-2005 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 1998-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -2661,6 +2661,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	Type = "land",
 	NumDirections = 1,
 	ExplodeWhenKilled = "missile-explosion",
+	DeathExplosion = DeathExplosion,
 	VisibleUnderFog = true,
 	Sounds = {
 		"selected", "click",
@@ -2961,12 +2962,33 @@ DefineUnitType("unit-barrel", { Name = _("Barrel"),
 		{
 			"variation-id", "2",
 			"file", "neutral/items/barrel_2.png"
-		},
-		{
-			"variation-id", "3",
-			"file", "neutral/items/barrel_3.png"
 		}
 	},
+	Sounds = {
+		"selected", "click",
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-explosive-barrel", { Name = _("Explosive Barrel"),
+	Image = {"file", "neutral/items/explosive_barrel.png", "size", {32, 32}},
+	Animations = "animations-barrel", Icon = "icon-barrel",
+	NeutralMinimapColor = {128, 128, 0},
+	Speed = 0,
+	HitPoints = 5,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 2, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	VisibleUnderFog = true,
+	Obstacle = true,
+	ExplodeWhenKilled = "missile-explosion",
+	DeathExplosion = DeathExplosion,
 	Sounds = {
 		"selected", "click",
 		"dead", "building-destroyed"

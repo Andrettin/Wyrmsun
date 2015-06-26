@@ -1629,6 +1629,19 @@ function InitializeHero(unit)
 	end
 end
 
+function DeathExplosion(unit, pixel_x, pixel_y)
+	local nearby_uncount = GetUnitsAroundUnit(unit, 1, true)
+	for unit1 = 1,table.getn(nearby_uncount) do 
+		local damage = 6
+		if (GameSettings.NoRandomness) then
+			damage = damage - math.floor(((damage + 2) / 2) / 2) -- if no randomness setting is used, then the damage will always return what would have been the average damage with randomness
+		else
+			damage = damage - SyncRand(math.floor((damage + 2) / 2))
+		end
+		DamageUnit(unit, nearby_uncount[unit1], damage)
+	end
+end
+
 function GetRandomCharacterName(civilization, gender, is_monarch)
 	local random_character_name = ""
 	local character_names = {}
