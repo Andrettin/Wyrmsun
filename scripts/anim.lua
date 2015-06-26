@@ -1051,27 +1051,29 @@ DefineAnimations("animations-trap", {
 --
 
 DefineAnimations("animations-roaming-fog", {
-  Still = BuildingStill,
-  Move = {"unbreakable begin",
-	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 1","move 1", "wait 2",
-	"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 2","move 1", "wait 1",
-	"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 1","move 1", "wait 2",
-	"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
-	"exact-frame 1", "move 1", "wait 2", "move 1", "wait 1",
-	"move 1", "wait 1",
-	"unbreakable end", "wait 1",}
+	Still = BuildingStill,
+	Move = {
+		"unbreakable begin",
+		"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 0","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 1","move 1", "wait 2",
+		"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 2","move 1", "wait 1",
+		"exact-frame 2","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 1","move 1", "wait 2",
+		"exact-frame 1","move 1", "wait 2", "move 1", "wait 1",
+		"exact-frame 1", "move 1", "wait 2", "move 1", "wait 1",
+		"move 1", "wait 1",
+		"unbreakable end", "wait 1",
+	}
 })
 
 DefineAnimations("animations-raft", {

@@ -226,6 +226,10 @@ https://github.com/Andrettin/Wyrmsun
 - The On the Vanaquisl quest now yields 2 technology points instead of 1.
 - The Sack of Iuvavum quest now yields 2 technology points instead of 1.
 
+* Terrain
+- Fixed issue which caused minimap representation of removed tree or rock tiles to be affected by the time of the day when they were removed.
+- Fixed issue with roaming fog movement.
+
 * Units
 - Fixed issue which caused ranged units to display their melee animation if attacking a flying unit that was close to them.
 - Fixed issue which caused ranged units to use the raft to move to close range, instead of moving only the amount necessary to be able to attack their targets.
