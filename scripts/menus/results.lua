@@ -125,32 +125,3 @@ function RunResultsMenu()
 
   menu:run()
 end
-
---
---  TODO : Reenable ranking.
---  TODO : progress bar instead of label
---[[
-
-DefineRanks("dwarf", {
---  0, "Servant",
-    0, "Miner",
---  2000, "Miner",
---  5000, "Squire",
-  8000, "Axefighter",
---  18000, "Corporal",
---  28000, "Sergeant",
---  40000, "Lieutenant",
-  55000, "Steelclad",
---  70000, "Major",
-  85000, "Gryphon Rider",
---  105000, "General",
---  125000, "Admiral",
---  145000, "Marshall",
-  165000, "Stonelord",
---  185000, "Grand Admiral",
-  205000, "Highlord",
-  230000, "Thundergod",
-  255000, "God",
-  280000, "Designer",
-})
---]]

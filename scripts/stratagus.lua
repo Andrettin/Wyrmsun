@@ -673,7 +673,7 @@ function StandardTriggers()
 							if ((GetUnitVariable(uncount[unit1], "BasicDamage") > 0 or GetUnitVariable(uncount[unit1], "PiercingDamage") > 0) and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
 								local hp_lost = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "BasicDamage") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "PiercingDamage")
 								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
-									AddMessage("Suffered " .. hp_lost .. " HP loss")
+									AddMessage(GetUnitVariable(uncount[unit1], "Name") .. _(" suffered ") .. hp_lost .. _(" HP loss"))
 								end
 --								SetUnitVariable(nearby_uncount[unit2], "HitPoints", GetUnitVariable(nearby_uncount[unit2], "HitPoints") + hp_lost)
 								DamageUnit(uncount[unit1], nearby_uncount[unit2], hp_lost)

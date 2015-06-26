@@ -199,6 +199,11 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - The AI build order has been revamped.
 
+* Items
+- The message when consuming an item now says which unit consumed it.
+- The message when stepping on trap now says which unit stepped on it.
+- A message is now given when a unit consumes a potion of slow.
+
 * Maps
 - Improved map generation algorithm so that players aren't generated too close to one another on random maps.
 - Fixed rare issue which could cause a player's starting location to be enclosed by rocks in random maps.
@@ -206,6 +211,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed crash related to workers trying to return goods to a non-existent building.
 - Right-clicking on chairs, beds and tables now attacks them.
+- Dungeon walls no longer are attacked when right-clicking on them.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.
@@ -217,6 +223,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused ranged units to use the raft to move to close range, instead of moving only the amount necessary to be able to attack their targets.
 - The Teuton Krieger and Marbod now display different graphics depending on which weapon and shield technologies are researched.
 - The Dwarven Thane has been renamed to Stonelord.
+- Fixed issue which allowed ranged units to shoot through doors in dungeon maps.
 
 * Upgrades
 - Added Wood Plow and Iron-Tipped Wood Plow upgrades (both increase farm food supply) for the Dwarves, the Germanic/Teutons and the Goblins (graphics by Jinn).

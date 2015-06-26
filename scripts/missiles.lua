@@ -10,8 +10,7 @@
 --
 --      missiles.lua - Define the used missiles.
 --
---      (c) Copyright 1998-2004 by Lutz Sammer, Fabrice Rossi,
---                                 Jimmy Salmon and Crestez Leonard
+--      (c) Copyright 1998-2015 by Lutz Sammer, Fabrice Rossi, Jimmy Salmon, Crestez Leonard and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
