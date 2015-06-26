@@ -2662,6 +2662,7 @@ DefineUnitType("unit-alchemy-bench", { Name = _("Alchemy Bench"),
 	NumDirections = 1,
 	ExplodeWhenKilled = "missile-explosion",
 	DeathExplosion = DeathExplosion,
+	Obstacle = true,
 	VisibleUnderFog = true,
 	Sounds = {
 		"selected", "click",

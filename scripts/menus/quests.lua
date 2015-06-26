@@ -10,7 +10,7 @@
 --
 --      quests.lua - Define the menu for quests.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -155,7 +155,8 @@ function addQuestIcon(quest, menu, x, y)
 					if (quest.Briefing) then
 						Briefing(quest)
 					end
-					RunMap(quest.Map)
+					mapname = quest.Map
+					RunMap(mapname)
 					quest_menu:stop()
 					menu:stop()
 					RunQuestMenu(quest.World)

@@ -203,6 +203,7 @@ https://github.com/Andrettin/Wyrmsun
 - It is now possible to set a unit's personal name through the map editor.
 - It is now possible to set an organic unit's trait through the map editor.
 - Setting a unit's AI to passive in the map editor now works properly.
+- The editor now never has a time of day graphics change applied to it.
 
 * Items
 - The message when consuming an item now says which unit consumed it.
@@ -220,6 +221,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dungeon walls no longer are attacked when right-clicking on them.
 - Some barrels (approximately 10%) are now explosive, and cause damage upon destruction to nearby units.
 - The explosion following the destruction of an alchemy bench now causes damage to nearby units.
+- The alchemy bench is now attacked when right-clicking on it.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.
