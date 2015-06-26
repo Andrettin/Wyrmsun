@@ -208,17 +208,13 @@ if (LoadedGame == false) then
 		SetStartView(2, 50, 63)
 		unit = CreateUnit("unit-dwarven-smithy", 2, {50, 63})
 	end
-	if (unit) then
-		SetUnitName(unit, "Thursagan's Forge")
-	end
+	SetUnitName(unit, "Thursagan's Forge")
 end
 
 -- create gryphon riders
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
 IncreaseUnitLevel(unit, 1, true)
-if (unit) then
-	AcquireAbility(unit, "upgrade-critical-strike")
-end
+AcquireAbility(unit, "upgrade-critical-strike")
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {0, 34})
 
 function NorthernWastelandsEnemy(enemy_x, enemy_y)

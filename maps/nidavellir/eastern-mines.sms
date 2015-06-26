@@ -195,9 +195,7 @@ IncreaseUnitLevel(unit, 1, true)
 if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 	IncreaseUnitLevel(unit, 1, true)
 end
-if (unit) then
-	AcquireAbility(unit, "upgrade-critical-strike")
-end
+AcquireAbility(unit, "upgrade-critical-strike")
 
 unit = CreateUnit("unit-goblin-town-hall", 2, {55, 29})
 unit = CreateUnit("unit-goblin-worker", 2, {55, 29})
@@ -210,9 +208,7 @@ IncreaseUnitLevel(unit, 1, true)
 if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 	IncreaseUnitLevel(unit, 1, true)
 end
-if (unit) then
-	AcquireAbility(unit, "upgrade-critical-strike")
-end
+AcquireAbility(unit, "upgrade-critical-strike")
 
 unit = CreateUnit("unit-goblin-town-hall", 3, {35, 17})
 unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
@@ -225,9 +221,7 @@ IncreaseUnitLevel(unit, 1, true)
 if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 	IncreaseUnitLevel(unit, 1, true)
 end
-if (unit) then
-	AcquireAbility(unit, "upgrade-critical-strike")
-end
+AcquireAbility(unit, "upgrade-critical-strike")
 
 CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
 CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)

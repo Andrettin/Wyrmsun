@@ -170,11 +170,9 @@ if (GrandStrategy == false) then
 		-- Gnomish king
 		unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
 		IncreaseUnitLevel(unit, 2, true)
-		if (unit) then
-			AcquireAbility(unit, "upgrade-sword-mastery")
-			AcquireAbility(unit, "upgrade-critical-strike")
-			SetUnitName(unit, "Pypo I")
-		end
+		AcquireAbility(unit, "upgrade-sword-mastery")
+		AcquireAbility(unit, "upgrade-critical-strike")
+		SetUnitName(unit, "Pypo I")
 	end
 
 	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})

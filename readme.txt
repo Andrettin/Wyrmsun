@@ -199,6 +199,10 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - The AI build order has been revamped.
 
+* Editor
+- It is now possible to set a unit's personal name through the map editor.
+- It is now possible to set an organic unit's trait through the map editor.
+
 * Items
 - The message when consuming an item now says which unit consumed it.
 - The message when stepping on trap now says which unit stepped on it.

@@ -222,9 +222,7 @@ unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
 unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
 unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
 unit = CreateUnit("unit-gnomish-recruit", 1, {13, 104}) -- gnomish king
-if (LoadedGame == false and GrandStrategy == false and unit) then
-	SetUnitName(unit, "Pypo I")
-end
+SetUnitName(unit, "Pypo I")
 
 unit = CreateUnit("unit-goblin-town-hall", 2, {62, 62})
 unit = CreateUnit("unit-goblin-farm", 2, {58, 59})
@@ -242,9 +240,7 @@ unit = CreateUnit("unit-dwarven-miner", 3, {20, 16})
 unit = CreateUnit("unit-dwarven-miner", 3, {20, 16})
 unit = CreateUnit("unit-dwarven-miner", 3, {20, 16})
 unit = CreateUnit("unit-dwarven-steelclad", 3, {20, 16}) -- Dursil
-if (LoadedGame == false and GrandStrategy == false and unit) then
-	SetUnitName(unit, "Dursil")
-end
+SetUnitName(unit, "Dursil")
 
 unit = CreateUnit("unit-potion-of-healing", 15, {8, 51})
 unit = CreateUnit("unit-potion-of-healing", 15, {52, 96})

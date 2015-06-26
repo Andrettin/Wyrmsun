@@ -1524,9 +1524,9 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	end
 end
 
-function GetUnitTypeTraits(unit_type)
+function GetUnitTypeTraits(unit_type, ignore_hero_default_trait)
 	local traits = {}
-	if (GetUnitTypeData(unit_type, "Hero") == false) then
+	if (GetUnitTypeData(unit_type, "Hero") == false or ignore_hero_default_trait) then
 		if (GetUnitTypeData(unit_type, "AttackRange") > 0) then
 			table.insert(traits, "upgrade-mighty")
 			table.insert(traits, "upgrade-strong")
@@ -1571,7 +1571,12 @@ function GetUnitTypeTraits(unit_type)
 end
 
 function GenerateTrait(unit)
-	if (GetUnitVariable(unit, "Trait") == "" and GetUnitBoolFlag(unit, "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))) > 0) then
+	if (
+		GetUnitVariable(unit, "Trait") == ""
+		and GetUnitBoolFlag(unit, "organic")
+		and table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))) > 0
+		and (Editor.Running == EditorNotRunning or GetUnitTypeData(GetUnitVariable(unit, "Ident"), "Hero"))
+	) then
 		AcquireTrait(unit, GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident")))) + 1])
 	end
 end

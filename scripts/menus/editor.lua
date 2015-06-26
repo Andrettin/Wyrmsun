@@ -607,36 +607,62 @@ end
 --
 function EditUnitProperties()
 
-  if (GetUnitUnderCursor() == nil) then
-    return;
-  end
-  local menu = WarGameMenu(panel(1))
-  local sizeX = 256
-  local sizeY = 288 -- 288
+	if (GetUnitUnderCursor() == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
 
-  menu:resize(sizeX, sizeY)
-  menu:addLabel(_("Unit Properties"), sizeX / 2, 11)
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(_("Unit Properties"), sizeX / 2, 11)
 
-  if (GetUnitUnderCursor().Type.GivesResource == 0) then
-    menu:addLabel(_("Artificial Intelligence"), sizeX / 2, 11 + 36)
-    local activeCheckBox = menu:addImageCheckBox(_("Active"), 15, 11 + 72)
-    activeCheckBox:setMarked(GetUnitUnderCursor().Active)
+	menu:addLabel(_("Unit Name"), sizeX / 2, 11 + (36 * 1))
+	local name_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name"), sizeX / 2 - 60, 11 + (36 * 2), 120)
 
-    menu:addHalfButton(_("~!OK"), "o", 20, sizeY - 40,
-      function() GetUnitUnderCursor().Active = activeCheckBox:isMarked();  menu:stop() end)
-  else
---    local resourceName = {"gold", "lumber", "oil"}
-    local resourceName = {"gold", "lumber", "stone"}
-    local resource = GetUnitUnderCursor().Type.GivesResource - 1
-    menu:addLabel(_("Amount of") .. " " .. _(CapitalizeString(resourceName[1 + resource])) .. ":", 24, 11 + 36, nil, false)
-	local resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + 36 * 2, 60)
+	local trait_list = GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)
+	table.insert(trait_list, "") -- for if the unit has no trait
+	local unit_trait
+	local activeCheckBox
+	local resourceName = {"gold", "lumber", "stone"}
+	local resource = GetUnitUnderCursor().Type.GivesResource - 1
+	local resourceValue
 
-    menu:addHalfButton(_("~!OK"), "o", 20, sizeY - 40,
-      function() GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();  menu:stop() end)
-  end
-  menu:addHalfButton(_("~!Cancel"), "c", 130, sizeY - 40,
-    function() menu:stop() end)
-  menu:run(false)
+	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)) > 0) then
+		menu:addLabel(_("Unit Trait"), sizeX / 2, 11 + (36 * 3))
+		unit_trait = menu:addDropDown(trait_list, (sizeX / 2) - 60, 11 + (36 * 4), function(dd) end)
+		unit_trait:setSize(120, 20)
+		unit_trait:setSelected(GetElementIndexFromArray(trait_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) - 1)
+	end
+
+	if (GetUnitUnderCursor().Type.GivesResource == 0) then
+		menu:addLabel(_("Artificial Intelligence"), sizeX / 2, 11 + (36 * 5))
+		activeCheckBox = menu:addImageCheckBox(_("Active"), sizeX / 2 - 30, 11 + (36 * 6))
+		activeCheckBox:setMarked(GetUnitUnderCursor().Active)
+	else
+		menu:addLabel(_("Amount of") .. " " .. _(CapitalizeString(resourceName[1 + resource])), sizeX / 2, 11 + (36 * 5))
+		resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + (36 * 6), 60)
+	end
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+		function()
+			SetUnitName(UnitNumber(GetUnitUnderCursor()), name_value:getText())
+			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)) > 0) then
+				if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
+					AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
+				end
+			end
+			if (GetUnitUnderCursor().Type.GivesResource ~= 0) then
+				GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();
+			else
+				GetUnitUnderCursor().Active = activeCheckBox:isMarked();
+			end
+			menu:stop()
+		end
+	)
+		
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
+	menu:run(false)
 end
 
 
