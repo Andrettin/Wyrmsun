@@ -146,6 +146,7 @@ b_o:
 /sounds/goblin/worker/built.wav
 /sounds/goblin/worker/goblin-worker-ready-1.wav
 /sounds/goblin/worker/goblin-worker-ready-2.wav
+/sounds/misc/eat.wav
 /sounds/misc/rescue.wav
 /sounds/missiles/throwing_axe.wav
 /sounds/neutral/yale/yale_ack01.wav (modified from the U.S. Fish and Wildlife Service's sound)

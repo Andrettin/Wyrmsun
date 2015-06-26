@@ -203,6 +203,7 @@ https://github.com/Andrettin/Wyrmsun
 - The message when consuming an item now says which unit consumed it.
 - The message when stepping on trap now says which unit stepped on it.
 - A message is now given when a unit consumes a potion of slow.
+- Food items now play an "eat" sound when consumed.
 
 * Maps
 - Improved map generation algorithm so that players aren't generated too close to one another on random maps.

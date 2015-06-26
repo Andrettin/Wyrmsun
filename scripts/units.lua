@@ -3011,7 +3011,11 @@ DefineUnitType("unit-cheese", { Name = _("Cheese"),
 	Item = true,
 	Dairy = true,
 	HitPointHealing = 3,
-	Sounds = {} } )
+	Sounds = {
+		"selected", "click",
+		"used", "eat"
+	} 
+} )
 
 DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
@@ -3029,7 +3033,11 @@ DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	Item = true, 
 	HitPointHealing = 3,
 	Vegetable = true,
-	Sounds = {} } )
+	Sounds = {
+		"selected", "click",
+		"used", "eat"
+	} 
+} )
 
 DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Image = {"file", "neutral/items/gryphon_feather.png", "size", {28, 26}},
@@ -3045,7 +3053,8 @@ DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
 	Image = {"file", "neutral/items/caltrops.png", "size", {32, 32}},
