@@ -202,6 +202,7 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - It is now possible to set a unit's personal name through the map editor.
 - It is now possible to set an organic unit's trait through the map editor.
+- Setting a unit's AI to passive in the map editor now works properly.
 
 * Items
 - The message when consuming an item now says which unit consumed it.
