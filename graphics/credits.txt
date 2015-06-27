@@ -613,6 +613,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/harvest.png
 /graphics/neutral/icons/iron_edged_wood_plow.png
 /graphics/neutral/icons/iron_plow.png
+/graphics/neutral/icons/iron_plow_extra_1.png
 /graphics/neutral/icons/level_up.png
 /graphics/neutral/icons/long_swordsman.png
 /graphics/neutral/icons/rally_point.png
