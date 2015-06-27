@@ -1,0 +1,5 @@
+-- Stratagus Map Presentation
+
+DefinePlayerTypes("person", "person")
+PresentMap("Aurvangar", 1, 64, 64, 1)
+MapWorld = "Nidavellir"

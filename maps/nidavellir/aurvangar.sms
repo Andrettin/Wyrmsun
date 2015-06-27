@@ -1,0 +1,12 @@
+LoadTileModels("scripts/tilesets/swamp.lua")
+
+if (LoadedGame == false) then
+	GenerateRandomMap({
+		MercenaryCamp = true,
+		RockQuantity = "medium",
+		TreeQuantity = "low",
+		WaterQuantity = "high",
+		WorkerQuantity = 5,
+		PlayerCivilizations = {"dwarf", "dwarf"}
+	})
+end

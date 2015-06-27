@@ -1599,7 +1599,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,14 do
@@ -1674,7 +1674,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				if (Map.Info.PlayerType[i] ~= PlayerNobody) then
 					SetStartView(i, player_spawn_point[1], player_spawn_point[2])
 
-					SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+					if (player_civilizations ~= nil and player_civilizations[i + 1] ~= nil) then
+						SetPlayerData(i, "RaceName", player_civilizations[i + 1])
+					else
+						SetPlayerData(i, "RaceName", possible_civilizations[SyncRand(table.getn(possible_civilizations)) + 1])
+					end
 					for sub_x=-1,4 do
 						for sub_y=-1,4 do
 							SetRawTile(player_spawn_point[1] + sub_x, player_spawn_point[2] + sub_y, "Road")
@@ -1776,7 +1780,7 @@ function GenerateRandomMap(arg)
 
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits) -- generate players after rocks and water
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations) -- generate players after rocks and water
 
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
@@ -3894,9 +3898,9 @@ function CreateStartingGoldMine(player, x, y)
 			end
 		end
 		local free_square = true
-		for sub_x=1,3 do
-			for sub_y=1,3 do
-					if (RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(gold_mine_spawn_point[1] + sub_x - 1, gold_mine_spawn_point[2] + sub_y - 1) ~= "Dark-Rough") then
+		for sub_x=-1,3 do
+			for sub_y=-1,3 do
+					if (RawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y) ~= "Land" and RawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y) ~= "Dark-Land") then
 						free_square = false
 					end
 			end

@@ -28,27 +28,27 @@
 --
 if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "Modsogning Clan")
-	Map.Info.PlayerType[1] = PlayerNobody
-	Map.Info.PlayerType[2] = PlayerNobody
-	Map.Info.PlayerType[3] = PlayerNobody
+	SetPlayerData(0, "Resources", "gold", 5000)
+	SetPlayerData(0, "Resources", "lumber", 1500)
+	SetPlayerData(0, "Resources", "stone", 1000)
+	SetPlayerData(1, "Faction", "Eikinskjaldi Clan")
+	SetPlayerData(1, "Name", "Bandits")
+	SetPlayerData(1, "Resources", "gold", 5000)
+	SetPlayerData(1, "Resources", "lumber", 1500)
+	SetPlayerData(1, "Resources", "stone", 1000)
 	
 	if not (GrandStrategy) then
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitName(unit, "Brokk")
-		AcquireTrait(unit, "upgrade-keen")
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitName(unit, "Eitri")
-		AcquireTrait(unit, "upgrade-dextrous")
-		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
 		local units_to_be_created = {}
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
 				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] / 2)
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")])
 				WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
---			elseif (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
---				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			elseif (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
+				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			end
 		end
 		for i, unitName in ipairs(Units) do
@@ -61,26 +61,6 @@ if (LoadedGame == false) then
 			end
 		end
 	end
-	
-
-	-- create blood bats and dread bats
-	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
-		CreateCreeps(15, "unit-slime", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 2, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
-		CreateCreeps(15, "unit-slime", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 4, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		CreateCreeps(15, "unit-slime", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 8, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		CreateCreeps(15, "unit-slime", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-blood-bat", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-		CreateCreeps(15, "unit-dread-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	end
 end
 
 RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
@@ -90,38 +70,27 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Collect 8000 gold")) then
+		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat the bandits")) then
 			player = GetFactionPlayer("Modsogning Clan")
 			return true
 		end
 		return false
 	end,
 	function() 
-		local brokk = nil
-		local eitri = nil
-		local uncount = GetUnits(GetFactionPlayer("Modsogning Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Brokk") then
-				brokk = uncount[unit1]
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Eitri") then
-				eitri = uncount[unit1]
-			end
-		end
-		
 		Event(
 			"",
-			"The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...",
+			"The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				eitri,
+				"",
 				"Here we are... the place where our scouts said they had found the high-grade gold.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					brokk,
+					"",
 					"Excellent. We have to be careful because of the dangerous beasts, but soon enough we should have the ores for Modsognir's artifacts. Let us be quick, we don't want to show the results of our craftsmanship to Modsognir much after the sons of Ivaldi... he might not be as pleased, and then we will lose our bet.",
 					player,
 					{"~!Continue"},
@@ -212,55 +181,6 @@ AddTrigger(
 			)
 			end}
 		)
-		return false
-	end
-)
-
-AddTrigger(
-	function()
-		if (GameCycle == 0) then
-			return false
-		end
-		
-		-- until Brokk or Eitri is dead, make the hostile fauna attack them
-		local uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-blood-bat" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dread-bat" or GetUnitVariable(uncount[unit1], "Ident") == "unit-slime") then
-				if (GetNumUnitsAt(GetFactionPlayer("Modsogning Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then -- if there are units from Brokk and Eitri's entourage near the beast
-					local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
-					for unit2 = 1,table.getn(nearby_uncount) do 
-						if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Modsogning Clan") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
-							OrderUnit(15, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
-						end
-					end
-				end
-			end
-		end
-		
-		local brokk_found = false
-		local eitri_found = false
-		local uncount = GetUnits(GetFactionPlayer("Modsogning Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Brokk") then
-				brokk_found = true
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Eitri") then
-				eitri_found = true
-			end
-		end
-		
-		if (
-			(PlayerHasObjective(GetThisPlayer(), "- Brokk must survive") and brokk_found == false)
-			or (PlayerHasObjective(GetThisPlayer(), "- Eitri must survive") and eitri_found == false)
-		) then
-			player = GetThisPlayer()
-			return true
-		end
-		return false
-	end,
-	function()
-		RemovePlayerObjective(player, "- Brokk must survive")
-		RemovePlayerObjective(player, "- Eitri must survive")
-		ActionDefeat()
 		return false
 	end
 )

@@ -210,17 +210,17 @@ Quests = {
 	},
 	TheNecklaceOfTheBrisings = {
 		Name = "The Necklace of the Brisings",
-		Icon = "dwarf/icons/smithy",
-		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!\n\nMap: Draupnir's Hideout\n\nRewards: 1 Dwarven Technology Point.",
+		Icon = "dwarf/icons/dwarven_steelclad",
+		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvangar\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredQuest = "The Treasures of Svarinshaug",
 		World = "Nidavellir",
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
-		Map = "maps/nidavellir/draupnirs_hideout.smp",
+		Map = "maps/nidavellir/aurvangar.smp",
 		Scenario = "scripts/dwarf/scenarios/the_necklace_of_the_brisings.lua",
 		X = 4,
 		Y = 1,
-		PlayerColor = "white"
+		PlayerColor = "black"
 	},
 	TheBindingOfGrafvitnir = {
 		Name = "The Binding of Grafvitnir",
