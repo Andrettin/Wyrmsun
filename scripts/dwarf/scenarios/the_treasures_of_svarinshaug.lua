@@ -81,16 +81,6 @@ if (LoadedGame == false) then
 		CreateCreeps(15, "unit-blood-bat", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 		CreateCreeps(15, "unit-dread-bat", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
-	
-	-- reduce gold quantities
-	local uncount = GetUnits(15)
-	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-deposit") then
-			SetResourcesHeld(uncount[unit1], 5000)
-		elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-rock") then
-			SetResourcesHeld(uncount[unit1], 100)
-		end
-	end
 end
 
 RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
@@ -136,7 +126,7 @@ AddTrigger(
 					player,
 					{"~!Continue"},
 					{function(s)
-						AddPlayerObjective(player, "- Mine 8000 gold")
+						AddPlayerObjective(player, "- Collect 8000 gold")
 						AddPlayerObjective(player, "- Brokk must survive")
 						AddPlayerObjective(player, "- Eitri must survive")
 					end}
@@ -157,7 +147,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Mine 8000 gold") and GetPlayerData(GetThisPlayer(), "Resources", "gold") >= 8000) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Collect 8000 gold") and GetPlayerData(GetThisPlayer(), "Resources", "gold") >= 8000) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -195,7 +185,7 @@ AddTrigger(
 					{function(s)
 					Event(
 						"",
-						"The time came for Brokk and Eitri to put their artifacts forward. They lay before their chief a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. Gungnir was strong, but Mjollnir was starker. As for Skidbladnir, Modsognir judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold.",
+						"The time came for Brokk and Eitri to put their artifacts forward. They lay before their chief a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. Gungnir was strong, but Mjollnir even more. As for Skidbladnir, Modsognir judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold.",
 						player,
 						{"~!Continue"},
 						{function(s)

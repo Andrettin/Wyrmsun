@@ -143,7 +143,7 @@ DefineUpgrade("upgrade-dwarven-masonry", {
 })
 
 DefineUpgrade("upgrade-dwarven-coinage", {
-	Parent = "upgrade-masonry",
+	Parent = "upgrade-coinage",
 	Civilization = "dwarf",
 	Icon = "icon-dwarven-coinage",
 	TechnologyPointCost = 1

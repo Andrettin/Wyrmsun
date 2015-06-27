@@ -226,12 +226,14 @@ https://github.com/Andrettin/Wyrmsun
 - The explosion following the destruction of an alchemy bench now causes damage to nearby units.
 - The alchemy bench is now attacked when right-clicking on it.
 - Pathfinder improvements.
+- Fixed issue with workers not properly repairing and harvesting when using rally points.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.
 - The On the Vanaquisl quest now yields 2 technology points instead of 1.
 - The Sack of Iuvavum quest now yields 2 technology points instead of 1.
 - Added The Treasures of Svarinshaug (dwarf) quest.
+- Changed the Gathering Materials quest objective text from "Mine 10000 gold and 20000 coal" to "Collect 10000 gold and 20000 coal".
 
 * Terrain
 - Fixed issue which caused minimap representation of removed tree or rock tiles to be affected by the time of the day when they were removed.
