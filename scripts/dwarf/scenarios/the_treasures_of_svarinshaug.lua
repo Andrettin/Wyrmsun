@@ -185,17 +185,25 @@ AddTrigger(
 					{function(s)
 					Event(
 						"",
-						"The time came for Brokk and Eitri to put their artifacts forward. They lay before their chief a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. Gungnir was strong, but Mjollnir even more. As for Skidbladnir, Modsognir judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold.",
+						"The time came for Brokk and Eitri to put their artifacts forward. They lay before their chief a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. Modsognir announced his decision.",
 						player,
 						{"~!Continue"},
 						{function(s)
-							if (GrandStrategy == false) then
-								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug") == false) then
-									table.insert(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug")
+						Event(
+							"",
+							"Gungnir was strong, but Mjollnir even more. Glancing at Skidbladnir, Modsognir's judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold. And thus Brokk and Eitri won the competition, receiving a hefty sum as their prize.",
+							player,
+							{"~!Continue"},
+							{function(s)
+								if (GrandStrategy == false) then
+									if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug") == false) then
+										table.insert(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug")
+									end
+									SavePreferences()
 								end
-								SavePreferences()
-							end
-							ActionVictory()
+								ActionVictory()
+							end}
+						)
 						end}
 					)
 					end}
