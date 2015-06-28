@@ -93,7 +93,7 @@ AddTrigger(
 	function() 
 		Event(
 			"",
-			"The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
+			"The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor on our clan, and recover the necklace from these bandits!",
 			player,
 			{"~!Continue"},
 			{function(s)
