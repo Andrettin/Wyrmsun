@@ -197,7 +197,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * AI
-- The AI build order has been revamped.
+- The AI build order and attack patterns have been revamped.
 - Fixed crash related to AI Goblin Glider movement.
 
 * Buildings
@@ -236,6 +236,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Sack of Iuvavum quest now yields 2 technology points instead of 1.
 - Added The Treasures of Svarinshaug (dwarf) quest.
 - Changed the Gathering Materials quest objective text from "Mine 10000 gold and 20000 coal" to "Collect 10000 gold and 20000 coal".
+- The Romans can no longer upgrade their town hall in the Sack of Iuvavum quest.
+- In the Sack of Iuvavum quest, the Romans now start with a mix of swordsmen and archers as their defense, rather than solely archers.
 
 * Terrain
 - Fixed issue which caused minimap representation of removed tree or rock tiles to be affected by the time of the day when they were removed.

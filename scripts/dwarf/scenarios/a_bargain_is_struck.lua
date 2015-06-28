@@ -10,7 +10,7 @@
 --
 --      scepter_of_fire_events.lua - Defines events for the Scepter of Fire campaign.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -30,6 +30,7 @@
 SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
 SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
 SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
+SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
 
 -- A Bargain is Struck initial dialogue
 -- based on the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth

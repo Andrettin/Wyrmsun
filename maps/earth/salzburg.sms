@@ -27,9 +27,9 @@ local layout = {
 	{-1, -1, -1, -1, -1, -1, -1, -2}
 }
 
-local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smithy"}
+local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smithy", "Farm"}
 
-local town_units = {"unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer"}
+local town_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer"}
 
 local invader_buildings = {"Farm", "Farm"}
 
