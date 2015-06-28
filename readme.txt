@@ -198,6 +198,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - The AI build order has been revamped.
+- Fixed crash related to AI Goblin Glider movement.
 
 * Buildings
 - Fixed issue which caused gold mines to unbuildable over gold deposits which had a decoration unit (like mushrooms) under them.
@@ -227,6 +228,7 @@ https://github.com/Andrettin/Wyrmsun
 - The alchemy bench is now attacked when right-clicking on it.
 - Pathfinder improvements.
 - Fixed issue with workers not properly repairing and harvesting when using rally points.
+- The game now no longer pauses if Alt+Tabbing from it.
 
 * Quests
 - The armor of the Chieftain's Hall is now zero in the On the Vanaquisl mission, to avoid too much waiting being necessary for destroying the Vana Tribe's hall.

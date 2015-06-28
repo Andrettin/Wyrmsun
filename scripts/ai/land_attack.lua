@@ -90,16 +90,20 @@ function AiLandAttack()
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) >= 1
 		) then -- if has a smithy and two barracks, begin researching upgrades
-			if (AiUpgradeWeapon1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon1())) then
-				AiResearch(AiUpgradeWeapon1())
+			if not (GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
+				if (AiUpgradeWeapon1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon1())) then
+					AiResearch(AiUpgradeWeapon1())
+				end
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
 				if (GetAiUnitType("bronze-shield") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("bronze-shield"))) then
 					AiResearch(GetAiUnitType("bronze-shield"))
 				end
 			end
-			if (AiUpgradeWeapon2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon2())) then
-				AiResearch(AiUpgradeWeapon2())
+			if not (GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
+				if (AiUpgradeWeapon2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon2())) then
+					AiResearch(AiUpgradeWeapon2())
+				end
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
 				if (GetAiUnitType("iron-shield") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("iron-shield"))) then
@@ -128,7 +132,7 @@ function AiLandAttack()
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiWorker()) >= 10
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiLumberMill()) >= 1
 			and GetPlayerData(AiPlayer(), "UnitTypesCount", AiSmithy()) >= 1
-			and (AiUpgradeWeapon2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeWeapon2()) == "R")
+			and (AiUpgradeWeapon2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeWeapon2()) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
 			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
 			and (AiUpgradeMissile2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeMissile2()) == "R")
 			and (GetAiUnitType("iron-tipped-wood-plow") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-tipped-wood-plow")) == "R")

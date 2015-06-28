@@ -31,7 +31,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "gold", 5000)
 	SetPlayerData(0, "Resources", "lumber", 1500)
 	SetPlayerData(0, "Resources", "stone", 1000)
-	SetPlayerData(1, "Faction", "Eikinskjaldi Clan")
+	SetPlayerData(1, "Faction", "Shorbear Clan")
 	SetPlayerData(1, "Name", "Bandits")
 	SetPlayerData(1, "Resources", "gold", 5000)
 	SetPlayerData(1, "Resources", "lumber", 1500)

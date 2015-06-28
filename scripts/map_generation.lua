@@ -1599,7 +1599,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations)
+function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings)
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,14 do
@@ -1694,6 +1694,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					if (starting_gold_mine) then
 						CreateStartingGoldMine(i) -- create the player's gold mine
 					end
+					if (player_buildings ~= nil and player_buildings[i + 1] ~= nil) then
+						for j=1,table.getn(player_buildings[i + 1]) do
+							CreateStartingBuilding(i, player_buildings[i + 1][j]) -- give the player initial buildings
+						end
+					end
 
 					SetPlayerData(i, "Resources", "gold", 10000)
 					SetPlayerData(i, "Resources", "lumber", 3000)
@@ -1780,7 +1785,7 @@ function GenerateRandomMap(arg)
 
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	
-	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations) -- generate players after rocks and water
+	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings) -- generate players after rocks and water
 
 	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
@@ -2066,6 +2071,13 @@ function ApplyRawTiles()
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
+			elseif (string.sub(RawTile(x, y), 0, 8) == "Barracks") then
+				unit = CreateUnit("unit-germanic-barracks", tonumber(string.sub(RawTile(x, y), 9)), {x, y})
+				for sub_x=0,2 do
+					for sub_y=0,2 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
 			elseif (string.sub(RawTile(x, y), 0, 11) == "Lumber Mill") then
 				unit = CreateUnit("unit-germanic-carpenters-shop", tonumber(string.sub(RawTile(x, y), 12)), {x, y})
 				for sub_x=0,2 do
@@ -2077,6 +2089,13 @@ function ApplyRawTiles()
 				unit = CreateUnit("unit-dwarven-smithy", tonumber(string.sub(RawTile(x, y), 7)), {x, y})
 				for sub_x=0,2 do
 					for sub_y=0,2 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
+			elseif (string.sub(RawTile(x, y), 0, 11) == "Watch Tower") then
+				unit = CreateUnit("unit-teuton-watch-tower", tonumber(string.sub(RawTile(x, y), 12)), {x, y})
+				for sub_x=0,1 do
+					for sub_y=0,1 do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
 					end
 				end
@@ -3928,10 +3947,10 @@ end
 function CreateStartingBuilding(player, building_type)
 	local width
 	local height
-	if (building_type == "Farm" or building_type == "Guard Tower") then
+	if (building_type == "Farm" or building_type == "Watch Tower" or building_type == "Guard Tower") then
 		width = 2
 		height = 2
-	elseif (building_type == "Lumber Mill" or building_type == "Smithy") then
+	elseif (building_type == "Barracks" or building_type == "Lumber Mill" or building_type == "Smithy") then
 		width = 3
 		height = 3
 	end
@@ -4001,7 +4020,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false, true)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false, true, nil, nil)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -4009,7 +4028,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false, true)
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false, true, nil, nil)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -5919,7 +5938,7 @@ function GenerateCave(town_halls, symmetric)
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric, true)
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric, true, nil, nil)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 

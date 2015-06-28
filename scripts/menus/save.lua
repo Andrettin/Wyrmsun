@@ -1,31 +1,31 @@
 function RunSaveGame(name, menu)
-  HexTiles = nil
-  HexTiles = {}
-  RawTiles = nil
-  RawTiles = {}
-  LoadedGame = true
-  local saved_globals = {}
-  saved_globals.Quests = copy(Quests)
-  saved_globals.Achievements = copy(Achievements)
-  saved_globals.Preferences = copy(wyr.preferences)
-  Quests = nil
-  Achievements = nil
-  wyr.preferences = nil
-  if (SaveGame(name) == -1) then
-    local confirm = WarGameMenu(panel(3))
-    confirm:resize(300,120)
-    confirm:addLabel("Cannot save game to file:", 300 / 2, 11)
-    confirm:addLabel(name, 300 / 2, 31)
-    confirm:addHalfButton("~!OK", "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
-    confirm:run(false)
-  else
-    UI.StatusLine:Set("Saved game to: " .. name)
-    menu:stop()
-  end
-  Quests = copy(saved_globals.Quests)
-  Achievements = copy(saved_globals.Achievements)
-  wyr.preferences = copy(saved_globals.Preferences)
-  LoadedGame = false
+	HexTiles = nil
+	HexTiles = {}
+	RawTiles = nil
+	RawTiles = {}
+	LoadedGame = true
+	local saved_globals = {}
+	saved_globals.Quests = copy(Quests)
+	saved_globals.Achievements = copy(Achievements)
+	saved_globals.Preferences = copy(wyr.preferences)
+	Quests = nil
+	Achievements = nil
+	wyr.preferences = nil
+	if (SaveGame(name) == -1) then
+		local confirm = WarGameMenu(panel(3))
+		confirm:resize(300,120)
+		confirm:addLabel("Cannot save game to file:", 300 / 2, 11)
+		confirm:addLabel(name, 300 / 2, 31)
+		confirm:addHalfButton("~!OK", "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
+		confirm:run(false)
+	else
+		UI.StatusLine:Set("Saved game to: " .. name)
+		menu:stop()
+	end
+	Quests = copy(saved_globals.Quests)
+	Achievements = copy(saved_globals.Achievements)
+	wyr.preferences = copy(saved_globals.Preferences)
+	LoadedGame = false
 end
 
 function RunConfirmErase(name, menu)

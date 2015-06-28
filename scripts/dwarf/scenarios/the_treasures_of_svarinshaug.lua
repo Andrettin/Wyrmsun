@@ -191,7 +191,7 @@ AddTrigger(
 						{function(s)
 						Event(
 							"",
-							"Gungnir was strong, but Mjollnir even more. Glancing at Skidbladnir, Modsognir's judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold. And thus Brokk and Eitri won the competition, receiving a hefty sum as their prize.",
+							"Gungnir was strong, but Mjollnir was stronger. Glancing at Skidbladnir, Modsognir's judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold. And thus Brokk and Eitri won the competition, receiving a hefty sum as their prize.",
 							player,
 							{"~!Continue"},
 							{function(s)
