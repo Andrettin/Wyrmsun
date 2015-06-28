@@ -155,7 +155,7 @@ local NidavellirEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Modsogning Clan"
-				and SyncRand(100) < 10
+				and SyncRand(100) < 20
 			) then
 				return true
 			else
@@ -198,6 +198,115 @@ local NidavellirEvents = {
 			end
 		},
 		OptionTooltips = {"", "-10 Prestige"}
+	},
+	TheTreasuresOfSvarinshaug = {
+		Name = "The Treasures of Svarinshaug",
+		Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...",
+		Heroes = {
+			unit_hero_modsognir = true,
+			unit_hero_durin = true
+		},
+		RequiredEvents = {
+			TheMeadOfWisdom = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Modsogning Clan"
+				and SyncRand(100) < 20
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"OK"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/nidavellir/eastern-mines.smp")
+					CurrentQuest = "The Treasures of Svarinshaug"
+					RunMap("maps/nidavellir/eastern-mines.smp")
+					GrandStrategyEventMap = false
+					
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+						elseif (IsHero(unitName)) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+							end
+						end
+					end
+					if (GameResult == GameVictory) then
+						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 30 -- prestige for obtaining the wondrous artifacts
+						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of Draupnir
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 30 -- prestige for obtaining the wondrous artifacts
+					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of Draupnir
+				end
+			end
+		},
+		OptionTooltips = {""}
+	},
+	TheNecklaceOfTheBrisings = {
+		Name = "The Necklace of the Brisings",
+		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
+		Heroes = {
+			unit_hero_modsognir = true,
+			unit_hero_durin = true
+		},
+		RequiredEvents = {
+			TheTreasuresOfSvarinshaug = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Modsogning Clan"
+				and SyncRand(100) < 20
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"OK"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+					GrandStrategyEventMap = true
+					GetMapInfo("maps/nidavellir/aurvangar.smp")
+					CurrentQuest = "The Necklace of the Brisings"
+					RunMap("maps/nidavellir/aurvangar.smp")
+					GrandStrategyEventMap = false
+					
+					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
+						WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
+						WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+					end
+
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+						elseif (IsHero(unitName)) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+							end
+						end
+					end
+					if (GameResult == GameVictory) then
+						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for rooting out the bandits
+						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of the Necklace
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for rooting out the bandits
+					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of the Necklace
+				end
+			end
+		},
+		OptionTooltips = {""}
 	},
 	ModsognirDies = {
 		Name = "Modsognir Dies",

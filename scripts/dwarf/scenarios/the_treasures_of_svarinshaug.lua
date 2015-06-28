@@ -41,6 +41,13 @@ if (LoadedGame == false) then
 		AcquireTrait(unit, "upgrade-dextrous")
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitName(unit, "Brokk")
+		AcquireTrait(unit, "upgrade-keen")
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitName(unit, "Eitri")
+		AcquireTrait(unit, "upgrade-dextrous")
+		
 		local units_to_be_created = {}
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then

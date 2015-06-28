@@ -70,6 +70,10 @@ if (LoadedGame == false) then
 				end
 			end
 		end
+		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	end
 end
 
