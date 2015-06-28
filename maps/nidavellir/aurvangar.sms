@@ -11,7 +11,7 @@ if (LoadedGame == false) then
 			NoFlyingCreeps = true, -- too early a mission to add such perils
 			PlayerCivilizations = {"dwarf", "dwarf"},
 			PlayerBuildings = {
-				{"Farm"},
+				{"Farm", "Farm"},
 				{"Barracks", "Farm", "Farm", "Watch Tower", "Watch Tower"}
 			}
 		})

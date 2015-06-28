@@ -150,65 +150,38 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Collect 8000 gold") and GetPlayerData(GetThisPlayer(), "Resources", "gold") >= 8000) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Defeat the bandits") and GetNumRivals(GetThisPlayer()) == 0) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function()
-		local brokk = nil
-		local eitri = nil
-		local uncount = GetUnits(GetFactionPlayer("Modsogning Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Brokk") then
-				brokk = uncount[unit1]
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Eitri") then
-				eitri = uncount[unit1]
-			end
-		end
-		
 		Event(
-			eitri,
-			"We have gotten all the gold we need. To the forge!",
+			FindHero("Durin"),
+			"Bloody bandits, quite a piece of work they were.",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
-				"",
-				"After arduous hours of work, the labor of Brokk and Eitri finally came to fruition. They had crafted two wondrous artifacts for Modsognir.",
+				FindHero("Modsognir"),
+				"Durin, your service to the clan has been invaluable. I believe that despite the loss of our sage's guidance, together we - warriors and leaders - can take the clan through the dangers of our new home.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
-					"",
-					"On the following day, the pair arrived at Modsognir's hall. The sons of Ivaldi were already there. They too bore two gifts for the dwarven chieftain: a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. These were found excellent by Modsognir.",
+					FindHero("Modsognir"),
+					"Ah, here's the necklace!",
 					player,
 					{"~!Continue"},
 					{function(s)
-					Event(
-						"",
-						"The time came for Brokk and Eitri to put their artifacts forward. They lay before their chief a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. Modsognir announced his decision.",
-						player,
-						{"~!Continue"},
-						{function(s)
-						Event(
-							"",
-							"Gungnir was strong, but Mjollnir even more. Glancing at Skidbladnir, Modsognir's judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold. And thus Brokk and Eitri won the competition, receiving a hefty sum as their prize.",
-							player,
-							{"~!Continue"},
-							{function(s)
-								if (GrandStrategy == false) then
-									if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug") == false) then
-										table.insert(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug")
-									end
-									SavePreferences()
-								end
-								ActionVictory()
-							end}
-						)
-						end}
-					)
+						if (GrandStrategy == false) then
+							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Necklace of the Brisings") == false) then
+								table.insert(wyr.preferences.QuestsCompleted, "The Necklace of the Brisings")
+							end
+							SavePreferences()
+						end
+						ActionVictory()
 					end}
 				)
 				end}

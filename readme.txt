@@ -238,6 +238,7 @@ https://github.com/Andrettin/Wyrmsun
 - Changed the Gathering Materials quest objective text from "Mine 10000 gold and 20000 coal" to "Collect 10000 gold and 20000 coal".
 - The Romans can no longer upgrade their town hall in the Sack of Iuvavum quest.
 - In the Sack of Iuvavum quest, the Romans now start with a mix of swordsmen and archers as their defense, rather than solely archers.
+- Added The Necklace of the Brisings (dwarf) quest.
 
 * Terrain
 - Fixed issue which caused minimap representation of removed tree or rock tiles to be affected by the time of the day when they were removed.
