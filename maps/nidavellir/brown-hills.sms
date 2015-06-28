@@ -252,3 +252,5 @@ CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
 
 CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+
+FillStumps()

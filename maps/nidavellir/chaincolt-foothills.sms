@@ -309,3 +309,5 @@ end
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+
+FillStumps()

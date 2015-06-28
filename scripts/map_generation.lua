@@ -10,7 +10,7 @@
 --
 --      map_generation.lua - Defines the map generation scripts.
 --
---      (c) Copyright 2013-2014 by Andrettin
+--      (c) Copyright 2013-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1897,54 +1897,11 @@ function GenerateRandomMap(arg)
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
-		if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
-			local uncount = 0
-			uncount = GetUnits(15)
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
-					if (SyncRand(2) == 0) then
-						local RandomNumber = SyncRand(3)
-						if (RandomNumber == 0) then
-							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
-						end
-					end
-				end
-			end
-		elseif (wyrmsun.tileset == "swamp") then
-			local uncount = 0
-			uncount = GetUnits(15)
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
-					if (SyncRand(2) == 0) then
-						local RandomNumber = SyncRand(2)
-						if (RandomNumber == 0) then
-							unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-						elseif (RandomNumber == 1) then
-							unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
-						end
-					end
-				end
-			end
-		end
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
-		local uncount = 0
-		uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
-				if (SyncRand(2) == 0) then
-					local RandomNumber = SyncRand(3)
-					if (RandomNumber == 0) then
-						unit = CreateUnitInTransporter("unit-bat", 15, uncount[unit1])
-					elseif (RandomNumber == 1) then
-						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-					elseif (RandomNumber == 2) then
-						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
-					end
-				end
-			end
-		end
 	end
+	
+	FillStumps()
 	
 	CleanRawTiles()
 end
@@ -3861,41 +3818,11 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-		if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
-			local uncount = 0
-			uncount = GetUnits(15)
-			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1]) then
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
-						if (SyncRand(2) == 0) then
-							local RandomNumber = SyncRand(3)
-							if (RandomNumber == 0) then
-								CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
-							end
-						end
-					end
-				end
-			end
-		end
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-		local uncount = 0
-		uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (uncount[unit1]) then
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
-					if (SyncRand(2) == 0) then
-						RandomNumber = SyncRand(2)
-						if (RandomNumber == 0) then
-							CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-						elseif (RandomNumber == 1) then
-							CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
-						end
-					end
-				end
-			end
-		end
 	end
+
+	FillStumps()
 end
 
 function CreateStartingGoldMine(player, x, y)
@@ -4088,37 +4015,11 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-		if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
-			local uncount = 0
-			uncount = GetUnits(15)
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump") then
-					if (SyncRand(2) == 0) then
-						local RandomNumber = SyncRand(3)
-						if (RandomNumber == 0) then
-							unit = CreateUnitInTransporter("unit-rat", 15, uncount[unit1])
-						end
-					end
-				end
-			end
-		end
 	elseif (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-		local uncount = 0
-		uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") then
-				if (SyncRand(2) == 0) then
-					local RandomNumber = SyncRand(2)
-					if (RandomNumber == 0) then
-						unit = CreateUnitInTransporter("unit-blood-bat", 15, uncount[unit1])
-					elseif (RandomNumber == 1) then
-						unit = CreateUnitInTransporter("unit-dread-bat", 15, uncount[unit1])
-					end
-				end
-			end
-		end
 	end
+	
+	FillStumps()
 	
 	CleanRawTiles()
 end
@@ -6064,4 +5965,53 @@ function FindNearestTerrainFlagTile(terrain_flag, starting_x, starting_y)
 	end
 	
 	return nil
+end
+
+function FillStumps()
+	local uncount = GetUnits(15)
+	local stumps = {}
+	for unit1 = 1,table.getn(uncount) do 
+		if (uncount[unit1]) then
+			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") and GetUnitVariable(uncount[unit1], "Transport") < 1) then
+				table.insert(stumps, uncount[unit1])
+			end
+		end
+	end
+	if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+		for i = 1,table.getn(stumps) do 
+			if (stumps[i]) then
+				if (SyncRand(2) == 0) then
+					CreateUnitInTransporter("unit-rat", 15, stumps[i])
+				end
+			end
+		end
+	elseif (wyrmsun.tileset == "swamp") then
+		for i = 1,table.getn(stumps) do 
+			if (stumps[i]) then
+				if (SyncRand(2) == 0) then
+					local RandomNumber = SyncRand(2)
+					if (RandomNumber == 0) then
+						CreateUnitInTransporter("unit-blood-bat", 15, stumps[i])
+					elseif (RandomNumber == 1) then
+						CreateUnitInTransporter("unit-dread-bat", 15, stumps[i])
+					end
+				end
+			end
+		end
+	elseif (wyrmsun.tileset == "cave") then
+		for i = 1,table.getn(uncount) do 
+			if (stumps[i]) then
+				if (SyncRand(2) == 0) then
+					local RandomNumber = SyncRand(3)
+					if (RandomNumber == 0) then
+						CreateUnitInTransporter("unit-bat", 15, stumps[i])
+					elseif (RandomNumber == 1) then
+						CreateUnitInTransporter("unit-blood-bat", 15, stumps[i])
+					elseif (RandomNumber == 2) then
+						CreateUnitInTransporter("unit-dread-bat", 15, stumps[i])
+					end
+				end
+			end
+		end
+	end
 end
