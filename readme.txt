@@ -201,7 +201,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash related to AI Goblin Glider movement.
 
 * Buildings
-- Fixed issue which caused gold mines to unbuildable over gold deposits which had a decoration unit (like mushrooms) under them.
+- Fixed issue which caused gold mines to be unbuildable over gold deposits which had a decoration unit (like mushrooms) under them.
 
 * Editor
 - It is now possible to set a unit's personal name through the map editor.
