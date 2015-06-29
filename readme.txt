@@ -207,6 +207,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed save game crash related to whether a unit's AI is active.
+- Slight improvement to unit selection.
 
 * Quests
 - Minor text update to the dwarven quests.
