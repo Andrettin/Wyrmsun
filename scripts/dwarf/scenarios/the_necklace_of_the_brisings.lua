@@ -169,7 +169,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				FindHero("Modsognir"),
-				"Durin, your service to the clan has been invaluable. I believe that despite the loss of our sage's guidance, together we - warriors and leaders - can take the clan through the dangers of our new home.",
+				"Durin, yer service to the clan has been invaluable. I believe that despite the loss of our sage's guidance, together we - warriors and leaders - can take the clan through the dangers of our new home.",
 				player,
 				{"~!Continue"},
 				{function(s)

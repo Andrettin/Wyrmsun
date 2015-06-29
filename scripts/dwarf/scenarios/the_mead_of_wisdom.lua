@@ -218,19 +218,19 @@ AddTrigger(
 				{function(s)
 				Event(
 					galar,
-					"I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, you can't drink any!",
+					"I feel rather like a sage, myself. We made a cauldron of mead, Odrorir, along with two jars, Bodn and Son. Go away, ye can't drink any!",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						FindHero("Durin"),
-						"Abominable! How could you, to Thjodrorir... Foolish as you seem, the mead certainly made you none the wiser.",
+						"Abominable! How could ye, to Thjodrorir... Foolish as ye seem, the mead certainly made ye none the wiser.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							fjalar,
-							"Thjodrorir went down first, but you will be next!",
+							"Thjodrorir went down first, but ye will be next!",
 							player,
 							{"~!Continue"},
 							{function(s)
