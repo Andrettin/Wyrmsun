@@ -10,7 +10,7 @@
 --
 --      stratagus.lua - The craft configuration language.
 --
---      (c) Copyright 1998-2011 by Lutz Sammer and Pali Rohár
+--      (c) Copyright 1998-2015 by Lutz Sammer, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "1.2.4"
+wyrmsun.Version = "1.2.5"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
