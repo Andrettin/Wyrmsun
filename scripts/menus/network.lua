@@ -141,6 +141,9 @@ function RunJoiningMapMenu(s)
   local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, function() end)
   no_randomness:setEnabled(true)
   no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
+  local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, function() end)
+  computer_opponents:setEnabled(true)
+  computer_opponents:setMarked(ServerSetupState.Opponents > 0)
 
   menu:writeText("Civilization:", sx, sy*11)
   local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
@@ -199,11 +202,12 @@ function RunJoiningMapMenu(s)
     GameSettings.RevealMap = ServerSetupState.RevealMap
     no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
     GameSettings.NoRandomness = int2bool(ServerSetupState.NoRandomness)
+    computer_opponents:setMarked(ServerSetupState.Opponents > 0)
     units:setSelected(ServerSetupState.UnitsOption)
     GameSettings.NumUnits = ServerSetupState.UnitsOption
     resources:setSelected(ServerSetupState.ResourcesOption)
     GameSettings.Resources = ServerSetupState.ResourcesOption
-    GameSettings.Inside = int2bool(ServerSetupState.Inside)
+--    GameSettings.Inside = int2bool(ServerSetupState.Inside)
     updatePlayersList()
     state = GetNetworkState()
     -- FIXME: don't use numbers
@@ -355,6 +359,24 @@ function RunServerMultiGameMenu(map, description, numplayers)
   end
   local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
   no_randomness:setMarked(false)
+  
+  ServerSetupState.Opponents = 0
+  local function computer_opponentsCb(dd)
+	if (dd:isMarked()) then
+		local connected_players = 0
+		for i=2,8 do
+			if (Hosts[i-1].PlyName ~= "") then
+				connected_players = connected_players + 1
+			end
+		end
+		ServerSetupState.Opponents = numplayers - 1 - connected_players
+	else
+		ServerSetupState.Opponents = 0
+	end
+    NetworkServerResyncClients()
+  end
+  local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, computer_opponentsCb)
+  computer_opponents:setMarked(false)
 
   menu:writeText("Civilization:", sx, sy*11)
    local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
@@ -397,7 +419,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   NetworkMapName = map
   NetworkInitServerConnect(numplayers)
   ServerSetupState.FogOfWar = 1
-  ServerSetupState.Inside = 0
+--  ServerSetupState.Inside = 0
   GameSettings.Inside = false
   startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
     function(s)
@@ -552,13 +574,11 @@ function RunCreateMultiGameMenu(s)
 		MapRequiredQuest = ""
 		Load(maps[i])
 		if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
-			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
-				local map_description = _(description)
-				if (map_description == "") then
-					map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
-				end
-				table.insert(scenario_list, map_description)
+			local map_description = _(description)
+			if (map_description == "") then
+				map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
 			end
+			table.insert(scenario_list, map_description)
 		end
 	end
 

@@ -721,8 +721,10 @@ function RunMap(map, objective, fow, revealmap)
     end
   end
   RunResultsMenu(s)
-  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and CurrentQuest ~= "" and not IsReplayGame() and not IsNetworkGame() and not GrandStrategy) then
-	  RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
+  if not (IsNetworkGame()) then
+	  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and CurrentQuest ~= "" and not IsReplayGame() and not GrandStrategy) then
+		  RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
+	  end
   end
 
   InitGameSettings()

@@ -209,6 +209,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed save game crash related to whether a unit's AI is active.
 - Slight improvement to unit selection.
 
+* Multiplayer
+- Added "Computer Opponents" option, which replaces empty player spots with computer players.
+- Fixed a couple of desync causes.
+
 * Quests
 - Minor text update to the dwarven quests.
 
