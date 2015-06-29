@@ -681,7 +681,7 @@ function EditUnitTypeProperties(unit_type)
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
-	menu:addFullButton(_("~!Stats"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
+	menu:addFullButton(_("S~!tats"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
 		function()
 			EditUnitTypePropertiesStats(unit_type)
 		end
@@ -699,7 +699,7 @@ function EditUnitTypeProperties(unit_type)
 		end
 	)
 		
-	menu:addFullButton(_("~!OK"), "ok", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
+	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
 		function()
 			menu:stop()
 		end
