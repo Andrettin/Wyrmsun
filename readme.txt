@@ -198,6 +198,15 @@ https://github.com/Andrettin/Wyrmsun
 
 * Editor
 - Fixed hotkey issue with the unit type properties menu.
+- Improvements to the organization of the editor UI elements.
+- It is now possible to use 5x5 and 10x10 tile brushes.
+
+* Grand Strategy
+- Added tooltip for tactical unit multiplier.
+- Fixed two interface-related crash causes.
+
+* Miscellaneous
+- Fixed save game crash related to whether a unit's AI is active.
 
 -----------------------------------------------------------------------
 - 1.2.4

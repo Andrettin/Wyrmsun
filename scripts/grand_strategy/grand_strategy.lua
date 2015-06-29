@@ -80,9 +80,9 @@ function RunGrandStrategyGameSetupMenu()
 
 	GrandStrategy = true
 
-	menu:addLabel("~<Grand Strategy Game Setup~>", offx + 640/2 + 12, offy + 72)
+	menu:addLabel(_("~<Grand Strategy Game Setup~>"), offx + 640/2 + 12, offy + 72)
 
-	menu:addFullButton("~!Start Game", "s", offx + 208, offy + 212 + (36 * 4),
+	menu:addFullButton(_("~!Start Game"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
 			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
 			if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
@@ -332,36 +332,36 @@ function RunGrandStrategyGameSetupMenu()
 			RunGrandStrategyGame()
 			menu:stop()
 		end)
-	menu:addFullButton("~!Load Game", "l", offx + 208, offy + 212 + (36 * 5),
+	menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 212 + (36 * 5),
 		function()
 			RunGrandStrategyLoadGameMenu()
 			if not (GrandStrategy) then
 				menu:stop()
 			end
 		end)
-	menu:addFullButton("~!Cancel Game", "c", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Cancel Game"), "c", offx + 208, offy + 212 + (36 * 6),
 		function()
 			menu:stop();
 			ClearGrandStrategyVariables()
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
 
-	menu:addLabel("World:", offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
+	menu:addLabel(_("World:"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
 	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
 		function(dd) DateChanged() end)
 	world:setSize(152, 20)
 
-	menu:addLabel("Date:", offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+	menu:addLabel(_("Date:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
 	date = menu:addDropDown(date_list, offx + 220, offy + 10 + 120,
 		function(dd) DateChanged() end)
 	date:setSize(152, 20)
 
-	menu:addLabel("Faction:", offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
+	menu:addLabel(_("Faction:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
 	faction = menu:addDropDown(faction_list, offx + 640 - 224 - 16, offy + 10 + 120,
 		function(dd) end)
 	faction:setSize(152, 20)
 
-	menu:addLabel("Tactical Unit Multiplier:", offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
 	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 40, offy + 10 + 180,
 		function(dd)
 			wyr.preferences.GrandStrategyBattalionMultiplier = battalions:getSelected() + 1
@@ -370,6 +370,7 @@ function RunGrandStrategyGameSetupMenu()
 		end)
 	battalions:setSize(152, 20)
 	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
+	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
 
 	function DateChanged()
 		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
@@ -432,6 +433,8 @@ function RunGrandStrategyGameSetupMenu()
 end
 
 function RunGrandStrategyGame()
+	ClearGrandStrategyUIVariables()
+
 	GrandStrategyMenu = WarMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
@@ -893,6 +896,7 @@ function EndTurn()
 	end
 
 	if (GrandStrategyFaction ~= nil and GetFactionProvinceCount(GrandStrategyFaction) == 0) then -- if player lost all provinces, end game
+		ClearGrandStrategyUIVariables()
 		GrandStrategyMenu:stop()
 		ClearGrandStrategyVariables()
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -1598,6 +1602,7 @@ function RunGrandStrategyGameMenu()
 		function()
 			RunEncyclopediaMenu()
 			menu:stop()
+			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
@@ -1610,6 +1615,7 @@ function RunGrandStrategyGameMenu()
 	menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 288 - 40,
 		function()
 			menu:stop()
+			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
@@ -1645,8 +1651,9 @@ function RunGrandStrategyQuitToMenuConfirmMenu()
 	menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
 		function()
 			StopMusic();
+			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop() 
-			menu:stopAll()
+			menu:stop()
 			ClearGrandStrategyVariables()
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
@@ -1690,6 +1697,7 @@ function RunGrandStrategySaveMenu()
 
 			SaveGrandStrategyGame(name)
     		menu:stop()
+			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
@@ -1697,6 +1705,7 @@ function RunGrandStrategySaveMenu()
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 		function()
 			menu:stop()
+			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
@@ -1754,6 +1763,7 @@ function RunGrandStrategyLoadGameMenu()
 			
 			menu:stop()
 			if (GrandStrategyMenu) then
+				ClearGrandStrategyUIVariables()
 				GrandStrategyMenu:stop();
 			end
 			RunGrandStrategyGame()
@@ -1775,6 +1785,7 @@ function RunGrandStrategyLoadGameMenu()
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 		function()
 			menu:stop()
+			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
 		end)
@@ -4030,8 +4041,8 @@ function AIDoTurn(ai_faction)
 	end
 	
 	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
-		local desired_infantry_in_province = 8
-		local desired_archers_in_province = 4
+		local desired_infantry_in_province = 6
+		local desired_archers_in_province = 3
 		local desired_catapults_in_province = 1
 
 		local borders_foreign = false
@@ -4540,6 +4551,12 @@ function ClearGrandStrategyVariables()
 	GrandStrategyMapWidthIndent = false
 	GrandStrategyMapHeightIndent = false
 
+	ClearGrandStrategyUIVariables()
+
+--	GrandStrategyMenu = nil
+end
+
+function ClearGrandStrategyUIVariables()
 	OnScreenTiles = nil
 	OnScreenSites = nil
 	UIResourceBar = nil
@@ -4550,8 +4567,6 @@ function ClearGrandStrategyVariables()
 
 	UIMinimap = nil
 	MinimapTiles = nil
-
-	GrandStrategyMenu = nil
 end
 
 function ProvinceHasBuildingType(province, building_type)

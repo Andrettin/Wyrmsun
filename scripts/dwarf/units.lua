@@ -432,7 +432,6 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	Corpse = "unit-dwarven-dead-body",
-	Excrement = "unit-yale-excrement",
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
