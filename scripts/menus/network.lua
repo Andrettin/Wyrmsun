@@ -149,13 +149,13 @@ function RunJoiningMapMenu(s)
   local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
   local race = menu:addDropDown(civilization_list, sx + 100, sy*11,
     function(dd)
-	  if (civilization_list[race:getSelected() + 1] == _("Dwarf")) then
+	  if (civilization_list[dd:getSelected() + 1] == _("Dwarf")) then
 		  GameSettings.Presets[NetLocalHostsSlot].Race = 1
 		  LocalSetupState.Race[NetLocalHostsSlot] = 1
-	  elseif (civilization_list[race:getSelected() + 1] == _("Human - Germanic")) then
+	  elseif (civilization_list[dd:getSelected() + 1] == _("Human - Germanic")) then
 		  GameSettings.Presets[NetLocalHostsSlot].Race = 2
 		  LocalSetupState.Race[NetLocalHostsSlot] = 2
-	  elseif (civilization_list[race:getSelected() + 1] == _("Human - Teuton")) then
+	  elseif (civilization_list[dd:getSelected() + 1] == _("Human - Teuton")) then
 		  GameSettings.Presets[NetLocalHostsSlot].Race = 3
 		  LocalSetupState.Race[NetLocalHostsSlot] = 3
 	  end
@@ -380,7 +380,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 
   menu:writeText("Civilization:", sx, sy*11)
    local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
- d = menu:addDropDown(civilization_list, sx + 100, sy*11,
+   d = menu:addDropDown(civilization_list, sx + 100, sy*11,
     function(dd)
 	  if (civilization_list[dd:getSelected() + 1] == _("Dwarf")) then
 		  GameSettings.Presets[0].Race = 1

@@ -196,6 +196,11 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.6
 -----------------------------------------------------------------------
 
+* Multiplayer
+- Fixed chat message crash issue.
+- Fixed player color for chat messages.
+- Fixed issue with civilization selection for multiplayer.
+
 * Units
 - Increased selection box size for the raft.
 - Units now have a selection box as large as the raft's if riding on it, and if the raft's selection box is larger than the unit's.

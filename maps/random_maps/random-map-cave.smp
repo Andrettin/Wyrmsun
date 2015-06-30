@@ -2,8 +2,8 @@
 
 DefinePlayerTypes("person","person","person","person")
 if (GrandStrategy == false) then
-	PresentMap("Random Cave", 3, 128, 128, 1)
+	PresentMap("Random Cave", 4, 128, 128, 1)
 else
-	PresentMap("Random Cave", 3, 64, 64, 1)
+	PresentMap("Random Cave", 4, 64, 64, 1)
 end
 MapWorld = "Random"
