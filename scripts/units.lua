@@ -3181,6 +3181,38 @@ DefineUnitType("unit-roaming-fog-small", { Name = _("Roaming Fog"),
 	}
 } )
 
+DefineUnitType("unit-miasma", { Name = _("Miasma"),
+	Image = {"file", "neutral/decorations/miasma.png", "size", {128, 128}},
+	Animations = "animations-roaming-fog", Icon = "icon-miasma",
+	NeutralMinimapColor = {192, 192, 192},
+	Speed = 3,
+	HitPoints = 1,
+	DrawLevel = 45,
+	TileSize = {4, 4}, BoxSize = {127, 127},
+	SightRange = 1,
+	Missile = "missile-none",
+	MaxAttackRange = 1,
+	Priority = 37,
+	Points = 1,
+	Demand = 1,
+	Type = "fly",
+	IsNotSelectable = true,
+	RightMouseAction = "move",
+	RandomMovementProbability = 100,
+	NumDirections = 1,
+	NonSolid = true, 
+	Transparency = 50,
+	Decoration = true,
+	VisibleUnderFog = false,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "bat-selected",
+--		"ready", "bat-selected",
+--		"help", "critter-help",
+--		"dead", "rat-dead"
+	}
+} )
+
 --UnitTypeFiles["unit-destroyed-1x1-place"] = {
 --	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
 --}

@@ -59,10 +59,9 @@ SetRawTile(34, 50, "Land")
 SetRawTile(35, 49, "Land")
 SetRawTile(35, 50, "Land")
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-
 -- rectify cave wall pieces which appear too much like separate small blocks
 SetRawTile(7, 20, "Rock")
+SetRawTile(21, 27, "Water")
 SetRawTile(24, 47, "Water")
 SetRawTile(26, 50, "Water")
 SetRawTile(32, 39, "Water")
@@ -83,6 +82,8 @@ SetRawTile(27, 57, "Land")
 SetRawTile(28, 56, "Land")
 SetRawTile(28, 57, "Land")
 SetRawTile(27, 58, "Land")
+
+AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
 ApplyRawTiles()
 

@@ -1282,6 +1282,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-miasma",
+	Size = {46, 38},
+	File = "neutral/icons/miasma.png"
+})
+
+DefineIcon({
 	Name = "icon-long-swordsman",
 	Size = {46, 38},
 	File = "neutral/icons/long_swordsman.png"

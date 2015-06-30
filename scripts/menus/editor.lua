@@ -175,6 +175,7 @@ editor_types = {
    "unit-volcanic-crater",
    "unit-roaming-fog-small",
    "unit-roaming-fog",
+   "unit-miasma",
    "unit-floor-decoration",
    "unit-shelf",
    "unit-outer-wall-decoration",
