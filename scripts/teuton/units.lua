@@ -50,7 +50,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 			"resource-id", "gold",
 			"resource-capacity", 100,
 			"resource-step", 2,
-			"wait-at-resource", 3,
+			"wait-at-resource", 6,
 			"wait-at-depot", 150
 		},
 		{
@@ -58,7 +58,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 			"resource-id", "silver",
 			"resource-capacity", 100,
 			"resource-step", 2,
-			"wait-at-resource", 3,
+			"wait-at-resource", 6,
 			"wait-at-depot", 150,
 			"final-resource", "gold",
 			"final-resource-conversion-rate", 50
@@ -68,7 +68,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"), -- Bûra = "Bauer" in Pr
 			"resource-id", "copper",
 			"resource-capacity", 100,
 			"resource-step", 2,
-			"wait-at-resource", 3,
+			"wait-at-resource", 6,
 			"wait-at-depot", 150,
 			"final-resource", "gold",
 			"final-resource-conversion-rate", 25
