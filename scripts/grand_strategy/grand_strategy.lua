@@ -1821,37 +1821,56 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	end
 	tooltip = tooltip .. " (" .. tile_x .. ", " .. tile_y .. ")"
 
-	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
-		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "CnFr" or GetWorldMapTile(tile_x, tile_y) == "ScFr" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil or string.find(file, "outer") ~= nil or string.find(file, "inner") ~= nil) then
-			local world_map_tile
-			if (GrandStrategyWorld == "Nidavellir") then
-				world_map_tile = CGraphic:New("tilesets/world/terrain/dark_plains.png")
-			else
-				world_map_tile = CGraphic:New("tilesets/world/terrain/plains.png")
+	if (OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] == nil) then
+		local base_world_map_tile
+		if (GrandStrategyWorld == "Nidavellir") then
+			base_world_map_tile = CGraphic:Get("tilesets/world/terrain/dark_plains.png")
+			if (base_world_map_tile == nil) then
+				base_world_map_tile = CGraphic:New("tilesets/world/terrain/dark_plains.png")
+				base_world_map_tile:Load()
 			end
-			world_map_tile:Load()
-			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageWidget(world_map_tile) -- not really a site, but it is more expedient to use this method
-			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
-				OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
-			elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
-				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 32 - height_indent)
-			else
-				OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
+		else
+			base_world_map_tile = CGraphic:Get("tilesets/world/terrain/plains.png")
+			if (base_world_map_tile == nil) then
+				base_world_map_tile = CGraphic:New("tilesets/world/terrain/plains.png")
+				base_world_map_tile:Load()
 			end
-			GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		end
-
-		local world_map_tile = CGraphic:New(file)
-		world_map_tile:Load()
+		OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageWidget(base_world_map_tile)
+		GrandStrategyMenu:add(OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+	end
+	
+	if (OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] == nil) then
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageButton("")
+		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
+	end
+			
+	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
+--		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "CnFr" or GetWorldMapTile(tile_x, tile_y) == "ScFr" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil or string.find(file, "outer") ~= nil or string.find(file, "inner") ~= nil) then
+			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
+				OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent + last_tile_width_modifier, 64)
+			elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
+				OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 32 - height_indent)
+			else
+				OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 64)
+			end
+			OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+--		end
+
+		local world_map_tile = CGraphic:Get(file)
+		if (world_map_tile == nil) then
+			world_map_tile = CGraphic:New(file)
+			world_map_tile:Load()
+		end
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setActionCallback(
 			function()
 				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setEnabled(true)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setNormalImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPressedImage(world_map_tile)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setDisabledImage(world_map_tile)
@@ -1862,10 +1881,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		else
 			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(64, 64)
 		end
-		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setTooltip(tooltip)
 	elseif (string.find(file, "border") ~= nil) then -- different method for border graphics
-		local b
 		local world_map_tile
 		if (string.find(file, "national") ~= nil) then
 			local playercolor
@@ -1874,39 +1891,39 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			else
 				playercolor = "gray"
 			end
-			b = PlayerColorImageButton("", playercolor)
+			OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", playercolor) -- not really a site, but it is more expedient to use this method
 			world_map_tile = CPlayerColorGraphic:New(file)
 		else
 			world_map_tile = CGraphic:New(file)
-			b = ImageButton("")
+			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("") -- not really a site, but it is more expedient to use this method
 		end
 		world_map_tile:Load()
-		OnScreenSites[table.getn(OnScreenSites) + 1] = b -- not really a site, but it is more expedient to use this method
-		b:setActionCallback(
+		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 			function()
 				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
 				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
-		GrandStrategyMenu:add(b, 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
-		b:setNormalImage(world_map_tile)
-		b:setPressedImage(world_map_tile)
-		b:setDisabledImage(world_map_tile)
+		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
+		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
+		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
+		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
 		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
-			b:setSize(42 - width_indent + last_tile_width_modifier, 84)
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(42 - width_indent + last_tile_width_modifier, 84)
 		elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
-			b:setSize(84 + (last_tile_width_modifier * 5 / 16), 84)
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(84 + (last_tile_width_modifier * 5 / 16), 84)
 		elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
-			b:setSize(84, 52 - height_indent)
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(84, 52 - height_indent)
 		else
-			b:setSize(84, 84)
+			OnScreenSites[table.getn(OnScreenSites)]:setSize(84, 84)
 		end
-		b:setBorderSize(0)
-		b:setTooltip(tooltip)
+		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
+		OnScreenSites[table.getn(OnScreenSites)]:setTooltip(tooltip)
+		
+		OnScreenSites[table.getn(OnScreenSites)]:requestMoveToBottom()
 	elseif (string.find(file, "sites") ~= nil) then -- different method for site graphics
 		local world_map_tile
-		local b
 		if (string.find(file, "settlement") ~= nil) then
 			world_map_tile = CPlayerColorGraphic:New(file)
 			local settlement_color = ""
@@ -1915,13 +1932,12 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			else
 				settlement_color = "gray"
 			end
-			b = PlayerColorImageButton("", settlement_color)
+			OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", settlement_color)
 		else
 			world_map_tile = CGraphic:New(file)
-			b = ImageButton("")
+			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("")
 		end
 		world_map_tile:Load()
-		OnScreenSites[table.getn(OnScreenSites) + 1] = b
 		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
 			function()
 				PlaySound("click")
@@ -1942,21 +1958,30 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
 		OnScreenSites[table.getn(OnScreenSites)]:setTooltip(tooltip)
+		
+		OnScreenSites[table.getn(OnScreenSites)]:requestMoveToBottom()
 	else -- different method for fog tiles
-		local world_map_tile = CGraphic:New(file)
-		world_map_tile:Load()
-		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1] = ImageWidget(world_map_tile)
+		OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setEnabled(false)
+		local world_map_tile = CGraphic:Get(file)
+		if (world_map_tile == nil) then
+			world_map_tile = CGraphic:New(file)
+			world_map_tile:Load()
+		end
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setNormalImage(world_map_tile)
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPressedImage(world_map_tile)
+		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setDisabledImage(world_map_tile)
 		if (tile_x == WorldMapOffsetX and tile_y == WorldMapOffsetY) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		elseif (tile_x == WorldMapOffsetX) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 			if ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(80, 48 - height_indent)
 			else
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(80, 96)
 			end
 		elseif (tile_y == WorldMapOffsetY) then
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 80)
 			elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
@@ -1967,7 +1992,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(96, 80)
 			end
 		else
-			GrandStrategyMenu:add(OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1], 64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
+			OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) - 16 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 16 + height_indent)
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(48 - width_indent + last_tile_width_modifier, 96)
 			elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
@@ -2540,31 +2565,40 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 end
 
 function DrawOnScreenTiles()
-	if (OnScreenTiles ~= nil) then
-		for i=1,table.getn(OnScreenTiles) do
-			for j=1,table.getn(OnScreenTiles[i]) do
-				if (OnScreenTiles[i][j] ~= nil) then
-					GrandStrategyMenu:remove(OnScreenTiles[i][j])
-				end
-			end
-		end
-	end
-	
 	if (OnScreenSites ~= nil) then
 		for i=1,table.getn(OnScreenSites) do
 			if (OnScreenSites[i] ~= nil) then
 				GrandStrategyMenu:remove(OnScreenSites[i])
 			end
 		end
+		
+		for i=table.getn(OnScreenSites),table.getn(OnScreenSites), -1 do
+			if (OnScreenSites[i] ~= nil) then
+				OnScreenSites[i] = nil
+			end
+		end
 	end
 
-	OnScreenTiles = nil
-	OnScreenTiles = {}
-	
+	if (OnScreenTiles == nil) then
+		OnScreenTiles = {}
+	end
+
 	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
-		OnScreenTiles[y - WorldMapOffsetY + 1] = {}
+		if (OnScreenTiles[y - WorldMapOffsetY + 1] == nil) then
+			OnScreenTiles[y - WorldMapOffsetY + 1] = {}
+		end
+	end
+	
+	if (OnScreenBaseTiles == nil) then
+		OnScreenBaseTiles = {}
 	end
 
+	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
+		if (OnScreenBaseTiles[y - WorldMapOffsetY + 1] == nil) then
+			OnScreenBaseTiles[y - WorldMapOffsetY + 1] = {}
+		end
+	end
+	
 	OnScreenSites = nil
 	OnScreenSites = {}
 
@@ -2954,6 +2988,17 @@ function DrawOnScreenTiles()
 			end
 		end
 	end
+	
+	-- put every tile graphic that isn't terra incognita at the bottom
+	for x=(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)), WorldMapOffsetX, -1 do
+		for y=math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)), WorldMapOffsetY, -1 do
+			if (GetWorldMapTile(x, y) ~= "") then
+				OnScreenTiles[y - WorldMapOffsetY + 1][x - WorldMapOffsetX + 1]:requestMoveToBottom() -- move to bottom so that fog appears over it
+				OnScreenBaseTiles[y - WorldMapOffsetY + 1][x - WorldMapOffsetX + 1]:requestMoveToBottom() -- move to bottom so that fog appears over it
+			end
+		end
+	end
+	backgroundWidget:requestMoveToBottom()
 
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
@@ -2972,8 +3017,6 @@ function DrawOnScreenTiles()
 			end
 		end
 	end
-
-	DrawGrandStrategyInterface()
 end
 
 function DrawGrandStrategyResourceBar()
@@ -3423,6 +3466,10 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. ")"
 							end
 							
+							if (GetUnitTypeUpkeep(unitName) > 0) then
+								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unitName) .. " Gold Upkeep)"
+							end
+							
 							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
 							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
 								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
@@ -3642,6 +3689,10 @@ function DrawGrandStrategyInterface()
 							end
 							if (cost_tooltip ~= "") then
 								cost_tooltip = cost_tooltip .. ")"
+							end
+							
+							if (GetUnitTypeUpkeep(unitName) > 0) then
+								cost_tooltip = cost_tooltip .. "(" .. GetUnitTypeUpkeep(unitName) .. " upkeep)"
 							end
 							
 							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
@@ -4557,15 +4608,89 @@ function ClearGrandStrategyVariables()
 end
 
 function ClearGrandStrategyUIVariables()
+	if (OnScreenTiles ~= nil) then
+		for i=1,table.getn(OnScreenTiles) do
+			for j=1,table.getn(OnScreenTiles[i]) do
+				if (OnScreenTiles[i][j] ~= nil) then
+					GrandStrategyMenu:remove(OnScreenTiles[i][j])
+				end
+			end
+		end
+	end
 	OnScreenTiles = nil
+	
+	if (OnScreenBaseTiles ~= nil) then
+		for i=1,table.getn(OnScreenBaseTiles) do
+			for j=1,table.getn(OnScreenBaseTiles[i]) do
+				if (OnScreenBaseTiles[i][j] ~= nil) then
+					GrandStrategyMenu:remove(OnScreenBaseTiles[i][j])
+				end
+			end
+		end
+	end
+	OnScreenBaseTiles = nil
+	
+	if (OnScreenSites ~= nil) then
+		for i=1,table.getn(OnScreenSites) do
+			if (OnScreenSites[i] ~= nil) then
+				GrandStrategyMenu:remove(OnScreenSites[i])
+			end
+		end
+		
+		for i=table.getn(OnScreenSites),table.getn(OnScreenSites), -1 do
+			if (OnScreenSites[i] ~= nil) then
+				OnScreenSites[i] = nil
+			end
+		end
+	end
 	OnScreenSites = nil
+	
+	if (UIResourceBar ~= nil) then
+		GrandStrategyMenu:remove(UIResourceBar)
+	end
 	UIResourceBar = nil
 
+	if (UIElements ~= nil) then
+		for i=1,table.getn(UIElements) do
+			if (UIElements[i] ~= nil) then
+				GrandStrategyMenu:remove(UIElements[i])
+			end
+		end
+	end
 	UIElements = nil
+	
+	if (CommodityButtons ~= nil) then
+		for i=1,table.getn(CommodityButtons) do
+			if (CommodityButtons[i] ~= nil) then
+				GrandStrategyMenu:remove(CommodityButtons[i])
+			end
+		end
+	end
 	CommodityButtons = nil
+	
+	if (GrandStrategyLabels ~= nil) then
+		for i=1,table.getn(GrandStrategyLabels) do
+			if (GrandStrategyLabels[i] ~= nil) then
+				GrandStrategyMenu:remove(GrandStrategyLabels[i])
+			end
+		end
+	end
 	GrandStrategyLabels = nil
 
+	if (UIMinimap ~= nil) then
+		GrandStrategyMenu:remove(UIMinimap)
+	end
 	UIMinimap = nil
+	
+	if (MinimapTiles ~= nil) then
+		for i=1,table.getn(MinimapTiles) do
+			for j=1,table.getn(MinimapTiles[i]) do
+				if (MinimapTiles[i][j] ~= nil) then
+					GrandStrategyMenu:remove(MinimapTiles[i][j])
+				end
+			end
+		end
+	end
 	MinimapTiles = nil
 end
 

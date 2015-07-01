@@ -16485,3 +16485,9 @@ unit = CreateUnit(GetRandomCritterUnitType(), 15, {93, 80})
 unit = CreateUnit(GetRandomCritterUnitType(), 15, {21, 76})
 unit = CreateUnit(GetRandomCritterUnitType(), 15, {81, 106})
 unit = CreateUnit(GetRandomCritterUnitType(), 15, {73, 110})
+
+unit = CreateUnit("unit-raft", 15, {47, 99})
+unit = CreateUnit("unit-raft", 15, {40, 48})
+
+unit = CreateUnit("unit-raft", 15, {80, 28})
+unit = CreateUnit("unit-raft", 15, {87, 79})

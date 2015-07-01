@@ -193,6 +193,18 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.2.8
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Added tooltip for how much a unit's upkeep is when recruiting one.
+- Improved Grand Strategy mode optimization.
+
+* Maps
+- Added two rafts to the "Time for Decisions" map, to allow reaching two gold deposits near a coast in a more practical way.
+- Added four rafts to the "Looking Upwards" map.
+
+-----------------------------------------------------------------------
 - 1.2.7
 -----------------------------------------------------------------------
 
