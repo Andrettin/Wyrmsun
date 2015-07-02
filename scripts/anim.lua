@@ -796,8 +796,15 @@ DefineAnimations("animations-bed", {
 })
 
 DefineAnimations("animations-volcanic-crater", {
+	Attack = {
+		"unbreakable begin",
+		"exact-frame 0", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8",
+		"exact-frame 4", "attack", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8",
+		"unbreakable end", "wait 1",
+	},
 	Still = {
-		"exact-frame 0", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8", "exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8",
+		"exact-frame 0", "wait 8", "exact-frame 1", "wait 8", "exact-frame 2", "wait 8", "exact-frame 3", "wait 8",
+		"exact-frame 4", "wait 8", "exact-frame 5", "wait 8", "exact-frame 6", "wait 8",
 	},
 })
 

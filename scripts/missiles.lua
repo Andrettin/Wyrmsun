@@ -49,20 +49,20 @@ DefineMissileType("missile-javelin",
 
 DefineMissileType("missile-dwarven-ballista-bolt",
   { File = "missiles/dwarven_ballista_bolt.png", Size = {64, 64}, Frames = 5, NumDirections = 9,
-  DrawLevel = 50, ImpactSound = "explosion",
+  DrawLevel = 44, ImpactSound = "explosion",
   Class = "missile-class-point-to-point", Sleep = 1, Speed = 8, Range = 2,
   ImpactMissile = "missile-impact", SplashFactor = 4 } )
 
 DefineMissileType("missile-catapult-flaming-rock",
   { File = "missiles/catapult_flaming_rock.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
   ImpactSound = "explosion",
-  DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
+  DrawLevel = 44, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
   ImpactMissile = "missile-impact", SplashFactor = 4 } )
   
 DefineMissileType("missile-slime-glob",
   { File = "missiles/slime_glob.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
   ImpactSound = "squishy-attack",
-  DrawLevel = 50, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
+  DrawLevel = 44, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
   ImpactMissile = "missile-impact-slime", SplashFactor = 4 } )
   
 DefineMissileType("missile-thrown-goblin",
@@ -73,11 +73,11 @@ DefineMissileType("missile-thrown-goblin",
 
 DefineMissileType("missile-impact",
   { File = "missiles/siege_projectile_impact.png", Size = {48, 48}, Frames = 10, NumDirections = 1,
-  DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
+  DrawLevel = 44, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1 } )
 
 DefineMissileType("missile-impact-slime",
   { File = "missiles/siege_projectile_impact_slime.png", Size = {32, 32}, Frames = 3, NumDirections = 1,
-  DrawLevel = 50, Class = "missile-class-stay", Sleep = 4, Speed = 16, Range = 1 } )
+  DrawLevel = 44, Class = "missile-class-stay", Sleep = 4, Speed = 16, Range = 1 } )
 
 DefineMissileType("missile-axe-twirl",
   { File = "missiles/axe_twirl.png", Size = {72, 72}, Frames = 8, NumDirections = 1,

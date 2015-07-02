@@ -2098,6 +2098,23 @@ DefineUnitType("unit-stalagmites", { Name = _("Stalagmites"),
 	Sounds = {} }
 )
 
+function VolcanicCraterSpit(unit) -- this is called every second
+	OrderUnit(GetUnitVariable(unit, "Player"), GetUnitVariable(unit, "Ident"), {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, nil, "stop")
+	if (CurrentQuest ~= "The Wyrm") then
+		if (SyncRand(10) == 0) then -- one chance in thirty to happen (that is, this is going to happen on average once every half minute)
+			if (SyncRand(2) == 0) then
+				local target_x = GetUnitVariable(unit,"PosX") + SyncRand(GetUnitVariable(unit,"AttackRange") + GetUnitTypeData(GetUnitVariable(unit, "Ident"), "TileWidth") + GetUnitVariable(unit,"AttackRange")) - GetUnitVariable(unit,"AttackRange")
+				local target_y = GetUnitVariable(unit,"PosY") + SyncRand(GetUnitVariable(unit,"AttackRange") + GetUnitTypeData(GetUnitVariable(unit, "Ident"), "TileHeight") + GetUnitVariable(unit,"AttackRange")) - GetUnitVariable(unit,"AttackRange")
+				OrderUnit(GetUnitVariable(unit, "Player"), GetUnitVariable(unit, "Ident"), {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, {target_x, target_y}, "attack-ground")
+			else
+				if (GetNumUnitsAt(15, "unit-miasma", {0, 0}, {256, 256}) < GetNumUnitsAt(15, "unit-volcanic-crater", {0, 0}, {256, 256})) then
+					CreateUnit("unit-miasma", 15, {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")})
+				end
+			end
+		end
+	end
+end
+
 DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
 	Image = {"file", "neutral/decorations/volcanic_crater.png", "size", {64, 64}},
 	Animations = "animations-volcanic-crater", Icon = "icon-volcanic-crater",
@@ -2106,14 +2123,20 @@ DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
 	DrawLevel = 30,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 0,
-	BasicDamage = 0, Missile = "missile-none",
+	BasicDamage = 80, Missile = "missile-catapult-flaming-rock",
 	Priority = 0,
 	Type = "land",
+	MaxAttackRange = 2,
+	GroundAttack = true,
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true,
 	IsNotSelectable = true,
 	Decoration = true,
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
+	Accuracy = 0,
+	OnEachSecond = VolcanicCraterSpit,
 	Sounds = {} }
 )
 
@@ -3136,9 +3159,10 @@ DefineUnitType("unit-roaming-fog", { Name = _("Roaming Fog"),
 	RightMouseAction = "move",
 	RandomMovementProbability = 100,
 	NumDirections = 1,
-	NonSolid = true, 
+	Diminutive = true, 
 	Transparency = 50,
 	Decoration = true,
+	Indestructible = true,
 	VisibleUnderFog = false,
 	Sounds = {
 		"selected", "click",
@@ -3168,9 +3192,10 @@ DefineUnitType("unit-roaming-fog-small", { Name = _("Roaming Fog"),
 	RightMouseAction = "move",
 	RandomMovementProbability = 100,
 	NumDirections = 1,
-	NonSolid = true, 
+	Diminutive = true, 
 	Transparency = 50,
 	Decoration = true,
+	Indestructible = true,
 	VisibleUnderFog = false,
 	Sounds = {
 		"selected", "click",
@@ -3186,7 +3211,7 @@ DefineUnitType("unit-miasma", { Name = _("Miasma"),
 	Animations = "animations-roaming-fog", Icon = "icon-miasma",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 3,
-	HitPoints = 1,
+	HitPoints = 30, -- miasma lives for 30 seconds
 	DrawLevel = 45,
 	TileSize = {4, 4}, BoxSize = {127, 127},
 	SightRange = 1,
@@ -3200,10 +3225,12 @@ DefineUnitType("unit-miasma", { Name = _("Miasma"),
 	RightMouseAction = "move",
 	RandomMovementProbability = 100,
 	NumDirections = 1,
-	NonSolid = true, 
+	Diminutive = true,
 	Transparency = 50,
 	Decoration = true,
+	Indestructible = true,
 	VisibleUnderFog = false,
+	RegenerationRate = -1,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bat-selected",
