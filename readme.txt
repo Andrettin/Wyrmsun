@@ -213,6 +213,9 @@ https://github.com/Andrettin/Wyrmsun
 - Workers now gather gold at a slower pace.
 - Improved missile origin pixel centralization for multi-tile units.
 
+* Upgrades
+- New graphics for the Dwarven and Teuton Coinage upgrades (by Jinn).
+
 -----------------------------------------------------------------------
 - 1.2.7
 -----------------------------------------------------------------------

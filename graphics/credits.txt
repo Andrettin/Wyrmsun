@@ -346,6 +346,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/axe_2.png (modified from Ransom.00's icon)
 /graphics/dwarf/icons/baglur.png
 /graphics/dwarf/icons/boots.png (modified from igoku's icon)
+/graphics/dwarf/icons/coinage.png
 /graphics/dwarf/icons/durin.png
 /graphics/dwarf/icons/dwarven_axefighter.png
 /graphics/dwarf/icons/dwarven_axefighter_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
@@ -647,6 +648,7 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/buildings/town_hall_shadow.png
 /graphics/teuton/buildings/watch_tower.png
 /graphics/teuton/buildings/watch_tower_shadow.png
+/graphics/teuton/icons/coinage.png
 /graphics/teuton/icons/iron_shield.png
 /graphics/teuton/icons/iron_shield_extra_1.png
 /graphics/teuton/icons/marbod.png
@@ -814,12 +816,10 @@ Jim16:
 /graphics/neutral/buildings/runestone.png (later modified by Nikita_Sadkov)
 
 KPJ:
-/graphics/dwarf/icons/coinage.png
 /graphics/neutral/buildings/silver_rock_1.png
 /graphics/neutral/buildings/silver_rock_2.png
 /graphics/neutral/buildings/silver_rock_3.png
 /graphics/neutral/buildings/silver_rock_4.png
-/graphics/teuton/icons/coinage.png
 /graphics/ui/fonts/KPJsWyrmSunFont.png
 
 Leo:

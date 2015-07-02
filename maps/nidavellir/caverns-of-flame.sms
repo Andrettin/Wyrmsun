@@ -111,8 +111,19 @@ SetRawTile(56, 41, "Water")
 SetRawTile(62, 46, "Rock")
 SetRawTile(64, 53, "Water")
 
+-- to give enough space to player 5 to have a town hall
+SetRawTile(51, 35, "Rough")
+SetRawTile(51, 36, "Rough")
+SetRawTile(52, 35, "Rough")
+
 AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 
+SetRawTile(60, 38, "Land")
+SetRawTile(60, 39, "Land")
+SetRawTile(60, 40, "Land")
+SetRawTile(61, 38, "Land")
+SetRawTile(61, 39, "Land")
+SetRawTile(61, 40, "Land")
 
 ApplyRawTiles()
 
@@ -187,13 +198,13 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-gold-rock", 15, {17, 32})
 	unit = CreateUnit("unit-gold-rock", 15, {17, 32})
 	unit = CreateUnit("unit-gold-rock", 15, {17, 32})
-	unit = CreateUnit("unit-gold-deposit", 15, {57, 38})
+	unit = CreateUnit("unit-gold-deposit", 15, {58, 38})
 	SetResourcesHeld(unit, 100000)
-	unit = CreateUnit("unit-gold-rock", 15, {58, 39})
-	unit = CreateUnit("unit-gold-rock", 15, {58, 39})
-	unit = CreateUnit("unit-gold-rock", 15, {58, 39})
-	unit = CreateUnit("unit-gold-rock", 15, {58, 39})
-	unit = CreateUnit("unit-gold-rock", 15, {58, 39})
+	unit = CreateUnit("unit-gold-rock", 15, {59, 39})
+	unit = CreateUnit("unit-gold-rock", 15, {59, 39})
+	unit = CreateUnit("unit-gold-rock", 15, {59, 39})
+	unit = CreateUnit("unit-gold-rock", 15, {59, 39})
+	unit = CreateUnit("unit-gold-rock", 15, {59, 39})
 
 	unit = CreateUnit("unit-glyph", 15, {36, 46})
 	unit = CreateUnit("unit-glyph", 15, {36, 47})
