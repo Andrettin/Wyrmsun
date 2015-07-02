@@ -204,6 +204,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Added two rafts to the "Time for Decisions" map, to allow reaching two gold deposits near a coast in a more practical way.
 - Added four rafts to the "Looking Upwards" map.
+- Improvements to the Cavern of Flames map.
 
 * Terrain
 - Volcanic craters now spit flaming rocks and miasma (except in The Wyrm quest).
