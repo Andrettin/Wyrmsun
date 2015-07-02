@@ -199,6 +199,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added tooltip for how much a unit's upkeep is when recruiting one.
 - Improved Grand Strategy mode optimization.
+- Greeks, Latins and Teutons now generate a new cultural settlement name when assimilating a province if none is preset for that province.
 
 * Maps
 - Added two rafts to the "Time for Decisions" map, to allow reaching two gold deposits near a coast in a more practical way.

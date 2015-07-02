@@ -38,7 +38,11 @@ function LoadProvinces(world)
 			Name = "Taulantia",
 			Tiles = { {134, 33}, {134, 34} },
 			Owner = "",
-			SettlementName = "Dyr",
+			SettlementName = "Dyrrhachium",
+			CulturalSettlementNames = {
+				greek = "Epidamnus",
+				latin = "Dyrrhachium"
+			},
 			SettlementLocation = {134, 34}, -- Dyr
 			SettlementBuildings = {
 			},
@@ -56,6 +60,9 @@ function LoadProvinces(world)
 			Tiles = { {115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37} },
 			Owner = "",
 			SettlementName = "Corduba",
+			CulturalSettlementNames = {
+				latin = "Corduba"
+			},
 			SettlementLocation = {116, 36}, -- Cordoba
 			SettlementBuildings = {
 			},
@@ -72,6 +79,9 @@ function LoadProvinces(world)
 			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
 			Owner = "",
 			SettlementName = "Tolosa",
+			CulturalSettlementNames = {
+				latin = "Tolosa"
+			},
 			SettlementLocation = {120, 32}, -- Toulouse
 			SettlementBuildings = {
 			},
@@ -89,6 +99,9 @@ function LoadProvinces(world)
 			Tiles = { {119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34} },
 			Owner = "",
 			SettlementName = "Caesaraugusta",
+			CulturalSettlementNames = {
+				latin = "Caesaraugusta"
+			},
 			SettlementLocation = {119, 34}, -- Zaragoza
 			SettlementBuildings = {
 			},
@@ -121,6 +134,10 @@ function LoadProvinces(world)
 			Tiles = { {135, 36}, {136, 36} },
 			Owner = "",
 			SettlementName = "Athens",
+			CulturalSettlementNames = {
+				greek = "Athens",
+				latin = "Athens"
+			},
 			SettlementLocation = {136, 36}, -- Athens
 			SettlementBuildings = {
 			},
@@ -177,7 +194,7 @@ function LoadProvinces(world)
 			Owner = "",
 			SettlementName = "Ratisbon",
 			CulturalSettlementNames = {
-				teuton = "Regina Castra",
+				latin = "Regina Castra",
 				teuton = "Regensburg"
 			},
 			SettlementLocation = {128, 29}, -- Regensburg
@@ -199,6 +216,9 @@ function LoadProvinces(world)
 			Tiles = { {122, 27}, {122, 28}, {123, 28}, {124, 28} },
 			Owner = "",
 			SettlementName = "Aduatuca",
+			CulturalSettlementNames = {
+				latin = "Aduatuca"
+			},
 			SettlementLocation = {123, 28}, -- Brussels
 			SettlementBuildings = {
 			},
@@ -275,6 +295,10 @@ function LoadProvinces(world)
 			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
 			Owner = "",
 			SettlementName = "Odessus",
+			CulturalSettlementNames = {
+				greek = "Odessus",
+				latin = "Odessus"
+			},
 			SettlementLocation = {139, 33}, -- Odessus
 			SettlementBuildings = {
 			},
@@ -292,6 +316,9 @@ function LoadProvinces(world)
 			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
 			Owner = "",
 			SettlementName = "Lugdunum",
+			CulturalSettlementNames = {
+				latin = "Lugdunum"
+			},
 			SettlementLocation = {123, 31}, -- Lyon
 			SettlementBuildings = {
 			},
@@ -309,6 +336,9 @@ function LoadProvinces(world)
 			Tiles = { {115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36} },
 			Owner = "",
 			SettlementName = "Toletum",
+			CulturalSettlementNames = {
+				latin = "Toletum"
+			},
 			SettlementLocation = {117, 35}, -- Toledo
 			SettlementBuildings = {
 			},
@@ -322,6 +352,9 @@ function LoadProvinces(world)
 			Tiles = { {126, 34} },
 			Owner = "",
 			SettlementName = "Aleria",
+			CulturalSettlementNames = {
+				latin = "Aleria"
+			},
 			SettlementLocation = {126, 34},
 			SettlementBuildings = {
 			},
@@ -357,6 +390,9 @@ function LoadProvinces(world)
 			Tiles = { {130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33} },
 			Owner = "",
 			SettlementName = "Salonae",
+			CulturalSettlementNames = {
+				latin = "Salonae"
+			},
 			SettlementLocation = {131, 31}, -- Zagreb
 			SettlementBuildings = {
 			},
@@ -415,6 +451,9 @@ function LoadProvinces(world)
 			Tiles = { {119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29} },
 			Owner = "",
 			SettlementName = "Lutetia",
+			CulturalSettlementNames = {
+				latin = "Lutetia"
+			},
 			SettlementLocation = {121, 29}, -- Paris
 			SettlementBuildings = {
 			},
@@ -447,6 +486,9 @@ function LoadProvinces(world)
 			Tiles = { {114, 33}, {115, 33} },
 			Owner = "",
 			SettlementName = "Lucus Augusti",
+			CulturalSettlementNames = {
+				latin = "Lucus Augusti"
+			},
 --			SettlementLocation = {114, 33}, -- Corunna
 			SettlementLocation = {115, 33}, -- moved here so that it is not on the same spot as the mine
 			SettlementBuildings = {
@@ -500,6 +542,9 @@ function LoadProvinces(world)
 			Tiles = { {132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29} },
 			Owner = "",
 			SettlementName = "Aquincum",
+			CulturalSettlementNames = {
+				latin = "Aquincum"
+			},
 			SettlementLocation = {133, 30}, -- Budapest
 			SettlementBuildings = {
 			},
@@ -545,6 +590,9 @@ function LoadProvinces(world)
 			Tiles = { {129, 33}, {129, 34} },
 			Owner = "",
 			SettlementName = "Rome",
+			CulturalSettlementNames = {
+				latin = "Roma"
+			},
 			SettlementLocation = {129, 34}, -- Rome
 			SettlementBuildings = {
 			},
@@ -578,6 +626,10 @@ function LoadProvinces(world)
 			Tiles = { {134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34} },
 			Owner = "",
 			SettlementName = "Aegae",
+			CulturalSettlementNames = {
+				greek = "Aegae",
+				latin = "Edessa"
+			},
 			SettlementLocation = {135, 34}, -- Aegae
 			SettlementBuildings = {
 			},
@@ -610,6 +662,10 @@ function LoadProvinces(world)
 			Tiles = { {130, 34}, {131, 34}, {131, 35}, {131, 36}, {132, 35} },
 			Owner = "",
 			SettlementName = "Neapolis",
+			CulturalSettlementNames = {
+				greek = "Neapolis",
+				latin = "Neapolis"
+			},
 			SettlementLocation = {130, 34}, -- Naples
 			SettlementBuildings = {
 			},
@@ -664,6 +720,9 @@ function LoadProvinces(world)
 			Tiles = { {135, 37}, {136, 37} },
 			Owner = "",
 			SettlementName = "Mycenae",
+			CulturalSettlementNames = {
+				greek = "Mycenae"
+			},
 			SettlementLocation = {136, 37}, -- Mycenae
 			SettlementBuildings = {
 			},
@@ -695,6 +754,9 @@ function LoadProvinces(world)
 			Tiles = { {114, 34}, {114, 35}, {114, 36}, {114, 37} },
 			Owner = "",
 			SettlementName = "Olisipo",
+			CulturalSettlementNames = {
+				latin = "Olisipo"
+			},
 			SettlementLocation = {114, 36}, -- Lisbon
 			SettlementBuildings = {
 			},
@@ -712,13 +774,12 @@ function LoadProvinces(world)
 			},
 			Tiles = { {130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25} },
 			Owner = "",
-	--		SettlementName = "Konigsberg",
+--			SettlementName = "Konigsberg",
 			SettlementLocation = {134, 25}, -- Königsberg
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
-				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
 			SettlementTerrain = "Plns",
 			Coastal = true
@@ -768,6 +829,9 @@ function LoadProvinces(world)
 			Tiles = { {126, 36} },
 			Owner = "",
 			SettlementName = "Caralis",
+			CulturalSettlementNames = {
+				latin = "Caralis"
+			},
 			SettlementLocation = {126, 36},
 			SettlementBuildings = {
 			},
@@ -800,6 +864,9 @@ function LoadProvinces(world)
 			Tiles = { {134, 32}, {135, 32}, {135, 33} },
 			Owner = "",
 			SettlementName = "Viminacium",
+			CulturalSettlementNames = {
+				latin = "Viminacium"
+			},
 			SettlementLocation = {135, 32}, -- Viminacium
 			SettlementBuildings = {
 			},
@@ -814,6 +881,9 @@ function LoadProvinces(world)
 			Tiles = { {129, 37} },
 			Owner = "",
 			SettlementName = "Syracuse",
+			CulturalSettlementNames = {
+				latin = "Syracusae"
+			},
 			SettlementLocation = {129, 37}, -- Palermo
 			SettlementBuildings = {
 			},
@@ -842,6 +912,9 @@ function LoadProvinces(world)
 			Tiles = { {129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21} },
 			Owner = "",
 			SettlementName = "Sigtun",
+			CulturalSettlementNames = {
+				norse = "Sigtun"
+			},
 			SettlementLocation = {132, 21}, -- Stockholm / Sigtun
 			SettlementBuildings = {
 			},
@@ -873,7 +946,11 @@ function LoadProvinces(world)
 			Tiles = { {138, 34}, {139, 34} },
 			Owner = "",
 			SettlementName = "Byzantium",
-			SettlementLocation = {139, 34}, -- Athens
+			CulturalSettlementNames = {
+				greek = "Byzantium",
+				latin = "Byzantium"
+			},
+			SettlementLocation = {139, 34}, -- Constantinople
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
@@ -1307,18 +1384,21 @@ function LoadProvinces(world)
 		for key, value in pairs(province_table) do
 			WorldMapProvinces[key] = {}
 			WorldMapProvinces[key]["Name"] = province_table[key].Name
+			
+			WorldMapProvinces[key]["CulturalNames"] = {}
 			if (province_table[key].CulturalNames ~= nil) then
-				WorldMapProvinces[key]["CulturalNames"] = {}
 				for second_key, second_value in pairs(province_table[key].CulturalNames) do
 					WorldMapProvinces[key].CulturalNames[second_key] = province_table[key].CulturalNames[second_key]
 				end
 			end
+			
+			WorldMapProvinces[key]["CulturalSettlementNames"] = {}
 			if (province_table[key].CulturalSettlementNames ~= nil) then
-				WorldMapProvinces[key]["CulturalSettlementNames"] = {}
 				for second_key, second_value in pairs(province_table[key].CulturalSettlementNames) do
 					WorldMapProvinces[key].CulturalSettlementNames[second_key] = province_table[key].CulturalSettlementNames[second_key]
 				end
 			end
+			
 			if (province_table[key].Tiles ~= nil) then
 				WorldMapProvinces[key]["Tiles"] = {}
 				for i=1,table.getn(province_table[key].Tiles) do

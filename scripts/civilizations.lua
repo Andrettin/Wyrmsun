@@ -85,14 +85,39 @@ DefineRaceNames(
 		"display", "Dwarf",
 		"visible",
 		"species", "dwarf",
-		"personal_names", {
+		"personal-names", {
 			"Ai", "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aiglondur", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alberich", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Alf", "Alfrigg", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Andvari", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Aurvang", "Austri", "Bafur", "Baglur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Brokk", "Burin", "Dain", "Delling", "Dolgthvari", "Dori", "Draupnir", "Duf", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Dulcatulos", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Durin", "Dursil", "Durstorn", "Dvalin", "Eggerich", "Eitri", "Fal", "Fid", "Fili", "Fjalar", "Frag", "Frar", "Frosti", "Fundin", "Galar", "Ginnar", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glinar", "Gloin", "Glomin", "Glonoin", "Goldemar", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Grerr", "Grimnir", "Hamel", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Ivaldi", "Jari", "Karrag", "Kili", "Kinan", "Kuhnar", "Laurin", "Lit", "Loni", "Modsognir", "Nabbi", "Nain", "Nar", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Neglur", "Nidi", "Niping", "Noiraran", "Nordri", "Nori", "Nyi", "Nyr", "Nyrad", "Oin", "Olurf", "Ori", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Regin", "Rekk", "Relgorn", "Rugnur", "Rynan", "Skavid", "Skirfir", "Sudri", "Sviar", "Sviur", "Theganli", "Thekk", "Thjodrorir", "Thorin", "Thrain", "Thror", "Thursagan", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus", "Ulrek", "Uni", "Vali", "Var", "Vegdrasil", "Vestri", "Vig", "Virfir", "Vit",
-			"Durahn", "Isuldan", -- names from Dyson Logos' The Tomb of Durâhn Oakenshield
+			"Durahn", "Isuldan", -- names from Dyson Logos' The Tomb of DurÃ¢hn Oakenshield
 			"Urist"
 		}, -- Austri = East, Draupnir = Dropper, Ivaldi = The Mighty, Nordri = North, Regin = Counsel-Giver, Sudri = South, Vestri = "West"
-		"personal_name_prefixes", {"Al", "Eikin", "Gand", "Mjod", "Rad", "Sol", "Vind"}, -- Al = Mighty / All, Eikin = Oak, Gand = Magic, Mjod = Mead, Rad = Swift, Sol = Sun, Vind = Wind
-		"personal_name_suffixes", {"alf", "blindi", "skjaldi", "svid", "thjof", "vis", "vitnir"} -- Alf = Elf, Blindi = Blinded, Skjaldi = Shield, Svid = in Counsel, Thjof = Thief, Vis = Knowing, Vitnir = wolf
-		-- Female names: Gneissus (from Dyson Logos' The Tomb of Durâhn Oakenshield)
+		"personal-name-prefixes", {"Al", "Eikin", "Gand", "Mjod", "Rad", "Sol", "Vind"}, -- Al = Mighty / All, Eikin = Oak, Gand = Magic, Mjod = Mead, Rad = Swift, Sol = Sun, Vind = Wind
+		"personal-name-suffixes", {"alf", "blindi", "skjaldi", "svid", "thjof", "vis", "vitnir"}, -- Alf = Elf, Blindi = Blinded, Skjaldi = Shield, Svid = in Counsel, Thjof = Thief, Vis = Knowing, Vitnir = wolf
+		-- Female names: Gneissus (from Dyson Logos' The Tomb of DurÃ¢hn Oakenshield)
+		"province-names", {
+			"Aurvangar", -- wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir
+			"Kal Kartha", -- from Wesnoth
+			"Knalga" -- from Wesnoth
+		},
+		"province-name-prefixes", {
+			"Chain", -- from Wesnoth, "Caverns of Chaincolt"
+			"High", -- from Wesnoth, "Highbrook Pass"
+			"Joru", -- from Norse mythology, "Joruvellir" = "Fields of Sand", "Joru" = "Sand"
+			"Svarins" -- from Norse mythology, "Svarinshaug" = "Svarin's Mound", "Svarins" = "Svarin's"
+		},
+		"province-name-suffixes", {
+			"brook", -- from Wesnoth, "Highbrook Pass"
+			"colt", -- from Wesnoth, "Caverns of Chaincolt"
+			"haug", -- from Norse mythology, "Svarinshaug" = "Svarin's Mound", "haug" = "mound"
+			"vellir" -- from Norse mythology, "Joruvellir" = "Fields of Sand", "vellir" = "fields"
+		}
+		--[[
+		-- commented out for now, only activate settlement name generation for dwarves when there is more variety to them
+		"settlement-names", {
+			"Kal Kartha", -- from Wesnoth
+			"Knalga", -- from Wesnoth
+			"Lyr" -- hall built by dwarves in Norse mythology
+		}
+		--]]
 	},
 	--[[
 	"race", {
@@ -100,7 +125,7 @@ DefineRaceNames(
 		"display", "Elf",
 		"visible",
 		"species", "elf",
-		"personal_names", {"Aendan", "Amadrieriand", "Amáril", "Amelad", "Ameldor", "Amendel", "Ameng", "Amilmaldur", "Amilmalith", "Amilmandir", "Amind", "Amiol", "Amiorion", "Amithrarion", "Amóldor", "Amorfimir", "Amorfir", "Amowyn", "Amulas", "Amundil", "Anán", "Anebrin", "Anebrir", "Anémbor", "Anénduil", "Anerion", "Anilad", "Anil-Gawyn", "Anilmambor", "Anilmariand", "Anior", "Anithranduil", "Anol", "Anon", "Anorfing", "Anundil", "Asaeri", "Belán", "Belandil", "Belarandel", "Belel", "Belén", "Belil-Gandil", "Belilmand", "Belilmang", "Beliondil", "Beliril", "Belithraldor", "Belithrawyn", "Belólad", "Belómir", "Belondel", "Belyrion", "Cadriembor", "Cadrieriand", "Cálad", "Caladrielas", "Calándel", "Caldur", "Cáldur", "Calebrindel", "Calebrindir", "Calénduil", "Calil-Gandir", "Calil-Gawyn", "Calioriand", "Caliril", "Calónduil", "Caloril", "Cándir", "Canduil", "Caraldur", "Carang", "Célad", "Celadrieriand", "Celang", "Celaral", "Celarandil", "Celáriand", "Celebririon", "Celelas", "Celendel", "Celér", "Celilmalas", "Celiondir", "Celior", "Celiorion", "Celong", "Celór", "Celóril", "Celorion", "Celundir", "Celuwyn", "Celyndel", "Cénduil", "Cindil", "Ciong", "Cithralad", "Cithraldur", "Cithrand", "Cithrandel", "Cithraril", "Col", "Corfil", "Corfildur", "Cówyn", "Crintil", "Cun", "Cundir", "Cylas", "Dain", "Delán", "Delánd", "Delandel", "Delaraldur", "Deláril", "Delawyn", "Deléng", "Delilmaldor", "Deliol", "Delithrar", "Deliwyn", "Delóldor", "Delorfilad", "Delorfilith", "Delorion", "Delundil", "Ealin", "Eäradriendel", "Eäradrier", "Eäránduil", "Eäraralad", "Eärebrindel", "Eäréldor", "Eäreng", "Eärérion", "Eärithrandil", "Eäromir", "Eärorfiriand", "Eäryldur", "Eäryriand", "Egil", "Eladrieng", "Elálith", "Elánd", "Elándil", "Elebrildor", "Elebrindel", "Elebriril", "Elélas", "Elémbor", "Elemir", "Elen", "Elil-Garil", "Elilmaldur", "Eliomir", "Eliondil", "Elolas", "Elólas", "Elor", "Elorfilad", "Elradrien", "Elralith", "Elran", "Elreldur", "Elrilmand", "Elrioldor", "Elriolith", "Elrithralith", "Elrithranduil", "Elrorfir", "Elval", "Elvandir", "Elvaramir", "Elváwyn", "Elvebrind", "Elvebrindel", "Elvélith", "Elvémir", "Elverion", "Elvil-Garion", "Elvilmaldur", "Elvilmaril", "Elvioldur", "Elvombor", "Elvónduil", "Elvorfimir", "Elvorfiriand", "Elvorfiril", "Elvóriand", "Elvund", "Elyldor", "Elyrion", "Eowambor", "Eowanduil", "Eowar", "Eowaraldor", "Eowaran", "Eowarar", "Eowariand", "Eowarion", "Eowebrind", "Eowémir", "Eowil-Garion", "Eowimbor", "Eowiomir", "Eowithrawyn", "Eowóldur", "Eoworfildor", "Eowówyn", "Eowylas", "Erlornas", "Fadriendel", "Fandel", "Farandir", "Fáwyn", "Fendel", "Fer", "Filman", "Fioril", "Fithraril", "Forfilas", "Fyrion", "Gadriendil", "Gadrieng", "Gaelir", "Gaenlar", "Galadrieldor", "Galálad", "Galálas", "Galalith", "Galar", "Galelas", "Galeldur", "Galelith", "Galémbor", "Galithrariand", "Galoldur", "Galtrid", "Galuldur", "Galur", "Galurion", "Gambor", "Gán", "Ganduil", "Garaldor", "Gararil", "Gelad", "Géril", "Gil-Gandel", "Gil-Gang", "Giombor", "Githral", "Githralad", "Gladriendil", "Glal", "Glámbor", "Glandil", "Glarang", "Glararil", "Glildur", "Glilmal", "Glimir", "Glinan", "Glindur", "Glior", "Glólas", "Gloldor", "Glómir", "Glon", "Glul", "Golad", "Gor", "Gumbor", "Gyl", "Gymbor", "Gyn", "Harariand", "Háriand", "Hebril", "Hemir", "Hénduil", "Hilas", "Hil-Garion", "Hilmariand", "Hiong", "Hirion", "Hithrandel", "Horfilad", "Horfindel", "Hundel", "Hymir", "Hyrion", "Hywyn", "Isadrieng", "Isándir", "Isarandel", "Isarar", "Iselas", "Isér", "Isilmandel", "Isirion", "Isithral", "Isól", "Isóndel", "Isóng", "Isorfilad", "Isorfindir", "Isuwyn", "Isyndel", "Kalenz", "Kalnar", "Landar", "Legal", "Legaran", "Legémir", "Legéril", "Legilad", "Legil-Gal", "Legiondel", "Legithralith", "Legorfindil", "Legorfirion", "Legówyn", "Legyl", "Legyn", "Linduilas", "Lómadrieril", "Lómarand", "Lomarfel", "Lómariand", "Lómebrilad", "Lómebrind", "Lómémbor", "Lómilmaril", "Lómiriand", "Lómorfindil", "Lómowyn", "Losnin", "Lyndar", "Madrieril", "Maldur", "Mánduil", "Maraldur", "Mebrin", "Méng", "Mérion", "Miolith", "Miomir", "Mithrand", "Mondir", "Móndir", "Morfilas", "Morfin", "Morfiriand", "Mylith", "Nadrieldor", "Nalith", "Nán", "Nél", "Nil-Galas", "Nil-Galith", "Nil-Gar", "Nilmar", "Nóndel", "Norfildor", "Norfilith", "Norfindil", "Norfindir", "Numbor", "Nyldur", "Padrieriand", "Padrieril", "Pamir", "Paraldor", "Parariand", "Pilmalad", "Pindir", "Pór", "Porfildur", "Pumbor", "Pyldur", "Raesil", "Rebrir", "Réndir", "Rilmandil", "Rithrandil", "Ról", "Róldor", "Roldur", "Róldur", "Rorfilad", "Rorfindil", "Rówyn", "Ryn", "Sadrielas", "Salira", "Sebrin", "Sebriril", "Sénd", "Sil-Gal", "Slagfid", "Sólad", "Sorfind", "Sóriand", "Tadriendir", "Taral", "Taraldur", "Táriand", "Tendel", "Téwyn", "Thradrieriand", "Thrambor", "Thraral", "Threbring", "Thrélad", "Thréldur", "Thril-Gamir", "Thril-Gandir", "Thril-Gar", "Thrilmandel", "Thrimir", "Thrion", "Thrithran", "Throlas", "Thrón", "Thróng", "Thrund", "Thryriand", "Til-Gan", "Tilmalad", "Tilmalas", "Tinandir", "Tinarambor", "Tinarariand", "Tinén", "Tinil-Ganduil", "Tinilmand", "Tinilmawyn", "Tinimir", "Tinindil", "Tinithrar", "Tinoldor", "Tinond", "Tinorfind", "Tinorfiriand", "Tinóriand", "Tinowyn", "Tinun", "Tinyl", "Tion", "Tolas", "Torfildur", "Tówyn", "Tylad", "Unadrieldor", "Unadrier", "Unál", "Unalas", "Unálas", "Unaraldur", "Unaril", "Unárion", "Unebrin", "Unebrind", "Uneldor", "Unil", "Unil-Gan", "Uniolith", "Unioril", "Unólith", "Unombor", "Unóndel", "Unondir", "Unorfildor", "Unorfiril", "Unorfiwyn", "Unulad", "Uradredia", "Uradrielas", "Uradrierion", "Urálas", "Urálith", "Urambor", "Urér", "Uril-Gambor", "Urilmalith", "Uróldor", "Urorfildor", "Urul", "Urymir", "Válad", "Ván", "Vándel", "Vandir", "Varalas", "Vararion", "Vebril", "Vebrilas", "Vebrinduil", "Vel", "Velon", "Vilith", "Vol", "Vólas", "Vóldur", "Volund", "Vondel", "Vorfin", "Vorfindil", "Vulas", "Vuldur", "Vunduil", "Vylas", "Vyldor"},
+		"personal-names", {"Aendan", "Amadrieriand", "AmÃ¡ril", "Amelad", "Ameldor", "Amendel", "Ameng", "Amilmaldur", "Amilmalith", "Amilmandir", "Amind", "Amiol", "Amiorion", "Amithrarion", "AmÃ³ldor", "Amorfimir", "Amorfir", "Amowyn", "Amulas", "Amundil", "AnÃ¡n", "Anebrin", "Anebrir", "AnÃ©mbor", "AnÃ©nduil", "Anerion", "Anilad", "Anil-Gawyn", "Anilmambor", "Anilmariand", "Anior", "Anithranduil", "Anol", "Anon", "Anorfing", "Anundil", "Asaeri", "BelÃ¡n", "Belandil", "Belarandel", "Belel", "BelÃ©n", "Belil-Gandil", "Belilmand", "Belilmang", "Beliondil", "Beliril", "Belithraldor", "Belithrawyn", "BelÃ³lad", "BelÃ³mir", "Belondel", "Belyrion", "Cadriembor", "Cadrieriand", "CÃ¡lad", "Caladrielas", "CalÃ¡ndel", "Caldur", "CÃ¡ldur", "Calebrindel", "Calebrindir", "CalÃ©nduil", "Calil-Gandir", "Calil-Gawyn", "Calioriand", "Caliril", "CalÃ³nduil", "Caloril", "CÃ¡ndir", "Canduil", "Caraldur", "Carang", "CÃ©lad", "Celadrieriand", "Celang", "Celaral", "Celarandil", "CelÃ¡riand", "Celebririon", "Celelas", "Celendel", "CelÃ©r", "Celilmalas", "Celiondir", "Celior", "Celiorion", "Celong", "CelÃ³r", "CelÃ³ril", "Celorion", "Celundir", "Celuwyn", "Celyndel", "CÃ©nduil", "Cindil", "Ciong", "Cithralad", "Cithraldur", "Cithrand", "Cithrandel", "Cithraril", "Col", "Corfil", "Corfildur", "CÃ³wyn", "Crintil", "Cun", "Cundir", "Cylas", "Dain", "DelÃ¡n", "DelÃ¡nd", "Delandel", "Delaraldur", "DelÃ¡ril", "Delawyn", "DelÃ©ng", "Delilmaldor", "Deliol", "Delithrar", "Deliwyn", "DelÃ³ldor", "Delorfilad", "Delorfilith", "Delorion", "Delundil", "Ealin", "EÃ¤radriendel", "EÃ¤radrier", "EÃ¤rÃ¡nduil", "EÃ¤raralad", "EÃ¤rebrindel", "EÃ¤rÃ©ldor", "EÃ¤reng", "EÃ¤rÃ©rion", "EÃ¤rithrandil", "EÃ¤romir", "EÃ¤rorfiriand", "EÃ¤ryldur", "EÃ¤ryriand", "Egil", "Eladrieng", "ElÃ¡lith", "ElÃ¡nd", "ElÃ¡ndil", "Elebrildor", "Elebrindel", "Elebriril", "ElÃ©las", "ElÃ©mbor", "Elemir", "Elen", "Elil-Garil", "Elilmaldur", "Eliomir", "Eliondil", "Elolas", "ElÃ³las", "Elor", "Elorfilad", "Elradrien", "Elralith", "Elran", "Elreldur", "Elrilmand", "Elrioldor", "Elriolith", "Elrithralith", "Elrithranduil", "Elrorfir", "Elval", "Elvandir", "Elvaramir", "ElvÃ¡wyn", "Elvebrind", "Elvebrindel", "ElvÃ©lith", "ElvÃ©mir", "Elverion", "Elvil-Garion", "Elvilmaldur", "Elvilmaril", "Elvioldur", "Elvombor", "ElvÃ³nduil", "Elvorfimir", "Elvorfiriand", "Elvorfiril", "ElvÃ³riand", "Elvund", "Elyldor", "Elyrion", "Eowambor", "Eowanduil", "Eowar", "Eowaraldor", "Eowaran", "Eowarar", "Eowariand", "Eowarion", "Eowebrind", "EowÃ©mir", "Eowil-Garion", "Eowimbor", "Eowiomir", "Eowithrawyn", "EowÃ³ldur", "Eoworfildor", "EowÃ³wyn", "Eowylas", "Erlornas", "Fadriendel", "Fandel", "Farandir", "FÃ¡wyn", "Fendel", "Fer", "Filman", "Fioril", "Fithraril", "Forfilas", "Fyrion", "Gadriendil", "Gadrieng", "Gaelir", "Gaenlar", "Galadrieldor", "GalÃ¡lad", "GalÃ¡las", "Galalith", "Galar", "Galelas", "Galeldur", "Galelith", "GalÃ©mbor", "Galithrariand", "Galoldur", "Galtrid", "Galuldur", "Galur", "Galurion", "Gambor", "GÃ¡n", "Ganduil", "Garaldor", "Gararil", "Gelad", "GÃ©ril", "Gil-Gandel", "Gil-Gang", "Giombor", "Githral", "Githralad", "Gladriendil", "Glal", "GlÃ¡mbor", "Glandil", "Glarang", "Glararil", "Glildur", "Glilmal", "Glimir", "Glinan", "Glindur", "Glior", "GlÃ³las", "Gloldor", "GlÃ³mir", "Glon", "Glul", "Golad", "Gor", "Gumbor", "Gyl", "Gymbor", "Gyn", "Harariand", "HÃ¡riand", "Hebril", "Hemir", "HÃ©nduil", "Hilas", "Hil-Garion", "Hilmariand", "Hiong", "Hirion", "Hithrandel", "Horfilad", "Horfindel", "Hundel", "Hymir", "Hyrion", "Hywyn", "Isadrieng", "IsÃ¡ndir", "Isarandel", "Isarar", "Iselas", "IsÃ©r", "Isilmandel", "Isirion", "Isithral", "IsÃ³l", "IsÃ³ndel", "IsÃ³ng", "Isorfilad", "Isorfindir", "Isuwyn", "Isyndel", "Kalenz", "Kalnar", "Landar", "Legal", "Legaran", "LegÃ©mir", "LegÃ©ril", "Legilad", "Legil-Gal", "Legiondel", "Legithralith", "Legorfindil", "Legorfirion", "LegÃ³wyn", "Legyl", "Legyn", "Linduilas", "LÃ³madrieril", "LÃ³marand", "Lomarfel", "LÃ³mariand", "LÃ³mebrilad", "LÃ³mebrind", "LÃ³mÃ©mbor", "LÃ³milmaril", "LÃ³miriand", "LÃ³morfindil", "LÃ³mowyn", "Losnin", "Lyndar", "Madrieril", "Maldur", "MÃ¡nduil", "Maraldur", "Mebrin", "MÃ©ng", "MÃ©rion", "Miolith", "Miomir", "Mithrand", "Mondir", "MÃ³ndir", "Morfilas", "Morfin", "Morfiriand", "Mylith", "Nadrieldor", "Nalith", "NÃ¡n", "NÃ©l", "Nil-Galas", "Nil-Galith", "Nil-Gar", "Nilmar", "NÃ³ndel", "Norfildor", "Norfilith", "Norfindil", "Norfindir", "Numbor", "Nyldur", "Padrieriand", "Padrieril", "Pamir", "Paraldor", "Parariand", "Pilmalad", "Pindir", "PÃ³r", "Porfildur", "Pumbor", "Pyldur", "Raesil", "Rebrir", "RÃ©ndir", "Rilmandil", "Rithrandil", "RÃ³l", "RÃ³ldor", "Roldur", "RÃ³ldur", "Rorfilad", "Rorfindil", "RÃ³wyn", "Ryn", "Sadrielas", "Salira", "Sebrin", "Sebriril", "SÃ©nd", "Sil-Gal", "Slagfid", "SÃ³lad", "Sorfind", "SÃ³riand", "Tadriendir", "Taral", "Taraldur", "TÃ¡riand", "Tendel", "TÃ©wyn", "Thradrieriand", "Thrambor", "Thraral", "Threbring", "ThrÃ©lad", "ThrÃ©ldur", "Thril-Gamir", "Thril-Gandir", "Thril-Gar", "Thrilmandel", "Thrimir", "Thrion", "Thrithran", "Throlas", "ThrÃ³n", "ThrÃ³ng", "Thrund", "Thryriand", "Til-Gan", "Tilmalad", "Tilmalas", "Tinandir", "Tinarambor", "Tinarariand", "TinÃ©n", "Tinil-Ganduil", "Tinilmand", "Tinilmawyn", "Tinimir", "Tinindil", "Tinithrar", "Tinoldor", "Tinond", "Tinorfind", "Tinorfiriand", "TinÃ³riand", "Tinowyn", "Tinun", "Tinyl", "Tion", "Tolas", "Torfildur", "TÃ³wyn", "Tylad", "Unadrieldor", "Unadrier", "UnÃ¡l", "Unalas", "UnÃ¡las", "Unaraldur", "Unaril", "UnÃ¡rion", "Unebrin", "Unebrind", "Uneldor", "Unil", "Unil-Gan", "Uniolith", "Unioril", "UnÃ³lith", "Unombor", "UnÃ³ndel", "Unondir", "Unorfildor", "Unorfiril", "Unorfiwyn", "Unulad", "Uradredia", "Uradrielas", "Uradrierion", "UrÃ¡las", "UrÃ¡lith", "Urambor", "UrÃ©r", "Uril-Gambor", "Urilmalith", "UrÃ³ldor", "Urorfildor", "Urul", "Urymir", "VÃ¡lad", "VÃ¡n", "VÃ¡ndel", "Vandir", "Varalas", "Vararion", "Vebril", "Vebrilas", "Vebrinduil", "Vel", "Velon", "Vilith", "Vol", "VÃ³las", "VÃ³ldur", "Volund", "Vondel", "Vorfin", "Vorfindil", "Vulas", "Vuldur", "Vunduil", "Vylas", "Vyldor"},
 		"playable", false
 	},
 	--]]
@@ -109,9 +134,9 @@ DefineRaceNames(
 		"display", "Germanic",
 		"visible",
 		"species", "human",
-		"personal_names", {"Godagaz", "Wagigaz", "Wiwaz"}, -- Godagaz = Goody / Good One, Hagustaldaz = Young Warrior / Owner of a Small Property, Hadulaikaz = Battle-Dancer, Hlewagastiz = Protected / Glory-Guest, Holtagastiz = Wood Guest, Wagigaz = One Who Moves Along Impetuously, Wiwaz = Darter; Godagaz, Hadulaikaz, Hagustaldaz, Hlewagastiz, Holtagastiz, Wagigaz, Wiwaz and Woduridaz are Proto-Norse (or late Proto-Germanic)
-		"personal_name_prefixes", {"Hadu", "Hagu", "Hlewa", "Holta", "Theuda", "Wodu"}, -- Hadu = Battle, Hagu = Small Property, Hlewa = Glory, Holta = Wood, Theuda = People, Wodu = Fury
-		"personal_name_suffixes", {"gastiz", "laikaz", "ridaz", "riks", "staldaz"} -- Gastiz = Guest, Laikaz = Dancer, Riks = Ruler, Ridaz = Rider, Staldaz = Owner
+		"personal-names", {"Godagaz", "Wagigaz", "Wiwaz"}, -- Godagaz = Goody / Good One, Hagustaldaz = Young Warrior / Owner of a Small Property, Hadulaikaz = Battle-Dancer, Hlewagastiz = Protected / Glory-Guest, Holtagastiz = Wood Guest, Wagigaz = One Who Moves Along Impetuously, Wiwaz = Darter; Godagaz, Hadulaikaz, Hagustaldaz, Hlewagastiz, Holtagastiz, Wagigaz, Wiwaz and Woduridaz are Proto-Norse (or late Proto-Germanic)
+		"personal-name-prefixes", {"Hadu", "Hagu", "Hlewa", "Holta", "Theuda", "Wodu"}, -- Hadu = Battle, Hagu = Small Property, Hlewa = Glory, Holta = Wood, Theuda = People, Wodu = Fury
+		"personal-name-suffixes", {"gastiz", "laikaz", "ridaz", "riks", "staldaz"} -- Gastiz = Guest, Laikaz = Dancer, Riks = Ruler, Ridaz = Rider, Staldaz = Owner
 	},
 	"race", {
 		"name", "gnome",
@@ -119,7 +144,7 @@ DefineRaceNames(
 		"visible",
 		"species", "gnome",
 		"parent-civilization", "dwarf",
-		"personal_names", {"Bimbam", "Clavo", "Cravatu", "Kalutho", "Pypo", "Rubezahl"},
+		"personal-names", {"Bimbam", "Clavo", "Cravatu", "Kalutho", "Pypo", "Rubezahl"},
 		"playable", false
 	},
 	"race", {
@@ -127,9 +152,9 @@ DefineRaceNames(
 		"display", "Goblin",
 		"visible",
 		"species", "goblin",
-		"personal_names", {"Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd"},
-		"personal_name_prefixes", {"Gom", "Grash", "Grut", "Gum", "Kar", "Kret", "Krom", "Stug"}, -- from Mike Anderson's Tyrant
-		"personal_name_suffixes", {"bag", "dag", "lig", "lug", "nak", "nark", "rat", "tug"}, -- from Mike Anderson's Tyrant
+		"personal-names", {"Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd"},
+		"personal-name-prefixes", {"Gom", "Grash", "Grut", "Gum", "Kar", "Kret", "Krom", "Stug"}, -- from Mike Anderson's Tyrant
+		"personal-name-suffixes", {"bag", "dag", "lig", "lug", "nak", "nark", "rat", "tug"}, -- from Mike Anderson's Tyrant
 		"playable", false
 	},
 	"race", {
@@ -146,15 +171,106 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "teuton",
-		"playable", false
+		"playable", false,
+		"settlement-names", {
+			"Abdera",
+			"Abydus",
+			"Acragas", -- Agrigentum
+			"Agathe",
+			"Ainos",
+			"Alalia", -- Aleria
+			"Alonae",
+			"Amisus",
+			"Apollonia",
+			"Argos",
+			"Barca",
+			"Byzantium",
+			"Calchedon", -- Chalcedon
+			"Callatis",
+			"Callipolis",
+			"Camarina",
+			"Catana",
+			"Caulonia",
+			"Cius",
+			"Cotyora",
+			"Cume", -- Cumae
+			"Cydonia",
+			"Cyrene",
+			"Dioscurias",
+			"Elea",
+			"Elis",
+			"Emporiae", -- Emporium
+			"Ephesus",
+			"Epidamnus", -- Dyrrhachium
+			"Gela",
+			"Halicarnassus",
+			"Hemeroscopium",
+			"Heraclea",
+			"Heraclea Chersonesus",
+			"Hesperis",
+			"Himera",
+			"Ilios",
+			"Istrus",
+			"Itanus",
+			"Knossos",
+			"Lissus",
+			"Locri",
+			"Massilia", -- Marseilles
+			"Medama",
+			"Megara",
+			"Megara Hyblaca",
+			"Mesambria",
+			"Metapontium",
+			"Methone",
+			"Miletus",
+			"Motye",
+			"Naucratis",
+			"Naxos",
+			"Odessus",
+			"Olbia",
+			"Parthenope", -- Neapolis/Naples
+			"Perinthus",
+			"Phaselis",
+			"Phasis",
+			"Pityus",
+			"Posidonia", -- Paestum
+			"Rhegium",
+			"Rhodae",
+			"Salamis",
+			"Selimis",
+			"Selinus",
+			"Selymbria",
+			"Sinope",
+			"Smyrna",
+			"Soli",
+			"Sparta",
+			"Sybaris",
+			"Syracusae",
+			"Tanais",
+			"Taras", -- Tarentum
+			"Tarsus",
+			"Theodosia",
+			"Thurii",
+			"Tomi",
+			"Trapezus",
+			"Zacynthus", -- Saguntum
+			"Zancle" -- Messana
+		},
+		"settlement-name-prefixes", {
+			"Amphi", -- example: "Amphipolis"
+			"Nea" -- "Nea" = "New"; example: "Neapolis" (Naples)
+		},
+		"settlement-name-suffixes", {
+			"polis" -- "polis" = "city"; examples: "Amphipolis", "Neapolis" (Naples)
+		}
 	},
 	"race", {
 		"name", "kobold",
 		"display", "Kobold",
 		"visible",
 		"species", "kobold",
-		"personal_name_prefixes", {"Hod", "Hoid", "Napf", "Pump"},
-		"personal_name_suffixes", {"coat", "eke", "ike", "hut"}, -- Hut = Hat
+		"personal-name-prefixes", {"Hod", "Hoid", "Napf", "Pump"},
+		"personal-name-suffixes", {"coat", "eke", "ike", "hut"}, -- Hut = Hat
 		"parent-civilization", "goblin",
 		"playable", false
 		 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
@@ -165,7 +281,101 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "teuton",
-		"playable", false
+		"playable", false,
+		"settlement-names", {
+			"Agrigentum",
+			"Alba",
+			"Aleria",
+			"Antium",
+			"Aquileia",
+			"Ardea",
+			"Ariminum",
+			"Arretium",
+			"Beneventum",
+			"Bononia",
+			"Bracara Augusta", -- Braga
+			"Brundisium",
+			"Buxentum",
+			"Capua",
+			"Caralis",
+			"Circeii",
+			"Clusium",
+			"Corfinium",
+			"Cora",
+			"Corduba",
+			"Cosa",
+			"Cremona",
+			"Croton",
+			"Cumae",
+			"Emporium",
+			"Firmum",
+			"Fregellae",
+			"Fregena",
+			"Fyrgi",
+			"Genua", -- Genoa
+			"Hatria",
+			"Heraclea",
+			"Locri",
+			"Luceria",
+			"Lucus Augusti",
+			"Mariana",
+			"Minturnae",
+			"Mutina",
+			"Narnia",
+			"Nora",
+			"Norba",
+			"Novum Castrum",
+			"Olbia",
+			"Olisipo",
+			"Opitergium", -- Oderzo
+			"Ostia",
+			"Paestum",
+			"Placentia",
+			"Puteoli",
+			"Regina Castra", -- Ratisbon/Regensburg
+			"Rhegium",
+			"Roma", -- Rome
+			"Saguntum",
+			"Salernum",
+			"Salicula",
+			"Satricum",
+			"Sena Gallica",
+			"Setia",
+			"Signia",
+			"Sinuessa",
+			"Sora",
+			"Spoletium",
+			"Sulci",
+			"Sutrium",
+			"Sybaris",
+			"Syracusae",
+			"Tarentum",
+			"Tarracina",
+			"Thurii",
+			"Toletum",
+			"Turnis Libisonis",
+			"Usellis",
+			"Velitrae",
+			"Venusia",
+			"Vibo Valentia",
+			"Vulturnus"
+		},
+		"settlement-name-prefixes", {
+			"Caesar", -- example: "Caesaraugusta"
+			"Medio", -- example: "Mediolanum" (Milan)
+			"Vindo" -- example: "Vindobona" (Vienna)
+		},
+		"settlement-name-suffixes", {
+			"augusta", -- example: Caesaraugusta
+			"bona", -- example: "Vindobona" (Vienna
+			"lanum" -- example: "Mediolanum" (Milan)
+		},
+		"settlement-name-prefix-translations", {
+			"Nea", "Nea" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+		},
+		"settlement-name-suffix-translations", {
+			"polis", "polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+		}
 	},
 	"race", {
 		"name", "norse",
@@ -181,9 +391,131 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "germanic",
-		"personal_names", {"Arnulf", "Bernhard", "Franz", "Friedrich", "Gerhard", "Gunther", "Gustav", "Heinrich", "Hermann", "Johann", "Hans", "Karl", "Klaus", "Kurt", "Lothar", "Ludwig", "Manfred", "Otto", "Pippin", "Walter", "Werner", "Wilhelm"},
-		"personal_name_prefixes", {"Gott", "Hel", "Karl", "Sieg", "Wolf"},
-		"personal_name_suffixes", {"fried", "gang", "mann", "mut"}
+		"personal-names", {"Arnulf", "Bernhard", "Franz", "Friedrich", "Gerhard", "Gunther", "Gustav", "Heinrich", "Hermann", "Johann", "Hans", "Karl", "Klaus", "Kurt", "Lothar", "Ludwig", "Manfred", "Otto", "Pippin", "Walter", "Werner", "Wilhelm"},
+		"personal-name-prefixes", {"Gott", "Hel", "Karl", "Sieg", "Wolf"},
+		"personal-name-suffixes", {"fried", "gang", "mann", "mut"},
+		"province-names", {
+			"Baden",
+			"Bayern", -- "Bayern" = "Bavaria"
+			"Holstein",
+			"KÃ¤rnten", -- "KÃ¤rnten" = "Carinthia"
+			"Preussen",
+			"Sachsen", -- "Sachsen" = "Saxony"
+			"Schlesien",
+			"Schleswig",
+			"Tirol" -- "Tirol" = "Tyrol"
+		},
+		"province-name-prefixes", {
+			"Branden", -- example: "Brandenburg"
+			"Burgen", -- "Burgen" = "Cities"/"Castles"; example: "Burgenland"
+			"Mecklen", -- example: "Mecklenburg"
+			"Steier", -- example: "Steiermark" (Styria)
+			"Vorarl", -- example: "Vorarlberg"
+			"West" -- "West" = "West"; example: "Westphalien" (Westphalia)
+		},
+		"province-name-suffixes", {
+			"berg", -- "berg" = "mountain"; example: "Vorarlberg"
+			"burg", -- "burg" = "city"/"castle"; example: "Brandenburg"
+			"land", -- "land" = "country"/"land"/"state"; example: "Burgenland"
+			"mark", -- "mark" = "march"; example: "Steiermark" (Styria)
+			"phalien" -- example: "Westphalien" (Westphalia)
+		},
+		"settlement-names", {
+			"Blumenau",
+			"Botzen",
+			"Bregenz",
+			"Bruck",
+			"BrÃ¼nn",
+			"Budweis",
+			"Chlum",
+			"Cilli",
+			"Eger",
+			"Franzensfeste",
+			"Gabel",
+			"Gastein",
+			"Glurns",
+			"GÃ¶rz",
+			"Graz", -- from the same Slavic root as "Grad"
+			"Ischl",
+			"KÃ¶niginhof",
+			"Krems",
+			"Kremsier",
+			"Kufstein",
+			"Laibach",
+			"Linz",
+			"MÃ¼nchen",
+			"OlmÃ¼tz",
+			"Passau",
+			"Pilsen",
+			"Prag",
+			"Sadowa",
+			"SchweinschÃ¤del",
+			"Steinamanger",
+			"Teplitz",
+			"Teschen",
+			"Tobitschau",
+			"Trent",
+			"Troppau",
+			"Villach",
+			"Wels",
+			"Werschitz",
+			"Wien" -- "Wien" = "Vienna"; from the Latin name "Vindobona"
+		},
+		"settlement-name-prefixes", {
+			"Adels", -- "Adels = "Noble's"; example: "Adelsberg"
+			"Alt", -- "Alt" = "Old"; example: "Altsohl"
+			"Eisen", -- "Eisen" = "Iron"; example: "Eisenstadt"
+			"Frohs", -- example: "Frohsdorf"
+			"FÃ¼nf", -- "FÃ¼nf" = "Five"; example: "FÃ¼nfkirchen"
+			"GÃ¤nsern", -- "GÃ¤nsern = "Geese"; example: "GÃ¤nserndorf"
+			"Ham", -- example: "Hamburg"
+			"HÃ¼hner", -- "HÃ¼hner" = "Chickens"; example: "HÃ¼hnerwasser"
+			"Inns", -- "Inns" = "Inn's" (related to the Inn river); example: "Innsbruck"
+			"Josef", -- example: "Josefstadt"
+			"Karls", -- "Karls" = "Charles'"; example: "Karlsbad"
+			"Klagen", -- example: "Klagenfurt"
+			"Klausen", -- example: "Klausenburg"
+			"KÃ¶nig", -- example: "KÃ¶niggrÃ¤tz"
+			"Kron", -- example: "Kronstadt"
+			"Lem", -- example: "Lemberg"
+			"Leopold", -- example: "Leopoldstadt"
+			"Mar", -- example: "Marburg"
+			"MÃ¼hlen", -- example: "MÃ¼hlenbach"
+			"MÃ¼nchen", -- example: "MÃ¼nchengrÃ¤tz"
+			"Neu", -- "Neu" = "New"; example: "Neusohl"
+			"Nikols", -- "Nikols" = "Nicholas'"; example: "Nikolsburg"
+			"Ã–den", -- example: "Ã–denburg"
+			"Pres", -- example: "Presburg"
+			"Regens", -- example: "Regensburg"
+			"Salz", -- "Salz" = "Salt"; example: "Salzburg"
+			"SchÃ¤ss", -- example: "SchÃ¤ssburg"
+			"Spiel", -- "Spiel" = "Game"/"Play"; example: "Spielberg"
+			"Stuhl", -- "Stuhl" = "Chair"; example: "Stuhlweissenburg"
+			"Weiss", -- "Weiss" = "White"; example: "Weisskirchen"
+			"Ziller" -- example: "Zillerthal"
+		},
+		"settlement-name-suffixes", {
+			"bach", -- example: "MÃ¼hlenbach"
+			"bad", -- example: "Karlsbad"
+			"berg", -- "berg" = "mountain"; examples: "Adelsberg", "Lemberg", "Spielberg"
+			"bruck", -- "bruck" = "bridge"; example: "Innsbruck"
+			"burg", -- "burg" = "city"/"castle"; examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ã–denburg", "Regensburg", "Salzburg", "SchÃ¤ssburg"
+			"dorf", -- "dorf" = "town"/"village"; examples: "Frohsdorf", "GÃ¤nserndorf"
+			"furt", -- example: "Klagenfurt"
+			"grÃ¤tz", -- examples: "KÃ¶niggrÃ¤tz", "MÃ¼nchengrÃ¤tz"
+			"kirchen", -- "kirchen" = "churches"; examples: "FÃ¼nfkirchen", "Weisskirchen"
+			"sohl", -- examples: "Altsohl", "Neusohl"
+			"stadt", -- "stadt" = "city"; examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
+			"thal", -- "thal" = "valley"
+			"wasser", -- "wasser" = "water"; example: "HÃ¼hnerwasser"
+			"weissenburg" -- "weissenburg" = "white castle/city"; example: "Stuhlweissenburg"
+		},
+		"settlement-name-prefix-translations", {
+			"Medio", "Mai" -- example: "Mediolanum" -> "Mailand" (Milan)
+		},
+		"settlement-name-suffix-translations", {
+			"lanum", "land" -- example: "Mediolanum" -> "Mailand" (Milan)
+		}
 	},
 	"race", {
 		"name", "neutral",
@@ -191,7 +523,7 @@ DefineRaceNames(
 	}
 )
 
--- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
+-- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and GÃ¶z means "eye"), Depeghoz (DepÃªghÃ¶z, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
 
 DefineCivilizationFactions("celt",
 	"faction", {

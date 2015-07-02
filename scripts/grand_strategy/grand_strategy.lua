@@ -203,6 +203,25 @@ function RunGrandStrategyGameSetupMenu()
 					end
 				end
 				
+				-- create a new cultural name for the province's settlement, if there isn't any
+				if (WorldMapProvinces[key].Civilization ~= "" and WorldMapProvinces[key].Owner ~= "" and WorldMapProvinces[key].CulturalSettlementNames ~= nil and WorldMapProvinces[key].CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[key].Owner)] == nil and WorldMapProvinces[key].CulturalSettlementNames[WorldMapProvinces[key].Civilization] == nil) then
+					local new_settlement_name = ""
+					if (new_settlement_name == "") then -- try to translate any cultural settlement name
+						for second_key, second_value in pairs(WorldMapProvinces[key].CulturalSettlementNames) do
+							new_settlement_name = TranslateSettlementName(WorldMapProvinces[key].CulturalSettlementNames[second_key], WorldMapProvinces[key].Civilization)
+							if (new_settlement_name ~= "") then
+								break
+							end
+						end
+					end
+					if (new_settlement_name == "") then -- if trying to translate all cultural settlement names failed, generate a new name
+						new_settlement_name = GenerateSettlementName(WorldMapProvinces[key].Civilization)
+					end
+					if (new_settlement_name ~= "") then
+						WorldMapProvinces[key].CulturalSettlementNames[WorldMapProvinces[key].Civilization] = new_settlement_name
+					end
+				end
+				
 				if (WorldMapProvinces[key].Coastal == nil) then
 					WorldMapProvinces[key]["Coastal"] = false
 				end
@@ -1151,6 +1170,28 @@ function ChangeProvinceCulture(province, civilization)
 		end
 	end
 	
+	-- create a new cultural name for the province's settlement, if there isn't any
+	if (province.CulturalSettlementNames ~= nil and province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)] == nil and province.CulturalSettlementNames[civilization] == nil) then
+		local new_settlement_name = ""
+		if (province.CulturalSettlementNames[old_civilization] ~= nil) then -- first see if can translate the cultural settlement name of the old civilization
+			new_settlement_name = TranslateSettlementName(province.CulturalSettlementNames[old_civilization], civilization)
+		end
+		if (new_settlement_name == "") then -- if translating the cultural name of the old civilization failed, try to translate any cultural settlement name
+			for key, value in pairs(province.CulturalSettlementNames) do
+				new_settlement_name = TranslateSettlementName(province.CulturalSettlementNames[key], civilization)
+				if (new_settlement_name ~= "") then
+					break
+				end
+			end
+		end
+		if (new_settlement_name == "") then -- if trying to translate all cultural settlement names failed, generate a new name
+			new_settlement_name = GenerateSettlementName(civilization)
+		end
+		if (new_settlement_name ~= "") then
+			province.CulturalSettlementNames[civilization] = new_settlement_name
+		end
+	end
+	
 	CalculateFactionIncomes()
 end
 
@@ -1902,7 +1943,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			function()
 				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
 		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
@@ -1920,8 +1960,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
 		OnScreenSites[table.getn(OnScreenSites)]:setTooltip(tooltip)
-		
-		OnScreenSites[table.getn(OnScreenSites)]:requestMoveToBottom()
 	elseif (string.find(file, "sites") ~= nil) then -- different method for site graphics
 		local world_map_tile
 		if (string.find(file, "settlement") ~= nil) then
@@ -1942,7 +1980,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			function()
 				PlaySound("click")
 				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-				DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 			end
 		)
 		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
@@ -1958,8 +1995,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
 		OnScreenSites[table.getn(OnScreenSites)]:setTooltip(tooltip)
-		
-		OnScreenSites[table.getn(OnScreenSites)]:requestMoveToBottom()
 	else -- different method for fog tiles
 		OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setPosition(64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setEnabled(false)
@@ -2007,8 +2042,11 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 end
 
 function DrawSettlement(file, tile_x, tile_y, playercolor)
-	local world_map_tile = CPlayerColorGraphic:New(file)
-	world_map_tile:Load()
+	local world_map_tile = CPlayerColorGraphic:Get(file)
+	if (world_map_tile == nil) then
+		world_map_tile = CPlayerColorGraphic:New(file)
+		world_map_tile:Load()
+	end
 	local width_indent = 0
 	local height_indent = 0
 	if (GrandStrategyMapWidthIndent) then
@@ -2022,7 +2060,6 @@ function DrawSettlement(file, tile_x, tile_y, playercolor)
 		function()
 			PlaySound("click")
 			SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-			DrawOnScreenTiles() -- to avoid the tile remaining selected after clicking
 		end
 	)
 	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 64 * (tile_y - WorldMapOffsetY) + height_indent)
@@ -2989,7 +3026,11 @@ function DrawOnScreenTiles()
 		end
 	end
 	
-	-- put every tile graphic that isn't terra incognita at the bottom
+	-- put everything that isn't terra incognita at the bottom
+	for i=1,table.getn(OnScreenSites) do
+		OnScreenSites[i]:requestMoveToBottom()
+	end
+	
 	for x=(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)), WorldMapOffsetX, -1 do
 		for y=math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)), WorldMapOffsetY, -1 do
 			if (GetWorldMapTile(x, y) ~= "") then
@@ -3962,7 +4003,9 @@ function SetSelectedProvince(province)
 						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
 						
 						-- draw symbol that the province is being attacked by the human player
-						DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
+							DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						end
 					end
 				end
 			end
@@ -3975,7 +4018,9 @@ function SetSelectedProvince(province)
 						SelectedHero = ""
 
 						-- draw symbol that a hero is attacking the province
-						DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
+							DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						end
 					end
 				end
 			end
@@ -3987,7 +4032,9 @@ function SetSelectedProvince(province)
 						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
 
 						-- draw symbol that troops are moving to the province
-						DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
+							DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						end
 					end
 				end
 			end
@@ -3999,7 +4046,9 @@ function SetSelectedProvince(province)
 						SelectedHero = ""
 
 						-- draw symbol that a hero is moving to the province
-						DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
+							DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
+						end
 					end
 				end
 			end
@@ -5685,4 +5734,12 @@ function GetTerrainName(terrain)
 		return "Water"
 	end
 	return ""
+end
+
+function IsWorldMapTileVisible(tile_x, tile_y)
+	if (tile_x >= WorldMapOffsetX and tile_x <= (WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) and tile_y >= WorldMapOffsetY and tile_y <= math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1))) then
+		return true
+	else
+		return false
+	end	
 end
