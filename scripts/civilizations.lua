@@ -80,6 +80,68 @@ DefineRaceNames(
 		"parent-civilization", "germanic",
 		"playable", false
 	},
+	--[[
+	"race", { -- information for later use
+		"name", "dutch",
+		"display", "Dutch",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"province-names", {
+			"Gelderland", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"Overijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+		},
+		"settlement-names", {
+			"Amsterdam",
+			"Rotterdam"
+		},
+		"settlement-name-prefixes", {
+			"Stap", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		},
+		"settlement-name-suffixes", {
+			"aha", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"apa", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"braak", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"breede", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"berg", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"borg", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"ede", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"geer", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"goor", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"haar", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"heim", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"heuvel", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"ho", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"hoop", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"horst", -- "horst" means "hyrst". Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"huis", -- "huis" means "house". Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+--			"ing", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
+--			"ingakker", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+--			"inggoed", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+--			"ingheim", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+--			"inghuis", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+--			"ingen", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"kote", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"laar", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"lo", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"molen", -- "molen" means "mill". Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"oever", -- "oever" means the bank of a river. Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"roden", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"sol", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"stege", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"tere", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
+			"tuin", -- Appears in the eastern Netherlands. "tuin" can mean "town", but usually means "garden". Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"tye", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"veld", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"voorde", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+			"wede", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"wijk" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		},
+		"river-names", {
+			"Ijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+		}
+	},
+	--]]
 	"race", {
 		"name", "dwarf",
 		"display", "Dwarf",
@@ -127,6 +189,24 @@ DefineRaceNames(
 		"species", "elf",
 		"personal-names", {"Aendan", "Amadrieriand", "Amáril", "Amelad", "Ameldor", "Amendel", "Ameng", "Amilmaldur", "Amilmalith", "Amilmandir", "Amind", "Amiol", "Amiorion", "Amithrarion", "Amóldor", "Amorfimir", "Amorfir", "Amowyn", "Amulas", "Amundil", "Anán", "Anebrin", "Anebrir", "Anémbor", "Anénduil", "Anerion", "Anilad", "Anil-Gawyn", "Anilmambor", "Anilmariand", "Anior", "Anithranduil", "Anol", "Anon", "Anorfing", "Anundil", "Asaeri", "Belán", "Belandil", "Belarandel", "Belel", "Belén", "Belil-Gandil", "Belilmand", "Belilmang", "Beliondil", "Beliril", "Belithraldor", "Belithrawyn", "Belólad", "Belómir", "Belondel", "Belyrion", "Cadriembor", "Cadrieriand", "Cálad", "Caladrielas", "Calándel", "Caldur", "Cáldur", "Calebrindel", "Calebrindir", "Calénduil", "Calil-Gandir", "Calil-Gawyn", "Calioriand", "Caliril", "Calónduil", "Caloril", "Cándir", "Canduil", "Caraldur", "Carang", "Célad", "Celadrieriand", "Celang", "Celaral", "Celarandil", "Celáriand", "Celebririon", "Celelas", "Celendel", "Celér", "Celilmalas", "Celiondir", "Celior", "Celiorion", "Celong", "Celór", "Celóril", "Celorion", "Celundir", "Celuwyn", "Celyndel", "Cénduil", "Cindil", "Ciong", "Cithralad", "Cithraldur", "Cithrand", "Cithrandel", "Cithraril", "Col", "Corfil", "Corfildur", "Cówyn", "Crintil", "Cun", "Cundir", "Cylas", "Dain", "Delán", "Delánd", "Delandel", "Delaraldur", "Deláril", "Delawyn", "Deléng", "Delilmaldor", "Deliol", "Delithrar", "Deliwyn", "Delóldor", "Delorfilad", "Delorfilith", "Delorion", "Delundil", "Ealin", "Eäradriendel", "Eäradrier", "Eäránduil", "Eäraralad", "Eärebrindel", "Eäréldor", "Eäreng", "Eärérion", "Eärithrandil", "Eäromir", "Eärorfiriand", "Eäryldur", "Eäryriand", "Egil", "Eladrieng", "Elálith", "Elánd", "Elándil", "Elebrildor", "Elebrindel", "Elebriril", "Elélas", "Elémbor", "Elemir", "Elen", "Elil-Garil", "Elilmaldur", "Eliomir", "Eliondil", "Elolas", "Elólas", "Elor", "Elorfilad", "Elradrien", "Elralith", "Elran", "Elreldur", "Elrilmand", "Elrioldor", "Elriolith", "Elrithralith", "Elrithranduil", "Elrorfir", "Elval", "Elvandir", "Elvaramir", "Elváwyn", "Elvebrind", "Elvebrindel", "Elvélith", "Elvémir", "Elverion", "Elvil-Garion", "Elvilmaldur", "Elvilmaril", "Elvioldur", "Elvombor", "Elvónduil", "Elvorfimir", "Elvorfiriand", "Elvorfiril", "Elvóriand", "Elvund", "Elyldor", "Elyrion", "Eowambor", "Eowanduil", "Eowar", "Eowaraldor", "Eowaran", "Eowarar", "Eowariand", "Eowarion", "Eowebrind", "Eowémir", "Eowil-Garion", "Eowimbor", "Eowiomir", "Eowithrawyn", "Eowóldur", "Eoworfildor", "Eowówyn", "Eowylas", "Erlornas", "Fadriendel", "Fandel", "Farandir", "Fáwyn", "Fendel", "Fer", "Filman", "Fioril", "Fithraril", "Forfilas", "Fyrion", "Gadriendil", "Gadrieng", "Gaelir", "Gaenlar", "Galadrieldor", "Galálad", "Galálas", "Galalith", "Galar", "Galelas", "Galeldur", "Galelith", "Galémbor", "Galithrariand", "Galoldur", "Galtrid", "Galuldur", "Galur", "Galurion", "Gambor", "Gán", "Ganduil", "Garaldor", "Gararil", "Gelad", "Géril", "Gil-Gandel", "Gil-Gang", "Giombor", "Githral", "Githralad", "Gladriendil", "Glal", "Glámbor", "Glandil", "Glarang", "Glararil", "Glildur", "Glilmal", "Glimir", "Glinan", "Glindur", "Glior", "Glólas", "Gloldor", "Glómir", "Glon", "Glul", "Golad", "Gor", "Gumbor", "Gyl", "Gymbor", "Gyn", "Harariand", "Háriand", "Hebril", "Hemir", "Hénduil", "Hilas", "Hil-Garion", "Hilmariand", "Hiong", "Hirion", "Hithrandel", "Horfilad", "Horfindel", "Hundel", "Hymir", "Hyrion", "Hywyn", "Isadrieng", "Isándir", "Isarandel", "Isarar", "Iselas", "Isér", "Isilmandel", "Isirion", "Isithral", "Isól", "Isóndel", "Isóng", "Isorfilad", "Isorfindir", "Isuwyn", "Isyndel", "Kalenz", "Kalnar", "Landar", "Legal", "Legaran", "Legémir", "Legéril", "Legilad", "Legil-Gal", "Legiondel", "Legithralith", "Legorfindil", "Legorfirion", "Legówyn", "Legyl", "Legyn", "Linduilas", "Lómadrieril", "Lómarand", "Lomarfel", "Lómariand", "Lómebrilad", "Lómebrind", "Lómémbor", "Lómilmaril", "Lómiriand", "Lómorfindil", "Lómowyn", "Losnin", "Lyndar", "Madrieril", "Maldur", "Mánduil", "Maraldur", "Mebrin", "Méng", "Mérion", "Miolith", "Miomir", "Mithrand", "Mondir", "Móndir", "Morfilas", "Morfin", "Morfiriand", "Mylith", "Nadrieldor", "Nalith", "Nán", "Nél", "Nil-Galas", "Nil-Galith", "Nil-Gar", "Nilmar", "Nóndel", "Norfildor", "Norfilith", "Norfindil", "Norfindir", "Numbor", "Nyldur", "Padrieriand", "Padrieril", "Pamir", "Paraldor", "Parariand", "Pilmalad", "Pindir", "Pór", "Porfildur", "Pumbor", "Pyldur", "Raesil", "Rebrir", "Réndir", "Rilmandil", "Rithrandil", "Ról", "Róldor", "Roldur", "Róldur", "Rorfilad", "Rorfindil", "Rówyn", "Ryn", "Sadrielas", "Salira", "Sebrin", "Sebriril", "Sénd", "Sil-Gal", "Slagfid", "Sólad", "Sorfind", "Sóriand", "Tadriendir", "Taral", "Taraldur", "Táriand", "Tendel", "Téwyn", "Thradrieriand", "Thrambor", "Thraral", "Threbring", "Thrélad", "Thréldur", "Thril-Gamir", "Thril-Gandir", "Thril-Gar", "Thrilmandel", "Thrimir", "Thrion", "Thrithran", "Throlas", "Thrón", "Thróng", "Thrund", "Thryriand", "Til-Gan", "Tilmalad", "Tilmalas", "Tinandir", "Tinarambor", "Tinarariand", "Tinén", "Tinil-Ganduil", "Tinilmand", "Tinilmawyn", "Tinimir", "Tinindil", "Tinithrar", "Tinoldor", "Tinond", "Tinorfind", "Tinorfiriand", "Tinóriand", "Tinowyn", "Tinun", "Tinyl", "Tion", "Tolas", "Torfildur", "Tówyn", "Tylad", "Unadrieldor", "Unadrier", "Unál", "Unalas", "Unálas", "Unaraldur", "Unaril", "Unárion", "Unebrin", "Unebrind", "Uneldor", "Unil", "Unil-Gan", "Uniolith", "Unioril", "Unólith", "Unombor", "Unóndel", "Unondir", "Unorfildor", "Unorfiril", "Unorfiwyn", "Unulad", "Uradredia", "Uradrielas", "Uradrierion", "Urálas", "Urálith", "Urambor", "Urér", "Uril-Gambor", "Urilmalith", "Uróldor", "Urorfildor", "Urul", "Urymir", "Válad", "Ván", "Vándel", "Vandir", "Varalas", "Vararion", "Vebril", "Vebrilas", "Vebrinduil", "Vel", "Velon", "Vilith", "Vol", "Vólas", "Vóldur", "Volund", "Vondel", "Vorfin", "Vorfindil", "Vulas", "Vuldur", "Vunduil", "Vylas", "Vyldor"},
 		"playable", false
+	},
+	--]]
+	--[[
+	"race", { -- information for later use
+		"name", "english",
+		"display", "English",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"personal-names", {"Charles", "Francis", "Henry", "John", "Lewis", "William"},
+		"settlement-name-suffixes", {
+			"house", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+			"hyrst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+			"ing", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+			"town", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"tree", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+			"wich" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		}
 	},
 	--]]
 	"race", {

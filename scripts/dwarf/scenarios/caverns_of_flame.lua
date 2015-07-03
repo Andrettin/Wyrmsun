@@ -27,6 +27,99 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+if (LoadedGame == false) then
+	-- create extra defensive troops for the goblins
+	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+	SetUnitActive(unit, false)
+
+	unit = CreateUnit("unit-goblin-spearman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+	SetUnitActive(unit, false)
+
+	unit = CreateUnit("unit-goblin-spearman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+	SetUnitActive(unit, false)
+
+	unit = CreateUnit("unit-goblin-spearman", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-spearman", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-goblin-archer", 5, {Players[5].StartPos.x, Players[5].StartPos.y})
+	SetUnitActive(unit, false)
+	
+	-- the goblins should be allied with one another
+	SetDiplomacy(2, "allied", 3)
+	SetDiplomacy(2, "allied", 4)
+	SetDiplomacy(2, "allied", 5)
+	SetDiplomacy(3, "allied", 2)
+	SetDiplomacy(3, "allied", 4)
+	SetDiplomacy(3, "allied", 5)
+	SetDiplomacy(4, "allied", 2)
+	SetDiplomacy(4, "allied", 3)
+	SetDiplomacy(4, "allied", 5)
+	SetDiplomacy(5, "allied", 2)
+	SetDiplomacy(5, "allied", 3)
+	SetDiplomacy(5, "allied", 4)
+end
+
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
 AddTrigger(
 	function()
@@ -411,7 +504,7 @@ AddTrigger(
 			uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 			for unit1 = 1,table.getn(uncount) do 
 				local unit_quantity = GetNumUnitsAt(-1, "unit-goblin-spearman", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
-				if (unit_quantity > 0) then
+				if (unit_quantity > 0 and GetNumUnitsAt(-1, "unit-glyph", {GetUnitVariable(uncount[unit1],"PosX") - 8, GetUnitVariable(uncount[unit1],"PosY") - 8}, {GetUnitVariable(uncount[unit1],"PosX") + 8, GetUnitVariable(uncount[unit1],"PosY") + 8}) > 0) then
 					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end

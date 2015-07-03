@@ -206,6 +206,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added four rafts to the "Looking Upwards" map.
 - Improvements to the Cavern of Flames map.
 
+* Quests
+- Added defensive troops for the goblins in the Caverns of Flame quest.
+
 * Terrain
 - Volcanic craters now spit flaming rocks and miasma (except in The Wyrm quest).
 
