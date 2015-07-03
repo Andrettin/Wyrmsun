@@ -392,7 +392,14 @@ AddTrigger(
 				SetUnitVariable(unit, "CustomAIState", 2)
 				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "CustomAIState", 2)
-				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 2)
+				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 2)
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 2)
 					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "CustomAIState", 2)
 				end
@@ -412,7 +419,20 @@ AddTrigger(
 				IncreaseUnitLevel(unit, 2, true)
 				AcquireAbility(unit, "upgrade-critical-strike")
 				SetUnitVariable(unit, "CustomAIState", 2)
-				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 2)
+				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 2)
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 2)
 					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					IncreaseUnitLevel(unit, 2, true)
 					AcquireAbility(unit, "upgrade-critical-strike")
@@ -426,7 +446,14 @@ AddTrigger(
 				SetUnitVariable(unit, "CustomAIState", 3)
 				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "CustomAIState", 3)
-				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 3)
+				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 3)
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					SetUnitVariable(unit, "CustomAIState", 3)
 					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "CustomAIState", 3)
 				end
@@ -446,7 +473,20 @@ AddTrigger(
 				IncreaseUnitLevel(unit, 2, true)
 				AcquireAbility(unit, "upgrade-critical-strike")
 				SetUnitVariable(unit, "CustomAIState", 4)
-				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 4)
+				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 4)
+					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 2, true)
+					AcquireAbility(unit, "upgrade-critical-strike")
+					SetUnitVariable(unit, "CustomAIState", 4)
 					unit = CreateUnit("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					IncreaseUnitLevel(unit, 2, true)
 					AcquireAbility(unit, "upgrade-critical-strike")
@@ -464,7 +504,17 @@ AddTrigger(
 				unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				IncreaseUnitLevel(unit, 1, true)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+					unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 1, true)
+					SetUnitVariable(unit, "CustomAIState", 4)
+				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+					unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 1, true)
+					SetUnitVariable(unit, "CustomAIState", 4)
+					unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
+					IncreaseUnitLevel(unit, 1, true)
+					SetUnitVariable(unit, "CustomAIState", 4)
 					unit = CreateUnit("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					IncreaseUnitLevel(unit, 1, true)
 					SetUnitVariable(unit, "CustomAIState", 4)

@@ -252,6 +252,45 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1, true)
 	AcquireAbility(unit, "upgrade-critical-strike")
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	end
 	unit = CreateUnit("unit-goblin-worker", 4, {12, 32})
 	unit = CreateUnit("unit-goblin-banner", 4, {17, 27})
 	unit = CreateUnit("unit-goblin-banner", 4, {19, 28})
@@ -271,6 +310,45 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1, true)
 	AcquireAbility(unit, "upgrade-critical-strike")
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	end
 	unit = CreateUnit("unit-goblin-worker", 5, {56, 32})
 	unit = CreateUnit("unit-goblin-banner", 5, {47, 33})
 	unit = CreateUnit("unit-goblin-banner", 5, {50, 28})
@@ -385,6 +463,45 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1, true)
 	AcquireAbility(unit, "upgrade-critical-strike")
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	end
 	unit = CreateUnit("unit-goblin-worker", 4, {12, 32})
 	unit = CreateUnit("unit-goblin-banner", 4, {17, 27})
 	unit = CreateUnit("unit-goblin-banner", 4, {19, 28})
@@ -404,6 +521,45 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1, true)
 	AcquireAbility(unit, "upgrade-critical-strike")
+	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
+		IncreaseUnitLevel(unit, 1, true)
+		AcquireAbility(unit, "upgrade-critical-strike")
+	end
 	unit = CreateUnit("unit-goblin-worker", 5, {56, 32})
 	unit = CreateUnit("unit-goblin-banner", 5, {47, 33})
 	unit = CreateUnit("unit-goblin-banner", 5, {50, 28})

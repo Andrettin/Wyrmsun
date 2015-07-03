@@ -208,6 +208,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Added defensive troops for the goblins in the Caverns of Flame quest.
+- Increased goblin and Shinsplitter troops in the Caverns of Flame quest in Hard and Brutal difficulties.
 
 * Terrain
 - Volcanic craters now spit flaming rocks and miasma (except in The Wyrm quest).
