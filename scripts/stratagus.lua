@@ -2198,6 +2198,7 @@ Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 
 --- Uses Stratagus Library path!
 Load("scripts/civilizations.lua")
+Load("scripts/languages.lua")
 Load("scripts/icons.lua")
 Load("scripts/sound.lua")
 Load("scripts/missiles.lua")

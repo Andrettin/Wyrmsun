@@ -196,6 +196,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.2.8
 -----------------------------------------------------------------------
 
+* Buildings
+- Dwarven towers now have more HP.
+- Goblin farms are now 20% cheaper and faster to build but have 50% lower HP.
+
 * Grand Strategy
 - Added tooltip for how much a unit's upkeep is when recruiting one.
 - Improved Grand Strategy mode optimization.

@@ -265,9 +265,11 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Parent = "unit-template-farm",
 	Civilization = "goblin",
-	Description = _("Goblin farms provide sustenance for their settlements. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."),
+	Description = _("Goblin farms provide sustenance for their settlements. Due to their high population growth goblins seek to finish the construction of new farms as quickly as possible, although they sacrifice structural integrity in the process. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."),
 	Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
 	Icon = "icon-goblin-farm",
+	HitPoints = 167, -- 200 with masonry
+	Costs = {"time", 80, "gold", 400, "lumber", 200},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
