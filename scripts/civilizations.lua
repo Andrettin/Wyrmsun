@@ -269,18 +269,6 @@ DefineRaceNames(
 			"riks", -- Riks = Ruler
 			"staldaz" -- Staldaz = Owner
 		}
-		--[[
-		"language-words", {
-			"aseowen", "sifted", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
-			"bearn", "child", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-			"eorthe", "earth", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-			"feoh", "cattle", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-			"healdan", "hold", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-			"hweowol", "wheel", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-			"neaht", "night", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-			"seah", "[he] saw", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-		}
-		--]]
 	},
 	"race", {
 		"name", "gnome",
@@ -536,8 +524,8 @@ DefineRaceNames(
 		"species", "human",
 		"parent-civilization", "germanic",
 		"personal-names", {"Arnulf", "Bernhard", "Franz", "Friedrich", "Gerhard", "Gunther", "Gustav", "Heinrich", "Hermann", "Johann", "Hans", "Karl", "Klaus", "Kurt", "Lothar", "Ludwig", "Manfred", "Otto", "Pippin", "Walter", "Werner", "Wilhelm"},
-		"personal-name-prefixes", {"Gott", "Hel", "Karl", "Sieg", "Wolf"},
-		"personal-name-suffixes", {"fried", "gang", "mann", "mut"},
+		"personal-name-prefixes", {"Hel", "Karl"},
+		"personal-name-suffixes", {"fried", "gang"},
 		"province-names", {
 			"Baden",
 			"Bayern", -- "Bayern" = "Bavaria"
@@ -606,53 +594,43 @@ DefineRaceNames(
 			"Wien" -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 		},
 		"settlement-name-prefixes", {
-			"Adels", -- "Adels = "Noble's"; example: "Adelsberg"
 			"Alt", -- "Alt" = "Old"; example: "Altsohl"
 			"Eisen", -- "Eisen" = "Iron"; example: "Eisenstadt"
 			"Frohs", -- example: "Frohsdorf"
-			"Fünf", -- "Fünf" = "Five"; example: "Fünfkirchen"
 			"Gänsern", -- "Gänsern = "Geese"; example: "Gänserndorf"
 			"Ham", -- example: "Hamburg"
 			"Hühner", -- "Hühner" = "Chickens"; example: "Hühnerwasser"
 			"Inns", -- "Inns" = "Inn's" (related to the Inn river); example: "Innsbruck"
-			"Josef", -- example: "Josefstadt"
+--			"Josef", -- example: "Josefstadt"
 			"Karls", -- "Karls" = "Charles'"; example: "Karlsbad"
 			"Klagen", -- example: "Klagenfurt"
 			"Klausen", -- example: "Klausenburg"
-			"König", -- example: "Königgrätz"
 			"Kron", -- example: "Kronstadt"
 			"Lem", -- example: "Lemberg"
-			"Leopold", -- example: "Leopoldstadt"
+--			"Leopold", -- example: "Leopoldstadt"
 			"Mar", -- example: "Marburg"
 			"Mühlen", -- example: "Mühlenbach"
 			"München", -- example: "Münchengrätz"
 			"Neu", -- "Neu" = "New"; example: "Neusohl"
-			"Nikols", -- "Nikols" = "Nicholas'"; example: "Nikolsburg"
+--			"Nikols", -- "Nikols" = "Nicholas'"; example: "Nikolsburg"
 			"Öden", -- example: "Ödenburg"
 			"Pres", -- example: "Presburg"
 			"Regens", -- example: "Regensburg"
-			"Salz", -- "Salz" = "Salt"; example: "Salzburg"
 			"Schäss", -- example: "Schässburg"
 			"Spiel", -- "Spiel" = "Game"/"Play"; example: "Spielberg"
 			"Stuhl", -- "Stuhl" = "Chair"; example: "Stuhlweissenburg"
 			"Weiss", -- "Weiss" = "White"; example: "Weisskirchen"
-			"Ziller" -- example: "Zillerthal"
+			"Ziller" -- example: "Zillertal"
 		},
 		"settlement-name-suffixes", {
 			"bach", -- example: "Mühlenbach"
 			"bad", -- example: "Karlsbad"
 			"berg", -- "berg" = "mountain"; examples: "Adelsberg", "Lemberg", "Spielberg"
-			"bruck", -- "bruck" = "bridge"; example: "Innsbruck"
-			"burg", -- "burg" = "city"/"castle"; examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg"
-			"dorf", -- "dorf" = "town"/"village"; examples: "Frohsdorf", "Gänserndorf"
 			"furt", -- example: "Klagenfurt"
 			"grätz", -- examples: "Königgrätz", "Münchengrätz"
-			"kirchen", -- "kirchen" = "churches"; examples: "Fünfkirchen", "Weisskirchen"
 			"sohl", -- examples: "Altsohl", "Neusohl"
-			"stadt", -- "stadt" = "city"; examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
-			"thal", -- "thal" = "valley"
 			"wasser", -- "wasser" = "water"; example: "Hühnerwasser"
-			"weissenburg" -- "weissenburg" = "white castle/city"; example: "Stuhlweissenburg"
+			"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
 		},
 		"settlement-name-translations", {
 			"Vindobona", "Wien"

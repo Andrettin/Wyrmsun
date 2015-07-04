@@ -203,6 +203,27 @@ function RunGrandStrategyGameSetupMenu()
 					end
 				end
 				
+				--[[
+				-- create a new cultural name for the province, if there isn't any
+				if (WorldMapProvinces[key].Civilization ~= "" and WorldMapProvinces[key].Owner ~= "" and WorldMapProvinces[key].CulturalNames ~= nil and WorldMapProvinces[key].CulturalNames[GetFactionKeyFromName(WorldMapProvinces[key].Owner)] == nil and WorldMapProvinces[key].CulturalNames[WorldMapProvinces[key].Civilization] == nil) then
+					local new_province_name = ""
+					if (new_province_name == "") then -- try to translate any cultural name
+						for second_key, second_value in pairs(WorldMapProvinces[key].CulturalNames) do
+							new_province_name = TranslateProvinceName(WorldMapProvinces[key].CulturalNames[second_key], WorldMapProvinces[key].Civilization)
+							if (new_province_name ~= "") then
+								break
+							end
+						end
+					end
+					if (new_province_name == "") then -- if trying to translate all cultural names failed, generate a new name
+						new_province_name = GenerateProvinceName(WorldMapProvinces[key].Civilization)
+					end
+					if (new_province_name ~= "") then
+						WorldMapProvinces[key].CulturalNames[WorldMapProvinces[key].Civilization] = new_province_name
+					end
+				end
+				--]]
+				
 				-- create a new cultural name for the province's settlement, if there isn't any
 				if (WorldMapProvinces[key].Civilization ~= "" and WorldMapProvinces[key].Owner ~= "" and WorldMapProvinces[key].CulturalSettlementNames ~= nil and WorldMapProvinces[key].CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[key].Owner)] == nil and WorldMapProvinces[key].CulturalSettlementNames[WorldMapProvinces[key].Civilization] == nil) then
 					local new_settlement_name = ""
@@ -1169,6 +1190,30 @@ function ChangeProvinceCulture(province, civilization)
 			
 		end
 	end
+	
+	--[[
+	-- create a new cultural name for the province, if there isn't any
+	if (province.CulturalNames ~= nil and province.CulturalNames[GetFactionKeyFromName(province.Owner)] == nil and province.CulturalNames[civilization] == nil) then
+		local new_province_name = ""
+		if (province.CulturalNames[old_civilization] ~= nil) then -- first see if can translate the cultural name of the old civilization
+			new_province_name = TranslateProvinceName(province.CulturalNames[old_civilization], civilization)
+		end
+		if (new_province_name == "") then -- if translating the cultural name of the old civilization failed, try to translate any cultural name
+			for key, value in pairs(province.CulturalNames) do
+				new_province_name = TranslateProvinceName(province.CulturalNames[key], civilization)
+				if (new_province_name ~= "") then
+					break
+				end
+			end
+		end
+		if (new_province_name == "") then -- if trying to translate all cultural names failed, generate a new name
+			new_province_name = GenerateProvinceName(civilization)
+		end
+		if (new_province_name ~= "") then
+			province.CulturalNames[civilization] = new_province_name
+		end
+	end
+	--]]
 	
 	-- create a new cultural name for the province's settlement, if there isn't any
 	if (province.CulturalSettlementNames ~= nil and province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)] == nil and province.CulturalSettlementNames[civilization] == nil) then
