@@ -380,6 +380,15 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: "Adelsberg"
 		},
+		"Berg", {
+			"meaning", "Mountain", -- can also mean "hill"
+			"singular-nominative", "Berg",
+			"plural-nominative", "Berge",
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-province-name", true, -- example: "Vorarlberg"
+			"suffix-settlement-name", true -- examples: "Adelsberg", "Lemberg", "Spielberg"
+		},
 		"Bruck", {
 			"meaning", "Bridge",
 			"singular-nominative", "Bruck",
@@ -393,7 +402,10 @@ DefineCivilizationLanguage("teuton", -- German
 			"singular-nominative", "Burg",
 			"plural-nominative", "Burgen",
 			"gender", "Feminine",
+			"prefix-plural", true,
+			"prefix-province-name", true, -- example: "Burgenland"
 			"suffix-singular", true,
+			"suffix-province-name", true, -- example: "Brandenburg"
 			"suffix-settlement-name", true -- examples: Hamburg, Klausenburg, Marburg, Nikolsburg, Ödenburg, Regensburg, Salzburg, Schässburg
 		},
 		"Dorf", {
@@ -404,12 +416,38 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: Frohsdorf, Gänserndorf
 		},
+		"Eisen", {
+			"meaning", "Iron",
+			"singular-nominative", "Eisen",
+			"gender", "Neutral",
+			"uncountable", true,
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- example: "Eisenstadt"
+		},
 		"Gott", {
 			"meaning", "God",
 			"singular-nominative", "Gott",
 			"gender", "Masculine",
 			"prefix-singular", true,
 			"prefix-personal-name", true -- example: Gottfried
+		},
+		"Hof", {
+			"meaning", "Court",
+			"singular-nominative", "Hof",
+			"plural-nominative", "Höfe",
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Königinhof"
+		},
+		"Huhn", {
+			"meaning", "Chicken",
+			"singular-nominative", "Huhn",
+			"singular-genitive", "Huhns", -- could also be "Huhnes"
+			"plural-nominative", "Hühner",
+			"plural-genitive", "Hühner",
+			"gender", "Neutral",
+			"prefix-plural", true,
+			"prefix-settlement-name", true -- example: "Hühnerwasser"
 		},
 		"Kirche", {
 			"meaning", "Church",
@@ -428,6 +466,25 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: Königgrätz
 		},
+		"Königin", {
+			"meaning", "Queen",
+			"singular-nominative", "Königin",
+			"singular-genitive", "Königin",
+			"plural-nominative", "Königinnen",
+			"gender", "Feminine",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- example: "Königinhof"
+		},
+		"Land", {
+			"meaning", "Country",
+			"singular-nominative", "Land",
+			"singular-genitive", "Landes",
+			"plural-nominative", "Länder",
+			"plural-genitive", "Länder",
+			"gender", "Neutral",
+			"suffix-singular", true,
+			"suffix-province-name", true -- example: "Burgenland"
+		},
 		"Mann", {
 			"meaning", "Man",
 			"singular-nominative", "Mann",
@@ -435,6 +492,14 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Masculine",
 			"suffix-singular", true,
 			"suffix-personal-name", true -- example: Hermann, Karlmann
+		},
+		"Mark", {
+			"meaning", "March",
+			"singular-nominative", "Mark",
+			"plural-nominative", "Marken",
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-province-name", true -- example: "Steiermark" (Styria)
 		},
 		"Mut", {
 			"meaning", "Courage",
@@ -468,6 +533,13 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
 		},
+		"Stuhl", {
+			"meaning", "Chair",
+			"singular-nominative", "Stuhl",
+			"singular-genitive", "Stuhls",
+			"gender", "Masculine"
+			-- Stuhlweissenburg uses as a prefix, but without being genitive?
+		},
 		"Tal", {
 			"meaning", "Valley",
 			"singular-nominative", "Tal",
@@ -476,6 +548,22 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: "Zillertal"
 		},
+		"Wasser", {
+			"meaning", "Water",
+			"singular-nominative", "Wasser",
+			"gender", "Neutral",
+			"uncountable", true,
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Hühnerwasser"
+		},
+		"West", {
+			"meaning", "West",
+			"singular-nominative", "West",
+			"singular-genitive", "West",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-province-name", true -- example: "Westphalien"
+		},
 		"Wolf", {
 			"meaning", "Wolf",
 			"singular-nominative", "Wolf",
@@ -483,6 +571,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Masculine",
 			"prefix-singular", true,
 			"prefix-personal-name", true
+		}
+	},
+	"adjectives", {
+		"Alt", {
+			"meaning", "Old",
+			"prefix-settlement-name", true -- example: "Altsohl"
+		},
+		"Neu", {
+			"meaning", "New",
+			"prefix-settlement-name", true -- example: "Neusohl"
+		},
+		"Weiss", {
+			"meaning", "White",
+			"prefix-settlement-name", true -- example: "Weisskirchen"
 		}
 	},
 	"numerals", {
@@ -705,11 +807,9 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 		},
 		"Mēro", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 			"meaning", "More", -- perhaps a "determiner" class of words should be added?
-			"singular-nominative", "Mēro"
 		},
 		"Rōt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 			"meaning", "Red",
-			"singular-nominative", "Rōt"
 		}
 	},
 	"adverbs", {

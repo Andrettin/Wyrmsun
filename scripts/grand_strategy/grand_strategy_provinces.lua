@@ -882,6 +882,7 @@ function LoadProvinces(world)
 			Owner = "",
 			SettlementName = "Syracuse",
 			CulturalSettlementNames = {
+				greek = "Syracusae",
 				latin = "Syracusae"
 			},
 			SettlementLocation = {129, 37}, -- Palermo

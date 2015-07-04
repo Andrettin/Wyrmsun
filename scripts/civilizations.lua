@@ -539,17 +539,11 @@ DefineRaceNames(
 		},
 		"province-name-prefixes", {
 			"Branden", -- example: "Brandenburg"
-			"Burgen", -- "Burgen" = "Cities"/"Castles"; example: "Burgenland"
 			"Mecklen", -- example: "Mecklenburg"
 			"Steier", -- example: "Steiermark" (Styria)
-			"Vorarl", -- example: "Vorarlberg"
-			"West" -- "West" = "West"; example: "Westphalien" (Westphalia)
+			"Vorarl" -- example: "Vorarlberg"
 		},
 		"province-name-suffixes", {
-			"berg", -- "berg" = "mountain"; example: "Vorarlberg"
-			"burg", -- "burg" = "city"/"castle"; example: "Brandenburg"
-			"land", -- "land" = "country"/"land"/"state"; example: "Burgenland"
-			"mark", -- "mark" = "march"; example: "Steiermark" (Styria)
 			"phalien" -- example: "Westphalien" (Westphalia)
 		},
 		"settlement-names", {
@@ -569,7 +563,6 @@ DefineRaceNames(
 			"Görz",
 			"Graz", -- from the same Slavic root as "Grad"
 			"Ischl",
-			"Königinhof",
 			"Krems",
 			"Kremsier",
 			"Kufstein",
@@ -594,12 +587,9 @@ DefineRaceNames(
 			"Wien" -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 		},
 		"settlement-name-prefixes", {
-			"Alt", -- "Alt" = "Old"; example: "Altsohl"
-			"Eisen", -- "Eisen" = "Iron"; example: "Eisenstadt"
 			"Frohs", -- example: "Frohsdorf"
-			"Gänsern", -- "Gänsern = "Geese"; example: "Gänserndorf"
+			"Gänsern", -- "Gänse = "Geese" ("Gänsern" is presumably a variation thereof); example: "Gänserndorf"
 			"Ham", -- example: "Hamburg"
-			"Hühner", -- "Hühner" = "Chickens"; example: "Hühnerwasser"
 			"Inns", -- "Inns" = "Inn's" (related to the Inn river); example: "Innsbruck"
 --			"Josef", -- example: "Josefstadt"
 			"Karls", -- "Karls" = "Charles'"; example: "Karlsbad"
@@ -611,7 +601,6 @@ DefineRaceNames(
 			"Mar", -- example: "Marburg"
 			"Mühlen", -- example: "Mühlenbach"
 			"München", -- example: "Münchengrätz"
-			"Neu", -- "Neu" = "New"; example: "Neusohl"
 --			"Nikols", -- "Nikols" = "Nicholas'"; example: "Nikolsburg"
 			"Öden", -- example: "Ödenburg"
 			"Pres", -- example: "Presburg"
@@ -619,17 +608,14 @@ DefineRaceNames(
 			"Schäss", -- example: "Schässburg"
 			"Spiel", -- "Spiel" = "Game"/"Play"; example: "Spielberg"
 			"Stuhl", -- "Stuhl" = "Chair"; example: "Stuhlweissenburg"
-			"Weiss", -- "Weiss" = "White"; example: "Weisskirchen"
 			"Ziller" -- example: "Zillertal"
 		},
 		"settlement-name-suffixes", {
 			"bach", -- example: "Mühlenbach"
 			"bad", -- example: "Karlsbad"
-			"berg", -- "berg" = "mountain"; examples: "Adelsberg", "Lemberg", "Spielberg"
 			"furt", -- example: "Klagenfurt"
 			"grätz", -- examples: "Königgrätz", "Münchengrätz"
 			"sohl", -- examples: "Altsohl", "Neusohl"
-			"wasser", -- "wasser" = "water"; example: "Hühnerwasser"
 			"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
 		},
 		"settlement-name-translations", {
