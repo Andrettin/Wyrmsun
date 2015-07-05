@@ -343,7 +343,7 @@ function RunGrandStrategyGameSetupMenu()
 						end
 					elseif (GetWorldMapTileTerrain(x, y) == "Plains" or GetWorldMapTileTerrain(x, y) == "Dark Plains") then -- make plains tiles into hills if there is a mine there
 						if (TileHasResource(x, y, "Gold", true) == true) then
-							SetWorldMapTileTerrain(x, y, "Hills")
+							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Hills"))
 						end
 					elseif (GetWorldMapTileTerrain(x, y) == "Mountains") then -- implement variations for mountain tiles
 						if (TileHasResource(x, y, "Stone", false) == false and TileHasResource(x, y, "Gold", true) == false) then -- only add stone resource if has no gold
@@ -1847,7 +1847,7 @@ function RunGrandStrategyLoadGameMenu()
 			SetWorldMapSize(table.getn(world_map_tiles[1]), table.getn(world_map_tiles))
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
-					SetWorldMapTileTerrain(x, y, world_map_tiles[y+1][x+1])
+					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId(world_map_tiles[y+1][x+1]))
 				end
 			end
 			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
@@ -4748,7 +4748,7 @@ function ClearGrandStrategyVariables()
 	MercenaryGroups = nil
 	EventFaction = nil
 	EventProvince = nil
-	CleanWorldMapTiles()
+--	CleanGrandStrategyGame()
 	WorldMapResources = nil
 	ProcessingEndTurn = nil
 	GrandStrategyMapWidthIndent = false

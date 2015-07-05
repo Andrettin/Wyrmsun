@@ -41,10 +41,16 @@ function GenerateRandomWorldMap()
 		end
 	end
 	
+	for x=0,(world_map_width - 1) do
+		for y=0,(world_map_height - 1) do
+			SetWorldMapTileTerrain(x, y, -1)
+		end
+	end
+	
 	-- set map water borders
 	for y=0,(world_map_height - 1) do -- to make the map seem wrap around the horizontal edges
-		SetWorldMapTileTerrain(0, y, "Water")
-		SetWorldMapTileTerrain((world_map_width - 1), y, "Water")
+		SetWorldMapTileTerrain(0, y, GetWorldMapTerrainTypeId("Water"))
+		SetWorldMapTileTerrain((world_map_width - 1), y, GetWorldMapTerrainTypeId("Water"))
 	end
 
 	local mountain_seeds = {}
@@ -56,7 +62,7 @@ function GenerateRandomWorldMap()
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTileTerrain(RandomX, RandomY) == "") then
-				SetWorldMapTileTerrain(RandomX, RandomY, "Mountains")
+				SetWorldMapTileTerrain(RandomX, RandomY, GetWorldMapTerrainTypeId("Mountains"))
 				table.insert(mountain_seeds, {RandomX, RandomY})
 				break
 			end
@@ -71,10 +77,10 @@ function GenerateRandomWorldMap()
 					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset) == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
-							SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, "Mountains")
+							SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Mountains"))
 							table.insert(new_mountain_seeds, {mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset})
 						else
-							SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, "Hills")
+							SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Hills"))
 							table.insert(hill_seeds, {mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset})
 						end
 					end
@@ -96,10 +102,10 @@ function GenerateRandomWorldMap()
 					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
-							SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, "Hills")
+							SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Hills"))
 							table.insert(new_hill_seeds, {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset})
 						else
-							SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, "Plains")
+							SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Plains"))
 							table.insert(plains_seeds, {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset})
 						end
 					end
@@ -121,10 +127,10 @@ function GenerateRandomWorldMap()
 					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset) == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
-							SetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, "Plains")
+							SetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Plains"))
 							table.insert(new_plains_seeds, {plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset})
 						else
-							SetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, "Water")
+							SetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Water"))
 						end
 					end
 				end
@@ -140,7 +146,7 @@ function GenerateRandomWorldMap()
 	for x=0,(world_map_width - 1) do
 		for y=0,(world_map_height - 1) do
 			if (GetWorldMapTileTerrain(x, y) == "") then
-				SetWorldMapTileTerrain(x, y, "Water")
+				SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Water"))
 			end
 		end
 	end
@@ -150,20 +156,20 @@ function GenerateRandomWorldMap()
 			if (GetWorldMapTileTerrain(x, y) == "Water") then
 				-- remove single water tiles
 				if (GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water") then
-					SetWorldMapTileTerrain(x, y, "Plains")
+					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
 				-- remove two-tile water lakes
 				elseif (GetWorldMapTileTerrain(x + 1, y) == "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x + 2, y) ~= "Water" and GetWorldMapTileTerrain(x + 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y - 1) ~= "Water") then
-					SetWorldMapTileTerrain(x, y, "Plains")
+					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
 					SetWorldMapTileTerrain(x + 1, y, "Plains")
 				elseif (GetWorldMapTileTerrain(x - 1, y) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x - 2, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x - 1, y - 1) ~= "Water") then
-					SetWorldMapTileTerrain(x, y, "Plains")
-					SetWorldMapTileTerrain(x - 1, y, "Plains")
+					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
+					SetWorldMapTileTerrain(x - 1, y, GetWorldMapTerrainTypeId("Plains"))
 				elseif (GetWorldMapTileTerrain(x, y + 1) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x, y + 2) ~= "Water" and GetWorldMapTileTerrain(x - 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y + 1) ~= "Water") then
-					SetWorldMapTileTerrain(x, y, "Plains")
-					SetWorldMapTileTerrain(x, y + 1, "Plains")
+					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
+					SetWorldMapTileTerrain(x, y + 1, GetWorldMapTerrainTypeId("Plains"))
 				elseif (GetWorldMapTileTerrain(x, y - 1) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 2) ~= "Water" and GetWorldMapTileTerrain(x - 1, y - 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y - 1) ~= "Water") then
-					SetWorldMapTileTerrain(x, y, "Plains")
-					SetWorldMapTileTerrain(x, y - 1, "Plains")
+					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
+					SetWorldMapTileTerrain(x, y - 1, GetWorldMapTerrainTypeId("Plains"))
 				end
 			end
 		end
@@ -234,7 +240,7 @@ function GenerateRandomWorldMap()
 	for x=0,(world_map_width - 1) do
 		for y=0,(world_map_height - 1) do
 			if (GetWorldMapTileTerrain(x, y) == "Water" and TileProvinces[y+1][x+1] == "") then
-				SetWorldMapTileTerrain(x, y, "Plains")
+				SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
 			end
 		end
 	end
@@ -248,16 +254,16 @@ function GenerateRandomWorldMap()
 			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Plains") then
 				if (TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
 					if (RandomY >= (world_map_height / 4) and RandomY < (world_map_height - (world_map_height / 4))) then
-						SetWorldMapTileTerrain(RandomX, RandomY, "Scrub Forest") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+						SetWorldMapTileTerrain(RandomX, RandomY, GetWorldMapTerrainTypeId("Scrub Forest")) -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
 					else
-						SetWorldMapTileTerrain(RandomX, RandomY, "Conifer Forest")
+						SetWorldMapTileTerrain(RandomX, RandomY, GetWorldMapTerrainTypeId("Conifer Forest"))
 					end
 					table.insert(forest_seeds, {RandomX, RandomY})
 					break
 				end
 			elseif (GetWorldMapTileTerrain(RandomX, RandomY) == "Dark Plains") then
 				if (TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
-					SetWorldMapTileTerrain(RandomX, RandomY, "Scrub Forest")
+					SetWorldMapTileTerrain(RandomX, RandomY, GetWorldMapTerrainTypeId("Scrub Forest"))
 					table.insert(forest_seeds, {RandomX, RandomY})
 					break
 				end
@@ -273,16 +279,16 @@ function GenerateRandomWorldMap()
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 33) then
 							if (forest_seeds[j][2] + y_offset >= (world_map_height / 4) and forest_seeds[j][2] + y_offset < (world_map_height - (world_map_height / 4))) then
-								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "Scrub Forest") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Scrub Forest")) -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
 							else
-								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "Conifer Forest")
+								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Conifer Forest"))
 							end
 							table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
 						end
 					elseif (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Dark Plains" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 33) then
-							SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "Scrub Forest")
+							SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Scrub Forest"))
 							table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
 						end
 					end
