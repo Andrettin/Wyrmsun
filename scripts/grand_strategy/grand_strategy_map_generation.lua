@@ -160,7 +160,7 @@ function GenerateRandomWorldMap()
 				-- remove two-tile water lakes
 				elseif (GetWorldMapTileTerrain(x + 1, y) == "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x + 2, y) ~= "Water" and GetWorldMapTileTerrain(x + 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y - 1) ~= "Water") then
 					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
-					SetWorldMapTileTerrain(x + 1, y, "Plains")
+					SetWorldMapTileTerrain(x + 1, y, GetWorldMapTerrainTypeId("Plains"))
 				elseif (GetWorldMapTileTerrain(x - 1, y) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x - 2, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x - 1, y - 1) ~= "Water") then
 					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
 					SetWorldMapTileTerrain(x - 1, y, GetWorldMapTerrainTypeId("Plains"))
