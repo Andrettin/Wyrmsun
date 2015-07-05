@@ -649,6 +649,23 @@ function WarMenu(title, background, resize)
   return menu
 end
 
+function WarGrandStrategyMenu(title, resize)
+  local menu
+  local exitButton
+  local bg
+  local bgg
+
+  menu = MenuScreen()
+
+  AddMenuHelpers(menu)
+
+  if title then
+    menu:addLabel(title, Video.Width / 2, Video.Height / 20, Fonts["large"])
+  end
+
+  return menu
+end
+
 -- Default configurations -------
 Widget:setGlobalFont(Fonts["large"])
 
