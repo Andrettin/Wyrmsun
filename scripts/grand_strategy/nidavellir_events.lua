@@ -270,7 +270,7 @@ local NidavellirEvents = {
 				return false
 			end
 		end,
-		Options = {"OK"},
+		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then

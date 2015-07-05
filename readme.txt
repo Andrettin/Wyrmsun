@@ -193,6 +193,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.2.9
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Fixed issue with a defeat happening if Durin and Modsognir weren't in Svarinshaug when the A Rocky Home and The Necklace of the Brisings missions happened.
+- Improved mercenary hiring tooltip.
+
+* Units
+- Fixed costs of the Surghan Mercenary (it was costing some lumber, while it should cost none).
+
+-----------------------------------------------------------------------
 - 1.2.8
 -----------------------------------------------------------------------
 

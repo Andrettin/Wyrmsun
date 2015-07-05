@@ -48,6 +48,7 @@ if (LoadedGame == false) then
 				WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
 			elseif (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+				WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 0
 			end
 		end
 		for i, unitName in ipairs(Units) do
@@ -58,6 +59,15 @@ if (LoadedGame == false) then
 					end
 				end
 			end
+		end
+		
+		if (FactionHasHero(GetFactionFromName("Modsogning Clan"), "unit-hero-modsognir")) then
+			RemoveHeroFromFaction("unit-hero-modsognir", GetFactionFromName("Modsogning Clan"))
+			unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		end
+		if (FactionHasHero(GetFactionFromName("Modsogning Clan"), "unit-hero-durin")) then
+			RemoveHeroFromFaction("unit-hero-durin", GetFactionFromName("Modsogning Clan"))
+			unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
 		
 		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

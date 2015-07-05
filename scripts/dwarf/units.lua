@@ -725,7 +725,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	Quote = _("\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\" - Baglur, Retired Norlund Warrior"),
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-steelclad",
-	Costs = {"time", 0, "gold", 900},
+	Costs = {"time", 0, "gold", 900, "lumber", 0},
 	TrainQuantity = 4,
 	Mercenary = true,
 	Variations = {

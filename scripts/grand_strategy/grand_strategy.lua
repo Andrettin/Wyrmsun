@@ -1576,6 +1576,37 @@ function ProvinceHasHero(province, unit_type)
 	end
 end
 
+function GetHeroProvinceForFaction(unit_type, faction)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		if (ProvinceHasHero(WorldMapProvinces[key], unit_type)) then
+			return WorldMapProvinces[key]
+		end
+	end
+	return WorldMapProvinces[key]
+end
+
+function RemoveHeroFromProvince(unit_type, province)
+	if (province.Heroes[string.gsub(unit_type, "-", "_")] == 2) then
+		province.Heroes[string.gsub(unit_type, "-", "_")] = 0
+	else
+		local has_other_hero_version = false -- check to see if the province has another version of the hero in it
+		for j, second_unitName in ipairs(Units) do
+			if (IsHero(second_unitName)) then
+				if (GetUnitTypeData(unit_type, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and province.Heroes[string.gsub(second_unitName, "-", "_")] == 2) then
+					province.Heroes[string.gsub(second_unitName, "-", "_")] = 0
+					break
+				end
+			end
+		end
+	end
+end
+
+function RemoveHeroFromFaction(unit_type, faction)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		RemoveHeroFromProvince(unit_type, WorldMapProvinces[key])
+	end
+end
+
 function CanAttackProvince(province, faction, province_from)
 	if (province.Owner == faction.Name or province.Owner == "Ocean" or (province.AttackedBy ~= "" and province.AttackedBy ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false
@@ -2557,6 +2588,39 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setSize(46, 38)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
+	local cost_tooltip = ""
+	if (GetUnitTypeData(unit_type, "Costs", "gold") > 0) then
+		if (cost_tooltip == "") then
+			cost_tooltip = " (costs "
+		else
+			cost_tooltip = cost_tooltip .. ", "
+		end
+		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "gold") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold"
+	end
+	if (GetUnitTypeData(unit_type, "Costs", "lumber") > 0) then
+		if (cost_tooltip == "") then
+			cost_tooltip = " (costs "
+		else
+			cost_tooltip = cost_tooltip .. " and "
+		end
+		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "lumber") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Lumber"
+	end
+	if (GetUnitTypeData(unit_type, "Costs", "stone") > 0) then
+		if (cost_tooltip == "") then
+			cost_tooltip = " (costs "
+		else
+			cost_tooltip = cost_tooltip .. " and "
+		end
+		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "stone") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Stone"
+	end
+	if (cost_tooltip ~= "") then
+		cost_tooltip = cost_tooltip .. ")"
+	end
+							
+	if (GetUnitTypeUpkeep(unit_type) > 0) then
+		cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unit_type) * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep)"
+	end
+							
 	local regiment_type_name = GetUnitTypeName(unit_type) .. "s"
 	if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
 		regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
@@ -2566,12 +2630,12 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	end
 	if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
 		regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-	end
+	end	
 							
 	if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] > 0) then
 		UIElements[table.getn(UIElements)]:setTooltip("Cancel hiring " .. regiment_type_name)
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Hire " .. regiment_type_name)
+		UIElements[table.getn(UIElements)]:setTooltip("Hire " .. regiment_type_name .. cost_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
@@ -3778,7 +3842,7 @@ function DrawGrandStrategyInterface()
 							end
 							
 							if (GetUnitTypeUpkeep(unitName) > 0) then
-								cost_tooltip = cost_tooltip .. "(" .. GetUnitTypeUpkeep(unitName) .. " upkeep)"
+								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unitName) .. " Gold Upkeep)"
 							end
 							
 							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
