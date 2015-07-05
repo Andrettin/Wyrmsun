@@ -837,115 +837,6 @@ function RunSelectScenarioMenu()
   menu:run()
 end
 
-function GetWorldMapTile(x, y)
-	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		return string.sub(WorldMapTiles[y+1][x+1], 1, 4)
-	elseif (x < 0 and y >= 0 and y < table.getn(WorldMapTiles)) then
-		return string.sub(WorldMapTiles[y+1][0+1], 1, 4)
-	elseif (x >= table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		return string.sub(WorldMapTiles[y+1][table.getn(WorldMapTiles[1])], 1, 4)
-	elseif (x >= 0 and x < table.getn(WorldMapTiles[1]) and y < 0) then
-		return string.sub(WorldMapTiles[0+1][x+1], 1, 4)
-	elseif (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= table.getn(WorldMapTiles)) then
-		return string.sub(WorldMapTiles[table.getn(WorldMapTiles)][x+1], 1, 4)
-	elseif (x < 0 and y < 0) then
-		return string.sub(WorldMapTiles[0+1][0+1], 1, 4)
-	elseif (x >= table.getn(WorldMapTiles[1]) and y < 0) then
-		return string.sub(WorldMapTiles[0+1][table.getn(WorldMapTiles[1])], 1, 4)
-	elseif (x < 0 and y >= table.getn(WorldMapTiles)) then
-		return string.sub(WorldMapTiles[table.getn(WorldMapTiles)][0+1], 1, 4)
-	elseif (x >= table.getn(WorldMapTiles[1]) and y >= table.getn(WorldMapTiles)) then
-		return string.sub(WorldMapTiles[table.getn(WorldMapTiles)][table.getn(WorldMapTiles[1])], 1, 4)
-	else
-		return ""
-	end
-end
-
-function RunWorldMapMenu(world, maps)
-	buttonStatut = 0
-	local menu = WarMenu(nil, panel(5), false)
-	menu:setSize(352, 352)
-	menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
-	menu:setDrawMenusUnder(true)
-
-	menu:addLabel("Select Map", 176, 8)
-
-	Load("scripts/grand_strategy/" .. string.lower(world) .. "_world_map.lua")
-
-	for x=0,9 do
-		for y=0,7 do
-			-- set map tile
-			if (GetWorldMapTile(x, y) == "DryMud") then
-				local world_map_tile = CGraphic:New("tilesets/world/terrain/dry_mud.png")
-				world_map_tile:Load()
-				world_map_tile = ImageWidget(world_map_tile)
-				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
-			elseif (GetWorldMapTile(x, y) == "Rock") then
-				local world_map_tile = CGraphic:New("tilesets/world/terrain/dry_mud.png")
-				world_map_tile:Load()
-				world_map_tile = ImageWidget(world_map_tile)
-				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
-				
-				if (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x - 1, y) == "Rock" and GetWorldMapTile(x + 1, y) == "Rock") then
-					world_map_tile = CGraphic:New("tilesets/world/terrain/rock_south.png")
-				elseif (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x, y - 1) == "Rock" and GetWorldMapTile(x - 1, y) ~= "Rock" and GetWorldMapTile(x + 1, y) ~= "Rock") then
-					world_map_tile = CGraphic:New("tilesets/world/terrain/rock_south_single.png")
-				elseif (GetWorldMapTile(x, y + 1) ~= "Rock" and GetWorldMapTile(x, y - 1) ~= "Rock" and GetWorldMapTile(x - 1, y) ~= "Rock" and GetWorldMapTile(x + 1, y) ~= "Rock") then
-					world_map_tile = CGraphic:New("tilesets/world/terrain/rock_single.png")
-				else
-					world_map_tile = CGraphic:New("tilesets/world/terrain/rock.png")
-				end
-				world_map_tile:Load()
-				world_map_tile = ImageWidget(world_map_tile)
-				menu:add(world_map_tile, 16 + 32 * x, 16 + 32 * (y + 1))
-			end
-		end
-	end
-
-	-- create sites in the world map from the information in the map files
-	for i=1,table.getn(maps) do
-		MapWorld = ""
-		MapRequiredQuest = ""
-		MapSiteType = ""
-		WorldMapPosition = {0, 0}
-		GetMapInfo(maps[i])
-		if (MapWorld == world and MapSiteType ~= "" and (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest))) then
-			local world_map_site_image
-			if (MapSiteType == "Dwarven Settlement") then
-				world_map_site_image = CGraphic:New("tilesets/world/sites/dwarven_settlement.png")
-			elseif (MapSiteType == "Gnomish Settlement") then
-				world_map_site_image = CGraphic:New("tilesets/world/sites/gnomish_settlement.png")
-			end
-			world_map_site_image:Load()
-
-			local world_map_site = ImageButton("")
-			world_map_site:setActionCallback(
-				function()
-					mapname = maps[i]
-					menu:stop()
-				end
-			)
-			menu:add(world_map_site, 16 + 32 * WorldMapPosition[1], 16 + 32 * (WorldMapPosition[2] + 1))
-			world_map_site:setNormalImage(world_map_site_image)
-			world_map_site:setPressedImage(world_map_site_image)
-			world_map_site:setDisabledImage(world_map_site_image)
-			world_map_site:setSize(32, 32)
-			world_map_site:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-		end
-	end
-
-	menu:addHalfButton(_("~!Random"), "r", 48, 318,
-		function()
-			menu:stop()
-		end)
-	menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
-		function()
-			menu:stop()
-		end)
-
-	menu:run()
-end
-
 function RunSinglePlayerGameMenu()
   SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
   wyrmsun.playlist = { "music/battle_theme_a.ogg" }
@@ -1078,13 +969,6 @@ function RunSinglePlayerCustomGameMenu()
   descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
 
   menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
---  menu:addFullButton("S~!elect Map", "e", offx + 640 - 224 - 16, offy + 360 + 36*-2,
---    function()
---      local oldmapname = mapname
---      RunWorldMapMenu(world_list[world:getSelected() + 1], maps)
---      GetMapInfo(mapname)
---      MapChanged()
---    end)
   menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
     function()
     	-- change the human player in special cases

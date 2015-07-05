@@ -28,25 +28,23 @@
 --
 
 function GenerateRandomWorldMap()
-	WorldMapTiles = {}
 	TileProvinces = {}
 	
-	local world_map_width = 128
-	local world_map_height = 64
+	SetWorldMapSize(128, 64)
+	local world_map_width = GetWorldMapWidth()
+	local world_map_height = GetWorldMapHeight()
 	
 	for y=1,world_map_height do
-		WorldMapTiles[y] = {}
 		TileProvinces[y] = {}
 		for x=1,world_map_width do
-			WorldMapTiles[y][x] = ""
 			TileProvinces[y][x] = ""
 		end
 	end
 	
 	-- set map water borders
 	for y=0,(world_map_height - 1) do -- to make the map seem wrap around the horizontal edges
-		SetWorldMapTile(0, y, "Watr")
-		SetWorldMapTile((world_map_width - 1), y, "Watr")
+		SetWorldMapTileTerrain(0, y, "Water")
+		SetWorldMapTileTerrain((world_map_width - 1), y, "Water")
 	end
 
 	local mountain_seeds = {}
@@ -57,8 +55,8 @@ function GenerateRandomWorldMap()
 		for j=1,100 do -- 100 attempts to get a suitable location
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
-			if (GetWorldMapTile(RandomX, RandomY) == "") then
-				SetWorldMapTile(RandomX, RandomY, "Mntn")
+			if (GetWorldMapTileTerrain(RandomX, RandomY) == "") then
+				SetWorldMapTileTerrain(RandomX, RandomY, "Mountains")
 				table.insert(mountain_seeds, {RandomX, RandomY})
 				break
 			end
@@ -70,13 +68,13 @@ function GenerateRandomWorldMap()
 		for j=1,table.getn(mountain_seeds) do
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset) == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset) == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
-							SetWorldMapTile(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, "Mntn")
+							SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, "Mountains")
 							table.insert(new_mountain_seeds, {mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset})
 						else
-							SetWorldMapTile(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, "Hill")
+							SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, "Hills")
 							table.insert(hill_seeds, {mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset})
 						end
 					end
@@ -95,13 +93,13 @@ function GenerateRandomWorldMap()
 		for j=1,table.getn(hill_seeds) do
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
-							SetWorldMapTile(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, "Hill")
+							SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, "Hills")
 							table.insert(new_hill_seeds, {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset})
 						else
-							SetWorldMapTile(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, "Plns")
+							SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, "Plains")
 							table.insert(plains_seeds, {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset})
 						end
 					end
@@ -120,13 +118,13 @@ function GenerateRandomWorldMap()
 		for j=1,table.getn(plains_seeds) do
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset) == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset) == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
-							SetWorldMapTile(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, "Plns")
+							SetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, "Plains")
 							table.insert(new_plains_seeds, {plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset})
 						else
-							SetWorldMapTile(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, "Watr")
+							SetWorldMapTileTerrain(plains_seeds[j][1] + x_offset, plains_seeds[j][2] + y_offset, "Water")
 						end
 					end
 				end
@@ -141,31 +139,31 @@ function GenerateRandomWorldMap()
 	
 	for x=0,(world_map_width - 1) do
 		for y=0,(world_map_height - 1) do
-			if (GetWorldMapTile(x, y) == "") then
-				SetWorldMapTile(x, y, "Watr")
+			if (GetWorldMapTileTerrain(x, y) == "") then
+				SetWorldMapTileTerrain(x, y, "Water")
 			end
 		end
 	end
 	
 	for x=0,(world_map_width - 1) do
 		for y=0,(world_map_height - 1) do
-			if (GetWorldMapTile(x, y) == "Watr") then
+			if (GetWorldMapTileTerrain(x, y) == "Water") then
 				-- remove single water tiles
-				if (GetWorldMapTile(x + 1, y) ~= "Watr" and GetWorldMapTile(x - 1, y) ~= "Watr" and GetWorldMapTile(x, y + 1) ~= "Watr" and GetWorldMapTile(x, y - 1) ~= "Watr") then
-					SetWorldMapTile(x, y, "Plns")
+				if (GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water") then
+					SetWorldMapTileTerrain(x, y, "Plains")
 				-- remove two-tile water lakes
-				elseif (GetWorldMapTile(x + 1, y) == "Watr" and GetWorldMapTile(x - 1, y) ~= "Watr" and GetWorldMapTile(x, y + 1) ~= "Watr" and GetWorldMapTile(x, y - 1) ~= "Watr" and GetWorldMapTile(x + 2, y) ~= "Watr" and GetWorldMapTile(x + 1, y + 1) ~= "Watr" and GetWorldMapTile(x + 1, y - 1) ~= "Watr") then
-					SetWorldMapTile(x, y, "Plns")
-					SetWorldMapTile(x + 1, y, "Plns")
-				elseif (GetWorldMapTile(x - 1, y) == "Watr" and GetWorldMapTile(x + 1, y) ~= "Watr" and GetWorldMapTile(x, y + 1) ~= "Watr" and GetWorldMapTile(x, y - 1) ~= "Watr" and GetWorldMapTile(x - 2, y) ~= "Watr" and GetWorldMapTile(x - 1, y + 1) ~= "Watr" and GetWorldMapTile(x - 1, y - 1) ~= "Watr") then
-					SetWorldMapTile(x, y, "Plns")
-					SetWorldMapTile(x - 1, y, "Plns")
-				elseif (GetWorldMapTile(x, y + 1) == "Watr" and GetWorldMapTile(x + 1, y) ~= "Watr" and GetWorldMapTile(x - 1, y) ~= "Watr" and GetWorldMapTile(x, y - 1) ~= "Watr" and GetWorldMapTile(x, y + 2) ~= "Watr" and GetWorldMapTile(x - 1, y + 1) ~= "Watr" and GetWorldMapTile(x + 1, y + 1) ~= "Watr") then
-					SetWorldMapTile(x, y, "Plns")
-					SetWorldMapTile(x, y + 1, "Plns")
-				elseif (GetWorldMapTile(x, y - 1) == "Watr" and GetWorldMapTile(x + 1, y) ~= "Watr" and GetWorldMapTile(x - 1, y) ~= "Watr" and GetWorldMapTile(x, y + 1) ~= "Watr" and GetWorldMapTile(x, y - 2) ~= "Watr" and GetWorldMapTile(x - 1, y - 1) ~= "Watr" and GetWorldMapTile(x + 1, y - 1) ~= "Watr") then
-					SetWorldMapTile(x, y, "Plns")
-					SetWorldMapTile(x, y - 1, "Plns")
+				elseif (GetWorldMapTileTerrain(x + 1, y) == "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x + 2, y) ~= "Water" and GetWorldMapTileTerrain(x + 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y - 1) ~= "Water") then
+					SetWorldMapTileTerrain(x, y, "Plains")
+					SetWorldMapTileTerrain(x + 1, y, "Plains")
+				elseif (GetWorldMapTileTerrain(x - 1, y) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x - 2, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x - 1, y - 1) ~= "Water") then
+					SetWorldMapTileTerrain(x, y, "Plains")
+					SetWorldMapTileTerrain(x - 1, y, "Plains")
+				elseif (GetWorldMapTileTerrain(x, y + 1) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y - 1) ~= "Water" and GetWorldMapTileTerrain(x, y + 2) ~= "Water" and GetWorldMapTileTerrain(x - 1, y + 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y + 1) ~= "Water") then
+					SetWorldMapTileTerrain(x, y, "Plains")
+					SetWorldMapTileTerrain(x, y + 1, "Plains")
+				elseif (GetWorldMapTileTerrain(x, y - 1) == "Water" and GetWorldMapTileTerrain(x + 1, y) ~= "Water" and GetWorldMapTileTerrain(x - 1, y) ~= "Water" and GetWorldMapTileTerrain(x, y + 1) ~= "Water" and GetWorldMapTileTerrain(x, y - 2) ~= "Water" and GetWorldMapTileTerrain(x - 1, y - 1) ~= "Water" and GetWorldMapTileTerrain(x + 1, y - 1) ~= "Water") then
+					SetWorldMapTileTerrain(x, y, "Plains")
+					SetWorldMapTileTerrain(x, y - 1, "Plains")
 				end
 			end
 		end
@@ -182,7 +180,7 @@ function GenerateRandomWorldMap()
 			for i=1,100 do
 				local RandomX = SyncRand(world_map_width)
 				local RandomY = SyncRand(world_map_height)
-				if (GetWorldMapTile(RandomX, RandomY) == "Watr" and TileProvinces[RandomY+1][RandomX+1] == "") then
+				if (GetWorldMapTileTerrain(RandomX, RandomY) == "Water" and TileProvinces[RandomY+1][RandomX+1] == "") then
 					TileProvinces[RandomY+1][RandomX+1] = key
 					table.insert(WorldMapWaterProvinces[key].Tiles, {RandomX, RandomY})
 					table.insert(water_province_seeds, {RandomX, RandomY})
@@ -202,7 +200,7 @@ function GenerateRandomWorldMap()
 		for j=1,table.getn(water_province_seeds) do
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(water_province_seeds[j][1] + x_offset, water_province_seeds[j][2] + y_offset) == "Watr" and (water_province_seeds[j][1] + x_offset) >= 0 and water_province_seeds[j][1] + x_offset < table.getn(WorldMapTiles[1]) and water_province_seeds[j][2] + y_offset >= 0 and water_province_seeds[j][2] + y_offset < table.getn(WorldMapTiles) and TileProvinces[water_province_seeds[j][2] + y_offset + 1][water_province_seeds[j][1] + x_offset + 1] == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(water_province_seeds[j][1] + x_offset, water_province_seeds[j][2] + y_offset) == "Water" and (water_province_seeds[j][1] + x_offset) >= 0 and water_province_seeds[j][1] + x_offset < GetWorldMapWidth() and water_province_seeds[j][2] + y_offset >= 0 and water_province_seeds[j][2] + y_offset < GetWorldMapHeight() and TileProvinces[water_province_seeds[j][2] + y_offset + 1][water_province_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
 							TileProvinces[water_province_seeds[j][2] + y_offset + 1][water_province_seeds[j][1] + x_offset + 1] = TileProvinces[water_province_seeds[j][2] + 1][water_province_seeds[j][1] + 1]
@@ -216,7 +214,7 @@ function GenerateRandomWorldMap()
 			local unassigned_neighboring_tile = false
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(water_province_seeds[j][1] + x_offset, water_province_seeds[j][2] + y_offset) == "Watr" and (water_province_seeds[j][1] + x_offset) >= 0 and water_province_seeds[j][1] + x_offset < table.getn(WorldMapTiles[1]) and water_province_seeds[j][2] + y_offset >= 0 and water_province_seeds[j][2] + y_offset < table.getn(WorldMapTiles) and TileProvinces[water_province_seeds[j][2] + y_offset + 1][water_province_seeds[j][1] + x_offset + 1] == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(water_province_seeds[j][1] + x_offset, water_province_seeds[j][2] + y_offset) == "Water" and (water_province_seeds[j][1] + x_offset) >= 0 and water_province_seeds[j][1] + x_offset < GetWorldMapWidth() and water_province_seeds[j][2] + y_offset >= 0 and water_province_seeds[j][2] + y_offset < GetWorldMapHeight() and TileProvinces[water_province_seeds[j][2] + y_offset + 1][water_province_seeds[j][1] + x_offset + 1] == "") then
 						unassigned_neighboring_tile = true
 					end
 				end
@@ -235,8 +233,8 @@ function GenerateRandomWorldMap()
 	-- make all water tiles which don't have a province assigned (usually very small inland lakes) into plains
 	for x=0,(world_map_width - 1) do
 		for y=0,(world_map_height - 1) do
-			if (GetWorldMapTile(x, y) == "Watr" and TileProvinces[y+1][x+1] == "") then
-				SetWorldMapTile(x, y, "Plns")
+			if (GetWorldMapTileTerrain(x, y) == "Water" and TileProvinces[y+1][x+1] == "") then
+				SetWorldMapTileTerrain(x, y, "Plains")
 			end
 		end
 	end
@@ -247,19 +245,19 @@ function GenerateRandomWorldMap()
 		for j=1,100 do
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
-			if (GetWorldMapTile(RandomX, RandomY) == "Plns") then
+			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Plains") then
 				if (TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
 					if (RandomY >= (world_map_height / 4) and RandomY < (world_map_height - (world_map_height / 4))) then
-						SetWorldMapTile(RandomX, RandomY, "ScFr") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+						SetWorldMapTileTerrain(RandomX, RandomY, "Scrub Forest") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
 					else
-						SetWorldMapTile(RandomX, RandomY, "CnFr")
+						SetWorldMapTileTerrain(RandomX, RandomY, "Conifer Forest")
 					end
 					table.insert(forest_seeds, {RandomX, RandomY})
 					break
 				end
-			elseif (GetWorldMapTile(RandomX, RandomY) == "DkPl") then
+			elseif (GetWorldMapTileTerrain(RandomX, RandomY) == "Dark Plains") then
 				if (TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
-					SetWorldMapTile(RandomX, RandomY, "ScFr")
+					SetWorldMapTileTerrain(RandomX, RandomY, "Scrub Forest")
 					table.insert(forest_seeds, {RandomX, RandomY})
 					break
 				end
@@ -271,20 +269,20 @@ function GenerateRandomWorldMap()
 		for j=1,table.getn(forest_seeds) do
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Plns" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Plains" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 33) then
 							if (forest_seeds[j][2] + y_offset >= (world_map_height / 4) and forest_seeds[j][2] + y_offset < (world_map_height - (world_map_height / 4))) then
-								SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "ScFr") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "Scrub Forest") -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
 							else
-								SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "CnFr")
+								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "Conifer Forest")
 							end
 							table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
 						end
-					elseif (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "DkPl" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
+					elseif (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Dark Plains" and TileProvinces[forest_seeds[j][2] + y_offset + 1][forest_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 33) then
-							SetWorldMapTile(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "ScFr")
+							SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, "Scrub Forest")
 							table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
 						end
 					end
@@ -317,9 +315,9 @@ function GenerateRandomWorldMap()
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
 			if (
-				GetWorldMapTile(RandomX, RandomY) ~= "Watr" and TileProvinces[RandomY+1][RandomX+1] == ""
-				and (WorldMapProvinces[key].SettlementTerrain == nil or GetWorldMapTile(RandomX, RandomY) == WorldMapProvinces[key].SettlementTerrain)
-				and (WorldMapProvinces[key].Coastal == nil or WorldMapProvinces[key].Coastal == false or GetWorldMapTile(RandomX - 1, RandomY) == "Water" or GetWorldMapTile(RandomX + 1, RandomY) == "Water" or GetWorldMapTile(RandomX, RandomY - 1) == "Water" or GetWorldMapTile(RandomX, RandomY + 1) == "Water")
+				GetWorldMapTileTerrain(RandomX, RandomY) ~= "Water" and TileProvinces[RandomY+1][RandomX+1] == ""
+				and (WorldMapProvinces[key].SettlementTerrain == nil or GetWorldMapTileTerrain(RandomX, RandomY) == WorldMapProvinces[key].SettlementTerrain)
+				and (WorldMapProvinces[key].Coastal == nil or WorldMapProvinces[key].Coastal == false or GetWorldMapTileTerrain(RandomX - 1, RandomY) == "Water" or GetWorldMapTileTerrain(RandomX + 1, RandomY) == "Water" or GetWorldMapTileTerrain(RandomX, RandomY - 1) == "Water" or GetWorldMapTileTerrain(RandomX, RandomY + 1) == "Water")
 			) then
 				TileProvinces[RandomY+1][RandomX+1] = key
 				table.insert(WorldMapProvinces[key].Tiles, {RandomX, RandomY})
@@ -338,7 +336,7 @@ function GenerateRandomWorldMap()
 		for j=1,100 do
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
-			if (GetWorldMapTile(RandomX, RandomY) == "Hill" or GetWorldMapTile(RandomX, RandomY) == "Mntn") then
+			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Hills" or GetWorldMapTileTerrain(RandomX, RandomY) == "Mountains") then
 				if (GetArrayIncludes(WorldMapResources.Gold, {RandomX, RandomY}) == false and TileProvinces[RandomY+1][RandomX+1] == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
 					table.insert(WorldMapResources.Gold, {RandomX, RandomY, false})
 					break
@@ -352,7 +350,7 @@ function GenerateRandomWorldMap()
 		for j=1,table.getn(province_seeds) do
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) ~= "Watr" and (province_seeds[j][1] + x_offset) >= 0 and province_seeds[j][1] + x_offset < table.getn(WorldMapTiles[1]) and province_seeds[j][2] + y_offset >= 0 and province_seeds[j][2] + y_offset < table.getn(WorldMapTiles) and TileProvinces[province_seeds[j][2] + y_offset + 1][province_seeds[j][1] + x_offset + 1] == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) ~= "Water" and (province_seeds[j][1] + x_offset) >= 0 and province_seeds[j][1] + x_offset < GetWorldMapWidth() and province_seeds[j][2] + y_offset >= 0 and province_seeds[j][2] + y_offset < GetWorldMapHeight() and TileProvinces[province_seeds[j][2] + y_offset + 1][province_seeds[j][1] + x_offset + 1] == "") then
 						local RandomNumber = SyncRand(100)
 						if (RandomNumber < 50) then
 							TileProvinces[province_seeds[j][2] + y_offset + 1][province_seeds[j][1] + x_offset + 1] = TileProvinces[province_seeds[j][2] + 1][province_seeds[j][1] + 1]
@@ -366,7 +364,7 @@ function GenerateRandomWorldMap()
 			local unassigned_neighboring_tile = false
 			for x_offset=-1,1 do
 				for y_offset=-1,1 do
-					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTile(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) ~= "Watr" and (province_seeds[j][1] + x_offset) >= 0 and province_seeds[j][1] + x_offset < table.getn(WorldMapTiles[1]) and province_seeds[j][2] + y_offset >= 0 and province_seeds[j][2] + y_offset < table.getn(WorldMapTiles) and TileProvinces[province_seeds[j][2] + y_offset + 1][province_seeds[j][1] + x_offset + 1] == "") then
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) ~= "Water" and (province_seeds[j][1] + x_offset) >= 0 and province_seeds[j][1] + x_offset < GetWorldMapWidth() and province_seeds[j][2] + y_offset >= 0 and province_seeds[j][2] + y_offset < GetWorldMapHeight() and TileProvinces[province_seeds[j][2] + y_offset + 1][province_seeds[j][1] + x_offset + 1] == "") then
 						unassigned_neighboring_tile = true
 					end
 				end

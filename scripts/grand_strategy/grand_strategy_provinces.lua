@@ -49,7 +49,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Andalusia = {
 			Name = "Farther Baetica",
@@ -69,7 +69,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Aquitaine = {
 			Name = "Aquitania",
@@ -88,7 +88,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Aragon = {
 			Name = "Hither Baetica",
@@ -108,7 +108,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Astrakhan = {
 			Name = "Astrakhan",
@@ -127,7 +127,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 8
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Attica = {
 			Name = "Attica",
@@ -144,7 +144,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Austria = {
@@ -168,7 +168,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		BalticLands = {
 			Name = "Baltic Lands",
@@ -181,7 +181,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Bavaria = {
 			Name = "Raetia",
@@ -204,7 +204,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Asa Tribe from expanding here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Belgium = {
 			Name = "Belgium",
@@ -226,7 +226,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer early on
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Bohemia = {
 	--		Name = "Marcomannia",
@@ -252,7 +252,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Brandenburg = {
 			Name = "Semnonia",
@@ -271,7 +271,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Brittany = {
 			Name = "Armorica",
@@ -288,7 +288,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Bulgaria = {
 			Name = "Lower Moesia",
@@ -306,7 +306,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Burgundy = {
 			Name = "Gallia Narbonensis",
@@ -325,7 +325,7 @@ function LoadProvinces(world)
 			Map = "maps/earth/belfort.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Castille = {
 			Name = "Hispania Tarraconensis",
@@ -345,7 +345,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Corsica = {
 			Name = "Corsica",
@@ -361,7 +361,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Crete = {
@@ -376,7 +376,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Croatia = {
@@ -400,7 +400,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Don = {
 			Name = "Don",
@@ -419,7 +419,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 4
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		England = {
 			Name = "Britannia",
@@ -438,7 +438,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		France = {
@@ -461,7 +461,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to prevent germanic expansion here too soon
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Galicia = {
 			Name = "Galicia",
@@ -474,7 +474,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		GaliciaIberia = {
 			Name = "Gallaecia",
@@ -497,7 +497,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Gotaland = {
 			Name = "Gotaland",
@@ -518,7 +518,7 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 4
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Gotland = {
@@ -531,7 +531,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Hungary = {
@@ -552,7 +552,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Iceland = {
 			Name = "Iceland",
@@ -565,7 +565,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Ireland = {
@@ -582,7 +582,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Latium = {
@@ -600,7 +600,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Jutland = {
 			Name = "Jutland",
@@ -618,7 +618,7 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Macedonia = {
@@ -636,7 +636,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Moldavia = {
 			Name = "Moldavia",
@@ -652,7 +652,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Naples = {
 			Name = "Naples",
@@ -672,7 +672,7 @@ function LoadProvinces(world)
 			Map = "maps/earth/south-italy.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Netherlands = {
 			Name = "Netherlands",
@@ -690,7 +690,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 1 -- soldiers to prevent germanic expansion here too soon
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		NorthItaly = {
@@ -712,7 +712,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Peloponnese = {
@@ -729,7 +729,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Poland = {
@@ -743,7 +743,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Portugal = {
 			Name = "Lusitania",
@@ -763,7 +763,7 @@ function LoadProvinces(world)
 			Map = "maps/earth/braga.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Prussia = {
@@ -775,13 +775,13 @@ function LoadProvinces(world)
 			Tiles = { {130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25} },
 			Owner = "",
 --			SettlementName = "Konigsberg",
-			SettlementLocation = {134, 25}, -- Königsberg
+			SettlementLocation = {134, 25}, -- KÃ¶nigsberg
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Rhineland = {
@@ -794,14 +794,14 @@ function LoadProvinces(world)
 			Tiles = { {125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26} },
 			Owner = "",
 	--		SettlementName = "Dusseldorf",
-			SettlementLocation = {125, 27}, -- Düsseldorf
+			SettlementLocation = {125, 27}, -- DÃ¼sseldorf
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Russia = {
 			Name = "Gardarike",
@@ -822,7 +822,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to stop the Vana Tribe from expanding here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Sardinia = {
 			Name = "Sardinia",
@@ -838,7 +838,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Scotland = {
@@ -856,7 +856,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Hill",
+			SettlementTerrain = "Hills",
 			Coastal = true
 		},
 		Serbia = {
@@ -874,7 +874,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Sicily = {
 			Name = "Sicily",
@@ -891,7 +891,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns",
+			SettlementTerrain = "Plains",
 			Coastal = true -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
 		},
 		Silesia = {
@@ -906,7 +906,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Sweden = {
 			Name = "Sweden",
@@ -923,7 +923,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Switzerland = {
 			Name = "Helvetia",
@@ -940,7 +940,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Mntn"
+			SettlementTerrain = "Mountains"
 		},
 		Thrace = {
 			Name = "Thrace",
@@ -958,7 +958,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Transylvania = {
 			Name = "Transylvania",
@@ -968,14 +968,14 @@ function LoadProvinces(world)
 			},
 			Tiles = { {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
 			Owner = "",
-			SettlementName = "",
+--			SettlementName = "",
 			SettlementLocation = {136, 30}, -- Klausenburg
 			SettlementBuildings = {
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Ukraine = {
 			Name = "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
@@ -996,7 +996,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		Wallachia = {
 			Name = "Wallachia",
@@ -1012,7 +1012,7 @@ function LoadProvinces(world)
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		},
 		WhiteRussia = {
 			Name = "White Russia",
@@ -1025,7 +1025,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 			},
-			SettlementTerrain = "Plns"
+			SettlementTerrain = "Plains"
 		}
 	}
 	
@@ -1046,7 +1046,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill" -- should be DkPl?
+			SettlementTerrain = "Hills" -- should be DkPl?
 		},
 		CavernsOfChaincolt = {
 			Name = "Caverns of Chaincolt",
@@ -1059,7 +1059,7 @@ function LoadProvinces(world)
 				unit_goblin_spearman = 4
 			},
 			Heroes = {},
-			SettlementTerrain = "Mntn" -- for random map generation
+			SettlementTerrain = "Mountains" -- for random map generation
 		},
 		CavernsOfFlame = {
 			Name = "Caverns of Flame",
@@ -1077,7 +1077,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		EasternMines = {
 			Name = "Eastern Mines",
@@ -1093,7 +1093,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		GryphonMountain = {
 			Name = "Gryphon Mountain",
@@ -1107,7 +1107,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Mntn"
+			SettlementTerrain = "Mountains"
 		},
 		Heartfangs = {
 			Name = "Heartfangs",
@@ -1124,7 +1124,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Mntn"
+			SettlementTerrain = "Mountains"
 		},
 		HighPass = {
 			Name = "High Pass",
@@ -1139,7 +1139,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		HighbrookPass = {
 			Name = "Highbrook Pass",
@@ -1157,7 +1157,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Mntn"
+			SettlementTerrain = "Mountains"
 		},
 		KalKartha = {
 			Name = "Kal Kartha",
@@ -1175,7 +1175,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Mntn"
+			SettlementTerrain = "Mountains"
 		},
 		Lyr = {
 			Name = "Lyr",
@@ -1190,7 +1190,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		NorthernWastelands = {
 			Name = "Northern Wastelands",
@@ -1208,7 +1208,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		PeacefulValley = {
 			Name = "Peaceful Valley",
@@ -1226,7 +1226,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		ShorbearHills = {
 			Name = "Shorbear Hills",
@@ -1241,7 +1241,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		SouthernTunnels = {
 			Name = "Southern Tunnels",
@@ -1256,7 +1256,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		},
 		Svarinshaug = {
 			Name = "Svarinshaug",
@@ -1272,7 +1272,7 @@ function LoadProvinces(world)
 			},
 			Heroes = {
 			},
-			SettlementTerrain = "Hill"
+			SettlementTerrain = "Hills"
 		}
 	}
 	

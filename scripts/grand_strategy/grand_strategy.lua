@@ -335,32 +335,20 @@ function RunGrandStrategyGameSetupMenu()
 			end
 
 			local RandomNumber = 0
-			for x=0,table.getn(WorldMapTiles[1]) - 1 do
-				for y=0,table.getn(WorldMapTiles) - 1 do
-					if (GetWorldMapTile(x, y) == "CnFr" or GetWorldMapTile(x, y) == "ScFr") then -- add lumber resource location to forest tiles
+			for x=0,GetWorldMapWidth() - 1 do
+				for y=0,GetWorldMapHeight() - 1 do
+					if (GetWorldMapTileTerrain(x, y) == "Conifer Forest" or GetWorldMapTileTerrain(x, y) == "Scrub Forest") then -- add lumber resource location to forest tiles
 						if (TileHasResource(x, y, "Lumber", false) == false) then
 							table.insert(WorldMapResources.Lumber, {x, y, true})
 						end
-						if (GetWorldMapTile(x, y) == "CnFr") then -- implement variations for conifer forest tiles
-							RandomNumber = SyncRand(2) + 1
-							WorldMapTiles[y+1][x+1] = "CnFr" .. RandomNumber
-						elseif (GetWorldMapTile(x, y) == "ScFr") then -- implement variations for scrub forest tiles
-							RandomNumber = SyncRand(4) + 1
-							WorldMapTiles[y+1][x+1] = "ScFr" .. RandomNumber
-						end
-					elseif (GetWorldMapTile(x, y) == "Plns" or GetWorldMapTile(x, y) == "DkPl") then -- make plains tiles into hills if there is a mine there
+					elseif (GetWorldMapTileTerrain(x, y) == "Plains" or GetWorldMapTileTerrain(x, y) == "Dark Plains") then -- make plains tiles into hills if there is a mine there
 						if (TileHasResource(x, y, "Gold", true) == true) then
-							SetWorldMapTile(x, y, "Hill")
+							SetWorldMapTileTerrain(x, y, "Hills")
 						end
-					elseif (GetWorldMapTile(x, y) == "Mntn") then -- implement variations for mountain tiles
+					elseif (GetWorldMapTileTerrain(x, y) == "Mountains") then -- implement variations for mountain tiles
 						if (TileHasResource(x, y, "Stone", false) == false and TileHasResource(x, y, "Gold", true) == false) then -- only add stone resource if has no gold
 							table.insert(WorldMapResources.Stone, {x, y, true})
 						end
-						RandomNumber = SyncRand(1) + 1
-						WorldMapTiles[y+1][x+1] = "Mntn" .. RandomNumber
-					elseif (GetWorldMapTile(x, y) == "Watr") then -- implement variations for water tiles
-						RandomNumber = SyncRand(3) + 1
-						WorldMapTiles[y+1][x+1] = "Watr" .. RandomNumber
 					end
 				end
 			end
@@ -526,7 +514,7 @@ function RunGrandStrategyGame()
 	b = GrandStrategyMenu:addButton("", "down", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetY < table.getn(WorldMapTiles) - 1 - math.floor(GrandStrategyMapHeight / 64)) then
+				if (WorldMapOffsetY < GetWorldMapHeight() - 1 - math.floor(GrandStrategyMapHeight / 64)) then
 					if (GrandStrategyMapHeightIndent) then
 						GrandStrategyMapHeightIndent = false
 						WorldMapOffsetY = WorldMapOffsetY + 1;
@@ -560,7 +548,7 @@ function RunGrandStrategyGame()
 	b = GrandStrategyMenu:addButton("", "right", 0, 0,
 		function()
 			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetX < table.getn(WorldMapTiles[1]) - 1 - math.floor(GrandStrategyMapWidth / 64)) then
+				if (WorldMapOffsetX < GetWorldMapWidth() - 1 - math.floor(GrandStrategyMapWidth / 64)) then
 					if (GrandStrategyMapWidthIndent) then
 						GrandStrategyMapWidthIndent = false
 						WorldMapOffsetX = WorldMapOffsetX + 1;
@@ -1341,15 +1329,15 @@ function CalculateTileProvinces()
 	TileProvinces = nil
 	TileProvinces = {}
 	
-	for y=1,(table.getn(WorldMapTiles)) do
+	for y=1,(GetWorldMapHeight()) do
 		TileProvinces[y] = {}
-		for x=1,table.getn(WorldMapTiles[1]) do
+		for x=1,GetWorldMapWidth() do
 			TileProvinces[y][x] = ""
 		end
 	end
 
-	for x=1,table.getn(WorldMapTiles[1]) do
-		for y=1,table.getn(WorldMapTiles) do
+	for x=1,GetWorldMapWidth() do
+		for y=1,GetWorldMapHeight() do
 			for key, value in pairs(WorldMapProvinces) do
 				for i=1,table.getn(WorldMapProvinces[key].Tiles) do
 					if ((WorldMapProvinces[key].Tiles[i][1] + 1) == x and (WorldMapProvinces[key].Tiles[i][2] + 1) == y) then
@@ -1446,7 +1434,7 @@ function CalculateFactionDisembarkmentProvinces()
 end
 
 function GetTileProvince(x, y)
-	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
+	if (x >= 0 and x < GetWorldMapWidth() and y >= 0 and y < GetWorldMapHeight()) then
 		local tile_province = TileProvinces[y + 1][x + 1]
 		if (WorldMapProvinces[tile_province] ~= nil) then
 			return WorldMapProvinces[tile_province]
@@ -1855,7 +1843,13 @@ function RunGrandStrategyLoadGameMenu()
 			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
 			GrandStrategyWorld = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
-			WorldMapTiles = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
+			local world_map_tiles = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
+			SetWorldMapSize(table.getn(world_map_tiles[1]), table.getn(world_map_tiles))
+			for x=0,GetWorldMapWidth() - 1 do
+				for y=0,GetWorldMapHeight() - 1 do
+					SetWorldMapTileTerrain(x, y, world_map_tiles[y+1][x+1])
+				end
+			end
 			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
 			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
 			WorldMapWaterProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
@@ -1911,7 +1905,7 @@ function RunGrandStrategyLoadGameMenu()
 end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
-	local tooltip = GetTerrainName(GetWorldMapTile(tile_x, tile_y))
+	local tooltip = GetTerrainName(GetWorldMapTileTerrain(tile_x, tile_y))
 	local width_indent = 0
 	local height_indent = 0
 	if (GrandStrategyMapWidthIndent) then
@@ -1963,8 +1957,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		OnScreenTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setBorderSize(0)
 	end
 			
-	if (GetWorldMapTile(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
---		if (GetWorldMapTile(tile_x, tile_y) == "Hill" or GetWorldMapTile(tile_x, tile_y) == "Mntn" or GetWorldMapTile(tile_x, tile_y) == "CnFr" or GetWorldMapTile(tile_x, tile_y) == "ScFr" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil or string.find(file, "outer") ~= nil or string.find(file, "inner") ~= nil) then
+	if (GetWorldMapTileTerrain(tile_x, tile_y) ~= "" and string.find(file, "border") == nil and string.find(file, "sites") == nil) then
+--		if (GetWorldMapTileTerrain(tile_x, tile_y) == "Hills" or GetWorldMapTileTerrain(tile_x, tile_y) == "Mountains" or GetWorldMapTileTerrain(tile_x, tile_y) == "Conifer Forest" or GetWorldMapTileTerrain(tile_x, tile_y) == "Scrub Forest" or string.find(file, "north") ~= nil or string.find(file, "south") ~= nil or string.find(file, "west") ~= nil or string.find(file, "east") ~= nil or string.find(file, "outer") ~= nil or string.find(file, "inner") ~= nil) then
 			if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
 				OnScreenBaseTiles[tile_y - WorldMapOffsetY + 1][tile_x - WorldMapOffsetX + 1]:setSize(32 - width_indent + last_tile_width_modifier, 64)
 			elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
@@ -2158,25 +2152,25 @@ function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 	local minimap_tile_size_y = 1
 	local minimap_offset_x = 0
 	local minimap_offset_y = 0
-	if (table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) then
-		minimap_tile_size_x = math.floor(128 / table.getn(WorldMapTiles[1]))
-		minimap_tile_size_y = math.floor(128 / table.getn(WorldMapTiles))
-		if (table.getn(WorldMapTiles[1]) > table.getn(WorldMapTiles)) then
+	if (GetWorldMapHeight() <= 128 and GetWorldMapWidth() <= 128) then
+		minimap_tile_size_x = math.floor(128 / GetWorldMapWidth())
+		minimap_tile_size_y = math.floor(128 / GetWorldMapHeight())
+		if (GetWorldMapWidth() > GetWorldMapHeight()) then
 			minimap_tile_size_y = minimap_tile_size_x
-			minimap_offset_y = ((128 - math.floor(table.getn(WorldMapTiles) * minimap_tile_size_y)) / 2)
+			minimap_offset_y = ((128 - math.floor(GetWorldMapHeight() * minimap_tile_size_y)) / 2)
 		else
 			minimap_tile_size_x = minimap_tile_size_y
-			minimap_offset_x = ((128 - math.floor(table.getn(WorldMapTiles[1]) * minimap_tile_size_x)) / 2)
+			minimap_offset_x = ((128 - math.floor(GetWorldMapWidth() * minimap_tile_size_x)) / 2)
 		end
 	else
-		if (table.getn(WorldMapTiles[1]) > table.getn(WorldMapTiles)) then
-			minimap_offset_y = ((128 - math.floor((table.getn(WorldMapTiles) / 2) * minimap_tile_size_y)) / 2)
+		if (GetWorldMapWidth() > GetWorldMapHeight()) then
+			minimap_offset_y = ((128 - math.floor((GetWorldMapHeight() / 2) * minimap_tile_size_y)) / 2)
 		else
-			minimap_offset_x = ((128 - math.floor((table.getn(WorldMapTiles[1]) / 2) * minimap_tile_size_x)) / 2)
+			minimap_offset_x = ((128 - math.floor((GetWorldMapWidth() / 2) * minimap_tile_size_x)) / 2)
 		end
 	end
 
-	if ((table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) or (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0)) then
+	if ((GetWorldMapHeight() <= 128 and GetWorldMapWidth() <= 128) or (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0)) then
 		local minimap_tile
 		local b
 		if (GetTileProvince(tile_x, tile_y).Owner ~= "" and GetTileProvince(tile_x, tile_y).Owner ~= "Ocean") then
@@ -2195,7 +2189,7 @@ function DrawWorldMapMinimapTile(file, tile_x, tile_y)
 				DrawOnScreenTiles()
 			end
 		)
-		if (table.getn(WorldMapTiles) <= 128 and table.getn(WorldMapTiles[1]) <= 128) then
+		if (GetWorldMapHeight() <= 128 and GetWorldMapWidth() <= 128) then
 			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], UI.Minimap.X + minimap_offset_x + minimap_tile_size_x * tile_x, UI.Minimap.Y + minimap_offset_y + minimap_tile_size_y * tile_y)
 		elseif (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0) then -- if one of the sides of the map is larger than 128, then only draw minimap tiles for one of every four tiles
 			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], UI.Minimap.X + minimap_offset_x + minimap_tile_size_x * (tile_x / 2), UI.Minimap.Y + minimap_offset_y + minimap_tile_size_y * (tile_y / 2))
@@ -2729,7 +2723,7 @@ function DrawOnScreenTiles()
 		OnScreenTiles = {}
 	end
 
-	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
+	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (GetWorldMapHeight() - 1)) do
 		if (OnScreenTiles[y - WorldMapOffsetY + 1] == nil) then
 			OnScreenTiles[y - WorldMapOffsetY + 1] = {}
 		end
@@ -2739,7 +2733,7 @@ function DrawOnScreenTiles()
 		OnScreenBaseTiles = {}
 	end
 
-	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
+	for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (GetWorldMapHeight() - 1)) do
 		if (OnScreenBaseTiles[y - WorldMapOffsetY + 1] == nil) then
 			OnScreenBaseTiles[y - WorldMapOffsetY + 1] = {}
 		end
@@ -2749,117 +2743,117 @@ function DrawOnScreenTiles()
 	OnScreenSites = {}
 
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
-		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (GetWorldMapHeight() - 1)) do
 			-- set map tile terrain
 			local tile_image = ""
-			if (GetWorldMapTile(x, y) == "Plns") then
+			if (GetWorldMapTileTerrain(x, y) == "Plains") then
 				tile_image = "tilesets/world/terrain/plains.png"
-			elseif (GetWorldMapTile(x, y) == "DkPl") then
+			elseif (GetWorldMapTileTerrain(x, y) == "Dark Plains") then
 				tile_image = "tilesets/world/terrain/dark_plains.png"
-			elseif (GetWorldMapTile(x, y) == "CnFr") then
+			elseif (GetWorldMapTileTerrain(x, y) == "Conifer Forest") then
 				tile_image = "tilesets/world/terrain/conifer_forest/conifer_forest"
-			elseif (GetWorldMapTile(x, y) == "ScFr") then
-				tile_image = "tilesets/world/terrain/scrub_forest_" .. string.sub(WorldMapTiles[y+1][x+1], 5) .. ".png"
-			elseif (GetWorldMapTile(x, y) == "Hill") then
+			elseif (GetWorldMapTileTerrain(x, y) == "Scrub Forest") then
+				tile_image = "tilesets/world/terrain/scrub_forest_" .. GetWorldMapTileTerrainVariation(x, y) .. ".png"
+			elseif (GetWorldMapTileTerrain(x, y) == "Hills") then
 				tile_image = "tilesets/world/terrain/hills.png"
-			elseif (GetWorldMapTile(x, y) == "Mntn") then
+			elseif (GetWorldMapTileTerrain(x, y) == "Mountains") then
 				tile_image = "tilesets/world/terrain/mountains/mountains"
-			elseif (GetWorldMapTile(x, y) == "Watr") then
+			elseif (GetWorldMapTileTerrain(x, y) == "Water") then
 				tile_image = "tilesets/world/terrain/ocean/ocean"
 			end
 			if (tile_image ~= "") then
 				if (string.find(tile_image, ".png") == nil) then -- if has no file type ending, then it is because this tile type can have transitions
-					if (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_north_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_south_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_west_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_east_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northwest_outer_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northeast_outer_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_southwest_outer_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_southeast_outer_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_north_south_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_west_east_" .. string.sub(WorldMapTiles[y+1][x+1], 5)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northwest_northeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northwest_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northwest_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northeast_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_northeast_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_southwest_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					if (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_north_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_south_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_west_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_east_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northwest_outer_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northeast_outer_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_southwest_outer_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_southeast_outer_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_southwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_southeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_north_south_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_west_east_" .. GetWorldMapTileTerrainVariation(x, y)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northwest_northeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northwest_southwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northwest_southeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northeast_southwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_northeast_southeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_southwest_southeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_northeast_southwest_inner"
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_northeast_southeast_inner"
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_southwest_southeast_inner"
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northeast_southwest_southeast_inner"
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_northeast_southwest_southeast_inner"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_north_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_north_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_west_northeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_west_southeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_east_northwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_east_southwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) == GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_south_northwest_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
-						tile_image = tile_image .. "_south_northeast_inner_" .. math.min(string.sub(WorldMapTiles[y+1][x+1], 5), 2)
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_north_southwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_north_southeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_west_northeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_west_southeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_east_northwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_east_southwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) == GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_south_northwest_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
+						tile_image = tile_image .. "_south_northeast_inner_" .. math.min(GetWorldMapTileTerrainVariation(x, y), 2)
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_northeast_outer"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_southwest_outer"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northeast_southeast_outer"
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_southwest_southeast_outer"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northwest_outer_southeast_inner"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_northeast_outer_southwest_inner"
-					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_southwest_outer_northeast_inner"
-					elseif (GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_southeast_outer_northwest_inner"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_north_southwest_inner_southeast_inner"
-					elseif (GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_south_northwest_inner_northeast_inner"
-					elseif (GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_west_northeast_inner_southeast_inner"
-					elseif (GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y - 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) == GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y - 1) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y - 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) == GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y - 1) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_east_northwest_inner_southwest_inner"
-					elseif (GetWorldMapTile(x, y - 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x + 1, y) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x, y + 1) ~= GetWorldMapTile(x, y) and GetWorldMapTile(x - 1, y) ~= GetWorldMapTile(x, y)) then
+					elseif (GetWorldMapTileTerrain(x, y - 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x + 1, y) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x, y + 1) ~= GetWorldMapTileTerrain(x, y) and GetWorldMapTileTerrain(x - 1, y) ~= GetWorldMapTileTerrain(x, y)) then
 						tile_image = tile_image .. "_outer"
 					else
 						tile_image = tile_image .. "_inner"
@@ -3136,13 +3130,13 @@ function DrawOnScreenTiles()
 	end
 	
 	-- put everything that isn't terra incognita at the bottom
-	for i=1,table.getn(OnScreenSites) do
+	for i=table.getn(OnScreenSites),1,-1 do
 		OnScreenSites[i]:requestMoveToBottom()
 	end
 	
 	for x=(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)), WorldMapOffsetX, -1 do
-		for y=math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)), WorldMapOffsetY, -1 do
-			if (GetWorldMapTile(x, y) ~= "") then
+		for y=math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (GetWorldMapHeight() - 1)), WorldMapOffsetY, -1 do
+			if (GetWorldMapTileTerrain(x, y) ~= "") then
 				OnScreenTiles[y - WorldMapOffsetY + 1][x - WorldMapOffsetX + 1]:requestMoveToBottom() -- move to bottom so that fog appears over it
 				OnScreenBaseTiles[y - WorldMapOffsetY + 1][x - WorldMapOffsetX + 1]:requestMoveToBottom() -- move to bottom so that fog appears over it
 			end
@@ -3152,9 +3146,9 @@ function DrawOnScreenTiles()
 
 	-- draw terra incognita tiles after the main ones, so that they may overlap with them a bit
 	for x=WorldMapOffsetX,(WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) do
-		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1)) do
+		for y=WorldMapOffsetY,math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (GetWorldMapHeight() - 1)) do
 			-- set map tile terrain
-			if (GetWorldMapTile(x, y) == "") then
+			if (GetWorldMapTileTerrain(x, y) == "") then
 				if (x == WorldMapOffsetX and y == WorldMapOffsetY) then
 					DrawWorldMapTile("tilesets/world/terrain/fog_no_north_no_west.png", x, y)
 				elseif (x == WorldMapOffsetX) then
@@ -4061,7 +4055,7 @@ function DrawMinimap()
 	MinimapTiles = nil
 	MinimapTiles = {}
 	
-	for y=1,(table.getn(WorldMapTiles)) do
+	for y=1,(GetWorldMapHeight()) do
 		MinimapTiles[y] = {}
 	end
 	
@@ -4754,7 +4748,7 @@ function ClearGrandStrategyVariables()
 	MercenaryGroups = nil
 	EventFaction = nil
 	EventProvince = nil
-	WorldMapTiles = nil
+	CleanWorldMapTiles()
 	WorldMapResources = nil
 	ProcessingEndTurn = nil
 	GrandStrategyMapWidthIndent = false
@@ -4985,15 +4979,15 @@ function CenterMapOnTile(tile_x, tile_y)
 	WorldMapOffsetX = math.floor(tile_x - ((GrandStrategyMapWidth / 64) / 2)) + 1
 	if (WorldMapOffsetX < 0) then
 		WorldMapOffsetX = 0
-	elseif (WorldMapOffsetX > table.getn(WorldMapTiles[1]) - 1 - math.floor(GrandStrategyMapWidth / 64)) then
-		WorldMapOffsetX = table.getn(WorldMapTiles[1]) - 1 - math.floor(GrandStrategyMapWidth / 64)
+	elseif (WorldMapOffsetX > GetWorldMapWidth() - 1 - math.floor(GrandStrategyMapWidth / 64)) then
+		WorldMapOffsetX = GetWorldMapWidth() - 1 - math.floor(GrandStrategyMapWidth / 64)
 	end
 
 	WorldMapOffsetY = math.floor(tile_y - ((GrandStrategyMapHeight / 64) / 2))
 	if (WorldMapOffsetY < 0) then
 		WorldMapOffsetY = 0
-	elseif (WorldMapOffsetY > table.getn(WorldMapTiles) - 1 - math.floor(GrandStrategyMapHeight / 64)) then
-		WorldMapOffsetY = table.getn(WorldMapTiles) - 1 - math.floor(GrandStrategyMapHeight / 64)
+	elseif (WorldMapOffsetY > GetWorldMapHeight() - 1 - math.floor(GrandStrategyMapHeight / 64)) then
+		WorldMapOffsetY = GetWorldMapHeight() - 1 - math.floor(GrandStrategyMapHeight / 64)
 	end
 end
 
@@ -5485,12 +5479,6 @@ function FormFaction(old_faction, new_faction)
 	DrawOnScreenTiles()
 end
 
-function SetWorldMapTile(x, y, tile_type)
-	if (x >= 0 and x < table.getn(WorldMapTiles[1]) and y >= 0 and y < table.getn(WorldMapTiles)) then
-		WorldMapTiles[y+1][x+1] = tile_type
-	end
-end
-
 function GetUnitTypeUpkeep(unit_type)
 	if (GetUnitTypeData(unit_type, "Class") == "infantry" or GetUnitTypeData(unit_type, "Class") == "veteran-infantry" or GetUnitTypeData(unit_type, "Class") == "heroic-infantry") then
 		return 25
@@ -5658,7 +5646,6 @@ function SaveGrandStrategyGame(name)
 		SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 		SavedGrandStrategyYear = GrandStrategyYear,
 		SavedGrandStrategyWorld = GrandStrategyWorld,
-		SavedWorldMapTiles = WorldMapTiles,
 		SavedWorldMapResources = WorldMapResources,
 		SavedWorldMapProvinces = WorldMapProvinces,
 		SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
@@ -5669,6 +5656,15 @@ function SaveGrandStrategyGame(name)
 	}
 	for key, value in pairs(GrandStrategyEvents) do
 		table.insert(wyr[name].SavedGrandStrategyEvents, key)
+	end
+	wyr[name].SavedWorldMapTiles = {}
+	for y=0,GetWorldMapHeight() - 1 do
+		table.insert(wyr[name].SavedWorldMapTiles, {})
+	end
+	for x=0,GetWorldMapWidth() - 1 do
+		for y=0,GetWorldMapHeight() - 1 do
+			wyr[name].SavedWorldMapTiles[y+1][x+1] = GetWorldMapTileTerrain(x, y)
+		end
 	end
 	SaveExtraPreferences(name)
 	wyr[name] = nil
@@ -5801,7 +5797,7 @@ function DoProspection()
 						l:setSize(228, 128)
 						l:setLineWidth(228)
 						menu:add(l, 14, 35)
-						l:setCaption("My lord, " .. key .. " has been found in the " .. string.lower(GetTerrainName(GetWorldMapTile(WorldMapResources[key][i][1], WorldMapResources[key][i][2]))) .. " of " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])) .. "!")
+						l:setCaption("My lord, " .. key .. " has been found in the " .. string.lower(GetTerrainName(GetWorldMapTileTerrain(WorldMapResources[key][i][1], WorldMapResources[key][i][2]))) .. " of " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])) .. "!")
 
 						menu:addFullButton("E~!xcellent!", "x", 16, 248 - (36 * 0),
 							function()
@@ -5827,26 +5823,11 @@ function DoProspection()
 end
 
 function GetTerrainName(terrain)
-	if (terrain == "Plns") then
-		return "Plains"
-	elseif (terrain == "DkPl") then
-		return "Dark Plains"
-	elseif (terrain == "CnFr") then
-		return "Conifer Forest"
-	elseif (terrain == "ScFr") then
-		return "Scrub Forest"
-	elseif (terrain == "Hill") then
-		return "Hills"
-	elseif (terrain == "Mntn") then
-		return "Mountains"
-	elseif (terrain == "Watr") then
-		return "Water"
-	end
-	return ""
+	return terrain
 end
 
 function IsWorldMapTileVisible(tile_x, tile_y)
-	if (tile_x >= WorldMapOffsetX and tile_x <= (WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) and tile_y >= WorldMapOffsetY and tile_y <= math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (table.getn(WorldMapTiles) - 1))) then
+	if (tile_x >= WorldMapOffsetX and tile_x <= (WorldMapOffsetX + math.floor(GrandStrategyMapWidth / 64)) and tile_y >= WorldMapOffsetY and tile_y <= math.min((WorldMapOffsetY + math.floor(GrandStrategyMapHeight / 64)), (GetWorldMapHeight() - 1))) then
 		return true
 	else
 		return false
