@@ -83,6 +83,7 @@ function RunGrandStrategyGameSetupMenu()
 	menu:addFullButton(_("~!Start Game"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
 			GrandStrategy = true
+			GameResult = GameNoResult
 			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
 			if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
 				GrandStrategyYear = GrandStrategyYear * -1
@@ -91,12 +92,6 @@ function RunGrandStrategyGameSetupMenu()
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			else
 				GenerateRandomWorldMap()
-			end
-			
-			for x=0,GetWorldMapWidth() - 1 do
-				for y=0,GetWorldMapHeight() - 1 do
-					CalculateWorldMapTileGraphicTile(x, y)
-				end
 			end
 			
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
@@ -194,6 +189,8 @@ function RunGrandStrategyGameSetupMenu()
 			for key, value in pairs(WorldMapProvinces) do
 				if (WorldMapProvinces[key].Owner == nil) then
 					WorldMapProvinces[key]["Owner"] = ""
+				elseif (GetFactionFromName(WorldMapProvinces[key].Owner) ~= nil) then
+					SetProvinceOwner(WorldMapProvinces[key].Name, GetFactionFromName(WorldMapProvinces[key].Owner).Civilization, WorldMapProvinces[key].Owner)				
 				end
 				-- set the province into its owner's owned provinces list
 				if (WorldMapProvinces[key].Owner ~= "") then
@@ -209,44 +206,8 @@ function RunGrandStrategyGameSetupMenu()
 					end
 				end
 				
-				--[[
-				-- create a new cultural name for the province, if there isn't any
-				if (WorldMapProvinces[key].Civilization ~= "" and WorldMapProvinces[key].Owner ~= "" and WorldMapProvinces[key].CulturalNames ~= nil and WorldMapProvinces[key].CulturalNames[GetFactionKeyFromName(WorldMapProvinces[key].Owner)] == nil and WorldMapProvinces[key].CulturalNames[WorldMapProvinces[key].Civilization] == nil) then
-					local new_province_name = ""
-					if (new_province_name == "") then -- try to translate any cultural name
-						for second_key, second_value in pairs(WorldMapProvinces[key].CulturalNames) do
-							new_province_name = TranslateProvinceName(WorldMapProvinces[key].CulturalNames[second_key], WorldMapProvinces[key].Civilization)
-							if (new_province_name ~= "") then
-								break
-							end
-						end
-					end
-					if (new_province_name == "") then -- if trying to translate all cultural names failed, generate a new name
-						new_province_name = GenerateProvinceName(WorldMapProvinces[key].Civilization)
-					end
-					if (new_province_name ~= "") then
-						WorldMapProvinces[key].CulturalNames[WorldMapProvinces[key].Civilization] = new_province_name
-					end
-				end
-				--]]
-				
-				-- create a new cultural name for the province's settlement, if there isn't any
-				if (WorldMapProvinces[key].Civilization ~= "" and WorldMapProvinces[key].Owner ~= "" and WorldMapProvinces[key].CulturalSettlementNames ~= nil and WorldMapProvinces[key].CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[key].Owner)] == nil and WorldMapProvinces[key].CulturalSettlementNames[WorldMapProvinces[key].Civilization] == nil) then
-					local new_settlement_name = ""
-					if (new_settlement_name == "") then -- try to translate any cultural settlement name
-						for second_key, second_value in pairs(WorldMapProvinces[key].CulturalSettlementNames) do
-							new_settlement_name = TranslateSettlementName(WorldMapProvinces[key].CulturalSettlementNames[second_key], WorldMapProvinces[key].Civilization)
-							if (new_settlement_name ~= "") then
-								break
-							end
-						end
-					end
-					if (new_settlement_name == "") then -- if trying to translate all cultural settlement names failed, generate a new name
-						new_settlement_name = GenerateSettlementName(WorldMapProvinces[key].Civilization)
-					end
-					if (new_settlement_name ~= "") then
-						WorldMapProvinces[key].CulturalSettlementNames[WorldMapProvinces[key].Civilization] = new_settlement_name
-					end
+				if (WorldMapProvinces[key].Civilization ~= "") then
+					SetProvinceCivilization(WorldMapProvinces[key].Name, WorldMapProvinces[key].Civilization) -- tell the engine the civilization of the province
 				end
 				
 				if (WorldMapProvinces[key].Coastal == nil) then
@@ -359,6 +320,12 @@ function RunGrandStrategyGameSetupMenu()
 				end
 			end
 
+			for x=0,GetWorldMapWidth() - 1 do
+				for y=0,GetWorldMapHeight() - 1 do
+					CalculateWorldMapTileGraphicTile(x, y)
+				end
+			end
+			
 --			CalculateFactionDisembarkmentProvinces()
 			CalculateFactionIncomes()
 			CalculateFactionUpkeeps()
@@ -407,6 +374,8 @@ function RunGrandStrategyGameSetupMenu()
 	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
 
 	function DateChanged()
+		CleanGrandStrategyGame()
+		
 		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
 			GrandStrategyWorld = world_list[world:getSelected() + 1]
 			
@@ -1082,13 +1051,15 @@ function AttackProvince(province, faction)
 	Defender = ""
 	AttackingUnits = nil
 	AttackedProvince = nil
+	GameResult = GameNoResult
 end
 
 function AcquireProvince(province, faction)
 	if (province.Owner ~= "") then
 		RemoveElementFromArray(GetFactionFromName(province.Owner).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 	end
-	province.Owner = faction
+	
+	ChangeProvinceOwner(province, GetFactionFromName(faction))
 	
 	if (faction ~= "") then
 		table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
@@ -1105,7 +1076,7 @@ function AcquireProvince(province, faction)
 			end
 		end
 	elseif (faction == "") then
-		province.Civilization = ""
+		ChangeProvinceCulture(province, "")
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] > 0) then
@@ -1155,79 +1126,35 @@ function ChangeProvinceCulture(province, civilization)
 	local old_civilization = province.Civilization
 	province.Civilization = civilization
 	
-	-- replace existent buildings from other civilizations with buildings of the new civilization
-	for i, unitName in ipairs(Units) do
-		if (IsGrandStrategyBuilding(unitName) and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp") then
-			if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
-				province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
-				if (GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
-					province.SettlementBuildings[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = 2
-				end
-			elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
-				province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
-			end
-		end
-	end
-	
-	-- replace existent units from the previous civilization with units of the new civilization
-	for i, unitName in ipairs(Units) do
-		if (
-			IsMilitaryUnit(unitName)
-			and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName
-			and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
-			and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
-		) then
-			province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.Units[string.gsub(unitName, "-", "_")]
-			province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.UnderConstructionUnits[string.gsub(unitName, "-", "_")]
-			province.Units[string.gsub(unitName, "-", "_")] = 0
-			province.UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-			
-		end
-	end
-	
-	--[[
-	-- create a new cultural name for the province, if there isn't any
-	if (province.CulturalNames ~= nil and province.CulturalNames[GetFactionKeyFromName(province.Owner)] == nil and province.CulturalNames[civilization] == nil) then
-		local new_province_name = ""
-		if (province.CulturalNames[old_civilization] ~= nil) then -- first see if can translate the cultural name of the old civilization
-			new_province_name = TranslateProvinceName(province.CulturalNames[old_civilization], civilization)
-		end
-		if (new_province_name == "") then -- if translating the cultural name of the old civilization failed, try to translate any cultural name
-			for key, value in pairs(province.CulturalNames) do
-				new_province_name = TranslateProvinceName(province.CulturalNames[key], civilization)
-				if (new_province_name ~= "") then
-					break
+	if (civilization ~= "") then
+		-- replace existent buildings from other civilizations with buildings of the new civilization
+		for i, unitName in ipairs(Units) do
+			if (IsGrandStrategyBuilding(unitName) and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp") then
+				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
+					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
+					if (GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
+						province.SettlementBuildings[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = 2
+					end
+				elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
+					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
 				end
 			end
 		end
-		if (new_province_name == "") then -- if trying to translate all cultural names failed, generate a new name
-			new_province_name = GenerateProvinceName(civilization)
-		end
-		if (new_province_name ~= "") then
-			province.CulturalNames[civilization] = new_province_name
-		end
-	end
-	--]]
-	
-	-- create a new cultural name for the province's settlement, if there isn't any
-	if (province.CulturalSettlementNames ~= nil and province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)] == nil and province.CulturalSettlementNames[civilization] == nil) then
-		local new_settlement_name = ""
-		if (province.CulturalSettlementNames[old_civilization] ~= nil) then -- first see if can translate the cultural settlement name of the old civilization
-			new_settlement_name = TranslateSettlementName(province.CulturalSettlementNames[old_civilization], civilization)
-		end
-		if (new_settlement_name == "") then -- if translating the cultural name of the old civilization failed, try to translate any cultural settlement name
-			for key, value in pairs(province.CulturalSettlementNames) do
-				new_settlement_name = TranslateSettlementName(province.CulturalSettlementNames[key], civilization)
-				if (new_settlement_name ~= "") then
-					break
-				end
+		
+		-- replace existent units from the previous civilization with units of the new civilization
+		for i, unitName in ipairs(Units) do
+			if (
+				IsMilitaryUnit(unitName)
+				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName
+				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
+				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
+			) then
+				province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.Units[string.gsub(unitName, "-", "_")]
+				province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.UnderConstructionUnits[string.gsub(unitName, "-", "_")]
+				province.Units[string.gsub(unitName, "-", "_")] = 0
+				province.UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
+				
 			end
-		end
-		if (new_settlement_name == "") then -- if trying to translate all cultural settlement names failed, generate a new name
-			new_settlement_name = GenerateSettlementName(civilization)
-		end
-		if (new_settlement_name ~= "") then
-			province.CulturalSettlementNames[civilization] = new_settlement_name
 		end
 	end
 	
@@ -1332,29 +1259,19 @@ function CalculateProvinceBorderTiles()
 end
 
 function CalculateTileProvinces()
-	TileProvinces = nil
-	TileProvinces = {}
-	
-	for y=1,(GetWorldMapHeight()) do
-		TileProvinces[y] = {}
-		for x=1,GetWorldMapWidth() do
-			TileProvinces[y][x] = ""
-		end
-	end
-
-	for x=1,GetWorldMapWidth() do
-		for y=1,GetWorldMapHeight() do
+	for x=0,GetWorldMapWidth()-1 do
+		for y=0,GetWorldMapHeight()-1 do
 			for key, value in pairs(WorldMapProvinces) do
 				for i=1,table.getn(WorldMapProvinces[key].Tiles) do
-					if ((WorldMapProvinces[key].Tiles[i][1] + 1) == x and (WorldMapProvinces[key].Tiles[i][2] + 1) == y) then
-						TileProvinces[y][x] = key
+					if (WorldMapProvinces[key].Tiles[i][1] == x and WorldMapProvinces[key].Tiles[i][2] == y) then
+						SetWorldMapTileProvince(x, y, WorldMapProvinces[key].Name)
 					end
 				end
 			end
 			for key, value in pairs(WorldMapWaterProvinces) do
 				for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
-					if ((WorldMapWaterProvinces[key].Tiles[i][1] + 1) == x and (WorldMapWaterProvinces[key].Tiles[i][2] + 1) == y) then
-						TileProvinces[y][x] = key
+					if (WorldMapWaterProvinces[key].Tiles[i][1] == x and WorldMapWaterProvinces[key].Tiles[i][2] == y) then
+						SetWorldMapTileProvince(x, y, WorldMapWaterProvinces[key].Name)
 					end
 				end
 			end
@@ -1441,14 +1358,8 @@ end
 
 function GetTileProvince(x, y)
 	if (x >= 0 and x < GetWorldMapWidth() and y >= 0 and y < GetWorldMapHeight()) then
-		local tile_province = TileProvinces[y + 1][x + 1]
-		if (WorldMapProvinces[tile_province] ~= nil) then
-			return WorldMapProvinces[tile_province]
-		elseif (WorldMapWaterProvinces[tile_province] ~= nil) then
-			return WorldMapWaterProvinces[tile_province]
-		else
-			return nil
-		end
+		local tile_province = GetProvinceFromName(GetWorldMapTileProvinceName(x, y))
+		return tile_province
 	else
 		return nil
 	end
@@ -1846,7 +1757,10 @@ function RunGrandStrategyLoadGameMenu()
 			if (saved_games:getSelected() < 0) then
 				return
 			end
+			CleanGrandStrategyGame()
+			
 			GrandStrategy = true
+			GameResult = GameNoResult
 			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
 			GrandStrategyWorld = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
@@ -1862,11 +1776,56 @@ function RunGrandStrategyLoadGameMenu()
 					CalculateWorldMapTileGraphicTile(x, y)
 				end
 			end
+			
 			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
-			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
-			WorldMapWaterProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
+
 			Factions = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
+			
+			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
+			for key, value in pairs(WorldMapProvinces) do
+				SetProvinceName("", WorldMapProvinces[key].Name) -- this will define a new province for the engine
+				SetProvinceSettlementName(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementName)
+				SetProvinceCivilization(WorldMapProvinces[key].Name, WorldMapProvinces[key].Civilization) -- tell the engine the civilization of the province
+				SetProvinceSettlementLocation(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+				if (WorldMapProvinces[key].Owner ~= nil and WorldMapProvinces[key].Owner ~= "") then
+					SetProvinceOwner(WorldMapProvinces[key].Name, GetFactionFromName(WorldMapProvinces[key].Owner).Civilization, WorldMapProvinces[key].Owner) -- tell the engine the owner of the province
+				end
+				for second_key, second_value in pairs(WorldMapProvinces[key].CulturalNames) do
+					SetProvinceCulturalName(WorldMapProvinces[key].Name, second_key, WorldMapProvinces[key].CulturalNames[second_key])
+				end
+				for second_key, second_value in pairs(WorldMapProvinces[key].FactionCulturalNames) do
+					SetProvinceFactionCulturalName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, WorldMapProvinces[key].FactionCulturalNames[second_key])
+				end
+				for second_key, second_value in pairs(WorldMapProvinces[key].CulturalSettlementNames) do
+					SetProvinceCulturalSettlementName(WorldMapProvinces[key].Name, second_key, WorldMapProvinces[key].CulturalSettlementNames[second_key])
+				end
+				for second_key, second_value in pairs(WorldMapProvinces[key].FactionCulturalSettlementNames) do
+					SetProvinceFactionCulturalSettlementName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, WorldMapProvinces[key].FactionCulturalSettlementNames[second_key])
+				end
+				WorldMapProvinces[key].CulturalNames = nil
+				WorldMapProvinces[key].FactionCulturalNames = nil
+				WorldMapProvinces[key].CulturalSettlementNames = nil
+				WorldMapProvinces[key].FactionCulturalSettlementNames = nil
+			end
+			
+			WorldMapWaterProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
+			for key, value in pairs(WorldMapWaterProvinces) do
+				SetProvinceName("", WorldMapWaterProvinces[key].Name) -- this will define a new province for the engine
+				SetProvinceWater(WorldMapWaterProvinces[key].Name, true)
+				if (WorldMapWaterProvinces[key].ReferenceProvince ~= nil) then
+					SetProvinceReferenceProvince(WorldMapWaterProvinces[key].Name, WorldMapProvinces[WorldMapWaterProvinces[key].ReferenceProvince].Name)
+				end
+				for second_key, second_value in pairs(WorldMapWaterProvinces[key].CulturalNames) do
+					SetProvinceCulturalName(WorldMapWaterProvinces[key].Name, second_key, WorldMapWaterProvinces[key].CulturalNames[second_key])
+				end
+				for second_key, second_value in pairs(WorldMapWaterProvinces[key].FactionCulturalNames) do
+					SetProvinceFactionCulturalName(WorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, WorldMapWaterProvinces[key].FactionCulturalNames[second_key])
+				end
+				WorldMapWaterProvinces[key].CulturalNames = nil
+				WorldMapWaterProvinces[key].FactionCulturalNames = nil
+			end
+			
 			GrandStrategyCommodities = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
 			MercenaryGroups = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
 			SavedGrandStrategyEvents = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyEvents
@@ -1960,12 +1919,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("") -- not really a site, but it is more expedient to use this method
 		end
 		world_map_tile:Load()
-		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
-			function()
-				PlaySound("click")
-				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-			end
-		)
 		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
 		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
@@ -1980,7 +1933,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(84, 84)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
-		OnScreenSites[table.getn(OnScreenSites)]:setTooltip(tooltip)
 	elseif (string.find(file, "sites") ~= nil) then -- different method for site graphics
 		local world_map_tile
 		if (string.find(file, "settlement") ~= nil) then
@@ -1997,12 +1949,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("")
 		end
 		world_map_tile:Load()
-		OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
-			function()
-				PlaySound("click")
-				SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-			end
-		)
 		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
 		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
 		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
@@ -2015,7 +1961,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
-		OnScreenSites[table.getn(OnScreenSites)]:setTooltip(tooltip)
 	end
 end
 
@@ -2779,6 +2724,7 @@ function DrawOnScreenTiles()
 
 		-- draw province settlement
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
+			--[[
 			if (WorldMapProvinces[key].Owner ~= "" and ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall")) then
 				local settlement_graphics = ""
 				if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Owner ~= "Kal Kartha") then
@@ -2812,6 +2758,7 @@ function DrawOnScreenTiles()
 				end
 				DrawWorldMapTile(settlement_graphics, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])				
 			end
+			--]]
 			
 			if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].AttackedBy == GrandStrategyFaction.Name) then
 				-- draw symbol that the province is being attacked by the human player if that is the case
@@ -4475,14 +4422,13 @@ function ClearGrandStrategyVariables()
 	SelectedUnits = nil
 	AttackingUnits = nil
 	AttackedProvince = nil
-	TileProvinces = nil
 	InterfaceState = nil
 	GrandStrategyCommodities = nil
 	GrandStrategyEvents = nil
 	MercenaryGroups = nil
 	EventFaction = nil
 	EventProvince = nil
---	CleanGrandStrategyGame()
+	CleanGrandStrategyGame()
 	WorldMapResources = nil
 	ProcessingEndTurn = nil
 	GrandStrategyMapWidthIndent = false
@@ -5064,6 +5010,7 @@ function GrandStrategyEvent(faction, event)
 					function(s)
 						menu:stop()
 						event.OptionEffects[i]()
+						GameResult = GameNoResult -- this is because many events start scenarios
 					end
 				)
 				if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
@@ -5378,6 +5325,52 @@ function SaveGrandStrategyGame(name)
 			wyr[name].SavedWorldMapTiles[y+1][x+1] = GetWorldMapTileTerrain(x, y)
 		end
 	end
+	local civilizations = {"germanic", "teuton", "celt", "dwarf", "goblin", "goth", "norse", "kobold", "gnome", "latin", "greek"}
+	for key, value in pairs(wyr[name].SavedWorldMapProvinces) do
+		wyr[name].SavedWorldMapProvinces[key].CulturalNames = {}
+		for i=1,table.getn(civilizations) do
+			if (GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i]) ~= "") then
+				wyr[name].SavedWorldMapProvinces[key].CulturalNames[civilizations[i]] = GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i])
+			end
+		end
+		
+		wyr[name].SavedWorldMapProvinces[key].FactionCulturalNames = {}
+		for second_key, second_value in pairs(Factions) do
+			if (GetProvinceFactionCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name) ~= "") then
+				wyr[name].SavedWorldMapProvinces[key].FactionCulturalNames[second_key] = GetProvinceFactionCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name)
+			end
+		end
+		
+		wyr[name].SavedWorldMapProvinces[key].CulturalSettlementNames = {}
+		for i=1,table.getn(civilizations) do
+			if (GetProvinceCivilizationCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i]) ~= "") then
+				wyr[name].SavedWorldMapProvinces[key].CulturalSettlementNames[civilizations[i]] = GetProvinceCivilizationCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i])
+			end
+		end
+		
+		wyr[name].SavedWorldMapProvinces[key].FactionCulturalSettlementNames = {}
+		for second_key, second_value in pairs(Factions) do
+			if (GetProvinceFactionCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name) ~= "") then
+				wyr[name].SavedWorldMapProvinces[key].FactionCulturalSettlementNames[second_key] = GetProvinceFactionCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name)
+			end
+		end
+	end
+	
+	for key, value in pairs(wyr[name].SavedWorldMapWaterProvinces) do
+		wyr[name].SavedWorldMapWaterProvinces[key].CulturalNames = {}
+		for i=1,table.getn(civilizations) do
+			if (GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, civilizations[i]) ~= "") then
+				wyr[name].SavedWorldMapWaterProvinces[key].CulturalNames[civilizations[i]] = GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, civilizations[i])
+			end
+		end
+		
+		wyr[name].SavedWorldMapWaterProvinces[key].FactionCulturalNames = {}
+		for second_key, second_value in pairs(Factions) do
+			if (GetProvinceFactionCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name) ~= "") then
+				wyr[name].SavedWorldMapWaterProvinces[key].FactionCulturalNames[second_key] = GetProvinceFactionCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name)
+			end
+		end
+	end
 	SaveExtraPreferences(name)
 	wyr[name] = nil
 end
@@ -5432,31 +5425,11 @@ function IsHero(unit_type)
 end
 
 function GetProvinceName(province)
-	if (province.CulturalNames ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.CulturalNames[GetFactionKeyFromName(province.Owner)] ~= nil and province.Civilization == GetFactionFromName(province.Owner).Civilization) then
-		return province.CulturalNames[GetFactionKeyFromName(province.Owner)]
-	elseif (province.CulturalNames ~= nil and province.Civilization ~= nil and province.Civilization ~= "" and province.CulturalNames[province.Civilization] ~= nil) then
-		return province.CulturalNames[province.Civilization]
-	elseif (province.CulturalNames ~= nil and province.Owner == "Ocean" and province.ReferenceProvince ~= nil and WorldMapProvinces[province.ReferenceProvince].Owner ~= "" and WorldMapProvinces[province.ReferenceProvince].Owner ~= "Ocean" and province.CulturalNames[GetFactionKeyFromName(WorldMapProvinces[province.ReferenceProvince].Owner)] ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization == GetFactionFromName(WorldMapProvinces[province.ReferenceProvince].Owner).Civilization) then
-		return province.CulturalNames[GetFactionKeyFromName(WorldMapProvinces[province.ReferenceProvince].Owner)]
-	elseif (province.CulturalNames ~= nil and province.Owner == "Ocean" and province.ReferenceProvince ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization ~= "" and province.CulturalNames[WorldMapProvinces[province.ReferenceProvince].Civilization] ~= nil) then
-		return province.CulturalNames[WorldMapProvinces[province.ReferenceProvince].Civilization]
-	else
-		return province.Name
-	end
+	return GetProvinceCulturalName(province.Name)
 end
 
 function GetProvinceSettlementName(province)
-	if (province.CulturalSettlementNames ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)] ~= nil and province.Civilization == GetFactionFromName(province.Owner).Civilization) then
-		return province.CulturalSettlementNames[GetFactionKeyFromName(province.Owner)]
-	elseif (province.CulturalSettlementNames ~= nil and province.Civilization ~= nil and province.Civilization ~= "" and province.CulturalSettlementNames[province.Civilization] ~= nil) then
-		return province.CulturalSettlementNames[province.Civilization]
-	elseif (province.CulturalSettlementNames ~= nil and province.Owner == "Ocean" and province.ReferenceProvince ~= nil and WorldMapProvinces[province.ReferenceProvince].Owner ~= "" and WorldMapProvinces[province.ReferenceProvince].Owner ~= "Ocean" and province.CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[province.ReferenceProvince].Owner)] ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization == GetFactionFromName(WorldMapProvinces[province.ReferenceProvince].Owner).Civilization) then
-		return province.CulturalSettlementNames[GetFactionKeyFromName(WorldMapProvinces[province.ReferenceProvince].Owner)]
-	elseif (province.CulturalSettlementNames ~= nil and province.Owner == "Ocean" and province.ReferenceProvince ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization ~= nil and WorldMapProvinces[province.ReferenceProvince].Civilization ~= "" and province.CulturalSettlementNames[WorldMapProvinces[province.ReferenceProvince].Civilization] ~= nil) then
-		return province.CulturalSettlementNames[WorldMapProvinces[province.ReferenceProvince].Civilization]
-	else
-		return province.SettlementName
-	end
+	return GetProvinceCulturalSettlementName(province.Name)
 end
 
 function CanDeclareWar(faction_from, faction_to)
@@ -5544,4 +5517,9 @@ function IsWorldMapTileVisible(tile_x, tile_y)
 	else
 		return false
 	end	
+end
+
+function ChangeProvinceOwner(province, faction) -- used to change the owner and pass the information to the engine
+	province.Owner = faction.Name
+	SetProvinceOwner(province.Name, faction.Civilization, faction.Name)
 end

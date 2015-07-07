@@ -1203,7 +1203,7 @@ local NidavellirEvents = {
 
 				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- payment for the crafting of the Scepter
 				Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- payment for the crafting of the Scepter
-				WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
+				AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 				Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
 				Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"
 				

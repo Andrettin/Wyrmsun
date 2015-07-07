@@ -153,7 +153,7 @@ local GermanicEvents = {
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
-						WorldMapProvinces.Astrakhan.Civilization = ""
+						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 						WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_worker = 0
 						CenterMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
@@ -164,7 +164,7 @@ local GermanicEvents = {
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
-						WorldMapProvinces.Astrakhan.Civilization = ""
+						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 						WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
@@ -176,7 +176,7 @@ local GermanicEvents = {
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
-					WorldMapProvinces.Astrakhan.Civilization = ""
+					ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 					WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 				end
 				DrawMinimap()
@@ -230,7 +230,7 @@ local GermanicEvents = {
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
-						WorldMapProvinces.Brandenburg.Civilization = ""
+						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 						CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
@@ -250,7 +250,7 @@ local GermanicEvents = {
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
-					WorldMapProvinces.Brandenburg.Civilization = ""
+					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 					WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 				end

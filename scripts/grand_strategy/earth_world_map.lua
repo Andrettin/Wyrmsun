@@ -165,9 +165,9 @@ WorldMapResources = {
 	}
 }
 
-LoadProvinces("Earth")
-
 LoadFactions("Earth")
+
+LoadProvinces("Earth")
 
 MercenaryGroups = {
 }
@@ -290,7 +290,7 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
 	WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
 
-	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit GÃ¶taland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Gotaland.Civilization = "germanic"
 	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 2
 	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
@@ -328,7 +328,7 @@ if (GrandStrategyYear >= -2400) then
 end
 
 if (GrandStrategyYear >= -2000) then
-	WorldMapProvinces.Crete.Owner = "Crete" -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
+	WorldMapProvinces.Crete.Owner = "Crete" -- Minoan civilization; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 23.
 	-- Somogyvar-Vinkovci culture existed in Hungary around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	-- early Wietenberg culture existed in Romania around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 end
@@ -346,7 +346,7 @@ if (GrandStrategyYear >= -1600) then
 	WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy = 2 -- bronzesmithing capabilities existed in Jutland, so that these swords were crafted
 end
 
-if (GrandStrategyYear >= -1450) then -- Minoan civilization disappears in 1450 BC; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
+if (GrandStrategyYear >= -1450) then -- Minoan civilization disappears in 1450 BC; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 23.
 	WorldMapProvinces.Crete.Owner = ""
 	WorldMapProvinces.Crete.SettlementBuildings.unit_teuton_town_hall = 0
 end
@@ -383,7 +383,7 @@ if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs 
 	GrandStrategyEvents.TheSunShields = nil
 end
 
-if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
+if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.SwedeTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.JuteTribe.Technologies.upgrade_germanic_broad_sword = 2
@@ -576,7 +576,7 @@ if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Sou
 	WorldMapProvinces.Portugal.SettlementBuildings.unit_teuton_town_hall = 2
 end
 
-if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
+if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: DÃ¡ithÃ­ Ã“ hÃ“gÃ¡in, "The Celts: A History", 2002, p. 138.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	WorldMapProvinces.France.Owner = "Aedui Tribe" -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.France.Civilization = "celt"
@@ -591,7 +591,7 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	WorldMapProvinces.Aquitaine.SettlementBuildings.unit_germanic_town_hall = 2
 	SetResourceProspected(121, 33, "Gold", true)
 	
-	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-ComtÃ©; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Burgundy.Civilization = "celt"
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 8 -- enough troops for them to be able to hold their own
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_germanic_town_hall = 2
@@ -618,7 +618,7 @@ if (GrandStrategyYear >= -67) then -- Crete acquired by Rome in 67 BC; Source: W
 	WorldMapProvinces.Crete.Owner = "Rome"
 end
 
-if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
+if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: DÃ¡ithÃ­ Ã“ hÃ“gÃ¡in, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 	WorldMapProvinces.Burgundy.Owner = "Suebi Tribe"
 	WorldMapProvinces.Burgundy.SettlementBuildings.unit_teuton_town_hall = 2
 	WorldMapProvinces.Brandenburg.Units.unit_teuton_swordsman = 4 -- to give them something of a defense
@@ -867,7 +867,7 @@ if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium
 	AcquireFactionTechnologies(Factions.Francia, Factions.FrankTribe)
 end
 
-if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 60.
 	WorldMapProvinces.France.Owner = "Francia"
 	WorldMapProvinces.France.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.Transylvania.Owner = ""
@@ -906,7 +906,7 @@ if (GrandStrategyYear >= 500) then
 	GrandStrategyEvents.HistoriaNova = nil
 end
 
-if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 60.
 	WorldMapProvinces.Austria.Owner = "Ostrogoth Tribe"
 	WorldMapProvinces.Austria.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.Bavaria.Owner = "Ostrogoth Tribe"
@@ -927,18 +927,17 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	AcquireFactionTechnologies(Factions.FrisianTribe, Factions.AsaTribe)
 	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
-	WorldMapProvinces.Brittany.Name = "Brittany" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 52
 	WorldMapProvinces.England.Owner = "Saxon Tribe" -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.England.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
 if (GrandStrategyYear >= 534) then
-	WorldMapProvinces.Switzerland.Owner = "Francia" -- Burgundian realm conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	WorldMapProvinces.Corsica.Owner = "" -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	WorldMapProvinces.Sardinia.Owner = "" -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	WorldMapProvinces.Switzerland.Owner = "Francia" -- Burgundian realm conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 60.
+	WorldMapProvinces.Corsica.Owner = "" -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 60.
+	WorldMapProvinces.Sardinia.Owner = "" -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 60.
 end
 
-if (GrandStrategyYear >= 537) then -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+if (GrandStrategyYear >= 537) then -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit Ã¼ber 1200 Karten", 2009, p. 60.
 	WorldMapProvinces.Bavaria.Owner = "Francia"
 end
 
@@ -971,7 +970,7 @@ end
 
 if (GrandStrategyYear >= 597) then
 	GrandStrategyEvents.AugustineArchbishopOfEngland = nil
-	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, §10.
+	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, Â§10.
 end
 
 if (GrandStrategyYear >= 602) then

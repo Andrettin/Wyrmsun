@@ -199,6 +199,8 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Fixed issue with a defeat happening if Durin and Modsognir weren't in Svarinshaug when the A Rocky Home and The Necklace of the Brisings missions happened.
 - Improved mercenary hiring tooltip.
+- Improved Grand Strategy mode performance.
+- Teutons now generate a new province name when assimilating a province if none is preset for that province.
 
 * Units
 - Fixed costs of the Surghan Mercenary (it was costing some lumber, while it should cost none).

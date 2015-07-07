@@ -61,7 +61,7 @@ local EarthEvents = {
 				WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 6
 				WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 4 -- make Bavaria easier to be conquered by the neighboring Celtic tribes
 				AcquireProvince(WorldMapProvinces.Don, "")
-				WorldMapProvinces.Don.Civilization = ""
+				ChangeProvinceCulture(WorldMapProvinces.Don, "")
 				AcquireFactionTechnologies(Factions.AeduiTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.ArverniTribe, EventFaction)
 				AcquireFactionTechnologies(Factions.BoiiTribe, EventFaction)

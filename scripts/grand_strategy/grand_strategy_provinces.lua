@@ -37,38 +37,29 @@ function LoadProvinces(world)
 		Albania = {
 			Name = "Taulantia",
 			Tiles = { {134, 33}, {134, 34} },
-			Owner = "",
 			SettlementName = "Dyrrhachium",
 			CulturalSettlementNames = {
 				greek = "Epidamnus",
 				latin = "Dyrrhachium"
 			},
 			SettlementLocation = {134, 34}, -- Dyr
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Andalusia = {
-			Name = "Farther Baetica",
+			Name = "Andalusia",
 			CulturalNames = {
+				latin = "Farther Baetica",
 				Portugal = "Andalusia",
 				Spain = "Andalusia"
 			},
 			Tiles = { {115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37} },
-			Owner = "",
 			SettlementName = "Corduba",
 			CulturalSettlementNames = {
 				latin = "Corduba"
 			},
 			SettlementLocation = {116, 36}, -- Cordoba
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Aquitaine = {
@@ -77,17 +68,12 @@ function LoadProvinces(world)
 				France = "Aquitaine"
 			},
 			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
-			Owner = "",
 			SettlementName = "Tolosa",
 			CulturalSettlementNames = {
 				latin = "Tolosa"
 			},
 			SettlementLocation = {120, 32}, -- Toulouse
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Aragon = {
@@ -97,17 +83,12 @@ function LoadProvinces(world)
 				Spain = "Aragon"
 			},
 			Tiles = { {119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34} },
-			Owner = "",
 			SettlementName = "Caesaraugusta",
 			CulturalSettlementNames = {
 				latin = "Caesaraugusta"
 			},
 			SettlementLocation = {119, 34}, -- Zaragoza
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Astrakhan = {
@@ -132,18 +113,13 @@ function LoadProvinces(world)
 		Attica = {
 			Name = "Attica",
 			Tiles = { {135, 36}, {136, 36} },
-			Owner = "",
 			SettlementName = "Athens",
 			CulturalSettlementNames = {
 				greek = "Athens",
 				latin = "Athens"
 			},
 			SettlementLocation = {136, 36}, -- Athens
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -153,7 +129,6 @@ function LoadProvinces(world)
 				teuton = "Austria"
 			},
 			Tiles = { {127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30} },
-			Owner = "",
 			SettlementName = "Vienna",
 			CulturalSettlementNames = {
 				celt = "Vindobona",
@@ -162,8 +137,6 @@ function LoadProvinces(world)
 				teuton = "Vienna"
 			},
 			SettlementLocation = {131, 29}, -- Vienna
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/salzburg.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -173,14 +146,9 @@ function LoadProvinces(world)
 		BalticLands = {
 			Name = "Baltic Lands",
 			Tiles = { {135, 23}, {135, 24}, {136, 23}, {136, 24}, {137, 22}, {137, 23}, {137, 24}, {138, 22}, {138, 23}, {138, 24}, {139, 22}, {139, 23} },
-			Owner = "",
 	--		SettlementName = "Riga",
 			SettlementLocation = {137, 23}, -- Riga
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Bavaria = {
@@ -191,15 +159,12 @@ function LoadProvinces(world)
 				teuton = "Bavaria"
 			},
 			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
-			Owner = "",
 			SettlementName = "Ratisbon",
 			CulturalSettlementNames = {
 				latin = "Regina Castra",
 				teuton = "Regensburg"
 			},
 			SettlementLocation = {128, 29}, -- Regensburg
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/regensburg.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Asa Tribe from expanding here
@@ -214,14 +179,11 @@ function LoadProvinces(world)
 				latin = "Belgica"
 			},
 			Tiles = { {122, 27}, {122, 28}, {123, 28}, {124, 28} },
-			Owner = "",
 			SettlementName = "Aduatuca",
 			CulturalSettlementNames = {
 				latin = "Aduatuca"
 			},
 			SettlementLocation = {123, 28}, -- Brussels
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer early on
@@ -234,23 +196,19 @@ function LoadProvinces(world)
 			CulturalNames = {
 				celt = "Boiohaemum",
 				germanic = "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-				latin = "Boiohaemum"
+				latin = "Boiohaemum",
+				teuton = "Bohemia"
 			},
 			Tiles = { {129, 28}, {130, 28}, {131, 28} },
-			Owner = "",
 			SettlementName = "Prague",
 			CulturalSettlementNames = {
 				germanic = "Bubienum", -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 				teuton = "Bubienum"
 			},
 			SettlementLocation = {130, 28}, -- Prague
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/prague.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
-			},
-			Heroes = {
 			},
 			SettlementTerrain = "Plains"
 		},
@@ -261,29 +219,24 @@ function LoadProvinces(world)
 				SuebiTribe = "Semnonia"
 			},
 			Tiles = { {127, 27}, {128, 25}, {128, 26}, {128, 27}, {129, 25}, {129, 26}, {129, 27} },
-			Owner = "",
-	--		SettlementName = "Berlin",
+			SettlementName = "Berlin",
+			CulturalSettlementNames = {
+				teuton = "Berlin"
+			},
 			SettlementLocation = {129, 26}, -- Berlin
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
-			Heroes = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Brittany = {
-			Name = "Armorica",
+			Name = "Brittany",
 			Tiles = { {117, 29}, {118, 29}, {118, 30} },
-			Owner = "",
 			CulturalNames = {
+				celt = "Armorica",
+				latin = "Armorica",
 				France = "Brittany"
 			},
 	--		SettlementName = "Rennes",
 			SettlementLocation = {118, 29}, -- Rennes
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -293,15 +246,12 @@ function LoadProvinces(world)
 		Bulgaria = {
 			Name = "Lower Moesia",
 			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
-			Owner = "",
 			SettlementName = "Odessus",
 			CulturalSettlementNames = {
 				greek = "Odessus",
 				latin = "Odessus"
 			},
 			SettlementLocation = {139, 33}, -- Odessus
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
@@ -314,17 +264,12 @@ function LoadProvinces(world)
 				France = "Provence"
 			},
 			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
-			Owner = "",
 			SettlementName = "Lugdunum",
 			CulturalSettlementNames = {
 				latin = "Lugdunum"
 			},
 			SettlementLocation = {123, 31}, -- Lyon
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/belfort.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Castille = {
@@ -334,33 +279,23 @@ function LoadProvinces(world)
 				Spain = "Castille"
 			},
 			Tiles = { {115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36} },
-			Owner = "",
 			SettlementName = "Toletum",
 			CulturalSettlementNames = {
 				latin = "Toletum"
 			},
 			SettlementLocation = {117, 35}, -- Toledo
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Corsica = {
 			Name = "Corsica",
 			Tiles = { {126, 34} },
-			Owner = "",
 			SettlementName = "Aleria",
 			CulturalSettlementNames = {
 				latin = "Aleria"
 			},
 			SettlementLocation = {126, 34},
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -374,8 +309,6 @@ function LoadProvinces(world)
 				unit_teuton_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -388,14 +321,11 @@ function LoadProvinces(world)
 				Russia = "Croatia"
 			},
 			Tiles = { {130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33} },
-			Owner = "",
 			SettlementName = "Salonae",
 			CulturalSettlementNames = {
 				latin = "Salonae"
 			},
 			SettlementLocation = {131, 31}, -- Zagreb
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -429,11 +359,13 @@ function LoadProvinces(world)
 				teuton = "England"
 			},
 			Tiles = { {117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26} },
-			Owner = "",
 			SettlementName = "Londinium",
-			SettlementLocation = {119, 27}, -- London
-			SettlementBuildings = {
+			CulturalSettlementNames = {
+				celt = "Londinium",
+				latin = "Londinium",
+				teuton = "London"
 			},
+			SettlementLocation = {119, 27}, -- London
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -449,14 +381,11 @@ function LoadProvinces(world)
 				FrankTribe = "Neustria"
 			},
 			Tiles = { {119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29} },
-			Owner = "",
 			SettlementName = "Lutetia",
 			CulturalSettlementNames = {
 				latin = "Lutetia"
 			},
 			SettlementLocation = {121, 29}, -- Paris
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to prevent germanic expansion here too soon
@@ -465,15 +394,13 @@ function LoadProvinces(world)
 		},
 		Galicia = {
 			Name = "Galicia",
+			CulturalNames = {
+				teuton = "Galicia"
+			},
 			Tiles = { {133, 28}, {134, 28}, {135, 28}, {136, 28}, {137, 28}, {137, 29}, {138, 28}, {138, 29} },
-			Owner = "",
 	--		SettlementName = "Lvov",
 			SettlementLocation = {137, 28}, -- Lvov / Lemberg
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		GaliciaIberia = {
@@ -484,15 +411,12 @@ function LoadProvinces(world)
 				Spain = "Galicia"
 			},
 			Tiles = { {114, 33}, {115, 33} },
-			Owner = "",
 			SettlementName = "Lucus Augusti",
 			CulturalSettlementNames = {
 				latin = "Lucus Augusti"
 			},
 --			SettlementLocation = {114, 33}, -- Corunna
 			SettlementLocation = {115, 33}, -- moved here so that it is not on the same spot as the mine
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -524,13 +448,8 @@ function LoadProvinces(world)
 		Gotland = {
 			Name = "Gotland",
 			Tiles = { {133, 23} },
-			Owner = "",
 			SettlementLocation = {133, 23},
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -540,14 +459,11 @@ function LoadProvinces(world)
 				Hungary = "Hungary"
 			},
 			Tiles = { {132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29} },
-			Owner = "",
 			SettlementName = "Aquincum",
 			CulturalSettlementNames = {
 				latin = "Aquincum"
 			},
 			SettlementLocation = {133, 30}, -- Budapest
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
@@ -557,14 +473,9 @@ function LoadProvinces(world)
 		Iceland = {
 			Name = "Iceland",
 			Tiles = { {103, 17}, {104, 17}, {104, 18}, {105, 17}, {105, 18}, {106, 17}, {106, 18}, {107, 17}, {107, 18}, {108, 17}, {109, 17} },
-			Owner = "",
 			SettlementName = "Reykjavik",
 			SettlementLocation = {104, 18}, -- Reykjavik
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -574,28 +485,20 @@ function LoadProvinces(world)
 				latin = "Hibernia"
 			},
 			Tiles = { {113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26} },
-			Owner = "",
 			SettlementName = "Eblana", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			SettlementLocation = {115, 26}, -- Dublin
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Latium = {
 			Name = "Latium",
 			Tiles = { {129, 33}, {129, 34} },
-			Owner = "",
 			SettlementName = "Rome",
 			CulturalSettlementNames = {
 				latin = "Roma"
 			},
 			SettlementLocation = {129, 34}, -- Rome
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
@@ -605,14 +508,12 @@ function LoadProvinces(world)
 		Jutland = {
 			Name = "Jutland",
 			CulturalNames = {
+				teuton = "Jutland",
 				JuteTribe = "Jutland"
 			},
 			Tiles = { {126, 23}, {126, 24}, {126, 25}, {127, 25} },
-			Owner = "",
 	--		SettlementName = "Aarhus",
 			SettlementLocation = {126, 24}, -- Aarhus
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/jutland.smp",
 			Units = {
 				unit_germanic_warrior = 4,
@@ -624,18 +525,13 @@ function LoadProvinces(world)
 		Macedonia = {
 			Name = "Macedonia",
 			Tiles = { {134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34} },
-			Owner = "",
 			SettlementName = "Aegae",
 			CulturalSettlementNames = {
 				greek = "Aegae",
 				latin = "Edessa"
 			},
 			SettlementLocation = {135, 34}, -- Aegae
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Moldavia = {
@@ -644,10 +540,7 @@ function LoadProvinces(world)
 				latin = "Northern Lower Dacia"
 			},
 			Tiles = { {139, 29}, {139, 30}, {139, 31}, {140, 30}, {140, 31} },
-			Owner = "",
 			SettlementLocation = {139, 31}, -- Braila
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -660,32 +553,28 @@ function LoadProvinces(world)
 				greek = "Magna Graecia"
 			},
 			Tiles = { {130, 34}, {131, 34}, {131, 35}, {131, 36}, {132, 35} },
-			Owner = "",
 			SettlementName = "Neapolis",
 			CulturalSettlementNames = {
 				greek = "Neapolis",
 				latin = "Neapolis"
 			},
 			SettlementLocation = {130, 34}, -- Naples
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/south-italy.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Netherlands = {
 			Name = "Netherlands",
 			CulturalNames = {
 				FrisianTribe = "Frisia",
-				latin = "Batavia"
+				latin = "Batavia",
+				teuton = "Netherlands"
 			},
 			Tiles = { {123, 26}, {123, 27}, {124, 26}, {124, 27} },
-			Owner = "",
-	--		SettlementName = "Amsterdam",
-			SettlementLocation = {123, 26}, -- Amsterdam
-			SettlementBuildings = {
+			SettlementName = "Amsterdam",
+			CulturalSettlementNames = {
+				teuton = "Amsterdam"
 			},
+			SettlementLocation = {123, 26}, -- Amsterdam
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 1 -- soldiers to prevent germanic expansion here too soon
@@ -699,15 +588,12 @@ function LoadProvinces(world)
 				celt = "Cisalpine Gaul"
 			},
 			Tiles = { {125, 31}, {125, 32}, {126, 31}, {126, 32}, {127, 31}, {127, 32}, {128, 31}, {128, 32}, {128, 33}, {129, 31} },
-			Owner = "",
 			SettlementName = "Milan",
 			CulturalSettlementNames = {
 				latin = "Mediolanum",
 				teuton = "Mailand"
 			},
 			SettlementLocation = {127, 31}, -- Milan
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/oderzo.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
@@ -718,31 +604,21 @@ function LoadProvinces(world)
 		Peloponnese = {
 			Name = "Peloponnese",
 			Tiles = { {135, 37}, {136, 37} },
-			Owner = "",
 			SettlementName = "Mycenae",
 			CulturalSettlementNames = {
 				greek = "Mycenae"
 			},
 			SettlementLocation = {136, 37}, -- Mycenae
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Poland = {
 			Name = "Poland",
 			Tiles = { {133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27} },
-			Owner = "",
 	--		SettlementName = "Warsaw",
 			SettlementLocation = {134, 26}, -- Warsaw
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Portugal = {
@@ -752,17 +628,12 @@ function LoadProvinces(world)
 				Spain = "Portugal"
 			},
 			Tiles = { {114, 34}, {114, 35}, {114, 36}, {114, 37} },
-			Owner = "",
 			SettlementName = "Olisipo",
 			CulturalSettlementNames = {
 				latin = "Olisipo"
 			},
 			SettlementLocation = {114, 36}, -- Lisbon
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/braga.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -773,30 +644,29 @@ function LoadProvinces(world)
 				teuton = "Prussia"
 			},
 			Tiles = { {130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25} },
-			Owner = "",
---			SettlementName = "Konigsberg",
+			SettlementName = "Königsberg",
+			CulturalSettlementNames = {
+				teuton = "Königsberg"
+			},
 			SettlementLocation = {134, 25}, -- Königsberg
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
 		Rhineland = {
 			Name = "Rhineland",
 			CulturalNames = {
+				teuton = "Rhineland",
 				DaneTribe = "Saxland",
 				SaxonTribe = "Saxland",
 				SwedeTribe = "Saxland"
 			},
 			Tiles = { {125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26} },
-			Owner = "",
-	--		SettlementName = "Dusseldorf",
-			SettlementLocation = {125, 27}, -- Düsseldorf
-			SettlementBuildings = {
+			SettlementName = "Dusseldorf",
+			CulturalSettlementNames = {
+				teuton = "Dusseldorf"
 			},
+			SettlementLocation = {125, 27}, -- Düsseldorf
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
@@ -813,11 +683,8 @@ function LoadProvinces(world)
 				Russia = "Russia"
 			},
 			Tiles = { {140, 22}, {140, 23}, {140, 24}, {140, 25}, {140, 26}, {141, 21}, {141, 22}, {141, 23}, {141, 24}, {141, 25}, {141, 26}, {142, 21}, {142, 22}, {142, 23}, {142, 24}, {142, 25}, {142, 26}, {143, 21}, {143, 22}, {143, 23}, {143, 24}, {143, 25}, {143, 26}, {144, 21}, {144, 22}, {144, 23}, {144, 24}, {144, 25}, {144, 26}, {145, 18}, {145, 19}, {145, 20}, {145, 21}, {145, 22}, {145, 23}, {145, 24}, {145, 25}, {145, 26}, {145, 27}, {146, 18}, {146, 19}, {146, 20}, {146, 21}, {146, 22}, {146, 23}, {146, 24}, {146, 25}, {146, 26}, {146, 27}, {147, 18}, {147, 19}, {147, 20}, {147, 21}, {147, 22}, {147, 23}, {147, 24}, {147, 25}, {147, 26}, {147, 27}, {148, 20}, {148, 21}, {148, 22}, {148, 23}, {148, 24}, {148, 25}, {148, 26}, {148, 27}, {148, 28}, {149, 23}, {149, 24}, {149, 25}, {149, 26}, {149, 27}, {149, 28}, {150, 23}, {150, 24}, {150, 25}, {150, 26}, {150, 27}, {151, 24}, {151, 25}, {151, 26}, {151, 27}, {151, 28}, {151, 29}, {152, 24}, {152, 25}, {152, 26}, {152, 27}, {153, 24}, {153, 25}, {153, 26}, {154, 24}, {154, 25} },
-			Owner = "",
 	--		SettlementName = "Moscow",
 			SettlementLocation = {146, 23}, -- Moscow
-			SettlementBuildings = {
-			},
 			Map = "maps/earth/novgorod.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to stop the Vana Tribe from expanding here
@@ -827,17 +694,12 @@ function LoadProvinces(world)
 		Sardinia = {
 			Name = "Sardinia",
 			Tiles = { {126, 36} },
-			Owner = "",
 			SettlementName = "Caralis",
 			CulturalSettlementNames = {
 				latin = "Caralis"
 			},
 			SettlementLocation = {126, 36},
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -846,30 +708,23 @@ function LoadProvinces(world)
 			CulturalNames = {
 				England = "Scotland",
 				ScotTribe = "Scotland",
-				Scotland = "Scotland"
+				Scotland = "Scotland",
+				teuton = "Scotland"
 			},
 			Tiles = { {116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24} },
-			Owner = "",
 			SettlementLocation = {117, 24}, -- Edinburgh
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Hills",
 			Coastal = true
 		},
 		Serbia = {
 			Name = "Upper Moesia",
 			Tiles = { {134, 32}, {135, 32}, {135, 33} },
-			Owner = "",
 			SettlementName = "Viminacium",
 			CulturalSettlementNames = {
 				latin = "Viminacium"
 			},
 			SettlementLocation = {135, 32}, -- Viminacium
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
@@ -879,29 +734,27 @@ function LoadProvinces(world)
 		Sicily = {
 			Name = "Sicily",
 			Tiles = { {129, 37} },
-			Owner = "",
 			SettlementName = "Syracuse",
 			CulturalSettlementNames = {
 				greek = "Syracusae",
 				latin = "Syracusae"
 			},
 			SettlementLocation = {129, 37}, -- Palermo
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
 		},
 		Silesia = {
 			Name = "Silesia",
-			Tiles = { {130, 27}, {131, 27}, {132, 27}, {132, 28} },
-			Owner = "",
-	--		SettlementName = "Breslau",
-			SettlementLocation = {132, 27}, -- Breslau
-			SettlementBuildings = {
+			CulturalNames = {
+				teuton = "Silesia"
 			},
+			Tiles = { {130, 27}, {131, 27}, {132, 27}, {132, 28} },
+			SettlementName = "Breslau",
+			CulturalSettlementNames = {
+				teuton = "Breslau"
+			},
+			SettlementLocation = {132, 27}, -- Breslau
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
@@ -911,14 +764,11 @@ function LoadProvinces(world)
 		Sweden = {
 			Name = "Sweden",
 			Tiles = { {129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21} },
-			Owner = "",
 			SettlementName = "Sigtun",
 			CulturalSettlementNames = {
 				norse = "Sigtun"
 			},
 			SettlementLocation = {132, 21}, -- Stockholm / Sigtun
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
@@ -928,14 +778,13 @@ function LoadProvinces(world)
 		Switzerland = {
 			Name = "Helvetia",
 			CulturalNames = {
+				celt = "Helvetia",
+				latin = "Helvetia",
 				teuton = "Switzerland"
 			},
 			Tiles = { {125, 30}, {126, 30} },
-			Owner = "",
 	--		SettlementName = "Bern",
 			SettlementLocation = {125, 30}, -- Bern
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -945,15 +794,12 @@ function LoadProvinces(world)
 		Thrace = {
 			Name = "Thrace",
 			Tiles = { {138, 34}, {139, 34} },
-			Owner = "",
 			SettlementName = "Byzantium",
 			CulturalSettlementNames = {
 				greek = "Byzantium",
 				latin = "Byzantium"
 			},
 			SettlementLocation = {139, 34}, -- Constantinople
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
@@ -967,14 +813,9 @@ function LoadProvinces(world)
 				teuton = "Siebenbürgen"
 			},
 			Tiles = { {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
-			Owner = "",
 --			SettlementName = "",
 			SettlementLocation = {136, 30}, -- Klausenburg
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		},
 		Ukraine = {
@@ -987,11 +828,8 @@ function LoadProvinces(world)
 				Russia = "Ukraine"
 			},
 			Tiles = { {139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29} },
-			Owner = "",
 	--		SettlementName = "Kiev",
 			SettlementLocation = {141, 27}, -- Kiev
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
@@ -1004,10 +842,7 @@ function LoadProvinces(world)
 				latin = "Southern Lower Dacia"
 			},
 			Tiles = { {136, 32}, {137, 32}, {138, 32}, {139, 32}, {140, 32} },
-			Owner = "",
 			SettlementLocation = {138, 32}, -- Bucharest
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
@@ -1017,14 +852,9 @@ function LoadProvinces(world)
 		WhiteRussia = {
 			Name = "White Russia",
 			Tiles = { {136, 25}, {136, 26}, {136, 27}, {137, 25}, {137, 26}, {137, 27}, {138, 25}, {138, 26}, {138, 27}, {139, 24}, {139, 25}, {139, 26}, {139, 27} },
-			Owner = "",
 	--		SettlementName = "Minsk",
 			SettlementLocation = {139, 25}, -- Minsk
-			SettlementBuildings = {
-			},
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-			},
 			SettlementTerrain = "Plains"
 		}
 	}
@@ -1044,14 +874,11 @@ function LoadProvinces(world)
 			Units = {
 				unit_gnomish_recruit = 2 -- Pypo I and his envoy
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills" -- should be DkPl?
 		},
 		CavernsOfChaincolt = {
 			Name = "Caverns of Chaincolt",
 			Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {29, 19}, {29, 20}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {30, 20}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
-			Owner = "",
 			SettlementLocation = {30, 13},
 			SettlementBuildings = {},
 			Map = "maps/nidavellir/caverns-of-chaincolt.smp",
@@ -1064,7 +891,6 @@ function LoadProvinces(world)
 		CavernsOfFlame = {
 			Name = "Caverns of Flame",
 			Tiles = { {39, 2}, {39, 3}, {39, 4}, {39, 9}, {40, 1}, {40, 2}, {40, 3}, {40, 4}, {40, 5}, {40, 6}, {40, 7}, {40, 8}, {40, 9}, {41, 1}, {41, 2}, {41, 3}, {41, 4}, {41, 5}, {41, 6}, {41, 7}, {41, 8}, {41, 9}, {42, 1}, {42, 2}, {42, 3}, {42, 4}, {42, 5}, {42, 6}, {42, 7}, {43, 1}, {43, 2}, {43, 3}, {43, 6} },
-			Owner = "",
 			Civilization = "goblin",
 			SettlementLocation = {41, 6},
 			SettlementBuildings = {
@@ -1075,14 +901,11 @@ function LoadProvinces(world)
 				unit_goblin_spearman = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
 				unit_goblin_war_machine = 1
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		},
 		EasternMines = {
 			Name = "Eastern Mines",
 			Tiles = { {22, 1}, {22, 2}, {23, 1}, {23, 2}, {23, 3}, {23, 4}, {24, 1}, {24, 2}, {24, 3}, {24, 4}, {24, 5}, {25, 1}, {25, 2}, {25, 3}, {25, 4}, {25, 5}, {26, 1}, {26, 2}, {26, 3}, {26, 4}, {26, 5}, {27, 1}, {27, 2}, {27, 3}, {27, 4}, {27, 5}, {28, 1}, {28, 2}, {28, 3}, {28, 4}, {29, 1}, {29, 2}, {29, 3}, {29, 4}, {30, 1}, {30, 2}, {30, 3}, {30, 4}, {30, 8}, {31, 1}, {31, 2}, {31, 3}, {31, 4}, {31, 5}, {31, 6}, {31, 8}, {32, 1}, {32, 2}, {32, 3}, {32, 4}, {32, 5}, {32, 6}, {32, 7}, {32, 8}, {33, 1}, {33, 2}, {33, 3}, {33, 4}, {33, 5}, {33, 6}, {33, 7}, {33, 8}, {33, 9}, {34, 1}, {34, 2}, {34, 3}, {34, 4}, {34, 5}, {34, 6}, {34, 7}, {34, 8}, {35, 1}, {35, 2}, {35, 3}, {35, 4}, {35, 5}, {35, 6}, {35, 7}, {35, 8}, {35, 9}, {36, 1}, {36, 2}, {36, 3}, {36, 4}, {36, 5}, {36, 6}, {36, 7}, {36, 8}, {36, 9}, {37, 1}, {37, 2}, {37, 3}, {37, 4}, {37, 5}, {37, 6}, {37, 7}, {37, 8}, {37, 9}, {37, 10}, {38, 1}, {38, 2}, {38, 3}, {38, 4}, {38, 5}, {38, 6}, {38, 7}, {38, 8}, {38, 9}, {39, 1}, {39, 5}, {39, 6}, {39, 7}, {39, 8} },
-			Owner = "",
 			Civilization = "goblin",
 			SettlementLocation = {38, 7},
 			SettlementBuildings = {},
@@ -1091,21 +914,16 @@ function LoadProvinces(world)
 	--			unit_goblin_spearman = 3 -- three starting chieftains in the Gathering Materials scenario
 				unit_goblin_spearman = 9 * 2 -- three starting chieftains in the Gathering Materials scenario, plus 2 goblins for each tribe and multiplied by 2 to prevent too early expansion into this province
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		},
 		GryphonMountain = {
 			Name = "Gryphon Mountain",
 			Tiles = { {24, 22}, {24, 23}, {25, 20}, {25, 21}, {25, 22}, {25, 23}, {26, 20}, {26, 21}, {26, 22}, {26, 23}, {27, 20}, {27, 21}, {27, 22}, {27, 23}, {27, 24}, {27, 25}, {28, 20}, {28, 21}, {28, 22}, {28, 23}, {28, 24}, {28, 25}, {28, 26}, {28, 27}, {29, 21}, {29, 22}, {29, 23}, {29, 24}, {29, 25}, {29, 26}, {29, 27}, {30, 21}, {30, 23}, {30, 24}, {30, 25}, {30, 26}, {30, 27}, {31, 23}, {31, 24}, {31, 25}, {31, 26}, {32, 23}, {32, 24} },
-			Owner = "",
 			SettlementLocation = {29, 23},
 			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = { -- wild units in the Gryphon Mountain scenario
 				unit_dwarven_gryphon_rider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
-			},
-			Heroes = {
 			},
 			SettlementTerrain = "Mountains"
 		},
@@ -1122,14 +940,11 @@ function LoadProvinces(world)
 			Units = {
 				unit_goblin_spearman = 5 -- Fal Khag, Gatrakh, Thurg, Krung, Gorokh (should all be cavalry)
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Mountains"
 		},
 		HighPass = {
 			Name = "High Pass",
 			Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {41, 10}, {41, 11}, {41, 12}, {42, 11} },
-			Owner = "",
 			SettlementLocation = {40, 12},
 			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
@@ -1137,14 +952,11 @@ function LoadProvinces(world)
 				unit_goblin_spearman = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
 				unit_dwarven_gryphon_rider = 1 -- Kaara
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		},
 		HighbrookPass = {
 			Name = "Highbrook Pass",
 			Tiles = { {33, 10}, {33, 11}, {34, 9}, {34, 10}, {34, 11}, {35, 10}, {35, 11}, {35, 12}, {35, 14}, {35, 15}, {36, 10}, {36, 11}, {36, 12}, {36, 13}, {36, 14}, {36, 15}, {37, 11}, {37, 12}, {37, 13}, {37, 14}, {37, 15}, {38, 10}, {38, 11}, {38, 12}, {38, 13}, {38, 14}, {39, 10}, {39, 11}, {39, 13}, {39, 14} },
-			Owner = "",
 			SettlementLocation = {35, 11},
 			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
@@ -1155,14 +967,11 @@ function LoadProvinces(world)
 				unit_goblin_spearman = 4 * 3, -- one troll, two young ogres, one ogre -- multiply by three to prevent dwarven expansion here too early
 				unit_goblin_archer = 2 * 3 -- two liches
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Mountains"
 		},
 		KalKartha = {
 			Name = "Kal Kartha",
 			Tiles = { {42, 8}, {42, 9}, {42, 10}, {43, 4}, {43, 5}, {43, 7}, {43, 8}, {43, 9}, {43, 10}, {44, 1}, {44, 2}, {44, 3}, {44, 4}, {44, 5}, {44, 6}, {44, 7}, {44, 8}, {45, 1}, {45, 2}, {45, 3}, {45, 4}, {45, 5}, {45, 6}, {45, 7}, {45, 8}, {46, 1}, {46, 2}, {46, 3}, {46, 4}, {46, 5}, {46, 6}, {46, 7}, {46, 8}, {47, 1}, {47, 2}, {47, 3}, {47, 4}, {47, 5}, {47, 6}, {47, 7}, {47, 8}, {47, 9}, {48, 1}, {48, 2}, {48, 3}, {48, 4}, {48, 5}, {48, 6}, {48, 7}, {48, 8}, {48, 9}, {49, 1}, {49, 2}, {49, 3}, {49, 4}, {49, 5}, {49, 6}, {49, 7}, {49, 8}, {49, 9}, {49, 10}, {50, 1}, {50, 2}, {50, 3}, {50, 4}, {50, 5}, {50, 6}, {50, 7}, {50, 8}, {50, 9}, {50, 10}, {50, 11}, {51, 3}, {51, 4}, {51, 5}, {51, 6}, {51, 7}, {51, 8}, {51, 9}, {51, 10}, {51, 11}, {52, 4}, {52, 5}, {52, 6}, {52, 7}, {52, 8}, {52, 9}, {52, 10}, {52, 11}, {52, 12}, {53, 4}, {53, 5}, {53, 6}, {53, 7}, {53, 8}, {53, 9}, {53, 10}, {53, 11}, {53, 12}, {54, 6}, {54, 7}, {54, 8}, {54, 9}, {54, 10}, {54, 11}, {54, 12}, {55, 7}, {55, 8}, {55, 9}, {55, 10}, {55, 11}, {55, 12}, {56, 12} },
-			Owner = "",
 			SettlementName = "Kal Kartha",
 			SettlementLocation = {45, 5},
 			SettlementBuildings = {},
@@ -1173,14 +982,11 @@ function LoadProvinces(world)
 				unit_dwarven_thane = 0,
 				unit_gnomish_recruit = 4
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Mountains"
 		},
 		Lyr = {
 			Name = "Lyr",
 			Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {56, 13}, {56, 14}, {56, 15}, {56, 16} },
-			Owner = "",
 			SettlementName = "Lyr",
 			SettlementLocation = {50, 13},
 			SettlementBuildings = {},
@@ -1188,14 +994,11 @@ function LoadProvinces(world)
 			Units = { -- some wild dwarves to stop too early expansion into this province
 				unit_dwarven_axefighter = 12
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		},
 		NorthernWastelands = {
 			Name = "Northern Wastelands",
 			Tiles = { {12, 3}, {12, 4}, {13, 3}, {13, 4}, {14, 2}, {14, 3}, {14, 4}, {15, 1}, {15, 2}, {15, 3}, {15, 4}, {16, 1}, {16, 2}, {16, 3}, {16, 4}, {16, 5}, {16, 6}, {17, 1}, {17, 2}, {17, 3}, {17, 4}, {17, 5}, {17, 6}, {17, 7}, {18, 1}, {18, 2}, {18, 3}, {18, 4}, {18, 5}, {18, 7}, {18, 8}, {19, 1}, {19, 2}, {19, 3}, {19, 4}, {19, 7}, {20, 1}, {20, 2}, {20, 3}, {21, 1}, {21, 2}, {21, 3}, {22, 3} },
-			Owner = "",
 			Civilization = "goblin",
 			SettlementLocation = {14, 2},
 			SettlementBuildings = {
@@ -1205,8 +1008,6 @@ function LoadProvinces(world)
 			Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
 				unit_goblin_spearman = 26,
 				unit_goblin_archer = 13
-			},
-			Heroes = {
 			},
 			SettlementTerrain = "Hills"
 		},
@@ -1224,14 +1025,11 @@ function LoadProvinces(world)
 			Units = {
 				unit_goblin_spearman = 14 -- 13 is the quantity of villages in Peaceful Valley map (each can generate 0-2 goblin spearmen) + T'shar Lggi himself
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		},
 		ShorbearHills = {
 			Name = "Shorbear Hills",
 			Tiles = { {31, 16}, {31, 17}, {31, 18}, {32, 15}, {32, 16}, {32, 17}, {32, 18}, {32, 19}, {33, 14}, {33, 15}, {33, 16}, {33, 17}, {33, 18}, {33, 19}, {34, 14}, {34, 15}, {34, 16}, {34, 17} },
-			Owner = "",
 			SettlementName = "Shorbear Hold",
 			SettlementLocation = {33, 15},
 			SettlementBuildings = {},
@@ -1239,22 +1037,17 @@ function LoadProvinces(world)
 			Units = {
 				unit_goblin_spearman = 4
 			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		},
 		SouthernTunnels = {
 			Name = "Southern Tunnels",
 			Tiles = { {31, 14}, {32, 13}, {32, 14}, {33, 12}, {33, 13}, {34, 12}, {34, 13}, {35, 13} },
-			Owner = "",
 			SettlementName = "Knalga",
 			SettlementLocation = {32, 14},
 			SettlementBuildings = {},
 			Map = "maps/nidavellir/southern-tunnels.smp",
 			Units = {
 				unit_goblin_spearman = 4
-			},
-			Heroes = {
 			},
 			SettlementTerrain = "Hills"
 		},
@@ -1268,10 +1061,6 @@ function LoadProvinces(world)
 				unit_dwarven_town_hall = 2
 			},
 			Map = "maps/random_maps/random-map-swamp.smp",
-			Units = {
-			},
-			Heroes = {
-			},
 			SettlementTerrain = "Hills"
 		}
 	}
@@ -1385,18 +1174,27 @@ function LoadProvinces(world)
 		for key, value in pairs(province_table) do
 			WorldMapProvinces[key] = {}
 			WorldMapProvinces[key]["Name"] = province_table[key].Name
+			SetProvinceName("", WorldMapProvinces[key].Name) -- this will define a new province for the engine
 			
 			WorldMapProvinces[key]["CulturalNames"] = {}
 			if (province_table[key].CulturalNames ~= nil) then
 				for second_key, second_value in pairs(province_table[key].CulturalNames) do
-					WorldMapProvinces[key].CulturalNames[second_key] = province_table[key].CulturalNames[second_key]
+					if (Factions[second_key] ~= nil) then
+						SetProvinceFactionCulturalName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalNames[second_key])
+					else
+						SetProvinceCulturalName(WorldMapProvinces[key].Name, second_key, province_table[key].CulturalNames[second_key])
+					end
 				end
 			end
 			
 			WorldMapProvinces[key]["CulturalSettlementNames"] = {}
 			if (province_table[key].CulturalSettlementNames ~= nil) then
 				for second_key, second_value in pairs(province_table[key].CulturalSettlementNames) do
-					WorldMapProvinces[key].CulturalSettlementNames[second_key] = province_table[key].CulturalSettlementNames[second_key]
+					if (Factions[second_key] ~= nil) then
+						SetProvinceFactionCulturalSettlementName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalSettlementNames[second_key])
+					else
+						SetProvinceCulturalSettlementName(WorldMapProvinces[key].Name, second_key, province_table[key].CulturalSettlementNames[second_key])
+					end
 				end
 			end
 			
@@ -1406,18 +1204,23 @@ function LoadProvinces(world)
 					table.insert(WorldMapProvinces[key].Tiles, {province_table[key].Tiles[i][1], province_table[key].Tiles[i][2]})
 				end
 			end
-			WorldMapProvinces[key]["Owner"] = province_table[key].Owner
+			WorldMapProvinces[key]["Owner"] = ""
+			if (province_table[key].Owner ~= nil) then
+				WorldMapProvinces[key]["Owner"] = province_table[key].Owner
+			end
 			if (province_table[key].Civilization ~= nil) then
 				WorldMapProvinces[key]["Civilization"] = province_table[key].Civilization
 			end
 			if (province_table[key].SettlementName ~= nil) then
 				WorldMapProvinces[key]["SettlementName"] = province_table[key].SettlementName
+				SetProvinceSettlementName(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementName)
 			end
 			if (province_table[key].SettlementLocation ~= nil) then
 				WorldMapProvinces[key]["SettlementLocation"] = {province_table[key].SettlementLocation[1], province_table[key].SettlementLocation[2]}
+				SetProvinceSettlementLocation(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 			end
+			WorldMapProvinces[key]["SettlementBuildings"] = {}
 			if (province_table[key].SettlementBuildings ~= nil) then
-				WorldMapProvinces[key]["SettlementBuildings"] = {}
 				for second_key, second_value in pairs(province_table[key].SettlementBuildings) do
 					WorldMapProvinces[key].SettlementBuildings[second_key] = province_table[key].SettlementBuildings[second_key]
 				end
@@ -1425,14 +1228,14 @@ function LoadProvinces(world)
 			if (province_table[key].Map ~= nil) then
 				WorldMapProvinces[key]["Map"] = province_table[key].Map
 			end
+			WorldMapProvinces[key]["Units"] = {}
 			if (province_table[key].Units ~= nil) then
-				WorldMapProvinces[key]["Units"] = {}
 				for second_key, second_value in pairs(province_table[key].Units) do
 					WorldMapProvinces[key].Units[second_key] = province_table[key].Units[second_key]
 				end
 			end
+			WorldMapProvinces[key]["Heroes"] = {}
 			if (province_table[key].Heroes ~= nil) then
-				WorldMapProvinces[key]["Heroes"] = {}
 				for second_key, second_value in pairs(province_table[key].Heroes) do
 					WorldMapProvinces[key].Heroes[second_key] = province_table[key].Heroes[second_key]
 				end
@@ -1447,13 +1250,24 @@ function LoadProvinces(world)
 		for key, value in pairs(province_table) do
 			WorldMapWaterProvinces[key] = {}
 			WorldMapWaterProvinces[key]["Name"] = province_table[key].Name
+			SetProvinceName("", WorldMapWaterProvinces[key].Name) -- this will define a new province for the engine
+			SetProvinceWater(WorldMapWaterProvinces[key].Name, true) -- this will make the province a water province for the engine
+			
 			if (province_table[key].CulturalNames ~= nil) then
-				WorldMapWaterProvinces[key]["CulturalNames"] = {}
 				for second_key, second_value in pairs(province_table[key].CulturalNames) do
-					WorldMapWaterProvinces[key].CulturalNames[second_key] = province_table[key].CulturalNames[second_key]
+					if (Factions[second_key] ~= nil) then
+						SetProvinceFactionCulturalName(WorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalNames[second_key])
+					else
+						SetProvinceCulturalName(WorldMapWaterProvinces[key].Name, second_key, province_table[key].CulturalNames[second_key])
+					end
 				end
 			end
-			WorldMapWaterProvinces[key]["ReferenceProvince"] = province_table[key].ReferenceProvince
+			
+			if (province_table[key].ReferenceProvince ~= nil) then
+				WorldMapWaterProvinces[key]["ReferenceProvince"] = province_table[key].ReferenceProvince
+				SetProvinceReferenceProvince(WorldMapWaterProvinces[key].Name, WorldMapProvinces[province_table[key].ReferenceProvince].Name)
+			end
+			
 			if (province_table[key].Tiles ~= nil) then
 				WorldMapWaterProvinces[key]["Tiles"] = {}
 				for i=1,table.getn(province_table[key].Tiles) do

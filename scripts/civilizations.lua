@@ -1305,6 +1305,20 @@ DefineCivilizationFactions("teuton",
 		"playable", false
 	},
 	"faction", {
+		"name", "Croatia",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "red",
+		"playable", false
+	},
+	"faction", {
+		"name", "Hungary",
+		"type", "polity",
+		"color", "green",
+		"secondary_color", "green",
+		"playable", false
+	},
+	"faction", {
 		"name", "Muscovy",
 		"type", "polity",
 		"color", "red",

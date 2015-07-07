@@ -67,9 +67,9 @@ WorldMapResources = {
 	}
 }
 
-LoadProvinces("Nidavellir")
-
 LoadFactions("Nidavellir")
+
+LoadProvinces("Nidavellir")
 
 MercenaryGroups = {
 	unit_surghan_mercenary_steelclad = 4
