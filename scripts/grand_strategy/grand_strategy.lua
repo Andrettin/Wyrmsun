@@ -35,8 +35,8 @@ EventFaction = nil
 EventProvince = nil
 GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
-GrandStrategyMapWidthIndent = false
-GrandStrategyMapHeightIndent = false
+GrandStrategyMapWidthIndent = 0
+GrandStrategyMapHeightIndent = 0
 
 function RunGrandStrategyGameSetupMenu()
 	GrandStrategyMapWidth = Video.Width + 64
@@ -55,8 +55,8 @@ function RunGrandStrategyGameSetupMenu()
 	EventProvince = nil
 	GrandStrategyWorld = ""
 	BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
-	GrandStrategyMapWidthIndent = false
-	GrandStrategyMapHeightIndent = false
+	GrandStrategyMapWidthIndent = 0
+	GrandStrategyMapHeightIndent = 0
 	ProcessingEndTurn = false
 
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -99,8 +99,8 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 			InterfaceState = "Province"
-			GrandStrategyMapWidthIndent = false
-			GrandStrategyMapHeightIndent = false
+			GrandStrategyMapWidthIndent = 0
+			GrandStrategyMapHeightIndent = 0
 			CalculateTileProvinces()
 			CalculateProvinceBorderTiles()
 
@@ -481,75 +481,6 @@ function RunGrandStrategyGame()
 			RunEncyclopediaMenu()
 		end,
 	{0, 0})
-
-	-- add pseudo-buttons to allow the player to see other parts of the map
-	local b = GrandStrategyMenu:addButton("", "up", 0, 0,
-		function()
-			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetY > 0) then
-					if (GrandStrategyMapHeightIndent == false) then
-						GrandStrategyMapHeightIndent = true
-						WorldMapOffsetY = WorldMapOffsetY - 1;
-					elseif (GrandStrategyMapHeightIndent) then
-						GrandStrategyMapHeightIndent = false
-					end
-				end
-				DrawOnScreenTiles()
-			end
-		end,
-	{0, 0})
-	b:setActsPressed(true)
-
-	b = GrandStrategyMenu:addButton("", "down", 0, 0,
-		function()
-			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetY < GetWorldMapHeight() - 1 - math.floor(GrandStrategyMapHeight / 64)) then
-					if (GrandStrategyMapHeightIndent) then
-						GrandStrategyMapHeightIndent = false
-						WorldMapOffsetY = WorldMapOffsetY + 1;
-					elseif (GrandStrategyMapHeightIndent == false) then
-						GrandStrategyMapHeightIndent = true
-					end
-				end
-				DrawOnScreenTiles()
-			end
-		end,
-	{0, 0})
-	b:setActsPressed(true)
-
-	b = GrandStrategyMenu:addButton("", "left", 0, 0,
-		function()
-			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetX > 0) then
-					if (GrandStrategyMapWidthIndent == false) then
-						GrandStrategyMapWidthIndent = true
-						WorldMapOffsetX = WorldMapOffsetX - 1;
-					elseif (GrandStrategyMapWidthIndent) then
-						GrandStrategyMapWidthIndent = false
-					end
-				end
-				DrawOnScreenTiles()
-			end
-		end,
-	{0, 0})
-	b:setActsPressed(true)
-	
-	b = GrandStrategyMenu:addButton("", "right", 0, 0,
-		function()
-			if (ProcessingEndTurn == false) then
-				if (WorldMapOffsetX < GetWorldMapWidth() - 1 - math.floor(GrandStrategyMapWidth / 64)) then
-					if (GrandStrategyMapWidthIndent) then
-						GrandStrategyMapWidthIndent = false
-						WorldMapOffsetX = WorldMapOffsetX + 1;
-					elseif (GrandStrategyMapWidthIndent == false) then
-						GrandStrategyMapWidthIndent = true
-					end
-				end
-				DrawOnScreenTiles()
-			end
-		end,
-	{0, 0})
-	b:setActsPressed(true)
 
 	GrandStrategyMenu:run()
 end
@@ -1902,14 +1833,9 @@ function RunGrandStrategyLoadGameMenu()
 end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
-	local width_indent = 0
-	local height_indent = 0
-	if (GrandStrategyMapWidthIndent) then
-		width_indent = -32
-	end
-	if (GrandStrategyMapHeightIndent) then
-		height_indent = -32
-	end
+	local width_indent = GrandStrategyMapWidthIndent
+	local height_indent = GrandStrategyMapHeightIndent
+	
 	local last_tile_width_modifier = -32 + (Video.Width % 64)
 	
 	if (string.find(file, "border") ~= nil) then -- different method for border graphics
@@ -1971,41 +1897,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
 	end
-end
-
-function DrawSettlement(file, tile_x, tile_y, playercolor)
-	local world_map_tile = CPlayerColorGraphic:Get(file)
-	if (world_map_tile == nil) then
-		world_map_tile = CPlayerColorGraphic:New(file)
-		world_map_tile:Load()
-	end
-	local width_indent = 0
-	local height_indent = 0
-	if (GrandStrategyMapWidthIndent) then
-		width_indent = -32
-	end
-	if (GrandStrategyMapHeightIndent) then
-		height_indent = -32
-	end
-	OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", playercolor)
-	OnScreenSites[table.getn(OnScreenSites)]:setActionCallback(
-		function()
-			PlaySound("click")
-			SetSelectedProvince(GetTileProvince(tile_x, tile_y))
-		end
-	)
-	GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 64 * (tile_y - WorldMapOffsetY) + height_indent)
-	OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
-	OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
-	OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
-	if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
-		OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
-	elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
-		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 32 - height_indent)
-	else
-		OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
-	end
-	OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
 end
 
 function DrawWorldMapMinimapTile(file, tile_x, tile_y)
@@ -4425,8 +4316,8 @@ function ClearGrandStrategyVariables()
 	CleanGrandStrategyGame()
 	WorldMapResources = nil
 	ProcessingEndTurn = nil
-	GrandStrategyMapWidthIndent = false
-	GrandStrategyMapHeightIndent = false
+	GrandStrategyMapWidthIndent = 0
+	GrandStrategyMapHeightIndent = 0
 
 	ClearGrandStrategyUIVariables()
 

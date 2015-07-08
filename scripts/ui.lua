@@ -10,7 +10,7 @@
 --
 --      ui.lua - Define the user interface
 --
---      (c) Copyright 2000-2007 by Lutz Sammer and Jimmy Salmon
+--      (c) Copyright 2000-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by

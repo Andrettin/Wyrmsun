@@ -201,6 +201,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved mercenary hiring tooltip.
 - Improved Grand Strategy mode performance.
 - Teutons now generate a new province name when assimilating a province if none is preset for that province.
+- Added mouse scrolling to the grand strategy mode.
 
 * Units
 - Fixed costs of the Surghan Mercenary (it was costing some lumber, while it should cost none).
