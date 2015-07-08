@@ -487,7 +487,7 @@ end
 
 function EndTurn()
 	if (GrandStrategyYear % 10 == 0) then
-		SaveGrandStrategyGame("autosave")
+		GrandStrategyGameSave("autosave")
 	end
 
 	ProcessingEndTurn = true
@@ -1663,7 +1663,7 @@ function RunGrandStrategySaveMenu()
 			local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
 			table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
 
-			SaveGrandStrategyGame(name)
+			GrandStrategyGameSave(name)
     		menu:stop()
 			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
@@ -1704,19 +1704,13 @@ function RunGrandStrategyLoadGameMenu()
 				return
 			end
 			CleanGrandStrategyGame()
+			InitializeGrandStrategyGame()
 			
 			GrandStrategy = true
 			GameResult = GameNoResult
 			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
 			GrandStrategyWorld = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
-			local world_map_tiles = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapTiles
-			SetWorldMapSize(table.getn(world_map_tiles[1]), table.getn(world_map_tiles))
-			for x=0,GetWorldMapWidth() - 1 do
-				for y=0,GetWorldMapHeight() - 1 do
-					SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId(world_map_tiles[y+1][x+1]))
-				end
-			end
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
 					CalculateWorldMapTileGraphicTile(x, y)
@@ -1724,17 +1718,6 @@ function RunGrandStrategyLoadGameMenu()
 			end
 			
 			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
-			for i=1,table.getn(WorldMapResources.Gold) do
-				AddWorldMapResource("gold", WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2], WorldMapResources.Gold[i][3])
-			end
-
-			for i=1,table.getn(WorldMapResources.Lumber) do
-				AddWorldMapResource("lumber", WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2], WorldMapResources.Lumber[i][3])
-			end
-
-			for i=1,table.getn(WorldMapResources.Stone) do
-				AddWorldMapResource("stone", WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2], WorldMapResources.Stone[i][3])
-			end
 
 			Factions = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
@@ -5185,7 +5168,7 @@ function GetUnitTypeRequiredTechnologies(unit_type)
 	return required_technologies
 end
 
-function SaveGrandStrategyGame(name)
+function GrandStrategyGameSave(name)
 	wyr[name] = {
 		SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 		SavedGrandStrategyYear = GrandStrategyYear,
@@ -5200,15 +5183,6 @@ function SaveGrandStrategyGame(name)
 	}
 	for key, value in pairs(GrandStrategyEvents) do
 		table.insert(wyr[name].SavedGrandStrategyEvents, key)
-	end
-	wyr[name].SavedWorldMapTiles = {}
-	for y=0,GetWorldMapHeight() - 1 do
-		table.insert(wyr[name].SavedWorldMapTiles, {})
-	end
-	for x=0,GetWorldMapWidth() - 1 do
-		for y=0,GetWorldMapHeight() - 1 do
-			wyr[name].SavedWorldMapTiles[y+1][x+1] = GetWorldMapTileTerrain(x, y)
-		end
 	end
 	local civilizations = {"germanic", "teuton", "celt", "dwarf", "goblin", "goth", "norse", "kobold", "gnome", "latin", "greek"}
 	for key, value in pairs(wyr[name].SavedWorldMapProvinces) do
@@ -5256,7 +5230,7 @@ function SaveGrandStrategyGame(name)
 			end
 		end
 	end
-	SaveExtraPreferences(name)
+	SaveGrandStrategyGame(name)
 	wyr[name] = nil
 end
 
