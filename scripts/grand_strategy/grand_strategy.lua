@@ -82,6 +82,8 @@ function RunGrandStrategyGameSetupMenu()
 
 	menu:addFullButton(_("~!Start Game"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
+			CleanGrandStrategyGame()
+			InitializeGrandStrategyGame()
 			GrandStrategy = true
 			GameResult = GameNoResult
 			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
@@ -318,6 +320,18 @@ function RunGrandStrategyGameSetupMenu()
 						end
 					end
 				end
+			end
+			
+			for i=1,table.getn(WorldMapResources.Gold) do
+				AddWorldMapResource("gold", WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2], WorldMapResources.Gold[i][3])
+			end
+
+			for i=1,table.getn(WorldMapResources.Lumber) do
+				AddWorldMapResource("lumber", WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2], WorldMapResources.Lumber[i][3])
+			end
+
+			for i=1,table.getn(WorldMapResources.Stone) do
+				AddWorldMapResource("stone", WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2], WorldMapResources.Stone[i][3])
 			end
 
 			for x=0,GetWorldMapWidth() - 1 do
@@ -1125,6 +1139,7 @@ end
 function ChangeProvinceCulture(province, civilization)
 	local old_civilization = province.Civilization
 	province.Civilization = civilization
+	SetProvinceCivilization(province.Name, civilization)
 	
 	if (civilization ~= "") then
 		-- replace existent buildings from other civilizations with buildings of the new civilization
@@ -1778,6 +1793,17 @@ function RunGrandStrategyLoadGameMenu()
 			end
 			
 			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
+			for i=1,table.getn(WorldMapResources.Gold) do
+				AddWorldMapResource("gold", WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2], WorldMapResources.Gold[i][3])
+			end
+
+			for i=1,table.getn(WorldMapResources.Lumber) do
+				AddWorldMapResource("lumber", WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2], WorldMapResources.Lumber[i][3])
+			end
+
+			for i=1,table.getn(WorldMapResources.Stone) do
+				AddWorldMapResource("stone", WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2], WorldMapResources.Stone[i][3])
+			end
 
 			Factions = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
@@ -1876,7 +1902,6 @@ function RunGrandStrategyLoadGameMenu()
 end
 
 function DrawWorldMapTile(file, tile_x, tile_y)
-	local tooltip = GetTerrainName(GetWorldMapTileTerrain(tile_x, tile_y))
 	local width_indent = 0
 	local height_indent = 0
 	if (GrandStrategyMapWidthIndent) then
@@ -1886,23 +1911,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		height_indent = -32
 	end
 	local last_tile_width_modifier = -32 + (Video.Width % 64)
-	if (GetTileProvince(tile_x, tile_y) ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation ~= nil and GetTileProvince(tile_x, tile_y).SettlementLocation[1] == tile_x and GetTileProvince(tile_x, tile_y).SettlementLocation[2] == tile_y and ProvinceHasBuildingType(GetTileProvince(tile_x, tile_y), "town-hall") and GetTileProvince(tile_x, tile_y).Owner ~= "") then
-		if (GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) ~= nil) then
-			tooltip = "Settlement of " .. GetProvinceSettlementName(GetTileProvince(tile_x, tile_y)) .. " (" .. tooltip .. ")"
-		else
-			tooltip = "Settlement (" .. tooltip .. ")"
-		end
-	elseif (TileHasResource(tile_x, tile_y, "Gold", false)) then
-		tooltip = "Gold Mine (" .. tooltip .. ")"
-	end
-	if (GetTileProvince(tile_x, tile_y) ~= nil) then
-		tooltip = tooltip .. ", " .. GetProvinceName(GetTileProvince(tile_x, tile_y))
-		if (GetTileProvince(tile_x, tile_y).Owner ~= "" and GetTileProvince(tile_x, tile_y).Owner ~= "Ocean") then
-			tooltip = tooltip .. ", " .. GetTileProvince(tile_x, tile_y).Owner
-		end
-	end
-	tooltip = tooltip .. " (" .. tile_x .. ", " .. tile_y .. ")"
-
+	
 	if (string.find(file, "border") ~= nil) then -- different method for border graphics
 		local world_map_tile
 		if (string.find(file, "national") ~= nil) then
@@ -2574,21 +2583,6 @@ function DrawOnScreenTiles()
 
 	OnScreenSites = nil
 	OnScreenSites = {}
-
-	-- draw resources
-	for key, value in pairs(WorldMapResources) do
-		for i=1,table.getn(WorldMapResources[key]) do
-			if (WorldMapResources[key][i][3]) then -- if is prospected
-				local resource_site_graphics = ""
-				if (key == "Gold") then
-					resource_site_graphics = "tilesets/world/sites/gold_mine.png"
-				end
-				if (resource_site_graphics ~= "" and WorldMapResources[key][i][1] >= WorldMapOffsetX and WorldMapResources[key][i][1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapResources[key][i][2] >= WorldMapOffsetY and WorldMapResources[key][i][2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
-					DrawWorldMapTile(resource_site_graphics, WorldMapResources[key][i][1], WorldMapResources[key][i][2])
-				end
-			end
-		end
-	end
 
 	for key, value in pairs(WorldMapProvinces) do
 		-- draw province borders
@@ -5460,6 +5454,7 @@ function SetResourceProspected(x, y, resource, prospected)
 	for i=1,table.getn(WorldMapResources[resource]) do
 		if (WorldMapResources[resource][i][1] == x and WorldMapResources[resource][i][2] == y) then
 			WorldMapResources[resource][i][3] = prospected
+			SetWorldMapResourceProspected(string.lower(resource), x, y, prospected)
 		end
 	end
 end
