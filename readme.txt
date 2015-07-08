@@ -202,6 +202,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved Grand Strategy mode performance.
 - Teutons now generate a new province name when assimilating a province if none is preset for that province.
 - Added mouse scrolling to the grand strategy mode.
+- The Germanic and Gnome civilizations now display different settlement graphics depending on whether a barracks is built or not.
 
 * Units
 - Fixed costs of the Surghan Mercenary (it was costing some lumber, while it should cost none).
