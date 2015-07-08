@@ -72,14 +72,6 @@ end
 --]]
 
 DefineRaceNames(
-	"race", {
-		"name", "celt",
-		"display", "Celt",
-		"visible",
-		"species", "human",
-		"parent-civilization", "germanic",
-		"playable", false
-	},
 	--[[
 	"race", { -- information for later use
 		"name", "dutch",
@@ -270,6 +262,14 @@ DefineRaceNames(
 			"staldaz" -- Staldaz = Owner
 		}
 	},
+	"race", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
+		"name", "celt",
+		"display", "Celt",
+		"visible",
+		"species", "human",
+		"parent-civilization", "germanic",
+		"playable", false
+	},
 	"race", {
 		"name", "gnome",
 		"display", "Gnome",
@@ -290,113 +290,6 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
-		"name", "goth",
-		"display", "Goth",
-		"visible",
-		"species", "human",
-		"parent-civilization", "teuton",
-		"playable", false
-	},
-	"race", {
-		"name", "greek",
-		"display", "Greek",
-		"visible",
-		"species", "human",
-		"parent-civilization", "teuton",
-		"playable", false,
-		"settlement-names", {
-			"Abdera",
-			"Abydus",
-			"Acragas", -- Agrigentum
-			"Agathe",
-			"Ainos",
-			"Alalia", -- Aleria
-			"Alonae",
-			"Amisus",
-			"Apollonia",
-			"Argos",
-			"Barca",
-			"Byzantium",
-			"Calchedon", -- Chalcedon
-			"Callatis",
-			"Callipolis",
-			"Camarina",
-			"Catana",
-			"Caulonia",
-			"Cius",
-			"Cotyora",
-			"Cume", -- Cumae
-			"Cydonia",
-			"Cyrene",
-			"Dioscurias",
-			"Elea",
-			"Elis",
-			"Emporiae", -- Emporium
-			"Ephesus",
-			"Epidamnus", -- Dyrrhachium
-			"Gela",
-			"Halicarnassus",
-			"Hemeroscopium",
-			"Heraclea",
-			"Heraclea Chersonesus",
-			"Hesperis",
-			"Himera",
-			"Ilios",
-			"Istrus",
-			"Itanus",
-			"Knossos",
-			"Lissus",
-			"Locri",
-			"Massilia", -- Marseilles
-			"Medama",
-			"Megara",
-			"Megara Hyblaca",
-			"Mesambria",
-			"Metapontium",
-			"Methone",
-			"Miletus",
-			"Motye",
-			"Naucratis",
-			"Naxos",
-			"Odessus",
-			"Olbia",
-			"Parthenope", -- Neapolis/Naples
-			"Perinthus",
-			"Phaselis",
-			"Phasis",
-			"Pityus",
-			"Posidonia", -- Paestum
-			"Rhegium",
-			"Rhodae",
-			"Salamis",
-			"Selimis",
-			"Selinus",
-			"Selymbria",
-			"Sinope",
-			"Smyrna",
-			"Soli",
-			"Sparta",
-			"Sybaris",
-			"Syracusae",
-			"Tanais",
-			"Taras", -- Tarentum
-			"Tarsus",
-			"Theodosia",
-			"Thurii",
-			"Tomi",
-			"Trapezus",
-			"Zacynthus", -- Saguntum
-			"Zancle" -- Messana
-		},
-		"settlement-name-prefixes", {
-			"Amphi", -- example: "Amphipolis"
-			"Nea" -- "Nea" = "New"; example: "Neapolis" (Naples)
-		},
-		"settlement-name-suffixes", {
-			"polis" -- "polis" = "city"; examples: "Amphipolis", "Neapolis" (Naples)
-		}
-	},
-	"race", {
 		"name", "kobold",
 		"display", "Kobold",
 		"visible",
@@ -406,116 +299,6 @@ DefineRaceNames(
 		"parent-civilization", "goblin",
 		"playable", false
 		 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
-	},
-	"race", {
-		"name", "latin",
-		"display", "Latin",
-		"visible",
-		"species", "human",
-		"parent-civilization", "teuton",
-		"playable", false,
-		"settlement-names", {
-			"Agrigentum",
-			"Alba",
-			"Aleria",
-			"Antium",
-			"Aquileia",
-			"Ardea",
-			"Ariminum",
-			"Arretium",
-			"Beneventum",
-			"Bononia",
-			"Bracara Augusta", -- Braga
-			"Brundisium",
-			"Buxentum",
-			"Capua",
-			"Caralis",
-			"Circeii",
-			"Clusium",
-			"Corfinium",
-			"Cora",
-			"Corduba",
-			"Cosa",
-			"Cremona",
-			"Croton",
-			"Cumae",
-			"Emporium",
-			"Firmum",
-			"Fregellae",
-			"Fregena",
-			"Fyrgi",
-			"Genua", -- Genoa
-			"Hatria",
-			"Heraclea",
-			"Locri",
-			"Luceria",
-			"Lucus Augusti",
-			"Mariana",
-			"Minturnae",
-			"Mutina",
-			"Narnia",
-			"Nora",
-			"Norba",
-			"Novum Castrum",
-			"Olbia",
-			"Olisipo",
-			"Opitergium", -- Oderzo
-			"Ostia",
-			"Paestum",
-			"Placentia",
-			"Puteoli",
-			"Regina Castra", -- Ratisbon/Regensburg
-			"Rhegium",
-			"Roma", -- Rome
-			"Saguntum",
-			"Salernum",
-			"Salicula",
-			"Satricum",
-			"Sena Gallica",
-			"Setia",
-			"Signia",
-			"Sinuessa",
-			"Sora",
-			"Spoletium",
-			"Sulci",
-			"Sutrium",
-			"Sybaris",
-			"Syracusae",
-			"Tarentum",
-			"Tarracina",
-			"Thurii",
-			"Toletum",
-			"Turnis Libisonis",
-			"Usellis",
-			"Velitrae",
-			"Venusia",
-			"Vibo Valentia",
-			"Vulturnus"
-		},
-		"settlement-name-prefixes", {
-			"Caesar", -- example: "Caesaraugusta"
-			"Medio", -- example: "Mediolanum" (Milan)
-			"Vindo" -- example: "Vindobona" (Vienna)
-		},
-		"settlement-name-suffixes", {
-			"augusta", -- example: Caesaraugusta
-			"bona", -- example: "Vindobona" (Vienna
-			"lanum" -- example: "Mediolanum" (Milan)
-		},
-		"settlement-name-prefix-translations", {
-			"Nea", "Nea" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-		},
-		"settlement-name-suffix-translations", {
-			"polis", "polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-		}
-	},
-	"race", {
-		"name", "norse",
-		"display", "Norse",
-		"visible",
-		"species", "human",
-		"parent-civilization", "teuton",
-		"playable", false
 	},
 	"race", {
 		"name", "teuton",
@@ -627,6 +410,223 @@ DefineRaceNames(
 		"settlement-name-suffix-translations", {
 			"lanum", "land" -- example: "Mediolanum" -> "Mailand" (Milan)
 		}
+	},
+	"race", {
+		"name", "goth",
+		"display", "Goth",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
+		"name", "greek",
+		"display", "Greek",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false,
+		"settlement-names", {
+			"Abdera",
+			"Abydus",
+			"Acragas", -- Agrigentum
+			"Agathe",
+			"Ainos",
+			"Alalia", -- Aleria
+			"Alonae",
+			"Amisus",
+			"Apollonia",
+			"Argos",
+			"Barca",
+			"Byzantium",
+			"Calchedon", -- Chalcedon
+			"Callatis",
+			"Callipolis",
+			"Camarina",
+			"Catana",
+			"Caulonia",
+			"Cius",
+			"Cotyora",
+			"Cume", -- Cumae
+			"Cydonia",
+			"Cyrene",
+			"Dioscurias",
+			"Elea",
+			"Elis",
+			"Emporiae", -- Emporium
+			"Ephesus",
+			"Epidamnus", -- Dyrrhachium
+			"Gela",
+			"Halicarnassus",
+			"Hemeroscopium",
+			"Heraclea",
+			"Heraclea Chersonesus",
+			"Hesperis",
+			"Himera",
+			"Ilios",
+			"Istrus",
+			"Itanus",
+			"Knossos",
+			"Lissus",
+			"Locri",
+			"Massilia", -- Marseilles
+			"Medama",
+			"Megara",
+			"Megara Hyblaca",
+			"Mesambria",
+			"Metapontium",
+			"Methone",
+			"Miletus",
+			"Motye",
+			"Naucratis",
+			"Naxos",
+			"Odessus",
+			"Olbia",
+			"Parthenope", -- Neapolis/Naples
+			"Perinthus",
+			"Phaselis",
+			"Phasis",
+			"Pityus",
+			"Posidonia", -- Paestum
+			"Rhegium",
+			"Rhodae",
+			"Salamis",
+			"Selimis",
+			"Selinus",
+			"Selymbria",
+			"Sinope",
+			"Smyrna",
+			"Soli",
+			"Sparta",
+			"Sybaris",
+			"Syracusae",
+			"Tanais",
+			"Taras", -- Tarentum
+			"Tarsus",
+			"Theodosia",
+			"Thurii",
+			"Tomi",
+			"Trapezus",
+			"Zacynthus", -- Saguntum
+			"Zancle" -- Messana
+		},
+		"settlement-name-prefixes", {
+			"Amphi", -- example: "Amphipolis"
+			"Nea" -- "Nea" = "New"; example: "Neapolis" (Naples)
+		},
+		"settlement-name-suffixes", {
+			"polis" -- "polis" = "city"; examples: "Amphipolis", "Neapolis" (Naples)
+		}
+	},
+	"race", {
+		"name", "latin",
+		"display", "Latin",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false,
+		"settlement-names", {
+			"Agrigentum",
+			"Alba",
+			"Aleria",
+			"Antium",
+			"Aquileia",
+			"Ardea",
+			"Ariminum",
+			"Arretium",
+			"Beneventum",
+			"Bononia",
+			"Bracara Augusta", -- Braga
+			"Brundisium",
+			"Buxentum",
+			"Capua",
+			"Caralis",
+			"Circeii",
+			"Clusium",
+			"Corfinium",
+			"Cora",
+			"Corduba",
+			"Cosa",
+			"Cremona",
+			"Croton",
+			"Cumae",
+			"Emporium",
+			"Firmum",
+			"Fregellae",
+			"Fregena",
+			"Fyrgi",
+			"Genua", -- Genoa
+			"Hatria",
+			"Heraclea",
+			"Locri",
+			"Luceria",
+			"Lucus Augusti",
+			"Mariana",
+			"Minturnae",
+			"Mutina",
+			"Narnia",
+			"Nora",
+			"Norba",
+			"Novum Castrum",
+			"Olbia",
+			"Olisipo",
+			"Opitergium", -- Oderzo
+			"Ostia",
+			"Paestum",
+			"Placentia",
+			"Puteoli",
+			"Regina Castra", -- Ratisbon/Regensburg
+			"Rhegium",
+			"Roma", -- Rome
+			"Saguntum",
+			"Salernum",
+			"Salicula",
+			"Satricum",
+			"Sena Gallica",
+			"Setia",
+			"Signia",
+			"Sinuessa",
+			"Sora",
+			"Spoletium",
+			"Sulci",
+			"Sutrium",
+			"Sybaris",
+			"Syracusae",
+			"Tarentum",
+			"Tarracina",
+			"Thurii",
+			"Toletum",
+			"Turnis Libisonis",
+			"Usellis",
+			"Velitrae",
+			"Venusia",
+			"Vibo Valentia",
+			"Vulturnus"
+		},
+		"settlement-name-prefixes", {
+			"Caesar", -- example: "Caesaraugusta"
+			"Medio", -- example: "Mediolanum" (Milan)
+			"Vindo" -- example: "Vindobona" (Vienna)
+		},
+		"settlement-name-suffixes", {
+			"augusta", -- example: Caesaraugusta
+			"bona", -- example: "Vindobona" (Vienna
+			"lanum" -- example: "Mediolanum" (Milan)
+		},
+		"settlement-name-prefix-translations", {
+			"Nea", "Nea" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+		},
+		"settlement-name-suffix-translations", {
+			"polis", "polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+		}
+	},
+	"race", {
+		"name", "norse",
+		"display", "Norse",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
 	},
 	"race", {
 		"name", "neutral",

@@ -345,6 +345,9 @@ function LoadProvinces(world)
 				unit_germanic_town_hall = 2,
 				unit_germanic_barracks = 2
 			},
+			CulturalSettlementNames = {
+				greek = "Tanais"
+			},
 			Map = "maps/earth/tanais.smp",
 			Units = {
 				unit_germanic_warrior = 4
@@ -880,7 +883,6 @@ function LoadProvinces(world)
 			Name = "Caverns of Chaincolt",
 			Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {29, 19}, {29, 20}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {30, 20}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
 			SettlementLocation = {30, 13},
-			SettlementBuildings = {},
 			Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 			Units = {
 				unit_goblin_spearman = 4
@@ -908,7 +910,6 @@ function LoadProvinces(world)
 			Tiles = { {22, 1}, {22, 2}, {23, 1}, {23, 2}, {23, 3}, {23, 4}, {24, 1}, {24, 2}, {24, 3}, {24, 4}, {24, 5}, {25, 1}, {25, 2}, {25, 3}, {25, 4}, {25, 5}, {26, 1}, {26, 2}, {26, 3}, {26, 4}, {26, 5}, {27, 1}, {27, 2}, {27, 3}, {27, 4}, {27, 5}, {28, 1}, {28, 2}, {28, 3}, {28, 4}, {29, 1}, {29, 2}, {29, 3}, {29, 4}, {30, 1}, {30, 2}, {30, 3}, {30, 4}, {30, 8}, {31, 1}, {31, 2}, {31, 3}, {31, 4}, {31, 5}, {31, 6}, {31, 8}, {32, 1}, {32, 2}, {32, 3}, {32, 4}, {32, 5}, {32, 6}, {32, 7}, {32, 8}, {33, 1}, {33, 2}, {33, 3}, {33, 4}, {33, 5}, {33, 6}, {33, 7}, {33, 8}, {33, 9}, {34, 1}, {34, 2}, {34, 3}, {34, 4}, {34, 5}, {34, 6}, {34, 7}, {34, 8}, {35, 1}, {35, 2}, {35, 3}, {35, 4}, {35, 5}, {35, 6}, {35, 7}, {35, 8}, {35, 9}, {36, 1}, {36, 2}, {36, 3}, {36, 4}, {36, 5}, {36, 6}, {36, 7}, {36, 8}, {36, 9}, {37, 1}, {37, 2}, {37, 3}, {37, 4}, {37, 5}, {37, 6}, {37, 7}, {37, 8}, {37, 9}, {37, 10}, {38, 1}, {38, 2}, {38, 3}, {38, 4}, {38, 5}, {38, 6}, {38, 7}, {38, 8}, {38, 9}, {39, 1}, {39, 5}, {39, 6}, {39, 7}, {39, 8} },
 			Civilization = "goblin",
 			SettlementLocation = {38, 7},
-			SettlementBuildings = {},
 			Map = "maps/nidavellir/eastern-mines.smp",
 			Units = {
 	--			unit_goblin_spearman = 3 -- three starting chieftains in the Gathering Materials scenario
@@ -920,7 +921,6 @@ function LoadProvinces(world)
 			Name = "Gryphon Mountain",
 			Tiles = { {24, 22}, {24, 23}, {25, 20}, {25, 21}, {25, 22}, {25, 23}, {26, 20}, {26, 21}, {26, 22}, {26, 23}, {27, 20}, {27, 21}, {27, 22}, {27, 23}, {27, 24}, {27, 25}, {28, 20}, {28, 21}, {28, 22}, {28, 23}, {28, 24}, {28, 25}, {28, 26}, {28, 27}, {29, 21}, {29, 22}, {29, 23}, {29, 24}, {29, 25}, {29, 26}, {29, 27}, {30, 21}, {30, 23}, {30, 24}, {30, 25}, {30, 26}, {30, 27}, {31, 23}, {31, 24}, {31, 25}, {31, 26}, {32, 23}, {32, 24} },
 			SettlementLocation = {29, 23},
-			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = { -- wild units in the Gryphon Mountain scenario
 				unit_dwarven_gryphon_rider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
@@ -946,7 +946,6 @@ function LoadProvinces(world)
 			Name = "High Pass",
 			Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {41, 10}, {41, 11}, {41, 12}, {42, 11} },
 			SettlementLocation = {40, 12},
-			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = { -- wild units in the High Pass scenario
 				unit_goblin_spearman = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
@@ -958,7 +957,6 @@ function LoadProvinces(world)
 			Name = "Highbrook Pass",
 			Tiles = { {33, 10}, {33, 11}, {34, 9}, {34, 10}, {34, 11}, {35, 10}, {35, 11}, {35, 12}, {35, 14}, {35, 15}, {36, 10}, {36, 11}, {36, 12}, {36, 13}, {36, 14}, {36, 15}, {37, 11}, {37, 12}, {37, 13}, {37, 14}, {37, 15}, {38, 10}, {38, 11}, {38, 12}, {38, 13}, {38, 14}, {39, 10}, {39, 11}, {39, 13}, {39, 14} },
 			SettlementLocation = {35, 11},
-			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = { -- starting units in the Settling Disputes scenario
 				unit_dwarven_axefighter = 0,
@@ -974,7 +972,6 @@ function LoadProvinces(world)
 			Tiles = { {42, 8}, {42, 9}, {42, 10}, {43, 4}, {43, 5}, {43, 7}, {43, 8}, {43, 9}, {43, 10}, {44, 1}, {44, 2}, {44, 3}, {44, 4}, {44, 5}, {44, 6}, {44, 7}, {44, 8}, {45, 1}, {45, 2}, {45, 3}, {45, 4}, {45, 5}, {45, 6}, {45, 7}, {45, 8}, {46, 1}, {46, 2}, {46, 3}, {46, 4}, {46, 5}, {46, 6}, {46, 7}, {46, 8}, {47, 1}, {47, 2}, {47, 3}, {47, 4}, {47, 5}, {47, 6}, {47, 7}, {47, 8}, {47, 9}, {48, 1}, {48, 2}, {48, 3}, {48, 4}, {48, 5}, {48, 6}, {48, 7}, {48, 8}, {48, 9}, {49, 1}, {49, 2}, {49, 3}, {49, 4}, {49, 5}, {49, 6}, {49, 7}, {49, 8}, {49, 9}, {49, 10}, {50, 1}, {50, 2}, {50, 3}, {50, 4}, {50, 5}, {50, 6}, {50, 7}, {50, 8}, {50, 9}, {50, 10}, {50, 11}, {51, 3}, {51, 4}, {51, 5}, {51, 6}, {51, 7}, {51, 8}, {51, 9}, {51, 10}, {51, 11}, {52, 4}, {52, 5}, {52, 6}, {52, 7}, {52, 8}, {52, 9}, {52, 10}, {52, 11}, {52, 12}, {53, 4}, {53, 5}, {53, 6}, {53, 7}, {53, 8}, {53, 9}, {53, 10}, {53, 11}, {53, 12}, {54, 6}, {54, 7}, {54, 8}, {54, 9}, {54, 10}, {54, 11}, {54, 12}, {55, 7}, {55, 8}, {55, 9}, {55, 10}, {55, 11}, {55, 12}, {56, 12} },
 			SettlementName = "Kal Kartha",
 			SettlementLocation = {45, 5},
-			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = { -- some wild gnomes from the Forbidden Forest to stop too early expansion into this province
 				unit_dwarven_axefighter = 0,
@@ -989,7 +986,6 @@ function LoadProvinces(world)
 			Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {56, 13}, {56, 14}, {56, 15}, {56, 16} },
 			SettlementName = "Lyr",
 			SettlementLocation = {50, 13},
-			SettlementBuildings = {},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = { -- some wild dwarves to stop too early expansion into this province
 				unit_dwarven_axefighter = 12
@@ -1032,7 +1028,6 @@ function LoadProvinces(world)
 			Tiles = { {31, 16}, {31, 17}, {31, 18}, {32, 15}, {32, 16}, {32, 17}, {32, 18}, {32, 19}, {33, 14}, {33, 15}, {33, 16}, {33, 17}, {33, 18}, {33, 19}, {34, 14}, {34, 15}, {34, 16}, {34, 17} },
 			SettlementName = "Shorbear Hold",
 			SettlementLocation = {33, 15},
-			SettlementBuildings = {},
 			Map = "maps/nidavellir/shorbear-hills.smp",
 			Units = {
 				unit_goblin_spearman = 4
@@ -1044,7 +1039,6 @@ function LoadProvinces(world)
 			Tiles = { {31, 14}, {32, 13}, {32, 14}, {33, 12}, {33, 13}, {34, 12}, {34, 13}, {35, 13} },
 			SettlementName = "Knalga",
 			SettlementLocation = {32, 14},
-			SettlementBuildings = {},
 			Map = "maps/nidavellir/southern-tunnels.smp",
 			Units = {
 				unit_goblin_spearman = 4
@@ -1223,6 +1217,7 @@ function LoadProvinces(world)
 			if (province_table[key].SettlementBuildings ~= nil) then
 				for second_key, second_value in pairs(province_table[key].SettlementBuildings) do
 					WorldMapProvinces[key].SettlementBuildings[second_key] = province_table[key].SettlementBuildings[second_key]
+					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].SettlementBuildings[second_key]) -- set the province settlement building for the engine
 				end
 			end
 			if (province_table[key].Map ~= nil) then

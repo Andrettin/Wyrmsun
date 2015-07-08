@@ -59,6 +59,7 @@ local GermanicEvents = {
 						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
 						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
 						WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
+						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", 0)
 						WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
 					for i, unitName in ipairs(Units) do
@@ -233,6 +234,7 @@ local GermanicEvents = {
 						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
+						SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
 						CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -253,6 +255,7 @@ local GermanicEvents = {
 					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 					WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
+					SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
 				end
 				DrawMinimap()
 			end,
@@ -298,6 +301,7 @@ local GermanicEvents = {
 							end
 						end
 						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
 						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						EventFaction.Prestige = EventFaction.Prestige + 25
 						-- give Gotaland to the Goth Tribe
@@ -323,6 +327,7 @@ local GermanicEvents = {
 						end
 					end
 					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+					SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
 					EventFaction.Prestige = EventFaction.Prestige + 25
 					-- give Gotaland to the Goth Tribe
 					EqualizeProvinceUnits(EventFaction)
@@ -348,6 +353,7 @@ local GermanicEvents = {
 					end
 				end
 				WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
+				SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
 				-- give Gotaland to the Goth Tribe
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")

@@ -49,7 +49,9 @@ local EarthEvents = {
 		OptionEffects = {
 			function(s)
 				WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
+				SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", 0)
 				WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
+				SetProvinceSettlementBuilding("Don", "unit-germanic-barracks", 0)
 				WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
 				WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 6
 				WorldMapProvinces.Austria.Units.unit_germanic_warrior = 6

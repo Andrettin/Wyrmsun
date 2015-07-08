@@ -667,6 +667,7 @@ function EndTurn()
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then
 					WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] = 2
+					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, unitName, 2)
 					if (GetUnitTypeData(unitName, "Class") == "town-hall" or GetUnitTypeData(unitName, "Class") == "lumber-mill" or GetUnitTypeData(unitName, "Class") == "smithy") then
 						CalculateFactionIncomes()
 					end
@@ -704,7 +705,8 @@ function EndTurn()
 		-- if the province has a town hall, a barracks and a smithy, give it a mercenary camp; not for Earth for now, since there are no recruitable mercenaries for Earth
 		if (WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp == 0 and GrandStrategyWorld ~= "Earth") then
 			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "smithy")) then
-				WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp = 2
+				WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp = 1
+				SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, "unit-mercenary-camp", 1)
 			end
 		end
 	end
@@ -1026,6 +1028,7 @@ function AcquireProvince(province, faction)
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] > 0) then
 					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove all buildings from an emptied province
+					SetProvinceSettlementBuilding(province.Name, unitName, 0)
 				end
 			end
 		end
@@ -1078,11 +1081,14 @@ function ChangeProvinceCulture(province, civilization)
 			if (IsGrandStrategyBuilding(unitName) and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp") then
 				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
 					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
+					SetProvinceSettlementBuilding(province.Name, unitName, 0)
 					if (GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
 						province.SettlementBuildings[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = 2
+						SetProvinceSettlementBuilding(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), 2)
 					end
 				elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
 					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
+					SetProvinceSettlementBuilding(province.Name, unitName, 0)
 				end
 			end
 		end
@@ -4073,6 +4079,7 @@ function BuildStructure(province, unit_type)
 		end
 
 		province.SettlementBuildings[string.gsub(unit_type, "-", "_")] = 1
+		SetProvinceSettlementBuilding(province.Name, unit_type, 1)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
@@ -4082,6 +4089,7 @@ end
 function CancelBuildStructure(province, unit_key)
 	if (province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 1) then
 		province.SettlementBuildings[string.gsub(unit_type, "-", "_")] = 0
+		SetProvinceSettlementBuilding(province.Name, unit_type, 0)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")

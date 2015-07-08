@@ -757,6 +757,7 @@ AddTrigger(
 																										if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
 																											if (GrandStrategy) then
 																												WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0
+																												SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", 0)
 																											end
 																											ActionVictory()
 																										end
