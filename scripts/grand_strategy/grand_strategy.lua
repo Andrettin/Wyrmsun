@@ -1764,37 +1764,7 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 	
 	local last_tile_width_modifier = -32 + (Video.Width % 64)
 	
-	if (string.find(file, "border") ~= nil) then -- different method for border graphics
-		local world_map_tile
-		if (string.find(file, "national") ~= nil) then
-			local playercolor
-			if (GetTileProvince(tile_x, tile_y).Owner ~= "") then
-				playercolor = GetFactionData(GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Civilization, GetTileProvince(tile_x, tile_y).Owner, "Color")
-			else
-				playercolor = "gray"
-			end
-			OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", playercolor) -- not really a site, but it is more expedient to use this method
-			world_map_tile = CPlayerColorGraphic:New(file)
-		else
-			world_map_tile = CGraphic:New(file)
-			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("") -- not really a site, but it is more expedient to use this method
-		end
-		world_map_tile:Load()
-		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) - 10 + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) - 10 + height_indent)
-		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
-		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
-		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
-		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(42 - width_indent + last_tile_width_modifier, 84)
-		elseif ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64)) - 1) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(84 + (last_tile_width_modifier * 5 / 16), 84)
-		elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(84, 52 - height_indent)
-		else
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(84, 84)
-		end
-		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
-	elseif (string.find(file, "sites") ~= nil) then -- different method for site graphics
+	if (string.find(file, "sites") ~= nil) then -- different method for site graphics
 		local world_map_tile
 		if (string.find(file, "settlement") ~= nil) then
 			world_map_tile = CPlayerColorGraphic:New(file)
@@ -2403,10 +2373,7 @@ function DrawOnScreenTiles()
 
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
-			if (GrandStrategyFaction ~= nil and GetProvinceAttackedBy(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
-				-- draw symbol that the province is being attacked by the human player if that is the case
-				DrawWorldMapTile("tilesets/world/sites/attack.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-			elseif (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
+			if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] > 0) then
@@ -3382,11 +3349,6 @@ function SetSelectedProvince(province)
 						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
 						province.AttackingUnits[string.gsub(unitName, "-", "_")] = province.AttackingUnits[string.gsub(unitName, "-", "_")] + SelectedUnits[string.gsub(unitName, "-", "_")]
 						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
-						
-						-- draw symbol that the province is being attacked by the human player
-						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
-							DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
-						end
 					end
 				end
 			end
@@ -3397,11 +3359,6 @@ function SetSelectedProvince(province)
 						province.Heroes[string.gsub(unitName, "-", "_")] = 3
 						SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 						SelectedHero = ""
-
-						-- draw symbol that a hero is attacking the province
-						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
-							DrawWorldMapTile("tilesets/world/sites/attack.png", province.SettlementLocation[1], province.SettlementLocation[2])
-						end
 					end
 				end
 			end
