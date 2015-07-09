@@ -279,9 +279,6 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key].Heroes.unit_hero_baglur_thane = 2
 				end
 				
-				if (WorldMapProvinces[key].AttackedBy == nil) then
-					WorldMapProvinces[key]["AttackedBy"] = ""
-				end
 				if (WorldMapProvinces[key].SettlementBuildings == nil) then
 					WorldMapProvinces[key]["SettlementBuildings"] = {}
 				end
@@ -730,14 +727,11 @@ function EndTurn()
 		end
 	end
 
-	local attack_happened = false
-
 	for key, value in pairs(WorldMapProvinces) do
 		-- effect attacks
-		if (WorldMapProvinces[key].AttackedBy ~= "") then
-			AttackProvince(WorldMapProvinces[key], WorldMapProvinces[key].AttackedBy)
-			WorldMapProvinces[key].AttackedBy = ""
-			attack_happened = true
+		if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "") then
+			AttackProvince(WorldMapProvinces[key], GetProvinceAttackedBy(WorldMapProvinces[key].Name))
+			SetProvinceAttackedBy(WorldMapProvinces[key].Name, "", "")
 		end
 	end
 
@@ -1428,7 +1422,7 @@ function RemoveHeroFromFaction(unit_type, faction)
 end
 
 function CanAttackProvince(province, faction, province_from)
-	if (province.Owner == faction.Name or province.Owner == "Ocean" or (province.AttackedBy ~= "" and province.AttackedBy ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
+	if (province.Owner == faction.Name or province.Owner == "Ocean" or (GetProvinceAttackedBy(province.Name) ~= "" and GetProvinceAttackedBy(province.Name) ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false
 	end
 	
@@ -1683,13 +1677,6 @@ function RunGrandStrategyLoadGameMenu()
 			
 			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
 			for key, value in pairs(WorldMapProvinces) do
-				SetProvinceName("", WorldMapProvinces[key].Name) -- this will define a new province for the engine
-				SetProvinceSettlementName(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementName)
-				SetProvinceCivilization(WorldMapProvinces[key].Name, WorldMapProvinces[key].Civilization) -- tell the engine the civilization of the province
-				SetProvinceSettlementLocation(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-				if (WorldMapProvinces[key].Owner ~= nil and WorldMapProvinces[key].Owner ~= "") then
-					SetProvinceOwner(WorldMapProvinces[key].Name, GetFactionFromName(WorldMapProvinces[key].Owner).Civilization, WorldMapProvinces[key].Owner) -- tell the engine the owner of the province
-				end
 				for second_key, second_value in pairs(WorldMapProvinces[key].CulturalNames) do
 					SetProvinceCulturalName(WorldMapProvinces[key].Name, second_key, WorldMapProvinces[key].CulturalNames[second_key])
 				end
@@ -1710,11 +1697,6 @@ function RunGrandStrategyLoadGameMenu()
 			
 			WorldMapWaterProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
 			for key, value in pairs(WorldMapWaterProvinces) do
-				SetProvinceName("", WorldMapWaterProvinces[key].Name) -- this will define a new province for the engine
-				SetProvinceWater(WorldMapWaterProvinces[key].Name, true)
-				if (WorldMapWaterProvinces[key].ReferenceProvince ~= nil) then
-					SetProvinceReferenceProvince(WorldMapWaterProvinces[key].Name, WorldMapProvinces[WorldMapWaterProvinces[key].ReferenceProvince].Name)
-				end
 				for second_key, second_value in pairs(WorldMapWaterProvinces[key].CulturalNames) do
 					SetProvinceCulturalName(WorldMapWaterProvinces[key].Name, second_key, WorldMapWaterProvinces[key].CulturalNames[second_key])
 				end
@@ -2421,7 +2403,7 @@ function DrawOnScreenTiles()
 
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
-			if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].AttackedBy == GrandStrategyFaction.Name) then
+			if (GrandStrategyFaction ~= nil and GetProvinceAttackedBy(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
 				-- draw symbol that the province is being attacked by the human player if that is the case
 				DrawWorldMapTile("tilesets/world/sites/attack.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 			elseif (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
@@ -3397,7 +3379,7 @@ function SetSelectedProvince(province)
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
-						province.AttackedBy = GrandStrategyFaction.Name
+						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
 						province.AttackingUnits[string.gsub(unitName, "-", "_")] = province.AttackingUnits[string.gsub(unitName, "-", "_")] + SelectedUnits[string.gsub(unitName, "-", "_")]
 						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
 						
@@ -3411,7 +3393,7 @@ function SetSelectedProvince(province)
 			for i, unitName in ipairs(Units) do
 				if (IsHero(unitName)) then
 					if (SelectedHero == unitName) then
-						province.AttackedBy = GrandStrategyFaction.Name
+						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
 						province.Heroes[string.gsub(unitName, "-", "_")] = 3
 						SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 						SelectedHero = ""
@@ -3551,7 +3533,7 @@ function AIDoTurn(ai_faction)
 			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
 				borders_foreign = true
 				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
-					if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
@@ -3562,7 +3544,7 @@ function AIDoTurn(ai_faction)
 								end
 							end
 							if (province_threatened == false) then
-								WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
+								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
 								for i, unitName in ipairs(Units) do
 									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/4th of the province's forces as a defense
@@ -3596,7 +3578,7 @@ function AIDoTurn(ai_faction)
 		for second_i, second_key in ipairs(ai_faction.DisembarkmentProvinces) do
 			if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
 				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
-					if (WorldMapProvinces[key].AttackedBy == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 						borders_foreign = true
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
@@ -3608,7 +3590,7 @@ function AIDoTurn(ai_faction)
 								end
 							end
 							if (province_threatened == false) then
-								WorldMapProvinces[second_key].AttackedBy = ai_faction.Name
+								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
 								for i, unitName in ipairs(Units) do
 									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/4th of the province's forces as a defense
@@ -4167,11 +4149,11 @@ function GetMilitaryScore(province, attacker, count_defenders)
 		units = province.Units
 		faction = province.Owner
 	else
-		if (province.AttackedBy == "") then
+		if (GetProvinceAttackedBy(province.Name) == "") then
 			return 0
 		else
 			units = province.AttackingUnits
-			faction = province.AttackedBy
+			faction = GetProvinceAttackedBy(province.Name)
 		end
 	end
 	local infantry_military_score_bonus = 0
