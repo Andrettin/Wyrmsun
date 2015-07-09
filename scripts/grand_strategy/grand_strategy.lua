@@ -3698,7 +3698,7 @@ function SetSelectedProvince(province)
 			end
 			for i, unitName in ipairs(Units) do
 				if (IsHero(unitName)) then
-					if (SelectedHero == unitName) then
+					if (SelectedHero == unitName and SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 						province.Heroes[string.gsub(unitName, "-", "_")] = 1
 						SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 						SelectedHero = ""
@@ -3722,6 +3722,7 @@ function SetSelectedProvince(province)
 		SelectedProvince = province
 		SelectedUnits = nil
 		SelectedUnits = {}
+		SelectedHero = ""
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
 				SelectedUnits[string.gsub(unitName, "-", "_")] = 0
