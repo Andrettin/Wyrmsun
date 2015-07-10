@@ -206,6 +206,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed costs of the Surghan Mercenary (it was costing some lumber, while it should cost none).
+- Added extra safety check against crashes when a shooter fires at a unit just about to enter a container.
 
 -----------------------------------------------------------------------
 - 1.2.8

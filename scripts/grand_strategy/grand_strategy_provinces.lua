@@ -1174,9 +1174,9 @@ function LoadProvinces(world)
 			if (province_table[key].CulturalNames ~= nil) then
 				for second_key, second_value in pairs(province_table[key].CulturalNames) do
 					if (Factions[second_key] ~= nil) then
-						SetProvinceFactionCulturalName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalNames[second_key])
+--						SetProvinceFactionCulturalName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalNames[second_key])
 					else
-						SetProvinceCulturalName(WorldMapProvinces[key].Name, second_key, province_table[key].CulturalNames[second_key])
+--						SetProvinceCulturalName(WorldMapProvinces[key].Name, second_key, province_table[key].CulturalNames[second_key])
 					end
 				end
 			end
@@ -1185,9 +1185,9 @@ function LoadProvinces(world)
 			if (province_table[key].CulturalSettlementNames ~= nil) then
 				for second_key, second_value in pairs(province_table[key].CulturalSettlementNames) do
 					if (Factions[second_key] ~= nil) then
-						SetProvinceFactionCulturalSettlementName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalSettlementNames[second_key])
+--						SetProvinceFactionCulturalSettlementName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, province_table[key].CulturalSettlementNames[second_key])
 					else
-						SetProvinceCulturalSettlementName(WorldMapProvinces[key].Name, second_key, province_table[key].CulturalSettlementNames[second_key])
+--						SetProvinceCulturalSettlementName(WorldMapProvinces[key].Name, second_key, province_table[key].CulturalSettlementNames[second_key])
 					end
 				end
 			end
@@ -1207,17 +1207,14 @@ function LoadProvinces(world)
 			end
 			if (province_table[key].SettlementName ~= nil) then
 				WorldMapProvinces[key]["SettlementName"] = province_table[key].SettlementName
-				SetProvinceSettlementName(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementName)
 			end
 			if (province_table[key].SettlementLocation ~= nil) then
 				WorldMapProvinces[key]["SettlementLocation"] = {province_table[key].SettlementLocation[1], province_table[key].SettlementLocation[2]}
-				SetProvinceSettlementLocation(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 			end
 			WorldMapProvinces[key]["SettlementBuildings"] = {}
 			if (province_table[key].SettlementBuildings ~= nil) then
 				for second_key, second_value in pairs(province_table[key].SettlementBuildings) do
 					WorldMapProvinces[key].SettlementBuildings[second_key] = province_table[key].SettlementBuildings[second_key]
-					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].SettlementBuildings[second_key]) -- set the province settlement building for the engine
 				end
 			end
 			if (province_table[key].Map ~= nil) then
