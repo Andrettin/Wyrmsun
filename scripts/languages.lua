@@ -188,27 +188,48 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"singular-nominative", "Kizna",
 			"gender", "Masculine"
 		},
-		"Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+		"Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 			"meaning", "Marrow",
-			"singular-nominative", "Mazgaz"
+			"singular-nominative", "Mazgaz",
+			"gender", "Masculine"
 		},
 		"Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 			"meaning", "Reward, Payment, Fee",
 			"singular-nominative", "Mizdō",
 			"gender", "Feminine"
 		},
-		"Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Language, Speech",
-			"singular-nominative", "Razdō"
+		"Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+			"meaning", "Voice, Sound",
+			"singular-nominative", "Razdō",
+			"gender", "Feminine"
+		},
+		"Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Food, Meal",
+			"singular-nominative", "Razdō",
+			"gender", "Feminine"
+		},
+		"Razna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "House",
+			"singular-nominative", "Razna",
+			"gender", "Neuter"
 		},
 		"Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 			"meaning", "Point, Place",
 			"singular-nominative", "Uzdaz",
 			"gender", "Masculine"
 		},
+		"Uzlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Fate",
+			"singular-nominative", "Uzlaga"
+		},
 		"Waida", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 			"meaning", "Woad",
 			"singular-nominative", "Waida" -- source also gives alternative form "Waizda"
+		},
+		"Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Valkyrie",
+			"singular-nominative", "Walakuzjōn",
+			"gender", "feminine"
 		}
 	},
 	"verbs", {
@@ -341,9 +362,15 @@ DefineCivilizationLanguage("goth", -- Gothic
 			"meaning", "Tube", -- seemingly etymologically, if not actually
 			"singular-nominative", "Raus"
 		},
-		"Razda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Language, Speech",
-			"singular-nominative", "Razda"
+		"Razda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+			"meaning", "Voice, Pronunciation, Speech",
+			"singular-nominative", "Razda",
+			"gender", "Feminine"
+		},
+		"Razn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "House",
+			"singular-nominative", "Razn",
+			"gender", "Neuter"
 		},
 		"Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 			"meaning", "Wound",
@@ -358,7 +385,7 @@ DefineCivilizationLanguage("goth", -- Gothic
 			"singular-nominative", "Sauhts"
 		},
 		"Waurms", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Worm", -- can also mean serpent (and probably could be extended to mean "wyrm" as well)
+			"meaning", "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 			"singular-nominative", "Waurms"
 		},
 		"Wigs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -525,6 +552,10 @@ DefineCivilizationLanguage("norse", -- Old Norse
 			"singular-nominative", "Gaddr",
 			"gender", "Masculine"
 		},
+		"Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Feeder, Satisfier",
+			"singular-nominative", "Greddir"
+		},
 		"Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
 			"meaning", "Woman's Long Hair",
 			"singular-nominative", "Haddr",
@@ -543,9 +574,11 @@ DefineCivilizationLanguage("norse", -- Old Norse
 			"meaning", "Dog",
 			"singular-nominative", "Hundr"
 		},
-		"Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Marrow",
-			"singular-nominative", "Mergr"
+		"Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+			"meaning", "Marrow in a Bone",
+			"singular-nominative", "Mergr",
+			"singular-genitive", "Mergjar",
+			"gender", "Masculine"
 		},
 		"Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 			"meaning", "Point, Place",
@@ -553,9 +586,24 @@ DefineCivilizationLanguage("norse", -- Old Norse
 			"singular-genitive", "Odds",
 			"gender", "Masculine"
 		},
-		"Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Language, Speech",
-			"singular-nominative", "Rǫdd"
+		"Orlǫg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Fate",
+			"singular-nominative", "Orlǫg" -- is singular or plural?
+		},
+		"Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "House",
+			"singular-nominative", "Rann",
+			"gender", "Neuter"
+		},
+		"Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+			"meaning", "Sound, Voice, Vowel",
+			"singular-nominative", "Rǫdd",
+			"gender", "Feminine"
+		},
+		"Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Valkyrie",
+			"singular-nominative", "Valkyrja",
+			"gender", "feminine"
 		},
 		"Vegr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Way",
@@ -566,6 +614,10 @@ DefineCivilizationLanguage("norse", -- Old Norse
 		"Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Eat",
 			"infinitive", "Eta"
+		},
+		"Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Feed",
+			"infinitive", "Grenna"
 		},
 		"Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 			"meaning", "Live",
@@ -658,14 +710,14 @@ DefineCivilizationLanguage("teuton", -- German
 			"meaning", "Village",
 			"singular-nominative", "Dorf",
 			"plural-nominative", "Dörfer",
-			"gender", "Neutral",
+			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: Frohsdorf, Gänserndorf
 		},
 		"Eisen", {
 			"meaning", "Iron",
 			"singular-nominative", "Eisen",
-			"gender", "Neutral",
+			"gender", "Neuter",
 			"uncountable", true,
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: "Eisenstadt"
@@ -691,7 +743,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"singular-genitive", "Huhns", -- could also be "Huhnes"
 			"plural-nominative", "Hühner",
 			"plural-genitive", "Hühner",
-			"gender", "Neutral",
+			"gender", "Neuter",
 			"prefix-plural", true,
 			"prefix-settlement-name", true -- example: "Hühnerwasser"
 		},
@@ -727,7 +779,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"singular-genitive", "Landes",
 			"plural-nominative", "Länder",
 			"plural-genitive", "Länder",
-			"gender", "Neutral",
+			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-province-name", true -- example: "Burgenland"
 		},
@@ -790,7 +842,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"meaning", "Valley",
 			"singular-nominative", "Tal",
 			"plural-nominative", "Täler",
-			"gender", "Neutral",
+			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: "Zillertal"
 		},
@@ -801,7 +853,7 @@ DefineCivilizationLanguage("teuton", -- German
 		"Wasser", {
 			"meaning", "Water",
 			"singular-nominative", "Wasser",
-			"gender", "Neutral",
+			"gender", "Neuter",
 			"uncountable", true,
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- example: "Hühnerwasser"
@@ -853,6 +905,11 @@ DefineCivilizationLanguage("teuton", -- German
 -- these are kept for reference, but not used
 DefineCivilizationLanguage("old-english", -- Old English
 	"nouns", {
+		"Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "House",
+			"singular-nominative", "Ærn",
+			"gender", "Neuter"
+		},
 		"Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 			"meaning", "Child",
 			"singular-nominative", "Bearn"
@@ -871,6 +928,11 @@ DefineCivilizationLanguage("old-english", -- Old English
 			"singular-nominative", "Cên",
 			"gender", "Masculine"
 		},
+		"Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Saving of a Life",
+			"singular-nominative", "Ealdorneru",
+			"gender", "Feminine"
+		},
 		"Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 			"meaning", "Earth",
 			"singular-nominative", "Eorþe",
@@ -883,6 +945,11 @@ DefineCivilizationLanguage("old-english", -- Old English
 		"Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 			"meaning", "Fish",
 			"singular-nominative", "Fisc"
+		},
+		"Gereord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Meal, Feast, Food",
+			"singular-nominative", "Gereord",
+			"gender", "Neuter"
 		},
 		"Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 			"meaning", "Rod, Prickle",
@@ -940,9 +1007,20 @@ DefineCivilizationLanguage("old-english", -- Old English
 			"singular-nominative", "Ord",
 			"gender", "Masculine"
 		},
-		"Reord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Language, Speech",
-			"singular-nominative", "Reord"
+		"Orlæg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Fate",
+			"singular-nominative", "Orlæg",
+			"gender", "Neuter"
+		},
+		"Ræsn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Plank, Ceiling",
+			"singular-nominative", "Ræsn",
+			"gender", "Neuter"
+		},
+		"Reord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+			"meaning", "Voice, Sound, Speech",
+			"singular-nominative", "Reord",
+			"gender", "Feminine"
 		},
 		"Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 			"meaning", "Canvas, Screen",
@@ -951,6 +1029,11 @@ DefineCivilizationLanguage("old-english", -- Old English
 		"Wâd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 			"meaning", "Woad",
 			"singular-nominative", "Wâd"
+		},
+		"Wælcyrige", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Sorceress",
+			"singular-nominative", "Wælcyrige",
+			"gender", "feminine"
 		},
 		"Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Way",
@@ -966,6 +1049,10 @@ DefineCivilizationLanguage("old-english", -- Old English
 		"Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Eat",
 			"infinitive", "Etan"
+		},
+		"Gereordian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Feed, Entertain, Feast",
+			"infinitive", "Gereordian"
 		},
 		"Healdan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 			"meaning", "Hold",
@@ -1094,13 +1181,24 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 			"meaning", "Pay", -- source gives German word "Lohn" as transation
 			"singular-nominative", "Lōn"
 		},
-		"Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+		"Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 			"meaning", "Marrow",
-			"singular-nominative", "Marc"
+			"singular-nominative", "Marc",
+			"singular-genitive", "Marges" -- source also gives "Marages" as a possible genitive
 		},
 		"Mēta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 			"meaning", "Reward, Payment",
 			"singular-nominative", "Mēta" -- source also gives as alternatives the forms "Miata" and "Mieta"
+		},
+		"Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Salvation, Rescue, Nourishment, Sustenance", -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
+			"singular-nominative", "Nara",
+			"gender", "Feminine"
+		},
+		"Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Fate",
+			"singular-nominative", "Orlac",
+			"gender", "Masculine"
 		},
 		"Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 			"meaning", "Point, Corner, Edge of a Part, Edge of a Piece, Edge of a Small Coin",
@@ -1111,9 +1209,10 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 			"meaning", "Eye",
 			"singular-nominative", "Ouga"
 		},
-		"Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Language, Speech",
-			"singular-nominative", "Rarta"
+		"Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 10.
+			"meaning", "Voice, Modulation",
+			"singular-nominative", "Rarta",
+			"gender", "Feminine"
 		},
 		"Sēula", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 			"meaning", "Soul",
@@ -1131,6 +1230,11 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 			"meaning", "Death",
 			"singular-nominative", "Tōd"
 		},
+		"Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Fate",
+			"singular-nominative", "Urlaga",
+			"gender", "Feminine"
+		},
 		"Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Way",
 			"singular-nominative", "Weg"
@@ -1141,7 +1245,7 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 			"gender", "Masculine"
 		},
 		"Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Worm", -- can also mean serpent (and probably could be extended to mean "wyrm" as well)
+			"meaning", "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 			"singular-nominative", "Wurm"
 		}
 	},
@@ -1268,9 +1372,19 @@ DefineCivilizationLanguage("middle-high-german", -- Middle High German
 			"singular-nominative", "Kien",
 			"gender", "Masculine"
 		},
+		"Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Marrow",
+			"singular-nominative", "Marc",
+			"singular-genitive", "Marges"
+		},
 		"Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 			"meaning", "Payment, Reward, Bribe",
 			"singular-nominative", "Miete",
+			"gender", "Feminine"
+		},
+		"Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Salvation, Rescue, Nourishment, Sustenance",
+			"singular-nominative", "Nare",
 			"gender", "Feminine"
 		},
 		"Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -1336,6 +1450,11 @@ DefineCivilizationLanguage("saxon", -- Old Saxon
 			"meaning", "Dog",
 			"singular-nominative", "Hund"
 		},
+		"Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Food, Nourishment",
+			"singular-nominative", "Līfnara",
+			"gender", "Feminine"
+		},
 		"Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 			"meaning", "Marrow",
 			"singular-nominative", "Merg"
@@ -1350,6 +1469,10 @@ DefineCivilizationLanguage("saxon", -- Old Saxon
 			"singular-nominative", "Ord",
 			"gender", "Masculine"
 		},
+		"Orlag", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+			"meaning", "Fate",
+			"singular-nominative", "Orlag" -- source also gives the alternative form "Orlagi"
+		},
 		"Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 			"meaning", "Sickness",
 			"singular-nominative", "Suht"
@@ -1359,7 +1482,7 @@ DefineCivilizationLanguage("saxon", -- Old Saxon
 			"singular-nominative", "Weg"
 		},
 		"Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Worm", -- can also mean serpent (and probably could be extended to mean "wyrm" as well)
+			"meaning", "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 			"singular-nominative", "Wurm"
 		}
 	},
@@ -1509,6 +1632,10 @@ DefineCivilizationLanguage("old-frisian", -- Old Frisian
 			"meaning", "Point, Place", -- source gives the meaning as "(spear)point, place"
 			"singular-nominative", "Ord"
 		},
+		"Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "House",
+			"singular-nominative", "Ransa"
+		},
 		"Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 			"meaning", "Woad",
 			"singular-nominative", "Wêd"
@@ -1588,6 +1715,10 @@ DefineCivilizationLanguage("old-irish", -- Old Irish
 
 DefineCivilizationLanguage("irish", -- Irish
 	"nouns", {
+		"Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Dwelling",
+			"singular-nominative", "Árus"
+		},
 		"Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 			"meaning", "Prickle",
 			"singular-nominative", "Brot",
@@ -1609,6 +1740,11 @@ DefineCivilizationLanguage("irish", -- Irish
 		"Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 			"meaning", "Curl, Tress",
 			"singular-nominative", "Kass"
+		},
+		"Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Whey",
+			"singular-nominative", "Medg",
+			"gender", "Feminine"
 		}
 	},
 	"adjectives", {
@@ -1635,10 +1771,20 @@ DefineCivilizationLanguage("sanskrit", -- Sanskrit
 			"singular-nominative", "Késara",
 			"gender", "Masculine"
 		},
+		"Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Marrow",
+			"singular-nominative", "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
+			"gender", "Feminine"
+		},
+		"Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Marrow",
+			"singular-nominative", "Majján",
+			"gender", "Masculine"
+		},
 		"Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 			"meaning", "Reward from a Battle, Reward from a Competition",
 			"singular-nominative", "Mīḍhá",
-			"gender", "Neutral"
+			"gender", "Neuter"
 		}
 	},
 	"pronouns", {
@@ -1659,9 +1805,17 @@ DefineCivilizationLanguage("old-slavic", -- Old Slavic / Old Church Slavonic
 			"meaning", "Head Hair",
 			"singular-nominative", "Kosmŭ"
 		},
+		"Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Sap, Juice",
+			"singular-nominative", "Mězga"
+		},
 		"Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 			"meaning", "Reward",
 			"singular-nominative", "Mĭzda"
+		},
+		"Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Brain",
+			"singular-nominative", "Mozgŭ"
 		},
 		"Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 			"meaning", "Flimsy Pole",
@@ -1679,12 +1833,34 @@ DefineCivilizationLanguage("north-slavic", -- North Slavic (did this really exis
 	}
 )
 
+DefineCivilizationLanguage("russian",
+	"nouns", {
+		"Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Blood",
+			"singular-nominative", "Mozga"
+		}
+	}
+)
+
+DefineCivilizationLanguage("ukrainian",
+	"nouns", {
+		"Mjazka", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Tree Sap",
+			"singular-nominative", "Mjazka"
+		},
+		"Mjazok", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+			"meaning", "Marrow",
+			"singular-nominative", "Mjazok"
+		}
+	}
+)
+
 DefineCivilizationLanguage("avestan", -- Avestan
 	"nouns", {
 		"Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 			"meaning", "Reward",
 			"singular-nominative", "Mīzhda",
-			"gender", "Neutral"
+			"gender", "Neuter"
 		}
 	}
 )
