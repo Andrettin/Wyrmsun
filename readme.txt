@@ -204,6 +204,11 @@ https://github.com/Andrettin/Wyrmsun
 - Added mouse scrolling to the grand strategy mode.
 - The Germanic and Gnome civilizations now display different settlement graphics depending on whether a barracks is built or not.
 
+* Miscellaneous
+- Fixed save game crash.
+- Added autosave option (active by default), which autosaves the game every five minutes.
+- Split the options screen into "Gameplay Options" and "Video and Audio Options" subscreens.
+
 * Units
 - Fixed costs of the Surghan Mercenary (it was costing some lumber, while it should cost none).
 - Added extra safety check against crashes when a shooter fires at a unit just about to enter a container.

@@ -2100,6 +2100,7 @@ local defaultPreferences = {
 	Language = "English",
 	ShowResourceBar = false,
 	PopupDescriptionFont = "small",
+	Autosave = true,
 	PlayerColorCircle = false,
 	NoRandomness = false,
 	Difficulty = 2,
@@ -2194,6 +2195,7 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 Preference.ShowPathlines = wyr.preferences.ShowPathlines
 Preference.ShowMessages = wyr.preferences.ShowMessages
+Preference.Autosave = wyr.preferences.Autosave
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 
 --- Uses Stratagus Library path!
