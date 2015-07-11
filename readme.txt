@@ -203,6 +203,9 @@ https://github.com/Andrettin/Wyrmsun
 - Teutons now generate a new province name when assimilating a province if none is preset for that province.
 - Added mouse scrolling to the grand strategy mode.
 - The Germanic and Gnome civilizations now display different settlement graphics depending on whether a barracks is built or not.
+- Dwarves now generate a new province name for a province of their culture, if no dwarven cultural name is preset for that province.
+- Germanics now generate a new province name for a province of their culture, if no germanic cultural name is preset for that province.
+- Germanics now generate a new settlement name for a province of their culture, if no germanic cultural settlement name is preset for that province.
 
 * Miscellaneous
 - Fixed save game crash.

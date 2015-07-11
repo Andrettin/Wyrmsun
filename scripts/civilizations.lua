@@ -245,7 +245,7 @@ DefineRaceNames(
 			"Godagaz", -- Godagaz = Goody / Good One
 			"Wagigaz", -- Wagigaz = One Who Moves Along Impetuously
 			"Wiwaz" -- Wiwaz = Darter
-		}, -- Hagustaldaz = Young Warrior / Owner of a Small Property, Hadulaikaz = Battle-Dancer, Hlewagastiz = Protected / Glory-Guest, Holtagastiz = Wood Guest; Godagaz, Hadulaikaz, Hagustaldaz, Hlewagastiz, Holtagastiz, Wagigaz, Wiwaz and Woduridaz are Proto-Norse (or late Proto-Germanic)
+		}, -- Hagustaldaz = Young Warrior / Owner of a Small Property, Hadulaikaz = Battle-Dancer, Hlewagastiz = Protected / Glory-Guest, Holtagastiz = Wood Guest
 		"personal-name-prefixes", {
 			"Hadu", -- Hadu = Battle
 			"Hagu", -- Hagu = Small Property
@@ -255,7 +255,6 @@ DefineRaceNames(
 			"Wodu" -- Wodu = Fury
 		},
 		"personal-name-suffixes", {
-			"gastiz", -- Gastiz = Guest
 			"laikaz", -- Laikaz = Dancer
 			"ridaz", -- Ridaz = Rider
 			"riks", -- Riks = Ruler

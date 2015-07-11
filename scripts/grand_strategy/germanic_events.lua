@@ -431,7 +431,7 @@ local GermanicEvents = {
 	},
 	AsaLawgiving = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Asa Lawgiving",
-		Description = "We have established the same law in this new land as that had been in force in Asaland. Thus it is determined that dead men of consequence shall be buried in a mound raised to their memory, and all other warriors who had been distinguished for their manhood a standing stone shall be erected. Over all the land a tax shall be paid to the tribe's high chieftain, who has to defend the country from enemy or disturbance, and to pay the expense for the feasts commemorating a good year.",
+		Description = "We have established the same law in this new land as that had been in force in Ansulanda. Thus it is determined that dead men of consequence shall be buried in a mound raised to their memory, and all other warriors who had been distinguished for their manhood a standing stone shall be erected. Over all the land a tax shall be paid to the tribe's high chieftain, who has to defend the country from enemy or disturbance, and to pay the expense for the feasts commemorating a good year.",
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"

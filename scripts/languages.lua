@@ -53,7 +53,8 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"singular-nominative", "Mjod",
 			"uncountable", true,
 			"prefix-singular", true,
-			"prefix-personal-name", true -- example: Mjodvitnir
+			"prefix-personal-name", true, -- example: Mjodvitnir
+			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Skjaldi", {
 			"meaning", "Shield",
@@ -65,7 +66,8 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"meaning", "Sun",
 			"singular-nominative", "Sol",
 			"prefix-singular", true,
-			"prefix-personal-name", true -- example: Solblindi
+			"prefix-personal-name", true, -- example: Solblindi
+			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Thjof", {
 			"meaning", "Thief",
@@ -85,7 +87,8 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"singular-nominative", "Vind",
 			"uncountable", true,
 			"prefix-singular", true,
-			"prefix-personal-name", true -- example: Vindalf
+			"prefix-personal-name", true, -- example: Vindalf
+			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Vitnir", {
 			"meaning", "Wolf",
@@ -111,7 +114,8 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 	"adjectives", {
 		"Al", {
 			"meaning", "Mighty", -- can also mean "All-"
-			"prefix-personal-name", true -- examples: Alvis (all-knowing), Althjof (mighty thief)
+			"prefix-personal-name", true, -- examples: Alvis (all-knowing), Althjof (mighty thief)
+			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Eikin", {
 			"meaning", "Oaken",
@@ -119,7 +123,8 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 		},
 		"Gand", {
 			"meaning", "Magic",
-			"prefix-personal-name", true -- example: Gandalf
+			"prefix-personal-name", true, -- example: Gandalf
+			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Rad", {
 			"meaning", "Swift",
@@ -149,6 +154,34 @@ DefineCivilizationLanguage("greek",
 
 DefineCivilizationLanguage("germanic", -- Proto-Germanic
 	"nouns", {
+		"Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
+			"meaning", "God",
+			"singular-nominative", "Ansu",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+		},
+		"Austa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+			"meaning", "East",
+			"singular-nominative", "Austa", -- source also gives the form "Austra"
+			"prefix-singular", true,
+			"prefix-province-name", true, -- seems sensible in face of a lack of examples
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
+		"Austrôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+			"meaning", "a Spring Goddess",
+			"singular-nominative", "Austrôn",
+			"gender", "Feminine",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
+		"Berga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+			"meaning", "Mountain, Hill",
+			"singular-nominative", "Berga",
+			"suffix-singular", true,
+			"suffix-province-name", true, -- seems sensible in face of a lack of examples
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
 		"Brazda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 			"meaning", "Edge",
 			"singular-nominative", "Brazda", -- source also gives the alternative form "Brezda"
@@ -159,10 +192,65 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"singular-nominative", "Bruzdaz",
 			"gender", "Masculine"
 		},
+		"Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+			"meaning", "Castle, City",
+			"singular-nominative", "Burg",
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-province-name", true, -- seems sensible in face of a lack of examples
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
+		"Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
+			"meaning", "Peasant, Farmer",
+			"singular-nominative", "Bûra",
+			"gender", "Masculine"
+		},
+		"Dverga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+			"meaning", "Dwarf",
+			"singular-nominative", "Dverga",
+			"gender", "Masculine"
+		},
+		"Erala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 22.
+			"meaning", "Man, Warrior",
+			"singular-nominative", "Erala",
+			"gender", "Masculine"
+		},
+		"Garda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
+			"meaning", "Enclosure, Court, Garden", -- source gives "Geheg, Hof, Garten" as the meaning
+			"singular-nominative", "Garda", -- source also gives the alternate forms "Gardi" and "Gardan"
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-province-name", true, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+		},
+		"Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 74; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2007, 3.3.5.
+			"meaning", "Guest",
+			"singular-nominative", "Gastiz",
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Hlewagastiz", "Holtagastiz"
+		},
+		"Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 68.
+			"meaning", "District", -- source gives "Gau" as the meaning
+			"singular-nominative", "Gavja",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-province-name", true -- seems sensible in face of a lack of examples
+		},
 		"Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 			"meaning", "Rod, Prickle, Point",
 			"singular-nominative", "Gazdaz",
 			"gender", "Masculine"
+		},
+		"Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+			"meaning", "Village, Home", -- source gives "Dorf, Heim, Heimat" as the meaning
+			"singular-nominative", "Haima",
+			"singular-accusative", "Haima",
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-province-name", true, -- seems sensible in face of a lack of examples (specially since in Old Norse there are many placenames ending in -heim)
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
 		},
 		"Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 			"meaning", "Head Hair",
@@ -187,6 +275,20 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"meaning", "Resinous Wood",
 			"singular-nominative", "Kizna",
 			"gender", "Masculine"
+		},
+		"Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+			"meaning", "Terra Firma, Land, Country", -- source gives the German words "terra firma, Land"
+			"singular-nominative", "Landa",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-province-name", true -- seems sensible in face of a lack of examples
+		},
+		"Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+			"meaning", "March, Border, Borderland",
+			"singular-nominative", "Mark", -- source also gives the form "Markô"
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-province-name", true -- seems sensible in face of a lack of examples
 		},
 		"Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 			"meaning", "Marrow",
@@ -213,6 +315,20 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"singular-nominative", "Razna",
 			"gender", "Neuter"
 		},
+		"Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
+			"meaning", "God", -- can also mean the name of a particular god
+			"singular-nominative", "Tîva",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
+		"Þhurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+			"meaning", "Crowd, Village", -- source gives "Schar, Menschenhaufen, Dorf" as the meaning
+			"singular-nominative", "Þhurpa",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
 		"Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 			"meaning", "Point, Place",
 			"singular-nominative", "Uzdaz",
@@ -221,6 +337,18 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 		"Uzlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 			"meaning", "Fate",
 			"singular-nominative", "Uzlaga"
+		},
+		"Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
+			"meaning", "Village", -- source gives "Flecken, Dorf" as the meaning
+			"singular-nominative", "Vîhsa",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
+		"Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
+			"meaning", "Sorcerer",
+			"singular-nominative", "Vikkan",
+			"gender", "Masculine"
 		},
 		"Waida", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 			"meaning", "Woad",
@@ -263,6 +391,10 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 		"Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 			"meaning", "Threefold" -- source gives the meaning as "threefold, the three (je drei)"
 			 -- maybe is an adverb instead?
+		},
+		"Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
+			"meaning", "Holy",
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
 		}
 	},
 	"pronouns", {
@@ -679,7 +811,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-settlement-name", true -- example: "Adelsberg"
 		},
 		"Berg", {
-			"meaning", "Mountain", -- can also mean "hill"
+			"meaning", "Mountain, Hill",
 			"singular-nominative", "Berg",
 			"plural-nominative", "Berge",
 			"gender", "Masculine",
