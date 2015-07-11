@@ -682,7 +682,6 @@ function LoadProvinces(world)
 		Russia = {
 			Name = "Gardarike",
 			CulturalNames = {
-				germanic = "Gardarike",
 				goth = "Gardarike",
 				norse = "Gardarike",
 				Muscovy = "Russia",

@@ -1073,7 +1073,7 @@ function ChangeFactionCulture(faction, civilization)
 				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]
 				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
 				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-				
+				SetProvinceOwner(WorldMapProvinces[key].Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
 			end
 		end
 	end

@@ -68,7 +68,7 @@ local NorseEvents = {
 	},
 	NorseCultureSpreads = {
 		Name = "Norse Culture Spreads",
-		Description = "The people of PROVINCE_NAME have adopted Norse culture.",
+		Description = "The people of PROVINCE_NAME have adopted the Norse culture.",
 		Conditions = function(s)
 			if (EventFaction.Civilization ~= "teuton" and EventFaction.Civilization ~= "goth") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do

@@ -731,7 +731,7 @@ local GermanicEvents = {
 	},
 	TeutonCultureSpreads = {
 		Name = "Teuton Culture Spreads",
-		Description = "The people of PROVINCE_NAME have adopted Teuton culture.",
+		Description = "The people of PROVINCE_NAME have adopted the Teuton culture.",
 		Conditions = function(s)
 			if (EventFaction.Civilization ~= "goth" and EventFaction.Civilization ~= "norse") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
@@ -795,7 +795,7 @@ local GermanicEvents = {
 	},
 	GothCultureSpreads = {
 		Name = "Goth Culture Spreads",
-		Description = "The people of PROVINCE_NAME have adopted Goth culture.",
+		Description = "The people of PROVINCE_NAME have adopted the Goth culture.",
 		Conditions = function(s)
 			if (EventFaction.Civilization ~= "teuton" and EventFaction.Civilization ~= "norse") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do

@@ -154,6 +154,13 @@ DefineCivilizationLanguage("greek",
 
 DefineCivilizationLanguage("germanic", -- Proto-Germanic
 	"nouns", {
+		"Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+			"meaning", "Ore", -- source gives "Erz" as the meaning
+			"singular-nominative", "Aiza", -- source also gives the alternative form "Skara"
+			"gender", "Neuter",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
 		"Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
 			"meaning", "God",
 			"singular-nominative", "Ansu",
@@ -283,6 +290,19 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"suffix-singular", true,
 			"suffix-province-name", true -- seems sensible in face of a lack of examples
 		},
+		"Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+			"meaning", "Metal, Lead",
+			"singular-nominative", "Lauda",
+			"gender", "Neuter",
+			"uncountable", true, -- as a material, it is likely to be uncountable
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+		},
+		"Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
+			"meaning", "Chisel", -- source gives meaning as "Meißel"
+			"singular-nominative", "Maitila",
+			"gender", "Masculine"
+		},
 		"Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 			"meaning", "March, Border, Borderland",
 			"singular-nominative", "Mark", -- source also gives the form "Markô"
@@ -315,6 +335,28 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"singular-nominative", "Razna",
 			"gender", "Neuter"
 		},
+		"Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.
+			"meaning", "Plowshare", -- source gives meaning as "Sech, Pflugeisen"
+			"singular-nominative", "Ristila",
+			"gender", "Masculine"
+		},
+		"Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+			"meaning", "Power, Dominion, Realm", -- source gives meaning as "Macht, Herrschaft, Reich"
+			"singular-nominative", "Rîkia",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-province-name", true -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+		},
+		"Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+			"meaning", "Current, Stream", -- source gives meaning as "Strom, Bach"
+			"singular-nominative", "Rîþa",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- seems sensible in face of a lack of examples, specially since there are German settlement names which end in -bach
+		},
+		"Skaran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
+			"meaning", "Plowshare", -- source gives "Schar, Pflugeisen" as the meaning
+			"singular-nominative", "Skaran" -- source also gives the alternative form "Skara"
+		},
 		"Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
 			"meaning", "God", -- can also mean the name of a particular god
 			"singular-nominative", "Tîva",
@@ -322,9 +364,9 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
 		},
-		"Þhurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+		"Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 			"meaning", "Crowd, Village", -- source gives "Schar, Menschenhaufen, Dorf" as the meaning
-			"singular-nominative", "Þhurpa",
+			"singular-nominative", "Þurpa",
 			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
