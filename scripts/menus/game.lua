@@ -29,27 +29,38 @@ end
 
 
 function RunGameMenu()
-  local menu = WarGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
-  menu:addLabel("Game Menu", 128, 11)
+	menu:addLabel("Game Menu", 128, 11)
 
-  menu:addFullButton("Options (~<F5~>)", "f5", 16, 40,
-    function()
+	menu:addFullButton("Options (~<F5~>)", "f5", 16, 40,
+		function()
 		RunGameOptionsMenu(menu)
 	end)
-  menu:addFullButton("Help (~<F1~>)", "f1", 16, 40 + 34*1,
-    function() RunHelpMenu() end)
-  menu:addFullButton("~!Objectives", "o", 16, 40 + 34*2,
-    function() RunObjectivesMenu() end)
-  menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 34*3,
-    function() RunSaveMenu() end)
-  menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 34*4,
-    function() RunGameLoadGameMenu() end)
-  menu:addFullButton("~!End Mission", "e", 16, 40 + 34*5,
-    function() RunEndScenarioMenu() end)
-  menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 40 + 34*6,
-    function() menu:stop() end)
+	menu:addFullButton("Help (~<F1~>)", "f1", 16, 40 + 34*1,
+		function() RunHelpMenu() end)
+	menu:addFullButton("~!Objectives", "o", 16, 40 + 34*2,
+		function() RunObjectivesMenu() end)
+		
+	local b = menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 34*3,
+		function() RunSaveMenu() end
+	)	
+	if (GrandStrategy) then
+		b:setEnabled(false)
+	end
+ 
+	b = menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 34*4,
+		function() RunGameLoadGameMenu() end
+	)
+	if (GrandStrategy) then
+		b:setEnabled(false)
+	end
+	
+	menu:addFullButton("~!End Mission", "e", 16, 40 + 34*5,
+		function() RunEndScenarioMenu() end)
+	menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 40 + 34*6,
+		function() menu:stop() end)
 
-  menu:run(false)
+	menu:run(false)
 end
 
