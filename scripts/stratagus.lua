@@ -2200,6 +2200,7 @@ Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 
 --- Uses Stratagus Library path!
 Load("scripts/civilizations.lua")
+Load("scripts/grand_strategy/grand_strategy_terrain_types.lua") -- has to be placed before the languages, because they can refer to terrain types
 Load("scripts/languages.lua")
 Load("scripts/icons.lua")
 Load("scripts/sound.lua")
@@ -2219,7 +2220,6 @@ Load("scripts/map_generation.lua")
 Load("scripts/quests.lua")
 Load("scripts/events.lua")
 Load("scripts/achievements.lua")
-Load("scripts/grand_strategy/grand_strategy_terrain_types.lua")
 Load("scripts/grand_strategy/grand_strategy_map_generation.lua")
 Load("scripts/grand_strategy/grand_strategy_factions.lua")
 Load("scripts/grand_strategy/grand_strategy_provinces.lua")

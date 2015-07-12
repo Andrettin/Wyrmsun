@@ -29,72 +29,106 @@
 
 DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy words used in dwarven contexts
 	"nouns", {
+		"Ai", {
+			"meaning", "Great-Grandfather", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
+			"singular-nominative", "Ai",
+			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
+			"personal-name", true -- example: "Ai" (dwarf from Norse mythology who was a settler of Joruvellir)
+		},
 		"Alf", {
 			"meaning", "Elf",
 			"singular-nominative", "Alf",
+			"personal-name", true, -- example: "Alf" (dwarf from Norse mythology who was a settler of Joruvellir)
 			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: Gandalf, Vindalf
+			"suffix-personal-name", true -- examples: "Gandalf" (Norse mythology), "Vindalf" (Norse mythology)
+			-- should be available as a name only if the dwarven civilization in question has met elves?
+		},
+		"Aur", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 34.
+			"meaning", "Wet Clay, Loam",
+			"singular-nominative", "Aur", -- "Aurr" in Old Icelandic
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-personal-name", true, -- example: "Aurvang" (dwarf from Norse mythology)
+			"prefix-province-name", true -- example: "Aurvang" (wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.)
+		},
+		"Austri", {
+			"meaning", "Eastern", -- source gives meaning as "the Eastern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+			"singular-nominative", "Austri",
+			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+			"personal-name", true -- example: "Austri" (dwarf from Norse mythology)
 		},
 		"Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's Mound", "haug" = "mound"
 			"meaning", "Mound",
 			"singular-nominative", "Haug",
 			"suffix-singular", true,
-			"suffix-province-name", true -- example: Svarinshaug
+			"suffix-province-name", true, -- example: "Svarinshaug" (Norse mythology)
+			"suffix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Joru", { -- from Norse mythology, "Joruvellir" = "Fields of Sand", "Joru" = "Sand"
 			"meaning", "Sand",
 			"singular-nominative", "Joru",
 			"uncountable", true,
 			"prefix-singular", true,
-			"prefix-province-name", true -- example: Joruvellir
+			"prefix-province-name", true, -- example: "Joruvellir" (Norse mythology)
+			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Mjod", {
 			"meaning", "Mead",
 			"singular-nominative", "Mjod",
 			"uncountable", true,
 			"prefix-singular", true,
-			"prefix-personal-name", true, -- example: Mjodvitnir
+			"prefix-personal-name", true, -- example: "Mjodvitnir" (Norse mythology)
 			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Skjaldi", {
 			"meaning", "Shield",
 			"singular-nominative", "Skjaldi",
 			"suffix-singular", true,
-			"suffix-personal-name", true -- example: Eikinskjaldi
+			"suffix-personal-name", true -- example: "Eikinskjaldi" (Norse mythology)
 		},
 		"Sol", {
 			"meaning", "Sun",
 			"singular-nominative", "Sol",
 			"prefix-singular", true,
-			"prefix-personal-name", true, -- example: Solblindi
-			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-personal-name", true, -- example: "Solblindi" (Norse mythology)
+			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Thjof", {
 			"meaning", "Thief",
 			"singular-nominative", "Thjof",
 			"suffix-singular", true,
-			"suffix-personal-name", true -- example: Althjof
+			"suffix-personal-name", true -- example: "Althjof" (Norse mythology)
+		},
+		"Vang", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 678.
+			"meaning", "Garden, Green Home-Field",
+			"singular-nominative", "Vang", -- "Vangr" in Old Icelandic
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-personal-name", true, -- example: "Aurvang" (dwarf from Norse mythology)
+			"suffix-province-name", true -- example: "Aurvang" (wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.)
 		},
 		"Vellir", { -- from Norse mythology, "Joruvellir" = "Fields of Sand", "vellir" = "fields"
 			"meaning", "Fields",
 			-- what is the singular form?
 			"plural-nominative", "Vellir",
 			"suffix-plural", true,
-			"suffix-province-name", true -- example: Joruvellir
+			"suffix-province-name", true -- example: "Joruvellir" (Norse mythology)
 		},
 		"Vind", {
 			"meaning", "Wind",
 			"singular-nominative", "Vind",
 			"uncountable", true,
 			"prefix-singular", true,
-			"prefix-personal-name", true, -- example: Vindalf
-			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-personal-name", true, -- example: "Vindalf" (Norse mythology)
+			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Vitnir", {
 			"meaning", "Wolf",
 			"singular-nominative", "Vitnir",
 			"suffix-singular", true,
-			"suffix-personal-name", true -- example: Mjodvitnir
+			"suffix-personal-name", true -- example: "Mjodvitnir" (Norse mythology)
 		}
 	},
 	"verbs", {
@@ -102,33 +136,35 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"meaning", "Blinded",
 			-- infinitive form?
 			"participle-past", "Blindi",
-			"suffix-personal-name", true -- example: Solblindi
+			"suffix-personal-name", true -- example: "Solblindi" (Norse mythology)
 		},
 		"Vis", { -- should be infinitive form
 			"meaning", "Knowing",
 			-- infinitive form?
 			"participle-present", "Vis",
-			"suffix-personal-name", true -- example: Alvis (all-knowing)
+			"suffix-personal-name", true -- example: "Alvis" (all-knowing) (Norse mythology)
 		}
 	},
 	"adjectives", {
 		"Al", {
 			"meaning", "Mighty", -- can also mean "All-"
-			"prefix-personal-name", true, -- examples: Alvis (all-knowing), Althjof (mighty thief)
-			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-personal-name", true, -- examples: "Alvis" (all-knowing) (Norse mythology), "Althjof" (mighty thief) (Norse mythology)
+			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Eikin", {
 			"meaning", "Oaken",
-			"prefix-personal-name", true -- example: Eikinskjaldi
+			"prefix-personal-name", true -- example: "Eikinskjaldi" (Norse mythology)
 		},
 		"Gand", {
 			"meaning", "Magic",
-			"prefix-personal-name", true, -- example: Gandalf
-			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-personal-name", true, -- example: "Gandalf" (Norse mythology)
+			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
 		},
 		"Rad", {
 			"meaning", "Swift",
-			"prefix-personal-name", true -- example: Radsvid
+			"prefix-personal-name", true -- example: "Radsvid" (Norse mythology)
 		}
 	}
 )
@@ -159,7 +195,9 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"singular-nominative", "Aiza", -- source also gives the alternative form "Skara"
 			"gender", "Neuter",
 			"prefix-singular", true,
-			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+			"prefix-settlement-name", true, -- seems sensible in face of a lack of examples
+			"prefix-terrain-name", "Mountains", true, -- seems sensible in face of a lack of examples
+			"prefix-terrain-name", "Hills", true -- seems sensible in face of a lack of examples
 		},
 		"Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
 			"meaning", "God",
@@ -186,8 +224,8 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"meaning", "Mountain, Hill",
 			"singular-nominative", "Berga",
 			"suffix-singular", true,
-			"suffix-province-name", true, -- seems sensible in face of a lack of examples
-			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
+			"suffix-terrain-name", "Mountains", true, -- seems rather sensible in face of a lack of examples and given the word's meaning
+			"suffix-terrain-name", "Hills", true -- seems rather sensible in face of a lack of examples and given the word's meaning
 		},
 		"Brazda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 			"meaning", "Edge",
@@ -208,7 +246,7 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"suffix-settlement-name", true -- seems sensible in face of a lack of examples
 		},
 		"Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
-			"meaning", "Peasant, Farmer",
+			"meaning", "Farmer, Peasant",
 			"singular-nominative", "Bûra",
 			"gender", "Masculine"
 		},
@@ -249,6 +287,10 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"meaning", "Rod, Prickle, Point",
 			"singular-nominative", "Gazdaz",
 			"gender", "Masculine"
+		},
+		"Gôm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
+			"meaning", "Winter",
+			"singular-nominative", "Gôm" -- source also gives the forms "Gam" and "Gim"
 		},
 		"Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 			"meaning", "Village, Home", -- source gives "Dorf, Heim, Heimat" as the meaning
@@ -296,7 +338,9 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"gender", "Neuter",
 			"uncountable", true, -- as a material, it is likely to be uncountable
 			"prefix-singular", true,
-			"prefix-settlement-name", true -- seems sensible in face of a lack of examples
+			"prefix-settlement-name", true, -- seems sensible in face of a lack of examples
+			"prefix-terrain-name", "Mountains", true, -- seems sensible in face of a lack of examples
+			"prefix-terrain-name", "Hills", true -- seems sensible in face of a lack of examples
 		},
 		"Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
 			"meaning", "Chisel", -- source gives meaning as "Meißel"
@@ -335,6 +379,10 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 			"singular-nominative", "Razna",
 			"gender", "Neuter"
 		},
+		"Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 169.
+			"meaning", "Ptarmigan", -- source gives meaning as "Schneehuhn (tetrao lagopus)"
+			"singular-nominative", "Reupôn" -- source also gives the forms "Gam" and "Gim"
+		},
 		"Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.
 			"meaning", "Plowshare", -- source gives meaning as "Sech, Pflugeisen"
 			"singular-nominative", "Ristila",
@@ -356,6 +404,14 @@ DefineCivilizationLanguage("germanic", -- Proto-Germanic
 		"Skaran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
 			"meaning", "Plowshare", -- source gives "Schar, Pflugeisen" as the meaning
 			"singular-nominative", "Skaran" -- source also gives the alternative form "Skara"
+		},
+		"Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 260.
+			"meaning", "Snow",
+			"singular-nominative", "Snaigva", -- source also gives the forms "Snaiva", "Snaigvi" and "Snaigi"
+			"gender", "Masculine",
+			"uncountable", true, -- seems likely to be uncountable
+			"prefix-singular", true,
+			"prefix-terrain-name", "Mountains", true -- seems sensible in face of a lack of examples, specially since in German there is the "Schneeberg"
 		},
 		"Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
 			"meaning", "God", -- can also mean the name of a particular god
@@ -858,8 +914,9 @@ DefineCivilizationLanguage("teuton", -- German
 			"plural-nominative", "Berge",
 			"gender", "Masculine",
 			"suffix-singular", true,
-			"suffix-province-name", true, -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
-			"suffix-settlement-name", true -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
+			"suffix-province-name", false, -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
+			"suffix-settlement-name", false, -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
+			"suffix-terrain-name", "Mountains", true -- example: "Schneeberg"
 		},
 		"Bruck", {
 			"meaning", "Bridge",
@@ -888,13 +945,37 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: Frohsdorf, Gänserndorf
 		},
+		"Drasch", {
+			"meaning", "Precipitation",
+			"singular-nominative", "Drasch",
+			"singular-accusative", "Drasch",
+			"singular-dative", "Drasch",
+			"singular-genitive", "Draschs",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-terrain-name", "Mountains", true -- example: "Draschturm"
+		},
 		"Eisen", {
 			"meaning", "Iron",
 			"singular-nominative", "Eisen",
 			"gender", "Neuter",
 			"uncountable", true,
 			"prefix-singular", true,
-			"prefix-settlement-name", true -- example: "Eisenstadt"
+			"prefix-settlement-name", true -- examples: "Eisenerz", "Eisenstadt"
+		},
+		"Erz", {
+			"meaning", "Ore",
+			"singular-nominative", "Erz",
+			"singular-accusative", "Erz",
+			"singular-dative", "Erz",
+			"singular-genitive", "Erzes",
+			"plural-nominative", "Erze",
+			"plural-accusative", "Erze",
+			"plural-dative", "Erzen",
+			"plural-genitive", "Erze",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Eisenerz"
 		},
 		"Gott", {
 			"meaning", "God",
@@ -910,6 +991,15 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Masculine",
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- example: "Königinhof"
+		},
+		"Horn", {
+			"meaning", "Horn",
+			"singular-nominative", "Horn",
+			"singular-genitive", "Horns",
+			"plural-nominative", "Hörner",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-terrain-name", "Mountains", true -- example: "Teufelshorn"
 		},
 		"Huhn", {
 			"meaning", "Chicken",
@@ -947,6 +1037,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: "Königinhof"
 		},
+		"Kugel", {
+			"meaning", "Ball, Globe",
+			"singular-nominative", "Kugel",
+			"singular-accusative", "Kugel",
+			"singular-dative", "Kugel",
+			"singular-genitive", "Kugel",
+			"plural-nominative", "Kugeln",
+			"plural-accusative", "Kugeln",
+			"plural-dative", "Kugeln",
+			"plural-genitive", "Kugeln",
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-terrain-name", "Mountains", true -- example: "Weißkugel"
+		},
 		"Land", {
 			"meaning", "Country",
 			"singular-nominative", "Land",
@@ -981,6 +1085,14 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-personal-name", true
 		},
+		"Ost", {
+			"meaning", "Ost",
+			"singular-nominative", "Ost",
+			"singular-genitive", "Ost",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-province-name", true -- example: "Ostmark"
+		},
 		"Salz", {
 			"meaning", "Salt",
 			"singular-nominative", "Salz",
@@ -989,6 +1101,14 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: Salzburg
 		},
+		"Schnee", {
+			"meaning", "Snow",
+			"singular-nominative", "Schnee",
+			"gender", "Masculine",
+			"uncountable", true,
+			"prefix-singular", true,
+			"prefix-terrain-name", "Mountains", true -- example: "Schneeberg"
+		},
 		"Sieg", {
 			"meaning", "Victory",
 			"singular-nominative", "Sieg",
@@ -996,6 +1116,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Masculine",
 			"prefix-singular", true,
 			"prefix-personal-name", true
+		},
+		"Spitze", {
+			"meaning", "Tip, Peak",
+			"singular-nominative", "Spitze",
+			"singular-accusative", "Spitze",
+			"singular-dative", "Spitze",
+			"singular-genitive", "Spitze",
+			"plural-nominative", "Spitzen",
+			"plural-accusative", "Spitzen",
+			"plural-dative", "Spitzen",
+			"plural-genitive", "Spitzen",
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-terrain-name", "Mountains", true -- example: "Wildspitze"
 		},
 		"Stadt", {
 			"meaning", "City",
@@ -1019,6 +1153,34 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- examples: "Zillertal"
+		},
+		"Teufel", {
+			"meaning", "Devil",
+			"singular-nominative", "Teufel",
+			"singular-accusative", "Teufel",
+			"singular-dative", "Teufel",
+			"singular-genitive", "Teufels",
+			"plural-nominative", "Teufel",
+			"plural-accusative", "Teufel",
+			"plural-dative", "Teufeln",
+			"plural-genitive", "Teufel",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-terrain-name", "Mountains", true -- example: "Teufelshorn"
+		},
+		"Turm", {
+			"meaning", "Tower",
+			"singular-nominative", "Turm",
+			"singular-accusative", "Turm",
+			"singular-dative", "Turm",
+			"singular-genitive", "Turms",
+			"plural-nominative", "Türme",
+			"plural-accusative", "Türme",
+			"plural-dative", "Türmen",
+			"plural-genitive", "Türme",
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-terrain-name", "Mountains", true -- example: "Draschturm"
 		},
 		"Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 			"meaning", "Woad",
@@ -1058,9 +1220,14 @@ DefineCivilizationLanguage("teuton", -- German
 			"meaning", "New",
 			"prefix-settlement-name", true -- example: "Neusohl"
 		},
-		"Weiss", {
+		"Weiß", {
 			"meaning", "White",
-			"prefix-settlement-name", true -- example: "Weisskirchen"
+			"prefix-settlement-name", true, -- example: "Weisskirchen"
+			"prefix-terrain-name", "Mountains", true -- example: "Weißkugel"
+		},
+		"Wild", {
+			"meaning", "Wild",
+			"prefix-terrain-name", "Mountains", true -- example: "Wildspitze"
 		}
 	},
 	"adverbs", {

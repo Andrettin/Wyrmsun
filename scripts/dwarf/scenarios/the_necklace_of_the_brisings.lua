@@ -115,7 +115,7 @@ AddTrigger(
 			{function(s)
 			Event(
 				FindHero("Modsognir"),
-				"The scoundrels have their base here in the Aurvangar swamplands. We should be crossing our axes with them soon.",
+				"The scoundrels have their base here in the Aurvang swamplands. We should be crossing our axes with them soon.",
 				player,
 				{"~!Continue"},
 				{function(s)

@@ -27,50 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- markov chain implementation
---[[
-DwarvenNames = {"Ai", "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aiglondur", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alberich", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Alf", "Alfrigg", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Althjof", "Alvis", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Andvari", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Aurvang", "Austri", "Bafur", "Baglur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Brokk", "Burin", "Dain", "Delling", "Dolgthvari", "Dori", "Draupnir", "Duf", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Dulcatulos", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Durin", "Dursil", "Durstorn", "Dvalin", "Eggerich", "Eikinskjaldi", "Eitri", "Fal", "Fid", "Fili", "Fjalar", "Frag", "Frar", "Frosti", "Fundin", "Galar", "Gandalf", "Ginnar", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glinar", "Gloin", "Glomin", "Glonoin", "Goldemar", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Grerr", "Grimnir", "Hamel", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Ivaldi", "Jari", "Karrag", "Kili", "Kinan", "Kuhnar", "Laurin", "Lit", "Loni", "Mjodvitnir", "Modsognir", "Nabbi", "Nain", "Nar", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Neglur", "Nidi", "Niping", "Noiraran", "Nordri", "Nori", "Nyi", "Nyr", "Nyrad", "Oin", "Olurf", "Ori", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Radsvid", "Regin", "Rekk", "Relgorn", "Rugnur", "Rynan", "Skavid", "Skirfir", "Solblindi", "Sudri", "Sviar", "Sviur", "Theganli", "Thekk", "Thjodrorir", "Thorin", "Thrain", "Thror", "Thursagan", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus", "Ulrek", "Uni", "Vali", "Var", "Vegdrasil", "Vestri", "Vig", "Vindalf", "Virfir", "Vit"}
-
-DwarvenLetterPairs = {}
-StartingDwarvenLetterPairs = {}
-for i=1,table.getn(DwarvenNames) do
-	for j=1,(string.len(DwarvenNames[i]) - 1) do
-		local letter_pair = string.lower(string.sub(DwarvenNames[i], j, j + 1))
-		if (DwarvenLetterPairs[letter_pair] == nil) then
-			DwarvenLetterPairs[letter_pair] = {}
-		end
-		if (j + 3 <= string.len(DwarvenNames[i])) then
-			local next_letter_pair = string.sub(DwarvenNames[i], j + 2, j + 3)
-			table.insert(DwarvenLetterPairs[letter_pair], next_letter_pair)
-		else
-			local next_letter_pair = string.sub(DwarvenNames[i], j + 2, j + 2)
-			table.insert(DwarvenLetterPairs[letter_pair], next_letter_pair)
-		end
-	end
-	table.insert(StartingDwarvenLetterPairs, string.lower(string.sub(DwarvenNames[i], 1, 2)))
-end
-
-local dwarven_personal_names = {}
-for i=1,255 do -- create 5 dwarven names as a test
-	local latest_letter_pair = StartingDwarvenLetterPairs[SyncRand(table.getn(StartingDwarvenLetterPairs)) + 1]
-	local personal_name = latest_letter_pair
-	local name_completed = false
-	while (name_completed == false) do
-		if (DwarvenLetterPairs[latest_letter_pair] ~= nil) then
-			local chosen_letter_pair = DwarvenLetterPairs[latest_letter_pair][SyncRand(table.getn(DwarvenLetterPairs[latest_letter_pair])) + 1]
-			latest_letter_pair = chosen_letter_pair
-			personal_name = personal_name .. chosen_letter_pair
-			if (string.len(chosen_letter_pair) == 1 or string.len(personal_name) >= 12) then
-				name_completed = true
-			end
-		else
-			name_completed = true
-		end
-	end
-	table.insert(dwarven_personal_names, CapitalizeString(personal_name))
-end
---]]
-
 DefineRaceNames(
 	--[[
 	"race", { -- information for later use
@@ -140,12 +96,14 @@ DefineRaceNames(
 		"visible",
 		"species", "dwarf",
 		"personal-names", {
-			"Ai", "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aiglondur", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alberich", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Alf", "Alfrigg", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Angarthing", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Aurvang", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Burin", "Dain", "Delling", "Dolgthvari", "Dori", "Duf", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Dulcatulos", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Dursil", "Dvalin", "Eggerich", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glinar", "Gloin", "Glomin", "Goldemar", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Grerr", "Grimnir", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Kinan", "Kuhnar", "Laurin", "Lit", "Loni", "Nabbi", "Nain", "Nar", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Neglur", "Nidi", "Niping", "Noiraran", "Nori", "Nyi", "Nyr", "Nyrad", "Oin", "Ori", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Rekk", "Relgorn", "Rynan", "Skavid", "Skirfir", "Sviar", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus", "Ulrek", "Uni", "Vali", "Var", "Vegdrasil", "Vig", "Virfir", "Vit",
+			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Dain", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Gloin", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nabbi", "Nain", "Nar", "Nidi", "Niping", "Nori", "Nyi", "Nyr", "Nyrad", "Oin", "Ori", "Rekk", "Skavid", "Skirfir", "Sviar", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Vig", "Virfir", "Vit", -- from Norse mythology
+			"Alberich", "Eggerich", "Goldemar", "Laurin", -- from German sagas
+			"Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Glomin", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Naralas", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus", -- from Wesnoth
 			"Andvari", -- dwarf from Norse mythology whose hoard and golden ring were stolen by Loki
-			"Austri", -- dwarf from Norse mythology; "Austri" = "East"
 			"Brokk", -- dwarf from Norse mythology; expert smith and brother of Eitri
 			"Draupnir", -- dwarf from Norse mythology; "Draupnir" = "Dropper"
 			"Durin", -- dwarf from Norse mythology who was Modsognir's deputy
+			"Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
 			"Eitri", -- dwarf from Norse mythology; expert smith and brother of Brokk
 			"Fjalar", -- dwarf from Norse mythology who (with the help of his brother Galar) brew Kvasir's remains into the Mead of Poetry
 			"Galar", -- dwarf from Norse mythology who (with the help of his brother Fjalar) brew Kvasir's remains into the Mead of Poetry
@@ -158,13 +116,27 @@ DefineRaceNames(
 			"Vestri", -- dwarf from Norse mythology; "Vestri" = "West"
 			"Baglur", -- from Wesnoth (The Scepter of Fire); veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 			"Durstorn", -- from Wesnoth (The Scepter of Fire); chieftain of Rugnur's tribe
+			"Glinar", -- from Wesnoth (The Scepter of Fire)
 			"Glonoin", -- from Wesnoth (The Scepter of Fire); chieftain of the Shorbear clan
+			"Kinan", -- from Wesnoth (The Scepter of Fire)
+			"Kuhnar", -- from Wesnoth (The Scepter of Fire)
+			"Neglur", -- from Wesnoth (The Scepter of Fire)
+			"Noiraran", -- from Wesnoth (The Scepter of Fire)
 			"Rugnur", -- from Wesnoth (The Scepter of Fire); leader of the party of dwarves who handled the crafting of the Sceptre of Fire
+			"Rynan", -- from Wesnoth (The Scepter of Fire)
 			"Theganli", -- from Wesnoth (The Scepter of Fire); jeweler of Durstorn's clan
 			"Thursagan", -- from Wesnoth (The Scepter of Fire); master runesmith who crafted the Sceptre of Fire
+			"Relgorn", -- from Wesnoth (Heir to the Throne and Delfador's Memoirs)
+			"Ulrek", -- from Wesnoth (Delfador's Memoirs)
+			"Aiglondur", -- from Wesnoth; dwarven hero in The Hammer of Thursagan
+			"Angarthing", -- from Wesnoth (The Hammer of Thursagan)
+			"Dulcatulos", -- from Wesnoth (The Hammer of Thursagan)
 			"Hamel", -- from Wesnoth (Northern Rebirth and The Hammer of Thursagan)
 			"Karrag", -- from Wesnoth (The Hammer of Thursagan)
 			"Olurf", -- from Wesnoth (The Legend of Wesmere)
+			"Burin", -- from Wesnoth (The Rise of Wesnoth)
+			"Dursil", -- from Wesnoth (The Rise of Wesnoth)
+			"Grimnir", -- from Wesnoth (Under the Burning Suns)
 			"Durahn", "Isuldan", -- names from Dyson Logos' The Tomb of Durâhn Oakenshield
 			"Urist"
 		},
@@ -173,7 +145,6 @@ DefineRaceNames(
 		},
 		-- Female names: Gneissus (from Dyson Logos' The Tomb of Durâhn Oakenshield)
 		"province-names", {
-			"Aurvangar", -- wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir
 			"Kal Kartha", -- from Wesnoth
 			"Knalga" -- from Wesnoth
 		},
@@ -230,7 +201,7 @@ DefineRaceNames(
 			"tree", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 			"wich" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 		},
-		"settlement-name-translations", {
+		"name-translations", {
 			"Lisboa", "Lisbon",
 			"Wien", "Vienna"
 		}
@@ -400,15 +371,27 @@ DefineRaceNames(
 			"sohl", -- examples: "Altsohl", "Neusohl"
 			"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
 		},
-		"settlement-name-translations", {
-			"Vindobona", "Wien"
+		"name-translations", {
+			"Aiza", "Erz", -- from Proto-Germanic to German
+			"Austa", "Ost", -- from Proto-Germanic to German
+			"Berga", "Berg", -- from Proto-Germanic to German
+			"Burg", "Burg", -- from Proto-Germanic to German
+			"Bûra", "Bauer", -- from Proto-Germanic to German
+			"Dverga", "Zwerg", -- from Proto-Germanic to German
+			"Gastiz", "Gast", -- from Proto-Germanic to German
+			"Haima", "Heim", -- from Proto-Germanic to German
+			"Landa", "Land", -- from Proto-Germanic to German
+			"Lanum", "Land", -- example: "Mediolanum" -> "Mailand" (Milan)
+			"Mark", "Mark", -- from Proto-Germanic to German
+			"Medio", "Mai", -- example: "Mediolanum" -> "Mailand" (Milan)
+			"Rikia", "Reich", -- from Proto-Germanic to German
+			"Snaigva", "Schnee", -- from Proto-Germanic to German
+			"Þurpa", "Dorf", -- from Proto-Germanic to German
+			"Uzdaz", "Ort", -- from Proto-Germanic to German
+			"Vindobona", "Wien",
+			"Waida", "Waid", -- from Proto-Germanic to German
+			"Walakuzjōn", "Walküre" -- from Proto-Germanic to German
 		},
-		"settlement-name-prefix-translations", {
-			"Medio", "Mai" -- example: "Mediolanum" -> "Mailand" (Milan)
-		},
-		"settlement-name-suffix-translations", {
-			"lanum", "land" -- example: "Mediolanum" -> "Mailand" (Milan)
-		}
 	},
 	"race", {
 		"name", "goth",
@@ -612,12 +595,10 @@ DefineRaceNames(
 			"bona", -- example: "Vindobona" (Vienna
 			"lanum" -- example: "Mediolanum" (Milan)
 		},
-		"settlement-name-prefix-translations", {
-			"Nea", "Nea" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+		"name-translations", {
+			"Nea", "Nea", -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+			"Polis", "Polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
 		},
-		"settlement-name-suffix-translations", {
-			"polis", "polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-		}
 	},
 	"race", {
 		"name", "norse",

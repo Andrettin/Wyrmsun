@@ -275,9 +275,9 @@ local NidavellirEvents = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
 					GrandStrategyEventMap = true
-					GetMapInfo("maps/nidavellir/aurvangar.smp")
+					GetMapInfo("maps/nidavellir/aurvang.smp")
 					CurrentQuest = "The Necklace of the Brisings"
-					RunMap("maps/nidavellir/aurvangar.smp")
+					RunMap("maps/nidavellir/aurvang.smp")
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
