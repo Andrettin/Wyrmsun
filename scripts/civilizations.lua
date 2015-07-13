@@ -107,13 +107,9 @@ DefineRaceNames(
 			"Eitri", -- dwarf from Norse mythology; expert smith and brother of Brokk
 			"Fjalar", -- dwarf from Norse mythology who (with the help of his brother Galar) brew Kvasir's remains into the Mead of Poetry
 			"Galar", -- dwarf from Norse mythology who (with the help of his brother Fjalar) brew Kvasir's remains into the Mead of Poetry
-			"Ivaldi", -- dwarf from Norse mythology whose sons were mastersmiths; "Ivaldi" = "The Mighty"
 			"Modsognir", -- the first and mightiest of the dwarves in Norse mythology
-			"Nordri", -- dwarf from Norse mythology; "Nordri" = "North"
 			"Regin", -- dwarven smith from Norse mythology who was the brother of the dragon Fafnir; "Regin" = "Counsel-Giver"
-			"Sudri", -- dwarf from Norse mythology; "Sudri" = "South"
 			"Thjodrorir", -- dwarven sage from Norse mythology
-			"Vestri", -- dwarf from Norse mythology; "Vestri" = "West"
 			"Baglur", -- from Wesnoth (The Scepter of Fire); veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 			"Durstorn", -- from Wesnoth (The Scepter of Fire); chieftain of Rugnur's tribe
 			"Glinar", -- from Wesnoth (The Scepter of Fire)
