@@ -199,6 +199,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Dwarves, Germanics and Teutons now generate names for hills and mountains, and their settlements have a 10% chance to be named after such terrain features on their tile.
 - Provinces now have a 10% chance to be named after their settlement.
+- Dwarven personal name generation improvements.
 
 * Maps
 - Renamed Aurvangar to Aurvang.
