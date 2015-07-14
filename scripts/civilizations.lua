@@ -98,10 +98,11 @@ DefineRaceNames(
 		"personal-names", {
 			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Dain", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Gloin", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nabbi", "Nain", "Nar", "Nidi", "Niping", "Nori", "Nyi", "Nyr", "Nyrad", "Oin", "Ori", "Rekk", "Skavid", "Skirfir", "Sviar", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Vig", "Virfir", "Vit", -- from Norse mythology
 			"Alberich", "Eggerich", "Goldemar", "Laurin", -- from German sagas
-			"Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Alaithlos", "Alaithsol", "Alaithus", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Augaithsil", "Augaithus", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Glamaithsol", "Glamalil", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glomin", "Gomaithsol", "Gomalil", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol", "Naraithsil", "Naraithsol", "Naraithus", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelaithlos", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil", "Trithaithlos", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", -- from Wesnoth
+			--[[
+			"Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatsil", "Alduras", "Aldurlos", "Aldurol", "Althalos", "Althaol", "Althasil", "Althasol", "Analil", "Anallos", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Anduril", "Andurol", "Andursol", "Andurus", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthais", "Augthalos", "Augthaol", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatol", "Dulcatsil", "Dulduras", "Dulduring", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Glamalil", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaol", "Glamthasil", "Glamthasol", "Glomin", "Gomalil", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomduris", "Gomdurlos", "Gomdursol", "Gomdurus", "Gomthalos", "Gomthasol", "Naralil", "Naralsil", "Naralus", "Naratlos", "Naratol", "Naratsil", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narduras", "Narduril", "Nardurol", "Narthalos", "Narthaol", "Pelalil", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatol", "Pelcatsil", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthasil", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdurus", "Triththasol", -- from Wesnoth, need to move these to the examples of the respective in-/suffixes (prefixes already have all examples)
+			--]]
 			"Andvari", -- dwarf from Norse mythology whose hoard and golden ring were stolen by Loki
 			"Brokk", -- dwarf from Norse mythology; expert smith and brother of Eitri
-			"Draupnir", -- dwarf from Norse mythology; "Draupnir" = "Dropper"
 			"Durin", -- dwarf from Norse mythology who was Modsognir's deputy
 			"Dvalin", -- dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings
 			"Eitri", -- dwarf from Norse mythology; expert smith and brother of Brokk
@@ -121,7 +122,6 @@ DefineRaceNames(
 			"Rugnur", -- from Wesnoth (The Scepter of Fire); leader of the party of dwarves who handled the crafting of the Sceptre of Fire
 			"Rynan", -- from Wesnoth (The Scepter of Fire)
 			"Theganli", -- from Wesnoth (The Scepter of Fire); jeweler of Durstorn's clan
-			"Thursagan", -- from Wesnoth (The Scepter of Fire); master runesmith who crafted the Sceptre of Fire
 			"Relgorn", -- from Wesnoth (Heir to the Throne and Delfador's Memoirs)
 			"Ulrek", -- from Wesnoth (Delfador's Memoirs)
 			"Aiglondur", -- from Wesnoth; dwarven hero in The Hammer of Thursagan
@@ -131,12 +131,11 @@ DefineRaceNames(
 			"Karrag", -- from Wesnoth (The Hammer of Thursagan)
 			"Olurf", -- from Wesnoth (The Legend of Wesmere)
 			"Burin", -- from Wesnoth (The Rise of Wesnoth)
-			"Dursil", -- from Wesnoth (The Rise of Wesnoth)
-			"Grimnir", -- from Wesnoth (Under the Burning Suns)
 			"Durahn", "Isuldan", -- names from Dyson Logos' The Tomb of Durâhn Oakenshield
 			"Urist"
 		},
 		"personal-name-suffixes", {
+			"agan", -- example: "Thursagan" (Battle for Wesnoth, The Sceptre of Fire)
 			"svid" -- Svid = in Counsel
 		},
 		-- Female names: Gneissus (from Dyson Logos' The Tomb of Durâhn Oakenshield)
@@ -153,8 +152,8 @@ DefineRaceNames(
 			"brook", -- from Wesnoth, "Highbrook Pass"
 			"colt" -- from Wesnoth (The Sceptre of Fire), "Caverns of Chaincolt"
 		}
-		--[[
 		-- commented out for now, only activate settlement name generation for dwarves when there is more variety to them
+		--[[
 		"settlement-names", {
 			"Kal Kartha", -- from Wesnoth
 			"Knalga", -- from Wesnoth

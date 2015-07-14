@@ -39,47 +39,11 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Aiglondur" (dwarven hero in The Hammer of Thursagan), "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus"
 		},
-		"Aithas", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+		"Aith", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
-			"singular-nominative", "Aithas",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigaithas", "Alaithas", "Anaithas", "Augaithas", "Gomaithas", "Pelaithas", "Trithaithas"
-		},
-		"Aithil", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Aithil",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigaithil", "Anaithil", "Dulaithil", "Glamaithil", "Gomaithil", "Naraithil", "Pelaithil", "Trithaithil"
-		},
-		"Aithing", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Aithing",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigaithing", "Anaithing", "Augaithing", "Dulaithing", "Naraithing", "Pelaithing", "Trithaithil"
-		},
-		"Aithis", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Aithis",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Alaithis", "Anaithis", "Glamaithis", "Pelaithis", "Trithaithis"
-		},
-		"Aithol", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Aithol",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigaithol", "Alaithol", "Glamaithol", "Gomaithol", "Naraithol", "Pelaithol", "Trithaithol"
-		},
-		"Al", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Al",
-			"prefix-singular", true,
-			"prefix-personal-name", true -- examples: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
-		},
-		"Alas", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Alas",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigalas", "Alalas", "Augalas", "Dulalas", "Naralas"
+			"singular-nominative", "Aith",
+			"infix-singular", true,
+			"infix-personal-name", true -- examples: "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Anaithas", "Anaithil", "Anaithis", "Anaithing", "Anaithsil", "Anaithus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus"
 		},
 		"Alf", {
 			"meaning", "Elf",
@@ -89,23 +53,23 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"suffix-personal-name", true -- examples: "Gandalf" (Norse mythology), "Vindalf" (Norse mythology)
 			-- should be available as a name only if the dwarven civilization in question has met elves?
 		},
-		"Aling", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Aling",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigaling", "Augaling", "Dulaling", "Glamaling", "Pelaling"
-		},
-		"Alis", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
-			"singular-nominative", "Alis",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigalis", "Dulalis", "Glamalis", "Gomalis", "Pelalis", "Trithalis"
-		},
 		"An", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
 			"singular-nominative", "An",
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus"
+		},
+		"As", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "As",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigaithas", "Aigalas", "Aigatas", "Aigcatas", "Aigduras", "Alaithas", "Alalas", "Aldras", "Althaas", "Anaithas", "Anthaas", "Augaithas", "Augalas", "Augdras", "Dulalas", "Glamdras", "Glamthaas", "Gomaithas", "Gomdras", "Gomthaas", "Naralas", "Nardras", "Pelaithas", "Peldras", "Pelthaas", "Trithaithas", "Triththaas"
+		},
+		"At", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "At",
+			"infix-singular", true,
+			"infix-personal-name", true -- examples: "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus"
 		},
 		"Aug", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
@@ -127,11 +91,37 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
 			"personal-name", true -- example: "Austri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
+		"Cat", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Cat",
+			"infix-singular", true,
+			"infix-personal-name", true -- examples: "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Alcatlos", "Ancatus", "Augcatus", "Dulcatlos", "Dulcatsol", "Glamcatus", "Gomcatlos", "Narcatsol", "Pelcatlos", "Trithcatlos", "Trithcatsol", "Trithcatus"
+		},
+		"Dr", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Dr",
+			"infix-singular", true,
+			"infix-personal-name", true -- examples: "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aldras", "Aldril", "Aldris", "Aldring", "Aldrlos", "Aldrol", "Aldrsol", "Andril", "Andris", "Andrlos", "Andrus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Trithdril", "Trithdring", "Trithdrlos", "Trithdris", "Trithdrol", "Trithdrsol", "Trithdrus"
+		},
+		"Draupnir", {
+			"meaning", "Dropper",
+			"singular-nominative", "Draupnir",
+			"gender", "Masculine", -- presumably, since it's the name of a male dwarf?
+			"personal-name", true -- example: "Draupnir" (dwarf from Norse mythology)
+		},
 		"Dul", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
 			"singular-nominative", "Dul",
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus"
+		},
+		"Dur", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Dur",
+			"prefix-singular", true,
+			"prefix-personal-name", true, -- example: "Dursil" (from Wesnoth, The Rise of Wesnoth)
+			"infix-singular", true,
+			"infix-personal-name", true -- examples: "Aigduras", "Aigdurlos", "Aigdursol", "Duldursil", "Gomdursil", "Trithdursil"
 		},
 		"Glam", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
@@ -145,12 +135,36 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol"
 		},
+		"Grimnir", { -- meaning is from Old Norse, while the occurrence of the name is from Wesnoth
+			"meaning", "Hooded One", -- Source: Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 85.
+			"singular-nominative", "Grimnir",
+			"gender", "Masculine",
+			"personal-name", true -- example: "Grimnir" (dwarven pathfinder from Wesnoth, Under the Burning Suns)
+		},
 		"Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's Mound", "haug" = "mound"
 			"meaning", "Mound",
 			"singular-nominative", "Haug",
 			"suffix-singular", true,
 			"suffix-province-name", true, -- example: "Svarinshaug" ("Svarin's Mound"; from Norse mythology)
 			"suffix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
+		},
+		"Il", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Il",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigaithil", "Aigcatil", "Alalil", "Aldril", "Althail", "Anaithil", "Andril", "Augthail", "Dulaithil", "Duldril", "Glamaithil", "Glamdril", "Gomaithil", "Gomdril", "Naraithil", "Nardril", "Pelaithil", "Peldril", "Pelthail", "Trithaithil", "Trithdril", "Triththail"
+		},
+		"Ing", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Ing",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigaithing", "Aigaling", "Aigcating", "Aigdring", "Aigthaing", "Aldring", "Anaithing", "Anthaing", "Augaithing", "Augaling", "Dulaithing", "Dulaling", "Glamaling", "Gomdring",  "Naraithing", "Nardring", "Pelaithing", "Pelaling", "Trithdring", "Triththaing"
+		},
+		"Is", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Is",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigalis", "Aigatis", "Aigcatis", "Aigdris", "Aigthais", "Alaithis", "Aldris", "Anaithis", "Andris", "Augdris", "Dulalis", "Duldris", "Glamaithis", "Glamalis", "Gomalis", "Gomdris", "Nardris", "Pelaithis", "Pelalis", "Trithaithis", "Trithalis", "Trithdris"
 		},
 		"Ivaldi", {
 			"meaning", "Mighty", -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.
@@ -165,6 +179,12 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"prefix-singular", true,
 			"prefix-province-name", true, -- example: "Joruvellir" (Norse mythology)
 			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
+		},
+		"Los", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Los",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigatlos", "Aigdrlos", "Aigdurlos", "Alaithlos", "Alcatlos", "Aldrlos", "Andrlos", "Dulaithlos", "Dulcatlos", "Duldrlos", "Glamdrlos", "Gomcatlos", "Pelaithlos", "Pelcatlos", "Trithaithlos", "Trithcatlos", "Trithdrlos"
 		},
 		"Mjod", {
 			"meaning", "Mead",
@@ -186,11 +206,23 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"gender", "Masculine",
 			"personal-name", true -- example: "Nordri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
+		"Ol", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Ol",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigaithol", "Aigalol", "Alaithol", "Alalol", "Aldrol", "Analol", "Augalol", "Duldrol", "Glamaithol", "Gomaithol", "Gomdrol", "Naraithol", "Nardrol", "Pelaithol", "Trithaithol", "Trithalol", "Trithdrol"
+		},
 		"Pel", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
 			"singular-nominative", "Pel",
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil"
+		},
+		"Sil", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Sil",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Dursil" (Battle for Wesnoth, The Rise of Wesnoth), "Aigalsil", "Aigatsil", "Aigcatsil", "Aigdrsil", "Aigthasil", "Anaithsil", "Augaithsil", "Augdrsil", "Dulaithsil", "Duldrsil", "Duldursil", "Gomdrsil", "Gomdursil", "Naraithsil", "Nardrsil", "Pelaithsil", "Trithaithsil", "Trithdursil"
 		},
 		"Skjaldi", {
 			"meaning", "Shield",
@@ -204,7 +236,9 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"prefix-singular", true,
 			"prefix-personal-name", true, -- example: "Solblindi" (Norse mythology)
 			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
-			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-terrain-name", "Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+			"suffix-singular", true, -- suffix used by Wesnoth's dwarven names
+			"suffix-personal-name", true -- examples: "Aigatsol", "Aigcatsol", "Aigdrsol", "Aigdursol", "Alaithsol", "Alalsol", "Aldrsol", "Dulaithsol", "Dulcatsol", "Glamaithsol", "Glamdrsol", "Gomaithsol", "Naraithsol", "Narcatsol", "Nardrsol", "Pelaithsol", "Peldrsol", "Trithaithsol", "Trithcatsol", "Trithdrsol"
 		},
 		"Sudri", {
 			"meaning", "Southern", -- "the Southern"
@@ -212,11 +246,11 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"gender", "Masculine",
 			"personal-name", true -- example: "Sudri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
-		"Thaus", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+		"Tha", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
-			"singular-nominative", "Thaus",
-			"suffix-singular", true,
-			"suffix-personal-name", true -- examples: "Aigthaus", "Althaus", "Anthaus", "Dulthaus", "Glamthaus", "Triththaus"
+			"singular-nominative", "Tha",
+			"infix-singular", true,
+			"infix-personal-name", true -- examples: "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Althaas", "Althail", "Althaus", "Anthaas", "Anthaing", "Anthaus", "Augthail", "Dulthaus", "Glamthaas", "Glamthaus", "Gomthaas", "Pelthaas", "Pelthail", "Triththaas", "Triththail", "Triththaing", "Triththaus"
 		},
 		"Thjof", {
 			"meaning", "Thief",
@@ -224,11 +258,23 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 			"suffix-singular", true,
 			"suffix-personal-name", true -- example: "Althjof" (Norse mythology)
 		},
+		"Thurs", {
+			"meaning", "Giant", -- meaning from Old Icelandic; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 750.
+			"singular-nominative", "Thurs",
+			"prefix-singular", true,
+			"prefix-personal-name", true -- example: "Thursagan" (Battle for Wesnoth, The Sceptre of Fire; master runesmith who crafted the Sceptre of Fire)
+		},
 		"Trith", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
 			"singular-nominative", "Trith",
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"
+		},
+		"Us", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
+			"meaning", "?",
+			"singular-nominative", "Us",
+			"suffix-singular", true,
+			"suffix-personal-name", true -- examples: "Aigatus", "Aigcatus", "Aigthaus", "Alaithus", "Alalus", "Althaus", "Anaithus", "Ancatus", "Andrus", "Anthaus", "Augaithus", "Augcatus", "Augdrus", "Duldrus", "Dulthaus", "Glamcatus", "Glamthaus", "Naraithus", "Nardrus", "Peldrus", "Trithaithus", "Trithcatus", "Trithdrus", "Triththaus"
 		},
 		"Vang", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 678.
 			"meaning", "Garden, Green Home-Field",
@@ -283,10 +329,11 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse, German and fantasy
 	},
 	"adjectives", {
 		"Al", {
-			"meaning", "Mighty", -- can also mean "All-"
-			"prefix-personal-name", true, -- examples: "Alvis" (all-knowing) (Norse mythology), "Althjof" (mighty thief) (Norse mythology)
+			"meaning", "Mighty", -- can also mean "All-"; meaning from Old Norse, but is also a prefix used by Wesnoth's dwarven names
+			"prefix-personal-name", true, -- examples from Norse mythology: "Alvis" (all-knowing), "Althjof" (mighty thief); examples from Wesnoth: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
 			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
-			"prefix-terrain-name", "Hills", true -- no examples, but seems sensible in face of a general lack of examples
+			"prefix-terrain-name", "Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+			"infix-personal-name", true -- infix used by Wesnoth's dwarven names; examples: "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Analol", "Augalas", "Augaling", "Augalol", "Dulalas", "Dulaling", "Dulalis", "Glamaling", "Glamalis", "Gomalis", "Naralas", "Pelaling", "Pelalis", "Trithalis", "Trithalol"
 		},
 		"Eikin", {
 			"meaning", "Oaken",
