@@ -37,7 +37,7 @@ local NorseEvents = {
 				and FactionHasTechnologyType(EventFaction, "melee-weapon-1") -- must have reached the iron age
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
-				and FactionHasTechnologyType(EventFaction, "wood-plow")
+--				and FactionHasTechnologyType(EventFaction, "wood-plow")
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Swede Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the norse civilization is not playable
 				and SyncRand(50) < 1
