@@ -35,14 +35,29 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: "Adelsberg"
 		},
+		"Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
+			"meaning", "Bear",
+			"singular-nominative", "Bär",
+			"singular-accusative", "Bären",
+			"singular-dative", "Bären",
+			"singular-genitive", "Bären",
+			"plural-nominative", "Bären",
+			"plural-accusative", "Bären",
+			"plural-dative", "Bären",
+			"plural-genitive", "Bären",
+			"gender", "Masculine",
+			"prefix-singular", true,
+			"prefix-terrain-name", "Hills", true, -- example: "Bärenberg"
+		},
 		"Berg", {
 			"meaning", "Mountain, Hill",
 			"singular-nominative", "Berg",
 			"plural-nominative", "Berge",
 			"gender", "Masculine",
 			"suffix-singular", true,
-			"suffix-province-name", false, -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
-			"suffix-settlement-name", false, -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
+			"suffix-province-name", true, -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
+			"suffix-settlement-name", true, -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
+			"suffix-terrain-name", "Hills", true, -- example: "Hackenberg"
 			"suffix-terrain-name", "Mountains", true -- example: "Schneeberg"
 		},
 		"Bruck", {
@@ -111,6 +126,29 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-personal-name", true -- example: Gottfried
 		},
+		"Hacken", {
+			"meaning", "Heel",
+			"singular-nominative", "Hacken",
+			"singular-accusative", "Hacken",
+			"singular-dative", "Hacken",
+			"singular-genitive", "Hackens",
+			"plural-nominative", "Hacken",
+			"plural-accusative", "Hacken",
+			"plural-dative", "Hacken",
+			"plural-genitive", "Hacken",
+			"gender", "Masculine",
+			"prefix-plural", true, -- should it really be so? at least this makes the correct form of the name be preserved
+			"prefix-terrain-name", "Hills", true -- example: "Hackenberg"
+		},
+		"Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
+			"meaning", "?", -- personal name
+			"singular-nominative", "Hagen",
+			"singular-accusative", "Hagen", -- source also gives the alternative form "Hagens"
+			"singular-dative", "Hagen",
+			"singular-genitive", "Hagen",
+			"gender", "Masculine",
+			"personal-name", true
+		},
 		"Hof", {
 			"meaning", "Court",
 			"singular-nominative", "Hof",
@@ -137,6 +175,31 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Neuter",
 			"prefix-plural", true,
 			"prefix-settlement-name", true -- example: "Hühnerwasser"
+		},
+		"Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
+			"meaning", "Hunger",
+			"singular-nominative", "Hunger",
+			"singular-accusative", "Hunger",
+			"singular-dative", "Hunger",
+			"singular-genitive", "Hungers",
+			"gender", "Masculine",
+			"uncountable", true,
+			"prefix-singular", true,
+			"prefix-terrain-name", "Hills", true -- example: "Hungerberg"
+		},
+		"Hügel", {
+			"meaning", "Hill",
+			"singular-nominative", "Hügel",
+			"singular-accusative", "Hügel",
+			"singular-dative", "Hügel",
+			"singular-genitive", "Hügels",
+			"plural-nominative", "Hügel",
+			"plural-accusative", "Hügel",
+			"plural-dative", "Hügeln",
+			"plural-genitive", "Hügel",
+			"gender", "Masculine",
+			"suffix-plural", true,
+			"suffix-terrain-name", "Hills", true -- example: "Konstantinhügel" (http://www.wien.gv.at/umwelt/parks/anlagen/prater.html)
 		},
 		"Kirche", {
 			"meaning", "Church",
@@ -212,6 +275,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-personal-name", true
 		},
+		"Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
+			"meaning", "Nut",
+			"singular-nominative", "Nuss",
+			"singular-accusative", "Nuss",
+			"singular-dative", "Nuss",
+			"singular-genitive", "Nuss",
+			"plural-nominative", "Nüsse",
+			"plural-accusative", "Nüsse",
+			"plural-dative", "Nüssen",
+			"plural-genitive", "Nüsse",
+			"gender", "Feminine",
+			"prefix-singular", true,
+			"prefix-terrain-name", "Hills", true -- example: "Nussberg"
+		},
 		"Ost", {
 			"meaning", "Ost",
 			"singular-nominative", "Ost",
@@ -220,6 +297,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-province-name", true -- example: "Ostmark"
 		},
+		"Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
+			"meaning", "Rose",
+			"singular-nominative", "Rose",
+			"singular-accusative", "Rose",
+			"singular-dative", "Rose",
+			"singular-genitive", "Rose",
+			"plural-nominative", "Rosen",
+			"plural-accusative", "Rosen",
+			"plural-dative", "Rosen",
+			"plural-genitive", "Rosen",
+			"gender", "Feminine",
+			"prefix-plural", true,
+			"prefix-terrain-name", "Hills", true -- example: "Rosenhügel"
+		},
 		"Salz", {
 			"meaning", "Salt",
 			"singular-nominative", "Salz",
@@ -227,6 +318,38 @@ DefineCivilizationLanguage("teuton", -- German
 			"uncountable", true,
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: Salzburg
+		},
+		"Schaf", {
+			"meaning", "Sheep",
+			"singular-nominative", "Schaf",
+			"singular-accusative", "Schaf",
+			"singular-dative", "Schaf",
+--			"singular-genitive", "Schafes", -- source also gives the alternative form "Schafs" 
+			"plural-nominative", "Schafe",
+			"plural-accusative", "Schafe",
+			"plural-dative", "Schafen",
+			"plural-genitive", "Schafe",
+			"gender", "Neuter",
+			"prefix-singular", true,
+			"prefix-terrain-name", "Hills", true -- example: "Schafberg"
+		},
+		"Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
+			"meaning", "Castle, Palace",
+			"singular-nominative", "Schloss",
+			"singular-accusative", "Schloss",
+			"singular-dative", "Schloss",
+			"singular-genitive", "Schlosses",
+			"plural-nominative", "Schlösser",
+			"plural-accusative", "Schlösser",
+			"plural-dative", "Schlössern",
+			"plural-genitive", "Schlösser",
+			"gender", "Neuter",
+		},
+		"Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
+			"meaning", "Hill under a Castle, Hill under a Palace, Mountain under a Castle, Mountain under a Palace",
+			"singular-nominative", "Schlossberg",
+			"gender", "Masculine"
+--			"terrain-name", "Hills", true -- example: "Schlossberg" (Graz)
 		},
 		"Schnee", {
 			"meaning", "Snow",
@@ -337,6 +460,26 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-personal-name", true
 		}
+	},
+	"verbs", {
+		"Hacken", {
+			"meaning", "Chop",
+			"infinitive", "Hacken",
+			"singular-first-person-present", "Hacke",
+			"singular-second-person-present", "Hackst",
+			"singular-third-person-present", "Hackt",
+			"plural-first-person-present", "Hacken",
+			"plural-second-person-present", "Hackt",
+			"plural-third-person-present", "Hacken",
+			"singular-first-person-past", "Hackte",
+			"singular-second-person-past", "Hacktest",
+			"singular-third-person-past", "Hackte",
+			"plural-first-person-past", "Hackten",
+			"plural-second-person-past", "Hacktet",
+			"plural-third-person-past", "Hackten",
+			"participle-present", "Hackend",
+			"participle-past", "Gehackt"
+		},
 	},
 	"adjectives", {
 		"Alt", {
