@@ -207,6 +207,9 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Renamed Aurvangar to Aurvang.
 
+* Miscellaneous
+- Fixed Linux start crash.
+
 -----------------------------------------------------------------------
 - 1.2.9
 -----------------------------------------------------------------------
