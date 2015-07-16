@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      scepter_of_fire_events.lua - Defines events for the Scepter of Fire campaign.
---
 --      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify

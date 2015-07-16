@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      events.lua - Defines events for the Germanic civilization.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
