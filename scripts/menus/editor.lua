@@ -644,6 +644,10 @@ function EditUnitProperties()
 		menu:addLabel(_("Amount of") .. " " .. _(CapitalizeString(resourceName[1 + resource])), sizeX / 2, 11 + (36 * 5))
 		resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + (36 * 6), 60)
 	end
+	
+	menu:addLabel(_("Hit Points:"), 10 + (sizeX / 4), 12 + 36 * 7, Fonts["game"], false)
+	local hp_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints"), (sizeX / 2) - 60 - 10 + (sizeX / 4), 11 + 36 * 7, 60)
+
 	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			SetUnitName(UnitNumber(GetUnitUnderCursor()), name_value:getText())
@@ -656,6 +660,9 @@ function EditUnitProperties()
 				GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();
 			else
 				GetUnitUnderCursor().Active = activeCheckBox:isMarked();
+			end
+			if (hp_value:getText() ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", "Max")) then
+				SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", tonumber(hp_value:getText()))
 			end
 			menu:stop()
 		end
