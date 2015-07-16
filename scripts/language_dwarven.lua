@@ -171,6 +171,14 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"infix-singular", true,
 			"infix-personal-name", true -- examples: "Aigduras", "Aigdurlos", "Aigdursol", "Alduras", "Aldurlos", "Aldurol", "Anduril", "Andurol", "Andursol", "Andurus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Gomduris", "Gomdurlos", "Gomdursol", "Gomdursil", "Gomdurus", "Narduras", "Narduril", "Nardurol", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus"
 		},
+		"Dvalin", {
+			"meaning", "?",
+			"singular-nominative", "Dvalin",
+			"gender", "Masculine",
+			"personal-name", true, -- example: "Dvalin" (dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings)
+			"suffix-personal-name", true -- example: "V√≠g-dvalinn" (dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.)
+
+		},
 		"Dverg", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 			"meaning", "Dwarf",
 			"singular-nominative", "Dverg",
@@ -205,7 +213,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 		},
 		"Gloin", {
 			"meaning", "Light-Colored Dog", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
-			"singular-nominative", "Gloin", -- given by Cleasby and Vigfusson as "GlÛi", but elsewhere given as "Gloin"/"GlÛin"
+			"singular-nominative", "Gloin", -- given by Cleasby and Vigfusson as "Gl√≥i", but elsewhere given as "Gloin"/"Gl√≥in"
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
 			"personal-name", true -- example: "Gloin" (dwarf from Norse mythology)
 		},
@@ -285,7 +293,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"suffix-singular", true,
 			"suffix-province-name", true -- example: "Smameyjaland" (the land of the dwarven maidens)
 		},
-		"Lid", { -- used in Old Norse "Dvalins li" to mean "the dwarf people"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 387.
+		"Lid", { -- used in Old Norse "Dvalins li√∞" to mean "the dwarf people"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 387.
 			"meaning", "People",
 			"singular-nominative", "Lid",
 			"gender", "Neuter"
@@ -302,7 +310,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"suffix-singular", true,
 			"suffix-personal-name", true -- examples: "Aigatlos", "Aigdrlos", "Aigdurlos", "Alaithlos", "Alatlos", "Alcatlos", "Aldrlos", "Anallos", "Andrlos", "Aldurlos", "Althalos", "Augatlos", "Augthalos", "Dulaithlos", "Dulcatlos", "Duldrlos", "Dulthalos", "Glamallos", "Glamdrlos", "Gomatlos", "Gomcatlos", "Gomdurlos", "Gomthalos", "Naratlos", "Narthalos", "Pelaithlos", "Pelcatlos", "Trithaithlos", "Trithatlos", "Trithcatlos", "Trithdrlos", "Trithdurlos"
 		},
-		"Mal", { -- appears in Old Norse "Dverg-m·l" ("echo", literally "Dwarf-speech"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 110, 415.
+		"Mal", { -- appears in Old Norse "Dverg-m√°l" ("echo", literally "Dwarf-speech"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 110, 415.
 			"meaning", "Speech, Echo", -- if in Old Norse "Dwarf-speech" means "echo", then why not consider that in the dwarven tongue the word for "echo" would be the same as that for "speech"?
 			"singular-nominative", "Mal",
 			"gender", "Neuter"
@@ -389,6 +397,12 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"plural-nominative", "Ron",
 			"gender", "Neuter"
 		},
+		"Rorir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
+			"meaning", "Rearer of Charms",
+			"singular-nominative", "Rorir", -- alternative spelling given by Cleasby and Vigfusson: "Reyrir"
+			"gender", "Masculine",
+			"suffix-personal-name", true -- example: "Thjodrorir"/"√æj√≥√∞-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
+		},
 		"Sil", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
 			"singular-nominative", "Sil",
@@ -413,14 +427,14 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"suffix-singular", true,
 			"suffix-personal-name", true -- example: "Eikinskjaldi" (Norse mythology)
 		},
-		"Smameyja", { -- from Old Norse "Sm·r" (small) and "Meyja" (maiden); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 426, 571.
+		"Smameyja", { -- from Old Norse "Sm√°r" (small) and "Meyja" (maiden); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 426, 571.
 			"meaning", "Dwarf Maiden",
 			"singular-nominative", "Smameyja",
 			"gender", "Feminine",
 			"prefix-singular", true,
 			"prefix-province-name", true -- example: "Smameyjaland" (the land of the dwarven maidens)
 		},
-		"Smidi", { -- appears in Old Norse "dverga-smÌi" ("work of rare art" or "crystal stone" or "prismatic stone", literally "dwarf's work"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 110, 572.
+		"Smidi", { -- appears in Old Norse "dverga-sm√≠√∞i" ("work of rare art" or "crystal stone" or "prismatic stone", literally "dwarf's work"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 110, 572.
 			"meaning", "Smith's Work, Work of Smithcraft, Work of Rare Art, Crystal Stone, Prismatic Stone",
 			"singular-nominative", "Smidi",
 			"gender", "Neuter"
@@ -435,7 +449,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"suffix-singular", true, -- suffix used by Wesnoth's dwarven names
 			"suffix-personal-name", true -- examples: "Aigatsol", "Aigcatsol", "Aigdrsol", "Aigdursol", "Alaithsol", "Alalsol", "Aldrsol", "Althasol", "Anatsol", "Andursol", "Anthasol", "Augatsol", "Augdursol", "Dulaithsol", "Dulatsol", "Dulcatsol", "Dulthasol", "Glamaithsol", "Glamdrsol", "Glamdursol", "Glamthasol", "Gomaithsol", "Gomdursol", "Gomthasol", "Naraithsol", "Narcatsol", "Nardrsol", "Pelaithsol", "Pelalsol", "Peldrsol", "Peldursol", "Trithaithsol", "Trithatsol", "Trithcatsol", "Trithdrsol", "Triththasol"
 		},
-		"Soleyg", { -- appears in Old Norse "dverga-sÛleyg" ("Ranunculus glacialis"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
+		"Soleyg", { -- appears in Old Norse "dverga-s√≥leyg" ("Ranunculus glacialis"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 			"meaning", "Ranunculus glacialis",
 			"singular-nominative", "Soleyg",
 			"gender", "Feminine"
@@ -445,11 +459,23 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"singular-nominative", "Stein",
 			"gender", "Masculine"
 		},
-		"Sudri", {
+		"Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 457, 603.
 			"meaning", "Southern", -- "the Southern"
 			"singular-nominative", "Sudri",
 			"gender", "Masculine",
 			"personal-name", true -- example: "Sudri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
+		},
+		"Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 606.
+			"meaning", "?",
+			"singular-nominative", "Svarin",
+			"gender", "Masculine",
+			"personal-name", true -- example: "Svarin" (dwarf from Norse mythology; maybe the one who gave his name to Svarinshaug?)
+		},
+		"Sviar", {
+			"meaning", "Forger, Smith", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
+			"singular-nominative", "Sviar",
+			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
+			"personal-name", true -- example: "Sviar" (dwarf from Norse mythology)
 		},
 		"Tha", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 			"meaning", "?",
@@ -475,6 +501,12 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"
 		},
+		"Tuta", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 645.
+			"meaning", "Teat-Like Prominence",
+			"singular-nominative", "Tuta",
+			"gender", "Feminine",
+			"personal-name", true -- example: "Tuta"
+		},
 		"Ulf", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 668.
 			"meaning", "Wolf",
 			"singular-nominative", "Olf", -- actually Ulf, but has to be "Olf" here to be correctly spelled for suffixes
@@ -496,7 +528,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"suffix-personal-name", true, -- example: "Aurvang" (dwarf from Norse mythology)
 			"suffix-province-name", true -- example: "Aurvang" (wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.)
 		},
-		"Vestri", {
+		"Vestri", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 457, 603.
 			"meaning", "Western", -- "the Western"
 			"singular-nominative", "Vestri",
 			"gender", "Masculine",
@@ -508,6 +540,13 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"plural-nominative", "Vellir",
 			"suffix-plural", true,
 			"suffix-province-name", true -- example: "Joruvellir" (Norse mythology)
+		},
+		"Vig", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.
+			"meaning", "Fight, Battle",
+			"singular-nominative", "Vig",
+			"gender", "Neuter",
+			"prefix-personal-name", true -- example: "V√≠g-dvalinn" (dwarf from Norse mythology)
+
 		},
 		"Vind", {
 			"meaning", "Wind",
@@ -532,27 +571,24 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"participle-past", "Blindi",
 			"suffix-personal-name", true -- example: "Solblindi" (Norse mythology)
 		},
-		"Mala", { -- appears in Old Norse "Dverg-m·la" (to "echo"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
+		"Mala", { -- appears in Old Norse "Dverg-m√°la" (to "echo"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 			"meaning", "Echo",
 			"infinitive", "Mala"
-		},
-		"Vis", { -- should be infinitive form
-			"meaning", "Knowing",
-			-- infinitive form?
-			"participle-present", "Vis",
-			"suffix-personal-name", true -- example: "Alvis" (all-knowing) (Norse mythology)
 		}
 	},
 	"adjectives", {
-		"Al", {
-			"meaning", "Mighty", -- can also mean "All-"; meaning from Old Norse, but is also a prefix used by Wesnoth's dwarven names
-			"prefix-personal-name", true, -- examples from Norse mythology: "Alvis" (all-knowing), "Althjof" (mighty thief); examples from Wesnoth: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
+		"Al", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+			"meaning", "Mighty, All", -- meaning from Old Norse, but is also a prefix and infix used by Wesnoth's dwarven names
+			"prefix-personal-name", true, -- examples from Norse mythology: "Alvis" ("all-knowing"/"all-wise"), "Althjof" (mighty thief); examples from Wesnoth: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
 			"prefix-province-name", true, -- no examples, but seems sensible in face of a general lack of examples
 			"prefix-terrain-name", "Hills", true, -- no examples, but seems sensible in face of a general lack of examples
 			"infix-personal-name", true -- infix used by Wesnoth's dwarven names; examples: "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Augalas", "Augaling", "Augalol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Gomalil", "Gomalis", "Gomalus", "Naralas", "Naralil", "Naralsil", "Naralus", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Trithalis", "Trithalol"
 		},
 		"Dagskjar", { -- epithet of a dwarf; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 95.
 			"meaning", "Day-Scared"
+		},
+		"Dagstygg", { -- was said of a dwarf in Old Norse; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 601.
+			"meaning", "Day-Shy"
 		},
 		"Eikin", {
 			"meaning", "Oaken",
@@ -577,6 +613,21 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 		},
 		"Skjar", { -- part of the dwarven epithet "Dagskjar"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 551.
 			"meaning", "Shy, Timid"
+		},
+		"Stygg", { -- part of the "Dagstygg", which was said of a dwarf; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 601.
+			"meaning", "Shy, Wary"
+		},
+		"Svid", {
+			"meaning", "Swift, Quick, Wise", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.
+			"suffix-personal-name", true -- example: "Alsvid" ("All-Wise"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.), "Radsvid" (Norse mythology; "Swift in Counsel")
+		},
+		"Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
+			"meaning", "Great, Powerful, Very",
+			"prefix-personal-name", true -- example: "Thjodrorir"/"√æj√≥√∞-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
+		},
+		"Vis", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+			"meaning", "Wise",
+			"suffix-personal-name", true -- example: "Alvis" ("all-knowing"/"all-wise"; from Norse mythology)
 		}
 	}
 )
