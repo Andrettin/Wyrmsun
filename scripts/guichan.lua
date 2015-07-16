@@ -699,7 +699,7 @@ function InitGameSettings()
 	GameSettings.Inside = false
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
-	GameSettings.NoRandomness = false
+	GameSettings.NoRandomness = wyr.preferences.NoRandomness
 	TechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 	MaxTechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 end

@@ -77,6 +77,7 @@ function RunGrandStrategyGameSetupMenu()
 	local faction
 	local faction_list = {}
 	local battalions
+	local no_randomness
 
 	menu:addLabel(_("~<Grand Strategy Game Setup~>"), offx + 640/2 + 12, offy + 72)
 
@@ -356,6 +357,8 @@ function RunGrandStrategyGameSetupMenu()
 			CalculateFactionIncomes()
 			CalculateFactionUpkeeps()
 			
+			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
+			
 			RunGrandStrategyGame()
 			menu:stop()
 		end)
@@ -399,6 +402,14 @@ function RunGrandStrategyGameSetupMenu()
 	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
 	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
 
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 240 + 3,
+		function()
+			wyr.preferences.NoRandomness = no_randomness:isMarked()
+			SavePreferences()
+		end
+	)
+	no_randomness:setMarked(wyr.preferences.NoRandomness)
+  
 	function DateChanged()
 		CleanGrandStrategyGame()
 		
@@ -1745,6 +1756,7 @@ function RunGrandStrategyLoadGameMenu()
 				ClearGrandStrategyUIVariables()
 				GrandStrategyMenu:stop();
 			end
+			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
 			RunGrandStrategyGame()
 		end)
 --	menu:addHalfButton("Delete", "", 384 - ((384 - 300 - 18) / 2) - 212, 256 - 16 - 27,

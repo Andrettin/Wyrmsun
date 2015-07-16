@@ -94,6 +94,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"singular-dative", "Drasch",
 			"singular-genitive", "Draschs",
 			"gender", "Masculine",
+			"uncountable", true,
 			"prefix-singular", true,
 			"prefix-terrain-name", "Mountains", true -- example: "Draschturm"
 		},
@@ -348,8 +349,8 @@ DefineCivilizationLanguage("teuton", -- German
 		"Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
 			"meaning", "Hill under a Castle, Hill under a Palace, Mountain under a Castle, Mountain under a Palace",
 			"singular-nominative", "Schlossberg",
-			"gender", "Masculine"
---			"terrain-name", "Hills", true -- example: "Schlossberg" (Graz)
+			"gender", "Masculine",
+			"terrain-name", "Hills", true -- example: "Schlossberg" (Graz)
 		},
 		"Schnee", {
 			"meaning", "Snow",

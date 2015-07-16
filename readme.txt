@@ -198,6 +198,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Improvements to grand strategy scrolling when reaching the eastmost and southmost portions of the map.
+- Added "No Randomness" option to the grand strategy mode.
 
 -----------------------------------------------------------------------
 - 1.3.0
