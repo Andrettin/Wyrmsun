@@ -96,7 +96,7 @@ DefineRaceNames(
 		"visible",
 		"species", "dwarf",
 		"personal-names", {
-			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nain", "Nar", "Niping", "Nori", "Nyr", "Nyrad", "Ori", "Rekk", "Skavid", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Vig", "Virfir", "Vit", -- from Norse mythology
+			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nar", "Niping", "Nori", "Nyr", "Nyrad", "Ori", "Rekk", "Skavid", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Vig", "Virfir", "Vit", -- from Norse mythology
 			"Alberich", "Eggerich", "Goldemar", "Laurin", -- from German sagas
 			"Glomin", -- from Wesnoth (the only name in Wesnoth's dwarven name list to not obbey the three-part compound pattern)
 			"Durin", -- dwarf from Norse mythology who was Modsognir's deputy

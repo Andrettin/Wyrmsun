@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in dwarven contexts, Scottish Gaelic, as well as dwarven fantasy names
+DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words used in dwarven contexts (specially ethnonyms, personal names or place names), as well as dwarven fantasy names
 	"nouns", {
 		"Ai", {
 			"meaning", "Great-Grandfather", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
@@ -151,9 +151,10 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"suffix-singular", true,
 			"suffix-item-name", "Potion", true -- example: "Dvalins dauda-drykk" ("the death-drink of the dwarf"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.)
 		},
-		"Dul", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
+		"Dul", { -- prefix used by Wesnoth's dwarven names
+			"meaning", "Concealment, Self-Conceit, Pride", -- meaning and gender from Old Norse word "Dul"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 109.)
 			"singular-nominative", "Dul",
+			"gender", "Feminine",
 			"prefix-singular", true,
 			"prefix-personal-name", true -- examples: "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus"
 		},
@@ -164,20 +165,13 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"personal-name", true -- example: "Dulsi" (dwarf from Norse mythology)
 		},
 		"Dur", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
+			"meaning", "Nap, Slumber", -- meaning and gender from Old Norse word "Dúrr" (which transliterated would become "Dur"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 109.)
 			"singular-nominative", "Dur",
+			"gender", "Masculine",
 			"prefix-singular", true,
 			"prefix-personal-name", true, -- example: "Dursil" (from Wesnoth, The Rise of Wesnoth)
 			"infix-singular", true,
 			"infix-personal-name", true -- examples: "Aigduras", "Aigdurlos", "Aigdursol", "Alduras", "Aldurlos", "Aldurol", "Anduril", "Andurol", "Andursol", "Andurus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Gomduris", "Gomdurlos", "Gomdursol", "Gomdursil", "Gomdurus", "Narduras", "Narduril", "Nardurol", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus"
-		},
-		"Dvalin", {
-			"meaning", "?",
-			"singular-nominative", "Dvalin",
-			"gender", "Masculine",
-			"personal-name", true, -- example: "Dvalin" (dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings)
-			"suffix-personal-name", true -- example: "Víg-dvalinn" (dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.)
-
 		},
 		"Dverg", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 			"meaning", "Dwarf",
@@ -401,11 +395,13 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"meaning", "Rearer of Charms",
 			"singular-nominative", "Rorir", -- alternative spelling given by Cleasby and Vigfusson: "Reyrir"
 			"gender", "Masculine",
+			"suffix-singular", true,
 			"suffix-personal-name", true -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
 		},
 		"Sil", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-			"meaning", "?",
+			"meaning", "A Kind of Herring", -- meaning and gender from Old Norse word "Síl" (which transliterated would become "Sil"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 532.)
 			"singular-nominative", "Sil",
+			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-personal-name", true -- examples: "Dursil" (Battle for Wesnoth, The Rise of Wesnoth), "Aigalsil", "Aigatsil", "Aigcatsil", "Aigdrsil", "Aigthasil", "Alatsil", "Alcatsil", "Althasil", "Anaithsil", "Analsil", "Anthasil", "Augaithsil", "Augatsil", "Augcatsil", "Augdrsil", "Dulaithsil", "Dulalsil", "Dulcatsil", "Duldrsil", "Duldursil", "Dulthasil", "Glamalsil", "Glamcatsil", "Glamthasil", "Gomdrsil", "Gomdursil", "Naraithsil", "Naralsil", "Naratsil", "Narcatsil", "Nardrsil", "Pelaithsil", "Pelalsil", "Pelatsil", "Pelcatsil", "Pelthasil", "Trithaithsil", "Trithdursil"
 		},
@@ -545,6 +541,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			"meaning", "Fight, Battle",
 			"singular-nominative", "Vig",
 			"gender", "Neuter",
+			"prefix-singular", true,
 			"prefix-personal-name", true -- example: "Víg-dvalinn" (dwarf from Norse mythology)
 
 		},
@@ -570,6 +567,13 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 			-- infinitive form?
 			"participle-past", "Blindi",
 			"suffix-personal-name", true -- example: "Solblindi" (Norse mythology)
+		},
+		"Dvelja", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
+			"meaning", "Delay",
+			"infinitive", "Dvelja",
+			"participle-present", "Dvalin",
+			"personal-name", true, -- example: "Dvalin" (dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings)
+			"suffix-personal-name", true -- example: "Víg-dvalinn" (dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.)
 		},
 		"Mala", { -- appears in Old Norse "Dverg-mála" (to "echo"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 			"meaning", "Echo",
@@ -606,6 +610,10 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German used in 
 		"Jung", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 327.
 			"meaning", "Young",
 			"suffix-personal-name", true -- example: "Nidjung" (Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454)
+		},
+		"Nain", {
+			"meaning", "Near To, Closely Related, Near Kinsman Of", -- Old Norse "Náinn"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 448.
+			"personal-name", true -- example: "Nain" (dwarf from Norse mythology)
 		},
 		"Rad", {
 			"meaning", "Swift",
