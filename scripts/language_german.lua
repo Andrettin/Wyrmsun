@@ -148,6 +148,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"singular-dative", "Hagen",
 			"singular-genitive", "Hagen",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true
 		},
 		"Hof", {
@@ -350,6 +351,7 @@ DefineCivilizationLanguage("teuton", -- German
 			"meaning", "Hill under a Castle, Hill under a Palace, Mountain under a Castle, Mountain under a Palace",
 			"singular-nominative", "Schlossberg",
 			"gender", "Masculine",
+			"name-singular", true,
 			"terrain-name", "Hills", true -- example: "Schlossberg" (Graz)
 		},
 		"Schnee", {

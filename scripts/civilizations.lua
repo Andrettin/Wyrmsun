@@ -96,14 +96,13 @@ DefineRaceNames(
 		"visible",
 		"species", "dwarf",
 		"personal-names", {
-			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nar", "Niping", "Nori", "Nyr", "Nyrad", "Ori", "Rekk", "Skavid", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Vig", "Virfir", "Vit", -- from Norse mythology
+			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nar", "Niping", "Nori", "Nyr", "Nyrad", "Ori", "Rekk", "Skavid", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Virfir", "Vit", -- from Norse mythology
 			"Alberich", "Eggerich", "Goldemar", "Laurin", -- from German sagas
 			"Glomin", -- from Wesnoth (the only name in Wesnoth's dwarven name list to not obbey the three-part compound pattern)
 			"Durin", -- dwarf from Norse mythology who was Modsognir's deputy
 			"Fjalar", -- dwarf from Norse mythology who (with the help of his brother Galar) brew Kvasir's remains into the Mead of Poetry
 			"Modsognir", -- the first and mightiest of the dwarves in Norse mythology
 			"Oin", -- dwarf from Norse mythology who was the father of Andvari
-			"Regin", -- dwarven smith from Norse mythology who was the brother of the dragon Fafnir; "Regin" = "Counsel-Giver"
 			"Baglur", -- from Wesnoth (The Scepter of Fire); veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 			"Durstorn", -- from Wesnoth (The Scepter of Fire); chieftain of Rugnur's tribe
 			"Glinar", -- from Wesnoth (The Scepter of Fire)

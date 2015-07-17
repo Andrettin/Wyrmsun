@@ -31,6 +31,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Great-Grandfather", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
 			"singular-nominative", "Ai",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
+			"name-singular", true,
 			"personal-name", true -- example: "Ai" (dwarf from Norse mythology who was a settler of Joruvellir)
 		},
 		"Aig", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
@@ -48,6 +49,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 		"Alf", {
 			"meaning", "Elf",
 			"singular-nominative", "Alf",
+			"name-singular", true,
 			"personal-name", true, -- example: "Alf" (dwarf from Norse mythology who was a settler of Joruvellir)
 			"suffix-singular", true,
 			"suffix-personal-name", true -- examples: "Gandalf" (Norse mythology), "Vindalf" (Norse mythology)
@@ -63,6 +65,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Fish of Prey, Gurnard", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 			"singular-nominative", "Andvari",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
+			"name-singular", true,
 			"personal-name", true -- example: "Andvari" (gurnard-shaped dwarf from Norse mythology whose hoard and golden ring were stolen by Loki)
 		},
 		"As", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
@@ -95,12 +98,14 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Eastern", -- source gives meaning as "the Eastern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
 			"singular-nominative", "Austri",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+			"name-singular", true,
 			"personal-name", true -- example: "Austri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
 		"Brokk", {
 			"meaning", "Badger, Trotter of a Horse", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
 			"singular-nominative", "Brokk",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
+			"name-singular", true,
 			"personal-name", true -- example: "Brokk" (dwarf from Norse mythology who was an expert smith and brother of Eitri)
 		},
 		"Cat", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
@@ -118,6 +123,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Dead, Deceased", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
 			"singular-nominative", "Dain",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
+			"name-singular", true,
 			"personal-name", true -- example: "Dain" (dwarf from Norse mythology)
 		},
 		"Daudi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
@@ -138,6 +144,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Dropper",
 			"singular-nominative", "Draupnir",
 			"gender", "Masculine", -- presumably, since it's the name of a male dwarf?
+			"name-singular", true,
 			"personal-name", true -- example: "Draupnir" (dwarf from Norse mythology)
 		},
 		"Drott", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 107.
@@ -162,6 +169,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Poet",
 			"singular-nominative", "Dulsi",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Dulsi" (dwarf from Norse mythology)
 		},
 		"Dur", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
@@ -192,6 +200,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Enchanter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
 			"singular-nominative", "Galar",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
+			"name-singular", true,
 			"personal-name", true -- example: "Galar" (dwarf from Norse mythology who - with the help of his brother Fjalar - brew Kvasir's remains into the Mead of Poetry)
 		},
 		"Gammi", { -- used in Old Norse for Finnish dwellings, but also for dwarven ones (as Finns were often confused with dwarves or elves in Norse mythology); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 188.
@@ -209,6 +218,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Light-Colored Dog", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
 			"singular-nominative", "Gloin", -- given by Cleasby and Vigfusson as "Glói", but elsewhere given as "Gloin"/"Glóin"
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
+			"name-singular", true,
 			"personal-name", true -- example: "Gloin" (dwarf from Norse mythology)
 		},
 		"Gom", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
@@ -221,13 +231,15 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Hooded One", -- Source: Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 85.
 			"singular-nominative", "Grimnir",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Grimnir" (dwarven pathfinder from Wesnoth, Under the Burning Suns)
 		},
-		"Hanar", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 239.
+		"Hannar", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 239.
 			"meaning", "Skillful, Artist", -- source gives meaning as "the Skillful, the Artist"
-			"singular-nominative", "Hanar",
+			"singular-nominative", "Hannar", -- source gives name as "Hannarr"
 			"gender", "Masculine",
-			"personal-name", true -- example: "Hanar" (dwarf from Norse mythology; source indicates the dwarf being present in the Voluspo, but in other consulted translations of that text it was nowhere to be found)
+			"name-singular", true,
+			"personal-name", true -- example: "Hannar" (dwarf from Norse mythology; source indicates the dwarf being present in the Voluspo, but in other consulted translations of that text it was nowhere to be found)
 		},
 		"Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's Mound", "haug" = "mound"
 			"meaning", "Mound",
@@ -270,6 +282,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Mighty", -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.
 			"singular-nominative", "Ivaldi",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
+			"name-singular", true,
 			"personal-name", true -- example: "Ivaldi" (dwarf from Norse mythology whose sons were mastersmiths)
 		},
 		"Joru", { -- from Norse mythology, "Joruvellir" = "Fields of Sand", "Joru" = "Sand"
@@ -296,6 +309,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "?",
 			"singular-nominative", "Lofar",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Lofar" (dwarf from Norse mythology who was a descendant of the settlers of Joruvellir)
 		},
 		"Los", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
@@ -321,6 +335,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Small Protuberance on the Skin, Small Protuberance on Greensward",
 			"singular-nominative", "Nabbi",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Nabbi" (dwarf from Norse mythology)
 		},
 		"Nar", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
@@ -340,6 +355,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Cognate Kinsman",
 			"singular-nominative", "Nefi",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Nefi" (dwarf from Norse mythology)
 		},
 		"Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
@@ -354,12 +370,14 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Wane of the Moon, No Moon", -- approximately, from "Nid"
 			"singular-nominative", "Nidi",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Nidi" (dwarf from Norse mythology)
 		},
 		"Nordri", {
 			"meaning", "Northern", -- source gives meaning as "the Northern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 457.
 			"singular-nominative", "Nordri",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Nordri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
 		"Ny", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 459.
@@ -371,6 +389,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Moon", -- approximately, from "Ny"
 			"singular-nominative", "Nyi",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Nyi" (dwarf from Norse mythology)
 		},
 		"Ol", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
@@ -391,6 +410,14 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"plural-nominative", "Ron",
 			"gender", "Neuter"
 		},
+		"Regin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 488.
+			"meaning", "Creator Gods", -- source gives meaning as "the gods as the makers and rulers of the universe"; another source gives the meaning of "Counsel-Giver", however
+			"plural-nominative", "Regin",
+			"gender", "Neuter",
+			"name-plural", true,
+			"personal-name", true -- example: "Regin" (dwarven smith from Norse mythology who was the brother of the dragon Fafnir)
+
+		},
 		"Rorir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
 			"meaning", "Rearer of Charms",
 			"singular-nominative", "Rorir", -- alternative spelling given by Cleasby and Vigfusson: "Reyrir"
@@ -409,12 +436,14 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Forger",
 			"singular-nominative", "Eitri", -- can also be spelled as "Sindri"
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Sindri"/"Eitri" (dwarf from Norse mythology; expert smith and brother of Brokk)
 		},
 		"Skirvir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
 			"meaning", "?", -- maybe related to Old Norse "Skirra"?
 			"singular-nominative", "Skirvir", -- alternatively spelled as "Skirfir"
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Skirvir" (dwarf from Norse mythology)
 		},
 		"Skjaldi", {
@@ -459,18 +488,21 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Southern", -- "the Southern"
 			"singular-nominative", "Sudri",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Sudri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
 		"Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 606.
 			"meaning", "?",
 			"singular-nominative", "Svarin",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Svarin" (dwarf from Norse mythology; maybe the one who gave his name to Svarinshaug?)
 		},
 		"Sviar", {
 			"meaning", "Forger, Smith", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
 			"singular-nominative", "Sviar",
 			"gender", "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
+			"name-singular", true,
 			"personal-name", true -- example: "Sviar" (dwarf from Norse mythology)
 		},
 		"Tha", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
@@ -501,6 +533,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Teat-Like Prominence",
 			"singular-nominative", "Tuta",
 			"gender", "Feminine",
+			"name-singular", true,
 			"personal-name", true -- example: "Tuta"
 		},
 		"Ulf", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 668.
@@ -528,6 +561,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Western", -- "the Western"
 			"singular-nominative", "Vestri",
 			"gender", "Masculine",
+			"name-singular", true,
 			"personal-name", true -- example: "Vestri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 		},
 		"Vellir", { -- from Norse mythology, "Joruvellir" = "Fields of Sand", "vellir" = "fields"
@@ -541,6 +575,8 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"meaning", "Fight, Battle",
 			"singular-nominative", "Vig",
 			"gender", "Neuter",
+			"name-singular", true,
+			"personal-name", true -- example: "Vig" (dwarf from Norse mythology)
 			"prefix-singular", true,
 			"prefix-personal-name", true -- example: "Víg-dvalinn" (dwarf from Norse mythology)
 
