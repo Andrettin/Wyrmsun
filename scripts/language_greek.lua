@@ -40,6 +40,78 @@ DefineCivilizationLanguage("greek",
 			"meaning", "Reward, Payment of a Soldier",
 			"singular-nominative", "Μισθός",
 			"gender", "Masculine"
+		},
+		"Abdera", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Abdera",
+			"name-singular", true,
+			"settlement-name", true -- example: "Abdera"
+		},
+		"Abydus", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Abydus",
+			"name-singular", true,
+			"settlement-name", true -- example: "Abydus"
+		},
+		"Acragas", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Acragas",
+			"name-singular", true,
+			"settlement-name", true -- example: "Acragas" (Agrigentum)
+		},
+		"Agathe", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Agathe",
+			"name-singular", true,
+			"settlement-name", true -- example: "Agathe"
+		},
+		"Ainos", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Ainos",
+			"name-singular", true,
+			"settlement-name", true -- example: "Ainos"
+		},
+		"Alalia", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Alalia",
+			"name-singular", true,
+			"settlement-name", true -- example: "Alalia" (Aleria)
+		},
+		"Alonae", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Alonae",
+			"name-singular", true,
+			"settlement-name", true -- example: "Alonae"
+		},
+		"Amisus", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Amisus",
+			"name-singular", true,
+			"settlement-name", true -- example: "Amisus"
+		},
+		"Amphi", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Amphi",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- example: "Amphipolis"
+		},
+		"Calli", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "?",
+			"singular-nominative", "Calli",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- example: "Callipolis"
+		},
+		"Polis", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "City",
+			"singular-nominative", "Polis",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
+		}
+	},
+	"adjectives", {
+		"Nea", { -- should be written as the original Greek name (with Greek characters)
+			"meaning", "New",
+			"prefix-settlement-name", true -- example: "Neapolis" (Naples)
 		}
 	}
 )

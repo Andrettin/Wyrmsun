@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words used in dwarven contexts (specially ethnonyms, personal names or place names), as well as dwarven fantasy names
+DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words used in dwarven contexts (ethnonyms, personal names or place names), as well as dwarven fantasy names
 	"nouns", {
 		"Ai", {
 			"meaning", "Great-Grandfather", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
@@ -1075,7 +1075,7 @@ DefineCivilizationLanguage("dwarf", -- Dwarven; mix of Norse and German words us
 			"suffix-personal-name", true -- example: "Alsvid" ("All-Wise"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.), "Radsvid" (Norse mythology; "Swift in Counsel")
 		},
 		"Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
-			"meaning", "Great, Powerful, Very",
+			"meaning", "Great",
 			"prefix-personal-name", true, -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
 			"prefix-settlement-name", true, -- no examples, but seems sensible in face of a general lack of examples
 			"prefix-province-name", true -- no examples, but seems sensible in face of a general lack of examples

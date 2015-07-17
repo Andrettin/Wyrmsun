@@ -223,17 +223,15 @@ DefineRaceNames(
 		"province-name-prefixes", {
 			"Branden", -- example: "Brandenburg"
 			"Mecklen", -- example: "Mecklenburg"
-			"Steier", -- example: "Steiermark" (Styria)
-			"Vorarl" -- example: "Vorarlberg"
+			"Steier" -- example: "Steiermark" (Styria)
+--			"Vorarl" -- example: "Vorarlberg"
 		},
 		"province-name-suffixes", {
 			"phalien" -- example: "Westphalien" (Westphalia)
 		},
 		"settlement-names", {
-			"Blumenau",
 			"Botzen",
 			"Bregenz",
-			"Bruck",
 			"Brünn",
 			"Budweis",
 			"Chlum",
@@ -249,7 +247,6 @@ DefineRaceNames(
 			"Krems",
 			"Kremsier",
 			"Kufstein",
-			"Laibach",
 			"Linz",
 			"München",
 			"Olmütz",
@@ -266,8 +263,7 @@ DefineRaceNames(
 			"Troppau",
 			"Villach",
 			"Wels",
-			"Werschitz",
-			"Wien" -- "Wien" = "Vienna"; from the Latin name "Vindobona"
+			"Werschitz"
 		},
 		"settlement-name-prefixes", {
 			"Frohs", -- example: "Frohsdorf"
@@ -276,13 +272,10 @@ DefineRaceNames(
 			"Inns", -- "Inns" = "Inn's" (related to the Inn river); example: "Innsbruck"
 --			"Josef", -- example: "Josefstadt"
 			"Karls", -- "Karls" = "Charles'"; example: "Karlsbad"
-			"Klagen", -- example: "Klagenfurt"
-			"Klausen", -- example: "Klausenburg"
 			"Kron", -- example: "Kronstadt"
 			"Lem", -- example: "Lemberg"
 --			"Leopold", -- example: "Leopoldstadt"
 			"Mar", -- example: "Marburg"
-			"Mühlen", -- example: "Mühlenbach"
 			"München", -- example: "Münchengrätz"
 --			"Nikols", -- "Nikols" = "Nicholas'"; example: "Nikolsburg"
 			"Öden", -- example: "Ödenburg"
@@ -294,9 +287,6 @@ DefineRaceNames(
 			"Ziller" -- example: "Zillertal"
 		},
 		"settlement-name-suffixes", {
-			"bach", -- example: "Mühlenbach"
-			"bad", -- example: "Karlsbad"
-			"furt", -- example: "Klagenfurt"
 			"grätz", -- examples: "Königgrätz", "Münchengrätz"
 			"sohl", -- examples: "Altsohl", "Neusohl"
 			"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
@@ -318,7 +308,7 @@ DefineRaceNames(
 			"Snaigva", "Schnee", -- from Proto-Germanic to German
 			"Þurpa", "Dorf", -- from Proto-Germanic to German
 			"Uzdaz", "Ort", -- from Proto-Germanic to German
-			"Vindobona", "Wien",
+			"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 			"Waida", "Waid", -- from Proto-Germanic to German
 			"Walakuzjōn", "Walküre" -- from Proto-Germanic to German
 		},
@@ -339,21 +329,12 @@ DefineRaceNames(
 		"parent-civilization", "teuton",
 		"playable", false,
 		"settlement-names", {
-			"Abdera",
-			"Abydus",
-			"Acragas", -- Agrigentum
-			"Agathe",
-			"Ainos",
-			"Alalia", -- Aleria
-			"Alonae",
-			"Amisus",
 			"Apollonia",
 			"Argos",
 			"Barca",
 			"Byzantium",
 			"Calchedon", -- Chalcedon
 			"Callatis",
-			"Callipolis",
 			"Camarina",
 			"Catana",
 			"Caulonia",
@@ -421,13 +402,6 @@ DefineRaceNames(
 			"Trapezus",
 			"Zacynthus", -- Saguntum
 			"Zancle" -- Messana
-		},
-		"settlement-name-prefixes", {
-			"Amphi", -- example: "Amphipolis"
-			"Nea" -- "Nea" = "New"; example: "Neapolis" (Naples)
-		},
-		"settlement-name-suffixes", {
-			"polis" -- "polis" = "city"; examples: "Amphipolis", "Neapolis" (Naples)
 		}
 	},
 	"race", {
@@ -522,7 +496,7 @@ DefineRaceNames(
 		},
 		"settlement-name-suffixes", {
 			"augusta", -- example: Caesaraugusta
-			"bona", -- example: "Vindobona" (Vienna
+			"bona", -- example: "Vindobona" (Vienna)
 			"lanum" -- example: "Mediolanum" (Milan)
 		},
 		"name-translations", {

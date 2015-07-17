@@ -35,6 +35,54 @@ DefineCivilizationLanguage("teuton", -- German
 			"prefix-singular", true,
 			"prefix-settlement-name", true -- example: "Adelsberg"
 		},
+		"Arl", {
+			"meaning", "?",
+			"singular-nominative", "Arl",
+			"prefix-singular", true,
+			"prefix-terrain-name", "Hills", true -- example: "Arlberg"
+		},
+		"Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
+			"meaning", "Flat Terrain with Lush Meadows",
+			"singular-nominative", "Au",
+			"singular-accusative", "Au",
+			"singular-dative", "Au",
+			"singular-genitive", "Au", -- source also gives alternative form "Bachs"
+			"plural-nominative", "Auen",
+			"plural-accusative", "Auen",
+			"plural-dative", "Auen",
+			"plural-genitive", "Auen",
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Blumenau"
+		},
+		"Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
+			"meaning", "Stream",
+			"singular-nominative", "Bach",
+			"singular-accusative", "Bach",
+			"singular-dative", "Bach",
+			"singular-genitive", "Baches", -- source also gives alternative form "Bachs"
+			"plural-nominative", "Bäche",
+			"plural-accusative", "Bäche",
+			"plural-dative", "Bächen",
+			"plural-genitive", "Bäche",
+			"gender", "Masculine",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Mühlenbach"
+		},
+		"Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
+			"meaning", "Baths",
+			"singular-nominative", "Bad",
+			"singular-accusative", "Bad",
+			"singular-dative", "Bad",
+			"singular-genitive", "Bades", -- source also gives alternative form "Bads"
+			"plural-nominative", "Bäder",
+			"plural-accusative", "Bäder",
+			"plural-dative", "Bädern",
+			"plural-genitive", "Bäder",
+			"gender", "Neuter",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Karlsbad"
+		},
 		"Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
 			"meaning", "Bear",
 			"singular-nominative", "Bär",
@@ -60,11 +108,27 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-terrain-name", "Hills", true, -- example: "Hackenberg"
 			"suffix-terrain-name", "Mountains", true -- example: "Schneeberg"
 		},
+		"Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
+			"meaning", "Flower",
+			"singular-nominative", "Blume",
+			"singular-accusative", "Blume",
+			"singular-dative", "Blume",
+			"singular-genitive", "Blume",
+			"plural-nominative", "Blumen",
+			"plural-accusative", "Blumen",
+			"plural-dative", "Blumen",
+			"plural-genitive", "Blumen",
+			"gender", "Feminine",
+			"prefix-plural", true,
+			"prefix-settlement-name", true -- example: "Blumenau"
+		},
 		"Bruck", {
 			"meaning", "Bridge",
 			"singular-nominative", "Bruck",
 			"plural-nominative", "Brucken",
 			"gender", "Feminine",
+			"name-singular", true,
+			"settlement-name", true, -- example: "Bruck"
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- example: "Innsbruck"
 		},
@@ -119,6 +183,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Neuter",
 			"suffix-singular", true,
 			"suffix-settlement-name", true -- example: "Eisenerz"
+		},
+		"Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
+			"meaning", "Ford",
+			"singular-nominative", "Furt",
+			"singular-accusative", "Furt",
+			"singular-dative", "Furt",
+			"singular-genitive", "Furt",
+			"plural-nominative", "Furten",
+			"plural-accusative", "Furten",
+			"plural-dative", "Furten",
+			"plural-genitive", "Furten",
+			"gender", "Feminine",
+			"suffix-singular", true,
+			"suffix-settlement-name", true -- example: "Klagenfurt"
 		},
 		"Gott", {
 			"meaning", "God",
@@ -211,6 +289,34 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-plural", true,
 			"suffix-settlement-name", true -- examples: "Fünfkirchen", "Weisskirchen"
 		},
+		"Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
+			"meaning", "Complaint",
+			"singular-nominative", "Klage",
+			"singular-accusative", "Klage",
+			"singular-dative", "Klage",
+			"singular-genitive", "Klage",
+			"plural-nominative", "Klagen",
+			"plural-accusative", "Klagen",
+			"plural-dative", "Klagen",
+			"plural-genitive", "Klagen",
+			"gender", "Feminine",
+			"prefix-plural", true,
+			"prefix-settlement-name", true -- example: "Klagenfurt"
+		},
+		"Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
+			"meaning", "Cloister",
+			"singular-nominative", "Klause",
+			"singular-accusative", "Klause",
+			"singular-dative", "Klause",
+			"singular-genitive", "Klause",
+			"plural-nominative", "Klausen",
+			"plural-accusative", "Klausen",
+			"plural-dative", "Klausen",
+			"plural-genitive", "Klausen",
+			"gender", "Feminine",
+			"prefix-plural", true,
+			"prefix-settlement-name", true -- example: "Klausenburg"
+		},
 		"König", {
 			"meaning", "King",
 			"singular-nominative", "König",
@@ -243,6 +349,15 @@ DefineCivilizationLanguage("teuton", -- German
 			"suffix-singular", true,
 			"suffix-terrain-name", "Mountains", true -- example: "Weißkugel"
 		},
+		"Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
+			"meaning", "Old French Poetry",
+			"singular-nominative", "Lai",
+			"singular-genitive", "Lai", -- source also gives alternative form "Lais"
+			"plural-nominative", "Lais",
+			"gender", "Neuter",
+			"prefix-singular", true,
+			"prefix-settlement-name", true -- example: "Laibach"
+		},
 		"Land", {
 			"meaning", "Country",
 			"singular-nominative", "Land",
@@ -268,6 +383,20 @@ DefineCivilizationLanguage("teuton", -- German
 			"gender", "Feminine",
 			"suffix-singular", true,
 			"suffix-province-name", true -- example: "Steiermark" (Styria)
+		},
+		"Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
+			"meaning", "Mill",
+			"singular-nominative", "Mühle",
+			"singular-accusative", "Mühle",
+			"singular-dative", "Mühle",
+			"singular-genitive", "Mühle",
+			"plural-nominative", "Mühlen",
+			"plural-accusative", "Mühlen",
+			"plural-dative", "Mühlen",
+			"plural-genitive", "Mühlen",
+			"gender", "Feminine",
+			"prefix-plural", true,
+			"prefix-settlement-name", true -- example: "Mühlenbach"
 		},
 		"Mut", {
 			"meaning", "Courage",
