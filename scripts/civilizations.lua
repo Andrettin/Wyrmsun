@@ -94,52 +94,7 @@ DefineRaceNames(
 		"name", "dwarf",
 		"display", "Dwarf",
 		"visible",
-		"species", "dwarf",
-		"personal-names", {
-			"Alfrigg", "Bafur", "Bari", "Berling", "Bibung", "Bifur", "Bombor", "Delling", "Dolgthvari", "Dori", "Duf", "Fal", "Fid", "Fili", "Frag", "Frar", "Frosti", "Fundin", "Ginnar", "Grerr", "Har", "Haur", "Heptifili", "Hledjolf", "Hornbori", "Hugstari", "Ingi", "Iri", "Jari", "Kili", "Lit", "Loni", "Nar", "Niping", "Nori", "Nyr", "Nyrad", "Ori", "Rekk", "Skavid", "Sviur", "Thekk", "Thorin", "Thrain", "Thror", "Uni", "Vali", "Var", "Vegdrasil", "Virfir", "Vit", -- from Norse mythology
-			"Alberich", "Eggerich", "Goldemar", "Laurin", -- from German sagas
-			"Glomin", -- from Wesnoth (the only name in Wesnoth's dwarven name list to not obbey the three-part compound pattern)
-			"Durin", -- dwarf from Norse mythology who was Modsognir's deputy
-			"Fjalar", -- dwarf from Norse mythology who (with the help of his brother Galar) brew Kvasir's remains into the Mead of Poetry
-			"Modsognir", -- the first and mightiest of the dwarves in Norse mythology
-			"Oin", -- dwarf from Norse mythology who was the father of Andvari
-			"Baglur", -- from Wesnoth (The Scepter of Fire); veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
-			"Durstorn", -- from Wesnoth (The Scepter of Fire); chieftain of Rugnur's tribe
-			"Glinar", -- from Wesnoth (The Scepter of Fire)
-			"Glonoin", -- from Wesnoth (The Scepter of Fire); chieftain of the Shorbear clan
-			"Kinan", -- from Wesnoth (The Scepter of Fire)
-			"Kuhnar", -- from Wesnoth (The Scepter of Fire)
-			"Neglur", -- from Wesnoth (The Scepter of Fire)
-			"Noiraran", -- from Wesnoth (The Scepter of Fire)
-			"Rugnur", -- from Wesnoth (The Scepter of Fire); leader of the party of dwarves who handled the crafting of the Sceptre of Fire
-			"Rynan", -- from Wesnoth (The Scepter of Fire)
-			"Theganli", -- from Wesnoth (The Scepter of Fire); jeweler of Durstorn's clan
-			"Relgorn", -- from Wesnoth (Heir to the Throne and Delfador's Memoirs)
-			"Ulrek", -- from Wesnoth (Delfador's Memoirs)
-			"Aiglondur", -- from Wesnoth; dwarven hero in The Hammer of Thursagan
-			"Angarthing", -- from Wesnoth (The Hammer of Thursagan)
-			"Dulcatulos", -- from Wesnoth (The Hammer of Thursagan)
-			"Hamel", -- from Wesnoth (Northern Rebirth and The Hammer of Thursagan)
-			"Karrag", -- from Wesnoth (The Hammer of Thursagan)
-			"Olurf", -- from Wesnoth (The Legend of Wesmere)
-			"Burin", -- from Wesnoth (The Rise of Wesnoth)
-			"Durahn", "Isuldan" -- names from Dyson Logos' The Tomb of Durâhn Oakenshield
-		},
-		"personal-name-suffixes", {
-			"agan" -- example: "Thursagan" (Battle for Wesnoth, The Sceptre of Fire)
-		},
-		-- Female names: Gneissus (from Dyson Logos' The Tomb of Durâhn Oakenshield)
-		--[[
-		"province-names", {
-			"Kal Kartha", -- from Wesnoth
-			"Knalga" -- from Wesnoth
-		},
-		"settlement-names", {
-			"Kal Kartha", -- from Wesnoth
-			"Knalga", -- from Wesnoth
-			"Lyr" -- hall built by dwarves in Norse mythology
-		}
-		--]]
+		"species", "dwarf"
 	},
 	--[[
 	"race", {
