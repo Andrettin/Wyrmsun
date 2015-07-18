@@ -232,7 +232,10 @@ DefineLanguageNoun("Brising", {
 	PrefixItemName = {"Amulet", true}, -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageNoun("Brokk", {
@@ -633,7 +636,10 @@ DefineLanguageNoun("Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's 
 	SuffixSingular = true,
 	SuffixProvinceName = true, -- example: "Svarinshaug" ("Svarin's Mound"; from Norse mythology)
 	SuffixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	SuffixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	SuffixTerrainName = {
+		"Hills", true, -- example: "Svarinshaug" ("Svarin's Mound"; from Norse mythology)
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageNoun("Haur", {
@@ -752,7 +758,10 @@ DefineLanguageNoun("Joru", { -- from Norse mythology, "Joruvellir" = "Fields of 
 	Uncountable = true,
 	PrefixSingular = true,
 	PrefixProvinceName = true, -- example: "Joruvellir" (Norse mythology)
-	PrefixTerrainName = {"Hills", true}, -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	},
 	PrefixSettlementName = true -- no examples, but seems sensible in face of a general lack of examples
 })
 
@@ -880,7 +889,10 @@ DefineLanguageNoun("Mjod", {
 	PrefixPersonalName = true, -- example: "Mjodvitnir" (Norse mythology)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageNoun("Mjollnir", {
@@ -960,7 +972,10 @@ DefineLanguageNoun("Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	PrefixPersonalName = true, -- example: "Nidjung" (Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageNoun("Nidi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
@@ -1176,7 +1191,10 @@ DefineLanguageNoun("Sol", {
 	PrefixSingular = true,
 	PrefixPersonalName = true, -- example: "Solblindi" (Norse mythology)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true}, -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	},
 	SuffixSingular = true, -- suffix used by Wesnoth's dwarven names
 	SuffixPersonalName = true -- examples: "Aigatsol", "Aigcatsol", "Aigdrsol", "Aigdursol", "Alaithsol", "Alalsol", "Aldrsol", "Althasol", "Anatsol", "Andursol", "Anthasol", "Augatsol", "Augdursol", "Dulaithsol", "Dulatsol", "Dulcatsol", "Dulthasol", "Glamaithsol", "Glamdrsol", "Glamdursol", "Glamthasol", "Gomaithsol", "Gomdursol", "Gomthasol", "Naraithsol", "Narcatsol", "Nardrsol", "Pelaithsol", "Pelalsol", "Peldrsol", "Peldursol", "Trithaithsol", "Trithatsol", "Trithcatsol", "Trithdrsol", "Triththasol"
 })
@@ -1410,7 +1428,10 @@ DefineLanguageNoun("Vig", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	PrefixPersonalName = true, -- example: "Víg-dvalinn" (dwarf from Norse mythology)
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageNoun("Vind", {
@@ -1422,7 +1443,10 @@ DefineLanguageNoun("Vind", {
 	PrefixPersonalName = true, -- example: "Vindalf" (Norse mythology)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageNoun("Virfir", {
@@ -1463,7 +1487,10 @@ DefineLanguageAdjective("Al", { -- Source: Richard Cleasby and Gudbrand Vigfusso
 	PrefixPersonalName = true, -- examples from Norse mythology: "Alvis" ("all-knowing"/"all-wise"), "Althjof" (mighty thief); examples from Wesnoth: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true}, -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	},
 	InfixPersonalName = true -- infix used by Wesnoth's dwarven names; examples: "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Augalas", "Augaling", "Augalol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Gomalil", "Gomalis", "Gomalus", "Naralas", "Naralil", "Naralsil", "Naralus", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Trithalis", "Trithalol"
 })
 
@@ -1474,7 +1501,10 @@ DefineLanguageAdjective("Bladnir", {
 	-- should add a category for ship name suffixes
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageAdjective("Eikin", {
@@ -1491,7 +1521,10 @@ DefineLanguageAdjective("Gand", {
 	PrefixPersonalName = true, -- example: "Gandalf" (Norse mythology)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true} -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	}
 })
 
 DefineLanguageAdjective("Jung", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 327.
@@ -1511,7 +1544,10 @@ DefineLanguageAdjective("Nyr", {
 	Meaning = "New", -- spelled as "Nýr" in Old Icelandic; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 459.
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
-	PrefixTerrainName = {"Hills", true}, -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	},
 	PersonalName = true -- example: "Nyr" (dwarf from Norse mythology)
 })
 
@@ -1539,7 +1575,10 @@ DefineLanguageAdjective("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfu
 	Civilization = "dwarf",
 	Meaning = "Great",
 	PrefixPersonalName = true, -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
-	PrefixTerrainName = {"Hills", true}, -- no examples, but seems sensible in face of a general lack of examples
+	PrefixTerrainName = {
+		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
+		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
+	},
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixProvinceName = true -- no examples, but seems sensible in face of a general lack of examples
 })

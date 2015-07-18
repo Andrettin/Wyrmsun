@@ -50,6 +50,8 @@ SetWorldMapTerrain({
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""}
 })
 
+SetWorldMapTileCulturalName(44, 11, "dwarf", "Svarinshaug");
+
 WorldMapResources = {
 	Gold = {
 		{22, 29, true}, -- location of the Troll Hole in the Brown Hills

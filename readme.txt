@@ -196,9 +196,16 @@ https://github.com/Andrettin/Wyrmsun
 - 1.3.1
 -----------------------------------------------------------------------
 
+* Civilization
+- Improvements to dwarven and teuton name generation.
+
 * Grand Strategy
 - Improvements to grand strategy scrolling when reaching the eastmost and southmost portions of the map.
 - Added "No Randomness" option to the grand strategy mode.
+- Dwarves now generate names for mountains.
+
+* Map Editor
+- It is now possible to change the HP of an individual unit, in its properties.
 
 -----------------------------------------------------------------------
 - 1.3.0

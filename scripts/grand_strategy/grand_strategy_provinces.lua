@@ -1114,6 +1114,9 @@ function LoadProvinces(world)
 			SettlementBuildings = {
 				unit_dwarven_town_hall = 2
 			},
+			CulturalSettlementNames = {
+				dwarf = "Svarinshaug"
+			},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			SettlementTerrain = "Hills"
 		}
