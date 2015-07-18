@@ -1472,6 +1472,15 @@ function FactionHasBorderWith(faction, faction_to)
 	return false
 end
 
+function FactionBordersCulture(faction, civilization)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		if (ProvinceBordersCulture(WorldMapProvinces[key].Name, civilization)) then
+			return true
+		end
+	end
+	return false
+end
+
 function FactionHasSecondaryBorderWith(faction, faction_to)
 	for province_i, key in ipairs(faction.OwnedProvinces) do
 		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do

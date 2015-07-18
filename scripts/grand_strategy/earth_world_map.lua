@@ -130,6 +130,11 @@ SetWorldMapTerrain({
 	{"",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     "",     ""}
 })
 
+--SetWorldMapSize(512, 256)
+
+--SetWorldMapTileTerrain(156, 31, GetWorldMapTerrainTypeId("Plains"))
+--SetWorldMapTileProvince(156, 31, "Astrakhan")
+
 WorldMapResources = {
 	Gold = {
 		{114, 33, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
@@ -290,7 +295,7 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
 	WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
 
-	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit GÃ¶taland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Gotaland.Civilization = "germanic"
 	WorldMapProvinces.Gotaland.SettlementBuildings.unit_germanic_town_hall = 2
 	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
@@ -383,7 +388,7 @@ if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs 
 	GrandStrategyEvents.TheSunShields = nil
 end
 
-if (GrandStrategyYear >= -1000) then -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
+if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.SwedeTribe.Technologies.upgrade_germanic_broad_sword = 2
 	Factions.JuteTribe.Technologies.upgrade_germanic_broad_sword = 2
@@ -497,6 +502,11 @@ if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. 
 	SetResourceProspected(129, 28, "Gold", true)
 end
 
+
+if (GrandStrategyYear >= -387) then
+	-- Plundering of Rome under Brennus (Celtic leader) and battle at the river Allia in 387 BC; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+end
+
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 	PytheasVoyageGoths = nil
 end
@@ -576,7 +586,7 @@ if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Sou
 	WorldMapProvinces.Portugal.SettlementBuildings.unit_teuton_town_hall = 2
 end
 
-if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138.
+if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	WorldMapProvinces.France.Owner = "Aedui Tribe" -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.France.Civilization = "celt"
@@ -653,6 +663,10 @@ if (GrandStrategyYear >= -57) then -- estimated date
 	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
 end
 
+if (GrandStrategyYear >= -52) then
+	GrandStrategyEvents.DeBelloGallico = nil -- De Bello Gallico was written 58-52 BC
+end
+
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.Aquitaine.Owner = "Rome"
 	WorldMapProvinces.Brittany.Owner = "Rome"
@@ -702,6 +716,8 @@ if (GrandStrategyYear >= -14) then -- Region around Byzantium acquired by Rome i
 	WorldMapProvinces.Thrace.Owner = "Rome"
 end
 
+-- Battle of Teutoburg Forest between the Cherusci chieftain Arminius' forces, and the Romans (when did this happen?); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+
 if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 	GrandStrategyEvents.MarbodReturns = nil -- should happen earlier
 	GrandStrategyEvents.TheHomeOfTheBoii = nil
@@ -710,13 +726,10 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	WorldMapProvinces.Bohemia.Civilization = "teuton"
 	WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
-	WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman = 4
+	WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman = 5 -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+	WorldMapProvinces.Bohemia.Units.unit_teuton_archer = 2 -- let's make 20,000 of those soldiers into archers
+	WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman = WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman + 1
 	AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
-end
-
-if (GrandStrategyYear >= 19) then
-	GrandStrategyEvents.MarbodDeposed = nil
-	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 0
 end
 
 if (GrandStrategyYear >= 3) then -- estimated date
@@ -729,7 +742,9 @@ if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Sou
 	WorldMapProvinces.Hungary.Units.unit_germanic_warrior = 0
 end
 
-if (GrandStrategyYear >= -15) then
+if (GrandStrategyYear >= 19) then
+	GrandStrategyEvents.MarbodDeposed = nil
+	WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 0
 end
 
 if (GrandStrategyYear >= 28) then -- estimated date
@@ -778,6 +793,10 @@ if (GrandStrategyYear >= 150) then
 	WorldMapProvinces.Prussia.Units.unit_germanic_warrior = 0
 end
 
+if (GrandStrategyYear >= 166) then
+	-- Army of 6,000 allied Marcomanni, Lombards and Obii raid the Romans in 166-167 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+end
+
 if (GrandStrategyYear >= 170) then
 	GrandStrategyEvents.TheSackOfIuvavum = nil
 end
@@ -802,6 +821,10 @@ if (GrandStrategyYear >= 325) then
 	-- decree by Emperor Constantine in 325 AD regulating the issue of gold solidi for Sicily, Sardinia and Corsica; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 186.
 end
 
+if (GrandStrategyYear >= 357) then
+	-- Roman commander (and later emperor) Julian defeat an Alamannic army (led by their king Chnodomar and his nephew Serapio/Agenarich) in the battle of Argentoratum in 357 AD; the Alamanns counted with an alliance of five kings (Vestralp, Urius, Ursicinus, Suomer and Hortar), totalling 35,000 soldiers commanded by 17 warlords, with each leading 2,000-3,000 warriors; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+end
+
 if (GrandStrategyYear >= 358) then
 	-- The Salii (Salic Franks) were attacked by the Frankish tribe of the Chamavi in 358 AD in the Batavian isle, being saved by the Romans; previously the Salii had been driven out of the region near the river Isala (in the area of Wesel) by the Chamavi; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 end
@@ -816,6 +839,10 @@ if (GrandStrategyYear >= 397) then
 	WorldMapProvinces.Wallachia.Owner = ""
 	WorldMapProvinces.Croatia.Owner = "Visigoth Tribe" -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Croatia.Units.unit_germanic_warrior = 0
+end
+
+if (GrandStrategyYear >= 400) then
+	GrandStrategyEvents.NotitiaDignitatum = nil -- Notitia Dignitatum was written c. 400 AD
 end
 
 if (GrandStrategyYear >= 411) then
@@ -970,7 +997,7 @@ end
 
 if (GrandStrategyYear >= 597) then
 	GrandStrategyEvents.AugustineArchbishopOfEngland = nil
-	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, §10.
+	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, Â§10.
 end
 
 if (GrandStrategyYear >= 602) then
@@ -1042,9 +1069,55 @@ if (GrandStrategyYear >= 834) then
 	GrandStrategyEvents.ChurchOfUtrechtGrantCharter = nil
 end
 
+-- King Louis I the Pious grants the Danish king Harald Klak a fiefdom in Friesia to combat other vikings, after the Danish royal had offered himself to be hired as a mercenary (when?); the Danish king Horik I would later make a similar offer, while demanding Friesia and the lands of the Abodrites (a monastic order?); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+	
+if (GrandStrategyYear >= 838) then
+	-- Karl II the Bald (of which country?) is born in 838 AD (source is not entirely clear over whether this is the date of birth or when his rule began); during his rule the payment of the Danegeld would begin, and Karl II would recruit a viking chieftain named Weland (name is cognate to "Volund"?), who possessed 200 ships and requested 5,000 pounds of silver and provisions; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 840) then
+	-- King Louis I the Pious (of which country?) dies in 840 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
 if (GrandStrategyYear >= 849) then
 	GrandStrategyEvents.VitaSanctiLebuiniAntiqua = nil
 	-- "Vita sancti Liudgeri" written about 841-849 AD by Altfried; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+end
+
+if (GrandStrategyYear >= 865) then
+	-- A large group of vikings gathered in Kent in 865 AD (perhaps at the invitation of a local ruler), eventually going on to conquer a number of Anglo-Saxon kingdoms; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 876) then
+	-- Part of the large group of vikings which had gathered in Kent begins to settle in England in 876 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 877) then
+	-- Karl II the Bald (of which country?) dies in 877 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 879) then
+	-- Part of the large group of vikings which had gathered in Kent split off and invade France in 879 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 885) then
+	-- Group of vikings which had invaded France besieges Paris in 885 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 887) then
+	-- Group of vikings which had invaded France besieges Paris a second time in 887 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 892) then
+	-- Group of vikings which had invaded France returns to England in 892 AD, but ends up being defeated by Alfred the Great; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 900) then
+	-- Scandinavian attempts of colonization in England begin after 900 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 232.
+end
+
+if (GrandStrategyYear >= 911) then
+	-- Scandinavian warlord Rollo converted to Christianity and was granted the estuary of the Seine as a fiefdom (which would be later known as Normandy), becoming the first duke of Normandy; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
 if (GrandStrategyYear >= 965) then

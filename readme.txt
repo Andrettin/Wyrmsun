@@ -207,6 +207,9 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - It is now possible to change the HP of an individual unit, in its properties.
 
+* Miscellaneous
+- Fixed a few cosmetic issues with resolution changing and full screen setting in the video options screens.
+
 -----------------------------------------------------------------------
 - 1.3.0
 -----------------------------------------------------------------------

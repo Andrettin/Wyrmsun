@@ -637,13 +637,13 @@ DefineCivilizationFactions("dwarf",
 )
 
 DefineCivilizationFactions("germanic",
---	"faction", {
---		"name", "Alamanni Tribe",
---		"type", "tribe",
---		"color", "blue",
---		"secondary_color", "blue",
---		"playable", false
---	},
+	"faction", {
+		"name", "Alamanni Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "blue",
+		"playable", false
+	},
 	"faction", {
 		"name", "Asa Tribe",
 		"type", "tribe",
@@ -969,12 +969,12 @@ DefineCivilizationFactions("norse",
 )
 
 DefineCivilizationFactions("teuton",
---	"faction", {
---		"name", "Alamanni Tribe",
---		"type", "tribe",
---		"color", "blue",
---		"secondary_color", "blue"
---	},
+	"faction", {
+		"name", "Alamanni Tribe",
+		"type", "tribe",
+		"color", "blue",
+		"secondary_color", "blue"
+	},
 	"faction", {
 		"name", "Bavarian Tribe",
 		"type", "tribe",

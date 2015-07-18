@@ -70,6 +70,10 @@ function LoadFactions(world)
 			Civilization = "celt"
 		},
 		-- Germanic tribes
+		AlamanniTribe = {
+			Name = "Alamanni Tribe",
+			Civilization = "teuton"
+		},
 		AsaTribe = {
 			Name = "Asa Tribe",
 			Civilization = "germanic",

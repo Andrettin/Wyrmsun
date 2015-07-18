@@ -304,6 +304,7 @@ function BuildOptionsMenu()
 	menu:addFullButton(_("~!Video and Audio Options"), "v", offx + 208, offy + 104 + 36*3,
 		function()
 			RunVideoOptionsMenu()
+			menu:stop(1)
 		end
 	)
 	--[[
@@ -489,6 +490,7 @@ function RunVideoOptionsMenu()
     function(dd)
    		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
 		SetVideoSize(resolution_width, resolution_height) menu:stop(1)
+		RunVideoOptionsMenu()
     end)
   resolution_width_dd:setSize(152, 20)
   for i = 1,table.getn(resolution_width_list) do
@@ -502,6 +504,7 @@ function RunVideoOptionsMenu()
     function(dd)
    		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
 		SetVideoSize(resolution_width, resolution_height) menu:stop(1)
+		RunVideoOptionsMenu()
     end)
   resolution_height_dd:setSize(152, 20)
   for i = 1,table.getn(resolution_height_list) do
@@ -586,6 +589,7 @@ function RunVideoOptionsMenu()
       wyr.preferences.VideoFullScreen = Video.FullScreen
       SavePreferences()
       menu:stop(1)
+	  RunVideoOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
 
