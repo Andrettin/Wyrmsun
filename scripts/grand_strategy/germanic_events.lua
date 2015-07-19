@@ -985,6 +985,7 @@ local GermanicEvents = {
 			end,
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
+					GrandStrategyFaction = Factions.MarcomanniTribe
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/prague.smp")
 					CurrentQuest = "The Home of the Boii"
@@ -1004,7 +1005,6 @@ local GermanicEvents = {
 						CenterMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
 						ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
-						GrandStrategyFaction = Factions.MarcomanniTribe
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then

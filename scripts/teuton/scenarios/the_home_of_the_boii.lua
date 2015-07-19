@@ -72,7 +72,9 @@ if (LoadedGame == false) then
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")
-		
+		SetPlayerData(0, "Allow", "unit-teuton-worker", "F") -- don't allow the player to build/train units if in grand strategy mode
+		SetPlayerData(1, "Allow", "unit-germanic-worker", "F")
+
 		local units_to_be_created = {}
 		
 		-- Marcomanni units
@@ -141,6 +143,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- should be cavalry
 	elseif (GrandStrategyEventMap) then
 		local player_spawn_point
+		local units_to_be_created = {}
 		
 		-- Vandals (Lugii)
 		if (WorldMapProvinces.Poland.Owner == "Vandal Tribe") then
