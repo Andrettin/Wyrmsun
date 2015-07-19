@@ -205,6 +205,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improvements to grand strategy scrolling when reaching the eastmost and southmost portions of the map.
 - Added "No Randomness" option to the grand strategy mode.
 - Dwarves now generate names for mountains.
+- Increased the loading speed of random forest, swamp and cave maps in grand strategy mode.
 
 * Map Editor
 - It is now possible to change the HP of an individual unit, in its properties.
