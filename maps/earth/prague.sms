@@ -4,51 +4,48 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-SetPlayerData(0, "Resources", "gold", 5000)
-SetPlayerData(0, "Resources", "lumber", 2500)
-SetPlayerData(0, "Resources", "stone", 1250)
-SetPlayerData(0, "Resources", "oil", 0)
-SetAiType(0, "land-attack")
-SetPlayerData(1, "Resources", "gold", 2000)
-SetPlayerData(1, "Resources", "lumber", 1000)
-SetPlayerData(1, "Resources", "stone", 500)
-SetPlayerData(1, "Resources", "oil", 0)
-SetAiType(1, "land-attack")
-SetPlayerData(15, "RaceName", "neutral")
-
-local layout = {
-	{ 0,  0,  0,  8,  0,  0,  0,  0},
-	{-1,  0,  0, 17, 10, 19,  0,  0},
-	{-1,  0,  0, 18, 10, 16,  0,  0},
-	{-1,  0,  0,  9,  6,  0,  0,  0},
-	{-1,  0,  0,  8,  0,  0,  0,  0},
-	{-1,  0,  0,  8,  0,  0,  0,  0}
-}
-
-local rock_generation = {
-	{0, 16, 0, 16}
-}
-
-local town_buildings = {"Farm", "Farm"}
-
-local town_units = {"unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-archer"}
-
-local invader_buildings = {"Farm", "Farm"}
-
-local invader_units = {"unit-teuton-swordsman", "unit-teuton-archer"}
-
 if (LoadedGame == false) then
-	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", rock_generation)
-		
-		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
-			for i=0,15 do
-				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = "Agrarian (Iron)"
-				end
-			end
-		end
-	else
-		GenerateTown(layout, 1, "celt", "Boii Tribe", 0, "teuton", "Marcomanni Tribe", town_buildings, town_units, false, {}, invader_units, "low", rock_generation)
-	end
+	GenerateRandomMap({
+		RockQuantity = "low",
+		TreeQuantity = "medium",
+		WaterQuantity = "low",
+		DarkLandQuantity = "medium",
+		DarkRoughLandQuantity = "medium",
+		WorkerQuantity = 5,
+		PlayerCivilizations = {"teuton", "celt"},
+		PlayerBuildings = {
+			{"Farm", "Farm"},
+			{"Farm", "Farm"}
+		},
+		WaterLayout = {
+			{ 0,  0,  0,  8,  0,  0,  0,  0},
+			{ 0,  0,  0, 17, 10, 19,  0,  0},
+			{ 0,  0,  0, 18, 10, 16,  0,  0},
+			{ 0,  0,  0,  9,  0,  0,  0,  0},
+			{ 0,  0,  0,  8,  0,  0,  0,  0},
+			{ 0,  0,  0,  8,  0,  0,  0,  0}
+		},
+		StartingLocationLayout = {
+			{-2, -2, -1, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2,  1, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2}
+		},
+		RockGenerationAreas = {
+			{0, 16, 0, 16}
+		}
+	})
+end
+
+-- create rafts in the bottom-left margin of the river, for the case the river bridge has been consumed by water
+local nearest_coast = FindNearestTerrainFlagTile("coast", 48, 80)
+if (nearest_coast ~= nil) then
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
 end

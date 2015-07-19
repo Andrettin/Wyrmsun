@@ -1021,6 +1021,12 @@ DefineCivilizationFactions("teuton",
 		"secondary_color", "white"
 	},
 	"faction", {
+		"name", "Lombard Tribe",
+		"type", "tribe",
+		"color", "green",
+		"secondary_color", "green"
+	},
+	"faction", {
 		"name", "Marcomanni Tribe",
 		"type", "tribe",
 		"color", "orange", -- change to a better one?

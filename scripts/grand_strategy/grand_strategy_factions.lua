@@ -111,6 +111,10 @@ function LoadFactions(world)
 			Name = "Jute Tribe",
 			Civilization = "germanic"
 		},
+		LombardTribe = {
+			Name = "Lombard Tribe",
+			Civilization = "teuton"
+		},
 		MarcomanniTribe = {
 			Name = "Marcomanni Tribe",
 			Civilization = "teuton"

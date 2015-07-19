@@ -209,9 +209,17 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - It is now possible to change the HP of an individual unit, in its properties.
 
+* Maps
+- Improved water and rock generation for the Prague map.
+- Added a few rafts to the Prague map.
+
 * Miscellaneous
 - Fixed a few cosmetic issues with resolution changing and full screen setting in the video options screens.
 - Added new Wyrm background (used for Wyrmsun with permission).
+
+* Quests
+- The Boii Tribe now starts with a few more defensive units in the Home of the Boii quest.
+- The player can now "rescue" troops from allied Germanic tribes in the Home of the Boii quest.
 
 -----------------------------------------------------------------------
 - 1.3.0

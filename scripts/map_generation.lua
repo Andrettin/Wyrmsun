@@ -1627,20 +1627,29 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 				local player_spawn_point
 				local starting_point_found = false
 				while (starting_point_found == false and WhileCount < 10000) do
-					if (symmetric == false) then
-						player_spawn_point = {SyncRand(max_x - min_x + 1) + min_x, SyncRand(max_y - min_y + 1) + min_y}
+					if (Players[i].StartPos.x > 0 and Players[i].StartPos.y > 0) then -- if the player already has a custom starting location set, then see if that area (or failing that the one surrounding it) is actually free
+						local second_min_x = Players[i].StartPos.x - WhileCount
+						local second_max_x = Players[i].StartPos.x + WhileCount
+						local second_min_y = Players[i].StartPos.y - WhileCount
+						local second_max_y = Players[i].StartPos.y + WhileCount
+						player_spawn_point = {SyncRand(second_max_x - second_min_x + 1) + second_min_x, SyncRand(second_max_y - second_min_y + 1) + second_min_y}
 					else
-						if (i == 0 or i == 4 or i == 8 or i == 12) then
-							player_spawn_point = {SyncRand(math.floor(max_x / 2) - min_x) + min_x, SyncRand(math.floor(max_y / 2) - min_y) + min_y}
-							symmetric_starting_location = player_spawn_point
-						elseif (i == 1 or i == 5 or i == 9 or i == 13) then
-							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
-						elseif (i == 2 or i == 6 or i == 10 or i == 14) then
-							player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
-						elseif (i == 3 or i == 7 or i == 11) then
-							player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
+						if (symmetric == false) then
+							player_spawn_point = {SyncRand(max_x - min_x + 1) + min_x, SyncRand(max_y - min_y + 1) + min_y}
+						else
+							if (i == 0 or i == 4 or i == 8 or i == 12) then
+								player_spawn_point = {SyncRand(math.floor(max_x / 2) - min_x) + min_x, SyncRand(math.floor(max_y / 2) - min_y) + min_y}
+								symmetric_starting_location = player_spawn_point
+							elseif (i == 1 or i == 5 or i == 9 or i == 13) then
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
+							elseif (i == 2 or i == 6 or i == 10 or i == 14) then
+								player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
+							elseif (i == 3 or i == 7 or i == 11) then
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
+							end
 						end
 					end
+
 					starting_point_found = true
 					if ((player_spawn_point[1] + 4) > (Map.Info.MapWidth - 1) or (player_spawn_point[2] + 4) > (Map.Info.MapHeight - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
 						starting_point_found = false
@@ -1766,6 +1775,124 @@ function GenerateRandomMap(arg)
 		mixed_civilizations = true
 	end
 	
+	if (arg.WaterLayout ~= nil) then
+		local block_size = 16
+		if (Map.Info.MapWidth > Map.Info.MapHeight) then
+			block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
+		else
+			block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
+		end
+	
+		-- 8 = N/S river
+		-- 9 = N/S river + bridge
+		-- 10 = E/W river
+		-- 11 = E/W river + bridge
+		-- 16 = N/W river bend
+		-- 17 = N/E river bend
+		-- 18 = S/E river bend
+		-- 19 = S/W river bend
+		-- 20 = N/W/E river fork
+		-- 21 = N/S/E river fork
+		-- 22 = S/W/E river fork
+		-- 23 = N/S/W river fork
+		-- 30 = Sea
+		-- 31 = North coast
+		-- 32 = East coast
+		-- 33 = South coast
+		-- 34 = West coast
+		-- 35 = Northwest outer coast
+		-- 36 = Northeast outer coast
+		-- 37 = Southeast outer coast
+		-- 38 = Southwest outer coast
+		-- 39 = Northwest inner coast
+		-- 40 = Northeast inner coast
+		-- 41 = Southeast inner coast
+		-- 42 = Southwest inner coast
+		
+		local function BuildWaterArea(x, y, t)
+			if (t == 8) then -- N/S river
+				MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+				AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+			elseif (t == 9) then -- N/S river + bridge
+				MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+				ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+				AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+			elseif (t == 10) then -- E/W river
+				MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+				RotateArea(x, y, block_size, 1)
+				AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+			elseif (t == 11) then -- E/W river + bridge
+				MakeRandomPath(x + (block_size / 2), y, x + (block_size / 2), y + (block_size - 1), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+				ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
+				RotateArea(x, y, block_size, 1)
+				AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+			elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
+				MakeRandomPath(x + (block_size / 2), y, x, y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+				RotateArea(x, y, block_size, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
+				AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+			elseif (t == 20 or t == 21 or t == 22 or t == 23) then -- river forks
+				MakeRandomPath(x + (block_size / 2), y, x, y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				MakeRandomPath(x + (block_size / 2), y, x + (block_size - 1), y + (block_size / 2), x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				SpreadTiles(x, y, x + (block_size - 1), y + (block_size - 1), "Water", "Land")
+				RotateArea(x, y, block_size, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
+				AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+			elseif (t == 30) then -- sea
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+			elseif (t == 31) then -- North coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
+				GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1)) -- (8 (the water area goal height) * 16 (the water area goal width) - (4 * 16)) (the already filled-in area of water)
+			elseif (t == 32) then -- East coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
+			elseif (t == 33) then -- South coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x, y + (block_size * 3 / 4), x + (block_size - 1), y + (block_size - 1), "Water", false)
+				GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
+			elseif (t == 34) then -- West coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x, y, x + 3, y + (block_size - 1), "Water", false)
+				GenerateWater(0, (8 * block_size - (4 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1), x, x + (block_size - 1), y, y + (block_size - 1))
+			elseif (t == 35) then -- Northwest outer coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
+				FillArea(x, y, x + 3, y + (block_size - 1), "Water", false)
+				GenerateWater(0, (8 * block_size - (3 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
+			elseif (t == 36) then -- Northeast outer coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x, y, x + (block_size - 1), y + 3, "Water", false)
+				FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + (block_size - 1), "Water", false)
+				GenerateWater(0, (8 * block_size - (3 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
+			elseif (t == 39) then -- Northwest inner coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x, y, x + 3, y + 3, "Water", false)
+				GenerateWater(0, (8 * block_size - (5 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
+			elseif (t == 40) then -- Northeast inner coast
+				FillArea(x, y, x + (block_size - 1), y + (block_size - 1), "Land", false)
+				FillArea(x + (block_size * 3 / 4), y, x + (block_size - 1), y + 3, "Water", false)
+				GenerateWater(0, (8 * block_size - (5 * block_size)), x, x + (block_size - 1), y, y + (block_size - 1))
+			end
+		end
+
+		for ay=1,table.getn(arg.WaterLayout) do
+			for ax=1,table.getn(arg.WaterLayout[ay]) do
+				BuildWaterArea((ax-1) * block_size, (ay-1) * block_size, arg.WaterLayout[ay][ax])
+			end
+		end
+	end
+	
+	if (arg.RockGenerationAreas) then
+		for i=1,table.getn(arg.RockGenerationAreas) do
+			GenerateRocks((((arg.RockGenerationAreas[i][2] - arg.RockGenerationAreas[i][1]) * (arg.RockGenerationAreas[i][4] - arg.RockGenerationAreas[i][3])) / 32), (((arg.RockGenerationAreas[i][2] - arg.RockGenerationAreas[i][1]) * (arg.RockGenerationAreas[i][4] - arg.RockGenerationAreas[i][3])) / 4), "Land", arg.RockGenerationAreas[i][1], arg.RockGenerationAreas[i][2], arg.RockGenerationAreas[i][3], arg.RockGenerationAreas[i][4])
+		end
+	end
+	
 	if (arg.WaterQuantity == "high") then
 		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.WaterQuantity == "medium") then
@@ -1773,7 +1900,7 @@ function GenerateRandomMap(arg)
 	elseif (arg.WaterQuantity == "low") then
 		GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
-
+	
 	if (arg.RockQuantity == "high") then
 		GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	elseif (arg.RockQuantity == "medium") then
@@ -1781,9 +1908,54 @@ function GenerateRandomMap(arg)
 	elseif (arg.RockQuantity == "low") then
 		GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
-	
 
 	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	
+	if (arg.StartingLocationLayout ~= nil) then
+		-- -2 = Not available as a random start location
+		-- -1 = Available random start location
+		-- 0+ = Starting location of a particular player
+		
+		local player_starting_location_found = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}
+		local random_starting_locations = {}
+		for ay=1,table.getn(arg.StartingLocationLayout) do
+			for ax=1,table.getn(arg.StartingLocationLayout[ay]) do
+				if (arg.StartingLocationLayout[ay][ax] == -1) then
+					table.insert(random_starting_locations, {ax, ay})
+				elseif (arg.StartingLocationLayout[ay][ax] >= 0) then
+					player_starting_location_found[arg.StartingLocationLayout[ay][ax] + 1] = true
+				end
+			end
+		end
+
+		for i=0,14 do
+			if (player_starting_location_found[i + 1] == false and table.getn(random_starting_locations) > 0) then
+				local player_starting_location = random_starting_locations[SyncRand(table.getn(random_starting_locations)) + 1]
+				RemoveElementFromArray(random_starting_locations, player_starting_location)
+				arg.StartingLocationLayout[player_starting_location[2]][player_starting_location[1]] = i
+			end
+		end
+	
+		local block_size = 16
+		if (Map.Info.MapWidth > Map.Info.MapHeight) then
+			block_size = Map.Info.MapWidth / table.getn(arg.StartingLocationLayout[1])
+		else
+			block_size = Map.Info.MapHeight / table.getn(arg.StartingLocationLayout)
+		end
+		
+		local function BuildArea(x, y, t)
+			if (t >= 0) then -- town center
+				local player_starting_point = {x + SyncRand(block_size - 3), y + SyncRand(block_size - 3)}
+				SetStartView(t, player_starting_point[1], player_starting_point[2])
+			end
+		end
+
+		for ay=1,table.getn(arg.StartingLocationLayout) do
+			for ax=1,table.getn(arg.StartingLocationLayout[ay]) do
+				BuildArea((ax-1) * block_size, (ay-1) * block_size, arg.StartingLocationLayout[ay][ax])
+			end
+		end
+	end
 	
 	CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings) -- generate players after rocks and water
 
@@ -2421,7 +2593,7 @@ function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			local unit_quantity = 0
 			for i=0,14 do
-				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 			end
 
 			if (unit_quantity < 1) then
@@ -2458,13 +2630,13 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 
 end
 
-function FindAppropriatePlayerSpawnPoint()
+function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
 	while (location_found == false) do
-		RandomX = SyncRand(Map.Info.MapWidth - 3)
-		RandomY = SyncRand(Map.Info.MapHeight - 3)
+		RandomX = SyncRand(max_x - min_x + 1) + min_x
+		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "land") and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 3, RandomY + 3, "no-building") == false) then
 			local unit_quantity = 0
@@ -3904,12 +4076,12 @@ function CreateStartingBuilding(player, building_type)
 			building_spawn_point = {(road_tile[1] + 1), (road_tile[2] - SyncRand(height))}
 		end
 		local free_square = true
-		for sub_x=0,width+1 do
-			for sub_y=0,height+1 do
-					if (RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Dark-Rough" and RawTile(building_spawn_point[1] + sub_x - 1, building_spawn_point[2] + sub_y - 1) ~= "Road") then
+		for sub_x=-1,width+1 do
+			for sub_y=-1,height+1 do
+					if (RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Land" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Dark-Rough" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Road") then
 						free_square = false
 					end
-					if (building_spawn_point[1] + sub_x - 1 < 0 or building_spawn_point[1] + sub_x - 1 >= Map.Info.MapWidth or building_spawn_point[2] + sub_y - 1 < 0 or building_spawn_point[2] + sub_y - 1 >= Map.Info.MapHeight) then
+					if (building_spawn_point[1] + sub_x < 0 or building_spawn_point[1] + sub_x >= Map.Info.MapWidth or building_spawn_point[2] + sub_y < 0 or building_spawn_point[2] + sub_y >= Map.Info.MapHeight) then
 						free_square = false
 					end
 			end

@@ -1,9 +1,11 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
-	DefinePlayerTypes("person","computer")
+if (CurrentQuest == "The Home of the Boii") then
+	DefinePlayerTypes("person", "computer", "rescue-passive", "rescue-passive", "rescue-passive")
+elseif (GrandStrategy == false or GrandStrategyEventMap) then
+	DefinePlayerTypes("person", "computer")
 else
-	DefinePlayerTypes("person","person")
+	DefinePlayerTypes("person", "person")
 end
 PresentMap("Prague", 1, 128, 96, 1)
 MapWorld = "Earth"
