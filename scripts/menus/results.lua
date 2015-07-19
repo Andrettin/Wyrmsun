@@ -1,5 +1,5 @@
-local ddefeat =  "dwarf/ui/defeat.png"
-local dvictory = "dwarf/ui/victory.png"
+local ddefeat =  GetBackground("ui/backgrounds/wyrm.png")
+local dvictory = GetBackground("ui/backgrounds/wyrm.png")
 
 function RunResultsMenu()
   local background
@@ -41,7 +41,8 @@ function RunResultsMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
 
-  local names_font = Fonts["small-title"]
+--  local names_font = Fonts["small-title"]
+  local names_font = Fonts["large"]
   local top_offset = 57
   local bottom_offset = 178
   local description_offset = 30
@@ -56,11 +57,13 @@ function RunResultsMenu()
   local line_spacing = (432 - bottom_offset - description_offset) / c
 
   menu:addLabel("Outcome", offx + 106, offy + top_offset)
-  menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
+--  menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
+  menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large"])
 
   if (GrandStrategy and GrandStrategyEventMap == false) then
 	menu:addLabel("Province", Video.Width - offx - 106, offy + top_offset)
-	menu:addLabel(GetProvinceName(AttackedProvince), Video.Width - offx - 106, offy + top_offset + 21, Fonts["large-title"])
+--	menu:addLabel(GetProvinceName(AttackedProvince), Video.Width - offx - 106, offy + top_offset + 21, Fonts["large-title"])
+	menu:addLabel(GetProvinceName(AttackedProvince), Video.Width - offx - 106, offy + top_offset + 21, Fonts["large"])
   end
   menu:addLabel("Units", offx + 50, offy + bottom_offset, Fonts["large"], true)
   menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)

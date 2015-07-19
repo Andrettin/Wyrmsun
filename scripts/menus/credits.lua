@@ -28,7 +28,7 @@
 --
 
 function RunShowCreditsMenu()
-  local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+  local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
 
@@ -117,6 +117,7 @@ function RunShowCreditsMenu()
 	"  João Victor G. Costa (Jinn)",
 	"  KPJ",
 	"  Leo",
+	"  Tanja Nov.",
 	"  Battle for Wesnoth Team",
 	"  Cuzco",
 	"  Elvish_Hunter",

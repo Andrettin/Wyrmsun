@@ -194,7 +194,7 @@ function Briefing(quest)
 		SetPlayerData(GetThisPlayer(), "RaceName", quest.Civilization)
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 
 	if (quest.Name ~= nil) then
 		menu:addLabel(quest.Name, Video.Width / 2, 28 * Video.Height / 480, Fonts["large"], true)

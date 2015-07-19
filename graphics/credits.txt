@@ -783,6 +783,7 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest_3.png
 /graphics/tilesets/world/terrain/scrub_forest_4.png
 /graphics/tilesets/fogofwar.png
+/graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/fonts/small.png
 /graphics/ui/bar_frame.png
@@ -908,6 +909,9 @@ Rick Elliot:
 
 StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
+
+Tanja Nov.:
+/graphics/ui/backgrounds/wyrm.png (later modified by Jinn)
 
 TaShadan:
 /graphics/neutral/units/long_swordsman.png

@@ -43,6 +43,8 @@ Getting Wyrmsun on Steam (http://store.steampowered.com/app/370070) provides you
 
 The Stratagus engine, as well as the code, artwork, sounds, music and story elements included in Wyrmsun are distributed under the GPL 2.0 license, with the exception of the following files:
 
+/graphics/ui/backgrounds/wyrm.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm_4_3.png (used for Wyrmsun with permission)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
@@ -209,6 +211,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed a few cosmetic issues with resolution changing and full screen setting in the video options screens.
+- Added new Wyrm background (used for Wyrmsun with permission).
 
 -----------------------------------------------------------------------
 - 1.3.0

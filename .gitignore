@@ -225,3 +225,7 @@ stderr.txt
 stdout.txt
 wyrmsun_debug.lnk
 wyrmsun_multiplayer.lnk
+
+## Content used by Wyrmsun with permission, but which isn't licensed under an open-source license
+graphics/ui/backgrounds/wyrm.png
+graphics/ui/backgrounds/wyrm_4_3.png

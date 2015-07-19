@@ -56,7 +56,7 @@ function RunEncyclopediaMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -108,7 +108,7 @@ function RunEncyclopediaUnitsMenu(state)
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -216,7 +216,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				end
 			end
 
-			local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+			local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 			local offx = (Video.Width - 640) / 2
 			local offy = (Video.Height - 480) / 2
 
@@ -331,7 +331,7 @@ function RunEncyclopediaTextsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -364,7 +364,7 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -692,7 +692,7 @@ function RunEncyclopediaWorldsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -745,7 +745,7 @@ function OpenEncyclopediaWorldEntry(world_key)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -816,7 +816,7 @@ function RunEncyclopediaGameConceptsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -869,7 +869,7 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -901,7 +901,7 @@ function RunEncyclopediaCivilizationsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -954,7 +954,7 @@ function OpenEncyclopediaCivilizationEntry(civilization_key)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1006,7 +1006,7 @@ function RunEncyclopediaFactionsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1059,7 +1059,7 @@ function OpenEncyclopediaFactionEntry(faction_key)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, "dwarf/ui/the_first_dwarves.png")
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
