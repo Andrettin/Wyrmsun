@@ -1132,12 +1132,43 @@ if (GrandStrategyYear >= 984) then
 	-- Bishop Dietrich of Metz died in 984 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
 end
 
+if (GrandStrategyYear >= 999) then
+	-- Norman knights reach Salerno (south Italy) in 999 AD in pilgrimage (after coming back from Jerusalem); Salerno was under Saracen siege, and the Normans drove the Saracens away, after getting weapons and horses; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+	
+	-- Gaimar IV becomes lord of Salerno in 999 AD; Gaimar IV sought to engage the Norman knights who had saved Salerno as mercenaries, but they decided to return to Normandy instead; Gaimar IV did send envoys with them to seek other mercenaries in Normandy, however; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+end
+
+if (GrandStrategyYear >= 1015) then
+	-- Norman warriors appear in southern Italy in 1015-1016 AD, to fight the Muslims and Byzantines for the local nobles; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+end
+
 if (GrandStrategyYear >= 1026) then
 	GrandStrategyEvents.TempleAtUpsalConverted = nil -- Temple at Upsal converted into a church by laf the Swede at about 1026; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 88.
 end
 
+if (GrandStrategyYear >= 1027) then
+	-- Gaimar IV of Salerno dies in 1027 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+end
+
+if (GrandStrategyYear >= 1046) then
+	-- Robert Guiscard, a Norman, arrived in southern Italy in 1046-1047 AD, eventually conquering Calabria, and becoming duke of Apulia, Calabria and Sicily; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+end
+
+if (GrandStrategyYear >= 1061) then
+	-- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+end
+
+if (GrandStrategyYear >= 1072) then
+	WorldMapProvinces.Sicily.Owner = "Sicily" -- Palermo was conquered by the Norman forces in Sicily in 1072 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+
+end
+
 if (GrandStrategyYear >= 1083) then
 	GrandStrategyEvents.SaemundPriestOfTheParishOfOdda = nil
+end
+
+if (GrandStrategyYear >= 1091) then
+	-- The sole remaining Muslim stronghold in Sicily fell to the Norman forces in 1091 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
 if (GrandStrategyYear >= 1104) then

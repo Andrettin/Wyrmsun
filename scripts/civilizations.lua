@@ -915,6 +915,12 @@ DefineCivilizationFactions("latin",
 		"secondary_color", "yellow"
 	},
 	"faction", {
+		"name", "Sicily",
+		"type", "polity",
+		"color", "green",
+		"secondary_color", "green"
+	},
+	"faction", {
 		"name", "Spain",
 		"type", "polity",
 		"color", "yellow",

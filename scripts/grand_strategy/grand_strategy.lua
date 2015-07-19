@@ -423,6 +423,7 @@ function RunGrandStrategyGameSetupMenu()
 --					"700 BC", -- 
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
+--					"1072 AD" -- 
 --					"1660 AD", -- 
 				}
 			elseif (GrandStrategyWorld == "Nidavellir") then

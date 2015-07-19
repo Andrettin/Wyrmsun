@@ -266,6 +266,11 @@ function LoadFactions(world)
 			Title = "Republic",
 			Gold = 5000
 		},
+		Sicily = {
+			Name = "Sicily",
+			Civilization = "latin",
+			Title = "Duchy"
+		},
 		Spain = {
 			Name = "Spain",
 			Civilization = "latin",
