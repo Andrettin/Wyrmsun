@@ -21,13 +21,13 @@ In the Wyrmsun universe a myriad of inhabited planets exist. Humans dwell on Ear
 Features:
 - Retro-style graphics
 - 2 playable civilizations, and a number of non-playable ones
-- 20 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
-- 38 units, 30 buildings and 18 technologies
+- 22 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
+- 38 units, 30 buildings and 20 technologies
 - Units that can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
 - Persistent heroes, who carry over their level and abilities throughout scenarios
 - Personal names and traits for units
 - Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets
-- 35 maps of real and fictional locations to choose from, as well as random maps
+- 36 maps of real and fictional locations to choose from, as well as random maps
 - Living environment, with fauna reproduction and predation
 - Very moddable game, with mod-loading capability built in
 - Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level
