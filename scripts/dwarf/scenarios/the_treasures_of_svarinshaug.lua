@@ -65,6 +65,12 @@ if (LoadedGame == false) then
 				end
 			end
 		end
+		
+		-- don't allow the player to build/train units if in grand strategy mode
+		SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-smithy", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
 	end
 	
 

@@ -206,6 +206,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added "No Randomness" option to the grand strategy mode.
 - Dwarves now generate names for mountains.
 - Increased the loading speed of random forest, swamp and cave maps in grand strategy mode.
+- Fixed which base tile is selected when loading a saved game.
+- The player can no longer train military units in the Treasures of Svarinshaug quest in grand strategy mode.
+- The player can no longer train units or build structures in the Necklace of the Brisings quest in grand strategy mode.
 
 * Map Editor
 - It is now possible to change the HP of an individual unit, in its properties.

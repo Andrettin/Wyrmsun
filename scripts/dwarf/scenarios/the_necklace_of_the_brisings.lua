@@ -81,13 +81,21 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		
+		-- don't allow the player to build/train units if in grand strategy mode
+		SetPlayerData(0, "Allow", "unit-dwarven-miner", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-smithy", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
+		SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
+		SetPlayerData(0, "Allow", "unit-gold-mine", "F")
 	end
 end
 

@@ -414,7 +414,7 @@ function RunGrandStrategyGameSetupMenu()
 		CleanGrandStrategyGame()
 		
 		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
-			GrandStrategyWorld = world_list[world:getSelected() + 1]
+			SetGrandStrategyWorld(world_list[world:getSelected() + 1])
 			
 			if (GrandStrategyWorld == "Earth") then
 				date_list = {
@@ -1698,7 +1698,7 @@ function RunGrandStrategyLoadGameMenu()
 			GameResult = GameNoResult
 			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
-			GrandStrategyWorld = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld
+			SetGrandStrategyWorld(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld)
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
 					CalculateWorldMapTileGraphicTile(x, y)
@@ -4002,7 +4002,7 @@ function ClearGrandStrategyVariables()
 	GrandStrategyBattle = false	
 	WorldMapOffsetX = nil
 	WorldMapOffsetY = nil
-	GrandStrategyWorld = nil
+	GrandStrategyWorld = ""
 	GrandStrategyYear = nil
 	GrandStrategyFaction = nil
 	SelectedProvince = nil
