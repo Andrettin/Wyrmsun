@@ -58,7 +58,6 @@ local GermanicEvents = {
 					if (GameResult == GameVictory) then
 						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
 						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
-						WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
 						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", 0)
 						WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
@@ -233,7 +232,6 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
-						WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 						SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
 						CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
@@ -254,10 +252,8 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
 					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
-					WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_town_hall = 1
 					SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
 				end
-				DrawMinimap()
 			end,
 			function(s)
 			end
@@ -300,7 +296,6 @@ local GermanicEvents = {
 								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
-						WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
 						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						EventFaction.Prestige = EventFaction.Prestige + 25
@@ -326,7 +321,6 @@ local GermanicEvents = {
 							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
 						end
 					end
-					WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 					SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
 					EventFaction.Prestige = EventFaction.Prestige + 25
 					-- give Gotaland to the Goth Tribe
@@ -352,7 +346,6 @@ local GermanicEvents = {
 						WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
 					end
 				end
-				WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall = 1
 				SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
 				-- give Gotaland to the Goth Tribe
 				EqualizeProvinceUnits(EventFaction)
@@ -411,7 +404,7 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
-				and WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall == 2 -- Hall of Sigtun
+				and GetProvinceSettlementBuildingState(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") == 2 -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
 				and SyncRand(100) < 25
 			) then
@@ -437,7 +430,7 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
-				and WorldMapProvinces.Sweden.SettlementBuildings.unit_germanic_town_hall == 2 -- a town hall is needed, since without basic political organization there can be no lawgiving
+				and GetProvinceSettlementBuildingState(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") == 2 -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
 			) then
 				return true
@@ -484,7 +477,7 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy == 2 -- Jutland must have a smithy
+				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
 				return true
@@ -507,7 +500,7 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy == 2 -- Jutland must have a smithy
+				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
 				return true
@@ -553,7 +546,7 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and WorldMapProvinces.Jutland.SettlementBuildings.unit_germanic_smithy == 2 -- Jutland must have a smithy
+				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
 				and EventFaction.Technologies.upgrade_germanic_bronze_shield == 2
 			) then
 				return true
@@ -576,7 +569,7 @@ local GermanicEvents = {
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
 				and WorldMapProvinces.Rhineland.Owner == EventFaction.Name
-				and ProvinceHasBuildingType(WorldMapProvinces.Rhineland, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.Rhineland.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -619,7 +612,7 @@ local GermanicEvents = {
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
 				and WorldMapProvinces.Netherlands.Owner == EventFaction.Name -- the Netherlands were the Franks' homelands
-				and ProvinceHasBuildingType(WorldMapProvinces.Netherlands, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
 				return true
@@ -659,7 +652,7 @@ local GermanicEvents = {
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name -- the Netherlands were the Franks' homelands
-				and ProvinceHasBuildingType(WorldMapProvinces.Brandenburg, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.Brandenburg.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
 				return true

@@ -346,7 +346,7 @@ local NidavellirEvents = {
 				EventFaction.Civilization == "dwarf"
 				and WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
 				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
-				and ProvinceHasBuildingType(WorldMapProvinces.CavernsOfChaincolt, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.CavernsOfChaincolt.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -384,7 +384,7 @@ local NidavellirEvents = {
 				EventFaction.Civilization == "dwarf"
 				and WorldMapProvinces.SouthernTunnels.Owner == EventFaction.Name
 				and WorldMapProvinces.SouthernTunnels.Civilization == "dwarf"
-				and ProvinceHasBuildingType(WorldMapProvinces.SouthernTunnels, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.SouthernTunnels.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -422,7 +422,7 @@ local NidavellirEvents = {
 				EventFaction.Civilization == "dwarf"
 				and WorldMapProvinces.ShorbearHills.Owner == EventFaction.Name
 				and WorldMapProvinces.ShorbearHills.Civilization == "dwarf"
-				and ProvinceHasBuildingType(WorldMapProvinces.ShorbearHills, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.ShorbearHills.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -831,7 +831,6 @@ local NidavellirEvents = {
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
-				WorldMapProvinces.NorthernWastelands.SettlementBuildings.unit_dwarven_smithy = 0
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", 0)
 				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
 				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
@@ -1365,7 +1364,7 @@ local NidavellirEvents = {
 		Description = "A band of goblin thieves has been looting the farms in PROVINCE_NAME. We have obtained information on where their hideout is... what shall we do?",
 		Conditions = function(s)
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-				if (ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "barracks") == false and SyncRand(100) < 1) then -- event only fires if there is a province which is settled but does not have proper defenses
+				if (ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "barracks") == false and SyncRand(100) < 1) then -- event only fires if there is a province which is settled but does not have proper defenses
 					EventProvince = WorldMapProvinces[province_key]
 					return true
 				end

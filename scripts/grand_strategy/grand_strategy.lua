@@ -294,16 +294,6 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key].Heroes.unit_hero_baglur_thane = 2
 				end
 				
-				if (WorldMapProvinces[key].SettlementBuildings == nil) then
-					WorldMapProvinces[key]["SettlementBuildings"] = {}
-				end
-				for i, unitName in ipairs(Units) do
-					if (IsGrandStrategyBuilding(unitName)) then
-						if (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == nil) then
-							WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- 0 = not built, 1 = under construction, 2 = built
-						end
-					end
-				end
 				if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 					CenterMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
@@ -561,13 +551,13 @@ function EndTurn()
 	for key, value in pairs(Factions) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
-				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall")) then
+				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall")) then
 					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - GetProvinceCommodityDemand("Lumber")
 					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
 					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
-				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall")) then
+				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall")) then
 					Factions[key].Commodities.Stone = Factions[key].Commodities.Stone - GetProvinceCommodityDemand("Stone")
 					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100)
 					Factions[key].Trade["Stone"] = Factions[key].Trade["Stone"] - GetProvinceCommodityDemand("Stone")
@@ -612,14 +602,14 @@ function EndTurn()
 	for key, value in pairsByKeys(Factions, trade_priority) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			for province_key, province_value in pairs(WorldMapProvinces) do
-				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
 					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - GetProvinceCommodityDemand("Lumber")
 					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
 					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
 				
-				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
 					Factions[key].Commodities.Stone = Factions[key].Commodities.Stone - GetProvinceCommodityDemand("Stone")
 					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100)
 					Factions[key].Trade["Stone"] = Factions[key].Trade["Stone"] - GetProvinceCommodityDemand("Stone")
@@ -638,7 +628,7 @@ function EndTurn()
 	end
 	
 	for province_key, province_value in pairs(WorldMapProvinces) do
-		if (ProvinceHasBuildingType(WorldMapProvinces[province_key], "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
+		if (ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
 			if (province_consumed_commodity.Lumber[province_key] == false) then
 				remaining_wanted_trade_lumber = remaining_wanted_trade_lumber - GetProvinceCommodityDemand("Lumber")
 			end
@@ -683,21 +673,12 @@ function EndTurn()
 		GrandStrategyFaction.Trade.Stone = player_trade_preferences.Stone
 	end
 	
+	DoGrandStrategyTurn()
+	
 	for key, value in pairs(WorldMapProvinces) do
 		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
 	
 		-- construct buildings, train units and move heroes
-		for i, unitName in ipairs(Units) do
-			if (IsGrandStrategyBuilding(unitName)) then
-				if (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then
-					WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] = 2
-					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, unitName, 2)
-					if (GetUnitTypeData(unitName, "Class") == "town-hall" or GetUnitTypeData(unitName, "Class") == "lumber-mill" or GetUnitTypeData(unitName, "Class") == "smithy") then
-						CalculateFactionIncomes()
-					end
-				end
-			end
-		end
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
 				if (GetUnitTypeData(unitName, "Mercenary") and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
@@ -720,18 +701,11 @@ function EndTurn()
 		end
 		-- if a dwarven province has a town hall and a barracks, give it militia
 		if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] < 4) then
-			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[key], "barracks")) then
+			if (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "town-hall") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks")) then
 				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] + 1
 			end
 		elseif (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] > 4) then
 				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] = 4
-		end
-		-- if the province has a town hall, a barracks and a smithy, give it a mercenary camp; not for Earth for now, since there are no recruitable mercenaries for Earth
-		if (WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp == 0 and GrandStrategyWorld ~= "Earth") then
-			if (ProvinceHasBuildingType(WorldMapProvinces[key], "town-hall") and ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "smithy")) then
-				WorldMapProvinces[key].SettlementBuildings.unit_mercenary_camp = 1
-				SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, "unit-mercenary-camp", 1)
-			end
 		end
 	end
 	-- research technologies
@@ -1047,9 +1021,8 @@ function AcquireProvince(province, faction)
 		ChangeProvinceCulture(province, "")
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName)) then
-				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] > 0) then
-					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove all buildings from an emptied province
-					SetProvinceSettlementBuilding(province.Name, unitName, 0)
+				if (GetProvinceSettlementBuildingState(province.Name, unitName) > 0) then
+					SetProvinceSettlementBuilding(province.Name, unitName, 0) -- remove all buildings from an emptied province
 				end
 			end
 		end
@@ -1100,15 +1073,12 @@ function ChangeProvinceCulture(province, civilization)
 		-- replace existent buildings from other civilizations with buildings of the new civilization
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName) and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp") then
-				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 2 and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
-					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0 -- remove building from other civilization
-					SetProvinceSettlementBuilding(province.Name, unitName, 0)
+				if (GetProvinceSettlementBuildingState(province.Name, unitName) == 2 and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
+					SetProvinceSettlementBuilding(province.Name, unitName, 0) -- remove building from other civilization
 					if (GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
-						province.SettlementBuildings[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = 2
 						SetProvinceSettlementBuilding(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), 2)
 					end
-				elseif (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- under construction buildings get canceled
-					province.SettlementBuildings[string.gsub(unitName, "-", "_")] = 0
+				elseif (GetProvinceSettlementBuildingState(province.Name, unitName) == 1) then -- under construction buildings get canceled
 					SetProvinceSettlementBuilding(province.Name, unitName, 0)
 				end
 			end
@@ -1229,19 +1199,19 @@ function CalculateFactionIncomes()
 			for i=1,table.getn(WorldMapResources.Gold) do
 				if (
 					WorldMapResources.Gold[i][3] -- if has been prospected
-					and ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "town-hall")
+					and ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Name, "town-hall")
 					and Factions[key].Name == GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner
 				) then
 					Factions[key].Income.Gold = Factions[key].Income.Gold + math.floor(200 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "Gold") / 100)
 				end
 			end
 			for i=1,table.getn(WorldMapResources.Lumber) do
-				if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner) then
+				if (ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Name, "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner) then
 					Factions[key].Income.Lumber = Factions[key].Income.Lumber + math.floor(100 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Lumber") / 100)
 				end
 			end
 			for i=1,table.getn(WorldMapResources.Stone) do
-				if (ProvinceHasBuildingType(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]), "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Owner) then
+				if (ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Name, "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Owner) then
 					Factions[key].Income.Stone = Factions[key].Income.Stone + math.floor(10 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]), "Stone") / 100)
 				end
 			end
@@ -1301,7 +1271,11 @@ function GetTileProvince(x, y)
 end
 
 function GetFactionFromName(faction)
-	return Factions[string.gsub(faction, " ", "")]
+	if (faction ~= "") then
+		return Factions[string.gsub(faction, " ", "")]
+	else
+		return nil
+	end
 end
 
 function GetFactionKeyFromName(faction)
@@ -1372,7 +1346,7 @@ end
 function GetFactionBuildingTypeCount(faction, building_type)
 	local building_count = 0
 	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (ProvinceHasBuildingType(WorldMapProvinces[key], building_type)) then
+		if (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, building_type)) then
 			building_count = building_count + 1
 		end
 	end
@@ -1944,7 +1918,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	
 	local old_unit_type = unit_type
 	
-	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- if not built, make icon gray
+	if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) < 2) then -- if not built, make icon gray
 		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-town-hall"
 		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
@@ -1979,9 +1953,9 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
-			if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 1) then
+			if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) < 1) then
 				BuildStructure(SelectedProvince, unit_type)
-			elseif (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] >= 2) then
+			elseif (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) >= 2) then
 				UseBuilding(SelectedProvince, unit_type)
 			end
 			DrawGrandStrategyInterface()
@@ -2042,9 +2016,9 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
 		building_function_tooltip = " (hires mercenaries)"
 	end
-	if (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 2) then
+	if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) == 2) then
 		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. building_function_tooltip)
-	elseif (SelectedProvince.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 1) then
+	elseif (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) == 1) then
 		UIElements[table.getn(UIElements)]:setTooltip(unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. building_cost_tooltip)
@@ -2661,7 +2635,7 @@ function DrawGrandStrategyInterface()
 
 							AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, unitName)
 
-							if (SelectedProvince.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then -- if is under construction, apply under construction graphics
+							if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unitName) == 1) then -- if is under construction, apply under construction graphics
 								AddUIElement("neutral/icons/build_basic_structure_transparent_background.png", icon_offset_x, icon_offset_y)
 							end
 							
@@ -3476,10 +3450,10 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction, "lumber-mill") == 0)) then
+					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction, "lumber-mill") == 0)) then
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingType(WorldMapProvinces[key], "barracks") and ProvinceHasBuildingType(WorldMapProvinces[key], "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
+					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					end
@@ -3731,7 +3705,7 @@ function IsBuildingAvailable(province, unit_type)
 		return false
 	end
 
-	if (GetUnitTypeData(unit_type, "Class") == "town-hall" and ProvinceHasBuildingType(province, "stronghold")) then -- if stronghold is built, town hall is no longer available for use
+	if (GetUnitTypeData(unit_type, "Class") == "town-hall" and ProvinceHasBuildingClass(province.Name, "stronghold")) then -- if stronghold is built, town hall is no longer available for use
 		return false
 	end
 	
@@ -3751,13 +3725,13 @@ function IsBuildingAvailable(province, unit_type)
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (province.SettlementBuildings[string.gsub(GetUnitTypeRequiredBuildings(unit_type)[i], "-", "_")] < 2) then
+			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) < 2) then
 				has_required_buildings = false
 			end
 		end
 		--]]
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (ProvinceHasBuildingType(province, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
+			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3766,7 +3740,7 @@ function IsBuildingAvailable(province, unit_type)
 		return false
 	end
 	
-	if (GetUnitTypeData(unit_type, "Class") == "mercenary-camp" and province.SettlementBuildings[string.gsub(unit_type, "-", "_")] < 2) then -- mercenary camps are not buildable, so they are only available if already built
+	if (GetUnitTypeData(unit_type, "Class") == "mercenary-camp" and GetProvinceSettlementBuildingState(province.Name, unit_type) < 2) then -- mercenary camps are not buildable, so they are only available if already built
 		return false
 	end
 	
@@ -3774,7 +3748,7 @@ function IsBuildingAvailable(province, unit_type)
 end
 
 function CanBuildStructure(province, unit_type)
-	if (province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 2 or province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 1) then -- can't build if already built or if under construction
+	if (GetProvinceSettlementBuildingState(province.Name, unit_type) == 2 or GetProvinceSettlementBuildingState(province.Name, unit_type) == 1) then -- can't build if already built or if under construction
 		return false
 	end
 
@@ -3789,13 +3763,12 @@ function BuildStructure(province, unit_type)
 	if (CanBuildStructure(province, unit_type)) then
 		for i, unitName in ipairs(Units) do -- can only build one building at a time in a province, so if another one is already being built there, cancel that
 			if (IsGrandStrategyBuilding(unitName)) then
-				if (province.SettlementBuildings[string.gsub(unitName, "-", "_")] == 1) then
+				if (GetProvinceSettlementBuildingState(province.Name, unitName) == 1) then
 					CancelBuildStructure(province, unitName)
 				end
 			end
 		end
 
-		province.SettlementBuildings[string.gsub(unit_type, "-", "_")] = 1
 		SetProvinceSettlementBuilding(province.Name, unit_type, 1)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
@@ -3803,9 +3776,8 @@ function BuildStructure(province, unit_type)
 	end
 end
 
-function CancelBuildStructure(province, unit_key)
-	if (province.SettlementBuildings[string.gsub(unit_type, "-", "_")] == 1) then
-		province.SettlementBuildings[string.gsub(unit_type, "-", "_")] = 0
+function CancelBuildStructure(province, unit_type)
+	if (GetProvinceSettlementBuildingState(province.Name, unit_type) == 1) then
 		SetProvinceSettlementBuilding(province.Name, unit_type, 0)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
@@ -3830,7 +3802,7 @@ function IsUnitAvailableForTraining(province, unit_type)
 		return false
 	end
 	
-	if (ProvinceHasBuildingType(province, GetUnitTypeInterfaceState(unit_type)) == false) then
+	if (ProvinceHasBuildingClass(province.Name, GetUnitTypeInterfaceState(unit_type)) == false) then
 		return false
 	end
 
@@ -3838,13 +3810,13 @@ function IsUnitAvailableForTraining(province, unit_type)
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (province.SettlementBuildings[string.gsub(GetUnitTypeRequiredBuildings(unit_type)[i], "-", "_")] < 2) then
+			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) < 2) then
 				has_required_buildings = false
 			end
 		end
 		--]]
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (ProvinceHasBuildingType(province, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
+			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3883,7 +3855,7 @@ function CanHireMercenary(province, unit_type)
 end
 
 function IsMercenaryAvailableForHiring(province, unit_type)
-	if (province.SettlementBuildings.unit_mercenary_camp < 2) then
+	if (GetProvinceSettlementBuildingState(province.Name, "unit-mercenary-camp") < 2) then
 		return false
 	end
 	
@@ -3942,13 +3914,13 @@ function IsTechnologyAvailable(province, unit_type)
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (province.SettlementBuildings[string.gsub(GetUnitTypeRequiredBuildings(unit_type)[i], "-", "_")] < 2) then
+			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) < 2) then
 				has_required_buildings = false
 			end
 		end
 		--]]
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (ProvinceHasBuildingType(province, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
+			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -4095,16 +4067,6 @@ function ClearGrandStrategyUIVariables()
 		end
 	end
 	MinimapTiles = nil
-end
-
-function ProvinceHasBuildingType(province, building_type)
-	if (province.Civilization ~= "" and GetCivilizationClassUnitType(building_type, province.Civilization) ~= nil and province.SettlementBuildings[string.gsub(GetCivilizationClassUnitType(building_type, province.Civilization), "-", "_")] == 2) then
-		return true
-	elseif (building_type == "mercenary-camp" and province.SettlementBuildings[string.gsub("unit-mercenary-camp", "-", "_")] == 2) then
-		return true
-	else
-		return false
-	end
 end
 
 function ProvinceHasResource(province, resource)
@@ -4439,7 +4401,7 @@ function CanTriggerEvent(faction, event)
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
 				if (IsGrandStrategyBuilding(unitName)) then
-					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].SettlementBuildings[string.gsub(unitName, "-", "_")] == 2) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
+					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (GetProvinceSettlementBuildingState(WorldMapProvinces[key].Name, unitName) == 2) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
 						return false
 					end
 				end
@@ -5031,10 +4993,10 @@ function GetProvinceEfficiency(province, commodity)
 	if (province.Civilization ~= GetFactionFromName(province.Owner).Civilization) then
 		province_efficiency = province_efficiency - 25
 	end
-	if (commodity == "Gold" and FactionHasTechnologyType(GetFactionFromName(province.Owner), "coinage") and (ProvinceHasBuildingType(province, "town-hall") or ProvinceHasBuildingType(province, "stronghold"))) then
+	if (commodity == "Gold" and FactionHasTechnologyType(GetFactionFromName(province.Owner), "coinage") and (ProvinceHasBuildingClass(province.Name, "town-hall") or ProvinceHasBuildingClass(province.Name, "stronghold"))) then
 		province_efficiency = province_efficiency + 10
 	end
-	if (commodity == "Lumber" and ProvinceHasBuildingType(province, "lumber-mill")) then
+	if (commodity == "Lumber" and ProvinceHasBuildingClass(province.Name, "lumber-mill")) then
 		province_efficiency = province_efficiency + 25
 	end
 	return province_efficiency
@@ -5053,7 +5015,7 @@ function DoProspection()
 	local resource_found = false
 	for key, value in pairs(WorldMapResources) do
 		for i=1,table.getn(WorldMapResources[key]) do
-			if (WorldMapResources[key][i][3] == false and ProvinceHasBuildingType(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]), "town-hall")) then
+			if (WorldMapResources[key][i][3] == false and ProvinceHasBuildingClass(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Name, "town-hall")) then
 				if (SyncRand(100) < 1) then -- 1% chance of discovery per turn
 					resource_found = true
 					if (GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Owner == GrandStrategyFaction.Name) then
@@ -5105,6 +5067,11 @@ function IsWorldMapTileVisible(tile_x, tile_y)
 end
 
 function ChangeProvinceOwner(province, faction) -- used to change the owner and pass the information to the engine
-	province.Owner = faction.Name
-	SetProvinceOwner(province.Name, faction.Civilization, faction.Name)
+	if (faction ~= nil) then
+		province.Owner = faction.Name
+		SetProvinceOwner(province.Name, faction.Civilization, faction.Name)
+	else
+		province.Owner = ""
+		SetProvinceOwner(province.Name, "", "")
+	end
 end

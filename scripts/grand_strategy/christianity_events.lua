@@ -250,7 +250,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
---				and ProvinceHasBuildingType(WorldMapProvinces.England, "temple")
+--				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "temple")
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -637,7 +637,7 @@ local ChristianityEvents = {
 			if (
 				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
 				and WorldMapProvinces.Netherlands.Civilization == "teuton"
---				and ProvinceHasBuildingType(WorldMapProvinces.Netherlands, "temple")
+--				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "temple")
 				and SyncRand(100) < 5
 				-- should add some check for Christianity being present
 			) then

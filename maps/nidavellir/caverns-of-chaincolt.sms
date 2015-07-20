@@ -312,7 +312,7 @@ unit = CreateUnit("unit-glyph", 15, {23, 7})
 unit = CreateUnit("unit-glyph", 15, {51, 43})
 
 if (GrandStrategy) then
-	if (WorldMapProvinces.CavernsOfChaincolt.SettlementBuildings.unit_dwarven_smithy == 2) then
+	if (GetProvinceSettlementBuildingState(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-smithy") == 2) then
 		unit = CreateUnit("unit-dwarven-smithy", 0, {38, 21})
 	end
 end

@@ -48,9 +48,7 @@ local EarthEvents = {
 		Options = {"~!OK", "This is our ~!home"},
 		OptionEffects = {
 			function(s)
-				WorldMapProvinces.Don.SettlementBuildings.unit_germanic_town_hall = 0
 				SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", 0)
-				WorldMapProvinces.Don.SettlementBuildings.unit_germanic_barracks = 0
 				SetProvinceSettlementBuilding("Don", "unit-germanic-barracks", 0)
 				WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
 				WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 6
@@ -117,7 +115,7 @@ local EarthEvents = {
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name -- was made at Uffington, in southern England
 				and WorldMapProvinces.England.Civilization == "celt" -- a Celtic culture did this
-				and ProvinceHasBuildingType(WorldMapProvinces.England, "smithy") -- happened in the late bronze age, possibly required bronze age tools
+				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "smithy") -- happened in the late bronze age, possibly required bronze age tools
 				and SyncRand(100) < 1
 			) then
 				EventProvince = WorldMapProvinces.England

@@ -57,7 +57,7 @@ local GenericEvents = {
 				SyncRand(100) < math.min(10, math.floor(EventFaction.Prestige / 10)) -- 10% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-					if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
 						EventProvince = WorldMapProvinces[province_key]
 						return true
 					end
@@ -85,7 +85,7 @@ local GenericEvents = {
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-					if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
 						EventProvince = WorldMapProvinces[province_key]
 						return true
 					end
@@ -114,7 +114,7 @@ local GenericEvents = {
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-					if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
 						EventProvince = WorldMapProvinces[province_key]
 						return true
 					end
@@ -145,7 +145,7 @@ local GenericEvents = {
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-					if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
 						EventProvince = WorldMapProvinces[province_key]
 						return true
 					end
@@ -176,7 +176,7 @@ local GenericEvents = {
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-					if (SyncRand(100) < 1 and ProvinceHasBuildingType(WorldMapProvinces[province_key], "lumber-mill")) then
+					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
 						EventProvince = WorldMapProvinces[province_key]
 						return true
 					end
