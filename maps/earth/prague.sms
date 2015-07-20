@@ -15,7 +15,7 @@ if (LoadedGame == false) then
 		PlayerCivilizations = {"teuton", "celt"},
 		PlayerBuildings = {
 			{"Farm", "Farm"},
-			{"Farm", "Farm"}
+			{"Farm", "Farm", "Farm", "Farm"}
 		},
 		WaterLayout = {
 			{ 0,  0,  0,  8,  0,  0,  0,  0},

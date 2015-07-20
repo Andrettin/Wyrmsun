@@ -428,7 +428,7 @@ function RunGrandStrategyGameSetupMenu()
 				}
 			elseif (GrandStrategyWorld == "Nidavellir") then
 				date_list = {
-					"3000 BC", -- approximate begin of the Asa's journey to Scandinavia
+					"3000 BC", -- approximate begin of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
 					"25 AD", -- begin of The Scepter of Fire
 					"40 AD", -- end of The Scepter of Fire
 					"550 AD" -- begin of The Hammer of Thursagan
