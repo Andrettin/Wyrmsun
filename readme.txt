@@ -213,6 +213,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - It is now possible to change the HP of an individual unit, in its properties.
+- Fixed bug with the map editor's civilization setting.
 
 * Maps
 - Improved water and rock generation for the Prague map.

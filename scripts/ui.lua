@@ -99,7 +99,10 @@ Load("scripts/dwarf/ui.lua")
 Load("scripts/germanic/ui.lua")
 Load("scripts/gnome/ui.lua")
 Load("scripts/goblin/ui.lua")
+Load("scripts/goth/ui.lua")
 Load("scripts/kobold/ui.lua")
+Load("scripts/latin/ui.lua")
+Load("scripts/norse/ui.lua")
 Load("scripts/teuton/ui.lua")
 
 local info_panel_x = UI.InfoPanel.X

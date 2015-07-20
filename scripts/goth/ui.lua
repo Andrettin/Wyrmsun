@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      ui.lua - Define the celt user interface
+--      ui.lua - Define the goth user interface
 --
 --      (c) Copyright 2001-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
@@ -29,40 +29,40 @@
 
 DefineCursor({
 	Name = "cursor-point",
-	Race = "celt",
+	Race = "goth",
 	File = "germanic/ui/cursors/germanic_hand.png",
-	HotSpot = { 3,  2},
+	HotSpot = { 3, 2},
 	Size = {29, 32}
 })
 DefineCursor({
 	Name = "cursor-green-hair",
-	Race = "celt",
+	Race = "goth",
 	File = "ui/cursors/green.png",
 	HotSpot = {15, 15},
 	Size = {32, 32}
 })
 DefineCursor({
 	Name = "cursor-yellow-hair",
-	Race = "celt",
+	Race = "goth",
 	File = "ui/cursors/yellow.png",
 	HotSpot = {15, 15},
 	Size = {32, 32}
 })
 DefineCursor({
 	Name = "cursor-red-hair",
-	Race = "celt",
+	Race = "goth",
 	File = "ui/cursors/red.png",
 	HotSpot = {15, 15},
 	Size = {32, 32}
 })
 
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
---	* Civilization Celt.
+--	* Civilization Goth.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/battle.ogg", "music/battle-epic.ogg", "music/battle_theme_a.ogg", "music/the_adventure_begins.ogg" }
+wyrmsun.playlist = { "music/heroes_rite.ogg", "music/casualties_of_war.ogg", "music/battle-epic.ogg", "music/battle_theme_a.ogg", "music/the_adventure_begins.ogg" }
 
-function CeltScreen(screen_width, screen_height)
+function GothScreen(screen_width, screen_height)
   local info_panel_x = 0
   local info_panel_y = 160
 
