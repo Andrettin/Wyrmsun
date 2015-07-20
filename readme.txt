@@ -209,6 +209,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed which base tile is selected when loading a saved game.
 - The player can no longer train military units in the Treasures of Svarinshaug quest in grand strategy mode.
 - The player can no longer train units or build structures in the Necklace of the Brisings quest in grand strategy mode.
+- Fixed issue with certain Germanic missions in grand strategy mode.
 
 * Map Editor
 - It is now possible to change the HP of an individual unit, in its properties.
