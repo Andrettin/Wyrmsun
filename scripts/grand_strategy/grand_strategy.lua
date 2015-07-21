@@ -222,12 +222,6 @@ function RunGrandStrategyGameSetupMenu()
 					SetProvinceSettlementLocation(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 				
-				if (WorldMapProvinces[key].SettlementBuildings ~= nil) then
-					for second_key, second_value in pairs(WorldMapProvinces[key].SettlementBuildings) do
-						SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), WorldMapProvinces[key].SettlementBuildings[second_key]) -- set the province settlement building for the engine
-					end
-				end
-				
 				if (WorldMapProvinces[key].Coastal == nil) then
 					WorldMapProvinces[key]["Coastal"] = false
 				end

@@ -1280,7 +1280,7 @@ function LoadProvinces(world)
 			WorldMapProvinces[key]["SettlementBuildings"] = {}
 			if (province_table[key].SettlementBuildings ~= nil) then
 				for second_key, second_value in pairs(province_table[key].SettlementBuildings) do
-					WorldMapProvinces[key].SettlementBuildings[second_key] = province_table[key].SettlementBuildings[second_key]
+					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].SettlementBuildings[second_key]) -- set the province settlement building for the engine
 				end
 			end
 			if (province_table[key].Map ~= nil) then
