@@ -10,7 +10,7 @@
 --
 --      options.lua - Define the menu for options.
 --
---      (c) Copyright 2006-2011 by Jimmy Salmon and Pali Rohár
+--      (c) Copyright 2006-2015 by Jimmy Salmon, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -351,7 +351,8 @@ function RunGameplayOptionsMenu()
 			wyr.preferences.GameTranslation = "translations/wyr-pt.po"
     	end
     	SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-  	menu:stop(1)
+  	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   language_list:setSize(152, 20)
   if (wyr.preferences.Language == "English") then
@@ -374,7 +375,8 @@ function RunGameplayOptionsMenu()
 		end
 		SetGrabMouse(wyr.preferences.GrabMouse)
 		SavePreferences()
-		menu:stop(1)
+		menu:stop()
+		RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.GrabMouse)
 
@@ -385,7 +387,8 @@ function RunGameplayOptionsMenu()
 	else
 		wyr.preferences.ShowTips = false
 	end
-	menu:stop(1)
+	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.ShowTips)
 
@@ -398,7 +401,8 @@ function RunGameplayOptionsMenu()
 		wyr.preferences.ShowResourceBar = false
 		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 	end
-	menu:stop(1)
+	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.ShowResourceBar)
 
@@ -410,7 +414,8 @@ function RunGameplayOptionsMenu()
 			wyr.preferences.PopupDescriptionFont = "small"
 		end
 		Load("scripts/ui.lua")
-		menu:stop(1)
+		menu:stop()
+		RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
 
@@ -422,7 +427,8 @@ function RunGameplayOptionsMenu()
 		wyr.preferences.PlayerColorCircle = false
 	end
 	Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
-	menu:stop(1)
+	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.PlayerColorCircle)
 
@@ -434,7 +440,8 @@ function RunGameplayOptionsMenu()
 		wyr.preferences.Autosave = false
 	end
 	Preference.Autosave = wyr.preferences.Autosave
-	menu:stop(1)
+	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.Autosave)
 
@@ -446,7 +453,8 @@ function RunGameplayOptionsMenu()
 		wyr.preferences.ShowPathlines = false
 	end
 	Preference.ShowPathlines = wyr.preferences.ShowPathlines
-	menu:stop(1)
+	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   b:setMarked(wyr.preferences.ShowPathlines)
 
@@ -458,7 +466,8 @@ function RunGameplayOptionsMenu()
 		wyr.preferences.ShowMessages = true
 	end
 	Preference.ShowMessages = wyr.preferences.ShowMessages
-	menu:stop(1)
+	menu:stop()
+	RunGameplayOptionsMenu()
     end)
   if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
@@ -489,7 +498,7 @@ function RunVideoOptionsMenu()
   resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
     function(dd)
    		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
-		SetVideoSize(resolution_width, resolution_height) menu:stop(1)
+		SetVideoSize(resolution_width, resolution_height) menu:stop()
 		RunVideoOptionsMenu()
     end)
   resolution_width_dd:setSize(152, 20)
@@ -503,7 +512,7 @@ function RunVideoOptionsMenu()
   resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
     function(dd)
    		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
-		SetVideoSize(resolution_width, resolution_height) menu:stop(1)
+		SetVideoSize(resolution_width, resolution_height) menu:stop()
 		RunVideoOptionsMenu()
     end)
   resolution_height_dd:setSize(152, 20)
@@ -588,7 +597,7 @@ function RunVideoOptionsMenu()
       ToggleFullScreen()
       wyr.preferences.VideoFullScreen = Video.FullScreen
       SavePreferences()
-      menu:stop(1)
+      menu:stop()
 	  RunVideoOptionsMenu()
     end)
   b:setMarked(Video.FullScreen)
@@ -610,7 +619,7 @@ function RunVideoOptionsMenu()
 --TODO: Add function for immediately change state of OpenGL
       wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
       SavePreferences()
---      menu:stop(1) --TODO: Enable if we have an OpenGL function
+--      menu:stop() --TODO: Enable if we have an OpenGL function
     end)
   checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
 --  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
