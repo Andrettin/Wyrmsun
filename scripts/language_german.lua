@@ -726,6 +726,14 @@ DefineLanguageAdjective("Alt", {
 	PrefixSettlementName = true -- example: "Altsohl"
 })
 
+DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
+	Civilization = "teuton",
+	Meaning = "Hard",
+	Comparative = "Härter",
+	Superlative = "Härteste",
+	SuffixPersonalName = true -- examples: "Alphart", "Wolfhart"
+})
+
 DefineLanguageAdjective("Neu", {
 	Civilization = "teuton",
 	Meaning = "New",
