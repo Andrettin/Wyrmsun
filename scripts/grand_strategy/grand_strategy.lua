@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy.lua - Define the grand strategy game mode.
+--      grand_strategy.lua - Defines the grand strategy game mode.
 --
 --      (c) Copyright 2014-2015 by Andrettin
 --
@@ -289,7 +289,7 @@ function RunGrandStrategyGameSetupMenu()
 				end
 				
 				if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
-					CenterMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+					CenterGrandStrategyMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 			end
 
@@ -337,6 +337,8 @@ function RunGrandStrategyGameSetupMenu()
 				end
 			end
 			
+			InitializeGrandStrategyMinimap()
+
 --			CalculateFactionDisembarkmentProvinces()
 			CalculateFactionIncomes()
 			CalculateFactionUpkeeps()
@@ -465,7 +467,6 @@ function RunGrandStrategyGame()
 	local offy = (Video.Height - 480) / 2
 
 	DrawOnScreenTiles()
-	DrawMinimap()
 	DrawGrandStrategyInterface()
 	
 	-- add a pseudo-button to bring up the menu
@@ -1022,7 +1023,7 @@ function AcquireProvince(province, faction)
 		end
 	end
 	
-	DrawMinimapProvince(province)
+	UpdateProvinceMinimap(province.Name)
 	
 	CalculateFactionIncomes()
 end
@@ -1723,11 +1724,13 @@ function RunGrandStrategyLoadGameMenu()
 
 			for key, value in pairs(WorldMapProvinces) do -- center map on a province of the loaded player's faction
 				if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
-					CenterMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
+					CenterGrandStrategyMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 			end
 			
 			wyr[saved_games_list[saved_games:getSelected() + 1]] = nil
+			
+			InitializeGrandStrategyMinimap()
 			
 			menu:stop()
 			if (GrandStrategyMenu) then
@@ -1796,65 +1799,6 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
 		end
 		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
-	end
-end
-
-function DrawWorldMapMinimapTile(file, tile_x, tile_y)
-	-- draw tile in the minimap
-	local minimap_tile_size_x = 1
-	local minimap_tile_size_y = 1
-	local minimap_offset_x = 0
-	local minimap_offset_y = 0
-	if (GetWorldMapHeight() <= 128 and GetWorldMapWidth() <= 128) then
-		minimap_tile_size_x = math.floor(128 / GetWorldMapWidth())
-		minimap_tile_size_y = math.floor(128 / GetWorldMapHeight())
-		if (GetWorldMapWidth() > GetWorldMapHeight()) then
-			minimap_tile_size_y = minimap_tile_size_x
-			minimap_offset_y = ((128 - math.floor(GetWorldMapHeight() * minimap_tile_size_y)) / 2)
-		else
-			minimap_tile_size_x = minimap_tile_size_y
-			minimap_offset_x = ((128 - math.floor(GetWorldMapWidth() * minimap_tile_size_x)) / 2)
-		end
-	else
-		if (GetWorldMapWidth() > GetWorldMapHeight()) then
-			minimap_offset_y = ((128 - math.floor((GetWorldMapHeight() / 2) * minimap_tile_size_y)) / 2)
-		else
-			minimap_offset_x = ((128 - math.floor((GetWorldMapWidth() / 2) * minimap_tile_size_x)) / 2)
-		end
-	end
-
-	if ((GetWorldMapHeight() <= 128 and GetWorldMapWidth() <= 128) or (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0)) then
-		local minimap_tile
-		local b
-		if (GetTileProvince(tile_x, tile_y).Owner ~= "" and GetTileProvince(tile_x, tile_y).Owner ~= "Ocean") then
-			b = PlayerColorImageButton("", GetFactionData(GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Civilization, GetTileProvince(tile_x, tile_y).Owner, "Color"))
-			minimap_tile = CPlayerColorGraphic:New(file)
-		else
-			b = ImageButton("")
-			minimap_tile = CGraphic:New(file)
-		end
-		minimap_tile:Load()
-		MinimapTiles[tile_y + 1][tile_x + 1] = b
-		MinimapTiles[tile_y + 1][tile_x + 1]:setActionCallback(
-			function()
-				PlaySound("click")
-				CenterMapOnTile(tile_x, tile_y)
-				DrawOnScreenTiles()
-			end
-		)
-		if (GetWorldMapHeight() <= 128 and GetWorldMapWidth() <= 128) then
-			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], UI.Minimap.X + minimap_offset_x + minimap_tile_size_x * tile_x, UI.Minimap.Y + minimap_offset_y + minimap_tile_size_y * tile_y)
-		elseif (math.fmod(tile_x, 2) == 0 and math.fmod(tile_y, 2) == 0) then -- if one of the sides of the map is larger than 128, then only draw minimap tiles for one of every four tiles
-			GrandStrategyMenu:add(MinimapTiles[tile_y + 1][tile_x + 1], UI.Minimap.X + minimap_offset_x + minimap_tile_size_x * (tile_x / 2), UI.Minimap.Y + minimap_offset_y + minimap_tile_size_y * (tile_y / 2))
-		end
-		MinimapTiles[tile_y + 1][tile_x + 1]:setNormalImage(minimap_tile)
-		MinimapTiles[tile_y + 1][tile_x + 1]:setPressedImage(minimap_tile)
-		MinimapTiles[tile_y + 1][tile_x + 1]:setDisabledImage(minimap_tile)
-		MinimapTiles[tile_y + 1][tile_x + 1]:setSize(minimap_tile_size_x, minimap_tile_size_y)
-		MinimapTiles[tile_y + 1][tile_x + 1]:setBorderSize(0)
-		MinimapTiles[tile_y + 1][tile_x + 1]:setBaseColor(Color(0,0,0,0))
-		MinimapTiles[tile_y + 1][tile_x + 1]:setForegroundColor(Color(0,0,0,0))
-		MinimapTiles[tile_y + 1][tile_x + 1]:setBackgroundColor(Color(0,0,0,0))
 	end
 end
 
@@ -2469,9 +2413,7 @@ function DrawGrandStrategyInterface()
 
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/filler_bottom.png", 380, Video.Height - 181)
 
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/minimap_top_grand_strategy.png", 0, Video.Height - 200)
-
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel_grand_strategy.png", 162, Video.Height - 200)
+	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel.png", 0, Video.Height - 200)
 
 	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
 
@@ -3286,62 +3228,6 @@ function DrawGrandStrategyInterface()
 	end
 end
 
-function DrawMinimap()
-	if (UIMinimap ~= nil) then
-		GrandStrategyMenu:remove(UIMinimap)
-	end
-
-	if (MinimapTiles ~= nil) then
-		for i=1,table.getn(MinimapTiles) do
-			for j=1,table.getn(MinimapTiles[i]) do
-				if (MinimapTiles[i][j] ~= nil) then
-					GrandStrategyMenu:remove(MinimapTiles[i][j])
-				end
-			end
-		end
-	end
-	
-	MinimapTiles = nil
-	MinimapTiles = {}
-	
-	for y=1,(GetWorldMapHeight()) do
-		MinimapTiles[y] = {}
-	end
-	
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/infopanel.png")
-	ui_element:Load()
-	UIMinimap = ImageWidget(ui_element)
-	UIMinimap:setSize(162, 200)
-	GrandStrategyMenu:add(UIMinimap, 0, Video.Height - 200)
-
-	for key, value in pairs(WorldMapProvinces) do
-		DrawMinimapProvince(WorldMapProvinces[key])
-	end
-
-	for key, value in pairs(WorldMapWaterProvinces) do
-		DrawMinimapProvince(WorldMapWaterProvinces[key])
-	end
-end
-
-function DrawMinimapProvince(province)
-	for i=1,table.getn(province.Tiles) do
-		-- draw the province's tiles on the minimap
-		if (MinimapTiles[province.Tiles[i][2] + 1][province.Tiles[i][1] + 1] ~= nil) then
-			GrandStrategyMenu:remove(MinimapTiles[province.Tiles[i][2] + 1][province.Tiles[i][1] + 1])
-			MinimapTiles[province.Tiles[i][2] + 1][province.Tiles[i][1] + 1] = nil
-		end
-		if (province.Owner ~= "Ocean") then
-			if (province.Owner ~= "") then
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile.png", province.Tiles[i][1], province.Tiles[i][2])
-			else
-				DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_white.png", province.Tiles[i][1], province.Tiles[i][2])
-			end
-		else
-			DrawWorldMapMinimapTile("tilesets/world/terrain/province_tile_ocean.png", province.Tiles[i][1], province.Tiles[i][2])
-		end
-	end
-end
-
 function SetSelectedProvince(province)
 	if (province ~= SelectedProvince) then
 
@@ -3810,7 +3696,7 @@ function IsUnitAvailableForTraining(province, unit_type)
 		end
 		--]]
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
+			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) ~= 2) then
 				has_required_buildings = false
 			end
 		end
@@ -4045,22 +3931,6 @@ function ClearGrandStrategyUIVariables()
 		end
 	end
 	GrandStrategyLabels = nil
-
-	if (UIMinimap ~= nil) then
-		GrandStrategyMenu:remove(UIMinimap)
-	end
-	UIMinimap = nil
-	
-	if (MinimapTiles ~= nil) then
-		for i=1,table.getn(MinimapTiles) do
-			for j=1,table.getn(MinimapTiles[i]) do
-				if (MinimapTiles[i][j] ~= nil) then
-					GrandStrategyMenu:remove(MinimapTiles[i][j])
-				end
-			end
-		end
-	end
-	MinimapTiles = nil
 end
 
 function ProvinceHasResource(province, resource)
@@ -4180,22 +4050,6 @@ function GetMilitaryScore(province, attacker, count_defenders)
 		end
 	end
 	return military_score
-end
-
-function CenterMapOnTile(tile_x, tile_y)
-	WorldMapOffsetX = math.floor(tile_x - ((GrandStrategyMapWidth / 64) / 2)) + 1
-	if (WorldMapOffsetX < 0) then
-		WorldMapOffsetX = 0
-	elseif (WorldMapOffsetX > GetWorldMapWidth() - 1 - math.floor(GrandStrategyMapWidth / 64)) then
-		WorldMapOffsetX = GetWorldMapWidth() - 1 - math.floor(GrandStrategyMapWidth / 64)
-	end
-
-	WorldMapOffsetY = math.floor(tile_y - ((GrandStrategyMapHeight / 64) / 2))
-	if (WorldMapOffsetY < 0) then
-		WorldMapOffsetY = 0
-	elseif (WorldMapOffsetY > GetWorldMapHeight() - 1 - math.floor(GrandStrategyMapHeight / 64)) then
-		WorldMapOffsetY = GetWorldMapHeight() - 1 - math.floor(GrandStrategyMapHeight / 64)
-	end
 end
 
 function DeclareWar(faction_from, faction_to)
@@ -4677,10 +4531,6 @@ function FormFaction(old_faction, new_faction)
 
 	if (GrandStrategyFaction == old_faction) then
 		GrandStrategyFaction = new_faction
-	end
-
-	for province_i, province_key in ipairs(new_faction.OwnedProvinces) do
-		DrawMinimapProvince(WorldMapProvinces[province_key])
 	end
 
 	DrawGrandStrategyInterface()

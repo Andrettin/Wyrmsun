@@ -78,7 +78,6 @@ local EarthEvents = {
 				AcquireProvince(WorldMapProvinces.France, "Aedui Tribe")
 				AcquireProvince(WorldMapProvinces.Latium, "Rome")
 				AcquireProvince(WorldMapProvinces.Switzerland, "Helvetii Tribe")
-				DrawMinimap()
 			end,
 			function(s)
 			end

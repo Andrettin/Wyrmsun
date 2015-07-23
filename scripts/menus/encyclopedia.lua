@@ -216,7 +216,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				end
 			end
 
-			local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+			local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetUnitBackground(unit_name)))
 			local offx = (Video.Width - 640) / 2
 			local offy = (Video.Height - 480) / 2
 
@@ -954,7 +954,7 @@ function OpenEncyclopediaCivilizationEntry(civilization_key)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(string.lower(string.gsub(civilization_key, "Human", "")))))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1059,7 +1059,7 @@ function OpenEncyclopediaFactionEntry(faction_key)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(FactionsEncyclopedia[faction_key].Civilization)))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1079,4 +1079,48 @@ function OpenEncyclopediaFactionEntry(faction_key)
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() encyclopedia_entry_menu:stop(); end)
 	encyclopedia_entry_menu:run()
+end
+
+function GetCivilizationBackground(civilization)
+	if (civilization == "dwarf") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "elf") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "germanic") then
+		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "gnome") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "goblin") then
+		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "goth") then
+		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "greek") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "kobold") then
+		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "latin") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "norse") then
+		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "orc") then
+		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "teuton") then
+		return "ui/backgrounds/wyrm.png"
+	end
+	
+	return "ui/backgrounds/wyrm.png"
+end
+
+function GetUnitBackground(unit_name)
+	if (string.find(unit_name, "upgrade-") == nil) then
+		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
+			return GetCivilizationBackground(GetUnitTypeData(unit_name, "Civilization"))
+		elseif (unit_name == "unit-gryphon") then
+			return "ui/backgrounds/gryphon.png"
+		end
+	else
+		return GetCivilizationBackground(CUpgrade:Get(unit_name).Civilization)
+	end
+	
+	return "ui/backgrounds/wyrm.png"
 end

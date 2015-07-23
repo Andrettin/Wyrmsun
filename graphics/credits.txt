@@ -614,6 +614,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_white_feathers.png
 /graphics/neutral/icons/harvest.png
+/graphics/neutral/icons/inventory.png
 /graphics/neutral/icons/iron_edged_wood_plow.png
 /graphics/neutral/icons/iron_plow.png
 /graphics/neutral/icons/iron_plow_extra_1.png
@@ -783,6 +784,7 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest_3.png
 /graphics/tilesets/world/terrain/scrub_forest_4.png
 /graphics/tilesets/fogofwar.png
+/graphics/ui/backgrounds/gryphon.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/fonts/small.png
@@ -911,6 +913,7 @@ StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
 
 Tanja Nov.:
+/graphics/ui/backgrounds/gryphon.png (later modified by Jinn)
 /graphics/ui/backgrounds/wyrm.png (later modified by Jinn)
 
 TaShadan:

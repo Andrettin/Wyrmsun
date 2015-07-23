@@ -641,7 +641,6 @@ local NidavellirEvents = {
 				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ABargainIsStruckShinsplitterClan)
-			DrawMinimap()
 		end}
 	},
 	ABargainIsStruckShinsplitterClan = {
@@ -737,7 +736,6 @@ local NidavellirEvents = {
 				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
-			DrawMinimap()
 		end}
 	},
 	ClosingTheGatesShinsplitterClan = {
@@ -957,7 +955,6 @@ local NidavellirEvents = {
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
 			end
-			DrawMinimap()
 		end}
 	},
 	HillsOfTheShorbearClanShinsplitterClan = {
@@ -1109,7 +1106,6 @@ local NidavellirEvents = {
 				
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 			end
-			DrawMinimap()
 		end}
 	},
 	TheWyrmShinsplitterClan = {
@@ -1209,7 +1205,6 @@ local NidavellirEvents = {
 				
 				Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 100 -- a lot of prestige for completing the legendary scepter
 			end
-			DrawMinimap()
 		end}
 	},
 	CavernsOfFlameShinsplitterClan = {

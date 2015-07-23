@@ -156,7 +156,7 @@ local GermanicEvents = {
 						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 						WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_worker = 0
-						CenterMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -179,7 +179,6 @@ local GermanicEvents = {
 					ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 					WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
 				end
-				DrawMinimap()
 			end,
 			function(s) -- if refused to migrate, then a part of the tribe splits and does so
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
@@ -233,7 +232,7 @@ local GermanicEvents = {
 						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
 						SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
-						CenterMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -297,7 +296,7 @@ local GermanicEvents = {
 							end
 						end
 						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
-						CenterMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						EventFaction.Prestige = EventFaction.Prestige + 25
 						-- give Gotaland to the Goth Tribe
 						EqualizeProvinceUnits(EventFaction)
@@ -330,7 +329,6 @@ local GermanicEvents = {
 				end
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(Factions.JuteTribe, Factions.AsaTribe)
-				DrawMinimap()
 			end,
 			function(s)
 			end,
@@ -355,7 +353,6 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(Factions.JuteTribe, Factions.AsaTribe)
 				GrandStrategyFaction = Factions.JuteTribe
-				DrawMinimap()
 			end
 		}
 	},
@@ -392,7 +389,7 @@ local GermanicEvents = {
 			end,
 			function(s)
 				GrandStrategyFaction = Factions.GothTribe
-				CenterMapOnTile(WorldMapProvinces.Gotaland.SettlementLocation[1], WorldMapProvinces.Gotaland.SettlementLocation[2])
+				CenterGrandStrategyMapOnTile(WorldMapProvinces.Gotaland.SettlementLocation[1], WorldMapProvinces.Gotaland.SettlementLocation[2])
 			end
 		}
 	},
@@ -583,14 +580,12 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
-				DrawMinimap()
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
-				DrawMinimap()
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 				EventFaction.Diplomacy.SaxonTribe = "War"
 				Factions.SaxonTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
@@ -600,7 +595,6 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
 				GrandStrategyFaction = Factions.SaxonTribe
-				DrawMinimap()
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
 		}
@@ -626,13 +620,11 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
 				AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
-				DrawMinimap()
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
 				AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
-				DrawMinimap()
 				EventFaction.Diplomacy.FrankTribe = "War"
 				Factions.FrankTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
@@ -641,7 +633,6 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
 				AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
 				GrandStrategyFaction = Factions.FrankTribe
-				DrawMinimap()
 			end
 		}
 	},
@@ -666,13 +657,11 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
-				DrawMinimap()
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
-				DrawMinimap()
 				EventFaction.Diplomacy.SuebiTribe = "War"
 				Factions.SuebiTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
@@ -681,7 +670,6 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
 				GrandStrategyFaction = Factions.SuebiTribe
-				DrawMinimap()
 			end
 		}
 	},
@@ -899,7 +887,7 @@ local GermanicEvents = {
 							end
 						end
 						WorldMapProvinces.France.Units.unit_germanic_warrior = 6 -- to give the Aedui something of a defense
-						CenterMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -918,7 +906,6 @@ local GermanicEvents = {
 					end
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 4 -- to give them something of a defense
 				end
-				DrawMinimap()
 			end
 		}
 	},
@@ -995,7 +982,7 @@ local GermanicEvents = {
 								end
 							end
 						end
-						CenterMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
 						ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
 					elseif (GameResult == GameDefeat) then
@@ -1074,7 +1061,7 @@ local GermanicEvents = {
 								end
 							end
 						end
-						CenterMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -1133,7 +1120,7 @@ local GermanicEvents = {
 								end
 							end
 						end
-						CenterMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
