@@ -139,6 +139,11 @@ local mountains_id = GetWorldMapTerrainTypeId("Mountains")
 local scrub_forest_id = GetWorldMapTerrainTypeId("Scrub Forest")
 local conifer_forest_id = GetWorldMapTerrainTypeId("Conifer Forest")
 
+SetWorldMapTileTerrain(452, 131, water_id)
+SetWorldMapTileTerrain(452, 132, water_id)
+SetWorldMapTileTerrain(452, 133, water_id)
+SetWorldMapTileTerrain(452, 134, water_id)
+SetWorldMapTileTerrain(452, 135, water_id)
 SetWorldMapTileTerrain(452, 136, water_id)
 SetWorldMapTileTerrain(452, 137, water_id)
 SetWorldMapTileTerrain(452, 138, water_id)
@@ -155,6 +160,11 @@ SetWorldMapTileTerrain(452, 148, water_id)
 SetWorldMapTileTerrain(452, 149, water_id)
 SetWorldMapTileTerrain(452, 150, water_id)
 SetWorldMapTileTerrain(452, 151, water_id)
+SetWorldMapTileTerrain(453, 131, water_id)
+SetWorldMapTileTerrain(453, 132, water_id)
+SetWorldMapTileTerrain(453, 133, water_id)
+SetWorldMapTileTerrain(453, 134, water_id)
+SetWorldMapTileTerrain(453, 135, water_id)
 SetWorldMapTileTerrain(453, 136, water_id)
 SetWorldMapTileTerrain(453, 137, water_id)
 SetWorldMapTileTerrain(453, 138, water_id)
@@ -171,6 +181,11 @@ SetWorldMapTileTerrain(453, 148, water_id)
 SetWorldMapTileTerrain(453, 149, water_id)
 SetWorldMapTileTerrain(453, 150, water_id)
 SetWorldMapTileTerrain(453, 151, water_id)
+SetWorldMapTileTerrain(454, 131, water_id)
+SetWorldMapTileTerrain(454, 132, water_id)
+SetWorldMapTileTerrain(454, 133, hills_id)
+SetWorldMapTileTerrain(454, 134, hills_id)
+SetWorldMapTileTerrain(454, 135, water_id)
 SetWorldMapTileTerrain(454, 136, water_id)
 SetWorldMapTileTerrain(454, 137, water_id)
 SetWorldMapTileTerrain(454, 138, water_id)
@@ -187,6 +202,11 @@ SetWorldMapTileTerrain(454, 148, water_id)
 SetWorldMapTileTerrain(454, 149, water_id)
 SetWorldMapTileTerrain(454, 150, water_id)
 SetWorldMapTileTerrain(454, 151, water_id)
+SetWorldMapTileTerrain(455, 131, water_id)
+SetWorldMapTileTerrain(455, 132, water_id)
+SetWorldMapTileTerrain(455, 133, hills_id)
+SetWorldMapTileTerrain(455, 134, hills_id)
+SetWorldMapTileTerrain(455, 135, hills_id)
 SetWorldMapTileTerrain(455, 136, hills_id)
 SetWorldMapTileTerrain(455, 137, plains_id)
 SetWorldMapTileTerrain(455, 138, plains_id)
@@ -203,6 +223,12 @@ SetWorldMapTileTerrain(455, 148, hills_id)
 SetWorldMapTileTerrain(455, 149, hills_id)
 SetWorldMapTileTerrain(455, 150, water_id)
 SetWorldMapTileTerrain(455, 151, water_id)
+SetWorldMapTileTerrain(456, 131, water_id)
+SetWorldMapTileTerrain(456, 132, plains_id)
+SetWorldMapTileTerrain(456, 133, plains_id)
+SetWorldMapTileTerrain(456, 134, hills_id)
+SetWorldMapTileTerrain(456, 135, hills_id)
+SetWorldMapTileTerrain(456, 136, hills_id)
 SetWorldMapTileTerrain(456, 137, hills_id)
 SetWorldMapTileTerrain(456, 138, hills_id)
 SetWorldMapTileTerrain(456, 139, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
@@ -218,6 +244,12 @@ SetWorldMapTileTerrain(456, 148, plains_id)
 SetWorldMapTileTerrain(456, 149, hills_id)
 SetWorldMapTileTerrain(456, 150, plains_id)
 SetWorldMapTileTerrain(456, 151, water_id)
+SetWorldMapTileTerrain(457, 131, water_id)
+SetWorldMapTileTerrain(457, 132, hills_id)
+SetWorldMapTileTerrain(457, 133, plains_id)
+SetWorldMapTileTerrain(457, 134, plains_id)
+SetWorldMapTileTerrain(457, 135, hills_id)
+SetWorldMapTileTerrain(457, 136, hills_id)
 SetWorldMapTileTerrain(457, 137, hills_id)
 SetWorldMapTileTerrain(457, 138, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(457, 139, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
@@ -233,6 +265,12 @@ SetWorldMapTileTerrain(457, 148, hills_id)
 SetWorldMapTileTerrain(457, 149, hills_id)
 SetWorldMapTileTerrain(457, 150, hills_id)
 SetWorldMapTileTerrain(457, 151, water_id)
+SetWorldMapTileTerrain(458, 131, water_id)
+SetWorldMapTileTerrain(458, 132, hills_id)
+SetWorldMapTileTerrain(458, 133, hills_id)
+SetWorldMapTileTerrain(458, 134, hills_id)
+SetWorldMapTileTerrain(458, 135, hills_id)
+SetWorldMapTileTerrain(458, 136, hills_id)
 SetWorldMapTileTerrain(458, 137, hills_id)
 SetWorldMapTileTerrain(458, 138, hills_id)
 SetWorldMapTileTerrain(458, 139, hills_id)
@@ -248,6 +286,10 @@ SetWorldMapTileTerrain(458, 148, hills_id)
 SetWorldMapTileTerrain(458, 149, hills_id)
 SetWorldMapTileTerrain(458, 150, water_id)
 SetWorldMapTileTerrain(458, 151, water_id)
+SetWorldMapTileTerrain(459, 133, hills_id)
+SetWorldMapTileTerrain(459, 134, hills_id)
+SetWorldMapTileTerrain(459, 135, hills_id)
+SetWorldMapTileTerrain(459, 136, hills_id)
 SetWorldMapTileTerrain(459, 137, hills_id)
 SetWorldMapTileTerrain(459, 138, hills_id)
 SetWorldMapTileTerrain(459, 139, hills_id)
@@ -257,6 +299,7 @@ SetWorldMapTileTerrain(459, 142, hills_id)
 SetWorldMapTileTerrain(459, 144, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(459, 145, hills_id)
 SetWorldMapTileTerrain(459, 147, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
+SetWorldMapTileTerrain(460, 135, hills_id)
 SetWorldMapTileTerrain(460, 137, hills_id)
 SetWorldMapTileTerrain(460, 138, hills_id)
 SetWorldMapTileTerrain(460, 139, hills_id)
@@ -268,7 +311,7 @@ SetWorldMapTileTerrain(461, 138, hills_id)
 
 WorldMapResources = {
 	Gold = {
-		{114, 33, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		-- old map resources
 		{117, 27, false}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{117, 29, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{118, 37, false}, -- Copper deposits
@@ -292,8 +335,17 @@ WorldMapResources = {
 --		{136, 30, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{136, 31, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{134, 27, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
-		{152, 31, true} -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
+		{152, 31, true}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
 --		{159, 27, false} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
+
+		{454, 133, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		-- the subsequent tin deposits are part of the Iberian Tin Belt, but don't compose all of it
+--		{454, 134, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+--		{455, 133, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+--		{455, 134, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+--		{456, 134, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+--		{456, 135, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+		
 	},
 	Lumber = { 
 	},
