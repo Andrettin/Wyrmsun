@@ -887,6 +887,844 @@ function LoadProvinces(world)
 		}
 	}
 	
+	local EarthOldProvinces = {
+		Albania = {
+			Name = "Taulantia",
+			Tiles = { {134, 33}, {134, 34} },
+			SettlementName = "Dyrrhachium",
+			CulturalSettlementNames = {
+				greek = "Epidamnus",
+				latin = "Dyrrhachium"
+			},
+			SettlementLocation = {134, 34}, -- Dyr
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Andalusia = {
+			Name = "Andalusia",
+			CulturalNames = {
+				latin = "Farther Baetica",
+				Portugal = "Andalusia",
+				Spain = "Andalusia"
+			},
+			Tiles = { {115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37} },
+			SettlementName = "Corduba",
+			CulturalSettlementNames = {
+				latin = "Corduba"
+			},
+			SettlementLocation = {116, 36}, -- Cordoba
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Aquitaine = {
+			Name = "Aquitania",
+			CulturalNames = {
+				France = "Aquitaine"
+			},
+			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
+			SettlementName = "Tolosa",
+			CulturalSettlementNames = {
+				latin = "Tolosa"
+			},
+			SettlementLocation = {120, 32}, -- Toulouse
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Aragon = {
+			Name = "Hither Baetica",
+			CulturalNames = {
+				Portugal = "Aragon",
+				Spain = "Aragon"
+			},
+			Tiles = { {119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34} },
+			SettlementName = "Caesaraugusta",
+			CulturalSettlementNames = {
+				latin = "Caesaraugusta"
+			},
+			SettlementLocation = {119, 34}, -- Zaragoza
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Astrakhan = {
+			Name = "Astrakhan",
+			CulturalNames = {
+				AsaTribe = "Ansulanda" -- rendering of "Asaland" in Proto-Germanic
+			},
+			Tiles = { {151, 30}, {152, 28}, {152, 29}, {152, 30}, {152, 31}, {153, 28}, {153, 29}, {153, 30}, {153, 31}, {154, 28}, {154, 29}, {154, 30}, {155, 29}, {155, 30} },
+			Owner = "Asa Tribe",
+			SettlementName = "Astrakhan",
+			CulturalSettlementNames = {
+				germanic = "Ansugarda" -- rendering of "Asgard" in Proto-Germanic
+			},
+			SettlementLocation = {154, 30}, -- Astrakhan
+			SettlementBuildings = {
+				unit_germanic_town_hall = 2,
+				unit_germanic_barracks = 2
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 8
+			},
+			SettlementTerrain = "Plains"
+		},
+		Attica = {
+			Name = "Attica",
+			Tiles = { {135, 36}, {136, 36} },
+			SettlementName = "Athens",
+			CulturalSettlementNames = {
+				greek = "Athens",
+				latin = "Athens"
+			},
+			SettlementLocation = {136, 36}, -- Athens
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Austria = {
+			Name = "Noricum",
+			CulturalNames = {
+				teuton = "Austria"
+			},
+			Tiles = { {127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30} },
+			SettlementName = "Vienna",
+			CulturalSettlementNames = {
+				celt = "Vindobona",
+				germanic = "Vindobona",
+				latin = "Vindobona",
+				teuton = "Vienna"
+			},
+			SettlementLocation = {131, 29}, -- Vienna
+			Map = "maps/earth/salzburg.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		BalticLands = {
+			Name = "Baltic Lands",
+			Tiles = { {135, 23}, {135, 24}, {136, 23}, {136, 24}, {137, 22}, {137, 23}, {137, 24}, {138, 22}, {138, 23}, {138, 24}, {139, 22}, {139, 23} },
+	--		SettlementName = "Riga",
+			SettlementLocation = {137, 23}, -- Riga
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Bavaria = {
+			Name = "Raetia",
+			CulturalNames = {
+				Bavaria = "Bavaria",
+				BavarianTribe = "Bavaria",
+				teuton = "Bavaria"
+			},
+			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
+			SettlementName = "Ratisbon",
+			CulturalSettlementNames = {
+				latin = "Regina Castra",
+				teuton = "Regensburg"
+			},
+			SettlementLocation = {128, 29}, -- Regensburg
+			Map = "maps/earth/regensburg.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- soldiers to stop the Asa Tribe from expanding here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Belgium = {
+			Name = "Belgium",
+			CulturalNames = {
+				Francia = "Austrasia",
+				FrankTribe = "Austrasia",
+				latin = "Belgica"
+			},
+			Tiles = { {122, 27}, {122, 28}, {123, 28}, {124, 28} },
+			SettlementName = "Aduatuca",
+			CulturalSettlementNames = {
+				latin = "Aduatuca"
+			},
+			SettlementLocation = {123, 28}, -- Brussels
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer early on
+			},
+			SettlementTerrain = "Plains"
+		},
+		Bohemia = {
+	--		Name = "Marcomannia",
+			Name = "Bohemia",
+			CulturalNames = {
+				celt = "Boiohaemum",
+				germanic = "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+				latin = "Boiohaemum",
+				teuton = "Bohemia"
+			},
+			Tiles = { {129, 28}, {130, 28}, {131, 28} },
+			SettlementName = "Prague",
+			CulturalSettlementNames = {
+				germanic = "Bubienum", -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+				teuton = "Bubienum"
+			},
+			SettlementLocation = {130, 28}, -- Prague
+			Map = "maps/earth/prague.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
+			},
+			SettlementTerrain = "Plains"
+		},
+		Brandenburg = {
+			Name = "Semnonia",
+			CulturalNames = {
+				teuton = "Brandenburg",
+				SuebiTribe = "Semnonia"
+			},
+			Tiles = { {127, 27}, {128, 25}, {128, 26}, {128, 27}, {129, 25}, {129, 26}, {129, 27} },
+			SettlementName = "Berlin",
+			CulturalSettlementNames = {
+				teuton = "Berlin"
+			},
+			SettlementLocation = {129, 26}, -- Berlin
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Brittany = {
+			Name = "Brittany",
+			Tiles = { {117, 29}, {118, 29}, {118, 30} },
+			CulturalNames = {
+				celt = "Armorica",
+				latin = "Armorica",
+				France = "Brittany"
+			},
+	--		SettlementName = "Rennes",
+			SettlementLocation = {118, 29}, -- Rennes
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		Bulgaria = {
+			Name = "Lower Moesia",
+			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
+			SettlementName = "Odessus",
+			CulturalSettlementNames = {
+				greek = "Odessus",
+				latin = "Odessus"
+			},
+			SettlementLocation = {139, 33}, -- Odessus
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Burgundy = {
+			Name = "Gallia Narbonensis",
+			CulturalNames = {
+				France = "Provence"
+			},
+			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
+			SettlementName = "Lugdunum",
+			CulturalSettlementNames = {
+				latin = "Lugdunum"
+			},
+			SettlementLocation = {123, 31}, -- Lyon
+			Map = "maps/earth/belfort.smp",
+			SettlementTerrain = "Plains"
+		},
+		Castille = {
+			Name = "Hispania Tarraconensis",
+			CulturalNames = {
+				Portugal = "Castille",
+				Spain = "Castille"
+			},
+			Tiles = { {115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36} },
+			SettlementName = "Toletum",
+			CulturalSettlementNames = {
+				latin = "Toletum"
+			},
+			SettlementLocation = {117, 35}, -- Toledo
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Corsica = {
+			Name = "Corsica",
+			Tiles = { {126, 34} },
+			SettlementName = "Aleria",
+			CulturalSettlementNames = {
+				latin = "Aleria"
+			},
+			SettlementLocation = {126, 34},
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Crete = {
+			Name = "Crete",
+			Tiles = { {137, 39}, {138, 39} },
+			Owner = "Minoan Tribe", -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
+			SettlementName = "Knossos",
+			CulturalSettlementNames = {
+				greek = "Knossos",
+				latin = "Cnossus"
+			},
+			SettlementLocation = {137, 39}, -- Knossos
+			SettlementBuildings = {
+				unit_teuton_town_hall = 2
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Croatia = {
+			Name = "Dalmatia",
+			CulturalNames = {
+				Croatia = "Croatia",
+				Muscovy = "Croatia",
+				Poland = "Croatia",
+				Russia = "Croatia"
+			},
+			Tiles = { {130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33} },
+			SettlementName = "Salonae",
+			CulturalSettlementNames = {
+				latin = "Salonae"
+			},
+			SettlementLocation = {131, 31}, -- Zagreb
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		Don = {
+			Name = "Don",
+			CulturalNames = {
+				VanaTribe = "Vanaland"
+			},
+			Tiles = { {147, 30}, {148, 29}, {148, 30}, {149, 29}, {149, 30}, {150, 28}, {150, 29}, {150, 30} },
+			Owner = "Vana Tribe",
+			SettlementName = "Tanais",
+			SettlementLocation = {148, 30}, -- Rostov-on-Don
+			SettlementBuildings = {
+				unit_germanic_town_hall = 2,
+				unit_germanic_barracks = 2
+			},
+			CulturalSettlementNames = {
+				greek = "Tanais"
+			},
+			Map = "maps/earth/tanais.smp",
+			Units = {
+				unit_germanic_warrior = 4
+			},
+			SettlementTerrain = "Plains"
+		},
+		England = {
+			Name = "Britannia",
+			CulturalNames = {
+				England = "England",
+				SaxonTribe = "England",
+				teuton = "England"
+			},
+			Tiles = { {117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26} },
+			SettlementName = "Londinium",
+			CulturalSettlementNames = {
+				celt = "Londinium",
+				latin = "Londinium",
+				teuton = "London"
+			},
+			SettlementLocation = {119, 27}, -- London
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		France = {
+			Name = "Gallia Lugdunensis",
+			CulturalNames = {
+				France = "France",
+				Francia = "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
+				FrankTribe = "Neustria"
+			},
+			Tiles = { {119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29} },
+			SettlementName = "Lutetia",
+			CulturalSettlementNames = {
+				latin = "Lutetia"
+			},
+			SettlementLocation = {121, 29}, -- Paris
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- soldiers to prevent germanic expansion here too soon
+			},
+			SettlementTerrain = "Plains"
+		},
+		Galicia = {
+			Name = "Galicia",
+			CulturalNames = {
+				teuton = "Galicia"
+			},
+			Tiles = { {133, 28}, {134, 28}, {135, 28}, {136, 28}, {137, 28}, {137, 29}, {138, 28}, {138, 29} },
+	--		SettlementName = "Lvov",
+			SettlementLocation = {137, 28}, -- Lvov / Lemberg
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		GaliciaIberia = {
+			Name = "Gallaecia",
+			CulturalNames = {
+				Galicia = "Galicia",
+				Portugal = "Galicia",
+				Spain = "Galicia"
+			},
+			Tiles = {
+				{114, 33}, {115, 33}
+			},
+			SettlementName = "Lucus Augusti",
+			CulturalSettlementNames = {
+				latin = "Lucus Augusti"
+			},
+			SettlementLocation = {115, 33}, -- Corunna
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		Gotaland = {
+			Name = "Gotaland",
+			CulturalNames = {
+				GylfingTribe = "Gylveland",
+				GothTribe = "Gothland"
+			},
+			Tiles = { {128, 21}, {128, 22}, {129, 21}, {129, 22}, {129, 23}, {130, 22}, {130, 23}, {131, 22}, {131, 23} },
+			Owner = "Gylfing Tribe",
+	--		SettlementName = "Gothenburg",
+			SettlementLocation = {128, 22}, -- Gothenburg
+			SettlementBuildings = {
+				unit_germanic_town_hall = 2, -- Gylve's realm
+				unit_germanic_barracks = 2
+			},
+			Map = "maps/earth/malmo.smp",
+			Units = {
+				unit_germanic_warrior = 4,
+				unit_germanic_archer = 4
+			},
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Gotland = {
+			Name = "Gotland",
+			Tiles = { {133, 23} },
+			SettlementLocation = {133, 23},
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Hungary = {
+			Name = "Pannonia",
+			CulturalNames = {
+				Hungary = "Hungary"
+			},
+			Tiles = { {132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29} },
+			SettlementName = "Aquincum",
+			CulturalSettlementNames = {
+				latin = "Aquincum"
+			},
+			SettlementLocation = {133, 30}, -- Budapest
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
+			},
+			SettlementTerrain = "Plains"
+		},
+		Iceland = {
+			Name = "Iceland",
+			Tiles = { {103, 17}, {104, 17}, {104, 18}, {105, 17}, {105, 18}, {106, 17}, {106, 18}, {107, 17}, {107, 18}, {108, 17}, {109, 17} },
+			SettlementName = "Reykjavik",
+			SettlementLocation = {104, 18}, -- Reykjavik
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Ireland = {
+			Name = "Ireland",
+			CulturalNames = { -- cultural names can be assigned either per faction or per civilization
+				latin = "Hibernia"
+			},
+			Tiles = { {113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26} },
+			SettlementName = "Eblana", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			SettlementLocation = {115, 26}, -- Dublin
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Latium = {
+			Name = "Latium",
+			Tiles = { {129, 33}, {129, 34} },
+			SettlementName = "Rome",
+			CulturalSettlementNames = {
+				latin = "Roma"
+			},
+			SettlementLocation = {129, 34}, -- Rome
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		Jutland = {
+			Name = "Jutland",
+			CulturalNames = {
+				teuton = "Jutland",
+				JuteTribe = "Jutland"
+			},
+			Tiles = { {126, 23}, {126, 24}, {126, 25}, {127, 25} },
+	--		SettlementName = "Aarhus",
+			SettlementLocation = {126, 24}, -- Aarhus
+			Map = "maps/earth/jutland.smp",
+			Units = {
+				unit_germanic_warrior = 4,
+				unit_germanic_archer = 2
+			},
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Macedonia = {
+			Name = "Macedonia",
+			Tiles = { {134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34} },
+			SettlementName = "Aegae",
+			CulturalSettlementNames = {
+				greek = "Aegae",
+				latin = "Edessa"
+			},
+			SettlementLocation = {135, 34}, -- Aegae
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Moldavia = {
+			Name = "Moldavia",
+			CulturalNames = {
+				latin = "Northern Lower Dacia"
+			},
+			Tiles = { {139, 29}, {139, 30}, {139, 31}, {140, 30}, {140, 31} },
+			SettlementLocation = {139, 31}, -- Braila
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		Naples = {
+			Name = "Naples",
+			CulturalNames = {
+				greek = "Magna Graecia"
+			},
+			Tiles = { {130, 34}, {131, 34}, {131, 35}, {131, 36}, {132, 35} },
+			SettlementName = "Neapolis",
+			CulturalSettlementNames = {
+				greek = "Neapolis",
+				latin = "Neapolis"
+			},
+			SettlementLocation = {130, 34}, -- Naples
+			Map = "maps/earth/south-italy.smp",
+			SettlementTerrain = "Plains"
+		},
+		Netherlands = {
+			Name = "Netherlands",
+			CulturalNames = {
+				FrisianTribe = "Frisia",
+				latin = "Batavia",
+				teuton = "Netherlands"
+			},
+			Tiles = { {123, 26}, {123, 27}, {124, 26}, {124, 27} },
+			SettlementName = "Amsterdam",
+			CulturalSettlementNames = {
+				teuton = "Amsterdam"
+			},
+			SettlementLocation = {123, 26}, -- Amsterdam
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 1 -- soldiers to prevent germanic expansion here too soon
+			},
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		NorthItaly = {
+			Name = "North Italy",
+			CulturalNames = {
+				celt = "Cisalpine Gaul"
+			},
+			Tiles = { {125, 31}, {125, 32}, {126, 31}, {126, 32}, {127, 31}, {127, 32}, {128, 31}, {128, 32}, {128, 33}, {129, 31} },
+			SettlementName = "Milan",
+			CulturalSettlementNames = {
+				latin = "Mediolanum",
+				teuton = "Mailand"
+			},
+			SettlementLocation = {127, 31}, -- Milan
+			Map = "maps/earth/oderzo.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
+			},
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Peloponnese = {
+			Name = "Peloponnese",
+			Tiles = { {135, 37}, {136, 37} },
+			SettlementName = "Mycenae",
+			CulturalSettlementNames = {
+				greek = "Mycenae"
+			},
+			SettlementLocation = {136, 37}, -- Mycenae
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Poland = {
+			Name = "Poland",
+			Tiles = { {133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27} },
+	--		SettlementName = "Warsaw",
+			SettlementLocation = {134, 26}, -- Warsaw
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Portugal = {
+			Name = "Lusitania",
+			CulturalNames = {
+				Portugal = "Portugal",
+				Spain = "Portugal"
+			},
+			Tiles = {
+				{114, 34}, {114, 35}, {114, 36}, {114, 37} -- old map
+			},
+			SettlementName = "Lisbon",
+			CulturalSettlementNames = {
+				latin = "Olisipo"
+			},
+			SettlementLocation = {114, 36}, -- Lisbon
+			Map = "maps/earth/braga.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Prussia = {
+			Name = "Gothiscandza",
+			CulturalNames = {
+				goth = "Gothiscandza",
+				teuton = "Prussia"
+			},
+			Tiles = { {130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25} },
+			SettlementName = "Königsberg",
+			CulturalSettlementNames = {
+				teuton = "Königsberg"
+			},
+			SettlementLocation = {134, 25}, -- Königsberg
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Rhineland = {
+			Name = "Rhineland",
+			CulturalNames = {
+				teuton = "Rhineland",
+				DaneTribe = "Saxland",
+				SaxonTribe = "Saxland",
+				SwedeTribe = "Saxland"
+			},
+			Tiles = { {125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26} },
+			SettlementName = "Dusseldorf",
+			CulturalSettlementNames = {
+				teuton = "Dusseldorf"
+			},
+			SettlementLocation = {125, 27}, -- Düsseldorf
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Russia = {
+			Name = "Gardarike",
+			CulturalNames = {
+				goth = "Gardarike",
+				norse = "Gardarike",
+				Muscovy = "Russia",
+				Russia = "Russia"
+			},
+			Tiles = { {140, 22}, {140, 23}, {140, 24}, {140, 25}, {140, 26}, {141, 21}, {141, 22}, {141, 23}, {141, 24}, {141, 25}, {141, 26}, {142, 21}, {142, 22}, {142, 23}, {142, 24}, {142, 25}, {142, 26}, {143, 21}, {143, 22}, {143, 23}, {143, 24}, {143, 25}, {143, 26}, {144, 21}, {144, 22}, {144, 23}, {144, 24}, {144, 25}, {144, 26}, {145, 18}, {145, 19}, {145, 20}, {145, 21}, {145, 22}, {145, 23}, {145, 24}, {145, 25}, {145, 26}, {145, 27}, {146, 18}, {146, 19}, {146, 20}, {146, 21}, {146, 22}, {146, 23}, {146, 24}, {146, 25}, {146, 26}, {146, 27}, {147, 18}, {147, 19}, {147, 20}, {147, 21}, {147, 22}, {147, 23}, {147, 24}, {147, 25}, {147, 26}, {147, 27}, {148, 20}, {148, 21}, {148, 22}, {148, 23}, {148, 24}, {148, 25}, {148, 26}, {148, 27}, {148, 28}, {149, 23}, {149, 24}, {149, 25}, {149, 26}, {149, 27}, {149, 28}, {150, 23}, {150, 24}, {150, 25}, {150, 26}, {150, 27}, {151, 24}, {151, 25}, {151, 26}, {151, 27}, {151, 28}, {151, 29}, {152, 24}, {152, 25}, {152, 26}, {152, 27}, {153, 24}, {153, 25}, {153, 26}, {154, 24}, {154, 25} },
+	--		SettlementName = "Moscow",
+			SettlementLocation = {146, 23}, -- Moscow
+			Map = "maps/earth/novgorod.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to stop the Vana Tribe from expanding here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Sardinia = {
+			Name = "Sardinia",
+			Tiles = { {126, 36} },
+			SettlementName = "Caralis",
+			CulturalSettlementNames = {
+				latin = "Caralis"
+			},
+			SettlementLocation = {126, 36},
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
+		Scotland = {
+			Name = "Caledonia",
+			CulturalNames = {
+				England = "Scotland",
+				ScotTribe = "Scotland",
+				Scotland = "Scotland",
+				teuton = "Scotland"
+			},
+			Tiles = { {116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24} },
+			SettlementLocation = {117, 24}, -- Edinburgh
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Hills",
+			Coastal = true
+		},
+		Serbia = {
+			Name = "Upper Moesia",
+			Tiles = { {134, 32}, {135, 32}, {135, 33} },
+			SettlementName = "Viminacium",
+			CulturalSettlementNames = {
+				latin = "Viminacium"
+			},
+			SettlementLocation = {135, 32}, -- Viminacium
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Sicily = {
+			Name = "Sicily",
+			Tiles = { {129, 37} },
+			SettlementName = "Syracuse",
+			CulturalSettlementNames = {
+				greek = "Syracusae",
+				latin = "Syracusae"
+			},
+			SettlementLocation = {129, 37}, -- Palermo
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
+		},
+		Silesia = {
+			Name = "Silesia",
+			CulturalNames = {
+				teuton = "Silesia"
+			},
+			Tiles = { {130, 27}, {131, 27}, {132, 27}, {132, 28} },
+			SettlementName = "Breslau",
+			CulturalSettlementNames = {
+				teuton = "Breslau"
+			},
+			SettlementLocation = {132, 27}, -- Breslau
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
+			},
+			SettlementTerrain = "Plains"
+		},
+		Sweden = {
+			Name = "Sweden",
+			Tiles = { {129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21} },
+			SettlementName = "Sigtun",
+			CulturalSettlementNames = {
+				norse = "Sigtun"
+			},
+			SettlementLocation = {132, 21}, -- Stockholm / Sigtun
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Switzerland = {
+			Name = "Helvetia",
+			CulturalNames = {
+				celt = "Helvetia",
+				latin = "Helvetia",
+				teuton = "Switzerland"
+			},
+			Tiles = { {125, 30}, {126, 30} },
+	--		SettlementName = "Bern",
+			SettlementLocation = {125, 30}, -- Bern
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Mountains"
+		},
+		Thrace = {
+			Name = "Thrace",
+			Tiles = { {138, 34}, {139, 34} },
+			SettlementName = "Byzantium",
+			CulturalSettlementNames = {
+				greek = "Byzantium",
+				latin = "Byzantium"
+			},
+			SettlementLocation = {139, 34}, -- Constantinople
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Transylvania = {
+			Name = "Transylvania",
+			CulturalNames = {
+				latin = "Upper Dacia",
+				teuton = "Siebenbürgen"
+			},
+			Tiles = { {136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31} },
+--			SettlementName = "",
+			SettlementLocation = {136, 30}, -- Klausenburg
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		},
+		Ukraine = {
+			Name = "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
+			CulturalNames = {
+				goth = "Danparstathir",
+				norse = "Danparstathir",
+				Muscovy = "Ukraine",
+				Poland = "Ukraine",
+				Russia = "Ukraine"
+			},
+			Tiles = { {139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29} },
+	--		SettlementName = "Kiev",
+			SettlementLocation = {141, 27}, -- Kiev
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
+			},
+			SettlementTerrain = "Plains"
+		},
+		Wallachia = {
+			Name = "Wallachia",
+			CulturalNames = {
+				latin = "Southern Lower Dacia"
+			},
+			Tiles = { {136, 32}, {137, 32}, {138, 32}, {139, 32}, {140, 32} },
+			SettlementLocation = {138, 32}, -- Bucharest
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
+			},
+			SettlementTerrain = "Plains"
+		},
+		WhiteRussia = {
+			Name = "White Russia",
+			Tiles = { {136, 25}, {136, 26}, {136, 27}, {137, 25}, {137, 26}, {137, 27}, {138, 25}, {138, 26}, {138, 27}, {139, 24}, {139, 25}, {139, 26}, {139, 27} },
+	--		SettlementName = "Minsk",
+			SettlementLocation = {139, 25}, -- Minsk
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains"
+		}
+	}
+	
 	local NidavellirProvinces = {
 		BrownHills = {
 			Name = "Brown Hills",
@@ -1152,17 +1990,199 @@ function LoadProvinces(world)
 			Tiles = { {136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35} },
 			Owner = "Ocean"
 		},
+		AlboranSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
+			Name = "Alboran Sea",
+			Tiles = {
+				{463, 153},
+				{464, 153},
+				{465, 152}, {465, 153}, {465, 154},
+				{466, 152}, {466, 153}, {466, 154}, {466, 155},
+				{467, 152}, {467, 153}, {467, 154}, {467, 155},
+				{468, 152}, {468, 153}, {468, 154}, {468, 155},
+				{469, 152}, {469, 153}, {469, 154}, {469, 155},
+				{470, 152}, {470, 153}, {470, 154}, {470, 155},
+				{471, 152}, {471, 153}, {471, 154}, {471, 155},
+				{472, 152}, {472, 153}, {472, 154}, {472, 155},
+				{473, 151}, {473, 152}, {473, 153}, {473, 154}, {473, 155},
+				{474, 152}, {474, 153}, {474, 154}, {474, 155},
+				{475, 153}, {475, 154}, {475, 155},
+				{476, 154}
+			},
+			Owner = "Ocean"
+		},
 		AtlanticOcean = {
 			Name = "Atlantic Ocean",
 			Tiles = {
 				{102, 16}, {102, 17}, {102, 18}, {102, 19}, {102, 20}, {102, 21}, {102, 22}, {102, 23}, {102, 24}, {102, 25}, {102, 26}, {102, 27}, {102, 28}, {102, 29}, {102, 30}, {102, 31}, {102, 32}, {102, 33}, {102, 34}, {102, 35}, {102, 36}, {102, 37}, {102, 38}, {103, 16}, {103, 18}, {103, 19}, {103, 20}, {103, 21}, {103, 22}, {103, 23}, {103, 24}, {103, 25}, {103, 26}, {103, 27}, {103, 28}, {103, 29}, {103, 30}, {103, 31}, {103, 32}, {103, 33}, {103, 34}, {103, 35}, {103, 36}, {103, 37}, {103, 38}, {104, 16}, {104, 19}, {104, 20}, {104, 21}, {104, 22}, {104, 23}, {104, 24}, {104, 25}, {104, 26}, {104, 27}, {104, 28}, {104, 29}, {104, 30}, {104, 31}, {104, 32}, {104, 33}, {104, 34}, {104, 35}, {104, 36}, {104, 37}, {104, 38}, {105, 16}, {105, 19}, {105, 20}, {105, 21}, {105, 22}, {105, 23}, {105, 24}, {105, 25}, {105, 26}, {105, 27}, {105, 28}, {105, 29}, {105, 30}, {105, 31}, {105, 32}, {105, 33}, {105, 34}, {105, 35}, {105, 36}, {105, 37}, {105, 38}, {106, 16}, {106, 19}, {106, 20}, {106, 21}, {106, 22}, {106, 23}, {106, 24}, {106, 25}, {106, 26}, {106, 27}, {106, 28}, {106, 29}, {106, 30}, {106, 31}, {106, 32}, {106, 33}, {106, 34}, {106, 35}, {106, 36}, {106, 37}, {106, 38}, {107, 16}, {107, 19}, {107, 20}, {107, 21}, {107, 22}, {107, 23}, {107, 24}, {107, 25}, {107, 26}, {107, 27}, {107, 28}, {107, 29}, {107, 30}, {107, 31}, {107, 32}, {107, 33}, {107, 34}, {107, 35}, {107, 36}, {107, 37}, {107, 38}, {108, 16}, {108, 18}, {108, 19}, {108, 20}, {108, 21}, {108, 22}, {108, 23}, {108, 24}, {108, 25}, {108, 26}, {108, 27}, {108, 28}, {108, 29}, {108, 30}, {108, 31}, {108, 32}, {108, 33}, {108, 34}, {108, 35}, {108, 36}, {108, 37}, {108, 38}, {109, 16}, {109, 18}, {109, 19}, {109, 20}, {109, 21}, {109, 22}, {109, 23}, {109, 24}, {109, 25}, {109, 26}, {109, 27}, {109, 28}, {109, 29}, {109, 30}, {109, 31}, {109, 32}, {109, 33}, {109, 34}, {109, 35}, {109, 36}, {109, 37}, {109, 38}, {110, 16}, {110, 17}, {110, 18}, {110, 19}, {110, 20}, {110, 21}, {110, 22}, {110, 23}, {110, 24}, {110, 25}, {110, 26}, {110, 27}, {110, 28}, {110, 29}, {110, 30}, {110, 31}, {110, 32}, {110, 33}, {110, 34}, {110, 35}, {110, 36}, {110, 37}, {110, 38}, {111, 16}, {111, 17}, {111, 18}, {111, 19}, {111, 20}, {111, 21}, {111, 22}, {111, 23}, {111, 24}, {111, 25}, {111, 26}, {111, 27}, {111, 28}, {111, 29}, {111, 30}, {111, 31}, {111, 32}, {111, 33}, {111, 34}, {111, 35}, {111, 36}, {111, 37}, {111, 38}, {112, 16}, {112, 17}, {112, 18}, {112, 19}, {112, 20}, {112, 21}, {112, 22}, {112, 23}, {112, 24}, {112, 25}, {112, 26}, {112, 27}, {112, 28}, {112, 29}, {112, 30}, {112, 31}, {112, 32}, {112, 33}, {112, 34}, {112, 35}, {112, 36}, {112, 37}, {112, 38}, {113, 16}, {113, 17}, {113, 18}, {113, 19}, {113, 20}, {113, 21}, {113, 22}, {113, 23}, {113, 24}, {113, 28}, {113, 29}, {113, 30}, {113, 31}, {113, 32}, {113, 33}, {113, 34}, {113, 35}, {113, 36}, {113, 37}, {113, 38}, {114, 16}, {114, 17}, {114, 18}, {114, 19}, {114, 20}, {114, 21}, {114, 22}, {114, 23}, {114, 24}, {114, 28}, {114, 29}, {114, 30}, {114, 31}, {114, 38}, {115, 16}, {115, 17}, {115, 18}, {115, 19}, {115, 20}, {115, 21}, {115, 22}, {115, 23}, {115, 24}, {115, 28}, {115, 29}, {115, 30}, {115, 38}, {116, 16}, {116, 17}, {116, 18}, {116, 19}, {116, 20}, {116, 21}, {117, 16}, {117, 17}, {117, 18}, {117, 19}, {117, 20}, {117, 21}, {118, 16}, {118, 17}, {118, 18}, {118, 19}, {118, 20}, {119, 16}, {119, 17}, {119, 18}, {119, 19}, {120, 16}, {120, 17}, {120, 18}, {120, 19}, {121, 16}, {121, 17}, {121, 18}, {121, 19}, {122, 16}, {122, 17}, {122, 18}, {122, 19}, {123, 16}, {123, 17}, {123, 18}, {123, 19}, {124, 16}, {124, 17}, {124, 18}, {124, 19}, {125, 16}, {125, 17}, {125, 18}, {126, 16}, {126, 17}, {126, 18}, {127, 16}, {127, 17}, {128, 16}, -- old map
-				{452, 131}, {452, 132}, {452, 133}, {452, 134}, {452, 135}, {452, 136}, {452, 137}, {452, 138}, {452, 139}, {452, 140}, {452, 141}, {452, 142}, {452, 143}, {452, 144}, {452, 145}, {452, 146}, {452, 147}, {452, 148}, {452, 149}, {452, 150}, {452, 151},
-				{453, 131}, {453, 132}, {453, 133}, {453, 134}, {453, 135}, {453, 136}, {453, 137}, {453, 138}, {453, 139}, {453, 140}, {453, 141}, {453, 142}, {453, 143}, {453, 146}, {453, 147}, {453, 148}, {453, 149}, {453, 150}, {453, 151},
-				{454, 131}, {454, 132}, {454, 135}, {454, 136}, {454, 137}, {454, 138}, {454, 139}, {454, 140}, {454, 141}, {454, 142}, {454, 147}, {454, 148}, {454, 149}, {454, 150}, {454, 151},
-				{455, 131}, {455, 132}, {455, 150}, {455, 151},
-				{456, 131}, {456, 151},
-				{457, 131}, {457, 151},
-				{458, 131}, {458, 150}, {458, 151}
+				{452, 131}, {452, 132}, {452, 133}, {452, 134}, {452, 135}, {452, 136}, {452, 137}, {452, 138}, {452, 139}, {452, 140}, {452, 141}, {452, 142}, {452, 143}, {452, 144}, {452, 145}, {452, 146}, {452, 147}, {452, 148}, {452, 149}, {452, 150}, {452, 151}, {452, 152}, {452, 153},
+				{453, 131}, {453, 132}, {453, 133}, {453, 134}, {453, 135}, {453, 136}, {453, 137}, {453, 138}, {453, 139}, {453, 140}, {453, 141}, {453, 142}, {453, 143}, {453, 146}, {453, 147}, {453, 148}, {453, 149}, {453, 150}, {453, 151}, {453, 152}, {453, 153},
+				{454, 131}, {454, 132}, {454, 135}, {454, 136}, {454, 137}, {454, 138}, {454, 139}, {454, 140}, {454, 141}, {454, 142}, {454, 147}, {454, 148}, {454, 149}, {454, 150}, {454, 151}, {454, 152}, {454, 153},
+				{455, 131}, {455, 132}, {455, 150}, {455, 151}, {455, 152}, {455, 153},
+				{456, 131}, {456, 151}, {456, 152}, {456, 153},
+				{457, 151}, {457, 152}, {457, 153},
+				{458, 150}, {458, 151}, {458, 152}, {458, 153},
+				{459, 150}, {459, 151}, {459, 152}, {459, 153},
+				{460, 150}, {460, 151}, {460, 152}, {460, 153},
+				{461, 151}, {461, 152}, {461, 153},
+				{462, 153}
+			},
+			Owner = "Ocean"
+		},
+		BalearicSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
+			Name = "Balearic Sea",
+			Tiles = {
+				{116, 38}, {117, 38}, {118, 38}, {119, 37}, {119, 38}, {120, 35}, {120, 36}, {120, 37}, {121, 35}, {121, 36}, {121, 37}, {122, 33}, {122, 34}, {122, 35}, {122, 36}, {122, 37}, {123, 33}, {123, 34}, {123, 35}, {123, 36}, {123, 37}, {124, 33}, {124, 34}, {124, 35}, {124, 36}, {124, 37}, {125, 34}, {125, 35}, {125, 36}, {125, 37}, {126, 35}, -- old map
+				{479, 143}, {479, 144},
+				{480, 142}, {480, 143}, {480, 144}, {480, 145},
+				{481, 141}, {481, 142}, {481, 143}, {481, 144}, {481, 145},
+				{482, 140}, {482, 141}, {482, 142}, {482, 143}, {482, 144}, {482, 145},
+				{483, 139}, {483, 140}, {483, 141}, {483, 142}, {483, 143}, {483, 144}, {483, 145},
+				{484, 139}, {484, 140}, {484, 141}, {484, 142}, {484, 143}, {484, 144}, {484, 145},
+				{485, 139}, {485, 140}, {485, 141}, {485, 142}, {485, 143}, {485, 144}, {485, 145},
+				{486, 138}, {486, 139}, {486, 140}, {486, 141}, {486, 142}, {486, 143}, {486, 144}, {486, 145},
+				{487, 138}, {487, 139}, {487, 140}, {487, 141}, {487, 142}, {487, 144}, {487, 145},
+				{488, 137}, {488, 138}, {488, 139}, {488, 140}, {488, 141}, {488, 142}, {488, 144},
+				{489, 137}, {489, 138}, {489, 139}, {489, 140}, {489, 141}, {489, 142}, {489, 144},
+				{490, 139}, {490, 140}, {490, 141}, {490, 142}, {490, 143}, {490, 144},
+				{491, 140}, {491, 141}, {491, 143}
+			},
+			Owner = "Ocean"
+		},
+		BalticSea = {
+			Name = "Baltic Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
+			ReferenceProvince = "Brandenburg", -- province used as a reference for this province's name
+			CulturalNames = {
+				MarcomanniTribe = "Suebic Sea",
+				SuebiTribe = "Suebic Sea"
+			},
+			Tiles = { {128, 24}, {129, 24}, {130, 24}, {130, 25}, {131, 24}, {132, 20}, {132, 22}, {132, 23}, {132, 24}, {133, 19}, {133, 20}, {133, 21}, {133, 22}, {133, 24}, {134, 18}, {134, 19}, {134, 20}, {134, 21}, {134, 22}, {134, 23}, {134, 24}, {135, 17}, {135, 18}, {135, 21}, {135, 22}, {136, 17}, {136, 18}, {136, 21}, {136, 22}, {137, 17}, {137, 21}, {138, 21}, {139, 21}, {140, 21} },
+			Owner = "Ocean"
+		},
+		BayOfBiscay = {
+			Name = "Bay of Biscay",
+			Tiles = {
+				{114, 32}, {115, 31}, {115, 32}, {116, 29}, {116, 30}, {116, 31}, {116, 32}, {117, 30}, {117, 31}, {117, 32}, {118, 31}, {118, 32}, -- old map
+				{457, 131},
+				{458, 131},
+				{459, 131},
+				{460, 131},
+				{461, 131},
+				{462, 131},
+				{463, 131},
+				{464, 131},
+				{465, 131},
+				{466, 131}, {466, 132},
+				{467, 131}, {467, 132},
+				{468, 131},
+				{469, 131},
+				{470, 131}, {470, 132},
+				{471, 131}, {471, 132},
+				{472, 131}, {472, 132},
+				{473, 131}, {473, 132},
+				{474, 131}, {474, 132}
+			},
+			Owner = "Ocean"
+		},
+		BlackSea = {
+			Name = "Black Sea",
+			Tiles = { {140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34} },
+			Owner = "Ocean"
+		},
+		EnglishChannel = {
+			Name = "British Ocean",
+			ReferenceProvince = "England", -- province used as a reference for this province's name
+			CulturalNames = {
+				England = "English Channel",
+				SaxonTribe = "English Channel",
+				teuton = "England"
+			},
+			Tiles = { {116, 28}, {117, 28}, {118, 28}, {119, 28}, {120, 27}, {120, 28} },
+			Owner = "Ocean"
+		},
+		IonianSea = {
+			Name = "Ionian Sea",
+			Tiles = { {128, 38}, {128, 39}, {129, 38}, {129, 39}, {129, 40}, {130, 37}, {130, 38}, {130, 39}, {130, 40}, {131, 37}, {131, 38}, {131, 39}, {131, 40}, {131, 41}, {132, 36}, {132, 37}, {132, 38}, {132, 39}, {133, 36}, {133, 37}, {133, 38}, {134, 36}, {134, 37}, {134, 38}, {135, 38}, {136, 38} },
+			Owner = "Ocean"
+		},
+		IrishSea = {
+			Name = "Irish Sea",
+			ReferenceProvince = "Ireland", -- province used as a reference for this province's name
+			CulturalNames = {
+				latin = "Hibernian Ocean"
+			},
+			Tiles = { {113, 27}, {114, 27}, {115, 27}, {116, 24}, {116, 25}, {116, 26}, {116, 27}, {117, 25} },
+			Owner = "Ocean"
+		},
+		LibyanSea = {
+			Name = "Libyan Sea",
+			Tiles = { {132, 40}, {132, 41}, {133, 39}, {133, 40}, {133, 41}, {134, 39}, {134, 40}, {135, 39}, {135, 40}, {136, 39}, {136, 40}, {137, 40}, {138, 40}, {139, 39}, {139, 40} },
+			Owner = "Ocean"
+		},
+		LigurianSea = {
+			Name = "Ligurian Sea",
+			Tiles = { {125, 33}, {126, 33}, {127, 33} },
+			Owner = "Ocean"
+		},
+		NorthSea = {
+			Name = "North Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
+			ReferenceProvince = "Rhineland", -- province used as a reference for this province's name
+			CulturalNames = {
+				germanic = "German Sea"
+			},
+			Tiles = { {118, 21}, {118, 22}, {119, 20}, {119, 21}, {119, 22}, {119, 23}, {119, 24}, {120, 20}, {120, 21}, {120, 22}, {120, 23}, {120, 24}, {120, 25}, {121, 20}, {121, 21}, {121, 22}, {121, 23}, {121, 24}, {121, 25}, {121, 26}, {121, 27}, {122, 20}, {122, 21}, {122, 22}, {122, 23}, {122, 24}, {122, 25}, {122, 26}, {123, 20}, {123, 21}, {123, 22}, {123, 23}, {123, 24}, {123, 25}, {124, 22}, {124, 23}, {124, 24}, {124, 25}, {125, 22}, {125, 23}, {125, 24}, {125, 25}, {126, 22}, {127, 22}, {127, 23}, {127, 24}, {128, 23} },
+			Owner = "Ocean"
+		},
+		TyrrhenianSea = {
+			Name = "Tyrrhenian Sea",
+			Tiles = { {126, 37}, {127, 34}, {127, 35}, {127, 36}, {127, 37}, {128, 34}, {128, 35}, {128, 36}, {128, 37}, {129, 35}, {129, 36}, {130, 35}, {130, 36} },
+			Owner = "Ocean"
+		},
+		WesternMediterraneanSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
+			Name = "Western Mediterranean Sea",
+			Tiles = {
+				{474, 151},
+				{475, 150}, {475, 151}, {475, 152},
+				{476, 149}, {476, 150}, {476, 151}, {476, 152}, {476, 153},
+				{477, 149}, {477, 150}, {477, 151}, {477, 152}, {477, 153},
+				{478, 147}, {478, 148}, {478, 149}, {478, 150}, {478, 151}, {478, 152}, {478, 153},
+				{479, 146}, {479, 147}, {479, 148}, {479, 149}, {479, 150}, {479, 151}, {479, 152}, {479, 153},
+				{480, 146}, {480, 147}, {480, 148}, {480, 149}, {480, 150}, {480, 151}, {480, 152},
+				{481, 146}, {481, 147}, {481, 148}, {481, 149}, {481, 150}, {481, 151}, {481, 152},
+				{482, 146}, {482, 147}, {482, 148}, {482, 149}, {482, 150}, {482, 151},
+				{483, 146}, {483, 147}, {483, 148}, {483, 149}, {483, 150}, {483, 151},
+				{484, 146}, {484, 147}, {484, 148}, {484, 149}, {484, 150}, {484, 151},
+				{485, 146}, {485, 147}, {485, 148}, {485, 149}, {485, 150}, {485, 151},
+				{486, 146}, {486, 147}, {486, 148}, {486, 149}, {486, 150}, {486, 151},
+				{487, 146}, {487, 147}, {487, 148}, {487, 149}, {487, 150}, {487, 151},
+				{488, 145}, {488, 146}, {488, 147}, {488, 148}, {488, 149}, {488, 150},
+				{489, 145}, {489, 146}, {489, 147}, {489, 148}, {489, 149}, {489, 150},
+				{490, 145}, {490, 146}, {490, 147}, {490, 148}, {490, 149}, {490, 150},
+				{491, 144}, {491, 145}, {491, 146}, {491, 147}, {491, 148}, {491, 149}, {491, 150}
+			},
+			Owner = "Ocean"
+		},
+		WhiteSea = {
+			Name = "White Sea",
+			Tiles = { {145, 17}, {146, 17}, {147, 17} },
+			Owner = "Ocean"
+		}
+	}
+
+	local EarthOldWaterProvinces = {
+		AdriaticSea = {
+			Name = "Adriatic Sea",
+			Tiles = { {129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35} },
+			Owner = "Ocean"
+		},
+		AegeanSea = {
+			Name = "Aegean Sea",
+			Tiles = { {136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35} },
+			Owner = "Ocean"
+		},
+		AtlanticOcean = {
+			Name = "Atlantic Ocean",
+			Tiles = {
+				{102, 16}, {102, 17}, {102, 18}, {102, 19}, {102, 20}, {102, 21}, {102, 22}, {102, 23}, {102, 24}, {102, 25}, {102, 26}, {102, 27}, {102, 28}, {102, 29}, {102, 30}, {102, 31}, {102, 32}, {102, 33}, {102, 34}, {102, 35}, {102, 36}, {102, 37}, {102, 38}, {103, 16}, {103, 18}, {103, 19}, {103, 20}, {103, 21}, {103, 22}, {103, 23}, {103, 24}, {103, 25}, {103, 26}, {103, 27}, {103, 28}, {103, 29}, {103, 30}, {103, 31}, {103, 32}, {103, 33}, {103, 34}, {103, 35}, {103, 36}, {103, 37}, {103, 38}, {104, 16}, {104, 19}, {104, 20}, {104, 21}, {104, 22}, {104, 23}, {104, 24}, {104, 25}, {104, 26}, {104, 27}, {104, 28}, {104, 29}, {104, 30}, {104, 31}, {104, 32}, {104, 33}, {104, 34}, {104, 35}, {104, 36}, {104, 37}, {104, 38}, {105, 16}, {105, 19}, {105, 20}, {105, 21}, {105, 22}, {105, 23}, {105, 24}, {105, 25}, {105, 26}, {105, 27}, {105, 28}, {105, 29}, {105, 30}, {105, 31}, {105, 32}, {105, 33}, {105, 34}, {105, 35}, {105, 36}, {105, 37}, {105, 38}, {106, 16}, {106, 19}, {106, 20}, {106, 21}, {106, 22}, {106, 23}, {106, 24}, {106, 25}, {106, 26}, {106, 27}, {106, 28}, {106, 29}, {106, 30}, {106, 31}, {106, 32}, {106, 33}, {106, 34}, {106, 35}, {106, 36}, {106, 37}, {106, 38}, {107, 16}, {107, 19}, {107, 20}, {107, 21}, {107, 22}, {107, 23}, {107, 24}, {107, 25}, {107, 26}, {107, 27}, {107, 28}, {107, 29}, {107, 30}, {107, 31}, {107, 32}, {107, 33}, {107, 34}, {107, 35}, {107, 36}, {107, 37}, {107, 38}, {108, 16}, {108, 18}, {108, 19}, {108, 20}, {108, 21}, {108, 22}, {108, 23}, {108, 24}, {108, 25}, {108, 26}, {108, 27}, {108, 28}, {108, 29}, {108, 30}, {108, 31}, {108, 32}, {108, 33}, {108, 34}, {108, 35}, {108, 36}, {108, 37}, {108, 38}, {109, 16}, {109, 18}, {109, 19}, {109, 20}, {109, 21}, {109, 22}, {109, 23}, {109, 24}, {109, 25}, {109, 26}, {109, 27}, {109, 28}, {109, 29}, {109, 30}, {109, 31}, {109, 32}, {109, 33}, {109, 34}, {109, 35}, {109, 36}, {109, 37}, {109, 38}, {110, 16}, {110, 17}, {110, 18}, {110, 19}, {110, 20}, {110, 21}, {110, 22}, {110, 23}, {110, 24}, {110, 25}, {110, 26}, {110, 27}, {110, 28}, {110, 29}, {110, 30}, {110, 31}, {110, 32}, {110, 33}, {110, 34}, {110, 35}, {110, 36}, {110, 37}, {110, 38}, {111, 16}, {111, 17}, {111, 18}, {111, 19}, {111, 20}, {111, 21}, {111, 22}, {111, 23}, {111, 24}, {111, 25}, {111, 26}, {111, 27}, {111, 28}, {111, 29}, {111, 30}, {111, 31}, {111, 32}, {111, 33}, {111, 34}, {111, 35}, {111, 36}, {111, 37}, {111, 38}, {112, 16}, {112, 17}, {112, 18}, {112, 19}, {112, 20}, {112, 21}, {112, 22}, {112, 23}, {112, 24}, {112, 25}, {112, 26}, {112, 27}, {112, 28}, {112, 29}, {112, 30}, {112, 31}, {112, 32}, {112, 33}, {112, 34}, {112, 35}, {112, 36}, {112, 37}, {112, 38}, {113, 16}, {113, 17}, {113, 18}, {113, 19}, {113, 20}, {113, 21}, {113, 22}, {113, 23}, {113, 24}, {113, 28}, {113, 29}, {113, 30}, {113, 31}, {113, 32}, {113, 33}, {113, 34}, {113, 35}, {113, 36}, {113, 37}, {113, 38}, {114, 16}, {114, 17}, {114, 18}, {114, 19}, {114, 20}, {114, 21}, {114, 22}, {114, 23}, {114, 24}, {114, 28}, {114, 29}, {114, 30}, {114, 31}, {114, 38}, {115, 16}, {115, 17}, {115, 18}, {115, 19}, {115, 20}, {115, 21}, {115, 22}, {115, 23}, {115, 24}, {115, 28}, {115, 29}, {115, 30}, {115, 38}, {116, 16}, {116, 17}, {116, 18}, {116, 19}, {116, 20}, {116, 21}, {117, 16}, {117, 17}, {117, 18}, {117, 19}, {117, 20}, {117, 21}, {118, 16}, {118, 17}, {118, 18}, {118, 19}, {118, 20}, {119, 16}, {119, 17}, {119, 18}, {119, 19}, {120, 16}, {120, 17}, {120, 18}, {120, 19}, {121, 16}, {121, 17}, {121, 18}, {121, 19}, {122, 16}, {122, 17}, {122, 18}, {122, 19}, {123, 16}, {123, 17}, {123, 18}, {123, 19}, {124, 16}, {124, 17}, {124, 18}, {124, 19}, {125, 16}, {125, 17}, {125, 18}, {126, 16}, {126, 17}, {126, 18}, {127, 16}, {127, 17}, {128, 16},
 			},
 			Owner = "Ocean"
 		},
@@ -1183,7 +2203,9 @@ function LoadProvinces(world)
 		},
 		BayOfBiscay = {
 			Name = "Bay of Biscay",
-			Tiles = { {114, 32}, {115, 31}, {115, 32}, {116, 29}, {116, 30}, {116, 31}, {116, 32}, {117, 30}, {117, 31}, {117, 32}, {118, 31}, {118, 32} },
+			Tiles = {
+				{114, 32}, {115, 31}, {115, 32}, {116, 29}, {116, 30}, {116, 31}, {116, 32}, {117, 30}, {117, 31}, {117, 32}, {118, 31}, {118, 32}
+			},
 			Owner = "Ocean"
 		},
 		BlackSea = {
@@ -1367,6 +2389,9 @@ function LoadProvinces(world)
 	if (world == "Earth") then
 		AddProvinceTable(EarthProvinces)
 		AddWaterProvinceTable(EarthWaterProvinces)
+	elseif (world == "EarthOld") then
+		AddProvinceTable(EarthOldProvinces)
+		AddWaterProvinceTable(EarthOldWaterProvinces)
 	elseif (world == "Nidavellir") then
 		AddProvinceTable(NidavellirProvinces)
 		AddWaterProvinceTable(NidavellirWaterProvinces)
