@@ -201,6 +201,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.3.2
 -----------------------------------------------------------------------
 
+* AI
+- Fixed issue which caused AI units to retaliate against volcanic craters.
+
 * Grand Strategy Mode
 - Improved the efficiency of minimap drawing.
 - There is now a gray-colored rectangle on the minimap indicating which part of the map the player is currently seeing.
