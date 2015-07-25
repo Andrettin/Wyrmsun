@@ -193,7 +193,9 @@ SetWorldMapTileTerrain(454, 132, water_id)
 SetWorldMapTileTerrain(454, 133, hills_id)
 SetWorldMapTileTerrain(454, 134, hills_id)
 SetWorldMapTileTerrain(454, 135, water_id)
+SetWorldMapTileRiver(454, 135, "south", true) -- Minho River
 SetWorldMapTileTerrain(454, 136, water_id)
+SetWorldMapTileRiver(454, 136, "north", true) -- Minho River
 SetWorldMapTileTerrain(454, 137, water_id)
 SetWorldMapTileTerrain(454, 138, water_id)
 SetWorldMapTileTerrain(454, 139, water_id)
@@ -210,7 +212,9 @@ SetWorldMapTileRiver(454, 145, "north", true) -- Tagus River
 SetWorldMapTileRiver(454, 145, "west", true) -- Tagus River
 SetWorldMapTileTerrain(454, 146, plains_id)
 SetWorldMapTileRiver(454, 146, "northwest", true) -- Tagus River
+SetWorldMapTileRiver(454, 146, "southeast", true) -- Sado River
 SetWorldMapTileTerrain(454, 147, water_id)
+SetWorldMapTileRiver(454, 147, "northeast", true) -- Sado River
 SetWorldMapTileTerrain(454, 148, water_id)
 SetWorldMapTileTerrain(454, 149, water_id)
 SetWorldMapTileTerrain(454, 150, water_id)
@@ -222,7 +226,9 @@ SetWorldMapTileTerrain(455, 132, water_id)
 SetWorldMapTileTerrain(455, 133, hills_id)
 SetWorldMapTileTerrain(455, 134, hills_id)
 SetWorldMapTileTerrain(455, 135, hills_id)
+SetWorldMapTileRiver(455, 135, "south", true) -- Minho River
 SetWorldMapTileTerrain(455, 136, hills_id)
+SetWorldMapTileRiver(455, 136, "north", true) -- Minho River
 SetWorldMapTileTerrain(455, 137, plains_id)
 SetWorldMapTileTerrain(455, 138, plains_id)
 SetWorldMapTileTerrain(455, 139, plains_id)
@@ -238,8 +244,13 @@ SetWorldMapTileRiver(455, 144, "north", true) -- Tagus River
 SetWorldMapTileRiver(455, 144, "west", true) -- Tagus River
 SetWorldMapTileTerrain(455, 145, scrub_forest_id)
 SetWorldMapTileTerrain(455, 146, plains_id)
+SetWorldMapTileRiver(455, 146, "south", true) -- Sado River
 SetWorldMapTileTerrain(455, 147, hills_id)
+SetWorldMapTileRiver(455, 147, "north", true) -- Sado River
+SetWorldMapTileRiver(455, 147, "east", true) -- Sado River
 SetWorldMapTileTerrain(455, 148, hills_id)
+SetWorldMapTileRiverhead(455, 148, "east", true) -- Sado River
+SetWorldMapTileRiver(455, 148, "northeast", true) -- Sado River
 SetWorldMapTileTerrain(455, 149, hills_id)
 SetWorldMapTileTerrain(455, 150, water_id)
 SetWorldMapTileTerrain(455, 151, water_id)
@@ -249,8 +260,12 @@ SetWorldMapTileTerrain(456, 131, water_id)
 SetWorldMapTileTerrain(456, 132, plains_id)
 SetWorldMapTileTerrain(456, 133, plains_id)
 SetWorldMapTileTerrain(456, 134, hills_id)
+SetWorldMapTileRiver(456, 134, "southeast", true) -- Minho River
 SetWorldMapTileTerrain(456, 135, hills_id)
+SetWorldMapTileRiver(456, 135, "south", true) -- Minho River
+SetWorldMapTileRiver(456, 135, "east", true) -- Minho River
 SetWorldMapTileTerrain(456, 136, hills_id)
+SetWorldMapTileRiver(456, 136, "north", true) -- Minho River
 SetWorldMapTileTerrain(456, 137, hills_id)
 SetWorldMapTileTerrain(456, 138, hills_id)
 SetWorldMapTileTerrain(456, 139, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
@@ -265,8 +280,12 @@ SetWorldMapTileTerrain(456, 144, plains_id)
 SetWorldMapTileRiver(456, 144, "northwest", true) -- Tagus River
 SetWorldMapTileTerrain(456, 145, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(456, 146, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
+SetWorldMapTileRiver(456, 146, "southwest", true) -- Sado River
 SetWorldMapTileTerrain(456, 147, plains_id)
+SetWorldMapTileRiver(456, 147, "west", true) -- Sado River
 SetWorldMapTileTerrain(456, 148, plains_id)
+SetWorldMapTileRiverhead(456, 148, "west", true) -- Sado River
+SetWorldMapTileRiver(456, 148, "northwest", true) -- Sado River
 SetWorldMapTileTerrain(456, 149, hills_id)
 SetWorldMapTileTerrain(456, 150, plains_id)
 SetWorldMapTileTerrain(456, 151, water_id)
@@ -274,10 +293,17 @@ SetWorldMapTileTerrain(456, 152, water_id)
 SetWorldMapTileTerrain(456, 153, water_id)
 SetWorldMapTileTerrain(457, 131, water_id)
 SetWorldMapTileTerrain(457, 132, hills_id)
+SetWorldMapTileRiver(457, 132, "southeast", true) -- Minho River
 SetWorldMapTileTerrain(457, 133, plains_id)
+SetWorldMapTileRiver(457, 133, "east", true) -- Minho River
 SetWorldMapTileTerrain(457, 134, plains_id)
+SetWorldMapTileRiver(457, 134, "east", true) -- Minho River
+SetWorldMapTileRiver(457, 134, "south", true) -- Minho River
 SetWorldMapTileTerrain(457, 135, hills_id)
+SetWorldMapTileRiver(457, 135, "north", true) -- Minho River
+SetWorldMapTileRiver(457, 135, "west", true) -- Minho River
 SetWorldMapTileTerrain(457, 136, hills_id)
+SetWorldMapTileRiver(457, 136, "northwest", true) -- Minho River
 SetWorldMapTileTerrain(457, 137, hills_id)
 SetWorldMapTileTerrain(457, 138, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(457, 139, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
@@ -299,9 +325,16 @@ SetWorldMapTileTerrain(457, 152, water_id)
 SetWorldMapTileTerrain(457, 153, water_id)
 SetWorldMapTileTerrain(458, 131, water_id)
 SetWorldMapTileTerrain(458, 132, hills_id)
+SetWorldMapTileRiverhead(458, 132, "south", true) -- Minho River
+SetWorldMapTileRiver(458, 132, "southwest", true) -- Minho River
 SetWorldMapTileTerrain(458, 133, hills_id)
+SetWorldMapTileRiverhead(458, 133, "north", true) -- Minho River
+SetWorldMapTileRiver(458, 133, "northwest", true) -- Minho River
+SetWorldMapTileRiver(458, 133, "west", true) -- Minho River
 SetWorldMapTileTerrain(458, 134, hills_id)
+SetWorldMapTileRiver(458, 134, "west", true) -- Minho River
 SetWorldMapTileTerrain(458, 135, hills_id)
+SetWorldMapTileRiver(458, 135, "northwest", true) -- Minho River
 SetWorldMapTileTerrain(458, 136, hills_id)
 SetWorldMapTileTerrain(458, 137, hills_id)
 SetWorldMapTileTerrain(458, 138, hills_id)
