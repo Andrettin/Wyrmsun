@@ -176,8 +176,11 @@ SetWorldMapTileTerrain(453, 141, water_id)
 SetWorldMapTileTerrain(453, 142, water_id)
 SetWorldMapTileTerrain(453, 143, water_id)
 SetWorldMapTileTerrain(453, 144, plains_id)
+SetWorldMapTileRiver(453, 144, "southeast", true) -- Tagus River
 SetWorldMapTileTerrain(453, 145, hills_id)
+SetWorldMapTileRiver(453, 145, "east", true) -- Tagus River
 SetWorldMapTileTerrain(453, 146, water_id)
+SetWorldMapTileRiver(453, 146, "northeast", true) -- Tagus River
 SetWorldMapTileTerrain(453, 147, water_id)
 SetWorldMapTileTerrain(453, 148, water_id)
 SetWorldMapTileTerrain(453, 149, water_id)
@@ -198,9 +201,15 @@ SetWorldMapTileTerrain(454, 140, water_id)
 SetWorldMapTileTerrain(454, 141, water_id)
 SetWorldMapTileTerrain(454, 142, water_id)
 SetWorldMapTileTerrain(454, 143, hills_id)
+SetWorldMapTileRiver(454, 143, "southeast", true) -- Tagus River
 SetWorldMapTileTerrain(454, 144, hills_id)
-SetWorldMapTileTerrain(454, 145, hills_id)
+SetWorldMapTileRiver(454, 144, "south", true) -- Tagus River
+SetWorldMapTileRiver(454, 144, "east", true) -- Tagus River
+SetWorldMapTileTerrain(454, 145, hills_id) -- Lisbon
+SetWorldMapTileRiver(454, 145, "north", true) -- Tagus River
+SetWorldMapTileRiver(454, 145, "west", true) -- Tagus River
 SetWorldMapTileTerrain(454, 146, plains_id)
+SetWorldMapTileRiver(454, 146, "northwest", true) -- Tagus River
 SetWorldMapTileTerrain(454, 147, water_id)
 SetWorldMapTileTerrain(454, 148, water_id)
 SetWorldMapTileTerrain(454, 149, water_id)
@@ -220,8 +229,13 @@ SetWorldMapTileTerrain(455, 139, plains_id)
 SetWorldMapTileTerrain(455, 140, plains_id)
 SetWorldMapTileTerrain(455, 141, plains_id)
 SetWorldMapTileTerrain(455, 142, scrub_forest_id)
+SetWorldMapTileRiver(455, 142, "southeast", true) -- Tagus River
 SetWorldMapTileTerrain(455, 143, hills_id)
+SetWorldMapTileRiver(455, 143, "south", true) -- Tagus River
+SetWorldMapTileRiver(455, 143, "east", true) -- Tagus River
 SetWorldMapTileTerrain(455, 144, plains_id)
+SetWorldMapTileRiver(455, 144, "north", true) -- Tagus River
+SetWorldMapTileRiver(455, 144, "west", true) -- Tagus River
 SetWorldMapTileTerrain(455, 145, scrub_forest_id)
 SetWorldMapTileTerrain(455, 146, plains_id)
 SetWorldMapTileTerrain(455, 147, hills_id)
@@ -243,8 +257,12 @@ SetWorldMapTileTerrain(456, 139, scrub_forest_id) -- is also hilly, so maybe sho
 SetWorldMapTileTerrain(456, 140, hills_id)
 SetWorldMapTileTerrain(456, 141, hills_id)
 SetWorldMapTileTerrain(456, 142, hills_id)
+SetWorldMapTileRiver(456, 142, "south", true) -- Tagus River
 SetWorldMapTileTerrain(456, 143, hills_id)
+SetWorldMapTileRiver(456, 143, "north", true) -- Tagus River
+SetWorldMapTileRiver(456, 143, "west", true) -- Tagus River
 SetWorldMapTileTerrain(456, 144, plains_id)
+SetWorldMapTileRiver(456, 144, "northwest", true) -- Tagus River
 SetWorldMapTileTerrain(456, 145, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(456, 146, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(456, 147, plains_id)
@@ -266,7 +284,9 @@ SetWorldMapTileTerrain(457, 139, scrub_forest_id) -- is also hilly, so maybe sho
 SetWorldMapTileTerrain(457, 140, hills_id)
 SetWorldMapTileTerrain(457, 141, hills_id)
 SetWorldMapTileTerrain(457, 142, hills_id)
+SetWorldMapTileRiver(457, 142, "south", true) -- Tagus River
 SetWorldMapTileTerrain(457, 143, hills_id)
+SetWorldMapTileRiver(457, 143, "north", true) -- Tagus River
 SetWorldMapTileTerrain(457, 144, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(457, 145, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(457, 146, hills_id)
@@ -289,7 +309,9 @@ SetWorldMapTileTerrain(458, 139, hills_id)
 SetWorldMapTileTerrain(458, 140, hills_id)
 SetWorldMapTileTerrain(458, 141, hills_id)
 SetWorldMapTileTerrain(458, 142, hills_id)
+SetWorldMapTileRiver(458, 142, "south", true) -- Tagus River
 SetWorldMapTileTerrain(458, 143, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
+SetWorldMapTileRiver(458, 143, "north", true) -- Tagus River
 SetWorldMapTileTerrain(458, 144, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
 SetWorldMapTileTerrain(458, 145, hills_id)
 SetWorldMapTileTerrain(458, 146, scrub_forest_id) -- is also hilly, so maybe should be a forested hill sort of terrain?
