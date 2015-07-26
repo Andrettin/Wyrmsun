@@ -424,7 +424,7 @@ function SinglePlayerTriggers()
 				if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
 					for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
 						if (string.find(unitName, "upgrade-") ~= nil) then
-							if (GetFactionFromName(GetPlayerData(i, "Name")).Technologies[string.gsub(unitName, "-", "_")] == 2) then
+							if (GetFactionTechnologyState(GetPlayerData(i, "RaceName"), GetPlayerData(i, "Name"), unitName) == 2) then
 								SetPlayerData(i, "Allow", unitName, "R")
 							end
 						end

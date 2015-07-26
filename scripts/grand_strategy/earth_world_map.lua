@@ -1232,8 +1232,8 @@ if (GrandStrategyYear >= -4000) then
 	-- Indo-European spoken at least partly in the Pontic-Caspian region between 4000 and 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 108.
 	
 	-- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	Factions.AsaTribe.Technologies.upgrade_germanic_wood_plow = 2
-	Factions.VanaTribe.Technologies.upgrade_germanic_wood_plow = 2
+	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-wood-plow", 2)
+	SetFactionTechnology("celt", "Vana Tribe", "upgrade-germanic-wood-plow", 2)
 	
 	-- Eneolithic Baden culture existed in "temperate southeastern Europe" (where, more precisely?) in the 4th millenium BC, and made use of animal traction; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	
@@ -1253,7 +1253,7 @@ end
 
 if (GrandStrategyYear >= -3600) then
 	-- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
-	Factions.GylfingTribe.Technologies.upgrade_germanic_wood_plow = 2
+	SetFactionTechnology("germanic", "Gylfing Tribe", "upgrade-germanic-wood-plow", 2)
 end
 
 if (GrandStrategyYear >= -3200) then
@@ -1372,18 +1372,18 @@ if (GrandStrategyYear >= -1250) then
 end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-	Factions.AsaTribe.Technologies.upgrade_germanic_bronze_shield = 2
-	Factions.SwedeTribe.Technologies.upgrade_germanic_bronze_shield = 2
-	Factions.JuteTribe.Technologies.upgrade_germanic_bronze_shield = 2
-	Factions.GothTribe.Technologies.upgrade_germanic_bronze_shield = 2
+	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-bronze-shield", 2)
+	SetFactionTechnology("germanic", "Swede Tribe", "upgrade-germanic-bronze-shield", 2)
+	SetFactionTechnology("germanic", "Jute Tribe", "upgrade-germanic-bronze-shield", 2)
+	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-bronze-shield", 2)
 	GrandStrategyEvents.TheSunShields = nil
 end
 
 if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
-	Factions.AsaTribe.Technologies.upgrade_germanic_broad_sword = 2
-	Factions.SwedeTribe.Technologies.upgrade_germanic_broad_sword = 2
-	Factions.JuteTribe.Technologies.upgrade_germanic_broad_sword = 2
-	Factions.GothTribe.Technologies.upgrade_germanic_broad_sword = 2
+	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-broad-sword", 2)
+	SetFactionTechnology("germanic", "Swede Tribe", "upgrade-germanic-broad-sword", 2)
+	SetFactionTechnology("germanic", "Jute Tribe", "upgrade-germanic-broad-sword", 2)
+	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-broad-sword", 2)
 end
 
 if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
@@ -1519,8 +1519,8 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	WorldMapProvinces.Naples.Owner = "Rome"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Naples.Name, "unit-teuton-town-hall", 2)
 	
-	Factions.Rome.Technologies.upgrade_teuton_masonry = 2 -- Rome should already have masonry technology by then
-	Factions.Rome.Technologies.upgrade_teuton_coinage = 2 -- Rome should already have coinage technology by then
+	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", 2) -- Rome should already have masonry technology by then
+	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", 2) -- Rome should already have coinage technology by then
 end
 
 if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1637,17 +1637,17 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 10 -- to make the province harder to conquer
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
---	Factions.AeduiTribe.Technologies.upgrade_teuton_coinage = 2
---	Factions.SequaniTribe.Technologies.upgrade_teuton_coinage = 2
+--	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", 2)
+--	SetFactionTechnology("celt", "Sequani Tribe", "upgrade-teuton-coinage", 2)
 
---	Factions.ArverniTribe.Technologies.upgrade_teuton_coinage = 2 -- in southern Gaul there was currency, mostly of silver however; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
---	Factions.MenapiiTribe.Technologies.upgrade_teuton_coinage = 2 -- in Belgic Gaul there was currency, mostly of gold, but using a different weight; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+--	SetFactionTechnology("celt", "Arverni Tribe", "upgrade-teuton-coinage", 2) -- in southern Gaul there was currency, mostly of silver however; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
+--	SetFactionTechnology("celt", "Menapii Tribe", "upgrade-teuton-coinage", 2) -- in Belgic Gaul there was currency, mostly of gold, but using a different weight; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
 
 	-- gold staters also present in Bohemia and the Danubian valley, as well as the Black Forest, the Rhine, Central Gaul, Armorica and the Channel Islands; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
---	Factions.BoiiTribe.Technologies.upgrade_teuton_coinage = 2
+--	SetFactionTechnology("celt", "Boii Tribe", "upgrade-teuton-coinage", 2)
 
 	-- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
-	Factions.Rome.Technologies.upgrade_teuton_coinage = 2
+	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", 2)	
 end
 
 if (GrandStrategyYear >= -57) then -- estimated date
@@ -1969,11 +1969,11 @@ if (GrandStrategyYear >= 565) then
 end
 
 if (GrandStrategyYear >= 573) then
-	Factions.VisigothTribe.Technologies.upgrade_teuton_coinage = 2 -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
+	SetFactionTechnology("goth", "Visigoth Tribe", "upgrade-teuton-coinage", 2) -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
 end
 
 if (GrandStrategyYear >= 578) then
-	Factions.Francia.Technologies.upgrade_teuton_coinage = 2 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+	SetFactionTechnology("teuton", "Francia", "upgrade-teuton-coinage", 2) -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 	
 	-- end of Justin II's reign in the Eastern Roman Empire in 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 end

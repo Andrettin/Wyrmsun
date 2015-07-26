@@ -447,7 +447,6 @@ function LoadFactions(world)
 					Factions[key].Commodities["Stone"] = faction_table[key].Commodities.Stone
 				end
 			end
-			Factions[key]["Technologies"] = {}
 			Factions[key]["Diplomacy"] = {}
 		end
 	end

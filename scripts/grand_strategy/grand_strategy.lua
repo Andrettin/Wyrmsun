@@ -142,22 +142,6 @@ function RunGrandStrategyGameSetupMenu()
 				if (Factions[key].Prestige == nil) then
 					Factions[key]["Prestige"] = 0
 				end
-				if (Factions[key].Technologies == nil) then
-					Factions[key]["Technologies"] = {}
-				end
-				for i, unitName in ipairs(Units) do
-					if (string.find(unitName, "upgrade-") ~= nil) then
-						if (Factions[key].Technologies[string.gsub(unitName, "-", "_")] == nil) then
-							Factions[key].Technologies[string.gsub(unitName, "-", "_")] = 0
-						elseif (Factions[key].Technologies[string.gsub(unitName, "-", "_")] == 2) then -- if has a technology researched, mark technologies of the same class from other civilizations as researched too
-							for j, second_unitName in ipairs(Units) do
-								if (string.find(second_unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Class == CUpgrade:Get(second_unitName).Class) then
-									Factions[key].Technologies[string.gsub(second_unitName, "-", "_")] = 2
-								end
-							end
-						end
-					end
-				end
 
 				-- initialize the diplomacy variables
 				if (Factions[key].Diplomacy == nil) then
@@ -398,6 +382,7 @@ function RunGrandStrategyGameSetupMenu()
   
 	function DateChanged()
 		CleanGrandStrategyGame()
+		InitializeGrandStrategyGame()
 		
 		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
 			SetGrandStrategyWorld(world_list[world:getSelected() + 1])
@@ -704,23 +689,6 @@ function EndTurn()
 		end
 	end
 	-- research technologies
-	for key, value in pairs(Factions) do
-		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") ~= nil) then
-				if (Factions[key].Technologies[string.gsub(unitName, "-", "_")] == 1) then
-					Factions[key].Technologies[string.gsub(unitName, "-", "_")] = 2
-					for j, second_unitName in ipairs(Units) do -- mark technologies from other civilizations that are of the same class as researched too, so that the player doesn't need to research the same type of technology every time
-						if (string.find(second_unitName, "upgrade-") ~= nil and CUpgrade:Get(unitName).Class == CUpgrade:Get(second_unitName).Class) then
-							Factions[key].Technologies[string.gsub(second_unitName, "-", "_")] = 2
-						end
-					end
-					if (CUpgrade:Get(unitName).Class == "coinage") then
-						CalculateFactionIncomes()
-					end
-				end
-			end
-		end
-	end
 
 	for key, value in pairs(WorldMapProvinces) do
 		-- effect attacks
@@ -1030,8 +998,8 @@ end
 
 function AcquireFactionTechnologies(faction, other_faction)
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") ~= nil and other_faction.Technologies[string.gsub(unitName, "-", "_")] == 2) then
-			faction.Technologies[string.gsub(unitName, "-", "_")] = other_faction.Technologies[string.gsub(unitName, "-", "_")]
+		if (string.find(unitName, "upgrade-") ~= nil and GetFactionTechnologyState(other_faction.Civilization, other_faction.Name, unitName) == 2) then
+			SetFactionTechnology(faction.Civilization, faction.Name, unitName, 2)
 		end
 	end
 end
@@ -1191,6 +1159,7 @@ function CalculateFactionIncomes()
 
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			-- collect resources
+--			CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
 			for i=1,table.getn(WorldMapResources.Gold) do
 				if (
 					WorldMapResources.Gold[i][3] -- if has been prospected
@@ -1351,7 +1320,7 @@ end
 function FactionHasTechnologyType(faction, technology_type)
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
-			if (CUpgrade:Get(unitName).Class == technology_type and faction.Technologies[string.gsub(unitName, "-", "_")] == 2) then
+			if (CUpgrade:Get(unitName).Class == technology_type and GetFactionTechnologyState(faction.Civilization, faction.Name, unitName) == 2) then
 				return true
 			end
 		end
@@ -2008,7 +1977,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
-	if (GrandStrategyFaction.Technologies[string.gsub(unit_type, "-", "_")] == 1) then -- if already being researched, make icon gray
+	if (GetFactionTechnologyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) == 1) then -- if already being researched, make icon gray
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CUpgrade:Get(unit_type).Icon.G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
@@ -2020,7 +1989,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
-			if (GrandStrategyFaction.Technologies[string.gsub(unit_type, "-", "_")] < 1) then
+			if (GetFactionTechnologyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) < 1) then
 				ResearchTechnology(SelectedProvince, unit_type)
 			else
 				CancelResearchTechnology(SelectedProvince, unit_type)
@@ -2085,7 +2054,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 		cost_tooltip = cost_tooltip .. ")"
 	end
 
-	if (GrandStrategyFaction.Technologies[string.gsub(unit_type, "-", "_")] == 1) then
+	if (GetFactionTechnologyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) == 1) then
 		UIElements[table.getn(UIElements)]:setTooltip(CUpgrade:Get(unit_type).Name .. " being researched")
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. cost_tooltip)
@@ -3592,7 +3561,7 @@ function IsBuildingAvailable(province, unit_type)
 	local has_required_technologies = true
 	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
 		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionFromName(province.Owner).Technologies[string.gsub(GetUnitTypeRequiredTechnologies(unit_type)[i], "-", "_")] < 2) then
+			if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) < 2) then
 				has_required_technologies = false
 			end
 		end
@@ -3774,14 +3743,18 @@ function IsTechnologyAvailable(province, unit_type)
 		return false
 	end
 
-	if (GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] == 2) then -- can't research if already researched
+	if (province.Owner == "") then
+		return false
+	end
+
+	if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type) == 2) then -- can't research if already researched
 		return false
 	end
 
 	local has_required_technologies = true
 	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
 		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionFromName(province.Owner).Technologies[string.gsub(GetUnitTypeRequiredTechnologies(unit_type)[i], "-", "_")] < 2) then
+			if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) < 2) then
 				has_required_technologies = false
 			end
 		end
@@ -3824,13 +3797,13 @@ function ResearchTechnology(province, unit_type)
 	if (CanResearchTechnology(province, unit_type)) then
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") ~= nil) then
-				if (GetFactionFromName(province.Owner).Technologies[string.gsub(unitName, "-", "_")] == 1) then
+				if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, unitName) == 1) then
 					CancelResearchTechnology(province, unitName) -- it doesn't matter that the province given here is this one and not the one used to originally set that technology to be researched, since the CancelResearchTechnology function only refers to the province's owner
 				end
 			end
 		end
 
-		GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] = 1
+		SetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type, 1)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - CUpgrade:Get(unit_type).GrandStrategyCosts[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - CUpgrade:Get(unit_type).GrandStrategyCosts[2]
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - CUpgrade:Get(unit_type).GrandStrategyCosts[5]
@@ -3839,8 +3812,8 @@ function ResearchTechnology(province, unit_type)
 end
 
 function CancelResearchTechnology(province, unit_type)
-	if (GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] == 1) then
-		GetFactionFromName(province.Owner).Technologies[string.gsub(unit_type, "-", "_")] = 0
+	if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type) == 1) then
+		SetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type, 0)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + CUpgrade:Get(unit_type).GrandStrategyCosts[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + CUpgrade:Get(unit_type).GrandStrategyCosts[2]
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + CUpgrade:Get(unit_type).GrandStrategyCosts[5]
@@ -4517,7 +4490,7 @@ function FormFaction(old_faction, new_faction)
 	new_faction.Prestige = old_faction.Prestige
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
-			new_faction.Technologies[string.gsub(unitName, "-", "_")] = old_faction.Technologies[string.gsub(unitName, "-", "_")]
+			SetFactionTechnology(new_faction.Civilization, new_faction.Name, unitName, GetFactionTechnologyState(old_faction.Civilization, old_faction.Name, unitName))
 		end
 	end
 

@@ -544,7 +544,7 @@ local GermanicEvents = {
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
 				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
-				and EventFaction.Technologies.upgrade_germanic_bronze_shield == 2
+				and GetFactionTechnologyState(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield") == 2
 			) then
 				return true
 			else

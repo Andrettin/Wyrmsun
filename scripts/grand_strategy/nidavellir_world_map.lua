@@ -125,27 +125,27 @@ if (GrandStrategyYear >= -1) then
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
 
 	-- bronze age technologies had already been obtained by the dwarves by this point
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_throwing_axe_1 = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_throwing_axe_1 = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_throwing_axe_1 = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_broad_axe = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_shield_1 = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_throwing_axe_1 = 2
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-broad-axe", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-1", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-1", 2)
 	
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2 -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
 	GrandStrategyEvents.BaglurWarrior = nil
@@ -165,13 +165,14 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-lumber-mill", 2) -- had capability to train scouts by then
 	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-lumber-mill", 2) -- had capability to train scouts by then
 
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_masonry = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_masonry = 2 -- dwarves already had castles built of stone masonry by then
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_masonry = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_masonry = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_masonry = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_masonry = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_masonry = 2
+	-- dwarves already had castles built of stone masonry by then
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-masonry", 2)
 end
 
 if (GrandStrategyYear > 25) then
@@ -285,13 +286,13 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.Lyr.Units.unit_dwarven_axefighter = 0
 	
 	-- The Dwarves should already have Coinage technology by then
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_coinage = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_coinage = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_coinage = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_coinage = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_coinage = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_coinage = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_coinage = 2
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-coinage", 2)
 end
 
 if (GrandStrategyYear >= 500) then
@@ -309,8 +310,8 @@ if (GrandStrategyYear >= 534) then
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 1 -- Hamel
 
 	-- Mushroom Farms existent in Knalga
-	Factions.Knalga.Technologies.upgrade_dwarven_wood_plow = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_iron_tipped_wood_plow = 2
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-wood-plow", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-iron-tipped-wood-plow", 2)
 end
 
 if (GrandStrategyYear >= 535) then
@@ -325,32 +326,32 @@ if (GrandStrategyYear >= 550) then
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_thane = 4 -- Karrag
 	
 	-- late iron age technologies already obtained by the dwarves by this point
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.ModsogningClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.NorlundClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.ShinsplitterClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.ShorbearClan.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.Knalga.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.KalKartha.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_great_axe = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_shield_2 = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_throwing_axe_2 = 2
-	Factions.Lyr.Technologies.upgrade_dwarven_ballista_bolt_1 = 2
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-great-axe", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-2", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-2", 2)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-ballista-bolt-1", 2)
 end
