@@ -3825,8 +3825,8 @@ function ClearGrandStrategyVariables()
 	GrandStrategy = false
 	GrandStrategyEventMap = false	
 	GrandStrategyBattle = false	
-	WorldMapOffsetX = nil
-	WorldMapOffsetY = nil
+	WorldMapOffsetX = 0
+	WorldMapOffsetY = 0
 	GrandStrategyWorld = ""
 	GrandStrategyYear = nil
 	GrandStrategyFaction = nil
