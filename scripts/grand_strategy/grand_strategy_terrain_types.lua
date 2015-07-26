@@ -47,6 +47,7 @@ DefineWorldMapTerrainTypes(
 		"base-tile", "Plains",
 		"has-transitions", true,
 		"variations", 1
+--		"resource", "stone", 10
 	},
 	"terrain-type", {
 		"name", "Water",
@@ -61,11 +62,13 @@ DefineWorldMapTerrainTypes(
 		"base-tile", "Plains",
 		"has-transitions", true,
 		"variations", 2
+--		"resource", "lumber", 100
 	},
 	"terrain-type", {
 		"name", "Scrub Forest",
 		"tag", "scrub_forest",
 		"base-tile", "Plains",
 		"variations", 4
+--		"resource", "lumber", 50
 	}
 )
