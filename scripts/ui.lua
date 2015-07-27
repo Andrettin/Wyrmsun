@@ -27,7 +27,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if not (GameRunning) then
+local ui_loaded_first_time
+
+if not (ui_loaded_first_time) then
+	ui_loaded_first_time = false
+end
+
+if not (ui_loaded_first_time) then
 	Load("scripts/widgets.lua")
 
 	--
@@ -365,7 +371,7 @@ DefinePanelContents(
 	}
   } })
 
-if not (GameRunning) then
+if not (ui_loaded_first_time) then
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	UI.MessageFont = Fonts["game"]
@@ -621,3 +627,5 @@ if not (GameRunning) then
 		}	
 	})
 end
+
+ui_loaded_first_time = true
