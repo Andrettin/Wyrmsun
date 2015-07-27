@@ -144,8 +144,8 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {154, 30}, -- Astrakhan
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
-				unit_germanic_barracks = 2
+				unit_germanic_town_hall = true,
+				unit_germanic_barracks = true
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -374,7 +374,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {137, 39}, -- Knossos
 			SettlementBuildings = {
-				unit_teuton_town_hall = 2
+				unit_teuton_town_hall = true
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
@@ -410,8 +410,8 @@ function LoadProvinces(world)
 			SettlementName = "Tanais",
 			SettlementLocation = {148, 30}, -- Rostov-on-Don
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
-				unit_germanic_barracks = 2
+				unit_germanic_town_hall = true,
+				unit_germanic_barracks = true
 			},
 			CulturalSettlementNames = {
 				greek = "Tanais"
@@ -513,8 +513,8 @@ function LoadProvinces(world)
 	--		SettlementName = "Gothenburg",
 			SettlementLocation = {128, 22}, -- Gothenburg
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2, -- Gylve's realm
-				unit_germanic_barracks = 2
+				unit_germanic_town_hall = true, -- Gylve's realm
+				unit_germanic_barracks = true
 			},
 			Map = "maps/earth/malmo.smp",
 			Units = {
@@ -1019,8 +1019,8 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {154, 30}, -- Astrakhan
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
-				unit_germanic_barracks = 2
+				unit_germanic_town_hall = true,
+				unit_germanic_barracks = true
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
@@ -1228,7 +1228,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {137, 39}, -- Knossos
 			SettlementBuildings = {
-				unit_teuton_town_hall = 2
+				unit_teuton_town_hall = true
 			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
@@ -1264,8 +1264,8 @@ function LoadProvinces(world)
 			SettlementName = "Tanais",
 			SettlementLocation = {148, 30}, -- Rostov-on-Don
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2,
-				unit_germanic_barracks = 2
+				unit_germanic_town_hall = true,
+				unit_germanic_barracks = true
 			},
 			CulturalSettlementNames = {
 				greek = "Tanais"
@@ -1360,8 +1360,8 @@ function LoadProvinces(world)
 	--		SettlementName = "Gothenburg",
 			SettlementLocation = {128, 22}, -- Gothenburg
 			SettlementBuildings = {
-				unit_germanic_town_hall = 2, -- Gylve's realm
-				unit_germanic_barracks = 2
+				unit_germanic_town_hall = true, -- Gylve's realm
+				unit_germanic_barracks = true
 			},
 			Map = "maps/earth/malmo.smp",
 			Units = {
@@ -1797,12 +1797,12 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {25, 26},
 			SettlementBuildings = {
-				unit_gnomish_town_hall = 2,
-				unit_gnomish_barracks = 2 -- has capability to train soldiers
+				unit_gnomish_town_hall = true,
+				unit_gnomish_barracks = true -- has capability to train soldiers
 			},
 			Map = "maps/nidavellir/brown-hills.smp",
 			Units = {
-				unit_gnomish_recruit = 2 -- Pypo I and his envoy
+				unit_gnomish_recruit = true -- Pypo I and his envoy
 			},
 			SettlementTerrain = "Hills" -- should be DkPl?
 		},
@@ -1829,7 +1829,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {41, 6},
 			SettlementBuildings = {
-				unit_dwarven_smithy = 2 -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
+				unit_dwarven_smithy = true -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 			},
 			Map = "maps/nidavellir/caverns-of-flame.smp",
 			Units = { -- starting units in the Caverns of Flame scenario
@@ -1876,7 +1876,7 @@ function LoadProvinces(world)
 			Civilization = "goblin",
 			SettlementLocation = {23, 11},
 			SettlementBuildings = {
-				unit_goblin_town_hall = 2
+				unit_goblin_town_hall = true
 			},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = {
@@ -1961,7 +1961,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {14, 2},
 			SettlementBuildings = {
-				unit_dwarven_smithy = 2 -- Thursagan's smithy
+				unit_dwarven_smithy = true -- Thursagan's smithy
 			},
 			Map = "maps/nidavellir/northern-wastelands.smp",
 			Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
@@ -1980,8 +1980,8 @@ function LoadProvinces(world)
 			Civilization = "goblin",
 			SettlementLocation = {51, 19},
 			SettlementBuildings = {
-				unit_goblin_town_hall = 2,
-				unit_goblin_barracks = 2 -- has capability to train soldiers
+				unit_goblin_town_hall = true,
+				unit_goblin_barracks = true -- has capability to train soldiers
 			},
 			Map = "maps/random_maps/random-map-swamp.smp",
 			Units = {
@@ -2030,7 +2030,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {44, 11},
 			SettlementBuildings = {
-				unit_dwarven_town_hall = 2
+				unit_dwarven_town_hall = true
 			},
 			CulturalSettlementNames = {
 				dwarf = "Svarinshaug"

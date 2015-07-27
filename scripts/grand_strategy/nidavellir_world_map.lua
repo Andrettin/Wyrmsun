@@ -102,50 +102,50 @@ if (GrandStrategyYear >= -1) then
 	GrandStrategyEvents.TheShinsplitterClan = nil
 	GrandStrategyEvents.TheShorbearClan = nil
 	WorldMapProvinces.CavernsOfChaincolt.Owner = "Norlund Clan"
-	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-town-hall", 2)
-	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-barracks", 2) -- has capability to train warriors
-	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-smithy", 2) -- Durstorn has runesmiths under his employ
+	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-town-hall", true)
+	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-barracks", true) -- has capability to train warriors
+	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-smithy", true) -- Durstorn has runesmiths under his employ
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_goblin_spearman = 0
 --	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_steelclad = 4 -- Neglur, Glinar, Kuhnar, Theganli
 --	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_scout = 1 -- Noiraran
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = 4 -- 4 Dwarven Guardsmen (5 if easy mode)
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_steelclad = 2 -- Neglur, Glinar
 	WorldMapProvinces.ShorbearHills.Owner = "Shorbear Clan"
-	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-town-hall", 2)
-	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-stronghold", 2) -- Shorbear Hold
-	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-barracks", 2) -- has capability to train warriors
-	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-smithy", 2) -- renowned skilled crafters
+	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-town-hall", true)
+	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-stronghold", true) -- Shorbear Hold
+	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-barracks", true) -- has capability to train warriors
+	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-smithy", true) -- renowned skilled crafters
 	WorldMapProvinces.ShorbearHills.Units.unit_goblin_spearman = 0
 	WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 1 -- Glonoin
 	WorldMapProvinces.SouthernTunnels.Owner = "Shinsplitter Clan"
-	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-town-hall", 2)
-	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-barracks", 2) -- has capability to train warriors
+	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-town-hall", true)
+	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-barracks", true) -- has capability to train warriors
 	WorldMapProvinces.SouthernTunnels.Units.unit_goblin_spearman = 0
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = 3 -- Glildur, Glindur, Kalnar
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 5 -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
 
 	-- bronze age technologies had already been obtained by the dwarves by this point
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-throwing-axe-1", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-throwing-axe-1", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-throwing-axe-1", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-throwing-axe-1", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-throwing-axe-1", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-throwing-axe-1", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-broad-axe", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-1", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-1", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-throwing-axe-1", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-throwing-axe-1", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-throwing-axe-1", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-throwing-axe-1", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-throwing-axe-1", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-throwing-axe-1", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-1", true)
 	
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2 -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
 	GrandStrategyEvents.BaglurWarrior = nil
@@ -162,17 +162,17 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 	GrandStrategyEvents.TheSagesDeparture = nil
 
-	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-lumber-mill", 2) -- had capability to train scouts by then
-	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-lumber-mill", 2) -- had capability to train scouts by then
+	SetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
+	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 
 	-- dwarves already had castles built of stone masonry by then
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-masonry", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-masonry", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-masonry", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-masonry", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-masonry", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-masonry", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-masonry", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-masonry", true)
 end
 
 if (GrandStrategyYear > 25) then
@@ -192,7 +192,7 @@ if (GrandStrategyYear >= 27) then -- time it took for Rugnur's party to travel t
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
 	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
-	SetProvinceSettlementBuilding(WorldMapProvinces.NorthernWastelands.Name, "unit-dwarven-smithy", 0) -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+	SetProvinceSettlementBuilding(WorldMapProvinces.NorthernWastelands.Name, "unit-dwarven-smithy", false) -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter = WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_axefighter + 2 -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands (deaths due to combat with Rugnur's dwarves)
 	WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
@@ -219,7 +219,7 @@ if (GrandStrategyYear >= 29) then
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 	--]]
 
-	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-lumber-mill", 2) -- had capability to train scouts by then
+	SetProvinceSettlementBuilding(WorldMapProvinces.ShorbearHills.Name, "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 end
 
 if (GrandStrategyYear >= 35) then
@@ -240,7 +240,7 @@ if (GrandStrategyYear >= 35) then
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
 	GrandStrategyEvents.DurstornDies = nil
-	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-mercenary-camp", 2) -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
+	SetProvinceSettlementBuilding(WorldMapProvinces.SouthernTunnels.Name, "unit-mercenary-camp", true) -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- gnomish recruit returns to Untersberg
 	WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_gryphon_rider = 0 -- gryphon riders return to the Northern Wastelands
@@ -265,8 +265,8 @@ if (GrandStrategyYear >= 389) then
 	WorldMapProvinces.PeacefulValley.Owner = "" -- Lggi Tribe destroyed
 	WorldMapProvinces.PeacefulValley.Civilization = ""
 	WorldMapProvinces.PeacefulValley.Units.unit_goblin_spearman = 0
-	SetProvinceSettlementBuilding(WorldMapProvinces.PeacefulValley.Name, "unit-goblin-town-hall", 0)
-	SetProvinceSettlementBuilding(WorldMapProvinces.PeacefulValley.Name, "unit-goblin-barracks", 0)
+	SetProvinceSettlementBuilding(WorldMapProvinces.PeacefulValley.Name, "unit-goblin-town-hall", false)
+	SetProvinceSettlementBuilding(WorldMapProvinces.PeacefulValley.Name, "unit-goblin-barracks", false)
 end
 
 if (GrandStrategyYear >= 400) then
@@ -275,29 +275,29 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.ShorbearHills.Owner = "Knalga"
 
 	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
-	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-town-hall", 2)
-	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-barracks", 2)
+	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-town-hall", true)
+	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-barracks", true)
 	WorldMapProvinces.KalKartha.Units.unit_gnomish_recruit = 0
 	SetResourceProspected(46, 5, "Gold", true)
 
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
-	SetProvinceSettlementBuilding(WorldMapProvinces.Lyr.Name, "unit-dwarven-town-hall", 2)
-	SetProvinceSettlementBuilding(WorldMapProvinces.Lyr.Name, "unit-dwarven-barracks", 2)
+	SetProvinceSettlementBuilding(WorldMapProvinces.Lyr.Name, "unit-dwarven-town-hall", true)
+	SetProvinceSettlementBuilding(WorldMapProvinces.Lyr.Name, "unit-dwarven-barracks", true)
 	WorldMapProvinces.Lyr.Units.unit_dwarven_axefighter = 0
 	
 	-- The Dwarves should already have Coinage technology by then
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-coinage", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-coinage", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-coinage", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-coinage", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-coinage", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-coinage", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-coinage", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-coinage", true)
 end
 
 if (GrandStrategyYear >= 500) then
 	WorldMapProvinces.HighbrookPass.Owner = "Shinsplitter Clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
-	SetProvinceSettlementBuilding(WorldMapProvinces.HighbrookPass.Name, "unit-dwarven-town-hall", 2)
+	SetProvinceSettlementBuilding(WorldMapProvinces.HighbrookPass.Name, "unit-dwarven-town-hall", true)
 	WorldMapProvinces.HighbrookPass.Units.unit_goblin_spearman = 0
 	WorldMapProvinces.HighbrookPass.Units.unit_goblin_archer = 0
 	WorldMapProvinces.HighbrookPass.Units.unit_dwarven_axefighter = 6 -- six dwarven ulfserkers
@@ -310,48 +310,48 @@ if (GrandStrategyYear >= 534) then
 	WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 1 -- Hamel
 
 	-- Mushroom Farms existent in Knalga
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-wood-plow", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-iron-tipped-wood-plow", 2)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-wood-plow", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-iron-tipped-wood-plow", true)
 end
 
 if (GrandStrategyYear >= 535) then
-	SetProvinceSettlementBuilding(WorldMapProvinces.HighbrookPass.Name, "unit-dwarven-barracks", 2) -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
+	SetProvinceSettlementBuilding(WorldMapProvinces.HighbrookPass.Name, "unit-dwarven-barracks", true) -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
 end
 
 if (GrandStrategyYear >= 550) then
-	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-smithy", 2) -- Karrag was already reviving the art of runesmithing in 550 AD
+	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-smithy", true) -- Karrag was already reviving the art of runesmithing in 550 AD
 
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_axefighter = 2 -- 2 Masked Ulfserkers in Karrag's court
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_steelclad = 3 -- Dulcatulos, 2 Masked Steelclads in Karrag's court
 	WorldMapProvinces.KalKartha.Units.unit_dwarven_thane = 4 -- Karrag
 	
 	-- late iron age technologies already obtained by the dwarves by this point
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-ballista-bolt-1", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-ballista-bolt-1", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-ballista-bolt-1", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-ballista-bolt-1", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-ballista-bolt-1", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-ballista-bolt-1", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-great-axe", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-2", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-2", 2)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-ballista-bolt-1", 2)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-2", true)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-ballista-bolt-1", true)
 end

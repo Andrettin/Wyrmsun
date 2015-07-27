@@ -829,7 +829,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
-				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", 0)
+				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
 				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
 				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
 				WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands

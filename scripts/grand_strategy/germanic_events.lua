@@ -58,7 +58,7 @@ local GermanicEvents = {
 					if (GameResult == GameVictory) then
 						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
 						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
-						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", 0)
+						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
 						WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
 					for i, unitName in ipairs(Units) do
@@ -231,7 +231,7 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
-						SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
+						SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -251,7 +251,7 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
 					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
-					SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", 1)
+					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 				end
 			end,
 			function(s)
@@ -295,7 +295,7 @@ local GermanicEvents = {
 								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
 							end
 						end
-						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
+						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						EventFaction.Prestige = EventFaction.Prestige + 25
 						-- give Gotaland to the Goth Tribe
@@ -320,7 +320,7 @@ local GermanicEvents = {
 							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
 						end
 					end
-					SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
+					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 					EventFaction.Prestige = EventFaction.Prestige + 25
 					-- give Gotaland to the Goth Tribe
 					EqualizeProvinceUnits(EventFaction)
@@ -344,7 +344,7 @@ local GermanicEvents = {
 						WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
 					end
 				end
-				SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", 1)
+				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 				-- give Gotaland to the Goth Tribe
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
@@ -401,7 +401,7 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
-				and GetProvinceSettlementBuildingState(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") == 2 -- Hall of Sigtun
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
 				and SyncRand(100) < 25
 			) then
@@ -427,7 +427,7 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
-				and GetProvinceSettlementBuildingState(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") == 2 -- a town hall is needed, since without basic political organization there can be no lawgiving
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
 			) then
 				return true
@@ -474,7 +474,7 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
 				return true
@@ -497,7 +497,7 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
 				return true
@@ -543,8 +543,8 @@ local GermanicEvents = {
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and WorldMapProvinces.Jutland.Civilization == "germanic"
-				and GetProvinceSettlementBuildingState(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") == 2 -- Jutland must have a smithy
-				and GetFactionTechnologyState(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield") == 2
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
+				and GetFactionTechnology(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield")
 			) then
 				return true
 			else

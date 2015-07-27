@@ -207,6 +207,8 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy Mode
 - Improved the efficiency of minimap drawing.
 - There is now a gray-colored rectangle on the minimap indicating which part of the map the player is currently seeing.
+- Improved turn processing performance.
+- Improved AI troop movement decisions.
 
 * Miscellaneous
 - Ctrl+F and Alt+F now work anywhere to toggle fullscreen, rather than only when playing a scenario.

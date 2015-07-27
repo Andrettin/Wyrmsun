@@ -984,11 +984,12 @@ function AcquireProvince(province, faction)
 		ChangeProvinceCulture(province, "")
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName)) then
-				if (GetProvinceSettlementBuildingState(province.Name, unitName) > 0) then
-					SetProvinceSettlementBuilding(province.Name, unitName, 0) -- remove all buildings from an emptied province
+				if (GetProvinceSettlementBuilding(province.Name, unitName)) then
+					SetProvinceSettlementBuilding(province.Name, unitName, false) -- remove all buildings from an emptied province
 				end
 			end
 		end
+		SetProvinceCurrentConstruction(province.Name, "")
 	end
 	
 	UpdateProvinceMinimap(province.Name)
@@ -1032,16 +1033,15 @@ function ChangeProvinceCulture(province, civilization)
 		-- replace existent buildings from other civilizations with buildings of the new civilization
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName) and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp") then
-				if (GetProvinceSettlementBuildingState(province.Name, unitName) == 2 and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
-					SetProvinceSettlementBuilding(province.Name, unitName, 0) -- remove building from other civilization
+				if (GetProvinceSettlementBuilding(province.Name, unitName) and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
+					SetProvinceSettlementBuilding(province.Name, unitName, false) -- remove building from other civilization
 					if (GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
-						SetProvinceSettlementBuilding(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), 2)
+						SetProvinceSettlementBuilding(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), true)
 					end
-				elseif (GetProvinceSettlementBuildingState(province.Name, unitName) == 1) then -- under construction buildings get canceled
-					SetProvinceSettlementBuilding(province.Name, unitName, 0)
 				end
 			end
 		end
+		SetProvinceCurrentConstruction(province.Name, "") -- under construction buildings get canceled
 		
 		-- replace existent units from the previous civilization with units of the new civilization
 		for i, unitName in ipairs(Units) do
@@ -1316,7 +1316,7 @@ end
 function FactionHasTechnologyType(faction, technology_type)
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
-			if (CUpgrade:Get(unitName).Class == technology_type and GetFactionTechnologyState(faction.Civilization, faction.Name, unitName) == 2) then
+			if (CUpgrade:Get(unitName).Class == technology_type and GetFactionTechnology(faction.Civilization, faction.Name, unitName)) then
 				return true
 			end
 		end
@@ -1821,7 +1821,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	
 	local old_unit_type = unit_type
 	
-	if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) < 2) then -- if not built, make icon gray
+	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type) == false) then -- if not built, make icon gray
 		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-town-hall"
 		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
@@ -1856,9 +1856,9 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
-			if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) < 1) then
+			if (GetProvinceCurrentConstruction(SelectedProvince.Name) ~= unit_type and GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type) == false) then
 				BuildStructure(SelectedProvince, unit_type)
-			elseif (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) >= 2) then
+			elseif (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type)) then
 				UseBuilding(SelectedProvince, unit_type)
 			end
 			DrawGrandStrategyInterface()
@@ -1919,9 +1919,9 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
 		building_function_tooltip = " (hires mercenaries)"
 	end
-	if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) == 2) then
+	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type)) then
 		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. building_function_tooltip)
-	elseif (GetProvinceSettlementBuildingState(SelectedProvince.Name, unit_type) == 1) then
+	elseif (GetProvinceCurrentConstruction(SelectedProvince.Name) == unit_type) then
 		UIElements[table.getn(UIElements)]:setTooltip(unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. building_cost_tooltip)
@@ -1973,7 +1973,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
-	if (GetFactionTechnologyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) == 1) then -- if already being researched, make icon gray
+	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then -- if already being researched, make icon gray
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CUpgrade:Get(unit_type).Icon.G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
@@ -1985,9 +1985,9 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
-			if (GetFactionTechnologyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) < 1) then
+			if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) ~= unit_type and GetFactionTechnology(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) == false) then
 				ResearchTechnology(SelectedProvince, unit_type)
-			else
+			elseif (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then
 				CancelResearchTechnology(SelectedProvince, unit_type)
 			end
 			DrawGrandStrategyInterface()
@@ -2050,7 +2050,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 		cost_tooltip = cost_tooltip .. ")"
 	end
 
-	if (GetFactionTechnologyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type) == 1) then
+	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then
 		UIElements[table.getn(UIElements)]:setTooltip(CUpgrade:Get(unit_type).Name .. " being researched")
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. cost_tooltip)
@@ -2536,7 +2536,7 @@ function DrawGrandStrategyInterface()
 
 							AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, unitName)
 
-							if (GetProvinceSettlementBuildingState(SelectedProvince.Name, unitName) == 1) then -- if is under construction, apply under construction graphics
+							if (GetProvinceCurrentConstruction(SelectedProvince.Name) == unitName) then -- if is under construction, apply under construction graphics
 								AddUIElement("neutral/icons/build_basic_structure_transparent_background.png", icon_offset_x, icon_offset_y)
 							end
 							
@@ -3343,8 +3343,10 @@ function AIDoTurn(ai_faction)
 
 		for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
-				borders_foreign = true
 				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
+					if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
+						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
+					end
 					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
@@ -3474,8 +3476,10 @@ function AIDoTurn(ai_faction)
 						local second_province_borders_foreign = false
 						for third_province_i, third_key in ipairs(WorldMapProvinces[second_key].BorderProvinces) do
 							if ((WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name) or (WorldMapWaterProvinces[third_key] ~= nil and WorldMapWaterProvinces[third_key].Owner ~= ai_faction.Name)) then
-								second_province_borders_foreign = true
-								break
+								if (WorldMapProvinces[third_key] ~= nil and CanAttackProvince(WorldMapProvinces[third_key], ai_faction, WorldMapProvinces[second_key]) or GetProvinceAttackedBy(WorldMapProvinces[second_key].Name) ~= "" or AtPeace(ai_faction)) then
+									second_province_borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
+									break
+								end
 							end
 						end
 						if (second_province_borders_foreign) then
@@ -3511,12 +3515,14 @@ function AIDoTurn(ai_faction)
 end
 
 function AIDoDiplomacy(ai_faction)
-	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
-		for second_key, second_value in pairs(WorldMapProvinces) do
-			if (WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean" and CanDeclareWar(ai_faction, GetFactionFromName(WorldMapProvinces[second_key].Owner))) then
-				if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-					if (AtPeace(ai_faction) and ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and ProvinceHasBorderWith(WorldMapProvinces[key], WorldMapProvinces[second_key]) and (GetFactionMilitaryScore(GetFactionFromName(WorldMapProvinces[second_key].Owner)) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
-						DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
+	if (AtPeace(ai_faction)) then -- if at peace, see if there are any suitable targets to declare war on
+		for province_i, key in ipairs(ai_faction.OwnedProvinces) do
+			for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
+				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean" and CanDeclareWar(ai_faction, GetFactionFromName(WorldMapProvinces[second_key].Owner))) then
+					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+						if (ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and (GetFactionMilitaryScore(GetFactionFromName(WorldMapProvinces[second_key].Owner)) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
+							DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
+						end
 					end
 				end
 			end
@@ -3557,7 +3563,7 @@ function IsBuildingAvailable(province, unit_type)
 	local has_required_technologies = true
 	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
 		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) < 2) then
+			if (GetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
 				has_required_technologies = false
 			end
 		end
@@ -3570,7 +3576,7 @@ function IsBuildingAvailable(province, unit_type)
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) < 2) then
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3585,7 +3591,7 @@ function IsBuildingAvailable(province, unit_type)
 		return false
 	end
 	
-	if (GetUnitTypeData(unit_type, "Class") == "mercenary-camp" and GetProvinceSettlementBuildingState(province.Name, unit_type) < 2) then -- mercenary camps are not buildable, so they are only available if already built
+	if (GetUnitTypeData(unit_type, "Class") == "mercenary-camp" and GetProvinceSettlementBuilding(province.Name, unit_type) == false) then -- mercenary camps are not buildable, so they are only "available" if already built
 		return false
 	end
 	
@@ -3593,7 +3599,7 @@ function IsBuildingAvailable(province, unit_type)
 end
 
 function CanBuildStructure(province, unit_type)
-	if (GetProvinceSettlementBuildingState(province.Name, unit_type) == 2 or GetProvinceSettlementBuildingState(province.Name, unit_type) == 1) then -- can't build if already built or if under construction
+	if (GetProvinceSettlementBuilding(province.Name, unit_type) or GetProvinceCurrentConstruction(province.Name) == unit_type) then -- can't build if already built or if under construction
 		return false
 	end
 
@@ -3606,15 +3612,11 @@ end
 
 function BuildStructure(province, unit_type)
 	if (CanBuildStructure(province, unit_type)) then
-		for i, unitName in ipairs(Units) do -- can only build one building at a time in a province, so if another one is already being built there, cancel that
-			if (IsGrandStrategyBuilding(unitName)) then
-				if (GetProvinceSettlementBuildingState(province.Name, unitName) == 1) then
-					CancelBuildStructure(province, unitName)
-				end
-			end
+		if (GetProvinceCurrentConstruction(province.Name) ~= "") then -- can only build one building at a time in a province, so if another one is already being built there, cancel that
+			CancelBuildStructure(province, GetProvinceCurrentConstruction(province.Name))
 		end
 
-		SetProvinceSettlementBuilding(province.Name, unit_type, 1)
+		SetProvinceCurrentConstruction(province.Name, unit_type)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
@@ -3622,8 +3624,8 @@ function BuildStructure(province, unit_type)
 end
 
 function CancelBuildStructure(province, unit_type)
-	if (GetProvinceSettlementBuildingState(province.Name, unit_type) == 1) then
-		SetProvinceSettlementBuilding(province.Name, unit_type, 0)
+	if (GetProvinceCurrentConstruction(province.Name) == unit_type) then
+		SetProvinceCurrentConstruction(province.Name, "")
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
@@ -3655,13 +3657,13 @@ function IsUnitAvailableForTraining(province, unit_type)
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) < 2) then
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
 				has_required_buildings = false
 			end
 		end
 		--]]
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) ~= 2) then
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3700,7 +3702,7 @@ function CanHireMercenary(province, unit_type)
 end
 
 function IsMercenaryAvailableForHiring(province, unit_type)
-	if (GetProvinceSettlementBuildingState(province.Name, "unit-mercenary-camp") < 2) then
+	if (GetProvinceSettlementBuilding(province.Name, "unit-mercenary-camp") == false) then
 		return false
 	end
 	
@@ -3743,14 +3745,14 @@ function IsTechnologyAvailable(province, unit_type)
 		return false
 	end
 
-	if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type) == 2) then -- can't research if already researched
+	if (GetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type)) then -- can't research if already researched
 		return false
 	end
 
 	local has_required_technologies = true
 	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
 		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) < 2) then
+			if (GetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
 				has_required_technologies = false
 			end
 		end
@@ -3763,7 +3765,7 @@ function IsTechnologyAvailable(province, unit_type)
 	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
 		--[[
 		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuildingState(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) < 2) then
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3791,15 +3793,11 @@ end
 
 function ResearchTechnology(province, unit_type)
 	if (CanResearchTechnology(province, unit_type)) then
-		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") ~= nil) then
-				if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, unitName) == 1) then
-					CancelResearchTechnology(province, unitName) -- it doesn't matter that the province given here is this one and not the one used to originally set that technology to be researched, since the CancelResearchTechnology function only refers to the province's owner
-				end
-			end
+		if (GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner) ~= "") then
+			CancelResearchTechnology(province, GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner)) -- it doesn't matter that the province given here is this one and not the one used to originally set that technology to be researched, since the CancelResearchTechnology function only refers to the province's owner
 		end
 
-		SetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type, 1)
+		SetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - CUpgrade:Get(unit_type).GrandStrategyCosts[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - CUpgrade:Get(unit_type).GrandStrategyCosts[2]
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - CUpgrade:Get(unit_type).GrandStrategyCosts[5]
@@ -3808,8 +3806,8 @@ function ResearchTechnology(province, unit_type)
 end
 
 function CancelResearchTechnology(province, unit_type)
-	if (GetFactionTechnologyState(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type) == 1) then
-		SetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type, 0)
+	if (GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner) == unit_type) then
+		SetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner, "")
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + CUpgrade:Get(unit_type).GrandStrategyCosts[1]
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + CUpgrade:Get(unit_type).GrandStrategyCosts[2]
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + CUpgrade:Get(unit_type).GrandStrategyCosts[5]
@@ -4218,7 +4216,7 @@ function CanTriggerEvent(faction, event)
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
 				if (IsGrandStrategyBuilding(unitName)) then
-					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (GetProvinceSettlementBuildingState(WorldMapProvinces[key].Name, unitName) == 2) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
+					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and GetProvinceSettlementBuilding(WorldMapProvinces[key].Name, unitName) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
 						return false
 					end
 				end
@@ -4486,9 +4484,10 @@ function FormFaction(old_faction, new_faction)
 	new_faction.Prestige = old_faction.Prestige
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
-			SetFactionTechnology(new_faction.Civilization, new_faction.Name, unitName, GetFactionTechnologyState(old_faction.Civilization, old_faction.Name, unitName))
+			SetFactionTechnology(new_faction.Civilization, new_faction.Name, unitName, GetFactionTechnology(old_faction.Civilization, old_faction.Name, unitName))
 		end
 	end
+	SetFactionCurrentResearch(new_faction.Civilization, new_faction.Name, GetFactionCurrentResearch(old_faction.Civilization, old_faction.Name))
 
 	for key, value in pairs(Factions) do
 		Factions[key].Diplomacy[new_faction_key] = Factions[key].Diplomacy[old_faction_key]
