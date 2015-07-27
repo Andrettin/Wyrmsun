@@ -185,7 +185,7 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8 -- give them enough units to continue migrating
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Swede Tribe")
-				AcquireFactionTechnologies(Factions.SwedeTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Swede Tribe")
 				Factions.SwedeTribe.Gold = EventFaction.Gold / 2
 				EventFaction.Gold = EventFaction.Gold - Factions.SwedeTribe.Gold
 				Factions.SwedeTribe.Gold = Factions.SwedeTribe.Gold + 2000 -- help them stay afloat a bit
@@ -301,7 +301,7 @@ local GermanicEvents = {
 						-- give Gotaland to the Goth Tribe
 						EqualizeProvinceUnits(EventFaction)
 						AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-						AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
+						AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -325,10 +325,10 @@ local GermanicEvents = {
 					-- give Gotaland to the Goth Tribe
 					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-					AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
+					AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
 				end
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
-				AcquireFactionTechnologies(Factions.JuteTribe, Factions.AsaTribe)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
 			end,
 			function(s)
 			end,
@@ -348,10 +348,10 @@ local GermanicEvents = {
 				-- give Gotaland to the Goth Tribe
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				AcquireFactionTechnologies(Factions.GothTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
 					
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
-				AcquireFactionTechnologies(Factions.JuteTribe, Factions.AsaTribe)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
 				GrandStrategyFaction = Factions.JuteTribe
 			end
 		}
@@ -579,13 +579,13 @@ local GermanicEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
-				AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
-				AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 				EventFaction.Diplomacy.SaxonTribe = "War"
 				Factions.SaxonTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
@@ -593,7 +593,7 @@ local GermanicEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
-				AcquireFactionTechnologies(Factions.SaxonTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				GrandStrategyFaction = Factions.SaxonTribe
 				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
@@ -619,19 +619,19 @@ local GermanicEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
-				AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
-				AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 				EventFaction.Diplomacy.FrankTribe = "War"
 				Factions.FrankTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
-				AcquireFactionTechnologies(Factions.FrankTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 				GrandStrategyFaction = Factions.FrankTribe
 			end
 		}
@@ -656,19 +656,19 @@ local GermanicEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-				AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-				AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
 				EventFaction.Diplomacy.SuebiTribe = "War"
 				Factions.SuebiTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
-				AcquireFactionTechnologies(Factions.SuebiTribe, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
 				GrandStrategyFaction = Factions.SuebiTribe
 			end
 		}
@@ -960,7 +960,7 @@ local GermanicEvents = {
 				end
 				WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
 				WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
-				AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+				AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 				ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
 			end,
 			function(s)
@@ -983,7 +983,8 @@ local GermanicEvents = {
 							end
 						end
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
-						AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+						AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
+
 						ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -1003,7 +1004,8 @@ local GermanicEvents = {
 					WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
 					WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
 					ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
-					AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+					AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
+
 				end
 			end
 		}

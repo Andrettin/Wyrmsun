@@ -359,19 +359,19 @@ local NidavellirEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
-				AcquireFactionTechnologies(Factions.NorlundClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
-				AcquireFactionTechnologies(Factions.NorlundClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 				EventFaction.Diplomacy.NorlundClan = "War"
 				Factions.NorlundClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
-				AcquireFactionTechnologies(Factions.NorlundClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 				GrandStrategyFaction = Factions.NorlundClan
 			end
 		}
@@ -397,19 +397,19 @@ local NidavellirEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
-				AcquireFactionTechnologies(Factions.ShinsplitterClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shinsplitter Clan")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
-				AcquireFactionTechnologies(Factions.ShinsplitterClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shinsplitter Clan")
 				EventFaction.Diplomacy.ShinsplitterClan = "War"
 				Factions.ShinsplitterClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
-				AcquireFactionTechnologies(Factions.ShinsplitterClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shinsplitter Clan")
 				GrandStrategyFaction = Factions.ShinsplitterClan
 			end
 		}
@@ -435,19 +435,19 @@ local NidavellirEvents = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
-				AcquireFactionTechnologies(Factions.ShorbearClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shorbear Clan")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
-				AcquireFactionTechnologies(Factions.ShorbearClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shorbear Clan")
 				EventFaction.Diplomacy.ShorbearClan = "War"
 				Factions.ShorbearClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
-				AcquireFactionTechnologies(Factions.ShorbearClan, EventFaction)
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shorbear Clan")
 				GrandStrategyFaction = Factions.ShorbearClan
 			end
 		}

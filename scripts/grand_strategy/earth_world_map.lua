@@ -1289,7 +1289,7 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Gotaland.Owner = "Goth Tribe" -- Goths are the earliest Germanic people known to inhabit GÃ¶taland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Gotaland.Civilization = "germanic"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Gotaland.Name, "unit-germanic-town-hall", 2)
-	AcquireFactionTechnologies(Factions.GothTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Goth Tribe")
 	WorldMapProvinces.Gotaland.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Gotaland.Units.unit_germanic_archer = 0
 	WorldMapProvinces.Gotland.Owner = "Goth Tribe" -- maybe should be later?
@@ -1410,29 +1410,29 @@ end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
 	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- The Suebi are the earliest Germanic people known to inhabit the Brandenburg area; the Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
-	Factions.SuebiTribe.Civilization = "teuton"
+	ChangeFactionCulture(Factions.SuebiTribe, "teuton")
 	WorldMapProvinces.Brandenburg.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Brandenburg.Name, "unit-teuton-town-hall", 2)
 	WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 0
-	AcquireFactionTechnologies(Factions.SuebiTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
 	SetResourceProspected(127, 27, "Gold", true)
 	
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- The Saxons are the earliest Germanic people known to inhabit the Hannover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
-	Factions.SaxonTribe.Civilization = "teuton"
+	ChangeFactionCulture(Factions.SaxonTribe, "teuton")
 	WorldMapProvinces.Rhineland.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Rhineland.Name, "unit-teuton-town-hall", 2)
 	WorldMapProvinces.Rhineland.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
 	WorldMapProvinces.Rhineland.Units.unit_germanic_warrior = 0
-	AcquireFactionTechnologies(Factions.SaxonTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
 	SetResourceProspected(125, 28, "Gold", true)
 
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	Factions.FrankTribe.Civilization = "teuton"
+	ChangeFactionCulture(Factions.FrankTribe, "teuton")
 	WorldMapProvinces.Netherlands.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Netherlands.Name, "unit-teuton-town-hall", 2)
 	WorldMapProvinces.Netherlands.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
 	WorldMapProvinces.Netherlands.Units.unit_germanic_warrior = 0
-	AcquireFactionTechnologies(Factions.FrankTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
 	SetResourceProspected(123, 27, "Gold", true)
 	
 	GrandStrategyEvents.VegdegsKingdom = nil
@@ -1440,17 +1440,17 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	GrandStrategyEvents.SigisLands = nil
 	
 	-- should put it at a more proper date (when Proto-Germanic split into West Germanic, East Germanic and North Germanic, respectively represented by the Teuton, Goth and Norse cultures in the game), but this will do; update culture in Sweden, Jutland and Gotaland
-	Factions.SwedeTribe.Civilization = "norse"
+	ChangeFactionCulture(Factions.SwedeTribe, "norse")
 	WorldMapProvinces.Sweden.Civilization = "norse"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall", 0)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-teuton-town-hall", 2)
-	Factions.JuteTribe.Civilization = "teuton"
+	ChangeFactionCulture(Factions.JuteTribe, "teuton")
 	WorldMapProvinces.Jutland.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-town-hall", 0)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-teuton-town-hall", 2)
 	WorldMapProvinces.Jutland.Units.unit_germanic_warrior = 0
 	WorldMapProvinces.Jutland.Units.unit_teuton_swordsman = 4 -- enough troops for them to hold their own
-	Factions.GothTribe.Civilization = "goth"
+	ChangeFactionCulture(Factions.GothTribe, "goth")
 	WorldMapProvinces.Gotaland.Civilization = "goth"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Gotaland.Name, "unit-germanic-town-hall", 0)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Gotaland.Name, "unit-teuton-town-hall", 2)
@@ -1681,7 +1681,7 @@ end
 
 if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 --	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
---	AcquireFactionTechnologies(Factions.SwedeTribe, Factions.AsaTribe)
+--	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Swede Tribe")
 --	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	GrandStrategyEvents.YngvesSickness = nil
 	GrandStrategyEvents.FjolneChieftainOfTheSwedes = nil
@@ -1720,7 +1720,7 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman = 5 -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	WorldMapProvinces.Bohemia.Units.unit_teuton_archer = 2 -- let's make 20,000 of those soldiers into archers
 	WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman = WorldMapProvinces.Bohemia.Units.unit_teuton_swordsman + 1
-	AcquireFactionTechnologies(Factions.MarcomanniTribe, Factions.SuebiTribe)
+	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Marcomanni Tribe")
 end
 
 if (GrandStrategyYear >= 3) then -- estimated date
@@ -1761,7 +1761,7 @@ end
 
 if (GrandStrategyYear >= 98) then
 	-- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
-	AcquireFactionTechnologies(Factions.RugianTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Rugian Tribe")
 --	WorldMapProvinces.Sweden.Owner = "Swede Tribe" -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
@@ -1774,7 +1774,7 @@ end
 if (GrandStrategyYear >= 142) then
 	WorldMapProvinces.Transylvania.Owner = "Vandal Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Transylvania.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	AcquireFactionTechnologies(Factions.VandalTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Vandal Tribe")
 end
 
 if (GrandStrategyYear >= 150) then
@@ -1796,10 +1796,10 @@ if (GrandStrategyYear >= 200) then
 	WorldMapProvinces.Prussia.Owner = ""
 	WorldMapProvinces.Ukraine.Owner = "Ostrogoth Tribe" -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Ukraine.Units.unit_germanic_warrior = 0
-	AcquireFactionTechnologies(Factions.OstrogothTribe, Factions.GothTribe)
+	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Ostrogoth Tribe")
 	WorldMapProvinces.Wallachia.Owner = "Visigoth Tribe" -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Moldavia.Owner = "Visigoth Tribe"
-	AcquireFactionTechnologies(Factions.VisigothTribe, Factions.GothTribe)
+	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Visigoth Tribe")
 end
 
 if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1863,7 +1863,7 @@ end
 if (GrandStrategyYear >= 445) then
 	WorldMapProvinces.Switzerland.Owner = "Burgundian Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	AcquireFactionTechnologies(Factions.BurgundianTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Burgundian Tribe")
 end
 
 if (GrandStrategyYear >= 450) then
@@ -1882,7 +1882,7 @@ end
 
 if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	WorldMapProvinces.Belgium.Owner = "Francia"
-	AcquireFactionTechnologies(Factions.Francia, Factions.FrankTribe)
+	AcquireFactionTechnologies("teuton", "Frank Tribe", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -1895,7 +1895,7 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	WorldMapProvinces.Sardinia.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	WorldMapProvinces.GaliciaIberia.Owner = "Galicia" -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	WorldMapProvinces.Portugal.Owner = "Galicia"
-	AcquireFactionTechnologies(Factions.Galicia, Factions.SuebiTribe)
+	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Galicia")
 	WorldMapProvinces.Castille.Owner = "Visigoth Tribe" -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceSettlementBuilding(WorldMapProvinces.Castille.Name, "unit-teuton-town-hall", 2)
 	WorldMapProvinces.Castille.Units.unit_germanic_warrior = 0
@@ -1939,12 +1939,12 @@ end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.Bavaria.Owner = "Bavarian Tribe"
-	AcquireFactionTechnologies(Factions.BavarianTribe, Factions.MarcomanniTribe)
+	AcquireFactionTechnologies("teuton", "Marcomanni Tribe", "teuton", "Bavarian Tribe")
 	WorldMapProvinces.Bavaria.Civilization = "teuton"
 	WorldMapProvinces.Netherlands.Owner = "Frisian Tribe"
-	AcquireFactionTechnologies(Factions.FrisianTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
 	WorldMapProvinces.Gotaland.Owner = "Dane Tribe" -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	AcquireFactionTechnologies(Factions.DaneTribe, Factions.AsaTribe)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
 	WorldMapProvinces.England.Owner = "Saxon Tribe" -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	WorldMapProvinces.England.Units.unit_germanic_warrior = 0 -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end

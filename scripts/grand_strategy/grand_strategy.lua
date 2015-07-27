@@ -996,32 +996,28 @@ function AcquireProvince(province, faction)
 	CalculateFactionIncomes()
 end
 
-function AcquireFactionTechnologies(faction, other_faction)
-	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") ~= nil and GetFactionTechnologyState(other_faction.Civilization, other_faction.Name, unitName) == 2) then
-			SetFactionTechnology(faction.Civilization, faction.Name, unitName, 2)
-		end
-	end
-end
-
 function ChangeFactionCulture(faction, civilization)
 	local old_civilization = faction.Civilization
 	faction.Civilization = civilization
 	
-	-- replace existent units from the previous civilization with units of the new civilization
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		for i, unitName in ipairs(Units) do
-			if (
-				IsMilitaryUnit(unitName)
-				and GetUnitTypeData(unitName, "Civilization") == old_civilization
-				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
-				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
-			) then
-				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
-				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]
-				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
-				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-				SetProvinceOwner(WorldMapProvinces[key].Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
+	AcquireFactionTechnologies(old_civilization, faction.Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
+	
+	if (faction.OwnedProvinces ~= nil and table.getn(faction.OwnedProvinces) > 0) then -- this function is also called when loading a world map, but the owned provinces table hasn't been created then
+		-- replace existent units from the previous civilization with units of the new civilization
+		for province_i, key in ipairs(faction.OwnedProvinces) do
+			for i, unitName in ipairs(Units) do
+				if (
+					IsMilitaryUnit(unitName)
+					and GetUnitTypeData(unitName, "Civilization") == old_civilization
+					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
+					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
+				) then
+					WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
+					WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]
+					WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
+					WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
+					SetProvinceOwner(WorldMapProvinces[key].Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
+				end
 			end
 		end
 	end
