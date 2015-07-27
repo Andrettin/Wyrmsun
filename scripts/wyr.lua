@@ -366,14 +366,14 @@ function SetPlayerData(player, data, arg1, arg2)
 end
 
 function LoadCivilizationUI(civilization)
-	if (civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
 	end
 	Load("scripts/" .. civilization .. "/ui.lua")
 	if not (RunningScenario) then
 		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 	end
-	if (civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		MusicStopped()
 	end
 end

@@ -209,11 +209,13 @@ https://github.com/Andrettin/Wyrmsun
 - There is now a gray-colored rectangle on the minimap indicating which part of the map the player is currently seeing.
 - Improved turn processing performance.
 - Improved AI troop movement decisions.
+- Fixed issue with grand strategy under Linux which could cause a freeze.
 
 * Miscellaneous
 - Ctrl+F and Alt+F now work anywhere to toggle fullscreen, rather than only when playing a scenario.
 - Added new Gryphon background (used for Wyrmsun with permission).
 - Fixed crash which sometimes happened when changing the resolution from the main menu after playing a grand strategy game.
+- Fixed tech tree menu music reset issue.
 
 * Units
 - Previously-obtained upgrades now apply to rescued units.
