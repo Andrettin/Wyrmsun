@@ -213,6 +213,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Ctrl+F and Alt+F now work anywhere to toggle fullscreen, rather than only when playing a scenario.
 - Added new Gryphon background (used for Wyrmsun with permission).
+- Fixed crash which sometimes happened when changing the resolution from the main menu after playing a grand strategy game.
 
 * Units
 - Previously-obtained upgrades now apply to rescued units.
