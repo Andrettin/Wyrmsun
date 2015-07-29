@@ -1171,7 +1171,7 @@ function CalculateFactionIncomes()
 				end
 			end
 			for i=1,table.getn(WorldMapResources.Stone) do
-				if (ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Name, "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Owner) then
+				if (GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]) ~= nil and ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Name, "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Owner) then
 					Factions[key].Income.Stone = Factions[key].Income.Stone + math.floor(10 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]), "Stone") / 100)
 				end
 			end

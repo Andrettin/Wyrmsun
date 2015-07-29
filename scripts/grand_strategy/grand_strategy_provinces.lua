@@ -80,7 +80,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				latin = "Corduba"
 			},
-			SettlementLocation = {116, 36}, -- Cordoba
+			SettlementLocation = {466, 148}, -- Cordoba
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
@@ -109,11 +109,11 @@ function LoadProvinces(world)
 				{475, 137}, {475, 138}, {475, 141},
 				{476, 135}, {476, 136}, {476, 137}, {476, 138}, {476, 139}, {476, 140}, {476, 141},
 				{477, 135}, {477, 136}, {477, 137}, {477, 138}, {477, 139}, {477, 140}, {477, 141}, {477, 142}, {477, 143}, {477, 144}, {477, 145},
-				{478, 135}, {478, 136}, {478, 137}, {478, 138}, {478, 139}, {478, 140}, {478, 141}, {478, 142}, {478, 143}, {478, 144}, {478, 145},
+				{478, 134}, {478, 135}, {478, 136}, {478, 137}, {478, 138}, {478, 139}, {478, 140}, {478, 141}, {478, 142}, {478, 143}, {478, 144}, {478, 145},
 				{479, 135}, {479, 136}, {479, 137}, {479, 138}, {479, 139}, {479, 140}, {479, 141}, {479, 142}, {479, 145},
 				{480, 135}, {480, 136}, {480, 137}, {480, 138}, {480, 139}, {480, 140}, {480, 141},
 				{481, 135}, {481, 136}, {481, 137}, {481, 138}, {481, 139}, {481, 140},
-				{482, 135}, {482, 136}, {482, 137}, {482, 138}, {482, 139},
+				{482, 134}, {482, 135}, {482, 136}, {482, 137}, {482, 138}, {482, 139},
 				{483, 134}, {483, 135}, {483, 136}, {483, 137}, {483, 138},
 				{484, 135}, {484, 136}, {484, 137}, {484, 138},
 				{485, 135}, {485, 136}, {485, 137}, {485, 138},
@@ -127,7 +127,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				latin = "Caesaraugusta"
 			},
-			SettlementLocation = {119, 34}, -- Zaragoza
+			SettlementLocation = {477, 137}, -- Zaragoza
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
@@ -343,11 +343,11 @@ function LoadProvinces(world)
 				{476, 134}, {476, 142}, {476, 143}, {476, 144},
 				{477, 134}
 			},
-			SettlementName = "Toletum",
+			SettlementName = "Complutum",
 			CulturalSettlementNames = {
-				latin = "Toletum"
+				latin = "Complutum" -- Toletum is also in the same region and more important in antiquity, but not in the same site as Madrid
 			},
-			SettlementLocation = {117, 35}, -- Toledo
+			SettlementLocation = {469, 141}, -- Madrid
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
