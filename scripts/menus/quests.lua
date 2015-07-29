@@ -31,30 +31,36 @@ RunningScenario = false
 CurrentQuest = ""
 
 function RunQuestWorldMenu()
-  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-  if not (IsMusicPlaying()) then
-    PlayMusic("music/battle_theme_a.ogg")
-  end
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/battle_theme_a.ogg")
+	end
 
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
 
-  menu:addLabel(_("~<Quests~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-  local buttonNewMap =
-  menu:addFullButton(_("~!Earth"), "e", offx + 208, offy + 104 + 36*2,
-    function()
+	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 212 - 25 - (36 * 1))
+	menu:addFullButton(_("~!Earth"), "e", offx + 208, offy + 104 + 36*2,
+	function()
 		RunQuestMenu("Earth");
+		if (RunningScenario) then
+			menu:stop()
+		end
 	end)
-  menu:addFullButton(_("~!Nidavellir"), "n", offx + 208, offy + 104 + 36*3,
-    function()
+	menu:addFullButton(_("~!Nidavellir"), "n", offx + 208, offy + 104 + 36*3,
+	function()
 		RunQuestMenu("Nidavellir");
+		if (RunningScenario) then
+			menu:stop()
+		end
 	end)
-  menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*4,
-    function() menu:stop() end)
-  return menu:run()
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*4,
+		function() menu:stop()
+	end)
+	return menu:run()
 end
 
 function RunQuestMenu(world)
@@ -159,7 +165,9 @@ function addQuestIcon(quest, menu, x, y)
 					RunMap(mapname)
 					quest_menu:stop()
 					menu:stop()
-					RunQuestMenu(quest.World)
+					if not (RunningScenario) then
+						RunQuestMenu(quest.World)
+					end
 				end)
 			quest_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
 				function()

@@ -216,6 +216,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added new Gryphon background (used for Wyrmsun with permission).
 - Fixed crash which sometimes happened when changing the resolution from the main menu after playing a grand strategy game.
 - Fixed tech tree menu music reset issue.
+- Fixed issue with autosaved games duplicating starting units when loaded.
+- Fixed issue with loading a game from a quest resulting in return to the quest menu.
 
 * Units
 - Previously-obtained upgrades now apply to rescued units.

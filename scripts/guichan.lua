@@ -886,6 +886,9 @@ function RunSinglePlayerGameMenu()
   menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
     function()
 		RunQuestWorldMenu();
+		if (RunningScenario) then
+			menu:stop()
+		end
 	end)
   menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
     function()
