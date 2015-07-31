@@ -4388,6 +4388,17 @@ function GrandStrategyEvent(faction, event)
 				end
 			end
 		end
+		
+		if (table.getn(event.Options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
+			menu:addButton("", "return", 0, 0,
+				function()
+					menu:stop()
+					event.OptionEffects[1]()
+					GameResult = GameNoResult -- this is because many events start scenarios
+				end,
+				{0, 0}
+			)
+		end
 
 		menu:run()
 	else
@@ -4850,8 +4861,19 @@ function DoProspection()
 									Tip("Gold Discovery in Province", "Congratulations! You have found gold in one of your provinces. Each gold mine provides you with 200 gold per turn, if a town hall is built in its province.")
 								end
 								menu:stop()
-							end)
+							end
+						)
 
+						menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the prospection dialogue
+							function()
+								SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
+								if (wyr.preferences.ShowTips) then
+									Tip("Gold Discovery in Province", "Congratulations! You have found gold in one of your provinces. Each gold mine provides you with 200 gold per turn, if a town hall is built in its province.")
+								end
+								menu:stop()
+							end,
+							{0, 0}
+						)
 						menu:run()
 					else
 						SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)

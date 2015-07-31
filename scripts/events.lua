@@ -594,6 +594,17 @@ function Event(speaker, event_description, player, options, option_effects, even
 				end
 			)
 		end
+		
+		if (table.getn(options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
+			menu:addButton("", "return", 0, 0,
+				function()
+					SetGamePaused(false)
+					menu:stop()
+					option_effects[1]()
+				end,
+				{0, 0}
+			)
+		end
 
 		menu:run(false)
 	else -- AIs always choose the first option
@@ -642,6 +653,16 @@ function Tip(tip_name, tip_description)
 			menu:stop()
 		end
 	)
+	
+	menu:addButton("", "return", 0, 0,
+		function()
+			if (GameRunning and not IsNetworkGame()) then
+				SetGamePaused(false)
+			end
+			menu:stop()
+		end,
+		{0, 0}
+	)	
 	
 	if (GrandStrategy == false) then
 		menu:run(false)

@@ -218,6 +218,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed tech tree menu music reset issue.
 - Fixed issue with autosaved games duplicating starting units when loaded.
 - Fixed issue with loading a game from a quest resulting in return to the quest menu.
+- Tip, dialogue, grand strategy event, and grand strategy prospection popups can now be closed by pressing "enter".
 
 * Units
 - Previously-obtained upgrades now apply to rescued units.
