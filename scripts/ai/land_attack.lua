@@ -166,8 +166,12 @@ function AiLandAttack()
 			if (GetAiUnitType("writing") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("writing"))) then
 				AiResearch(GetAiUnitType("writing")) -- if has a stronghold, research writing
 			end
-			AiSet(AiTownHall(), 2) -- make an expansion
-			AiSet(GetAiUnitType("barracks"), 3)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("town-hall")) < 2) then
+				AiSet(GetAiUnitType("town-hall"), 2) -- make an expansion
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 3) then
+				AiSet(GetAiUnitType("barracks"), 3)
+			end
 		end
 		
 		if (GetAiUnitType("stronghold") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSmithy()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then -- if has a stronghold, a smithy and two barracks, begin researching siege projectile upgrades
