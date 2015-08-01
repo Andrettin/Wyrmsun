@@ -1146,25 +1146,25 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-blue-potion",
 	Size = {46, 38},
-	File = "neutral/icons/blue_potion.png"
+	File = "neutral/icons/potion_blue.png"
 })
 
 DefineIcon({
 	Name = "icon-green-potion",
 	Size = {46, 38},
-	File = "neutral/icons/green_potion.png"
+	File = "neutral/icons/potion_green.png"
 })
 
 DefineIcon({
 	Name = "icon-purple-potion",
 	Size = {46, 38},
-	File = "neutral/icons/purple_potion.png"
+	File = "neutral/icons/potion_purple.png"
 })
 
 DefineIcon({
 	Name = "icon-red-potion",
 	Size = {46, 38},
-	File = "neutral/icons/red_potion.png"
+	File = "neutral/icons/potion_red.png"
 })
 
 DefineIcon({

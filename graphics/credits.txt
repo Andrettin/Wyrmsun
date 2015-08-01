@@ -620,6 +620,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/iron_plow_extra_1.png
 /graphics/neutral/icons/level_up.png
 /graphics/neutral/icons/long_swordsman.png
+/graphics/neutral/icons/potion_red.png
 /graphics/neutral/icons/rally_point.png
 /graphics/neutral/icons/repair.png
 /graphics/neutral/icons/repair_extra_1.png
@@ -635,6 +636,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/units/dwarven_corpse.png
 /graphics/neutral/units/gnomish_goblin_and_kobold_corpses.png
 /graphics/neutral/units/human_corpse.png
+/graphics/norse/icons/runewriting.png
 /graphics/orc/icons/sea_orc.png
 /graphics/orc/icons/shaman.png
 /graphics/orc/icons/spearthrower.png
@@ -918,9 +920,3 @@ Tanja Nov.:
 
 TaShadan:
 /graphics/neutral/units/long_swordsman.png
-
-Veneteaou:
-/graphics/tilesets/world/terrain/province_tile_ocean.png
-
-yd:
-/graphics/ui/backgrounds/castle.png

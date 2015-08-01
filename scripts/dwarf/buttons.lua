@@ -37,29 +37,31 @@
 -- general commands -- almost all", "units have it -------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
-  Action = "move",
-  Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-	"unit-goblin-war-machine", "unit-goblin-glider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
-	"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-	"unit-hero-greebo",
-	"unit-germanic-worker", "unit-germanic-builder",
-    "unit-germanic-warrior", "unit-germanic-archer",
-	"unit-germanic-old-man",
-	"unit-teuton-worker", 
-	"unit-teuton-swordsman", "unit-teuton-archer",
-	"unit-teuton-catapult", 
-	"unit-teuton-old-man",
-	"unit-hero-marbod",
-	"unit-slug", "unit-rat",
-	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-	"dwarf-group", "germanic-group", "teuton-group"} } )
+	Action = "move",
+	Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-war-machine", "unit-goblin-glider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
+		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+		"unit-hero-greebo",
+		"unit-germanic-worker", "unit-germanic-builder",
+		"unit-germanic-warrior", "unit-germanic-archer",
+		"unit-germanic-old-man",
+		"unit-teuton-worker", 
+		"unit-teuton-swordsman", "unit-teuton-archer",
+		"unit-teuton-catapult", 
+		"unit-teuton-old-man",
+		"unit-hero-marbod",
+		"unit-slug", "unit-rat",
+		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
+		"dwarf-group", "germanic-group", "teuton-group"
+	}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
   Action = "stop",
@@ -313,29 +315,34 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 -- Building Commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
-  Action = "train-unit", Value = "unit-dwarven-miner",
-  Key = "m", Hint = _("Train ~!Miner"), Popup = "popup-unit",
-  ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"} } )
+	Action = "train-unit", Value = "unit-dwarven-miner",
+	Key = "m", Hint = _("Train ~!Miner"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+} )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
-  Action = "train-unit", Value = "unit-dwarven-axefighter",
-  Key = "a", Hint = _("Train ~!Axefighter"), Popup = "popup-unit",
-  ForUnit = {"unit-dwarven-barracks"} } )
+	Action = "train-unit", Value = "unit-dwarven-axefighter",
+	Key = "a", Hint = _("Train ~!Axefighter"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks"}
+} )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-scout",
-  Action = "train-unit", Value = "unit-dwarven-scout",
-  Key = "s", Hint = _("Train ~!Scout"), Popup = "popup-unit",
-  ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"} } )
+	Action = "train-unit", Value = "unit-dwarven-scout",
+	Key = "s", Hint = _("Train ~!Scout"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+} )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista",
-  Action = "train-unit", Value = "unit-dwarven-ballista",
-  Key = "b", Hint = _("Build ~!Ballista"), Popup = "popup-unit",
-  ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"} } )
+	Action = "train-unit", Value = "unit-dwarven-ballista",
+	Key = "b", Hint = _("Build ~!Ballista"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+} )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
-  Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
-  Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",
-  ForUnit = {"unit-mercenary-camp"} } )
+	Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
+	Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+} )
 
 -- Researches ---------------------------------------------------------
 
@@ -657,13 +664,6 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "2"},
 --  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 --  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
-
--- Item Purchase ---------------------------------------------------------
-
---DefineButton( { Pos = 3, Level = 0, Icon = "icon-red-potion",
---  Action = "train-unit", Value = "unit-potion-of-healing",
---  Key = "p", Hint = _("Buy ~!Potion of Healing"), Popup = "popup-commands",
---  ForUnit = {"unit-dwarven-smithy"} } )
 
 -- Special Abilities ------------------------------------------------------
 

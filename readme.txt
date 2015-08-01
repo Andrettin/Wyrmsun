@@ -211,6 +211,9 @@ https://github.com/Andrettin/Wyrmsun
 - Improved AI troop movement decisions.
 - Fixed issue with grand strategy under Linux which could cause a freeze.
 
+* Items
+- Potions of Healing can now be bought at the dwarven Bastion and the teuton Burg.
+
 * Miscellaneous
 - Ctrl+F and Alt+F now work anywhere to toggle fullscreen, rather than only when playing a scenario.
 - Added new Gryphon background (used for Wyrmsun with permission).
