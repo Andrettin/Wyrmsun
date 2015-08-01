@@ -139,18 +139,6 @@ AddTrigger(
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
-				if (GrandStrategy) then
-					if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
-					end
-					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
-						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
-						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
-					end
-				end
 			end
 		end
 		return false
@@ -191,15 +179,6 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 			ActionDefeat()
-			if (GrandStrategy) then
-				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
-					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-					WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
-					AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
-				end
-			end
 		end
 		return false
 	end
@@ -396,7 +375,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (GetPlayerData(i, "Resources", "gold") >= 10000) then
+				if (GetPlayerData(GetFactionPlayer("Norlund Clan"), "Resources", "gold") >= 10000) then
 					Event(
 						FindHero("Thursagan"),
 						"This is all we need from these mines. Now we should go back further west, where there are no goblins, and mine there.",

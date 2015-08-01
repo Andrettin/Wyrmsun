@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      scepter_of_fire_events.lua - Defines events for the Scepter of Fire campaign.
---
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -49,18 +47,6 @@ AddTrigger(
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
-				if (GrandStrategy) then
-					if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
-					end
-					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
-						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
-						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
-					end
-				end
 			end
 		end
 		return false
@@ -128,15 +114,6 @@ AddTrigger(
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 			ActionDefeat()
-			if (GrandStrategy) then
-				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
-					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-					WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
-					AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
-				end
-			end
 		end
 		return false
 	end
@@ -812,26 +789,11 @@ AddTrigger(
 					unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
 				elseif (GrandStrategyEventMap) then
 					-- Shinsplitters
-					local units_to_be_created = {}
-					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
-							units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-							units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 4)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-						end
-					end
-					if (units_to_be_created.unit_dwarven_thane < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane >= 1) then
-						units_to_be_created.unit_dwarven_thane = 1
-						WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1
-					end
-					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
-							if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-								for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-									unit = CreateUnit(unitName, 2, {40, 10})
-								end
-							end
-						end
+					SetStartView(2, 40, 10)
+					CreateProvinceUnits("Southern Tunnels", 2, 4)
+					if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
+						unit = CreateUnit("unit-dwarven-thane", 2, {40, 10})
+						ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
 					end
 					
 					-- if in grand strategy mode, give the province to the Shinsplitters

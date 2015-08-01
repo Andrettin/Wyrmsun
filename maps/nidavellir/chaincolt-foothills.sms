@@ -222,23 +222,7 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
 
-	local units_to_be_created = {}
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 3)
-			WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				end
-			end
-		end
-	end
+	CreateProvinceUnits("Caverns of Chaincolt", 0, 3)
 
 	-- Rugnur
 	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
@@ -260,45 +244,15 @@ elseif (GrandStrategyEventMap) then
 --	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
 --	IncreaseUnitLevel(unit, 2, true)
 
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] / 5)
-			WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-				end
-			end
-		end
-	end
+	CreateProvinceUnits("Brown Hills", 1, 5)
 
 	-- Shinsplitter Clan
+	CreateProvinceUnits("Southern Tunnels", 2, 3, false, true)
 
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 3)
-			WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-		end
-	end
 	-- if there is at least one steelclad in the Southern Tunnels, make sure that it is used for the raid
-	if (units_to_be_created.unit_dwarven_steelclad < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad >= 1) then
-		units_to_be_created.unit_dwarven_steelclad = 1
-		WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 2, {Players[2].StartPos.x, Players[2].StartPos.y})
-				end
-			end
-		end
+	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-steelclad", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad") >= 1) then
+		unit = CreateUnit("unit-dwarven-steelclad", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 	end
 	
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})

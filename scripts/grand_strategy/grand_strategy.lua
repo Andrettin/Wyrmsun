@@ -210,35 +210,6 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key]["Coastal"] = false
 				end
 				
-				if (WorldMapProvinces[key].Units == nil) then
-					WorldMapProvinces[key]["Units"] = {}
-				end
-				if (WorldMapProvinces[key].UnderConstructionUnits == nil) then
-					WorldMapProvinces[key]["UnderConstructionUnits"] = {}
-				end
-				if (WorldMapProvinces[key].MovingUnits == nil) then
-					WorldMapProvinces[key]["MovingUnits"] = {}
-				end
-				if (WorldMapProvinces[key].AttackingUnits == nil) then
-					WorldMapProvinces[key]["AttackingUnits"] = {}
-				end
-				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
-						if (WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] == nil) then
-							WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
-						end
-						if (WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] == nil) then
-							WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-						end
-						if (WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] == nil) then
-							WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] = 0
-						end
-						if (WorldMapProvinces[key].AttackingUnits[string.gsub(unitName, "-", "_")] == nil) then
-							WorldMapProvinces[key].AttackingUnits[string.gsub(unitName, "-", "_")] = 0
-						end
-					end
-				end
-				
 				if (WorldMapProvinces[key].Heroes == nil) then
 					WorldMapProvinces[key]["Heroes"] = {}
 				end
@@ -661,15 +632,15 @@ function EndTurn()
 		-- construct buildings, train units and move heroes
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
-				if (GetUnitTypeData(unitName, "Mercenary") and WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then -- if a mercenary group is hired, disable hiring them permanently
+				if (GetUnitTypeData(unitName, "Mercenary") and GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName) > 0) then -- if a mercenary group is hired, disable hiring them permanently
 					MercenaryGroups[string.gsub(unitName, "-", "_")] = nil
 				end
-				if (WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] < 0 or WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] == nil) then
-					WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
+				if (GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < 0) then
+					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
 				end
-				WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")]
-				WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-				WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] = 0
+				SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unitName))
+				SetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
+				SetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
 			end
 		end
 		for i, unitName in ipairs(Units) do
@@ -680,12 +651,12 @@ function EndTurn()
 			end
 		end
 		-- if a dwarven province has a town hall and a barracks, give it militia
-		if (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] < 4) then
+		if (WorldMapProvinces[key].Civilization == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization)) < 4) then
 			if (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "town-hall") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks")) then
-				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] + 1
+				SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization)) + 1)
 			end
-		elseif (WorldMapProvinces[key].Civilization == "dwarf" and WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] > 4) then
-				WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), "-", "_")] = 4
+		elseif (WorldMapProvinces[key].Civilization == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization)) > 4) then
+			SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), 4)
 		end
 	end
 	-- research technologies
@@ -713,12 +684,12 @@ function EndTurn()
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						if (WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] > 0 and GetUnitTypeUpkeep(unitName) > 0) then
-							if (disband_quota > WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)) then
-								disband_quota = disband_quota - WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
-								WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = 0
+						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 0 and GetUnitTypeUpkeep(unitName) > 0) then
+							if (disband_quota > GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeUpkeep(unitName)) then
+								disband_quota = disband_quota - GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeUpkeep(unitName)
+								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, 0)
 							else
-								WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] - math.floor(disband_quota / GetUnitTypeUpkeep(unitName))
+								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - math.floor(disband_quota / GetUnitTypeUpkeep(unitName)))
 								disband_quota = disband_quota - math.floor(disband_quota / GetUnitTypeUpkeep(unitName)) * GetUnitTypeUpkeep(unitName)
 							end
 						end
@@ -828,7 +799,6 @@ function AttackProvince(province, faction)
 		Defender = GetProvinceName(province)
 		empty_province = true
 	end
-	AttackingUnits = province.AttackingUnits
 	AttackedProvince = province
 	
 	local victorious_player = ""
@@ -880,7 +850,7 @@ function AttackProvince(province, faction)
 		-- set the new unit quantity to the surviving units of the victorious side
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
-				AttackingUnits[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier)
+				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier))
 			elseif (IsHero(unitName)) then
 				AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
 				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
@@ -894,7 +864,7 @@ function AttackProvince(province, faction)
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					AttackingUnits[string.gsub(unitName, "-", "_")] = AttackingUnits[string.gsub(unitName, "-", "_")] - math.floor(AttackingUnits[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true)) -- formula for calculating units belonging to the victorious player that were killed
+					SetProvinceUnitQuantity(province.Name, unitName, GetProvinceAttackingUnitQuantity(province.Name, unitName) - math.floor(GetProvinceAttackingUnitQuantity(province.Name, unitName) * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true))) -- formula for calculating units belonging to the victorious player that were killed
 				elseif (IsHero(unitName)) then -- kill off defending heroes if the attacking player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
@@ -907,7 +877,7 @@ function AttackProvince(province, faction)
 			victorious_player = Defender
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					AttackingUnits[string.gsub(unitName, "-", "_")] = province.Units[string.gsub(unitName, "-", "_")] - math.floor(province.Units[string.gsub(unitName, "-", "_")] * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true))
+					SetProvinceUnitQuantity(province.Name, unitName, GetProvinceUnitQuantity(province.Name, unitName) - math.floor(GetProvinceUnitQuantity(province.Name, unitName) * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true)))
 				elseif (IsHero(unitName)) then -- kill off attacking heroes if the defending player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
@@ -935,12 +905,7 @@ function AttackProvince(province, faction)
 				
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
-			province.Units[string.gsub(unitName, "-", "_")] = AttackingUnits[string.gsub(unitName, "-", "_")]
-		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			province.AttackingUnits[string.gsub(unitName, "-", "_")] = 0
+			SetProvinceAttackingUnitQuantity(province.Name, unitName, 0)
 		end
 	end
 	if (empty_province == false and GetFactionProvinceCount(GetFactionFromName(Defender)) == 0) then
@@ -954,7 +919,6 @@ function AttackProvince(province, faction)
 	end
 	Attacker = ""
 	Defender = ""
-	AttackingUnits = nil
 	AttackedProvince = nil
 	GameResult = GameNoResult
 end
@@ -1013,10 +977,10 @@ function ChangeFactionCulture(faction, civilization)
 					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
 					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
 				) then
-					WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
-					WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = WorldMapProvinces[key].UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]
-					WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
-					WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
+					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName))
+					SetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName))
+					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
+					SetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
 					SetProvinceOwner(WorldMapProvinces[key].Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
 				end
 			end
@@ -1051,11 +1015,10 @@ function ChangeProvinceCulture(province, civilization)
 				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
 				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
 			) then
-				province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.Units[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.Units[string.gsub(unitName, "-", "_")]
-				province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] = province.UnderConstructionUnits[string.gsub(GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), "-", "_")] + province.UnderConstructionUnits[string.gsub(unitName, "-", "_")]
-				province.Units[string.gsub(unitName, "-", "_")] = 0
-				province.UnderConstructionUnits[string.gsub(unitName, "-", "_")] = 0
-				
+				SetProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnitQuantity(province.Name, unitName))
+				SetProvinceUnderConstructionUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnderConstructionUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnderConstructionUnitQuantity(province.Name, unitName))
+				SetProvinceUnitQuantity(province.Name, unitName, 0)
+				SetProvinceUnderConstructionUnitQuantity(province.Name, unitName, 0)
 			end
 		end
 	end
@@ -1197,7 +1160,7 @@ function CalculateFactionUpkeeps()
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
 				if (province_owner ~= nil) then -- pay upkeep for military units
-					province_owner.Upkeep = province_owner.Upkeep + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * GetUnitTypeUpkeep(unitName)
+					province_owner.Upkeep = province_owner.Upkeep + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * GetUnitTypeUpkeep(unitName)
 				end
 			end
 		end
@@ -1295,9 +1258,9 @@ end
 function GetFactionUnitTypeCount(faction, unit_type, include_under_construction)
 	local unit_count = 0
 	for province_i, key in ipairs(faction.OwnedProvinces) do
-		unit_count = unit_count + WorldMapProvinces[key].Units[string.gsub(unit_type, "-", "_")]
+		unit_count = unit_count + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unit_type)
 		if (include_under_construction) then
-			unit_count = unit_count + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unit_type, "-", "_")]
+			unit_count = unit_count + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unit_type)
 		end
 	end
 	return unit_count
@@ -1957,14 +1920,14 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 	local veterans = 0
 	local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unit_type, "Class"), GetUnitTypeData(unit_type, "Civilization"))
 	if (veteran_unit_type ~= nil and GetUnitTypeData(unit_type, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
-		veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
+		veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
 	end
 	local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unit_type, "Class"), GetUnitTypeData(unit_type, "Civilization"))
 	if (heroic_unit_type ~= nil and GetUnitTypeData(unit_type, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
-		veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
+		veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 	end
 
-	UIElements[table.getn(UIElements)]:setTooltip("You have " .. SelectedProvince.Units[string.gsub(unit_type, "-", "_")] + veterans .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
+	UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) + veterans .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2112,7 +2075,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
-	if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] > 0) then -- if mercenary group is already being hired, make icon gray
+	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then -- if mercenary group is already being hired, make icon gray
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
@@ -2124,7 +2087,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
 			PlaySound("click")
-			if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] < 1) then
+			if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) < 1) then
 				HireMercenary(SelectedProvince, unit_type)
 			else
 				CancelHireMercenary(SelectedProvince, unit_type)
@@ -2188,7 +2151,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
 	end	
 							
-	if (SelectedProvince.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] > 0) then
+	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then
 		UIElements[table.getn(UIElements)]:setTooltip("Cancel hiring " .. regiment_type_name)
 	else
 		UIElements[table.getn(UIElements)]:setTooltip("Hire " .. regiment_type_name .. cost_tooltip)
@@ -2289,7 +2252,7 @@ function DrawOnScreenTiles()
 			if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						if (WorldMapProvinces[key].MovingUnits[string.gsub(unitName, "-", "_")] > 0) then
+						if (GetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unitName) > 0) then
 							-- draw symbol that troops are moving to the province
 							DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 							break
@@ -2416,26 +2379,26 @@ function DrawGrandStrategyInterface()
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
-							veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
+							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
 						else
 							veteran_unit_type = nil
 						end
 						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (heroic_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
-							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
+							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 						else
 							heroic_unit_type = nil
 						end
 
-						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp") or (SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
+						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp") or (GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
-							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
-								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans .. "+" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName) > 0) then
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							else
-								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							end
 
 							-- add unit selection arrows
@@ -2473,13 +2436,13 @@ function DrawGrandStrategyInterface()
 							b:setTooltip("Deselect one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
-								if (SelectedUnits[string.gsub(unitName, "-", "_")] < SelectedProvince.Units[string.gsub(unitName, "-", "_")]) then
+								if (SelectedUnits[string.gsub(unitName, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, unitName)) then
 									SelectedUnits[string.gsub(unitName, "-", "_")] = SelectedUnits[string.gsub(unitName, "-", "_")] + 1
 									DrawGrandStrategyInterface()
-								elseif (veteran_unit_type ~= nil and SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] < SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]) then
+								elseif (veteran_unit_type ~= nil and SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)) then
 									SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] = SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] + 1
 									DrawGrandStrategyInterface()
-								elseif (heroic_unit_type ~= nil and SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] < SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]) then
+								elseif (heroic_unit_type ~= nil and SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)) then
 									SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] = SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] + 1
 									DrawGrandStrategyInterface()
 								end
@@ -2679,11 +2642,11 @@ function DrawGrandStrategyInterface()
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil) then
-							veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
+							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
 						end
 						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (heroic_unit_type ~= nil) then
-							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
+							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 						end
 
 						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
@@ -2691,10 +2654,10 @@ function DrawGrandStrategyInterface()
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
-							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
-								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans .. "+" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName) > 0) then
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							else
-								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							end
 
 							-- add unit training arrows
@@ -2782,7 +2745,7 @@ function DrawGrandStrategyInterface()
 							end
 							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
-							AddGrandStrategyLabel(SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 3) then
@@ -2904,11 +2867,11 @@ function DrawGrandStrategyInterface()
 						local veterans = 0
 						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (veteran_unit_type ~= nil) then
-							veterans = veterans + SelectedProvince.Units[string.gsub(veteran_unit_type, "-", "_")]
+							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
 						end
 						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
 						if (heroic_unit_type ~= nil) then
-							veterans = veterans + SelectedProvince.Units[string.gsub(heroic_unit_type, "-", "_")]
+							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 						end
 
 						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
@@ -2916,10 +2879,10 @@ function DrawGrandStrategyInterface()
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
-							if (SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")] > 0) then
-								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans .. "+" .. SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+							if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName) > 0) then
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							else
-								AddGrandStrategyLabel(SelectedProvince.Units[string.gsub(unitName, "-", "_")] + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							end
 
 							-- add unit training arrows
@@ -3007,7 +2970,7 @@ function DrawGrandStrategyInterface()
 							end
 							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
-							AddGrandStrategyLabel(SelectedProvince.UnderConstructionUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 3) then
@@ -3202,8 +3165,8 @@ function SetSelectedProvince(province)
 				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
 						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-						province.AttackingUnits[string.gsub(unitName, "-", "_")] = province.AttackingUnits[string.gsub(unitName, "-", "_")] + SelectedUnits[string.gsub(unitName, "-", "_")]
-						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
+						SetProvinceAttackingUnitQuantity(province.Name, unitName, GetProvinceAttackingUnitQuantity(province.Name, unitName) + SelectedUnits[string.gsub(unitName, "-", "_")])
+						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - SelectedUnits[string.gsub(unitName, "-", "_")])
 					end
 				end
 			end
@@ -3221,8 +3184,8 @@ function SetSelectedProvince(province)
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
-						province.MovingUnits[string.gsub(unitName, "-", "_")] = province.MovingUnits[string.gsub(unitName, "-", "_")] + SelectedUnits[string.gsub(unitName, "-", "_")]
-						SelectedProvince.Units[string.gsub(unitName, "-", "_")] = SelectedProvince.Units[string.gsub(unitName, "-", "_")] - SelectedUnits[string.gsub(unitName, "-", "_")]
+						SetProvinceMovingUnitQuantity(province.Name, unitName, GetProvinceMovingUnitQuantity(province.Name, unitName) + SelectedUnits[string.gsub(unitName, "-", "_")])
+						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - SelectedUnits[string.gsub(unitName, "-", "_")])
 
 						-- draw symbol that troops are moving to the province
 						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
@@ -3361,8 +3324,8 @@ function AIDoTurn(ai_faction)
 								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
 								for i, unitName in ipairs(Units) do
 									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/4th of the province's forces as a defense
-										WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
+										SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
+										SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
 									end
 								end
 							end
@@ -3407,8 +3370,8 @@ function AIDoTurn(ai_faction)
 								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
 								for i, unitName in ipairs(Units) do
 									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-										WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].AttackingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] - round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4) -- leave 1/4th of the province's forces as a defense
-										WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = round(WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] * 1 / 4)
+										SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
+										SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
 									end
 								end
 							end
@@ -3446,7 +3409,7 @@ function AIDoTurn(ai_faction)
 				if (IsUnitAvailableForTraining(WorldMapProvinces[key], unitName)) then
 					if (GetUnitTypeData(unitName, "Class") == "infantry" and desired_infantry_in_province > 0) then
 						for j=1,desired_infantry_in_province do
-							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_infantry_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_infantry_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
 								TrainUnit(WorldMapProvinces[key], unitName)
 							else
 								break
@@ -3454,7 +3417,7 @@ function AIDoTurn(ai_faction)
 						end
 					elseif (GetUnitTypeData(unitName, "Class") == "shooter" and desired_archers_in_province > 0) then
 						for j=1,desired_archers_in_province do
-							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
 								TrainUnit(WorldMapProvinces[key], unitName)
 							else
 								break
@@ -3462,7 +3425,7 @@ function AIDoTurn(ai_faction)
 						end
 					elseif (GetUnitTypeData(unitName, "Class") == "siege-engine" and desired_catapults_in_province > 0) then
 						for j=1,desired_catapults_in_province do
-							if ((WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].UnderConstructionUnits[string.gsub(unitName, "-", "_")]) < desired_catapults_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_catapults_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
 								TrainUnit(WorldMapProvinces[key], unitName)
 							else
 								break
@@ -3471,7 +3434,7 @@ function AIDoTurn(ai_faction)
 					end
 				end
 
-				if (borders_foreign == false and WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then -- if this province borders no foreign provinces but has units in the province, move them out, unless they are militia units
+				if (borders_foreign == false and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) > 0 and GetUnitTypeData(unitName, "Class") ~= "militia") then -- if this province borders no foreign provinces but has units in the province, move them out, unless they are militia units
 					for second_province_i, second_key in ipairs(ai_faction.OwnedProvinces) do
 						local second_province_borders_foreign = false
 						for third_province_i, third_key in ipairs(WorldMapProvinces[second_key].BorderProvinces) do
@@ -3483,8 +3446,8 @@ function AIDoTurn(ai_faction)
 							end
 						end
 						if (second_province_borders_foreign) then
-							WorldMapProvinces[second_key].MovingUnits[string.gsub(unitName, "-", "_")] = WorldMapProvinces[second_key].MovingUnits[string.gsub(unitName, "-", "_")] + WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")]
-							WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceMovingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceMovingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName))
+							SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
 							break
 						end
 					end
@@ -3677,7 +3640,7 @@ end
 
 function TrainUnit(province, unit_type)
 	if (CanTrainUnit(province, unit_type)) then
-		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] + 1
+		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) + 1)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
@@ -3685,8 +3648,8 @@ function TrainUnit(province, unit_type)
 end
 
 function TrainUnitCancel(province, unit_type)
-	if (province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] >= 1) then
-		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] - 1
+	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
+		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) - 1)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
@@ -3716,7 +3679,7 @@ end
 function HireMercenary(province, unit_type)
 	if (CanHireMercenary(province, unit_type)) then
 		local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
-		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = mercenary_quantity
+		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, mercenary_quantity)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
@@ -3724,8 +3687,8 @@ function HireMercenary(province, unit_type)
 end
 
 function CancelHireMercenary(province, unit_type)
-	if (province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] >= 1) then
-		province.UnderConstructionUnits[string.gsub(unit_type, "-", "_")] = 0
+	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
+		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, 0)
 		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
 		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
 		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
@@ -3832,7 +3795,6 @@ function ClearGrandStrategyVariables()
 	WorldMapProvinces = nil
 	WorldMapWaterProvinces = nil
 	SelectedUnits = nil
-	AttackingUnits = nil
 	AttackedProvince = nil
 	InterfaceState = nil
 	GrandStrategyCommodities = nil
@@ -3932,13 +3894,13 @@ function GetMilitaryScore(province, attacker, count_defenders)
 	local units
 	local faction
 	if (attacker == false) then
-		units = province.Units
+		units = GetProvinceUnitQuantity
 		faction = province.Owner
 	else
 		if (GetProvinceAttackedBy(province.Name) == "") then
 			return 0
 		else
-			units = province.AttackingUnits
+			units = GetProvinceAttackingUnitQuantity
 			faction = GetProvinceAttackedBy(province.Name)
 		end
 	end
@@ -3980,29 +3942,29 @@ function GetMilitaryScore(province, attacker, count_defenders)
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
 			if (GetUnitTypeData(unitName, "Class") == "militia" and count_defenders) then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (30 + infantry_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (30 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (50 + infantry_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (50 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "veteran-infantry") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (75 + infantry_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (75 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "heroic-infantry") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (100 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "shooter") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (60 + archer_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (60 + archer_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "thief") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * 30)
+				military_score = military_score + (units(province.Name, unitName) * 30)
 			elseif (GetUnitTypeData(unitName, "Class") == "priest") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * 60)
+				military_score = military_score + (units(province.Name, unitName) * 60)
 			elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + catapult_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (100 + catapult_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
-				military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (150 + flying_rider_military_score_bonus))
+				military_score = military_score + (units(province.Name, unitName) * (150 + flying_rider_military_score_bonus))
 			-- Mercenaries
 			elseif (GetUnitTypeData(unitName, "Mercenary")) then
 				if (unitName == "unit-surghan-mercenary-steelclad") then
-					military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (75 + infantry_military_score_bonus))
+					military_score = military_score + (units(province.Name, unitName) * (75 + infantry_military_score_bonus))
 				elseif (unitName == "unit-surghan-mercenary-thane") then
-					military_score = military_score + (units[string.gsub(unitName, "-", "_")] * (100 + infantry_military_score_bonus))
+					military_score = military_score + (units(province.Name, unitName) * (100 + infantry_military_score_bonus))
 				end
 			end
 		-- Heroes
@@ -4228,7 +4190,7 @@ function CanTriggerEvent(faction, event)
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and WorldMapProvinces[key].Units[string.gsub(unitName, "-", "_")] < event.Units[string.gsub(unitName, "-", "_")]) then
+					if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < event.Units[string.gsub(unitName, "-", "_")]) then
 						return false
 					end
 				end
@@ -4750,12 +4712,12 @@ function EqualizeProvinceUnits(faction)
 			local unit_count = GetFactionUnitTypeCount(faction, unitName, false)
 			if (unit_count > 0) then
 				for province_i, province_key in ipairs(faction.OwnedProvinces) do
-					WorldMapProvinces[province_key].Units[string.gsub(unitName, "-", "_")] = math.floor(unit_count / GetFactionProvinceCount(faction))
+					SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, math.floor(unit_count / GetFactionProvinceCount(faction)))
 				end
 			end
 			local new_unit_count = GetFactionUnitTypeCount(faction, unitName, false)
 			if (unit_count > new_unit_count) then -- if the total unit count is smaller after the redistribution of units, add the missing units to the oldest province
-				WorldMapProvinces[faction.OwnedProvinces[1]].Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces[faction.OwnedProvinces[1]].Units[string.gsub(unitName, "-", "_")] + (unit_count - new_unit_count)
+				SetProvinceUnitQuantity(WorldMapProvinces[faction.OwnedProvinces[1]].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[faction.OwnedProvinces[1]].Name, unitName) + (unit_count - new_unit_count))
 			end
 		end
 	end

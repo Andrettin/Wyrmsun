@@ -35,8 +35,11 @@ function LoadProvinces(world)
 
 	local EarthProvinces = {
 		Albania = {
-			Name = "Taulantia",
+			Name = "Albania",
 			Tiles = { {134, 33}, {134, 34} },
+			CulturalNames = {
+				latin = "Taulantia"
+			},
 			SettlementName = "Dyrrhachium",
 			CulturalSettlementNames = {
 				greek = "Epidamnus",
@@ -85,8 +88,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Aquitaine = {
-			Name = "Aquitania",
+			Name = "Aquitaine",
 			CulturalNames = {
+				latin = "Aquitania",
 				France = "Aquitaine"
 			},
 			Tiles = { {119, 31}, {119, 32}, {119, 33}, {120, 31}, {120, 32}, {120, 33}, {121, 31}, {121, 32}, {121, 33}, {122, 32} },
@@ -99,8 +103,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Aragon = {
-			Name = "Hither Baetica",
+			Name = "Aragon",
 			CulturalNames = {
+				latin = "Hither Baetica",
 				Portugal = "Aragon",
 				Spain = "Aragon"
 			},
@@ -167,8 +172,10 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		Austria = {
-			Name = "Noricum",
+			Name = "Austria",
 			CulturalNames = {
+				celt = "Noricum",
+				latin = "Noricum",
 				teuton = "Austria"
 			},
 			Tiles = { {127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30} },
@@ -195,7 +202,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Bavaria = {
-			Name = "Raetia",
+			Name = "Bavaria",
 			CulturalNames = {
 				Bavaria = "Bavaria",
 				BavarianTribe = "Bavaria",
@@ -203,6 +210,9 @@ function LoadProvinces(world)
 			},
 			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
 			SettlementName = "Ratisbon",
+			CulturalNames = {
+				latin = "Raetia"
+			},
 			CulturalSettlementNames = {
 				latin = "Regina Castra",
 				teuton = "Regensburg"
@@ -256,7 +266,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Brandenburg = {
-			Name = "Semnonia",
+			Name = "Brandenburg",
 			CulturalNames = {
 				teuton = "Brandenburg",
 				SuebiTribe = "Semnonia"
@@ -287,8 +297,11 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Bulgaria = {
-			Name = "Lower Moesia",
+			Name = "Bulgaria",
 			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
+			CulturalNames = {
+				latin = "Lower Moesia"
+			},
 			SettlementName = "Odessus",
 			CulturalSettlementNames = {
 				greek = "Odessus",
@@ -302,8 +315,10 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Burgundy = {
-			Name = "Gallia Narbonensis",
+			Name = "Burgundy",
 			CulturalNames = {
+				celt = "Gallia Narbonensis",
+				latin = "Gallia Narbonensis",
 				France = "Provence"
 			},
 			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
@@ -316,8 +331,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Castille = {
-			Name = "Hispania Tarraconensis",
+			Name = "Castille",
 			CulturalNames = {
+				latin = "Hispania Tarraconensis",
 				Portugal = "Castille",
 				Spain = "Castille"
 			},
@@ -381,9 +397,10 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		Croatia = {
-			Name = "Dalmatia",
+			Name = "Croatia",
 			CulturalNames = {
 				Croatia = "Croatia",
+				latin = "Dalmatia",
 				Muscovy = "Croatia",
 				Poland = "Croatia",
 				Russia = "Croatia"
@@ -423,10 +440,11 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		England = {
-			Name = "Britannia",
+			Name = "England",
 			CulturalNames = {
 				England = "England",
 				SaxonTribe = "England",
+				latin = "Britannia",
 				teuton = "England"
 			},
 			Tiles = { {117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26} },
@@ -445,11 +463,13 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		France = {
-			Name = "Gallia Lugdunensis",
+			Name = "France",
 			CulturalNames = {
 				France = "France",
 				Francia = "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
-				FrankTribe = "Neustria"
+				FrankTribe = "Neustria",
+				celt = "Gallia Lugdunensis",
+				latin = "Gallia Lugdunensis"
 			},
 			Tiles = { {119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29} },
 			SettlementName = "Lutetia",
@@ -477,6 +497,7 @@ function LoadProvinces(world)
 		GaliciaIberia = {
 			Name = "Gallaecia",
 			CulturalNames = {
+				latin = "Gallaecia",
 				Galicia = "Galicia",
 				Portugal = "Galicia",
 				Spain = "Galicia"
@@ -533,8 +554,9 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		Hungary = {
-			Name = "Pannonia",
+			Name = "Hungary",
 			CulturalNames = {
+				latin = "Pannonia",
 				Hungary = "Hungary"
 			},
 			Tiles = { {132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29} },
@@ -701,8 +723,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Portugal = {
-			Name = "Lusitania",
+			Name = "Portugal",
 			CulturalNames = {
+				latin = "Lusitania",
 				Portugal = "Portugal",
 				Spain = "Portugal"
 			},
@@ -728,7 +751,7 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		Prussia = {
-			Name = "Gothiscandza",
+			Name = "Prussia",
 			CulturalNames = {
 				goth = "Gothiscandza",
 				teuton = "Prussia"
@@ -764,7 +787,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Russia = {
-			Name = "Gardarike",
+			Name = "Russia",
 			CulturalNames = {
 				goth = "Gardarike",
 				norse = "Gardarike",
@@ -793,8 +816,9 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		Scotland = {
-			Name = "Caledonia",
+			Name = "Scotland",
 			CulturalNames = {
+				latin = "Caledonia",
 				England = "Scotland",
 				ScotTribe = "Scotland",
 				Scotland = "Scotland",
@@ -807,8 +831,11 @@ function LoadProvinces(world)
 			Coastal = true
 		},
 		Serbia = {
-			Name = "Upper Moesia",
+			Name = "Serbia",
 			Tiles = { {134, 32}, {135, 32}, {135, 33} },
+			CulturalNames = {
+				latin = "Upper Moesia"
+			},
 			SettlementName = "Viminacium",
 			CulturalSettlementNames = {
 				latin = "Viminacium"
@@ -865,7 +892,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Switzerland = {
-			Name = "Helvetia",
+			Name = "Switzerland",
 			CulturalNames = {
 				celt = "Helvetia",
 				latin = "Helvetia",
@@ -908,9 +935,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains"
 		},
 		Ukraine = {
-			Name = "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
+			Name = "Ukraine",
 			CulturalNames = {
-				goth = "Danparstathir",
+				goth = "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
 				norse = "Danparstathir",
 				Muscovy = "Ukraine",
 				Poland = "Ukraine",
@@ -2400,7 +2427,7 @@ function LoadProvinces(world)
 			WorldMapProvinces[key]["Units"] = {}
 			if (province_table[key].Units ~= nil) then
 				for second_key, second_value in pairs(province_table[key].Units) do
-					WorldMapProvinces[key].Units[second_key] = province_table[key].Units[second_key]
+					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].Units[second_key])
 				end
 			end
 			WorldMapProvinces[key]["Heroes"] = {}

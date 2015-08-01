@@ -50,16 +50,16 @@ local EarthEvents = {
 			function(s)
 				SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
 				SetProvinceSettlementBuilding("Don", "unit-germanic-barracks", false)
-				WorldMapProvinces.Don.Units.unit_germanic_warrior = 0
-				WorldMapProvinces.Aquitaine.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Austria.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Belgium.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Bohemia.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Burgundy.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.France.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Latium.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Switzerland.Units.unit_germanic_warrior = 6
-				WorldMapProvinces.Bavaria.Units.unit_germanic_warrior = 4 -- make Bavaria easier to be conquered by the neighboring Celtic tribes
+				SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
+				SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("France", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Latium", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Switzerland", "unit-germanic-warrior", 6)
+				SetProvinceUnitQuantity("Bavaria", "unit-germanic-warrior", 4) -- make Bavaria easier to be conquered by the neighboring Celtic tribes
 				AcquireProvince(WorldMapProvinces.Don, "")
 				ChangeProvinceCulture(WorldMapProvinces.Don, "")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe")

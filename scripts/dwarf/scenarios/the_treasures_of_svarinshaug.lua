@@ -50,8 +50,8 @@ if (LoadedGame == false) then
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
 				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] / 2)
-				WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Svarinshaug", unitName) / 2)
+				SetProvinceUnitQuantity("Svarinshaug", unitName, GetProvinceUnitQuantity("Svarinshaug", unitName) - units_to_be_created[string.gsub(unitName, "-", "_")])
 --			elseif (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 --				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			end

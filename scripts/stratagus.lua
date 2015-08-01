@@ -399,7 +399,7 @@ function SinglePlayerTriggers()
 
 	-- make players have the correct names in grand strategy mode
 	for i=0,14 do
-		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
+		if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 			if (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) then
 				if (Players[i].Type == PlayerPerson) then
 					SetPlayerData(i, "Name", GrandStrategyFaction.Name)

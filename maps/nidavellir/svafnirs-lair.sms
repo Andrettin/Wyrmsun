@@ -419,23 +419,7 @@ elseif (GrandStrategyEventMap) then
 	end
 
 	-- Norlund units
-	local units_to_be_created = {}
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")])
-			WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-		end
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				end
-			end
-		end
-	end
+	CreateProvinceUnits("Caverns of Chaincolt", 0, 1, false, true)
 
 	-- base for the Shinsplitters
 	unit = CreateUnit("unit-dwarven-town-hall", 1, {1, 19})
@@ -446,25 +430,10 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
 
 	-- Shinsplitters
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 2)
-			WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
-		end
-	end
-	if (units_to_be_created.unit_dwarven_thane < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane >= 1) then
-		units_to_be_created.unit_dwarven_thane = 1
-		WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1
-	end
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
-			if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-				for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-					unit = OldCreateUnit(unitName, 1, {Players[1].StartPos.x, Players[1].StartPos.x})
-				end
-			end
-		end
+	CreateProvinceUnits("Southern Tunnels", 1, 2, false, true)
+	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
+		unit = CreateUnit("unit-dwarven-thane", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
 	end
 
 	-- abandoned dwarven buildings

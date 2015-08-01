@@ -117,7 +117,7 @@ local NidavellirEvents = {
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -179,7 +179,7 @@ local NidavellirEvents = {
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -231,7 +231,7 @@ local NidavellirEvents = {
 					
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -289,7 +289,7 @@ local NidavellirEvents = {
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Svarinshaug.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -619,9 +619,9 @@ local NidavellirEvents = {
 
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
+						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Brown Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
 				for i, unitName in ipairs(Units) do
@@ -637,8 +637,8 @@ local NidavellirEvents = {
 				Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
 				Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
-				WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit + 1
-				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ABargainIsStruckShinsplitterClan)
 		end}
@@ -666,9 +666,9 @@ local NidavellirEvents = {
 
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.BrownHills.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
+						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Brown Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
 				for i, unitName in ipairs(Units) do
@@ -679,7 +679,7 @@ local NidavellirEvents = {
 					end
 				end
 			end
-			if (WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit >= 1) then -- way to check if Norlund Clan successfully transported the caravans
+			if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then -- way to check if Norlund Clan successfully transported the caravans
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.ClosingTheGates)
 			end
 		end}
@@ -719,21 +719,21 @@ local NidavellirEvents = {
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
 				else
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then
-				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
 		end}
@@ -768,15 +768,15 @@ local NidavellirEvents = {
 				if (WorldMapProvinces.CavernsOfChaincolt.Owner == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
 				else
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
@@ -811,8 +811,8 @@ local NidavellirEvents = {
 
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.NorthernWastelands.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Northern Wastelands", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
 				for i, unitName in ipairs(Units) do
@@ -830,9 +830,9 @@ local NidavellirEvents = {
 				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
-				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_spearman / 2 -- halve enemies in the northern wastelands
-				WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer = WorldMapProvinces.NorthernWastelands.Units.unit_goblin_archer / 2
-				WorldMapProvinces.CavernsOfChaincolt.Units["unit_dwarven_gryphon_rider"] = 2 -- two gryphon riders joined from the travel to the Northern Wastelands
+				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands
+				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer") / 2)
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 2) -- two gryphon riders joined from the travel to the Northern Wastelands
 			end
 		end}
 	},
@@ -865,8 +865,8 @@ local NidavellirEvents = {
 
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.EasternMines.Units[string.gsub(unitName, "-", "_")] = math.ceil((GetPlayerData(1, "UnitTypesCount", unitName) + GetPlayerData(2, "UnitTypesCount", unitName) + GetPlayerData(3, "UnitTypesCount", unitName)) / BattalionMultiplier)
+						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Eastern Mines", unitName, math.ceil((GetPlayerData(1, "UnitTypesCount", unitName) + GetPlayerData(2, "UnitTypesCount", unitName) + GetPlayerData(3, "UnitTypesCount", unitName)) / BattalionMultiplier))
 					end
 				end
 				for i, unitName in ipairs(Units) do
@@ -879,8 +879,8 @@ local NidavellirEvents = {
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
 				Factions.NorlundClan.Commodities["Coal"] = 20000
---				WorldMapProvinces.EasternMines.Units.unit_goblin_spearman = WorldMapProvinces.EasternMines.Units.unit_goblin_spearman / 2
---				WorldMapProvinces.EasternMines.Units.unit_goblin_archer = WorldMapProvinces.EasternMines.Units.unit_goblin_archer / 2
+--				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
+--				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer") / 2)
 			end
 		end}
 	},
@@ -917,13 +917,13 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (unitName ~= "unit-gnomish-recruit") then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Shorbear Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						else
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(math.ceil((GetPlayerData(0, "UnitTypesCount", unitName) - 1) / BattalionMultiplier), 0)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.max(math.ceil((GetPlayerData(0, "UnitTypesCount", unitName) - 1) / BattalionMultiplier), 0))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Shorbear Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
@@ -942,15 +942,15 @@ local NidavellirEvents = {
 			elseif ("Shorbear Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShorbearClan, GrandStrategyEvents.HillsOfTheShorbearClanShorbearClan)
 			else
-				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1 -- Kalnar
-				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 3 -- Lyndar, Gaenlar and Glinan
-				WorldMapProvinces.ShorbearHills.Units.unit_dwarven_axefighter = 0
-				WorldMapProvinces.ShorbearHills.Units.unit_dwarven_thane = 0
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1) -- Kalnar
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -3) -- Lyndar, Gaenlar and Glinan
+				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
+				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
 				
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
 				GrandStrategyEvents.DurstornDies = nil
-				WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit - 1 -- the gnomish envoy returns south
-				WorldMapProvinces.BrownHills.Units.unit_gnomish_recruit = WorldMapProvinces.BrownHills.Units.unit_gnomish_recruit + 1
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1) -- the gnomish envoy returns south
+				ChangeProvinceUnitQuantity("Brown Hills", "unit-gnomish-recruit", 1)
 	
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
@@ -977,13 +977,13 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (unitName ~= "unit-gnomish-recruit") then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Shorbear Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						else
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(math.ceil((GetPlayerData(0, "UnitTypesCount", unitName) - 1) / BattalionMultiplier), 0)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.max(math.ceil((GetPlayerData(0, "UnitTypesCount", unitName) - 1) / BattalionMultiplier), 0))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Shorbear Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
@@ -1020,13 +1020,13 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (unitName ~= "unit-gnomish-recruit") then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Shorbear Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						else
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.max(math.ceil((GetPlayerData(0, "UnitTypesCount", unitName) - 1) / BattalionMultiplier), 0)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.ShorbearHills.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.max(math.ceil((GetPlayerData(0, "UnitTypesCount", unitName) - 1) / BattalionMultiplier), 0))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Shorbear Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
@@ -1063,7 +1063,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
-				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = 8 -- Surghan mercenaries hired by the Shinsplitters
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2)
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 			
@@ -1076,8 +1076,8 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "shooter") then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
@@ -1095,12 +1095,12 @@ local NidavellirEvents = {
 			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.TheWyrmShinsplitterClan)
 			else
-				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = 8 -- Surghan mercenaries hired by the Shinsplitters
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
 				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2)
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 			
-				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane - 1 -- Crintil
-				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad - 4
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1) -- Crintil
+				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", -4)
 				
 				Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
 				
@@ -1127,8 +1127,8 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "shooter") then
-							WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				end
@@ -1175,15 +1175,15 @@ local NidavellirEvents = {
 
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
 			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.CavernsOfFlameShinsplitterClan)
 			else
-				WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_thane = 0
-				WorldMapProvinces.SouthernTunnels.Units.unit_surghan_mercenary_steelclad = 0
+				SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 0)
+				SetProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 0)
 				
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0 -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
@@ -1195,7 +1195,7 @@ local NidavellirEvents = {
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 				GrandStrategyEvents.ThursaganDies = nil
 
-				WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_gryphon_rider = WorldMapProvinces.CavernsOfChaincolt.Units.unit_dwarven_gryphon_rider - 2 -- the dwarven gryphon riders return to the Northern Wastelands
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
 
 				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- payment for the crafting of the Scepter
 				Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- payment for the crafting of the Scepter
@@ -1225,8 +1225,8 @@ local NidavellirEvents = {
 
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-						WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
 			end
@@ -1372,7 +1372,7 @@ local NidavellirEvents = {
 			function(s)
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						if (EventProvince.Units[string.gsub(unitName, "-", "_")] > 0) then
+						if (GetProvinceUnitQuantity(EventProvince.Name, unitName) > 0) then
 							return true
 						end
 					elseif (IsHero(unitName)) then
@@ -1396,7 +1396,7 @@ local NidavellirEvents = {
 
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							EventProvince.Units[string.gsub(unitName, "-", "_")] = EventProvince.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity(EventProvince.Name, unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 					for i, unitName in ipairs(Units) do

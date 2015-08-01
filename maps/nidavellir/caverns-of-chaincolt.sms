@@ -221,9 +221,9 @@ elseif (GrandStrategyEventMap) then
 		if (IsMilitaryUnit(unitName)) then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 			if (unitName ~= "unit-gnomish-recruit") then -- the gnomish recruit doesn't appear in this mission
-				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] / 1) -- must have every unit in there, since otherwise it will be impossible to win
+				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Caverns of Chaincolt", unitName)) -- must have every unit in there, since otherwise it will be impossible to win
 			end
-			WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.CavernsOfChaincolt.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, - units_to_be_created[string.gsub(unitName, "-", "_")])
 		end
 	end
 	for i, unitName in ipairs(Units) do
@@ -240,13 +240,13 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] / 2)
-			WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.SouthernTunnels.Units[string.gsub(unitName, "-", "_")] - units_to_be_created[string.gsub(unitName, "-", "_")]
+			units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Southern Tunnels", unitName) / 2)
+			ChangeProvinceUnitQuantity("Southern Tunnels", unitName, - units_to_be_created[string.gsub(unitName, "-", "_")])
 		end
 	end
-	if (units_to_be_created.unit_dwarven_steelclad < 1 and WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad >= 1) then
+	if (units_to_be_created.unit_dwarven_steelclad < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad") >= 1) then
 		units_to_be_created.unit_dwarven_steelclad = 1
-		WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad = WorldMapProvinces.SouthernTunnels.Units.unit_dwarven_steelclad - 1
+		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 	end
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then

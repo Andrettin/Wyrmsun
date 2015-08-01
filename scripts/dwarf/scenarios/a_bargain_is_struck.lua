@@ -875,7 +875,7 @@ AddTrigger(
 						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
 						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						WorldMapProvinces.CavernsOfChaincolt.Units.unit_gnomish_recruit = 0 -- kill off the gnomish envoy if the province has been conquered
+						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 					end
 				end

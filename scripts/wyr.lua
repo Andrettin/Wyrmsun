@@ -324,7 +324,7 @@ function SetPlayerData(player, data, arg1, arg2)
 					OldCreateUnit(unittype, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 				end
 			end
-			if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
+			if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattle and GrandStrategyFaction ~= nil) then
 				if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
 					if (Players[player].Type == PlayerPerson) then
 						SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
@@ -339,20 +339,15 @@ function SetPlayerData(player, data, arg1, arg2)
 			end
 		end
 	elseif (data == "Name") then
-		if (GrandStrategy and AttackingUnits ~= nil and GrandStrategyEventMap == false) then
+		if (GrandStrategy and GrandStrategyEventMap == false) then
 			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
+				if (arg1 == Attacker) then
+					CreateProvinceUnits(AttackedProvince.Name, player, 1, true, true)
+				elseif (arg1 == Defender) then
+					CreateProvinceUnits(AttackedProvince.Name, player, 1, false, false)
+				end
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
-						if (arg1 == Attacker) then
-							for i=1,(AttackingUnits[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-							end
-						elseif (arg1 == Defender) then
-							for i=1,(AttackedProvince.Units[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-								OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-							end
-						end
-					elseif (IsHero(unitName)) then -- create heroes which are in the province for the defender
+					if (IsHero(unitName)) then -- create heroes which are in the province for the defender
 						if (arg1 == Attacker and AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
 							OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 						elseif (arg1 == Defender and AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then

@@ -37,7 +37,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
 				and WorldMapProvinces.Don.Owner == "Vana Tribe"
-				and WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior >= 8 -- event only happens if player has gathered enough warriors for a raid
+				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has gathered enough warriors for a raid
 				and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
 				and SyncRand(100) < 33
 			) then
@@ -59,21 +59,15 @@ local GermanicEvents = {
 						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
 						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
 						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
-						WorldMapProvinces.Don.Units.unit_germanic_warrior = WorldMapProvinces.Don.Units.unit_germanic_warrior + 8 -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
+						ChangeProvinceUnitQuantity("Don", "unit-germanic-warrior", 8) -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Astrakhan", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Don", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name ~= "Vana Tribe") then
-					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")]
-							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")]
-						end
-					end
 					Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name == "Vana Tribe") then
 					GrandStrategyEvent(Factions.VanaTribe, GrandStrategyEvents.AsaRaid)
@@ -100,8 +94,8 @@ local GermanicEvents = {
 					GrandStrategyEventMap = false
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-							WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Don.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+							ChangeProvinceUnitQuantity("Astrakhan", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							ChangeProvinceUnitQuantity("Don", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 					if (GameResult == GameDefeat) then
@@ -124,7 +118,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
 				and WorldMapProvinces.Russia.Owner ~= EventFaction.Name
-				and WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior >= 8 -- event only happens if player has enough warriors to successfully migrate
+				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully migrate
 				and ProvinceHasBorderWith(WorldMapProvinces.Astrakhan, WorldMapProvinces.Russia)
 				and WorldMapProvinces.Russia.SettlementLocation[1] < WorldMapProvinces.Astrakhan.SettlementLocation[1] -- Russia must be to the west of Astrakhan, or else the event's name and description don't make sense
 				and WorldMapProvinces.Brandenburg.SettlementLocation[1] < WorldMapProvinces.Russia.SettlementLocation[1] -- Brandenburg must be to the west of Russia
@@ -148,42 +142,42 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
-								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName) + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+								ChangeProvinceUnitQuantity("Russia", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
-						WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
-						WorldMapProvinces.Brandenburg.Units.unit_germanic_worker = 0
+						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
+						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 0)
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Russia.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								ChangeProvinceUnitQuantity("Russia", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
-						WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
+						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")]
-							WorldMapProvinces.Astrakhan.Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName))
+							SetProvinceUnitQuantity("Astrakhan", unitName, 0)
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
 					ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
-					WorldMapProvinces.Astrakhan.Units.unit_germanic_warrior = 8 -- to make this province harder to conquer
+					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 				end
 			end,
 			function(s) -- if refused to migrate, then a part of the tribe splits and does so
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 				EqualizeProvinceUnits(EventFaction)
-				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 8 -- give them enough units to continue migrating
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 8) -- give them enough units to continue migrating
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Swede Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Swede Tribe")
 				Factions.SwedeTribe.Gold = EventFaction.Gold / 2
@@ -200,7 +194,7 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
-				and WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior >= 6 -- event only happens if player has enough warriors to successfully attack the province
+				and GetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior") >= 6 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Jutland)
 				and WorldMapProvinces.Jutland.Owner ~= EventFaction.Name
 --				and SyncRand(100) < 50
@@ -224,19 +218,19 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier)
-								WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
+								SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) + math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
+								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
-						WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
+						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 						SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Jutland", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -244,13 +238,13 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")]
-							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
+							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
 					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
-					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 6
+					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 				end
 			end,
@@ -266,7 +260,7 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Units.unit_germanic_warrior >= 8 -- event only happens if player has enough warriors to successfully attack the province
+				and GetProvinceUnitQuantity("Jutland", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Jutland)
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Gotaland)
 				and WorldMapProvinces.Gotaland.Owner == "Gylfing Tribe"
@@ -292,7 +286,7 @@ local GermanicEvents = {
 						FormFaction(EventFaction, Factions.SwedeTribe)
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Sweden", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -305,7 +299,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Gotaland", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -315,9 +309,9 @@ local GermanicEvents = {
 					FormFaction(EventFaction, Factions.SwedeTribe)
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = 0
-							WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] * 3 / 4
-							WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceUnitQuantity("Gotaland", unitName, 0)
+							SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4)
+							SetProvinceUnitQuantity("Jutland", unitName, 0)
 						end
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -339,9 +333,9 @@ local GermanicEvents = {
 				FormFaction(EventFaction, Factions.SwedeTribe)
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.Gotaland.Units[string.gsub(unitName, "-", "_")] = 0
-						WorldMapProvinces.Sweden.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] * 3 / 4)
-						WorldMapProvinces.Jutland.Units[string.gsub(unitName, "-", "_")] = 0
+						SetProvinceUnitQuantity("Gotaland", unitName, 0)
+						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
+						SetProvinceUnitQuantity("Jutland", unitName, 0)
 					end
 				end
 				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -580,13 +574,13 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
-				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
-				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 				EventFaction.Diplomacy.SaxonTribe = "War"
 				Factions.SaxonTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
 			end,
@@ -595,7 +589,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				GrandStrategyFaction = Factions.SaxonTribe
-				WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 1 -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
 		}
 	},
@@ -883,15 +877,15 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Burgundy", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
-						WorldMapProvinces.France.Units.unit_germanic_warrior = 6 -- to give the Aedui something of a defense
+						SetProvinceUnitQuantity("France", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								ChangeProvinceUnitQuantity("France", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -899,12 +893,13 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.France.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] * 3 / 4) -- to give them something of a defense
-							WorldMapProvinces.Burgundy.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2)
-							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceUnitQuantity("France", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
+							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
+							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
+							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end
-					WorldMapProvinces.Brandenburg.Units.unit_germanic_warrior = 4 -- to give them something of a defense
+					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
 				end
 			end
 		}
@@ -954,8 +949,8 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2)
-						WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2
+						SetProvinceUnitQuantity("Bohemia", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
+						SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 					end
 				end
 				WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
@@ -975,7 +970,7 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 									WorldMapProvinces.Bohemia.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -989,7 +984,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								ChangeProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -997,8 +992,8 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2)
-							WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Brandenburg.Units[string.gsub(unitName, "-", "_")] / 2
+							SetProvinceUnitQuantity("Bohemia", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
+							SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 						end
 					end
 					WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
@@ -1056,7 +1051,7 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
 									WorldMapProvinces.Austria.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -1067,7 +1062,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+								ChangeProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -1075,8 +1070,8 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")])
-							WorldMapProvinces.Bohemia.Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Bohemia", unitName))
+							SetProvinceUnitQuantity("Bohemia", unitName, 0)
 						end
 					end
 				end
@@ -1115,7 +1110,7 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier)
+								SetProvinceUnitQuantity("North Italy", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 									WorldMapProvinces.NorthItaly.Heroes[string.gsub(unitName, "-", "_")] = 2
@@ -1126,7 +1121,7 @@ local GermanicEvents = {
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] + math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier)
+								ChangeProvinceUnitQuantity("North Italy", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -1134,8 +1129,8 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
-							WorldMapProvinces.NorthItaly.Units[string.gsub(unitName, "-", "_")] = math.floor(WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")])
-							WorldMapProvinces.Austria.Units[string.gsub(unitName, "-", "_")] = 0
+							SetProvinceUnitQuantity("North Italy", unitName, GetProvinceUnitQuantity("Austria", unitName))
+							SetProvinceUnitQuantity("Austria", unitName, 0)
 						end
 					end
 				end
