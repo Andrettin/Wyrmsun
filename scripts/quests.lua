@@ -225,16 +225,15 @@ Quests = {
 	TheBindingOfGrafvitnir = {
 		Name = "The Binding of Grafvitnir",
 		Icon = "neutral/icons/wyrm",
-		Description = "The wyrm Grafvitnir threatens the survival of the fledgling dwarves. Many have been eaten, and there's little chance for them to kill the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.\n\nMap: Grafvitnir's Lair\n\nRewards: 1 Dwarven Technology Point.",
---		RequiredQuest = "The Necklace of the Brisings",
+		Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.\n\nMap: Grafvitnir's Lair\n\nRewards: 1 Dwarven Technology Point.",
+		RequiredQuest = "The Necklace of the Brisings",
 		World = "Nidavellir",
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
-		Map = "maps/nidavellir/grafvitnirs_lair.smp",
+		Map = "maps/nidavellir/grafvitnirs-lair.smp",
 		Scenario = "scripts/dwarf/scenarios/the_binding_of_grafvitnir.lua",
 		X = 5,
 		Y = 1,
-		Hidden = true,
 		PlayerColor = "black"
 	},
 	TheTombOfDurahnEikinskjaldi = {
@@ -247,7 +246,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/tomb-of-durahn-eikinskjaldi.smp",
 		Scenario = "scripts/dwarf/scenarios/the_tomb_of_durahn_eikinskjaldi.lua",
-		X = 5,
+		X = 6,
 		Y = 1,
 		PlayerColor = "brown"
 	},
@@ -261,7 +260,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/chaincolt-foothills.smp",
 		Scenario = "scripts/dwarf/scenarios/a_bargain_is_struck.lua",
-		X = 6,
+		X = 7,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -275,7 +274,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 		Scenario = "scripts/dwarf/scenarios/closing_the_gates.lua",
-		X = 7,
+		X = 8,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -289,7 +288,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/northern-wastelands.smp",
 		Scenario = "scripts/dwarf/scenarios/searching_for_the_runecrafter.lua",
-		X = 8,
+		X = 9,
 		Y = 1,
 		PlayerColor = "red"
 	},
@@ -303,8 +302,8 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/eastern-mines.smp",
 		Scenario = "scripts/dwarf/scenarios/gathering_materials.lua",
-		X = 9,
-		Y = 1,
+		X = 1,
+		Y = 2,
 		PlayerColor = "red"
 	},
 	HillsOfTheShorbearClan = {
@@ -317,7 +316,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/shorbear-hills.smp",
 		Scenario = "scripts/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
-		X = 1,
+		X = 2,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -331,7 +330,7 @@ Quests = {
 		TechnologyPoints = 2,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
 		Scenario = "scripts/dwarf/scenarios/the_wyrm.lua",
-		X = 2,
+		X = 3,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -345,7 +344,7 @@ Quests = {
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/caverns-of-flame.smp",
 		Scenario = "scripts/dwarf/scenarios/caverns_of_flame.lua",
-		X = 3,
+		X = 4,
 		Y = 2,
 		PlayerColor = "red"
 	},
@@ -358,7 +357,7 @@ Quests = {
 		Civilization = "dwarf",
 		TechnologyPoints = 1,
 		Map = "maps/nidavellir/svafnirs-lair.smp",
-		X = 4,
+		X = 5,
 		Y = 2,
 		PlayerColor = "red"
 	}

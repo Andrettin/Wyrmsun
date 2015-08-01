@@ -225,6 +225,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The Blue Danube quest now grants 3 technology points instead of 2.
+- Added the Binding of Grafvitnir (dwarf) quest.
 
 * Units
 - Previously-obtained upgrades now apply to rescued units.
