@@ -78,9 +78,9 @@ local land_funcs = {
 
   function() return AiSet(AiWorker(), 4) end, -- 4
 
-  function() return AiNeed(AiBarracks()) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
   function() return AiSet(AiWorker(), 8) end, -- 8
-  function() return AiWait(AiBarracks()) end,
+  function() return AiWait(GetAiUnitType("barracks")) end,
   function() return AiSet(AiSmithy(), 1) end,
   function() if (AiUpgradeWeapon1() ~= nil) then return AiResearch(AiUpgradeWeapon1()) end end,
   function() if (GetAiUnitType("bronze-shield") ~= nil) then return AiResearch(GetAiUnitType("bronze-shield")) end end,
@@ -118,7 +118,7 @@ local land_funcs = {
   function() return AiResearch(AiUpgradeMissile1()) end,
   function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") else return false end end,
 
-  function() return AiSet(AiBarracks(), 2) end,
+  function() return AiSet(GetAiUnitType("barracks"), 2) end,
   function() return AiDifficultyForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
   function() return AiDifficultyForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
   function() return AiSet(AiWorker(), 20) end,
@@ -139,8 +139,8 @@ local land_funcs = {
   function() return AiResearch(AiUpgradeMissile2()) end,
   function() return AiResearch(GetAiUnitType("masonry")) end,
   
-  function() return AiUpgradeTo(AiStronghold()) end,
-  function() return AiWait(AiStronghold()) end,
+  function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
+  function() return AiWait(GetAiUnitType("stronghold")) end,
   function() return AiSet(AiWorker(), 25) end,
 --  function() return AiNeed(AiStables()) end,
 
@@ -182,7 +182,7 @@ local land_funcs = {
 -- EXPANSION
 
   function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiBarracks()) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
 
 -- ATTACK!!
 
@@ -368,8 +368,8 @@ local land_funcs = {
 
 -- ANOTHER EXPANSION, ANOTHER BIG ATTACK
 
-  function() return AiNeed(AiBarracks()) end,
-  function() return AiNeed(AiBarracks()) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
 
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit

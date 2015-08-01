@@ -293,6 +293,12 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
 						tech_allowed = false
 					end
+				elseif (CUpgrade:Get(unitName).Class == "writing") then
+					tech_icon_x = 6
+					tech_icon_y = 4
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
+						tech_allowed = false
+					end
 				else
 					tech_allowed = false
 				end
@@ -411,6 +417,9 @@ function GetTechnologyAllowsString(technology, civilization)
 		elseif (GetUnitTypeData(technology, "Class") == "stronghold") then
 			if (GetCivilizationClassUnitType("coinage", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("coinage", civilization))
+			end
+			if (GetCivilizationClassUnitType("writing", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("writing", civilization))
 			end
 		end
 	else

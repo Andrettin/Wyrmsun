@@ -10,7 +10,7 @@
 --
 --      cheats.lua - Cheat Codes
 --
---      (c) Copyright 2001-2011 by Lutz Sammer, Jimmy Salmon and Pali Rohár
+--      (c) Copyright 2001-2015 by Lutz Sammer, Jimmy Salmon, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by

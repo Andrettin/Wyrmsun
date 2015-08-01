@@ -149,6 +149,16 @@ DefineUpgrade("upgrade-dwarven-coinage", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-dwarven-runewriting", {
+	Name = _("Dvalic Runewriting"),
+	Parent = "upgrade-writing",
+	Civilization = "dwarf",
+	Description = _("The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin."),
+	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
+	Icon = "icon-norse-runewriting",
+	TechnologyPointCost = 1
+})
+
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"BasicDamage", 2},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
@@ -240,6 +250,11 @@ DefineModifier("upgrade-dwarven-masonry",
 DefineModifier("upgrade-dwarven-coinage",
 	{"improve-production", "gold", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
+)
+
+DefineModifier("upgrade-dwarven-runewriting",
+	{"research-speed", 10}
+--	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
 )
 
 DefineDependency("unit-dwarven-scout",

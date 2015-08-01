@@ -212,7 +212,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with grand strategy under Linux which could cause a freeze.
 
 * Items
-- Potions of Healing can now be bought at the dwarven Bastion and the teuton Burg.
+- Potions of Healing can now be bought at the dwarven Bastion and the teuton Burg (healing potion icon by Jinn).
 
 * Miscellaneous
 - Ctrl+F and Alt+F now work anywhere to toggle fullscreen, rather than only when playing a scenario.
@@ -223,9 +223,16 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with loading a game from a quest resulting in return to the quest menu.
 - Tip, dialogue, grand strategy event, and grand strategy prospection popups can now be closed by pressing "enter".
 
+* Quests
+- The Blue Danube quest now grants 3 technology points instead of 2.
+
 * Units
 - Previously-obtained upgrades now apply to rescued units.
 - Chain mail left arm graphics update (by b_o).
+
+* Upgrades
+- Added Writing upgrade for the Teutons (increases research speed).
+- Added Dvalic Runewriting upgrade for the Dwarves (increases research speed).
 
 -----------------------------------------------------------------------
 - 1.3.1

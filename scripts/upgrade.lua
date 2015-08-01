@@ -122,6 +122,15 @@ DefineUpgrade("upgrade-coinage", {
 	Ability = false
 })
 
+DefineUpgrade("upgrade-writing", {
+	Name = _("Writing"),
+	Class = "writing",
+	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Research Speed."),
+	Costs = {"time", 250, "gold", 900, "lumber", 750},
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
+	Ability = false
+})
+
 -- Load the different civilizations
 Load("scripts/celt/upgrade.lua")
 Load("scripts/dwarf/upgrade.lua")
@@ -212,8 +221,8 @@ function ApplyTechLevels()
 		"upgrade-goblin-masonry"
 	}
 	local civilized_upgrades = {
-		"upgrade-dwarven-coinage",
-		"upgrade-teuton-coinage"
+		"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting",
+		"upgrade-teuton-coinage", "upgrade-teuton-writing"
 	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",

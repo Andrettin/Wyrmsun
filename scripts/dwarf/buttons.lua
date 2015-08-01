@@ -452,6 +452,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-coinage",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
+	Action = "research", Value = "upgrade-dwarven-runewriting",
+	Allowed = "check-single-research",
+	Description = _("+10% Research Speed."),
+	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-stronghold"}
+} )
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-steelclad",

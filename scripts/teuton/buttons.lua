@@ -267,6 +267,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
+	Action = "research", Value = "upgrade-teuton-writing",
+	Allowed = "check-single-research",
+	Description = _("+10% Research Speed."),
+	Key = "w", Hint = _("Research ~!Writing"), Popup = "popup-research",
+	ForUnit = {"unit-teuton-stronghold"}
+} )
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",

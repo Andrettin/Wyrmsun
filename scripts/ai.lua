@@ -63,13 +63,6 @@ function AiTownHall()
 end
 
 --
---  Stronghold of the current civilization.
---
-function AiStronghold()
-	return GetCivilizationClassUnitType("stronghold", AiGetRace())
-end
-
---
 --  Worker of the current civilization.
 --
 function AiWorker()
@@ -88,17 +81,6 @@ function AiFarm()
 		return GetCivilizationClassUnitType("farm", AiGetRace())
 	else
 		return GetCivilizationClassUnitType("farm", "dwarf")
-	end
-end
-
---
---  Barracks of the current civilization.
---
-function AiBarracks()
-	if (GetCivilizationClassUnitType("barracks", AiGetRace()) ~= nil) then
-		return GetCivilizationClassUnitType("barracks", AiGetRace())
-	else
-		return GetCivilizationClassUnitType("barracks", "dwarf")
 	end
 end
 

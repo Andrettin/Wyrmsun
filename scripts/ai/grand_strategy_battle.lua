@@ -71,9 +71,9 @@ local land_funcs = {
 
 --  function() return AiSet(AiWorker(), 4) end, -- 4
 
---  function() return AiNeed(AiBarracks()) end,
+--  function() return AiNeed(GetAiUnitType("barracks")) end,
 --  function() return AiSet(AiWorker(), 8) end, -- 8
---  function() return AiWait(AiBarracks()) end,
+--  function() return AiWait(GetAiUnitType("barracks")) end,
 --  function() return AiSet(AiSmithy(), 1) end,
 --  function() return AiResearch(AiUpgradeWeapon1()) end,
 --  function() return AiResearch(GetAiUnitType("bronze-shield")) end,
@@ -130,7 +130,7 @@ local land_funcs = {
 
 -- PREPARING FIRST SERIOUS ATTACK
 
-  function() return AiSet(AiBarracks(), 2) end,
+  function() return AiSet(GetAiUnitType("barracks"), 2) end,
   function() return AiForce(1, {AiSoldier(), 16}, true) end,
   function() return AiForce(0, {AiSoldier(), 4}) end,
   function() return AiSet(AiWorker(), 20) end,
@@ -139,8 +139,8 @@ local land_funcs = {
 
 -- NOW UPGRADING
 
---  function() return AiUpgradeTo(AiStronghold()) end,
---  function() return AiWait(AiStronghold()) end,
+--  function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
+--  function() return AiWait(GetAiUnitType("stronghold")) end,
   function() return AiSet(AiWorker(), 25) end,
 --  function() return AiNeed(AiStables()) end,
 
@@ -181,7 +181,7 @@ local land_funcs = {
 -- EXPANSION
 
   function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiBarracks()) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
 
 -- ATTACK!!
 
@@ -338,8 +338,8 @@ local land_funcs = {
 
 -- ANOTHER EXPANSION, ANOTHER BIG ATTACK
 
-  function() return AiNeed(AiBarracks()) end,
-  function() return AiNeed(AiBarracks()) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
+  function() return AiNeed(GetAiUnitType("barracks")) end,
 
 --  function() return AiForce(5, {AiSoldier(), 0, AiEliteShooter(), 15, AiCavalry(), 0, AiCavalryMage(), 40, AiSiegeWeapon(), 0, AiMage(), 4}, true) end,
 --  function() return AiForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiMage(), 0}, true) end,

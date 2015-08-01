@@ -374,7 +374,7 @@ function AiNephrite_Attack_2013()
 end
 
 function AiNephrite_Flush_2013()
-	AiSet(AiBarracks(), 0)
+	AiSet(GetAiUnitType("barracks"), 0)
 	AiSet(AiTownHall(), 0)
 	AiSet(AiFarm(), 1)
 	AiSet(AiSmithy(), 0)

@@ -978,17 +978,20 @@ if (GrandStrategyYear >= 400) then
 	WorldMapProvinces.CavernsOfChaincolt.Owner = "Knalga" -- The Lordship of Knalga was founded around 400 AD
 	WorldMapProvinces.SouthernTunnels.Owner = "Knalga"
 	WorldMapProvinces.ShorbearHills.Owner = "Knalga"
+	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-runewriting", true) -- polities require writing
 
 	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
 	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding(WorldMapProvinces.KalKartha.Name, "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetResourceProspected(46, 5, "Gold", true)
+	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing
 
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
 	SetProvinceSettlementBuilding(WorldMapProvinces.Lyr.Name, "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Lyr.Name, "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
+	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-runewriting", true) -- polities require writing
 	
 	-- The Dwarves should already have Coinage technology by then
 	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-coinage", true)

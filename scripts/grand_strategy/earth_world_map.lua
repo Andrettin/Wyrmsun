@@ -2364,7 +2364,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	ChangeFactionCulture(Factions.SaxonTribe, "teuton")
 	WorldMapProvinces.Rhineland.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Rhineland.Name, "unit-teuton-town-hall", true)
-	SetProvinceUnitQuantity("Rhineland", "unit-teuton-swordsman", 0) -- enough troops for them to hold their own
+	SetProvinceUnitQuantity("Rhineland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
 	SetProvinceUnitQuantity("Rhineland", "unit-germanic-warrior", 0)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
 	SetResourceProspected(125, 28, "Gold", true)
@@ -2373,7 +2373,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	ChangeFactionCulture(Factions.FrankTribe, "teuton")
 	WorldMapProvinces.Netherlands.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Netherlands.Name, "unit-teuton-town-hall", true)
-	SetProvinceUnitQuantity("Netherlands", "unit-teuton-swordsman", 0) -- enough troops for them to hold their own
+	SetProvinceUnitQuantity("Netherlands", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
 	SetProvinceUnitQuantity("Netherlands", "unit-germanic-warrior", 0)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
 	SetResourceProspected(123, 27, "Gold", true)
@@ -2458,7 +2458,7 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	SetProvinceSettlementBuilding(WorldMapProvinces.Latium.Name, "unit-teuton-barracks", true)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Latium.Name, "unit-teuton-lumber-mill", true)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Latium.Name, "unit-teuton-smithy", true)
-	SetResourceProspected(129, 33, "Gold", true)	
+	SetResourceProspected(129, 33, "Gold", true)
 	WorldMapProvinces.Naples.Owner = "Rome"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Naples.Name, "unit-teuton-town-hall", true)
 	
