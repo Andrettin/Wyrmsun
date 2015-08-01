@@ -349,7 +349,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Class = "flying-predator",
-	Description = _("Amongst the beasts which dwell in the dwarven homeworld of Nidavellir are the gryphons. Although many can be seen in the wild, dwarves have been domesticating gryphons for aeons. It is unknown if the wild gryphons are the descendants of gryphons who avoided domestication, or if descend from gryphons escaped from captivity who managed to survive on their own. Not coincidentally, the Gryphon Mountain is the greatest nesting area for wild gryphons."),
+	Description = _("Gryphons dwell in the dwarven homeworld of Nidavellir, predating smaller animals such as yales. Although many gryphons can be seen in the wild, dwarves have been domesticating the beasts for aeons, riding them into battle to the enemy's dismay. The Gryphon Mountain is the greatest nesting area for wild gryphons."),
 	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
 	DrawLevel = 45,
