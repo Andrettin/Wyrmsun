@@ -44,7 +44,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
-		CreateProvinceUnits("Svarinshaug", 0)
+		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
 
 		for i, unitName in ipairs(Units) do
 			if (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
@@ -279,9 +279,13 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
+				local event_string = "What is certain is that the creature never bothered Modsognir's clan again. The settlement in Svarinshaug prospered, and the dwarves grew in number."
+				if (GrandStrategy == false) then
+					event_string = event_string .. " Eventually, new groups would split off the original clan - some moving through Aurvang in the southeast, and others settling in the west."
+				end
 				Event(
 					"",
-					"What is certain is that the creature never bothered Modsognir's clan again. The settlement in Svarinshaug prospered, and the dwarves grew in number. Eventually, new groups would split off the original clan - some moving through Aurvang in the southeast, and others settling in the west.",
+					event_string,
 					player,
 					{"~!Continue"},
 					{function(s)

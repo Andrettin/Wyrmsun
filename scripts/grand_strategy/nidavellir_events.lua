@@ -308,6 +308,62 @@ local NidavellirEvents = {
 		},
 		OptionTooltips = {""}
 	},
+	TheBindingOfGrafvitnir = {
+		Name = "The Binding of Grafvitnir",
+		Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.",
+		Heroes = {
+			unit_hero_modsognir = true,
+			unit_hero_durin = true
+		},
+		RequiredEvents = {
+			TheNecklaceOfTheBrisings = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Modsogning Clan"
+				and SyncRand(100) < 20
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+					GrandStrategyEventMap = true
+					GetMapInfo(Quests.TheBindingOfGrafvitnir.Map)
+					CurrentQuest = "The Binding of Grafvitnir"
+					RunMap(Quests.TheBindingOfGrafvitnir.Map)
+					GrandStrategyEventMap = false
+					
+					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
+						WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
+						WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
+						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+					end
+
+					for i, unitName in ipairs(Units) do
+						if (IsMilitaryUnit(unitName)) then
+							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						elseif (IsHero(unitName)) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+							end
+						end
+					end
+					if (GameResult == GameVictory) then
+						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 25 -- prestige for chaining the beast
+					end
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 25 -- prestige for chaining the beast
+				end
+			end
+		},
+		OptionTooltips = {""}
+	},
 	ModsognirDies = {
 		Name = "Modsognir Dies",
 		Description = "The mighty Modsognir has died of natural causes.",

@@ -796,6 +796,7 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheTreasuresOfSvarinshaug = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheNecklaceOfTheBrisings = nil -- should be placed at an earlier date
+	GrandStrategyEvents.TheBindingOfGrafvitnir = nil -- should be placed at an earlier date
 	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 0
 	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 0
 	GrandStrategyEvents.ModsognirDies = nil
