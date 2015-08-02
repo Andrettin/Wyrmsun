@@ -216,13 +216,13 @@ function ApplyTechLevels()
 	end
 
 	local agrarian_upgrades = {
-		"upgrade-dwarven-masonry",
-		"upgrade-teuton-masonry",
+		"upgrade-dwarven-masonry", "upgrade-dwarven-runewriting",
+		"upgrade-teuton-masonry", "upgrade-teuton-writing",
 		"upgrade-goblin-masonry"
 	}
 	local civilized_upgrades = {
-		"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting",
-		"upgrade-teuton-coinage", "upgrade-teuton-writing"
+		"upgrade-dwarven-coinage", 
+		"upgrade-teuton-coinage"
 	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",

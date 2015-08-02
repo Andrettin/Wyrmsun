@@ -28,6 +28,7 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")

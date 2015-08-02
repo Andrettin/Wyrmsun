@@ -26,6 +26,7 @@
 --
 if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "Modsogning Clan")
+	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	Map.Info.PlayerType[1] = PlayerNobody
 	Map.Info.PlayerType[2] = PlayerNobody
 	Map.Info.PlayerType[3] = PlayerNobody

@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      events.lua - Defines events for the Germanic civilization.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -28,6 +26,7 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(4, "Allow", "upgrade-teuton-writing", "F")
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")

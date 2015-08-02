@@ -444,7 +444,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-coinage",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
 	Action = "research", Value = "upgrade-dwarven-coinage",
 	Allowed = "check-single-research",
 	Description = _("+10% Gold Processing."),
@@ -452,7 +452,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-coinage",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-dwarven-runewriting",
 	Allowed = "check-single-research",
 	Description = _("+10% Research Speed."),

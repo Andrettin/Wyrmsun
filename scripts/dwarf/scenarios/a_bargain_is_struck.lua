@@ -25,10 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
-SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
-SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
-SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
+if (LoadedGame == false) then
+	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
+	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+	SetPlayerData(2, "Allow", "upgrade-dwarven-runewriting", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
+	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
+end
 
 -- A Bargain is Struck initial dialogue
 -- based on the A Bargain is Struck scenario of the Sceptre of Fire campaign from Battle for Wesnoth

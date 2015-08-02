@@ -51,6 +51,7 @@ if (LoadedGame == false) then
 	end
 
 	if (GrandStrategy == false) then
+		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 		unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
 		unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
 		unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})

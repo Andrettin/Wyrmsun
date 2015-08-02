@@ -1044,10 +1044,14 @@ function RunSinglePlayerCustomGameMenu()
 	      GameSettings.GameType = gametype:getSelected() - 1
       end
 	  if (tech_level:getSelected() > 0) then
-		  TechLevel[MapPersonPlayer + 1] = tech_level_list[tech_level:getSelected() + 1]
+		for i=1,mapinfo.nplayers do
+			TechLevel[i] = tech_level_list[tech_level:getSelected() + 1]
+		end
 	  end
 	  if (max_tech_level:getSelected() > 0) then
-		  MaxTechLevel[MapPersonPlayer + 1] = max_tech_level_list[max_tech_level:getSelected() + 1]
+		for i=1,mapinfo.nplayers do
+			MaxTechLevel[i] = max_tech_level_list[max_tech_level:getSelected() + 1]
+		end
 	  end
       GameSettings.NoRandomness = wyr.preferences.NoRandomness
 	  

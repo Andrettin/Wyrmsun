@@ -26,6 +26,7 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	SetPlayerData(0, "Resources", "gold", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)

@@ -235,6 +235,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Writing upgrade for the Teutons (increases research speed).
 - Added Dvalic Runewriting upgrade for the Dwarves (increases research speed).
+- Fixed issue which was causing the tech level and max tech level settings to not be set for all players.
 
 -----------------------------------------------------------------------
 - 1.3.1

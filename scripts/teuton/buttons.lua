@@ -259,7 +259,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Gold Processing.",
@@ -267,7 +267,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-coinage",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-teuton-writing",
 	Allowed = "check-single-research",
 	Description = _("+10% Research Speed."),

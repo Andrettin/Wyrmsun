@@ -1355,8 +1355,8 @@ local NidavellirEvents = {
 				GetFactionProvinceCount(Factions.Knalga) == 0
 				and EventFaction.Civilization == "dwarf"
 				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
-				and WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
 				and WorldMapProvinces.SouthernTunnels.Owner == EventFaction.Name
+				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
 			) then
 				return true
 			else
@@ -1380,6 +1380,7 @@ local NidavellirEvents = {
 				and EventFaction.Civilization == "dwarf"
 				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
 				and WorldMapProvinces.KalKartha.Owner == EventFaction.Name
+				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
 			) then
 				return true
 			else
@@ -1399,9 +1400,19 @@ local NidavellirEvents = {
 		Description = "Our clan has expanded through a large territory, and our people have become more and more settled down. Now it is high time for us to to found a new realm, the lordship of Lyr!",
 		Civilization = "dwarf",
 		FactionType = "tribe",
-		Provinces = {
-			Lyr = true
-		},
+		Conditions = function(s)
+			if (
+				GetFactionProvinceCount(Factions.Lyr) == 0
+				and EventFaction.Civilization == "dwarf"
+				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
+				and WorldMapProvinces.Lyr.Owner == EventFaction.Name
+				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
+			) then
+				return true
+			else
+				return false
+			end
+		end,
 		Persistent = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)

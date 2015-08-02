@@ -38,6 +38,8 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
 	SetPlayerData(1, "Allow", "unit-dwarven-guard-tower", "F")
 	SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
+	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
+	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

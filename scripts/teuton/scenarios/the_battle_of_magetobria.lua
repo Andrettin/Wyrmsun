@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      events.lua - Defines events for the Germanic civilization.
---
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -26,6 +24,10 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+if (LoadedGame == false) then
+	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
+end
 
 -- The Battle of Magetobria introduction
 AddTrigger(
