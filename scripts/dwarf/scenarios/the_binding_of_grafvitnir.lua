@@ -64,7 +64,15 @@ if (LoadedGame == false) then
 	end
 	
 	-- Grafvitnir and his kobold defenders
-	CreateCreeps(1, "unit-kobold-footpad", 36, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	if (GameSettings.Difficulty == 1) then
+		CreateCreeps(1, "unit-kobold-footpad", 18, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	elseif (GameSettings.Difficulty == 2) then
+		CreateCreeps(1, "unit-kobold-footpad", 36, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	elseif (GameSettings.Difficulty == 3) then
+		CreateCreeps(1, "unit-kobold-footpad", 54, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	elseif (GameSettings.Difficulty == 4) then
+		CreateCreeps(1, "unit-kobold-footpad", 72, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	end
 	unit = CreateUnit("unit-wyrm", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	SetUnitName(unit, "Grafvitnir")
 	SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") * 10, "Max") -- Grafvitnir should be virtually indestructible
@@ -73,10 +81,18 @@ if (LoadedGame == false) then
 	SetUnitVariable(unit, "Armor", 20)
 	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	if (GameSettings.Difficulty >= 2) then
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	end
+	if (GameSettings.Difficulty >= 3) then
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	end
+	if (GameSettings.Difficulty >= 4) then
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	end
 end
 
 RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
@@ -86,7 +102,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat the bandits")) then
+		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Get Modsognir close to Grafvitnir")) then
 			player = GetFactionPlayer("Modsogning Clan")
 			return true
 		end
@@ -131,10 +147,11 @@ AddTrigger(
 								{function(s)
 								Event(
 									FindHero("Modsognir"),
-									"No, as chieftain I must do what I must. If we fail, the clan's doom will be imminent. Either our clan is saved, or my line dies here.",
+									"No, I must do my duty as chieftain. If we fail, the clan's doom will be imminent. Either our clan is saved, or my line dies here.",
 									player,
 									{"~!Continue"},
 									{function(s)
+										AddPlayerObjective(player, "- Kill the enemies surrounding Grafvitnir")
 										AddPlayerObjective(player, "- Get Modsognir close to Grafvitnir")
 										AddPlayerObjective(player, "- Modsognir must survive")
 										AddPlayerObjective(player, "- Durin must survive")
@@ -164,22 +181,101 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Get Modsognir close to Grafvitnir") and (IfNearUnit(GetThisPlayer(), ">=", 1, "unit-hero-modsognir", "unit-wyrm") or IfNearUnit(GetThisPlayer(), ">=", 1, "unit-hero-modsognir-thane", "unit-wyrm"))) then
-			player = GetThisPlayer()
+		if (PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Get Modsognir close to Grafvitnir")) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Grafvitnir"))
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Modsogning Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 1 + 4, GetUnitVariable(uncount[unit1],"PosY") + 1 + 4})
+					if (unit_quantity > 0) then
+						player = GetFactionPlayer("Modsogning Clan")
+						return true
+					end
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		local modsogning_unit
+		
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Grafvitnir"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+				local nearby_uncount = 0
+				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
+				for unit2 = 1,table.getn(nearby_uncount) do 
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Modsogning Clan")) then
+						modsogning_unit = nearby_uncount[unit2]
+						break
+					end
+				end
+			end
+		end
+		
+		if (not modsogning_unit) then
 			return true
+		end
+			
+		Event(
+			modsogning_unit,
+			"I've found Grafvitnir...!",
+			player,
+			{"~!Continue"},
+			{function(s)
+				Event(
+					FindHero("Durin"),
+					"Some kobolds are guarding it... Let's get rid of them.",
+					player,
+					{"~!Continue"},
+					{function(s)
+						Event(
+							FindHero("Modsognir"),
+							"And then I need to get close to the monster...",
+							player,
+							{"~!Continue"},
+							{function(s)
+							end}
+						)
+					end}
+				)
+			end}
+		)
+		return false
+	end
+)
+
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (PlayerHasObjective(GetThisPlayer(), "- Get Modsognir close to Grafvitnir") and (IfNearUnit(GetThisPlayer(), ">=", 1, "unit-hero-modsognir", "unit-wyrm") or IfNearUnit(GetThisPlayer(), ">=", 1, "unit-hero-modsognir-thane", "unit-wyrm"))) then
+			local uncount = 0
+			uncount = GetUnits(GetFactionPlayer("Grafvitnir"))
+			for unit1 = 1,table.getn(uncount) do 
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Grafvitnir"), "unit-kobold-footpad", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 1 + 6, GetUnitVariable(uncount[unit1],"PosY") + 1 + 6})
+					if (unit_quantity == 0) then
+						player = GetThisPlayer()
+						return true
+					end
+				end
+			end
 		end
 		return false
 	end,
 	function()
 		Event(
 			FindHero("Modsognir"),
-			"The monster is chained, let us take it to Svarinshaug!",
+			"It's done! The monster is chained, let's take it to Svarinshaug!",
 			player,
 			{"~!Continue"},
 			{function(s)
 			Event(
 				"",
-				"With much effort, the enormous Grafvitnir was brought to Svarinshaug by Modsognir's party. The monster's fetters were bound to the walls of a nearby cave, and the entrance destroyed. Little is known of what became of the wyrm. Some dwarven scholars say it died of hunger, while others speculate that it eventually managed to free itself and find its way deep underground.",
+				"With much effort, the enormous Grafvitnir was brought to Svarinshaug by Modsognir's party. The monster's fetters were bound to the walls of a nearby cave, and the entrance destroyed. Little is known of what became of the wyrm. Some dwarven scholars say it died of hunger, while others speculate that it eventually managed to free itself and found its way deep underground.",
 				player,
 				{"~!Continue"},
 				{function(s)
