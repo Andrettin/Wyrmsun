@@ -203,6 +203,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - Fixed issue which caused AI units to retaliate against volcanic craters.
+- Fixed bug with AI active unit count.
 
 * Grand Strategy Mode
 - Improved the efficiency of minimap drawing.
