@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_events.lua - Defines the grand strategy events.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -54,7 +52,7 @@ local GenericEvents = {
 		Description = "A group of skilled carpenters has come to our country, opening up a workshop in PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				SyncRand(100) < math.min(10, math.floor(EventFaction.Prestige / 10)) -- 10% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
+				SyncRand(100) < math.min(5, math.floor(EventFaction.Prestige / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
@@ -81,7 +79,7 @@ local GenericEvents = {
 		Description = "A group of skilled masons has come to our country, opening up a workshop in PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				SyncRand(100) < math.min(10, math.floor(EventFaction.Prestige / 10)) -- 10% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
+				SyncRand(100) < math.min(5, math.floor(EventFaction.Prestige / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
@@ -109,7 +107,7 @@ local GenericEvents = {
 		Description = "A master builder has approached you with plans to build an observatory in PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				SyncRand(100) < math.min(10, math.floor(EventFaction.Prestige / 10)) -- 10% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
+				SyncRand(100) < math.min(5, math.floor(EventFaction.Prestige / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
 				and EventFaction.Gold >= 500
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then
@@ -140,9 +138,10 @@ local GenericEvents = {
 		Description = "A master builder has approached you with plans to build a library in PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				SyncRand(100) < math.min(10, math.floor(EventFaction.Prestige / 10)) -- 10% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
+				SyncRand(100) < math.min(5, math.floor(EventFaction.Prestige / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
 				and EventFaction.Gold >= 400
 				and FactionHasTechnologyType(EventFaction, "masonry")
+				and FactionHasTechnologyType(EventFaction, "writing")
 			) then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (SyncRand(100) < 1 and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "lumber-mill")) then
@@ -171,7 +170,7 @@ local GenericEvents = {
 		Description = "A master builder has approached you with plans to build a monument in PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				SyncRand(100) < math.min(10, math.floor(EventFaction.Prestige / 10)) -- 10% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
+				SyncRand(100) < math.min(5, math.floor(EventFaction.Prestige / 20)) -- 5% chance the event happens at all if prestige is at least 100, and then 1% chance that it happens to a particular province, for a total chance of 0.01% of happening if the player has one province (this event shouldn't be common)
 				and EventFaction.Gold >= 500
 				and FactionHasTechnologyType(EventFaction, "masonry")
 			) then

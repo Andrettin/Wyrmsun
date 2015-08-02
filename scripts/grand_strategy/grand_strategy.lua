@@ -1145,6 +1145,10 @@ function CalculateFactionIncomes()
 				+ 2 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
 				+ 2 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
 			)
+			
+			if (FactionHasTechnologyType(Factions[key], "writing")) then
+				Factions[key].Income.Research = math.floor(Factions[key].Income.Research * 150 / 100)
+			end
 		end
 	end
 end
@@ -1372,7 +1376,7 @@ end
 
 function FactionBordersCulture(faction, civilization)
 	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (ProvinceBordersCulture(WorldMapProvinces[key].Name, civilization)) then
+		if (ProvinceBordersCulture(WorldMapProvinces[key], civilization)) then
 			return true
 		end
 	end
@@ -3235,6 +3239,16 @@ function AIDoTurn(ai_faction)
 	AIConsiderOffers(ai_faction)
 
 	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
+		-- try to first research masonry, then writing, then coinage, and only then try to research other technologies
+		if (GetCivilizationClassUnitType("masonry", WorldMapProvinces[key].Civilization) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", WorldMapProvinces[key].Civilization))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", WorldMapProvinces[key].Civilization))
+		end
+		if (GetCivilizationClassUnitType("writing", WorldMapProvinces[key].Civilization) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", WorldMapProvinces[key].Civilization))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", WorldMapProvinces[key].Civilization))
+		end
+		if (GetCivilizationClassUnitType("coinage", WorldMapProvinces[key].Civilization) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", WorldMapProvinces[key].Civilization))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", WorldMapProvinces[key].Civilization))
+		end
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") ~= nil) then
 				if (CanResearchTechnology(WorldMapProvinces[key], unitName)) then

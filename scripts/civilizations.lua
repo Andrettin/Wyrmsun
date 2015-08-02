@@ -834,6 +834,18 @@ DefineCivilizationFactions("goth",
 		"type", "polity",
 		"color", "brown",
 		"secondary_color", "brown"
+	},
+	"faction", {
+		"name", "Gothia",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Vandalia",
+		"type", "polity",
+		"color", "cyan",
+		"secondary_color", "blue"
 	}
 )
 
@@ -1091,7 +1103,7 @@ DefineCivilizationFactions("teuton",
 		"secondary_color", "pink",
 		"playable", false
 	},
-	-- Germanic polities
+	-- Teuton polities
 	"faction", {
 		"name", "Austria",
 		"type", "polity",
@@ -1141,6 +1153,12 @@ DefineCivilizationFactions("teuton",
 		"type", "polity",
 		"color", "black",
 		"secondary_color", "black"
+	},
+	"faction", {
+		"name", "Jutland",
+		"type", "polity",
+		"color", "red",
+		"secondary_color", "white"
 	},
 	"faction", {
 		"name", "Netherlands",

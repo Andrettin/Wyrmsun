@@ -206,13 +206,11 @@ function LoadProvinces(world)
 			CulturalNames = {
 				Bavaria = "Bavaria",
 				BavarianTribe = "Bavaria",
+				latin = "Raetia",
 				teuton = "Bavaria"
 			},
 			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
 			SettlementName = "Ratisbon",
-			CulturalNames = {
-				latin = "Raetia"
-			},
 			CulturalSettlementNames = {
 				latin = "Regina Castra",
 				teuton = "Regensburg"
@@ -403,7 +401,8 @@ function LoadProvinces(world)
 				latin = "Dalmatia",
 				Muscovy = "Croatia",
 				Poland = "Croatia",
-				Russia = "Croatia"
+				Russia = "Croatia",
+				teuton = "Küstenland"
 			},
 			Tiles = { {130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33} },
 			SettlementName = "Salonae",
@@ -1350,7 +1349,10 @@ function LoadProvinces(world)
 				teuton = "Galicia"
 			},
 			Tiles = { {133, 28}, {134, 28}, {135, 28}, {136, 28}, {137, 28}, {137, 29}, {138, 28}, {138, 29} },
-	--		SettlementName = "Lvov",
+			SettlementName = "Lvov",
+			CulturalSettlementNames = {
+				teuton = "Lemberg"
+			},
 			SettlementLocation = {137, 28}, -- Lvov / Lemberg
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"

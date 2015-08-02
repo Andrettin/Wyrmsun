@@ -205,6 +205,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused AI units to retaliate against volcanic craters.
 - Fixed bug with AI active unit count.
 
+* Factions
+- Tribe and clan factions now become polity factions after a writing technology is researched (also valid for the grand strategy mode).
+
 * Grand Strategy Mode
 - Improved the efficiency of minimap drawing.
 - There is now a gray-colored rectangle on the minimap indicating which part of the map the player is currently seeing.
@@ -233,8 +236,8 @@ https://github.com/Andrettin/Wyrmsun
 - Chain mail left arm graphics update (by b_o).
 
 * Upgrades
-- Added Writing upgrade for the Teutons (increases research speed).
-- Added Dvalic Runewriting upgrade for the Dwarves (increases research speed).
+- Added Writing upgrade for the Teutons (increases research speed; in grand strategy mode increases research output).
+- Added Dvalic Runewriting upgrade for the Dwarves (increases research speed; in grand strategy mode increases research output).
 - Fixed issue which was causing the tech level and max tech level settings to not be set for all players.
 
 -----------------------------------------------------------------------

@@ -1357,6 +1357,7 @@ local NidavellirEvents = {
 				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
 				and WorldMapProvinces.SouthernTunnels.Owner == EventFaction.Name
 				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
+				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
 			) then
 				return true
 			else
@@ -1381,6 +1382,7 @@ local NidavellirEvents = {
 				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
 				and WorldMapProvinces.KalKartha.Owner == EventFaction.Name
 				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
+				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
 			) then
 				return true
 			else
@@ -1407,6 +1409,7 @@ local NidavellirEvents = {
 				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
 				and WorldMapProvinces.Lyr.Owner == EventFaction.Name
 				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
+				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
 			) then
 				return true
 			else

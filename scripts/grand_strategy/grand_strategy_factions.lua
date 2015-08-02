@@ -188,6 +188,16 @@ function LoadFactions(world)
 			Civilization = "teuton",
 			Title = "Kingdom"
 		},
+		Gothia = {
+			Name = "Gothia",
+			Civilization = "goth",
+			Title = "Kingdom"
+		},
+		Jutland = {
+			Name = "Jutland",
+			Civilization = "teuton",
+			Title = "Duchy"
+		},
 		Netherlands = {
 			Name = "Netherlands",
 			Civilization = "teuton",
@@ -222,6 +232,11 @@ function LoadFactions(world)
 			Name = "Switzerland",
 			Civilization = "teuton",
 			Title = "Confederation"
+		},
+		Vandalia = {
+			Name = "Vandalia",
+			Civilization = "goth",
+			Title = "Kingdom"
 		},
 		Westphalia = {
 			Name = "Westphalia",

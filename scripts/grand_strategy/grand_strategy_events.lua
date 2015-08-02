@@ -150,6 +150,7 @@ function LoadEvents(world)
 		Load("scripts/grand_strategy/germanic_events.lua")
 		Load("scripts/grand_strategy/latin_events.lua")
 		Load("scripts/grand_strategy/norse_events.lua")
+		Load("scripts/grand_strategy/teuton_events.lua")
 	end
 	if (world == "Nidavellir" or world == "Random" or world == "Save") then
 		Load("scripts/grand_strategy/nidavellir_events.lua")
