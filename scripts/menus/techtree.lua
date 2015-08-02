@@ -285,7 +285,7 @@ function RunTechTreeMenu(civilization_number)
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "coinage") then
-					tech_icon_x = 5
+					tech_icon_x = 4
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
@@ -294,7 +294,7 @@ function RunTechTreeMenu(civilization_number)
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "writing") then
-					tech_icon_x = 6
+					tech_icon_x = 5
 					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
 						tech_allowed = false
