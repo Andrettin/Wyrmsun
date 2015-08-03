@@ -1446,6 +1446,15 @@ function FactionHasCoast(faction)
 	return false
 end
 
+function FactionHasCulture(faction, civilization)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		if (WorldMapProvinces[key].Civilization == civilization) then
+			return true
+		end
+	end
+	return false
+end
+
 function RunGrandStrategyGameMenu()
 	local menu = WarGameMenu(panel(1))
 
@@ -1669,6 +1678,8 @@ function RunGrandStrategyLoadGameMenu()
 				ClearGrandStrategyUIVariables()
 				GrandStrategyMenu:stop();
 			end
+			CalculateFactionIncomes()
+			CalculateFactionUpkeeps()
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
 			RunGrandStrategyGame()
 		end)

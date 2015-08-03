@@ -679,7 +679,7 @@ local GermanicEvents = {
 --				and FactionHasTechnologyType(EventFaction, "wood-plow")
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Goth Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the goth civilization is not playable
-				and SyncRand(50) < 1
+				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "goth"))
 			) then
 				return true
 			end

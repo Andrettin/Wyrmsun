@@ -40,7 +40,7 @@ local NorseEvents = {
 --				and FactionHasTechnologyType(EventFaction, "wood-plow")
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Swede Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the norse civilization is not playable
-				and SyncRand(50) < 1
+				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "norse"))
 			) then
 				return true
 			end

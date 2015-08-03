@@ -215,6 +215,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved AI troop movement decisions.
 - Fixed issue with grand strategy under Linux which could cause a freeze.
 - Added events to transform tribal factions into polity ones if writing has been researched.
+- The "Teuton Culture Develops", "Goth Culture Develops" and "Norse Culture Develops" events now trigger immediately if a Germanic faction has one province of the respective culture.
 
 * Items
 - Potions of Healing can now be bought at the dwarven Bastion and the teuton Burg (healing potion icon by Jinn).
