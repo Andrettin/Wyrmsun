@@ -590,31 +590,36 @@ DefineCivilizationFactions("dwarf",
 		"name", "Eikinskjaldi Clan", -- originally Oakenshield, translated into Norse to make it seem more dwarvish
 		"type", "tribe",
 		"color", "brown",
-		"secondary_color", "brown"
+		"secondary_color", "brown",
+		"develops-to", {"Kal Kartha", "Knalga", "Lyr"}
 	},
 	"faction", {
 		"name", "Modsogning Clan", -- clan of Modsognir
 		"type", "tribe",
 		"color", "white",
-		"secondary_color", "white"
+		"secondary_color", "white",
+		"develops-to", {"Kal Kartha", "Knalga", "Lyr"}
 	},
 	"faction", {
 		"name", "Norlund Clan",
 		"type", "tribe",
 		"color", "red",
-		"secondary_color", "orange"
+		"secondary_color", "orange",
+		"develops-to", {"Knalga"}
 	},
 	"faction", {
 		"name", "Shinsplitter Clan",
 		"type", "tribe",
 		"color", "green",
-		"secondary_color", "teal"
+		"secondary_color", "teal",
+		"develops-to", {"Kal Kartha", "Knalga", "Lyr"}
 	},
 	"faction", {
 		"name", "Shorbear Clan",
 		"type", "tribe",
 		"color", "blue",
-		"secondary_color", "cyan"
+		"secondary_color", "cyan",
+		"develops-to", {"Knalga"}
 	},
 	"faction", {
 		"name", "Kal Kartha",
@@ -796,19 +801,22 @@ DefineCivilizationFactions("goth",
 		"name", "Burgundian Tribe",
 		"type", "tribe",
 		"color", "brown",
-		"secondary_color", "brown"
+		"secondary_color", "brown",
+		"develops-to", {"Burgundy"}
 	},
 	"faction", {
 		"name", "Goth Tribe",
 		"type", "tribe",
 		"color", "red",
-		"secondary_color", "red"
+		"secondary_color", "red",
+		"develops-to", {"Gothia"}
 	},
 	"faction", {
 		"name", "Ostrogoth Tribe",
 		"type", "tribe",
 		"color", "red",
-		"secondary_color", "red"
+		"secondary_color", "red",
+		"develops-to", {"Gothia"}
 	},
 	"faction", {
 		"name", "Rugian Tribe",
@@ -820,13 +828,15 @@ DefineCivilizationFactions("goth",
 		"name", "Vandal Tribe",
 		"type", "tribe",
 		"color", "cyan",
-		"secondary_color", "blue"
+		"secondary_color", "blue",
+		"develops-to", {"Vandalia"}
 	},
 	"faction", {
 		"name", "Visigoth Tribe",
 		"type", "tribe",
 		"color", "pink",
-		"secondary_color", "pink"
+		"secondary_color", "pink",
+		"develops-to", {"Gothia"}
 	},
 	-- polities
 	"faction", {
@@ -873,7 +883,9 @@ DefineCivilizationFactions("greek",
 		"name", "Minoan Tribe",
 		"type", "tribe",
 		"color", "yellow",
-		"secondary_color", "yellow"
+		"secondary_color", "yellow",
+		"develops-to", {"Crete"},
+		"playable", false
 	},
 	-- Non-Playable Polities
 	"faction", {
@@ -957,13 +969,15 @@ DefineCivilizationFactions("norse",
 		"name", "Dane Tribe",
 		"type", "tribe",
 		"color", "red",
-		"secondary_color", "white"
+		"secondary_color", "white",
+		"develops-to", {"Denmark"}
 	},
 	"faction", {
 		"name", "Swede Tribe",
 		"type", "tribe",
 		"color", "blue",
-		"secondary_color", "yellow"
+		"secondary_color", "yellow",
+		"develops-to", {"Sweden"}
 	},
 	-- polities
 	"faction", {
@@ -991,13 +1005,15 @@ DefineCivilizationFactions("teuton",
 		"name", "Alamanni Tribe",
 		"type", "tribe",
 		"color", "blue",
-		"secondary_color", "blue"
+		"secondary_color", "blue",
+		"develops-to", {"Switzerland"}
 	},
 	"faction", {
 		"name", "Bavarian Tribe",
 		"type", "tribe",
 		"color", "cyan",
-		"secondary_color", "white"
+		"secondary_color", "white",
+		"develops-to", {"Austria", "Bavaria"}
 	},
 	"faction", {
 		"name", "Burgundian Tribe",
@@ -1017,7 +1033,8 @@ DefineCivilizationFactions("teuton",
 		"name", "Frank Tribe",
 		"type", "tribe",
 		"color", "green",
-		"secondary_color", "orange"
+		"secondary_color", "orange",
+		"develops-to", {"Francia", "Netherlands"}
 	},
 	"faction", {
 		"name", "Frisian Tribe",
@@ -1036,7 +1053,8 @@ DefineCivilizationFactions("teuton",
 		"name", "Jute Tribe",
 		"type", "tribe",
 		"color", "red",
-		"secondary_color", "white"
+		"secondary_color", "white",
+		"develops-to", {"Jutland"}
 	},
 	"faction", {
 		"name", "Lombard Tribe",
@@ -1048,7 +1066,8 @@ DefineCivilizationFactions("teuton",
 		"name", "Marcomanni Tribe",
 		"type", "tribe",
 		"color", "orange", -- change to a better one?
-		"secondary_color", "red"
+		"secondary_color", "red",
+		"develops-to", {"Austria", "Bavaria", "Galicia"}
 	},
 	"faction", {
 		"name", "Ostrogoth Tribe",
@@ -1068,13 +1087,15 @@ DefineCivilizationFactions("teuton",
 		"name", "Saxon Tribe",
 		"type", "tribe",
 		"color", "pink",
-		"secondary_color", "pink"
+		"secondary_color", "pink",
+		"develops-to", {"Brandenburg", "England", "Prussia", "Saxony", "Scotland", "Westphalia"}
 	},
 	"faction", {
 		"name", "Suebi Tribe",
 		"type", "tribe",
 		"color", "black",
-		"secondary_color", "black"
+		"secondary_color", "black",
+		"develops-to", {"Austria", "Bavaria", "Galicia"}
 	},
 	"faction", {
 		"name", "Swede Tribe",

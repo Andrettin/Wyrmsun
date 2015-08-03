@@ -206,7 +206,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed bug with AI active unit count.
 
 * Factions
-- Tribe and clan factions now become polity factions after a writing technology is researched (also valid for the grand strategy mode).
+- Tribe and clan factions now become polity factions after a writing technology is researched.
 
 * Grand Strategy Mode
 - Improved the efficiency of minimap drawing.
@@ -214,6 +214,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved turn processing performance.
 - Improved AI troop movement decisions.
 - Fixed issue with grand strategy under Linux which could cause a freeze.
+- Added events to transform tribal factions into polity ones if writing has been researched.
 
 * Items
 - Potions of Healing can now be bought at the dwarven Bastion and the teuton Burg (healing potion icon by Jinn).
@@ -236,8 +237,7 @@ https://github.com/Andrettin/Wyrmsun
 - Chain mail left arm graphics update (by b_o).
 
 * Upgrades
-- Added Writing upgrade for the Teutons (increases research speed; in grand strategy mode increases research output).
-- Added Dvalic Runewriting upgrade for the Dwarves (increases research speed; in grand strategy mode increases research output).
+- Added Writing upgrade for the Teutons and Dvalic Runewriting for the Dwarves (increases research speed; in grand strategy mode increases research output) (icon by Jinn).
 - Fixed issue which was causing the tech level and max tech level settings to not be set for all players.
 
 -----------------------------------------------------------------------
