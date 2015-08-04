@@ -165,7 +165,7 @@ function addQuestIcon(quest, menu, x, y)
 					RunMap(mapname)
 					quest_menu:stop()
 					menu:stop()
-					if not (RunningScenario) then
+					if not (LoadGameFile) then
 						RunQuestMenu(quest.World)
 					end
 				end)

@@ -32,6 +32,7 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+		SetPlayerData(0, "Faction", "Suebi Tribe")
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")

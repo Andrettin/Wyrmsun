@@ -27,6 +27,7 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
+	SetPlayerData(0, "Faction", "Suebi Tribe")
 end
 
 -- The Battle of Magetobria introduction

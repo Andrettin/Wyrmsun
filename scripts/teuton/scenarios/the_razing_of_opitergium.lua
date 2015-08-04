@@ -30,13 +30,12 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+		SetPlayerData(0, "Faction", "Marcomanni Tribe")
 
 	--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")
-		
-		local units_to_be_created = {}
 		
 		-- Marcomanni units
 		CreateProvinceUnits("Austria", 0)		

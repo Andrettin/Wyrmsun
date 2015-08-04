@@ -26,8 +26,8 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Marcomanni Tribe")
 	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
+	SetPlayerData(0, "Faction", "Marcomanni Tribe")
 	SetPlayerData(1, "Faction", "Boii Tribe")
 	SetPlayerData(2, "RaceName", "goth")
 	SetPlayerData(2, "Faction", "Vandal Tribe")
