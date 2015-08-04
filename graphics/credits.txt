@@ -117,6 +117,7 @@ b_o:
 /graphics/goblin/units/goblin_worker_with_gold_spiky_hair.png
 /graphics/goblin/units/goblin_worker_with_lumber.png
 /graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png
+/graphics/goblin/units/rogue.png
 /graphics/human/units/human_body.png
 /graphics/human/units/human_body_warrior.png
 /graphics/human/units/human_left_arm.png
