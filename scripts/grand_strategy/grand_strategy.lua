@@ -4499,6 +4499,8 @@ function FormFaction(old_faction, new_faction)
 		GrandStrategyFaction = new_faction
 	end
 
+	CalculateFactionIncomes()
+	
 	DrawGrandStrategyInterface()
 	DrawOnScreenTiles()
 end

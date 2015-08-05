@@ -332,12 +332,22 @@ function LoadFactions(world)
 		},
 		Crimea = {
 			Name = "Crimea",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Khanate"
+		},
+		Croatia = {
+			Name = "Croatia",
+			Civilization = "teuton",
+			Title = "Kingdom"
+		},
+		Hungary = {
+			Name = "Hungary",
+			Civilization = "teuton",
+			Title = "Kingdom"
 		},
 		Muscovy = {
 			Name = "Muscovy",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Dominion"
 		},
 		Persia = {
@@ -347,17 +357,17 @@ function LoadFactions(world)
 		},
 		Poland = {
 			Name = "Poland",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Kingdom"
 		},
 		Russia = {
 			Name = "Russia",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Empire"
 		},
 		Turkey = {
 			Name = "Turkey",
-			Civilization = "germanic",
+			Civilization = "teuton",
 			Title = "Empire"
 		}
 	}
