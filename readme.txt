@@ -199,6 +199,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.3.3
+-----------------------------------------------------------------------
+
+* Buildings
+- Right-clicking on an enemy with a tower while a ranged unit is inside will now cause the unit to try to attack that particular enemy.
+
+* Units
+- Fixed issue which caused the player's food consumption to be updated incorrectly when a unit is rescued.
+
+-----------------------------------------------------------------------
 - 1.3.2
 -----------------------------------------------------------------------
 
