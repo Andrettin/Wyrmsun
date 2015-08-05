@@ -207,6 +207,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused the player's food consumption to be updated incorrectly when a unit is rescued.
+- Neutral units now display health bars when damaged.
 
 -----------------------------------------------------------------------
 - 1.3.2
