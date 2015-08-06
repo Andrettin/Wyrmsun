@@ -659,6 +659,7 @@ function EndTurn()
 			SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), 4)
 		end
 	end
+	
 	-- research technologies
 
 	for key, value in pairs(WorldMapProvinces) do
@@ -1118,37 +1119,10 @@ function CalculateFactionIncomes()
 
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			-- collect resources
---			CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
-			for i=1,table.getn(WorldMapResources.Gold) do
-				if (
-					WorldMapResources.Gold[i][3] -- if has been prospected
-					and ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Name, "town-hall")
-					and Factions[key].Name == GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]).Owner
-				) then
-					Factions[key].Income.Gold = Factions[key].Income.Gold + math.floor(200 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2]), "Gold") / 100)
-				end
-			end
-			for i=1,table.getn(WorldMapResources.Lumber) do
-				if (ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Name, "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]).Owner) then
-					Factions[key].Income.Lumber = Factions[key].Income.Lumber + math.floor(100 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2]), "Lumber") / 100)
-				end
-			end
-			for i=1,table.getn(WorldMapResources.Stone) do
-				if (GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]) ~= nil and ProvinceHasBuildingClass(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Name, "town-hall") and Factions[key].Name == GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]).Owner) then
-					Factions[key].Income.Stone = Factions[key].Income.Stone + math.floor(10 * GetProvinceEfficiency(GetTileProvince(WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2]), "Stone") / 100)
-				end
-			end
-			
-			-- faction's research is 10 if all provinces have town halls, lumber mills and smithies
-			Factions[key].Income.Research = math.floor(
-				6 * GetFactionBuildingTypeCount(Factions[key], "town-hall") / GetFactionProvinceCount(Factions[key])
-				+ 2 * GetFactionBuildingTypeCount(Factions[key], "lumber-mill") / GetFactionProvinceCount(Factions[key])
-				+ 2 * GetFactionBuildingTypeCount(Factions[key], "smithy") / GetFactionProvinceCount(Factions[key])
-			)
-			
-			if (FactionHasTechnologyType(Factions[key], "writing")) then
-				Factions[key].Income.Research = math.floor(Factions[key].Income.Research * 150 / 100)
-			end
+			Factions[key].Income.Gold = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
+			Factions[key].Income.Lumber = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "lumber")
+			Factions[key].Income.Stone = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "stone")
+			Factions[key].Income.Research = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "research")
 		end
 	end
 end
@@ -4804,20 +4778,6 @@ function CanDeclareWar(faction_from, faction_to)
 		return false
 	end
 	return true
-end
-
-function GetProvinceEfficiency(province, commodity)
-	local province_efficiency = 100
-	if (province.Civilization ~= GetFactionFromName(province.Owner).Civilization) then
-		province_efficiency = province_efficiency - 25
-	end
-	if (commodity == "Gold" and FactionHasTechnologyType(GetFactionFromName(province.Owner), "coinage") and (ProvinceHasBuildingClass(province.Name, "town-hall") or ProvinceHasBuildingClass(province.Name, "stronghold"))) then
-		province_efficiency = province_efficiency + 10
-	end
-	if (commodity == "Lumber" and ProvinceHasBuildingClass(province.Name, "lumber-mill")) then
-		province_efficiency = province_efficiency + 25
-	end
-	return province_efficiency
 end
 
 function SetResourceProspected(x, y, resource, prospected)
