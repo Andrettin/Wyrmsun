@@ -205,6 +205,12 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Right-clicking on an enemy with a tower while a ranged unit is inside will now cause the unit to try to attack that particular enemy.
 
+* Grand Strategy
+- Rework of dark plains, plains and hills tile graphics (by Jinn).
+
+* Miscellaneous
+- New stone icon (by Jinn).
+
 * Units
 - Fixed issue which caused the player's food consumption to be updated incorrectly when a unit is rescued.
 - Neutral units now display health bars when damaged.

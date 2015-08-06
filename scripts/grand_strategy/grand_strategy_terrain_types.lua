@@ -30,16 +30,19 @@
 DefineWorldMapTerrainTypes(
 	"terrain-type", {
 		"name", "Plains",
-		"tag", "plains"
+		"tag", "plains",
+		"variations", 5
 	},
 	"terrain-type", {
 		"name", "Dark Plains",
-		"tag", "dark_plains"
+		"tag", "dark_plains",
+		"variations", 5
 	},
 	"terrain-type", {
 		"name", "Hills",
 		"tag", "hills",
-		"base-tile", "Plains"
+		"base-tile", "Plains",
+		"variations", 4
 	},
 	"terrain-type", {
 		"name", "Mountains",
