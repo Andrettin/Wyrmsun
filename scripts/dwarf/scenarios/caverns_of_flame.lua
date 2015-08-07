@@ -333,14 +333,14 @@ AddTrigger(
 			-- Shinsplitters
 			local units_to_be_created = {}
 			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
+				if (IsOffensiveMilitaryUnit(unitName)) then
 					units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 					units_to_be_created[string.gsub(unitName, "-", "_")] = GetProvinceUnitQuantity("Southern Tunnels", unitName)
 					SetProvinceUnitQuantity("Southern Tunnels", unitName, GetProvinceUnitQuantity("Southern Tunnels", unitName) - units_to_be_created[string.gsub(unitName, "-", "_")])
 				end
 			end
 			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
+				if (IsOffensiveMilitaryUnit(unitName)) then
 					if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
 						for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
 							unit = OldCreateUnit(unitName, 1, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})

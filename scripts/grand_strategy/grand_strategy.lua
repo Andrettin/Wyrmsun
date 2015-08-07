@@ -295,7 +295,11 @@ function RunGrandStrategyGameSetupMenu()
 			InitializeGrandStrategyMinimap()
 
 --			CalculateFactionDisembarkmentProvinces()
-			CalculateFactionIncomes()
+			for key, value in pairs(Factions) do
+				if (GetFactionProvinceCount(Factions[key]) > 0) then
+					CalculateFactionIncomes(Factions[key].Civilization, Factions[key].Name)
+				end
+			end
 			CalculateFactionUpkeeps()
 			
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
@@ -469,11 +473,11 @@ function EndTurn()
 	-- faction income
 	for key, value in pairs(Factions) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
-			Factions[key].Gold = Factions[key].Gold + Factions[key].Income.Gold
-			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + Factions[key].Income.Lumber
-			Factions[key].Commodities.Stone = Factions[key].Commodities.Stone + Factions[key].Income.Stone
-			Factions[key].Research = Factions[key].Research + Factions[key].Income.Research
-			Factions[key].Prestige = Factions[key].Prestige + Factions[key].Income.Prestige
+			Factions[key].Gold = Factions[key].Gold + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
+			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "lumber")
+			Factions[key].Commodities.Stone = Factions[key].Commodities.Stone + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "stone")
+			Factions[key].Research = Factions[key].Research + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "research")
+			Factions[key].Prestige = Factions[key].Prestige + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "prestige")
 		end
 	end
 	
@@ -679,9 +683,9 @@ function EndTurn()
 	local disbanding_happened = false
 	-- disband units if gold is on the negative and upkeep is higher than income
 	for key, value in pairs(Factions) do
-		if (Factions[key].Gold < 0 and Factions[key].Upkeep > Factions[key].Income.Gold) then
+		if (Factions[key].Gold < 0 and Factions[key].Upkeep > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")) then
 			disbanding_happened = true
-			local disband_quota = Factions[key].Upkeep - Factions[key].Income.Gold
+			local disband_quota = Factions[key].Upkeep - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
@@ -929,7 +933,16 @@ function AcquireProvince(province, faction)
 		RemoveElementFromArray(GetFactionFromName(province.Owner).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 	end
 	
+	local old_faction = province.Owner
+	
 	ChangeProvinceOwner(province, GetFactionFromName(faction))
+	
+	if (faction ~= "") then
+		CalculateFactionIncomes(GetFactionFromName(faction).Civilization, GetFactionFromName(faction).Name)
+	end
+	if (old_faction ~= "") then
+		CalculateFactionIncomes(GetFactionFromName(old_faction).Civilization, GetFactionFromName(old_faction).Name)
+	end
 	
 	if (faction ~= "") then
 		table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
@@ -958,8 +971,6 @@ function AcquireProvince(province, faction)
 	end
 	
 	UpdateProvinceMinimap(province.Name)
-	
-	CalculateFactionIncomes()
 end
 
 function ChangeFactionCulture(faction, civilization)
@@ -973,7 +984,11 @@ function ChangeFactionCulture(faction, civilization)
 		for province_i, key in ipairs(faction.OwnedProvinces) do
 			for i, unitName in ipairs(Units) do
 				if (
-					IsMilitaryUnit(unitName)
+					string.find(unitName, "upgrade-") == nil
+					and GetUnitTypeData(unitName, "Class") ~= ""
+					and GetUnitTypeData(unitName, "Civilization") ~= ""
+					and GetUnitTypeData(unitName, "Building") == false
+					and GetUnitTypeData(unitName, "Demand") > 0 
 					and GetUnitTypeData(unitName, "Civilization") == old_civilization
 					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
 					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
@@ -1011,7 +1026,11 @@ function ChangeProvinceCulture(province, civilization)
 		-- replace existent units from the previous civilization with units of the new civilization
 		for i, unitName in ipairs(Units) do
 			if (
-				IsMilitaryUnit(unitName)
+				string.find(unitName, "upgrade-") == nil
+				and GetUnitTypeData(unitName, "Class") ~= ""
+				and GetUnitTypeData(unitName, "Civilization") ~= ""
+				and GetUnitTypeData(unitName, "Building") == false
+				and GetUnitTypeData(unitName, "Demand") > 0 
 				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName
 				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
 				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
@@ -1024,7 +1043,9 @@ function ChangeProvinceCulture(province, civilization)
 		end
 	end
 	
-	CalculateFactionIncomes()
+	if (province.Owner ~= "") then
+		CalculateFactionIncomes(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name)
+	end
 end
 
 function CalculateProvinceBorderTiles()
@@ -1103,26 +1124,6 @@ function CalculateTileProvinces()
 	for key, value in pairs(WorldMapWaterProvinces) do
 		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
 			SetWorldMapTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2], WorldMapWaterProvinces[key].Name)
-		end
-	end
-end
-
-function CalculateFactionIncomes()
-	for key, value in pairs(Factions) do
-		Factions[key]["Income"] = nil
-		Factions[key]["Income"] = {}
-		Factions[key].Income["Gold"] = 0
-		Factions[key].Income["Lumber"] = 0
-		Factions[key].Income["Stone"] = 0
-		Factions[key].Income["Research"] = 0
-		Factions[key].Income["Prestige"] = 0
-
-		if (GetFactionProvinceCount(Factions[key]) > 0) then
-			-- collect resources
-			Factions[key].Income.Gold = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
-			Factions[key].Income.Lumber = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "lumber")
-			Factions[key].Income.Stone = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "stone")
-			Factions[key].Income.Research = CalculateFactionIncome(Factions[key].Civilization, Factions[key].Name, "research")
 		end
 	end
 end
@@ -1652,7 +1653,11 @@ function RunGrandStrategyLoadGameMenu()
 				ClearGrandStrategyUIVariables()
 				GrandStrategyMenu:stop();
 			end
-			CalculateFactionIncomes()
+			for key, value in pairs(Factions) do
+				if (GetFactionProvinceCount(Factions[key]) > 0) then
+					CalculateFactionIncomes(Factions[key].Civilization, Factions[key].Name)
+				end
+			end
 			CalculateFactionUpkeeps()
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
 			RunGrandStrategyGame()
@@ -2183,25 +2188,26 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 	local income = ""
 	if (commodity == "gold") then
 		quantity_stored = GrandStrategyFaction.Gold
-		if (GrandStrategyFaction.Income.Gold < GrandStrategyFaction.Upkeep) then
-			income = GrandStrategyFaction.Income.Gold - GrandStrategyFaction.Upkeep
-		elseif (GrandStrategyFaction.Income.Gold > GrandStrategyFaction.Upkeep) then
-			income = "+" .. GrandStrategyFaction.Income.Gold - GrandStrategyFaction.Upkeep
+		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < GrandStrategyFaction.Upkeep) then
+			income = GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
+		elseif (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") > GrandStrategyFaction.Upkeep) then
+			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
 		end
 	elseif (commodity == "research") then
 		quantity_stored = GrandStrategyFaction.Research
-		if (GrandStrategyFaction.Income.Research > 0) then
-			income = "+" .. GrandStrategyFaction.Income.Research
+		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "research") > 0) then
+			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "research")
 		end
 	elseif (commodity == "prestige") then
-		quantity_stored = GrandStrategyFaction.Prestige
-		if (GrandStrategyFaction.Income.Prestige > 0) then
-			income = "+" .. GrandStrategyFaction.Income.Prestige
+		quantity_stored = GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "prestige")
+		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "prestige") > 0) then
+			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "prestige")
 		end
 	else
 		quantity_stored = GrandStrategyFaction.Commodities[CapitalizeString(commodity)]
-		if (GrandStrategyFaction.Income[CapitalizeString(commodity)] > 0) then
-			income = "+" .. GrandStrategyFaction.Income[CapitalizeString(commodity)]
+		
+		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) > 0) then
+			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity)
 		end
 	end
 
@@ -3322,7 +3328,7 @@ function AIDoTurn(ai_faction)
 							if (province_threatened == false) then
 								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
 								for i, unitName in ipairs(Units) do
-									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
+									if (IsOffensiveMilitaryUnit(unitName)) then
 										SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
 										SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
 									end
@@ -3368,7 +3374,7 @@ function AIDoTurn(ai_faction)
 							if (province_threatened == false) then
 								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
 								for i, unitName in ipairs(Units) do
-									if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
+									if (IsOffensiveMilitaryUnit(unitName)) then
 										SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
 										SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
 									end
@@ -3397,7 +3403,7 @@ function AIDoTurn(ai_faction)
 			end
 		end
 
-		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction) or ((ai_faction.Income.Gold - ai_faction.Upkeep) < 100 and ai_faction.Gold < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
+		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction) or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and ai_faction.Gold < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_catapults_in_province = 0
@@ -3459,7 +3465,7 @@ function AIDoTurn(ai_faction)
 	-- do trade
 	if (ai_faction.Commodities.Lumber < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
 		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber - (800 - ai_faction.Commodities.Lumber)
-	elseif (ai_faction.Commodities.Lumber > 800 * 2 and ai_faction.Income.Lumber > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
+	elseif (ai_faction.Commodities.Lumber > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "lumber") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
 		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 2)
 	elseif (ai_faction.Commodities.Lumber > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
 		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 4)
@@ -3469,7 +3475,7 @@ function AIDoTurn(ai_faction)
 	-- do trade
 	if (ai_faction.Commodities.Stone < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
 		ai_faction.Trade.Stone = ai_faction.Trade.Stone - (800 - ai_faction.Commodities.Stone)
-	elseif (ai_faction.Commodities.Stone > 800 * 2 and ai_faction.Income.Stone > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
+	elseif (ai_faction.Commodities.Stone > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "stone") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
 		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (ai_faction.Commodities.Stone - 800 * 2)
 	elseif (ai_faction.Commodities.Stone > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
 		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (ai_faction.Commodities.Stone - 800 * 4)
@@ -4194,10 +4200,8 @@ function CanTriggerEvent(faction, event)
 	if (event.Provinces ~= nil and event.Units ~= nil) then
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName)) then
-					if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < event.Units[string.gsub(unitName, "-", "_")]) then
-						return false
-					end
+				if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < event.Units[string.gsub(unitName, "-", "_")]) then
+					return false
 				end
 			end
 		end
@@ -4479,7 +4483,8 @@ function FormFaction(old_faction, new_faction)
 		GrandStrategyFaction = new_faction
 	end
 
-	CalculateFactionIncomes()
+	CalculateFactionIncomes(old_faction.Civilization, old_faction.Name)
+	CalculateFactionIncomes(new_faction.Civilization, new_faction.Name)
 	
 	DrawGrandStrategyInterface()
 	DrawOnScreenTiles()
@@ -4845,7 +4850,11 @@ function DoProspection()
 	end
 	
 	if (resource_found) then
-		CalculateFactionIncomes()
+		for key, value in pairs(Factions) do
+			if (GetFactionProvinceCount(Factions[key]) > 0) then
+				CalculateFactionIncomes(Factions[key].Civilization, Factions[key].Name)
+			end
+		end
 	end
 end
 
