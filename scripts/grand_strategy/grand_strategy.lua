@@ -3656,7 +3656,12 @@ function TrainUnitCancel(province, unit_type)
 end
 
 function CanHireMercenary(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionFromName(province.Owner).Commodities.Stone < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
+	if (
+		GetFactionFromName(province.Owner).Gold < (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
+		or GetFactionFromName(province.Owner).Commodities.Lumber < (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
+		or GetFactionFromName(province.Owner).Commodities.Stone < (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
+	) then
 		return false
 	end
 
@@ -3679,18 +3684,19 @@ function HireMercenary(province, unit_type)
 	if (CanHireMercenary(province, unit_type)) then
 		local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, mercenary_quantity)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
 	end
 end
 
 function CancelHireMercenary(province, unit_type)
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
+		local mercenary_quantity = GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type)
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, 0)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
+		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
+		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
+		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
 	end
 end
 
