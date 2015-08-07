@@ -95,7 +95,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Suebi Tribe"
-				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.Brandenburg)
 				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.France)
 				and EventFaction.Diplomacy.AeduiTribe == "Peace"

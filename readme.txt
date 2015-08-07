@@ -207,6 +207,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Rework of dark plains, plains and hills tile graphics (by Jinn).
+- Added two new provinces to the Nidavellir world map: Aurvang and Joruvellir.
 
 * Miscellaneous
 - New stone icon (by Jinn).

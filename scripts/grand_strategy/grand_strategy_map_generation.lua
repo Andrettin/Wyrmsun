@@ -386,3 +386,246 @@ function GenerateRandomWorldMap()
 	
 	LoadEvents("Random")
 end
+
+function GenerateProvince(arg)
+	local potential_province_seed_tiles = {}
+	for i=1,table.getn(arg.BorderProvinces) do
+		for j=1,table.getn(WorldMapProvinces[arg.BorderProvinces[i]].Tiles) do
+			local tile_x = WorldMapProvinces[arg.BorderProvinces[i]].Tiles[j][1]
+			local tile_y = WorldMapProvinces[arg.BorderProvinces[i]].Tiles[j][2]
+			for x_offset=-1,1 do
+				for y_offset=-1,1 do
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "" and (tile_x + x_offset) >= 0 and tile_x + x_offset < GetWorldMapWidth() and tile_y + y_offset >= 0 and tile_y + y_offset < GetWorldMapHeight()) then
+						local border_position_allowed = true
+						for sub_x_offset=-1,1 do
+							for sub_y_offset=-1,1 do
+								if (math.abs(sub_x_offset) ~= math.abs(sub_y_offset) and (tile_x + x_offset + sub_x_offset) >= 0 and tile_x + x_offset + sub_x_offset < GetWorldMapWidth() and tile_y + y_offset + sub_y_offset >= 0 and tile_y + y_offset + sub_y_offset < GetWorldMapHeight()) then
+									for k=1,table.getn(WorldMapProvinces[arg.BorderProvinces[i]].Tiles) do
+										local sub_tile_x = WorldMapProvinces[arg.BorderProvinces[i]].Tiles[k][1]
+										local sub_tile_y = WorldMapProvinces[arg.BorderProvinces[i]].Tiles[k][2]
+										if (tile_x + x_offset + sub_x_offset == sub_tile_x and tile_y + y_offset + sub_y_offset == sub_tile_y) then
+											if (
+												(sub_x_offset == 1 and not arg.BorderProvinceWest)
+												or (sub_x_offset == -1 and not arg.BorderProvinceEast)
+												or (sub_y_offset == 1 and not arg.BorderProvinceNorth)
+												or (sub_y_offset == -1 and not arg.BorderProvinceSouth)
+											) then
+												border_position_allowed = false
+											end
+										end
+									end
+								end
+							end
+						end
+						if (border_position_allowed) then
+							table.insert(potential_province_seed_tiles, {tile_x + x_offset, tile_y + y_offset})
+						end
+					end
+				end
+			end
+		end
+	end
+
+	local province_seed_tile = potential_province_seed_tiles[SyncRand(table.getn(potential_province_seed_tiles)) + 1]
+
+	local province_seeds = {}
+	
+	local base_tile_id = GetWorldMapTerrainTypeId("Plains")
+	if (GrandStrategyWorld == "Nidavellir") then
+		base_tile_id = GetWorldMapTerrainTypeId("Dark Plains")
+	end
+
+	SetWorldMapTileTerrain(province_seed_tile[1], province_seed_tile[2], base_tile_id)
+	SetWorldMapTileProvince(province_seed_tile[1], province_seed_tile[2], arg.Province.Name)
+	table.insert(arg.Province.Tiles, {province_seed_tile[1], province_seed_tile[2]})
+	table.insert(province_seeds, {province_seed_tile[1], province_seed_tile[2]})
+
+	for i=1,100 do
+		local new_province_seeds = {}
+		for j=1,table.getn(province_seeds) do
+			for x_offset=-1,1 do
+				for y_offset=-1,1 do
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) == "" and (province_seeds[j][1] + x_offset) >= 0 and province_seeds[j][1] + x_offset < GetWorldMapWidth() and province_seeds[j][2] + y_offset >= 0 and province_seeds[j][2] + y_offset < GetWorldMapHeight()) then
+						local RandomNumber = SyncRand(100)
+						if (RandomNumber < 50) then
+							SetWorldMapTileTerrain(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset, base_tile_id)
+							SetWorldMapTileProvince(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset, GetWorldMapTileProvinceName(province_seeds[j][1], province_seeds[j][2]))
+							table.insert(GetProvinceFromName(GetWorldMapTileProvinceName(province_seeds[j][1], province_seeds[j][2])).Tiles, {province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset})
+							table.insert(new_province_seeds, {province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset})
+						end
+					end
+				end
+			end
+			-- check to see if all neighboring tiles have been assigned provinces; if not, make this tile continue to be a "province seed"
+			local unassigned_neighboring_tile = false
+			for x_offset=-1,1 do
+				for y_offset=-1,1 do
+					if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) ~= "Water" and (province_seeds[j][1] + x_offset) >= 0 and province_seeds[j][1] + x_offset < GetWorldMapWidth() and province_seeds[j][2] + y_offset >= 0 and province_seeds[j][2] + y_offset < GetWorldMapHeight() and GetWorldMapTileProvinceName(province_seeds[j][1] + x_offset, province_seeds[j][2] + y_offset) == "") then
+						unassigned_neighboring_tile = true
+					end
+				end
+			end
+			if (unassigned_neighboring_tile) then
+				table.insert(new_province_seeds, {province_seeds[j][1], province_seeds[j][2]})
+			end
+		end
+		province_seeds = nil
+		province_seeds = new_province_seeds
+		if (table.getn(province_seeds) < 1) then
+			break
+		end
+		if (table.getn(arg.Province.Tiles) > 15) then -- if the province is already big enough, stop giving it new tiles
+			break
+		end
+	end
+	
+	
+	-- check to see if there are no empty tiles surrounded on all sides by provinces; if there are, add that tile to this province
+	for i=1,table.getn(arg.Province.Tiles) do
+		local tile_x = arg.Province.Tiles[i][1]
+		local tile_y = arg.Province.Tiles[i][2]
+		for x_offset=-1,1 do
+			for y_offset=-1,1 do
+				if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "" and (tile_x + x_offset) >= 0 and tile_x + x_offset < GetWorldMapWidth() and tile_y + y_offset >= 0 and tile_y + y_offset < GetWorldMapHeight()) then
+					local second_tile_x = tile_x + x_offset
+					local second_tile_y = tile_y + y_offset
+					local empty_surrounded = true
+					for second_x_offset=-1,1 do
+						for second_y_offset=-1,1 do
+							if (math.abs(second_x_offset) ~= math.abs(second_y_offset) and GetWorldMapTileTerrain(second_tile_x + second_x_offset, second_tile_y + second_y_offset) == "" and (second_tile_x + second_x_offset) >= 0 and second_tile_x + second_x_offset < GetWorldMapWidth() and second_tile_y + second_y_offset >= 0 and second_tile_y + second_y_offset < GetWorldMapHeight()) then
+								empty_surrounded = false
+							end
+						end
+					end
+					if (empty_surrounded) then
+						SetWorldMapTileTerrain(second_tile_x, second_tile_y, base_tile_id)
+						SetWorldMapTileProvince(second_tile_x, second_tile_y, arg.Province.Name)
+						table.insert(arg.Province.Tiles, {second_tile_x, second_tile_y})
+					end
+				end
+			end
+		end
+	end
+	
+	-- set settlement location to one of the province's tiles randomly
+	local settlement_location_id = SyncRand(table.getn(arg.Province.Tiles)) + 1
+	arg.Province.SettlementLocation = {arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2]}
+	SetProvinceSettlementLocation(arg.Province.Name, arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2])
+
+	-- create some hill tiles in the province
+	-- first generate the hill seeds
+	local hill_seeds = {}
+	for i=1,table.getn(arg.Province.Tiles) do
+		local tile_x = arg.Province.Tiles[i][1]
+		local tile_y = arg.Province.Tiles[i][2]
+		if (SyncRand(8) == 0) then -- 12.5% chance to generate a hill seed on one of the province's tiles
+			if (GetWorldMapTileTerrain(tile_x, tile_y) == "Plains" or GetWorldMapTileTerrain(tile_x, tile_y) == "Dark Plains") then
+				SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Hills"))
+				table.insert(hill_seeds, {tile_x, tile_y})
+				break
+			end
+		end
+	end
+	
+	-- now allow the hill seeds to expand
+	for i=1,100 do
+		local new_hill_seeds = {}
+		for j=1,table.getn(hill_seeds) do
+			for x_offset=-1,1 do
+				for y_offset=-1,1 do
+					if (GetWorldMapTileProvinceName(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset} ~= arg.Province.SettlementLocation) then
+						if (GetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "Plains" or GetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "Dark Plains") then
+							local RandomNumber = SyncRand(100)
+							if (RandomNumber < 33) then
+								SetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Hills"))
+								table.insert(new_hill_seeds, {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset})
+							end
+						end
+					end
+				end
+			end
+		end
+		hill_seeds = nil
+		hill_seeds = new_hill_seeds
+		if (table.getn(hill_seeds) < 1) then
+			break
+		end
+	end
+
+	-- create some forest tiles in the province
+	-- first generate the forest seeds
+	local forest_seeds = {}
+	for i=1,table.getn(arg.Province.Tiles) do
+		local tile_x = arg.Province.Tiles[i][1]
+		local tile_y = arg.Province.Tiles[i][2]
+		if (SyncRand(8) == 0) then -- 12.5% chance to generate a forest seed on one of the province's tiles
+			if (GetWorldMapTileTerrain(tile_x, tile_y) == "Plains") then
+				if (arg.Province.Tiles[i] ~= arg.Province.SettlementLocation) then
+					if (tile_y >= (GetWorldMapHeight() / 4) and tile_y < (GetWorldMapHeight() - (GetWorldMapHeight() / 4))) then
+						SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Scrub Forest")) -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+					else
+						SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Conifer Forest"))
+					end
+					table.insert(forest_seeds, {tile_x, tile_y})
+					break
+				end
+			elseif (GetWorldMapTileTerrain(tile_x, tile_y) == "Dark Plains") then
+				if (arg.Province.Tiles[i] ~= arg.Province.SettlementLocation) then
+					SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Scrub Forest"))
+					table.insert(forest_seeds, {tile_x, tile_y})
+					break
+				end
+			end
+		end
+	end
+	
+	-- now allow the forest seeds to expand
+	for i=1,100 do
+		local new_forest_seeds = {}
+		for j=1,table.getn(forest_seeds) do
+			for x_offset=-1,1 do
+				for y_offset=-1,1 do
+					if (GetWorldMapTileProvinceName(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset} ~= arg.Province.SettlementLocation) then
+						if (GetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Plains") then
+							local RandomNumber = SyncRand(100)
+							if (RandomNumber < 33) then
+								if (forest_seeds[j][2] + y_offset >= (GetWorldMapHeight() / 4) and forest_seeds[j][2] + y_offset < (GetWorldMapHeight() - (GetWorldMapHeight() / 4))) then
+									SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Scrub Forest")) -- forests in plains above 45 degrees become conifer forests, and below that they become scrub forests
+								else
+									SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Conifer Forest"))
+								end
+								table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
+							end
+						elseif (GetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Dark Plains") then
+							local RandomNumber = SyncRand(100)
+							if (RandomNumber < 33) then
+								SetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Scrub Forest"))
+								table.insert(new_forest_seeds, {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset})
+							end
+						end
+					end
+				end
+			end
+		end
+		forest_seeds = nil
+		forest_seeds = new_forest_seeds
+		if (table.getn(forest_seeds) < 1) then
+			break
+		end
+	end
+	
+	-- generate gold deposits
+	if (arg.Gold) then
+		for i=1,arg.Gold do
+			for j=1,100 do
+				local random_tile = arg.Province.Tiles[SyncRand(table.getn(arg.Province.Tiles)) + 1]
+				if (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains") then
+					if (GetArrayIncludes(WorldMapResources.Gold, {random_tile[1], random_tile[2]}) == false and {random_tile[1], random_tile[2]} ~= arg.Province.SettlementLocation) then
+						table.insert(WorldMapResources.Gold, {random_tile[1], random_tile[2], true})
+						break
+					end
+				end
+			end
+		end
+	end
+end

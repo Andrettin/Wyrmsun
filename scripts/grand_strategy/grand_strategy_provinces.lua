@@ -1867,6 +1867,19 @@ function LoadProvinces(world)
 	}
 	
 	local NidavellirProvinces = {
+		Aurvang = {
+			Name = "Aurvang",
+			Tiles = {},
+			CulturalNames = {
+				dwarf = "Aurvang"
+			},
+			Map = "maps/nidavellir/aurvang.smp",
+			Units = { -- Dwarven bandits
+				unit_dwarven_steelclad = 1,
+				unit_dwarven_axefighter = 3
+			},
+			SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
+		},
 		BrownHills = {
 			Name = "Brown Hills",
 			Tiles = { {18, 29}, {18, 30}, {19, 28}, {19, 29}, {19, 30}, {20, 28}, {20, 29}, {20, 30}, {20, 31}, {20, 32}, {21, 28}, {21, 29}, {21, 30}, {21, 31}, {21, 32}, {22, 25}, {22, 26}, {22, 27}, {22, 28}, {22, 29}, {22, 30}, {22, 31}, {22, 32}, {23, 25}, {23, 26}, {23, 27}, {23, 28}, {23, 29}, {23, 30}, {23, 31}, {23, 32}, {24, 24}, {24, 25}, {24, 26}, {24, 27}, {24, 28}, {24, 29}, {24, 30}, {24, 31}, {24, 32}, {25, 24}, {25, 25}, {25, 26}, {25, 27}, {25, 28}, {25, 29}, {25, 30}, {25, 31}, {25, 32}, {26, 24}, {26, 25}, {26, 26}, {26, 27}, {26, 28}, {26, 29}, {26, 30}, {26, 31}, {27, 26}, {27, 27}, {27, 28}, {27, 29}, {27, 30}, {28, 28}, {29, 28} },
@@ -1994,6 +2007,19 @@ function LoadProvinces(world)
 				unit_goblin_archer = 2 * 3 -- two liches
 			},
 			SettlementTerrain = "Mountains"
+		},
+		Joruvellir = {
+			Name = "Joruvellir",
+			Tiles = {},
+			CulturalNames = {
+				dwarf = "Joruvellir"
+			},
+			Map = "maps/random_maps/random-map-swamp.smp",
+			Units = {
+				unit_goblin_spearman = 6, -- some enemy goblins
+				unit_goblin_archer = 3
+			},
+			SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet); when there are desert tiles implemented, this should be Desert instead
 		},
 		KalKartha = {
 			Name = "Kal Kartha",

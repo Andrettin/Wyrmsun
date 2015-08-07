@@ -98,7 +98,7 @@ local NidavellirEvents = {
 				return false
 			end
 		end,
-		Options = {"OK"},
+		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
@@ -219,7 +219,7 @@ local NidavellirEvents = {
 				return false
 			end
 		end,
-		Options = {"OK"},
+		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
@@ -263,6 +263,7 @@ local NidavellirEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Modsogning Clan"
+				and GetProvinceOwner("Aurvang") == ""
 				and SyncRand(100) < 20
 			) then
 				return true
@@ -299,10 +300,19 @@ local NidavellirEvents = {
 					if (GameResult == GameVictory) then
 						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for rooting out the bandits
 						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of the Necklace
+						-- place some goblins in Aurvang after the dwarven bandits are gone
+						SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
+						SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
+					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
 					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for rooting out the bandits
 					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of the Necklace
+					
+					-- place some goblins in Aurvang after the dwarven bandits are gone
+					SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
+					SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 				end
 			end
 		},

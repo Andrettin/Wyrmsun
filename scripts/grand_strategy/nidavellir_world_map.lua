@@ -567,6 +567,7 @@ SetWorldMapTileTerrain(44, 8, dark_plains_id)
 SetWorldMapTileTerrain(44, 9, hills_id)
 SetWorldMapTileTerrain(44, 10, hills_id)
 SetWorldMapTileTerrain(44, 11, hills_id)
+SetWorldMapTileCulturalName(44, 11, "dwarf", "Svarinshaug");
 SetWorldMapTileTerrain(44, 12, hills_id)
 SetWorldMapTileTerrain(44, 13, hills_id)
 SetWorldMapTileTerrain(44, 14, hills_id)
@@ -755,8 +756,6 @@ SetWorldMapTileTerrain(56, 16, dark_plains_id)
 SetWorldMapTileTerrain(56, 17, dark_plains_id)
 SetWorldMapTileTerrain(56, 18, hills_id)
 
-SetWorldMapTileCulturalName(44, 11, "dwarf", "Svarinshaug");
-
 WorldMapResources = {
 	Gold = {
 		{22, 29, true}, -- location of the Troll Hole in the Brown Hills
@@ -778,6 +777,19 @@ LoadFactions("Nidavellir")
 
 LoadProvinces("Nidavellir")
 
+-- generate procedural provinces
+GenerateProvince({
+	Province = WorldMapProvinces.Aurvang,
+	BorderProvinces = {"Svarinshaug"},
+	BorderProvinceSouth = true
+})
+GenerateProvince({
+	Province = WorldMapProvinces.Joruvellir,
+	BorderProvinces = {"Aurvang"},
+	BorderProvinceSouth = true,
+	Gold = 1
+})
+
 MercenaryGroups = {
 	unit_surghan_mercenary_steelclad = 4
 }
@@ -795,7 +807,13 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 	GrandStrategyEvents.ARockyHome = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheTreasuresOfSvarinshaug = nil -- should be placed at an earlier date
+
 	GrandStrategyEvents.TheNecklaceOfTheBrisings = nil -- should be placed at an earlier date
+	SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
+	SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
+	SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6) -- place some goblins in Aurvang after the dwarven bandits are gone
+	SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
+		
 	GrandStrategyEvents.TheBindingOfGrafvitnir = nil -- should be placed at an earlier date
 	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 0
 	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 0
