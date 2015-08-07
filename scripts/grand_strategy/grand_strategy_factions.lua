@@ -461,15 +461,15 @@ function LoadFactions(world)
 				Factions[key]["Title"] = faction_table[key].Title
 			end
 			if (faction_table[key].Gold ~= nil) then
-				Factions[key]["Gold"] = faction_table[key].Gold
+				SetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", faction_table[key].Gold)
 			end
 			Factions[key]["Commodities"] = {}
 			if (faction_table[key].Commodities ~= nil) then
 				if (faction_table[key].Commodities.Lumber ~= nil) then
-					Factions[key].Commodities["Lumber"] = faction_table[key].Commodities.Lumber
+					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", faction_table[key].Commodities.Lumber)
 				end
 				if (faction_table[key].Commodities.Stone ~= nil) then
-					Factions[key].Commodities["Stone"] = faction_table[key].Commodities.Stone
+					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", faction_table[key].Commodities.Stone)
 				end
 			end
 			Factions[key]["Diplomacy"] = {}

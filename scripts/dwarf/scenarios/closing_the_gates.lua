@@ -54,11 +54,11 @@ AddTrigger(
 				ActionDefeat()
 				if (GrandStrategy) then
 					if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 					end
 					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+						ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
+						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
@@ -251,8 +251,8 @@ AddTrigger(
 															end,
 															function(s)
 																if (GrandStrategy) then
-																	Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-																	Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+																	ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
+																	ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 																	-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 																	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
 																	AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
@@ -617,8 +617,8 @@ AddTrigger(
 	function() 
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			if (GrandStrategy) then
-				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+				ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
+				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 				-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 				SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
@@ -667,8 +667,8 @@ AddTrigger(
 			ActionDefeat()
 			if (GrandStrategy) then
 				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
 					AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")

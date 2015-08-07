@@ -429,7 +429,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 5)
 			end
 		},
 		OptionTooltips = {"+5 Prestige"}
@@ -454,7 +454,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 				-- should increase Faith
 			end
 		},
@@ -477,8 +477,8 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500
-				EventFaction.Research = EventFaction.Research - 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
 		OptionTooltips = {"+500 Gold, -5 Research", ""}
@@ -500,8 +500,8 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500
-				EventFaction.Research = EventFaction.Research - 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
 		OptionTooltips = {"+500 Gold, -5 Research", ""}
@@ -523,8 +523,8 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500
-				EventFaction.Research = EventFaction.Research - 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
 		OptionTooltips = {"+500 Gold, -5 Research", ""}
@@ -548,7 +548,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -572,7 +572,7 @@ local TeutonEvents = {
 		Options = {"More ~!taxes for us!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 50
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
 			end
 		},
 		OptionTooltips = {"+50 Gold"}
@@ -597,8 +597,8 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold - 50
-				EventFaction.Gold = EventFaction.Research - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -50)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -1)
 			end
 		},
 		OptionTooltips = {"-50 Gold, -1 Research"}
@@ -620,9 +620,9 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500
-				EventFaction.Research = EventFaction.Research + 1
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+500 Gold, +1 Research", "+1 Prestige"}
@@ -645,7 +645,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -668,7 +668,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -691,7 +691,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -714,7 +714,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -737,7 +737,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -766,7 +766,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Austria)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Austria, +10 Prestige"}
 	},
@@ -797,7 +797,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Bavaria)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Bavaria, +10 Prestige"}
 	},
@@ -824,7 +824,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Brandenburg)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Brandenburg, +10 Prestige"}
 	},
@@ -849,7 +849,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Burgundy)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Burgundy, +10 Prestige"}
 	},
@@ -874,7 +874,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Denmark)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Denmark, +10 Prestige"}
 	},
@@ -901,7 +901,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.England)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes England, +10 Prestige"}
 	},
@@ -926,7 +926,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Francia)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Francia, +10 Prestige"}
 	},
@@ -954,7 +954,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.England)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes England, +10 Prestige"}
 	},
@@ -979,7 +979,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Jutland)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Jutland, +10 Prestige"}
 	},
@@ -1006,7 +1006,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Netherlands)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes the Netherlands, +10 Prestige"}
 	},
@@ -1032,7 +1032,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Prussia)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Prussia, +10 Prestige"}
 	},
@@ -1057,7 +1057,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Saxony)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Saxony, +10 Prestige"}
 	},
@@ -1084,7 +1084,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Scotland)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Scotland, +10 Prestige"}
 	},
@@ -1109,7 +1109,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Sweden)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Sweden, +10 Prestige"}
 	},
@@ -1136,7 +1136,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Bavaria)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Bavaria, +10 Prestige"}
 	},

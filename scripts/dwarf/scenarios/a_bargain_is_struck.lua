@@ -511,7 +511,7 @@ AddTrigger(
 												if (GrandStrategy) then
 													Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 													Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
-													Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+													ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 												else
 													if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 														Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
@@ -599,7 +599,7 @@ AddTrigger(
 									ActionDefeat()
 								end
 								if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-									Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+									ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 								end
 							end
 						end}
@@ -668,7 +668,7 @@ AddTrigger(
 							ActionDefeat()
 						end
 						if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-							Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+							ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 						end
 					end
 				end}
@@ -737,7 +737,7 @@ AddTrigger(
 				ActionDefeat()
 			end
 			if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 			end
 		end
 		return false
@@ -842,7 +842,7 @@ AddTrigger(
 	function() 
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			if (GrandStrategy) then
-				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 			ActionVictory()
 		end
@@ -874,11 +874,11 @@ AddTrigger(
 				ActionDefeat()
 				if (GrandStrategy) then
 					if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 					end
 					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-						Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
-						Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500
+						ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
+						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
 						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
@@ -910,7 +910,7 @@ AddTrigger(
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
 		return false
@@ -937,7 +937,7 @@ AddTrigger(
 --		if (mapinfo.description == "Chaincolt Foothills") then
 --			ActionDefeat()
 --			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
---				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+--				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 --			end
 --		end
 --		return false

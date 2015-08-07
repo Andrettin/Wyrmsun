@@ -947,8 +947,8 @@ if (GrandStrategyYear > 25) then
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
 	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "War"
 	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "War"
-	Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
-	Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 	ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 end
 
@@ -965,7 +965,7 @@ end
 
 if (GrandStrategyYear >= 29) then
 	GrandStrategyEvents.GatheringMaterials = nil
-	Factions.NorlundClan.Commodities["Coal"] = 20000 -- Rugnur's party returned from the Eastern Mines in 29 AD
+	ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000) -- Rugnur's party returned from the Eastern Mines in 29 AD
 --	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
 	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", 12) -- to prevent the Norlunds expanding here too soon
 	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", 4)
@@ -1017,9 +1017,9 @@ if (GrandStrategyYear >= 40) then
 	GrandStrategyEvents.BaglurDies = nil
 	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
 	GrandStrategyEvents.ThursaganDies = nil
-	Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
-	Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- payment for the crafting of the Scepter
-	Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- payment for the crafting of the Scepter
+	ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
+	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter
+	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
 	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
 	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"

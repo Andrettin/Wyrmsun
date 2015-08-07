@@ -47,7 +47,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -72,7 +72,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 				GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
 			end
 		},
@@ -98,7 +98,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 				GrandStrategyEvents.PalladiusFailure = nil
 				GrandStrategyEvents.PatrickTheApostleOfIreland = nil
 			end
@@ -124,7 +124,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 10 -- major development for Ireland, founding a monastic tradition that would have impact in much of Europe
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10) -- major development for Ireland, founding a monastic tradition that would have impact in much of Europe
 			end
 		},
 		OptionTooltips = {"+10 Prestige"}
@@ -150,7 +150,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -174,7 +174,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -200,7 +200,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -223,11 +223,11 @@ local ChristianityEvents = {
 		Options = {"~!Welcome him warmly", "Pay him no ~!heed"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 				GrandStrategyEvent(EventFaction, GrandStrategyEvents.AugustineArchbishopOfEngland)
 			end,
 			function(s)
---				EventFaction.Prestige = EventFaction.Prestige + 1
+--				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige", ""}
@@ -239,7 +239,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -265,7 +265,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -291,7 +291,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
 		OptionTooltips = {"-1 Prestige"}
@@ -316,7 +316,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
 		OptionTooltips = {"-1 Prestige"}
@@ -339,7 +339,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -362,7 +362,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -386,7 +386,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -409,7 +409,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -433,7 +433,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -457,7 +457,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -480,7 +480,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -504,7 +504,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -528,7 +528,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -551,7 +551,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -574,7 +574,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -598,7 +598,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -625,7 +625,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -651,8 +651,8 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
-				EventFaction.Gold = EventFaction.Gold - 100
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -100)
 			end
 		},
 		OptionTooltips = {"+1 Prestige, -100 Gold"}
@@ -679,7 +679,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -703,7 +703,7 @@ local ChristianityEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}

@@ -589,8 +589,8 @@ AddTrigger(
 																																									SavePreferences()
 																																								end
 																																								if (GrandStrategy) then
-																																									--Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 10000
-																																									Factions.NorlundClan.Commodities["Coal"] = 20000
+																																									--ChangeFactionResource("dwarf", "Norlund Clan", "gold", 10000)
+																																									ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
 																																								end
 																																								if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																									ActionVictory()
@@ -913,8 +913,8 @@ AddTrigger(
 																																						SavePreferences()
 																																					end
 																																					if (GrandStrategy) then
-																																						--Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 10000
-																																						Factions.NorlundClan.Commodities["Coal"] = 20000
+																																						--ChangeFactionResource("dwarf", "Norlund Clan", "gold", 10000)
+																																						ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																						ActionVictory()

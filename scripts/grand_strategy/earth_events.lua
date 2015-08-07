@@ -100,7 +100,7 @@ local EarthEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 10
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -10)
 				-- should perhaps cause some bad economic effects?
 			end
 		},
@@ -125,7 +125,7 @@ local EarthEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -174,8 +174,8 @@ local EarthEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold - 100
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -100)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
 		OptionTooltips = {"-100 Gold, -1 Prestige"}
@@ -196,8 +196,8 @@ local EarthEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500 -- greater exploitation of the peasantry bringing in more revenues
-				EventFaction.Research = EventFaction.Research - 5 -- strengthening of serfdom increases long-term backwardness
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500) -- greater exploitation of the peasantry bringing in more revenues
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5) -- strengthening of serfdom increases long-term backwardness
 			end
 		},
 		OptionTooltips = {"+500 Gold, -5 Research"}
@@ -220,7 +220,7 @@ local EarthEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}
@@ -244,7 +244,7 @@ local EarthEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 100
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 100)
 			end
 		},
 		OptionTooltips = {"+100 Research"}
@@ -267,7 +267,7 @@ local EarthEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research"}

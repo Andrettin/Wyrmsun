@@ -861,12 +861,12 @@ AddTrigger(
 									{"~!Continue"},
 									{function(s)
 									if (GrandStrategy) then
-										Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500
-										Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500
+										ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500)
+										ChangeFactionResource("gnome", "Untersberg", "gold", -2500)
 										AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan")
 										Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
 										Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
-										Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 100 -- a lot of prestige for completing the legendary scepter
+										ChangeFactionResource("dwarf", "Norlund Clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 									end
 									Event(
 										"",

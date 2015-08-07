@@ -61,7 +61,7 @@ local LatinEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -85,7 +85,7 @@ local LatinEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}

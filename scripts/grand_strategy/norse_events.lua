@@ -109,8 +109,8 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 250
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 250)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+250 Gold, +1 Prestige"}
@@ -135,7 +135,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -161,7 +161,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -183,7 +183,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -210,7 +210,7 @@ local NorseEvents = {
 		Options = {"~!Oh no!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 1 -- not a particularly prestigious way of dying
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1) -- not a particularly prestigious way of dying
 			end
 		},
 		OptionTooltips = {"-1 Prestige"}
@@ -236,7 +236,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -261,7 +261,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -286,7 +286,7 @@ local NorseEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
 		OptionTooltips = {"-1 Prestige"}
@@ -312,7 +312,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -337,7 +337,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -362,7 +362,7 @@ local NorseEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -385,7 +385,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -408,7 +408,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -434,7 +434,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -460,7 +460,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 5)
 			end
 		},
 		OptionTooltips = {"+5 Prestige"}
@@ -483,8 +483,8 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1 -- Karl wrote about the life of King Swerrer, who reigned from 1177 to 1202
---				EventFaction.Faith = EventFaction.Faith + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1) -- Karl wrote about the life of King Swerrer, who reigned from 1177 to 1202
+--				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "faith", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -507,8 +507,8 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1 -- Karl wrote about the life of King Swerrer, who reigned from 1177 to 1202
---				EventFaction.Faith = EventFaction.Faith + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1) -- Karl wrote about the life of King Swerrer, who reigned from 1177 to 1202
+--				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "faith", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -531,7 +531,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -557,7 +557,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 5)
 			end
 		},
 		OptionTooltips = {"+5 Prestige"}
@@ -582,7 +582,7 @@ local NorseEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige - 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
 		OptionTooltips = {"-1 Prestige"}
@@ -605,8 +605,8 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500
-				EventFaction.Research = EventFaction.Research - 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
 		OptionTooltips = {"+500 Gold, -5 Research"}
@@ -627,8 +627,8 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500
-				EventFaction.Research = EventFaction.Research - 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
 		OptionTooltips = {"+500 Gold, -5 Research", ""}
@@ -654,7 +654,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 5
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 5)
 			end
 		},
 		OptionTooltips = {"+5 Research"}
@@ -678,8 +678,8 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold - 300
-				EventFaction.Research = EventFaction.Research - 2
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -300)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -2)
 			end
 		},
 		OptionTooltips = {"-300 Gold, -2 Research"}

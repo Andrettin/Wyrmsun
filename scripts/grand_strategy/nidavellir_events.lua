@@ -125,18 +125,18 @@ local NidavellirEvents = {
 						end
 					end
 					if (GameResult == GameVictory) then
-						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for successfully settling Svarinshaug
-						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 800 -- food gained from the yales
-						Factions.ModsogningClan.Commodities.Lumber = Factions.ModsogningClan.Commodities.Lumber + 400 -- lumber gained from the mission
-						Factions.ModsogningClan.Commodities.Stone = Factions.ModsogningClan.Commodities.Stone + 200 -- stone gained from the mission
+						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
+						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 800) -- food gained from the yales
+						ChangeFactionResource("dwarf", "Modsogning Clan", "lumber", 400) -- lumber gained from the mission
+						ChangeFactionResource("dwarf", "Modsogning Clan", "stone", 200) -- stone gained from the mission
 					elseif (GameResult == GameDefeat) then
 						AcquireProvince(WorldMapProvinces.Svarinshaug, "")
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
-					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for successfully settling Svarinshaug
-					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 800 -- food gained from the yales
-					Factions.ModsogningClan.Commodities.Lumber = Factions.ModsogningClan.Commodities.Lumber + 400 -- lumber gained from the mission
-					Factions.ModsogningClan.Commodities.Stone = Factions.ModsogningClan.Commodities.Stone + 200 -- stone gained from the mission
+					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
+					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 800) -- food gained from the yales
+					ChangeFactionResource("dwarf", "Modsogning Clan", "lumber", 400) -- lumber gained from the mission
+					ChangeFactionResource("dwarf", "Modsogning Clan", "stone", 200) -- stone gained from the mission
 				end
 			end
 		},
@@ -187,14 +187,14 @@ local NidavellirEvents = {
 						end
 					end
 					if (GameResult == GameVictory) then
-						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
+						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
-					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 10 -- prestige for punishing the evil doers and recovering the sage's remains
+					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 				end
 			end,
 			function(s)
-				Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige - 10 -- doing nothing in such a situation would be dishonorable
+				ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", -10) -- doing nothing in such a situation would be dishonorable
 			end
 		},
 		OptionTooltips = {"", "-10 Prestige"}
@@ -239,12 +239,12 @@ local NidavellirEvents = {
 						end
 					end
 					if (GameResult == GameVictory) then
-						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 30 -- prestige for obtaining the wondrous artifacts
-						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of Draupnir
+						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
+						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
-					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 30 -- prestige for obtaining the wondrous artifacts
-					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of Draupnir
+					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
+					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
 				end
 			end
 		},
@@ -298,8 +298,8 @@ local NidavellirEvents = {
 						end
 					end
 					if (GameResult == GameVictory) then
-						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for rooting out the bandits
-						Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of the Necklace
+						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for rooting out the bandits
+						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of the Necklace
 						-- place some goblins in Aurvang after the dwarven bandits are gone
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
@@ -307,8 +307,8 @@ local NidavellirEvents = {
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
-					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 5 -- prestige for rooting out the bandits
-					Factions.ModsogningClan.Gold = Factions.ModsogningClan.Gold + 1000 -- gold value of the Necklace
+					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for rooting out the bandits
+					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of the Necklace
 					
 					-- place some goblins in Aurvang after the dwarven bandits are gone
 					SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
@@ -365,10 +365,10 @@ local NidavellirEvents = {
 						end
 					end
 					if (GameResult == GameVictory) then
-						Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 25 -- prestige for chaining the beast
+						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
-					Factions.ModsogningClan.Prestige = Factions.ModsogningClan.Prestige + 25 -- prestige for chaining the beast
+					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
 				end
 			end
 		},
@@ -701,8 +701,8 @@ local NidavellirEvents = {
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 				Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 				Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
-				Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
-				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
+				ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
+				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
@@ -944,7 +944,7 @@ local NidavellirEvents = {
 				end
 			end
 			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
-				Factions.NorlundClan.Commodities["Coal"] = 20000
+				ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
 --				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
 --				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer") / 2)
 			end
@@ -1130,7 +1130,7 @@ local NidavellirEvents = {
 		OptionEffects = {function(s)
 			if ("Norlund Clan" == GrandStrategyFaction.Name) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
-				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2)
+				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2))
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 			
 				GrandStrategyEventMap = true
@@ -1155,20 +1155,20 @@ local NidavellirEvents = {
 					end
 				end
 				if (GameResult == GameVictory) then
-					Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 				end
 			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.TheWyrmShinsplitterClan)
 			else
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
-				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2)
+				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2))
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 			
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1) -- Crintil
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", -4)
 				
-				Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+				ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 				
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 			end
@@ -1206,7 +1206,7 @@ local NidavellirEvents = {
 					end
 				end
 				if (GameResult ~= GameVictory and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan) then
-					Factions.NorlundClan.Commodities["Coal"] = 0 -- Scepter of Fire crafted
+					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 				end
@@ -1263,13 +1263,13 @@ local NidavellirEvents = {
 
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
 
-				Factions.NorlundClan.Gold = Factions.NorlundClan.Gold + 2500 -- payment for the crafting of the Scepter
-				Factions.Untersberg.Gold = Factions.Untersberg.Gold - 2500 -- payment for the crafting of the Scepter
+				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter
+				ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 				Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
 				Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"
 				
-				Factions.NorlundClan.Prestige = Factions.NorlundClan.Prestige + 100 -- a lot of prestige for completing the legendary scepter
+				ChangeFactionResource("dwarf", "Norlund Clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 			end
 		end}
 	},
@@ -1378,7 +1378,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Knalga)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Knalga, +10 Prestige"}
 	},
@@ -1403,7 +1403,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.KalKartha)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Kal Kartha, +10 Prestige"}
 	},
@@ -1430,7 +1430,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Lyr)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Lyr, +10 Prestige"}
 	},
@@ -1488,16 +1488,16 @@ local NidavellirEvents = {
 					end
 					
 					if (GameResult == GameVictory) then
-						EventFaction.Prestige = EventFaction.Prestige + 1
+						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 					elseif (GameResult == GameDefeat) then -- if lost the battle, lose the gold
-						EventFaction.Gold = EventFaction.Gold - 500
-						EventFaction.Prestige = EventFaction.Prestige - 1
+						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -500)
+						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 					end
 				end
 			end,
 			function(s)
-				EventFaction.Gold = EventFaction.Gold - 500
-				EventFaction.Prestige = EventFaction.Prestige - 2
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -500)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -2)
 			end
 		},
 		OptionTooltips = {"Fight the goblin thieves", "-500 Gold, -1 Prestige"}

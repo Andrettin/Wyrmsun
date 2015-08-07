@@ -56,8 +56,8 @@ local GermanicEvents = {
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
-						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000 -- gold lost from the raid
+						ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
+						ChangeFactionResource("celt", "Vana Tribe", "gold", -1000) -- gold lost from the raid
 						SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
 						ChangeProvinceUnitQuantity("Don", "unit-germanic-warrior", 8) -- increase the quantity of warriors in Vanaland by 8, to make it defensible after this scenario is over
 					end
@@ -68,7 +68,7 @@ local GermanicEvents = {
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name ~= "Vana Tribe") then
-					Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
+					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name == "Vana Tribe") then
 					GrandStrategyEvent(Factions.VanaTribe, GrandStrategyEvents.AsaRaid)
 				end
@@ -99,8 +99,8 @@ local GermanicEvents = {
 						end
 					end
 					if (GameResult == GameDefeat) then
-						Factions.AsaTribe.Gold = Factions.AsaTribe.Gold + 1000 -- gold from raiding Vanaland
-						Factions.VanaTribe.Gold = Factions.VanaTribe.Gold - 1000
+						ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
+						ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
 					end
 				end
 			end
@@ -180,9 +180,9 @@ local GermanicEvents = {
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 8) -- give them enough units to continue migrating
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Swede Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Swede Tribe")
-				Factions.SwedeTribe.Gold = EventFaction.Gold / 2
-				EventFaction.Gold = EventFaction.Gold - Factions.SwedeTribe.Gold
-				Factions.SwedeTribe.Gold = Factions.SwedeTribe.Gold + 2000 -- help them stay afloat a bit
+				SetFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", - GetFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold"))
+				ChangeFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold", 2000) -- help them stay afloat a bit
 			end
 		}
 	},
@@ -291,7 +291,7 @@ local GermanicEvents = {
 						end
 						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
-						EventFaction.Prestige = EventFaction.Prestige + 25
+						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
 						-- give Gotaland to the Goth Tribe
 						EqualizeProvinceUnits(EventFaction)
 						AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
@@ -315,7 +315,7 @@ local GermanicEvents = {
 						end
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
-					EventFaction.Prestige = EventFaction.Prestige + 25
+					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
 					-- give Gotaland to the Goth Tribe
 					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
@@ -327,7 +327,7 @@ local GermanicEvents = {
 			function(s)
 			end,
 			function(s)
-				Factions.AsaTribe.Prestige = Factions.AsaTribe.Prestige + 25
+				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
@@ -367,7 +367,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 				GrandStrategyEvent(Factions.SwedeTribe, GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe)
 			end
 		},
@@ -407,8 +407,8 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 3 -- promotion of the educated priest class
-				EventFaction.Gold = EventFaction.Gold - 300 -- cost of the land grant
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 3) -- promotion of the educated priest class
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -300) -- cost of the land grant
 			end
 		},
 		OptionTooltips = {"-300 Gold, +3 Prestige"}
@@ -432,7 +432,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 500 -- tax gains
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500) -- tax gains
 			end
 		},
 		OptionTooltips = {"+500 Gold"}
@@ -455,8 +455,8 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Gold = EventFaction.Gold + 100 -- gifts
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 100) -- gifts
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+100 Gold, +1 Prestige"}
@@ -479,7 +479,7 @@ local GermanicEvents = {
 		Options = {"~!Marvelous!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -502,7 +502,7 @@ local GermanicEvents = {
 		Options = {"~!Inspiring!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -525,7 +525,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -548,7 +548,7 @@ local GermanicEvents = {
 		Options = {"~!Marvelous!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
@@ -750,8 +750,8 @@ local GermanicEvents = {
 		Options = {"A ~!wise man!"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Research = EventFaction.Research + 1
-				EventFaction.Prestige = EventFaction.Prestige + 1
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
 		OptionTooltips = {"+1 Research, +1 Prestige"}
@@ -777,7 +777,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Gothia)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Gothia, +10 Prestige"}
 	},
@@ -802,7 +802,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			FormFaction(EventFaction, Factions.Vandalia)
-			EventFaction.Prestige = EventFaction.Prestige + 10
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Vandalia, +10 Prestige"}
 	}

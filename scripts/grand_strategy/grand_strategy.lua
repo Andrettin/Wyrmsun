@@ -121,26 +121,14 @@ function RunGrandStrategyGameSetupMenu()
 
 			-- add resource quantities to factions that don't have that set up
 			for key, value in pairs(Factions) do
-				if (Factions[key].Gold == nil) then
-					Factions[key]["Gold"] = 3000
+				if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold") == 0) then
+					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", 3000)
 				end
-				if (Factions[key].Commodities == nil) then
-					Factions[key]["Commodities"] = {}
+				if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber") == 0) then
+					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", 1500)
 				end
-				if (Factions[key].Commodities.Lumber == nil) then
-					Factions[key].Commodities["Lumber"] = 1500
-				end
-				if (Factions[key].Commodities.Stone == nil) then
-					Factions[key].Commodities["Stone"] = 1500
-				end
-				if (Factions[key].Commodities.Coal == nil) then
-					Factions[key].Commodities["Coal"] = 0
-				end
-				if (Factions[key].Research == nil) then
-					Factions[key]["Research"] = 0
-				end
-				if (Factions[key].Prestige == nil) then
-					Factions[key]["Prestige"] = 0
+				if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "stone") == 0) then
+					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", 1500)
 				end
 
 				-- initialize the diplomacy variables
@@ -473,11 +461,11 @@ function EndTurn()
 	-- faction income
 	for key, value in pairs(Factions) do
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
-			Factions[key].Gold = Factions[key].Gold + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
-			Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "lumber")
-			Factions[key].Commodities.Stone = Factions[key].Commodities.Stone + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "stone")
-			Factions[key].Research = Factions[key].Research + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "research")
-			Factions[key].Prestige = Factions[key].Prestige + GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "prestige")
+			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold"))
+			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "lumber"))
+			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "stone"))
+			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "research", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "research"))
+			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "prestige", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "prestige"))
 		end
 	end
 	
@@ -498,7 +486,7 @@ function EndTurn()
 	
 	local function trade_priority( a, b )
 		if (Factions[a] and Factions[b]) then
-			return Factions[a].Prestige > Factions[b].Prestige
+			return GetFactionResource(Factions[a].Civilization, Factions[a].Name, "prestige") > GetFactionResource(Factions[b].Civilization, Factions[b].Name, "prestige")
 		end
 	end
 
@@ -507,14 +495,14 @@ function EndTurn()
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall")) then
-					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - GetProvinceCommodityDemand("Lumber")
-					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", - GetProvinceCommodityDemand("Lumber"))
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100))
 					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
 				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall")) then
-					Factions[key].Commodities.Stone = Factions[key].Commodities.Stone - GetProvinceCommodityDemand("Stone")
-					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100)
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", - GetProvinceCommodityDemand("Stone"))
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100))
 					Factions[key].Trade["Stone"] = Factions[key].Trade["Stone"] - GetProvinceCommodityDemand("Stone")
 					province_consumed_commodity.Stone[province_key] = true
 				end
@@ -558,15 +546,15 @@ function EndTurn()
 		if (GetFactionProvinceCount(Factions[key]) > 0) then
 			for province_key, province_value in pairs(WorldMapProvinces) do
 				if (province_consumed_commodity.Lumber[province_key] == false and Factions[key].Trade.Lumber >= GetProvinceCommodityDemand("Lumber") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
-					Factions[key].Commodities.Lumber = Factions[key].Commodities.Lumber - GetProvinceCommodityDemand("Lumber")
-					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100)
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", - GetProvinceCommodityDemand("Lumber"))
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", round(GetProvinceCommodityDemand("Lumber") * GetCommodityPrice("Lumber") / 100))
 					Factions[key].Trade["Lumber"] = Factions[key].Trade["Lumber"] - GetProvinceCommodityDemand("Lumber")
 					province_consumed_commodity.Lumber[province_key] = true
 				end
 				
 				if (province_consumed_commodity.Stone[province_key] == false and Factions[key].Trade.Stone >= GetProvinceCommodityDemand("Stone") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and WorldMapProvinces[province_key].Owner ~= "") then
-					Factions[key].Commodities.Stone = Factions[key].Commodities.Stone - GetProvinceCommodityDemand("Stone")
-					Factions[key].Gold = Factions[key].Gold + round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100)
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", - GetProvinceCommodityDemand("Stone"))
+					ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", round(GetProvinceCommodityDemand("Stone") * GetCommodityPrice("Stone") / 100))
 					Factions[key].Trade["Stone"] = Factions[key].Trade["Stone"] - GetProvinceCommodityDemand("Stone")
 					province_consumed_commodity.Stone[province_key] = true
 				end
@@ -609,21 +597,21 @@ function EndTurn()
 
 	-- keep human player's trading preferences
 	if (GrandStrategyFaction ~= nil) then
-		if (player_trade_preferences.Lumber > 0 and GrandStrategyFaction.Commodities.Lumber < player_trade_preferences.Lumber) then
-			player_trade_preferences.Lumber = GrandStrategyFaction.Commodities.Lumber
-		elseif (player_trade_preferences.Lumber < 0 and GrandStrategyFaction.Gold < 0) then
+		if (player_trade_preferences.Lumber > 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "lumber") < player_trade_preferences.Lumber) then
+			player_trade_preferences.Lumber = GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "lumber")
+		elseif (player_trade_preferences.Lumber < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < 0) then
 			player_trade_preferences.Lumber = 0
-		elseif (player_trade_preferences.Lumber < 0 and GrandStrategyFaction.Gold < player_trade_preferences.Lumber * -1 * GetCommodityPrice("Lumber") / 100) then
-			player_trade_preferences.Lumber = math.floor(GrandStrategyFaction.Gold / GetCommodityPrice("Lumber") * 100) * -1
+		elseif (player_trade_preferences.Lumber < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < player_trade_preferences.Lumber * -1 * GetCommodityPrice("Lumber") / 100) then
+			player_trade_preferences.Lumber = math.floor(GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") / GetCommodityPrice("Lumber") * 100) * -1
 		end
 		GrandStrategyFaction.Trade.Lumber = player_trade_preferences.Lumber
 		
-		if (player_trade_preferences.Stone > 0 and GrandStrategyFaction.Commodities.Stone < player_trade_preferences.Stone) then
-			player_trade_preferences.Stone = GrandStrategyFaction.Commodities.Stone
-		elseif (player_trade_preferences.Stone < 0 and GrandStrategyFaction.Gold < 0) then
+		if (player_trade_preferences.Stone > 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "stone") < player_trade_preferences.Stone) then
+			player_trade_preferences.Stone = GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "stone")
+		elseif (player_trade_preferences.Stone < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < 0) then
 			player_trade_preferences.Stone = 0
-		elseif (player_trade_preferences.Stone < 0 and GrandStrategyFaction.Gold < player_trade_preferences.Stone * -1 * GetCommodityPrice("Stone") / 100) then
-			player_trade_preferences.Stone = math.floor(GrandStrategyFaction.Gold / GetCommodityPrice("Stone") * 100) * -1
+		elseif (player_trade_preferences.Stone < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < player_trade_preferences.Stone * -1 * GetCommodityPrice("Stone") / 100) then
+			player_trade_preferences.Stone = math.floor(GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") / GetCommodityPrice("Stone") * 100) * -1
 		end
 		GrandStrategyFaction.Trade.Stone = player_trade_preferences.Stone
 	end
@@ -677,13 +665,13 @@ function EndTurn()
 	CalculateFactionUpkeeps()
 
 	for key, value in pairs(Factions) do
-		Factions[key].Gold = Factions[key].Gold - Factions[key].Upkeep
+		ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", - Factions[key].Upkeep)
 	end
 
 	local disbanding_happened = false
 	-- disband units if gold is on the negative and upkeep is higher than income
 	for key, value in pairs(Factions) do
-		if (Factions[key].Gold < 0 and Factions[key].Upkeep > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")) then
+		if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold") < 0 and Factions[key].Upkeep > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")) then
 			disbanding_happened = true
 			local disband_quota = Factions[key].Upkeep - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
@@ -897,15 +885,15 @@ function AttackProvince(province, faction)
 		if (GrandStrategyFaction ~= nil and Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
 			InterfaceState = "Province"
 		end
-		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige + attacker_prestige + 5 -- plus five for acquiring the territory
+		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", attacker_prestige + 5) -- plus five for acquiring the territory
 		if (empty_province == false) then
-			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige - attacker_prestige - 5 -- minus five for losing the territory
+			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", - attacker_prestige - 5) -- minus five for losing the territory
 		end
 	else
 		if (empty_province == false) then
-			GetFactionFromName(Defender).Prestige = GetFactionFromName(Defender).Prestige + defender_prestige
+			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", defender_prestige)
 		end
-		GetFactionFromName(Attacker).Prestige = GetFactionFromName(Attacker).Prestige - defender_prestige
+		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", - defender_prestige)
 	end
 				
 	for i, unitName in ipairs(Units) do
@@ -2184,28 +2172,15 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 		CommodityButtons[table.getn(CommodityButtons)]:setTooltip("Prestige influences trade priority between nations, among other things")
 	end
 
-	local quantity_stored = 0
+	local quantity_stored = GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity)
 	local income = ""
 	if (commodity == "gold") then
-		quantity_stored = GrandStrategyFaction.Gold
 		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < GrandStrategyFaction.Upkeep) then
 			income = GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
 		elseif (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") > GrandStrategyFaction.Upkeep) then
 			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
 		end
-	elseif (commodity == "research") then
-		quantity_stored = GrandStrategyFaction.Research
-		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "research") > 0) then
-			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "research")
-		end
-	elseif (commodity == "prestige") then
-		quantity_stored = GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "prestige")
-		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "prestige") > 0) then
-			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "prestige")
-		end
 	else
-		quantity_stored = GrandStrategyFaction.Commodities[CapitalizeString(commodity)]
-		
 		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) > 0) then
 			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity)
 		end
@@ -2552,7 +2527,7 @@ function DrawGrandStrategyInterface()
 					local b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 - 2 - 24, icon_offset_y, function()
 						if (GrandStrategyFaction.Trade[key] > 0 and GrandStrategyFaction.Trade[key] < 100) then
 							GrandStrategyFaction.Trade[key] = 0
-						elseif (GrandStrategyFaction.Gold >= -1 * (GrandStrategyFaction.Trade[key] - 100) * GetCommodityPrice(key) / 100) then
+						elseif (GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") >= -1 * (GrandStrategyFaction.Trade[key] - 100) * GetCommodityPrice(key) / 100) then
 							GrandStrategyFaction.Trade[key] = GrandStrategyFaction.Trade[key] - 100
 						end
 						DrawGrandStrategyInterface()
@@ -2575,7 +2550,7 @@ function DrawGrandStrategyInterface()
 					local b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 + 2 + 46 - 20, icon_offset_y, function()
 						if (GrandStrategyFaction.Trade[key] < 0 and GrandStrategyFaction.Trade[key] > -100) then
 							GrandStrategyFaction.Trade[key] = 0
-						elseif (GrandStrategyFaction.Commodities[key] >= GrandStrategyFaction.Trade[key] + 100) then
+						elseif (GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) >= GrandStrategyFaction.Trade[key] + 100) then
 							GrandStrategyFaction.Trade[key] = GrandStrategyFaction.Trade[key] + 100
 						end
 						DrawGrandStrategyInterface()
@@ -3403,7 +3378,7 @@ function AIDoTurn(ai_faction)
 			end
 		end
 
-		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction) or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and ai_faction.Gold < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
+		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction) or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "gold") < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_catapults_in_province = 0
@@ -3463,22 +3438,22 @@ function AIDoTurn(ai_faction)
 
 	ai_faction.Trade.Lumber = 0
 	-- do trade
-	if (ai_faction.Commodities.Lumber < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
-		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber - (800 - ai_faction.Commodities.Lumber)
-	elseif (ai_faction.Commodities.Lumber > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "lumber") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
-		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 2)
-	elseif (ai_faction.Commodities.Lumber > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
-		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (ai_faction.Commodities.Lumber - 800 * 4)
+	if (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
+		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber - (800 - GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber"))
+	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "lumber") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
+		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") - 800 * 2)
+	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
+		ai_faction.Trade.Lumber = ai_faction.Trade.Lumber + (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") - 800 * 4)
 	end
 
 	ai_faction.Trade.Stone = 0
 	-- do trade
-	if (ai_faction.Commodities.Stone < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
-		ai_faction.Trade.Stone = ai_faction.Trade.Stone - (800 - ai_faction.Commodities.Stone)
-	elseif (ai_faction.Commodities.Stone > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "stone") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
-		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (ai_faction.Commodities.Stone - 800 * 2)
-	elseif (ai_faction.Commodities.Stone > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
-		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (ai_faction.Commodities.Stone - 800 * 4)
+	if (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
+		ai_faction.Trade.Stone = ai_faction.Trade.Stone - (800 - GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone"))
+	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "stone") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
+		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") - 800 * 2)
+	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
+		ai_faction.Trade.Stone = ai_faction.Trade.Stone + (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") - 800 * 4)
 	end
 end
 
@@ -3571,7 +3546,7 @@ function CanBuildStructure(province, unit_type)
 		return false
 	end
 
-	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionFromName(province.Owner).Commodities.Stone < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	if (GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 	
@@ -3585,23 +3560,23 @@ function BuildStructure(province, unit_type)
 		end
 
 		SetProvinceCurrentConstruction(province.Name, unit_type)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function CancelBuildStructure(province, unit_type)
 	if (GetProvinceCurrentConstruction(province.Name) == unit_type) then
 		SetProvinceCurrentConstruction(province.Name, "")
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function CanTrainUnit(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionFromName(province.Owner).Commodities.Lumber < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionFromName(province.Owner).Commodities.Stone < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	if (GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 
@@ -3646,27 +3621,27 @@ end
 function TrainUnit(province, unit_type)
 	if (CanTrainUnit(province, unit_type)) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) + 1)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - GetUnitTypeData(unit_type, "Costs", "gold")
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - GetUnitTypeData(unit_type, "Costs", "lumber")
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - GetUnitTypeData(unit_type, "Costs", "stone")
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function TrainUnitCancel(province, unit_type)
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) - 1)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + GetUnitTypeData(unit_type, "Costs", "gold")
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + GetUnitTypeData(unit_type, "Costs", "lumber")
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + GetUnitTypeData(unit_type, "Costs", "stone")
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function CanHireMercenary(province, unit_type)
 	local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 	if (
-		GetFactionFromName(province.Owner).Gold < (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
-		or GetFactionFromName(province.Owner).Commodities.Lumber < (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
-		or GetFactionFromName(province.Owner).Commodities.Stone < (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
+		GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
+		or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
+		or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
 	) then
 		return false
 	end
@@ -3690,9 +3665,9 @@ function HireMercenary(province, unit_type)
 	if (CanHireMercenary(province, unit_type)) then
 		local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, mercenary_quantity)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
 	end
 end
 
@@ -3700,9 +3675,9 @@ function CancelHireMercenary(province, unit_type)
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		local mercenary_quantity = GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type)
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, 0)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
 	end
 end
 
@@ -3758,7 +3733,7 @@ function IsTechnologyAvailable(province, unit_type)
 end
 
 function CanResearchTechnology(province, unit_type)
-	if (GetFactionFromName(province.Owner).Gold < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionFromName(province.Owner).Commodities.Lumber < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionFromName(province.Owner).Commodities.Stone < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionFromName(province.Owner).Research < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
+	if (GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "research") < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
 		return false
 	end
 	
@@ -3772,20 +3747,20 @@ function ResearchTechnology(province, unit_type)
 		end
 
 		SetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type)
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold - CUpgrade:Get(unit_type).GrandStrategyCosts[1]
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber - CUpgrade:Get(unit_type).GrandStrategyCosts[2]
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone - CUpgrade:Get(unit_type).GrandStrategyCosts[5]
-		GetFactionFromName(province.Owner).Research = GetFactionFromName(province.Owner).Research - CUpgrade:Get(unit_type).GrandStrategyCosts[7]
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - CUpgrade:Get(unit_type).GrandStrategyCosts[1])
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - CUpgrade:Get(unit_type).GrandStrategyCosts[2])
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - CUpgrade:Get(unit_type).GrandStrategyCosts[5])
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "research", - CUpgrade:Get(unit_type).GrandStrategyCosts[7])
 	end
 end
 
 function CancelResearchTechnology(province, unit_type)
 	if (GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner) == unit_type) then
 		SetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner, "")
-		GetFactionFromName(province.Owner).Gold = GetFactionFromName(province.Owner).Gold + CUpgrade:Get(unit_type).GrandStrategyCosts[1]
-		GetFactionFromName(province.Owner).Commodities.Lumber = GetFactionFromName(province.Owner).Commodities.Lumber + CUpgrade:Get(unit_type).GrandStrategyCosts[2]
-		GetFactionFromName(province.Owner).Commodities.Stone = GetFactionFromName(province.Owner).Commodities.Stone + CUpgrade:Get(unit_type).GrandStrategyCosts[5]
-		GetFactionFromName(province.Owner).Research = GetFactionFromName(province.Owner).Research + CUpgrade:Get(unit_type).GrandStrategyCosts[7]
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", CUpgrade:Get(unit_type).GrandStrategyCosts[1])
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", CUpgrade:Get(unit_type).GrandStrategyCosts[2])
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", CUpgrade:Get(unit_type).GrandStrategyCosts[5])
+		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "research", CUpgrade:Get(unit_type).GrandStrategyCosts[7])
 	end
 end
 
@@ -4167,7 +4142,7 @@ function CanTriggerEvent(faction, event)
 	
 	if (event.Commodities ~= nil) then
 		for key, value in pairs(event.Commodities) do
-			if (faction.Commodities[key] < event.Commodities[key]) then
+			if (GetFactionResource(faction.Civilization, faction.Name, string.lower(key)) < event.Commodities[key]) then
 				return false
 			end
 		end
@@ -4410,21 +4385,21 @@ end
 
 function PerformTrade(importer_faction, exporter_faction, commodity)
 	if (math.abs(importer_faction.Trade[commodity]) > exporter_faction.Trade[commodity]) then
-		importer_faction.Commodities[commodity] = importer_faction.Commodities[commodity] + exporter_faction.Trade[commodity]
-		exporter_faction.Commodities[commodity] = exporter_faction.Commodities[commodity] - exporter_faction.Trade[commodity]
+		ChangeFactionResource(importer_faction.Civilization, importer_faction.Name, string.lower(commodity), exporter_faction.Trade[commodity])
+		ChangeFactionResource(exporter_faction.Civilization, exporter_faction.Name, string.lower(commodity), - exporter_faction.Trade[commodity])
 
-		importer_faction.Gold = importer_faction.Gold - round(exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
-		exporter_faction.Gold = exporter_faction.Gold + round(exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100)
-
+		ChangeFactionResource(importer_faction.Civilization, importer_faction.Name, "gold", - round(exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100))
+		ChangeFactionResource(exporter_faction.Civilization, exporter_faction.Name, "gold", round(exporter_faction.Trade[commodity] * GetCommodityPrice(commodity) / 100))
+		
 		importer_faction.Trade[commodity] = importer_faction.Trade[commodity] + exporter_faction.Trade[commodity]
 		exporter_faction.Trade[commodity] = 0
 	else
-		importer_faction.Commodities[commodity] = importer_faction.Commodities[commodity] + math.abs(importer_faction.Trade[commodity])
-		exporter_faction.Commodities[commodity] = exporter_faction.Commodities[commodity] - math.abs(importer_faction.Trade[commodity])
+		ChangeFactionResource(importer_faction.Civilization, importer_faction.Name, string.lower(commodity), math.abs(importer_faction.Trade[commodity]))
+		ChangeFactionResource(exporter_faction.Civilization, exporter_faction.Name, string.lower(commodity), - math.abs(importer_faction.Trade[commodity]))
 
-		importer_faction.Gold = importer_faction.Gold - round(math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
-		exporter_faction.Gold = exporter_faction.Gold + round(math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100)
-
+		ChangeFactionResource(importer_faction.Civilization, importer_faction.Name, "gold", - round(math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100))
+		ChangeFactionResource(exporter_faction.Civilization, exporter_faction.Name, "gold", round(math.abs(importer_faction.Trade[commodity]) * GetCommodityPrice(commodity) / 100))
+		
 		exporter_faction.Trade[commodity] = exporter_faction.Trade[commodity] + importer_faction.Trade[commodity]
 		importer_faction.Trade[commodity] = 0
 	end
@@ -4457,13 +4432,14 @@ function FormFaction(old_faction, new_faction)
 	end
 	
 	new_faction.Civilization = old_faction.Civilization
-	new_faction.Gold = old_faction.Gold
+	SetFactionResource(new_faction.Civilization, new_faction.Name, "gold", GetFactionResource(old_faction.Civilization, old_faction.Name, "gold"))
 	for key, value in pairs(GrandStrategyCommodities) do
-		new_faction.Commodities[key] = old_faction.Commodities[key]
+		SetFactionResource(new_faction.Civilization, new_faction.Name, string.lower(key), GetFactionResource(old_faction.Civilization, old_faction.Name, string.lower(key)))
 		new_faction.Trade[key] = old_faction.Trade[key]
 	end
-	new_faction.Research = old_faction.Research
-	new_faction.Prestige = old_faction.Prestige
+	SetFactionResource(new_faction.Civilization, new_faction.Name, "research", GetFactionResource(old_faction.Civilization, old_faction.Name, "research"))
+	SetFactionResource(new_faction.Civilization, new_faction.Name, "prestige", GetFactionResource(old_faction.Civilization, old_faction.Name, "prestige"))
+	
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") ~= nil) then
 			SetFactionTechnology(new_faction.Civilization, new_faction.Name, unitName, GetFactionTechnology(old_faction.Civilization, old_faction.Name, unitName))
@@ -4785,7 +4761,7 @@ function CanDeclareWar(faction_from, faction_to)
 	if (FactionHasBorderWith(faction_from, faction_to) == false and (FactionHasCoast(faction_from) and FactionHasCoast(faction_to)) == false) then
 		return false
 	end
-	if (faction_from.Prestige < 0) then
+	if (GetFactionResource(faction_from.Civilization, faction_from.Name, "prestige") < 0) then
 		return false
 	end
 	return true

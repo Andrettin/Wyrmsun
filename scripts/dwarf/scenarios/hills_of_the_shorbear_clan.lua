@@ -79,7 +79,7 @@ AddTrigger(
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
 		return false
@@ -1248,9 +1248,9 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 10000 -- gold gained from the ruby's sale
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- gained the silver via peace treaty with the Norlunds
-					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 10000) -- gold gained from the ruby's sale
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
 					Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
 				end
@@ -1282,9 +1282,9 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 10000 -- gold gained from the ruby's sale
-					Factions.ShinsplitterClan.Gold = Factions.ShinsplitterClan.Gold + 2500 -- gained the silver via peace treaty with the Norlunds
-					Factions.NorlundClan.Gold = Factions.NorlundClan.Gold - 2500
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 10000) -- gold gained from the ruby's sale
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
 					Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
 				end
