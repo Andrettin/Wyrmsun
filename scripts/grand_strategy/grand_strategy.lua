@@ -990,6 +990,13 @@ function ChangeFactionCulture(faction, civilization)
 			end
 		end
 	end
+	
+	SetFactionResource(faction.Civilization, faction.Name, "gold", GetFactionResource(old_civilization, faction.Name, "gold"))
+	for key, value in pairs(GrandStrategyCommodities) do
+		SetFactionResource(faction.Civilization, faction.Name, string.lower(key), GetFactionResource(old_civilization, faction.Name, string.lower(key)))
+	end
+	SetFactionResource(faction.Civilization, faction.Name, "research", GetFactionResource(old_civilization, faction.Name, "research"))
+	SetFactionResource(faction.Civilization, faction.Name, "prestige", GetFactionResource(old_civilization, faction.Name, "prestige"))
 end
 
 function ChangeProvinceCulture(province, civilization)
