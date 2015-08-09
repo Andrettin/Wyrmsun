@@ -54,7 +54,7 @@ local NorseEvents = {
 					FormFaction(EventFaction, Factions.SwedeTribe)
 					EventFaction = Factions.SwedeTribe
 				end
-				ChangeFactionCulture(EventFaction, "norse")
+				ChangeFactionCulture("germanic", EventFaction.Name, "norse")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						WorldMapProvinces[province_key].Civilization == "germanic"

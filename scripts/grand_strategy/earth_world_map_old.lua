@@ -1304,7 +1304,7 @@ end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
 	WorldMapProvinces.Brandenburg.Owner = "Suebi Tribe" -- The Suebi are the earliest Germanic people known to inhabit the Brandenburg area; the Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
-	ChangeFactionCulture(Factions.SuebiTribe, "teuton")
+	ChangeFactionCulture("germanic", "Suebi Tribe", "teuton")
 	WorldMapProvinces.Brandenburg.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Brandenburg.Name, "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 0)
@@ -1312,7 +1312,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetResourceProspected(127, 27, "Gold", true)
 	
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- The Saxons are the earliest Germanic people known to inhabit the Hannover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
-	ChangeFactionCulture(Factions.SaxonTribe, "teuton")
+	ChangeFactionCulture("germanic", "Saxon Tribe", "teuton")
 	WorldMapProvinces.Rhineland.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Rhineland.Name, "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Rhineland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
@@ -1321,7 +1321,7 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetResourceProspected(125, 28, "Gold", true)
 
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	ChangeFactionCulture(Factions.FrankTribe, "teuton")
+	ChangeFactionCulture("germanic", "Frank Tribe", "teuton")
 	WorldMapProvinces.Netherlands.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Netherlands.Name, "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Netherlands", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
@@ -1334,17 +1334,17 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	GrandStrategyEvents.SigisLands = nil
 	
 	-- should put it at a more proper date (when Proto-Germanic split into West Germanic, East Germanic and North Germanic, respectively represented by the Teuton, Goth and Norse cultures in the game), but this will do; update culture in Sweden, Jutland and Gotaland
-	ChangeFactionCulture(Factions.SwedeTribe, "norse")
+	ChangeFactionCulture("germanic", "Swede Tribe", "norse")
 	WorldMapProvinces.Sweden.Civilization = "norse"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall", false)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-teuton-town-hall", true)
-	ChangeFactionCulture(Factions.JuteTribe, "teuton")
+	ChangeFactionCulture("germanic", "Jute Tribe", "teuton")
 	WorldMapProvinces.Jutland.Civilization = "teuton"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-town-hall", false)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Jutland", "unit-germanic-warrior", 0)
 	SetProvinceUnitQuantity("Jutland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
-	ChangeFactionCulture(Factions.GothTribe, "goth")
+	ChangeFactionCulture("germanic", "Goth Tribe", "goth")
 	WorldMapProvinces.Gotaland.Civilization = "goth"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Gotaland.Name, "unit-germanic-town-hall", false)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Gotaland.Name, "unit-teuton-town-hall", true)

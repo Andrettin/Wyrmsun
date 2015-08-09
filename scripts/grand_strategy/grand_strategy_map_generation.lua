@@ -629,7 +629,7 @@ function GenerateProvince(arg)
 					local random_tile = arg.Province.Tiles[SyncRand(table.getn(arg.Province.Tiles)) + 1]
 					if (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains") then
 						if (GetArrayIncludes(WorldMapResources.Gold, {random_tile[1], random_tile[2]}) == false and {random_tile[1], random_tile[2]} ~= arg.Province.SettlementLocation) then
-							table.insert(WorldMapResources.Gold, {random_tile[1], random_tile[2], true})
+							table.insert(WorldMapResources.Gold, {random_tile[1], random_tile[2], false})
 							break
 						end
 					end

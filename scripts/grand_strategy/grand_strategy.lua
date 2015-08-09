@@ -961,42 +961,11 @@ function AcquireProvince(province, faction)
 	UpdateProvinceMinimap(province.Name)
 end
 
-function ChangeFactionCulture(faction, civilization)
-	local old_civilization = faction.Civilization
-	faction.Civilization = civilization
-	
-	AcquireFactionTechnologies(old_civilization, faction.Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
-	
-	if (faction.OwnedProvinces ~= nil and table.getn(faction.OwnedProvinces) > 0) then -- this function is also called when loading a world map, but the owned provinces table hasn't been created then
-		-- replace existent units from the previous civilization with units of the new civilization
-		for province_i, key in ipairs(faction.OwnedProvinces) do
-			for i, unitName in ipairs(Units) do
-				if (
-					string.find(unitName, "upgrade-") == nil
-					and GetUnitTypeData(unitName, "Class") ~= ""
-					and GetUnitTypeData(unitName, "Civilization") ~= ""
-					and GetUnitTypeData(unitName, "Building") == false
-					and GetUnitTypeData(unitName, "Demand") > 0 
-					and GetUnitTypeData(unitName, "Civilization") == old_civilization
-					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
-					and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
-				) then
-					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName))
-					SetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName))
-					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
-					SetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName, 0)
-					SetProvinceOwner(WorldMapProvinces[key].Name, faction.Civilization, faction.Name) -- this is necessary because the engine considers the different-civilization faction to be a different faction
-				end
-			end
-		end
-	end
-	
-	SetFactionResource(faction.Civilization, faction.Name, "gold", GetFactionResource(old_civilization, faction.Name, "gold"))
-	for key, value in pairs(GrandStrategyCommodities) do
-		SetFactionResource(faction.Civilization, faction.Name, string.lower(key), GetFactionResource(old_civilization, faction.Name, string.lower(key)))
-	end
-	SetFactionResource(faction.Civilization, faction.Name, "research", GetFactionResource(old_civilization, faction.Name, "research"))
-	SetFactionResource(faction.Civilization, faction.Name, "prestige", GetFactionResource(old_civilization, faction.Name, "prestige"))
+OldChangeFactionCulture = ChangeFactionCulture
+
+function ChangeFactionCulture(old_civilization, faction_name, new_civilization)
+	GetFactionFromName(faction_name).Civilization = new_civilization
+	OldChangeFactionCulture(old_civilization, faction_name, new_civilization)
 end
 
 function ChangeProvinceCulture(province, civilization)
