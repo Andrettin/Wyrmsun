@@ -101,7 +101,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/svarinshaug.smp")
 					CurrentQuest = "A Rocky Home"
@@ -132,7 +132,7 @@ local NidavellirEvents = {
 					elseif (GameResult == GameDefeat) then
 						AcquireProvince(WorldMapProvinces.Svarinshaug, "")
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
 					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 800) -- food gained from the yales
 					ChangeFactionResource("dwarf", "Modsogning Clan", "lumber", 400) -- lumber gained from the mission
@@ -165,7 +165,7 @@ local NidavellirEvents = {
 		Options = {"Send ~!Durin", "Do ~!nothing"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
 					CurrentQuest = "The Mead of Wisdom"
@@ -189,7 +189,7 @@ local NidavellirEvents = {
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 				end
 			end,
@@ -222,7 +222,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/eastern-mines.smp")
 					CurrentQuest = "The Treasures of Svarinshaug"
@@ -242,7 +242,7 @@ local NidavellirEvents = {
 						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
 						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
 					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
 				end
@@ -274,7 +274,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/aurvang.smp")
 					CurrentQuest = "The Necklace of the Brisings"
@@ -304,7 +304,7 @@ local NidavellirEvents = {
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for rooting out the bandits
@@ -341,7 +341,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo(Quests.TheBindingOfGrafvitnir.Map)
 					CurrentQuest = "The Binding of Grafvitnir"
@@ -367,7 +367,7 @@ local NidavellirEvents = {
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Modsogning Clan") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
 				end
 			end
@@ -673,7 +673,7 @@ local NidavellirEvents = {
 		end,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GameSettings.Presets[1].Type = PlayerComputer
 				GameSettings.Presets[2].Type = PlayerComputer
 
@@ -698,7 +698,7 @@ local NidavellirEvents = {
 					end
 				end
 			end
-			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
+			if (("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("Shinsplitter Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 				Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 				Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
 				ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
@@ -720,7 +720,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GameSettings.Presets[0].Type = PlayerComputer
 				GameSettings.Presets[1].Type = PlayerComputer
 
@@ -766,7 +766,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GameSettings.Presets[1].Type = PlayerComputer
 
 				GrandStrategyEventMap = true
@@ -798,7 +798,7 @@ local NidavellirEvents = {
 					end
 				end
 			end
-			if ("Norlund Clan" ~= GrandStrategyFaction.Name and "Shinsplitter Clan" ~= GrandStrategyFaction.Name) then
+			if (("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("Shinsplitter Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
@@ -815,7 +815,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GameSettings.Presets[0].Type = PlayerComputer
 
 				GrandStrategyEventMap = true
@@ -868,7 +868,7 @@ local NidavellirEvents = {
 		RandomChance = 50, -- took two years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/northern-wastelands.smp")
 				CurrentQuest = "Searching for the Runecrafter"
@@ -891,8 +891,7 @@ local NidavellirEvents = {
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
 					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 				end
-			end
-			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
+			elseif ("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
 				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
 				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
@@ -922,7 +921,7 @@ local NidavellirEvents = {
 		RandomChance = 50, -- took two years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/eastern-mines.smp")
 				CurrentQuest = "Gathering Materials"
@@ -942,8 +941,7 @@ local NidavellirEvents = {
 						end
 					end
 				end
-			end
-			if ("Norlund Clan" ~= GrandStrategyFaction.Name) then
+			elseif ("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
 				ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
 --				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
 --				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer") / 2)
@@ -973,7 +971,7 @@ local NidavellirEvents = {
 		RandomChance = 16, -- six years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
 				CurrentQuest = "Hills of the Shorbear Clan"
@@ -1003,11 +1001,16 @@ local NidavellirEvents = {
 				if (GameResult == GameVictory) then
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
 				end
-			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			end
+			
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.HillsOfTheShorbearClanShinsplitterClan)
-			elseif ("Shorbear Clan" == GrandStrategyFaction.Name) then
+			end
+			if ("Shorbear Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShorbearClan, GrandStrategyEvents.HillsOfTheShorbearClanShorbearClan)
-			else
+			end
+			
+			if ((GrandStrategyFaction.Name ~= "Norlund Clan" and GrandStrategyFaction.Name ~= "Shinsplitter Clan" and GrandStrategyFaction.Name ~= "Shorbear Clan") or wyr.preferences.AutomaticBattles) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1) -- Kalnar
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -3) -- Lyndar, Gaenlar and Glinan
 				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
@@ -1031,7 +1034,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GameSettings.Presets[0].Type = PlayerComputer
 				GameSettings.Presets[1].Type = PlayerComputer
 				GrandStrategyEventMap = true
@@ -1074,7 +1077,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Shorbear Clan" == GrandStrategyFaction.Name) then
+			if ("Shorbear Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GameSettings.Presets[0].Type = PlayerComputer
 				GameSettings.Presets[2].Type = PlayerComputer
 				GrandStrategyEventMap = true
@@ -1128,7 +1131,7 @@ local NidavellirEvents = {
 		RandomChance = 40, -- two and a half years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
 				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2))
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
@@ -1158,9 +1161,13 @@ local NidavellirEvents = {
 					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 				end
-			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			end
+			
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.TheWyrmShinsplitterClan)
-			else
+			end
+				
+			if ((GrandStrategyFaction.Name ~= "Norlund Clan" and GrandStrategyFaction.Name ~= "Shinsplitter Clan") or wyr.preferences.AutomaticBattles) then
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 8) -- Surghan mercenaries hired by the Shinsplitters
 				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", - (GetUnitTypeData("unit-surghan-mercenary-steelclad", "Costs", "gold") * 2))
 				MercenaryGroups.unit_surghan_mercenary_steelclad = nil
@@ -1182,7 +1189,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
@@ -1232,7 +1239,7 @@ local NidavellirEvents = {
 		RandomChance = 40, -- two and a half years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Norlund Clan" == GrandStrategyFaction.Name) then
+			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
 				CurrentQuest = "Caverns of Flame"
@@ -1245,9 +1252,13 @@ local NidavellirEvents = {
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
-			elseif ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			end
+				
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
 				GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.CavernsOfFlameShinsplitterClan)
-			else
+			end
+				
+			if ((GrandStrategyFaction.Name ~= "Norlund Clan" and GrandStrategyFaction.Name ~= "Shinsplitter Clan") or wyr.preferences.AutomaticBattles) then
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 0)
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 0)
 				
@@ -1281,7 +1292,7 @@ local NidavellirEvents = {
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			if ("Shinsplitter Clan" == GrandStrategyFaction.Name) then
+			if ("Shinsplitter Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
@@ -1468,7 +1479,7 @@ local NidavellirEvents = {
 		},
 		OptionEffects = {
 			function(s)
-				if (EventFaction.Name == GrandStrategyFaction.Name) then
+				if (EventFaction.Name == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/goblin-thief-hideout.smp")
 					RunMap("maps/nidavellir/goblin-thief-hideout.smp")
@@ -1493,6 +1504,8 @@ local NidavellirEvents = {
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -500)
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 					end
+				else
+					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 				end
 			end,
 			function(s)

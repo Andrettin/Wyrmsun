@@ -77,6 +77,7 @@ function RunGrandStrategyGameSetupMenu()
 	local faction
 	local faction_list = {}
 	local battalions
+	local automatic_battles
 	local no_randomness
 
 	menu:addLabel(_("~<Grand Strategy Game Setup~>"), offx + 640/2 + 12, offy + 72)
@@ -335,6 +336,14 @@ function RunGrandStrategyGameSetupMenu()
 	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
 	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
 
+	automatic_battles = menu:addImageCheckBox(_("Automatic Battles"), offx + 220, offy + 10 + 240 + 3,
+		function()
+			wyr.preferences.AutomaticBattles = automatic_battles:isMarked()
+			SavePreferences()
+		end
+	)
+	automatic_battles:setMarked(wyr.preferences.AutomaticBattles)
+  
 	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 240 + 3,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
@@ -799,7 +808,7 @@ function AttackProvince(province, faction)
 	local attacker_prestige = math.floor(10 * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true)) -- 10 prestige if military scores are equal
 	local defender_prestige = math.floor(10 * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true)) -- 10 prestige if military scores are equal
 
-	if (GrandStrategyFaction ~= nil and (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name)) then -- if the human player is involved, run a RTS battle map, and if not autoresolve the battle
+	if (GrandStrategyFaction ~= nil and (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles == false) then -- if the human player is involved and automatic battles is deactivated, run a RTS battle map, and if not autoresolve the battle
 		if (MapAttacker ~= nil and MapDefender ~= nil) then
 			for k=1,mapinfo.nplayers do
 				if (k == MapAttacker + 1) then
@@ -853,11 +862,13 @@ function AttackProvince(province, faction)
 		end
 		GrandStrategyBattle = false
 	else
-		if (GetMilitaryScore(province, true, true) > GetMilitaryScore(province, false, true)) then -- if military score is the same, then defenders win
+		local attacker_military_score = GetMilitaryScore(province, true, true)
+		local defender_military_score = GetMilitaryScore(province, false, true)
+		if (attacker_military_score > defender_military_score) then -- if military score is the same, then defenders win
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					SetProvinceUnitQuantity(province.Name, unitName, GetProvinceAttackingUnitQuantity(province.Name, unitName) - math.floor(GetProvinceAttackingUnitQuantity(province.Name, unitName) * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true))) -- formula for calculating units belonging to the victorious player that were killed
+					SetProvinceUnitQuantity(province.Name, unitName, math.floor(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
 				elseif (IsHero(unitName)) then -- kill off defending heroes if the attacking player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
@@ -870,7 +881,11 @@ function AttackProvince(province, faction)
 			victorious_player = Defender
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					SetProvinceUnitQuantity(province.Name, unitName, GetProvinceUnitQuantity(province.Name, unitName) - math.floor(GetProvinceUnitQuantity(province.Name, unitName) * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true)))
+					SetProvinceUnitQuantity(province.Name, unitName, math.floor(
+						GetProvinceUnitQuantity(province.Name, unitName)
+						* (defender_military_score - attacker_military_score)
+						/ defender_military_score
+					))
 				elseif (IsHero(unitName)) then -- kill off attacking heroes if the defending player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 3) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
@@ -910,6 +925,45 @@ function AttackProvince(province, faction)
 		Factions[defender_faction_key].Trade.Lumber = 0 -- remove offers and bids from the eliminated faction
 		Factions[defender_faction_key].Trade.Stone = 0 -- remove offers and bids from the eliminated faction
 	end
+
+	if ((Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles) then -- show a battle report if the player was involved in the battle, and has automatic battles activated
+		local menu = WarGrandStrategyGameMenu(panel(1))
+		menu:setDrawMenusUnder(true)
+
+		menu:addLabel("Battle in " .. GetProvinceName(AttackedProvince), 128, 11)
+
+		local l = MultiLineLabel()
+		l:setFont(Fonts["game"])
+		l:setSize(228, 128)
+		l:setLineWidth(228)
+		menu:add(l, 14, 35)
+		if (Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
+			l:setCaption("My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!")
+		elseif (Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
+			l:setCaption("My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!")
+		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
+			l:setCaption("My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!")
+		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
+			l:setCaption("My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(Defender) .. "!")
+		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province) then
+			l:setCaption("My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " wildlands has failed!")
+		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
+			l:setCaption("My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!")
+		end
+		menu:addFullButton("~!OK!", "o", 16, 248 - (36 * 0),
+			function()
+				menu:stop()
+			end
+		)
+		menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the battle dialog
+			function()
+				menu:stop()
+			end,
+			{0, 0}
+		)
+		menu:run()
+	end
+	
 	Attacker = ""
 	Defender = ""
 	AttackedProvince = nil
@@ -3860,7 +3914,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 		faction = province.Owner
 	else
 		if (GetProvinceAttackedBy(province.Name) == "") then
-			return 0
+			return 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
 		else
 			units = GetProvinceAttackingUnitQuantity
 			faction = GetProvinceAttackedBy(province.Name)
@@ -4782,7 +4836,7 @@ function DoProspection()
 							end
 						)
 
-						menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the prospection dialogue
+						menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the prospection dialog
 							function()
 								SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
 								if (wyr.preferences.ShowTips) then

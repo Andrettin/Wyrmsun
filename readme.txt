@@ -209,9 +209,13 @@ https://github.com/Andrettin/Wyrmsun
 - Rework of dark plains, plains and hills tile graphics (by Jinn).
 - Added two new provinces to the Nidavellir world map: Aurvang and Joruvellir.
 - Added new water province to the Nidavellir world map: Deep Sea.
+- Added option for automatic battles.
 
 * Miscellaneous
 - New stone icon (by Jinn).
+
+* Quests
+- Fixed crash in the Gathering Materials quest.
 
 * Units
 - Fixed issue which caused the player's food consumption to be updated incorrectly when a unit is rescued.

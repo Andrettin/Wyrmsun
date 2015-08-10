@@ -42,7 +42,7 @@ DefineWorldMapTerrainTypes(
 		"name", "Hills",
 		"tag", "hills",
 		"base-tile", "Plains",
---		"has-transitions", true,
+		"has-transitions", true,
 		"variations", 5
 	},
 	"terrain-type", {

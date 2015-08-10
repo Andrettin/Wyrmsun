@@ -2104,6 +2104,7 @@ local defaultPreferences = {
 	Autosave = true,
 	PlayerColorCircle = false,
 	NoRandomness = false,
+	AutomaticBattles = false,
 	Difficulty = 2,
 	GrandStrategyBattalionMultiplier = 1,
 	QuestsCompleted = {},

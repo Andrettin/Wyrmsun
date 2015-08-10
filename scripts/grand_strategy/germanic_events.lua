@@ -49,7 +49,7 @@ local GermanicEvents = {
 		Options = {"~!Attack them!", "~!Leave them alone"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					CurrentQuest = "On the Vanaquisl"
@@ -67,7 +67,7 @@ local GermanicEvents = {
 							ChangeProvinceUnitQuantity("Don", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name ~= "Vana Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "Vana Tribe") then
 					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name == "Vana Tribe") then
 					GrandStrategyEvent(Factions.VanaTribe, GrandStrategyEvents.AsaRaid)
@@ -85,7 +85,7 @@ local GermanicEvents = {
 		Options = {"~!Defend our homeland!"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Vana Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Vana Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					GameSettings.Presets[0].Type = PlayerComputer
@@ -102,6 +102,9 @@ local GermanicEvents = {
 						ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 						ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
 					end
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Vana Tribe" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
+					ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
 				end
 			end
 		}
@@ -132,7 +135,7 @@ local GermanicEvents = {
 		Options = {"~!Migrate to the west", "The ~!steppes are our home"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/novgorod.smp")
 					CurrentQuest = "Westward Migration"
@@ -161,7 +164,7 @@ local GermanicEvents = {
 						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
@@ -172,6 +175,9 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
 					ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
+					end
 				end
 			end,
 			function(s) -- if refused to migrate, then a part of the tribe splits and does so
@@ -207,7 +213,7 @@ local GermanicEvents = {
 		Options = {"~!Yes", "~!No"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/jutland.smp")
 					GameSettings.Presets[1].Type = PlayerComputer					
@@ -234,7 +240,7 @@ local GermanicEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= EventFaction.Name) then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
@@ -246,6 +252,10 @@ local GermanicEvents = {
 					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
+					end
+
 				end
 			end,
 			function(s)
@@ -274,7 +284,7 @@ local GermanicEvents = {
 		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as the ~!Jute Tribe"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/malmo.smp")
 					CurrentQuest = "Gylve's Realm"
@@ -303,7 +313,7 @@ local GermanicEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= EventFaction.Name) then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 					FormFaction(EventFaction, Factions.SwedeTribe)
@@ -320,6 +330,9 @@ local GermanicEvents = {
 					EqualizeProvinceUnits(EventFaction)
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 					AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
+					if (GrandStrategyFaction.Name == "Swede Tribe") then
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
+					end
 				end
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")

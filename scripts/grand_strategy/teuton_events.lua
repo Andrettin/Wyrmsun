@@ -137,7 +137,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/belfort.smp")
 					CurrentQuest = "The Battle of Magetobria"
@@ -159,17 +159,21 @@ local TeutonEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Suebi Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Suebi Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("France", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
-							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
-							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
+							SetProvinceUnitQuantity("Burgundy", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end
-					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
+					if (GrandStrategyFaction.Name ~= "Suebi Tribe") then
+						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
+					end
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
+					end
 				end
 			end
 		}
@@ -229,7 +233,7 @@ local TeutonEvents = {
 				ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
 			end,
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyFaction = Factions.MarcomanniTribe
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/prague.smp")
@@ -258,7 +262,7 @@ local TeutonEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Suebi Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Suebi Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
@@ -271,6 +275,10 @@ local TeutonEvents = {
 					ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
 					AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
+						GrandStrategyFaction = Factions.MarcomanniTribe
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
+					end
 				end
 			end
 		}
@@ -310,7 +318,7 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				DeclareWar(EventFaction.Name, "Rome")
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GameSettings.Presets[0].Type = PlayerComputer
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/salzburg.smp")
@@ -336,13 +344,17 @@ local TeutonEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Marcomanni Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Marcomanni Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Bohemia", unitName))
 							SetProvinceUnitQuantity("Bohemia", unitName, 0)
 						end
+					end
+					
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
 					end
 				end
 			end,
@@ -370,7 +382,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe") then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/oderzo.smp")
 					CurrentQuest = "The Razing of Opitergium"
@@ -395,13 +407,16 @@ local TeutonEvents = {
 							end
 						end
 					end
-				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Marcomanni Tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Marcomanni Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("North Italy", unitName, GetProvinceUnitQuantity("Austria", unitName))
 							SetProvinceUnitQuantity("Austria", unitName, 0)
 						end
+					end
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
 					end
 				end
 			end
