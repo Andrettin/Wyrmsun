@@ -807,6 +807,17 @@ function AttackProvince(province, faction)
 	
 	local attacker_prestige = math.floor(10 * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true)) -- 10 prestige if military scores are equal
 	local defender_prestige = math.floor(10 * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true)) -- 10 prestige if military scores are equal
+	
+	local units_lost = {}
+	for i, unitName in ipairs(Units) do
+		if (IsMilitaryUnit(unitName)) then
+			if (GrandStrategyFaction.Name == Attacker) then
+				units_lost[string.gsub(unitName, "-", "_")] = GetProvinceAttackingUnitQuantity(province.Name, unitName)
+			elseif (GrandStrategyFaction.Defender == Attacker) then
+				units_lost[string.gsub(unitName, "-", "_")] = GetProvinceUnitQuantity(province.Name, unitName)
+			end
+		end
+	end
 
 	if (GrandStrategyFaction ~= nil and (Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles == false) then -- if the human player is involved and automatic battles is deactivated, run a RTS battle map, and if not autoresolve the battle
 		if (MapAttacker ~= nil and MapDefender ~= nil) then
@@ -868,7 +879,7 @@ function AttackProvince(province, faction)
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					SetProvinceUnitQuantity(province.Name, unitName, math.floor(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
+					SetProvinceUnitQuantity(province.Name, unitName, round(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
 				elseif (IsHero(unitName)) then -- kill off defending heroes if the attacking player was the victorious one
 					if (AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 						AttackedProvince.Heroes[string.gsub(unitName, "-", "_")] = 0
@@ -881,7 +892,7 @@ function AttackProvince(province, faction)
 			victorious_player = Defender
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					SetProvinceUnitQuantity(province.Name, unitName, math.floor(
+					SetProvinceUnitQuantity(province.Name, unitName, round(
 						GetProvinceUnitQuantity(province.Name, unitName)
 						* (defender_military_score - attacker_military_score)
 						/ defender_military_score
@@ -895,6 +906,35 @@ function AttackProvince(province, faction)
 		end
 	end
 
+	for i, unitName in ipairs(Units) do
+		if (IsMilitaryUnit(unitName)) then
+			if (victorious_player == GrandStrategyFaction.Name) then
+				units_lost[string.gsub(unitName, "-", "_")] = units_lost[string.gsub(unitName, "-", "_")] - GetProvinceUnitQuantity(province.Name, unitName)
+			end
+		end
+	end
+	
+	local units_lost_string = "None"
+	local first_unit = true
+	for i, unitName in ipairs(Units) do
+		if (IsMilitaryUnit(unitName)) then
+			if (units_lost[string.gsub(unitName, "-", "_")] ~= nil and units_lost[string.gsub(unitName, "-", "_")] > 0) then
+				if not (first_unit) then
+					units_lost_string = units_lost_string .. ", "
+				else
+					first_unit = false
+					units_lost_string = ""
+				end
+				units_lost_string = units_lost_string .. units_lost[string.gsub(unitName, "-", "_")] .. " "
+				if (units_lost[string.gsub(unitName, "-", "_")] > 1) then
+					units_lost_string = units_lost_string .. GetUnitTypeNamePluralForm(unitName)
+				else
+					units_lost_string = units_lost_string .. GetUnitTypeName(unitName)
+				end
+			end
+		end
+	end
+	
 	if (victorious_player == Attacker) then
 		AcquireProvince(province, victorious_player)
 		if (GrandStrategyFaction ~= nil and Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
@@ -927,19 +967,23 @@ function AttackProvince(province, faction)
 	end
 
 	if ((Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles) then -- show a battle report if the player was involved in the battle, and has automatic battles activated
+		local battle_report_title = "Battle in " .. GetProvinceName(AttackedProvince)
+		local battle_report_message = ""
 		if (Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
-			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!")
+			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
-			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!")
+			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!")
+			battle_report_message = "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(Defender) .. "!")
+			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(Defender) .. "!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province) then
-			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " wildlands has failed!")
+			battle_report_message = "My lord, our attempt to conquer the wildlands of " .. GetProvinceName(AttackedProvince) .. " has failed!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
-			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!")
+			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!"
 		end
+		battle_report_message = battle_report_message .. "\n\nUnits Lost: " .. units_lost_string
+		GrandStrategyDialog(battle_report_title, battle_report_message)
 	end
 	
 	Attacker = ""
@@ -2130,16 +2174,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unit_type) * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep)"
 	end
 							
-	local regiment_type_name = GetUnitTypeName(unit_type) .. "s"
-	if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-		regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-	end
-	if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-		regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-	end
-	if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-		regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-	end	
+	local regiment_type_name = GetUnitTypeNamePluralForm(unit_type)
 							
 	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then
 		UIElements[table.getn(UIElements)]:setTooltip("Cancel hiring " .. regiment_type_name)
@@ -2401,16 +2436,7 @@ function DrawGrandStrategyInterface()
 							g_lslider_p:Load()
 							b:setNormalImage(g_lslider_n)
 							b:setPressedImage(g_lslider_p)
-							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
-							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-							end
-							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-							end
-							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-							end
+							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Deselect one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2434,16 +2460,7 @@ function DrawGrandStrategyInterface()
 							g_rslider_p:Load()
 							b:setNormalImage(g_rslider_n)
 							b:setPressedImage(g_rslider_p)
-							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
-							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-							end
-							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-							end
-							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-							end
+							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Select one ".. regiment_type_name .. " regiment")
 
 							local selected_veterans = 0
@@ -2652,16 +2669,7 @@ function DrawGrandStrategyInterface()
 							g_lslider_p:Load()
 							b:setNormalImage(g_lslider_n)
 							b:setPressedImage(g_lslider_p)
-							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
-							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-							end
-							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-							end
-							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-							end
+							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Cancel training of one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2711,16 +2719,7 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unitName) .. " Gold Upkeep)"
 							end
 							
-							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
-							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-							end
-							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-							end
-							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-							end
+							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
 							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
@@ -2877,16 +2876,7 @@ function DrawGrandStrategyInterface()
 							g_lslider_p:Load()
 							b:setNormalImage(g_lslider_n)
 							b:setPressedImage(g_lslider_p)
-							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
-							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-							end
-							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-							end
-							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-							end
+							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Cancel hiring of one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2936,16 +2926,7 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unitName) .. " Gold Upkeep)"
 							end
 							
-							local regiment_type_name = GetUnitTypeName(unitName) .. "s"
-							if (string.find(regiment_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-								regiment_type_name = string.sub(regiment_type_name, 0, -4) .. "men"
-							end
-							if (string.find(regiment_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-								regiment_type_name = string.sub(regiment_type_name, 0, -7) .. "Thieves"
-							end
-							if (string.find(regiment_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-								regiment_type_name = string.sub(regiment_type_name, 0, -11) .. "Mercenaries"
-							end
+							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. cost_tooltip)
 
 							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
@@ -4888,4 +4869,19 @@ function GrandStrategyDialog(title, message)
 		{0, 0}
 	)
 	menu:run()
+end
+
+function GetUnitTypeNamePluralForm(unit_type)
+	local unit_type_name = GetUnitTypeName(unit_type) .. "s"
+	if (string.find(unit_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
+		unit_type_name = string.sub(unit_type_name, 0, -4) .. "men"
+	end
+	if (string.find(unit_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
+		unit_type_name = string.sub(unit_type_name, 0, -7) .. "Thieves"
+	end
+	if (string.find(unit_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
+		unit_type_name = string.sub(unit_type_name, 0, -11) .. "Mercenaries"
+	end	
+	
+	return unit_type_name
 end
