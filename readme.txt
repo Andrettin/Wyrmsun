@@ -209,6 +209,7 @@ https://github.com/Andrettin/Wyrmsun
 - Rework of dark plains, plains and hills tile graphics (by Jinn).
 - Added two new provinces to the Nidavellir world map: Aurvang and Joruvellir.
 - Added new water province to the Nidavellir world map: Deep Sea.
+- New hill graphic transitions (by Jinn).
 - Added option for automatic battles.
 
 * Miscellaneous

@@ -173,6 +173,7 @@ local TeutonEvents = {
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
+						GrandStrategyDialog("The Battle of Magetobria", "The Aedui have been crushed! We were granted land in Gaul by the Sequani and the Arverni. However, our chieftain Ariovistus wanted more, and took much of the Sequani's lands for settlement.")
 					end
 				end
 			end
@@ -278,6 +279,7 @@ local TeutonEvents = {
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GrandStrategyFaction = Factions.MarcomanniTribe
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
+						GrandStrategyDialog("The Home of the Boii", "The Boii's capital has become naught but a burning ruin. On its ashes we shall build our own settlement of Bubienum, the center of our new Marcomannic kingdom!")
 					end
 				end
 			end
@@ -355,6 +357,7 @@ local TeutonEvents = {
 					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
+						GrandStrategyDialog("The Sack of Iuvavum", "All that was of worth in Iuvavum has been pillaged...")
 					end
 				end
 			end,
@@ -417,6 +420,7 @@ local TeutonEvents = {
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
+						GrandStrategyDialog("The Razing of Opitergium", "Opitergium became naught but ashes.")
 					end
 				end
 			end

@@ -927,41 +927,19 @@ function AttackProvince(province, faction)
 	end
 
 	if ((Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles) then -- show a battle report if the player was involved in the battle, and has automatic battles activated
-		local menu = WarGrandStrategyGameMenu(panel(1))
-		menu:setDrawMenusUnder(true)
-
-		menu:addLabel("Battle in " .. GetProvinceName(AttackedProvince), 128, 11)
-
-		local l = MultiLineLabel()
-		l:setFont(Fonts["game"])
-		l:setSize(228, 128)
-		l:setLineWidth(228)
-		menu:add(l, 14, 35)
 		if (Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
-			l:setCaption("My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!")
+			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!")
 		elseif (Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
-			l:setCaption("My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!")
+			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!")
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			l:setCaption("My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!")
+			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!")
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			l:setCaption("My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(Defender) .. "!")
+			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(Defender) .. "!")
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province) then
-			l:setCaption("My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " wildlands has failed!")
+			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " wildlands has failed!")
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
-			l:setCaption("My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!")
+			GrandStrategyDialog("Battle in " .. GetProvinceName(AttackedProvince), "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!")
 		end
-		menu:addFullButton("~!OK!", "o", 16, 248 - (36 * 0),
-			function()
-				menu:stop()
-			end
-		)
-		menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the battle dialog
-			function()
-				menu:stop()
-			end,
-			{0, 0}
-		)
-		menu:run()
 	end
 	
 	Attacker = ""
@@ -4884,4 +4862,30 @@ function ChangeProvinceOwner(province, faction) -- used to change the owner and 
 		province.Owner = ""
 		SetProvinceOwner(province.Name, "", "")
 	end
+end
+
+function GrandStrategyDialog(title, message)
+	local menu = WarGrandStrategyGameMenu(panel(1))
+	menu:setDrawMenusUnder(true)
+
+	menu:addLabel(title, 128, 11)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(228, 256)
+	l:setLineWidth(228)
+	menu:add(l, 14, 35)
+	l:setCaption(message)
+	menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
+		function()
+			menu:stop()
+		end
+	)
+	menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the battle dialog
+		function()
+			menu:stop()
+		end,
+		{0, 0}
+	)
+	menu:run()
 end

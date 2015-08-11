@@ -69,6 +69,10 @@ local GermanicEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "Vana Tribe") then
 					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
+					
+					if (GrandStrategyFaction.Name == "Asa Tribe") then
+						GrandStrategyDialog("On the Vanaquisl", "We have managed to raid the Vana, but failed to take their lands.")
+					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name == "Vana Tribe") then
 					GrandStrategyEvent(Factions.VanaTribe, GrandStrategyEvents.AsaRaid)
 				end
@@ -105,6 +109,9 @@ local GermanicEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Vana Tribe" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 					ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
+					if (GrandStrategyFaction.Name == "Vana Tribe") then
+						GrandStrategyDialog("On the Vanaquisl", "The Asa raided our main settlement, but we managed to push them out of Vanaland!")
+					end
 				end
 			end
 		}
@@ -177,6 +184,7 @@ local GermanicEvents = {
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
+						GrandStrategyDialog("Westward Migration", "After passing through dangerous locales, we have arrived in a new area!")
 					end
 				end
 			end,
@@ -254,6 +262,7 @@ local GermanicEvents = {
 					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
+						GrandStrategyDialog("Northwards to the Sea", "The natives were no match for us. The peninsula is ours!")
 					end
 
 				end
@@ -332,6 +341,7 @@ local GermanicEvents = {
 					AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
 					if (GrandStrategyFaction.Name == "Swede Tribe") then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
+						GrandStrategyDialog("Gylve's Realm", "Gylve has been defeated, and has swore an oath of fealty to us. After entrusting lordship over him to one of our chieftains, we have moved north... We came upon a lake, with fair fields spread around it. We founded a hall by the lake, Sigtun, from which we shall rule for untold generations!")
 					end
 				end
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
