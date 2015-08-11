@@ -71,7 +71,7 @@ local GermanicEvents = {
 					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 					
 					if (GrandStrategyFaction.Name == "Asa Tribe") then
-						GrandStrategyDialog("On the Vanaquisl", "We have managed to raid the Vana, but failed to take their lands.")
+						GrandStrategyDialog("On the Vanaquisl", "We have managed to raid the Vana's main settlement, but were later pushed back by their warriors, forcing us to agree to a peace.")
 					end
 				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "Asa Tribe" and GrandStrategyFaction.Name == "Vana Tribe") then
 					GrandStrategyEvent(Factions.VanaTribe, GrandStrategyEvents.AsaRaid)
@@ -110,7 +110,7 @@ local GermanicEvents = {
 					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 					ChangeFactionResource("celt", "Vana Tribe", "gold", -1000)
 					if (GrandStrategyFaction.Name == "Vana Tribe") then
-						GrandStrategyDialog("On the Vanaquisl", "The Asa raided our main settlement, but we managed to push them out of Vanaland!")
+						GrandStrategyDialog("On the Vanaquisl", "The Asa raided our main settlement, but we managed to push them out of Vanaland, forcing them to agree to a peace.")
 					end
 				end
 			end

@@ -5,6 +5,7 @@
 mods/
 wyr/
 crash.dmp
+SDL.dll
 stderr.txt
 stdout.txt
 wyrmsun.exe

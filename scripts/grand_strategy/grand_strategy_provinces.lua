@@ -2154,6 +2154,9 @@ function LoadProvinces(world)
 			CulturalNames = {
 				dwarf = "Shorbear Hills"
 			},
+			CulturalSettlementNames = {
+				dwarf = "Shorbear Hold"
+			},
 			SettlementLocation = {33, 15},
 			Map = "maps/nidavellir/shorbear-hills.smp",
 			Units = {
