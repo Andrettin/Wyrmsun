@@ -1082,7 +1082,9 @@ function OpenEncyclopediaFactionEntry(faction_key)
 end
 
 function GetCivilizationBackground(civilization)
-	if (civilization == "dwarf") then
+	if (civilization == "basque") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "dwarf") then
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "elf") then
 		return "ui/backgrounds/gryphon.png"
@@ -1099,6 +1101,8 @@ function GetCivilizationBackground(civilization)
 	elseif (civilization == "kobold") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "latin") then
+		return "ui/backgrounds/gryphon.png"
+	elseif (civilization == "minoan") then
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "norse") then
 		return "ui/backgrounds/wyrm.png"

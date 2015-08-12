@@ -301,19 +301,26 @@ function LoadFactions(world)
 			Civilization = "latin",
 			Title = "Principality"
 		},
+		-- Minoan Tribes
+		MinoanTribe = {
+			Name = "Minoan Tribe",
+			Civilization = "minoan"
+		},
+		-- Minoan Polities
+		Crete = {
+			Name = "Crete",
+			Civilization = "minoan",
+			Title = "Kingdom"
+		},
 		-- Non-Playable Tribes
 		GylfingTribe = {
 			Name = "Gylfing Tribe",
-			Civilization = "germanic",
+			Civilization = "basque",
 			Gold = 5000,
 			Commodities = {
 				Lumber = 2500, -- half of the gold value
 				Stone = 2500 -- half of the gold value
 			}
-		},
-		MinoanTribe = {
-			Name = "Minoan Tribe",
-			Civilization = "greek"
 		},
 		VanaTribe = {
 			Name = "Vana Tribe",
@@ -325,11 +332,6 @@ function LoadFactions(world)
 			}
 		},
 		-- Non-Playable Polities
-		Crete = {
-			Name = "Crete",
-			Civilization = "greek",
-			Title = "Kingdom"
-		},
 		Crimea = {
 			Name = "Crimea",
 			Civilization = "teuton",

@@ -4639,7 +4639,7 @@ function GrandStrategyGameSave(name)
 	for key, value in pairs(GrandStrategyEvents) do
 		table.insert(wyr[name].SavedGrandStrategyEvents, key)
 	end
-	local civilizations = {"germanic", "teuton", "celt", "dwarf", "goblin", "goth", "norse", "kobold", "gnome", "latin", "greek"}
+	local civilizations = {"germanic", "teuton", "celt", "dwarf", "goblin", "goth", "norse", "kobold", "gnome", "latin", "greek", "basque", "minoan"}
 	for key, value in pairs(wyr[name].SavedWorldMapProvinces) do
 		wyr[name].SavedWorldMapProvinces[key].CulturalNames = {}
 		for i=1,table.getn(civilizations) do

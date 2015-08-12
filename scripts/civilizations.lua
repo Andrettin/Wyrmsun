@@ -314,6 +314,14 @@ DefineRaceNames(
 		},
 	},
 	"race", {
+		"name", "basque", -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
+		"display", "Basque",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "goth",
 		"display", "Goth",
 		"visible",
@@ -505,6 +513,14 @@ DefineRaceNames(
 		},
 	},
 	"race", {
+		"name", "minoan",
+		"display", "Minoan",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "norse",
 		"display", "Norse",
 		"visible",
@@ -519,6 +535,15 @@ DefineRaceNames(
 )
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
+
+DefineCivilizationFactions("basque",
+	"faction", {
+		"name", "Gylfing Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
+		"type", "tribe",
+		"color", "green",
+		"secondary_color", "teal"
+	}
+)
 
 DefineCivilizationFactions("celt",
 	"faction", {
@@ -761,14 +786,6 @@ DefineCivilizationFactions("germanic",
 		"color", "pink",
 		"secondary_color", "pink",
 		"playable", false
-	},
-	-- Non-Playable Tribes
-	"faction", {
-		"name", "Gylfing Tribe",
-		"type", "tribe",
-		"color", "green",
-		"secondary_color", "teal",
-		"playable", false
 	}
 )
 
@@ -878,23 +895,7 @@ DefineCivilizationFactions("greek",
 		"color", "brown",
 		"secondary_color", "brown"
 	},
-	-- Non-Playable Tribes
-	"faction", {
-		"name", "Minoan Tribe",
-		"type", "tribe",
-		"color", "yellow",
-		"secondary_color", "yellow",
-		"develops-to", {"Crete"},
-		"playable", false
-	},
 	-- Non-Playable Polities
-	"faction", {
-		"name", "Crete", -- Minoans
-		"type", "polity",
-		"color", "yellow",
-		"secondary_color", "yellow",
-		"playable", false
-	},
 	"faction", {
 		"name", "Persia",
 		"type", "polity",
@@ -961,6 +962,22 @@ DefineCivilizationFactions("latin",
 		"type", "polity",
 		"color", "brown",
 		"secondary_color", "brown"
+	}
+)
+
+DefineCivilizationFactions("minoan",
+	"faction", {
+		"name", "Minoan Tribe",
+		"type", "tribe",
+		"color", "yellow",
+		"secondary_color", "yellow",
+		"develops-to", {"Crete"}
+	},
+	"faction", {
+		"name", "Crete", -- Minoans
+		"type", "polity",
+		"color", "yellow",
+		"secondary_color", "yellow"
 	}
 )
 
