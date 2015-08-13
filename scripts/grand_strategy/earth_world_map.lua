@@ -3068,7 +3068,7 @@ WorldMapResources = {
 --		{136, 30, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{136, 31, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{134, 27, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
-		{152, 31, true}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
+--		{152, 31, true}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77. (should be in Stavropol rather than Astrakhan)
 --		{159, 27, false} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
 
 		{454, 133, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.

@@ -142,6 +142,7 @@ b_o:
 /sounds/goblin/glider/glider-flying.wav
 /sounds/goblin/glider/glider-ready.wav
 /sounds/goblin/impaler/goblin-impaler-ready.wav
+/sounds/goblin/shaman/gobchant.wav
 /sounds/goblin/shaman/goblin-shaman-ready.wav
 /sounds/goblin/worker/built.wav
 /sounds/goblin/worker/goblin-worker-ready-1.wav
