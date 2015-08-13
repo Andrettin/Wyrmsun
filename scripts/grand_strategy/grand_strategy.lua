@@ -87,6 +87,7 @@ function RunGrandStrategyGameSetupMenu()
 			CleanGrandStrategyGame()
 			InitializeGrandStrategyGame()
 			GrandStrategy = true
+			GrandStrategyGamePaused = false
 			GameResult = GameNoResult
 			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
 			if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
@@ -1625,6 +1626,7 @@ function RunGrandStrategyLoadGameMenu()
 			InitializeGrandStrategyGame()
 			
 			GrandStrategy = true
+			GrandStrategyGamePaused = false
 			GameResult = GameNoResult
 			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
