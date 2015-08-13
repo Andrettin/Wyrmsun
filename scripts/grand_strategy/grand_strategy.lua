@@ -1471,6 +1471,7 @@ function FactionHasCulture(faction, civilization)
 end
 
 function RunGrandStrategyGameMenu()
+	GrandStrategyGamePaused = true
 	local menu = WarGameMenu(panel(1))
 
 	menu:addLabel("Game Menu", 128, 11)
@@ -1496,6 +1497,7 @@ function RunGrandStrategyGameMenu()
 	menu:addFullButton("Return to Game (~<Esc~>)", "escape", 16, 288 - 40,
 		function()
 			menu:stop()
+			GrandStrategyGamePaused = false
 			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
@@ -1545,6 +1547,7 @@ function RunGrandStrategyQuitToMenuConfirmMenu()
 end
 
 function RunGrandStrategySaveMenu()
+	GrandStrategyGamePaused = true
 	local menu = WarGameMenu(panel(3))
 	menu:resize(384, 256)
 
@@ -1589,12 +1592,14 @@ function RunGrandStrategySaveMenu()
 			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
+			GrandStrategyGamePaused = false
 		end)
 
 	menu:run(false)
 end
 
 function RunGrandStrategyLoadGameMenu()
+	GrandStrategyGamePaused = true
 	local menu = WarGameMenu(panel(3))
 	menu:resize(384, 256)
 	menu:setDrawMenusUnder(true)
@@ -1722,6 +1727,7 @@ function RunGrandStrategyLoadGameMenu()
 			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop();
 			RunGrandStrategyGame()
+			GrandStrategyGamePaused = false
 		end)
 
 	menu:run()
@@ -2298,10 +2304,6 @@ function DrawOnScreenTiles()
 end
 
 function DrawGrandStrategyResourceBar()
-	if (UIResourceBar ~= nil) then
-		GrandStrategyMenu:remove(UIResourceBar)
-	end
-
 	if (CommodityButtons ~= nil) then
 		for i=1,table.getn(CommodityButtons) do
 			if (CommodityButtons[i] ~= nil) then
@@ -2313,11 +2315,6 @@ function DrawGrandStrategyResourceBar()
 	CommodityButtons = nil
 	CommodityButtons = {}
 	
-	local ui_element = CGraphic:New(GrandStrategyFaction.Civilization .. "/ui/resource.png")
-	ui_element:Load()
-	UIResourceBar = ImageWidget(ui_element)
-	GrandStrategyMenu:add(UIResourceBar, 0, 0)
-
 	if (GrandStrategyFaction ~= nil) then
 		-- add resource quantities
 		AddGrandStrategyCommodityButton(154 + (100 * 0), 0, "gold")
@@ -2351,12 +2348,6 @@ function DrawGrandStrategyInterface()
 
 	GrandStrategyLabels = nil
 	GrandStrategyLabels = {}
-
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/filler_bottom.png", 380, Video.Height - 181)
-
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/infopanel.png", 0, Video.Height - 200)
-
-	AddUIElement(GrandStrategyFaction.Civilization .. "/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
 
 	DrawGrandStrategyResourceBar()
 	
@@ -3804,11 +3795,6 @@ function ClearGrandStrategyUIVariables()
 	end
 	OnScreenSites = nil
 	
-	if (UIResourceBar ~= nil) then
-		GrandStrategyMenu:remove(UIResourceBar)
-	end
-	UIResourceBar = nil
-
 	if (UIElements ~= nil) then
 		for i=1,table.getn(UIElements) do
 			if (UIElements[i] ~= nil) then
@@ -4240,6 +4226,7 @@ end
 function GrandStrategyEvent(faction, event)
 	EventFaction = faction
 	if (faction == GrandStrategyFaction) then
+		GrandStrategyGamePaused = true
 		local menu = WarGrandStrategyGameMenu(panel(5))
 		menu:resize(352, 352)
 		menu:setDrawMenusUnder(true)
@@ -4316,6 +4303,7 @@ function GrandStrategyEvent(faction, event)
 						menu:stop()
 						event.OptionEffects[i]()
 						GameResult = GameNoResult -- this is because many events start scenarios
+						GrandStrategyGamePaused = false
 					end
 				)
 				if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
@@ -4330,6 +4318,7 @@ function GrandStrategyEvent(faction, event)
 					menu:stop()
 					event.OptionEffects[1]()
 					GameResult = GameNoResult -- this is because many events start scenarios
+					GrandStrategyGamePaused = false
 				end,
 				{0, 0}
 			)
@@ -4846,6 +4835,7 @@ function ChangeProvinceOwner(province, faction) -- used to change the owner and 
 end
 
 function GrandStrategyDialog(title, message)
+	GrandStrategyGamePaused = true
 	local menu = WarGrandStrategyGameMenu(panel(1))
 	menu:setDrawMenusUnder(true)
 
@@ -4859,11 +4849,13 @@ function GrandStrategyDialog(title, message)
 	l:setCaption(message)
 	menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
 		function()
+			GrandStrategyGamePaused = false
 			menu:stop()
 		end
 	)
 	menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the battle dialog
 		function()
+			GrandStrategyGamePaused = false
 			menu:stop()
 		end,
 		{0, 0}

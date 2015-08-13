@@ -42,7 +42,10 @@ function chapter_compare( a, b )
 end
 
 function RunEncyclopediaMenu()
-
+	if (GrandStrategy) then
+		GrandStrategyGamePaused = true
+	end
+	
 	Load("scripts/game_concepts.lua")
 	Load("scripts/texts.lua")
 	Load("scripts/worlds.lua")
@@ -93,7 +96,17 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() Texts = nil; Worlds = nil; CivilizationsEncyclopedia = nil; FactionsEncyclopedia = nil; menu:stop(); end)
+		function()
+			Texts = nil;
+			Worlds = nil;
+			CivilizationsEncyclopedia = nil;
+			FactionsEncyclopedia = nil;
+			menu:stop();
+			if (GrandStrategy) then
+				GrandStrategyGamePaused = false
+			end
+		end
+	)
 
 	menu:run()
 end
