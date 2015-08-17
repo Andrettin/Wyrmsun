@@ -3288,21 +3288,21 @@ function AIDoTurn(ai_faction)
 	SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", 0)
 	-- do trade
 	if (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
-		ChangeFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", - (800 - GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber")))
+		SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", - (800 - GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber")))
 	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "lumber") > 0) then -- if the AI has a regular lumber income, there's no need to keep a large quantity of it stored
-		ChangeFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") - 800 * 2))
+		SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") - 800 * 2))
 	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") > 800 * 4) then -- if the AI doesn't have a regular lumber income, then only sell if more lumber is stored
-		ChangeFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") - 800 * 4))
+		SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "lumber", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "lumber") - 800 * 4))
 	end
 
 	SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", 0)
 	-- do trade
 	if (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") < 800) then -- 800 is the most a unit/building/technology costs in terms of lumber, so if lumber stored is lower than this quantity, bid for the difference
-		ChangeFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", - (800 - GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone")))
+		SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", - (800 - GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone")))
 	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") > 800 * 2 and GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "stone") > 0) then -- if the AI has a regular stone income, there's no need to keep a large quantity of it stored
-		ChangeFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") - 800 * 2))
+		SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") - 800 * 2))
 	elseif (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") > 800 * 4) then -- if the AI doesn't have a regular stone income, then only sell if more stone is stored
-		ChangeFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") - 800 * 4))
+		SetFactionCommodityTrade(ai_faction.Civilization, ai_faction.Name, "stone", (GetFactionResource(ai_faction.Civilization, ai_faction.Name, "stone") - 800 * 4))
 	end
 end
 
