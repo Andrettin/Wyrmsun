@@ -199,6 +199,9 @@ DefineDefaultResourceAmounts(
 
 DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
+SetResourceBasePrice("lumber", 100)
+SetResourceBasePrice("stone", 100)
+
 function GetResourceID(resource)
 	local resource_types = {"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper"}
 	for i=1,table.getn(resource_types) do
