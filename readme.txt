@@ -204,6 +204,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - The minimap no longer stops functioning if toggling full screen while playing a grand strategy game.
+- Building lumber mills in a province now increases that province's lumber demand.
 
 -----------------------------------------------------------------------
 - 1.3.3
