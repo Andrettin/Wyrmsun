@@ -205,6 +205,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - The minimap no longer stops functioning if toggling full screen while playing a grand strategy game.
 - Building lumber mills in a province now increases that province's lumber demand.
+- The administrative efficiency of a province can now be seen in the town hall's interface (administrative efficiency affects production and research; it is by default 100%, but there is a 25% penalty to it if the province is of a different culture than its owner).
 
 -----------------------------------------------------------------------
 - 1.3.3

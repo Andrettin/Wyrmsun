@@ -101,7 +101,7 @@ function RunGrandStrategyGameSetupMenu()
 			
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
-			InterfaceState = "Province"
+			GrandStrategyInterfaceState = "Province"
 			GrandStrategyMapWidthIndent = 0
 			GrandStrategyMapHeightIndent = 0
 			CalculateTileProvinces()
@@ -678,7 +678,7 @@ function AttackProvince(province, faction)
 		if (IsMilitaryUnit(unitName)) then
 			if (GrandStrategyFaction.Name == Attacker) then
 				units_lost[string.gsub(unitName, "-", "_")] = GetProvinceAttackingUnitQuantity(province.Name, unitName)
-			elseif (GrandStrategyFaction.Defender == Attacker) then
+			elseif (GrandStrategyFaction.Name == Defender) then
 				units_lost[string.gsub(unitName, "-", "_")] = GetProvinceUnitQuantity(province.Name, unitName)
 			end
 		end
@@ -799,11 +799,11 @@ function AttackProvince(province, faction)
 			end
 		end
 	end
-	
+
 	if (victorious_player == Attacker) then
 		AcquireProvince(province, victorious_player)
 		if (GrandStrategyFaction ~= nil and Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
-			InterfaceState = "Province"
+			GrandStrategyInterfaceState = "Province"
 		end
 		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", attacker_prestige + 5) -- plus five for acquiring the territory
 		if (empty_province == false) then
@@ -811,7 +811,7 @@ function AttackProvince(province, faction)
 		end
 	else
 		if (GrandStrategyFaction ~= nil and Defender == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a lost province that is selected will have the interface state switched from province to diplomacy)
-			InterfaceState = "Diplomacy"
+			GrandStrategyInterfaceState = "Diplomacy"
 		end
 		if (empty_province == false) then
 			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", defender_prestige)
@@ -1446,6 +1446,7 @@ function RunGrandStrategySaveMenu()
 			-- replace invalid chars with underscore
 			local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|", " "}
 			table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
+			GrandStrategyGamePaused = false
 
 			GrandStrategyGameSave(name)
     		menu:stop()
@@ -2244,7 +2245,7 @@ function DrawGrandStrategyInterface()
 
 		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting
 		if (GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name) then
-			if (InterfaceState == "Province") then
+			if (GrandStrategyInterfaceState == "Province") then
 				local item_x = 0
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
@@ -2372,7 +2373,7 @@ function DrawGrandStrategyInterface()
 						if (SelectedProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
 							-- add a button to show the heroes in the province (but only if there is actually a hero there)
 							local b = AddGrandStrategyImageButton("Show ~!Heroes", "h", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-								InterfaceState = "Heroes"
+								GrandStrategyInterfaceState = "Heroes"
 								DrawGrandStrategyInterface()
 							end)
 							b:setBaseColor(Color(0,0,0,0))
@@ -2390,16 +2391,15 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				end
-			elseif (InterfaceState == "town-hall" or InterfaceState == "stronghold") then
+			elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-town-hall"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_y = -2
 
-				AddGrandStrategyLabel("Province Culture: " .. CapitalizeString(SelectedProvince.Civilization), UI.InfoPanel.X + 27, UI.InfoPanel.Y + 180 + (item_y * 47), Fonts["game"], true, true)
 				item_y = item_y + 1
 
 				item_y = 0
@@ -2468,7 +2468,7 @@ function DrawGrandStrategyInterface()
 				
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-					InterfaceState = "Province"
+					GrandStrategyInterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2482,11 +2482,11 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "barracks") then
+			elseif (GrandStrategyInterfaceState == "barracks") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-barracks"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				-- add units buttons for training
@@ -2504,7 +2504,7 @@ function DrawGrandStrategyInterface()
 							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 						end
 
-						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
+						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
@@ -2595,7 +2595,7 @@ function DrawGrandStrategyInterface()
 
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-					InterfaceState = "Province"
+					GrandStrategyInterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2609,18 +2609,18 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "lumber-mill") then
+			elseif (GrandStrategyInterfaceState == "lumber-mill") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (string.find(unitName, "upgrade-") ~= nil) then
-						if (GetUnitTypeInterfaceState(unitName) == InterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
+						if (GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
@@ -2637,7 +2637,7 @@ function DrawGrandStrategyInterface()
 
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-					InterfaceState = "Province"
+					GrandStrategyInterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2651,18 +2651,18 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "smithy") then
+			elseif (GrandStrategyInterfaceState == "smithy") then
 				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(InterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (string.find(unitName, "upgrade-") ~= nil) then
-						if (GetUnitTypeInterfaceState(unitName) == InterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
+						if (GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
@@ -2679,7 +2679,7 @@ function DrawGrandStrategyInterface()
 
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-					InterfaceState = "Province"
+					GrandStrategyInterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2693,7 +2693,7 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "mercenary-camp") then
+			elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				-- add units buttons for hiring generic mercenaries
@@ -2711,7 +2711,7 @@ function DrawGrandStrategyInterface()
 							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 						end
 
-						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == InterfaceState) then
+						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
@@ -2820,7 +2820,7 @@ function DrawGrandStrategyInterface()
 
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-					InterfaceState = "Province"
+					GrandStrategyInterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2834,7 +2834,7 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (InterfaceState == "Heroes") then
+			elseif (GrandStrategyInterfaceState == "Heroes") then
 				AddGrandStrategyLabel("Heroes", UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				local item_x = 0
@@ -2858,7 +2858,7 @@ function DrawGrandStrategyInterface()
 				
 				-- add a button to go back to the main province interface
 				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
-					InterfaceState = "Province"
+					GrandStrategyInterfaceState = "Province"
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2873,7 +2873,7 @@ function DrawGrandStrategyInterface()
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			end
-		elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
+		elseif (SelectedProvince.Owner ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
 			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "War") then
 				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
@@ -2955,27 +2955,27 @@ function DrawGrandStrategyInterface()
 	if (wyr.preferences.ShowTips) then
 		if (SelectedProvince ~= nil) then
 			if (GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name) then
-				if (InterfaceState == "Province") then
+				if (GrandStrategyInterfaceState == "Province") then
 					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected. Use the arrows to select or deselect units.")
-				elseif (InterfaceState == "town-hall" or InterfaceState == "stronghold") then
+				elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
 					Tip("Town Hall Interface", "A province's culture determines what is available in it. A province that has a different culture than your faction will suffer a penalty to economic efficiency. The number beside each commodity icon represents its price in gold, while the one between the arrows represents its quantity currently bid or offered by your faction - use the arrows to change it.")
-				elseif (InterfaceState == "barracks") then
+				elseif (GrandStrategyInterfaceState == "barracks") then
 					Tip("Barracks Interface", "Here you can recruit new units. The number on each unit icon represents how many units of that type are present in the province, while the number between the arrows represents how many are currently being trained. Use the arrows to change the quantity of units being trained.")
-				elseif (InterfaceState == "lumber-mill") then
+				elseif (GrandStrategyInterfaceState == "lumber-mill") then
 					Tip("Lumber Mill Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn. The presence of a lumber mill in a province increases its lumber output by 25%.")
-				elseif (InterfaceState == "smithy") then
+				elseif (GrandStrategyInterfaceState == "smithy") then
 					Tip("Smithy Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn.")
-				elseif (InterfaceState == "mercenary-camp") then
+				elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 					Tip("Mercenary Camp Interface", "Here you can recruit thief units as you would normal units, as well as hire unique mercenary squads.")
 				end
-			elseif (SelectedProvince.Owner ~= "" and InterfaceState == "Diplomacy") then
+			elseif (SelectedProvince.Owner ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
 				Tip("Diplomacy Interface", "This is a foreign province. Here you can declare war against this province's owner, or offer peace if you are currently at war.")
 			end
 		end				
 	end
 end
 
-function SetSelectedProvince(province)
+function SetSelectedProvinceLua(province)
 	if (province ~= SelectedProvince) then
 
 		-- if the player has units selected and then selects an attackable province, set those units to attack the province
@@ -3031,12 +3031,13 @@ function SetSelectedProvince(province)
 
 		if (GrandStrategyFaction ~= nil) then
 			if (province ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.Owner ~= GrandStrategyFaction.Name) then -- if is owned by a foreign faction, use diplomacy interface, if is a self owned province or an empty one, use the normal province interface
-				InterfaceState = "Diplomacy"
+				GrandStrategyInterfaceState = "Diplomacy"
 			else
-				InterfaceState = "Province"
+				GrandStrategyInterfaceState = "Province"
 			end
 		end
 		SelectedProvince = province
+		SetSelectedProvince(province.Name)
 		SelectedUnits = nil
 		SelectedUnits = {}
 		SelectedHero = ""
@@ -3531,7 +3532,7 @@ function CancelHireMercenary(province, unit_type)
 end
 
 function UseBuilding(province, unit_type)
-	InterfaceState = GetUnitTypeData(unit_type, "Class")
+	GrandStrategyInterfaceState = GetUnitTypeData(unit_type, "Class")
 end
 
 function IsTechnologyAvailable(province, unit_type)
@@ -3631,7 +3632,7 @@ function ClearGrandStrategyVariables()
 	WorldMapWaterProvinces = nil
 	SelectedUnits = nil
 	AttackedProvince = nil
-	InterfaceState = nil
+	GrandStrategyInterfaceState = ""
 	GrandStrategyCommodities = nil
 	GrandStrategyEvents = nil
 	MercenaryGroups = nil
