@@ -250,7 +250,7 @@ function LoadFactions(world)
 			Title = "City-State"
 		},
 		Macedon = {
-			Name = "Athens",
+			Name = "Macedon",
 			Civilization = "greek",
 			Title = "Kingdom"
 		},

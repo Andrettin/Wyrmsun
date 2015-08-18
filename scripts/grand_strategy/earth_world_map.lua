@@ -3209,7 +3209,7 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	WorldMapProvinces.Astrakhan.Owner = ""
 	SetProvinceSettlementBuilding(WorldMapProvinces.Astrakhan.Name, "unit-germanic-town-hall", false)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Astrakhan.Name, "unit-germanic-barracks", false)
-	SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 0)	
+	SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 0)
 	WorldMapProvinces.Don.Owner = ""
 	SetProvinceSettlementBuilding(WorldMapProvinces.Don.Name, "unit-germanic-town-hall", false)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Don.Name, "unit-germanic-barracks", false)

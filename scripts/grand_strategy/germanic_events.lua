@@ -158,6 +158,7 @@ local GermanicEvents = {
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
+						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 0)
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
@@ -169,6 +170,7 @@ local GermanicEvents = {
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
+						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles)) then
@@ -181,6 +183,7 @@ local GermanicEvents = {
 					end
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
 					ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
+					RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])

@@ -666,6 +666,10 @@ function AttackProvince(province, faction)
 		Defender = GetProvinceName(province)
 		empty_province = true
 	end
+	local revolt = false
+	if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0) then -- if the attacker doesn't own any provinces, then this must be a revolt
+		revolt = true
+	end
 	AttackedProvince = province
 	
 	local victorious_player = ""
@@ -799,6 +803,12 @@ function AttackProvince(province, faction)
 			end
 		end
 	end
+	
+	if (revolt) then
+		GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] = "War"
+		GetFactionFromName(Defender).Diplomacy[GetFactionKeyFromName(Attacker)] = "War"
+		AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
+	end
 
 	if (victorious_player == Attacker) then
 		AcquireProvince(province, victorious_player)
@@ -836,10 +846,13 @@ function AttackProvince(province, faction)
 
 	if ((Attacker == GrandStrategyFaction.Name or Defender == GrandStrategyFaction.Name) and wyr.preferences.AutomaticBattles) then -- show a battle report if the player was involved in the battle, and has automatic battles activated
 		local battle_report_title = "Battle in " .. GetProvinceName(AttackedProvince)
+		if (revolt) then
+			battle_report_title = "Revolt in " .. GetProvinceName(AttackedProvince)
+		end
 		local battle_report_message = ""
-		if (Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
+		if (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
 			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
+		elseif (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
 			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
 			battle_report_message = "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!"
@@ -849,6 +862,10 @@ function AttackProvince(province, faction)
 			battle_report_message = "My lord, our attempt to conquer the wildlands of " .. GetProvinceName(AttackedProvince) .. " has failed!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
 			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!"
+		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
+			battle_report_message = "My lord, a failed revolt to declare the independence of the " .. GetFactionFullName(Attacker) .. " has occurred in " .. GetProvinceName(AttackedProvince) .. "!"
+		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
+			battle_report_message = "My lord, the province of " .. GetProvinceName(AttackedProvince) .. " has risen in rebellion, resulting in the declaration of independence of the " .. GetFactionFullName(Attacker) .. "!"
 		end
 		battle_report_message = battle_report_message .. "\n\nUnits Lost: " .. units_lost_string
 		GrandStrategyDialog(battle_report_title, battle_report_message)
@@ -4232,6 +4249,9 @@ function FormFaction(old_faction, new_faction)
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].Owner == old_faction.Name) then
 			AcquireProvince(WorldMapProvinces[key], new_faction.Name)
+			if (ProvinceHasClaim(WorldMapProvinces[key].Name, old_faction.Civilization, old_faction.Name)) then
+				AddProvinceClaim(WorldMapProvinces[key].Name, new_faction.Civilization, new_faction.Name)
+			end
 		end
 	end
 	
