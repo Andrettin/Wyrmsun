@@ -598,6 +598,7 @@ function EndTurn()
 	if (GrandStrategyFaction ~= nil) then
 		for key, value in pairs(Factions) do
 			if (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Accepted") then
+				GrandStrategyGamePaused = true
 				local menu = WarGrandStrategyGameMenu(panel(1))
 				menu:setDrawMenusUnder(true)
 
@@ -613,11 +614,13 @@ function EndTurn()
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
 						GrandStrategyFaction.Diplomacy[key] = "Peace"
+						GrandStrategyGamePaused = false
 						menu:stop()
 					end)
 
 				menu:run()
 			elseif (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Rejected") then
+				GrandStrategyGamePaused = true
 				local menu = WarGrandStrategyGameMenu(panel(1))
 				menu:setDrawMenusUnder(true)
 
@@ -633,6 +636,7 @@ function EndTurn()
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
 						GrandStrategyFaction.Diplomacy[key] = "War"
+						GrandStrategyGamePaused = false
 						menu:stop()
 					end)
 
@@ -3835,6 +3839,7 @@ function DeclareWar(faction_from, faction_to)
 	end
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
+		GrandStrategyGamePaused = true
 		local menu = WarGrandStrategyGameMenu(panel(1))
 		menu:setDrawMenusUnder(true)
 
@@ -3849,6 +3854,7 @@ function DeclareWar(faction_from, faction_to)
 
 		menu:addFullButton("~!OK", "o", 16, 248,
 			function()
+				GrandStrategyGamePaused = false
 				menu:stop()
 			end)
 
@@ -3863,6 +3869,7 @@ function OfferPeace(faction_from, faction_to)
 	end
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
+		GrandStrategyGamePaused = true
 		local menu = WarGrandStrategyGameMenu(panel(1))
 		menu:setDrawMenusUnder(true)
 
@@ -3878,11 +3885,13 @@ function OfferPeace(faction_from, faction_to)
 		menu:addFullButton("~!Accept", "a", 16, 248 - (36 * 1),
 			function()
 				RespondPeaceOffer(faction_from, faction_to, true)
+				GrandStrategyGamePaused = false
 				menu:stop()
 			end)
 		menu:addFullButton("~!Reject", "r", 16, 248 - (36 * 0),
 			function()
 				RespondPeaceOffer(faction_from, faction_to, false)
+				GrandStrategyGamePaused = false
 				menu:stop()
 			end)
 
@@ -4608,6 +4617,7 @@ function DoProspection()
 				if (SyncRand(100) < 1) then -- 1% chance of discovery per turn
 					resource_found = true
 					if (GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Owner == GrandStrategyFaction.Name) then
+						GrandStrategyGamePaused = true
 						local menu = WarGrandStrategyGameMenu(panel(1))
 						menu:setDrawMenusUnder(true)
 
@@ -4626,6 +4636,7 @@ function DoProspection()
 								if (wyr.preferences.ShowTips) then
 									Tip("Gold Discovery in Province", "Congratulations! You have found gold in one of your provinces. Each gold mine provides you with 200 gold per turn, if a town hall is built in its province.")
 								end
+								GrandStrategyGamePaused = false
 								menu:stop()
 							end
 						)

@@ -620,7 +620,10 @@ function Tip(tip_name, tip_description)
 
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
+	elseif (GrandStrategy) then
+		GrandStrategyGamePaused = true
 	end
+	
 	local menu
 	
 	if (GrandStrategy == false) then
@@ -649,6 +652,8 @@ function Tip(tip_name, tip_description)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
+			elseif (GrandStrategy) then
+				GrandStrategyGamePaused = false
 			end
 			menu:stop()
 		end
@@ -658,6 +663,8 @@ function Tip(tip_name, tip_description)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
+			elseif (GrandStrategy) then
+				GrandStrategyGamePaused = false
 			end
 			menu:stop()
 		end,
