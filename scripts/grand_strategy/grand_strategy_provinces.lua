@@ -692,6 +692,9 @@ function LoadProvinces(world)
 			Name = "Latium",
 			Tiles = { {129, 33}, {129, 34} },
 			SettlementName = "Rome",
+			CulturalNames = {
+				latin = "Latium"
+			},
 			CulturalSettlementNames = {
 				latin = "Roma"
 			},

@@ -667,7 +667,7 @@ function AttackProvince(province, faction)
 		empty_province = true
 	end
 	local revolt = false
-	if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0) then -- if the attacker doesn't own any provinces, then this must be a revolt
+	if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] == "Peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
 		revolt = true
 	end
 	AttackedProvince = province
@@ -804,12 +804,6 @@ function AttackProvince(province, faction)
 		end
 	end
 	
-	if (revolt) then
-		GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] = "War"
-		GetFactionFromName(Defender).Diplomacy[GetFactionKeyFromName(Attacker)] = "War"
-		AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
-	end
-
 	if (victorious_player == Attacker) then
 		AcquireProvince(province, victorious_player)
 		if (GrandStrategyFaction ~= nil and Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
@@ -818,6 +812,11 @@ function AttackProvince(province, faction)
 		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", attacker_prestige + 5) -- plus five for acquiring the territory
 		if (empty_province == false) then
 			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", - attacker_prestige - 5) -- minus five for losing the territory
+		end
+		if (revolt) then
+			GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] = "War"
+			GetFactionFromName(Defender).Diplomacy[GetFactionKeyFromName(Attacker)] = "War"
+			AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
 		end
 	else
 		if (GrandStrategyFaction ~= nil and Defender == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a lost province that is selected will have the interface state switched from province to diplomacy)

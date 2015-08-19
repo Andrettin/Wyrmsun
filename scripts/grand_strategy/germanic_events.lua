@@ -305,6 +305,7 @@ local GermanicEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 						SetProvinceCivilization("Gotaland", "germanic")
+						WorldMapProvinces.Gotaland.Civilization = "germanic"
 						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 						
 						FormFaction(EventFaction, Factions.SwedeTribe)
@@ -330,6 +331,7 @@ local GermanicEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 					SetProvinceCivilization("Gotaland", "germanic")
+					WorldMapProvinces.Gotaland.Civilization = "germanic"
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 					FormFaction(EventFaction, Factions.SwedeTribe)
 					for i, unitName in ipairs(Units) do
@@ -359,6 +361,7 @@ local GermanicEvents = {
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 				SetProvinceCivilization("Gotaland", "germanic")
+				WorldMapProvinces.Gotaland.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
 				for i, unitName in ipairs(Units) do
