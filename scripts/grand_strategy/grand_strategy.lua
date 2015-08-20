@@ -1307,6 +1307,21 @@ function FactionHasSecondaryBorderWith(faction, faction_to)
 	return false
 end
 
+function FactionHasSecondaryBorderThroughWaterWith(faction, faction_to)
+	for province_i, key in ipairs(faction.OwnedProvinces) do
+		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
+			if (WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
+				for j=1,table.getn(WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
+					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Owner == faction_to.Name) then
+						return true
+					end
+				end
+			end
+		end
+	end
+	return false
+end
+
 function ProvinceHasBorderWith(province, province_to)
 	return ProvinceBordersProvince(province.Name, province_to.Name)
 end
@@ -1322,6 +1337,20 @@ function ProvinceHasSecondaryBorderThroughWaterWith(province, province_to)
 		end
 	end
 	return false
+end
+
+function GetProvinceSecondaryBorderProvincesThroughWater(province)
+	local secondary_border_provinces_through_water = {}
+	for i=1,table.getn(province.BorderProvinces) do
+		if (WorldMapWaterProvinces[province.BorderProvinces[i]] ~= nil) then
+			for j=1,table.getn(WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces) do
+				if (GetArrayIncludes(province.BorderProvinces, WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]) == false) then
+					table.insert(secondary_border_provinces_through_water, WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j])
+				end
+			end
+		end
+	end
+	return secondary_border_provinces_through_water
 end
 
 function ProvinceBordersCulture(province, civilization)
@@ -3201,7 +3230,56 @@ function AIDoTurn(ai_faction)
 				end
 			end
 		end
-
+		
+		local secondary_border_provinces_through_water = GetProvinceSecondaryBorderProvincesThroughWater(WorldMapProvinces[key])
+		for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
+			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
+				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
+					if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
+						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
+					end
+					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+							local province_threatened = false
+							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
+								if (WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
+									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
+										province_threatened = true
+									end
+								end
+							end
+							if (province_threatened == false) then
+								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
+								for i, unitName in ipairs(Units) do
+									if (IsOffensiveMilitaryUnit(unitName)) then
+										SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
+										SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
+									end
+								end
+							end
+						end
+					end
+					local new_desired_infantry_in_province = 0
+					local new_desired_archers_in_province = 0
+					local new_desired_catapults_in_province = 0
+					if (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
+						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+						new_desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+					end
+					if (new_desired_infantry_in_province > desired_infantry_in_province) then
+						desired_infantry_in_province = new_desired_infantry_in_province
+					end
+					if (new_desired_archers_in_province > desired_archers_in_province) then
+						desired_archers_in_province = new_desired_archers_in_province
+					end
+					if (new_desired_catapults_in_province > desired_catapults_in_province) then
+						desired_catapults_in_province = new_desired_catapults_in_province
+					end
+				end
+			end
+		end
+	
 		for second_i, second_key in ipairs(ai_faction.DisembarkmentProvinces) do
 			if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
 				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
@@ -3355,7 +3433,7 @@ function AIConsiderOffers(ai_faction)
 		if (ai_faction.Diplomacy[key] == "Peace Offered") then
 			if (round(GetFactionMilitaryScore(ai_faction) * 3 / 2) < GetFactionMilitaryScore(Factions[key])) then -- accept peace if enemy's forces are 50% greater than own forces
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
-			elseif (FactionHasBorderWith(ai_faction, Factions[key]) == false) then -- accept peace if has no borders with enemy any longer (since ships aren't implemented yet)
+			elseif (FactionHasBorderWith(ai_faction, Factions[key]) == false and FactionHasSecondaryBorderThroughWaterWith(ai_faction, Factions[key]) == false) then -- accept peace if has no borders with enemy any longer (since ships aren't implemented yet)
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
 			else
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, false)

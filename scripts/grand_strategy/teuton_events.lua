@@ -128,6 +128,10 @@ local TeutonEvents = {
 				and EventFaction.Diplomacy.AeduiTribe == "War"
 				and EventFaction.Diplomacy.ArverniTribe == "Peace"
 				and EventFaction.Diplomacy.SequaniTribe == "Peace"
+				and Factions.ArverniTribe.Diplomacy.AeduiTribe == "War"
+				and Factions.SequaniTribe.Diplomacy.AeduiTribe == "War"
+				and GetProvinceOwner("Burgundy") == "Sequani Tribe"
+				and GetProvinceOwner("France") == "Aedui Tribe"
 			) then
 				return true
 			else
