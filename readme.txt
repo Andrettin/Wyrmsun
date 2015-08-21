@@ -208,6 +208,7 @@ https://github.com/Andrettin/Wyrmsun
 - The administrative efficiency of a province can now be seen in the town hall's interface (administrative efficiency affects production and research; it is by default 100%, but there is a 25% penalty to it if the province is of a different culture than its owner).
 - Added the possibility of provinces revolting if they are not of the same culture as their owner, or if they have been conquered recently.
 - AI factions now attack through water, if there is only one water province separating them and an enemy province.
+- Hill graphic transitions update (by Jinn).
 
 -----------------------------------------------------------------------
 - 1.3.3
