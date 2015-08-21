@@ -538,10 +538,34 @@ DefineRaceNames(
 
 DefineCivilizationFactions("basque",
 	"faction", {
+		"name", "Ertebolle Tribe", -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Funnelbeaker Tribe", -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
 		"name", "Gylfing Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
 		"type", "tribe",
 		"color", "green",
 		"secondary_color", "teal"
+	},
+	"faction", {
+		"name", "Kongemose Tribe", -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
+	},
+	"faction", {
+		"name", "Maglemose Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+		"type", "tribe",
+		"color", "red",
+		"secondary_color", "white"
 	}
 )
 

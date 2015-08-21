@@ -353,7 +353,16 @@ function SinglePlayerTriggers()
 				return true
 			end,
 			function()
-				AddMessage("Battle in " .. GetProvinceName(AttackedProvince))
+				local revolt = false
+				if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] == "Peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
+					revolt = true
+				end
+				
+				if not (revolt) then
+					AddMessage("Battle in " .. GetProvinceName(AttackedProvince))
+				else
+					AddMessage("Revolt in " .. GetProvinceName(AttackedProvince))
+				end
 				return false
 			end
 		)

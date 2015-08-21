@@ -93,7 +93,7 @@ function LoadFactions(world)
 		},
 		DaneTribe = {
 			Name = "Dane Tribe",
-			Civilization = "norse"
+			Civilization = "germanic"
 		},
 		FrankTribe = {
 			Name = "Frank Tribe",
@@ -313,6 +313,14 @@ function LoadFactions(world)
 			Title = "Kingdom"
 		},
 		-- Non-Playable Tribes
+		ErtebolleTribe = {
+			Name = "Ertebolle Tribe",
+			Civilization = "basque"
+		},
+		FunnelbeakerTribe = {
+			Name = "Funnelbeaker Tribe",
+			Civilization = "basque"
+		},
 		GylfingTribe = {
 			Name = "Gylfing Tribe",
 			Civilization = "basque",
@@ -321,6 +329,14 @@ function LoadFactions(world)
 				Lumber = 2500, -- half of the gold value
 				Stone = 2500 -- half of the gold value
 			}
+		},
+		KongemoseTribe = {
+			Name = "Kongemose Tribe",
+			Civilization = "basque"
+		},
+		MaglemoseTribe = {
+			Name = "Maglemose Tribe",
+			Civilization = "basque"
 		},
 		VanaTribe = {
 			Name = "Vana Tribe",

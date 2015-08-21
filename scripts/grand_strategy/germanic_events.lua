@@ -243,6 +243,10 @@ local GermanicEvents = {
 						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 						SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
+						SetProvinceCivilization("Jutland", "germanic")
+						AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
+						SetProvinceCurrentConstruction("Zealand", "unit-germanic-town-hall")
+						SetProvinceCivilization("Zealand", "germanic")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -263,6 +267,10 @@ local GermanicEvents = {
 					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
+					SetProvinceCivilization("Jutland", "germanic")					
+					AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
+					SetProvinceCurrentConstruction("Zealand", "unit-germanic-town-hall")
+					SetProvinceCivilization("Zealand", "germanic")					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 						GrandStrategyDialog("Northwards to the Sea", "The natives were no match for us. The peninsula is ours!")
@@ -276,7 +284,7 @@ local GermanicEvents = {
 	},
 	GylvesRealm = {
 		Name = "Gylve's Realm",
-		Description = "After establishing ourselves in the Jutland peninsula, we now have the opportunity to sail across this short sea... what will await us? Shall we set sail, entrusting one of our chieftains to rule this peninsula?",
+		Description = "After establishing ourselves in the Jutland peninsula and the neighboring islands, we now have the opportunity to travel to the other side of this short sea... what will await us? Shall we set sail, entrusting a couple of our chieftains to rule this peninsula and the surrounding isles?",
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
@@ -293,7 +301,7 @@ local GermanicEvents = {
 				return false
 			end
 		end,
-		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as the ~!Jute Tribe"},
+		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as the ~!Jute Tribe", "Play as the ~!Dane Tribe"},
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
@@ -339,12 +347,13 @@ local GermanicEvents = {
 							SetProvinceUnitQuantity("Gotaland", unitName, 0)
 							SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4)
 							SetProvinceUnitQuantity("Jutland", unitName, 0)
+							SetProvinceUnitQuantity("Zealand", unitName, 0)
 						end
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
-					-- give Gotaland to the Goth Tribe
 					EqualizeProvinceUnits(EventFaction)
+					-- give Gotaland to the Goth Tribe
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 					AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
 					if (GrandStrategyFaction.Name == "Swede Tribe") then
@@ -354,6 +363,8 @@ local GermanicEvents = {
 				end
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
+				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
 			end,
 			function(s)
 			end,
@@ -369,6 +380,7 @@ local GermanicEvents = {
 						SetProvinceUnitQuantity("Gotaland", unitName, 0)
 						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
 						SetProvinceUnitQuantity("Jutland", unitName, 0)
+						SetProvinceUnitQuantity("Zealand", unitName, 0)
 					end
 				end
 				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -379,7 +391,36 @@ local GermanicEvents = {
 					
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
+				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
 				GrandStrategyFaction = Factions.JuteTribe
+			end,
+			function(s)
+				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
+				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
+				SetProvinceCivilization("Gotaland", "germanic")
+				WorldMapProvinces.Gotaland.Civilization = "germanic"
+				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
+				FormFaction(EventFaction, Factions.SwedeTribe)
+				for i, unitName in ipairs(Units) do
+					if (IsMilitaryUnit(unitName)) then
+						SetProvinceUnitQuantity("Gotaland", unitName, 0)
+						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
+						SetProvinceUnitQuantity("Jutland", unitName, 0)
+						SetProvinceUnitQuantity("Zealand", unitName, 0)
+					end
+				end
+				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
+				EqualizeProvinceUnits(EventFaction)
+				-- give Gotaland to the Goth Tribe
+				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
+					
+				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
+				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
+				GrandStrategyFaction = Factions.DaneTribe
 			end
 		}
 	},

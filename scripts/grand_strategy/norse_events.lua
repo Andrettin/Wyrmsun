@@ -205,7 +205,7 @@ local NorseEvents = {
 		MaxYear = -27 + 30,
 		RequiredEvents = {
 			FjolneChieftainOfTheSwedes = true,
---			FredfrodeChieftainOfTheDanes = true -- not required yet, because the Danes aren't on the map when this happens
+			FredfrodeChieftainOfTheDanes = true
 		},
 		Options = {"~!Oh no!"},
 		OptionEffects = {
@@ -593,8 +593,8 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Denmark"
-				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
+				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
+				and WorldMapProvinces.Zealand.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -639,8 +639,8 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Denmark"
-				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "norse"
+				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
+				and WorldMapProvinces.Zealand.Civilization == "norse"
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -665,9 +665,9 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Denmark"
-				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-teuton-barracks")
+				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
+				and WorldMapProvinces.Zealand.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Zealand.Name, "unit-teuton-barracks")
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
