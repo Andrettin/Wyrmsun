@@ -292,8 +292,8 @@ local GermanicEvents = {
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and GetProvinceUnitQuantity("Jutland", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Jutland)
-				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Gotaland)
-				and WorldMapProvinces.Gotaland.Owner == "Gylfing Tribe"
+				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Scania)
+				and WorldMapProvinces.Scania.Owner == "Gylfing Tribe"
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -311,9 +311,10 @@ local GermanicEvents = {
 					RunMap("maps/earth/malmo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
+						AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
+						SetProvinceCivilization("Scania", "germanic")
+						WorldMapProvinces.Scania.Civilization = "germanic"
 						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
-						SetProvinceCivilization("Gotaland", "germanic")
-						WorldMapProvinces.Gotaland.Civilization = "germanic"
 						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 						
 						FormFaction(EventFaction, Factions.SwedeTribe)
@@ -329,21 +330,25 @@ local GermanicEvents = {
 						EqualizeProvinceUnits(EventFaction)
 						AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 						AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
+						-- give Scania to the Dane Tribe
+						AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Gotaland", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+								SetProvinceUnitQuantity("Scania", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
+					AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
+					SetProvinceCivilization("Scania", "germanic")
+					WorldMapProvinces.Scania.Civilization = "germanic"
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
-					SetProvinceCivilization("Gotaland", "germanic")
-					WorldMapProvinces.Gotaland.Civilization = "germanic"
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 					FormFaction(EventFaction, Factions.SwedeTribe)
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
+							SetProvinceUnitQuantity("Scania", unitName, 0)
 							SetProvinceUnitQuantity("Gotaland", unitName, 0)
 							SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4)
 							SetProvinceUnitQuantity("Jutland", unitName, 0)
@@ -356,6 +361,8 @@ local GermanicEvents = {
 					-- give Gotaland to the Goth Tribe
 					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 					AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
+					-- give Scania to the Dane Tribe
+					AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
 					if (GrandStrategyFaction.Name == "Swede Tribe") then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						GrandStrategyDialog("Gylve's Realm", "Gylve has been defeated, and subsequently swore an oath of fealty to us. After entrusting lordship over him to one of our chieftains, we have moved north... We came upon a lake, with fair fields spread around it. We founded a hall by the lake, Sigtun, from which we shall rule for untold generations!")
@@ -370,13 +377,15 @@ local GermanicEvents = {
 			end,
 			function(s)
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
+				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
+				SetProvinceCivilization("Scania", "germanic")
+				WorldMapProvinces.Scania.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
-				SetProvinceCivilization("Gotaland", "germanic")
-				WorldMapProvinces.Gotaland.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
+						SetProvinceUnitQuantity("Scania", unitName, 0)
 						SetProvinceUnitQuantity("Gotaland", unitName, 0)
 						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
 						SetProvinceUnitQuantity("Jutland", unitName, 0)
@@ -388,6 +397,9 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
+				
+				-- give Scania to the Dane Tribe
+				AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
 					
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
@@ -397,13 +409,15 @@ local GermanicEvents = {
 			end,
 			function(s)
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
+				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
+				SetProvinceCivilization("Scania", "germanic")
+				WorldMapProvinces.Scania.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
-				SetProvinceCivilization("Gotaland", "germanic")
-				WorldMapProvinces.Gotaland.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
+						SetProvinceUnitQuantity("Scania", unitName, 0)
 						SetProvinceUnitQuantity("Gotaland", unitName, 0)
 						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
 						SetProvinceUnitQuantity("Jutland", unitName, 0)
@@ -411,10 +425,13 @@ local GermanicEvents = {
 					end
 				end
 				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
-				EqualizeProvinceUnits(EventFaction)
 				-- give Gotaland to the Goth Tribe
+				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
+				
+				-- give Scania to the Dane Tribe
+				AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
 					
 				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")

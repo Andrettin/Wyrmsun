@@ -96,9 +96,9 @@ GameConcepts = {
 		Name = _("~!Research"),
 		Description = _("Research is a grand strategy mode only resource, which is used to acquire technologies. A faction gains research depending on the ~<proportion~> of its provinces that has town halls, lumber mills and smithies.")
 	},
-	RevoltRisk = {
-		Name = _("Revolt Risk"),
-		Description = _("In Grand Strategy mode, provinces have a chance to revolt against your rule. There is a chance of revolt occurring in recently conquered provinces, as well as ones of a culture different than their owner's.")
+	Revolts = {
+		Name = _("Revolts"),
+		Description = _("In Grand Strategy mode, provinces have a chance to revolt against their owner's rule. There is a risk of revolt occurring in recently conquered provinces, as well as ones of a culture different than their owner's.")
 	},
 	TechTreeScreen = {
 		Name = _("~!Tech Tree Screen"),

@@ -209,6 +209,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the possibility of provinces revolting if they are not of the same culture as their owner, or if they have been conquered recently.
 - AI factions now attack through water, if there is only one water province separating them and an enemy province.
 - Hill graphic transitions update (by Jinn).
+- Greatly increased the proportions of the Earth map.
+- New Earth provinces: Scania, Zealand.
+- New Earth water provinces: Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Kattegat, Lake Vättern, Lake Wener, Skagerrak.
 
 -----------------------------------------------------------------------
 - 1.3.3

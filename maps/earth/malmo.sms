@@ -36,7 +36,7 @@ local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-g
 
 if (LoadedGame == false) then
 	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", nil)
+		GenerateTown(layout, 1, "basque", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", nil)
 		
 		if (MaxTechLevel[GetThisPlayer() + 1] == "") then
 			for i=0,15 do
@@ -46,7 +46,7 @@ if (LoadedGame == false) then
 			end
 		end
 	else
-		GenerateTown(layout, 1, "germanic", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, {}, "low", nil)
+		GenerateTown(layout, 1, "basque", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, {}, "low", nil)
 	end
 end
 
@@ -59,5 +59,5 @@ if (GrandStrategyEventMap) then
 	CreateProvinceUnits("Jutland", 0)
 	
 	-- Gylfing units
-	CreateProvinceUnits("Gotaland", 1)
+	CreateProvinceUnits("Scania", 1)
 end
