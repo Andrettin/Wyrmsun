@@ -1036,8 +1036,8 @@ function LoadProvinces(world)
 			SettlementName = "Malmö",
 			SettlementLocation = {517, 97}, -- Malmö
 			SettlementBuildings = {
-				unit_teuton_town_hall = true, -- Gylve's realm
-				unit_teuton_barracks = true
+				unit_germanic_town_hall = true, -- Gylve's realm
+				unit_germanic_barracks = true
 			},
 			Map = "maps/earth/malmo.smp",
 			Units = {
@@ -1273,7 +1273,7 @@ function LoadProvinces(world)
 				{508, 98},
 				{509, 98},
 				{510, 98},
-				{512, 97}, {512, 98},
+				{512, 97}, {512, 98}, {512, 100},
 				{513, 97}, {513, 98},
 				{514, 97}, {514, 98},
 				{515, 97}
@@ -1747,7 +1747,7 @@ function LoadProvinces(world)
 			Tiles = {
 				{128, 24}, {129, 24}, {130, 24}, {130, 25}, {131, 24}, {132, 20}, {132, 22}, {132, 23}, {132, 24}, {133, 19}, {133, 20}, {133, 21}, {133, 22}, {133, 24}, {134, 18}, {134, 19}, {134, 20}, {134, 21}, {134, 22}, {134, 23}, {134, 24}, {135, 17}, {135, 18}, {135, 21}, {135, 22}, {136, 17}, {136, 18}, {136, 21}, {136, 22}, {137, 17}, {137, 21}, {138, 21}, {139, 21}, {140, 21}, -- old map
 				{511, 101},
-				{512, 100}, {512, 101},
+				{512, 101},
 				{513, 100}, {513, 101},
 				{514, 99}, {514, 100}, {514, 101},
 				{515, 99}, {515, 100},

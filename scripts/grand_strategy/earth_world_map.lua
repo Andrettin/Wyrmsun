@@ -3239,7 +3239,7 @@ SetWorldMapTileTerrain(512, 96, water_id)
 SetWorldMapTileTerrain(512, 97, plains_id)
 SetWorldMapTileTerrain(512, 98, plains_id)
 SetWorldMapTileTerrain(512, 99, water_id)
-SetWorldMapTileTerrain(512, 100, water_id)
+SetWorldMapTileTerrain(512, 100, plains_id)
 SetWorldMapTileTerrain(512, 101, water_id)
 SetWorldMapTileTerrain(512, 102, plains_id)
 SetWorldMapTileTerrain(512, 135, water_id)
@@ -4596,14 +4596,19 @@ if (GrandStrategyYear >= -30000) then
 end
 
 if (GrandStrategyYear >= -9500) then
-	-- Pleistocene-Holocene transition around 9500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 48.
+	-- Pleistocene-Holocene transition (Holocene interglacial epoch begins) around 9500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 48, 126.
+	-- Before 9500 BC, Europe to the north of the Mediterranean had been in large part covered by "tundra-steppe" and boreal forests, with large herds of reindeer, wild horses and other herbivores laying about; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 127.
 end
 
 if (GrandStrategyYear >= -9000) then
 	-- Maglemose culture arises in Zealand in 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	WorldMapProvinces.Zealand.Owner = "Maglemose Tribe"
 	SetProvinceCivilization("Zealand", "basque")
-	SetProvinceSettlementBuilding("Zealand", "unit-teuton-town-hall", true)
+	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
+end
+
+if (GrandStrategyYear >= -8000) then
+	-- Migratory reindeer herds, which previously had helped feed much of Europe, retreat to northern Scandinavia around 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 123.
 end
 
 if (GrandStrategyYear >= -7500) then
@@ -4616,6 +4621,8 @@ end
 
 if (GrandStrategyYear >= -7000) then
 	-- Foundation of pre-pottery Jericho in 7000 BC (this information could be useful later if the map is extended); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 42.
+	
+	-- By 7000 BC the predominant vegetation in Europe had become mixed deciduous forests, with fauna such as red deer, aurochs (wild oxes) and wild boars; this fauna had been more dispersed than the fauna of the previous late-glacial tundra; with this new vegetation came a myriad of eatable plant species (such as hazelnuts, berries, fruits, fungi and bracken rhizomes); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 127.
 end
 
 if (GrandStrategyYear >= -6400) then
@@ -4627,6 +4634,10 @@ end
 
 if (GrandStrategyYear >= -5800) then
 	-- Cris culture migrates from southeastern Europe and the Lower Danube Valley to the region on the western side of the Dnieper/Dniester rivers; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 107-108.
+end
+
+if (GrandStrategyYear >= -5500) then
+	-- Mediterranean Sea and Black Sea reconnected around 5500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 126.
 end
 
 if (GrandStrategyYear >= -5400) then

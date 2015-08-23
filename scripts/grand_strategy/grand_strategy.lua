@@ -1508,36 +1508,8 @@ function RunGrandStrategyLoadGameMenu()
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
 			
 			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
-			for key, value in pairs(WorldMapProvinces) do
-				for second_key, second_value in pairs(WorldMapProvinces[key].CulturalNames) do
-					SetProvinceCulturalName(WorldMapProvinces[key].Name, second_key, WorldMapProvinces[key].CulturalNames[second_key])
-				end
-				for second_key, second_value in pairs(WorldMapProvinces[key].FactionCulturalNames) do
-					SetProvinceFactionCulturalName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, WorldMapProvinces[key].FactionCulturalNames[second_key])
-				end
-				for second_key, second_value in pairs(WorldMapProvinces[key].CulturalSettlementNames) do
-					SetProvinceCulturalSettlementName(WorldMapProvinces[key].Name, second_key, WorldMapProvinces[key].CulturalSettlementNames[second_key])
-				end
-				for second_key, second_value in pairs(WorldMapProvinces[key].FactionCulturalSettlementNames) do
-					SetProvinceFactionCulturalSettlementName(WorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, WorldMapProvinces[key].FactionCulturalSettlementNames[second_key])
-				end
-				WorldMapProvinces[key].CulturalNames = nil
-				WorldMapProvinces[key].FactionCulturalNames = nil
-				WorldMapProvinces[key].CulturalSettlementNames = nil
-				WorldMapProvinces[key].FactionCulturalSettlementNames = nil
-			end
 			
 			WorldMapWaterProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapWaterProvinces
-			for key, value in pairs(WorldMapWaterProvinces) do
-				for second_key, second_value in pairs(WorldMapWaterProvinces[key].CulturalNames) do
-					SetProvinceCulturalName(WorldMapWaterProvinces[key].Name, second_key, WorldMapWaterProvinces[key].CulturalNames[second_key])
-				end
-				for second_key, second_value in pairs(WorldMapWaterProvinces[key].FactionCulturalNames) do
-					SetProvinceFactionCulturalName(WorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name, WorldMapWaterProvinces[key].FactionCulturalNames[second_key])
-				end
-				WorldMapWaterProvinces[key].CulturalNames = nil
-				WorldMapWaterProvinces[key].FactionCulturalNames = nil
-			end
 			
 			GrandStrategyCommodities = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyCommodities
 			MercenaryGroups = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedMercenaryGroups
@@ -4510,51 +4482,7 @@ function GrandStrategyGameSave(name)
 		table.insert(wyr[name].SavedGrandStrategyEvents, key)
 	end
 	local civilizations = {"germanic", "teuton", "celt", "dwarf", "goblin", "goth", "norse", "kobold", "gnome", "latin", "greek", "basque", "minoan"}
-	for key, value in pairs(wyr[name].SavedWorldMapProvinces) do
-		wyr[name].SavedWorldMapProvinces[key].CulturalNames = {}
-		for i=1,table.getn(civilizations) do
-			if (GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i]) ~= "") then
-				wyr[name].SavedWorldMapProvinces[key].CulturalNames[civilizations[i]] = GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i])
-			end
-		end
-		
-		wyr[name].SavedWorldMapProvinces[key].FactionCulturalNames = {}
-		for second_key, second_value in pairs(Factions) do
-			if (GetProvinceFactionCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name) ~= "") then
-				wyr[name].SavedWorldMapProvinces[key].FactionCulturalNames[second_key] = GetProvinceFactionCulturalName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name)
-			end
-		end
-		
-		wyr[name].SavedWorldMapProvinces[key].CulturalSettlementNames = {}
-		for i=1,table.getn(civilizations) do
-			if (GetProvinceCivilizationCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i]) ~= "") then
-				wyr[name].SavedWorldMapProvinces[key].CulturalSettlementNames[civilizations[i]] = GetProvinceCivilizationCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, civilizations[i])
-			end
-		end
-		
-		wyr[name].SavedWorldMapProvinces[key].FactionCulturalSettlementNames = {}
-		for second_key, second_value in pairs(Factions) do
-			if (GetProvinceFactionCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name) ~= "") then
-				wyr[name].SavedWorldMapProvinces[key].FactionCulturalSettlementNames[second_key] = GetProvinceFactionCulturalSettlementName(wyr[name].SavedWorldMapProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name)
-			end
-		end
-	end
 	
-	for key, value in pairs(wyr[name].SavedWorldMapWaterProvinces) do
-		wyr[name].SavedWorldMapWaterProvinces[key].CulturalNames = {}
-		for i=1,table.getn(civilizations) do
-			if (GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, civilizations[i]) ~= "") then
-				wyr[name].SavedWorldMapWaterProvinces[key].CulturalNames[civilizations[i]] = GetProvinceCivilizationCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, civilizations[i])
-			end
-		end
-		
-		wyr[name].SavedWorldMapWaterProvinces[key].FactionCulturalNames = {}
-		for second_key, second_value in pairs(Factions) do
-			if (GetProvinceFactionCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name) ~= "") then
-				wyr[name].SavedWorldMapWaterProvinces[key].FactionCulturalNames[second_key] = GetProvinceFactionCulturalName(wyr[name].SavedWorldMapWaterProvinces[key].Name, Factions[second_key].Civilization, Factions[second_key].Name)
-			end
-		end
-	end
 	SaveGrandStrategyGame(name)
 	wyr[name] = nil
 end

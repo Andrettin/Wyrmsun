@@ -318,7 +318,7 @@ DefineRaceNames(
 		"display", "Basque",
 		"visible",
 		"species", "human",
-		"parent-civilization", "teuton",
+		"parent-civilization", "germanic",
 		"playable", false
 	},
 	"race", {
