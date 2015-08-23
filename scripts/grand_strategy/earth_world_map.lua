@@ -1410,7 +1410,7 @@ SetWorldMapTileTerrain(464, 139, hills_id)
 SetWorldMapTileTerrain(464, 140, hills_id)
 SetWorldMapTileTerrain(464, 141, mountains_id)
 SetWorldMapTileName(464, 141, "Pico Almanzor")
---SetWorldMapTileCulturalName(464, 141, "spanish", "Pico Almanzor") -- Source: "Philip's International School Atlas", 2006, p. 69
+--SetWorldMapTileCulturalName(464, 141, "castillian", "Pico Almanzor") -- Source: "Philip's International School Atlas", 2006, p. 69
 SetWorldMapTileTerrain(464, 142, plains_id)
 SetWorldMapTileRiver(464, 142, "south", "Tagus")
 SetWorldMapTileTerrain(464, 143, hills_id)
@@ -1622,7 +1622,7 @@ SetWorldMapTileTerrain(470, 148, mountains_id)
 SetWorldMapTileTerrain(470, 149, mountains_id)
 SetWorldMapTileTerrain(470, 150, mountains_id)
 SetWorldMapTileName(470, 150, "Mulhacén")
---SetWorldMapTileCulturalName(470, 150, "spanish", "Mulhacén") -- Source: "Philip's International School Atlas", 2006, p. 69
+--SetWorldMapTileCulturalName(470, 150, "castillian", "Mulhacén") -- Source: "Philip's International School Atlas", 2006, p. 69
 SetWorldMapTileTerrain(470, 151, hills_id)
 SetWorldMapTileTerrain(470, 152, water_id)
 SetWorldMapTileTerrain(470, 153, water_id)
@@ -2048,7 +2048,7 @@ SetWorldMapTileTerrain(481, 103, water_id)
 SetWorldMapTileTerrain(481, 104, water_id)
 SetWorldMapTileTerrain(481, 135, mountains_id)
 SetWorldMapTileName(481, 135, "Monte Perdido")
---SetWorldMapTileCulturalName(481, 135, "spanish", "Monte Perdido") -- Source: "Philip's International School Atlas", 2006, p. 69
+--SetWorldMapTileCulturalName(481, 135, "castillian", "Monte Perdido") -- Source: "Philip's International School Atlas", 2006, p. 69
 SetWorldMapTileTerrain(481, 136, hills_id)
 SetWorldMapTileTerrain(481, 137, plains_id)
 SetWorldMapTileTerrain(481, 138, plains_id)
@@ -2907,6 +2907,9 @@ SetWorldMapTileTerrain(503, 91, water_id)
 SetWorldMapTileTerrain(503, 92, water_id)
 SetWorldMapTileTerrain(503, 93, water_id)
 SetWorldMapTileTerrain(503, 94, water_id)
+SetWorldMapTileTerrain(503, 95, plains_id)
+SetWorldMapTileTerrain(503, 96, plains_id)
+SetWorldMapTileTerrain(503, 97, plains_id)
 SetWorldMapTileTerrain(503, 98, water_id)
 SetWorldMapTileTerrain(503, 99, water_id)
 SetWorldMapTileTerrain(503, 100, water_id)
@@ -2937,6 +2940,11 @@ SetWorldMapTileTerrain(504, 90, water_id)
 SetWorldMapTileTerrain(504, 91, water_id)
 SetWorldMapTileTerrain(504, 92, water_id)
 SetWorldMapTileTerrain(504, 93, water_id)
+SetWorldMapTileTerrain(504, 94, plains_id)
+SetWorldMapTileTerrain(504, 95, plains_id)
+SetWorldMapTileTerrain(504, 96, plains_id)
+SetWorldMapTileTerrain(504, 97, plains_id)
+SetWorldMapTileTerrain(504, 98, plains_id)
 SetWorldMapTileTerrain(504, 99, water_id)
 SetWorldMapTileTerrain(504, 100, water_id)
 SetWorldMapTileTerrain(504, 101, water_id)
@@ -2966,6 +2974,15 @@ SetWorldMapTileTerrain(505, 90, water_id)
 SetWorldMapTileTerrain(505, 91, water_id)
 SetWorldMapTileTerrain(505, 92, water_id)
 SetWorldMapTileTerrain(505, 93, water_id)
+SetWorldMapTileTerrain(505, 94, plains_id)
+SetWorldMapTileTerrain(505, 95, plains_id)
+SetWorldMapTileTerrain(505, 96, plains_id)
+SetWorldMapTileTerrain(505, 97, plains_id)
+SetWorldMapTileTerrain(505, 98, plains_id)
+SetWorldMapTileTerrain(505, 99, plains_id)
+SetWorldMapTileTerrain(505, 100, plains_id)
+SetWorldMapTileTerrain(505, 101, plains_id)
+SetWorldMapTileTerrain(505, 102, plains_id)
 SetWorldMapTileTerrain(505, 130, water_id)
 SetWorldMapTileTerrain(505, 131, water_id)
 SetWorldMapTileTerrain(505, 132, water_id)
@@ -2993,6 +3010,16 @@ SetWorldMapTileTerrain(506, 89, water_id)
 SetWorldMapTileTerrain(506, 90, water_id)
 SetWorldMapTileTerrain(506, 91, water_id)
 SetWorldMapTileTerrain(506, 92, water_id)
+SetWorldMapTileTerrain(506, 93, plains_id)
+SetWorldMapTileTerrain(506, 94, plains_id)
+SetWorldMapTileTerrain(506, 95, plains_id)
+SetWorldMapTileTerrain(506, 96, plains_id)
+SetWorldMapTileTerrain(506, 97, plains_id)
+SetWorldMapTileTerrain(506, 98, plains_id)
+SetWorldMapTileTerrain(506, 99, plains_id)
+SetWorldMapTileTerrain(506, 100, plains_id)
+SetWorldMapTileTerrain(506, 101, plains_id)
+SetWorldMapTileTerrain(506, 102, plains_id)
 SetWorldMapTileTerrain(506, 130, water_id)
 SetWorldMapTileTerrain(506, 131, water_id)
 SetWorldMapTileTerrain(506, 132, water_id)
@@ -3020,9 +3047,17 @@ SetWorldMapTileTerrain(507, 89, water_id)
 SetWorldMapTileTerrain(507, 90, water_id)
 SetWorldMapTileTerrain(507, 91, water_id)
 SetWorldMapTileTerrain(507, 92, water_id)
+SetWorldMapTileTerrain(507, 93, plains_id)
+SetWorldMapTileTerrain(507, 94, plains_id)
+SetWorldMapTileTerrain(507, 95, plains_id)
+SetWorldMapTileTerrain(507, 96, plains_id)
 SetWorldMapTileTerrain(507, 97, water_id)
 SetWorldMapTileTerrain(507, 98, water_id)
 SetWorldMapTileTerrain(507, 99, water_id)
+SetWorldMapTileTerrain(507, 100, plains_id)
+SetWorldMapTileTerrain(507, 101, plains_id)
+SetWorldMapTileTerrain(507, 102, plains_id)
+SetWorldMapTileTerrain(507, 103, plains_id)
 SetWorldMapTileTerrain(507, 130, water_id)
 SetWorldMapTileTerrain(507, 131, water_id)
 SetWorldMapTileTerrain(507, 132, water_id)
@@ -3047,10 +3082,18 @@ SetWorldMapTileTerrain(508, 88, water_id)
 SetWorldMapTileTerrain(508, 89, water_id)
 SetWorldMapTileTerrain(508, 90, water_id)
 SetWorldMapTileTerrain(508, 91, water_id)
+SetWorldMapTileTerrain(508, 92, plains_id)
+SetWorldMapTileTerrain(508, 93, plains_id)
+SetWorldMapTileTerrain(508, 94, plains_id)
+SetWorldMapTileTerrain(508, 95, plains_id)
+SetWorldMapTileTerrain(508, 96, plains_id)
 SetWorldMapTileTerrain(508, 97, water_id)
 SetWorldMapTileTerrain(508, 98, plains_id)
 SetWorldMapTileTerrain(508, 99, water_id)
 SetWorldMapTileTerrain(508, 100, water_id)
+SetWorldMapTileTerrain(508, 101, plains_id)
+SetWorldMapTileTerrain(508, 102, plains_id)
+SetWorldMapTileTerrain(508, 103, plains_id)
 SetWorldMapTileTerrain(508, 131, water_id)
 SetWorldMapTileTerrain(508, 132, water_id)
 SetWorldMapTileTerrain(508, 133, water_id)
@@ -3074,12 +3117,17 @@ SetWorldMapTileTerrain(509, 88, water_id)
 SetWorldMapTileTerrain(509, 89, water_id)
 SetWorldMapTileTerrain(509, 90, water_id)
 SetWorldMapTileTerrain(509, 91, water_id)
+SetWorldMapTileTerrain(509, 92, plains_id)
+SetWorldMapTileTerrain(509, 93, plains_id)
 SetWorldMapTileTerrain(509, 94, water_id)
+SetWorldMapTileTerrain(509, 95, plains_id)
 SetWorldMapTileTerrain(509, 96, water_id)
 SetWorldMapTileTerrain(509, 97, water_id)
 SetWorldMapTileTerrain(509, 98, plains_id)
 SetWorldMapTileTerrain(509, 99, water_id)
 SetWorldMapTileTerrain(509, 100, water_id)
+SetWorldMapTileTerrain(509, 101, plains_id)
+SetWorldMapTileTerrain(509, 102, plains_id)
 SetWorldMapTileTerrain(509, 132, water_id)
 SetWorldMapTileTerrain(509, 133, water_id)
 SetWorldMapTileTerrain(509, 134, water_id)
@@ -3109,11 +3157,13 @@ SetWorldMapTileTerrain(510, 91, water_id)
 SetWorldMapTileTerrain(510, 92, water_id)
 SetWorldMapTileTerrain(510, 93, water_id)
 SetWorldMapTileTerrain(510, 94, water_id)
+SetWorldMapTileTerrain(510, 95, plains_id)
 SetWorldMapTileTerrain(510, 96, water_id)
 SetWorldMapTileTerrain(510, 97, water_id)
 SetWorldMapTileTerrain(510, 98, plains_id)
 SetWorldMapTileTerrain(510, 99, water_id)
 SetWorldMapTileTerrain(510, 100, water_id)
+SetWorldMapTileTerrain(510, 101, plains_id)
 SetWorldMapTileTerrain(510, 134, water_id)
 SetWorldMapTileTerrain(510, 135, water_id)
 SetWorldMapTileTerrain(510, 136, water_id)
@@ -3191,7 +3241,7 @@ SetWorldMapTileTerrain(512, 98, plains_id)
 SetWorldMapTileTerrain(512, 99, water_id)
 SetWorldMapTileTerrain(512, 100, water_id)
 SetWorldMapTileTerrain(512, 101, water_id)
-SetWorldMapTileTerrain(512, 102, water_id)
+SetWorldMapTileTerrain(512, 102, plains_id)
 SetWorldMapTileTerrain(512, 135, water_id)
 SetWorldMapTileTerrain(512, 136, water_id)
 SetWorldMapTileTerrain(512, 137, water_id)
@@ -3947,7 +3997,7 @@ SetWorldMapTileTerrain(535, 97, water_id)
 SetWorldMapTileTerrain(535, 98, water_id)
 SetWorldMapTileTerrain(535, 99, water_id)
 SetWorldMapTileTerrain(535, 100, water_id)
-SetWorldMapTileTerrain(535, 101, water_id)
+SetWorldMapTileTerrain(535, 101, plains_id)
 SetWorldMapTileTerrain(536, 75, water_id)
 SetWorldMapTileTerrain(536, 76, water_id)
 SetWorldMapTileTerrain(536, 77, water_id)
@@ -4487,26 +4537,22 @@ WorldMapResources = {
 		{117, 27, false}, -- Tin deposits; Source: "Philip's International School Atlas", 2006, p. 59; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{117, 29, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{119, 29, false}, -- iron ore deposits
-		{123, 27, false}, -- this is just to provide the Franks in the Netherlands with better survival chances
 		{121, 33, false}, -- iron ore deposits
-		{124, 31, false}, -- to help keep the Sequani afloat
 		{125, 28, false}, -- iron ore deposits
 		{125, 29, false}, -- iron ore deposits
-		{125, 31, false}, -- to help keep the Romans afloat
-		{127, 25, false}, -- crude oil or natural gas
+--		{127, 25, false}, -- crude oil or natural gas
 		{127, 27, false}, -- copper ore deposits
 		{128, 28, false}, -- iron ore deposits
 		{129, 28, false}, -- iron ore deposits; Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 		{129, 30, false}, -- Copper deposits (Mitterberg mines) in the Salzach Valley, near Salzburg; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
-		{129, 33, false}, -- to help keep the Romans afloat
 		{130, 27, false}, -- Copper deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 		{131, 21, false}, -- iron ore deposits
-		{131, 22, true}, -- iron ore deposits
+		{131, 22, false}, -- iron ore deposits
 		{131, 30, false}, -- iron ore deposits
 --		{136, 30, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{136, 31, false}, -- Gold deposits; Source: http://www.lib.utexas.edu/maps/europe/romania_res_1970.jpg
 		{134, 27, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
---		{152, 31, true}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77. (should be in Stavropol rather than Astrakhan)
+--		{152, 31, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77. (should be in Stavropol rather than Astrakhan)
 --		{159, 27, false} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
 
 		{454, 133, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
@@ -4646,7 +4692,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Jutland", "unit-germanic-warrior", 4) -- enough troops for them to hold their own
 	SetProvinceUnitQuantity("Jutland", "unit-germanic-archer", 0)
-	SetResourceProspected(127, 25, "Gold", true)
 	
 	WorldMapProvinces.Sweden.Owner = "Swede Tribe"
 	WorldMapProvinces.Sweden.Civilization = "germanic"
@@ -4654,7 +4699,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-barracks", true) -- to prevent the Goth Tribe from conquering Sweden too easily
 	SetProvinceUnitQuantity("Sweden", "unit-germanic-warrior", 0)
 	SetProvinceUnitQuantity("Sweden", "unit-germanic-archer", 0)
-	SetResourceProspected(131, 21, "Gold", true)
 	
 	WorldMapProvinces.Scania.Owner = "Dane Tribe"
 	WorldMapProvinces.Scania.Civilization = "germanic"
@@ -4771,6 +4815,7 @@ end
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-bronze-shield", true)
 	SetFactionTechnology("germanic", "Swede Tribe", "upgrade-germanic-bronze-shield", true)
+	SetFactionTechnology("germanic", "Dane Tribe", "upgrade-germanic-bronze-shield", true)
 	SetFactionTechnology("germanic", "Jute Tribe", "upgrade-germanic-bronze-shield", true)
 	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-bronze-shield", true)
 	GrandStrategyEvents.TheSunShields = nil
@@ -4779,6 +4824,7 @@ end
 if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-broad-sword", true)
 	SetFactionTechnology("germanic", "Swede Tribe", "upgrade-germanic-broad-sword", true)
+	SetFactionTechnology("germanic", "Dane Tribe", "upgrade-germanic-broad-sword", true)
 	SetFactionTechnology("germanic", "Jute Tribe", "upgrade-germanic-broad-sword", true)
 	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-broad-sword", true)
 end
@@ -4788,12 +4834,10 @@ if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and
 	WorldMapProvinces.Austria.Civilization = "celt"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Austria.Name, "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 0)
-	SetResourceProspected(131, 30, "Gold", true)
 	WorldMapProvinces.Bavaria.Owner = "Norici Tribe"
 	WorldMapProvinces.Bavaria.Civilization = "celt"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Bavaria.Name, "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Bavaria", "unit-germanic-warrior", 0)
-	SetResourceProspected(128, 28, "Gold", true)
 	WorldMapProvinces.Switzerland.Owner = "Helvetii Tribe" -- already in Switzerland?
 	WorldMapProvinces.Switzerland.Civilization = "celt"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Switzerland.Name, "unit-germanic-town-hall", true)
@@ -4812,7 +4856,6 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetProvinceSettlementBuilding(WorldMapProvinces.Brandenburg.Name, "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 0)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
-	SetResourceProspected(127, 27, "Gold", true)
 	
 	WorldMapProvinces.Rhineland.Owner = "Saxon Tribe" -- The Saxons are the earliest Germanic people known to inhabit the Hannover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
 	ChangeFactionCulture("germanic", "Saxon Tribe", "teuton")
@@ -4821,7 +4864,6 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetProvinceUnitQuantity("Rhineland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
 	SetProvinceUnitQuantity("Rhineland", "unit-germanic-warrior", 0)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
-	SetResourceProspected(125, 28, "Gold", true)
 
 	WorldMapProvinces.Netherlands.Owner = "Frank Tribe" -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	ChangeFactionCulture("germanic", "Frank Tribe", "teuton")
@@ -4830,13 +4872,12 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetProvinceUnitQuantity("Netherlands", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
 	SetProvinceUnitQuantity("Netherlands", "unit-germanic-warrior", 0)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
-	SetResourceProspected(123, 27, "Gold", true)
 	
 	GrandStrategyEvents.VegdegsKingdom = nil
 	GrandStrategyEvents.BeldegsLands = nil
 	GrandStrategyEvents.SigisLands = nil
 	
-	-- should put it at a more proper date (when Proto-Germanic split into West Germanic, East Germanic and North Germanic, respectively represented by the Teuton, Goth and Norse cultures in the game), but this will do; update culture in Sweden, Jutland and Gotaland
+	-- should put it at a more proper date (when Proto-Germanic split into West Germanic, East Germanic and North Germanic, respectively represented by the Teuton, Goth and Norse cultures in the game), but this will do; update culture in Sweden, Zealand, Jutland, Gotaland and Scania
 	ChangeFactionCulture("germanic", "Swede Tribe", "norse")
 	WorldMapProvinces.Sweden.Civilization = "norse"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall", false)
@@ -4897,7 +4938,6 @@ if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. 
 	WorldMapProvinces.Bohemia.Civilization = "celt"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Bohemia.Name, "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
-	SetResourceProspected(129, 28, "Gold", true)
 end
 
 
@@ -4922,7 +4962,6 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	SetProvinceSettlementBuilding(WorldMapProvinces.Latium.Name, "unit-teuton-barracks", true)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Latium.Name, "unit-teuton-lumber-mill", true)
 	SetProvinceSettlementBuilding(WorldMapProvinces.Latium.Name, "unit-teuton-smithy", true)
-	SetResourceProspected(129, 33, "Gold", true)
 	WorldMapProvinces.Naples.Owner = "Rome"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Naples.Name, "unit-teuton-town-hall", true)
 	
@@ -4962,14 +5001,12 @@ if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and Farther Baetic
 	SetProvinceSettlementBuilding(WorldMapProvinces.Castille.Name, "unit-teuton-town-hall", true)
 	WorldMapProvinces.Andalusia.Owner = "Rome"
 	SetProvinceSettlementBuilding(WorldMapProvinces.Andalusia.Name, "unit-teuton-town-hall", true)
-	SetResourceProspected(118, 37, "Gold", true)
 end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul conquered in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	WorldMapProvinces.NorthItaly.Owner = "Rome"
 	SetProvinceSettlementBuilding(WorldMapProvinces.NorthItaly.Name, "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("North Italy", "unit-germanic-warrior", 0)
-	SetResourceProspected(125, 31, "Gold", true)	
 end
 
 if (GrandStrategyYear >= -146) then -- Attica, Macedonia and the Peloponnese acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -4990,20 +5027,16 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	WorldMapProvinces.France.Civilization = "celt"
 	SetProvinceUnitQuantity("France", "unit-germanic-warrior", 10) -- enough troops for them to be able to hold their own (except against Ariovistus)
 	SetProvinceSettlementBuilding(WorldMapProvinces.France.Name, "unit-germanic-town-hall", true)
-	SetResourceProspected(119, 29, "Gold", true)
-	SetResourceProspected(125, 29, "Gold", true)
 	
 	WorldMapProvinces.Aquitaine.Owner = "Arverni Tribe" -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Aquitaine.Civilization = "celt"
 	SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	SetProvinceSettlementBuilding(WorldMapProvinces.Aquitaine.Name, "unit-germanic-town-hall", true)
-	SetResourceProspected(121, 33, "Gold", true)
 	
 	WorldMapProvinces.Burgundy.Owner = "Sequani Tribe" -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Burgundy.Civilization = "celt"
 	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	SetProvinceSettlementBuilding(WorldMapProvinces.Burgundy.Name, "unit-germanic-town-hall", true)
-	SetResourceProspected(124, 31, "Gold", true)
 	
 	WorldMapProvinces.Belgium.Owner = "Menapii Tribe" -- Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	WorldMapProvinces.Belgium.Civilization = "celt"
