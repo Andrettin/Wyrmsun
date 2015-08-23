@@ -54,9 +54,9 @@ local TeutonEvents = {
 				ChangeFactionCulture("germanic", EventFaction.Name, "teuton")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
-						WorldMapProvinces[province_key].Civilization == "germanic"
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 					) then
-						ChangeProvinceCulture(WorldMapProvinces[province_key], "teuton") -- change the culture of only one province, and let cultural spread do the rest
+						SetProvinceCivilization(WorldMapProvinces[province_key].Name, "teuton") -- change the culture of only one province, and let cultural spread do the rest
 						break
 					end
 				end
@@ -70,7 +70,7 @@ local TeutonEvents = {
 			if (EventFaction.Civilization ~= "goth" and EventFaction.Civilization ~= "norse") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
-						WorldMapProvinces[province_key].Civilization == "germanic"
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 						and SyncRand(50) < 1
 						and ProvinceBordersCulture(WorldMapProvinces[province_key], "teuton")
 					) then
@@ -85,7 +85,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeProvinceCulture(EventProvince, "teuton")
+				SetProvinceCivilization(EventProvince.Name, "teuton")
 			end
 		}
 	},
@@ -190,7 +190,7 @@ local TeutonEvents = {
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
 				WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
-				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
+				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				return true
 			else
@@ -235,7 +235,7 @@ local TeutonEvents = {
 				WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
 				WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
 				AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
-				ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
+				SetProvinceCivilization("Bohemia", "teuton")
 			end,
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe" and wyr.preferences.AutomaticBattles == false) then
@@ -259,7 +259,7 @@ local TeutonEvents = {
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 
-						ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
+						SetProvinceCivilization("Bohemia", "teuton")
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
@@ -277,7 +277,7 @@ local TeutonEvents = {
 					end
 					WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
 					WorldMapProvinces.Bohemia.Heroes.unit_hero_marbod = 2
-					ChangeProvinceCulture(WorldMapProvinces.Bohemia, "teuton")
+					SetProvinceCivilization("Bohemia", "teuton")
 					AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
@@ -436,7 +436,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and WorldMapProvinces.England.Civilization == "teuton"
+				and GetProvinceCivilization("England") == "teuton" -- should be English
 --				and SyncRand(100) < 10
 			) then
 				return true
@@ -463,7 +463,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and (WorldMapProvinces.England.Civilization == "germanic" or WorldMapProvinces.England.Civilization == "teuton" or WorldMapProvinces.England.Civilization == "norse" or WorldMapProvinces.England.Civilization == "goth") -- eating horse-flesh was a Germanic custom
+				and (GetProvinceCivilization("England") == "germanic" or GetProvinceCivilization("England") == "teuton" or GetProvinceCivilization("England") == "norse" or GetProvinceCivilization("England") == "goth") -- eating horse-flesh was a Germanic custom
 				and SyncRand(100) < 1 -- should take a while for this to happen after Christianization
 			) then
 				return true
@@ -558,7 +558,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and WorldMapProvinces.England.Civilization == "teuton" -- should be English
+				and GetProvinceCivilization("England") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -583,7 +583,7 @@ local TeutonEvents = {
 			if (
 				EventFaction.Civilization == "teuton"
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
-				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
+				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				return true
 			else
@@ -607,7 +607,7 @@ local TeutonEvents = {
 			if (
 				EventFaction.Civilization == "teuton"
 				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
-				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
+				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				EventProvince = WorldMapProvinces.Brandenburg
 				return true
@@ -656,7 +656,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
-				and WorldMapProvinces.Scotland.Civilization == "teuton" -- should be English
+				and GetProvinceCivilization("Scotland") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -679,7 +679,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and WorldMapProvinces.England.Civilization == "teuton" -- should be English
+				and GetProvinceCivilization("England") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -702,7 +702,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
-				and WorldMapProvinces.Scotland.Civilization == "teuton" -- should be English
+				and GetProvinceCivilization("Scotland") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -725,7 +725,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name
-				and WorldMapProvinces.England.Civilization == "teuton" -- should be English
+				and GetProvinceCivilization("England") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -748,7 +748,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Brandenburg.Owner == EventFaction.Name -- where was it actually founded? Brandenburg set here since Berlin was Germany's capital
-				and WorldMapProvinces.Brandenburg.Civilization == "teuton"
+				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				return true
 			else

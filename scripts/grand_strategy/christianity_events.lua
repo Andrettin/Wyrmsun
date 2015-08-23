@@ -34,7 +34,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.England.Civilization == "celt"
+				and GetProvinceCivilization("England") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -111,7 +111,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -161,7 +161,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Scotland
 				return true
@@ -185,8 +185,8 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Scotland.Owner == EventFaction.Name
-				and WorldMapProvinces.Scotland.Civilization == "celt" -- there must be Picts in Scotland for this event to fire
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Scotland") == "celt" -- there must be Picts in Scotland for this event to fire
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Scotland
 				return true
@@ -373,7 +373,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.France.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.France
 				return true
@@ -420,8 +420,8 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
-				and (WorldMapProvinces.Bavaria.Civilization == "germanic" or WorldMapProvinces.Bavaria.Civilization == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and (GetProvinceCivilization("Bavaria") == "germanic" or GetProvinceCivilization("Bavaria") == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				return true
 			else
@@ -444,7 +444,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Belgium.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true
@@ -491,7 +491,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Bavaria
 				return true
@@ -515,7 +515,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
-				and WorldMapProvinces.England.Civilization == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
+				and GetProvinceCivilization("England") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
 			) then
 				EventProvince = WorldMapProvinces.Netherlands
 				return true
@@ -539,7 +539,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				return true
 			else
@@ -585,7 +585,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -609,8 +609,8 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Ireland.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
---				and WorldMapProvinces.Norway.Civilization == "norse"
+				and GetProvinceCivilization("Ireland") == "celt"
+--				and GetProvinceCivilization("Norway") == "norse"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -636,7 +636,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
-				and WorldMapProvinces.Netherlands.Civilization == "teuton"
+				and GetProvinceCivilization("Netherlands") == "teuton"
 --				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "temple")
 				and SyncRand(100) < 5
 				-- should add some check for Christianity being present
@@ -663,7 +663,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Rhineland.Owner == EventFaction.Name
-				and WorldMapProvinces.Rhineland.Civilization == "teuton"
+				and GetProvinceCivilization("Rhineland") == "teuton"
 			) then
 				EventProvince = WorldMapProvinces.Rhineland
 				return true
@@ -690,7 +690,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Belgium.Owner == EventFaction.Name
-				and WorldMapProvinces.Ireland.Civilization == "celt"
+				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true

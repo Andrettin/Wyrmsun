@@ -57,9 +57,9 @@ local NorseEvents = {
 				ChangeFactionCulture("germanic", EventFaction.Name, "norse")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
-						WorldMapProvinces[province_key].Civilization == "germanic"
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 					) then
-						ChangeProvinceCulture(WorldMapProvinces[province_key], "norse") -- change the culture of only one province, and let cultural spread do the rest
+						SetProvinceCivilization(WorldMapProvinces[province_key].Name, "norse") -- change the culture of only one province, and let cultural spread do the rest
 						break
 					end
 				end
@@ -73,7 +73,7 @@ local NorseEvents = {
 			if (EventFaction.Civilization ~= "teuton" and EventFaction.Civilization ~= "goth") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
-						WorldMapProvinces[province_key].Civilization == "germanic"
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 						and SyncRand(50) < 1
 						and ProvinceBordersCulture(WorldMapProvinces[province_key], "norse")
 					) then
@@ -88,7 +88,7 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeProvinceCulture(EventProvince, "norse")
+				SetProvinceCivilization(EventProvince.Name, "norse")
 			end
 		}
 	},
@@ -373,7 +373,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Sweden.Owner == EventFaction.Name
-				and WorldMapProvinces.Sweden.Civilization == "norse"
+				and GetProvinceCivilization("Sweden") == "norse"
 				-- should require Sweden to be Christian, and there to be a church in Sweden
 			) then
 				return true
@@ -396,7 +396,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
 			else
@@ -419,7 +419,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -445,7 +445,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -471,7 +471,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
 			else
@@ -495,7 +495,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
 			else
@@ -519,7 +519,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
 			else
@@ -542,7 +542,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Iceland.Owner == EventFaction.Name
-				and WorldMapProvinces.Iceland.Civilization == "norse"
+				and GetProvinceCivilization("Iceland") == "norse"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -594,7 +594,7 @@ local NorseEvents = {
 			if (
 				EventFaction.Name == "Denmark"
 				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
-				and WorldMapProvinces.Zealand.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
+				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -640,7 +640,7 @@ local NorseEvents = {
 			if (
 				EventFaction.Name == "Denmark"
 				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
-				and WorldMapProvinces.Zealand.Civilization == "norse"
+				and GetProvinceCivilization("Zealand") == "norse"
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -666,7 +666,7 @@ local NorseEvents = {
 			if (
 				EventFaction.Name == "Denmark"
 				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
-				and WorldMapProvinces.Zealand.Civilization == "norse" -- because the name "Vornedskabet" is specific to the Danish language
+				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Zealand.Name, "unit-teuton-barracks")
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then

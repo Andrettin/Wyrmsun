@@ -2201,7 +2201,7 @@ function LoadProvinces(world)
 				WorldMapProvinces[key]["Owner"] = province_table[key].Owner
 			end
 			if (province_table[key].Civilization ~= nil) then
-				WorldMapProvinces[key]["Civilization"] = province_table[key].Civilization
+				SetProvinceCivilization(WorldMapProvinces[key].Name, province_table[key].Civilization)
 			end
 			if (province_table[key].SettlementName ~= nil) then
 				WorldMapProvinces[key]["SettlementName"] = province_table[key].SettlementName

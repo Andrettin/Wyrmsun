@@ -157,7 +157,7 @@ local GermanicEvents = {
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
-						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
+						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 0)
@@ -169,7 +169,7 @@ local GermanicEvents = {
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
-						ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
+						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					end
@@ -182,7 +182,7 @@ local GermanicEvents = {
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
-					ChangeProvinceCulture(WorldMapProvinces.Astrakhan, "")
+					SetProvinceCivilization("Astrakhan", "")
 					RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8) -- to make this province harder to conquer
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
@@ -240,7 +240,7 @@ local GermanicEvents = {
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
-						ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
+						SetProvinceCivilization("Brandenburg", "")
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 						SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 						SetProvinceCivilization("Jutland", "germanic")
@@ -264,7 +264,7 @@ local GermanicEvents = {
 						end
 					end
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
-					ChangeProvinceCulture(WorldMapProvinces.Brandenburg, "")
+					SetProvinceCivilization("Brandenburg", "")
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 					SetProvinceCivilization("Jutland", "germanic")					
@@ -291,8 +291,8 @@ local GermanicEvents = {
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
 				and GetProvinceUnitQuantity("Jutland", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully attack the province
-				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Jutland)
-				and ProvinceHasBorderWith(WorldMapWaterProvinces.NorthSea, WorldMapProvinces.Scania)
+				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Jutland)
+				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Scania)
 				and WorldMapProvinces.Scania.Owner == "Gylfing Tribe"
 --				and SyncRand(100) < 50
 			) then
@@ -313,7 +313,6 @@ local GermanicEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 						SetProvinceCivilization("Scania", "germanic")
-						WorldMapProvinces.Scania.Civilization = "germanic"
 						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 						
@@ -342,7 +341,6 @@ local GermanicEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 					SetProvinceCivilization("Scania", "germanic")
-					WorldMapProvinces.Scania.Civilization = "germanic"
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 					FormFaction(EventFaction, Factions.SwedeTribe)
@@ -379,7 +377,6 @@ local GermanicEvents = {
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
 				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 				SetProvinceCivilization("Scania", "germanic")
-				WorldMapProvinces.Scania.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
@@ -411,7 +408,6 @@ local GermanicEvents = {
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
 				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 				SetProvinceCivilization("Scania", "germanic")
-				WorldMapProvinces.Scania.Civilization = "germanic"
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
@@ -534,7 +530,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Sweden.Owner == EventFaction.Name
-				and WorldMapProvinces.Sweden.Civilization == "germanic"
+				and (GetProvinceCivilization("Sweden") == "germanic" or GetProvinceCivilization("Sweden") == "norse")
 			) then
 				return true
 			else
@@ -558,7 +554,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic"
+				and GetProvinceCivilization("Jutland") == "germanic"
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
@@ -581,7 +577,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic"
+				and GetProvinceCivilization("Jutland") == "germanic"
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
@@ -604,7 +600,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic"
+				and GetProvinceCivilization("Jutland") == "germanic"
 			) then
 				return true
 			else
@@ -627,7 +623,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Jutland.Owner == EventFaction.Name
-				and WorldMapProvinces.Jutland.Civilization == "germanic"
+				and GetProvinceCivilization("Jutland") == "germanic"
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and GetFactionTechnology(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield")
 			) then
@@ -787,9 +783,9 @@ local GermanicEvents = {
 				ChangeFactionCulture("germanic", EventFaction.Name, "goth")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
-						WorldMapProvinces[province_key].Civilization == "germanic"
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 					) then
-						ChangeProvinceCulture(WorldMapProvinces[province_key], "goth") -- change the culture of only one province, and let cultural spread do the rest
+						SetProvinceCivilization(WorldMapProvinces[province_key].Name, "goth") -- change the culture of only one province, and let cultural spread do the rest
 						break
 					end
 				end
@@ -803,7 +799,7 @@ local GermanicEvents = {
 			if (EventFaction.Civilization ~= "teuton" and EventFaction.Civilization ~= "norse") then
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
-						WorldMapProvinces[province_key].Civilization == "germanic"
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 						and SyncRand(50) < 1
 						and ProvinceBordersCulture(WorldMapProvinces[province_key], "goth")
 					) then
@@ -818,7 +814,7 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				ChangeProvinceCulture(EventProvince, "goth")
+				SetProvinceCivilization(EventProvince.Name, "goth")
 			end
 		}
 	},

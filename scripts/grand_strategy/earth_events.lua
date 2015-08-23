@@ -53,7 +53,7 @@ local EarthEvents = {
 				SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
 				SetProvinceUnitQuantity("Bavaria", "unit-germanic-warrior", 4) -- make Bavaria easier to be conquered by the neighboring Celtic tribes
 				AcquireProvince(WorldMapProvinces.Don, "")
-				ChangeProvinceCulture(WorldMapProvinces.Don, "")
+				SetProvinceCivilization("Don", "")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Boii Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "celt", "Helvetii Tribe")
@@ -120,7 +120,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.England.Owner == EventFaction.Name -- was made at Uffington, in southern England
-				and WorldMapProvinces.England.Civilization == "celt" -- a Celtic culture did this
+				and GetProvinceCivilization("England") == "celt" -- a Celtic culture did this
 				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "smithy") -- happened in the late bronze age, possibly required bronze age tools
 				and SyncRand(100) < 1
 			) then
@@ -216,7 +216,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.France.Owner == EventFaction.Name
-				and WorldMapProvinces.France.Civilization == "latin" -- should be French
+				and GetProvinceCivilization("France") == "latin" -- should be French
 			) then
 				return true
 			else
@@ -263,7 +263,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.France.Owner == EventFaction.Name
-				and WorldMapProvinces.France.Civilization == "latin" -- should be French
+				and GetProvinceCivilization("France") == "latin" -- should be French
 			) then
 				return true
 			else

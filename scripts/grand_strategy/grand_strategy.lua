@@ -158,17 +158,9 @@ function RunGrandStrategyGameSetupMenu()
 					table.insert(GetFactionFromName(WorldMapProvinces[key].Owner).OwnedProvinces, key)
 				end
 
-				if (WorldMapProvinces[key].Civilization == nil) then
+				if (GetProvinceCivilization(WorldMapProvinces[key].Name) == "" and GetProvinceOwner(WorldMapProvinces[key].Name) ~= "") then
 					-- if province has no civilization/culture defined, then make it that of its owner, if any
-					if (WorldMapProvinces[key].Owner ~= "") then
-						WorldMapProvinces[key]["Civilization"] = GetFactionFromName(WorldMapProvinces[key].Owner).Civilization
-					else
-						WorldMapProvinces[key]["Civilization"] = ""
-					end
-				end
-				
-				if (WorldMapProvinces[key].Civilization ~= "") then
-					SetProvinceCivilization(WorldMapProvinces[key].Name, WorldMapProvinces[key].Civilization) -- tell the engine the civilization of the province
+					SetProvinceCivilization(WorldMapProvinces[key].Name, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name)).Civilization) -- tell the engine the civilization of the province
 				end
 				
 				if (WorldMapProvinces[key].SettlementName ~= nil) then
@@ -517,12 +509,12 @@ function EndTurn()
 			end
 		end
 		-- if a dwarven province has a town hall and a barracks, give it militia
-		if (WorldMapProvinces[key].Civilization == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization)) < 4) then
+		if (GetProvinceCivilization(WorldMapProvinces[key].Name) == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name))) < 4) then
 			if (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "town-hall") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks")) then
-				SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization)) + 1)
+				SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name)), GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name))) + 1)
 			end
-		elseif (WorldMapProvinces[key].Civilization == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization)) > 4) then
-			SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", WorldMapProvinces[key].Civilization), 4)
+		elseif (GetProvinceCivilization(WorldMapProvinces[key].Name) == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name))) > 4) then
+			SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name)), 4)
 		end
 	end
 	
@@ -899,8 +891,8 @@ function AcquireProvince(province, faction)
 	if (faction ~= "") then
 		table.insert(GetFactionFromName(faction).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 		
-		if (province.Civilization == "") then -- if province has no culture, make it that of the one who acquired it
-			ChangeProvinceCulture(province, GetFactionFromName(faction).Civilization)
+		if (GetProvinceCivilization(province.Name) == "") then -- if province has no culture, make it that of the one who acquired it
+			SetProvinceCivilization(province.Name, GetFactionFromName(faction).Civilization)
 		end
 					
 		for i, unitName in ipairs(Units) do
@@ -911,7 +903,7 @@ function AcquireProvince(province, faction)
 			end
 		end
 	elseif (faction == "") then
-		ChangeProvinceCulture(province, "")
+		SetProvinceCivilization(province.Name, "")
 		for i, unitName in ipairs(Units) do
 			if (IsGrandStrategyBuilding(unitName)) then
 				if (GetProvinceSettlementBuilding(province.Name, unitName)) then
@@ -930,50 +922,6 @@ OldChangeFactionCulture = ChangeFactionCulture
 function ChangeFactionCulture(old_civilization, faction_name, new_civilization)
 	GetFactionFromName(faction_name).Civilization = new_civilization
 	OldChangeFactionCulture(old_civilization, faction_name, new_civilization)
-end
-
-function ChangeProvinceCulture(province, civilization)
-	local old_civilization = province.Civilization
-	province.Civilization = civilization
-	SetProvinceCivilization(province.Name, civilization)
-	
-	if (civilization ~= "") then
-		-- replace existent buildings from other civilizations with buildings of the new civilization
-		for i, unitName in ipairs(Units) do
-			if (IsGrandStrategyBuilding(unitName) and GetUnitTypeData(unitName, "Class") ~= "mercenary-camp") then
-				if (GetProvinceSettlementBuilding(province.Name, unitName) and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= unitName) then
-					SetProvinceSettlementBuilding(province.Name, unitName, false) -- remove building from other civilization
-					if (GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil) then
-						SetProvinceSettlementBuilding(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), true)
-					end
-				end
-			end
-		end
-		SetProvinceCurrentConstruction(province.Name, "") -- under construction buildings get canceled
-		
-		-- replace existent units from the previous civilization with units of the new civilization
-		for i, unitName in ipairs(Units) do
-			if (
-				string.find(unitName, "upgrade-") == nil
-				and GetUnitTypeData(unitName, "Class") ~= ""
-				and GetUnitTypeData(unitName, "Civilization") ~= ""
-				and GetUnitTypeData(unitName, "Building") == false
-				and GetUnitTypeData(unitName, "Demand") > 0 
-				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) == unitName
-				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= nil
-				and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) ~= GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), old_civilization) -- don't replace if both civilizations use the same unit type
-			) then
-				SetProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnitQuantity(province.Name, unitName))
-				SetProvinceUnderConstructionUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization), GetProvinceUnderConstructionUnitQuantity(province.Name, GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization)) + GetProvinceUnderConstructionUnitQuantity(province.Name, unitName))
-				SetProvinceUnitQuantity(province.Name, unitName, 0)
-				SetProvinceUnderConstructionUnitQuantity(province.Name, unitName, 0)
-			end
-		end
-	end
-	
-	if (province.Owner ~= "") then
-		CalculateFactionIncomes(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name)
-	end
 end
 
 function CalculateProvinceBorderTiles()
@@ -1355,11 +1303,11 @@ end
 
 function ProvinceBordersCulture(province, civilization)
 	for i=1,table.getn(province.BorderProvinces) do
-		if (WorldMapProvinces[province.BorderProvinces[i]] ~= nil and WorldMapProvinces[province.BorderProvinces[i]].Civilization == civilization) then
+		if (WorldMapProvinces[province.BorderProvinces[i]] ~= nil and GetProvinceCivilization(WorldMapProvinces[province.BorderProvinces[i]].Name) == civilization) then
 			return true
 		elseif (WorldMapWaterProvinces[province.BorderProvinces[i]] ~= nil) then -- also check secondary borders through water, so that culture can spread to islands
 			for j=1,table.getn(WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces) do
-				if (WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]].Civilization == civilization) then
+				if (WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceCivilization(WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]].Name) == civilization) then
 					return true
 				end
 			end
@@ -1380,7 +1328,7 @@ end
 
 function FactionHasCulture(faction, civilization)
 	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (WorldMapProvinces[key].Civilization == civilization) then
+		if (GetProvinceCivilization(WorldMapProvinces[key].Name) == civilization) then
 			return true
 		end
 	end
@@ -1744,25 +1692,25 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	local old_unit_type = unit_type
 	
 	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type) == false) then -- if not built, make icon gray
-		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-town-hall"
-		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-barracks"
-		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
+		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
 			unit_type = "unit-germanic-carpenters-shop"
-		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-smithy"
 		end
 		b = ImageButton("")
 		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
 	else
-		if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-town-hall"
-		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-barracks"
-		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 			unit_type = "unit-germanic-carpenters-shop"
-		elseif ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 			unit_type = "unit-germanic-smithy"
 		end
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
@@ -2441,10 +2389,10 @@ function DrawGrandStrategyInterface()
 					end
 				end
 			elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
-				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-town-hall"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_y = -2
@@ -2532,10 +2480,10 @@ function DrawGrandStrategyInterface()
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyInterfaceState == "barracks") then
-				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-barracks"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				-- add units buttons for training
@@ -2659,10 +2607,10 @@ function DrawGrandStrategyInterface()
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyInterfaceState == "lumber-mill") then
-				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
@@ -2701,10 +2649,10 @@ function DrawGrandStrategyInterface()
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyInterfaceState == "smithy") then
-				if ((SelectedProvince.Civilization == "teuton" or GetParentCivilization(SelectedProvince.Civilization) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
+				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetParentCivilization(GetProvinceCivilization(SelectedProvince.Name)) == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, SelectedProvince.Civilization)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
@@ -3105,14 +3053,14 @@ function AIDoTurn(ai_faction)
 
 	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
 		-- try to first research masonry, then writing, then coinage, and only then try to research other technologies
-		if (GetCivilizationClassUnitType("masonry", WorldMapProvinces[key].Civilization) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", WorldMapProvinces[key].Civilization))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", WorldMapProvinces[key].Civilization))
+		if (GetCivilizationClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name)))
 		end
-		if (GetCivilizationClassUnitType("writing", WorldMapProvinces[key].Civilization) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", WorldMapProvinces[key].Civilization))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", WorldMapProvinces[key].Civilization))
+		if (GetCivilizationClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name)))
 		end
-		if (GetCivilizationClassUnitType("coinage", WorldMapProvinces[key].Civilization) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", WorldMapProvinces[key].Civilization))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", WorldMapProvinces[key].Civilization))
+		if (GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)))
 		end
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") ~= nil) then
@@ -3443,7 +3391,7 @@ function AIConsiderOffers(ai_faction)
 end
 
 function IsBuildingAvailable(province, unit_type)
-	if (province.Owner ~= "Ocean" and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), province.Civilization) ~= unit_type and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp") then
+	if (province.Owner ~= "Ocean" and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp") then
 		return false
 	end
 
@@ -3536,7 +3484,7 @@ function CanTrainUnit(province, unit_type)
 end
 
 function IsUnitAvailableForTraining(province, unit_type)
-	if (GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), province.Civilization) ~= unit_type and GetUnitTypeInterfaceState(unit_type) ~= "mercenary-camp") then
+	if (GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type and GetUnitTypeInterfaceState(unit_type) ~= "mercenary-camp") then
 		return false
 	end
 	
@@ -3634,7 +3582,7 @@ function UseBuilding(province, unit_type)
 end
 
 function IsTechnologyAvailable(province, unit_type)
-	if (GetCivilizationClassUnitType(CUpgrade:Get(unit_type).Class, province.Civilization) ~= unit_type) then
+	if (GetCivilizationClassUnitType(CUpgrade:Get(unit_type).Class, GetProvinceCivilization(province.Name)) ~= unit_type) then
 		return false
 	end
 

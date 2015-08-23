@@ -34,7 +34,7 @@ local GreekEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.Thrace.Owner == EventFaction.Name
-				and WorldMapProvinces.Thrace.Civilization == "greek"
+				and GetProvinceCivilization("Thrace") == "greek"
 			) then
 				EventProvince = WorldMapProvinces.Thrace
 				return true

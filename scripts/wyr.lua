@@ -180,8 +180,8 @@ function SetPlayerData(player, data, arg1, arg2)
 					elseif (GrandStrategyFaction.Name == Defender and GetFactionFromName(Attacker) ~= nil) then
 						arg1 = GetFactionFromName(Attacker).Civilization
 					end
-				elseif (AttackedProvince.Civilization ~= "") then
-					arg1 = AttackedProvince.Civilization
+				elseif (GetProvinceCivilization(AttackedProvince.Name) ~= "") then
+					arg1 = GetProvinceCivilization(AttackedProvince.Name)
 				end
 			end
 		end

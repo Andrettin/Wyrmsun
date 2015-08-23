@@ -35,7 +35,7 @@ local NidavellirEvents = {
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
 				WorldMapProvinces.Svarinshaug.Owner == EventFaction.Name
-				and WorldMapProvinces.Svarinshaug.Civilization == "dwarf"
+				and GetProvinceCivilization("Svarinshaug") == "dwarf"
 			) then
 				return true
 			else
@@ -62,7 +62,7 @@ local NidavellirEvents = {
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
 				WorldMapProvinces.Svarinshaug.Owner == EventFaction.Name
-				and WorldMapProvinces.Svarinshaug.Civilization == "dwarf"
+				and GetProvinceCivilization("Svarinshaug") == "dwarf"
 			) then
 				return true
 			else
@@ -428,7 +428,7 @@ local NidavellirEvents = {
 			if (
 				EventFaction.Civilization == "dwarf"
 				and WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
-				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
 				and ProvinceHasBuildingClass(WorldMapProvinces.CavernsOfChaincolt.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
@@ -466,7 +466,7 @@ local NidavellirEvents = {
 			if (
 				EventFaction.Civilization == "dwarf"
 				and WorldMapProvinces.SouthernTunnels.Owner == EventFaction.Name
-				and WorldMapProvinces.SouthernTunnels.Civilization == "dwarf"
+				and GetProvinceCivilization("Southern Tunnels") == "dwarf"
 				and ProvinceHasBuildingClass(WorldMapProvinces.SouthernTunnels.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
@@ -504,7 +504,7 @@ local NidavellirEvents = {
 			if (
 				EventFaction.Civilization == "dwarf"
 				and WorldMapProvinces.ShorbearHills.Owner == EventFaction.Name
-				and WorldMapProvinces.ShorbearHills.Civilization == "dwarf"
+				and GetProvinceCivilization("Shorbear Hills") == "dwarf"
 				and ProvinceHasBuildingClass(WorldMapProvinces.ShorbearHills.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
@@ -542,7 +542,7 @@ local NidavellirEvents = {
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
 				WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
-				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
 			) then
 				return true
 			else
@@ -569,7 +569,7 @@ local NidavellirEvents = {
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
 				WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
-				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
 				and EventFaction.Name == "Norlund Clan" -- ruler events also require the faction being correct
 			) then
 				return true
@@ -592,7 +592,7 @@ local NidavellirEvents = {
 		Conditions = function(s)
 			if (
 				WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
-				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
 			) then
 				return true
 			else
@@ -614,7 +614,7 @@ local NidavellirEvents = {
 		Conditions = function(s) -- can happen for clans other than the Norlund clan, if they conquer the Caverns of Chaincolt in time!
 			if (
 				WorldMapProvinces.CavernsOfChaincolt.Owner == EventFaction.Name
-				and WorldMapProvinces.CavernsOfChaincolt.Civilization == "dwarf"
+				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
 				and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 0
 				and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 0
 				and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 0
