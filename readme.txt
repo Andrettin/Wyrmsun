@@ -211,7 +211,7 @@ https://github.com/Andrettin/Wyrmsun
 - Hill graphic transitions update (by Jinn).
 - Greatly increased the proportions of the Earth map.
 - New Earth provinces: Scania, Zealand.
-- New Earth water provinces: Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Kattegat, Lake Vättern, Lake Wener, Skagerrak.
+- New Earth water provinces: Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake VÃ¤ttern, Lake Wener, Skagerrak.
 
 -----------------------------------------------------------------------
 - 1.3.3
