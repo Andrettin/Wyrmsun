@@ -213,6 +213,10 @@ https://github.com/Andrettin/Wyrmsun
 - New Earth provinces: Scania, Zealand.
 - New Earth water provinces: Bristol Channel, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Skagerrak.
 
+* Miscellaneous
+- A idle worker button now appears in the upper right corner of the screen if there are any idle workers.
+- Fixed a few minor issues with button clicking.
+
 -----------------------------------------------------------------------
 - 1.3.3
 -----------------------------------------------------------------------

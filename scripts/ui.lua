@@ -100,6 +100,145 @@ local max_damage = Add(
 	ActiveUnitVar("PiercingDamage")
 )
 
+UI.InfoPanel.X = 162
+UI.InfoPanel.Y = Video.Height - 186
+
+b = CUIButton:new()
+b.X = 169
+b.Y = Video.Height - 166
+b.Style = FindButtonStyle("icon")
+UI.SingleSelectedButton = b
+
+UI.SelectedButtons:clear()
+
+function AddSelectedButton(x, y)
+	b = CUIButton:new_local()
+	b.X = 162 + x
+	b.Y = Video.Height - 186 + y
+	b.Style = FindButtonStyle("icon")
+	UI.SelectedButtons:push_back(b)
+end
+
+AddSelectedButton(30, 15)
+AddSelectedButton(86, 15)
+AddSelectedButton(142, 15)
+AddSelectedButton(30, 69)
+AddSelectedButton(86, 69)
+AddSelectedButton(142, 69)
+AddSelectedButton(30, 123)
+AddSelectedButton(86, 123)
+AddSelectedButton(142, 123)
+
+UI.MaxSelectedFont = Fonts["game"]
+UI.MaxSelectedTextX = 162 + 0
+UI.MaxSelectedTextY = Video.Height - 186 + 15
+
+b = CUIButton:new()
+b.X = 162 + 160
+b.Y = Video.Height - 186 + 80
+b.Style = FindButtonStyle("icon")
+UI.SingleTrainingButton = b
+
+UI.TrainingButtons:clear()
+
+function AddTrainingButton(x, y)
+	b = CUIButton:new_local()
+	b.X = 162 + x
+	b.Y = Video.Height - 186 + y
+	b.Style = FindButtonStyle("icon")
+	UI.TrainingButtons:push_back(b)
+end
+
+AddTrainingButton(160, 80)
+AddTrainingButton(108, 80)
+AddTrainingButton(56, 80)
+AddTrainingButton(4, 80)
+
+b = CUIButton:new()
+b.X = 162 + 110
+b.Y = Video.Height - 186 + 11 + 70
+b.Style = FindButtonStyle("icon")
+UI.UpgradingButton = b
+
+b = CUIButton:new()
+b.X = 162 + 110
+b.Y = Video.Height - 186 + 11 + 70
+b.Style = FindButtonStyle("icon")
+UI.ResearchingButton = b
+
+UI.TransportingButtons:clear()
+
+function AddTransportingButton(x, y)
+	b = CUIButton:new_local()
+	b.X = Video.Width - 243 + x
+	b.Y = Video.Height - 186 + y
+	b.Style = FindButtonStyle("icon")
+	UI.TransportingButtons:push_back(b)
+end
+
+AddTransportingButton(17, 65)
+AddTransportingButton(73, 65)
+AddTransportingButton(129, 65)
+AddTransportingButton(17, 119)
+AddTransportingButton(73, 119)
+AddTransportingButton(129, 119)
+
+b = CUIButton:new()
+--b.X = 12
+b.X = Video.Width - 12 - 46
+b.Y = 16 + 12
+b.Style = FindButtonStyle("icon")
+UI.IdleWorkerButton = b
+
+UI.CompletedBarColorRGB = CColor(48, 100, 4)
+UI.CompletedBarShadow = false
+
+UI.ButtonPanel.Buttons:clear()
+
+function AddButtonPanelButton(x, y)
+	b = CUIButton:new_local()
+	b.X = Video.Width - 243 + x
+	b.Y = Video.Height - 186 + y
+	b.Style = FindButtonStyle("icon")
+	UI.ButtonPanel.Buttons:push_back(b)
+end
+
+AddButtonPanelButton(17, 11)
+AddButtonPanelButton(73, 11)
+AddButtonPanelButton(129, 11)
+AddButtonPanelButton(185, 11)
+AddButtonPanelButton(17, 54)
+AddButtonPanelButton(73, 54)
+AddButtonPanelButton(129, 54)
+AddButtonPanelButton(185, 54)
+AddButtonPanelButton(17, 97)
+AddButtonPanelButton(73, 97)
+AddButtonPanelButton(129, 97)
+AddButtonPanelButton(185, 97)
+AddButtonPanelButton(17, 140)
+AddButtonPanelButton(73, 140)
+AddButtonPanelButton(129, 140)
+AddButtonPanelButton(185, 140)
+
+UI.ButtonPanel.X = Video.Width - 243
+UI.ButtonPanel.Y = Video.Height - 186
+UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
+
+UI.MapArea.X = 0
+UI.MapArea.Y = 16
+UI.MapArea.EndX = Video.Width - 1
+UI.MapArea.EndY = Video.Height - 176 - 1
+
+UI.Minimap.X = 17
+UI.Minimap.Y = Video.Height - 156
+UI.Minimap.W = 128
+UI.Minimap.H = 128
+
+UI.StatusLine.TextX = 2
+UI.StatusLine.TextY = Video.Height + 2 - 16
+UI.StatusLine.Width = Video.Width - 16 - 2 - 176
+UI.StatusLine.Font = Fonts["game"]
+
 Load("scripts/celt/ui.lua")
 Load("scripts/dwarf/ui.lua")
 Load("scripts/germanic/ui.lua")
