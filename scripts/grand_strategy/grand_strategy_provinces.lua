@@ -285,12 +285,24 @@ function LoadProvinces(world)
 				FrankTribe = "Austrasia",
 				latin = "Belgica"
 			},
-			Tiles = { {122, 27}, {122, 28}, {123, 28}, {124, 28} },
-			SettlementName = "Aduatuca",
+			Tiles = {
+				{122, 27}, {122, 28}, {123, 28}, {124, 28}, -- old map
+				{488, 110}, {488, 111},
+				{489, 110}, {489, 111},
+				{490, 110}, {490, 111}, {490, 112},
+				{491, 110}, {491, 111}, {491, 112},
+				{492, 110}, {492, 111}, {492, 112}, {492, 113},
+				{493, 110}, {493, 111}, {493, 112}, {493, 113},
+				{494, 110}, {494, 111}, {494, 112}, {494, 113},
+				{495, 110}, {495, 111}, {495, 112}, {495, 113}, {495, 114},
+				{496, 111}, {496, 112}, {496, 113}, {496, 114},
+				{497, 114}
+			},
+			SettlementName = "Brussels",
 			CulturalSettlementNames = {
 				latin = "Aduatuca"
 			},
-			SettlementLocation = {123, 28}, -- Brussels
+			SettlementLocation = {492, 111}, -- Brussels
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer early on
@@ -882,12 +894,24 @@ function LoadProvinces(world)
 				latin = "Batavia",
 				teuton = "Netherlands"
 			},
-			Tiles = { {123, 26}, {123, 27}, {124, 26}, {124, 27} },
+			Tiles = {
+				{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
+				{490, 109},
+				{491, 108}, {491, 109},
+				{492, 107}, {492, 108}, {492, 109},
+				{493, 106}, {493, 107}, {493, 108}, {493, 109},
+				{494, 107}, {494, 108}, {494, 109},
+				{495, 107}, {495, 108}, {495, 109},
+				{496, 104}, {496, 105}, {496, 106}, {496, 107}, {496, 108}, {496, 109}, {496, 110},
+				{497, 104}, {497, 105}, {497, 106}, {497, 107}, {497, 109},
+				{498, 104}, {498, 105}, {498, 106}, {498, 107},
+				{499, 104}, {499, 105}, {499, 106}, {499, 107}
+			},
 			SettlementName = "Amsterdam",
 			CulturalSettlementNames = {
 				teuton = "Amsterdam"
 			},
-			SettlementLocation = {123, 26}, -- Amsterdam
+			SettlementLocation = {494, 107}, -- Amsterdam
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 8 -- soldiers to prevent expansion here too soon
@@ -1007,12 +1031,20 @@ function LoadProvinces(world)
 				SaxonTribe = "Saxland",
 				SwedeTribe = "Saxland"
 			},
-			Tiles = { {125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26} },
-			SettlementName = "Dusseldorf",
-			CulturalSettlementNames = {
-				teuton = "Dusseldorf"
+			Tiles = {
+				{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
+				{497, 108}, {497, 110},
+				{498, 108}, {498, 109}, {498, 110},
+				{499, 108}, {499, 109}, {499, 110},
+				{500, 103}, {500, 104}, {500, 105}, {500, 106}, {500, 107}, {500, 108}, {500, 109}, {500, 110},
+				{501, 103}, {501, 104}, {501, 105}, {501, 106}, {501, 107}, {501, 108}, {501, 109}, {501, 110},
+				{502, 103}, {502, 104}, {502, 105}, {502, 106}, {502, 107}, {502, 108}, {502, 109}, {502, 110}
 			},
-			SettlementLocation = {125, 27}, -- Düsseldorf
+			SettlementName = "Düsseldorf",
+			CulturalSettlementNames = {
+				teuton = "Düsseldorf"
+			},
+			SettlementLocation = {500, 109}, -- Düsseldorf
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
