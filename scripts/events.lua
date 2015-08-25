@@ -596,7 +596,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 		end
 		
 		if (table.getn(options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
-			menu:addButton("", "return", 0, 0,
+			menu:addButton("", "return", -1, -1,
 				function()
 					SetGamePaused(false)
 					menu:stop()
@@ -659,7 +659,7 @@ function Tip(tip_name, tip_description)
 		end
 	)
 	
-	menu:addButton("", "return", 0, 0,
+	menu:addButton("", "return", -1, -1,
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)

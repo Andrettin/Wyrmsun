@@ -391,22 +391,22 @@ function RunGrandStrategyGame()
 	DrawGrandStrategyInterface()
 	
 	-- add a pseudo-button to bring up the menu
-	GrandStrategyMenu:addButton("", "f10", 0, 0,
+	GrandStrategyMenu:addButton("", "f10", -1, -1,
 		function()
 			RunGrandStrategyGameMenu()
 		end,
 	{0, 0})
-	GrandStrategyMenu:addButton("", "f11", 0, 0,
+	GrandStrategyMenu:addButton("", "f11", -1, -1,
 		function()
 			RunGrandStrategySaveMenu()
 		end,
 	{0, 0})
-	GrandStrategyMenu:addButton("", "f12", 0, 0,
+	GrandStrategyMenu:addButton("", "f12", -1, -1,
 		function()
 			RunGrandStrategyLoadGameMenu()
 		end,
 	{0, 0})
-	GrandStrategyMenu:addButton("", "f5", 0, 0,
+	GrandStrategyMenu:addButton("", "f5", -1, -1,
 		function()
 			RunEncyclopediaMenu()
 		end,
@@ -4158,7 +4158,7 @@ function GrandStrategyEvent(faction, event)
 		end
 		
 		if (table.getn(event.Options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
-			menu:addButton("", "return", 0, 0,
+			menu:addButton("", "return", -1, -1,
 				function()
 					menu:stop()
 					event.OptionEffects[1]()
@@ -4547,7 +4547,7 @@ function GrandStrategyDialog(title, message)
 			menu:stop()
 		end
 	)
-	menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the battle dialog
+	menu:addButton("", "return", -1, -1, -- allow enter to be used as a way to close the battle dialog
 		function()
 			GrandStrategyGamePaused = false
 			menu:stop()
