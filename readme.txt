@@ -211,7 +211,7 @@ https://github.com/Andrettin/Wyrmsun
 - Hill graphic transitions update (by Jinn).
 - Greatly increased the proportions of the Earth map.
 - New Earth provinces: Scania, Zealand.
-- New Earth water provinces: Bristol Channel, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Skagerrak.
+- New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Skagerrak.
 
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.
