@@ -142,6 +142,7 @@ SetWorldMapTileTerrain(22, 26, dark_plains_id)
 SetWorldMapTileTerrain(22, 27, dark_plains_id)
 SetWorldMapTileTerrain(22, 28, dark_plains_id)
 SetWorldMapTileTerrain(22, 29, hills_id)
+AddWorldMapResource("gold", 22, 29, true) -- location of the Troll Hole in the Brown Hills
 SetWorldMapTileTerrain(22, 30, hills_id)
 SetWorldMapTileTerrain(22, 31, hills_id)
 SetWorldMapTileTerrain(22, 32, dark_plains_id)
@@ -347,6 +348,7 @@ SetWorldMapTileTerrain(30, 9, mountains_id)
 SetWorldMapTileTerrain(30, 10, mountains_id)
 SetWorldMapTileTerrain(30, 11, mountains_id)
 SetWorldMapTileTerrain(30, 12, mountains_id)
+AddWorldMapResource("gold", 30, 12, false)
 SetWorldMapTileTerrain(30, 13, mountains_id)
 SetWorldMapTileTerrain(30, 14, hills_id)
 SetWorldMapTileTerrain(30, 15, hills_id)
@@ -399,6 +401,7 @@ SetWorldMapTileTerrain(32, 10, mountains_id)
 SetWorldMapTileTerrain(32, 11, mountains_id)
 SetWorldMapTileTerrain(32, 12, mountains_id)
 SetWorldMapTileTerrain(32, 13, mountains_id)
+AddWorldMapResource("gold", 32, 13, false)
 SetWorldMapTileTerrain(32, 14, hills_id)
 SetWorldMapTileTerrain(32, 15, hills_id)
 SetWorldMapTileTerrain(32, 16, hills_id)
@@ -442,6 +445,7 @@ SetWorldMapTileTerrain(34, 11, mountains_id)
 SetWorldMapTileTerrain(34, 12, mountains_id)
 SetWorldMapTileTerrain(34, 13, mountains_id)
 SetWorldMapTileTerrain(34, 14, hills_id)
+AddWorldMapResource("gold", 34, 14, false)
 SetWorldMapTileTerrain(34, 15, dark_plains_id)
 SetWorldMapTileTerrain(34, 16, dark_plains_id)
 SetWorldMapTileTerrain(34, 17, dark_plains_id)
@@ -456,6 +460,7 @@ SetWorldMapTileTerrain(35, 7, dark_plains_id)
 SetWorldMapTileTerrain(35, 8, dark_plains_id)
 SetWorldMapTileTerrain(35, 9, dark_plains_id)
 SetWorldMapTileTerrain(35, 10, mountains_id)
+AddWorldMapResource("gold", 35, 10, false)
 SetWorldMapTileTerrain(35, 11, mountains_id)
 SetWorldMapTileTerrain(35, 12, mountains_id)
 SetWorldMapTileTerrain(35, 13, mountains_id)
@@ -515,6 +520,7 @@ SetWorldMapTileTerrain(39, 3, mountains_id)
 SetWorldMapTileTerrain(39, 4, mountains_id)
 SetWorldMapTileTerrain(39, 5, mountains_id)
 SetWorldMapTileTerrain(39, 6, hills_id)
+AddWorldMapResource("gold", 39, 6, false)
 SetWorldMapTileTerrain(39, 7, hills_id)
 SetWorldMapTileTerrain(39, 8, hills_id)
 SetWorldMapTileTerrain(39, 9, dark_plains_id)
@@ -620,6 +626,7 @@ SetWorldMapTileTerrain(46, 2, mountains_id)
 SetWorldMapTileTerrain(46, 3, mountains_id)
 SetWorldMapTileTerrain(46, 4, mountains_id)
 SetWorldMapTileTerrain(46, 5, hills_id)
+AddWorldMapResource("gold", 46, 5, false)
 SetWorldMapTileTerrain(46, 6, dark_plains_id)
 SetWorldMapTileTerrain(46, 7, dark_plains_id)
 SetWorldMapTileTerrain(46, 8, dark_plains_id)
@@ -641,6 +648,7 @@ SetWorldMapTileTerrain(47, 8, dark_plains_id)
 SetWorldMapTileTerrain(47, 9, dark_plains_id)
 SetWorldMapTileTerrain(47, 10, hills_id)
 SetWorldMapTileTerrain(47, 11, hills_id)
+AddWorldMapResource("gold", 47, 11, true) -- to give the Modsogning clan a proper start
 SetWorldMapTileTerrain(47, 12, hills_id)
 SetWorldMapTileTerrain(47, 13, hills_id)
 SetWorldMapTileTerrain(47, 14, dark_plains_id)
@@ -789,23 +797,6 @@ SetWorldMapTileTerrain(56, 16, dark_plains_id)
 SetWorldMapTileTerrain(56, 17, dark_plains_id)
 SetWorldMapTileTerrain(56, 18, hills_id)
 
-WorldMapResources = {
-	Gold = {
-		{22, 29, true}, -- location of the Troll Hole in the Brown Hills
-		{30, 12, true}, 
-		{32, 13, true}, 
-		{35, 10, false}, 
-		{34, 14, true}, 
-		{39, 6, false}, 
-		{46, 5, false},
-		{47, 11, true} -- to give the Modsogning clan a proper start
-	},
-	Lumber = { 
-	},
-	Stone = { 
-	}
-}
-
 LoadFactions("Nidavellir")
 
 LoadProvinces("Nidavellir")
@@ -874,6 +865,7 @@ if (GrandStrategyYear >= -1) then
 --	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-scout", 1) -- Noiraran
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-axefighter", 4) -- 4 Dwarven Guardsmen (5 if easy mode)
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Neglur, Glinar
+	SetWorldMapResourceProspected("gold", 30, 12, true)
 	WorldMapProvinces.ShorbearHills.Owner = "Shorbear Clan"
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-stronghold", true) -- Shorbear Hold
@@ -881,12 +873,14 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-smithy", true) -- renowned skilled crafters
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
+	SetWorldMapResourceProspected("gold", 34, 14, true)
 	WorldMapProvinces.SouthernTunnels.Owner = "Shinsplitter Clan"
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-barracks", true) -- has capability to train warriors
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 3) -- Glildur, Glindur, Kalnar
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 5) -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
+	SetWorldMapResourceProspected("gold", 32, 13, true)
 
 	-- bronze age technologies had already been obtained by the dwarves by this point
 	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-broad-axe", true)
@@ -969,7 +963,7 @@ if (GrandStrategyYear >= 29) then
 --	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman") / 2)
 	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-spearman", 12) -- to prevent the Norlunds expanding here too soon
 	SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", 4)
-	SetResourceProspected(39, 6, "Gold", true) -- Rugnur and his companions found the location of the gold mines in the Eastern Mines
+	SetWorldMapResourceProspected("gold", 39, 6, true) -- Rugnur and his companions found the location of the gold mines in the Eastern Mines
 
 	--[[
 	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
@@ -1043,7 +1037,7 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
-	SetResourceProspected(46, 5, "Gold", true)
+	SetWorldMapResourceProspected("gold", 46, 5, true)
 	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing
 
 	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
@@ -1069,7 +1063,7 @@ if (GrandStrategyYear >= 500) then
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-goblin-archer", 0)
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-dwarven-axefighter", 6) -- six dwarven ulfserkers
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-dwarven-thane", 1) -- Stalrag
-	SetResourceProspected(35, 10, "Gold", true)
+	SetWorldMapResourceProspected("gold", 35, 10, true)
 end
 
 if (GrandStrategyYear >= 534) then

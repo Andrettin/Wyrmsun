@@ -2315,6 +2315,7 @@ function LoadProvinces(world)
 				WorldMapProvinces[key]["Tiles"] = {}
 				for i=1,table.getn(province_table[key].Tiles) do
 					table.insert(WorldMapProvinces[key].Tiles, {province_table[key].Tiles[i][1], province_table[key].Tiles[i][2]})
+					SetWorldMapTileProvince(province_table[key].Tiles[i][1], province_table[key].Tiles[i][2], WorldMapProvinces[key].Name)
 				end
 			end
 			WorldMapProvinces[key]["Owner"] = ""
@@ -2392,6 +2393,7 @@ function LoadProvinces(world)
 				WorldMapWaterProvinces[key]["Tiles"] = {}
 				for i=1,table.getn(province_table[key].Tiles) do
 					table.insert(WorldMapWaterProvinces[key].Tiles, {province_table[key].Tiles[i][1], province_table[key].Tiles[i][2]})
+					SetWorldMapTileProvince(province_table[key].Tiles[i][1], province_table[key].Tiles[i][2], WorldMapWaterProvinces[key].Name)
 				end
 			end
 			WorldMapWaterProvinces[key]["Owner"] = province_table[key].Owner

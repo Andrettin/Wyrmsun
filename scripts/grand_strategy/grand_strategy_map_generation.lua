@@ -295,15 +295,6 @@ function GenerateRandomWorldMap()
 		end
 	end
 	
-	WorldMapResources = {
-		Gold = {
-		},
-		Lumber = { 
-		},
-		Stone = { 
-		}
-	}
-	
 	local province_seeds = {}
 
 	for key, value in pairs(WorldMapProvinces) do -- insert the province seeds at this point, so that it will be known where the settlement locations will be when gold deposits and etc. are generated
@@ -337,8 +328,8 @@ function GenerateRandomWorldMap()
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Hills" or GetWorldMapTileTerrain(RandomX, RandomY) == "Mountains") then
-				if (GetArrayIncludes(WorldMapResources.Gold, {RandomX, RandomY}) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
-					table.insert(WorldMapResources.Gold, {RandomX, RandomY, false})
+				if (WorldMapTileHasResource(RandomX, RandomY, "gold", true) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
+					AddWorldMapResource("gold", RandomX, RandomY, false)
 					break
 				end
 			end
@@ -628,8 +619,8 @@ function GenerateProvince(arg)
 				for j=1,100 do
 					local random_tile = arg.Province.Tiles[SyncRand(table.getn(arg.Province.Tiles)) + 1]
 					if (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains") then
-						if (GetArrayIncludes(WorldMapResources.Gold, {random_tile[1], random_tile[2]}) == false and {random_tile[1], random_tile[2]} ~= arg.Province.SettlementLocation) then
-							table.insert(WorldMapResources.Gold, {random_tile[1], random_tile[2], false})
+						if (WorldMapTileHasResource(random_tile[1], random_tile[2], "gold", true) == false and {random_tile[1], random_tile[2]} ~= arg.Province.SettlementLocation) then
+							AddWorldMapResource("gold", random_tile[1], random_tile[2], false)
 							break
 						end
 					end

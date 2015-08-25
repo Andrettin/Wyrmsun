@@ -100,11 +100,11 @@ function RunGrandStrategyGameSetupMenu()
 			end
 			
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
+			SetPlayerFaction(GetFactionFromName(faction_list[faction:getSelected() + 1]).Civilization, GetFactionFromName(faction_list[faction:getSelected() + 1]).Name)
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 			GrandStrategyInterfaceState = "Province"
 			GrandStrategyMapWidthIndent = 0
 			GrandStrategyMapHeightIndent = 0
-			CalculateTileProvinces()
 			CalculateProvinceBorders()
 			CalculateProvinceBorderTiles()
 
@@ -224,33 +224,21 @@ function RunGrandStrategyGameSetupMenu()
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
 					if (GetWorldMapTileTerrain(x, y) == "Conifer Forest" or GetWorldMapTileTerrain(x, y) == "Scrub Forest") then -- add lumber resource location to forest tiles
-						if (TileHasResource(x, y, "Lumber", false) == false) then
-							table.insert(WorldMapResources.Lumber, {x, y, true})
+						if (WorldMapTileHasResource(x, y, "lumber", true) == false) then
+							AddWorldMapResource("lumber", x, y, true)
 						end
 					elseif (GetWorldMapTileTerrain(x, y) == "Plains" or GetWorldMapTileTerrain(x, y) == "Dark Plains") then -- make plains tiles into hills if there is a mine there
-						if (TileHasResource(x, y, "Gold", true) == true) then
+						if (WorldMapTileHasResource(x, y, "gold", true) == true) then
 							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Hills"))
 						end
 					elseif (GetWorldMapTileTerrain(x, y) == "Mountains") then -- implement variations for mountain tiles
-						if (TileHasResource(x, y, "Stone", false) == false and TileHasResource(x, y, "Gold", true) == false) then -- only add stone resource if has no gold
-							table.insert(WorldMapResources.Stone, {x, y, true})
+						if (WorldMapTileHasResource(x, y, "stone", true) == false and WorldMapTileHasResource(x, y, "gold", true) == false) then -- only add stone resource if has no gold
+							AddWorldMapResource("stone", x, y, true)
 						end
 					end
 				end
 			end
 			
-			for i=1,table.getn(WorldMapResources.Gold) do
-				AddWorldMapResource("gold", WorldMapResources.Gold[i][1], WorldMapResources.Gold[i][2], WorldMapResources.Gold[i][3])
-			end
-
-			for i=1,table.getn(WorldMapResources.Lumber) do
-				AddWorldMapResource("lumber", WorldMapResources.Lumber[i][1], WorldMapResources.Lumber[i][2], WorldMapResources.Lumber[i][3])
-			end
-
-			for i=1,table.getn(WorldMapResources.Stone) do
-				AddWorldMapResource("stone", WorldMapResources.Stone[i][1], WorldMapResources.Stone[i][2], WorldMapResources.Stone[i][3])
-			end
-
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
 					CalculateWorldMapTileGraphicTile(x, y)
@@ -991,19 +979,6 @@ function CalculateProvinceBorderTiles()
 	end
 end
 
-function CalculateTileProvinces()
-	for key, value in pairs(WorldMapProvinces) do
-		for i=1,table.getn(WorldMapProvinces[key].Tiles) do
-			SetWorldMapTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2], WorldMapProvinces[key].Name)
-		end
-	end
-	for key, value in pairs(WorldMapWaterProvinces) do
-		for i=1,table.getn(WorldMapWaterProvinces[key].Tiles) do
-			SetWorldMapTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2], WorldMapWaterProvinces[key].Name)
-		end
-	end
-end
-
 function CalculateFactionUpkeeps()
 	for key, value in pairs(Factions) do
 		Factions[key]["Upkeep"] = 0
@@ -1502,10 +1477,9 @@ function RunGrandStrategyLoadGameMenu()
 				end
 			end
 			
-			WorldMapResources = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapResources
-
 			Factions = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
+			SetPlayerFaction(GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName).Civilization, GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName).Name)
 			
 			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
 			
@@ -1516,7 +1490,6 @@ function RunGrandStrategyLoadGameMenu()
 			SavedGrandStrategyEvents = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyEvents
 			LoadEvents("Save")
 			SavedGrandStrategyEvents = nil
-			CalculateTileProvinces()
 			CalculateProvinceBorders()
 			CalculateProvinceBorderTiles()
 			
@@ -3057,7 +3030,7 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") or ProvinceHasResource(WorldMapProvinces[key], "Lumber") or GetFactionBuildingTypeCount(ai_faction, "lumber-mill") == 0)) then
+					elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill" and (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") or ProvinceHasResource(WorldMapProvinces[key].Name, "lumber", false) or GetFactionBuildingTypeCount(ai_faction, "lumber-mill") == 0)) then
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
@@ -3657,7 +3630,6 @@ function ClearGrandStrategyVariables()
 	EventFaction = nil
 	EventProvince = nil
 	CleanGrandStrategyGame()
-	WorldMapResources = nil
 	ProcessingEndTurn = nil
 	GrandStrategyMapWidthIndent = 0
 	GrandStrategyMapHeightIndent = 0
@@ -3709,26 +3681,6 @@ function ClearGrandStrategyUIVariables()
 		end
 	end
 	GrandStrategyLabels = nil
-end
-
-function ProvinceHasResource(province, resource)
-	for i=1,table.getn(WorldMapResources[resource]) do
-		if (WorldMapResources[resource][i][3] and GetTileProvince(WorldMapResources[resource][i][1], WorldMapResources[resource][i][2]) == province) then
-			return true
-		end
-	end
-
-	return false
-end
-
-function TileHasResource(tile_x, tile_y, resource, ignore_prospection)
-	for i=1,table.getn(WorldMapResources[resource]) do
-		if ((WorldMapResources[resource][i][3] or ignore_prospection) and tile_x == WorldMapResources[resource][i][1] and tile_y == WorldMapResources[resource][i][2]) then
-			return true
-		end
-	end
-
-	return false
 end
 
 function GetFactionMilitaryScore(faction)
@@ -4288,6 +4240,7 @@ function FormFaction(old_faction, new_faction)
 
 	if (GrandStrategyFaction == old_faction) then
 		GrandStrategyFaction = new_faction
+		SetPlayerFaction(new_faction.Civilization, new_faction.Name)
 	end
 
 	CalculateFactionIncomes(old_faction.Civilization, old_faction.Name)
@@ -4470,7 +4423,6 @@ function GrandStrategyGameSave(name)
 		SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 		SavedGrandStrategyYear = GrandStrategyYear,
 		SavedGrandStrategyWorld = GrandStrategyWorld,
-		SavedWorldMapResources = WorldMapResources,
 		SavedWorldMapProvinces = WorldMapProvinces,
 		SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
 		SavedFactions = Factions,
@@ -4552,75 +4504,6 @@ function CanDeclareWar(faction_from, faction_to)
 		return false
 	end
 	return true
-end
-
-function SetResourceProspected(x, y, resource, prospected)
-	for i=1,table.getn(WorldMapResources[resource]) do
-		if (WorldMapResources[resource][i][1] == x and WorldMapResources[resource][i][2] == y) then
-			WorldMapResources[resource][i][3] = prospected
-			SetWorldMapResourceProspected(string.lower(resource), x, y, prospected)
-		end
-	end
-end
-
-function DoProspection()
-	local resource_found = false
-	for key, value in pairs(WorldMapResources) do
-		for i=1,table.getn(WorldMapResources[key]) do
-			if (WorldMapResources[key][i][3] == false and ProvinceHasBuildingClass(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Name, "town-hall")) then
-				if (SyncRand(100) < 1) then -- 1% chance of discovery per turn
-					resource_found = true
-					if (GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2]).Owner == GrandStrategyFaction.Name) then
-						GrandStrategyGamePaused = true
-						local menu = WarGrandStrategyGameMenu(panel(1))
-						menu:setDrawMenusUnder(true)
-
-						menu:addLabel(key .. " found in " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])), 128, 11)
-
-						local l = MultiLineLabel()
-						l:setFont(Fonts["game"])
-						l:setSize(228, 128)
-						l:setLineWidth(228)
-						menu:add(l, 14, 35)
-						l:setCaption("My lord, " .. key .. " has been found in the " .. string.lower(GetTerrainName(GetWorldMapTileTerrain(WorldMapResources[key][i][1], WorldMapResources[key][i][2]))) .. " of " .. GetProvinceName(GetTileProvince(WorldMapResources[key][i][1], WorldMapResources[key][i][2])) .. "!")
-
-						menu:addFullButton("E~!xcellent!", "x", 16, 248 - (36 * 0),
-							function()
-								SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
-								if (wyr.preferences.ShowTips) then
-									Tip("Gold Discovery in Province", "Congratulations! You have found gold in one of your provinces. Each gold mine provides you with 200 gold per turn, if a town hall is built in its province.")
-								end
-								GrandStrategyGamePaused = false
-								menu:stop()
-							end
-						)
-
-						menu:addButton("", "return", 0, 0, -- allow enter to be used as a way to close the prospection dialog
-							function()
-								SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
-								if (wyr.preferences.ShowTips) then
-									Tip("Gold Discovery in Province", "Congratulations! You have found gold in one of your provinces. Each gold mine provides you with 200 gold per turn, if a town hall is built in its province.")
-								end
-								menu:stop()
-							end,
-							{0, 0}
-						)
-						menu:run()
-					else
-						SetResourceProspected(WorldMapResources[key][i][1], WorldMapResources[key][i][2], key, true)
-					end
-				end
-			end
-		end
-	end
-	
-	if (resource_found) then
-		for key, value in pairs(Factions) do
-			if (GetFactionProvinceCount(Factions[key]) > 0) then
-				CalculateFactionIncomes(Factions[key].Civilization, Factions[key].Name)
-			end
-		end
-	end
 end
 
 function GetTerrainName(terrain)

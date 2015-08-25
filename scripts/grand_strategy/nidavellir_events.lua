@@ -456,6 +456,7 @@ local NidavellirEvents = {
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 				GrandStrategyFaction = Factions.NorlundClan
+				SetPlayerFaction("dwarf", "Norlund Clan")
 			end
 		}
 	},
@@ -494,6 +495,7 @@ local NidavellirEvents = {
 				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shinsplitter Clan")
 				GrandStrategyFaction = Factions.ShinsplitterClan
+				SetPlayerFaction("dwarf", "Shinsplitter Clan")
 			end
 		}
 	},
@@ -532,6 +534,7 @@ local NidavellirEvents = {
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shorbear Clan")
 				GrandStrategyFaction = Factions.ShorbearClan
+				SetPlayerFaction("dwarf", "Shorbear Clan")
 			end
 		}
 	},

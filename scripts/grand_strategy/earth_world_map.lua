@@ -1094,6 +1094,7 @@ SetWorldMapTileTerrain(454, 108, plains_id)
 SetWorldMapTileTerrain(454, 131, water_id)
 SetWorldMapTileTerrain(454, 132, water_id)
 SetWorldMapTileTerrain(454, 133, plains_id)
+AddWorldMapResource("gold", 454, 133, false) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 SetWorldMapTileTerrain(454, 134, plains_id)
 SetWorldMapTileTerrain(454, 135, water_id)
 SetWorldMapTileRiver(454, 135, "south", "Minho")
@@ -1205,6 +1206,7 @@ SetWorldMapTileRiver(456, 147, "west", "Sado")
 SetWorldMapTileTerrain(456, 148, plains_id)
 SetWorldMapTileRiverhead(456, 148, "west", "Sado")
 SetWorldMapTileRiver(456, 148, "northwest", "Sado")
+AddWorldMapResource("gold", 456, 148, false) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
 SetWorldMapTileTerrain(456, 149, plains_id)
 SetWorldMapTileTerrain(456, 150, plains_id)
 SetWorldMapTileTerrain(456, 151, water_id)
@@ -1394,6 +1396,7 @@ SetWorldMapTileTerrain(460, 135, mountains_id)
 SetWorldMapTileTerrain(460, 136, mountains_id)
 SetWorldMapTileTerrain(460, 137, hills_id)
 SetWorldMapTileTerrain(460, 138, hills_id)
+AddWorldMapResource("gold", 460, 138, false) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
 SetWorldMapTileTerrain(460, 139, hills_id)
 SetWorldMapTileTerrain(460, 140, hills_id)
 SetWorldMapTileTerrain(460, 141, hills_id)
@@ -1409,6 +1412,7 @@ SetWorldMapTileRiver(460, 146, "north", "Guadiana")
 SetWorldMapTileTerrain(460, 147, hills_id)
 SetWorldMapTileTerrain(460, 148, plains_id)
 SetWorldMapTileTerrain(460, 149, plains_id)
+AddWorldMapResource("gold", 460, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetWorldMapTileTerrain(460, 150, water_id)
 SetWorldMapTileTerrain(460, 151, water_id)
 SetWorldMapTileTerrain(460, 152, water_id)
@@ -1457,6 +1461,7 @@ SetWorldMapTileRiver(461, 146, "north", "Guadiana")
 SetWorldMapTileTerrain(461, 147, hills_id)
 SetWorldMapTileTerrain(461, 148, plains_id)
 SetWorldMapTileTerrain(461, 149, plains_id)
+AddWorldMapResource("gold", 461, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetWorldMapTileTerrain(461, 150, plains_id)
 SetWorldMapTileTerrain(461, 151, water_id)
 SetWorldMapTileTerrain(461, 152, water_id)
@@ -2343,6 +2348,7 @@ SetWorldMapTileTerrain(474, 146, hills_id)
 SetWorldMapTileTerrain(474, 147, mountains_id)
 SetWorldMapTileTerrain(474, 148, hills_id)
 SetWorldMapTileTerrain(474, 149, hills_id)
+AddWorldMapResource("gold", 474, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetWorldMapTileTerrain(474, 150, hills_id)
 SetWorldMapTileTerrain(474, 151, water_id)
 SetWorldMapTileTerrain(474, 152, water_id)
@@ -5218,6 +5224,7 @@ SetWorldMapTileTerrain(623, 122, plains_id)
 SetWorldMapTileTerrain(624, 121, plains_id)
 SetWorldMapTileTerrain(624, 122, plains_id)
 
+--[[
 WorldMapResources = {
 	Gold = {
 		-- old map resources
@@ -5241,25 +5248,9 @@ WorldMapResources = {
 		{134, 27, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 --		{152, 31, false}, -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77. (should be in Stavropol rather than Astrakhan)
 --		{159, 27, false} -- Copper deposits (approximate coordinates, should be verified later) at Kargaly; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 9.
-
-		{454, 133, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-		-- the subsequent tin deposits are part of the Iberian Tin Belt, but don't compose all of it
---		{454, 134, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
---		{455, 133, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
---		{455, 134, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
---		{456, 134, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
---		{456, 135, false}, -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
-		{456, 148, false}, -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
-		{460, 138, false}, -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
-		{460, 149, false}, -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-		{461, 149, false}, -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-		{474, 149, false} -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-	},
-	Lumber = { 
-	},
-	Stone = { 
 	}
 }
+--]]
 
 LoadFactions("Earth")
 

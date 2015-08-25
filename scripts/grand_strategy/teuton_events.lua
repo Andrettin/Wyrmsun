@@ -240,6 +240,7 @@ local TeutonEvents = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyFaction = Factions.MarcomanniTribe
+					SetPlayerFaction("teuton", "Marcomanni Clan")
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/prague.smp")
 					CurrentQuest = "The Home of the Boii"
@@ -282,6 +283,7 @@ local TeutonEvents = {
 
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GrandStrategyFaction = Factions.MarcomanniTribe
+						SetPlayerFaction("teuton", "Marcomanni Tribe")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						GrandStrategyDialog("The Home of the Boii", "The Boii's capital has become naught but a burning ruin. On its ashes we shall build our own settlement of Bubienum, the center of our new Marcomannic kingdom!")
 					end

@@ -403,6 +403,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
 				GrandStrategyFaction = Factions.JuteTribe
+				SetPlayerFaction("germanic", "Jute Tribe")
 			end,
 			function(s)
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
@@ -434,6 +435,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
 				GrandStrategyFaction = Factions.DaneTribe
+				SetPlayerFaction("germanic", "Dane Tribe")
 			end
 		}
 	},
@@ -470,6 +472,7 @@ local GermanicEvents = {
 			end,
 			function(s)
 				GrandStrategyFaction = Factions.GothTribe
+				SetPlayerFaction(Factions.GothTribe.Civilization, "Goth Tribe")
 				CenterGrandStrategyMapOnTile(WorldMapProvinces.Gotaland.SettlementLocation[1], WorldMapProvinces.Gotaland.SettlementLocation[2])
 			end
 		}
@@ -676,6 +679,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				GrandStrategyFaction = Factions.SaxonTribe
+				SetPlayerFaction(Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
 		}
@@ -714,6 +718,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 				GrandStrategyFaction = Factions.FrankTribe
+				SetPlayerFaction(Factions.FrankTribe.Civilization, "Frank Tribe")
 			end
 		}
 	},
@@ -751,6 +756,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
 				GrandStrategyFaction = Factions.SuebiTribe
+				SetPlayerFaction(Factions.SuebiTribe.Civilization, "Suebi Tribe")
 			end
 		}
 	},
