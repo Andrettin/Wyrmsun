@@ -4116,7 +4116,7 @@ SetWorldMapTileTerrain(508, 92, plains_id)
 SetWorldMapTileTerrain(508, 93, plains_id)
 SetWorldMapTileTerrain(508, 94, plains_id)
 SetWorldMapTileTerrain(508, 95, plains_id)
-SetWorldMapTileTerrain(508, 96, plains_id)
+SetWorldMapTileTerrain(508, 96, plains_id) -- Ringkloster
 SetWorldMapTileTerrain(508, 97, water_id)
 SetWorldMapTileTerrain(508, 98, plains_id)
 SetWorldMapTileTerrain(508, 99, water_id)
@@ -4519,6 +4519,7 @@ SetWorldMapTileTerrain(517, 100, water_id)
 SetWorldMapTileTerrain(517, 101, water_id)
 SetWorldMapTileTerrain(517, 112, plains_id)
 SetWorldMapTileTerrain(517, 113, plains_id)
+AddWorldMapResource("gold", 517, 113, false) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 SetWorldMapTileTerrain(517, 114, plains_id)
 SetWorldMapTileTerrain(517, 115, plains_id)
 SetWorldMapTileTerrain(517, 116, plains_id)
@@ -5798,8 +5799,22 @@ if (GrandStrategyYear >= -9000) then
 	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
 end
 
+if (GrandStrategyYear >= -8700) then
+	-- Hunter-gatherers begin continuously visiting a lake by Friesack (150 kilometers northwest of Berlin); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 133-134.
+end
+
 if (GrandStrategyYear >= -8000) then
 	-- Migratory reindeer herds, which previously had helped feed much of Europe, retreat to northern Scandinavia around 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 123.
+	
+	-- Thin island belt existed (appeared?) off Sweden circa 8000 BC; many low coastal lands and mouths of rivers and bays were flooded; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
+	
+	-- Around 8000 BC what is today the Södertorn Peninsula to the south of Stockholm was a group of rocky islets; many low coastal lands and mouths of rivers and bays were flooded; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
+
+	-- Near 8000 BC the Stockholm Archipelago was settled by foragers, placing their camps on sheltered bays and throughout the narrow straits between the islands; those living in the outer archipelago lived off seal hunting and fishing, while those living nearer the mainland hunted a wider variety of animals; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
+end
+
+if (GrandStrategyYear >= -7800) then
+	-- Hunter-gatherers cease continuously visiting a lake by Friesack (150 kilometers northwest of Berlin); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 133-134.
 end
 
 if (GrandStrategyYear >= -7500) then
@@ -5810,6 +5825,10 @@ if (GrandStrategyYear >= -7400) then
 	-- Formation of the English Channel around 7400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 48.
 end
 
+if (GrandStrategyYear >= -7200) then
+	-- Around 7200 BC hunters came via boat through the Ancylus Lake to the Stora Förvar cave, which lies on the island of Stora Karlsö (an island off Gotland); they hunted seals, sea birds and fish; the location was inhabited by whole families for long periods of time (rather than only in a seasonal manner); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 134-135.
+end
+
 if (GrandStrategyYear >= -7000) then
 	-- Foundation of pre-pottery Jericho in 7000 BC (this information could be useful later if the map is extended); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 42.
 	
@@ -5818,6 +5837,12 @@ if (GrandStrategyYear >= -7000) then
 	-- Neolithic farming begins spreading throughout Europe (from the Near East), specially through the Danube-Rhine axis; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 128.
 	
 	-- The Ancylus Lake (in Northern Europe) is dammed at its south until little after 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 133.
+	
+	-- Littorina Sea and the North Sea connected circa 7000 BC; many low coastal lands and mouths of rivers and bays were flooded; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
+end
+
+if (GrandStrategyYear >= -6500) then
+	-- Since circa 6500 BC in northern Europe the Mesolithic cultures increase in complexity and diversification; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 end
 
 if (GrandStrategyYear >= -6400) then
@@ -5829,10 +5854,15 @@ end
 
 if (GrandStrategyYear >= -5800) then
 	-- Cris culture migrates from southeastern Europe and the Lower Danube Valley to the region on the western side of the Dnieper/Dniester rivers; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 107-108.
+	
+	-- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+	WorldMapProvinces.Scania.Owner = "Ertebolle Tribe"
 end
 
 if (GrandStrategyYear >= -5500) then
 	-- Mediterranean Sea and Black Sea reconnected around 5500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 126.
+	
+	-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
 end
 
 if (GrandStrategyYear >= -5400) then
@@ -5840,6 +5870,13 @@ if (GrandStrategyYear >= -5400) then
 	-- Ertebolle culture arises in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	WorldMapProvinces.Zealand.Owner = "Ertebolle Tribe"
 	AcquireFactionTechnologies("basque", "Kongemose Tribe", "basque", "Ertebolle Tribe")
+	
+	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) begins being irregularly occupied at around 5400 BC; wild boars were hunted for their meat; pine martens and otters were hunted for their fur; the site was generally occupied between Fall and early Spring; Ringkloster may have been occupied by Ertebolle foragers, who would pass the remnant of the year at the coast; it may also have been inhabited by a people distinct from the coast-inhabitants; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
+	WorldMapProvinces.Jutland.Owner = "Ertebolle Tribe"
+	SetProvinceCivilization("Jutland", "basque")
+	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
+	
+	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) faced several occupations from 5400 BC; beavers, deer and ducks were hunted, and many sorts of freshwater fishes were caught, particularly pike and perch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 135-136.
 end
 
 if (GrandStrategyYear >= -5100) then
@@ -5850,8 +5887,24 @@ if (GrandStrategyYear >= -4990) then
 	-- Fish and boat landing area belonging to the Ertebolle culture existed in Zealand in 4990 BC (could be relevant for setting factions' technologies or resource production); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 end
 
+if (GrandStrategyYear >= -4600) then
+	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) ceased facing several occupations c. 4600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
+end
+
 if (GrandStrategyYear >= -4500) then
 	-- Use of cattle in traction, probably for plowing, in the Late Neolithic in the Northern Balkans, c. 4500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
+end
+
+if (GrandStrategyYear >= -4400) then
+	-- Timmendorf-Nordmole site (belonging to the Ertebolle/Ellerbek culture) in Poel isle (in Wismar Bay in Mecklenburg) began being occupied around 4400 BC; fishing gear existed there; they had dugout canoes; fish (particularly eel and cod), sea mammals and birds were caught/hunted; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 138.
+	WorldMapProvinces.Brandenburg.Owner = "Ertebolle Tribe"
+	SetProvinceSettlementBuilding("Brandenburg", "unit-germanic-town-hall", true)
+end
+
+if (GrandStrategyYear >= -4100) then
+	-- Timmendorf-Nordmole site (belonging to the Ertebolle/Ellerbek culture) in Poel isle (in Wismar Bay in Mecklenburg) ceases being occupied around 4100 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 138.
+	WorldMapProvinces.Brandenburg.Owner = ""
+	SetProvinceSettlementBuilding("Brandenburg", "unit-germanic-town-hall", false)
 end
 
 if (GrandStrategyYear >= -4000) then
@@ -5879,10 +5932,22 @@ if (GrandStrategyYear >= -3920) then
 	-- Cattle breeding practiced in Zealand in 3920 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 end
 
+if (GrandStrategyYear >= -3900) then
+	-- Transition to agriculture happened in southern Scandinavia c. 3900 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+end
+	
+if (GrandStrategyYear >= -3800) then
+	-- Coastal Ertebolle Mesolithic sites and shell middens cease being occupied c. 3800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+end
+
 if (GrandStrategyYear >= -3600) then
 	-- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	SetFactionTechnology("basque", "Funnelbeaker Tribe", "upgrade-germanic-wood-plow", true)
 	SetFactionTechnology("basque", "Gylfing Tribe", "upgrade-germanic-wood-plow", true)
+end
+
+if (GrandStrategyYear >= -3550) then
+	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) ceases being irregularly occupied at around 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 end
 
 if (GrandStrategyYear >= -3500) then
@@ -5975,6 +6040,7 @@ if (GrandStrategyYear >= -2000) then
 	
 	SetWorldMapResourceProspected("gold", 466, 112, true) -- Tin deposits in Cornwall which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
 	SetWorldMapResourceProspected("gold", 461, 135, true) -- Tin deposits in northwestern Iberia which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
+	SetWorldMapResourceProspected("gold", 517, 113, true) -- Tin deposits which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
 end
 
 if (GrandStrategyYear >= -1700) then

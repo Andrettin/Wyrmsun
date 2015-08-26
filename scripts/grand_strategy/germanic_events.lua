@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_events.lua - Defines the grand strategy events.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -210,10 +208,11 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
-				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior") >= 6 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Jutland)
-				and WorldMapProvinces.Jutland.Owner ~= EventFaction.Name
+				and GetProvinceOwner("Jutland") ~= EventFaction.Name
+				and (GetProvinceOwner("Jutland") == "" or GetFactionFromName(GetProvinceOwner("Jutland")).Civilization == "basque")
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -242,10 +241,8 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						SetProvinceCivilization("Brandenburg", "")
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
-						SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 						SetProvinceCivilization("Jutland", "germanic")
 						AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
-						SetProvinceCurrentConstruction("Zealand", "unit-germanic-town-hall")
 						SetProvinceCivilization("Zealand", "germanic")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
@@ -266,10 +263,8 @@ local GermanicEvents = {
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
 					SetProvinceCivilization("Brandenburg", "")
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
-					SetProvinceCurrentConstruction("Jutland", "unit-germanic-town-hall")
 					SetProvinceCivilization("Jutland", "germanic")					
 					AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
-					SetProvinceCurrentConstruction("Zealand", "unit-germanic-town-hall")
 					SetProvinceCivilization("Zealand", "germanic")					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])

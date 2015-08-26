@@ -32,6 +32,11 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
 	SetPlayerData(1, "Allow", "upgrade-germanic-broad-sword", "F")
 	SetPlayerData(1, "Allow", "upgrade-germanic-barbed-arrow", "F")
+	if (GrandStrategy == false or GetProvinceOwner("Jutland") == "") then
+		SetPlayerData(1, "Faction", "Ertebolle Tribe")
+	else
+		SetPlayerData(1, "Faction", GetProvinceOwner("Jutland"))
+	end
 end
 
 -- Northwards to the Sea introduction
@@ -69,7 +74,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Subdue the natives")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Natives"))
+			uncount = GetUnits(1)
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
@@ -87,7 +92,7 @@ AddTrigger(
 		local asa_unit
 		
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Natives"))
+		uncount = GetUnits(1)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
 				local nearby_uncount = 0
