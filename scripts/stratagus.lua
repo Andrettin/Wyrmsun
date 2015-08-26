@@ -162,55 +162,7 @@ SetFogOfWarGraphics("tilesets/fogofwar.png")
 
 -------------------------------------------------------------------------------
 
---  Define default resources
-
--- FIXME: Must be removed: Use and write (define-resource)
---
---  (define-resource 'gold 'name "Gold"
---    'start-resource-default 2000
---    'start-resource-low 2000
---    'start-resource-medium 5000
---    'start-resource-high 10000
---    'income 100)
---  FIXME: Must describe how getting resources work.
---
-
-DefineDefaultIncomes(
-	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
-)
-
-DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather", "mine", "mine"
-)
-
-DefineDefaultResourceNames(
-	"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper"
-)
-
-DefineDefaultResourceAmounts(
-	"gold", 50000,
-	"lumber", 100,
-	"oil", 50000,
-	"stone", 100,
-	"coal", 50000,
-	"silver", 50000,
-	"copper", 50000
-)
-
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
-
-SetResourceBasePrice("lumber", 100)
-SetResourceBasePrice("stone", 100)
-
-function GetResourceID(resource)
-	local resource_types = {"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper"}
-	for i=1,table.getn(resource_types) do
-		if (resource_types[i] == resource) then
-			return i - 1
-		end
-	end
-	return nil
-end
+Load("scripts/resources.lua")
 
 -------------------------------------------------------------------------------
 
