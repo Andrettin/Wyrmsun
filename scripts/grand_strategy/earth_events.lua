@@ -34,7 +34,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Vana Tribe"
-				and WorldMapProvinces.Don.Owner == EventFaction.Name
+				and GetProvinceOwner("Don") == EventFaction.Name
 				and SyncRand(200) < 1
 			) then
 				return true
@@ -95,7 +95,7 @@ local EarthEvents = {
 		Description = "The volcano in the isle of Thera, not far from PROVINCE_NAME, has erupted!",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Crete.Owner == EventFaction.Name
+				GetProvinceOwner("Crete") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.Crete
 				return true
@@ -119,7 +119,7 @@ local EarthEvents = {
 		Description = "The people of PROVINCE_NAME have carved the figure of a horse on a hill, filling it with chalk afterwards, resulting in a huge symbol of a white horse.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name -- was made at Uffington, in southern England
+				GetProvinceOwner("England") == EventFaction.Name -- was made at Uffington, in southern England
 				and GetProvinceCivilization("England") == "celt" -- a Celtic culture did this
 				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "smithy") -- happened in the late bronze age, possibly required bronze age tools
 				and SyncRand(100) < 1
@@ -144,10 +144,10 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Aedui Tribe"
-				and WorldMapProvinces.NorthItaly.Owner == "Rome"
+				and GetProvinceOwner("North Italy") == "Rome"
 				and EventFaction.Diplomacy.SuebiTribe == "War"
 				and Factions.Rome.Diplomacy.SuebiTribe == "Peace"
-				and WorldMapProvinces.Burgundy.Owner == "Suebi Tribe"
+				and GetProvinceOwner("Burgundy") == "Suebi Tribe"
 				and SyncRand(100) < 33
 			) then
 				return true
@@ -169,7 +169,7 @@ local EarthEvents = {
 		Description = "The volcano of Hekla in PROVINCE_NAME has erupted, destroying a farmstead in PROVINCE_NAME's southwest!",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.Iceland
 				return true
@@ -215,7 +215,7 @@ local EarthEvents = {
 		Description = "The French customs officer and amateur archaeologist, Jacques Boucher de Crèvecoeur de Perthes, after doing excavations in the Somme region, has published a his Celtic and Antediluvian Antiquities in three volumes. In his work, he established a stark division between ancient flaked tools (which he called Antediluvian) and the more recent polished ones (which he named Celtic).",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.France.Owner == EventFaction.Name
+				GetProvinceOwner("France") == EventFaction.Name
 				and GetProvinceCivilization("France") == "latin" -- should be French
 			) then
 				return true
@@ -262,7 +262,7 @@ local EarthEvents = {
 		Description = "A new periodical has been founded in France, the Matériaux pour l'histoire positive et philosophique de l'homme, which preoccupies itself with research on prehistory.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.France.Owner == EventFaction.Name
+				GetProvinceOwner("France") == EventFaction.Name
 				and GetProvinceCivilization("France") == "latin" -- should be French
 			) then
 				return true

@@ -125,21 +125,21 @@ if (LoadedGame == false) then
 		local units_to_be_created = {}
 		
 		-- Vandals (Lugii)
-		if (WorldMapProvinces.Poland.Owner == "Vandal Tribe") then
+		if (GetProvinceOwner("Poland") == "Vandal Tribe") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(2, player_spawn_point[1], player_spawn_point[2])
 			CreateProvinceUnits("Poland", 2, 4)
 		end
 
 		-- Suebi (Semnones)
-		if (WorldMapProvinces.Brandenburg.Owner == "Suebi Tribe") then
+		if (GetProvinceOwner("Brandenburg") == "Suebi Tribe") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(3, player_spawn_point[1], player_spawn_point[2])
 			CreateProvinceUnits("Brandenburg", 3, 4)
 		end
 
 		-- Lombards
-		if (WorldMapProvinces.Rhineland.Owner == "Lombards") then
+		if (GetProvinceOwner("Rhineland") == "Lombards") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(4, player_spawn_point[1], player_spawn_point[2])
 			CreateProvinceUnits("Rhineland", 4, 4)

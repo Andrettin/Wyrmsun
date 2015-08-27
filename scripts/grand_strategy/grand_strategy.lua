@@ -148,14 +148,9 @@ function RunGrandStrategyGameSetupMenu()
 			
 			-- initialize province variables
 			for key, value in pairs(WorldMapProvinces) do
-				if (WorldMapProvinces[key].Owner == nil) then
-					WorldMapProvinces[key]["Owner"] = ""
-				elseif (GetFactionFromName(WorldMapProvinces[key].Owner) ~= nil) then
-					SetProvinceOwner(WorldMapProvinces[key].Name, GetFactionFromName(WorldMapProvinces[key].Owner).Civilization, WorldMapProvinces[key].Owner)				
-				end
 				-- set the province into its owner's owned provinces list
-				if (WorldMapProvinces[key].Owner ~= "") then
-					table.insert(GetFactionFromName(WorldMapProvinces[key].Owner).OwnedProvinces, key)
+				if (GetProvinceOwner(WorldMapProvinces[key].Name) ~= "") then
+					table.insert(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name)).OwnedProvinces, key)
 				end
 
 				if (GetProvinceCivilization(WorldMapProvinces[key].Name) == "" and GetProvinceOwner(WorldMapProvinces[key].Name) ~= "") then
@@ -208,7 +203,7 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key].Heroes.unit_hero_baglur_thane = 2
 				end
 				
-				if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
+				if (GrandStrategyFaction ~= nil and GetProvinceOwner(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
 					CenterGrandStrategyMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 			end
@@ -330,8 +325,10 @@ function RunGrandStrategyGameSetupMenu()
 --					"700 BC", -- 
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
+					"486 AD",
 --					"1072 AD" -- 
 --					"1660 AD", -- 
+--					"1815 AD", -- 
 				}
 			elseif (GrandStrategyWorld == "Nidavellir") then
 				date_list = {
@@ -473,7 +470,7 @@ function EndTurn()
 	end
 	
 	for key, value in pairs(WorldMapProvinces) do
-		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
+		local province_owner = GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name))
 	
 		-- construct buildings, train units and move heroes
 		for i, unitName in ipairs(Units) do
@@ -644,8 +641,8 @@ function AttackProvince(province, faction)
 	GetMapInfo(province.Map)
 	Attacker = faction
 	local empty_province = false
-	if (province.Owner ~= "") then
-		Defender = province.Owner
+	if (GetProvinceOwner(province.Name) ~= "") then
+		Defender = GetProvinceOwner(province.Name)
 	else
 		Defender = GetProvinceName(province)
 		empty_province = true
@@ -861,11 +858,11 @@ function AttackProvince(province, faction)
 end
 
 function AcquireProvince(province, faction)
-	if (province.Owner ~= "") then
-		RemoveElementFromArray(GetFactionFromName(province.Owner).OwnedProvinces, GetProvinceKeyFromName(province.Name))
+	if (GetProvinceOwner(province.Name) ~= "") then
+		RemoveElementFromArray(GetFactionFromName(GetProvinceOwner(province.Name)).OwnedProvinces, GetProvinceKeyFromName(province.Name))
 	end
 	
-	local old_faction = province.Owner
+	local old_faction = GetProvinceOwner(province.Name)
 	
 	ChangeProvinceOwner(province, GetFactionFromName(faction))
 	
@@ -920,7 +917,7 @@ function CalculateProvinceBorderTiles()
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name))
-					if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Owner == "Ocean") then
+					if (GetProvinceWater(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] - 1, WorldMapProvinces[key].Tiles[i][2]).Name)) then
 						WorldMapProvinces[key].Coastal = true
 					end
 				end
@@ -928,7 +925,7 @@ function CalculateProvinceBorderTiles()
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name))
-					if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Owner == "Ocean") then
+					if (GetProvinceWater(GetTileProvince(WorldMapProvinces[key].Tiles[i][1] + 1, WorldMapProvinces[key].Tiles[i][2]).Name)) then
 						WorldMapProvinces[key].Coastal = true
 					end
 				end
@@ -936,7 +933,7 @@ function CalculateProvinceBorderTiles()
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name))
-					if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Owner == "Ocean") then
+					if (GetProvinceWater(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] - 1).Name)) then
 						WorldMapProvinces[key].Coastal = true
 					end
 				end
@@ -944,7 +941,7 @@ function CalculateProvinceBorderTiles()
 			if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= WorldMapProvinces[key]) then
 				if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)) == false) then
 					table.insert(WorldMapProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name))
-					if (GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Owner == "Ocean") then
+					if (GetProvinceWater(GetTileProvince(WorldMapProvinces[key].Tiles[i][1], WorldMapProvinces[key].Tiles[i][2] + 1).Name)) then
 						WorldMapProvinces[key].Coastal = true
 					end
 				end
@@ -985,7 +982,7 @@ function CalculateFactionUpkeeps()
 	end
 	
 	for key, value in pairs(WorldMapProvinces) do
-		local province_owner = GetFactionFromName(WorldMapProvinces[key].Owner)
+		local province_owner = GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name))
 	
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
@@ -1005,7 +1002,7 @@ function CalculateFactionDisembarkmentProvinces()
 		for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 			if (WorldMapProvinces[province_key].Coastal) then
 				for second_province_key, second_province_value in pairs(WorldMapProvinces) do
-					if (WorldMapProvinces[second_province_key].Coastal and (WorldMapProvinces[second_province_key].Owner == "" or Factions[key].Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_province_key].Owner)] == "War") and ProvinceHasSecondaryBorderThroughWaterWith(WorldMapProvinces[province_key], WorldMapProvinces[second_province_key])) then
+					if (WorldMapProvinces[second_province_key].Coastal and (GetProvinceOwner(WorldMapProvinces[second_province_key].Name) == "" or Factions[key].Diplomacy[GetFactionKeyFromName(GetProvinceOwner(WorldMapProvinces[second_province_key].Name))] == "War") and ProvinceHasSecondaryBorderThroughWaterWith(WorldMapProvinces[province_key], WorldMapProvinces[second_province_key])) then
 						table.insert(Factions[key].DisembarkmentProvinces, second_province_key)
 					end
 				end
@@ -1078,7 +1075,7 @@ end
 function GetFactionProvinceCountPreGame(faction)
 	local province_count = 0
 	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == faction) then
+		if (GetProvinceOwner(WorldMapProvinces[key].Name) == faction) then
 			province_count = province_count + 1
 		end
 	end
@@ -1175,12 +1172,12 @@ function RemoveHeroFromFaction(unit_type, faction)
 end
 
 function CanAttackProvince(province, faction, province_from)
-	if (province.Owner == faction.Name or province.Owner == "Ocean" or (GetProvinceAttackedBy(province.Name) ~= "" and GetProvinceAttackedBy(province.Name) ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
+	if (GetProvinceOwner(province.Name) == faction.Name or GetProvinceWater(province.Name) or (GetProvinceAttackedBy(province.Name) ~= "" and GetProvinceAttackedBy(province.Name) ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false
 	end
 	
 	-- if is at peace, can't attack
-	if (province.Owner ~= "" and faction.Diplomacy[GetFactionKeyFromName(province.Owner)] ~= "War") then
+	if (GetProvinceOwner(province.Name) ~= "" and faction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(province.Name))] ~= "War") then
 		return false
 	end
 
@@ -1214,13 +1211,13 @@ function FactionHasSecondaryBorderWith(faction, faction_to)
 		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
 			if (WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
 				for j=1,table.getn(WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
-					if (WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Owner == faction_to.Name) then
+					if (WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceOwner(WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Name) == faction_to.Name) then
 						return true
 					end
 				end
 			elseif (WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
 				for j=1,table.getn(WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
-					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Owner == faction_to.Name) then
+					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceOwner(WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Name) == faction_to.Name) then
 						return true
 					end
 				end
@@ -1235,7 +1232,7 @@ function FactionHasSecondaryBorderThroughWaterWith(faction, faction_to)
 		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
 			if (WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
 				for j=1,table.getn(WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
-					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Owner == faction_to.Name) then
+					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceOwner(WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Name) == faction_to.Name) then
 						return true
 					end
 				end
@@ -1496,7 +1493,7 @@ function RunGrandStrategyLoadGameMenu()
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 
 			for key, value in pairs(WorldMapProvinces) do -- center map on a province of the loaded player's faction
-				if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
+				if (GrandStrategyFaction ~= nil and GetProvinceOwner(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
 					CenterGrandStrategyMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
 			end
@@ -1556,8 +1553,8 @@ function DrawWorldMapTile(file, tile_x, tile_y)
 		if (string.find(file, "settlement") ~= nil) then
 			world_map_tile = CPlayerColorGraphic:New(file)
 			local settlement_color = ""
-			if (GetTileProvince(tile_x, tile_y).Owner ~= "") then
-				settlement_color = GetFactionData(GetFactionFromName(GetTileProvince(tile_x, tile_y).Owner).Civilization, GetTileProvince(tile_x, tile_y).Owner, "Color")
+			if (GetProvinceOwner(GetTileProvince(tile_x, tile_y).Name) ~= "") then
+				settlement_color = GetFactionData(GetFactionFromName(GetProvinceOwner(GetTileProvince(tile_x, tile_y).Name)).Civilization, GetProvinceOwner(GetTileProvince(tile_x, tile_y).Name), "Color")
 			else
 				settlement_color = "gray"
 			end
@@ -2080,7 +2077,7 @@ function DrawOnScreenTiles()
 
 	for key, value in pairs(WorldMapProvinces) do
 		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
-			if (GrandStrategyFaction ~= nil and WorldMapProvinces[key].Owner == GrandStrategyFaction.Name) then
+			if (GrandStrategyFaction ~= nil and GetProvinceOwner(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						if (GetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unitName) > 0) then
@@ -2175,18 +2172,18 @@ function DrawGrandStrategyInterface()
 	
 	if (SelectedProvince ~= nil) then
 		local province_name_text = GetProvinceName(SelectedProvince)
-		if (SelectedProvince.Owner ~= "" and SelectedProvince.Owner ~= "Ocean") then
+		if (GetProvinceOwner(SelectedProvince.Name) ~= "" and GetProvinceWater(SelectedProvince.Name) == false) then
 			province_name_text = province_name_text .. ", "
-			if (GetFactionData(GetFactionFromName(SelectedProvince.Owner).Civilization, SelectedProvince.Owner, "Type")  == "tribe") then -- if is a tribe, just use the tribe's name
-				province_name_text = province_name_text .. SelectedProvince.Owner
-			elseif (GetFactionData(GetFactionFromName(SelectedProvince.Owner).Civilization, SelectedProvince.Owner, "Type") == "polity") then -- if is a polity, use the polity's name accompanied by its title
-				province_name_text = province_name_text .. GetFactionFromName(SelectedProvince.Owner).Title .. " of " .. SelectedProvince.Owner
+			if (GetFactionData(GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name), "Type")  == "tribe") then -- if is a tribe, just use the tribe's name
+				province_name_text = province_name_text .. GetProvinceOwner(SelectedProvince.Name)
+			elseif (GetFactionData(GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name), "Type") == "polity") then -- if is a polity, use the polity's name accompanied by its title
+				province_name_text = province_name_text .. GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Title .. " of " .. GetProvinceOwner(SelectedProvince.Name)
 			end
 		end
 		AddGrandStrategyLabel(province_name_text, UI.InfoPanel.X + 27, UI.InfoPanel.Y + 11, Fonts["game"], true, true)
 
 		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting
-		if (GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name) then
+		if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 			if (GrandStrategyInterfaceState == "Province") then
 				local item_x = 0
 				local item_y = 0
@@ -2815,13 +2812,13 @@ function DrawGrandStrategyInterface()
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			end
-		elseif (SelectedProvince.Owner ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
-			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "War") then
+		elseif (GetProvinceOwner(SelectedProvince.Name) ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
+			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(SelectedProvince.Name))] == "War") then
 				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
 				-- add a button for offering peace
 				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
-					OfferPeace(GrandStrategyFaction.Name, SelectedProvince.Owner)
+					OfferPeace(GrandStrategyFaction.Name, GetProvinceOwner(SelectedProvince.Name))
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2835,12 +2832,12 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(SelectedProvince.Owner)] == "Offering Peace") then
+			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(SelectedProvince.Name))] == "Offering Peace") then
 				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
-			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(SelectedProvince.Owner))) then
+			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)))) then
 				-- add a button for declaring war
 				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
-					DeclareWar(GrandStrategyFaction.Name, SelectedProvince.Owner)
+					DeclareWar(GrandStrategyFaction.Name, GetProvinceOwner(SelectedProvince.Name))
 					DrawGrandStrategyInterface()
 				end)
 				b:setBaseColor(Color(0,0,0,0))
@@ -2896,7 +2893,7 @@ function DrawGrandStrategyInterface()
 	
 	if (wyr.preferences.ShowTips) then
 		if (SelectedProvince ~= nil) then
-			if (GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name) then
+			if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 				if (GrandStrategyInterfaceState == "Province") then
 					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected. Use the arrows to select or deselect units.")
 				elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
@@ -2910,7 +2907,7 @@ function DrawGrandStrategyInterface()
 				elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 					Tip("Mercenary Camp Interface", "Here you can recruit thief units as you would normal units, as well as hire unique mercenary squads.")
 				end
-			elseif (SelectedProvince.Owner ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
+			elseif (GetProvinceOwner(SelectedProvince.Name) ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
 				Tip("Diplomacy Interface", "This is a foreign province. Here you can declare war against this province's owner, or offer peace if you are currently at war.")
 			end
 		end				
@@ -2921,7 +2918,7 @@ function SetSelectedProvinceLua(province)
 	if (province ~= SelectedProvince) then
 
 		-- if the player has units selected and then selects an attackable province, set those units to attack the province
-		if (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and SelectedProvince.Owner == GrandStrategyFaction.Name and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
+		if (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
@@ -2941,7 +2938,7 @@ function SetSelectedProvinceLua(province)
 					end
 				end
 			end
-		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and SelectedProvince.Owner == province.Owner and SelectedProvince.Owner == GrandStrategyFaction.Name) then
+		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GetProvinceOwner(province.Name) and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
@@ -2972,7 +2969,7 @@ function SetSelectedProvinceLua(province)
 		end
 
 		if (GrandStrategyFaction ~= nil) then
-			if (province ~= nil and province.Owner ~= "" and province.Owner ~= "Ocean" and province.Owner ~= GrandStrategyFaction.Name) then -- if is owned by a foreign faction, use diplomacy interface, if is a self owned province or an empty one, use the normal province interface
+			if (province ~= nil and GetProvinceOwner(province.Name) ~= "" and GetProvinceWater(province.Name) == false and GetProvinceOwner(province.Name) ~= GrandStrategyFaction.Name) then -- if is owned by a foreign faction, use diplomacy interface, if is a self owned province or an empty one, use the normal province interface
 				GrandStrategyInterfaceState = "Diplomacy"
 			else
 				GrandStrategyInterfaceState = "Province"
@@ -3077,8 +3074,8 @@ function AIDoTurn(ai_faction)
 		local borders_foreign = false
 
 		for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
-				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
+			if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
+				if (WorldMapProvinces[second_key] ~= nil and GetProvinceWater(WorldMapProvinces[second_key].Name) == false) then
 					if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
 						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 					end
@@ -3086,7 +3083,7 @@ function AIDoTurn(ai_faction)
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
+								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
 									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
 										province_threatened = true
 									end
@@ -3126,8 +3123,8 @@ function AIDoTurn(ai_faction)
 		
 		local secondary_border_provinces_through_water = GetProvinceSecondaryBorderProvincesThroughWater(WorldMapProvinces[key])
 		for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
-			if ((WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
-				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
+			if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
+				if (WorldMapProvinces[second_key] ~= nil and GetProvinceWater(WorldMapProvinces[second_key].Name) == false) then
 					if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
 						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 					end
@@ -3135,7 +3132,7 @@ function AIDoTurn(ai_faction)
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
+								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
 									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
 										province_threatened = true
 									end
@@ -3174,14 +3171,14 @@ function AIDoTurn(ai_faction)
 		end
 	
 		for second_i, second_key in ipairs(ai_faction.DisembarkmentProvinces) do
-			if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name) then
-				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= "Ocean") then
+			if (WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) then
+				if (WorldMapProvinces[second_key] ~= nil and GetProvinceWater(WorldMapProvinces[second_key].Name) == false) then
 					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 						borders_foreign = true
 						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name and WorldMapProvinces[third_key].Owner ~= "" and WorldMapProvinces[third_key].Owner ~= "Ocean" and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(WorldMapProvinces[third_key].Owner), WorldMapProvinces[third_key])) then
+								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
 									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
 										province_threatened = true
 									end
@@ -3259,7 +3256,7 @@ function AIDoTurn(ai_faction)
 					for second_province_i, second_key in ipairs(ai_faction.OwnedProvinces) do
 						local second_province_borders_foreign = false
 						for third_province_i, third_key in ipairs(WorldMapProvinces[second_key].BorderProvinces) do
-							if ((WorldMapProvinces[third_key] ~= nil and WorldMapProvinces[third_key].Owner ~= ai_faction.Name) or (WorldMapWaterProvinces[third_key] ~= nil and WorldMapWaterProvinces[third_key].Owner ~= ai_faction.Name)) then
+							if ((WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name) or (WorldMapWaterProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapWaterProvinces[third_key].Name) ~= ai_faction.Name)) then
 								if (WorldMapProvinces[third_key] ~= nil and CanAttackProvince(WorldMapProvinces[third_key], ai_faction, WorldMapProvinces[second_key]) or GetProvinceAttackedBy(WorldMapProvinces[second_key].Name) ~= "" or AtPeace(ai_faction)) then
 									second_province_borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 									break
@@ -3302,10 +3299,10 @@ function AIDoDiplomacy(ai_faction)
 	if (AtPeace(ai_faction)) then -- if at peace, see if there are any suitable targets to declare war on
 		for province_i, key in ipairs(ai_faction.OwnedProvinces) do
 			for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-				if (WorldMapProvinces[second_key] ~= nil and WorldMapProvinces[second_key].Owner ~= ai_faction.Name and WorldMapProvinces[second_key].Owner ~= "" and WorldMapProvinces[second_key].Owner ~= "Ocean" and CanDeclareWar(ai_faction, GetFactionFromName(WorldMapProvinces[second_key].Owner))) then
+				if (WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[second_key].Name) == false and CanDeclareWar(ai_faction, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name)))) then
 					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (ai_faction.Diplomacy[GetFactionKeyFromName(WorldMapProvinces[second_key].Owner)] ~= "War" and (GetFactionMilitaryScore(GetFactionFromName(WorldMapProvinces[second_key].Owner)) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
-							DeclareWar(ai_faction.Name, WorldMapProvinces[second_key].Owner)
+						if (ai_faction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))] ~= "War" and (GetFactionMilitaryScore(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
+							DeclareWar(ai_faction.Name, GetProvinceOwner(WorldMapProvinces[second_key].Name))
 						end
 					end
 				end
@@ -3336,7 +3333,7 @@ function AIConsiderOffers(ai_faction)
 end
 
 function IsBuildingAvailable(province, unit_type)
-	if (province.Owner ~= "Ocean" and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp") then
+	if (GetProvinceWater(province.Name) == false and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp") then
 		return false
 	end
 
@@ -3347,7 +3344,7 @@ function IsBuildingAvailable(province, unit_type)
 	local has_required_technologies = true
 	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
 		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
+			if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
 				has_required_technologies = false
 			end
 		end
@@ -3387,7 +3384,7 @@ function CanBuildStructure(province, unit_type)
 		return false
 	end
 
-	if (GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 	
@@ -3401,27 +3398,27 @@ function BuildStructure(province, unit_type)
 		end
 
 		SetProvinceCurrentConstruction(province.Name, unit_type)
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function CancelBuildStructure(province, unit_type)
 	if (GetProvinceCurrentConstruction(province.Name) == unit_type) then
 		SetProvinceCurrentConstruction(province.Name, "")
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function CanTrainUnit(province, unit_type)
-	if (GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
 		return false
 	end
 
-	if (GetUnitTypeData(unit_type, "Class") == "thief" and GetFactionUnitTypeCount(GetFactionFromName(province.Owner), unit_type, true) >= 6) then -- only 6 regiments of a particular sort of thief can be had at a single time
+	if (GetUnitTypeData(unit_type, "Class") == "thief" and GetFactionUnitTypeCount(GetFactionFromName(GetProvinceOwner(province.Name)), unit_type, true) >= 6) then -- only 6 regiments of a particular sort of thief can be had at a single time
 		return false
 	end
 
@@ -3462,27 +3459,27 @@ end
 function TrainUnit(province, unit_type)
 	if (CanTrainUnit(province, unit_type)) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) + 1)
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function TrainUnitCancel(province, unit_type)
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) - 1)
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
 	end
 end
 
 function CanHireMercenary(province, unit_type)
 	local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 	if (
-		GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
-		or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
-		or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity)
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity)
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity)
 	) then
 		return false
 	end
@@ -3506,9 +3503,9 @@ function HireMercenary(province, unit_type)
 	if (CanHireMercenary(province, unit_type)) then
 		local mercenary_quantity = MercenaryGroups[string.gsub(unit_type, "-", "_")]
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, mercenary_quantity)
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
 	end
 end
 
@@ -3516,9 +3513,9 @@ function CancelHireMercenary(province, unit_type)
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		local mercenary_quantity = GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type)
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, 0)
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", (GetUnitTypeData(unit_type, "Costs", "gold") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", (GetUnitTypeData(unit_type, "Costs", "lumber") * mercenary_quantity))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", (GetUnitTypeData(unit_type, "Costs", "stone") * mercenary_quantity))
 	end
 end
 
@@ -3531,18 +3528,18 @@ function IsTechnologyAvailable(province, unit_type)
 		return false
 	end
 
-	if (province.Owner == "") then
+	if (GetProvinceOwner(province.Name) == "") then
 		return false
 	end
 
-	if (GetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type)) then -- can't research if already researched
+	if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type)) then -- can't research if already researched
 		return false
 	end
 
 	local has_required_technologies = true
 	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
 		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionTechnology(GetFactionFromName(province.Owner).Civilization, province.Owner, GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
+			if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
 				has_required_technologies = false
 			end
 		end
@@ -3574,7 +3571,7 @@ function IsTechnologyAvailable(province, unit_type)
 end
 
 function CanResearchTechnology(province, unit_type)
-	if (GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold") < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber") < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone") < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "research") < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
+	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < CUpgrade:Get(unit_type).GrandStrategyCosts[1] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < CUpgrade:Get(unit_type).GrandStrategyCosts[2] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < CUpgrade:Get(unit_type).GrandStrategyCosts[5] or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research") < CUpgrade:Get(unit_type).GrandStrategyCosts[7]) then
 		return false
 	end
 	
@@ -3583,25 +3580,25 @@ end
 
 function ResearchTechnology(province, unit_type)
 	if (CanResearchTechnology(province, unit_type)) then
-		if (GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner) ~= "") then
-			CancelResearchTechnology(province, GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner)) -- it doesn't matter that the province given here is this one and not the one used to originally set that technology to be researched, since the CancelResearchTechnology function only refers to the province's owner
+		if (GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) ~= "") then
+			CancelResearchTechnology(province, GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) -- it doesn't matter that the province given here is this one and not the one used to originally set that technology to be researched, since the CancelResearchTechnology function only refers to the province's owner
 		end
 
-		SetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner, unit_type)
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", - CUpgrade:Get(unit_type).GrandStrategyCosts[1])
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", - CUpgrade:Get(unit_type).GrandStrategyCosts[2])
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", - CUpgrade:Get(unit_type).GrandStrategyCosts[5])
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "research", - CUpgrade:Get(unit_type).GrandStrategyCosts[7])
+		SetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type)
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - CUpgrade:Get(unit_type).GrandStrategyCosts[1])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - CUpgrade:Get(unit_type).GrandStrategyCosts[2])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - CUpgrade:Get(unit_type).GrandStrategyCosts[5])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research", - CUpgrade:Get(unit_type).GrandStrategyCosts[7])
 	end
 end
 
 function CancelResearchTechnology(province, unit_type)
-	if (GetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner) == unit_type) then
-		SetFactionCurrentResearch(GetFactionFromName(province.Owner).Civilization, province.Owner, "")
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "gold", CUpgrade:Get(unit_type).GrandStrategyCosts[1])
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "lumber", CUpgrade:Get(unit_type).GrandStrategyCosts[2])
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "stone", CUpgrade:Get(unit_type).GrandStrategyCosts[5])
-		ChangeFactionResource(GetFactionFromName(province.Owner).Civilization, GetFactionFromName(province.Owner).Name, "research", CUpgrade:Get(unit_type).GrandStrategyCosts[7])
+	if (GetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) == unit_type) then
+		SetFactionCurrentResearch(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "")
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", CUpgrade:Get(unit_type).GrandStrategyCosts[1])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", CUpgrade:Get(unit_type).GrandStrategyCosts[2])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", CUpgrade:Get(unit_type).GrandStrategyCosts[5])
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "research", CUpgrade:Get(unit_type).GrandStrategyCosts[7])
 	end
 end
 
@@ -3696,7 +3693,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 	local faction
 	if (attacker == false) then
 		units = GetProvinceUnitQuantity
-		faction = province.Owner
+		faction = GetProvinceOwner(province.Name)
 	else
 		if (GetProvinceAttackedBy(province.Name) == "") then
 			return 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
@@ -3709,7 +3706,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 	local archer_military_score_bonus = 0
 	local catapult_military_score_bonus = 0
 	local flying_rider_military_score_bonus = 0
-	if (faction ~= "" and faction ~= "Ocean") then
+	if (faction ~= "" and GetProvinceWater(province.Name) == false) then
 		faction = GetFactionFromName(faction)
 		if (FactionHasTechnologyType(faction, "melee-weapon-1")) then
 			infantry_military_score_bonus = infantry_military_score_bonus + 10
@@ -3970,7 +3967,7 @@ function CanTriggerEvent(faction, event)
 	
 	if (event.Provinces ~= nil) then
 		for key, value in pairs(event.Provinces) do
-			if ((WorldMapProvinces[key].Owner == faction.Name) ~= event.Provinces[key]) then
+			if ((GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name) ~= event.Provinces[key]) then
 				return false
 			end
 		end
@@ -3984,7 +3981,7 @@ function CanTriggerEvent(faction, event)
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
 				if (IsGrandStrategyBuilding(unitName)) then
-					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and GetProvinceSettlementBuilding(WorldMapProvinces[key].Name, unitName) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
+					if (event.SettlementBuildings[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and GetProvinceSettlementBuilding(WorldMapProvinces[key].Name, unitName) ~= event.SettlementBuildings[string.gsub(unitName, "-", "_")]) then
 						return false
 					end
 				end
@@ -3995,7 +3992,7 @@ function CanTriggerEvent(faction, event)
 	if (event.Provinces ~= nil and event.Units ~= nil) then
 		for key, value in pairs(event.Provinces) do
 			for i, unitName in ipairs(Units) do
-				if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < event.Units[string.gsub(unitName, "-", "_")]) then
+				if (event.Units[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) < event.Units[string.gsub(unitName, "-", "_")]) then
 					return false
 				end
 			end
@@ -4007,7 +4004,7 @@ function CanTriggerEvent(faction, event)
 			for key, value in pairs(event.Provinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
-						if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and WorldMapProvinces[key].Owner == faction.Name and (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
+						if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and (WorldMapProvinces[key].Heroes[string.gsub(unitName, "-", "_")] == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
 							local has_other_hero_version = false -- check to see if the province has another version of the hero in it
 							for j, second_unitName in ipairs(Units) do
 								if (IsHero(second_unitName)) then
@@ -4055,7 +4052,7 @@ function CanTriggerEvent(faction, event)
 	
 	if (event.SecondProvinces ~= nil and event.SecondFaction ~= nil) then
 		for key, value in pairs(event.SecondProvinces) do
-			if ((WorldMapProvinces[key].Owner == Factions[event.SecondFaction].Name) ~= event.SecondProvinces[key]) then -- if the "second faction" holds these provinces
+			if ((GetProvinceOwner(WorldMapProvinces[key].Name) == Factions[event.SecondFaction].Name) ~= event.SecondProvinces[key]) then -- if the "second faction" holds these provinces
 				return false
 			end
 		end
@@ -4205,7 +4202,7 @@ function FormFaction(old_faction, new_faction)
 	local new_faction_key = GetFactionKeyFromName(new_faction.Name)	
 
 	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].Owner == old_faction.Name) then
+		if (GetProvinceOwner(WorldMapProvinces[key].Name) == old_faction.Name) then
 			AcquireProvince(WorldMapProvinces[key], new_faction.Name)
 			if (ProvinceHasClaim(WorldMapProvinces[key].Name, old_faction.Civilization, old_faction.Name)) then
 				AddProvinceClaim(WorldMapProvinces[key].Name, new_faction.Civilization, new_faction.Name)
@@ -4520,10 +4517,8 @@ end
 
 function ChangeProvinceOwner(province, faction) -- used to change the owner and pass the information to the engine
 	if (faction ~= nil) then
-		province.Owner = faction.Name
 		SetProvinceOwner(province.Name, faction.Civilization, faction.Name)
 	else
-		province.Owner = ""
 		SetProvinceOwner(province.Name, "", "")
 	end
 end

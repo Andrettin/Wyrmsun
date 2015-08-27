@@ -1155,21 +1155,13 @@ function LoadProvinces(world)
 				{524, 95},
 				{525, 95}
 			},
-			Owner = "Gylfing Tribe",
 			SettlementName = "Malmö",
 			SettlementLocation = {517, 97}, -- Malmö
-			SettlementBuildings = {
-				unit_germanic_town_hall = true, -- Gylve's realm
-				unit_germanic_barracks = true
-			},
 			Map = "maps/earth/malmo.smp",
-			Units = {
-				unit_teuton_swordsman = 4,
-				unit_teuton_archer = 4
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
+				"basque", "Ertebolle Tribe",
 				"basque", "Gylfing Tribe",
 				"germanic", "Dane Tribe",
 				"teuton", "Dane Tribe",
@@ -1809,13 +1801,11 @@ function LoadProvinces(world)
 	local EarthWaterProvinces = {
 		AdriaticSea = {
 			Name = "Adriatic Sea",
-			Tiles = { {129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35} },
-			Owner = "Ocean"
+			Tiles = { {129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35} }
 		},
 		AegeanSea = {
 			Name = "Aegean Sea",
-			Tiles = { {136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35} },
-			Owner = "Ocean"
+			Tiles = { {136, 35}, {137, 35}, {137, 36}, {137, 37}, {137, 38}, {138, 35}, {138, 36}, {138, 37}, {138, 38}, {139, 35}, {139, 38}, {140, 35} }
 		},
 		AlboranSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
 			Name = "Alboran Sea",
@@ -1834,8 +1824,7 @@ function LoadProvinces(world)
 				{474, 152}, {474, 153}, {474, 154}, {474, 155},
 				{475, 153}, {475, 154}, {475, 155},
 				{476, 154}
-			},
-			Owner = "Ocean"
+			}
 		},
 		AtlanticOcean = {
 			Name = "Atlantic Ocean",
@@ -1852,8 +1841,7 @@ function LoadProvinces(world)
 				{460, 150}, {460, 151}, {460, 152}, {460, 153},
 				{461, 151}, {461, 152}, {461, 153},
 				{462, 153}
-			},
-			Owner = "Ocean"
+			}
 		},
 		BalearicSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
 			Name = "Balearic Sea",
@@ -1872,8 +1860,7 @@ function LoadProvinces(world)
 				{489, 137}, {489, 138}, {489, 139}, {489, 140}, {489, 141}, {489, 142}, {489, 144},
 				{490, 139}, {490, 140}, {490, 141}, {490, 142}, {490, 143}, {490, 144},
 				{491, 140}, {491, 141}, {491, 143}
-			},
-			Owner = "Ocean"
+			}
 		},
 		BalticSea = {
 			Name = "Baltic Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
@@ -1918,8 +1905,7 @@ function LoadProvinces(world)
 				{542, 86}, {542, 87}, {542, 88}, {542, 89}, {542, 90},
 				{543, 86}, {543, 87}, {543, 88},
 				{544, 86}
-			},
-			Owner = "Ocean"
+			}
 		},
 		BayOfBiscay = {
 			Name = "Bay of Biscay",
@@ -1944,13 +1930,11 @@ function LoadProvinces(world)
 				{474, 123}, {474, 124}, {474, 125}, {474, 126}, {474, 127}, {474, 128}, {474, 129}, {474, 130}, {474, 131}, {474, 132},
 				{475, 124}, {475, 125}, {475, 126}, {475, 127}, {475, 128}, {475, 129}, {475, 130}, {475, 131},
 				{476, 124}, {476, 125}, {476, 126}, {476, 127}, {476, 128}
-			},
-			Owner = "Ocean"
+			}
 		},
 		BlackSea = {
 			Name = "Black Sea",
-			Tiles = { {140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34} },
-			Owner = "Ocean"
+			Tiles = { {140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34} }
 		},
 		BristolChannel = { -- Source: "Limits of Oceans and Seas", 1953, p. 13. (see corrections as well)
 			Name = "Bristol Channel",
@@ -1958,8 +1942,7 @@ function LoadProvinces(world)
 				{466, 109},
 				{467, 109}, {467, 110},
 				{468, 109}
-			},
-			Owner = "Ocean"
+			}
 		},
 		CelticSea = { -- Source: "Limits of Oceans and Seas", 1953. (see corrections)
 			Name = "Celtic Sea",
@@ -1984,8 +1967,7 @@ function LoadProvinces(world)
 				{464, 108}, {464, 109}, {464, 110}, {464, 111}, {464, 112}, {464, 115}, {464, 116}, {464, 117}, {464, 118}, {464, 119}, {464, 120}, {464, 121}, {464, 122},
 				{465, 109}, {465, 110}, {465, 111}, {465, 117}, {465, 118}, {465, 119}, {465, 120}, {465, 121},
 				{466, 110}, {466, 111}, {466, 118}, {466, 119}, {466, 120},
-			},
-			Owner = "Ocean"
+			}
 		},
 		EasternMediterraneanSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
 			Name = "Eastern Mediterranean Sea",
@@ -2006,8 +1988,7 @@ function LoadProvinces(world)
 				{522, 152}, {522, 153}, {522, 154}, {522, 155}, {522, 156}, {522, 157}, {522, 158}, {522, 159}, {522, 160}, {522, 161}, {522, 162}, {522, 163},
 				{523, 148}, {523, 149}, {523, 150}, {523, 151}, {523, 152}, {523, 153}, {523, 154}, {523, 155}, {523, 156}, {523, 157}, {523, 158}, {523, 159}, {523, 160}, {523, 161}, {523, 162}, {523, 163},
 				{524, 147}, {524, 148}, {524, 149}, {524, 150}, {524, 151}, {524, 152}, {524, 153}, {524, 154}, {524, 155}, {524, 156}, {524, 157}, {524, 158}, {524, 159}, {524, 160}, {524, 161}, {524, 162}, {524, 163}, {524, 164}, {524, 165}
-			},
-			Owner = "Ocean"
+			}
 		},
 		EnglishChannel = {
 			Name = "English Channel",
@@ -2042,8 +2023,7 @@ function LoadProvinces(world)
 				{482, 111}, {482, 112}, {482, 113},
 				{483, 111}, {483, 112}, {483, 113},
 				{484, 111}, {484, 112}
-			},
-			Owner = "Ocean"
+			}
 		},
 		GulfOfBothnia = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 			Name = "Gulf of Bothnia",
@@ -2071,8 +2051,7 @@ function LoadProvinces(world)
 				{549, 69}, {549, 70}, {549, 71},
 				{550, 69}, {550, 70}, {550, 71},
 				{551, 69}, {551, 70}
-			},
-			Owner = "Ocean"
+			}
 		},
 		GulfOfFinland = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 			Name = "Gulf of Finland",
@@ -2098,8 +2077,7 @@ function LoadProvinces(world)
 				{563, 85},
 				{564, 85},
 				{565, 85}
-			},
-			Owner = "Ocean"
+			}
 		},
 		GulfOfRiga = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 			Name = "Gulf of Riga",
@@ -2112,8 +2090,7 @@ function LoadProvinces(world)
 				{547, 87}, {547, 90}, {547, 91}, {547, 92}, {547, 93},
 				{548, 90}, {548, 91}, {548, 92}, {548, 93},
 				{549, 90}
-			},
-			Owner = "Ocean"
+			}
 		},
 		InnerSeas = { -- Source: "Limits of Oceans and Seas", 1953, p. 12.
 			Name = "Inner Seas",
@@ -2127,13 +2104,11 @@ function LoadProvinces(world)
 				{463, 89}, {463, 90}, {463, 91}, {463, 92}, {463, 93}, {463, 96}, {463, 97}, {463, 98}, {463, 99},
 				{464, 89}, {464, 90}, {464, 98}, {464, 99}, {464, 100}, {464, 101},
 				{465, 89}, {465, 97}, {465, 98}, {465, 99}, {465, 100}
-			},
-			Owner = "Ocean"
+			}
 		},
 		IonianSea = {
 			Name = "Ionian Sea",
-			Tiles = { {128, 38}, {128, 39}, {129, 38}, {129, 39}, {129, 40}, {130, 37}, {130, 38}, {130, 39}, {130, 40}, {131, 37}, {131, 38}, {131, 39}, {131, 40}, {131, 41}, {132, 36}, {132, 37}, {132, 38}, {132, 39}, {133, 36}, {133, 37}, {133, 38}, {134, 36}, {134, 37}, {134, 38}, {135, 38}, {136, 38} },
-			Owner = "Ocean"
+			Tiles = { {128, 38}, {128, 39}, {129, 38}, {129, 39}, {129, 40}, {130, 37}, {130, 38}, {130, 39}, {130, 40}, {131, 37}, {131, 38}, {131, 39}, {131, 40}, {131, 41}, {132, 36}, {132, 37}, {132, 38}, {132, 39}, {133, 36}, {133, 37}, {133, 38}, {134, 36}, {134, 37}, {134, 38}, {135, 38}, {136, 38} }
 		},
 		IrishSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
 			Name = "Irish Sea",
@@ -2153,8 +2128,7 @@ function LoadProvinces(world)
 				{469, 100}, {469, 101}, {469, 102}, {469, 103},
 				{470, 102}, {470, 103},
 				{471, 102}
-			},
-			Owner = "Ocean"
+			}
 		},
 		Kattegat = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 			Name = "Kattegat",
@@ -2169,8 +2143,7 @@ function LoadProvinces(world)
 				{514, 93}, {514, 94}, {514, 95}, {514, 96},
 				{515, 94}, {515, 95}, {515, 96}, {515, 98},
 				{516, 95}, {516, 96}, {516, 97}, {516, 98},
-			},
-			Owner = "Ocean"
+			}
 		},
 		LakeVattern = {
 			Name = "Lake Vättern",
@@ -2180,8 +2153,7 @@ function LoadProvinces(world)
 			},
 			Tiles = {
 				{521, 89}, {521, 90}
-			},
-			Owner = "Ocean"
+			}
 		},
 		LakeWener = {
 			Name = "Lake Wener", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
@@ -2194,13 +2166,11 @@ function LoadProvinces(world)
 				{517, 88},
 				{518, 87}, {518, 88},
 				{519, 87}, {519, 88}
-			},
-			Owner = "Ocean"
+			}
 		},
 		LibyanSea = {
 			Name = "Libyan Sea",
-			Tiles = { {132, 40}, {132, 41}, {133, 39}, {133, 40}, {133, 41}, {134, 39}, {134, 40}, {135, 39}, {135, 40}, {136, 39}, {136, 40}, {137, 40}, {138, 40}, {139, 39}, {139, 40} },
-			Owner = "Ocean"
+			Tiles = { {132, 40}, {132, 41}, {133, 39}, {133, 40}, {133, 41}, {134, 39}, {134, 40}, {135, 39}, {135, 40}, {136, 39}, {136, 40}, {137, 40}, {138, 40}, {139, 39}, {139, 40} }
 		},
 		LigurianSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
 			Name = "Ligurian Sea",
@@ -2213,8 +2183,7 @@ function LoadProvinces(world)
 				{505, 130}, {505, 131}, {505, 132}, {505, 133},
 				{506, 130}, {506, 131}, {506, 132}, {506, 133},
 				{507, 130}, {507, 131}, {507, 132}
-			},
-			Owner = "Ocean"
+			}
 		},
 		NorthSea = {
 			Name = "North Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
@@ -2260,8 +2229,7 @@ function LoadProvinces(world)
 				{502, 93}, {502, 94}, {502, 95}, {502, 96}, {502, 97}, {502, 98}, {502, 99}, {502, 100}, {502, 101}, {502, 102},
 				{503, 93}, {503, 94}, {503, 98}, {503, 99}, {503, 100}, {503, 101}, {503, 102}, {503, 103},
 				{504, 99}, {504, 100}, {504, 101}, {504, 102}
-			},
-			Owner = "Ocean"
+			}
 		},
 		Skagerrak = { -- Source: "Limits of Oceans and Seas", 1953, p. 6.
 			Name = "Skagerrak",
@@ -2279,8 +2247,7 @@ function LoadProvinces(world)
 				{510, 87}, {510, 88}, {510, 89}, {510, 90}, {510, 91},
 				{511, 88}, {511, 89}, {511, 90}, {511, 91},
 				{512, 90}, {512, 91}
-			},
-			Owner = "Ocean"
+			}
 		},
 		TyrrhenianSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
 			Name = "Tyrrhenian Sea",
@@ -2307,8 +2274,7 @@ function LoadProvinces(world)
 				{523, 142}, {523, 143}, {523, 144}, {523, 145}, {523, 146},
 				{524, 142}, {524, 143}, {524, 144}, {524, 145}, {524, 146},
 				{525, 144}, {525, 145}
-			},
-			Owner = "Ocean"
+			}
 		},
 		WesternMediterraneanSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
 			Name = "Western Mediterranean Sea",
@@ -2354,13 +2320,11 @@ function LoadProvinces(world)
 				{512, 148}, {512, 149},
 				{513, 148},
 				{514, 148}
-			},
-			Owner = "Ocean"
+			}
 		},
 		WhiteSea = {
 			Name = "White Sea",
-			Tiles = { {145, 17}, {146, 17}, {147, 17} },
-			Owner = "Ocean"
+			Tiles = { {145, 17}, {146, 17}, {147, 17} }
 		}
 	}
 
@@ -2373,7 +2337,6 @@ function LoadProvinces(world)
 				{46, 0}, {46, 1},
 				{47, 0}
 			},
-			Owner = "Ocean",
 			CulturalNames = {
 				dwarf = "Deep Sea"
 			}
@@ -2381,7 +2344,6 @@ function LoadProvinces(world)
 		LakeVrug = {
 			Name = "Lake Vrug",
 			Tiles = { {27, 6}, {27, 7}, {27, 8}, {28, 5}, {28, 6}, {28, 7}, {28, 8}, {29, 5}, {29, 6}, {29, 7}, {29, 8}, {30, 5}, {30, 6}, {30, 7}, {31, 7} },
-			Owner = "Ocean",
 			CulturalNames = {
 				dwarf = "Lake Vrug"
 			}
@@ -2423,9 +2385,8 @@ function LoadProvinces(world)
 					SetWorldMapTileProvince(province_table[key].Tiles[i][1], province_table[key].Tiles[i][2], WorldMapProvinces[key].Name)
 				end
 			end
-			WorldMapProvinces[key]["Owner"] = ""
 			if (province_table[key].Owner ~= nil) then
-				WorldMapProvinces[key]["Owner"] = province_table[key].Owner
+				SetProvinceOwner(province_table[key].Name, GetFactionFromName(province_table[key].Owner).Civilization, province_table[key].Owner)
 			end
 			if (province_table[key].Civilization ~= nil) then
 				SetProvinceCivilization(WorldMapProvinces[key].Name, province_table[key].Civilization)
@@ -2501,7 +2462,6 @@ function LoadProvinces(world)
 					SetWorldMapTileProvince(province_table[key].Tiles[i][1], province_table[key].Tiles[i][2], WorldMapWaterProvinces[key].Name)
 				end
 			end
-			WorldMapWaterProvinces[key]["Owner"] = province_table[key].Owner
 		end
 	end
 	

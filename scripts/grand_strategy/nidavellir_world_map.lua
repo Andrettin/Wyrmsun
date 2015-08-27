@@ -856,7 +856,7 @@ if (GrandStrategyYear >= -1) then
 	GrandStrategyEvents.TheNorlundClan = nil
 	GrandStrategyEvents.TheShinsplitterClan = nil
 	GrandStrategyEvents.TheShorbearClan = nil
-	WorldMapProvinces.CavernsOfChaincolt.Owner = "Norlund Clan"
+	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Norlund Clan")
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-barracks", true) -- has capability to train warriors
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-smithy", true) -- Durstorn has runesmiths under his employ
@@ -866,7 +866,7 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-axefighter", 4) -- 4 Dwarven Guardsmen (5 if easy mode)
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Neglur, Glinar
 	SetWorldMapResourceProspected("gold", 30, 12, true)
-	WorldMapProvinces.ShorbearHills.Owner = "Shorbear Clan"
+	SetProvinceOwner("Shorbear Hills", "dwarf", "Shorbear Clan")
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-stronghold", true) -- Shorbear Hold
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-barracks", true) -- has capability to train warriors
@@ -874,7 +874,7 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
 	SetWorldMapResourceProspected("gold", 34, 14, true)
-	WorldMapProvinces.SouthernTunnels.Owner = "Shinsplitter Clan"
+	SetProvinceOwner("Southern Tunnels", "dwarf", "Shinsplitter Clan")
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-barracks", true) -- has capability to train warriors
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-goblin-spearman", 0)
@@ -966,7 +966,7 @@ if (GrandStrategyYear >= 29) then
 	SetWorldMapResourceProspected("gold", 39, 6, true) -- Rugnur and his companions found the location of the gold mines in the Eastern Mines
 
 	--[[
-	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
+	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 2
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 2
 	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 2
@@ -984,7 +984,7 @@ if (GrandStrategyYear >= 35) then
 	GrandStrategyEvents.HillsOfTheShorbearClan = nil
 	GrandStrategyEvents.HillsOfTheShorbearClanShinsplitterClan = nil
 	GrandStrategyEvents.HillsOfTheShorbearClanShorbearClan = nil
-	WorldMapProvinces.ShorbearHills.Owner = "Shinsplitter Clan" -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan), while the Shinsplitter forces were sieging them
+	SetProvinceOwner("Shorbear Hills", "dwarf", "Shinsplitter Clan") -- Shorbear Hold abandoned in 35 AD by Rugnur's and Durstorn's Clan (Norlund Clan), while the Shinsplitter forces were sieging them
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
 	--[[
@@ -1014,13 +1014,13 @@ if (GrandStrategyYear >= 40) then
 	ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter
 	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
-	WorldMapProvinces.ShorbearHills.Owner = "Norlund Clan" -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
+	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
 	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"
 end
 
 if (GrandStrategyYear >= 389) then
-	WorldMapProvinces.PeacefulValley.Owner = "" -- Lggi Tribe destroyed
+	SetProvinceOwner("Peaceful Valley", "", "") -- Lggi Tribe destroyed
 	SetProvinceCivilization("Peaceful Valley", "")
 	SetProvinceUnitQuantity("Peaceful Valley", "unit-goblin-spearman", 0)
 	SetProvinceSettlementBuilding("Peaceful Valley", "unit-goblin-town-hall", false)
@@ -1028,19 +1028,19 @@ if (GrandStrategyYear >= 389) then
 end
 
 if (GrandStrategyYear >= 400) then
-	WorldMapProvinces.CavernsOfChaincolt.Owner = "Knalga" -- The Lordship of Knalga was founded around 400 AD
-	WorldMapProvinces.SouthernTunnels.Owner = "Knalga"
-	WorldMapProvinces.ShorbearHills.Owner = "Knalga"
+	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Knalga") -- The Lordship of Knalga was founded around 400 AD
+	SetProvinceOwner("Southern Tunnels", "dwarf", "Knalga")
+	SetProvinceOwner("Shorbear Hills", "dwarf", "Knalga")
 	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-runewriting", true) -- polities require writing
 
-	WorldMapProvinces.KalKartha.Owner = "Kal Kartha" -- The Lordship of Kal Kartha was founded around 400 AD
+	SetProvinceOwner("Kal Kartha", "dwarf", "Kal Kartha") -- The Lordship of Kal Kartha was founded around 400 AD
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
 	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing
 
-	WorldMapProvinces.Lyr.Owner = "Lyr" -- The Lordship of Lyr was founded around the same time as the other lordships
+	SetProvinceOwner("Lyr", "dwarf", "Lyr") -- The Lordship of Lyr was founded around the same time as the other lordships
 	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
@@ -1057,7 +1057,7 @@ if (GrandStrategyYear >= 400) then
 end
 
 if (GrandStrategyYear >= 500) then
-	WorldMapProvinces.HighbrookPass.Owner = "Shinsplitter Clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
+	SetProvinceOwner("Highbrook Pass", "dwarf", "Shinsplitter Clan") -- The Shinsplitter clan took over the Highbrook Pass around this time
 	SetProvinceSettlementBuilding("Highbrook Pass", "unit-dwarven-town-hall", true)
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-goblin-archer", 0)

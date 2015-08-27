@@ -33,7 +33,7 @@ local GreekEvents = {
 		Description = "Zosimus has written a work of his entitled \"Historia nova\", in which he describes events that occurred as far away as the Netherlands.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Thrace.Owner == EventFaction.Name
+				GetProvinceOwner("Thrace") == EventFaction.Name
 				and GetProvinceCivilization("Thrace") == "greek"
 			) then
 				EventProvince = WorldMapProvinces.Thrace

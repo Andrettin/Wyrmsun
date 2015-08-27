@@ -189,7 +189,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
-				WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				return true
@@ -215,7 +215,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Suebi Tribe"
-				and WorldMapProvinces.Bohemia.Owner == "Boii Tribe"
+				and GetProvinceOwner("Bohemia") == "Boii Tribe"
 			) then
 				return true
 			else
@@ -313,8 +313,8 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
-				and WorldMapProvinces.Austria.Owner == "Rome"
-				and WorldMapProvinces.Bohemia.Owner == "Marcomanni Tribe"
+				and GetProvinceOwner("Austria") == "Rome"
+				and GetProvinceOwner("Bohemia") == "Marcomanni Tribe"
 			) then
 				return true
 			else
@@ -380,8 +380,8 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
-				and WorldMapProvinces.NorthItaly.Owner == "Rome"
-				and WorldMapProvinces.Austria.Owner == "Marcomanni Tribe"
+				and GetProvinceOwner("North Italy") == "Rome"
+				and GetProvinceOwner("Austria") == "Marcomanni Tribe"
 			) then
 				return true
 			else
@@ -437,7 +437,7 @@ local TeutonEvents = {
 		Description = "The venerable Bede has written an important work of history, the Historia Ecclesiastica Venerabilis Bedae.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English
 --				and SyncRand(100) < 10
 			) then
@@ -464,7 +464,7 @@ local TeutonEvents = {
 		Description = "A council gathered in Mercia has declared the old custom of eating horse-flesh to be forbidden, judging it to be incompatible with Christian doctrine.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 				and (GetProvinceCivilization("England") == "germanic" or GetProvinceCivilization("England") == "teuton" or GetProvinceCivilization("England") == "norse" or GetProvinceCivilization("England") == "goth") -- eating horse-flesh was a Germanic custom
 				and SyncRand(100) < 1 -- should take a while for this to happen after Christianization
 			) then
@@ -491,7 +491,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-				and WorldMapProvinces.Prussia.Owner == EventFaction.Name
+				and GetProvinceOwner("Prussia") == EventFaction.Name
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -514,7 +514,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-				and WorldMapProvinces.BalticLands.Owner == EventFaction.Name
+				and GetProvinceOwner("Baltic Lands") == EventFaction.Name
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -537,7 +537,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Brandenburg" or EventFaction.Name == "Prussia") -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-				and (WorldMapProvinces.Prussia.Owner == EventFaction.Name or WorldMapProvinces.Brandenburg.Owner == EventFaction.Name) -- can happen in either Western or Eastern Pommerania (historically it happened in both)
+				and (GetProvinceOwner("Prussia") == EventFaction.Name or GetProvinceOwner("Brandenburg") == EventFaction.Name) -- can happen in either Western or Eastern Pommerania (historically it happened in both)
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -559,7 +559,7 @@ local TeutonEvents = {
 		Description = "William Camden has published Britannia, an analysis of the material remnants of ancient British peoples. One of the objects analyzed by him was the Stonehenge monument.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English
 			) then
 				return true
@@ -584,7 +584,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "teuton"
-				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				return true
@@ -608,7 +608,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "teuton"
-				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name
+				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				EventProvince = WorldMapProvinces.Brandenburg
@@ -634,7 +634,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Austria" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-				and WorldMapProvinces.Bohemia.Owner == EventFaction.Name
+				and GetProvinceOwner("Bohemia") == EventFaction.Name
 				-- should only trigger after an enlightenment-related technology has been researched
 			) then
 				return true
@@ -657,7 +657,7 @@ local TeutonEvents = {
 		Description = "The Scottish geologist Charles Lyell has published his Principles of Geology, in which he argues that geological processes in the past occurred the same as in the present, and throughout an enormously long period.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				GetProvinceOwner("Scotland") == EventFaction.Name
 				and GetProvinceCivilization("Scotland") == "teuton" -- should be English
 			) then
 				return true
@@ -680,7 +680,7 @@ local TeutonEvents = {
 		Description = "Charles Darwin has published a work entitled On the Origin of Species by Means of Natural Selection, in which he proposes that living organisms are the result of a long process of natural evolution.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English
 			) then
 				return true
@@ -703,7 +703,7 @@ local TeutonEvents = {
 		Description = "The Scottish geologist Charles Lyell has published a work entitled Antiquity of Man, in which he seeks to connect theories on natural evolution, geological processes and finds of ancient objects, to provide a new understanding of prehistoric peoples.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				GetProvinceOwner("Scotland") == EventFaction.Name
 				and GetProvinceCivilization("Scotland") == "teuton" -- should be English
 			) then
 				return true
@@ -726,7 +726,7 @@ local TeutonEvents = {
 		Description = "Sir John Lubbock has published his Prehistoric Times, in which he divides the Stone Age between the Old Stone Age (the Palaeolithic) and the New Stone Age (the Neolithic). The former was marked by the use of flaked stone, while in the latter polished stone was used.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English
 			) then
 				return true
@@ -749,7 +749,7 @@ local TeutonEvents = {
 		Description = "The journal Archiv für Anthropologie has been founded in Germany, preoccuping itself with research on prehistory..",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Brandenburg.Owner == EventFaction.Name -- where was it actually founded? Brandenburg set here since Berlin was Germany's capital
+				GetProvinceOwner("Brandenburg") == EventFaction.Name -- where was it actually founded? Brandenburg set here since Berlin was Germany's capital
 				and GetProvinceCivilization("Brandenburg") == "teuton"
 			) then
 				return true

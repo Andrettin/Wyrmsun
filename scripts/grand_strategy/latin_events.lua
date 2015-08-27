@@ -46,9 +46,9 @@ local LatinEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Rome"
-				and WorldMapProvinces.France.Owner == EventFaction.Name -- Gaul must have been conquered
-				and WorldMapProvinces.Burgundy.Owner == EventFaction.Name
-				and WorldMapProvinces.Aquitaine.Owner == EventFaction.Name
+				and GetProvinceOwner("France") == EventFaction.Name -- Gaul must have been conquered
+				and GetProvinceOwner("Burgundy") == EventFaction.Name
+				and GetProvinceOwner("Aquitaine") == EventFaction.Name
 --				and SyncRand(100) < 20
 			) then
 				return true

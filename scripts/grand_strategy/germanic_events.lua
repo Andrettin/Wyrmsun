@@ -33,8 +33,8 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "Asa Tribe"
-				and WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
-				and WorldMapProvinces.Don.Owner == "Vana Tribe"
+				and GetProvinceOwner("Astrakhan") == EventFaction.Name
+				and GetProvinceOwner("Don") == "Vana Tribe"
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has gathered enough warriors for a raid
 				and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
 				and SyncRand(100) < 33
@@ -124,8 +124,8 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "Asa Tribe"
-				and WorldMapProvinces.Astrakhan.Owner == EventFaction.Name
-				and WorldMapProvinces.Russia.Owner ~= EventFaction.Name
+				and GetProvinceOwner("Astrakhan") == EventFaction.Name
+				and GetProvinceOwner("Russia") ~= EventFaction.Name
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully migrate
 				and ProvinceHasBorderWith(WorldMapProvinces.Astrakhan, WorldMapProvinces.Russia)
 				and WorldMapProvinces.Russia.SettlementLocation[1] < WorldMapProvinces.Astrakhan.SettlementLocation[1] -- Russia must be to the west of Astrakhan, or else the event's name and description don't make sense
@@ -284,11 +284,11 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
-				and WorldMapProvinces.Jutland.Owner == EventFaction.Name
+				and GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceUnitQuantity("Jutland", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Jutland)
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Scania)
-				and WorldMapProvinces.Scania.Owner == "Gylfing Tribe"
+				and GetProvinceOwner("Scania") == "Gylfing Tribe"
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -479,7 +479,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
-				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
 				and SyncRand(100) < 25
@@ -505,7 +505,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
-				and WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
 			) then
@@ -527,7 +527,7 @@ local GermanicEvents = {
 		Description = "Our chieftain's wife has bore him a son, who has been named Saeming. The notables of the tribe have given our ruler many gifts to commemorate Saeming's birth.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				GetProvinceOwner("Sweden") == EventFaction.Name
 				and (GetProvinceCivilization("Sweden") == "germanic" or GetProvinceCivilization("Sweden") == "norse")
 			) then
 				return true
@@ -551,7 +551,7 @@ local GermanicEvents = {
 		Description = "One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords would serve to embellish ceremonies and bring prestige to their bearer.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Jutland.Owner == EventFaction.Name
+				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
@@ -574,7 +574,7 @@ local GermanicEvents = {
 		Description = "One of our artisans has made a delicate bronze figure of a sun chariot, representing the divine horse that carries the sun on its eternal journey across the sky.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Jutland.Owner == EventFaction.Name
+				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
@@ -597,7 +597,7 @@ local GermanicEvents = {
 		Description = "In 1365 BC, a nobleman was buried in the northwestern parts of the Jutland peninsula. Dressed in wool, he was laid down with his bronze sword in an oak coffin, which was then placed in a mound.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Jutland.Owner == EventFaction.Name
+				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
 			) then
 				return true
@@ -620,7 +620,7 @@ local GermanicEvents = {
 		Description = "Our artisans have learned the craft of making circular bronze shields from the Celtic peoples to our south. These shields are often made to symbolize the sun and the cycle of the seasons.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Jutland.Owner == EventFaction.Name
+				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
 				and GetFactionTechnology(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield")
@@ -644,7 +644,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
-				and WorldMapProvinces.Rhineland.Owner == EventFaction.Name
+				and GetProvinceOwner("Rhineland") == EventFaction.Name
 				and ProvinceHasBuildingClass(WorldMapProvinces.Rhineland.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
@@ -685,7 +685,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
-				and WorldMapProvinces.Netherlands.Owner == EventFaction.Name -- the Netherlands were the Franks' homelands
+				and GetProvinceOwner("Netherlands") == EventFaction.Name -- the Netherlands were the Franks' homelands
 				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
@@ -723,7 +723,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
-				and WorldMapProvinces.Brandenburg.Owner == EventFaction.Name -- the Netherlands were the Franks' homelands
+				and GetProvinceOwner("Brandenburg") == EventFaction.Name -- the Netherlands were the Franks' homelands
 				and ProvinceHasBuildingClass(WorldMapProvinces.Brandenburg.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
@@ -825,7 +825,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "goth" or EventFaction.Civilization == "norse" or EventFaction.Civilization == "teuton")
-				and WorldMapProvinces.Gotaland.Owner == EventFaction.Name
+				and GetProvinceOwner("Gotaland") == EventFaction.Name
 				and SyncRand(100) < 50
 			) then
 				return true

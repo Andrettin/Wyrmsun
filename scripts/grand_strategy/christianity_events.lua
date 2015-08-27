@@ -33,7 +33,7 @@ local ChristianityEvents = {
 		Description = "The Pope has ordained the Briton deacon Palladius as the first bishop of PROVINCE_NAME, sending him to administer the small community of the faithful there, and to promote Christianity amongst the non-believers.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("England") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
@@ -57,7 +57,7 @@ local ChristianityEvents = {
 		Description = "The bishop of PROVINCE_NAME Palladius, faced with great difficulties, has desisted from his mission of promoting Christianity there. He left with his assistants for the northern parts of Great Britain, where his days ended.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and SyncRand(100) < 80
 			) then
 				EventProvince = WorldMapProvinces.Ireland
@@ -83,7 +83,7 @@ local ChristianityEvents = {
 		Description = "Palladius has succeeded in converting the people of PROVINCE_NAME to the Christian faith!",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and SyncRand(100) < 20
 			) then
 				EventProvince = WorldMapProvinces.Ireland
@@ -110,7 +110,7 @@ local ChristianityEvents = {
 		Description = "Patrick, the son of a deacon and grandson of a priest, was brought to PROVINCE_NAME as a slave when young, where he worked for six years as a shepherd. Having ran away from PROVINCE_NAME, he later had a dream instigating him to come back to the island and help propagate the Christian faith there. After his return to PROVINCE_NAME, Patrick personally baptized many thousands, successfully gaining the island for Christianity. \"The Irish\", he said, \"who never had the knowledge of God and worshiped only idols and unclean things, have lately become the people of the Lord\".",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
@@ -134,7 +134,7 @@ local ChristianityEvents = {
 		Description = "Patrick wrote a hymn called S. Patricii Canticum Scotticum just before he converted the main chieftain of PROVINCE_NAME. The hymn contained a prayer invoking help for such an important task, and contained the major Christian doctrines, along with a warning against spells done by old women and smiths who abided by the pagan traditions.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and SyncRand(100) < 10 -- should take a bit until Patrick writes this hymn, as his mission began in 440 and ended only in 493
 			) then
 				EventProvince = WorldMapProvinces.Ireland
@@ -160,7 +160,7 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Columba has arrived with twelve companions in the settlement of Hy in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				GetProvinceOwner("Scotland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Scotland
@@ -184,7 +184,7 @@ local ChristianityEvents = {
 		Description = "The missionary Mohonna has been sent by Columba to christianize the Picts.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Scotland.Owner == EventFaction.Name
+				GetProvinceOwner("Scotland") == EventFaction.Name
 				and GetProvinceCivilization("Scotland") == "celt" -- there must be Picts in Scotland for this event to fire
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
@@ -210,7 +210,7 @@ local ChristianityEvents = {
 		Description = "The Pope has sent the Benedictine abbot Augustine on a mission to propagate Christianity in PROVINCE_NAME. He has arrived with thirty other monks, along with a priest called Laurentius and some translators. Augustine carried, besides papal instructions, letters of recommendation and a few books.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -249,7 +249,7 @@ local ChristianityEvents = {
 		Description = "Archbishop Augustine has built a church at Canterbury, which shall be the center of the Christian faith in PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 --				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "temple")
 			) then
 				EventProvince = WorldMapProvinces.England
@@ -275,7 +275,7 @@ local ChristianityEvents = {
 		Description = "Augustine, the archbishop of Canterbury, has arranged with our king's aid a conference with the Briton bishops. The meeting took place in Sussex, near the banks of the Severn under an oak. Augustine sought to make them give up their local religious traditions and accept the customs practiced in Rome, which they resisted. The Briton bishops said they needed the approval of their people to give up the old traditions, and asked for a second, larger conference to be held later.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -301,7 +301,7 @@ local ChristianityEvents = {
 		Description = "The Briton bishops have met archbishop Augustine in a second conference, having brought with them several scholars from the Convent of Bangor. The bishops had been advised by a venerated hermit to accept Augustine's propositions only if he stood up to talk to them, instead of speaking to them with arrogance from his seat. Augustine remained seated. He demanded that they accept Roman customs and help him in the conversion of PROVINCE_NAME. The bishops refused Augustine, who then predicted that they would suffer divine punishment through the Anglo-Saxons.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -326,7 +326,7 @@ local ChristianityEvents = {
 		Description = "Mellitus, a priest sent by the Pope to PROVINCE_NAME, has been consecrated bishop of PROVINCE_SETTLEMENT_NAME.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -349,7 +349,7 @@ local ChristianityEvents = {
 		Description = "Justus, a priest sent by the Pope to PROVINCE_NAME, has been consecrated bishop of Rochester.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -372,7 +372,7 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Columbanus has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.France.Owner == EventFaction.Name
+				GetProvinceOwner("France") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.France
@@ -396,7 +396,7 @@ local ChristianityEvents = {
 		Description = "Paulinus, who had been sent by the Pope to PROVINCE_NAME to aid in the promotion of Christianity there, has been appointed the archbishop of York.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.England.Owner == EventFaction.Name
+				GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.England
 				return true
@@ -419,7 +419,7 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Kilian has arrived with twelve companions in Franconia to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
+				GetProvinceOwner("Bavaria") == EventFaction.Name
 				and (GetProvinceCivilization("Bavaria") == "germanic" or GetProvinceCivilization("Bavaria") == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
@@ -443,7 +443,7 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Eloquius has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Belgium.Owner == EventFaction.Name
+				GetProvinceOwner("Belgium") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
@@ -467,7 +467,7 @@ local ChristianityEvents = {
 		Description = "The missionary Willibrord, who studied for twelve years in Ireland, has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
+				GetProvinceOwner("Netherlands") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.Netherlands
 				return true
@@ -490,7 +490,7 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Rupert has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Bavaria.Owner == EventFaction.Name
+				GetProvinceOwner("Bavaria") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Bavaria
@@ -514,7 +514,7 @@ local ChristianityEvents = {
 		Description = "After journeying from Utrecht to the Ijssel river, the Anglo-Saxon missionary Liafwin has founded an oratory on its left bank.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
+				GetProvinceOwner("Netherlands") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
 			) then
 				EventProvince = WorldMapProvinces.Netherlands
@@ -538,7 +538,7 @@ local ChristianityEvents = {
 		Description = "Ferdomnach was a learned monk belonging to the monastery of Armagh, who worked as a scribe and compiled many of the religious works extant at the time.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				return true
@@ -561,7 +561,7 @@ local ChristianityEvents = {
 		Description = "The Book of Armargh was a compilation of a number of religious texts, written by the learned monk Ferdomnach. The book included the memoirs of St. Patrick, the Confession of St. Patrick, the Preface of Jerome to the New Testament, and many other texts.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 			) then
 				return true
 			else
@@ -584,7 +584,7 @@ local ChristianityEvents = {
 		Description = "Dicuil is an Irish monk who has become notable for his scholarship.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Ireland
@@ -608,7 +608,7 @@ local ChristianityEvents = {
 		Description = "The monk Dicuil has written a cosmographical work, \"De Mensura Orbis Terrae\". In it, Dicuil laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Ireland.Owner == EventFaction.Name
+				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 --				and GetProvinceCivilization("Norway") == "norse"
 				and SyncRand(100) < 10
@@ -635,7 +635,7 @@ local ChristianityEvents = {
 		Description = "A charter has been enacted granting the church of Utrecht estates in the Arnhem region.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Netherlands.Owner == EventFaction.Name
+				GetProvinceOwner("Netherlands") == EventFaction.Name
 				and GetProvinceCivilization("Netherlands") == "teuton"
 --				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "temple")
 				and SyncRand(100) < 5
@@ -662,7 +662,7 @@ local ChristianityEvents = {
 		Description = "The work \"Vita sancti Lebuini antiqua\" described the life of Liafwin (Lebuin), an Anglo-Saxon missionary who made extensive efforts to convert the Saxons, penetrating deep into their country, even undertaking as risky an act as appearing in the annual assembly of the pagan Saxons to spread his faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Rhineland.Owner == EventFaction.Name
+				GetProvinceOwner("Rhineland") == EventFaction.Name
 				and GetProvinceCivilization("Rhineland") == "teuton"
 			) then
 				EventProvince = WorldMapProvinces.Rhineland
@@ -689,7 +689,7 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Forannan has arrived with twelve companions in the frontier of PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Belgium.Owner == EventFaction.Name
+				GetProvinceOwner("Belgium") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium

@@ -372,7 +372,7 @@ local NorseEvents = {
 		Description = "The temple at Upsal, formerly the major center of Norse pagan religion, has been converted by our king into a Christian church, and its first bishop has been ordained.", -- historically the king was Olaf the Swede, and the bishop was the Englishman Severin
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Sweden.Owner == EventFaction.Name
+				GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceCivilization("Sweden") == "norse"
 				-- should require Sweden to be Christian, and there to be a church in Sweden
 			) then
@@ -395,7 +395,7 @@ local NorseEvents = {
 		Description = "Saemund has been ordained priest of the parish of Odda. He had studied in universities in France and Germany, and has deep knowledge of Norse traditions.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
@@ -418,7 +418,7 @@ local NorseEvents = {
 		Description = "The priest Saemund has initiated the writing of Annals, which shall be continued by his successors to the parish of Odda.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 				and GetProvinceCivilization("Iceland") == "norse"
 				and SyncRand(100) < 10
 			) then
@@ -444,7 +444,7 @@ local NorseEvents = {
 		Description = "The priest Saemund has written an Edda, a compendium of Norse mythologies, traditions and legends.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 				and GetProvinceCivilization("Iceland") == "norse"
 				and SyncRand(100) < 10
 			) then
@@ -470,7 +470,7 @@ local NorseEvents = {
 		Description = "The priest Brand has been ordained bishop of the diocese of Holen in Iceland. The bishop often occupies his time with the transcription of sagas from memory into manuscripts.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
@@ -494,7 +494,7 @@ local NorseEvents = {
 		Description = "The priest Karl has been ordained abbot of the monastery of Thing Isle, which lies to the north of Iceland.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
@@ -518,7 +518,7 @@ local NorseEvents = {
 		Description = "The Icelander Snorri Sturlson has shown himself to be a learned man in a number of old legends and mythologies.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
+				GetProvinceOwner("Iceland") == EventFaction.Name -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
 				and GetProvinceCivilization("Iceland") == "norse"
 			) then
 				return true
@@ -541,7 +541,7 @@ local NorseEvents = {
 		Description = "The Heimskringla, or Chronicle of the Kings of Norway, was written by the Icelandic sage Snorri Sturlson, detailing the legendary origins of the Norwegian monarchy, and then going on to write the stories of a long series of kings of Norway.",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 				and GetProvinceCivilization("Iceland") == "norse"
 				and SyncRand(100) < 10
 			) then
@@ -567,7 +567,7 @@ local NorseEvents = {
 		Description = "The sage Snorri Sturlson has been murdered in his home country of Iceland!",
 		Conditions = function(s)
 			if (
-				WorldMapProvinces.Iceland.Owner == EventFaction.Name
+				GetProvinceOwner("Iceland") == EventFaction.Name
 			) then
 				return true
 			else
@@ -593,7 +593,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Denmark"
-				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
+				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
@@ -639,7 +639,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Denmark"
-				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
+				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse"
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
@@ -665,7 +665,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Denmark"
-				and WorldMapProvinces.Zealand.Owner == EventFaction.Name
+				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Zealand.Name, "unit-teuton-barracks")
 				-- should only trigger after a technology for the appropriate time period has been researched
