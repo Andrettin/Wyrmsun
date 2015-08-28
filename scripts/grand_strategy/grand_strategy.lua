@@ -3123,50 +3123,52 @@ function AIDoTurn(ai_faction)
 			end
 		end
 		
-		local secondary_border_provinces_through_water = GetProvinceSecondaryBorderProvincesThroughWater(WorldMapProvinces[key])
-		for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
-			if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
-				if (WorldMapProvinces[second_key] ~= nil and GetProvinceWater(WorldMapProvinces[second_key].Name) == false) then
-					if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
-						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
-					end
-					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
-						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-							local province_threatened = false
-							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
-									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
-										province_threatened = true
+		if (borders_foreign == false) then -- only look for potential targets through water if no targets connected by land exist
+			local secondary_border_provinces_through_water = GetProvinceSecondaryBorderProvincesThroughWater(WorldMapProvinces[key])
+			for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
+				if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
+					if (WorldMapProvinces[second_key] ~= nil and GetProvinceWater(WorldMapProvinces[second_key].Name) == false) then
+						if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
+							borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
+						end
+						if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+							if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+								local province_threatened = false
+								for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
+									if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
+										if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
+											province_threatened = true
+										end
 									end
 								end
-							end
-							if (province_threatened == false) then
-								SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
-								for i, unitName in ipairs(Units) do
-									if (IsOffensiveMilitaryUnit(unitName)) then
-										SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
-										SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
+								if (province_threatened == false) then
+									SetProvinceAttackedBy(WorldMapProvinces[second_key].Name, ai_faction.Civilization, ai_faction.Name)
+									for i, unitName in ipairs(Units) do
+										if (IsOffensiveMilitaryUnit(unitName)) then
+											SetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName, GetProvinceAttackingUnitQuantity(WorldMapProvinces[second_key].Name, unitName) + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) - round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4)) -- leave 1/4th of the province's forces as a defense
+											SetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName, round(GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * 1 / 4))
+										end
 									end
 								end
 							end
 						end
-					end
-					local new_desired_infantry_in_province = 0
-					local new_desired_archers_in_province = 0
-					local new_desired_catapults_in_province = 0
-					if (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
-						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-						new_desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-					end
-					if (new_desired_infantry_in_province > desired_infantry_in_province) then
-						desired_infantry_in_province = new_desired_infantry_in_province
-					end
-					if (new_desired_archers_in_province > desired_archers_in_province) then
-						desired_archers_in_province = new_desired_archers_in_province
-					end
-					if (new_desired_catapults_in_province > desired_catapults_in_province) then
-						desired_catapults_in_province = new_desired_catapults_in_province
+						local new_desired_infantry_in_province = 0
+						local new_desired_archers_in_province = 0
+						local new_desired_catapults_in_province = 0
+						if (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
+							new_desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+							new_desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+							new_desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+						end
+						if (new_desired_infantry_in_province > desired_infantry_in_province) then
+							desired_infantry_in_province = new_desired_infantry_in_province
+						end
+						if (new_desired_archers_in_province > desired_archers_in_province) then
+							desired_archers_in_province = new_desired_archers_in_province
+						end
+						if (new_desired_catapults_in_province > desired_catapults_in_province) then
+							desired_catapults_in_province = new_desired_catapults_in_province
+						end
 					end
 				end
 			end
