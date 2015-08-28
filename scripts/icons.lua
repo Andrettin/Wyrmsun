@@ -70,12 +70,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-critical-strike",
-	Size = {46, 38},
-	File = "neutral/icons/critical_strike.png"
-})
-
-DefineIcon({
 	Name = "icon-sword-mastery",
 	Size = {46, 38},
 	File = "neutral/icons/sword_mastery.png"
@@ -85,6 +79,18 @@ DefineIcon({
 	Name = "icon-sword-mastery-bronze",
 	Size = {46, 38},
 	File = "neutral/icons/sword_mastery_bronze.png"
+})
+
+DefineIcon({
+	Name = "icon-critical-strike",
+	Size = {46, 38},
+	File = "neutral/icons/critical_strike.png"
+})
+
+DefineIcon({
+	Name = "icon-deadly-precision",
+	Size = {46, 38},
+	File = "neutral/icons/deadly_precision.png"
 })
 
 DefineIcon({

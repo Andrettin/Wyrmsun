@@ -202,6 +202,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.3.4
 -----------------------------------------------------------------------
 
+* Abilities
+- Added the learnable ability Deadly Precision (icon by Jinn).
+
 * Buildings
 - The Teuton Farm now changes its graphics after Masonry is researched (new graphics by Jinn).
 

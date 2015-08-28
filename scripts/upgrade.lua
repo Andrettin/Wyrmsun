@@ -296,9 +296,10 @@ end
 -- neutral upgrades
 local upgrades = {
 	{"upgrade-axe-mastery", _("Axe Mastery"), "icon-axe-mastery"},
+	{"upgrade-sword-mastery", _("Sword Mastery"), "icon-sword-mastery"},
 	{"upgrade-critical-strike", _("Critical Strike"), "icon-critical-strike"},
-	{"upgrade-portent", _("Portent"), "icon-portent"},
-	{"upgrade-sword-mastery", _("Sword Mastery"), "icon-sword-mastery"}
+	{"upgrade-deadly-precision", _("Deadly Precision"), "icon-deadly-precision"},
+	{"upgrade-portent", _("Portent"), "icon-portent"}
 }
 
 for i = 1,table.getn(upgrades) do
@@ -321,12 +322,16 @@ DefineModifier("upgrade-axe-mastery",
 	{"BasicDamage", 2}
 )
 
-DefineModifier("upgrade-critical-strike",
-	{"CriticalStrikeChance", 15}
-)
-
 DefineModifier("upgrade-sword-mastery",
 	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-critical-strike",
+	{"CriticalStrikeChance", 5}
+)
+
+DefineModifier("upgrade-deadly-precision",
+	{"CriticalStrikeChance", 10}
 )
 
 -- traits

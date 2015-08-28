@@ -484,7 +484,11 @@ function StandardTriggers()
 					else -- for other units, learn an ability, if any are present for learning
 						for i=1,table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) do
 							if (string.find(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i], "upgrade-") ~= nil and UnitHasAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i]) == false) then
-								AcquireAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i])
+								if not (
+									GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i] == "upgrade-deadly-precision" and UnitHasAbility(uncount[unit1], "upgrade-critical-strike") == false
+								) then
+									AcquireAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i])
+								end
 							end
 						end
 					end
@@ -551,10 +555,10 @@ function StandardTriggers()
 					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Hero")) then
 						for key, value in pairs(wyr.preferences.Heroes) do
 							if (wyr.preferences.Heroes[key].name == GetUnitVariable(uncount[unit1], "Name")) then
-								if (GetUnitVariable(uncount[unit1], "LevelUp") > 0 and GetUnitVariable(uncount[unit1], "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) + GetUnitVariable(uncount[unit1], "StartingLevel")) then
-									SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + (15 * GetUnitVariable(uncount[unit1], "LevelUp")), "Max")
-									SetUnitVariable(uncount[unit1], "LevelUp", 0)
-								end
+--								if (GetUnitVariable(uncount[unit1], "LevelUp") > 0 and GetUnitVariable(uncount[unit1], "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) + GetUnitVariable(uncount[unit1], "StartingLevel")) then
+--									SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + (15 * GetUnitVariable(uncount[unit1], "LevelUp")), "Max")
+--									SetUnitVariable(uncount[unit1], "LevelUp", 0)
+--								end
 
 								-- save upgrades
 								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
@@ -562,16 +566,20 @@ function StandardTriggers()
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")
 										SavePreferences()
 									end
+									if (UnitHasAbility(uncount[unit1], "upgrade-sword-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery")
+										SavePreferences()
+									end
 									if (UnitHasAbility(uncount[unit1], "upgrade-critical-strike") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
+									if (UnitHasAbility(uncount[unit1], "upgrade-deadly-precision") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-sword-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery")
+									if (UnitHasAbility(uncount[unit1], "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
 										SavePreferences()
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
@@ -1479,29 +1487,29 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-modsognir" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
 		return { "unit-dwarven-thane" }
 	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-modsognir-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-dwarven-yale-rider") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-dwarven-scout") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-teuton-swordsman" or unit_type == "unit-hero-marbod") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-gnomish-recruit") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-gnomish-herbalist") then
 		return { "upgrade-portent" }
 	elseif (unit_type == "unit-goblin-thief") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-goblin-spearman") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-goblin-archer") then
-		return { "upgrade-critical-strike" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
 	elseif (unit_type == "unit-hero-greebo") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision" }
 	else
 		return {}
 	end

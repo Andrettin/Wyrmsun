@@ -107,26 +107,6 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-axe-mastery",
 	}
 } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
-	Action = "learn-ability", Value = "upgrade-critical-strike",
-	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-commands",
-	Description = "Critical Strike is a passive ability that provides 15% chance to deal double damage in combat. In No Randomness mode it provides a 15% damage bonus instead.",
-	ForUnit = {
-		"unit-dwarven-thane",
-		"unit-dwarven-yale-rider",
-		"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
-		"unit-germanic-warrior", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-teuton-archer",
-		"unit-gnomish-recruit",
-		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-		"unit-surghan-mercenary-thane",
-		"unit-hero-marbod",
-		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
-		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-		"unit-hero-greebo"
-	}
-} )
-
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery-bronze",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
@@ -154,6 +134,47 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery",
 	}
 } )
 
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
+	Action = "learn-ability", Value = "upgrade-critical-strike",
+	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-commands",
+	Description = "Critical Strike is a passive ability that provides a 5% chance to deal double damage in combat. In No Randomness mode it provides a 5% damage bonus instead.",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-dwarven-yale-rider",
+		"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
+		"unit-germanic-warrior", "unit-germanic-archer",
+		"unit-teuton-swordsman", "unit-teuton-archer",
+		"unit-gnomish-recruit",
+		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-surghan-mercenary-thane",
+		"unit-hero-marbod",
+		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
+		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+		"unit-hero-greebo"
+	}
+} )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-deadly-precision",
+	Action = "learn-ability", Value = "upgrade-deadly-precision",
+	Allowed = "check-ability", AllowArg = {"upgrade-critical-strike"},
+	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-commands",
+	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead.",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-dwarven-yale-rider",
+		"unit-dwarven-scout", "unit-dwarven-gryphon-rider",
+		"unit-germanic-warrior", "unit-germanic-archer",
+		"unit-teuton-swordsman", "unit-teuton-archer",
+		"unit-gnomish-recruit",
+		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-surghan-mercenary-thane",
+		"unit-hero-marbod",
+		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
+		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
+		"unit-hero-greebo"
+	}
+} )
+
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
@@ -173,7 +194,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	} 
 } )
 
--- Level-Up Upgrades ------------------------------------------------------
+-- Purchasable Items ------------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",
 	Action = "train-unit", Value = "unit-potion-of-healing",

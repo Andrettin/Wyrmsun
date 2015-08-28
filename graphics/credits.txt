@@ -612,6 +612,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/catapult_projectile_sandstone_extra_1.png
 /graphics/neutral/icons/critical_strike.png
 /graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
+/graphics/neutral/icons/deadly_precision.png
 /graphics/neutral/icons/gryphon.png
 /graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
 /graphics/neutral/icons/gryphon_white_feathers.png
