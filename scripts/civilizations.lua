@@ -364,10 +364,12 @@ DefineRaceNames(
 			"Heraclea Chersonesus",
 			"Hesperis",
 			"Himera",
+			"Ialysus",
 			"Ilios",
 			"Istrus",
 			"Itanus",
 			"Knossos",
+			"Larissa",
 			"Lissus",
 			"Locri",
 			"Massilia", -- Marseilles
@@ -380,7 +382,9 @@ DefineRaceNames(
 			"Miletus",
 			"Motye",
 			"Naucratis",
+			"Naupactus",
 			"Naxos",
+			"Nicopolis",
 			"Odessus",
 			"Olbia",
 			"Parthenope", -- Neapolis/Naples

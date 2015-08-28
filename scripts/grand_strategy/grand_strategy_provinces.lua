@@ -1220,6 +1220,23 @@ function LoadProvinces(world)
 				"teuton", "Westphalia"
 			}
 		},
+		Rhodes = {
+			Name = "Rhodes",
+			Tiles = {
+				{559, 152}, {559, 153}
+			},
+			CulturalNames = {
+				greek = "Rhodes"
+			},
+			SettlementName = "Ialysus",
+			CulturalSettlementNames = {
+				greek = "Ialysus"
+			},
+			SettlementLocation = {559, 152}, -- Ialysus
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
 		Russia = {
 			Name = "Russia",
 			CulturalNames = {

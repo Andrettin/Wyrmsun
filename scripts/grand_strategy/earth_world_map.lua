@@ -6463,6 +6463,8 @@ SetWorldMapTileTerrain(559, 86, water_id)
 SetWorldMapTileTerrain(559, 139, water_id)
 SetWorldMapTileTerrain(559, 140, water_id)
 SetWorldMapTileTerrain(559, 151, water_id)
+SetWorldMapTileTerrain(559, 152, plains_id)
+SetWorldMapTileTerrain(559, 153, plains_id)
 SetWorldMapTileTerrain(559, 154, water_id)
 SetWorldMapTileTerrain(559, 155, water_id)
 SetWorldMapTileTerrain(559, 156, water_id)
@@ -7376,12 +7378,12 @@ if (GrandStrategyYear >= -1600) then
 	SetProvinceSettlementBuilding("Jutland", "unit-germanic-smithy", true) -- bronzesmithing capabilities existed in Jutland, so that these swords were crafted
 end
 
-if (GrandStrategyYear >= -1450) then -- Minoan civilization disappears in 1450 BC; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
+if (GrandStrategyYear >= -1450) then
+	 -- Minoan civilization disappears in 1450 BC; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", false)
-end
-
-if (GrandStrategyYear >= -1450) then -- Mycenaean Greece; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	
+	-- Mycenaean Greece; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	SetProvinceCivilization("Attica", "greek")
 	SetProvinceSettlementBuilding("Attica", "unit-teuton-town-hall", true)
 	SetProvinceCivilization("Aetolia", "greek")
@@ -7392,6 +7394,8 @@ if (GrandStrategyYear >= -1450) then -- Mycenaean Greece; Source: William R. She
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", true)
 	SetProvinceCivilization("Peloponnese", "greek")
 	SetProvinceSettlementBuilding("Peloponnese", "unit-teuton-town-hall", true)
+	SetProvinceCivilization("Rhodes", "greek")
+	SetProvinceSettlementBuilding("Rhodes", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -1400) then
@@ -7447,6 +7451,7 @@ if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. 
 	SetProvinceOwner("Attica", "greek", "Athens")
 	SetProvinceOwner("Boeotia", "greek", "Thebes")
 	SetProvinceCivilization("Epirus", "greek")
+	SetProvinceSettlementBuilding("Epirus", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Peloponnese", "greek", "Sparta")
 	SetProvinceCivilization("Thessaly", "greek")
 	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
@@ -7777,8 +7782,9 @@ if (GrandStrategyYear >= 33) then -- estimated date
 	GrandStrategyEvents.VanlandeChieftainOfTheSwedes = nil
 end
 
-if (GrandStrategyYear >= 43) then -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("England", "latin", "Rome")
+if (GrandStrategyYear >= 43) then
+	SetProvinceOwner("England", "latin", "Rome")  -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Rhodes", "latin", "Rome")  -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
 if (GrandStrategyYear >= 53) then -- estimated date
