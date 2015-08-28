@@ -210,8 +210,9 @@ https://github.com/Andrettin/Wyrmsun
 - AI factions now attack through water, if there is only one water province separating them and an enemy province.
 - Hill graphic transitions update (by Jinn).
 - Greatly increased the proportions of the Earth map.
-- New Earth provinces: Aetolia, Boeotia, Epirus, Scania, Thessaly, Zealand.
+- New Earth provinces: Aetolia, Boeotia, Epirus, Euboea, Rhodes, Scania, Thessaly, Zealand.
 - New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Marmara, Skagerrak.
+- New starting dates for the Earth world map: 
 
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.

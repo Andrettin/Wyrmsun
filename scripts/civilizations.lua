@@ -346,6 +346,7 @@ DefineRaceNames(
 			"Camarina",
 			"Catana",
 			"Caulonia",
+			"Chalcis",
 			"Cius",
 			"Cotyora",
 			"Cume", -- Cumae
