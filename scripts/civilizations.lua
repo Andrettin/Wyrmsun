@@ -919,6 +919,12 @@ DefineCivilizationFactions("greek",
 		"color", "brown",
 		"secondary_color", "brown"
 	},
+	"faction", {
+		"name", "Thebes",
+		"type", "polity",
+		"color", "blue",
+		"secondary_color", "blue"
+	},
 	-- Non-Playable Polities
 	"faction", {
 		"name", "Persia",

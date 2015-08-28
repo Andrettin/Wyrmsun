@@ -321,8 +321,9 @@ function RunGrandStrategyGameSetupMenu()
 			if (GrandStrategyWorld == "Earth") then
 				date_list = {
 					"3000 BC", -- begin of the last wave of Indo-European migrations, which lasted until 2800 BC
---					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
+					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 --					"700 BC", -- 
+					"450 BC", -- height of the Athenian empire
 					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
 					"486 AD",

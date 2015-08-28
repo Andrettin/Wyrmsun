@@ -196,13 +196,20 @@ function LoadProvinces(world)
 		},
 		Attica = {
 			Name = "Attica",
-			Tiles = { {135, 36}, {136, 36} },
+			Tiles = {
+				{135, 36}, {136, 36}, -- old map
+				{546, 147},
+				{547, 147}
+			},
+			CulturalNames = {
+				greek = "Attica"
+			},
 			SettlementName = "Athens",
 			CulturalSettlementNames = {
 				greek = "Athens",
 				latin = "Athens"
 			},
-			SettlementLocation = {136, 36}, -- Athens
+			SettlementLocation = {547, 147}, -- Athens
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
@@ -334,6 +341,28 @@ function LoadProvinces(world)
 			Claims = {
 				"celt", "Menapii Tribe",
 				"teuton", "Francia"
+			}
+		},
+		Boeotia = {
+			Name = "Boeotia",
+			Tiles = {
+				{544, 146},
+				{545, 146},
+				{546, 146}
+			},
+			CulturalNames = {
+				greek = "Boeotia"
+			},
+			SettlementName = "Thebes",
+			CulturalSettlementNames = {
+				greek = "Thebes"
+			},
+			SettlementLocation = {546, 146}, -- Thebes
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true,
+			Claims = {
+				"greek", "Thebes"
 			}
 		},
 		Bohemia = {
@@ -521,14 +550,24 @@ function LoadProvinces(world)
 		},
 		Crete = {
 			Name = "Crete",
-			Tiles = { {137, 39}, {138, 39} },
+			Tiles = {
+				{137, 39}, {138, 39}, -- old map
+				{547, 155},
+				{548, 155},
+				{549, 155},
+				{550, 155}, {550, 156},
+				{551, 155}, {551, 156},
+				{552, 155}, {552, 156},
+				{553, 156},
+				{554, 156}
+			},
 			Owner = "Minoan Tribe", -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
 			SettlementName = "Knossos",
 			CulturalSettlementNames = {
 				greek = "Knossos",
 				latin = "Cnossus"
 			},
-			SettlementLocation = {137, 39}, -- Knossos
+			SettlementLocation = {551, 155}, -- Knossos
 			SettlementBuildings = {
 				unit_teuton_town_hall = true
 			},
@@ -890,7 +929,27 @@ function LoadProvinces(world)
 		},
 		Macedonia = {
 			Name = "Macedonia",
-			Tiles = { {134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34} },
+			Tiles = {
+				{134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34}, -- old map
+				{540, 140}, {540, 141},
+				{541, 140}, {541, 141},
+				{542, 140}, {542, 141},
+				{543, 139}, {543, 140}, {543, 141},
+				{544, 139}, {544, 140},
+				{545, 139}, {545, 140},
+				{546, 139}, {546, 140},
+				{547, 139}, {547, 140},
+				{548, 138}, {548, 139},
+				{549, 138}, {549, 139},
+				{550, 139},
+				{551, 139},
+				{552, 139},
+				{553, 139},
+				{554, 138}, {554, 139}
+			},
+			CulturalNames = {
+				greek = "Macedonia"
+			},
 			SettlementName = "Aegae",
 			CulturalSettlementNames = {
 				greek = "Aegae",
@@ -997,7 +1056,10 @@ function LoadProvinces(world)
 				{542, 147}, {542, 148}, {542, 149}, {542, 150},
 				{543, 148}, {543, 149}, {543, 150}, {543, 151},
 				{544, 148}, {544, 149}, {544, 150},
-				{545, 148}, {545, 150}, {545, 151}
+				{545, 147}, {545, 148}, {545, 150}, {545, 151}
+			},
+			CulturalNames = {
+				greek = "Peloponnese"
 			},
 			SettlementName = "Mycenae",
 			CulturalSettlementNames = {
@@ -1335,6 +1397,30 @@ function LoadProvinces(world)
 				"celt", "Helvetii Tribe",
 				"teuton", "Switzerland"
 			}
+		},
+		Thessaly = {
+			Name = "Thessaly",
+			Tiles = {
+				{537, 143},
+				{538, 142}, {538, 143}, {538, 144},
+				{539, 141}, {539, 142}, {539, 143}, {539, 144}, {539, 145},
+				{540, 142}, {540, 143}, {540, 144}, {540, 145}, {540, 146},
+				{541, 142}, {541, 143}, {541, 144}, {541, 145},
+				{542, 142}, {542, 143}, {542, 144}, {542, 145},
+				{543, 142}, {543, 143}, {543, 144}, {543, 145},
+				{544, 142}, {544, 143}, {544, 144}, {544, 145},
+			},
+			CulturalNames = {
+				greek = "Thessaly"
+			},
+			SettlementName = "Larissa",
+			CulturalSettlementNames = {
+				greek = "Larissa"
+			},
+			SettlementLocation = {543, 143}, -- Larissa
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
 		},
 		Thrace = {
 			Name = "Thrace",

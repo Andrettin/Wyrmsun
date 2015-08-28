@@ -259,6 +259,11 @@ function LoadFactions(world)
 			Civilization = "greek",
 			Title = "City-State"
 		},
+		Thebes = {
+			Name = "Thebes",
+			Civilization = "greek",
+			Title = "City-State"
+		},
 		-- Latin polities
 		France = {
 			Name = "France",
