@@ -34,6 +34,28 @@ function LoadProvinces(world)
 	WorldMapWaterProvinces = {}
 
 	local EarthProvinces = {
+		Aetolia = {
+			Name = "Aetolia",
+			Tiles = {
+				{539, 145},
+				{540, 145}, {540, 146},
+				{541, 145},
+				{542, 145},
+				{543, 145},
+				{544, 145}
+			},
+			CulturalNames = {
+				greek = "Aetolia"
+			},
+			SettlementName = "Naupactus",
+			CulturalSettlementNames = {
+				greek = "Naupactus"
+			},
+			SettlementLocation = {541, 145}, -- Naupactus
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
 		Albania = {
 			Name = "Albania",
 			Tiles = {
@@ -681,6 +703,26 @@ function LoadProvinces(world)
 			Claims = {
 				"teuton", "England"
 			}
+		},
+		Epirus = {
+			Name = "Epirus",
+			Tiles = {
+				{537, 143},
+				{538, 142}, {538, 143}, {538, 144},
+				{539, 141}, {539, 142}, {539, 143}, {539, 144},
+				{540, 142}, {540, 143}, {540, 144}
+			},
+			CulturalNames = {
+				greek = "Epirus"
+			},
+			SettlementName = "Nicopolis",
+			CulturalSettlementNames = {
+				greek = "Nicopolis"
+			},
+			SettlementLocation = {538, 144}, -- Nicopolis
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
 		},
 		France = {
 			Name = "France",
@@ -1408,14 +1450,10 @@ function LoadProvinces(world)
 		Thessaly = {
 			Name = "Thessaly",
 			Tiles = {
-				{537, 143},
-				{538, 142}, {538, 143}, {538, 144},
-				{539, 141}, {539, 142}, {539, 143}, {539, 144}, {539, 145},
-				{540, 142}, {540, 143}, {540, 144}, {540, 145}, {540, 146},
-				{541, 142}, {541, 143}, {541, 144}, {541, 145},
-				{542, 142}, {542, 143}, {542, 144}, {542, 145},
-				{543, 142}, {543, 143}, {543, 144}, {543, 145},
-				{544, 142}, {544, 143}, {544, 144}, {544, 145}
+				{541, 142}, {541, 143}, {541, 144},
+				{542, 142}, {542, 143}, {542, 144},
+				{543, 142}, {543, 143}, {543, 144},
+				{544, 142}, {544, 143}, {544, 144}
 			},
 			CulturalNames = {
 				greek = "Thessaly"

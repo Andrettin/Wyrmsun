@@ -7384,6 +7384,8 @@ end
 if (GrandStrategyYear >= -1450) then -- Mycenaean Greece; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	SetProvinceCivilization("Attica", "greek")
 	SetProvinceSettlementBuilding("Attica", "unit-teuton-town-hall", true)
+	SetProvinceCivilization("Aetolia", "greek")
+	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-town-hall", true)
 	SetProvinceCivilization("Boeotia", "greek")
 	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-town-hall", true)
 	SetProvinceCivilization("Crete", "greek")
@@ -7444,7 +7446,10 @@ end
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	SetProvinceOwner("Attica", "greek", "Athens")
 	SetProvinceOwner("Boeotia", "greek", "Thebes")
+	SetProvinceCivilization("Epirus", "greek")
 	SetProvinceOwner("Peloponnese", "greek", "Sparta")
+	SetProvinceCivilization("Thessaly", "greek")
+	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
@@ -7502,8 +7507,6 @@ if (GrandStrategyYear >= -550) then -- Greek and Phoenician settlements about 55
 	SetProvinceCivilization("Macedonia", "greek")
 	SetProvinceCivilization("Naples", "greek") -- Magna Graecia
 	SetProvinceCivilization("Sicily", "greek")
-	SetProvinceCivilization("Thessaly", "greek")
-	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
 	SetProvinceCivilization("Thrace", "greek")
 	
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
@@ -7599,9 +7602,11 @@ if (GrandStrategyYear >= -191) then -- Cisalpine Gaul conquered in 191 BC; Sourc
 	SetProvinceUnitQuantity("North Italy", "unit-germanic-warrior", 0)
 end
 
-if (GrandStrategyYear >= -146) then -- Attica, Boeotia, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Epirus, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Aetolia", "latin", "Rome")
 	SetProvinceOwner("Attica", "latin", "Rome")
 	SetProvinceOwner("Boeotia", "latin", "Rome")
+	SetProvinceOwner("Epirus", "latin", "Rome")
 	SetProvinceOwner("Macedonia", "latin", "Rome")
 	SetProvinceSettlementBuilding("Macedonia", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Peloponnese", "latin", "Rome")
