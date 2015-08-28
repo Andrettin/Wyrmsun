@@ -36,7 +36,14 @@ function LoadProvinces(world)
 	local EarthProvinces = {
 		Albania = {
 			Name = "Albania",
-			Tiles = { {134, 33}, {134, 34} },
+			Tiles = {
+				{134, 33}, {134, 34}, -- old map
+				{535, 136}, {535, 138}, {535, 139}, {535, 140}, {535, 141},
+				{536, 135}, {536, 136}, {536, 137}, {536, 138}, {536, 139}, {536, 140}, {536, 141},
+				{537, 135}, {537, 136}, {537, 137}, {537, 138}, {537, 139}, {537, 140}, {537, 141}, {537, 142},
+				{538, 136}, {538, 137}, {538, 138}, {538, 139}, {538, 140}, {538, 141},
+				{539, 140}
+			},
 			CulturalNames = {
 				latin = "Taulantia"
 			},
@@ -45,7 +52,7 @@ function LoadProvinces(world)
 				greek = "Epidamnus",
 				latin = "Dyrrhachium"
 			},
-			SettlementLocation = {134, 34}, -- Dyr
+			SettlementLocation = {536, 138}, -- Tirana
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 		},
@@ -1408,7 +1415,7 @@ function LoadProvinces(world)
 				{541, 142}, {541, 143}, {541, 144}, {541, 145},
 				{542, 142}, {542, 143}, {542, 144}, {542, 145},
 				{543, 142}, {543, 143}, {543, 144}, {543, 145},
-				{544, 142}, {544, 143}, {544, 144}, {544, 145},
+				{544, 142}, {544, 143}, {544, 144}, {544, 145}
 			},
 			CulturalNames = {
 				greek = "Thessaly"
