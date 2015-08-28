@@ -202,6 +202,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.3.4
 -----------------------------------------------------------------------
 
+* Buildings
+- The Teuton Farm now changes its graphics after Masonry is researched (new graphics by Jinn).
+
 * Grand Strategy
 - The minimap no longer stops functioning if toggling full screen while playing a grand strategy game.
 - Building lumber mills in a province now increases that province's lumber demand.

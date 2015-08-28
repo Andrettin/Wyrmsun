@@ -332,29 +332,31 @@ function RunGrandStrategyGameSetupMenu()
 	menu:addCentered(date_maximum_label, offx + 220 + 76 + 86 + 11, offy + 36 * 6 + 6)
 
 	function DateChanged()
-		CleanGrandStrategyGame()
-		InitializeGrandStrategyGame()
-		
-		if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
-			SetGrandStrategyWorld(world_list[world:getSelected() + 1])
+		if (IsMouseLeftButtonPressed() == false) then
+			CleanGrandStrategyGame()
+			InitializeGrandStrategyGame()
 			
-			if (GrandStrategyWorld == "Earth") then
-				date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
-				date_maximum = 486
-			elseif (GrandStrategyWorld == "Nidavellir") then
-				date_minimum = -3000 -- approximate beginning of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
-				date_maximum = 550 -- beginning of The Hammer of Thursagan
-			elseif (GrandStrategyWorld == "Random") then
-				date_minimum = -3000
-				date_maximum = -3000
+			if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
+				SetGrandStrategyWorld(world_list[world:getSelected() + 1])
+				
+				if (GrandStrategyWorld == "Earth") then
+					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
+					date_maximum = 486
+				elseif (GrandStrategyWorld == "Nidavellir") then
+					date_minimum = -3000 -- approximate beginning of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
+					date_maximum = 550 -- beginning of The Hammer of Thursagan
+				elseif (GrandStrategyWorld == "Random") then
+					date_minimum = -3000
+					date_maximum = -3000
+				end
+				
+				date_slider:setScale(date_minimum, date_maximum)
+				date_slider:setValue(date_minimum)
+				date_minimum_label:setCaption(GetYearString(date_minimum))
+				date_minimum_label:adjustSize();
+				date_maximum_label:setCaption(GetYearString(date_maximum))
+				date_maximum_label:adjustSize();
 			end
-			
-			date_slider:setScale(date_minimum, date_maximum)
-			date_slider:setValue(date_minimum)
-			date_minimum_label:setCaption(GetYearString(date_minimum))
-			date_minimum_label:adjustSize();
-			date_maximum_label:setCaption(GetYearString(date_maximum))
-			date_maximum_label:adjustSize();
 		end
 		
 		GrandStrategyYear = math.floor(date_slider:getValue())
@@ -362,22 +364,24 @@ function RunGrandStrategyGameSetupMenu()
 		date_label:setCaption(_("Date: ") .. GetYearString(GrandStrategyYear))
 		date_label:adjustSize();
 	
-		if (world_list[world:getSelected() + 1] ~= "Random") then
-			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
-			
-			faction_list = {}
-			for key, value in pairsByKeys(Factions) do
-				if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and IsCivilizationPlayable(Factions[key].Civilization) and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then
-					table.insert(faction_list, Factions[key].Name)
+		if (IsMouseLeftButtonPressed() == false) then
+			if (world_list[world:getSelected() + 1] ~= "Random") then
+				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+				
+				faction_list = {}
+				for key, value in pairsByKeys(Factions) do
+					if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and IsCivilizationPlayable(Factions[key].Civilization) and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then
+						table.insert(faction_list, Factions[key].Name)
+					end
 				end
+			else
+				faction_list = {"Asa Tribe", "Modsogning Clan"}
 			end
-		else
-			faction_list = {"Asa Tribe", "Modsogning Clan"}
-		end
 
-		faction:setList(faction_list)
-		faction:setSize(152, 20)
-		faction:setSelected(0)
+			faction:setList(faction_list)
+			faction:setSize(152, 20)
+			faction:setSelected(0)
+		end
 	end
 
 	DateChanged()

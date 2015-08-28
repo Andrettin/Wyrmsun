@@ -309,9 +309,22 @@ DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
 	Civilization = "teuton",
 --	Description = _("Farms are essential for supporting a settlement's population."),
 --	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
-	Image = {"file", "germanic/buildings/farm.png", "size", {64, 64}},
-	Shadow = {"file", "germanic/buildings/farm_shadow.png", "size", {64, 64}},
-	Icon = "icon-germanic-farm",
+	Image = {"file", "teuton/buildings/farm.png", "size", {64, 64}},
+	Shadow = {"file", "teuton/buildings/farm_shadow.png", "size", {64, 64}},
+	Icon = "icon-teuton-farm",
+	Variations = {
+		{
+			"variation-id", "farm",
+			"file", "germanic/buildings/farm.png",
+			"shadow-file", "germanic/buildings/farm_shadow.png",
+			"icon", "icon-germanic-farm",
+			"upgrade-forbidden", "upgrade-teuton-masonry"
+		},
+		{
+			"variation-id", "farm",
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
+	},
 	Sounds = {
 		"selected", "corral-selected",
 		"ready", "corral-ready",
