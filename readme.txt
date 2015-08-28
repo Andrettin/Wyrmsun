@@ -212,7 +212,8 @@ https://github.com/Andrettin/Wyrmsun
 - Greatly increased the proportions of the Earth map.
 - New Earth provinces: Aetolia, Boeotia, Epirus, Euboea, Rhodes, Scania, Thessaly, Zealand.
 - New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Marmara, Skagerrak.
-- New starting dates for the Earth world map: 
+- Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
+- Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
 
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.

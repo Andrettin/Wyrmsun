@@ -169,6 +169,13 @@ function GenerateRandomWorldMap()
 	LoadFactions("Random")
 	
 	LoadProvinces("Random") -- load provinces here to load the water provinces, so that when the water tiles without provinces get transformed into plains they will be available for becoming forests later on
+
+	-- erase association of provinces with tiles
+	for x=0,(world_map_width - 1) do
+		for y=0,(world_map_height - 1) do
+			SetWorldMapTileProvince(x, y, "")
+		end
+	end
 	
 	local water_province_seeds = {}
 

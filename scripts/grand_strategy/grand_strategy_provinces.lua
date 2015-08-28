@@ -172,6 +172,29 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
+		Argolis = {
+			Name = "Argolis",
+			Tiles = {
+				{135, 37}, {136, 37}, -- old map
+				{540, 148},
+				{541, 148}, {541, 149},
+				{542, 147}, {542, 148}, {542, 149},
+				{543, 148}, {543, 149},
+				{544, 148}, {544, 149},
+				{545, 147}, {545, 148}
+			},
+			CulturalNames = {
+				greek = "Argolis"
+			},
+			SettlementName = "Mycenae",
+			CulturalSettlementNames = {
+				greek = "Mycenae"
+			},
+			SettlementLocation = {544, 148}, -- Mycenae
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
 		Astrakhan = {
 			Name = "Astrakhan",
 			CulturalNames = {
@@ -995,6 +1018,30 @@ function LoadProvinces(world)
 				"teuton", "Jutland"
 			}
 		},
+		Lacedaemonia = {
+			Name = "Lacedaemonia",
+			Tiles = {
+				{541, 150},
+				{542, 150},
+				{543, 150}, {543, 151},
+				{544, 150},
+				{545, 150}, {545, 151}
+			},
+			CulturalNames = {
+				greek = "Lacedaemonia"
+			},
+			SettlementName = "Sparta",
+			CulturalSettlementNames = {
+				greek = "Sparta"
+			},
+			SettlementLocation = {543, 150}, -- Sparta
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true,
+			Claims = {
+				"greek", "Sparta"
+			}
+		},
 		Macedonia = {
 			Name = "Macedonia",
 			Tiles = {
@@ -1114,32 +1161,6 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Coastal = true
-		},
-		Peloponnese = {
-			Name = "Peloponnese",
-			Tiles = {
-				{135, 37}, {136, 37}, -- old map
-				{540, 148},
-				{541, 148}, {541, 149}, {541, 150},
-				{542, 147}, {542, 148}, {542, 149}, {542, 150},
-				{543, 148}, {543, 149}, {543, 150}, {543, 151},
-				{544, 148}, {544, 149}, {544, 150},
-				{545, 147}, {545, 148}, {545, 150}, {545, 151}
-			},
-			CulturalNames = {
-				greek = "Peloponnese"
-			},
-			SettlementName = "Mycenae",
-			CulturalSettlementNames = {
-				greek = "Mycenae"
-			},
-			SettlementLocation = {544, 148}, -- Mycenae
-			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains",
-			Coastal = true,
-			Claims = {
-				"greek", "Sparta"
-			}
 		},
 		Poland = {
 			Name = "Poland",
@@ -2673,7 +2694,6 @@ function LoadProvinces(world)
 			WorldMapProvinces[key]["Name"] = province_table[key].Name
 			SetProvinceName("", WorldMapProvinces[key].Name) -- this will define a new province for the engine
 			
-			WorldMapProvinces[key]["CulturalNames"] = {}
 			if (province_table[key].CulturalNames ~= nil) then
 				for second_key, second_value in pairs(province_table[key].CulturalNames) do
 					if (Factions[second_key] ~= nil) then
@@ -2684,7 +2704,6 @@ function LoadProvinces(world)
 				end
 			end
 			
-			WorldMapProvinces[key]["CulturalSettlementNames"] = {}
 			if (province_table[key].CulturalSettlementNames ~= nil) then
 				for second_key, second_value in pairs(province_table[key].CulturalSettlementNames) do
 					if (Factions[second_key] ~= nil) then
@@ -2714,7 +2733,6 @@ function LoadProvinces(world)
 			if (province_table[key].SettlementLocation ~= nil) then
 				WorldMapProvinces[key]["SettlementLocation"] = {province_table[key].SettlementLocation[1], province_table[key].SettlementLocation[2]}
 			end
-			WorldMapProvinces[key]["SettlementBuildings"] = {}
 			if (province_table[key].SettlementBuildings ~= nil) then
 				for second_key, second_value in pairs(province_table[key].SettlementBuildings) do
 					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].SettlementBuildings[second_key]) -- set the province settlement building for the engine
@@ -2723,7 +2741,6 @@ function LoadProvinces(world)
 			if (province_table[key].Map ~= nil) then
 				WorldMapProvinces[key]["Map"] = province_table[key].Map
 			end
-			WorldMapProvinces[key]["Units"] = {}
 			if (province_table[key].Units ~= nil) then
 				for second_key, second_value in pairs(province_table[key].Units) do
 					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].Units[second_key])
@@ -2785,9 +2802,6 @@ function LoadProvinces(world)
 	if (world == "Earth") then
 		AddProvinceTable(EarthProvinces)
 		AddWaterProvinceTable(EarthWaterProvinces)
-	elseif (world == "EarthOld") then
-		AddProvinceTable(EarthOldProvinces)
-		AddWaterProvinceTable(EarthOldWaterProvinces)
 	elseif (world == "Nidavellir") then
 		AddProvinceTable(NidavellirProvinces)
 		AddWaterProvinceTable(NidavellirWaterProvinces)

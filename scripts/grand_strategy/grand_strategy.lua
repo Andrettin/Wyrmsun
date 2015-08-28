@@ -43,7 +43,7 @@ function RunGrandStrategyGameSetupMenu()
 	GrandStrategyMapHeight = Video.Height - 16 - 186
 	WorldMapOffsetX = 0
 	WorldMapOffsetY = 0
-	GrandStrategyYear = 25
+	GrandStrategyYear = 0
 	GrandStrategyFaction = nil
 	SelectedProvince = nil
 	SelectedHero = nil
@@ -72,8 +72,10 @@ function RunGrandStrategyGameSetupMenu()
 
 	local world_list = {"Earth", "Nidavellir", "Random"}
 	local world
-	local date_list = {}
-	local date
+	local date_label
+	local date_slider = {}
+	local date_minimum = 0
+	local date_maximum = 0
 	local faction
 	local faction_list = {}
 	local battalions
@@ -89,10 +91,7 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategy = true
 			GrandStrategyGamePaused = false
 			GameResult = GameNoResult
-			GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
-			if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
-				GrandStrategyYear = GrandStrategyYear * -1
-			end
+			GrandStrategyYear = math.floor(date_slider:getValue())
 			if (world_list[world:getSelected() + 1] ~= "Random") then
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			else
@@ -274,18 +273,13 @@ function RunGrandStrategyGameSetupMenu()
 		function(dd) DateChanged() end)
 	world:setSize(152, 20)
 
-	menu:addLabel(_("Date:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
-	date = menu:addDropDown(date_list, offx + 220, offy + 10 + 120,
-		function(dd) DateChanged() end)
-	date:setSize(152, 20)
-
-	menu:addLabel(_("Faction:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
-	faction = menu:addDropDown(faction_list, offx + 640 - 224 - 16, offy + 10 + 120,
+	menu:addLabel(_("Faction:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+	faction = menu:addDropDown(faction_list, offx + 220, offy + 10 + 120,
 		function(dd) end)
 	faction:setSize(152, 20)
 
-	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 40, offy + 10 + 180,
+	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
+	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 640 - 224 - 16, offy + 10 + 120,
 		function(dd)
 			wyr.preferences.GrandStrategyBattalionMultiplier = battalions:getSelected() + 1
 			SavePreferences()
@@ -311,6 +305,32 @@ function RunGrandStrategyGameSetupMenu()
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
   
+
+	local date_label = Label(_("Date: ") .. GetYearString(GrandStrategyYear))
+	date_label:setFont(CFont:Get("game"))
+	date_label:adjustSize();
+	menu:add(date_label, offx + 220, offy + 36 * 5)
+	-- slider button to decrease slider value
+	local b = menu:addImageLeftSliderButton("", nil, offx + 220 + 76 - 86 - 20, offy + 36 * 5.5, function() date_slider:setValue(date_slider:getValue() - 1); DateChanged() end)
+		
+	-- slider button to increase slider value
+	b = menu:addImageRightSliderButton("", nil, offx + 220 + 76 + 86, offy + 36 * 5.5, function() date_slider:setValue(date_slider:getValue() + 1); DateChanged() end)
+		
+	-- slider itself
+	date_slider = menu:addImageSlider(date_minimum, date_maximum, 172, 18, offx + 220 + 76 - 86, offy + 36 * 5.5, function() DateChanged() end)
+
+	date_slider:setValue(date_minimum)
+
+	local date_minimum_label = Label(GetYearString(date_minimum))
+	date_minimum_label:setFont(CFont:Get("small"))
+	date_minimum_label:adjustSize();
+	menu:addCentered(date_minimum_label, offx + 220 + 76 - 86 - 20 + 11, offy + 36 * 6 + 6)
+
+	local date_maximum_label = Label(GetYearString(date_maximum))
+	date_maximum_label:setFont(CFont:Get("small"))
+	date_maximum_label:adjustSize();
+	menu:addCentered(date_maximum_label, offx + 220 + 76 + 86 + 11, offy + 36 * 6 + 6)
+
 	function DateChanged()
 		CleanGrandStrategyGame()
 		InitializeGrandStrategyGame()
@@ -319,42 +339,29 @@ function RunGrandStrategyGameSetupMenu()
 			SetGrandStrategyWorld(world_list[world:getSelected() + 1])
 			
 			if (GrandStrategyWorld == "Earth") then
-				date_list = {
-					"3000 BC", -- begin of the last wave of Indo-European migrations, which lasted until 2800 BC
-					"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
---					"700 BC", -- 
-					"450 BC", -- height of the Athenian empire
-					"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
---					"406 AD", -- Sueves, Alans and Vandals attack Gaul (which eventually would lead them to Iberia)
-					"486 AD",
---					"1072 AD" -- 
---					"1660 AD", -- 
---					"1815 AD", -- 
-				}
+				date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
+				date_maximum = 486
 			elseif (GrandStrategyWorld == "Nidavellir") then
-				date_list = {
-					"3000 BC", -- approximate begin of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
-					"25 AD", -- begin of The Scepter of Fire
-					"40 AD", -- end of The Scepter of Fire
-					"550 AD" -- begin of The Hammer of Thursagan
-				}
+				date_minimum = -3000 -- approximate beginning of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
+				date_maximum = 550 -- beginning of The Hammer of Thursagan
 			elseif (GrandStrategyWorld == "Random") then
-				date_list = {
-					"3000 BC"
-				}
+				date_minimum = -3000
+				date_maximum = -3000
 			end
 			
-			date:setList(date_list)
-			date:setSize(152, 20)
-			date:setSelected(0)
+			date_slider:setScale(date_minimum, date_maximum)
+			date_slider:setValue(date_minimum)
+			date_minimum_label:setCaption(GetYearString(date_minimum))
+			date_minimum_label:adjustSize();
+			date_maximum_label:setCaption(GetYearString(date_maximum))
+			date_maximum_label:adjustSize();
 		end
 		
-		GrandStrategyYear = tonumber(string.sub(date_list[date:getSelected() + 1], 0, -3))
-		if (string.find(date_list[date:getSelected() + 1], "BC") ~= nil) then
-			GrandStrategyYear = GrandStrategyYear * -1
-		end
-
+		GrandStrategyYear = math.floor(date_slider:getValue())
 		
+		date_label:setCaption(_("Date: ") .. GetYearString(GrandStrategyYear))
+		date_label:adjustSize();
+	
 		if (world_list[world:getSelected() + 1] ~= "Random") then
 			Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 			
@@ -2161,14 +2168,8 @@ function DrawGrandStrategyInterface()
 
 	DrawGrandStrategyResourceBar()
 	
-	local display_year
-	if (GrandStrategyYear >= 0) then
-		display_year = GrandStrategyYear .. " AD"
-	else
-		display_year = (GrandStrategyYear * -1) .. " BC"
-	end
 	if (GrandStrategyFaction ~= nil) then
-		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. display_year, 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 	end
 	
 	if (SelectedProvince ~= nil) then
@@ -3610,7 +3611,7 @@ function ClearGrandStrategyVariables()
 	WorldMapOffsetX = 0
 	WorldMapOffsetY = 0
 	GrandStrategyWorld = ""
-	GrandStrategyYear = nil
+	GrandStrategyYear = 0
 	GrandStrategyFaction = nil
 	SelectedProvince = nil
 	SelectedHero = nil
@@ -4566,4 +4567,12 @@ function GetUnitTypeNamePluralForm(unit_type)
 	end	
 	
 	return unit_type_name
+end
+
+function GetYearString(year)
+	if (year >= 0) then
+		return year .. " AD"
+	else
+		return (year * -1) .. " BC"
+	end
 end

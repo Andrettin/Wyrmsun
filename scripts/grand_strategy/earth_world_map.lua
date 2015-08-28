@@ -7278,6 +7278,8 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	SetProvinceSettlementBuilding("Scania", "unit-germanic-barracks", true)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-warrior", 4)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-archer", 4)
+	
+	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 end
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
@@ -7365,6 +7367,14 @@ if (GrandStrategyYear >= -2000) then
 	SetWorldMapResourceProspected("gold", 517, 113, true) -- Tin deposits which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
 end
 
+if (GrandStrategyYear >= -1900) then
+	-- Beginning of the age of the first Minoan palaces around 1900 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+end
+
+if (GrandStrategyYear >= -1750) then
+	-- Around 1750 BC the first Minoan palaces were destroyed, and the age of the second palaces begins; Source: "Atlas de História Mundial", 2001, p. 66.
+end
+
 if (GrandStrategyYear >= -1700) then
 	-- Late Bronze Age begins around 1700 BC, and during this period cremation became the burial tradition in almost all of Europe; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
 end
@@ -7383,21 +7393,31 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", false)
 	
-	-- Mycenaean Greece; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	SetProvinceCivilization("Attica", "greek")
-	SetProvinceSettlementBuilding("Attica", "unit-teuton-town-hall", true)
+	-- Mycenaean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	SetProvinceOwner("Argolis", "greek", "Mycenae")
+	SetProvinceCivilization("Argolis", "greek")
+	SetProvinceSettlementBuilding("Argolis", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Aetolia", "greek", "Mycenae")
 	SetProvinceCivilization("Aetolia", "greek")
 	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Attica", "greek", "Mycenae")
+	SetProvinceCivilization("Attica", "greek")
+	SetProvinceSettlementBuilding("Attica", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Boeotia", "greek", "Mycenae")
 	SetProvinceCivilization("Boeotia", "greek")
 	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Crete", "greek", "Mycenae")
 	SetProvinceCivilization("Crete", "greek")
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Euboea", "greek", "Mycenae")
 	SetProvinceCivilization("Euboea", "greek")
 	SetProvinceSettlementBuilding("Euboea", "unit-teuton-town-hall", true)
-	SetProvinceCivilization("Peloponnese", "greek")
-	SetProvinceSettlementBuilding("Peloponnese", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Rhodes", "greek", "Mycenae")
 	SetProvinceCivilization("Rhodes", "greek")
 	SetProvinceSettlementBuilding("Rhodes", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Lacedaemonia", "greek", "Mycenae")
+	SetProvinceCivilization("Lacedaemonia", "greek")
+	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -1400) then
@@ -7405,6 +7425,8 @@ if (GrandStrategyYear >= -1400) then
 	GrandStrategyEvents.TheWhiteHorse = nil -- the white horse at Uffington was made between 1400 and 600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 46.
 	
 	-- Late Bronze Age ends around 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
+	
+	-- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 end
 
 if (GrandStrategyYear >= -1365) then
@@ -7413,6 +7435,18 @@ end
 
 if (GrandStrategyYear >= -1250) then
 	-- Defenses of Mycenaean strongholds strengthened c. 1250 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 114.
+end
+
+if (GrandStrategyYear >= -1190) then
+	-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	SetProvinceOwner("Argolis", "", "")
+	SetProvinceOwner("Aetolia", "", "")
+	SetProvinceOwner("Attica", "", "")
+	SetProvinceOwner("Boeotia", "", "")
+	SetProvinceOwner("Crete", "", "")
+	SetProvinceOwner("Euboea", "", "")
+	SetProvinceOwner("Rhodes", "", "")
+	SetProvinceOwner("Lacedaemonia", "", "")
 end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
@@ -7454,7 +7488,7 @@ if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. 
 	SetProvinceOwner("Boeotia", "greek", "Thebes")
 	SetProvinceCivilization("Epirus", "greek")
 	SetProvinceSettlementBuilding("Epirus", "unit-teuton-town-hall", true)
-	SetProvinceOwner("Peloponnese", "greek", "Sparta")
+	SetProvinceOwner("Lacedaemonia", "greek", "Sparta")
 	SetProvinceCivilization("Thessaly", "greek")
 	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
 end
@@ -7611,13 +7645,14 @@ end
 
 if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Epirus, Euboea, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Aetolia", "latin", "Rome")
+	SetProvinceOwner("Argolis", "latin", "Rome")
 	SetProvinceOwner("Attica", "latin", "Rome")
 	SetProvinceOwner("Boeotia", "latin", "Rome")
 	SetProvinceOwner("Epirus", "latin", "Rome")
 	SetProvinceOwner("Euboea", "latin", "Rome")
+	SetProvinceOwner("Lacedaemonia", "latin", "Rome")
 	SetProvinceOwner("Macedonia", "latin", "Rome")
 	SetProvinceSettlementBuilding("Macedonia", "unit-teuton-town-hall", true)
-	SetProvinceOwner("Peloponnese", "latin", "Rome")
 	SetProvinceOwner("Thessaly", "latin", "Rome")
 end
 

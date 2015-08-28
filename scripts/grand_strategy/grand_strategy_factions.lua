@@ -254,6 +254,11 @@ function LoadFactions(world)
 			Civilization = "greek",
 			Title = "Kingdom"
 		},
+		Mycenae = {
+			Name = "Mycenae",
+			Civilization = "greek",
+			Title = "City-State"
+		},
 		Sparta = {
 			Name = "Sparta",
 			Civilization = "greek",

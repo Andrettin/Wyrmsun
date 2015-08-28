@@ -381,6 +381,7 @@ DefineRaceNames(
 			"Metapontium",
 			"Methone",
 			"Miletus",
+			"Mycenae",
 			"Motye",
 			"Naucratis",
 			"Naupactus",
@@ -917,6 +918,12 @@ DefineCivilizationFactions("greek",
 		"type", "polity",
 		"color", "brown",
 		"secondary_color", "red"
+	},
+	"faction", {
+		"name", "Mycenae",
+		"type", "polity",
+		"color", "orange",
+		"secondary_color", "orange"
 	},
 	"faction", {
 		"name", "Sparta",
