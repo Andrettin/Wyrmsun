@@ -319,3 +319,11 @@ if (LoadedGame == false) then
 
 	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
 end
+
+-- in a grand strategy battle, give the defender two guard towers if a stronghold is built
+if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+	if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
+		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {47, 48})
+		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {51, 48})
+	end
+end

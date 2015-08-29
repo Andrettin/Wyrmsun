@@ -1989,7 +1989,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				dwarf = "Svarinshaug"
 			},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/nidavellir/svarinshaug.smp",
 			SettlementTerrain = "Hills",
 			Claims = {
 				"dwarf", "Modsogning Clan"
