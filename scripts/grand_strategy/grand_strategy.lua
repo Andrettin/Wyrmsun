@@ -72,6 +72,8 @@ function RunGrandStrategyGameSetupMenu()
 
 	local world_list = {"Earth", "Nidavellir", "Random"}
 	local world
+	local bookmark_list = {}
+	local bookmark
 	local date_label
 	local date_slider = {}
 	local date_minimum = 0
@@ -270,16 +272,30 @@ function RunGrandStrategyGameSetupMenu()
 
 	menu:addLabel(_("World:"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
 	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
-		function(dd) DateChanged() end)
+		function(dd) DateChanged(true) end)
 	world:setSize(152, 20)
 
-	menu:addLabel(_("Faction:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
-	faction = menu:addDropDown(faction_list, offx + 220, offy + 10 + 120,
+	menu:addLabel(_("Bookmark:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+	bookmark = menu:addDropDown(bookmark_list, offx + 220, offy + 10 + 120,
+		function(dd)
+			local bookmark_date = tonumber(string.sub(bookmark_list[bookmark:getSelected() + 1], 0, -3))
+			if (string.find(bookmark_list[bookmark:getSelected() + 1], "BC") ~= nil) then
+				bookmark_date = bookmark_date * -1
+			end
+			
+			date_slider:setValue(bookmark_date)
+			DateChanged(true)
+		end
+	)
+	bookmark:setSize(152, 20)
+	
+	menu:addLabel(_("Faction:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
+	faction = menu:addDropDown(faction_list, offx + 640 - 224 - 16, offy + 10 + 120,
 		function(dd) end)
 	faction:setSize(152, 20)
 
-	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
-	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 640 - 224 - 16, offy + 10 + 120,
+	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+	battalions = menu:addDropDown({"1x", "2x", "3x", "4x", "5x"}, offx + 40, offy + 10 + 180,
 		function(dd)
 			wyr.preferences.GrandStrategyBattalionMultiplier = battalions:getSelected() + 1
 			SavePreferences()
@@ -289,7 +305,7 @@ function RunGrandStrategyGameSetupMenu()
 	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
 	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
 
-	automatic_battles = menu:addImageCheckBox(_("Automatic Battles"), offx + 220, offy + 10 + 240 + 3,
+	automatic_battles = menu:addImageCheckBox(_("Automatic Battles"), offx + 220, offy + 10 + 180 + 3,
 		function()
 			wyr.preferences.AutomaticBattles = automatic_battles:isMarked()
 			SavePreferences()
@@ -297,7 +313,7 @@ function RunGrandStrategyGameSetupMenu()
 	)
 	automatic_battles:setMarked(wyr.preferences.AutomaticBattles)
   
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 240 + 3,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 180 + 3,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -309,30 +325,30 @@ function RunGrandStrategyGameSetupMenu()
 	local date_label = Label(_("Date: ") .. GetYearString(GrandStrategyYear))
 	date_label:setFont(CFont:Get("game"))
 	date_label:adjustSize();
-	menu:add(date_label, offx + 220, offy + 36 * 5)
+	menu:add(date_label, offx + 220, offy + 36 * 7)
 	-- slider button to decrease slider value
-	local b = menu:addImageLeftSliderButton("", nil, offx + 220 + 76 - 86 - 20, offy + 36 * 5.5, function() date_slider:setValue(date_slider:getValue() - 1); DateChanged() end)
+	local b = menu:addImageLeftSliderButton("", nil, offx + 220 + 76 - 86 - 20, offy + 36 * 7.5, function() date_slider:setValue(date_slider:getValue() - 1); DateChanged() end)
 		
 	-- slider button to increase slider value
-	b = menu:addImageRightSliderButton("", nil, offx + 220 + 76 + 86, offy + 36 * 5.5, function() date_slider:setValue(date_slider:getValue() + 1); DateChanged() end)
+	b = menu:addImageRightSliderButton("", nil, offx + 220 + 76 + 86, offy + 36 * 7.5, function() date_slider:setValue(date_slider:getValue() + 1); DateChanged() end)
 		
 	-- slider itself
-	date_slider = menu:addImageSlider(date_minimum, date_maximum, 172, 18, offx + 220 + 76 - 86, offy + 36 * 5.5, function() DateChanged() end)
+	date_slider = menu:addImageSlider(date_minimum, date_maximum, 172, 18, offx + 220 + 76 - 86, offy + 36 * 7.5, function() DateChanged() end)
 
 	date_slider:setValue(date_minimum)
 
 	local date_minimum_label = Label(GetYearString(date_minimum))
 	date_minimum_label:setFont(CFont:Get("small"))
 	date_minimum_label:adjustSize();
-	menu:addCentered(date_minimum_label, offx + 220 + 76 - 86 - 20 + 11, offy + 36 * 6 + 6)
+	menu:addCentered(date_minimum_label, offx + 220 + 76 - 86 - 20 + 11, offy + 36 * 8 + 6)
 
 	local date_maximum_label = Label(GetYearString(date_maximum))
 	date_maximum_label:setFont(CFont:Get("small"))
 	date_maximum_label:adjustSize();
-	menu:addCentered(date_maximum_label, offx + 220 + 76 + 86 + 11, offy + 36 * 6 + 6)
+	menu:addCentered(date_maximum_label, offx + 220 + 76 + 86 + 11, offy + 36 * 8 + 6)
 
-	function DateChanged()
-		if (IsMouseLeftButtonPressed() == false) then
+	function DateChanged(ignore_mouse_state)
+		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
 			CleanGrandStrategyGame()
 			InitializeGrandStrategyGame()
 			
@@ -342,12 +358,30 @@ function RunGrandStrategyGameSetupMenu()
 				if (GrandStrategyWorld == "Earth") then
 					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
 					date_maximum = 486
+					
+					bookmark_list = {
+						"3000 BC", -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
+						"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
+						"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
+						"486 AD"
+					}
 				elseif (GrandStrategyWorld == "Nidavellir") then
 					date_minimum = -3000 -- approximate beginning of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
 					date_maximum = 550 -- beginning of The Hammer of Thursagan
+					
+					bookmark_list = {
+						"3000 BC", -- approximate begin of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)
+						"25 AD", -- beginning of The Scepter of Fire
+						"40 AD", -- end of The Scepter of Fire
+						"550 AD" -- beginning of The Hammer of Thursagan
+					}
 				elseif (GrandStrategyWorld == "Random") then
 					date_minimum = -3000
 					date_maximum = -3000
+					
+					bookmark_list = {
+						"3000 BC"
+					}
 				end
 				
 				date_slider:setScale(date_minimum, date_maximum)
@@ -364,7 +398,7 @@ function RunGrandStrategyGameSetupMenu()
 		date_label:setCaption(_("Date: ") .. GetYearString(GrandStrategyYear))
 		date_label:adjustSize();
 	
-		if (IsMouseLeftButtonPressed() == false) then
+		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
 			if (world_list[world:getSelected() + 1] ~= "Random") then
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 				
@@ -381,6 +415,24 @@ function RunGrandStrategyGameSetupMenu()
 			faction:setList(faction_list)
 			faction:setSize(152, 20)
 			faction:setSelected(0)
+			
+			bookmark:setList(bookmark_list)
+			bookmark:setSize(152, 20)
+			local bookmark_found = false
+			for i=1,table.getn(bookmark_list) do
+				local bookmark_date = tonumber(string.sub(bookmark_list[i], 0, -3))
+				if (string.find(bookmark_list[bookmark:getSelected() + 1], "BC") ~= nil) then
+					bookmark_date = bookmark_date * -1
+				end
+				if (GrandStrategyYear == bookmark_date) then
+					bookmark:setSelected(i-1)
+					bookmark_found = true
+				end
+			end
+			
+			if not (bookmark_found) then
+				bookmark:setSelected(0)
+			end
 		end
 	end
 
