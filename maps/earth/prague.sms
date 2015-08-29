@@ -39,7 +39,7 @@ if (LoadedGame == false) then
 	})
 end
 
--- create rafts in the bottom-left margin of the river, for the case the river bridge has been consumed by water
+-- create rafts in the bottom-left margin of the river, in case the river bridge has been consumed by water
 local nearest_coast = FindNearestTerrainFlagTile("coast", 48, 80)
 if (nearest_coast ~= nil) then
 	unit = CreateUnit("unit-raft", 15, nearest_coast)

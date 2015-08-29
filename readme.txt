@@ -222,6 +222,9 @@ https://github.com/Andrettin/Wyrmsun
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
 - Burgs and Bastions now provide two guard towers in defensive battles.
 
+* Maps
+- Improvements to the generation of the Braga and Salzburg maps.
+
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.
 - Fixed a few minor issues with button clicking.

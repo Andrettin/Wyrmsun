@@ -4,64 +4,64 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-SetPlayerData(0, "Resources", "gold", 2000)
-SetPlayerData(0, "Resources", "lumber", 1000)
-SetPlayerData(0, "Resources", "stone", 500)
-SetPlayerData(0, "Resources", "oil", 0)
-SetAiType(0, "land-attack")
-SetPlayerData(4, "Resources", "gold", 2000)
-SetPlayerData(4, "Resources", "lumber", 1000)
-SetPlayerData(4, "Resources", "stone", 500)
-SetPlayerData(4, "Resources", "oil", 0)
-SetAiType(4, "land-attack")
-SetPlayerData(15, "RaceName", "neutral")
-
-local layout = {
-	{-2,  8, -1, -1, 27, -2, -2, -2},
-	{-2, 17, 19, -2, -2, -2, -2, -1},
-	{-2, -2, 17, 11, 10, 10, 19, -1},
-	{-1, -2, -2,  6, -2, -2, 17, 10},
-	{-1, -2, -2, -2, -2, -2, -2, -1},
-	{-1, -2, -2, -2, -2, -2, -2, -1},
-	{-1, -2, -2, -2, -2, -2, -2, -2},
-	{-1, -1, -1, -1, -1, -1, -1, -2}
-}
-
-local town_buildings = {"Farm", "Farm", "Lumber Mill", "Farm", "Smithy", "Farm"}
-
-local town_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer"}
-
-local invader_buildings = {"Farm", "Farm"}
-
-local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer", "unit-teuton-archer"}
-
-local rock_generation = {
-	{80, 128, 0, 32},
-	{64, 80, 16, 32},
-	{0, 16, 0, 48},
-	{16, 32, 48, 112},
-	{32, 48, 64, 96},
-	{48, 64, 80, 96},
-	{112, 128, 96, 112},
-	{96, 128, 112, 128}
-}
-
---layout = nil
-
 if (LoadedGame == false) then
-	if (GrandStrategy == false) then
-		GenerateTown(layout, 0, "latin", "Rome", 4, "teuton", "Marcomanni Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
-		
-		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
-			for i=0,15 do
-				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = "Civilized (Iron)"
-				end
-			end
-		end
-	else
-		GenerateTown(layout, 0, "latin", "Rome", 4, "teuton", "Marcomanni Tribe", town_buildings, {}, false, {}, {}, "low", rock_generation) -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
-	end
+	GenerateRandomMap({
+		RockQuantity = "low",
+		TreeQuantity = "low", -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
+		WaterQuantity = "low",
+		DarkLandQuantity = "medium",
+		DarkRoughLandQuantity = "medium",
+		WorkerQuantity = 5,
+		PlayerCivilizations = {"latin", "celt", "celt", "celt", "teuton"},
+		PlayerBuildings = {
+			{"Farm", "Farm", "Lumber Mill", "Farm", "Smithy", "Farm"},
+			{},
+			{},
+			{},
+			{"Farm", "Farm"}
+		},
+		WaterLayout = {
+			{ 0,  8,  0,  0, 27,  0,  0,  0},
+			{ 0, 17, 19,  0,  0,  0,  0,  0},
+			{ 0,  0, 17, 11, 10, 10, 19,  0},
+			{ 0,  0,  0,  0,  0,  0, 17, 10},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0}
+		},
+		StartingLocationLayout = {
+			{-2, -2, -1, -1, -2, -2, -2, -2},
+			{-2, -2, -2, -2, -2, -2, -2, -1},
+			{-2, -2, -2, -2, -2, -2, -2, -1},
+			{-1, -2, -2,  0, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -1},
+			{-1, -2, -2, -2, -2, -2, -2, -1},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -1, -1, -1, -1, -1, -1, -2}
+		},
+		RockGenerationAreas = {
+			{80, 128, 0, 32},
+			{64, 80, 16, 32},
+			{0, 16, 0, 48},
+			{16, 32, 48, 112},
+			{32, 48, 64, 96},
+			{48, 64, 80, 96},
+			{112, 128, 96, 112},
+			{96, 128, 112, 128}
+		}
+	})
 end
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+
+-- create rafts in the northern margin of the river, in case the river bridge has been consumed by water
+local nearest_coast = FindNearestTerrainFlagTile("coast", 59, 33)
+if (nearest_coast ~= nil) then
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
+end

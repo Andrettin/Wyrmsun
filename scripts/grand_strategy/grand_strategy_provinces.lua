@@ -1105,7 +1105,7 @@ function LoadProvinces(world)
 				latin = "Neapolis"
 			},
 			SettlementLocation = {130, 34}, -- Naples
-			Map = "maps/earth/south-italy.smp",
+			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Netherlands = {

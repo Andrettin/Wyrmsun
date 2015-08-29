@@ -451,36 +451,8 @@ function EndTurn()
 		end
 	end
 	
-	-- perform trade
-	local player_trade_preferences = {}
-	if (GrandStrategyFaction ~= nil) then
-		player_trade_preferences["Lumber"] = GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "lumber")
-		player_trade_preferences["Stone"] = GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "stone")
-	end
-
 	DoGrandStrategyTurn()
 
-	-- keep human player's trading preferences
-	if (GrandStrategyFaction ~= nil) then
-		if (player_trade_preferences.Lumber > 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "lumber") < player_trade_preferences.Lumber) then
-			player_trade_preferences.Lumber = GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "lumber")
-		elseif (player_trade_preferences.Lumber < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < 0) then
-			player_trade_preferences.Lumber = 0
-		elseif (player_trade_preferences.Lumber < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < player_trade_preferences.Lumber * -1 * GetCommodityPrice("lumber") / 100) then
-			player_trade_preferences.Lumber = math.floor(GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") / GetCommodityPrice("lumber") * 100) * -1
-		end
-		SetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "lumber", player_trade_preferences.Lumber)
-		
-		if (player_trade_preferences.Stone > 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "stone") < player_trade_preferences.Stone) then
-			player_trade_preferences.Stone = GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "stone")
-		elseif (player_trade_preferences.Stone < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < 0) then
-			player_trade_preferences.Stone = 0
-		elseif (player_trade_preferences.Stone < 0 and GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < player_trade_preferences.Stone * -1 * GetCommodityPrice("stone") / 100) then
-			player_trade_preferences.Stone = math.floor(GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") / GetCommodityPrice("stone") * 100) * -1
-		end
-		SetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "stone", player_trade_preferences.Stone)
-	end
-	
 	for key, value in pairs(WorldMapProvinces) do
 		local province_owner = GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name))
 	
@@ -3786,7 +3758,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 	end
 	
 	if (ProvinceHasBuildingClass(province.Name, "stronghold")) then
-		military score = military_score + (100 * 2) -- two guard towers if has a stronghold
+		military_score = military_score + (100 * 2) -- two guard towers if has a stronghold
 	end
 
 	return military_score
