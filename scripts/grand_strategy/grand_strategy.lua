@@ -421,7 +421,7 @@ function RunGrandStrategyGameSetupMenu()
 			local bookmark_found = false
 			for i=1,table.getn(bookmark_list) do
 				local bookmark_date = tonumber(string.sub(bookmark_list[i], 0, -3))
-				if (string.find(bookmark_list[bookmark:getSelected() + 1], "BC") ~= nil) then
+				if (string.find(bookmark_list[i], "BC") ~= nil) then
 					bookmark_date = bookmark_date * -1
 				end
 				if (GrandStrategyYear == bookmark_date) then
