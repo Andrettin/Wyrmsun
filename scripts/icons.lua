@@ -328,6 +328,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-lumber-mill",
+	Size = {46, 38},
+	File = "teuton/icons/lumber_mill.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-watch-tower",
 	Size = {46, 38},
 	File = "teuton/icons/watch_tower.png"
@@ -1369,12 +1375,6 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	})
 
 	DefineIcon({
-		Name = "icon-teuton-lumber-mill",
-		Size = {46, 38},
-		File = "tilesets/swamp/teuton/icons/lumber_mill.png"
-	})
-
-	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/rat.png"
@@ -1495,12 +1495,6 @@ elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conife
 	})
 
 	DefineIcon({
-		Name = "icon-teuton-lumber-mill",
-		Size = {46, 38},
-		File = "tilesets/forest/teuton/icons/lumber_mill.png"
-	})
-
-	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		File = "tilesets/forest/neutral/icons/rat.png"
@@ -1618,12 +1612,6 @@ else
 		Name = "icon-gnomish-caravan",
 		Size = {46, 38},
 		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
-	})
-
-	DefineIcon({
-		Name = "icon-teuton-lumber-mill",
-		Size = {46, 38},
-		File = "tilesets/forest/teuton/icons/lumber_mill.png"
 	})
 
 	DefineIcon({
