@@ -1708,6 +1708,10 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 							CreateStartingBuilding(i, player_buildings[i + 1][j]) -- give the player initial buildings
 						end
 					end
+					if (GrandStrategy and GrandStrategyEventMap == false and Defender == GetPlayerData(i, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+						CreateStartingBuilding(i, "Stronghold Guard Tower") -- give the defender two guard towers if a stronghold is built
+						CreateStartingBuilding(i, "Stronghold Guard Tower")
+					end
 
 					SetPlayerData(i, "Resources", "gold", 10000)
 					SetPlayerData(i, "Resources", "lumber", 3000)
@@ -2230,6 +2234,16 @@ function ApplyRawTiles()
 				end
 			elseif (string.sub(RawTile(x, y), 0, 11) == "Guard Tower") then
 				unit = CreateUnit("unit-teuton-guard-tower", tonumber(string.sub(RawTile(x, y), 12)), {x, y})
+				for sub_x=0,1 do
+					for sub_y=0,1 do
+						SetRawTile(x + sub_x, y + sub_y, "Land")
+					end
+				end
+			elseif (string.sub(RawTile(x, y), 0, 22) == "Stronghold Guard Tower") then
+				local defender_player = tonumber(string.sub(RawTile(x, y), 23))
+				if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
+					unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), defender_player, {x, y})
+				end
 				for sub_x=0,1 do
 					for sub_y=0,1 do
 						SetRawTile(x + sub_x, y + sub_y, "Land")
@@ -4047,7 +4061,7 @@ end
 function CreateStartingBuilding(player, building_type)
 	local width
 	local height
-	if (building_type == "Farm" or building_type == "Watch Tower" or building_type == "Guard Tower") then
+	if (building_type == "Farm" or building_type == "Watch Tower" or building_type == "Guard Tower" or building_type == "Stronghold Guard Tower") then
 		width = 2
 		height = 2
 	elseif (building_type == "Barracks" or building_type == "Lumber Mill" or building_type == "Smithy") then

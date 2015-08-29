@@ -380,6 +380,9 @@ end
 
 -- Override with game settings
 function SetAiType(player, arg)
+	if (GrandStrategy and GrandStrategyEventMap == false and Defender == GetPlayerData(player, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+		arg = "passive" -- if has a stronghold, don't attack, but wait for the enemy to come to you
+	end
 	if ((GrandStrategy and GrandStrategyEventMap == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
 		arg = "grand-strategy-battle"
 	end

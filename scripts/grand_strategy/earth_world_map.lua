@@ -7377,6 +7377,12 @@ end
 
 if (GrandStrategyYear >= -1700) then
 	-- Late Bronze Age begins around 1700 BC, and during this period cremation became the burial tradition in almost all of Europe; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
+	
+	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+	SetProvinceSettlementBuilding("Argolis", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Argos, Tirinto, Dendra and Kastro between 1700 and 1200 BC, as well as in Araxos (in the Achaean coast), in Korakou and Perdikaria (both in the isthmus of Corinth) and in Kolonna (in the isle of Aegina); Source: "Atlas de História Mundial", 2001, p. 67.
+	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
+	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Eutresis, Kastri, Aghia Marina, Gla, Aghios Ioannis, Chantsa, Stroviki, Pyrgos and Panopeus between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
+	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
 end
 
 if (GrandStrategyYear >= -1628) then
@@ -7393,13 +7399,13 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", false)
 	
-	-- Mycenaean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	SetProvinceOwner("Argolis", "greek", "Mycenae")
-	SetProvinceCivilization("Argolis", "greek")
-	SetProvinceSettlementBuilding("Argolis", "unit-teuton-town-hall", true)
+	-- Mycenaean Greece included Argolis, Aetolia, Attica, Boeotia, Crete, Euboea, Lacedaemonia and Rhodesabout 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	SetProvinceOwner("Aetolia", "greek", "Mycenae")
 	SetProvinceCivilization("Aetolia", "greek")
 	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Argolis", "greek", "Mycenae")
+	SetProvinceCivilization("Argolis", "greek")
+	SetProvinceSettlementBuilding("Argolis", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Attica", "greek", "Mycenae")
 	SetProvinceCivilization("Attica", "greek")
 	SetProvinceSettlementBuilding("Attica", "unit-teuton-town-hall", true)
@@ -7412,12 +7418,12 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceOwner("Euboea", "greek", "Mycenae")
 	SetProvinceCivilization("Euboea", "greek")
 	SetProvinceSettlementBuilding("Euboea", "unit-teuton-town-hall", true)
-	SetProvinceOwner("Rhodes", "greek", "Mycenae")
-	SetProvinceCivilization("Rhodes", "greek")
-	SetProvinceSettlementBuilding("Rhodes", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Lacedaemonia", "greek", "Mycenae")
 	SetProvinceCivilization("Lacedaemonia", "greek")
 	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Rhodes", "greek", "Mycenae")
+	SetProvinceCivilization("Rhodes", "greek")
+	SetProvinceSettlementBuilding("Rhodes", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -1400) then
@@ -7433,20 +7439,33 @@ if (GrandStrategyYear >= -1365) then
 	GrandStrategyEvents.NoblemansBurial = nil -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
 end
 
+if (GrandStrategyYear >= -1300) then
+	-- Mycenaean territory included most of Thessaly in 1300 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	SetProvinceOwner("Thessaly", "greek", "Mycenae")
+	SetProvinceCivilization("Thessaly", "greek")
+	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
+end
+
 if (GrandStrategyYear >= -1250) then
 	-- Defenses of Mycenaean strongholds strengthened c. 1250 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 114.
 end
 
 if (GrandStrategyYear >= -1190) then
 	-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	SetProvinceOwner("Argolis", "", "")
 	SetProvinceOwner("Aetolia", "", "")
+	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-stronghold", false)
+	SetProvinceOwner("Argolis", "", "")
+	SetProvinceSettlementBuilding("Argolis", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Attica", "", "")
+	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Boeotia", "", "")
+	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceOwner("Euboea", "", "")
 	SetProvinceOwner("Rhodes", "", "")
 	SetProvinceOwner("Lacedaemonia", "", "")
+	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-stronghold", false)
+	SetProvinceOwner("Thessaly", "", "")
 end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
@@ -7489,8 +7508,6 @@ if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. 
 	SetProvinceCivilization("Epirus", "greek")
 	SetProvinceSettlementBuilding("Epirus", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Lacedaemonia", "greek", "Sparta")
-	SetProvinceCivilization("Thessaly", "greek")
-	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
@@ -7920,7 +7937,6 @@ end
 if (GrandStrategyYear >= 412) then
 	SetProvinceOwner("Croatia", "", "")
 	SetProvinceOwner("Aquitaine", "goth", "Visigoth Tribe") -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceSettlementBuilding("Aquitaine", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
@@ -7945,7 +7961,6 @@ if (GrandStrategyYear >= 450) then
 	SetProvinceOwner("Belgium", "teuton", "Frank Tribe") -- Frankish territory included modern Belgium in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 	SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Portugal", "teuton", "Suebi Tribe") -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceSettlementBuilding("Portugal", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Portugal", "unit-germanic-warrior", 0)
 end
 
@@ -7971,13 +7986,10 @@ if (GrandStrategyYear >= 486) then -- The Frankish Merovingian king Clovis conqu
 	SetProvinceOwner("Portugal", "teuton", "Galicia")
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Galicia")
 	SetProvinceOwner("Castille", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceSettlementBuilding("Castille", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Castille", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Andalusia", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceSettlementBuilding("Andalusia", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Andalusia", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Aragon", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceSettlementBuilding("Aragon", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Aragon", "unit-germanic-warrior", 0)
 end
 
@@ -8003,7 +8015,6 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Bavaria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Sicily", "goth", "Ostrogoth Tribe")
-	SetProvinceSettlementBuilding("Sicily", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Sicily", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bohemia", "", "")

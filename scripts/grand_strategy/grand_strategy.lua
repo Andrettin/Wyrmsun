@@ -3784,6 +3784,11 @@ function GetMilitaryScore(province, attacker, count_defenders)
 			end
 		end
 	end
+	
+	if (ProvinceHasBuildingClass(province.Name, "stronghold")) then
+		military score = military_score + (100 * 2) -- two guard towers if has a stronghold
+	end
+
 	return military_score
 end
 

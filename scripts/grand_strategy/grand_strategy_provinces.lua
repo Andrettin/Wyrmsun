@@ -614,6 +614,9 @@ function LoadProvinces(world)
 				{554, 156}
 			},
 			Owner = "Minoan Tribe", -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
+			CulturalNames = {
+				greek = "Crete"
+			},
 			SettlementName = "Knossos",
 			CulturalSettlementNames = {
 				greek = "Knossos",

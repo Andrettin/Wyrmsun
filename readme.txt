@@ -220,6 +220,7 @@ https://github.com/Andrettin/Wyrmsun
 - New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Marmara, Skagerrak.
 - Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
+- Burgs and Bastions now provide two guard towers in defensive battles.
 
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.
