@@ -4,92 +4,42 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-SetPlayerData(0, "Resources", "gold", 5000)
-SetPlayerData(0, "Resources", "lumber", 2500)
-SetPlayerData(0, "Resources", "stone", 1250)
-SetPlayerData(0, "Resources", "oil", 0)
-SetAiType(0, "land-attack")
-SetPlayerData(1, "Resources", "gold", 2000)
-SetPlayerData(1, "Resources", "lumber", 1000)
-SetPlayerData(1, "Resources", "stone", 500)
-SetPlayerData(1, "Resources", "oil", 0)
-SetAiType(1, "land-attack")
-SetPlayerData(2, "Resources", "gold", 2000)
-SetPlayerData(2, "Resources", "lumber", 1000)
-SetPlayerData(2, "Resources", "stone", 500)
-SetPlayerData(2, "Resources", "oil", 0)
-SetAiType(2, "passive")
-SetPlayerData(15, "RaceName", "neutral")
-
-local layout = {
-	{-1, -1,  8, 40, 31},
-	{ 0,  0, 17, 19,  0},
-	{ 0,  0, 18, 16,  0},
-	{ 0,  6, 17, 19,  0},
-	{ 0,  0,  0,  8,  0},
-	{ 0,  0,  0,  8,  0},
-	{ 0,  0, 18, 16,  0},
-	{-1, -1, 17, 19,  0}
-}
-
-local rock_generation = {
-	{64, 80, 48, 112}
-}
-
-local town_buildings = {"Farm", "Farm"}
-
-local town_units = {}
-
-local invader_units = {"unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-archer"}
-
 if (LoadedGame == false) then
-	if (GrandStrategy == false) then
-		GenerateTown(layout, 2, "celt", "Sequani Tribe", 1, "celt", "Aedui Tribe", town_buildings, town_units, true, {}, invader_units, "low", rock_generation)
-		
-		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
-			for i=0,15 do
-				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = "Agrarian (Iron)"
-				end
-			end
-		end
-	else
-		GenerateTown(layout, 2, "celt", "Sequani Tribe", 1, "celt", "Aedui Tribe", town_buildings, {}, false, {}, {}, "low", nil)
-	end
-end
-
--- Suebi units
-SetStartView(0, Players[2].StartPos.x, Players[2].StartPos.y)
-SetPlayerData(0, "RaceName", "teuton")
-SetPlayerData(0, "Faction", "Suebi Tribe")
-
-if (GrandStrategy == false) then
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-worker", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-
-	unit = CreateUnit("unit-germanic-warrior", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-warrior", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-	unit = CreateUnit("unit-germanic-archer", 0, {Players[2].StartPos.x, Players[2].StartPos.y})
-end
-
-if (GrandStrategy == false or GrandStrategyEventMap) then
-	SetDiplomacy(0, "allied", 2)
-	SetDiplomacy(2, "allied", 0)
-end
-
-if (GrandStrategyEventMap) then
-	SetAiType(0, "grand-strategy-battle")
-	SetAiType(1, "grand-strategy-battle")
-	SetAiType(2, "grand-strategy-battle")
-	
-	local units_to_be_created = {}
-	
-	-- Suebi units
-	CreateProvinceUnits("Brandenburg", 0, 1, false, true)
-	
-	-- Aedui units
-	CreateProvinceUnits("France", 1, 1, false, true)
+	GenerateRandomMap({
+		RockQuantity = "low",
+		TreeQuantity = "medium",
+		WaterQuantity = "low",
+		DarkLandQuantity = "medium",
+		DarkRoughLandQuantity = "medium",
+		WorkerQuantity = 5,
+		PlayerCivilizations = {"teuton", "celt", "celt"},
+		PlayerBuildings = {
+			{},
+			{},
+			{"Farm", "Farm"}
+		},
+		WaterLayout = {
+			{ 0,  0,  8, 40, 31},
+			{ 0,  0, 17, 19,  0},
+			{ 0,  0, 18, 16,  0},
+			{ 0,  0, 17, 19,  0},
+			{ 0,  0,  0,  8,  0},
+			{ 0,  0,  0,  8,  0},
+			{ 0,  0, 18, 16,  0},
+			{ 0,  0, 17, 19,  0}
+		},
+		StartingLocationLayout = {
+			{-1, -1, -2, -2, -2},
+			{-2, -2, -2, -2, -2},
+			{-2, -2, -2, -2, -2},
+			{-2,  2, -2, -2, -2},
+			{-2, -2, -2, -2, -2},
+			{-2, -2,  0, -2, -2},
+			{-2, -2, -2, -2, -2},
+			{-1, -1, -2, -2, -2}
+		},
+		RockGenerationAreas = {
+			{64, 80, 48, 112}
+		}
+	})
 end

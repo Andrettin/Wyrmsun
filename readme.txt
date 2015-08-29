@@ -204,6 +204,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Abilities
 - Added the learnable ability Deadly Precision (icon by Jinn).
+- Decreased Critical Strike's bonus.
 
 * Buildings
 - The Teuton Farm now changes its graphics after Masonry is researched (new graphics by Jinn).
@@ -223,7 +224,7 @@ https://github.com/Andrettin/Wyrmsun
 - Burgs and Bastions now provide two guard towers in defensive battles.
 
 * Maps
-- Improvements to the generation of the Braga and Salzburg maps.
+- Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.
 
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.

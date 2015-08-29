@@ -1006,7 +1006,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Aarhus",
 			SettlementLocation = {508, 96}, -- Aarhus
-			Map = "maps/earth/jutland.smp",
+			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2

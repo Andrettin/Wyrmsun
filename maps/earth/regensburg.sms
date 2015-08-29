@@ -4,59 +4,50 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-SetPlayerData(0, "Resources", "gold", 5000)
-SetPlayerData(0, "Resources", "lumber", 2500)
-SetPlayerData(0, "Resources", "stone", 1250)
-SetPlayerData(0, "Resources", "oil", 0)
-SetAiType(0, "land-attack")
-SetPlayerData(1, "Resources", "gold", 2000)
-SetPlayerData(1, "Resources", "lumber", 1000)
-SetPlayerData(1, "Resources", "stone", 500)
-SetPlayerData(1, "Resources", "oil", 0)
-SetAiType(1, "land-attack")
-SetPlayerData(15, "RaceName", "neutral")
-
-local layout = {
-	{ 0, 18, 11, 10, 10, 19, -1, -1},
-	{18, 16,  0,  0,  6, 17, 19, -1},
-	{ 9,  0,  0,  0,  0,  0,  8, -1},
-	{20, 10, 10, 10, 10, 10, 20, 10}
-}
-
+if (LoadedGame == false) then
+	GenerateRandomMap({
+		RockQuantity = "low",
+		TreeQuantity = "low",
+		WaterQuantity = "low",
+		DarkLandQuantity = "medium",
+		DarkRoughLandQuantity = "medium",
+		WorkerQuantity = 5,
+		PlayerCivilizations = {"teuton", "latin"},
+		PlayerBuildings = {
+			{"Farm", "Farm"},
+			{"Farm", "Farm", "Smithy", "Lumber Mill", "Guard Tower", "Guard Tower", "Guard Tower"}
+		},
+		WaterLayout = {
+			{ 0, 18, 11, 10, 10, 19,  0,  0},
+			{18, 16,  0,  0,  0, 17, 19,  0},
+			{ 9,  0,  0,  0,  0,  0,  8,  0},
+			{20, 10, 10, 10, 10, 10, 20, 10}
+		},
+		StartingLocationLayout = {
+			{-2, -2, -2, -2, -2, -2, -1, -1},
+			{-2, -2, -2, -2,  1, -2, -2, -1},
+			{-2, -2, -2, -2, -2, -2, -2, -1},
+			{-2, -2, -2, -2, -2, -2, -2, -2}
+		},
 --[[
-local rock_generation = {
-	{112, 128, 48, 80},
-	{0, 16, 32, 80}
-}
+		RockGenerationAreas = {
+			{112, 128, 48, 80},
+			{0, 16, 32, 80}
+		}
 --]]
-
-local town_buildings = {"Farm", "Farm", "Smithy", "Lumber Mill", "Guard Tower", "Guard Tower", "Guard Tower"}
+	})
+end
 
 local town_units = {"unit-teuton-archer", "unit-teuton-archer", "unit-teuton-catapult"}
-
-local invader_buildings = {"Farm", "Farm"}
 
 local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer"}
 
 if (LoadedGame == false) then
-	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Bavarian Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", nil)
-		
-		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
-			for i=0,15 do
-				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = "Civilized (Iron)"
-				end
-			end
-		end
-	else
-		GenerateTown(layout, 1, "latin", "Rome", 0, "teuton", "Bavarian Tribe", town_buildings, {}, false, {}, {}, "low", nil)
-	end
-	
 	-- create raft in the nearest coast tile to the Bavarian settlement
 	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[0].StartPos.x, Players[0].StartPos.y)
 	if (nearest_coast ~= nil) then
 		unit = CreateUnit("unit-raft", 15, nearest_coast)
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
 	end
-	
 end

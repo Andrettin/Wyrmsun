@@ -4,60 +4,36 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-SetPlayerData(0, "Resources", "gold", 2000)
-SetPlayerData(0, "Resources", "lumber", 1000)
-SetPlayerData(0, "Resources", "stone", 500)
-SetPlayerData(0, "Resources", "oil", 0)
-SetAiType(0, "land-attack")
-SetPlayerData(1, "Resources", "gold", 2000)
-SetPlayerData(1, "Resources", "lumber", 1000)
-SetPlayerData(1, "Resources", "stone", 500)
-SetPlayerData(1, "Resources", "oil", 0)
-SetAiType(1, "land-attack")
-SetPlayerData(15, "RaceName", "neutral")
-
-local layout = {
-	{30, 35, 31, 31, 36, 30, 30, 30},
-	{31, 39,  0,  0, 40, 31, 36, 30},
-	{-1,  0,  0,  0,  0,  6, 40, 36},
-	{-1,  0,  0,  0,  0,  0,  0, 40},
-	{-1,  0,  0,  0,  0,  0,  0,  0},
-	{-1,  0,  0,  0,  0,  0,  0,  0},
-	{-1, -1, -1, -1, -1, -1, -1, -1}
-}
-
-local town_buildings = {"Farm", "Farm"}
-
-local town_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-archer"}
-
-local invader_buildings = {"Farm", "Farm"}
-
-local invader_units = {"unit-germanic-warrior", "unit-germanic-warrior", "unit-germanic-archer"}
-
 if (LoadedGame == false) then
-	if (GrandStrategy == false) then
-		GenerateTown(layout, 1, "basque", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, town_units, true, invader_buildings, invader_units, "low", nil)
-		
-		if (MaxTechLevel[GetThisPlayer() + 1] == "") then
-			for i=0,15 do
-				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = "Agrarian (Bronze)"
-				end
-			end
-		end
-	else
-		GenerateTown(layout, 1, "basque", "Gylfing Tribe", 0, "germanic", "Asa Tribe", town_buildings, {}, false, {}, {}, "low", nil)
-	end
-end
-
-
-if (GrandStrategyEventMap) then
-	SetAiType(0, "grand-strategy-battle")
-	SetAiType(1, "passive")
-	
-	-- Asa units
-	CreateProvinceUnits("Jutland", 0)
-	
-	-- Gylfing units
-	CreateProvinceUnits("Scania", 1)
+	GenerateRandomMap({
+		RockQuantity = "low",
+		TreeQuantity = "medium",
+		WaterQuantity = "low",
+		DarkLandQuantity = "medium",
+		DarkRoughLandQuantity = "medium",
+		WorkerQuantity = 5,
+		PlayerCivilizations = {"germanic", "basque"},
+		PlayerBuildings = {
+			{"Farm", "Farm"},
+			{"Farm", "Farm"}
+		},
+		WaterLayout = {
+			{30, 35, 31, 31, 36, 30, 30, 30},
+			{31, 39,  0,  0, 40, 31, 36, 30},
+			{ 0,  0,  0,  0,  0,  0, 40, 36},
+			{ 0,  0,  0,  0,  0,  0,  0, 40},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0}
+		},
+		StartingLocationLayout = {
+			{-2, -2, -2, -2, -2, -2, -2, -2},
+			{-2, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2,  1, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -2, -2, -2, -2, -2, -2, -2},
+			{-1, -1, -1, -1, -1, -1, -1, -1}
+		}
+	})
 end

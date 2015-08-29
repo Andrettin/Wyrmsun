@@ -10,7 +10,7 @@
 --
 --      events.lua - Defines events for the Germanic civilization.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,6 +28,17 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(0, "Faction", "Asa Tribe")
+	SetPlayerData(0, "Resources", "gold", 0)
+	SetPlayerData(0, "Resources", "lumber", 0)
+	SetPlayerData(0, "Resources", "stone", 0)
+	SetPlayerData(0, "Resources", "oil", 0)
+	SetAiType(0, "land-attack")
+	SetPlayerData(1, "Name", "Natives")
+	SetPlayerData(1, "Resources", "gold", 2000)
+	SetPlayerData(1, "Resources", "lumber", 1000)
+	SetPlayerData(1, "Resources", "stone", 500)
+	SetPlayerData(1, "Resources", "oil", 0)
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-town-hall", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-farm", "F")
@@ -35,7 +46,46 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-carpenters-shop", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-germanic-smithy", "F")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "unit-gold-mine", "F")
+	
+	if (GrandStrategy == false) then
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	elseif (GrandStrategyEventMap) then
+		SetAiType(0, "grand-strategy-battle")
+		
+		-- Asa units
+		CreateProvinceUnits("Astrakhan", 0)
+	end
 
+	unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitActive(unit, false)
+	unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitActive(unit, false)
+		
+	CreateCreeps(15, "unit-glyph", 1, 0, Map.Info.MapWidth / 8, Map.Info.MapHeight / 3, Map.Info.MapHeight)
+	if (GameSettings.Difficulty == 1) then -- if difficulty is easy
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 1 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 3 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 6 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		CreateCreeps(1, "unit-germanic-warrior", Map.Info.MapWidth * 12 / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	end
+		
 	-- reveal area near the glyph
 	local uncount = 0
 	uncount = GetUnits(15)

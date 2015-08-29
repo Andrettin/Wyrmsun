@@ -28,6 +28,55 @@
 if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
 	SetPlayerData(0, "Faction", "Suebi Tribe")
+	SetPlayerData(0, "Resources", "gold", 5000)
+	SetPlayerData(0, "Resources", "lumber", 2500)
+	SetPlayerData(0, "Resources", "stone", 1250)
+	SetPlayerData(0, "Resources", "oil", 0)
+	SetAiType(0, "land-attack")
+	SetPlayerData(1, "Faction", "Aedui Tribe")
+	SetPlayerData(1, "Resources", "gold", 2000)
+	SetPlayerData(1, "Resources", "lumber", 1000)
+	SetPlayerData(1, "Resources", "stone", 500)
+	SetPlayerData(1, "Resources", "oil", 0)
+	SetAiType(1, "land-attack")
+	SetPlayerData(2, "Faction", "Sequani Tribe")
+	SetPlayerData(2, "Resources", "gold", 2000)
+	SetPlayerData(2, "Resources", "lumber", 1000)
+	SetPlayerData(2, "Resources", "stone", 500)
+	SetPlayerData(2, "Resources", "oil", 0)
+	SetAiType(2, "passive")
+	
+	if (GrandStrategy == false) then
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		
+		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+	elseif (GrandStrategyEventMap) then
+		SetAiType(0, "grand-strategy-battle")
+		SetAiType(1, "grand-strategy-battle")
+		SetAiType(2, "grand-strategy-battle")
+		
+		local units_to_be_created = {}
+		
+		-- Suebi units
+		CreateProvinceUnits("Brandenburg", 0, 1, false, true)
+		
+		-- Aedui units
+		CreateProvinceUnits("France", 1, 1, false, true)
+	end
+	
+	if (GrandStrategy == false or GrandStrategyEventMap) then
+		SetDiplomacy(0, "allied", 2)
+		SetSharedVision(0, true, 2)
+		SetDiplomacy(2, "allied", 0)
+		SetSharedVision(2, true, 0)
+	end
 end
 
 -- The Battle of Magetobria introduction

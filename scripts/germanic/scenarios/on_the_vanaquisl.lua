@@ -28,7 +28,69 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(0, "Faction", "Asa Tribe")
+	SetPlayerData(0, "Resources", "gold", 2000)
+	SetPlayerData(0, "Resources", "lumber", 1000)
+	SetPlayerData(0, "Resources", "stone", 500)
+	SetPlayerData(0, "Resources", "oil", 0)
+	SetAiType(0, "land-attack")
+	SetPlayerData(1, "Faction", "Vana Tribe")
+	SetPlayerData(1, "Resources", "gold", 2000)
+	SetPlayerData(1, "Resources", "lumber", 1000)
+	SetPlayerData(1, "Resources", "stone", 500)
+	SetPlayerData(1, "Resources", "oil", 0)
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+
+	if (GrandStrategy == false) then
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		
+		unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		
+		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
+			CreateCreeps(1, "unit-germanic-warrior", 4, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
+		elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
+			CreateCreeps(1, "unit-germanic-warrior", 9, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
+		elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
+			CreateCreeps(1, "unit-germanic-warrior", 18, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
+		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
+		end
+	end
+	
+	-- create raft in the nearest coast tile to the Vana settlement
+	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
+	if (nearest_coast ~= nil) then
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
+	end
+	
+	if (GrandStrategyEventMap) then
+		SetAiType(0, "grand-strategy-battle")
+		
+		-- Asa units
+		CreateProvinceUnits("Astrakhan", 0)
+
+		-- Vana units
+		CreateProvinceUnits("Don", 1)
+	end
 end
 
 -- On the Vanaquisl introduction

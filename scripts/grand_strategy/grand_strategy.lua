@@ -424,7 +424,7 @@ function RunGrandStrategyGameSetupMenu()
 				if (string.find(bookmark_list[i], "BC") ~= nil) then
 					bookmark_date = bookmark_date * -1
 				end
-				if (GrandStrategyYear == bookmark_date) then
+				if (GrandStrategyYear >= bookmark_date) then
 					bookmark:setSelected(i-1)
 					bookmark_found = true
 				end

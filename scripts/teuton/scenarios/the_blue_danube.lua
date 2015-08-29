@@ -27,10 +27,34 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-teuton-writing", "F")
+	SetPlayerData(0, "Resources", "gold", 5000)
+	SetPlayerData(0, "Resources", "lumber", 2500)
+	SetPlayerData(0, "Resources", "stone", 1250)
+	SetPlayerData(0, "Resources", "oil", 0)
+	SetAiType(0, "land-attack")
+	SetPlayerData(1, "Resources", "gold", 2000)
+	SetPlayerData(1, "Resources", "lumber", 1000)
+	SetPlayerData(1, "Resources", "stone", 500)
+	SetPlayerData(1, "Resources", "oil", 0)
+	SetAiType(1, "land-attack")
+	
+	SetPlayerData(1, "Faction", "Rome")
+	
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
 		SetPlayerData(0, "Faction", "Bavarian Tribe")
+		
+		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		
+		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-teuton-catapult", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")

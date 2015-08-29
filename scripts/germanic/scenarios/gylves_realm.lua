@@ -28,7 +28,41 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(0, "Faction", "Asa Tribe")
+	SetPlayerData(0, "Resources", "gold", 2000)
+	SetPlayerData(0, "Resources", "lumber", 1000)
+	SetPlayerData(0, "Resources", "stone", 500)
+	SetPlayerData(0, "Resources", "oil", 0)
+	SetAiType(0, "land-attack")
+	SetPlayerData(1, "Faction", "Gylfing Tribe")
+	SetPlayerData(1, "Resources", "gold", 2000)
+	SetPlayerData(1, "Resources", "lumber", 1000)
+	SetPlayerData(1, "Resources", "stone", 500)
+	SetPlayerData(1, "Resources", "oil", 0)
+	SetAiType(1, "land-attack")
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+	
+	if (GrandStrategy == false) then
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-germanic-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		
+		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitActive(unit, false)
+	elseif (GrandStrategyEventMap) then
+		SetAiType(0, "grand-strategy-battle")
+		SetAiType(1, "passive")
+		
+		-- Asa units
+		CreateProvinceUnits("Jutland", 0)
+		
+		-- Gylfing units
+		CreateProvinceUnits("Scania", 1)
+	end
 end
 
 -- Gylve's Realm introduction
