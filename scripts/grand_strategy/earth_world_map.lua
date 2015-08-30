@@ -7095,6 +7095,10 @@ if (GrandStrategyYear >= -30000) then
 	-- Bone projectile point in Grimaldi, Italy c. 30,000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 111.
 end
 
+if (GrandStrategyYear >= -16000) then
+	-- The Late Glacial of Denmark ends about 16,000 BC, and the region surrounding the later settlement of Tybrind Vig (in the coast of the Danish island of Fyn) is formed; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 141.
+end
+
 if (GrandStrategyYear >= -9500) then
 	-- Pleistocene-Holocene transition (Holocene interglacial epoch begins) around 9500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 48, 126.
 	-- Before 9500 BC, Europe to the north of the Mediterranean had been in large part covered by "tundra-steppe" and boreal forests, with large herds of reindeer, wild horses and other herbivores laying about; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 127.
@@ -7175,6 +7179,8 @@ if (GrandStrategyYear >= -5500) then
 	-- Mediterranean Sea and Black Sea reconnected around 5500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 126.
 	
 	-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+	
+	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 end
 
 if (GrandStrategyYear >= -5400) then
@@ -7199,6 +7205,9 @@ if (GrandStrategyYear >= -4990) then
 	-- Fish and boat landing area belonging to the Ertebolle culture existed in Zealand in 4990 BC (could be relevant for setting factions' technologies or resource production); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 end
 
+if (GrandStrategyYear >= -4700) then
+	-- The oldest known ceramics in southern Scandinavia were present in Tybrind Vig (in the coast of the Danish island of Fyn, belonging to the Ertebolle culture) around 4700 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
+end
 if (GrandStrategyYear >= -4600) then
 	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) ceased facing several occupations c. 4600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 end
@@ -7231,6 +7240,8 @@ if (GrandStrategyYear >= -4000) then
 	-- Use of plows begins in Northwestern Europe c. 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
 	
 	-- Around 4000 BC in Skateholm (southernmost part of Sweden) the formation of an inlet in phases ends; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 140.
+	
+	-- Tybrind Vig (in the coast of the Danish island of Fyn) ends being occupied around 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 end
 
 if (GrandStrategyYear >= -3950) then

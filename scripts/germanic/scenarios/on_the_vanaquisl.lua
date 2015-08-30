@@ -74,15 +74,9 @@ if (LoadedGame == false) then
 		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		end
-	end
-	
-	-- create raft in the nearest coast tile to the Vana settlement
-	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
-	if (nearest_coast ~= nil) then
-		unit = CreateUnit("unit-raft", 15, nearest_coast)
-	end
-	
-	if (GrandStrategyEventMap) then
+	elseif (GrandStrategyEventMap) then
+		unit = OldCreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		
 		SetAiType(0, "grand-strategy-battle")
 		
 		-- Asa units
@@ -90,6 +84,12 @@ if (LoadedGame == false) then
 
 		-- Vana units
 		CreateProvinceUnits("Don", 1)
+	end
+	
+	-- create raft in the nearest coast tile to the Vana settlement
+	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
+	if (nearest_coast ~= nil) then
+		unit = CreateUnit("unit-raft", 15, nearest_coast)
 	end
 end
 

@@ -40,6 +40,7 @@ function DefineUpgrade(upgrade, data)
 		for i = 1,MaxCosts do
 			upgrade.Costs[i - 1] = CUpgrade:Get(data.Parent).Costs[i - 1]
 			upgrade.GrandStrategyCosts[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyCosts[i - 1]
+			upgrade.GrandStrategyProductionEfficiencyModifier[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyProductionEfficiencyModifier[i - 1]
 		end
 		upgrade.TechnologyPointCost = CUpgrade:Get(data.Parent).TechnologyPointCost
 		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
@@ -73,6 +74,11 @@ function DefineUpgrade(upgrade, data)
 	if (data.GrandStrategyCosts ~= nil) then
 		for i = 1,table.getn(data.GrandStrategyCosts),2 do
 			upgrade.GrandStrategyCosts[GetResourceID(data.GrandStrategyCosts[i])] = data.GrandStrategyCosts[i + 1]
+		end
+	end
+	if (data.GrandStrategyProductionEfficiencyModifier ~= nil) then
+		for i = 1,table.getn(data.GrandStrategyProductionEfficiencyModifier),2 do
+			upgrade.GrandStrategyProductionEfficiencyModifier[GetResourceID(data.GrandStrategyProductionEfficiencyModifier[i])] = data.GrandStrategyProductionEfficiencyModifier[i + 1]
 		end
 	end
 	if (data.TechnologyPointCost ~= nil) then
@@ -119,6 +125,7 @@ DefineUpgrade("upgrade-coinage", {
 	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
 	Costs = {"time", 250, "gold", 1500},
 	GrandStrategyCosts = {"time", 250, "gold", 1500, "research", 1500},
+	GrandStrategyProductionEfficiencyModifier = {"gold", 10},
 	Ability = false
 })
 
@@ -128,6 +135,7 @@ DefineUpgrade("upgrade-writing", {
 	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Research Speed."),
 	Costs = {"time", 250, "gold", 900, "lumber", 750},
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
+	GrandStrategyProductionEfficiencyModifier = {"research", 50},
 	Ability = false
 })
 

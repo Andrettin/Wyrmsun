@@ -3790,6 +3790,7 @@ DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
 	RepairHp = 4,
 	RepairCosts = {"gold", 1, "lumber", 1},
 	ImproveProduction = {"lumber", 25},
+	GrandStrategyProductionEfficiencyModifier = {"lumber", 25},
 	Construction = "construction-land",
 	Speed = 0,
 	HitPoints = 500, -- 600 with masonry
