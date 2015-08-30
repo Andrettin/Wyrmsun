@@ -198,7 +198,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-germanic-smithy",
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
+  Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
   ForUnit = {"unit-germanic-worker", "unit-germanic-builder", "unit-teuton-worker"} } )
 
 -- Building Commands ---------------------------------------------------------

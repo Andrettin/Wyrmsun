@@ -50,25 +50,25 @@ Load("scripts/teuton/buttons.lua")
 
 DefineButton( { Pos = 16, Level = 9, Icon = "icon-cancel",
 	Action = "cancel",
-	Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {"*"}
 } )
 
 DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
 	Action = "cancel-upgrade",
-	Key = "escape", Hint = "~<ESC~> Cancel Upgrade", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel Upgrade (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {"cancel-upgrade"}
 } )
 
 DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
 	Action = "cancel-train-unit",
-	Key = "escape", Hint = "~<ESC~> Cancel Unit Training", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel Unit Training (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {"*"}
 } )
 
 DefineButton( { Pos = 16, Level = 0, Icon = "icon-cancel",
 	Action = "cancel-build",
-	Key = "escape", Hint = "~<ESC~> Cancel Construction", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel Construction (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {"cancel-build"}
 } )
 
@@ -177,7 +177,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-deadly-precision",
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
-	Key = "escape", Hint = "~<ESC~> Cancel", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-scout", "unit-dwarven-gryphon-rider",

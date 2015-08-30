@@ -132,7 +132,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-gnomish-barracks",
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,
-  Key = "escape", Hint = _("~<ESC~> Cancel"), Popup = "popup-commands",
+  Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
   ForUnit = {"unit-gnomish-worker"} } )
 
 -- buildings commands ---------------------------------------------------------

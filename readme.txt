@@ -222,6 +222,8 @@ https://github.com/Andrettin/Wyrmsun
 - Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
 - Burgs and Bastions now provide two guard towers in defensive battles.
+- Tile tooltips are now drawn as popups in the bottom-left corner of the map, instead of being drawn below the minimap.
+- Interface tooltips are now drawn as popups.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.
@@ -229,6 +231,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.
 - Fixed a few minor issues with button clicking.
+- Encyclopedia, tech tree and quest tooltips are now drawn as popups.
 
 -----------------------------------------------------------------------
 - 1.3.3

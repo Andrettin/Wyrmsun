@@ -7099,6 +7099,12 @@ if (GrandStrategyYear >= -16000) then
 	-- The Late Glacial of Denmark ends about 16,000 BC, and the region surrounding the later settlement of Tybrind Vig (in the coast of the Danish island of Fyn) is formed; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 141.
 end
 
+if (GrandStrategyYear >= -10000) then
+	-- Mesolithic begins in Northwestern Europe around 10,000 BC, lasting for six thousand years; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 144.
+	
+	-- Sauveterrian narrow-blade arrowheads begin spreading from central and southern France to the rest of northwestern Europe around 10,000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
+end
+
 if (GrandStrategyYear >= -9500) then
 	-- Pleistocene-Holocene transition (Holocene interglacial epoch begins) around 9500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 48, 126.
 	-- Before 9500 BC, Europe to the north of the Mediterranean had been in large part covered by "tundra-steppe" and boreal forests, with large herds of reindeer, wild horses and other herbivores laying about; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 127.
@@ -7109,10 +7115,18 @@ if (GrandStrategyYear >= -9000) then
 	SetProvinceOwner("Zealand", "basque", "Maglemose Tribe")
 	SetProvinceCivilization("Zealand", "basque")
 	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
+	
+	-- Moose likely become extinct in northwestern Europe around 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 end
 
 if (GrandStrategyYear >= -8700) then
 	-- Hunter-gatherers begin continuously visiting a lake by Friesack (150 kilometers northwest of Berlin); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 133-134.
+end
+
+if (GrandStrategyYear >= -8500) then
+	-- The Star Carr site (in Yorkshire, England) underwent two occupation periods in the middle of the 9th millenium BC; in the site were found microliths (i.e. arrowheads), barbed antler points, moose bones, wild cattle bones, red and roe deer bones, pine marten bones, fox bones, beaver bones, remains of birds such as the red-breasted-merganser, red-throated diver and great crested grebe, water chestnuts, bog bean, fat hen, nettle and hazelnuts; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
+	
+	-- The Mount Sandel site (River Bann valley, Northern Ireland) was occupied in the late 9th millenium BC; in the site were found narrow-bladed, geometric microliths, wild boar bones, remains of birds such as mallard, teal, wigeon, grouse, capercaillie and snipe/woodcock, remains of fishes such as salmon, sea trout, eel and bass, hazelnuts, pears, apples and water-lilies; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 end
 
 if (GrandStrategyYear >= -8000) then
@@ -7123,6 +7137,12 @@ if (GrandStrategyYear >= -8000) then
 	-- Around 8000 BC what is today the Södertorn Peninsula to the south of Stockholm was a group of rocky islets; many low coastal lands and mouths of rivers and bays were flooded; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
 
 	-- Near 8000 BC the Stockholm Archipelago was settled by foragers, placing their camps on sheltered bays and throughout the narrow straits between the islands; those living in the outer archipelago lived off seal hunting and fishing, while those living nearer the mainland hunted a wider variety of animals; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
+	
+	-- Up to about 8000 BC obliquely blunted and broad-bladed arrowheads are present in Mesolithic British Isles, Low Countries, and northeastern France; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 144.
+	
+	-- Production blanks of bone and antler in northwestern Europe were replaced by production blanks made of split sections of long bone or antler beam c. 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
+	
+	-- The L'Abri du Pape site (Meuse valley, Belgium) was occupied in the 8th and early 7th milleniums BC; in the site were found remains of mammals such as red and roe deer, wild boar, wild cattle, otter, fox and wild cat, remains of birds, remains of fishes such as carp, pike, catfish, eel, salmon, perch and shad; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 146-147.
 end
 
 if (GrandStrategyYear >= -7800) then
@@ -7151,6 +7171,10 @@ if (GrandStrategyYear >= -7000) then
 	-- The Ancylus Lake (in Northern Europe) is dammed at its south until little after 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 133.
 	
 	-- Littorina Sea and the North Sea connected circa 7000 BC; many low coastal lands and mouths of rivers and bays were flooded; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 134.
+	
+	-- Sauveterrian narrow-blade arrowheads finish spreading from central and southern France to the rest of northwestern Europe around 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
+	
+	-- Trapeze-shaped arrowheads ("Tardenoisian") appear in continental northwestern Europe around 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
 end
 
 if (GrandStrategyYear >= -6800) then
@@ -7181,6 +7205,8 @@ if (GrandStrategyYear >= -5500) then
 	-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
 	
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
+	
+	-- The Polderweg site (Netherlands) was occupied in the late 6th millenium BC; main economic activity was pike fishing, although fishing for roach, bream, tench, eels, catfish and salmon was conducted as well; beavers and otters were the most significant animals hunted (likely for their fur), although pine marten, wild cat and polecat were also trapped for that purpose; remains of wild boar and red and roe deer were found as well; remains of ducks were found (the most important fowl food source); regarding plants acorns, hazelnut, water nut, wild apple and diverse berries were too found there; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 end
 
 if (GrandStrategyYear >= -5400) then
@@ -7208,6 +7234,7 @@ end
 if (GrandStrategyYear >= -4700) then
 	-- The oldest known ceramics in southern Scandinavia were present in Tybrind Vig (in the coast of the Danish island of Fyn, belonging to the Ertebolle culture) around 4700 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 end
+
 if (GrandStrategyYear >= -4600) then
 	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) ceased facing several occupations c. 4600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 end
