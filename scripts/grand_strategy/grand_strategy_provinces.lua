@@ -27,6 +27,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Regions = {
+	BritishIsles = {"England", "Scotland", "Ireland"},
+	Czechoslovakia = {"Bohemia"},
+	England = {"England"},
+	Eurasia = {"Astrakhan", "Don", "Russia", "Ukraine", "White Russia"},
+	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "Don", "England", "Epirus", "Euboea", "France", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Macedonia", "Moldavia", "Naples", "Netherlands", "North Italy", "Poland", "Portugal", "Prussia", "Rhineland", "Rhodes", "Russia", "Sardinia", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Ukraine", "Wallachia", "White Russia", "Zealand"},
+	France = {"Aquitaine", "Brittany", "Burgundy", "France"},
+	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France"},
+	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Rhineland", "Netherlands", "Silesia"},
+	Greece = {"Aetolia", "Albania", "Argolis", "Attica", "Boeotia", "Crete", "Epirus", "Euboea", "Lacedaemonia", "Macedonia", "Rhodes", "Thessaly", "Thrace"},
+	Iberia = {"Andalusia", "Aragon", "Castille", "Gallaecia", "Portugal"},
+	Italy = {"Corsica", "Latium", "Naples", "North Italy", "Sardinia", "Sicily"},
+	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Ireland", "Netherlands", "Scotland"},
+	Poland = {"Galicia", "Poland", "White Russia"},
+	RomanDanube = {"Austria", "Bavaria", "Bulgaria", "Croatia", "Hungary", "Serbia", "Switzerland"},
+	Scandinavia = {"Gotaland", "Gotland", "Jutland", "Scania", "Sweden", "Zealand"},
+	WestandCentralEurope = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "England", "Epirus", "Euboea", "France", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Macedonia", "Moldavia", "Naples", "Netherlands", "North Italy", "Poland", "Portugal", "Prussia", "Rhineland", "Rhodes", "Sardinia", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Wallachia", "Zealand"}
+}
+
 function LoadProvinces(world)
 	WorldMapProvinces = nil
 	WorldMapProvinces = {}
@@ -967,26 +986,6 @@ function LoadProvinces(world)
 				"celt", "Scot Tribe"
 			}
 		},
-		Latium = {
-			Name = "Latium",
-			Tiles = { {129, 33}, {129, 34} },
-			SettlementName = "Rome",
-			CulturalNames = {
-				latin = "Latium"
-			},
-			CulturalSettlementNames = {
-				latin = "Roma"
-			},
-			SettlementLocation = {129, 34}, -- Rome
-			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
-			},
-			SettlementTerrain = "Plains",
-			Claims = {
-				"latin", "Rome"
-			}
-		},
 		Jutland = {
 			Name = "Jutland",
 			CulturalNames = {
@@ -1043,6 +1042,26 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"greek", "Sparta"
+			}
+		},
+		Latium = {
+			Name = "Latium",
+			Tiles = { {129, 33}, {129, 34} },
+			SettlementName = "Rome",
+			CulturalNames = {
+				latin = "Latium"
+			},
+			CulturalSettlementNames = {
+				latin = "Roma"
+			},
+			SettlementLocation = {129, 34}, -- Rome
+			Map = "maps/random_maps/random-map-forest.smp",
+			Units = {
+				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
+			},
+			SettlementTerrain = "Plains",
+			Claims = {
+				"latin", "Rome"
 			}
 		},
 		Macedonia = {

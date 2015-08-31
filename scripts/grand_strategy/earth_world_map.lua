@@ -7103,6 +7103,10 @@ if (GrandStrategyYear >= -10000) then
 	-- Mesolithic begins in Northwestern Europe around 10,000 BC, lasting for six thousand years; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 144.
 	
 	-- Sauveterrian narrow-blade arrowheads begin spreading from central and southern France to the rest of northwestern Europe around 10,000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
+	
+	SetRegionPopulation("West and Central Europe", 500000) -- Non-CIS Europe had a population of around 0.5 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 200000) -- CIS had a population of around 0.2 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 end
 
 if (GrandStrategyYear >= -9500) then
@@ -7117,6 +7121,10 @@ if (GrandStrategyYear >= -9000) then
 	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
 	
 	-- Moose likely become extinct in northwestern Europe around 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
+	
+	SetRegionPopulation("West and Central Europe", 800000) -- Non-CIS Europe had a population of around 0.8 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 200000) -- CIS had a population of around 0.2 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 end
 
 if (GrandStrategyYear >= -8700) then
@@ -7143,6 +7151,10 @@ if (GrandStrategyYear >= -8000) then
 	-- Production blanks of bone and antler in northwestern Europe were replaced by production blanks made of split sections of long bone or antler beam c. 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
 	
 	-- The L'Abri du Pape site (Meuse valley, Belgium) was occupied in the 8th and early 7th milleniums BC; in the site were found remains of mammals such as red and roe deer, wild boar, wild cattle, otter, fox and wild cat, remains of birds, remains of fishes such as carp, pike, catfish, eel, salmon, perch and shad; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 146-147.
+	
+	SetRegionPopulation("West and Central Europe", 1100000) -- Non-CIS Europe had a population of around 1.1 millions in 8000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 400000) -- CIS had a population of around 0.4 millions in 8000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 end
 
 if (GrandStrategyYear >= -7800) then
@@ -7175,6 +7187,12 @@ if (GrandStrategyYear >= -7000) then
 	-- Sauveterrian narrow-blade arrowheads finish spreading from central and southern France to the rest of northwestern Europe around 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
 	
 	-- Trapeze-shaped arrowheads ("Tardenoisian") appear in continental northwestern Europe around 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 145.
+	
+	SetRegionPopulation("West and Central Europe", 1500000) -- Non-CIS Europe had a population of around 1.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 500000) -- CIS had a population of around 0.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Northwest Europe", 100000) -- At the height of the Mesolithic the population in northwestern Europe was no larger than 100,000; since the Mesolithic in Northwestern Europe began around 10,000 BC and ended about 4000 BC, its height would have been in the middle, or 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 144, 148.
 end
 
 if (GrandStrategyYear >= -6800) then
@@ -7192,6 +7210,12 @@ if (GrandStrategyYear >= -6400) then
 	AcquireFactionTechnologies("basque", "Maglemose Tribe", "basque", "Kongemose Tribe")
 end
 
+if (GrandStrategyYear >= -6000) then
+	SetRegionPopulation("West and Central Europe", 2100000) -- Non-CIS Europe had a population of around 2.1 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 800000) -- CIS had a population of around 0.8 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+end
+
 if (GrandStrategyYear >= -5800) then
 	-- Cris culture migrates from southeastern Europe and the Lower Danube Valley to the region on the western side of the Dnieper/Dniester rivers; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 107-108.
 	
@@ -7206,7 +7230,7 @@ if (GrandStrategyYear >= -5500) then
 	
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 	
-	-- The Polderweg site (Netherlands) was occupied in the late 6th millenium BC; main economic activity was pike fishing, although fishing for roach, bream, tench, eels, catfish and salmon was conducted as well; beavers and otters were the most significant animals hunted (likely for their fur), although pine marten, wild cat and polecat were also trapped for that purpose; remains of wild boar and red and roe deer were found as well; remains of ducks were found (the most important fowl food source); regarding plants acorns, hazelnut, water nut, wild apple and diverse berries were too found there; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
+	-- The Polderweg site (Netherlands) was occupied in the late 6th millenium BC; main economic activity was pike fishing, although fishing for roach, bream, tench, eels, catfish and salmon was conducted as well; beavers and otters were the most significant animals hunted (likely for their fur), although pine marten, wild cat and polecat were also trapped for that purpose; remains of wild boar and red and roe deer were found as well; remains of ducks were found (the most important fowl food source); regarding plants acorns, hazelnut, water nut, wild apple and diverse berries were too found there; arrowheads (likely from Linearbandkeramik) were also found there, as well as bag-shaped pottery (from Linearbandkeramik areas or made in this form due to their influence); the people of the Polderweg site led a semi-nomadic life, and occupied the site only in January and February of each year; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 147.
 end
 
 if (GrandStrategyYear >= -5400) then
@@ -7225,6 +7249,12 @@ end
 
 if (GrandStrategyYear >= -5100) then
 	-- Fish trap belonging to the Ertebolle culture existed in Zealand in 5100 BC (could be relevant for setting factions' technologies or resource production); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+end
+
+if (GrandStrategyYear >= -5000) then
+	SetRegionPopulation("West and Central Europe", 3100000) -- Non-CIS Europe had a population of around 3.1 millions in 5000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 1200000) -- CIS had a population of around 1.2 millions in 5000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 end
 
 if (GrandStrategyYear >= -4990) then
@@ -7269,6 +7299,14 @@ if (GrandStrategyYear >= -4000) then
 	-- Around 4000 BC in Skateholm (southernmost part of Sweden) the formation of an inlet in phases ends; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 140.
 	
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) ends being occupied around 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
+	
+	SetRegionPopulation("West and Central Europe", 4400000) -- Non-CIS Europe had a population of around 4.4 millions in 4000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 1800000) -- CIS had a population of around 1.8 millions in 4000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	-- Mesolithic ends in Northwestern Europe around 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 144.
+	
+	SetRegionPopulation("British Isles", (2750 + 5500 / 2)) -- The British Isles had between 2,750 and 5,500 people at the end of the Mesolithic; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 148.
 end
 
 if (GrandStrategyYear >= -3950) then
@@ -7316,6 +7354,10 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	SetProvinceSettlementBuilding("Scania", "unit-germanic-barracks", true)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-warrior", 4)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-archer", 4)
+	
+	SetRegionPopulation("West and Central Europe", 6600000) -- Non-CIS Europe had a population of around 6.6 millions in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 2700000) -- CIS had a population of around 2.7 millions in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
 	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 end
@@ -7403,6 +7445,10 @@ if (GrandStrategyYear >= -2000) then
 	SetWorldMapResourceProspected("gold", 466, 112, true) -- Tin deposits in Cornwall which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
 	SetWorldMapResourceProspected("gold", 461, 135, true) -- Tin deposits in northwestern Iberia which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
 	SetWorldMapResourceProspected("gold", 517, 113, true) -- Tin deposits which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
+	
+	SetRegionPopulation("West and Central Europe", 10300000) -- Non-CIS Europe had a population of around 10.3 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 4100000) -- CIS had a population of around 4.1 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
 if (GrandStrategyYear >= -1900) then
@@ -7523,6 +7569,10 @@ if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; S
 	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-broad-sword", true)
 	
 	-- Widespread accretion of fine-grained floodpain alluvium in Northern European lowland rivers after 1000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 129.
+	
+	SetRegionPopulation("West and Central Europe", 16700000) -- Non-CIS Europe had a population of around 16.7 millions in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 6100000) -- CIS had a population of around 6.1 millions in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
 if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
@@ -7812,13 +7862,21 @@ if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquire
 	SetProvinceOwner("Serbia", "latin", "Rome")
 end
 
-if (GrandStrategyYear >= -27) then -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
+if (GrandStrategyYear >= -27) then
+	-- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 --	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
 --	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Swede Tribe")
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	GrandStrategyEvents.YngvesSickness = nil
 	GrandStrategyEvents.FjolneChieftainOfTheSwedes = nil
 	GrandStrategyEvents.FredfrodeChieftainOfTheDanes = nil
+	
+	SetRegionPopulation("Roman Danube", 2000000) -- 2 million people lived in the (Roman) Danube at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Gaul", 5000000) -- 5 million people lived in France at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Greece", 3000000) -- 3 million people lived in Greece at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Italy", 14000000) -- 14 million people lived in Italy at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Iberia", 6000000) -- 6 million people lived in Spain-Portugal at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	 -- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -7849,6 +7907,12 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-archer", 2) -- let's make 20,000 of those soldiers into archers
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-swordsman", GetProvinceUnitQuantity("Bohemia", "unit-teuton-swordsman") + 1) -- treat cavalry as infantry for now, while cavalry units haven't been added yet
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Marcomanni Tribe")
+end
+
+if (GrandStrategyYear >= 0) then
+	SetRegionPopulation("West and Central Europe", 29300000) -- Non-CIS Europe had a population of around 29.3 millions in 0 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 9200000) -- CIS had a population of around 9.2 millions in 0 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
 if (GrandStrategyYear >= 3) then -- estimated date
@@ -7894,6 +7958,12 @@ if (GrandStrategyYear >= 98) then
 --	SetProvinceOwner("Sweden", "norse", "Swede Tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
+if (GrandStrategyYear >= 100) then
+	SetRegionPopulation("West and Central Europe", 31000000) -- Non-CIS Europe had a population of around 31 millions in 100 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 8600000) -- CIS had a population of around 8.6 millions in 100 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+end
+
 if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Moldavia", "latin", "Rome")
 	SetProvinceOwner("Transylvania", "latin", "Rome")
@@ -7929,12 +7999,24 @@ if (GrandStrategyYear >= 200) then
 	SetProvinceOwner("Wallachia", "goth", "Visigoth Tribe") -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Moldavia", "goth", "Visigoth Tribe")
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Visigoth Tribe")
+	
+	SetRegionPopulation("West and Central Europe", 32600000) -- Non-CIS Europe had a population of around 32.6 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 8100000) -- CIS had a population of around 8.1 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+	
+	-- Josiah Cox Russell gives 40 million people in Europe in 200 AD; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
 if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --	SetProvinceOwner("Moldavia", "", "")
 	SetProvinceOwner("Transylvania", "", "")
 --	SetProvinceOwner("Wallachia", "", "")
+end
+
+if (GrandStrategyYear >= 300) then
+	SetRegionPopulation("West and Central Europe", 31200000) -- Non-CIS Europe had a population of around 31.2 millions in 300 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 7700000) -- CIS had a population of around 7.7 millions in 300 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
 if (GrandStrategyYear >= 325) then
@@ -7963,6 +8045,10 @@ end
 
 if (GrandStrategyYear >= 400) then
 	GrandStrategyEvents.NotitiaDignitatum = nil -- Notitia Dignitatum was written c. 400 AD
+	
+	SetRegionPopulation("West and Central Europe", 29700000) -- Non-CIS Europe had a population of around 29.7 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 7400000) -- CIS had a population of around 7.4 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
 if (GrandStrategyYear >= 411) then
@@ -8046,6 +8132,10 @@ end
 
 if (GrandStrategyYear >= 500) then
 	GrandStrategyEvents.HistoriaNova = nil
+	
+	SetRegionPopulation("West and Central Europe", 25900000) -- Non-CIS Europe had a population of around 25.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	SetRegionPopulation("Eurasia", 6900000) -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -8315,12 +8405,21 @@ if (GrandStrategyYear >= 1241) then
 	GrandStrategyEvents.SnorrisMurder = nil
 end
 
-if (GrandStrategyYear >= 1490) then -- happened in the 1490s; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
-	GrandStrategyEvents.Vornedskabet = nil
+if (GrandStrategyYear >= 1401) then
+	SetRegionPopulation("England", 4000000) -- 4 million people lived in England during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("France", 21000000) -- 21 million people lived in France during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Germany-Netherlands", 15000000) -- 15 million people lived in Germany-Netherlands during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Italy", 11000000) -- 11 million people lived in Italy during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Iberia", 6000000) -- 6 million people lived in Spain-Portugal during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Scandinavia", 2000000) -- 2 million people lived in Scandinavia during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
-if (GrandStrategyYear >= 1523) then -- happened in 1523-1536; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
-	GrandStrategyEvents.NoblesAcquireLegalJurisdictionPrivilege = nil
+if (GrandStrategyYear >= 1490) then
+	GrandStrategyEvents.Vornedskabet = nil -- happened in the 1490s; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+end
+
+if (GrandStrategyYear >= 1523) then
+	GrandStrategyEvents.NoblesAcquireLegalJurisdictionPrivilege = nil -- happened in 1523-1536; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 end
 
 if (GrandStrategyYear >= 1526) then -- East Prussian Land Ordinance of 1526; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
@@ -8390,6 +8489,17 @@ end
 
 if (GrandStrategyYear >= 1586) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.
 	GrandStrategyEvents.Britannia = nil
+end
+
+if (GrandStrategyYear >= 1600) then
+	SetRegionPopulation("Czechoslovakia", 2000000) -- 2 million people lived in Czechoslovakia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("England", 5000000) -- 5 million people lived in England around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("France", 17000000) -- 17 million people lived in France around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Germany-Netherlands", 20000000) -- 20 million people lived in Germany-Netherlands around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Italy", 13000000) -- 13 million people lived in Italy around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Iberia", 10000000) -- 10 million people lived in Spain-Portugal around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Poland", 3000000) -- 3 million people lived in Poland around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	SetRegionPopulation("Scandinavia", 2000000) -- 2 million people lived in Scandinavia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
 if (GrandStrategyYear >= 1616) then -- The Peasants' and Shepherds' Ordinance passed in Western and Eastern Pommerania; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.

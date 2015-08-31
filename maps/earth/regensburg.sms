@@ -7,7 +7,7 @@ end
 if (LoadedGame == false) then
 	GenerateRandomMap({
 		RockQuantity = "low",
-		TreeQuantity = "low",
+		TreeQuantity = "medium",
 		WaterQuantity = "low",
 		DarkLandQuantity = "medium",
 		DarkRoughLandQuantity = "medium",
@@ -18,10 +18,10 @@ if (LoadedGame == false) then
 			{"Farm", "Farm", "Smithy", "Lumber Mill", "Guard Tower", "Guard Tower", "Guard Tower"}
 		},
 		WaterLayout = {
-			{ 0, 18, 11, 10, 10, 19,  0,  0},
-			{18, 16,  0,  0,  0, 17, 19,  0},
-			{ 9,  0,  0,  0,  0,  0,  8,  0},
-			{20, 10, 10, 10, 10, 10, 20, 10}
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{ 0,  0,  0,  0,  0,  0,  0,  0},
+			{10, 10, 10, 10, 10, 10, 10, 10}
 		},
 		StartingLocationLayout = {
 			{-2, -2, -2, -2, -2, -2, -1, -1},
@@ -46,8 +46,6 @@ if (LoadedGame == false) then
 	-- create raft in the nearest coast tile to the Bavarian settlement
 	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[0].StartPos.x, Players[0].StartPos.y)
 	if (nearest_coast ~= nil) then
-		unit = CreateUnit("unit-raft", 15, nearest_coast)
-		unit = CreateUnit("unit-raft", 15, nearest_coast)
 		unit = CreateUnit("unit-raft", 15, nearest_coast)
 	end
 end

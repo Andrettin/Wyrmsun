@@ -224,9 +224,11 @@ https://github.com/Andrettin/Wyrmsun
 - Burgs and Bastions now provide two guard towers in defensive battles.
 - Tile tooltips are now drawn as popups in the bottom-left corner of the map, instead of being drawn below the minimap.
 - Interface tooltips are now drawn as popups.
+- Provinces now show a (cosmetic) population number.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.
+- Changed the river layout of the Regensburg map.
 
 * Miscellaneous
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.

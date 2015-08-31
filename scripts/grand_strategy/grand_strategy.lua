@@ -154,11 +154,6 @@ function RunGrandStrategyGameSetupMenu()
 					table.insert(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name)).OwnedProvinces, key)
 				end
 
-				if (GetProvinceCivilization(WorldMapProvinces[key].Name) == "" and GetProvinceOwner(WorldMapProvinces[key].Name) ~= "") then
-					-- if province has no civilization/culture defined, then make it that of its owner, if any
-					SetProvinceCivilization(WorldMapProvinces[key].Name, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name)).Civilization) -- tell the engine the civilization of the province
-				end
-				
 				if (WorldMapProvinces[key].SettlementName ~= nil) then
 					SetProvinceSettlementName(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementName)
 				end
@@ -4609,5 +4604,13 @@ function GetYearString(year)
 		return year .. " AD"
 	else
 		return (year * -1) .. " BC"
+	end
+end
+
+function SetRegionPopulation(region_name, quantity)
+	local region = Regions[string.gsub(region_name, " ", "")]
+	
+	for i=1,table.getn(region) do
+		SetProvincePopulation(region[i], quantity / table.getn(region))
 	end
 end
