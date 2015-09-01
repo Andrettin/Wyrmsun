@@ -814,7 +814,8 @@ GenerateProvince({
 	BorderProvinces = {"Svarinshaug"},
 	BorderProvinceSouth = true,
 	Resources = {
-		lumber = 3
+		lumber = 3,
+		mushrooms = 1
 	}
 })
 GenerateProvince({
@@ -824,6 +825,7 @@ GenerateProvince({
 	Resources = {
 		gold = 1,
 		lumber = 1,
+		mushrooms = 2,
 		stone = 2
 	}
 })
@@ -837,17 +839,29 @@ GenerateProvince({
 
 -- generate resources for provinces
 --AddProvinceResource(WorldMapProvinces.BrownHills, "gold", 1)
+AddProvinceResource(WorldMapProvinces.BrownHills, "mushrooms", 2)
 AddProvinceResource(WorldMapProvinces.BrownHills, "stone", 1)
+AddProvinceResource(WorldMapProvinces.CavernsOfChaincolt, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.CavernsOfChaincolt, "stone", 1)
+AddProvinceResource(WorldMapProvinces.CavernsOfFlame, "mushrooms", 1)
+AddProvinceResource(WorldMapProvinces.EasternMines, "mushrooms", 1)
+AddProvinceResource(WorldMapProvinces.Heartfangs, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.Heartfangs, "stone", 3)
 AddProvinceResource(WorldMapProvinces.HighPass, "stone", 1)
+AddProvinceResource(WorldMapProvinces.HighbrookPass, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.HighbrookPass, "stone", 1)
+AddProvinceResource(WorldMapProvinces.KalKartha, "mushrooms", 3)
 AddProvinceResource(WorldMapProvinces.KalKartha, "stone", 1)
+AddProvinceResource(WorldMapProvinces.Lyr, "mushrooms", 2)
 AddProvinceResource(WorldMapProvinces.Lyr, "stone", 1)
 AddProvinceResource(WorldMapProvinces.NorthernWastelands, "stone", 1)
+AddProvinceResource(WorldMapProvinces.PeacefulValley, "mushrooms", 1)
+AddProvinceResource(WorldMapProvinces.ShorbearHills, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.ShorbearHills, "stone", 1)
+AddProvinceResource(WorldMapProvinces.SouthernTunnels, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.SouthernTunnels, "stone", 1)
 --AddProvinceResource(WorldMapProvinces.Svarinshaug, "gold", 1)
+AddProvinceResource(WorldMapProvinces.Svarinshaug, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.Svarinshaug, "stone", 1)
 
 MercenaryGroups = {

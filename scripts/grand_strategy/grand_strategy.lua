@@ -203,12 +203,18 @@ function RunGrandStrategyGameSetupMenu()
 			local RandomNumber = 0
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
-					if (WorldMapTileHasResource(x, y, "lumber", true) and GetWorldMapTileTerrain(x, y) == "Plains") then -- make tiles into forest if there is a timber lodge there
-						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Conifer Forest"))
-					elseif (WorldMapTileHasResource(x, y, "lumber", true) and GetWorldMapTileTerrain(x, y) == "Dark Plains") then -- make tiles into forest if there is a timber lodge there
-						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Scrub Forest"))
-					elseif ((WorldMapTileHasResource(x, y, "gold", true) or WorldMapTileHasResource(x, y, "stone", true)) and (GetWorldMapTileTerrain(x, y) == "Plains" or GetWorldMapTileTerrain(x, y) == "Dark Plains")) then -- make plains tiles into hills if there is a mine or quarry there
+					if (WorldMapTileHasResource(x, y, "lumber", true) and GetWorldMapTileTerrain(x, y) ~= "Conifer Forest" and GetWorldMapTileTerrain(x, y) ~= "Scrub Forest") then -- make tiles into forest if there is a timber lodge there
+						if (GrandStrategyWorld == "Nidavellir" or GetWorldMapTileTerrain(x, y) == "Dark Plains") then
+							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Scrub Forest"))
+						else
+							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Conifer Forest"))
+						end
+					elseif ((WorldMapTileHasResource(x, y, "gold", true) or WorldMapTileHasResource(x, y, "stone", true)) and GetWorldMapTileTerrain(x, y) ~= "Hills" and GetWorldMapTileTerrain(x, y) ~= "Mountains") then -- make plains tiles into hills if there is a mine or quarry there
 						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Hills"))
+					elseif (WorldMapTileHasResource(x, y, "grain", true) and GetWorldMapTileTerrain(x, y) ~= "Plains") then
+						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
+					elseif (WorldMapTileHasResource(x, y, "mushrooms", true) and GetWorldMapTileTerrain(x, y) ~= "Dark Plains" and GetWorldMapTileTerrain(x, y) ~= "Hills" and GetWorldMapTileTerrain(x, y) ~= "Mountains" and GetWorldMapTileTerrain(x, y) ~= "Plains") then
+						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Dark Plains"))
 					end
 				end
 			end

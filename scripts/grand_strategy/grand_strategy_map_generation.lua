@@ -567,7 +567,7 @@ function GenerateProvince(arg)
 			for j=1,table.getn(hill_seeds) do
 				for x_offset=-1,1 do
 					for y_offset=-1,1 do
-						if (GetWorldMapTileProvinceName(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and {hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset} ~= arg.Province.SettlementLocation) then
+						if (GetWorldMapTileProvinceName(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and not (hill_seeds[j][1] + x_offset == arg.Province.SettlementLocation[1] and hill_seeds[j][2] + y_offset == arg.Province.SettlementLocation[2])) then
 							if (GetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "Plains" or GetWorldMapTileTerrain(hill_seeds[j][1] + x_offset, hill_seeds[j][2] + y_offset) == "Dark Plains") then
 								local RandomNumber = SyncRand(100)
 								if (RandomNumber < 33) then
@@ -619,7 +619,7 @@ function GenerateProvince(arg)
 			for j=1,table.getn(forest_seeds) do
 				for x_offset=-1,1 do
 					for y_offset=-1,1 do
-						if (GetWorldMapTileProvinceName(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and {forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset} ~= arg.Province.SettlementLocation) then
+						if (GetWorldMapTileProvinceName(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and not (forest_seeds[j][1] + x_offset == arg.Province.SettlementLocation[1] and forest_seeds[j][2] + y_offset == arg.Province.SettlementLocation[2])) then
 							if (GetWorldMapTileTerrain(forest_seeds[j][1] + x_offset, forest_seeds[j][2] + y_offset) == "Plains") then
 								local RandomNumber = SyncRand(100)
 								if (RandomNumber < 33) then
@@ -670,6 +670,8 @@ function AddProvinceResource(province, resource, quantity)
 					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains"
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" and WhileCount > 1000)
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Conifer Forest" and WhileCount > 1000)
 				)
 			)
 			or (
@@ -679,15 +681,38 @@ function AddProvinceResource(province, resource, quantity)
 					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest"
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" and WhileCount > 1000)
 					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains" and WhileCount > 1000)
+				)
+			)
+			or (
+				(resource == "grain")
+				and (
+					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains"
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Conifer Forest" and WhileCount > 1000)
+				)
+			)
+			or (
+				(resource == "mushrooms")
+				and (
+					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills"
+					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains"
+					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains"
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Conifer Forest" and WhileCount > 1000)
 				)
 			)
 		) then
-			if (WorldMapTileHasResource(random_tile[1], random_tile[2], "any", true) == false and {random_tile[1], random_tile[2]} ~= province.SettlementLocation) then
+			if (WorldMapTileHasResource(random_tile[1], random_tile[2], "any", true) == false and not (random_tile[1] == province.SettlementLocation[1] and random_tile[2] == province.SettlementLocation[2])) then
 				AddWorldMapResource(resource, random_tile[1], random_tile[2], prospected)
 				quantity = quantity - 1
 				WhileCount = 0
 			end
 		end
 		WhileCount = WhileCount + 1
+		if (WhileCount > 10000) then
+			break
+		end
 	end
 end
