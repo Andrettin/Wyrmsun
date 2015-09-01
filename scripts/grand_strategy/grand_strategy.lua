@@ -432,7 +432,6 @@ function RunGrandStrategyGame()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	DrawOnScreenTiles()
 	DrawGrandStrategyInterface()
 	
 	-- add a pseudo-button to bring up the menu
@@ -476,17 +475,6 @@ function EndTurn()
 		end
 	end
 
-	-- faction income
-	for key, value in pairs(Factions) do
-		if (GetFactionProvinceCount(Factions[key]) > 0) then
-			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold"))
-			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "lumber", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "lumber"))
-			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "stone"))
-			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "research", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "research"))
-			ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "prestige", GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "prestige"))
-		end
-	end
-	
 	DoGrandStrategyTurn()
 
 	for key, value in pairs(WorldMapProvinces) do
@@ -581,7 +569,6 @@ function EndTurn()
 --		RunGrandStrategyGame()
 --	else
 		DrawGrandStrategyInterface()
-		DrawOnScreenTiles()
 --	end
 
 	-- AI diplomacy
@@ -1562,43 +1549,6 @@ function RunGrandStrategyLoadGameMenu()
 	menu:run()
 end
 
-function DrawWorldMapTile(file, tile_x, tile_y)
-	local width_indent = GrandStrategyMapWidthIndent
-	local height_indent = GrandStrategyMapHeightIndent
-	
-	local last_tile_width_modifier = -32 + (Video.Width % 64)
-	
-	if (string.find(file, "sites") ~= nil) then -- different method for site graphics
-		local world_map_tile
-		if (string.find(file, "settlement") ~= nil) then
-			world_map_tile = CPlayerColorGraphic:New(file)
-			local settlement_color = ""
-			if (GetProvinceOwner(GetTileProvince(tile_x, tile_y).Name) ~= "") then
-				settlement_color = GetFactionData(GetFactionFromName(GetProvinceOwner(GetTileProvince(tile_x, tile_y).Name)).Civilization, GetProvinceOwner(GetTileProvince(tile_x, tile_y).Name), "Color")
-			else
-				settlement_color = "gray"
-			end
-			OnScreenSites[table.getn(OnScreenSites) + 1] = PlayerColorImageButton("", settlement_color)
-		else
-			world_map_tile = CGraphic:New(file)
-			OnScreenSites[table.getn(OnScreenSites) + 1] = ImageButton("")
-		end
-		world_map_tile:Load()
-		GrandStrategyMenu:add(OnScreenSites[table.getn(OnScreenSites)], 64 * (tile_x - WorldMapOffsetX) + width_indent, 16 + 64 * (tile_y - WorldMapOffsetY) + height_indent)
-		OnScreenSites[table.getn(OnScreenSites)]:setNormalImage(world_map_tile)
-		OnScreenSites[table.getn(OnScreenSites)]:setPressedImage(world_map_tile)
-		OnScreenSites[table.getn(OnScreenSites)]:setDisabledImage(world_map_tile)
-		if ((tile_x - WorldMapOffsetX) >= (math.floor(GrandStrategyMapWidth / 64))) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(32 - width_indent + last_tile_width_modifier, 64)
-		elseif ((tile_y - WorldMapOffsetY) >= (math.floor(GrandStrategyMapHeight / 64))) then
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 32 - height_indent)
-		else
-			OnScreenSites[table.getn(OnScreenSites)]:setSize(64, 64)
-		end
-		OnScreenSites[table.getn(OnScreenSites)]:setBorderSize(0)
-	end
-end
-
 -- draw UI
 function AddUIElement(file, x, y)
 	local ui_element = CGraphic:New(file)
@@ -2074,61 +2024,6 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 		CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["small"])
 		CommodityButtons[table.getn(CommodityButtons)]:adjustSize()
 		GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x + 18, y + 1 + 2)
-	end
-end
-
-function DrawOnScreenTiles()
-	if (OnScreenSites ~= nil) then
-		for i=1,table.getn(OnScreenSites) do
-			if (OnScreenSites[i] ~= nil) then
-				GrandStrategyMenu:remove(OnScreenSites[i])
-			end
-		end
-		
-		for i=table.getn(OnScreenSites),table.getn(OnScreenSites), -1 do
-			if (OnScreenSites[i] ~= nil) then
-				OnScreenSites[i] = nil
-			end
-		end
-	end
-
-	OnScreenSites = nil
-	OnScreenSites = {}
-
-	for key, value in pairs(WorldMapProvinces) do
-		if (WorldMapProvinces[key].SettlementLocation[1] >= WorldMapOffsetX and WorldMapProvinces[key].SettlementLocation[1] <= math.floor(WorldMapOffsetX + (GrandStrategyMapWidth / 64)) and WorldMapProvinces[key].SettlementLocation[2] >= WorldMapOffsetY and WorldMapProvinces[key].SettlementLocation[2] <= math.floor(WorldMapOffsetY + (GrandStrategyMapHeight / 64))) then
-			if (GrandStrategyFaction ~= nil and GetProvinceOwner(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
-				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
-						if (GetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unitName) > 0) then
-							-- draw symbol that troops are moving to the province
-							DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-							break
-						end
-					end
-					if (IsHero(unitName)) then
-						if (GetProvinceHero(WorldMapProvinces[key].Name, unitName) == 1) then
-							-- draw symbol that a hero is moving to the province
-							DrawWorldMapTile("tilesets/world/sites/move.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-							break
-						end
-					end
-				end
-				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
-						if (GetProvinceHero(WorldMapProvinces[key].Name, unitName) == 2) then
-							DrawWorldMapTile("tilesets/world/sites/hero.png", WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-							break
-						end
-					end
-				end
-			end
-		end
-	end
-
-	-- put everything that isn't terra incognita at the bottom
-	for i=table.getn(OnScreenSites),1,-1 do
-		OnScreenSites[i]:requestMoveToBottom()
 	end
 end
 
@@ -2947,7 +2842,6 @@ function SetSelectedProvinceLua(province)
 					if (SelectedHero == unitName) then
 						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
 						SetProvinceHero(province.Name, unitName, 3)
-						SetProvinceHero(SelectedProvince.Name, unitName, 0)
 						SelectedHero = ""
 					end
 				end
@@ -2958,11 +2852,6 @@ function SetSelectedProvinceLua(province)
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
 						SetProvinceMovingUnitQuantity(province.Name, unitName, GetProvinceMovingUnitQuantity(province.Name, unitName) + SelectedUnits[string.gsub(unitName, "-", "_")])
 						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - SelectedUnits[string.gsub(unitName, "-", "_")])
-
-						-- draw symbol that troops are moving to the province
-						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
-							DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
-						end
 					end
 				end
 			end
@@ -2970,13 +2859,7 @@ function SetSelectedProvinceLua(province)
 				if (IsHero(unitName)) then
 					if (SelectedHero == unitName and GetProvinceHero(SelectedProvince.Name, unitName) == 2) then
 						SetProvinceHero(province.Name, unitName, 1)
-						SetProvinceHero(SelectedProvince.Name, unitName, 0)
 						SelectedHero = ""
-
-						-- draw symbol that a hero is moving to the province
-						if (IsWorldMapTileVisible(province.SettlementLocation[1], province.SettlementLocation[2])) then
-							DrawWorldMapTile("tilesets/world/sites/move.png", province.SettlementLocation[1], province.SettlementLocation[2])
-						end
 					end
 				end
 			end
@@ -3653,21 +3536,6 @@ function ClearGrandStrategyVariables()
 end
 
 function ClearGrandStrategyUIVariables()
-	if (OnScreenSites ~= nil) then
-		for i=1,table.getn(OnScreenSites) do
-			if (OnScreenSites[i] ~= nil) then
-				GrandStrategyMenu:remove(OnScreenSites[i])
-			end
-		end
-		
-		for i=table.getn(OnScreenSites),table.getn(OnScreenSites), -1 do
-			if (OnScreenSites[i] ~= nil) then
-				OnScreenSites[i] = nil
-			end
-		end
-	end
-	OnScreenSites = nil
-	
 	if (UIElements ~= nil) then
 		for i=1,table.getn(UIElements) do
 			if (UIElements[i] ~= nil) then
@@ -4265,7 +4133,6 @@ function FormFaction(old_faction, new_faction)
 	CalculateFactionIncomes(new_faction.Civilization, new_faction.Name)
 	
 	DrawGrandStrategyInterface()
-	DrawOnScreenTiles()
 end
 
 function GetUnitTypeUpkeep(unit_type)

@@ -960,7 +960,6 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 	GrandStrategyEvents.ChargeRugnurWithTheOutpost = nil
 	SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 2)
 	SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 2) -- by this point, Thursagan had gone away to the north
-	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 0)
 	GrandStrategyEvents.TheSagesDeparture = nil
 
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
@@ -991,7 +990,6 @@ end
 
 if (GrandStrategyYear >= 27) then -- time it took for Rugnur's party to travel to the Northern Wastelands and come back
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
-	SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 0)
 	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 2)
 	SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false) -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
