@@ -89,7 +89,7 @@ if (LoadedGame == false) then
 		-- Marcomanni units
 		CreateProvinceUnits("Brandenburg", 0, 2)
 		unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		WorldMapProvinces.Brandenburg.Heroes.unit_hero_marbod = 0
+		SetProvinceHero("Brandenburg", "unit-hero-marbod", 0)
 		
 		-- Boii units
 		CreateProvinceUnits("Bohemia", 1)

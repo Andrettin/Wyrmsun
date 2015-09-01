@@ -225,15 +225,15 @@ elseif (GrandStrategyEventMap) then
 	CreateProvinceUnits("Caverns of Chaincolt", 0, 3)
 
 	-- Rugnur
-	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
+	if (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur") == 2) then
 		unit = CreateUnit("unit-hero-rugnur", 0, {47, 10})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2) then
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0)
+	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad") == 2) then
 		unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {47, 10})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
-	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) then
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad", 0)
+	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane") == 2) then
 		unit = CreateUnit("unit-hero-rugnur-thane", 0, {47, 10})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane", 0)
 	end
 
 	-- Gnomish outpost

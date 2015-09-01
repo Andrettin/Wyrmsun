@@ -135,24 +135,24 @@ if (GrandStrategy == false) then
 	end
 elseif (GrandStrategyEventMap) then
 	-- Rugnur
-	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2) then
+	if (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur") == 2) then
 		unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2) then
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0)
+	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad") == 2) then
 		unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {8, 60})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
-	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) then
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad", 0)
+	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane") == 2) then
 		unit = CreateUnit("unit-hero-rugnur-thane", 0, {8, 60})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane", 0)
 	end
 
 	-- Baglur
-	if (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2) then
+	if (GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur") == 2) then
 		unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
-	elseif (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) then
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 0)
+	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane") == 2) then
 		unit = CreateUnit("unit-hero-baglur-thane", 0, {8, 60})
-		WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 0
+		SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane", 0)
 	end
 end
 

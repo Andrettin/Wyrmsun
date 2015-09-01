@@ -857,8 +857,8 @@ MercenaryGroups = {
 LoadEvents("Nidavellir")
 
 if (GrandStrategyYear >= -3000) then
-	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 2
-	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 2
+	SetProvinceHero("Svarinshaug", "unit-hero-modsognir", 2) 
+	SetProvinceHero("Svarinshaug", "unit-hero-durin", 2) 
 	GrandStrategyEvents.ModsognirTribalChieftain = nil
 	GrandStrategyEvents.DurinWarrior = nil
 end
@@ -875,8 +875,8 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 	SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 		
 	GrandStrategyEvents.TheBindingOfGrafvitnir = nil -- should be placed at an earlier date
-	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 0
-	WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 0
+	SetProvinceHero("Svarinshaug", "unit-hero-modsognir", 0)
+	SetProvinceHero("Svarinshaug", "unit-hero-durin", 0)
 	GrandStrategyEvents.ModsognirDies = nil
 	GrandStrategyEvents.DurinDies = nil
 end
@@ -934,19 +934,19 @@ if (GrandStrategyYear >= -1) then
 	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-1", true)
 	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-1", true)
 	
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2 -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 2) -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
 	GrandStrategyEvents.BaglurWarrior = nil
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 2 -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 2) -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
 	GrandStrategyEvents.DurstornChieftainOfTheNorlundClan = nil
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2 -- Thursagan could be in the Caverns of Chaincolt at this time
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 2) -- Thursagan could be in the Caverns of Chaincolt at this time
 	GrandStrategyEvents.ThursaganTheSageOfFire = nil
 end
 
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
 	GrandStrategyEvents.ChargeRugnurWithTheOutpost = nil
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2 -- by this point, Thursagan had gone away to the north
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 2)
+	SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 2) -- by this point, Thursagan had gone away to the north
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 0)
 	GrandStrategyEvents.TheSagesDeparture = nil
 
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
@@ -977,8 +977,8 @@ end
 
 if (GrandStrategyYear >= 27) then -- time it took for Rugnur's party to travel to the Northern Wastelands and come back
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
-	WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
+	SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 0)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 2)
 	SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false) -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands (deaths due to combat with Rugnur's dwarves)
@@ -996,14 +996,14 @@ if (GrandStrategyYear >= 29) then
 
 	--[[
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan (Norlund Clan)
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 2
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 2
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 2
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_thursagan = 2
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	SetProvinceHero("Shorbear Hills", "unit-hero-rugnur", 2)
+	SetProvinceHero("Shorbear Hills", "unit-hero-baglur", 2)
+	SetProvinceHero("Shorbear Hills", "unit-hero-durstorn", 2)
+	SetProvinceHero("Shorbear Hills", "unit-hero-thursagan", 2)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 0)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 0)
 	--]]
 
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
@@ -1017,15 +1017,15 @@ if (GrandStrategyYear >= 35) then
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
 	--[[
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_rugnur = 0
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_baglur = 0
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_thursagan = 0
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 2)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 2)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 2)
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0)
+	SetProvinceHero("Shorbear Hills", "unit-hero-baglur", 0)
+	SetProvinceHero("Shorbear Hills", "unit-hero-thursagan", 0)
 	--]]
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
-	WorldMapProvinces.ShorbearHills.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
+	SetProvinceHero("Shorbear Hills", "unit-hero-durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 	GrandStrategyEvents.DurstornDies = nil
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-mercenary-camp", true) -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	MercenaryGroups.unit_surghan_mercenary_steelclad = nil
@@ -1034,11 +1034,11 @@ if (GrandStrategyYear >= 35) then
 end
 
 if (GrandStrategyYear >= 40) then
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0 -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
 	GrandStrategyEvents.RugnurDies = nil
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 0)
 	GrandStrategyEvents.BaglurDies = nil
-	WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+	SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 0)
 	GrandStrategyEvents.ThursaganDies = nil
 	ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter

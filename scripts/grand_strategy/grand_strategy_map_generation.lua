@@ -171,8 +171,8 @@ function GenerateRandomWorldMap()
 	LoadProvinces("Random") -- load provinces here to load the water provinces, so that when the water tiles without provinces get transformed into plains they will be available for becoming forests later on
 
 	-- erase association of provinces with tiles
-	for x=0,(world_map_width - 1) do
-		for y=0,(world_map_height - 1) do
+	for x=0,(1024 - 1) do
+		for y=0,(512 - 1) do
 			SetWorldMapTileProvince(x, y, "")
 		end
 	end
@@ -335,8 +335,36 @@ function GenerateRandomWorldMap()
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Hills" or GetWorldMapTileTerrain(RandomX, RandomY) == "Mountains") then
-				if (WorldMapTileHasResource(RandomX, RandomY, "gold", true) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
+				if (WorldMapTileHasResource(RandomX, RandomY, "any", true) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
 					AddWorldMapResource("gold", RandomX, RandomY, false)
+					break
+				end
+			end
+		end
+	end
+
+	-- generate timber lodges
+	for i=1,(world_map_width * world_map_height / 64) do
+		for j=1,100 do
+			local RandomX = SyncRand(world_map_width)
+			local RandomY = SyncRand(world_map_height)
+			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Conifer Forest" or GetWorldMapTileTerrain(RandomX, RandomY) == "Scrub Forest") then
+				if (WorldMapTileHasResource(RandomX, RandomY, "any", true) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
+					AddWorldMapResource("lumber", RandomX, RandomY, true)
+					break
+				end
+			end
+		end
+	end
+	
+	-- generate stone quarries
+	for i=1,(world_map_width * world_map_height / 64) do
+		for j=1,100 do
+			local RandomX = SyncRand(world_map_width)
+			local RandomY = SyncRand(world_map_height)
+			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Hills" or GetWorldMapTileTerrain(RandomX, RandomY) == "Mountains") then
+				if (WorldMapTileHasResource(RandomX, RandomY, "any", true) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
+					AddWorldMapResource("stone", RandomX, RandomY, true)
 					break
 				end
 			end

@@ -53,7 +53,7 @@ if (LoadedGame == false) then
 				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
 				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Svarinshaug", unitName) / 2)
 				SetProvinceUnitQuantity("Svarinshaug", unitName, GetProvinceUnitQuantity("Svarinshaug", unitName) - units_to_be_created[string.gsub(unitName, "-", "_")])
---			elseif (IsHero(unitName) and WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] == 2) then
+--			elseif (IsHero(unitName) and GetProvinceHero("Svarinshaug", unitName) == 2) then
 --				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			end
 		end

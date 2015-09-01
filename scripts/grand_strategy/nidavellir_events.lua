@@ -48,9 +48,9 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
-					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir_thane = 2
+					SetProvinceHero("Svarinshaug", "unit-hero-modsognir-thane", 2) 
 				else
-					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_modsognir = 2
+					SetProvinceHero("Svarinshaug", "unit-hero-modsognir", 2) 
 				end
 			end
 		}
@@ -75,9 +75,9 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin_thane = 2
+					SetProvinceHero("Svarinshaug", "unit-hero-durin-thane", 2) 
 				else
-					WorldMapProvinces.Svarinshaug.Heroes.unit_hero_durin = 2
+					SetProvinceHero("Svarinshaug", "unit-hero-durin", 2) 
 				end
 			end
 		}
@@ -109,10 +109,10 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
-						WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-modsognir", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-modsognir-thane", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin-thane", 0)
 					end
 
 					for i, unitName in ipairs(Units) do
@@ -120,7 +120,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+								SetProvinceHero("Svarinshaug", unitName, 2)
 							end
 						end
 					end
@@ -177,8 +177,8 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin-thane", 0)
 					end
 
 					for i, unitName in ipairs(Units) do
@@ -186,7 +186,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+								SetProvinceHero("Svarinshaug", unitName, 2)
 							end
 						end
 					end
@@ -241,7 +241,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+								SetProvinceHero("Svarinshaug", unitName, 2)
 							end
 						end
 					end
@@ -292,10 +292,10 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
-						WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-modsognir", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-modsognir-thane", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin-thane", 0)
 					end
 
 					for i, unitName in ipairs(Units) do
@@ -303,7 +303,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+								SetProvinceHero("Svarinshaug", unitName, 2)
 							end
 						end
 					end
@@ -363,10 +363,10 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
-						WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin = 0
-						WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-modsognir", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-modsognir-thane", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin", 0)
+						SetProvinceHero(WorldMapProvinces[key].Name, "unit-hero-durin-thane", 0)
 					end
 
 					for i, unitName in ipairs(Units) do
@@ -374,7 +374,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								WorldMapProvinces.Svarinshaug.Heroes[string.gsub(unitName, "-", "_")] = 2
+								SetProvinceHero("Svarinshaug", unitName, 2)
 							end
 						end
 					end
@@ -400,10 +400,7 @@ local NidavellirEvents = {
 		MinYear = -3000 + 30, -- estimated death date
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-				WorldMapProvinces[key].Heroes.unit_hero_modsognir = 0
-				WorldMapProvinces[key].Heroes.unit_hero_modsognir_thane = 0
-			end
+			RemoveHeroFromFaction("unit-hero-modsognir", EventFaction)
 		end}
 	},
 	DurinDies = {
@@ -415,10 +412,7 @@ local NidavellirEvents = {
 		MinYear = -3000 + 30, -- estimated death date
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-				WorldMapProvinces[key].Heroes.unit_hero_durin = 0
-				WorldMapProvinces[key].Heroes.unit_hero_durin_thane = 0
-			end
+			RemoveHeroFromFaction("unit-hero-durin", EventFaction)
 		end}
 	},
 	TheNorlundClan = {
@@ -558,9 +552,9 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 2
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane", 2)
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 2
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 2)
 				end
 			end
 		}
@@ -585,7 +579,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 2
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 2)
 			end
 		}
 	},
@@ -607,7 +601,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 2)
 			end
 		}
 	},
@@ -618,9 +612,9 @@ local NidavellirEvents = {
 			if (
 				GetProvinceOwner("Caverns of Chaincolt") == EventFaction.Name
 				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
-				and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 0
-				and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 0
-				and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 0
+				and GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur") == 0
+				and GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad") == 0
+				and GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane") == 0
 			) then
 				return true
 			else
@@ -633,11 +627,11 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 2
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane", 2)
 				elseif (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 2
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad", 2)
 				else
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 2
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 2)
 				end
 			end,
 			function(s)
@@ -662,10 +656,10 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-					WorldMapProvinces[key].Heroes.unit_hero_thursagan = 0
+					RemoveHeroFromFaction("unit-hero-thursagan", EventFaction)
 				end
 				if (GetProvinceOwner("Northern Wastelands") ~= "Norlund Clan") then
-					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 2
+					SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 2)
 				end
 			end
 		},
@@ -713,7 +707,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -763,7 +757,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -804,7 +798,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -814,7 +808,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0)
 				else
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
@@ -856,7 +850,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -866,7 +860,7 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0)
 				else
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
@@ -916,16 +910,16 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
 				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
+					SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 0)
 				end
 			elseif ("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
-				WorldMapProvinces.NorthernWastelands.Heroes.unit_hero_thursagan = 0
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 2
+				SetProvinceHero("Northern Wastelands", "unit-hero-thursagan", 0)
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 2)
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer") / 2)
@@ -972,7 +966,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -1032,7 +1026,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -1056,7 +1050,7 @@ local NidavellirEvents = {
 				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
 				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
 				
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0 -- Durstorn is killed in a conflict between him and other members of the clan
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 				GrandStrategyEvents.DurstornDies = nil
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1) -- the gnomish envoy returns south
 				ChangeProvinceUnitQuantity("Brown Hills", "unit-gnomish-recruit", 1)
@@ -1103,11 +1097,11 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
-				if (GameResult ~= GameVictory and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan == 2) then
+				if (GameResult ~= GameVictory and (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur") == 2 or GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad") == 2 or GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane") == 2) and (GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur") == 2 or GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane") == 2) and GetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan") == 2) then
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
 				end
 			end
@@ -1149,7 +1143,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -1203,7 +1197,7 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
@@ -1262,13 +1256,13 @@ local NidavellirEvents = {
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							WorldMapProvinces.CavernsOfChaincolt.Heroes[string.gsub(unitName, "-", "_")] = 2
+							SetProvinceHero("Caverns of Chaincolt", unitName, 2)
 						end
 					end
 				end
-				if (GameResult ~= GameVictory and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane == 2) and (WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur == 2 or WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane == 2) and WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan) then
+				if (GameResult ~= GameVictory and (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur") == 2 or GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad") == 2 or GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane") == 2) and (GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur") == 2 or GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane") == 2) and GetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan")) then
 					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
-					WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_durstorn = 0
+					SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0)
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 				end
 			end
@@ -1319,14 +1313,14 @@ local NidavellirEvents = {
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 0)
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 0)
 				
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur = 0 -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_steelclad = 0
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_rugnur_thane = 0
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad", 0)
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane", 0)
 				GrandStrategyEvents.RugnurDies = nil
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur = 0
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_baglur_thane = 0
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 0)
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane", 0)
 				GrandStrategyEvents.BaglurDies = nil
-				WorldMapProvinces.CavernsOfChaincolt.Heroes.unit_hero_thursagan = 0
+				SetProvinceHero("Caverns of Chaincolt", "unit-hero-thursagan", 0)
 				GrandStrategyEvents.ThursaganDies = nil
 
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
@@ -1387,11 +1381,7 @@ local NidavellirEvents = {
 		MinYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-				WorldMapProvinces[key].Heroes.unit_hero_rugnur = 0
-				WorldMapProvinces[key].Heroes.unit_hero_rugnur_steelclad = 0
-				WorldMapProvinces[key].Heroes.unit_hero_rugnur_thane = 0
-			end
+			RemoveHeroFromFaction("unit-hero-rugnur", EventFaction)
 		end}
 	},
 	BaglurDies = {
@@ -1403,10 +1393,7 @@ local NidavellirEvents = {
 		MinYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-				WorldMapProvinces[key].Heroes.unit_hero_baglur = 0
-				WorldMapProvinces[key].Heroes.unit_hero_baglur_thane = 0
-			end
+			RemoveHeroFromFaction("unit-hero-baglur", EventFaction)
 		end}
 	},
 	ThursaganDies = {
@@ -1418,9 +1405,7 @@ local NidavellirEvents = {
 		MinYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-				WorldMapProvinces[key].Heroes.unit_hero_thursagan = 0
-			end
+			RemoveHeroFromFaction("unit-hero-thursagan", EventFaction)
 		end}
 	},
 	DurstornDies = {
@@ -1432,9 +1417,7 @@ local NidavellirEvents = {
 		MinYear = 35 + 15, -- died in 35 AD of a violent death, but was already old; +15 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-				WorldMapProvinces[key].Heroes.unit_hero_durstorn = 0
-			end
+			RemoveHeroFromFaction("unit-hero-durstorn", EventFaction)
 		end}
 	},
 	TheFoundingOfKnalga = {
@@ -1536,7 +1519,7 @@ local NidavellirEvents = {
 							return true
 						end
 					elseif (IsHero(unitName)) then
-						if (EventProvince.Heroes[string.gsub(unitName, "-", "_")] == 2) then
+						if (GetProvinceHero(EventProvince.Name, unitName) == 2) then
 							return true
 						end
 					end
@@ -1562,7 +1545,7 @@ local NidavellirEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								EventProvince.Heroes[string.gsub(unitName, "-", "_")] = 2
+								SetProvinceHero(EventProvince.Name, unitName, 2)
 							end
 						end
 					end
