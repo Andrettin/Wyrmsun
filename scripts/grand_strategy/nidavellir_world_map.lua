@@ -6,7 +6,6 @@ local water_id = GetWorldMapTerrainTypeId("Water")
 local hills_id = GetWorldMapTerrainTypeId("Hills")
 local mountains_id = GetWorldMapTerrainTypeId("Mountains")
 local scrub_forest_id = GetWorldMapTerrainTypeId("Scrub Forest")
-local conifer_forest_id = GetWorldMapTerrainTypeId("Conifer Forest")
 
 SetWorldMapTileTerrain(12, 3, dark_plains_id)
 SetWorldMapTileTerrain(12, 4, dark_plains_id)
@@ -19,6 +18,7 @@ SetWorldMapTileTerrain(14, 4, hills_id)
 SetWorldMapTileTerrain(14, 10, dark_plains_id)
 SetWorldMapTileTerrain(14, 11, dark_plains_id)
 SetWorldMapTileTerrain(15, 1, scrub_forest_id)
+AddWorldMapResource("lumber", 15, 1, true)
 SetWorldMapTileTerrain(15, 2, hills_id)
 SetWorldMapTileTerrain(15, 3, hills_id)
 SetWorldMapTileTerrain(15, 4, dark_plains_id)
@@ -329,6 +329,7 @@ SetWorldMapTileTerrain(29, 19, dark_plains_id)
 SetWorldMapTileTerrain(29, 20, dark_plains_id)
 SetWorldMapTileTerrain(29, 21, dark_plains_id)
 SetWorldMapTileTerrain(29, 22, scrub_forest_id)
+AddWorldMapResource("lumber", 29, 22, true)
 SetWorldMapTileTerrain(29, 23, mountains_id)
 SetWorldMapTileTerrain(29, 24, mountains_id)
 SetWorldMapTileTerrain(29, 25, hills_id)
@@ -354,6 +355,7 @@ SetWorldMapTileTerrain(30, 14, hills_id)
 SetWorldMapTileTerrain(30, 15, hills_id)
 SetWorldMapTileTerrain(30, 16, hills_id)
 SetWorldMapTileTerrain(30, 17, scrub_forest_id)
+AddWorldMapResource("lumber", 30, 17, true)
 SetWorldMapTileTerrain(30, 18, dark_plains_id)
 SetWorldMapTileTerrain(30, 19, dark_plains_id)
 SetWorldMapTileTerrain(30, 20, dark_plains_id)
@@ -378,6 +380,7 @@ SetWorldMapTileTerrain(31, 11, mountains_id)
 SetWorldMapTileTerrain(31, 12, mountains_id)
 SetWorldMapTileTerrain(31, 13, mountains_id)
 SetWorldMapTileTerrain(31, 14, hills_id)
+AddWorldMapResource("mushrooms", 31, 14, true) -- there was a mushroom farm in the Southern Tunnels (Northern Rebirth: Infested Caves)
 SetWorldMapTileTerrain(31, 15, hills_id)
 SetWorldMapTileTerrain(31, 16, hills_id)
 SetWorldMapTileTerrain(31, 17, dark_plains_id)
@@ -568,6 +571,7 @@ SetWorldMapTileTerrain(42, 5, mountains_id)
 SetWorldMapTileTerrain(42, 6, hills_id)
 SetWorldMapTileTerrain(42, 7, hills_id)
 SetWorldMapTileTerrain(42, 8, scrub_forest_id)
+AddWorldMapResource("lumber", 42, 8, true)
 SetWorldMapTileTerrain(42, 9, dark_plains_id)
 SetWorldMapTileTerrain(42, 10, dark_plains_id)
 SetWorldMapTileTerrain(42, 11, hills_id)
@@ -596,6 +600,7 @@ SetWorldMapTileTerrain(44, 3, mountains_id)
 SetWorldMapTileTerrain(44, 4, mountains_id)
 SetWorldMapTileTerrain(44, 5, mountains_id)
 SetWorldMapTileTerrain(44, 6, scrub_forest_id)
+AddWorldMapResource("lumber", 44, 6, true)
 SetWorldMapTileTerrain(44, 7, dark_plains_id)
 SetWorldMapTileTerrain(44, 8, dark_plains_id)
 SetWorldMapTileTerrain(44, 9, hills_id)
@@ -710,6 +715,7 @@ SetWorldMapTileTerrain(50, 17, hills_id)
 SetWorldMapTileTerrain(50, 18, hills_id)
 SetWorldMapTileTerrain(50, 19, dark_plains_id)
 SetWorldMapTileTerrain(50, 20, scrub_forest_id)
+AddWorldMapResource("lumber", 50, 20, true)
 SetWorldMapTileTerrain(51, 3, dark_plains_id)
 SetWorldMapTileTerrain(51, 4, mountains_id)
 SetWorldMapTileTerrain(51, 5, hills_id)
@@ -723,6 +729,7 @@ SetWorldMapTileTerrain(51, 12, dark_plains_id)
 SetWorldMapTileTerrain(51, 13, hills_id)
 SetWorldMapTileTerrain(51, 14, hills_id)
 SetWorldMapTileTerrain(51, 15, hills_id)
+AddWorldMapResource("gold", 51, 15, false)
 SetWorldMapTileTerrain(51, 16, hills_id)
 SetWorldMapTileTerrain(51, 17, hills_id)
 SetWorldMapTileTerrain(51, 18, hills_id)
@@ -805,13 +812,20 @@ LoadProvinces("Nidavellir")
 GenerateProvince({
 	Province = WorldMapProvinces.Aurvang,
 	BorderProvinces = {"Svarinshaug"},
-	BorderProvinceSouth = true
+	BorderProvinceSouth = true,
+	Resources = {
+		lumber = 3
+	}
 })
 GenerateProvince({
 	Province = WorldMapProvinces.Joruvellir,
 	BorderProvinces = {"Aurvang"},
 	BorderProvinceSouth = true,
-	Gold = 1
+	Resources = {
+		gold = 1,
+		lumber = 1,
+		stone = 2
+	}
 })
 GenerateProvince({
 	Province = WorldMapWaterProvinces.DeepSea,
@@ -820,6 +834,21 @@ GenerateProvince({
 	Water = true,
 	MaximumSize = 300
 })
+
+-- generate resources for provinces
+--AddProvinceResource(WorldMapProvinces.BrownHills, "gold", 1)
+AddProvinceResource(WorldMapProvinces.BrownHills, "stone", 1)
+AddProvinceResource(WorldMapProvinces.CavernsOfChaincolt, "stone", 1)
+AddProvinceResource(WorldMapProvinces.Heartfangs, "stone", 3)
+AddProvinceResource(WorldMapProvinces.HighPass, "stone", 1)
+AddProvinceResource(WorldMapProvinces.HighbrookPass, "stone", 1)
+AddProvinceResource(WorldMapProvinces.KalKartha, "stone", 1)
+AddProvinceResource(WorldMapProvinces.Lyr, "stone", 1)
+AddProvinceResource(WorldMapProvinces.NorthernWastelands, "stone", 1)
+AddProvinceResource(WorldMapProvinces.ShorbearHills, "stone", 1)
+AddProvinceResource(WorldMapProvinces.SouthernTunnels, "stone", 1)
+--AddProvinceResource(WorldMapProvinces.Svarinshaug, "gold", 1)
+AddProvinceResource(WorldMapProvinces.Svarinshaug, "stone", 1)
 
 MercenaryGroups = {
 	unit_surghan_mercenary_steelclad = 4
@@ -1044,6 +1073,7 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
+	SetWorldMapResourceProspected("gold", 51, 15, true)
 	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-runewriting", true) -- polities require writing
 	
 	-- The Dwarves should already have Coinage technology by then

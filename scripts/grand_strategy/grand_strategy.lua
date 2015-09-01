@@ -214,18 +214,12 @@ function RunGrandStrategyGameSetupMenu()
 			local RandomNumber = 0
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
-					if (GetWorldMapTileTerrain(x, y) == "Conifer Forest" or GetWorldMapTileTerrain(x, y) == "Scrub Forest") then -- add lumber resource location to forest tiles
-						if (WorldMapTileHasResource(x, y, "lumber", true) == false) then
-							AddWorldMapResource("lumber", x, y, true)
-						end
-					elseif (GetWorldMapTileTerrain(x, y) == "Plains" or GetWorldMapTileTerrain(x, y) == "Dark Plains") then -- make plains tiles into hills if there is a mine there
-						if (WorldMapTileHasResource(x, y, "gold", true) == true) then
-							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Hills"))
-						end
-					elseif (GetWorldMapTileTerrain(x, y) == "Mountains") then -- implement variations for mountain tiles
-						if (WorldMapTileHasResource(x, y, "stone", true) == false and WorldMapTileHasResource(x, y, "gold", true) == false) then -- only add stone resource if has no gold
-							AddWorldMapResource("stone", x, y, true)
-						end
+					if (WorldMapTileHasResource(x, y, "lumber", true) and GetWorldMapTileTerrain(x, y) == "Plains") then -- make tiles into forest if there is a timber lodge there
+						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Conifer Forest"))
+					elseif (WorldMapTileHasResource(x, y, "lumber", true) and GetWorldMapTileTerrain(x, y) == "Dark Plains") then -- make tiles into forest if there is a timber lodge there
+						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Scrub Forest"))
+					elseif ((WorldMapTileHasResource(x, y, "gold", true) or WorldMapTileHasResource(x, y, "stone", true)) and (GetWorldMapTileTerrain(x, y) == "Plains" or GetWorldMapTileTerrain(x, y) == "Dark Plains")) then -- make plains tiles into hills if there is a mine or quarry there
+						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Hills"))
 					end
 				end
 			end

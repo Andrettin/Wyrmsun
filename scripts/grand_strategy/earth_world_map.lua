@@ -7193,6 +7193,8 @@ if (GrandStrategyYear >= -7000) then
 	SetRegionPopulation("Eurasia", 500000) -- CIS had a population of around 0.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
 	SetRegionPopulation("Northwest Europe", 100000) -- At the height of the Mesolithic the population in northwestern Europe was no larger than 100,000; since the Mesolithic in Northwestern Europe began around 10,000 BC and ended about 4000 BC, its height would have been in the middle, or 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 144, 148.
+	
+	-- In the Mediterranean coasts of northwestern Europe, material aspects of the Neolithic (like grinding stones and pottery) begin to appear around the 7th millenium BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 150.
 end
 
 if (GrandStrategyYear >= -6800) then
@@ -7307,6 +7309,8 @@ if (GrandStrategyYear >= -4000) then
 	-- Mesolithic ends in Northwestern Europe around 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 144.
 	
 	SetRegionPopulation("British Isles", (2750 + 5500 / 2)) -- The British Isles had between 2,750 and 5,500 people at the end of the Mesolithic; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 148.
+	
+	-- Agriculture had already spread throughout northwestern Europe by 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 151.
 end
 
 if (GrandStrategyYear >= -3950) then

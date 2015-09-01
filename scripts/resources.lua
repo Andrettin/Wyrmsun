@@ -41,15 +41,15 @@
 --
 
 DefineDefaultIncomes(
-	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+	0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
 )
 
 DefineDefaultActions(
-	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather", "mine", "mine"
+	"stop", "mine", "gather", "drill", "mine", "mine", "mine", "produce", "gain", "gather", "mine", "mine", "grow", "grow"
 )
 
 DefineDefaultResourceNames(
-	"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper"
+	"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper", "grain", "mushrooms"
 )
 
 DefineDefaultResourceAmounts(
@@ -62,13 +62,13 @@ DefineDefaultResourceAmounts(
 	"copper", 50000
 )
 
-DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
 SetResourceBasePrice("lumber", 100)
 SetResourceBasePrice("stone", 100)
 
 function GetResourceID(resource)
-	local resource_types = {"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper"}
+	local resource_types = {"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper", "grain", "mushrooms"}
 	for i=1,table.getn(resource_types) do
 		if (resource_types[i] == resource) then
 			return i - 1

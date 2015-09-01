@@ -222,50 +222,16 @@ function SetPlayerData(player, data, arg1, arg2)
 		end
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
-			res = {2000, 1000, 1000, 0, 1000, 0, 0, 0, 0, 0, 0}
+			res = {2000, 1000, 1000, 0, 1000, 0, 0, 0, 0, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 2) then
-			res = {5000, 2000, 2000, 0, 2000, 0, 0, 0, 0, 0, 0}
+			res = {5000, 2000, 2000, 0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 3) then
-			res = {10000, 5000, 5000, 0, 5000, 0, 0, 0, 0, 0, 0}
+			res = {10000, 5000, 5000, 0, 5000, 0, 0, 0, 0, 0, 0, 0, 0}
 		end
-		if (arg1 == "gold") then
-			if (GrandStrategy == false or GrandStrategyEventMap) then
-				arg2 = res[1]
-			else
-				arg2 = 0
-			end
-		elseif (arg1 == "lumber") then
-			if (GrandStrategy == false or GrandStrategyEventMap) then
-				arg2 = res[2]
-			else
-				arg2 = 0
-			end
-		elseif (arg1 == "oil") then
-			arg2 = res[3]
-		elseif (arg1 == "ore") then
-			arg2 = res[4]
-		elseif (arg1 == "stone") then
-			if (GrandStrategy == false or GrandStrategyEventMap) then
-				arg2 = res[5]
-			else
-				arg2 = 0
-			end
-		elseif (arg1 == "coal") then
-			if (GrandStrategy == false or GrandStrategyEventMap) then
-				arg2 = res[6]
-			else
-				arg2 = 0
-			end
-		elseif (arg1 == "research") then
-			arg2 = res[7]
-		elseif (arg1 == "prestige") then
-			arg2 = res[8]
-		elseif (arg1 == "timber") then
-			arg2 = res[9]
-		elseif (arg1 == "silver") then
-			arg2 = res[10]
-		elseif (arg1 == "copper") then
-			arg2 = res[11]
+		if (GrandStrategy == false or GrandStrategyEventMap) then
+			arg2 = res[GetResourceID(arg1)]
+		else
+			arg2 = 0
 		end
 	end
 

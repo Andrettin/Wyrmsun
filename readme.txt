@@ -225,6 +225,8 @@ https://github.com/Andrettin/Wyrmsun
 - Tile tooltips are now drawn as popups in the bottom-left corner of the map, instead of being drawn below the minimap.
 - Interface tooltips are now drawn as popups.
 - Provinces now show a (cosmetic) population number.
+- Added a gold deposit in the Lyr province.
+- Stone and lumber are now harvested from a tile only if a quarry or timber lodge is present there.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.

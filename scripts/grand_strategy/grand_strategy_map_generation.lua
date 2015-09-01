@@ -620,19 +620,46 @@ function GenerateProvince(arg)
 			end
 		end
 		
-		-- generate gold deposits
-		if (arg.Gold) then
-			for i=1,arg.Gold do
-				for j=1,100 do
-					local random_tile = arg.Province.Tiles[SyncRand(table.getn(arg.Province.Tiles)) + 1]
-					if (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains") then
-						if (WorldMapTileHasResource(random_tile[1], random_tile[2], "gold", true) == false and {random_tile[1], random_tile[2]} ~= arg.Province.SettlementLocation) then
-							AddWorldMapResource("gold", random_tile[1], random_tile[2], false)
-							break
-						end
-					end
-				end
+		-- generate resources
+		if (arg.Resources) then
+			for key, value in pairs(arg.Resources) do
+				AddProvinceResource(arg.Province, key, arg.Resources[key])
 			end
 		end
+	end
+end
+
+function AddProvinceResource(province, resource, quantity)
+	local WhileCount = 0
+	while (quantity > 0) do
+		local random_tile = province.Tiles[SyncRand(table.getn(province.Tiles)) + 1]
+		local prospected = resource ~= "gold"
+		if (
+			(
+				(resource == "gold" or resource == "stone")
+				and (
+					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills"
+					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains"
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains" and WhileCount > 1000)
+				)
+			)
+			or (
+				(resource == "lumber")
+				and (
+					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Conifer Forest"
+					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Scrub Forest"
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Plains" and WhileCount > 1000)
+					or (GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Dark Plains" and WhileCount > 1000)
+				)
+			)
+		) then
+			if (WorldMapTileHasResource(random_tile[1], random_tile[2], "any", true) == false and {random_tile[1], random_tile[2]} ~= province.SettlementLocation) then
+				AddWorldMapResource(resource, random_tile[1], random_tile[2], prospected)
+				quantity = quantity - 1
+				WhileCount = 0
+			end
+		end
+		WhileCount = WhileCount + 1
 	end
 end
