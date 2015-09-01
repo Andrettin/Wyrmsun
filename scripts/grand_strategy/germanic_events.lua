@@ -152,13 +152,15 @@ local GermanicEvents = {
 							if (IsMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName) + math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 								ChangeProvinceUnitQuantity("Russia", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+							elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+								SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName))
+								SetProvinceUnitQuantity("Astrakhan", unitName, 0)
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 8)
-						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 0)
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Brandenburg.SettlementLocation[1], WorldMapProvinces.Brandenburg.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
@@ -174,7 +176,7 @@ local GermanicEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsMilitaryUnit(unitName) or (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker")) then
 							SetProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName))
 							SetProvinceUnitQuantity("Astrakhan", unitName, 0)
 						end
@@ -193,6 +195,8 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Asa Tribe")
 				EqualizeProvinceUnits(EventFaction)
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 8) -- give them enough units to continue migrating
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", GetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker") / 2)
+				ChangeProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", - GetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker"))
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Swede Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Swede Tribe")
 				SetFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
@@ -236,6 +240,10 @@ local GermanicEvents = {
 							if (IsMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) + math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
 								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
+							elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+								SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) / 5)
+								SetProvinceUnitQuantity("Zealand", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) - GetProvinceUnitQuantity("Jutland", unitName))
+								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 							end
 						end
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
@@ -257,6 +265,10 @@ local GermanicEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
+							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
+						elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+							SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) / 5)
+							SetProvinceUnitQuantity("Zealand", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) - GetProvinceUnitQuantity("Jutland", unitName))
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end
@@ -315,6 +327,11 @@ local GermanicEvents = {
 						for i, unitName in ipairs(Units) do
 							if (IsMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Sweden", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+							elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+								SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+								SetProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+								SetProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+								ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
 							end
 						end
 						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -346,6 +363,11 @@ local GermanicEvents = {
 							SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4)
 							SetProvinceUnitQuantity("Jutland", unitName, 0)
 							SetProvinceUnitQuantity("Zealand", unitName, 0)
+						elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+							SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+							SetProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+							SetProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+							ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
 						end
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -382,6 +404,11 @@ local GermanicEvents = {
 						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
 						SetProvinceUnitQuantity("Jutland", unitName, 0)
 						SetProvinceUnitQuantity("Zealand", unitName, 0)
+					elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+						SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+						SetProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+						SetProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+						ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
 					end
 				end
 				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
@@ -414,6 +441,11 @@ local GermanicEvents = {
 						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
 						SetProvinceUnitQuantity("Jutland", unitName, 0)
 						SetProvinceUnitQuantity("Zealand", unitName, 0)
+					elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+						SetProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+						SetProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+						SetProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
+						ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
 					end
 				end
 				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")

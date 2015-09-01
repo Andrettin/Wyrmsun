@@ -1746,7 +1746,11 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 		veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
 	end
 
-	UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) + veterans .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
+	if (GetUnitTypeData(unit_type, "Class") == "worker") then
+		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) + veterans .. " " .. GetUnitTypeName(unit_type) .. " units in " .. GetProvinceName(SelectedProvince))
+	else
+		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) + veterans .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
+	end
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2091,11 +2095,34 @@ function DrawGrandStrategyInterface()
 		end
 		AddGrandStrategyLabel(province_name_text, UI.InfoPanel.X + 27, UI.InfoPanel.Y + 11, Fonts["game"], true, true)
 
-		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting
+		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting, and show up how many workers the province has
 		if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 			if (GrandStrategyInterfaceState == "Province") then
 				local item_x = 0
 				local item_y = 0
+				
+				-- workers
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
+						if (GetProvinceUnitQuantity(SelectedProvince.Name, unitName) > 0) then
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
+
+							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
+							AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+
+							item_x = item_x + 1
+							if (item_x > 3) then
+								item_x = 0
+								item_y = item_y + 1
+							end
+							if (item_y > 2) then
+								break
+							end
+						end
+					end
+				end
+				
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						local veterans = 0
