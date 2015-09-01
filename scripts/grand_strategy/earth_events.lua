@@ -87,14 +87,14 @@ local EarthEvents = {
 				SetProvinceSettlementBuilding("Switzerland", "unit-germanic-town-hall", true)
 				for i, unitName in ipairs(Units) do -- migrate the Vana workers
 					if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
-						SetProvinceUnitQuantity("Aquitaine", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("Belgium", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("Bohemia", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("Burgundy", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("France", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("Latium", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						SetProvinceUnitQuantity("Switzerland", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Aquitaine", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Belgium", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Bohemia", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Burgundy", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("France", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Latium", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Switzerland", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						SetProvinceUnitQuantity("Don", unitName, 0)
 					end
 				end
