@@ -227,6 +227,9 @@ https://github.com/Andrettin/Wyrmsun
 - Provinces now show a (cosmetic) population number.
 - Added a gold deposit in the Lyr province.
 - Stone and lumber are now harvested from a tile only if a quarry or timber lodge is present there.
+- Provinces now have worker units, who contribute to the province's labor pool (used for producing resources).
+- New food resources: grain and mushrooms (contrary to other resources, food is stored by the province, not by the faction).
+- When a province accumulates 1000 food, its population will grow, with the creation of a new worker.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.

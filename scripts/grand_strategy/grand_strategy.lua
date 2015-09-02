@@ -2012,6 +2012,10 @@ function AddGrandStrategyCommodityButton(x, y, commodity)
 		elseif (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") > GrandStrategyFaction.Upkeep) then
 			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
 		end
+	elseif (commodity == "research") then
+		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) > 0) then
+			income = "+" .. math.floor(GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) / GetFactionProvinceCount(GrandStrategyFaction))
+		end
 	else
 		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) > 0) then
 			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity)
