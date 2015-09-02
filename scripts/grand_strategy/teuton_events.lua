@@ -150,7 +150,7 @@ local TeutonEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Burgundy", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
@@ -158,7 +158,7 @@ local TeutonEvents = {
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Burgundy.SettlementLocation[1], WorldMapProvinces.Burgundy.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								ChangeProvinceUnitQuantity("France", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
@@ -166,7 +166,7 @@ local TeutonEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Suebi Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Burgundy, "Suebi Tribe")
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("France", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
 							SetProvinceUnitQuantity("Burgundy", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
@@ -227,7 +227,7 @@ local TeutonEvents = {
 			function(s)
 				AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						SetProvinceUnitQuantity("Bohemia", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 						SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 					end
@@ -248,7 +248,7 @@ local TeutonEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -262,7 +262,7 @@ local TeutonEvents = {
 						SetProvinceCivilization("Bohemia", "teuton")
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								ChangeProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
@@ -270,7 +270,7 @@ local TeutonEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Suebi Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Bohemia, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Bohemia", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 							SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 						end
@@ -332,7 +332,7 @@ local TeutonEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
@@ -343,7 +343,7 @@ local TeutonEvents = {
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								ChangeProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
@@ -351,7 +351,7 @@ local TeutonEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Marcomanni Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Bohemia", unitName))
 							SetProvinceUnitQuantity("Bohemia", unitName, 0)
 						end
@@ -396,7 +396,7 @@ local TeutonEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("North Italy", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -407,7 +407,7 @@ local TeutonEvents = {
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
-							if (IsMilitaryUnit(unitName)) then
+							if (IsOffensiveMilitaryUnit(unitName)) then
 								ChangeProvinceUnitQuantity("North Italy", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
@@ -415,7 +415,7 @@ local TeutonEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Marcomanni Tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("North Italy", unitName, GetProvinceUnitQuantity("Austria", unitName))
 							SetProvinceUnitQuantity("Austria", unitName, 0)
 						end

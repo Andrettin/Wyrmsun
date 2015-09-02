@@ -47,23 +47,7 @@ if (LoadedGame == false) then
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
 	elseif (GrandStrategyEventMap) then
-		local units_to_be_created = {}
-		for i, unitName in ipairs(Units) do
-			if (IsOffensiveMilitaryUnit(unitName)) then
-				units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Svarinshaug", unitName) / 2)
-				SetProvinceUnitQuantity("Svarinshaug", unitName, GetProvinceUnitQuantity("Svarinshaug", unitName) - units_to_be_created[string.gsub(unitName, "-", "_")])
-			end
-		end
-		for i, unitName in ipairs(Units) do
-			if (IsOffensiveMilitaryUnit(unitName)) then
-				if (units_to_be_created[string.gsub(unitName, "-", "_")] > 0) then
-					for i=1,(units_to_be_created[string.gsub(unitName, "-", "_")] * BattalionMultiplier) do
-						unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-					end
-				end
-			end
-		end
+		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)
 	end
 end
 

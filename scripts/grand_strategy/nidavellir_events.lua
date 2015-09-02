@@ -116,7 +116,7 @@ local NidavellirEvents = {
 					end
 
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -182,7 +182,7 @@ local NidavellirEvents = {
 					end
 
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -237,7 +237,7 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -299,7 +299,7 @@ local NidavellirEvents = {
 					end
 
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -370,7 +370,7 @@ local NidavellirEvents = {
 					end
 
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
@@ -698,7 +698,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Brown Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -748,7 +748,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Brown Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -804,14 +804,14 @@ local NidavellirEvents = {
 				end
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 					SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0)
 				else
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
@@ -856,14 +856,14 @@ local NidavellirEvents = {
 				end
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
 					SetProvinceHero("Caverns of Chaincolt", "unit-hero-durstorn", 0)
 				else
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
@@ -902,7 +902,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Northern Wastelands", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
@@ -958,7 +958,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Eastern Mines", unitName, math.ceil((GetPlayerData(1, "UnitTypesCount", unitName) + GetPlayerData(2, "UnitTypesCount", unitName) + GetPlayerData(3, "UnitTypesCount", unitName)) / BattalionMultiplier))
 					end
@@ -1011,7 +1011,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						if (unitName ~= "unit-gnomish-recruit") then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -1082,7 +1082,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						if (unitName ~= "unit-gnomish-recruit") then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -1128,7 +1128,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						if (unitName ~= "unit-gnomish-recruit") then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -1187,7 +1187,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						if (GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "shooter") then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -1246,7 +1246,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						if (GetUnitTypeData(unitName, "Class") ~= "infantry" and GetUnitTypeData(unitName, "Class") ~= "shooter") then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -1298,7 +1298,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
@@ -1360,7 +1360,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
@@ -1514,7 +1514,7 @@ local NidavellirEvents = {
 		OptionConditions = {
 			function(s)
 				for i, unitName in ipairs(Units) do
-					if (IsMilitaryUnit(unitName)) then
+					if (IsOffensiveMilitaryUnit(unitName)) then
 						if (GetProvinceUnitQuantity(EventProvince.Name, unitName) > 0) then
 							return true
 						end
@@ -1538,7 +1538,7 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 
 					for i, unitName in ipairs(Units) do
-						if (IsMilitaryUnit(unitName)) then
+						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity(EventProvince.Name, unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end

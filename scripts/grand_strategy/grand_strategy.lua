@@ -501,14 +501,6 @@ function EndTurn()
 				end
 			end
 		end
-		-- if a dwarven province has a town hall and a barracks, give it militia
-		if (GetProvinceCivilization(WorldMapProvinces[key].Name) == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name))) < 4) then
-			if (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "town-hall") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks")) then
-				SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name)), GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name))) + 1)
-			end
-		elseif (GetProvinceCivilization(WorldMapProvinces[key].Name) == "dwarf" and GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name))) > 4) then
-			SetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("militia", GetProvinceCivilization(WorldMapProvinces[key].Name)), 4)
-		end
 	end
 	
 	-- research technologies
@@ -719,7 +711,7 @@ function AttackProvince(province, faction)
 		end
 		-- set the new unit quantity to the surviving units of the victorious side
 		for i, unitName in ipairs(Units) do
-			if (IsMilitaryUnit(unitName)) then
+			if (IsOffensiveMilitaryUnit(unitName)) then
 				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier))
 			elseif (IsHero(unitName)) then
 				SetProvinceHero(AttackedProvince.Name, unitName, 0)
@@ -735,7 +727,7 @@ function AttackProvince(province, faction)
 		if (attacker_military_score > defender_military_score) then -- if military score is the same, then defenders win
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName)) then
+				if (IsOffensiveMilitaryUnit(unitName)) then
 					SetProvinceUnitQuantity(province.Name, unitName, round(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
 				elseif (IsHero(unitName)) then -- kill off defending heroes if the attacking player was the victorious one
 					if (GetProvinceHero(AttackedProvince.Name, unitName) == 2) then
@@ -748,7 +740,7 @@ function AttackProvince(province, faction)
 		else
 			victorious_player = Defender
 			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName)) then
+				if (IsOffensiveMilitaryUnit(unitName)) then
 					SetProvinceUnitQuantity(province.Name, unitName, round(
 						GetProvinceUnitQuantity(province.Name, unitName)
 						* (defender_military_score - attacker_military_score)
