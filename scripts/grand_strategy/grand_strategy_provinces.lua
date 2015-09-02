@@ -1092,7 +1092,7 @@ function LoadProvinces(world)
 				greek = "Aegae",
 				latin = "Edessa"
 			},
-			SettlementLocation = {135, 34}, -- Aegae
+			SettlementLocation = {542, 140}, -- Aegae
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {

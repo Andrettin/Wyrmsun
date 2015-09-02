@@ -2924,6 +2924,12 @@ function AIDoTurn(ai_faction)
 		if (GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
 			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)))
 		end
+		if (GetCivilizationClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		end
+		if (GetCivilizationClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
+			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		end
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") ~= nil) then
 				if (CanResearchTechnology(WorldMapProvinces[key], unitName)) then
@@ -3138,7 +3144,12 @@ function AIDoTurn(ai_faction)
 			end
 		end
 
-		if (borders_foreign == false or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction) or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "gold") < 1500 * 4)) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
+		if (
+			borders_foreign == false
+			or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction)
+			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "gold") < 1500 * 4)
+			or GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(WorldMapProvinces[key].Name))) <= 1
+		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_catapults_in_province = 0
@@ -3336,7 +3347,12 @@ function CancelBuildStructure(province, unit_type)
 end
 
 function CanTrainUnit(province, unit_type)
-	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	if (
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold")
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber")
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")
+		or (GetProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(province.Name))) <= 1 and GetUnitTypeData(unit_type, "Class") ~= "thief")
+	) then
 		return false
 	end
 
@@ -3384,6 +3400,9 @@ function TrainUnit(province, unit_type)
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
+		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
+			ChangeProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(province.Name)), -1)
+		end
 	end
 end
 
@@ -3393,6 +3412,9 @@ function TrainUnitCancel(province, unit_type)
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
+		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
+			ChangeProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(province.Name)), 1)
+		end
 	end
 end
 
@@ -4208,8 +4230,7 @@ function GetUnitTypeInterfaceState(unit_type)
 	else
 		if (CUpgrade:Get(unit_type).Class == "melee-weapon-1" or CUpgrade:Get(unit_type).Class == "melee-weapon-2" or CUpgrade:Get(unit_type).Class == "bronze-shield" or CUpgrade:Get(unit_type).Class == "iron-shield" or CUpgrade:Get(unit_type).Class == "siege-projectile-1" or CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
 			return "smithy"
---		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
-		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "masonry") then
+		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
 			return "lumber-mill"
 		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
 			return "smithy"
@@ -4320,6 +4341,10 @@ function GetUnitTypeRequiredTechnologies(unit_type)
 		elseif (CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
 			if (GetCivilizationClassUnitType("siege-projectile-1", CUpgrade:Get(unit_type).Civilization) ~= nil) then
 				table.insert(required_technologies, GetCivilizationClassUnitType("siege-projectile-1", CUpgrade:Get(unit_type).Civilization))
+			end
+		elseif (CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow") then
+			if (GetCivilizationClassUnitType("wood-plow", CUpgrade:Get(unit_type).Civilization) ~= nil) then
+				table.insert(required_technologies, GetCivilizationClassUnitType("wood-plow", CUpgrade:Get(unit_type).Civilization))
 			end
 		end
 	end
