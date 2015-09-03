@@ -157,6 +157,7 @@ local GermanicEvents = {
 								SetProvinceUnitQuantity("Astrakhan", unitName, 0)
 							end
 						end
+						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
 						RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
@@ -184,6 +185,7 @@ local GermanicEvents = {
 							SetProvinceUnitQuantity("Astrakhan", unitName, 0)
 						end
 					end
+					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow					
 					AcquireProvince(WorldMapProvinces.Astrakhan, "")
 					SetProvinceCivilization("Astrakhan", "")
 					RemoveProvinceClaim("Astrakhan", "germanic", "Asa Tribe")
@@ -249,6 +251,7 @@ local GermanicEvents = {
 								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 							end
 						end
+						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						SetProvinceCivilization("Brandenburg", "")
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
@@ -275,6 +278,7 @@ local GermanicEvents = {
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end
+					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 					AcquireProvince(WorldMapProvinces.Brandenburg, "")
 					SetProvinceCivilization("Brandenburg", "")
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)

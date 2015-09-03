@@ -47,8 +47,11 @@ local LatinEvents = {
 			if (
 				EventFaction.Name == "Rome"
 				and GetProvinceOwner("France") == EventFaction.Name -- Gaul must have been conquered
-				and GetProvinceOwner("Burgundy") == EventFaction.Name
 				and GetProvinceOwner("Aquitaine") == EventFaction.Name
+				and GetProvinceOwner("Burgundy") == EventFaction.Name
+				and GetProvinceOwner("Franche Comté") == EventFaction.Name
+				and GetProvinceOwner("Normandy") == EventFaction.Name
+				and GetProvinceOwner("Provence") == EventFaction.Name
 --				and SyncRand(100) < 20
 			) then
 				return true

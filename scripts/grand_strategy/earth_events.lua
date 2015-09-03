@@ -65,7 +65,7 @@ local EarthEvents = {
 				AcquireProvince(WorldMapProvinces.Austria, "Norici Tribe")
 				AcquireProvince(WorldMapProvinces.Belgium, "Menapii Tribe")
 				AcquireProvince(WorldMapProvinces.Bohemia, "Boii Tribe")
-				AcquireProvince(WorldMapProvinces.Burgundy, "Sequani Tribe")
+				AcquireProvince(WorldMapProvinces.FrancheComte, "Sequani Tribe")
 				AcquireProvince(WorldMapProvinces.France, "Aedui Tribe")
 				AcquireProvince(WorldMapProvinces.Latium, "Rome")
 				AcquireProvince(WorldMapProvinces.Switzerland, "Helvetii Tribe")
@@ -77,10 +77,10 @@ local EarthEvents = {
 				SetProvinceSettlementBuilding("Belgium", "unit-germanic-town-hall", true)
 				SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 6)
 				SetProvinceSettlementBuilding("Bohemia", "unit-germanic-town-hall", true)
-				SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6)
-				SetProvinceSettlementBuilding("Burgundy", "unit-germanic-town-hall", true)
 				SetProvinceUnitQuantity("France", "unit-germanic-warrior", 6)
 				SetProvinceSettlementBuilding("France", "unit-germanic-town-hall", true)
+				SetProvinceUnitQuantity("Franche Comté", "unit-germanic-warrior", 6)
+				SetProvinceSettlementBuilding("Franche Comté", "unit-germanic-town-hall", true)
 				SetProvinceUnitQuantity("Latium", "unit-teuton-swordsman", 6)
 				SetProvinceSettlementBuilding("Latium", "unit-teuton-town-hall", true)
 				SetProvinceUnitQuantity("Switzerland", "unit-germanic-warrior", 6)
@@ -91,8 +91,8 @@ local EarthEvents = {
 						ChangeProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						ChangeProvinceUnitQuantity("Belgium", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						ChangeProvinceUnitQuantity("Bohemia", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
-						ChangeProvinceUnitQuantity("Burgundy", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						ChangeProvinceUnitQuantity("France", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
+						ChangeProvinceUnitQuantity("Franche Comté", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						ChangeProvinceUnitQuantity("Latium", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						ChangeProvinceUnitQuantity("Switzerland", unitName, GetProvinceUnitQuantity("Don", unitName) / 8)
 						SetProvinceUnitQuantity("Don", unitName, 0)
@@ -160,7 +160,7 @@ local EarthEvents = {
 				and GetProvinceOwner("North Italy") == "Rome"
 				and EventFaction.Diplomacy.SuebiTribe == "War"
 				and Factions.Rome.Diplomacy.SuebiTribe == "Peace"
-				and GetProvinceOwner("Burgundy") == "Suebi Tribe"
+				and GetProvinceOwner("Franche Comté") == "Suebi Tribe"
 				and SyncRand(100) < 33
 			) then
 				return true
