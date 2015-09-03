@@ -2418,6 +2418,7 @@ function DrawGrandStrategyInterface()
 							b:setPressedImage(g_rslider_p)
 							
 							local cost_tooltip = ""
+							cost_tooltip = " (costs 1 " .. GetUnitTypeName(GetCivilizationClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name))) .. " unit"
 							if (GetUnitTypeData(unitName, "Costs", "gold") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
@@ -2430,7 +2431,7 @@ function DrawGrandStrategyInterface()
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
-									cost_tooltip = cost_tooltip .. " and "
+									cost_tooltip = cost_tooltip .. ", "
 								end
 								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "lumber") .. " Lumber"
 							end
@@ -2438,7 +2439,7 @@ function DrawGrandStrategyInterface()
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
-									cost_tooltip = cost_tooltip .. " and "
+									cost_tooltip = cost_tooltip .. ", "
 								end
 								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "stone") .. " Stone"
 							end
