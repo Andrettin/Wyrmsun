@@ -64,8 +64,22 @@ DefineDefaultResourceAmounts(
 
 DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 
+SetResourceBaseLaborInput("gold", 100)
+SetResourceBaseOutput("gold", 200)
+
 SetResourceBasePrice("lumber", 100)
+SetResourceBaseLaborInput("lumber", 100)
+SetResourceBaseOutput("lumber", 100)
+
 SetResourceBasePrice("stone", 100)
+SetResourceBaseLaborInput("stone", 100)
+SetResourceBaseOutput("stone", 100)
+
+SetResourceBaseLaborInput("grain", 100)
+SetResourceBaseOutput("grain", 100)
+
+SetResourceBaseLaborInput("mushrooms", 100)
+SetResourceBaseOutput("mushrooms", 100)
 
 function GetResourceID(resource)
 	local resource_types = {"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper", "grain", "mushrooms", "labor"}
