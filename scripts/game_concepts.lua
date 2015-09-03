@@ -44,10 +44,12 @@ GameConcepts = {
 		Name = _("~!Backstab"),
 		Description = _("Thief units cause extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking directly from behind.")
 	},
+	--[[
 	Claims = {
 		Name = _("Claims"),
 		Description = _("In Grand Strategy mode, claims are provinces considered to be an integral part of a country.")
 	},
+	--]]
 	Experience = {
 		Name = _("~!Experience"),
 		Description = _("Organic units gain experience as enemy units are killed, eventually allowing them to level up. Leveling up allows the unit to upgrade to a better unit type, or to learn one new ability.")
@@ -58,7 +60,7 @@ GameConcepts = {
 	},
 	Food = {
 		Name = _("~!Food"),
-		Description = _("Food is produced by farms in RTS mode, and determines the maximum amount of units a player can have.")
+		Description = _("Food is produced by farms in RTS mode, and determines the maximum amount of units a player can have. In Grand Strategy mode, food is produced by a province's workers employed in food-producing tiles, generating population growth and being consumed by the province's population.")
 	},
 	GameType = {
 		Name = _("Game T~!ype"),
@@ -66,11 +68,11 @@ GameConcepts = {
 	},
 	Garrisoning = {
 		Name = _("~!Garrisoning"),
-		Description = _("Certain buildings can be garrisoned by organic units, and some of them (like towers) even allow units with ranged attacks to attacked from within them.")
+		Description = _("Certain buildings can be garrisoned by organic units, and some of them (like towers) even allow ranged units with to attack from within them.")
 	},
 	Harvesting = {
 		Name = _("Har~!vesting"),
-		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold rocks or gold mines (built on gold deposits), while lumber is gathered by harvesting trees or wood piles. Stone is harvested from rocks. Coal mines are used in a similar manner to gold mines, but they appear only in specific scenarios. In grand strategy mode, resources are harvested by owning the appropriate tiles, and having a town hall in their province.")
+		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold rocks or gold mines (built on gold deposits), while lumber is gathered by harvesting trees or wood piles. Stone is harvested from rocks. Coal mines are used in a similar manner to gold mines, but they appear only in specific scenarios. In Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
 	},
 	Heroes = {
 		Name = _("~!Heroes"),
@@ -86,7 +88,7 @@ GameConcepts = {
 	},
 	Prestige = {
 		Name = _("Pre~!stige"),
-		Description = _("Prestige is a grand strategy mode only resource. A faction's prestige determines its trade priority, and influences the likelihood of certain positive events. Factions with negative prestige cannot declare war. The results of battles will affect a faction's prestige.")
+		Description = _("Prestige is a Grand Strategy mode only resource. A faction's prestige determines its trade priority, and influences the likelihood of certain positive events. Factions with negative prestige cannot declare war. The results of battles will affect a faction's prestige.")
 	},
 	Quests = {
 		Name = _("~!Quests"),
@@ -94,7 +96,7 @@ GameConcepts = {
 	},
 	Research = {
 		Name = _("~!Research"),
-		Description = _("Research is a grand strategy mode only resource, which is used to acquire technologies. A faction gains research depending on the ~<proportion~> of its provinces that has town halls, lumber mills and smithies.")
+		Description = _("Research is a Grand Strategy mode only resource, which is used to acquire technologies. A faction gains research depending on the ~<proportion~> of its provinces that has town halls, lumber mills and smithies.")
 	},
 	Revolts = {
 		Name = _("Revolts"),
@@ -106,7 +108,7 @@ GameConcepts = {
 	},
 	Trade = {
 		Name = _("Tra~!de"),
-		Description = _("In grand strategy mode factions can trade commodities with one another. Trade priority depends on the faction's prestige, and the price of each commodity will vary depending on demand and supply. Trade is also conducted with provinces, with preference being given to the province's owner. Each province demands a bit of certain commodities every turn, demanding more if the price is currently low, or less if the price is too high.")
+		Description = _("In Grand Strategy mode factions can trade commodities with one another. Trade priority depends on the faction's prestige, and the price of each commodity will vary depending on demand and supply. Trade is also conducted with provinces, with preference being given to the province's owner. Each province demands a bit of certain commodities every turn, demanding more if the price is currently low, or less if the price is too high.")
 	},
 	Traits = {
 		Name = _("Tra~!its"),
@@ -114,6 +116,6 @@ GameConcepts = {
 	},
 	Upkeep = {
 		Name = _("~!Upkeep"),
-		Description = _("In grand strategy mode, each military unit costs some upkeep in gold. If the upkeep is not paid, the unit will be disbanded.")
+		Description = _("In Grand Strategy mode, each military unit costs some upkeep in gold. If the upkeep is not paid, the unit will be disbanded.")
 	},
 }

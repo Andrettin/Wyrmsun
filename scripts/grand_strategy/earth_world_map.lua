@@ -7433,12 +7433,14 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
 	SetProvinceOwner("Jutland", "germanic", "Jute Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Jute Tribe")
 	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Jutland", "unit-germanic-warrior", 4) -- enough troops for them to hold their own
 	SetProvinceUnitQuantity("Jutland", "unit-germanic-archer", 0)
 	
 	SetProvinceOwner("Sweden", "germanic", "Swede Tribe")
 	SetProvinceCivilization("Sweden", "germanic")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Swede Tribe")
 	SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
 	SetProvinceSettlementBuilding("Sweden", "unit-germanic-barracks", true) -- to prevent the Goth Tribe from conquering Sweden too easily
 	SetProvinceUnitQuantity("Sweden", "unit-germanic-warrior", 0)
