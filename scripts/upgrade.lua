@@ -96,7 +96,7 @@ DefineUpgrade("upgrade-wood-plow", {
 	Description = _("While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."),
 	Costs = {"time", 200, "gold", 300, "lumber", 450},
 	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 450, "research", 1200},
-	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100},
+	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100, "fish", 100},
 	Ability = false
 })
 
@@ -107,7 +107,7 @@ DefineUpgrade("upgrade-iron-tipped-wood-plow", {
 	Description = _("The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms."),
 	Costs = {"time", 250, "gold", 900, "lumber", 750},
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
-	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100},
+	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100, "fish", 100},
 	Ability = false
 })
 

@@ -228,7 +228,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a gold deposit in the Lyr province.
 - Stone and lumber are now harvested from a tile only if a quarry or timber lodge is present there.
 - Provinces now have worker units, who contribute to the province's labor pool (used for producing resources).
-- New food resources: grain and mushrooms (contrary to other resources, food is stored by the province, not by the faction).
+- New food resources: grain (produced by grain farms), mushrooms (produced by mushroom farms) and fish (produced by settlements adjacent to water); contrary to other resources, food is stored by the province, not by the faction).
 - When a province accumulates 1000 food, its population will grow, with the creation of a new worker.
 - Training military units now requires a worker (you cannot however take the last worker unit away from a province).
 - The Wood Plow and Iron-Tipped Wood Plow technologies are now researchable in grand strategy mode (each provides +100% to food production).
