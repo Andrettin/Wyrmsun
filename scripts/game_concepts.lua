@@ -82,6 +82,10 @@ GameConcepts = {
 		Name = _("Ite~!ms"),
 		Description = _("Items such as potions and food lay down on the ground, and can be used by units by moving on top of them. Food items like cheese and carrots appear when a farm is destroyed. Red potions heal units, blue potions damage them, food items heal, and gold coins give gold to the player. Additionally, destroying barrels will sometimes yield potions, and opening chests (by attacking them) will grant gold.")
 	},
+	Labor = {
+		Name = _("Labor"),
+		Description = _("Workers in a province produce Labor (100 for each worker), which is then used to produce resources in the province.")
+	},
 	Mercenaries = {
 		Name = _("Mer~!cenaries"),
 		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of gold, however. Besides mercenary squads, players can also hire a maximum of 6 thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
