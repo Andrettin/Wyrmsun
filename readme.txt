@@ -208,6 +208,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - The Teuton Farm now changes its graphics after Masonry is researched (new graphics by Jinn).
+- Reworking of the shadows of the Gnomish and Goblin buildings (by Jinn).
+- Reworking of the shadows of the Mercenary Camp (by Jinn).
 
 * Grand Strategy
 - The minimap no longer stops functioning if toggling full screen while playing a grand strategy game.

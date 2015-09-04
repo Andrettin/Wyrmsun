@@ -802,6 +802,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-town-hall",
+	Size = {46, 38},
+	File = "gnome/icons/town_hall.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-farm",
+	Size = {46, 38},
+	File = "gnome/icons/farm.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-barracks",
+	Size = {46, 38},
+	File = "gnome/icons/barracks.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-thrusting-sword-1",
 	Size = {46, 38},
 	File = "gnome/icons/thrusting_sword_1.png"
@@ -1351,24 +1369,6 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	})
 
 	DefineIcon({
-		Name = "icon-gnomish-town-hall",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/town_hall.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-farm",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/farm.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-barracks",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/barracks.png"
-	})
-
-	DefineIcon({
 		Name = "icon-gnomish-caravan",
 		Size = {46, 38},
 		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
@@ -1471,24 +1471,6 @@ elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conife
 	})
 
 	DefineIcon({
-		Name = "icon-gnomish-town-hall",
-		Size = {46, 38},
-		File = "tilesets/forest/gnome/icons/town_hall.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-farm",
-		Size = {46, 38},
-		File = "tilesets/forest/gnome/icons/farm.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-barracks",
-		Size = {46, 38},
-		File = "tilesets/forest/gnome/icons/barracks.png"
-	})
-
-	DefineIcon({
 		Name = "icon-gnomish-caravan",
 		Size = {46, 38},
 		File = "tilesets/forest/gnome/icons/gnomish_caravan.png"
@@ -1588,24 +1570,6 @@ else
 		Name = "icon-dwarven-guard-tower",
 		Size = {46, 38},
 		File = "tilesets/swamp/dwarf/icons/guard_tower.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-town-hall",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/town_hall.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-farm",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/farm.png"
-	})
-
-	DefineIcon({
-		Name = "icon-gnomish-barracks",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/barracks.png"
 	})
 
 	DefineIcon({

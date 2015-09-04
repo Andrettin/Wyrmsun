@@ -256,6 +256,7 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 	Civilization = "goblin",
 	Description = _("The town hall is the center of a goblin settlement's life."),
 	Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
+	Shadow = {"file", "goblin/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-goblin-town-hall",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -267,6 +268,7 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Civilization = "goblin",
 	Description = _("Goblin farms provide sustenance for their settlements. Due to their high population growth goblins seek to finish the construction of new farms as quickly as possible, although they sacrifice structural integrity in the process. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."),
 	Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
+	Shadow = {"file", "goblin/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-farm",
 	HitPoints = 167, -- 200 with masonry
 	Costs = {"time", 80, "gold", 400, "lumber", 200},
@@ -280,6 +282,7 @@ DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
 	Civilization = "goblin",
 	Description = _("Within mess halls goblin warriors gather to hone their skills and plan raids on nearby settlements."),
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/mess_hall_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-mess-hall",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -291,6 +294,7 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 	Civilization = "goblin",
 	Description = _("Although exhibiting a crude exterior, the goblin lumber mills carry saws as technologically advanced as that of other societies."),
 	Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-lumber-mill",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -303,6 +307,7 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	Description = _("Goblins construct their forges out of the skulls of massive birds found on Nidavellir."),
 	Background = _("The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'."),
 	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-smithy",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"

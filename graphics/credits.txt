@@ -548,8 +548,11 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/widgets/slider-bar-normal.png
 /graphics/germanic/ui/widgets/slider-knob.png
 /graphics/gnome/buildings/barracks.png
+/graphics/gnome/buildings/barracks_shadow.png
 /graphics/gnome/buildings/farm.png
+/graphics/gnome/buildings/farm_shadow.png
 /graphics/gnome/buildings/town_hall.png
+/graphics/gnome/buildings/town_hall_shadow.png
 /graphics/gnome/icons/gnomish_recruit.png
 /graphics/gnome/icons/gnomish_worker.png
 /graphics/gnome/icons/gnomish_worker_black_hair.png
@@ -568,7 +571,12 @@ João Victor G. Costa (Jinn):
 /graphics/gnome/ui/widgets/button-thin-medium-pressed.png
 /graphics/gnome/ui/widgets/button-thin-small-normal.png
 /graphics/gnome/ui/widgets/button-thin-small-pressed.png
+/graphics/goblin/buildings/farm_shadow.png
+/graphics/goblin/buildings/lumber_mill_shadow.png
+/graphics/goblin/buildings/mess_hall_shadow.png
 /graphics/goblin/buildings/smithy.png
+/graphics/goblin/buildings/smithy_shadow.png
+/graphics/goblin/buildings/town_hall_shadow.png
 /graphics/goblin/icons/goblin_archer.png
 /graphics/goblin/icons/goblin_assassin.png
 /graphics/goblin/icons/goblin_spearman.png
@@ -598,6 +606,7 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/gold_rock_4_shadow.png
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation)
+/graphics/neutral/buildings/mercenary_camp_shadow.png
 /graphics/neutral/buildings/wood_pile.png
 /graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/axe_mastery.png
