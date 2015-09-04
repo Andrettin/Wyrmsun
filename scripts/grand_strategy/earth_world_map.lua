@@ -8348,20 +8348,20 @@ end
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	
-	SetProvinceOwner("France", "celt", "Aedui Tribe") -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("France", "celt")
-	SetProvinceUnitQuantity("France", "unit-germanic-warrior", 10) -- enough troops for them to be able to hold their own (except against Ariovistus)
-	SetProvinceSettlementBuilding("France", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Burgundy", "celt", "Aedui Tribe") -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	SetProvinceCivilization("Burgundy", "celt")
+	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 10) -- enough troops for them to be able to hold their own (except against Ariovistus)
+	SetProvinceSettlementBuilding("Burgundy", "unit-germanic-town-hall", true)
 	
 	SetProvinceOwner("Aquitaine", "celt", "Arverni Tribe") -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	SetProvinceCivilization("Aquitaine", "celt")
 	SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	SetProvinceSettlementBuilding("Aquitaine", "unit-germanic-town-hall", true)
 	
-	SetProvinceOwner("Franche Comté", "celt", "Sequani Tribe") -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("Franche Comté", "celt")
-	SetProvinceUnitQuantity("Franche Comté", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
-	SetProvinceSettlementBuilding("Franche Comté", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Franche Comte", "celt", "Sequani Tribe") -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	SetProvinceCivilization("Franche Comte", "celt")
+	SetProvinceUnitQuantity("Franche Comte", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
+	SetProvinceSettlementBuilding("Franche Comte", "unit-germanic-town-hall", true)
 	
 	SetProvinceOwner("Belgium", "celt", "Menapii Tribe") -- Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	SetProvinceCivilization("Belgium", "celt")
@@ -8385,11 +8385,11 @@ if (GrandStrategyYear >= -67) then -- Crete acquired by Rome in 67 BC; Source: W
 end
 
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
-	SetProvinceOwner("Franche Comté", "teuton", "Suebi Tribe")
+	SetProvinceOwner("Franche Comte", "teuton", "Suebi Tribe")
 	SetProvinceUnitQuantity("Brandenburg", "unit-teuton-swordsman", 4) -- to give them something of a defense
-	SetProvinceUnitQuantity("Franche Comté", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Franche Comté", "unit-teuton-swordsman", 13)
-	SetProvinceUnitQuantity("France", "unit-germanic-warrior", 0) -- Aedui forces defeated
+	SetProvinceUnitQuantity("Franche Comte", "unit-germanic-warrior", 0)
+	SetProvinceUnitQuantity("Franche Comte", "unit-teuton-swordsman", 13)
+	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 0) -- Aedui forces defeated
 	GrandStrategyEvents.TheSequanisAppeal = nil
 	GrandStrategyEvents.TheBattleOfMagetobria = nil
 end
@@ -8397,8 +8397,8 @@ end
 if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	GrandStrategyEvents.AskRomeForHelp = nil
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
-	SetProvinceOwner("Franche Comté", "", "")
-	SetProvinceUnitQuantity("Franche Comté", "unit-germanic-warrior", 10) -- to make the province harder to conquer
+	SetProvinceOwner("Franche Comte", "", "")
+	SetProvinceUnitQuantity("Franche Comte", "unit-germanic-warrior", 10) -- to make the province harder to conquer
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
 --	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", true)
@@ -8427,7 +8427,7 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceOwner("Brittany", "latin", "Rome")
 	SetProvinceOwner("Burgundy", "latin", "Rome")
 	SetProvinceOwner("France", "latin", "Rome")
-	SetProvinceOwner("Franche Comté", "latin", "Rome")
+	SetProvinceOwner("Franche Comte", "latin", "Rome")
 	SetProvinceOwner("Normandy", "latin", "Rome")
 	SetProvinceUnitQuantity("Normandy", "unit-germanic-warrior", 0)
 	SetProvinceSettlementBuilding("Normandy", "unit-teuton-town-hall", true)
@@ -8749,9 +8749,11 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 end
 
 if (GrandStrategyYear >= 534) then
-	-- The Burgundian realm, which included the Franche Comté, Burgundy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Burgundy", "teuton", "Francia")
-	SetProvinceOwner("Franche Comté", "teuton", "Francia")
+	SetProvinceOwner("Franche Comte", "teuton", "Francia")
+	SetProvinceOwner("Savoy", "teuton", "Francia")
+	SetProvinceOwner("Switzerland", "teuton", "Francia")
 	
 	SetProvinceOwner("Corsica", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Sardinia", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -9036,12 +9038,13 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Normandy", "latin", "France")
 	SetProvinceOwner("Provence", "latin", "France")
 	
+	SetProvinceOwner("Savoy", "latin", "Savoy")
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 	SetProvinceOwner("Sicily", "latin", "Spain")
 
 	SetProvinceOwner("Belgium", "latin", "Spain")
 	SetProvinceOwner("Netherlands", "latin", "Spain")
-	SetProvinceOwner("Franche Comté", "latin", "Spain")
+	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	
 	SetProvinceOwner("Jutland", "norse", "Denmark")

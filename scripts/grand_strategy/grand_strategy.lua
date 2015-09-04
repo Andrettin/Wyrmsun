@@ -37,6 +37,7 @@ GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 GrandStrategyMapWidthIndent = 0
 GrandStrategyMapHeightIndent = 0
+PopulationGrowthThreshold = 2000
 
 function RunGrandStrategyGameSetupMenu()
 	GrandStrategyMapWidth = Video.Width + 64
@@ -2360,9 +2361,26 @@ function DrawGrandStrategyInterface()
 					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
-				-- add units buttons for training
 				local item_x = 0
 				local item_y = 0
+
+				-- workers (to show how many are available for training
+				local worker_unit_type = GetCivilizationClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name))
+				if (worker_unit_type ~= nil) then
+					local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+					local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
+
+					AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, worker_unit_type)
+					AddGrandStrategyLabel(GetProvinceAvailableWorkersForTraining(SelectedProvince.Name) .. "/" .. GetProvinceUnitQuantity(SelectedProvince.Name, worker_unit_type), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+
+					item_x = item_x + 1
+					if (item_x > 3) then
+						item_x = 0
+						item_y = item_y + 1
+					end
+				end
+				
+				-- add units buttons for training
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
 						local veterans = 0
@@ -3149,7 +3167,7 @@ function AIDoTurn(ai_faction)
 			borders_foreign == false
 			or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction)
 			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "gold") < 1500 * 4)
-			or GetProvinceUnitQuantity(WorldMapProvinces[key].Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(WorldMapProvinces[key].Name))) <= 1
+			or GetProvinceAvailableWorkersForTraining(WorldMapProvinces[key].Name) < 1
 		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
@@ -3352,7 +3370,7 @@ function CanTrainUnit(province, unit_type)
 		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber")
 		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")
-		or (GetProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(province.Name))) <= 1 and GetUnitTypeData(unit_type, "Class") ~= "thief")
+		or (GetProvinceAvailableWorkersForTraining(province.Name) < 1 and GetUnitTypeData(unit_type, "Class") ~= "thief")
 	) then
 		return false
 	end
@@ -3695,6 +3713,8 @@ function GetMilitaryScore(province, attacker, count_defenders)
 					military_score = military_score + (units(province.Name, unitName) * (100 + infantry_military_score_bonus))
 				end
 			end
+		elseif (count_defenders and string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker" and GetCivilizationClassUnitType("militia", GetUnitTypeData(unitName, "Civilization")) ~= nil) then
+			military_score = military_score + math.floor(units(province.Name, unitName) * (30 + infantry_military_score_bonus) / 2) -- half the worker population becomes militia when the province is attacked
 		-- Heroes
 		elseif (count_defenders and IsHero(unitName) and ((attacker == false and GetProvinceHero(province.Name, unitName) == 2) or (attacker == true and GetProvinceHero(province.Name, unitName) == 3))) then
 			if (unitName == "unit-hero-marbod" or unitName == "unit-hero-rugnur") then

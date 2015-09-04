@@ -32,18 +32,18 @@ Regions = {
 	Czechoslovakia = {"Bohemia"},
 	England = {"England"},
 	Eurasia = {"Astrakhan", "Don", "Russia", "Ukraine", "White Russia"},
-	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "Don", "England", "Epirus", "Euboea", "France", "Franche Comté", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Macedonia", "Moldavia", "Naples", "Netherlands", "Normandy", "North Italy", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Russia", "Sardinia", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Ukraine", "Wallachia", "White Russia", "Zealand"},
-	France = {"Aquitaine", "Brittany", "Burgundy", "France", "Franche Comté", "Normandy", "Provence"},
-	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comté", "Normandy", "Provence"},
+	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Macedonia", "Moldavia", "Naples", "Netherlands", "Normandy", "North Italy", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Ukraine", "Wallachia", "White Russia", "Zealand"},
+	France = {"Aquitaine", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
+	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Rhineland", "Netherlands", "Silesia"},
 	Greece = {"Aetolia", "Albania", "Argolis", "Attica", "Boeotia", "Crete", "Epirus", "Euboea", "Lacedaemonia", "Macedonia", "Rhodes", "Thessaly", "Thrace"},
 	Iberia = {"Andalusia", "Aragon", "Castille", "Gallaecia", "Portugal"},
 	Italy = {"Corsica", "Latium", "Naples", "North Italy", "Sardinia", "Sicily"},
-	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Franche Comté", "Ireland", "Netherlands", "Normandy", "Provence", "Scotland"},
+	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Franche Comte", "Ireland", "Netherlands", "Normandy", "Provence", "Savoy", "Scotland"},
 	Poland = {"Galicia", "Poland", "White Russia"},
 	RomanDanube = {"Austria", "Bavaria", "Bulgaria", "Croatia", "Hungary", "Serbia", "Switzerland"},
 	Scandinavia = {"Gotaland", "Gotland", "Jutland", "Scania", "Sweden", "Zealand"},
-	WestandCentralEurope = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "England", "Epirus", "Euboea", "France", "Franche Comté", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Macedonia", "Moldavia", "Naples", "Netherlands", "Normandy", "North Italy", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Sardinia", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Wallachia", "Zealand"}
+	WestandCentralEurope = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Macedonia", "Moldavia", "Naples", "Netherlands", "Normandy", "North Italy", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Wallachia", "Zealand"}
 }
 
 function LoadProvinces(world)
@@ -172,7 +172,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Arverni Tribe",
-				"teuton", "Francia"
+				"latin", "France"
 			}
 		},
 		Aragon = {
@@ -579,15 +579,21 @@ function LoadProvinces(world)
 			CulturalNames = {
 				France = "Bourgogne"
 			},
-			Tiles = { {123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32} },
-			SettlementName = "Dijon",
-			CulturalSettlementNames = {
-				latin = "Lugdunum"
+			Tiles = {
+				{123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32}, -- old map
+				{491, 120}, {491, 121}, {491, 123},
+				{492, 120}, {492, 121}, {492, 122}, {492, 123},
+				{493, 120}, {493, 121}, {493, 122}, {493, 123},
+				{494, 121}, {494, 122}, {494, 123}, {494, 124}, {494, 125},
+				{495, 124}, {495, 125},
+				{496, 124}, {496, 125}
 			},
-			SettlementLocation = {123, 31}, -- Dijon
+			SettlementName = "Dijon",
+			SettlementLocation = {494, 121}, -- Dijon
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"celt", "Aedui Tribe",
 				"teuton", "Francia",
 				"latin", "France"
 			}
@@ -824,7 +830,36 @@ function LoadProvinces(world)
 				latin = "Gallia Lugdunensis"
 			},
 			Tiles = {
-				{119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29} -- old map
+				{119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29}, -- old map
+				{474, 122},
+				{475, 122}, {475, 123},
+				{476, 120}, {476, 121}, {476, 122}, {476, 123},
+				{477, 118}, {477, 119}, {477, 120}, {477, 121}, {477, 122}, {477, 123},
+				{478, 118}, {478, 119}, {478, 120}, {478, 121}, {478, 122}, {478, 123},
+				{479, 118}, {479, 119}, {479, 120}, {479, 121}, {479, 122}, {479, 123}, {479, 124},
+				{480, 118}, {480, 119}, {480, 120}, {480, 121}, {480, 122}, {480, 123}, {480, 124},
+				{481, 117}, {481, 118}, {481, 119}, {481, 120}, {481, 121}, {481, 122}, {481, 123}, {481, 124},
+				{482, 117}, {482, 118}, {482, 119}, {482, 120}, {482, 121}, {482, 122}, {482, 123}, {482, 124},
+				{483, 116}, {483, 117}, {483, 118}, {483, 119}, {483, 120}, {483, 121}, {483, 122}, {483, 123}, {483, 124},
+				{484, 113}, {484, 114}, {484, 115}, {484, 116}, {484, 117}, {484, 118}, {484, 119}, {484, 120}, {484, 121}, {484, 122}, {484, 123}, {484, 124}, {484, 125},
+				{485, 111}, {485, 112}, {485, 113}, {485, 114}, {485, 115}, {485, 116}, {485, 117}, {485, 118}, {485, 119}, {485, 120}, {485, 121}, {485, 122}, {485, 123}, {485, 124}, {485, 125},
+				{486, 111}, {486, 112}, {486, 113}, {486, 114}, {486, 115}, {486, 116}, {486, 117}, {486, 118}, {486, 119}, {486, 120}, {486, 121}, {486, 122}, {486, 123}, {486, 124}, {486, 125},
+				{487, 111}, {487, 112}, {487, 113}, {487, 114}, {487, 115}, {487, 116}, {487, 117}, {487, 118}, {487, 119}, {487, 120}, {487, 121}, {487, 122}, {487, 123},
+				{488, 112}, {488, 113}, {488, 114}, {488, 115}, {488, 116}, {488, 117}, {488, 118}, {488, 119}, {488, 120}, {488, 121}, {488, 122}, {488, 123},
+				{489, 112}, {489, 113}, {489, 114}, {489, 115}, {489, 116}, {489, 117}, {489, 118}, {489, 119}, {489, 120}, {489, 121}, {489, 122}, {489, 123}, {489, 124},
+				{490, 113}, {490, 114}, {490, 115}, {490, 116}, {490, 117}, {490, 118}, {490, 119}, {490, 120}, {490, 121}, {490, 122}, {490, 123}, {490, 124},
+				{491, 113}, {491, 114}, {491, 115}, {491, 116}, {491, 117}, {491, 118}, {491, 119}, {491, 122}, {491, 124}, {491, 125}, {491, 126},
+				{492, 114}, {492, 115}, {492, 116}, {492, 117}, {492, 118}, {492, 119}, {492, 124}, {492, 125}, {492, 126},
+				{493, 114}, {493, 115}, {493, 116}, {493, 117}, {493, 118}, {493, 119}, {493, 124}, {493, 125}, {493, 126},
+				{494, 114}, {494, 115}, {494, 116}, {494, 117}, {494, 118}, {494, 119}, {494, 120},
+				{495, 115}, {495, 116}, {495, 117}, {495, 118}, {495, 119}, {495, 120},
+				{496, 115}, {496, 116}, {496, 117}, {496, 118}, {496, 119},
+				{497, 115}, {497, 116}, {497, 117}, {497, 118}, {497, 119},
+				{498, 115}, {498, 116}, {498, 117}, {498, 118}, {498, 119},
+				{499, 116}, {499, 117}, {499, 118}, {499, 119}, {499, 120},
+				{500, 116}, {500, 117}, {500, 118}, {500, 119}, {500, 120},
+				{501, 117}, {501, 118}, {501, 119}, {501, 120},
+				{502, 117}
 			},
 			SettlementName = "Lutetia",
 			CulturalSettlementNames = {
@@ -837,17 +872,21 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Claims = {
-				"celt", "Aedui Tribe",
-				"teuton", "Francia"
+				"teuton", "Francia",
+				"latin", "France"
 			}
 		},
 		FrancheComte = {
-			Name = "Franche Comté",
+			Name = "Franche Comte",
 			CulturalNames = {
 				France = "Franche Comté"
 			},
 			Tiles = {
-				{497, 121}, {497, 122}
+				{495, 121}, {495, 122}, {495, 123},
+				{496, 120}, {496, 121}, {496, 122}, {496, 123},
+				{497, 120}, {497, 121}, {497, 122},
+				{498, 120}, {498, 121}, {498, 122},
+				{499, 121}
 			},
 			SettlementName = "Besançon",
 			CulturalSettlementNames = {
@@ -1305,7 +1344,7 @@ function LoadProvinces(world)
 				{494, 126}, {494, 127}, {494, 128}, {494, 129}, {494, 130}, {494, 131}, {494, 132},
 				{495, 126}, {495, 127}, {495, 128}, {495, 129}, {495, 130}, {495, 131}, {495, 132},
 				{496, 127}, {496, 128}, {496, 129}, {496, 130}, {496, 131}, {496, 132},
-				{497, 128}, {497, 129}, {497, 130}, {497, 131}, {497, 132},
+				{497, 127}, {497, 128}, {497, 129}, {497, 130}, {497, 131}, {497, 132},
 				{498, 128}, {498, 129}, {498, 130}, {498, 131}, {498, 132},
 				{499, 128}, {499, 129}, {499, 130}, {499, 131},
 				{500, 130}, {500, 131},
@@ -1433,6 +1472,25 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
+		},
+		Savoy = {
+			Name = "Savoy",
+			Tiles = {
+				{496, 126},
+				{497, 125}, {497, 126},
+				{498, 124}, {498, 125}, {498, 126}, {498, 127},
+				{499, 124}, {499, 125}, {499, 126}, {499, 127}
+			},
+			SettlementName = "Chambéry",
+			CulturalSettlementNames = {
+				France = "Chambéry"
+			},
+			SettlementLocation = {496, 126}, -- Chambéry
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Claims = {
+				"latin", "France"
+			}
 		},
 		Scania = {
 			Name = "Scania",

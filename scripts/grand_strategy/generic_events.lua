@@ -42,10 +42,12 @@ local GenericEvents = {
 		Options = {"E~!xcellent!"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", (100 * GetFactionProvinceCount(EventFaction)))
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+					ChangeProvinceFood(WorldMapProvinces[province_key].Name, 100)
+				end
 			end
 		},
-		OptionTooltips = {"+100 Gold per province owned"}
+		OptionTooltips = {"+100 Food in every province"}
 	},
 	SkilledCarpenters = {
 		Name = "Skilled Carpenters",

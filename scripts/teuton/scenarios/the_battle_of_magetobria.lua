@@ -68,7 +68,7 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Brandenburg", 0, 1, false, true)
 		
 		-- Aedui units
-		CreateProvinceUnits("France", 1, 1, false, true)
+		CreateProvinceUnits("Burgundy", 1, 1, false, true)
 	end
 	
 	if (GrandStrategy == false or GrandStrategyEventMap) then

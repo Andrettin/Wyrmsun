@@ -97,7 +97,7 @@ local TeutonEvents = {
 				EventFaction.Name == "Suebi Tribe"
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.Brandenburg)
-				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.France)
+				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.France) -- should be Alsace
 				and EventFaction.Diplomacy.AeduiTribe == "Peace"
 				and EventFaction.Diplomacy.ArverniTribe == "Peace"
 				and EventFaction.Diplomacy.SequaniTribe == "Peace"
@@ -130,8 +130,8 @@ local TeutonEvents = {
 				and EventFaction.Diplomacy.SequaniTribe == "Peace"
 				and Factions.ArverniTribe.Diplomacy.AeduiTribe == "War"
 				and Factions.SequaniTribe.Diplomacy.AeduiTribe == "War"
-				and GetProvinceOwner("Franche Comté") == "Sequani Tribe"
-				and GetProvinceOwner("France") == "Aedui Tribe"
+				and GetProvinceOwner("Franche Comte") == "Sequani Tribe"
+				and GetProvinceOwner("Burgundy") == "Aedui Tribe"
 			) then
 				return true
 			else
@@ -151,15 +151,15 @@ local TeutonEvents = {
 						AcquireProvince(WorldMapProvinces.FrancheComte, "Suebi Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Franche Comté", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+								SetProvinceUnitQuantity("Franche Comte", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
-						SetProvinceUnitQuantity("France", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
+						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.FrancheComte.SettlementLocation[1], WorldMapProvinces.FrancheComte.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
-								ChangeProvinceUnitQuantity("France", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+								ChangeProvinceUnitQuantity("Burgundy", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
@@ -167,8 +167,8 @@ local TeutonEvents = {
 					AcquireProvince(WorldMapProvinces.FrancheComte, "Suebi Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("France", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
-							SetProvinceUnitQuantity("Franche Comté", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
+							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
+							SetProvinceUnitQuantity("Franche Comte", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end

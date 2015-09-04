@@ -217,7 +217,7 @@ https://github.com/Andrettin/Wyrmsun
 - AI factions now attack through water, if there is only one water province separating them from an enemy province.
 - Hill graphic transitions update (by Jinn).
 - Greatly increased the proportions of the Earth map.
-- New Earth provinces: Aetolia, Boeotia, Epirus, Euboea, Franche Comté, Normandy, Provence, Rhodes, Scania, Thessaly, Zealand.
+- New Earth provinces: Aetolia, Boeotia, Epirus, Euboea, Franche Comté, Normandy, Provence, Rhodes, Savoy, Scania, Thessaly, Zealand.
 - New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Marmara, Skagerrak.
 - Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
@@ -232,6 +232,7 @@ https://github.com/Andrettin/Wyrmsun
 - When a province accumulates 10,000 food, its population will grow, with the creation of a new worker.
 - Training military units now requires a worker (you cannot however take the last worker unit away from a province).
 - The Wood Plow and Iron-Tipped Wood Plow technologies are now researchable in grand strategy mode (each provides +100% to food production).
+- The Bountiful Harvest event now grants additional food in every province, instead of giving extra gold to the player.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.
