@@ -157,7 +157,7 @@ local EarthEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Aedui Tribe"
-				and GetProvinceOwner("North Italy") == "Rome"
+				and GetProvinceOwner("Provence") == "Rome"
 				and EventFaction.Diplomacy.SuebiTribe == "War"
 				and Factions.Rome.Diplomacy.SuebiTribe == "Peace"
 				and GetProvinceOwner("Franche Comte") == "Suebi Tribe"

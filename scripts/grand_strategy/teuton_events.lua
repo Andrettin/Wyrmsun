@@ -376,7 +376,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
-				and GetProvinceOwner("North Italy") == "Rome"
+				and GetProvinceOwner("Venetia") == "Rome"
 				and GetProvinceOwner("Austria") == "Marcomanni Tribe"
 			) then
 				return true
@@ -394,34 +394,34 @@ local TeutonEvents = {
 					RunMap("maps/earth/oderzo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
+						AcquireProvince(WorldMapProvinces.Venetia, "Marcomanni Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("North Italy", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+								SetProvinceUnitQuantity("Venetia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("North Italy", unitName, 2)
+									SetProvinceHero("Venetia", unitName, 2)
 								end
 							end
 						end
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Venetia.SettlementLocation[1], WorldMapProvinces.Venetia.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
-								ChangeProvinceUnitQuantity("North Italy", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+								ChangeProvinceUnitQuantity("Venetia", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Marcomanni Tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.NorthItaly, "Marcomanni Tribe")
+					AcquireProvince(WorldMapProvinces.Venetia, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("North Italy", unitName, GetProvinceUnitQuantity("Austria", unitName))
+							SetProvinceUnitQuantity("Venetia", unitName, GetProvinceUnitQuantity("Austria", unitName))
 							SetProvinceUnitQuantity("Austria", unitName, 0)
 						end
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.NorthItaly.SettlementLocation[1], WorldMapProvinces.NorthItaly.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Venetia.SettlementLocation[1], WorldMapProvinces.Venetia.SettlementLocation[2])
 						GrandStrategyDialog("The Razing of Opitergium", "Opitergium became naught but ashes.")
 					end
 				end

@@ -58,7 +58,7 @@ if (LoadedGame == false) then
 	--	SetProvinceHero("Austria", "unit-hero-marbod", 0)
 		
 		-- Roman units
-		CreateProvinceUnits("North Italy", 1, 4)
+		CreateProvinceUnits("Venetia", 1, 4)
 	end
 end
 
