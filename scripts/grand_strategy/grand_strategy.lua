@@ -3687,7 +3687,7 @@ function GetMilitaryScore(province, attacker, count_defenders)
 	local military_score = 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
-			if (GetUnitTypeData(unitName, "Class") == "militia" and count_defenders) then
+			if (GetUnitTypeData(unitName, "Class") == "militia") then
 				military_score = military_score + (units(province.Name, unitName) * (30 + infantry_military_score_bonus))
 			elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
 				military_score = military_score + (units(province.Name, unitName) * (50 + infantry_military_score_bonus))
