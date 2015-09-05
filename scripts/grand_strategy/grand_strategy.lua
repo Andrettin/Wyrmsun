@@ -830,9 +830,9 @@ function AttackProvince(province, faction)
 			battle_report_title = "Revolt in " .. GetProvinceName(AttackedProvince)
 		end
 		local battle_report_message = ""
-		if (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
+		if (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
 			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
+		elseif (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
 			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
 			battle_report_message = "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!"
@@ -842,9 +842,9 @@ function AttackProvince(province, faction)
 			battle_report_message = "My lord, our attempt to conquer the wildlands of " .. GetProvinceName(AttackedProvince) .. " has failed!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
 			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Defender) then
+		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
 			battle_report_message = "My lord, a failed revolt to declare the independence of the " .. GetFactionFullName(Attacker) .. " has occurred in " .. GetProvinceName(AttackedProvince) .. "!"
-		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Attacker) then
+		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
 			battle_report_message = "My lord, the province of " .. GetProvinceName(AttackedProvince) .. " has risen in rebellion, resulting in the declaration of independence of the " .. GetFactionFullName(Attacker) .. "!"
 		end
 		battle_report_message = battle_report_message .. "\n\nUnits Lost: " .. units_lost_string
