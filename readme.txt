@@ -219,7 +219,7 @@ https://github.com/Andrettin/Wyrmsun
 - AI factions now attack through water, if there is only one water province separating them from an enemy province.
 - Hill graphic transitions update (by Jinn).
 - Greatly increased the proportions of the Earth map.
-- New Earth provinces: Aetolia, Boeotia, Epirus, Euboea, Franche Comté, Liguria, Lombardy, Modena, Normandy, Parma, Piedmont, Provence, Rhodes, Savoy, Scania, Thessaly, Venetia, Zealand.
+- New Earth provinces: Aetolia, Boeotia, Epirus, Euboea, Franche Comté, Liguria, Lombardy, Modena, Normandy, Parma, Piedmont, Provence, Rhodes, Savoy, Scania, Thessaly, Tuscany, Venetia, Zealand.
 - New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Marmara, Skagerrak.
 - Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.

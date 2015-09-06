@@ -8581,7 +8581,8 @@ if (GrandStrategyYear >= -323) then -- Macedonian Empire in 323 BC; Source: Will
 	SetProvinceCivilization("Bulgaria", "greek")
 end
 
-if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -264) then
+	-- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Latium", "latin", "Rome")
 	SetProvinceCivilization("Latium", "latin")
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-town-hall", true)
@@ -8590,6 +8591,8 @@ if (GrandStrategyYear >= -264) then -- Roman territory at the beginning of the 1
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-smithy", true)
 	SetProvinceOwner("Naples", "latin", "Rome")
 	SetProvinceSettlementBuilding("Naples", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Tuscany", "latin", "Rome")
+	SetProvinceSettlementBuilding("Tuscany", "unit-teuton-town-hall", true)
 	
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
@@ -8622,17 +8625,33 @@ if (GrandStrategyYear >= -200) then -- Kingdoms of the Diadochi about 200 BC; So
 	SetProvinceOwner("Bulgaria", "", "")
 end
 
-if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Castille", "latin", "Rome")
 	SetProvinceSettlementBuilding("Castille", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Andalusia", "latin", "Rome")
 	SetProvinceSettlementBuilding("Andalusia", "unit-teuton-town-hall", true)
 end
 
-if (GrandStrategyYear >= -191) then -- Cisalpine Gaul conquered in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Lombardy", "latin", "Rome")
 	SetProvinceSettlementBuilding("Lombardy", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Lombardy", "unit-germanic-warrior", 0)
+	SetProvinceOwner("Modena", "latin", "Rome")
+	SetProvinceSettlementBuilding("Modena", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Parma", "latin", "Rome")
+	SetProvinceSettlementBuilding("Parma", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Piedmont", "latin", "Rome")
+	SetProvinceSettlementBuilding("Piedmont", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Romagna", "latin", "Rome")
+	SetProvinceSettlementBuilding("Romagna", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Venetia", "latin", "Rome")
+	SetProvinceSettlementBuilding("Venetia", "unit-teuton-town-hall", true)
+	SetProvinceUnitQuantity("Venetia", "unit-germanic-warrior", 0)
+end
+
+if (GrandStrategyYear >= -154) then -- Liguria acquired by Rome in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Liguria", "latin", "Rome")
+	SetProvinceSettlementBuilding("Liguria", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Epirus, Euboea, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -8651,6 +8670,11 @@ end
 if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Portugal", "latin", "Rome")
 	SetProvinceSettlementBuilding("Portugal", "unit-teuton-town-hall", true)
+end
+
+if (GrandStrategyYear >= -121) then -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Provence", "latin", "Rome")
+	SetProvinceSettlementBuilding("Provence", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -8780,6 +8804,9 @@ if (GrandStrategyYear >= -15) then
 	SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Bavaria", "latin", "Rome") -- Raetia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceUnitQuantity("Bavaria", "unit-germanic-warrior", 0)
+	
+	SetProvinceOwner("Savoy", "latin", "Rome") -- Pennine Alps acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceSettlementBuilding("Savoy", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -14) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

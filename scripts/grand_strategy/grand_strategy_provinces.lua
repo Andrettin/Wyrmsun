@@ -32,18 +32,18 @@ Regions = {
 	Czechoslovakia = {"Bohemia"},
 	England = {"England"},
 	Eurasia = {"Astrakhan", "Don", "Russia", "Ukraine", "White Russia"},
-	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Naples", "Netherlands", "Normandy", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Ukraine", "Venetia", "Wallachia", "White Russia", "Zealand"},
+	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Naples", "Netherlands", "Normandy", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Venetia", "Wallachia", "White Russia", "Zealand"},
 	France = {"Aquitaine", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Rhineland", "Netherlands", "Silesia"},
 	Greece = {"Aetolia", "Albania", "Argolis", "Attica", "Boeotia", "Crete", "Epirus", "Euboea", "Lacedaemonia", "Macedonia", "Rhodes", "Thessaly", "Thrace"},
 	Iberia = {"Andalusia", "Aragon", "Castille", "Gallaecia", "Portugal"},
-	Italy = {"Corsica", "Latium", "Liguria", "Lombardy", "Modena", "Naples", "Parma", "Piedmont", "Sardinia", "Sicily", "Venetia"},
+	Italy = {"Corsica", "Latium", "Liguria", "Lombardy", "Modena", "Naples", "Parma", "Piedmont", "Romagna", "Sardinia", "Sicily", "Tuscany", "Venetia"},
 	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Franche Comte", "Ireland", "Netherlands", "Normandy", "Provence", "Savoy", "Scotland"},
 	Poland = {"Galicia", "Poland", "White Russia"},
 	RomanDanube = {"Austria", "Bavaria", "Bulgaria", "Croatia", "Hungary", "Serbia", "Switzerland"},
 	Scandinavia = {"Gotaland", "Gotland", "Jutland", "Scania", "Sweden", "Zealand"},
-	WestandCentralEurope = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Naples", "Netherlands", "Normandy", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Venetia", "Wallachia", "Zealand"}
+	WestandCentralEurope = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Castille", "Corsica", "Crete", "Croatia", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Naples", "Netherlands", "Normandy", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Romagna", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Sicily", "Silesia", "Sweden", "Switzerland", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Venetia", "Wallachia", "Zealand"}
 }
 
 function LoadProvinces(world)
@@ -1131,7 +1131,14 @@ function LoadProvinces(world)
 		},
 		Latium = {
 			Name = "Latium",
-			Tiles = { {129, 33}, {129, 34} },
+			Tiles = {
+				{129, 33}, {129, 34}, -- old map
+				{513, 134}, {513, 135},
+				{514, 133}, {514, 134}, {514, 135}, {514, 136},
+				{515, 135}, {515, 136}, {515, 137},
+				{516, 136}, {516, 137},
+				{517, 136}, {517, 137}, {517, 138}
+			},
 			SettlementName = "Rome",
 			CulturalNames = {
 				latin = "Latium"
@@ -1139,7 +1146,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				latin = "Roma"
 			},
-			SettlementLocation = {129, 34}, -- Rome
+			SettlementLocation = {515, 136}, -- Rome
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
@@ -1151,6 +1158,9 @@ function LoadProvinces(world)
 		},
 		Liguria = {
 			Name = "Liguria",
+			CulturalNames = {
+				latin = "Liguria"
+			},
 			Tiles = {
 				{502, 130},
 				{503, 129}, {503, 130},
@@ -1168,7 +1178,8 @@ function LoadProvinces(world)
 		Lombardy = {
 			Name = "Lombardy",
 			CulturalNames = {
-				celt = "Cisalpine Gaul"
+				celt = "Transpadane Gaul",
+				latin = "Transpadane Gaul"
 			},
 			Tiles = {
 				{125, 31}, {125, 32}, {126, 31}, {126, 32}, {127, 31}, {127, 32}, {128, 31}, {128, 32}, {128, 33}, {129, 31}, -- old map
@@ -1231,7 +1242,7 @@ function LoadProvinces(world)
 				{508, 130},
 				{509, 130},
 				{510, 128}, {510, 129}, {510, 130},
-				{511, 128}, {511, 129}, {511, 130}
+				{511, 128}, {511, 129}
 			},
 			SettlementName = "Modena",
 			SettlementLocation = {511, 129}, -- Modena
@@ -1502,6 +1513,24 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
+		Romagna = {
+			Name = "Romagna",
+			CulturalNames = {
+				celt = "Cispadane Gaul",
+				latin = "Cispadane Gaul"
+			},
+			Tiles = {
+				{512, 128}, {512, 129},
+				{513, 128}, {513, 129},
+				{514, 128}, {514, 129}, {514, 130},
+				{515, 130}
+			},
+			SettlementName = "Bologna",
+			SettlementLocation = {512, 129}, -- Bologna
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
 		Russia = {
 			Name = "Russia",
 			CulturalNames = {
@@ -1539,6 +1568,9 @@ function LoadProvinces(world)
 		},
 		Savoy = {
 			Name = "Savoy",
+			CulturalNames = {
+				latin = "Pennine Alps"
+			},
 			Tiles = {
 				{496, 126},
 				{497, 125}, {497, 126},
@@ -1814,6 +1846,25 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4 -- a few soldiers to make it more difficult for to expand here
 			}
 		},
+		Tuscany = {
+			Name = "Tuscany",
+			CulturalNames = {
+				latin = "Etruria"
+			},
+			Tiles = {
+				{509, 131},
+				{510, 131}, {510, 132}, {510, 133},
+				{511, 130}, {511, 131}, {511, 132}, {511, 133}, {511, 134},
+				{512, 130}, {512, 131}, {512, 132}, {512, 133}, {512, 134},
+				{513, 130}, {513, 131}, {513, 132}, {513, 133},
+				{514, 131}, {514, 132}
+			},
+			SettlementName = "Florence",
+			SettlementLocation = {512, 131}, -- Florence
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
 		Ukraine = {
 			Name = "Ukraine",
 			CulturalNames = {
@@ -1834,6 +1885,9 @@ function LoadProvinces(world)
 		},
 		Venetia = {
 			Name = "Venetia",
+			CulturalNames = {
+				latin = "Venetia"
+			},
 			Tiles = {
 				{510, 126}, {510, 127},
 				{511, 126}, {511, 127},
