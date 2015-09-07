@@ -8593,6 +8593,8 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceSettlementBuilding("Naples", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Tuscany", "latin", "Rome")
 	SetProvinceSettlementBuilding("Tuscany", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Umbria", "latin", "Rome")
+	SetProvinceSettlementBuilding("Umbria", "unit-teuton-town-hall", true)
 	
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
@@ -9050,6 +9052,7 @@ if (GrandStrategyYear >= 495) then
 	SetProvinceUnitQuantity("Latium", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe") -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceUnitQuantity("Naples", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
+	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe") -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 end
 
 if (GrandStrategyYear >= 500) then
