@@ -245,9 +245,6 @@ SetAllPlayersTotalUnitLimit(400)
 DefineVariables(
 --	"CharacterName", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"Level", {Max = 255, Value = 1, Increase = 0, Enable = true},
-	"BasePoints", {Max = 99999, Value = 0, Increase = 0, Enable = true},
-	"Points", {Max = 99999, Value = 0, Increase = 0, Enable = true},
---	"Points",
 	"XpRequired", {Enable = true},
 	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
@@ -525,13 +522,9 @@ function StandardTriggers()
 					end
 				end
 
-				if (GetUnitVariable(uncount[unit1], "Points") == 0 and GetUnitVariable(uncount[unit1], "BasePoints") > 0) then
-					SetUnitVariable(uncount[unit1], "Points", GetUnitVariable(uncount[unit1], "BasePoints"))
-				end
-				
 				if (GetUnitVariable(uncount[unit1], "XpRequired") == 0) then
 					local xp_required = GetUnitVariable(uncount[unit1], "XpRequired")
-					xp_required = xp_required + math.floor(GetUnitVariable(uncount[unit1], "BasePoints") / (GetUnitVariable(uncount[unit1], "StartingLevel") + 1) * 4 * 2)
+					xp_required = xp_required + math.floor(GetUnitVariable(uncount[unit1], "Points") / (GetUnitVariable(uncount[unit1], "StartingLevel") + 1) * 4 * 2)
 					SetUnitVariable(uncount[unit1], "XpRequired", xp_required)
 				end
 				
@@ -1584,12 +1577,9 @@ function InitializeUnit(unit)
 			SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
 		end
 	end
-	if (GetUnitVariable(unit, "Points") == 0 and GetUnitVariable(unit, "BasePoints") > 0) then
-		SetUnitVariable(unit, "Points", GetUnitVariable(unit, "BasePoints"))
-	end
 	if (GetUnitVariable(unit, "XpRequired") == 0) then
 		local xp_required = GetUnitVariable(unit, "XpRequired")
-		xp_required = xp_required + math.floor(GetUnitVariable(unit, "BasePoints") / (GetUnitVariable(unit, "StartingLevel") + 1) * 4 * 2)
+		xp_required = xp_required + math.floor(GetUnitVariable(unit, "Points") / (GetUnitVariable(unit, "StartingLevel") + 1) * 4 * 2)
 		SetUnitVariable(unit, "XpRequired", xp_required)
 	end
 	if (GetUnitVariable(unit, "Level") < GetUnitVariable(unit, "StartingLevel")) then
@@ -1733,6 +1723,7 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 			xp_required = xp_required + 100 * (GetUnitVariable(unit, "Level") + 1)
 			SetUnitVariable(unit, "XpRequired", xp_required)
 			if (GetUnitVariable(unit, "StartingLevel") < GetUnitVariable(unit, "Level")) then
+				SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points", "Max") + (5 * (GetUnitVariable(unit, "Level") + 1)), "Max")
 				SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + (5 * (GetUnitVariable(unit, "Level") + 1)))
 			end
 			if (advancement) then
