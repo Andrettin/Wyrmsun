@@ -119,6 +119,7 @@ DefineUpgrade("upgrade-teuton-writing", {
 
 DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
+	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"},
 --	{"apply-to", "unit-teuton-old-man"},
 	{"apply-to", "unit-hero-marbod"}
@@ -126,22 +127,26 @@ DefineModifier("upgrade-teuton-spatha",
 
 DefineModifier("upgrade-teuton-iron-shield",
 	{"Armor", 2},
+	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"},
 	{"apply-to", "unit-hero-marbod"}
 )
 
 DefineModifier("upgrade-teuton-bodkin-arrow",
 	{"BasicDamage", 1},
+	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )
 
 DefineModifier("upgrade-teuton-catapult-projectile-1",
 	{"BasicDamage", 15},
+	{"Points", 10},
 	{"apply-to", "unit-teuton-catapult"}
 )
 
 DefineModifier("upgrade-teuton-catapult-projectile-2",
 	{"BasicDamage", 15},
+	{"Points", 10},
 	{"apply-to", "unit-teuton-catapult"}
 )
 

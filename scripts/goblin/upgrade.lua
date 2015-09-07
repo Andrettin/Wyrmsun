@@ -84,11 +84,13 @@ DefineUpgrade("upgrade-goblin-masonry", {
 
 DefineModifier("upgrade-goblin-catapult-projectile-1",
 	{"BasicDamage", 15},
+	{"Points", 10},
 	{"apply-to", "unit-goblin-war-machine"}
 )
 
 DefineModifier("upgrade-goblin-catapult-projectile-2",
 	{"BasicDamage", 15},
+	{"Points", 10},
 	{"apply-to", "unit-goblin-war-machine"}
 )
 

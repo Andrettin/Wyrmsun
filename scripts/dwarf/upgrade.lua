@@ -161,6 +161,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"BasicDamage", 2},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
@@ -174,6 +175,7 @@ DefineModifier("upgrade-dwarven-broad-axe",
 
 DefineModifier("upgrade-dwarven-great-axe",
 	{"BasicDamage", 2},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
@@ -187,6 +189,7 @@ DefineModifier("upgrade-dwarven-great-axe",
 
 DefineModifier("upgrade-dwarven-shield-1",
 	{"Armor", 2},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
@@ -200,6 +203,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 
 DefineModifier("upgrade-dwarven-shield-2",
 	{"Armor", 2},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
@@ -213,19 +217,23 @@ DefineModifier("upgrade-dwarven-shield-2",
 
 DefineModifier("upgrade-dwarven-throwing-axe-1",
 	{"BasicDamage", 1},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineModifier("upgrade-dwarven-throwing-axe-2",
 	{"BasicDamage", 1},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
 )
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
 	{"BasicDamage", 15},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista"})
 
 DefineModifier("upgrade-dwarven-ballista-bolt-2",
 	{"BasicDamage", 15},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista"})
 
 DefineModifier("upgrade-dwarven-wood-plow",

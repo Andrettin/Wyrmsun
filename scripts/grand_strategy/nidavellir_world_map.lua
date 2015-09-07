@@ -841,7 +841,7 @@ GenerateProvince({
 --AddProvinceResource(WorldMapProvinces.BrownHills, "gold", 1)
 AddProvinceResource(WorldMapProvinces.BrownHills, "mushrooms", 2)
 AddProvinceResource(WorldMapProvinces.BrownHills, "stone", 1)
-AddProvinceResource(WorldMapProvinces.CavernsOfChaincolt, "mushrooms", 2)
+AddProvinceResource(WorldMapProvinces.CavernsOfChaincolt, "mushrooms", 3)
 AddProvinceResource(WorldMapProvinces.CavernsOfChaincolt, "stone", 1)
 AddProvinceResource(WorldMapProvinces.CavernsOfFlame, "mushrooms", 1)
 AddProvinceResource(WorldMapProvinces.EasternMines, "mushrooms", 1)

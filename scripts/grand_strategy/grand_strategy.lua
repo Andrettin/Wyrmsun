@@ -655,8 +655,8 @@ function AttackProvince(province, faction)
 	
 	local victorious_player = ""
 	
-	local attacker_prestige = math.floor(10 * GetMilitaryScore(province, false, true) / GetMilitaryScore(province, true, true)) -- 10 prestige if military scores are equal
-	local defender_prestige = math.floor(10 * GetMilitaryScore(province, true, true) / GetMilitaryScore(province, false, true)) -- 10 prestige if military scores are equal
+	local attacker_prestige = math.floor(10 * GetProvinceMilitaryScore(province.Name, false, true) / GetProvinceMilitaryScore(province.Name, true, true)) -- 10 prestige if military scores are equal
+	local defender_prestige = math.floor(10 * GetProvinceMilitaryScore(province.Name, true, true) / GetProvinceMilitaryScore(province.Name, false, true)) -- 10 prestige if military scores are equal
 	
 	local units_lost = {}
 	for i, unitName in ipairs(Units) do
@@ -723,8 +723,8 @@ function AttackProvince(province, faction)
 		end
 		GrandStrategyBattle = false
 	else
-		local attacker_military_score = GetMilitaryScore(province, true, true)
-		local defender_military_score = GetMilitaryScore(province, false, true)
+		local attacker_military_score = GetProvinceMilitaryScore(province.Name, true, true)
+		local defender_military_score = GetProvinceMilitaryScore(province.Name, false, true)
 		if (attacker_military_score > defender_military_score) then -- if military score is the same, then defenders win
 			victorious_player = Attacker
 			for i, unitName in ipairs(Units) do
@@ -3025,11 +3025,11 @@ function AIDoTurn(ai_faction)
 						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 					end
 					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
-						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+						if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
-									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
+									if (GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) < GetProvinceMilitaryScore(WorldMapProvinces[third_key].Name, false, false)) then
 										province_threatened = true
 									end
 								end
@@ -3048,10 +3048,10 @@ function AIDoTurn(ai_faction)
 					local new_desired_infantry_in_province = 0
 					local new_desired_archers_in_province = 0
 					local new_desired_catapults_in_province = 0
-					if (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
-						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-						new_desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
+						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 					end
 					if (new_desired_infantry_in_province > desired_infantry_in_province) then
 						desired_infantry_in_province = new_desired_infantry_in_province
@@ -3075,11 +3075,11 @@ function AIDoTurn(ai_faction)
 							borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 						end
 						if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
-							if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+							if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 								local province_threatened = false
 								for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 									if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
-										if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
+										if (GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) < GetProvinceMilitaryScore(WorldMapProvinces[third_key].Name, false, false)) then
 											province_threatened = true
 										end
 									end
@@ -3098,10 +3098,10 @@ function AIDoTurn(ai_faction)
 						local new_desired_infantry_in_province = 0
 						local new_desired_archers_in_province = 0
 						local new_desired_catapults_in_province = 0
-						if (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
-							new_desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-							new_desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-							new_desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+						if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
+							new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+							new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+							new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						end
 						if (new_desired_infantry_in_province > desired_infantry_in_province) then
 							desired_infantry_in_province = new_desired_infantry_in_province
@@ -3122,11 +3122,11 @@ function AIDoTurn(ai_faction)
 				if (WorldMapProvinces[second_key] ~= nil and GetProvinceWater(WorldMapProvinces[second_key].Name) == false) then
 					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
 						borders_foreign = true
-						if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+						if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[third_key].Name) == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
-									if (GetMilitaryScore(WorldMapProvinces[key], false, true) < GetMilitaryScore(WorldMapProvinces[third_key], false, false)) then
+									if (GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) < GetProvinceMilitaryScore(WorldMapProvinces[third_key].Name, false, false)) then
 										province_threatened = true
 									end
 								end
@@ -3145,10 +3145,10 @@ function AIDoTurn(ai_faction)
 					local new_desired_infantry_in_province = 0
 					local new_desired_archers_in_province = 0
 					local new_desired_catapults_in_province = 0
-					if (GetMilitaryScore(WorldMapProvinces[second_key], false, true) > 0) then
-						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-						new_desired_archers_in_province = round(desired_archers_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
-						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) / base_military_score)
+					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
+						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 					end
 					if (new_desired_infantry_in_province > desired_infantry_in_province) then
 						desired_infantry_in_province = new_desired_infantry_in_province
@@ -3252,7 +3252,7 @@ function AIDoDiplomacy(ai_faction)
 		for province_i, key in ipairs(ai_faction.OwnedProvinces) do
 			for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 				if (WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[second_key].Name) == false and CanDeclareWar(ai_faction, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name)))) then
-					if (round(GetMilitaryScore(WorldMapProvinces[second_key], false, true) * 3 / 2) < GetMilitaryScore(WorldMapProvinces[key], false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
+					if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 						if (ai_faction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))] ~= "War" and (GetFactionMilitaryScore(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
 							DeclareWar(ai_faction.Name, GetProvinceOwner(WorldMapProvinces[second_key].Name))
 						end
@@ -3631,106 +3631,8 @@ end
 function GetFactionMilitaryScore(faction)
 	local military_score = 0
 	for province_i, key in ipairs(faction.OwnedProvinces) do
-		military_score = military_score + GetMilitaryScore(WorldMapProvinces[key], false, true)
+		military_score = military_score + GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true)
 	end
-	return military_score
-end
-
-function GetMilitaryScore(province, attacker, count_defenders)
-	local units
-	local faction
-	if (attacker == false) then
-		units = GetProvinceUnitQuantity
-		faction = GetProvinceOwner(province.Name)
-	else
-		if (GetProvinceAttackedBy(province.Name) == "") then
-			return 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
-		else
-			units = GetProvinceAttackingUnitQuantity
-			faction = GetProvinceAttackedBy(province.Name)
-		end
-	end
-	local infantry_military_score_bonus = 0
-	local archer_military_score_bonus = 0
-	local catapult_military_score_bonus = 0
-	local flying_rider_military_score_bonus = 0
-	if (faction ~= "" and GetProvinceWater(province.Name) == false) then
-		faction = GetFactionFromName(faction)
-		if (FactionHasTechnologyType(faction, "melee-weapon-1")) then
-			infantry_military_score_bonus = infantry_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "melee-weapon-2")) then
-			infantry_military_score_bonus = infantry_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "bronze-shield")) then
-			infantry_military_score_bonus = infantry_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "iron-shield")) then
-			infantry_military_score_bonus = infantry_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "ranged-projectile-1")) then
-			archer_military_score_bonus = archer_military_score_bonus + 10
-			flying_rider_military_score_bonus = flying_rider_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "ranged-projectile-2")) then
-			archer_military_score_bonus = archer_military_score_bonus + 10
-			flying_rider_military_score_bonus = flying_rider_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "siege-projectile-1")) then
-			catapult_military_score_bonus = catapult_military_score_bonus + 10
-		end
-		if (FactionHasTechnologyType(faction, "siege-projectile-2")) then
-			catapult_military_score_bonus = catapult_military_score_bonus + 10
-		end
-	end
-
-	local military_score = 1 -- military score must be at least one, since it is a divider in some instances, and we don't want to divide by 0
-	for i, unitName in ipairs(Units) do
-		if (IsMilitaryUnit(unitName)) then
-			if (GetUnitTypeData(unitName, "Class") == "militia") then
-				military_score = military_score + (units(province.Name, unitName) * (30 + infantry_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
-				military_score = military_score + (units(province.Name, unitName) * (50 + infantry_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "veteran-infantry") then
-				military_score = military_score + (units(province.Name, unitName) * (75 + infantry_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "heroic-infantry") then
-				military_score = military_score + (units(province.Name, unitName) * (100 + infantry_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "shooter") then
-				military_score = military_score + (units(province.Name, unitName) * (60 + archer_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "thief") then
-				military_score = military_score + (units(province.Name, unitName) * 30)
-			elseif (GetUnitTypeData(unitName, "Class") == "priest") then
-				military_score = military_score + (units(province.Name, unitName) * 60)
-			elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
-				military_score = military_score + (units(province.Name, unitName) * (100 + catapult_military_score_bonus))
-			elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
-				military_score = military_score + (units(province.Name, unitName) * (150 + flying_rider_military_score_bonus))
-			-- Mercenaries
-			elseif (GetUnitTypeData(unitName, "Mercenary")) then
-				if (unitName == "unit-surghan-mercenary-steelclad") then
-					military_score = military_score + (units(province.Name, unitName) * (75 + infantry_military_score_bonus))
-				elseif (unitName == "unit-surghan-mercenary-thane") then
-					military_score = military_score + (units(province.Name, unitName) * (100 + infantry_military_score_bonus))
-				end
-			end
-		elseif (count_defenders and string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker" and GetCivilizationClassUnitType("militia", GetUnitTypeData(unitName, "Civilization")) ~= nil) then
-			military_score = military_score + math.floor(units(province.Name, unitName) * (30 + infantry_military_score_bonus) / 2) -- half the worker population becomes militia when the province is attacked
-		-- Heroes
-		elseif (count_defenders and IsHero(unitName) and ((attacker == false and GetProvinceHero(province.Name, unitName) == 2) or (attacker == true and GetProvinceHero(province.Name, unitName) == 3))) then
-			if (unitName == "unit-hero-marbod" or unitName == "unit-hero-rugnur") then
-				military_score = military_score + (50 + infantry_military_score_bonus)
-			elseif (unitName == "unit-hero-modsognir" or unitName == "unit-hero-durin" or unitName == "unit-hero-rugnur-steelclad" or unitName == "unit-hero-baglur" or unitName == "unit-hero-greebo") then
-				military_score = military_score + (75 + infantry_military_score_bonus)
-			elseif (unitName == "unit-hero-modsognir-thane" or unitName == "unit-hero-durin-thane" or unitName == "unit-hero-rugnur-thane" or unitName == "unit-hero-baglur-thane" or unitName == "unit-hero-thursagan" or unitName == "unit-hero-durstorn") then
-				military_score = military_score + (100 + infantry_military_score_bonus + (10 * (wyr.preferences.Heroes[GetUnitTypeData(unitName, "DefaultName")].level - GetUnitTypeData(unitName, "StartingLevel"))))
-			end
-		end
-	end
-	
-	if (ProvinceHasBuildingClass(province.Name, "stronghold")) then
-		military_score = military_score + (100 * 2) -- two guard towers if has a stronghold
-	end
-
 	return military_score
 end
 
