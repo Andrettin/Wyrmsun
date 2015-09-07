@@ -490,7 +490,7 @@ function LoadProvinces(world)
 				germanic = "Bubienum", -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 				teuton = "Bubienum"
 			},
-			SettlementLocation = {521, 113}, -- Prague
+			SettlementLocation = {520, 113}, -- Prague
 			Map = "maps/earth/prague.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
@@ -1171,6 +1171,9 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Genoa",
 			SettlementLocation = {505, 129}, -- Genoa
+			CulturalSettlementNames = {
+				latin = "Genua"
+			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
