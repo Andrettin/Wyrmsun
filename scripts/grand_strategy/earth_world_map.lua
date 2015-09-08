@@ -5548,6 +5548,7 @@ SetWorldMapTileTerrain(520, 123, plains_id)
 SetWorldMapTileTerrain(520, 124, plains_id)
 SetWorldMapTileTerrain(520, 125, plains_id)
 SetWorldMapTileTerrain(520, 126, plains_id)
+AddWorldMapResource("grain", 520, 126, true) -- Potatoes; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(520, 127, water_id)
 SetWorldMapTileTerrain(520, 128, water_id)
 SetWorldMapTileTerrain(520, 129, water_id)
