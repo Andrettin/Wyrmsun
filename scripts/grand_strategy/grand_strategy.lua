@@ -4435,7 +4435,9 @@ function GetYearString(year)
 end
 
 function SetRegionPopulation(region_name, quantity)
-	local region = Regions[string.gsub(region_name, " ", "")]
+	region_name = string.gsub(region_name, " ", "")
+	region_name = string.gsub(region_name, "-", "")
+	local region = Regions[region_name]
 	
 	for i=1,table.getn(region) do
 		SetProvincePopulation(region[i], quantity / table.getn(region))

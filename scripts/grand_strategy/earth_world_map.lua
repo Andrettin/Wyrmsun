@@ -5398,6 +5398,8 @@ SetWorldMapTileTerrain(518, 120, plains_id)
 SetWorldMapTileTerrain(518, 121, plains_id)
 SetWorldMapTileTerrain(518, 122, plains_id)
 SetWorldMapTileTerrain(518, 123, plains_id)
+SetWorldMapTileTerrain(518, 124, plains_id)
+SetWorldMapTileTerrain(518, 125, plains_id)
 SetWorldMapTileTerrain(518, 126, water_id)
 SetWorldMapTileTerrain(518, 127, water_id)
 SetWorldMapTileTerrain(518, 128, water_id)
@@ -5469,6 +5471,10 @@ SetWorldMapTileTerrain(519, 120, plains_id)
 SetWorldMapTileTerrain(519, 121, plains_id)
 SetWorldMapTileTerrain(519, 122, plains_id)
 SetWorldMapTileTerrain(519, 123, plains_id)
+SetWorldMapTileTerrain(519, 124, plains_id)
+SetWorldMapTileTerrain(519, 125, plains_id)
+SetWorldMapTileTerrain(519, 126, plains_id)
+SetWorldMapTileTerrain(519, 127, plains_id)
 SetWorldMapTileTerrain(519, 128, water_id)
 SetWorldMapTileTerrain(519, 129, water_id)
 SetWorldMapTileTerrain(519, 130, water_id)
@@ -5539,6 +5545,9 @@ SetWorldMapTileTerrain(520, 120, plains_id)
 SetWorldMapTileTerrain(520, 121, plains_id)
 SetWorldMapTileTerrain(520, 122, plains_id)
 SetWorldMapTileTerrain(520, 123, plains_id)
+SetWorldMapTileTerrain(520, 124, plains_id)
+SetWorldMapTileTerrain(520, 125, plains_id)
+SetWorldMapTileTerrain(520, 126, plains_id)
 SetWorldMapTileTerrain(520, 127, water_id)
 SetWorldMapTileTerrain(520, 128, water_id)
 SetWorldMapTileTerrain(520, 129, water_id)
@@ -5608,6 +5617,8 @@ SetWorldMapTileTerrain(521, 120, plains_id)
 SetWorldMapTileTerrain(521, 121, plains_id)
 SetWorldMapTileTerrain(521, 122, plains_id)
 SetWorldMapTileTerrain(521, 123, plains_id)
+SetWorldMapTileTerrain(521, 124, plains_id)
+SetWorldMapTileTerrain(521, 125, plains_id)
 SetWorldMapTileTerrain(521, 127, water_id)
 SetWorldMapTileTerrain(521, 128, water_id)
 SetWorldMapTileTerrain(521, 129, water_id)
@@ -5677,6 +5688,8 @@ SetWorldMapTileTerrain(522, 120, plains_id)
 SetWorldMapTileTerrain(522, 121, plains_id)
 SetWorldMapTileTerrain(522, 122, plains_id)
 SetWorldMapTileTerrain(522, 123, plains_id)
+SetWorldMapTileTerrain(522, 124, plains_id)
+SetWorldMapTileTerrain(522, 125, plains_id)
 SetWorldMapTileTerrain(522, 129, water_id)
 SetWorldMapTileTerrain(522, 130, water_id)
 SetWorldMapTileTerrain(522, 131, water_id)
@@ -5748,6 +5761,7 @@ SetWorldMapTileTerrain(523, 121, plains_id)
 SetWorldMapTileTerrain(523, 122, plains_id)
 SetWorldMapTileTerrain(523, 123, plains_id)
 SetWorldMapTileTerrain(523, 124, plains_id)
+SetWorldMapTileTerrain(523, 125, plains_id)
 SetWorldMapTileTerrain(523, 131, water_id)
 SetWorldMapTileTerrain(523, 132, water_id)
 SetWorldMapTileTerrain(523, 133, water_id)
@@ -8644,6 +8658,12 @@ if (GrandStrategyYear >= -229) then -- The cities of Dyrrhachium and Apollonia w
 	SetProvinceSettlementBuilding("Albania", "unit-teuton-town-hall", true)
 end
 
+if (GrandStrategyYear >= -219) then
+	-- Istria and the Dalmatian coast acquired by Rome in 219 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Istria", "latin", "Rome")
+	SetProvinceSettlementBuilding("Istria", "unit-teuton-town-hall", true)
+end
+
 if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Aragon", "latin", "Rome")
 	SetProvinceSettlementBuilding("Aragon", "unit-teuton-town-hall", true)
@@ -8798,8 +8818,12 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceUnitQuantity("Switzerland", "unit-germanic-warrior", 0)
 end
 
-if (GrandStrategyYear >= -33) then -- Illyricum acquired by Rome in 33 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -33) then
+	-- Illyricum acquired by Rome in 33 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Croatia", "latin", "Rome")
+	SetProvinceSettlementBuilding("Croatia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Carniola", "latin", "Rome")
+	SetProvinceSettlementBuilding("Carniola", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -9096,6 +9120,8 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Bavaria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Sicily", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Sicily", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	SetProvinceOwner("Istria", "goth", "Ostrogoth Tribe")
+	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bohemia", "", "")
 	SetProvinceOwner("Brandenburg", "", "")
@@ -9427,6 +9453,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	Factions.Austria.Title = "Archduchy"
 	SetProvinceOwner("Austria", "teuton", "Austria")
 	SetProvinceOwner("Bohemia", "teuton", "Austria")
+	SetProvinceOwner("Carniola", "teuton", "Austria")
+	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Hungary", "teuton", "Turkey")
 	SetProvinceOwner("Silesia", "teuton", "Austria")
