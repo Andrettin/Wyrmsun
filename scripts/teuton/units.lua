@@ -388,9 +388,22 @@ DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
 	Parent = "unit-template-smithy",
 	Civilization = "teuton",
 	Description = _("It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),
-	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
-	Shadow = {"file", "germanic/buildings/smithy_shadow.png", "size", {96, 96}},
-	Icon = "icon-germanic-smithy",
+	Image = {"file", "teuton/buildings/smithy.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/smithy_shadow.png", "size", {96, 96}},
+	Icon = "icon-teuton-smithy",
+	Variations = {
+		{
+			"variation-id", "smithy",
+			"file", "germanic/buildings/smithy.png",
+			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"icon", "icon-germanic-smithy",
+			"upgrade-forbidden", "upgrade-teuton-masonry"
+		},
+		{
+			"variation-id", "smithy",
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
+	},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}

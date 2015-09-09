@@ -210,6 +210,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Teuton Farm now changes its graphics after Masonry is researched (new graphics by Jinn).
 - Reworking of the shadows of the Gnomish and Goblin buildings (by Jinn).
 - Reworking of the shadows of the Mercenary Camp (by Jinn).
+- The Teuton Smithy now changes its graphics after Masonry is researched (new graphics by Jinn).
 
 * Grand Strategy
 - The minimap no longer stops functioning if toggling full screen while playing a grand strategy game.
@@ -234,7 +235,7 @@ https://github.com/Andrettin/Wyrmsun
 - When a province accumulates 10,000 food, its population will grow, with the creation of a new worker.
 - Training military units now requires a worker (you cannot however take the last worker unit away from a province).
 - The Wood Plow and Iron-Tipped Wood Plow technologies are now researchable in grand strategy mode (each provides +100% to food production).
-- The Bountiful Harvest event now grants additional food in every province, instead of giving extra gold to the player.
+- The Bountiful Harvest event now grants additional food in every province, rather than giving extra gold to the player.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.

@@ -170,6 +170,12 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-germanic-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
   
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-teuton-smithy",
+  Action = "build", Value = "unit-teuton-smithy",
+  Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
+  Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+  ForUnit = {"unit-teuton-worker"} } )
+  
 DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
   Action = "build", Value = "unit-teuton-watch-tower",
   Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",

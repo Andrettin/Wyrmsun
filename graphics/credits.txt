@@ -661,6 +661,8 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/buildings/guard_tower_shadow.png
 /graphics/teuton/buildings/lumber_mill.png
 /graphics/teuton/buildings/lumber_mill_shadow.png
+/graphics/teuton/buildings/smithy.png
+/graphics/teuton/buildings/smithy_shadow.png
 /graphics/teuton/buildings/stables.png
 /graphics/teuton/buildings/stables_shadow.png
 /graphics/teuton/buildings/stronghold.png
