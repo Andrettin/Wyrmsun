@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Latin Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "yellow",
+	DevelopsTo = {"Rome"}
+})
+
 -- polities
 
 DefineFaction("France", {
@@ -108,6 +116,16 @@ DefineFaction("Transylvania", {
 	SecondaryColor = "cyan",
 	Titles = {
 		"monarchy", "Principality"
+	}
+})
+
+DefineFaction("Venice", {
+	Civilization = "latin",
+	Type = "polity",
+	Color = "red",
+	SecondaryColor = "red",
+	Titles = {
+		"republic", "Republic"
 	}
 })
 

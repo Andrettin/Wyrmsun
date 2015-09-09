@@ -322,6 +322,14 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
+		"name", "etruscan",
+		"display", "Etruscan",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "goth",
 		"display", "Goth",
 		"visible",
@@ -417,6 +425,14 @@ DefineRaceNames(
 			"Zacynthus", -- Saguntum
 			"Zancle" -- Messana
 		}
+	},
+	"race", {
+		"name", "illyrian",
+		"display", "Illyrian",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
 	},
 	"race", {
 		"name", "latin",
@@ -535,6 +551,14 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
+		"name", "persian",
+		"display", "Persian",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "phoenician",
 		"display", "Phoenician",
 		"visible",
@@ -557,257 +581,4 @@ Load("scripts/latin/factions.lua")
 Load("scripts/minoan/factions.lua")
 Load("scripts/norse/factions.lua")
 Load("scripts/teuton/factions.lua")
-
-DefineCivilizationFactions("basque",
-	"faction", {
-		"name", "Ertebolle Tribe", -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Funnelbeaker Tribe", -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Gylfing Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
-		"type", "tribe",
-		"color", "green",
-		"secondary_color", "teal"
-	},
-	"faction", {
-		"name", "Kongemose Tribe", -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Maglemose Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	}
-)
-
-DefineCivilizationFactions("celt",
-	"faction", {
-		"name", "Aedui Tribe",
-		"type", "tribe",
-		"color", "green",
-		"secondary_color", "green"
-	},
-	"faction", {
-		"name", "Arverni Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "blue"
-	},
-	"faction", {
-		"name", "Boii Tribe",
-		"type", "tribe",
-		"color", "brown",
-		"secondary_color", "brown"
-	},
-	"faction", {
-		"name", "Helvetii Tribe",
-		"type", "tribe",
-		"color", "violet", -- another color, perhaps?
-		"secondary_color", "violet"
-	},
-	"faction", {
-		"name", "Menapii Tribe",
-		"type", "tribe",
-		"color", "orange",
-		"secondary_color", "orange"
-	},
-	"faction", {
-		"name", "Norici Tribe",
-		"type", "tribe",
-		"color", "white", -- another color, perhaps?
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Pict Tribe",
-		"type", "tribe",
-		"color", "cyan",
-		"secondary_color", "cyan"
-	},
-	"faction", {
-		"name", "Scot Tribe",
-		"type", "tribe",
-		"color", "brown",
-		"secondary_color", "brown"
-	},
-	"faction", {
-		"name", "Sequani Tribe",
-		"type", "tribe",
-		"color", "pink",
-		"secondary_color", "red"
-	},
-	-- Non-Playable Tribes
-	"faction", {
-		"name", "Vana Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "cyan",
-		"playable", false
-	}
-)
-
-DefineCivilizationFactions("germanic",
-	"faction", {
-		"name", "Alamanni Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "blue",
-		"playable", false
-	},
-	"faction", {
-		"name", "Asa Tribe",
-		"type", "tribe",
-		"color", "orange",
-		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Bavarian Tribe",
-		"type", "tribe",
-		"color", "cyan",
-		"secondary_color", "white",
-		"playable", false
-	},
-	"faction", {
-		"name", "Burgundian Tribe",
-		"type", "tribe",
-		"color", "brown",
-		"secondary_color", "brown"
-	},
-	"faction", {
-		"name", "Dane Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Frank Tribe",
-		"type", "tribe",
-		"color", "green",
-		"secondary_color", "orange",
-		"playable", false
-	},
-	"faction", {
-		"name", "Frisian Tribe",
-		"type", "tribe",
-		"color", "violet", -- change to a better one?
-		"secondary_color", "purple",
-		"playable", false
-	},
-	"faction", {
-		"name", "Goth Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Jute Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Marcomanni Tribe",
-		"type", "tribe",
-		"color", "orange", -- change to a better one?
-		"secondary_color", "red",
-		"playable", false
-	},
-	"faction", {
-		"name", "Ostrogoth Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "red",
-		"playable", false
-	},
-	"faction", {
-		"name", "Rugian Tribe",
-		"type", "tribe",
-		"color", "red", -- change to a better one?
-		"secondary_color", "orange",
-		"playable", false
-	},
-	"faction", {
-		"name", "Saxon Tribe",
-		"type", "tribe",
-		"color", "pink",
-		"secondary_color", "pink",
-		"playable", false
-	},
-	"faction", {
-		"name", "Suebi Tribe",
-		"type", "tribe",
-		"color", "black",
-		"secondary_color", "black",
-		"playable", false
-	},
-	"faction", {
-		"name", "Swede Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "yellow"
-	},
---	"faction", {
---		"name", "Thuringian Tribe",
---		"type", "tribe",
---		"color", "yellow",
---		"secondary_color", "yellow",
---		"playable", false
---	},
-	"faction", {
-		"name", "Vandal Tribe",
-		"type", "tribe",
-		"color", "cyan",
-		"secondary_color", "blue",
-		"playable", false
-	},
-	"faction", {
-		"name", "Visigoth Tribe",
-		"type", "tribe",
-		"color", "pink",
-		"secondary_color", "pink",
-		"playable", false
-	}
-)
-
-DefineCivilizationFactions("gnome",
-	"faction", {
-		"name", "Untersberg",
-		"type", "tribe", -- should be polity
-		"color", "blue",
-		"secondary_color", "purple"
-	}
-)
-
-DefineCivilizationFactions("goblin",
-	"faction", {
-		"name", "Khag Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "cyan"
-	},
-	"faction", {
-		"name", "Lggi Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "cyan"
-	}
-)
-
-DefineCivilizationFactions("kobold",
-	"faction", {
-		"name", "Kobolds",
-		"type", "tribe",
-		"color", "violet",
-		"secondary_color", "purple"
-	}
-)
+Load("scripts/factions.lua")

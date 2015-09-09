@@ -27,6 +27,17 @@
 
 -- polities
 
+DefineFaction("Argos", {
+	Civilization = "greek",
+	Type = "polity",
+	Color = "green",
+	SecondaryColor = "green",
+	Titles = {
+		"monarchy", "City-State",
+		"republic", "City-State"
+	}
+})
+
 DefineFaction("Athens", {
 	Civilization = "greek",
 	Type = "polity",
@@ -78,18 +89,5 @@ DefineFaction("Thebes", {
 	Titles = {
 		"monarchy", "City-State",
 		"republic", "City-State"
-	}
-})
-
--- Non-Playable Polities
-	
-DefineFaction("Persia", {
-	Civilization = "greek",
-	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "green",
-	Playable = false,
-	Titles = {
-		"monarchy", "Kingdom"
 	}
 })

@@ -447,7 +447,7 @@ function RunEditorPlayerProperties()
   local offxOil = 470
 
   local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
-  local racenames = {"dwarf", "germanic", "celt", "gnome", "goblin", "kobold", "teuton", "basque", "goth", "greek", "latin", "minoan", "norse", "phoenician"}
+  local racenames = {"dwarf", "germanic", "celt", "gnome", "goblin", "kobold", "teuton", "basque", "etruscan", "goth", "greek", "illyrian", "latin", "minoan", "norse", "persian", "phoenician"}
   local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
 
   menu:addLabel("#", 15, 36)

@@ -1115,6 +1115,8 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "kobold") then
 		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "illyrian") then
+		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "latin") then
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "minoan") then
@@ -1123,6 +1125,8 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "orc") then
 		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "persian") then
+		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "phoenician") then
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "teuton") then

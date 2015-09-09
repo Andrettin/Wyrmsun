@@ -5763,6 +5763,7 @@ SetWorldMapTileTerrain(523, 122, plains_id)
 SetWorldMapTileTerrain(523, 123, plains_id)
 SetWorldMapTileTerrain(523, 124, plains_id)
 SetWorldMapTileTerrain(523, 125, plains_id)
+SetWorldMapTileTerrain(523, 130, plains_id)
 SetWorldMapTileTerrain(523, 131, water_id)
 SetWorldMapTileTerrain(523, 132, water_id)
 SetWorldMapTileTerrain(523, 133, water_id)
@@ -5827,6 +5828,7 @@ SetWorldMapTileTerrain(524, 121, plains_id)
 SetWorldMapTileTerrain(524, 122, plains_id)
 SetWorldMapTileTerrain(524, 123, plains_id)
 SetWorldMapTileTerrain(524, 124, plains_id)
+SetWorldMapTileTerrain(524, 130, plains_id)
 SetWorldMapTileTerrain(524, 131, water_id)
 SetWorldMapTileTerrain(524, 132, water_id)
 SetWorldMapTileTerrain(524, 133, water_id)
@@ -5892,6 +5894,8 @@ SetWorldMapTileTerrain(525, 120, plains_id)
 SetWorldMapTileTerrain(525, 121, plains_id)
 SetWorldMapTileTerrain(525, 122, plains_id)
 SetWorldMapTileTerrain(525, 123, plains_id)
+SetWorldMapTileTerrain(525, 130, plains_id)
+SetWorldMapTileTerrain(525, 131, plains_id)
 SetWorldMapTileTerrain(525, 132, water_id)
 SetWorldMapTileTerrain(525, 133, water_id)
 SetWorldMapTileTerrain(525, 134, water_id)
@@ -5953,6 +5957,8 @@ SetWorldMapTileTerrain(526, 117, plains_id)
 SetWorldMapTileTerrain(526, 118, plains_id)
 SetWorldMapTileTerrain(526, 119, plains_id)
 SetWorldMapTileTerrain(526, 120, plains_id)
+SetWorldMapTileTerrain(526, 130, plains_id)
+SetWorldMapTileTerrain(526, 131, plains_id)
 SetWorldMapTileTerrain(526, 132, water_id)
 SetWorldMapTileTerrain(526, 133, water_id)
 SetWorldMapTileTerrain(526, 134, water_id)
@@ -6010,6 +6016,8 @@ SetWorldMapTileTerrain(527, 115, plains_id)
 SetWorldMapTileTerrain(527, 116, plains_id) -- Brünn
 SetWorldMapTileTerrain(527, 117, plains_id)
 SetWorldMapTileTerrain(527, 118, plains_id)
+SetWorldMapTileTerrain(527, 131, plains_id)
+AddWorldMapResource("grain", 527, 131, true) -- Vines; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(527, 132, water_id)
 SetWorldMapTileTerrain(527, 133, water_id)
 SetWorldMapTileTerrain(527, 134, water_id)
@@ -6066,6 +6074,8 @@ SetWorldMapTileTerrain(528, 113, plains_id)
 SetWorldMapTileTerrain(528, 114, plains_id)
 SetWorldMapTileTerrain(528, 115, plains_id)
 SetWorldMapTileTerrain(528, 116, plains_id)
+SetWorldMapTileTerrain(528, 131, plains_id)
+SetWorldMapTileTerrain(528, 132, plains_id)
 SetWorldMapTileTerrain(528, 133, water_id)
 SetWorldMapTileTerrain(528, 134, water_id)
 SetWorldMapTileTerrain(528, 135, water_id)
@@ -6125,6 +6135,8 @@ SetWorldMapTileTerrain(529, 113, plains_id)
 SetWorldMapTileTerrain(529, 114, plains_id)
 SetWorldMapTileTerrain(529, 115, plains_id)
 SetWorldMapTileTerrain(529, 116, plains_id)
+SetWorldMapTileTerrain(529, 132, plains_id)
+SetWorldMapTileTerrain(529, 133, plains_id)
 SetWorldMapTileTerrain(529, 134, water_id)
 SetWorldMapTileTerrain(529, 135, water_id)
 SetWorldMapTileTerrain(529, 136, water_id)
@@ -6185,6 +6197,7 @@ SetWorldMapTileTerrain(530, 99, water_id)
 SetWorldMapTileTerrain(530, 114, plains_id)
 SetWorldMapTileTerrain(530, 115, plains_id)
 SetWorldMapTileTerrain(530, 116, plains_id)
+SetWorldMapTileTerrain(530, 133, plains_id)
 SetWorldMapTileTerrain(530, 134, water_id)
 SetWorldMapTileTerrain(530, 135, water_id)
 SetWorldMapTileTerrain(530, 136, water_id)
@@ -6246,6 +6259,8 @@ SetWorldMapTileTerrain(531, 99, water_id)
 SetWorldMapTileTerrain(531, 114, plains_id)
 SetWorldMapTileTerrain(531, 115, plains_id)
 SetWorldMapTileTerrain(531, 116, plains_id)
+SetWorldMapTileTerrain(531, 133, plains_id)
+SetWorldMapTileTerrain(531, 134, plains_id)
 SetWorldMapTileTerrain(531, 135, water_id)
 SetWorldMapTileTerrain(531, 136, water_id)
 SetWorldMapTileTerrain(531, 137, water_id)
@@ -6305,6 +6320,7 @@ SetWorldMapTileTerrain(532, 98, water_id)
 SetWorldMapTileTerrain(532, 99, water_id)
 SetWorldMapTileTerrain(532, 114, plains_id)
 SetWorldMapTileTerrain(532, 115, plains_id)
+SetWorldMapTileTerrain(532, 134, plains_id)
 SetWorldMapTileTerrain(532, 135, water_id)
 SetWorldMapTileTerrain(532, 136, water_id)
 SetWorldMapTileTerrain(532, 137, water_id)
@@ -6365,6 +6381,8 @@ SetWorldMapTileTerrain(533, 98, water_id)
 SetWorldMapTileTerrain(533, 99, water_id)
 SetWorldMapTileTerrain(533, 100, water_id)
 SetWorldMapTileTerrain(533, 114, plains_id)
+SetWorldMapTileTerrain(533, 134, plains_id)
+SetWorldMapTileTerrain(533, 135, plains_id)
 SetWorldMapTileTerrain(533, 136, water_id)
 SetWorldMapTileTerrain(533, 137, water_id)
 SetWorldMapTileTerrain(533, 138, water_id)
@@ -7286,6 +7304,8 @@ SetWorldMapTileTerrain(554, 165, water_id)
 SetWorldMapTileTerrain(555, 84, water_id)
 SetWorldMapTileTerrain(555, 85, water_id)
 SetWorldMapTileTerrain(555, 86, water_id)
+SetWorldMapTileTerrain(555, 138, plains_id)
+SetWorldMapTileTerrain(555, 139, plains_id)
 SetWorldMapTileTerrain(555, 140, water_id)
 SetWorldMapTileTerrain(555, 141, water_id)
 SetWorldMapTileTerrain(555, 144, water_id)
@@ -7313,6 +7333,10 @@ SetWorldMapTileTerrain(555, 165, water_id)
 SetWorldMapTileTerrain(556, 84, water_id)
 SetWorldMapTileTerrain(556, 85, water_id)
 SetWorldMapTileTerrain(556, 86, water_id)
+SetWorldMapTileTerrain(556, 137, plains_id)
+AddWorldMapResource("grain", 556, 137, true) -- Wheat; Source: "Philip's International School Atlas", 2006, p. 59.
+SetWorldMapTileTerrain(556, 138, plains_id)
+SetWorldMapTileTerrain(556, 139, plains_id)
 SetWorldMapTileTerrain(556, 140, water_id)
 SetWorldMapTileTerrain(556, 148, water_id)
 SetWorldMapTileTerrain(556, 149, water_id)
@@ -7336,6 +7360,9 @@ SetWorldMapTileTerrain(556, 166, water_id)
 SetWorldMapTileTerrain(557, 84, water_id)
 SetWorldMapTileTerrain(557, 85, water_id)
 SetWorldMapTileTerrain(557, 86, water_id)
+SetWorldMapTileTerrain(557, 137, plains_id)
+SetWorldMapTileTerrain(557, 138, plains_id)
+SetWorldMapTileTerrain(557, 139, plains_id)
 SetWorldMapTileTerrain(557, 140, water_id)
 SetWorldMapTileTerrain(557, 150, water_id)
 SetWorldMapTileTerrain(557, 151, water_id)
@@ -7357,6 +7384,8 @@ SetWorldMapTileTerrain(557, 166, water_id)
 SetWorldMapTileTerrain(558, 84, water_id)
 SetWorldMapTileTerrain(558, 85, water_id)
 SetWorldMapTileTerrain(558, 86, water_id)
+SetWorldMapTileTerrain(558, 137, plains_id)
+SetWorldMapTileTerrain(558, 138, plains_id)
 SetWorldMapTileTerrain(558, 139, water_id)
 SetWorldMapTileTerrain(558, 140, water_id)
 SetWorldMapTileTerrain(558, 151, water_id)
@@ -7378,6 +7407,8 @@ SetWorldMapTileTerrain(558, 166, water_id)
 SetWorldMapTileTerrain(559, 84, water_id)
 SetWorldMapTileTerrain(559, 85, water_id)
 SetWorldMapTileTerrain(559, 86, water_id)
+SetWorldMapTileTerrain(559, 137, plains_id)
+SetWorldMapTileTerrain(559, 138, plains_id)
 SetWorldMapTileTerrain(559, 139, water_id)
 SetWorldMapTileTerrain(559, 140, water_id)
 SetWorldMapTileTerrain(559, 151, water_id)
@@ -7398,6 +7429,8 @@ SetWorldMapTileTerrain(559, 165, water_id)
 SetWorldMapTileTerrain(559, 166, water_id)
 SetWorldMapTileTerrain(560, 84, water_id)
 SetWorldMapTileTerrain(560, 85, water_id)
+SetWorldMapTileTerrain(560, 138, plains_id)
+AddWorldMapResource("grain", 560, 138, true) -- Other fruit and vegetables; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(560, 139, water_id)
 SetWorldMapTileTerrain(560, 140, water_id)
 SetWorldMapTileTerrain(560, 151, water_id)
@@ -7419,6 +7452,7 @@ SetWorldMapTileTerrain(560, 166, water_id)
 SetWorldMapTileTerrain(560, 167, water_id)
 SetWorldMapTileTerrain(561, 84, water_id)
 SetWorldMapTileTerrain(561, 85, water_id)
+SetWorldMapTileTerrain(561, 138, plains_id)
 SetWorldMapTileTerrain(561, 139, water_id)
 SetWorldMapTileTerrain(561, 140, water_id)
 SetWorldMapTileTerrain(561, 152, water_id)
@@ -8377,6 +8411,7 @@ end
 
 if (GrandStrategyYear >= -1900) then
 	-- Beginning of the age of the first Minoan palaces around 1900 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	SetFactionTechnology("minoan", "Crete", "upgrade-teuton-masonry", true)
 end
 
 if (GrandStrategyYear >= -1750) then
@@ -8441,6 +8476,7 @@ if (GrandStrategyYear >= -1400) then
 	-- Late Bronze Age ends around 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
 	
 	-- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	SetFactionTechnology("greek", "Mycenae", "upgrade-teuton-masonry", true)
 end
 
 if (GrandStrategyYear >= -1365) then
@@ -8514,22 +8550,46 @@ if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and
 	SetProvinceUnitQuantity("Switzerland", "unit-germanic-warrior", 0)
 end
 
-if (GrandStrategyYear >= -750) then
+if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	-- Greek settlements existed in Greece proper, Crete, Rhodes, Asia Minor, the Ionian islands, Sinope, Trapezus, eastern Sicily, southern Italy and northern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	SetProvinceCivilization("Syracuse", "greek")
 	SetProvinceCivilization("Naples", "greek") -- Magna Graecia
 	
 	-- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	SetProvinceCivilization("Palermo", "phoenician")
+
+	SetProvinceOwner("Macedonia", "greek", "Macedon")
+	SetProvinceSettlementBuilding("Macedonia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Dalmatia", "illyrian", "Illyrian Tribe")
+	SetProvinceCivilization("Dalmatia", "illyrian")
+	SetProvinceSettlementBuilding("Dalmatia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Latium", "latin", "Latin Tribe")
+	SetProvinceCivilization("Latium", "latin")
+	SetProvinceSettlementBuilding("Latium", "unit-teuton-town-hall", true)	
+	
+	SetProvinceOwner("Tuscany", "etruscan", "Etruscan Tribe")
+	SetProvinceCivilization("Tuscany", "etruscan")
+	SetProvinceSettlementBuilding("Tuscany", "unit-teuton-town-hall", true)	
 end
 
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	SetProvinceOwner("Attica", "greek", "Athens")
 	SetFactionGovernmentType("greek", "Athens", "republic")
+	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Athens")
+	
 	SetProvinceOwner("Boeotia", "greek", "Thebes")
+	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Thebes")
+	
 	SetProvinceCivilization("Epirus", "greek")
 	SetProvinceSettlementBuilding("Epirus", "unit-teuton-town-hall", true)
+	
 	SetProvinceOwner("Lacedaemonia", "greek", "Sparta")
+	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Sparta")
+
+	SetProvinceOwner("Argolis", "greek", "Argos")
+	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Argos")
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
@@ -8591,13 +8651,27 @@ if (GrandStrategyYear >= -550) then
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
 end
 
-if (GrandStrategyYear >= -500) then -- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	SetProvinceOwner("Macedonia", "greek", "Persia")
-	SetProvinceSettlementBuilding("Macedonia", "unit-teuton-town-hall", true)
-	SetProvinceOwner("Thrace", "greek", "Persia")
+if (GrandStrategyYear >= -500) then
+	-- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	SetProvinceOwner("Macedonia", "persian", "Persia")
+	SetProvinceOwner("Thrace", "persian", "Persia")
 	SetProvinceSettlementBuilding("Thrace", "unit-teuton-town-hall", true)
 	
 	-- Maiden Castle hill fort build around 500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 119.
+	
+	-- Greece at the time of the War with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+	Factions.Athens.Diplomacy["Persia"] = "War"
+	Factions.Sparta.Diplomacy["Persia"] = "War"
+	Factions.Persia.Diplomacy["Athens"] = "War"
+	Factions.Persia.Diplomacy["Sparta"] = "War"
+end
+
+if (GrandStrategyYear >= -479) then
+	-- End of the war between the Greek states and Persia in 479 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+	Factions.Athens.Diplomacy["Persia"] = "Peace"
+	Factions.Sparta.Diplomacy["Persia"] = "Peace"
+	Factions.Persia.Diplomacy["Athens"] = "Peace"
+	Factions.Persia.Diplomacy["Sparta"] = "Peace"
 end
 
 if (GrandStrategyYear >= -431) then -- Greece in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -8630,8 +8704,7 @@ end
 if (GrandStrategyYear >= -264) then
 	-- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Latium", "latin", "Rome")
-	SetProvinceCivilization("Latium", "latin")
-	SetProvinceSettlementBuilding("Latium", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("latin", "Latin Tribe", "latin", "Rome")
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-barracks", true)
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-lumber-mill", true)
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-smithy", true)
@@ -8672,6 +8745,7 @@ if (GrandStrategyYear >= -219) then
 	-- Istria and the Dalmatian coast acquired by Rome in 219 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Istria", "latin", "Rome")
 	SetProvinceSettlementBuilding("Istria", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Dalmatia", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -9019,10 +9093,12 @@ if (GrandStrategyYear >= 395) then
 end
 
 if (GrandStrategyYear >= 397) then
+	-- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Moldavia", "", "")
 	SetProvinceOwner("Wallachia", "", "")
-	SetProvinceOwner("Croatia", "goth", "Visigoth Tribe") -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Croatia", "goth", "Visigoth Tribe")
 	SetProvinceUnitQuantity("Croatia", "unit-germanic-warrior", 0)
+	SetProvinceOwner("Dalmatia", "goth", "Visigoth Tribe")
 end
 
 if (GrandStrategyYear >= 400) then
@@ -9042,6 +9118,7 @@ end
 
 if (GrandStrategyYear >= 412) then
 	SetProvinceOwner("Croatia", "", "")
+	SetProvinceOwner("Dalmatia", "", "")
 	SetProvinceOwner("Aquitaine", "goth", "Visigoth Tribe") -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
@@ -9134,6 +9211,7 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Istria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
+	SetProvinceOwner("Dalmatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bohemia", "", "")
 	SetProvinceOwner("Brandenburg", "", "")
 	SetProvinceOwner("Aquitaine", "teuton", "Francia") -- Aquitania conquered by the Franks in 507
@@ -9442,6 +9520,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Provence", "latin", "France")
 	
 	SetProvinceOwner("Savoy", "latin", "Savoy")
+	SetProvinceOwner("Venetia", "latin", "Venice")
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 	SetProvinceOwner("Palermo", "latin", "Spain")
 	SetProvinceOwner("Syracuse", "latin", "Spain")
@@ -9467,9 +9546,12 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Bohemia", "teuton", "Austria")
 	SetProvinceOwner("Carniola", "teuton", "Austria")
 	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
+	SetProvinceOwner("Silesia", "teuton", "Austria")
+	
+	SetProvinceOwner("Dalmatia", "latin", "Venice")
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Hungary", "teuton", "Turkey")
-	SetProvinceOwner("Silesia", "teuton", "Austria")
+	
 	SetProvinceOwner("Transylvania", "latin", "Transylvania")
 	
 	SetProvinceOwner("Baltic Lands", "teuton", "Prussia")

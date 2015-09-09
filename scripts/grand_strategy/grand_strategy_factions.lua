@@ -69,6 +69,11 @@ function LoadFactions(world)
 			Name = "Sequani Tribe",
 			Civilization = "celt"
 		},
+		-- Etruscan tribes
+		EtruscanTribe = {
+			Name = "Etruscan Tribe",
+			Civilization = "etruscan"
+		},
 		-- Germanic tribes
 		AlamanniTribe = {
 			Name = "Alamanni Tribe",
@@ -225,6 +230,10 @@ function LoadFactions(world)
 			Civilization = "teuton"
 		},
 		-- Greek polities
+		Argos = {
+			Name = "Argos",
+			Civilization = "greek"
+		},
 		Athens = {
 			Name = "Athens",
 			Civilization = "greek"
@@ -244,6 +253,16 @@ function LoadFactions(world)
 		Thebes = {
 			Name = "Thebes",
 			Civilization = "greek"
+		},
+		-- Illyrian tribes
+		IllyrianTribe = {
+			Name = "Illyrian Tribe",
+			Civilization = "illyrian"
+		},
+		-- Latin tribes
+		LatinTribe = {
+			Name = "Latin Tribe",
+			Civilization = "latin"
 		},
 		-- Latin polities
 		France = {
@@ -277,6 +296,10 @@ function LoadFactions(world)
 		},
 		Transylvania = {
 			Name = "Transylvania",
+			Civilization = "latin"
+		},
+		Venice = {
+			Name = "Venice",
 			Civilization = "latin"
 		},
 		Wallachia = {
@@ -347,7 +370,7 @@ function LoadFactions(world)
 		},
 		Persia = {
 			Name = "Persia",
-			Civilization = "greek"
+			Civilization = "persian"
 		},
 		Poland = {
 			Name = "Poland",
@@ -367,7 +390,6 @@ function LoadFactions(world)
 		Untersberg = {
 			Name = "Untersberg",
 			Civilization = "gnome",
-			Title = "Kingdom",
 			Gold = 7500,
 			Commodities = {
 				Lumber = 3750, -- half of the gold value
