@@ -211,6 +211,8 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		playercolor = "teal"
 	elseif (civilization == "orc") then
 		playercolor = "red"
+	elseif (civilization == "phoenician") then
+		playercolor = "black"
 	elseif (civilization == "teuton") then
 		playercolor = "orange"
 	else
@@ -1121,6 +1123,8 @@ function GetCivilizationBackground(civilization)
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "orc") then
 		return "ui/backgrounds/wyrm.png"
+	elseif (civilization == "phoenician") then
+		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "teuton") then
 		return "ui/backgrounds/wyrm.png"
 	end

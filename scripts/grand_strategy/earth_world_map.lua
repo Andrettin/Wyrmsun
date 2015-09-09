@@ -4536,7 +4536,7 @@ SetWorldMapTileTerrain(502, 125, plains_id)
 SetWorldMapTileTerrain(502, 126, plains_id)
 SetWorldMapTileTerrain(502, 127, plains_id)
 SetWorldMapTileTerrain(502, 128, plains_id)
-AddWorldMapResource("grain", 502, 128, true) -- Wheat; should be in (502, 127), but that is the location of a settlement; Source: "Philip's International School Atlas", 2006, p. 59.
+AddWorldMapResource("grain", 502, 128, true) -- Wheat; perhaps should be in (502, 127), but that is the location of a settlement; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(502, 129, plains_id)
 SetWorldMapTileTerrain(502, 130, plains_id)
 SetWorldMapTileTerrain(502, 131, water_id)
@@ -5716,8 +5716,8 @@ SetWorldMapTileName(522, 148, "Etna")
 SetWorldMapTileTerrain(522, 149, plains_id)
 AddWorldMapResource("grain", 522, 149, true) -- Vines; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(522, 150, hills_id)
-AddWorldMapResource("grain", 522, 150, true) -- Olives; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(522, 151, plains_id)
+AddWorldMapResource("grain", 522, 151, true) -- Olives; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(522, 152, water_id)
 SetWorldMapTileTerrain(522, 153, water_id)
 SetWorldMapTileTerrain(522, 154, water_id)
@@ -8516,7 +8516,11 @@ end
 
 if (GrandStrategyYear >= -750) then
 	-- Greek settlements existed in Greece proper, Crete, Rhodes, Asia Minor, the Ionian islands, Sinope, Trapezus, eastern Sicily, southern Italy and northern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+	SetProvinceCivilization("Syracuse", "greek")
+	SetProvinceCivilization("Naples", "greek") -- Magna Graecia
+	
 	-- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
+	SetProvinceCivilization("Palermo", "phoenician")
 end
 
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
@@ -8577,11 +8581,10 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	-- Subboreal-Subatlantic transition in Europe c. 600 BC (provoking climatic transition from warmer and drier climate to a cooler and wetter one); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 129.
 end
 
-if (GrandStrategyYear >= -550) then -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
+if (GrandStrategyYear >= -550) then
+	-- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
 	SetProvinceCivilization("Albania", "greek")
 	SetProvinceCivilization("Macedonia", "greek")
-	SetProvinceCivilization("Naples", "greek") -- Magna Graecia
-	SetProvinceCivilization("Sicily", "greek")
 	SetProvinceCivilization("Thrace", "greek")
 	
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
@@ -8642,9 +8645,12 @@ if (GrandStrategyYear >= -264) then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
 end
 
-if (GrandStrategyYear >= -241) then -- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Sicily", "latin", "Rome")
-	SetProvinceSettlementBuilding("Sicily", "unit-teuton-town-hall", true)
+if (GrandStrategyYear >= -241) then
+	-- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Palermo", "latin", "Rome")
+	SetProvinceSettlementBuilding("Palermo", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Syracuse", "latin", "Rome") -- the city of Syracuse was acquired only in 212 BC, but overwhelming majority of the eastern side of the island was acquired in 241 BC
+	SetProvinceSettlementBuilding("Syracuse", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -9119,8 +9125,9 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Austria", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Bavaria", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Sicily", "goth", "Ostrogoth Tribe")
-	SetProvinceUnitQuantity("Sicily", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	SetProvinceOwner("Palermo", "goth", "Ostrogoth Tribe")
+	SetProvinceUnitQuantity("Palermo", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	SetProvinceOwner("Syracuse", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Istria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
@@ -9347,11 +9354,11 @@ end
 
 if (GrandStrategyYear >= 1061) then
 	-- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+	SetProvinceOwner("Syracuse", "latin", "Sicily") -- Messina is on the eastern side of the island
 end
 
 if (GrandStrategyYear >= 1072) then
-	SetProvinceOwner("Sicily", "latin", "Sicily") -- Palermo was conquered by the Norman forces in Sicily in 1072 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
-
+	SetProvinceOwner("Palermo", "latin", "Sicily") -- Palermo was conquered by the Norman forces in Sicily in 1072 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
 if (GrandStrategyYear >= 1083) then
@@ -9433,7 +9440,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	
 	SetProvinceOwner("Savoy", "latin", "Savoy")
 	SetProvinceOwner("Sardinia", "latin", "Spain")
-	SetProvinceOwner("Sicily", "latin", "Spain")
+	SetProvinceOwner("Palermo", "latin", "Spain")
+	SetProvinceOwner("Syracuse", "latin", "Spain")
 
 	SetProvinceOwner("Belgium", "latin", "Spain")
 	SetProvinceOwner("Netherlands", "latin", "Spain")

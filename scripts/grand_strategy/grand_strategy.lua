@@ -4289,7 +4289,6 @@ function GrandStrategyGameSave(name)
 	for key, value in pairs(GrandStrategyEvents) do
 		table.insert(wyr[name].SavedGrandStrategyEvents, key)
 	end
-	local civilizations = {"germanic", "teuton", "celt", "dwarf", "goblin", "goth", "norse", "kobold", "gnome", "latin", "greek", "basque", "minoan"}
 	
 	SaveGrandStrategyGame(name)
 	wyr[name] = nil

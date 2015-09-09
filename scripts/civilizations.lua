@@ -535,6 +535,14 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
+		"name", "phoenician",
+		"display", "Phoenician",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "neutral",
 		"display", "Neutral"
 	}
