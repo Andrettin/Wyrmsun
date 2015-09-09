@@ -586,7 +586,7 @@ function EndTurn()
 				l:setSize(228, 128)
 				l:setLineWidth(228)
 				menu:add(l, 14, 35)
-				l:setCaption("My lord, the " .. GetFactionFullName(Factions[key].Name) .. " has accepted our peace offer.")
+				l:setCaption("My lord, the " .. GetFactionFullName(Factions[key].Civilization, Factions[key].Name) .. " has accepted our peace offer.")
 
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
@@ -608,7 +608,7 @@ function EndTurn()
 				l:setSize(228, 128)
 				l:setLineWidth(228)
 				menu:add(l, 14, 35)
-				l:setCaption("My lord, the " .. GetFactionFullName(Factions[key].Name) .. " has rejected our peace offer!")
+				l:setCaption("My lord, the " .. GetFactionFullName(Factions[key].Civilization, Factions[key].Name) .. " has rejected our peace offer!")
 
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
@@ -831,21 +831,21 @@ function AttackProvince(province, faction)
 		end
 		local battle_report_message = ""
 		if (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!"
+			battle_report_message = "My lord, the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. " has made a failed attack against us in " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (revolt == false and Defender == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			battle_report_message = "My lord, the " .. GetFactionFullName(Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!"
+			battle_report_message = "My lord, the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. " has taken our province of " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			battle_report_message = "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(Defender) .. " has failed!"
+			battle_report_message = "My lord, our attack against the " .. GetProvinceName(AttackedProvince) .. " province of the " .. GetFactionFullName(GetFactionFromName(Defender).Civilization, Defender) .. " has failed!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(Defender) .. "!"
+			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. " from the " .. GetFactionFullName(GetFactionFromName(Defender).Civilization, Defender) .. "!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Defender and empty_province) then
 			battle_report_message = "My lord, our attempt to conquer the wildlands of " .. GetProvinceName(AttackedProvince) .. " has failed!"
 		elseif (Attacker == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province) then
 			battle_report_message = "My lord, we have taken the province of " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Defender and empty_province == false) then
-			battle_report_message = "My lord, a failed revolt to declare the independence of the " .. GetFactionFullName(Attacker) .. " has occurred in " .. GetProvinceName(AttackedProvince) .. "!"
+			battle_report_message = "My lord, a failed revolt to declare the independence of the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. " has occurred in " .. GetProvinceName(AttackedProvince) .. "!"
 		elseif (revolt and Defender == GrandStrategyFaction.Name and victorious_player == Attacker and empty_province == false) then
-			battle_report_message = "My lord, the province of " .. GetProvinceName(AttackedProvince) .. " has risen in rebellion, resulting in the declaration of independence of the " .. GetFactionFullName(Attacker) .. "!"
+			battle_report_message = "My lord, the province of " .. GetProvinceName(AttackedProvince) .. " has risen in rebellion, resulting in the declaration of independence of the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. "!"
 		end
 		battle_report_message = battle_report_message .. "\n\nUnits Lost: " .. units_lost_string
 		GrandStrategyDialog(battle_report_title, battle_report_message)
@@ -2084,11 +2084,7 @@ function DrawGrandStrategyInterface()
 		local province_name_text = GetProvinceName(SelectedProvince)
 		if (GetProvinceOwner(SelectedProvince.Name) ~= "" and GetProvinceWater(SelectedProvince.Name) == false) then
 			province_name_text = province_name_text .. ", "
-			if (GetFactionData(GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name), "Type")  == "tribe") then -- if is a tribe, just use the tribe's name
-				province_name_text = province_name_text .. GetProvinceOwner(SelectedProvince.Name)
-			elseif (GetFactionData(GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name), "Type") == "polity") then -- if is a polity, use the polity's name accompanied by its title
-				province_name_text = province_name_text .. GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Title .. " of " .. GetProvinceOwner(SelectedProvince.Name)
-			end
+			province_name_text = province_name_text .. GetFactionFullName(GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name))
 		end
 		AddGrandStrategyLabel(province_name_text, UI.InfoPanel.X + 27, UI.InfoPanel.Y + 11, Fonts["game"], true, true)
 
@@ -3654,7 +3650,7 @@ function DeclareWar(faction_from, faction_to)
 		l:setSize(228, 128)
 		l:setLineWidth(228)
 		menu:add(l, 14, 35)
-		l:setCaption("My lord, the " .. GetFactionFullName(faction_from) .. " has declared war upon us!")
+		l:setCaption("My lord, the " .. GetFactionFullName(GetFactionFromName(faction_from).Civilization, faction_from) .. " has declared war upon us!")
 
 		menu:addFullButton("~!OK", "o", 16, 248,
 			function()
@@ -3684,7 +3680,7 @@ function OfferPeace(faction_from, faction_to)
 		l:setSize(228, 128)
 		l:setLineWidth(228)
 		menu:add(l, 14, 35)
-		l:setCaption("My lord, the " .. GetFactionFullName(faction_from) .. " has offered us peace. Shall we accept?")
+		l:setCaption("My lord, the " .. GetFactionFullName(GetFactionFromName(faction_from).Civilization, faction_from) .. " has offered us peace. Shall we accept?")
 
 		menu:addFullButton("~!Accept", "a", 16, 248 - (36 * 1),
 			function()
@@ -3731,16 +3727,6 @@ function AtPeace(faction)
 	end
 
 	return true
-end
-
-function GetFactionFullName(faction)
-	local province_name_text = ""
-	if (GetFactionData(GetFactionFromName(faction).Civilization, faction, "Type") == "tribe") then -- if is a tribe, just use the tribe's name
-		province_name_text = province_name_text .. faction
-	elseif (GetFactionData(GetFactionFromName(faction).Civilization, faction, "Type") == "polity") then -- if is a polity, use the polity's name accompanied by its title
-		province_name_text = province_name_text .. GetFactionFromName(faction).Title .. " of " .. faction
-	end
-	return province_name_text
 end
 
 function WarGrandStrategyGameMenu(background)

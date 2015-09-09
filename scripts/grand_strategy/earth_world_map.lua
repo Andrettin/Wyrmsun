@@ -8525,6 +8525,7 @@ end
 
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	SetProvinceOwner("Attica", "greek", "Athens")
+	SetFactionGovernmentType("greek", "Athens", "republic")
 	SetProvinceOwner("Boeotia", "greek", "Thebes")
 	SetProvinceCivilization("Epirus", "greek")
 	SetProvinceSettlementBuilding("Epirus", "unit-teuton-town-hall", true)
@@ -8640,6 +8641,8 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceSettlementBuilding("Tuscany", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Umbria", "latin", "Rome")
 	SetProvinceSettlementBuilding("Umbria", "unit-teuton-town-hall", true)
+	
+	SetFactionGovernmentType("latin", "Rome", "republic") -- should be earlier
 	
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
@@ -9459,7 +9462,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Brandenburg", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	
-	Factions.Austria.Title = "Archduchy"
+--	Factions.Austria.Title = "Archduchy"
 	SetProvinceOwner("Austria", "teuton", "Austria")
 	SetProvinceOwner("Bohemia", "teuton", "Austria")
 	SetProvinceOwner("Carniola", "teuton", "Austria")

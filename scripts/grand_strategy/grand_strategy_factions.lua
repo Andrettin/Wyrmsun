@@ -150,171 +150,138 @@ function LoadFactions(world)
 		-- Germanic polities
 		Austria = {
 			Name = "Austria",
-			Civilization = "teuton",
-			Title = "Duchy" -- later Archduchy
+			Civilization = "teuton"
 		},
 		Bavaria = {
 			Name = "Bavaria",
-			Civilization = "teuton",
-			Title = "Duchy"
+			Civilization = "teuton"
 		},
 		Brandenburg = {
 			Name = "Brandenburg",
-			Civilization = "teuton",
-			Title = "Margravate"
+			Civilization = "teuton"
 		},
 		Burgundy = {
 			Name = "Burgundy",
-			Civilization = "goth",
-			Title = "Kingdom"
+			Civilization = "goth"
 		},
 		Denmark = {
 			Name = "Denmark",
-			Civilization = "norse",
-			Title = "Kingdom"
+			Civilization = "norse"
 		},
 		England = {
 			Name = "England",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Francia = {
 			Name = "Francia",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Galicia = { -- Suebi kingdom of Galicia
 			Name = "Galicia",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Gothia = {
 			Name = "Gothia",
-			Civilization = "goth",
-			Title = "Kingdom"
+			Civilization = "goth"
 		},
 		Jutland = {
 			Name = "Jutland",
-			Civilization = "teuton",
-			Title = "Duchy"
+			Civilization = "teuton"
 		},
 		Netherlands = {
 			Name = "Netherlands",
-			Civilization = "teuton",
-			Title = "Republic"
+			Civilization = "teuton"
 		},
 		Norway = {
 			Name = "Norway",
-			Civilization = "norse",
-			Title = "Kingdom"
+			Civilization = "norse"
 		},
 		Prussia = {
 			Name = "Prussia",
-			Civilization = "teuton",
-			Title = "Duchy"
+			Civilization = "teuton"
 		},
 		Saxony = {
 			Name = "Saxony",
-			Civilization = "teuton",
-			Title = "Duchy"
+			Civilization = "teuton"
 		},
 		Scotland = {
 			Name = "Scotland",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Sweden = {
 			Name = "Sweden",
-			Civilization = "norse",
-			Title = "Kingdom"
+			Civilization = "norse"
 		},
 		Switzerland = {
 			Name = "Switzerland",
-			Civilization = "teuton",
-			Title = "Confederation"
+			Civilization = "teuton"
 		},
 		Vandalia = {
 			Name = "Vandalia",
-			Civilization = "goth",
-			Title = "Kingdom"
+			Civilization = "goth"
 		},
 		Westphalia = {
 			Name = "Westphalia",
-			Civilization = "teuton",
-			Title = "Duchy"
+			Civilization = "teuton"
 		},
 		-- Greek polities
 		Athens = {
 			Name = "Athens",
-			Civilization = "greek",
-			Title = "City-State"
+			Civilization = "greek"
 		},
 		Macedon = {
 			Name = "Macedon",
-			Civilization = "greek",
-			Title = "Kingdom"
+			Civilization = "greek"
 		},
 		Mycenae = {
 			Name = "Mycenae",
-			Civilization = "greek",
-			Title = "City-State"
+			Civilization = "greek"
 		},
 		Sparta = {
 			Name = "Sparta",
-			Civilization = "greek",
-			Title = "City-State"
+			Civilization = "greek"
 		},
 		Thebes = {
 			Name = "Thebes",
-			Civilization = "greek",
-			Title = "City-State"
+			Civilization = "greek"
 		},
 		-- Latin polities
 		France = {
 			Name = "France",
-			Civilization = "latin",
-			Title = "Kingdom"
+			Civilization = "latin"
 		},
 		Moldavia = {
 			Name = "Moldavia",
-			Civilization = "latin",
-			Title = "Principality"
+			Civilization = "latin"
 		},
 		Portugal = {
 			Name = "Portugal",
-			Civilization = "latin",
-			Title = "Kingdom"
+			Civilization = "latin"
 		},
 		Rome = {
 			Name = "Rome",
 			Civilization = "latin",
-			Title = "Republic",
 			Gold = 5000
 		},
 		Savoy = {
 			Name = "Savoy",
-			Civilization = "latin",
-			Title = "Duchy"
+			Civilization = "latin"
 		},
 		Sicily = {
 			Name = "Sicily",
-			Civilization = "latin",
-			Title = "Duchy"
+			Civilization = "latin"
 		},
 		Spain = {
 			Name = "Spain",
-			Civilization = "latin",
-			Title = "Kingdom"
+			Civilization = "latin"
 		},
 		Transylvania = {
 			Name = "Transylvania",
-			Civilization = "latin",
-			Title = "Principality"
+			Civilization = "latin"
 		},
 		Wallachia = {
 			Name = "Wallachia",
-			Civilization = "latin",
-			Title = "Principality"
+			Civilization = "latin"
 		},
 		-- Minoan Tribes
 		MinoanTribe = {
@@ -324,8 +291,7 @@ function LoadFactions(world)
 		-- Minoan Polities
 		Crete = {
 			Name = "Crete",
-			Civilization = "minoan",
-			Title = "Kingdom"
+			Civilization = "minoan"
 		},
 		-- Non-Playable Tribes
 		ErtebolleTribe = {
@@ -365,43 +331,35 @@ function LoadFactions(world)
 		-- Non-Playable Polities
 		Crimea = {
 			Name = "Crimea",
-			Civilization = "teuton",
-			Title = "Khanate"
+			Civilization = "teuton"
 		},
 		Croatia = {
 			Name = "Croatia",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Hungary = {
 			Name = "Hungary",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Muscovy = {
 			Name = "Muscovy",
-			Civilization = "teuton",
-			Title = "Dominion"
+			Civilization = "teuton"
 		},
 		Persia = {
 			Name = "Persia",
-			Civilization = "greek",
-			Title = "Kingdom"
+			Civilization = "greek"
 		},
 		Poland = {
 			Name = "Poland",
-			Civilization = "teuton",
-			Title = "Kingdom"
+			Civilization = "teuton"
 		},
 		Russia = {
 			Name = "Russia",
-			Civilization = "teuton",
-			Title = "Empire"
+			Civilization = "teuton"
 		},
 		Turkey = {
 			Name = "Turkey",
-			Civilization = "teuton",
-			Title = "Empire"
+			Civilization = "teuton"
 		}
 	}
 	
@@ -451,18 +409,15 @@ function LoadFactions(world)
 		-- Dwarven polities
 		KalKartha = {
 			Name = "Kal Kartha",
-			Civilization = "dwarf",
-			Title = "Lordship"
+			Civilization = "dwarf"
 		},
 		Knalga = {
 			Name = "Knalga",
-			Civilization = "dwarf",
-			Title = "Lordship"
+			Civilization = "dwarf"
 		},
 		Lyr = {
 			Name = "Lyr",
-			Civilization = "dwarf",
-			Title = "Lordship"
+			Civilization = "dwarf"
 		},
 		-- Goblin tribes
 		KhagTribe = {
@@ -490,9 +445,6 @@ function LoadFactions(world)
 			Factions[key] = {}
 			Factions[key]["Name"] = faction_table[key].Name
 			Factions[key]["Civilization"] = faction_table[key].Civilization
-			if (faction_table[key].Title ~= nil) then
-				Factions[key]["Title"] = faction_table[key].Title
-			end
 			if (faction_table[key].Gold ~= nil) then
 				SetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", faction_table[key].Gold)
 			end
