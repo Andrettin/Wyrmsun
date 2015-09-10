@@ -1954,7 +1954,10 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {561, 138}, -- Constantinople
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains"
+			SettlementTerrain = "Plains",
+			Claims = {
+				"thracian", "Apsinthii Tribe"
+			}
 		},
 		Transylvania = {
 			Name = "Transylvania",
