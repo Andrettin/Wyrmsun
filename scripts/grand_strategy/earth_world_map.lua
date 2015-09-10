@@ -6729,6 +6729,10 @@ SetWorldMapTileTerrain(539, 96, water_id)
 SetWorldMapTileTerrain(539, 97, water_id)
 SetWorldMapTileTerrain(539, 98, water_id)
 SetWorldMapTileTerrain(539, 99, water_id)
+SetWorldMapTileTerrain(539, 136, plains_id)
+SetWorldMapTileTerrain(539, 137, plains_id)
+SetWorldMapTileTerrain(539, 138, plains_id)
+SetWorldMapTileTerrain(539, 139, plains_id)
 SetWorldMapTileTerrain(539, 140, plains_id)
 SetWorldMapTileTerrain(539, 141, plains_id)
 SetWorldMapTileTerrain(539, 142, plains_id)
@@ -6774,6 +6778,10 @@ SetWorldMapTileTerrain(540, 90, water_id)
 SetWorldMapTileTerrain(540, 91, water_id)
 SetWorldMapTileTerrain(540, 92, water_id)
 SetWorldMapTileTerrain(540, 93, water_id)
+SetWorldMapTileTerrain(540, 136, plains_id)
+SetWorldMapTileTerrain(540, 137, plains_id)
+SetWorldMapTileTerrain(540, 138, plains_id)
+SetWorldMapTileTerrain(540, 139, plains_id)
 SetWorldMapTileTerrain(540, 140, plains_id)
 SetWorldMapTileTerrain(540, 141, plains_id)
 SetWorldMapTileTerrain(540, 142, plains_id)
@@ -6820,6 +6828,10 @@ SetWorldMapTileTerrain(541, 89, water_id)
 SetWorldMapTileTerrain(541, 90, water_id)
 SetWorldMapTileTerrain(541, 91, water_id)
 SetWorldMapTileTerrain(541, 92, water_id)
+SetWorldMapTileTerrain(541, 136, plains_id)
+SetWorldMapTileTerrain(541, 137, plains_id)
+SetWorldMapTileTerrain(541, 138, plains_id)
+SetWorldMapTileTerrain(541, 139, plains_id)
 SetWorldMapTileTerrain(541, 140, plains_id)
 SetWorldMapTileTerrain(541, 141, plains_id)
 SetWorldMapTileTerrain(541, 142, plains_id)
@@ -6857,6 +6869,10 @@ SetWorldMapTileTerrain(542, 88, water_id)
 SetWorldMapTileTerrain(542, 89, water_id)
 SetWorldMapTileTerrain(542, 90, water_id)
 SetWorldMapTileTerrain(542, 91, water_id)
+SetWorldMapTileTerrain(542, 136, plains_id)
+SetWorldMapTileTerrain(542, 137, plains_id)
+SetWorldMapTileTerrain(542, 138, plains_id)
+SetWorldMapTileTerrain(542, 139, plains_id)
 SetWorldMapTileTerrain(542, 140, plains_id)
 SetWorldMapTileTerrain(542, 141, plains_id)
 SetWorldMapTileTerrain(542, 142, plains_id)
@@ -6895,6 +6911,9 @@ SetWorldMapTileTerrain(543, 88, water_id)
 SetWorldMapTileTerrain(543, 89, plains_id)
 SetWorldMapTileTerrain(543, 90, water_id)
 SetWorldMapTileTerrain(543, 91, water_id)
+SetWorldMapTileTerrain(543, 136, plains_id)
+SetWorldMapTileTerrain(543, 137, plains_id)
+SetWorldMapTileTerrain(543, 138, plains_id)
 SetWorldMapTileTerrain(543, 139, plains_id)
 SetWorldMapTileTerrain(543, 140, plains_id)
 AddWorldMapResource("grain", 543, 140, true) -- Other fruit and vegetables; Source: "Philip's International School Atlas", 2006, p. 59.
@@ -6939,6 +6958,9 @@ SetWorldMapTileTerrain(544, 131, plains_id)
 SetWorldMapTileTerrain(544, 132, plains_id)
 SetWorldMapTileTerrain(544, 134, plains_id)
 SetWorldMapTileTerrain(544, 135, plains_id)
+SetWorldMapTileTerrain(544, 136, plains_id)
+SetWorldMapTileTerrain(544, 137, plains_id)
+SetWorldMapTileTerrain(544, 138, plains_id)
 SetWorldMapTileTerrain(544, 139, plains_id)
 SetWorldMapTileTerrain(544, 140, plains_id)
 SetWorldMapTileTerrain(544, 141, water_id)
@@ -9329,6 +9351,9 @@ if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Epirus, Euboea,
 	SetProvinceOwner("Macedonia", "latin", "Rome")
 	SetProvinceSettlementBuilding("Macedonia", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Thessaly", "latin", "Rome")
+	
+	SetProvinceOwner("Skopje", "latin", "Rome")
+	SetProvinceSettlementBuilding("Skopje", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -9339,6 +9364,10 @@ end
 if (GrandStrategyYear >= -121) then -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Provence", "latin", "Rome")
 	SetProvinceSettlementBuilding("Provence", "unit-teuton-town-hall", true)
+end
+
+if (GrandStrategyYear >= -74) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Thrace", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
@@ -9441,8 +9470,9 @@ if (GrandStrategyYear >= -33) then
 end
 
 if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Bulgaria", "latin", "Rome")
+	SetProvinceOwner("Bulgaria", "latin", "Rome") -- the southern half of Bulgaria was only acquired later, in 46 AD, when Thrace was acquired
 	SetProvinceOwner("Serbia", "latin", "Rome")
+	SetProvinceSettlementBuilding("Serbia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -27) then
@@ -9474,10 +9504,6 @@ if (GrandStrategyYear >= -15) then
 	
 	SetProvinceOwner("Savoy", "latin", "Rome") -- Pennine Alps acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceSettlementBuilding("Savoy", "unit-teuton-town-hall", true)
-end
-
-if (GrandStrategyYear >= -14) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Thrace", "latin", "Rome")
 end
 
 -- Battle of Teutoburg Forest between the Cherusci chieftain Arminius' forces, and the Romans (when did this happen?); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
