@@ -9191,6 +9191,7 @@ end
 if (GrandStrategyYear >= -550) then
 	-- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
 	SetProvinceCivilization("Macedonia", "greek")
+	SetProvinceCivilization("Rhodope", "greek")
 	SetProvinceCivilization("Thrace", "greek")
 	
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
@@ -9199,6 +9200,8 @@ end
 if (GrandStrategyYear >= -500) then
 	-- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	SetProvinceOwner("Macedonia", "persian", "Persia")
+	SetProvinceOwner("Rhodope", "persian", "Persia")
+	SetProvinceSettlementBuilding("Rhodope", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Thrace", "persian", "Persia")
 	SetProvinceSettlementBuilding("Thrace", "unit-teuton-town-hall", true)
 	
@@ -9209,6 +9212,7 @@ if (GrandStrategyYear >= -500) then
 	Factions.Sparta.Diplomacy["Persia"] = "War"
 	Factions.Persia.Diplomacy["Athens"] = "War"
 	Factions.Persia.Diplomacy["Sparta"] = "War"
+	SetProvinceCivilization("Thrace", "thracian") -- Apsinthii
 end
 
 if (GrandStrategyYear >= -479) then
@@ -9219,18 +9223,33 @@ if (GrandStrategyYear >= -479) then
 	Factions.Persia.Diplomacy["Sparta"] = "Peace"
 end
 
-if (GrandStrategyYear >= -431) then
-	-- Greece in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+if (GrandStrategyYear >= -450) then
+	-- Greece circa 450 BC (height of the Athenian empire); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+	SetProvinceOwner("Thrace", "thracian", "Apsinthii Tribe")
 	SetProvinceOwner("Macedonia", "greek", "Macedon")
-	SetProvinceOwner("Thrace", "", "")
+	SetProvinceOwner("Rhodope", "", "")
 	
 	SetProvinceOwner("Albania", "illyrian", "Taulantii Tribe")
 	SetProvinceCivilization("Albania", "illyrian")
 	SetProvinceSettlementBuilding("Albania", "unit-teuton-town-hall", true)
-	
+end
+
+if (GrandStrategyYear >= -431) then
+	-- Greece in 431 BC (beginning of the Peloponnesian War); Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.	
 	SetProvinceOwner("Bulgaria", "thracian", "Odrysae Tribe")
 	SetProvinceCivilization("Bulgaria", "thracian")
 	SetProvinceSettlementBuilding("Bulgaria", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Skopje", "phrygian", "Bryges Tribe")
+	SetProvinceCivilization("Skopje", "phrygian")
+	SetProvinceSettlementBuilding("Skopje", "unit-teuton-town-hall", true)
+	
+	Factions.Athens.Diplomacy["Sparta"] = "War"
+	Factions.Athens.Diplomacy["Thebes"] = "War"
+	Factions.Athens.Diplomacy["Macedon"] = "War"
+	Factions.Sparta.Diplomacy["Athens"] = "War"
+	Factions.Thebes.Diplomacy["Athens"] = "War"
+	Factions.Macedon.Diplomacy["Athens"] = "War"
 end
 
 if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
@@ -9245,11 +9264,23 @@ if (GrandStrategyYear >= -387) then
 	-- Plundering of Rome under Brennus (Celtic leader) and battle at the river Allia in 387 BC; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 end
 
+if (GrandStrategyYear >= -362) then
+	-- Greece in 362 BC (Theban headship); Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.	
+	Factions.Athens.Diplomacy["Sparta"] = "Peace"
+	Factions.Athens.Diplomacy["Thebes"] = "Peace"
+	Factions.Athens.Diplomacy["Macedon"] = "Peace"
+	Factions.Sparta.Diplomacy["Athens"] = "Peace"
+	Factions.Thebes.Diplomacy["Athens"] = "Peace"
+	Factions.Macedon.Diplomacy["Athens"] = "Peace"
+end
+
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 	PytheasVoyageGoths = nil
 end
 
 if (GrandStrategyYear >= -323) then -- Macedonian Empire in 323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+	SetProvinceOwner("Rhodope", "greek", "Macedon")
+	SetProvinceSettlementBuilding("Rhodope", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Thrace", "greek", "Macedon")
 	SetProvinceOwner("Bulgaria", "greek", "Macedon")
 	SetProvinceCivilization("Bulgaria", "greek")
@@ -9349,11 +9380,10 @@ if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Epirus, Euboea,
 	SetProvinceOwner("Euboea", "latin", "Rome")
 	SetProvinceOwner("Lacedaemonia", "latin", "Rome")
 	SetProvinceOwner("Macedonia", "latin", "Rome")
-	SetProvinceSettlementBuilding("Macedonia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Rhodope", "latin", "Rome")
 	SetProvinceOwner("Thessaly", "latin", "Rome")
 	
 	SetProvinceOwner("Skopje", "latin", "Rome")
-	SetProvinceSettlementBuilding("Skopje", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -138) then -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

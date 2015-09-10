@@ -335,6 +335,18 @@ function LoadFactions(world)
 			Civilization = "phrygian"
 		},
 		-- Thracian tribes
+		ApsinthiiTribe = {
+			Name = "Apsinthii Tribe",
+			Civilization = "thracian"
+		},
+		EdoniTribe = {
+			Name = "Edoni Tribe",
+			Civilization = "thracian"
+		},
+		OdomantiTribe = {
+			Name = "Odomanti Tribe",
+			Civilization = "thracian"
+		},
 		OdrysaeTribe = {
 			Name = "Odrysae Tribe",
 			Civilization = "thracian"

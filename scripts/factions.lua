@@ -315,6 +315,27 @@ DefineFaction("Bryges Tribe", {
 	SecondaryColor = "violet"
 })
 
+DefineFaction("Apsinthii Tribe", {
+	Civilization = "thracian",
+	Type = "tribe",
+	Color = "purple",
+	SecondaryColor = "purple"
+})
+
+DefineFaction("Edoni Tribe", {
+	Civilization = "thracian",
+	Type = "tribe",
+	Color = "white",
+	SecondaryColor = "white"
+})
+
+DefineFaction("Odomanti Tribe", {
+	Civilization = "thracian", -- were they really Thracian?
+	Type = "tribe",
+	Color = "black",
+	SecondaryColor = "black"
+})
+
 DefineFaction("Odrysae Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",
