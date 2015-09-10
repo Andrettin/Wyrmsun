@@ -543,17 +543,33 @@ function LoadProvinces(world)
 			Name = "Bulgaria",
 			Tiles = {
 				{136, 33}, {137, 33}, {138, 33}, {139, 33}, -- old map
-				{559, 136}
+				{544, 131}, {544, 132}, {544, 134}, {544, 135},
+				{545, 131}, {545, 132}, {545, 133}, {545, 134}, {545, 135}, {545, 136}, {545, 137}, {545, 138},
+				{546, 131}, {546, 132}, {546, 133}, {546, 134}, {546, 135}, {546, 136}, {546, 137}, {546, 138},
+				{547, 131}, {547, 132}, {547, 133}, {547, 134}, {547, 135}, {547, 136}, {547, 137}, {547, 138},
+				{548, 132}, {548, 133}, {548, 134}, {548, 135}, {548, 136}, {548, 137},
+				{549, 132}, {549, 133}, {549, 134}, {549, 135}, {549, 136}, {549, 137},
+				{550, 132}, {550, 133}, {550, 134}, {550, 135}, {550, 136}, {550, 137}, {550, 138},
+				{551, 132}, {551, 133}, {551, 134}, {551, 135}, {551, 136}, {551, 137}, {551, 138},
+				{552, 132}, {552, 133}, {552, 134}, {552, 135}, {552, 136}, {552, 137}, {552, 138},
+				{553, 132}, {553, 133}, {553, 134}, {553, 135}, {553, 136}, {553, 137}, {553, 138},
+				{554, 131}, {554, 132}, {554, 133}, {554, 134}, {554, 135}, {554, 136}, {554, 137},
+				{555, 131}, {555, 132}, {555, 133}, {555, 134}, {555, 135}, {555, 136}, {555, 137},
+				{556, 131}, {556, 132}, {556, 133}, {556, 134}, {556, 135}, {556, 136},
+				{557, 131}, {557, 132}, {557, 133}, {557, 134}, {557, 135}, {557, 136},
+				{558, 131}, {558, 132}, {558, 133}, {558, 134}, {558, 135}, {558, 136},
+				{559, 132}, {559, 136},
+				{560, 132}
 			},
 			CulturalNames = {
-				latin = "Lower Moesia"
+				latin = "Lower Moesia" -- Lower Moesia encompassed most of Bulgaria, but left out large parts of its south, including Sofia, which were part of the Thrace province of Rome; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
-			SettlementName = "Odessus",
+			SettlementName = "Sofia",
 			CulturalSettlementNames = {
-				greek = "Odessus",
-				latin = "Odessus"
+				latin = "Ulpia"
+				-- Sardica
 			},
-			SettlementLocation = {139, 33}, -- Odessus
+			SettlementLocation = {546, 134}, -- Sofia
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
@@ -1369,7 +1385,7 @@ function LoadProvinces(world)
 				norse = "Normandy"
 			},
 			SettlementName = "Rouen",
-			SettlementLocation = {475, 119}, -- Rouen
+			SettlementLocation = {482, 115}, -- Rouen
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
