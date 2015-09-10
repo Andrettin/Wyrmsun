@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- tribes
+
+DefineFaction("Chaoni Tribe", {
+	Civilization = "greek",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow"
+})
+
+DefineFaction("Dolopes Tribe", {
+	Civilization = "greek",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
+
 -- polities
 
 DefineFaction("Argos", {

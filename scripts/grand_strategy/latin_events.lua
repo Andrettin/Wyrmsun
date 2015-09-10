@@ -93,6 +93,32 @@ local LatinEvents = {
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
+	},
+	TheFoundingOfRome = {
+		Name = "The Founding of Rome",
+		Description = "As our people gain in sophistication, we have become more and more settled down. Now it is high time for us to to found a new polity, Rome!",
+		Conditions = function(s)
+			if (
+				GetFactionProvinceCount(Factions.Rome) == 0
+				and (EventFaction.Name == "Latin Tribe")
+				and EventFaction.Civilization == "latin"
+				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
+				and GetProvinceOwner("Latium") == EventFaction.Name
+				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
+				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		Persistent = true,
+		Options = {"~!OK"},
+		OptionEffects = {function(s)
+			FormFaction(EventFaction, Factions.Rome)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
+		end},
+		OptionTooltips = {"Our faction becomes Rome, +10 Prestige"}
 	}
 }
 	

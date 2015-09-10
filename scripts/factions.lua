@@ -284,6 +284,13 @@ DefineFaction("Illyrian Tribe", {
 	SecondaryColor = "red"
 })
 
+DefineFaction("Taulantii Tribe", {
+	Civilization = "illyrian",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
+})
+
 DefineFaction("Kobolds", {
 	Civilization = "kobold",
 	Type = "tribe",
@@ -299,4 +306,18 @@ DefineFaction("Persia", {
 	Titles = {
 		"monarchy", "Kingdom"
 	}
+})
+
+DefineFaction("Bryges Tribe", {
+	Civilization = "phrygian",
+	Type = "tribe",
+	Color = "violet",
+	SecondaryColor = "violet"
+})
+
+DefineFaction("Odrysae Tribe", {
+	Civilization = "thracian",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "red"
 })

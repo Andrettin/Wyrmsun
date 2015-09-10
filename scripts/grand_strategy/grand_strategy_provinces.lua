@@ -350,9 +350,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {526, 118}, -- Vienna
 			Map = "maps/earth/salzburg.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Norici Tribe",
@@ -371,10 +368,7 @@ function LoadProvinces(world)
 			SettlementName = "Riga",
 			SettlementLocation = {137, 23}, -- Riga
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains",
-			Units = {
-				unit_germanic_warrior = 8 -- a few soldiers to make it more difficult for to expand here
-			}
+			SettlementTerrain = "Plains"
 		},
 		Bavaria = {
 			Name = "Bavaria",
@@ -392,9 +386,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {128, 29}, -- Regensburg
 			Map = "maps/earth/regensburg.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- soldiers to stop the Asa Tribe from expanding here
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Bavarian Tribe",
@@ -427,9 +418,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {492, 111}, -- Brussels
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer early on
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Menapii Tribe",
@@ -496,9 +484,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {520, 113}, -- Prague
 			Map = "maps/earth/prague.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Boii Tribe",
@@ -526,9 +511,6 @@ function LoadProvinces(world)
 				"germanic", "Suebi Tribe",
 				"teuton", "Suebi Tribe",
 				"teuton", "Brandenburg"
-			},
-			Units = {
-				unit_germanic_warrior = 8 -- a few soldiers to make it more difficult for the Gylfing Tribe to expand here
 			}
 		},
 		Brittany = {
@@ -555,14 +537,14 @@ function LoadProvinces(world)
 --			SettlementLocation = {475, 121}, -- Nantes
 			SettlementLocation = {475, 119}, -- Rennes
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains"
 		},
 		Bulgaria = {
 			Name = "Bulgaria",
-			Tiles = { {136, 33}, {137, 33}, {138, 33}, {139, 33} },
+			Tiles = {
+				{136, 33}, {137, 33}, {138, 33}, {139, 33}, -- old map
+				{559, 136}
+			},
 			CulturalNames = {
 				latin = "Lower Moesia"
 			},
@@ -573,9 +555,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {139, 33}, -- Odessus
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
-			},
 			SettlementTerrain = "Plains"
 		},
 		Burgundy = {
@@ -725,9 +704,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {131, 31}, -- Zagreb
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -821,9 +797,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {480, 109}, -- London
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -847,6 +820,9 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {538, 144}, -- Nicopolis
 			Map = "maps/random_maps/random-map-forest.smp",
+			Claims = {
+				"greek", "Chaoni Tribe"
+			},
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -916,9 +892,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {486, 117}, -- Paris
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- soldiers to prevent germanic expansion here too soon
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Francia",
@@ -962,10 +935,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {137, 28}, -- Lvov / Lemberg
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains",
-			Units = {
-				unit_germanic_warrior = 4 -- a few soldiers to make it more difficult for to expand here
-			}
+			SettlementTerrain = "Plains"
 		},
 		GaliciaIberia = {
 			Name = "Gallaecia",
@@ -991,9 +961,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {456, 132}, -- Corunna
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Galicia"
@@ -1031,9 +998,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {513, 91}, -- Gothenburg
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1058,9 +1022,6 @@ function LoadProvinces(world)
 				"germanic", "Goth Tribe",
 				"goth", "Goth Tribe",
 				"goth", "Gothia"
-			},
-			Units = {
-				unit_germanic_warrior = 8 -- a few soldiers to make it more difficult for to expand here
 			}
 		},
 		Hungary = {
@@ -1076,9 +1037,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {133, 30}, -- Budapest
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
-			},
 			SettlementTerrain = "Plains"
 		},
 		Iceland = {
@@ -1218,9 +1176,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {515, 136}, -- Rome
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a very difficult province to conquer
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"latin", "Rome"
@@ -1269,9 +1224,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {506, 126}, -- Milan
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
-			},
 			SettlementTerrain = "Plains"
 		},
 		Macedonia = {
@@ -1331,9 +1283,6 @@ function LoadProvinces(world)
 			Tiles = { {139, 29}, {139, 30}, {139, 31}, {140, 30}, {140, 31} },
 			SettlementLocation = {139, 31}, -- Braila
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains"
 		},
 		Naples = {
@@ -1394,9 +1343,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {494, 107}, -- Amsterdam
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 8 -- soldiers to prevent expansion here too soon
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1425,9 +1371,6 @@ function LoadProvinces(world)
 			SettlementName = "Rouen",
 			SettlementLocation = {475, 119}, -- Rouen
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- soldiers to prevent germanic expansion here too soon
-			},
 			SettlementTerrain = "Plains"
 		},
 		Palermo = {
@@ -1500,10 +1443,7 @@ function LoadProvinces(world)
 	--		SettlementName = "Warsaw",
 			SettlementLocation = {134, 26}, -- Warsaw
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains",
-			Units = {
-				unit_germanic_warrior = 4 -- a few soldiers to make it more difficult for to expand here
-			}
+			SettlementTerrain = "Plains"
 		},
 		Portugal = {
 			Name = "Portugal",
@@ -1583,9 +1523,6 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"teuton", "Prussia"
-			},
-			Units = {
-				unit_germanic_warrior = 8 -- a few soldiers to make it more difficult for to expand here
 			}
 		},
 		Rhineland = {
@@ -1611,9 +1548,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {500, 109}, -- Düsseldorf
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 6 -- soldiers to stop the Asa Tribe from expanding here
-			},
 			SettlementTerrain = "Plains",
 			Claims = {
 				"germanic", "Saxon Tribe",
@@ -1786,9 +1720,6 @@ function LoadProvinces(world)
 			Claims = {
 				"celt", "Pict Tribe",
 				"teuton", "Scotland" -- should be English
-			},
-			Units = {
-				unit_germanic_warrior = 8 -- a few soldiers to make it more difficult for the Gylfing Tribe to expand here
 			}
 		},
 		Serbia = {
@@ -1803,9 +1734,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {135, 32}, -- Viminacium
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
-			},
 			SettlementTerrain = "Plains"
 		},
 		Silesia = {
@@ -1820,9 +1748,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {132, 27}, -- Breslau
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- soldiers to stop the germanic tribes from expanding here too soon
-			},
 			SettlementTerrain = "Plains"
 		},
 		Sweden = {
@@ -1892,9 +1817,6 @@ function LoadProvinces(world)
 			SettlementName = "Bern",
 			SettlementLocation = {501, 122}, -- Bern
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Mountains",
 			Claims = {
 				"celt", "Helvetii Tribe",
@@ -1965,9 +1887,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {561, 138}, -- Constantinople
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- a few soldiers to make it more difficult for the Romans to expand here
-			},
 			SettlementTerrain = "Plains"
 		},
 		Transylvania = {
@@ -1980,10 +1899,7 @@ function LoadProvinces(world)
 --			SettlementName = "",
 			SettlementLocation = {136, 30}, -- Klausenburg
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains",
-			Units = {
-				unit_germanic_warrior = 4 -- a few soldiers to make it more difficult for to expand here
-			}
+			SettlementTerrain = "Plains"
 		},
 		Tuscany = {
 			Name = "Tuscany",
@@ -2065,9 +1981,6 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {515, 126}, -- Venice
 			Map = "maps/earth/oderzo.smp",
-			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Norici Tribe from expanding here too easily
-			},
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2082,9 +1995,6 @@ function LoadProvinces(world)
 			Tiles = { {136, 32}, {137, 32}, {138, 32}, {139, 32}, {140, 32} },
 			SettlementLocation = {138, 32}, -- Bucharest
 			Map = "maps/random_maps/random-map-forest.smp",
-			Units = {
-				unit_germanic_warrior = 20 -- many soldiers, to represent the might of Rome, and make this a difficult province to conquer
-			},
 			SettlementTerrain = "Plains"
 		},
 		WhiteRussia = {
@@ -2672,9 +2582,51 @@ function LoadProvinces(world)
 				{476, 124}, {476, 125}, {476, 126}, {476, 127}, {476, 128}
 			}
 		},
-		BlackSea = {
+		BlackSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
 			Name = "Black Sea",
-			Tiles = { {140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34} }
+			Tiles = {
+				{140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34}, -- old map
+				{559, 133}, {559, 134}, {559, 135},
+				{560, 133}, {560, 134}, {560, 135}, {560, 136}, {560, 137},
+				{561, 130}, {561, 131}, {561, 132}, {561, 133}, {561, 134}, {561, 135}, {561, 136}, {561, 137},
+				{562, 129}, {562, 130}, {562, 131}, {562, 132}, {562, 133}, {562, 134}, {562, 135}, {562, 136}, {562, 137}, {562, 138},
+				{563, 129}, {563, 130}, {563, 131}, {563, 132}, {563, 133}, {563, 134}, {563, 135}, {563, 136}, {563, 137}, {563, 138},
+				{564, 126}, {564, 127}, {564, 128}, {564, 129}, {564, 130}, {564, 131}, {564, 132}, {564, 133}, {564, 134}, {564, 135}, {564, 136}, {564, 137}, {564, 138},
+				{565, 126}, {565, 127}, {565, 128}, {565, 129}, {565, 130}, {565, 131}, {565, 132}, {565, 133}, {565, 134}, {565, 135}, {565, 136}, {565, 137}, {565, 138},
+				{566, 125}, {566, 126}, {566, 127}, {566, 128}, {566, 129}, {566, 130}, {566, 131}, {566, 132}, {566, 133}, {566, 134}, {566, 135}, {566, 136}, {566, 137}, {566, 138},
+				{567, 124}, {567, 125}, {567, 126}, {567, 127}, {567, 128}, {567, 129}, {567, 130}, {567, 131}, {567, 132}, {567, 133}, {567, 134}, {567, 135}, {567, 136}, {567, 137}, {567, 138},
+				{568, 123}, {568, 124}, {568, 125}, {568, 126}, {568, 127}, {568, 128}, {568, 129}, {568, 130}, {568, 131}, {568, 132}, {568, 133}, {568, 134}, {568, 135}, {568, 136}, {568, 137}, {568, 138},
+				{569, 123}, {569, 124}, {569, 125}, {569, 126}, {569, 127}, {569, 128}, {569, 129}, {569, 130}, {569, 131}, {569, 132}, {569, 133}, {569, 134}, {569, 135}, {569, 136}, {569, 137}, {569, 138},
+				{570, 123}, {570, 124}, {570, 125}, {570, 126}, {570, 127}, {570, 128}, {570, 129}, {570, 130}, {570, 131}, {570, 132}, {570, 133}, {570, 134}, {570, 135}, {570, 136}, {570, 137},
+				{571, 125}, {571, 126}, {571, 127}, {571, 128}, {571, 129}, {571, 130}, {571, 131}, {571, 132}, {571, 133}, {571, 134}, {571, 135}, {571, 136}, {571, 137},
+				{572, 125}, {572, 126}, {572, 127}, {572, 128}, {572, 129}, {572, 130}, {572, 131}, {572, 132}, {572, 133}, {572, 134}, {572, 135}, {572, 136},
+				{573, 125}, {573, 127}, {573, 128}, {573, 129}, {573, 130}, {573, 131}, {573, 132}, {573, 133}, {573, 134}, {573, 135}, {573, 136},
+				{574, 125}, {574, 127}, {574, 128}, {574, 129}, {574, 130}, {574, 131}, {574, 132}, {574, 133}, {574, 134}, {574, 135}, {574, 136},
+				{575, 125}, {575, 128}, {575, 129}, {575, 130}, {575, 131}, {575, 132}, {575, 133}, {575, 134}, {575, 135}, {575, 136},
+				{576, 130}, {576, 131}, {576, 132}, {576, 133}, {576, 134}, {576, 135}, {576, 136},
+				{577, 129}, {577, 130}, {577, 131}, {577, 132}, {577, 133}, {577, 134}, {577, 135}, {577, 136},
+				{578, 129}, {578, 130}, {578, 131}, {578, 132}, {578, 133}, {578, 134}, {578, 135}, {578, 136},
+				{579, 129}, {579, 130}, {579, 131}, {579, 132}, {579, 133}, {579, 134}, {579, 135}, {579, 136},
+				{580, 128}, {580, 129}, {580, 130}, {580, 131}, {580, 132}, {580, 133}, {580, 134}, {580, 135}, {580, 136},
+				{581, 128}, {581, 129}, {581, 130}, {581, 131}, {581, 132}, {581, 133}, {581, 134}, {581, 135}, {581, 136}, {581, 137},
+				{582, 128}, {582, 129}, {582, 130}, {582, 131}, {582, 132}, {582, 133}, {582, 134}, {582, 135}, {582, 136}, {582, 137},
+				{583, 128}, {583, 129}, {583, 130}, {583, 131}, {583, 132}, {583, 133}, {583, 134}, {583, 135}, {583, 136}, {583, 137}, {583, 138},
+				{584, 128}, {584, 129}, {584, 130}, {584, 131}, {584, 132}, {584, 133}, {584, 134}, {584, 135}, {584, 136}, {584, 137},
+				{585, 128}, {585, 129}, {585, 130}, {585, 131}, {585, 132}, {585, 133}, {585, 134}, {585, 135}, {585, 136}, {585, 137}, {585, 138},
+				{586, 129}, {586, 130}, {586, 131}, {586, 132}, {586, 133}, {586, 134}, {586, 135}, {586, 136}, {586, 137}, {586, 138},
+				{587, 129}, {587, 130}, {587, 131}, {587, 132}, {587, 133}, {587, 134}, {587, 135}, {587, 136}, {587, 137}, {587, 138},
+				{588, 130}, {588, 131}, {588, 132}, {588, 133}, {588, 134}, {588, 135}, {588, 136}, {588, 137}, {588, 138}, {588, 139},
+				{589, 130}, {589, 131}, {589, 132}, {589, 133}, {589, 134}, {589, 135}, {589, 136}, {589, 137}, {589, 138}, {589, 139},
+				{590, 130}, {590, 131}, {590, 132}, {590, 133}, {590, 134}, {590, 135}, {590, 136}, {590, 137}, {590, 138},
+				{591, 131}, {591, 132}, {591, 133}, {591, 134}, {591, 135}, {591, 136}, {591, 137}, {591, 138},
+				{592, 132}, {592, 133}, {592, 134}, {592, 135}, {592, 136}, {592, 137}, {592, 138},
+				{593, 132}, {593, 133}, {593, 134}, {593, 135}, {593, 136}, {593, 137}, {593, 138}, {593, 139},
+				{594, 133}, {594, 134}, {594, 135}, {594, 136}, {594, 137}, {594, 138}, {594, 139},
+				{595, 133}, {595, 134}, {595, 135}, {595, 136}, {595, 137}, {595, 138},
+				{596, 134}, {596, 135}, {596, 136}, {596, 137}, {596, 138},
+				{597, 134}, {597, 135}, {597, 136}, {597, 137},
+				{598, 136}
+			}
 		},
 		BristolChannel = { -- Source: "Limits of Oceans and Seas", 1953, p. 13. (see corrections as well)
 			Name = "Bristol Channel",
@@ -3055,6 +3007,23 @@ function LoadProvinces(world)
 				{502, 93}, {502, 94}, {502, 95}, {502, 96}, {502, 97}, {502, 98}, {502, 99}, {502, 100}, {502, 101}, {502, 102},
 				{503, 93}, {503, 94}, {503, 98}, {503, 99}, {503, 100}, {503, 101}, {503, 102}, {503, 103},
 				{504, 99}, {504, 100}, {504, 101}, {504, 102}
+			}
+		},
+		SeaOfAzov = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
+			Name = "Sea of Azov",
+			Tiles = {
+				{579, 124}, {579, 125},
+				{580, 124}, {580, 125}, {580, 126},
+				{581, 124}, {581, 125}, {581, 126},
+				{582, 123}, {582, 124}, {582, 125}, {582, 126},
+				{583, 123}, {583, 124}, {583, 125}, {583, 126},
+				{584, 123}, {584, 124}, {584, 125}, {584, 126}, {584, 127},
+				{585, 123}, {585, 124}, {585, 125}, {585, 126},
+				{586, 122}, {586, 123}, {586, 124}, {586, 125}, {586, 126},
+				{587, 122}, {587, 123}, {587, 124}, {587, 125},
+				{588, 122}, {588, 124},
+				{589, 122},
+				{590, 122}
 			}
 		},
 		SeaOfMarmara = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.

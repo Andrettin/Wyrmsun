@@ -229,6 +229,15 @@ function LoadFactions(world)
 			Name = "Westphalia",
 			Civilization = "teuton"
 		},
+		-- Greek tribes
+		ChaoniTribe = {
+			Name = "Chaoni Tribe",
+			Civilization = "greek"
+		},
+		DolopesTribe = {
+			Name = "Dolopes Tribe",
+			Civilization = "greek"
+		},
 		-- Greek polities
 		Argos = {
 			Name = "Argos",
@@ -257,6 +266,10 @@ function LoadFactions(world)
 		-- Illyrian tribes
 		IllyrianTribe = {
 			Name = "Illyrian Tribe",
+			Civilization = "illyrian"
+		},
+		TaulantiiTribe = {
+			Name = "Taulantii Tribe",
 			Civilization = "illyrian"
 		},
 		-- Latin tribes
@@ -315,6 +328,16 @@ function LoadFactions(world)
 		Crete = {
 			Name = "Crete",
 			Civilization = "minoan"
+		},
+		-- Phrygian tribes
+		BrygesTribe = {
+			Name = "Bryges Tribe",
+			Civilization = "phrygian"
+		},
+		-- Thracian tribes
+		OdrysaeTribe = {
+			Name = "Odrysae Tribe",
+			Civilization = "thracian"
 		},
 		-- Non-Playable Tribes
 		ErtebolleTribe = {

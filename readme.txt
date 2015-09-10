@@ -221,7 +221,7 @@ https://github.com/Andrettin/Wyrmsun
 - Hill graphic transitions update (by Jinn).
 - Greatly increased the proportions of the Earth map.
 - New Earth provinces: Aetolia, Boeotia, Carniola, Dalmatia, Epirus, Euboea, Franche Comté, Istria, Liguria, Lombardy, Modena, Normandy, Palermo, Parma, Piedmont, Provence, Rhodes, Savoy, Scania, Syracuse, Thessaly, Tuscany, Umbria, Venetia, Zealand.
-- New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Marmara, Skagerrak.
+- New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Azov, Sea of Marmara, Skagerrak.
 - Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
 - Burgs and Bastions now provide two guard towers in defensive battles.

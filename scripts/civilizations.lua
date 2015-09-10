@@ -567,6 +567,22 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
+		"name", "phrygian",
+		"display", "Phrygian",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
+		"name", "thracian",
+		"display", "Thracian",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false
+	},
+	"race", {
 		"name", "neutral",
 		"display", "Neutral"
 	}

@@ -1160,7 +1160,7 @@ local TeutonEvents = {
 			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
 		end},
 		OptionTooltips = {"Our faction becomes Bavaria, +10 Prestige"}
-	},
+	}
 }
 	
 AddEventTable(TeutonEvents)
