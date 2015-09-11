@@ -1791,17 +1791,32 @@ function LoadProvinces(world)
 		},
 		Serbia = {
 			Name = "Serbia",
-			Tiles = { {134, 32}, {135, 32}, {135, 33} },
+			Tiles = {
+				{134, 32}, {135, 32}, {135, 33}, -- old map
+				{535, 129}, {535, 133},
+				{536, 128}, {536, 129}, {536, 130}, {536, 131}, {536, 132}, {536, 133},
+				{537, 129}, {537, 130}, {537, 131}, {537, 132}, {537, 133},
+				{538, 129}, {538, 130}, {538, 131}, {538, 132}, {538, 133}, {538, 134}, {538, 135},
+				{539, 129}, {539, 130}, {539, 131}, {539, 132}, {539, 133}, {539, 134}, {539, 135},
+				{540, 129}, {540, 130}, {540, 131}, {540, 132}, {540, 133}, {540, 134}, {540, 135},
+				{541, 129}, {541, 130}, {541, 131}, {541, 132}, {541, 133}, {541, 134}, {541, 135},
+				{542, 129}, {542, 130}, {542, 131}, {542, 132}, {542, 133}, {542, 134}, {542, 135},
+				{543, 129}, {543, 130}, {543, 131}, {543, 132}, {543, 133}, {543, 134}, {543, 135},
+				{544, 133}
+			},
 			CulturalNames = {
 				latin = "Upper Moesia"
 			},
-			SettlementName = "Viminacium",
+			SettlementName = "Belgrade",
 			CulturalSettlementNames = {
-				latin = "Viminacium"
+				latin = "Singidunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
-			SettlementLocation = {135, 32}, -- Viminacium
+			SettlementLocation = {538, 129}, -- Belgrade
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains"
+			SettlementTerrain = "Plains",
+			Claims = {
+				"thracian", "Triballi Tribe"
+			}
 		},
 		Silesia = {
 			Name = "Silesia",
@@ -2120,7 +2135,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"latin", "Wallachia"
+				"latin", "Wallachia",
+				"thracian", "Getae Tribe"
 			}
 		},
 		WhiteRussia = {
