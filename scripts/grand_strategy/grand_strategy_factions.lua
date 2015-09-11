@@ -343,12 +343,20 @@ function LoadFactions(world)
 			Name = "Edoni Tribe",
 			Civilization = "thracian"
 		},
+		GetaeTribe = {
+			Name = "Getae Tribe",
+			Civilization = "thracian"
+		},
 		OdomantiTribe = {
 			Name = "Odomanti Tribe",
 			Civilization = "thracian"
 		},
 		OdrysaeTribe = {
 			Name = "Odrysae Tribe",
+			Civilization = "thracian"
+		},
+		TriballiTribe = {
+			Name = "Triballi Tribe",
 			Civilization = "thracian"
 		},
 		-- Non-Playable Tribes
