@@ -253,10 +253,34 @@ DefineFaction("Etruscan Tribe", {
 	SecondaryColor = "yellow"
 })
 
+DefineFaction("Acthnic Tribe", {
+	Civilization = "gnome",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "red",
+	DevelopsTo = {"Untersberg"}
+})
+
+DefineFaction("Cubital Tribe", {
+	Civilization = "gnome",
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown",
+	DevelopsTo = {"Untersberg"}
+})
+
+DefineFaction("Sagan Tribe", {
+	Civilization = "gnome",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green",
+	DevelopsTo = {"Untersberg"}
+})
+
 DefineFaction("Untersberg", {
 	Civilization = "gnome",
-	Type = "tribe", -- should be polity
-	Color = "blue",
+	Type = "polity",
+	Color = "purple",
 	SecondaryColor = "purple",
 	Titles = {
 		"monarchy", "Kingdom"

@@ -6381,6 +6381,7 @@ SetWorldMapTileTerrain(533, 98, water_id)
 SetWorldMapTileTerrain(533, 99, water_id)
 SetWorldMapTileTerrain(533, 100, water_id)
 SetWorldMapTileTerrain(533, 114, plains_id)
+SetWorldMapTileTerrain(533, 133, plains_id)
 SetWorldMapTileTerrain(533, 134, plains_id)
 SetWorldMapTileTerrain(533, 135, plains_id)
 SetWorldMapTileTerrain(533, 136, water_id)
@@ -6442,6 +6443,11 @@ SetWorldMapTileTerrain(534, 97, water_id)
 SetWorldMapTileTerrain(534, 98, water_id)
 SetWorldMapTileTerrain(534, 99, water_id)
 SetWorldMapTileTerrain(534, 100, water_id)
+SetWorldMapTileTerrain(534, 132, plains_id)
+SetWorldMapTileTerrain(534, 133, plains_id)
+SetWorldMapTileTerrain(534, 134, plains_id)
+SetWorldMapTileTerrain(534, 135, plains_id)
+SetWorldMapTileTerrain(534, 136, plains_id)
 SetWorldMapTileTerrain(534, 137, water_id)
 SetWorldMapTileTerrain(534, 138, water_id)
 SetWorldMapTileTerrain(534, 139, water_id)
@@ -6503,7 +6509,10 @@ SetWorldMapTileTerrain(535, 99, water_id)
 SetWorldMapTileTerrain(535, 100, water_id)
 SetWorldMapTileTerrain(535, 101, plains_id)
 SetWorldMapTileTerrain(535, 129, plains_id)
+SetWorldMapTileTerrain(535, 132, plains_id)
 SetWorldMapTileTerrain(535, 133, plains_id)
+SetWorldMapTileTerrain(535, 134, plains_id)
+SetWorldMapTileTerrain(535, 135, plains_id)
 SetWorldMapTileTerrain(535, 136, plains_id)
 SetWorldMapTileTerrain(535, 137, water_id)
 SetWorldMapTileTerrain(535, 138, plains_id)
@@ -6571,6 +6580,7 @@ SetWorldMapTileTerrain(536, 130, plains_id)
 SetWorldMapTileTerrain(536, 131, plains_id)
 SetWorldMapTileTerrain(536, 132, plains_id)
 SetWorldMapTileTerrain(536, 133, plains_id)
+SetWorldMapTileTerrain(536, 134, plains_id)
 SetWorldMapTileTerrain(536, 135, plains_id)
 SetWorldMapTileTerrain(536, 136, plains_id)
 SetWorldMapTileTerrain(536, 137, plains_id)
@@ -6635,6 +6645,7 @@ SetWorldMapTileTerrain(537, 130, plains_id)
 SetWorldMapTileTerrain(537, 131, plains_id)
 SetWorldMapTileTerrain(537, 132, plains_id)
 SetWorldMapTileTerrain(537, 133, plains_id)
+SetWorldMapTileTerrain(537, 134, plains_id)
 SetWorldMapTileTerrain(537, 135, plains_id)
 SetWorldMapTileTerrain(537, 136, plains_id)
 SetWorldMapTileTerrain(537, 137, plains_id)
@@ -9426,32 +9437,38 @@ if (GrandStrategyYear >= -362) then
 	Factions.Macedon.Diplomacy["Athens"] = "Peace"
 end
 
+if (GrandStrategyYear >= -336) then
+	-- Macedonian Empire in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+	SetProvinceOwner("Rhodope", "greek", "Macedon")
+	SetProvinceSettlementBuilding("Rhodope", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Skopje", "greek", "Macedon") -- the site of Skopje wasn't a part of the Macedonian Empire in 336 BC, but most of the modern Republic of Macedonia was
+	SetProvinceOwner("Albania", "greek", "Macedon") -- most of Albania was a part of the Macedonian Empire in 336 BC (including the city of Apollonia), but not the city of Epidamnus
+	
+	SetProvinceOwner("Serbia", "thracian", "Triballi Tribe") -- they were also in western Bulgaria
+	SetProvinceCivilization("Serbia", "thracian")
+	SetProvinceSettlementBuilding("Serbia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Wallachia", "thracian", "Getae Tribe")
+	SetProvinceCivilization("Wallachia", "thracian")
+	SetProvinceSettlementBuilding("Wallachia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Dobruja", "thracian", "Getae Tribe")
+	SetProvinceCivilization("Dobruja", "thracian")
+	SetProvinceSettlementBuilding("Dobruja", "unit-teuton-town-hall", true)
+end
+
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 	PytheasVoyageGoths = nil
 end
 
 if (GrandStrategyYear >= -323) then
 	-- Macedonian Empire in 323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Rhodope", "greek", "Macedon")
-	SetProvinceSettlementBuilding("Rhodope", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Thrace", "greek", "Macedon")
 	SetProvinceOwner("Bulgaria", "greek", "Macedon")
 	SetProvinceCivilization("Bulgaria", "greek")
-	SetProvinceOwner("Skopje", "greek", "Macedon") -- the site of Skopje wasn't a part of the Macedonian Empire in 323 BC, but most of the modern Republic of Macedonia was
 	SetProvinceOwner("Thessaly", "greek", "Macedon")
-	SetProvinceOwner("Albania", "greek", "Macedon") -- most of Albania was a part of the Macedonian Empire in 323 BC (including the city of Apollonia), but not the city of Epidamnus
 	
 	SetProvinceOwner("Dobruja", "greek", "Macedon")
-	SetProvinceCivilization("Dobruja", "thracian") -- Dobruja was owned by Macedon, but there were also Getae there
 	SetProvinceSettlementBuilding("Dobruja", "unit-teuton-town-hall", true)
-	
-	SetProvinceOwner("Serbia", "thracian", "Triballi Tribe") -- they were also in western Bulgaria
-	SetProvinceCivilization("Serbia", "thracian")
-	SetProvinceSettlementBuilding("Serbia", "unit-teuton-town-hall", true)
-	
-	SetProvinceOwner("Wallachia", "thracian", "Getae Tribe") -- they were also in Dobruja
-	SetProvinceCivilization("Wallachia", "thracian")
-	SetProvinceSettlementBuilding("Wallachia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -264) then
@@ -9665,6 +9682,8 @@ if (GrandStrategyYear >= -33) then
 	SetProvinceSettlementBuilding("Croatia", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Carniola", "latin", "Rome")
 	SetProvinceSettlementBuilding("Carniola", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Montenegro", "latin", "Rome")
+	SetProvinceSettlementBuilding("Montenegro", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

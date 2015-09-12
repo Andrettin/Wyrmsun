@@ -430,6 +430,18 @@ function LoadFactions(world)
 	}
 	
 	local NidavellirFactions = {
+		ActhnicTribe = {
+			Name = "Acthnic Tribe",
+			Civilization = "gnome"
+		},
+		CubitalTribe = {
+			Name = "Cubital Tribe",
+			Civilization = "gnome"
+		},
+		SaganTribe = {
+			Name = "Sagan Tribe",
+			Civilization = "gnome"
+		},
 		Untersberg = {
 			Name = "Untersberg",
 			Civilization = "gnome",
