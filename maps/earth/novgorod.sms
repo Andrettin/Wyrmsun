@@ -36,8 +36,9 @@ if (LoadedGame == false) then
 		NoTownHall = (GrandStrategy or CurrentQuest == "Westward Migration"),
 		NoDeposits = (GrandStrategy or CurrentQuest == "Westward Migration")
 	})
+	
+	if (CurrentQuest == "Westward Migration") then
+		SetAiType(1, "passive")
+	end
 end
 
-if (CurrentQuest == "Westward Migration") then
-	SetAiType(1, "passive")
-end
