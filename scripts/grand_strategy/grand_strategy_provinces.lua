@@ -31,8 +31,8 @@ Regions = {
 	BritishIsles = {"England", "Scotland", "Ireland"},
 	Czechoslovakia = {"Bohemia"},
 	England = {"England"},
-	Eurasia = {"Astrakhan", "Bukowina", "Don", "Russia", "Ukraine", "White Russia"},
-	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bukowina", "Bulgaria", "Burgundy", "Carniola", "Castille", "Corsica", "Crete", "Croatia", "Dalmatia", "Dobruja", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Venetia", "Vojvodina", "Wallachia", "White Russia", "Zealand"},
+	Eurasia = {"Astrakhan", "Bukowina", "Crimea", "Don", "Russia", "Ukraine", "White Russia"},
+	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bukowina", "Bulgaria", "Burgundy", "Carniola", "Castille", "Corsica", "Crete", "Crimea", "Croatia", "Dalmatia", "Dobruja", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Venetia", "Vojvodina", "Wallachia", "White Russia", "Zealand"},
 	France = {"Aquitaine", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Rhineland", "Netherlands", "Silesia"},
@@ -287,7 +287,8 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Claims = {
-				"germanic", "Asa Tribe"
+				"germanic", "Asa Tribe",
+				"persian", "Sarmatian Tribe"
 			}
 		},
 		Attica = {
@@ -726,6 +727,35 @@ function LoadProvinces(world)
 			Claims = {
 				"minoan", "Minoan Tribe",
 				"minoan", "Crete"
+			}
+		},
+		Crimea = {
+			Name = "Crimea",
+			CulturalNames = {
+				greek = "Tauric Chersonese"
+			},
+			Tiles = {
+				{573, 126},
+				{574, 126},
+				{575, 126}, {575, 127},
+				{576, 125}, {576, 126}, {576, 127}, {576, 128}, {576, 129},
+				{577, 125}, {577, 126}, {577, 127}, {577, 128},
+				{578, 125}, {578, 126}, {578, 127}, {578, 128},
+				{579, 126}, {579, 127}, {579, 128},
+				{580, 127},
+				{581, 127},
+				{582, 127},
+				{583, 127}
+			},
+			SettlementName = "Simferopol",
+			SettlementLocation = {576, 128}, -- Simferopol
+			CulturalSettlementNames = {
+				greek = "Heraclea Chersonesus" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+			},
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Claims = {
+--				"teuton", "Crimea"
 			}
 		},
 		Croatia = {
@@ -2122,14 +2152,34 @@ function LoadProvinces(world)
 				Poland = "Ukraine",
 				Russia = "Ukraine"
 			},
-			Tiles = { {139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29} },
-	--		SettlementName = "Kiev",
-			SettlementLocation = {141, 27}, -- Kiev
+			Tiles = {
+				{139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29}, -- old map
+				{566, 110}, {566, 111}, {566, 112}, {566, 113}, {566, 114}, {566, 115}, {566, 116}, {566, 117}, {566, 118}, {566, 119}, {566, 120}, {566, 121}, {566, 122}, {566, 123}, {566, 124},
+				{567, 112}, {567, 113}, {567, 114}, {567, 115}, {567, 116}, {567, 117}, {567, 118}, {567, 119}, {567, 120}, {567, 121}, {567, 122}, {567, 123},
+				{568, 113}, {568, 114}, {568, 115}, {568, 116}, {568, 117}, {568, 118}, {568, 119}, {568, 120}, {568, 121}, {568, 122},
+				{569, 113}, {569, 114}, {569, 115}, {569, 116}, {569, 117}, {569, 118}, {569, 119}, {569, 120}, {569, 121}, {569, 122},
+				{570, 114}, {570, 115}, {570, 116}, {570, 117}, {570, 118}, {570, 119}, {570, 120}, {570, 121}, {570, 122},
+				{571, 114}, {571, 115}, {571, 116}, {571, 117}, {571, 118}, {571, 119}, {571, 120}, {571, 121}, {571, 122}, {571, 123}, {571, 124},
+				{572, 115}, {572, 116}, {572, 117}, {572, 118}, {572, 119}, {572, 120}, {572, 121}, {572, 122}, {572, 123}, {572, 124},
+				{573, 115}, {573, 116}, {573, 117}, {573, 118}, {573, 119}, {573, 120}, {573, 121}, {573, 122}, {573, 123}, {573, 124},
+				{574, 115}, {574, 116}, {574, 117}, {574, 118}, {574, 119}, {574, 120}, {574, 121}, {574, 122}, {574, 123}, {574, 124},
+				{575, 116}, {575, 117}, {575, 118}, {575, 119}, {575, 120}, {575, 121}, {575, 122}, {575, 123}, {575, 124},
+				{576, 116}, {576, 117}, {576, 118}, {576, 119}, {576, 120}, {576, 121}, {576, 122}, {576, 123}, {576, 124},
+				{577, 116}, {577, 117}, {577, 118}, {577, 119}, {577, 120}, {577, 121}, {577, 122}, {577, 123}, {577, 124},
+				{578, 117}, {578, 118}, {578, 119}, {578, 120}, {578, 121}, {578, 122}, {578, 123}, {578, 124},
+				{579, 117}, {579, 118}, {579, 119}, {579, 120}, {579, 121}, {579, 122}, {579, 123},
+				{580, 117}, {580, 118}, {580, 119}, {580, 120}, {580, 121}, {580, 122}, {580, 123}
+			},
+			SettlementName = "Kiev",
+			SettlementLocation = {567, 112}, -- Kiev
 			Map = "maps/random_maps/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
 			},
-			SettlementTerrain = "Plains"
+			SettlementTerrain = "Plains",
+			Claims = {
+				"persian", "Scythian Tribe"
+			}
 		},
 		Umbria = {
 			Name = "Umbria",

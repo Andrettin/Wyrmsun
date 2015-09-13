@@ -329,6 +329,20 @@ function LoadFactions(world)
 			Name = "Crete",
 			Civilization = "minoan"
 		},
+		-- Persian tribes
+		SarmatianTribe = {
+			Name = "Sarmatian Tribe",
+			Civilization = "persian"
+		},
+		ScythianTribe = {
+			Name = "Scythian Tribe",
+			Civilization = "persian"
+		},
+		-- Persian polities
+		Persia = {
+			Name = "Persia",
+			Civilization = "persian"
+		},
 		-- Phrygian tribes
 		BrygesTribe = {
 			Name = "Bryges Tribe",
@@ -410,10 +424,6 @@ function LoadFactions(world)
 		Muscovy = {
 			Name = "Muscovy",
 			Civilization = "teuton"
-		},
-		Persia = {
-			Name = "Persia",
-			Civilization = "persian"
 		},
 		Poland = {
 			Name = "Poland",

@@ -322,6 +322,20 @@ DefineFaction("Kobolds", {
 	SecondaryColor = "purple"
 })
 
+DefineFaction("Sarmatian Tribe", {
+	Civilization = "persian",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "red"
+})
+
+DefineFaction("Scythian Tribe", {
+	Civilization = "persian",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
+
 DefineFaction("Persia", {
 	Civilization = "persian",
 	Type = "polity",
