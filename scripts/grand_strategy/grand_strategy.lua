@@ -1372,7 +1372,7 @@ function RunGrandStrategyQuitToMenuConfirmMenu()
 		function()
 			StopMusic();
 			ClearGrandStrategyUIVariables()
-			GrandStrategyMenu:stop() 
+			GrandStrategyMenu:stop()
 			menu:stop()
 			ClearGrandStrategyVariables()
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
