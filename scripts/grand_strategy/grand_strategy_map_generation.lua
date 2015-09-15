@@ -406,6 +406,12 @@ function GenerateRandomWorldMap()
 		end
 	end
 	
+	-- generate food resources
+	for key, value in pairs(WorldMapProvinces) do
+		AddProvinceResource(WorldMapProvinces[key], "grain", SyncRand(2) + 1) -- at least one grain per province
+		AddProvinceResource(WorldMapProvinces[key], "mushrooms", SyncRand(3))
+	end
+	
 	MercenaryGroups = {
 		unit_surghan_mercenary_steelclad = 4
 	}

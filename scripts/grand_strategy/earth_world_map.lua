@@ -9498,8 +9498,6 @@ LoadFactions("Earth")
 
 LoadProvinces("Earth")
 
-AddProvinceResource(WorldMapProvinces.Sweden, "lumber", 4)
-
 MercenaryGroups = {
 }
 
