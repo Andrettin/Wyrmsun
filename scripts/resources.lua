@@ -77,9 +77,11 @@ SetResourceBaseOutput("stone", 100)
 
 SetResourceBaseLaborInput("grain", 100)
 SetResourceBaseOutput("grain", 100)
+SetResourceGrandStrategyBuildingVariations("grain", 4)
 
 SetResourceBaseLaborInput("mushrooms", 100)
 SetResourceBaseOutput("mushrooms", 100)
+SetResourceGrandStrategyBuildingVariations("mushrooms", 4)
 
 SetResourceBaseLaborInput("fish", 100)
 SetResourceBaseOutput("fish", 100)

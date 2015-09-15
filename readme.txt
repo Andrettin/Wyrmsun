@@ -230,7 +230,7 @@ https://github.com/Andrettin/Wyrmsun
 - Provinces now show a (cosmetic) population number.
 - Added a gold deposit in the Lyr province.
 - Stone and lumber are now harvested from a tile only if a quarry or timber lodge is present there.
-- New food resources: grain (produced by grain farms), mushrooms (produced by mushroom farms) and fish (produced by settlements adjacent to water); contrary to other resources, food is stored by the province, not by the faction).
+- New food resources: grain (produced by grain farms), mushrooms (produced by mushroom farms) and fish (produced by settlements adjacent to water); contrary to other resources, food is stored by the province, not by the faction (resource building tile graphics by Jinn).
 - Provinces now have worker units, who contribute to the province's labor pool (used for producing resources) and consume food (except for workers who are employed in food-producing occupations, who don't contribute to food consumption).
 - When a province accumulates 10,000 food, its population will grow, with the creation of a new worker.
 - Training military units now requires a worker (you cannot however take the last worker unit away from a province).

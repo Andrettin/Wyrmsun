@@ -693,6 +693,16 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/sites/gnomish_settlement.png
 /graphics/tilesets/world/sites/goblin_settlement_with_barracks.png (based on the goblin buildings made by Leo)
 /graphics/tilesets/world/sites/kal_karthan_settlement.png
+/graphics/tilesets/world/sites/resource_building_grain_1.png
+/graphics/tilesets/world/sites/resource_building_grain_2.png
+/graphics/tilesets/world/sites/resource_building_grain_3.png
+/graphics/tilesets/world/sites/resource_building_grain_4.png
+/graphics/tilesets/world/sites/resource_building_lumber.png
+/graphics/tilesets/world/sites/resource_building_lumber_conifer_forest.png
+/graphics/tilesets/world/sites/resource_building_mushrooms_1.png
+/graphics/tilesets/world/sites/resource_building_mushrooms_2.png
+/graphics/tilesets/world/sites/resource_building_mushrooms_3.png
+/graphics/tilesets/world/sites/resource_building_mushrooms_4.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_1.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_2.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_inner.png

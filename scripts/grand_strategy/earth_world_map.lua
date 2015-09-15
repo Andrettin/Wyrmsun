@@ -7516,6 +7516,7 @@ SetWorldMapTileTerrain(551, 114, plains_id)
 SetWorldMapTileTerrain(551, 115, plains_id)
 SetWorldMapTileTerrain(551, 116, plains_id)
 SetWorldMapTileTerrain(551, 117, plains_id)
+AddWorldMapResource("grain", 551, 117, true) -- Dairy cattle; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(551, 118, plains_id)
 SetWorldMapTileTerrain(551, 119, plains_id)
 SetWorldMapTileTerrain(551, 120, plains_id)
@@ -7577,6 +7578,7 @@ SetWorldMapTileTerrain(552, 115, plains_id)
 SetWorldMapTileTerrain(552, 116, plains_id)
 SetWorldMapTileTerrain(552, 117, plains_id)
 SetWorldMapTileTerrain(552, 118, plains_id)
+AddWorldMapResource("grain", 552, 118, true) -- Other fruit and vegetables; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(552, 119, plains_id)
 SetWorldMapTileTerrain(552, 120, plains_id)
 SetWorldMapTileTerrain(552, 121, plains_id)
@@ -7877,6 +7879,7 @@ SetWorldMapTileTerrain(557, 123, plains_id)
 SetWorldMapTileTerrain(557, 124, plains_id)
 SetWorldMapTileTerrain(557, 125, plains_id)
 SetWorldMapTileTerrain(557, 126, plains_id)
+AddWorldMapResource("grain", 557, 126, true) -- Other fruit and vegetables; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(557, 127, plains_id)
 SetWorldMapTileTerrain(557, 128, plains_id)
 SetWorldMapTileTerrain(557, 129, plains_id)
@@ -9042,6 +9045,7 @@ SetWorldMapTileTerrain(585, 117, plains_id)
 SetWorldMapTileTerrain(585, 118, plains_id)
 SetWorldMapTileTerrain(585, 119, plains_id)
 SetWorldMapTileTerrain(585, 120, plains_id)
+AddWorldMapResource("grain", 585, 120, true) -- Dairy cattle; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(585, 121, plains_id)
 SetWorldMapTileTerrain(585, 122, plains_id)
 SetWorldMapTileTerrain(585, 123, water_id)
@@ -9493,6 +9497,8 @@ WorldMapResources = {
 LoadFactions("Earth")
 
 LoadProvinces("Earth")
+
+AddProvinceResource(WorldMapProvinces.Sweden, "lumber", 4)
 
 MercenaryGroups = {
 }
