@@ -703,6 +703,8 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/sites/resource_building_mushrooms_2.png
 /graphics/tilesets/world/sites/resource_building_mushrooms_3.png
 /graphics/tilesets/world/sites/resource_building_mushrooms_4.png
+/graphics/tilesets/world/sites/resource_building_mushrooms_hills.png
+/graphics/tilesets/world/sites/resource_building_mushrooms_mountains.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_1.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_2.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_inner.png

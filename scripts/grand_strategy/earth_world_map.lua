@@ -8786,6 +8786,7 @@ SetWorldMapTileTerrain(577, 123, plains_id)
 SetWorldMapTileTerrain(577, 124, plains_id)
 SetWorldMapTileTerrain(577, 125, plains_id)
 SetWorldMapTileTerrain(577, 126, plains_id)
+AddWorldMapResource("grain", 577, 126, true) -- Other fruit and vegetables; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(577, 127, plains_id)
 SetWorldMapTileTerrain(577, 128, plains_id)
 SetWorldMapTileTerrain(577, 129, water_id)
@@ -9497,6 +9498,14 @@ WorldMapResources = {
 LoadFactions("Earth")
 
 LoadProvinces("Earth")
+
+-- generate food resources to provinces that have none, and that don't have coastal settlements (which produce fish)
+AddProvinceResource(WorldMapProvinces.Bessarabia, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Carniola, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Parma, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Romagna, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Savoy, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Serbia, "grain", 1)
 
 MercenaryGroups = {
 }

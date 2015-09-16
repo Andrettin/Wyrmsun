@@ -215,7 +215,11 @@ function RunGrandStrategyGameSetupMenu()
 					elseif (WorldMapTileHasResource(x, y, "grain", true) and GetWorldMapTileTerrain(x, y) ~= "Plains") then
 						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))
 					elseif (WorldMapTileHasResource(x, y, "mushrooms", true) and GetWorldMapTileTerrain(x, y) ~= "Dark Plains" and GetWorldMapTileTerrain(x, y) ~= "Hills" and GetWorldMapTileTerrain(x, y) ~= "Mountains" and GetWorldMapTileTerrain(x, y) ~= "Plains") then
-						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Dark Plains"))
+						if (GrandStrategyWorld == "Nidavellir") then
+							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Dark Plains"))
+						else
+							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains")) -- since dark plains don't have transitions yet
+						end
 					end
 				end
 			end
