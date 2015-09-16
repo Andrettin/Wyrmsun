@@ -10140,19 +10140,15 @@ if (GrandStrategyYear >= -500) then
 	-- Maiden Castle hill fort build around 500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 119.
 	
 	-- Greece at the time of the War with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
-	Factions.Athens.Diplomacy["Persia"] = "War"
-	Factions.Sparta.Diplomacy["Persia"] = "War"
-	Factions.Persia.Diplomacy["Athens"] = "War"
-	Factions.Persia.Diplomacy["Sparta"] = "War"
+	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "war")
+	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "war")
 	SetProvinceCivilization("Thrace", "thracian") -- Apsinthii
 end
 
 if (GrandStrategyYear >= -479) then
 	-- End of the war between the Greek states and Persia in 479 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
-	Factions.Athens.Diplomacy["Persia"] = "Peace"
-	Factions.Sparta.Diplomacy["Persia"] = "Peace"
-	Factions.Persia.Diplomacy["Athens"] = "Peace"
-	Factions.Persia.Diplomacy["Sparta"] = "Peace"
+	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "peace")
+	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "peace")
 end
 
 if (GrandStrategyYear >= -450) then
@@ -10175,13 +10171,10 @@ if (GrandStrategyYear >= -431) then
 	SetProvinceOwner("Skopje", "phrygian", "Bryges Tribe")
 	SetProvinceCivilization("Skopje", "phrygian")
 	SetProvinceSettlementBuilding("Skopje", "unit-teuton-town-hall", true)
-	
-	Factions.Athens.Diplomacy["Sparta"] = "War"
-	Factions.Athens.Diplomacy["Thebes"] = "War"
-	Factions.Athens.Diplomacy["Macedon"] = "War"
-	Factions.Sparta.Diplomacy["Athens"] = "War"
-	Factions.Thebes.Diplomacy["Athens"] = "War"
-	Factions.Macedon.Diplomacy["Athens"] = "War"
+
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Sparta", "war")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "war")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "war")
 end
 
 if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
@@ -10198,12 +10191,9 @@ end
 
 if (GrandStrategyYear >= -362) then
 	-- Greece in 362 BC (Theban headship); Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.	
-	Factions.Athens.Diplomacy["Sparta"] = "Peace"
-	Factions.Athens.Diplomacy["Thebes"] = "Peace"
-	Factions.Athens.Diplomacy["Macedon"] = "Peace"
-	Factions.Sparta.Diplomacy["Athens"] = "Peace"
-	Factions.Thebes.Diplomacy["Athens"] = "Peace"
-	Factions.Macedon.Diplomacy["Athens"] = "Peace"
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Sparta", "peace")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "peace")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "peace")
 end
 
 if (GrandStrategyYear >= -336) then
@@ -10395,10 +10385,8 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	SetProvinceSettlementBuilding("Belgium", "unit-germanic-town-hall", true)
 	
-	Factions.AeduiTribe.Diplomacy["ArverniTribe"] = "War"
-	Factions.AeduiTribe.Diplomacy["SequaniTribe"] = "War"
-	Factions.ArverniTribe.Diplomacy["AeduiTribe"] = "War"
-	Factions.SequaniTribe.Diplomacy["AeduiTribe"] = "War"
+	SetFactionDiplomacyState("celt", "Aedui Tribe", "celt", "Arverni Tribe", "war")
+	SetFactionDiplomacyState("celt", "Aedui Tribe", "celt", "Sequani Tribe", "war")
 	
 	SetProvinceUnitQuantity("Brandenburg", "unit-teuton-swordsman", 13) -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
 	

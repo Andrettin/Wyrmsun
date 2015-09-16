@@ -705,8 +705,7 @@ local GermanicEvents = {
 				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
-				EventFaction.Diplomacy.SaxonTribe = "War"
-				Factions.SaxonTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
@@ -744,8 +743,7 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
-				EventFaction.Diplomacy.FrankTribe = "War"
-				Factions.FrankTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
@@ -782,8 +780,7 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.Brandenburg, "Suebi Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe")
-				EventFaction.Diplomacy.SuebiTribe = "War"
-				Factions.SuebiTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)

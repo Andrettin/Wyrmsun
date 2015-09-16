@@ -983,8 +983,7 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
-	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "War"
-	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "War"
+	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war")
 	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 	ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
@@ -1058,8 +1057,7 @@ if (GrandStrategyYear >= 40) then
 	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter
 	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
-	Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
-	Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"
+	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
 end
 
 if (GrandStrategyYear >= 389) then

@@ -362,8 +362,7 @@ AddTrigger(
 																																AddPlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")
 																																--[[
 																																if (GrandStrategy) then
-																																	Factions.NorlundClan.Diplomacy.ShorbearClan = "War"
-																																	Factions.ShorbearClan.Diplomacy.NorlundClan = "War"
+																																	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shorbear Clan", "war")
 																																end
 																																--]]
 																															end}
@@ -1251,8 +1250,7 @@ AddTrigger(
 					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 10000) -- gold gained from the ruby's sale
 					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
 					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
-					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
-					Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
+					SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
 				end
 				ActionVictory()
 			end}
@@ -1285,8 +1283,7 @@ AddTrigger(
 					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 10000) -- gold gained from the ruby's sale
 					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- gained the silver via peace treaty with the Norlunds
 					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
-					Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
-					Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
+					SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
 				end
 				ActionVictory()
 			end}

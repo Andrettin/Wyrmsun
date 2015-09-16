@@ -350,8 +350,7 @@ AddTrigger(
 
 									KillUnitAt("unit-revealer", player, 1, {0, 0}, {256, 256})
 									if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Untersberg if Rugnur decided to attack the gnomish monarch
-										Factions.NorlundClan.Diplomacy.Untersberg = "War"
-										Factions.Untersberg.Diplomacy.NorlundClan = "War"
+										SetFactionDiplomacyState("dwarf", "Norlund Clan", "gnome", "Untersberg", "war")
 									end
 								end}
 							)
@@ -509,8 +508,7 @@ AddTrigger(
 												SetDiplomacy(second_bandit_player, "allied", bandit_player)
 												KillUnitAt("unit-revealer", player, 2, {0, 0}, {256, 256})
 												if (GrandStrategy) then
-													Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-													Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
+													SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war") -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 													ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 												else
 													if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then

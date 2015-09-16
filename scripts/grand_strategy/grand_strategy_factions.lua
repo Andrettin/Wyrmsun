@@ -544,7 +544,6 @@ function LoadFactions(world)
 					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", faction_table[key].Commodities.Stone)
 				end
 			end
-			Factions[key]["Diplomacy"] = {}
 		end
 	end
 	

@@ -129,16 +129,6 @@ function RunGrandStrategyGameSetupMenu()
 					SetFactionResource(Factions[key].Civilization, Factions[key].Name, "stone", 1500)
 				end
 
-				-- initialize the diplomacy variables
-				if (Factions[key].Diplomacy == nil) then
-					Factions[key]["Diplomacy"] = {}
-				end
-				for second_key, second_value in pairs(Factions) do
-					if (Factions[key].Diplomacy[second_key] == nil) then
-						Factions[key].Diplomacy[second_key] = "Peace" -- at peace by default
-					end
-				end
-
 				-- provinces owned by the faction, to not have to loop through the provinces each time
 				if (Factions[key].OwnedProvinces == nil) then
 					Factions[key]["OwnedProvinces"] = {}
@@ -578,7 +568,7 @@ function EndTurn()
 	-- if AI has responded to a peace offer of the human player, send a message telling the result
 	if (GrandStrategyFaction ~= nil) then
 		for key, value in pairs(Factions) do
-			if (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Accepted") then
+			if (GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "peace" and GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "peace") then
 				GrandStrategyGamePaused = true
 				local menu = WarGrandStrategyGameMenu(panel(1))
 				menu:setDrawMenusUnder(true)
@@ -594,13 +584,13 @@ function EndTurn()
 
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
-						GrandStrategyFaction.Diplomacy[key] = "Peace"
+						SetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name, "")
 						GrandStrategyGamePaused = false
 						menu:stop()
 					end)
 
 				menu:run()
-			elseif (GrandStrategyFaction.Diplomacy[key] == "Peace Offer Rejected") then
+			elseif (GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "peace" and GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name) == "war") then
 				GrandStrategyGamePaused = true
 				local menu = WarGrandStrategyGameMenu(panel(1))
 				menu:setDrawMenusUnder(true)
@@ -616,7 +606,7 @@ function EndTurn()
 
 				menu:addFullButton("~!OK", "o", 16, 248,
 					function()
-						GrandStrategyFaction.Diplomacy[key] = "War"
+						SetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, Factions[key].Civilization, Factions[key].Name, "")
 						GrandStrategyGamePaused = false
 						menu:stop()
 					end)
@@ -652,7 +642,7 @@ function AttackProvince(province, faction)
 		empty_province = true
 	end
 	local revolt = false
-	if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] == "Peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
+	if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
 		revolt = true
 	end
 	AttackedProvince = province
@@ -799,8 +789,7 @@ function AttackProvince(province, faction)
 			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", - attacker_prestige - 5) -- minus five for losing the territory
 		end
 		if (revolt) then
-			GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] = "War"
-			GetFactionFromName(Defender).Diplomacy[GetFactionKeyFromName(Attacker)] = "War"
+			SetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender, "war")
 			AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
 		end
 	else
@@ -821,8 +810,8 @@ function AttackProvince(province, faction)
 	if (empty_province == false and GetFactionProvinceCount(GetFactionFromName(Defender)) == 0) then
 		local defender_faction_key = GetFactionKeyFromName(Defender)
 		for key, value in pairs(Factions) do -- if the defender lost his last province, end wars between him and other factions
-			Factions[key].Diplomacy[defender_faction_key] = "Peace"
-			Factions[defender_faction_key].Diplomacy[key] = "Peace"
+			SetFactionDiplomacyState(Factions[key].Civilization, Factions[key].Name, Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "peace")
+			SetFactionDiplomacyStateProposal(Factions[key].Civilization, Factions[key].Name, Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "")
 		end
 		SetFactionCommodityTrade(Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "lumber", 0) -- remove offers and bids from the eliminated faction
 		SetFactionCommodityTrade(Factions[defender_faction_key].Civilization, Factions[defender_faction_key].Name, "stone", 0) -- remove offers and bids from the eliminated faction
@@ -1006,7 +995,7 @@ function CalculateFactionDisembarkmentProvinces()
 		for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 			if (WorldMapProvinces[province_key].Coastal) then
 				for second_province_key, second_province_value in pairs(WorldMapProvinces) do
-					if (WorldMapProvinces[second_province_key].Coastal and (GetProvinceOwner(WorldMapProvinces[second_province_key].Name) == "" or Factions[key].Diplomacy[GetFactionKeyFromName(GetProvinceOwner(WorldMapProvinces[second_province_key].Name))] == "War") and ProvinceHasSecondaryBorderThroughWaterWith(WorldMapProvinces[province_key], WorldMapProvinces[second_province_key])) then
+					if (WorldMapProvinces[second_province_key].Coastal and (GetProvinceOwner(WorldMapProvinces[second_province_key].Name) == "" or GetFactionDiplomacyState(Factions[key].Civilization, Factions[key].Name, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_province_key].Name)).Civilization, GetProvinceOwner(WorldMapProvinces[second_province_key].Name)) == "war") and ProvinceHasSecondaryBorderThroughWaterWith(WorldMapProvinces[province_key], WorldMapProvinces[second_province_key])) then
 						table.insert(Factions[key].DisembarkmentProvinces, second_province_key)
 					end
 				end
@@ -1180,8 +1169,8 @@ function CanAttackProvince(province, faction, province_from)
 		return false
 	end
 	
-	-- if is at peace, can't attack
-	if (GetProvinceOwner(province.Name) ~= "" and faction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(province.Name))] ~= "War") then
+	-- if is at peace or offering peace, can't attack
+	if (GetProvinceOwner(province.Name) ~= "" and (GetFactionDiplomacyState(faction.Civilization, faction.Name, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) ~= "war" or GetFactionDiplomacyStateProposal(faction.Civilization, faction.Name, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) == "peace")) then
 		return false
 	end
 
@@ -2764,7 +2753,7 @@ function DrawGrandStrategyInterface()
 				b:setFont(Fonts["game"])
 			end
 		elseif (GetProvinceOwner(SelectedProvince.Name) ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
-			if (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(SelectedProvince.Name))] == "War") then
+			if (GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "war" and GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "") then
 				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
 				-- add a button for offering peace
@@ -2783,7 +2772,7 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
-			elseif (GrandStrategyFaction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(SelectedProvince.Name))] == "Offering Peace") then
+			elseif (GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "war" and GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "peace") then
 				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)))) then
 				-- add a button for declaring war
@@ -3253,7 +3242,7 @@ function AIDoDiplomacy(ai_faction)
 			for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 				if (WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= "" and GetProvinceWater(WorldMapProvinces[second_key].Name) == false and CanDeclareWar(ai_faction, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name)))) then
 					if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (ai_faction.Diplomacy[GetFactionKeyFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))] ~= "War" and (GetFactionMilitaryScore(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
+						if (GetFactionDiplomacyState(ai_faction.Civilization, ai_faction.Name, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name)).Civilization, GetProvinceOwner(WorldMapProvinces[second_key].Name)) ~= "war" and (GetFactionMilitaryScore(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
 							DeclareWar(ai_faction.Name, GetProvinceOwner(WorldMapProvinces[second_key].Name))
 						end
 					end
@@ -3262,7 +3251,7 @@ function AIDoDiplomacy(ai_faction)
 		end
 	end
 	for key, value in pairs(Factions) do
-		if (ai_faction.Diplomacy[key] == "War" and FactionHasBorderWith(ai_faction, Factions[key]) == false) then
+		if (GetFactionDiplomacyState(ai_faction.Civilization, ai_faction.Name, Factions[key].Civilization, Factions[key].Name) == "war" and FactionHasBorderWith(ai_faction, Factions[key]) == false) then
 			if (FactionHasSecondaryBorderWith(ai_faction, Factions[key]) == false) then
 				OfferPeace(ai_faction.Name, Factions[key].Name)
 			end
@@ -3272,7 +3261,7 @@ end
 
 function AIConsiderOffers(ai_faction)
 	for key, value in pairs(Factions) do
-		if (ai_faction.Diplomacy[key] == "Peace Offered") then
+		if (GetFactionDiplomacyState(ai_faction.Civilization, ai_faction.Name, Factions[key].Civilization, Factions[key].Name) == "war" and GetFactionDiplomacyStateProposal(ai_faction.Civilization, ai_faction.Name, Factions[key].Civilization, Factions[key].Name) == "peace") then
 			if (round(GetFactionMilitaryScore(ai_faction) * 3 / 2) < GetFactionMilitaryScore(Factions[key])) then -- accept peace if enemy's forces are 50% greater than own forces
 				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
 			elseif (FactionHasBorderWith(ai_faction, Factions[key]) == false and FactionHasSecondaryBorderThroughWaterWith(ai_faction, Factions[key]) == false) then -- accept peace if has no borders with enemy any longer (since ships aren't implemented yet)
@@ -3638,8 +3627,7 @@ end
 
 function DeclareWar(faction_from, faction_to)
 	if (faction_from ~= "" and faction_to ~= "") then
-		GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "War"
-		GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "War"
+		SetFactionDiplomacyState(GetFactionFromName(faction_from).Civilization, GetFactionFromName(faction_from).Name, GetFactionFromName(faction_to).Civilization, GetFactionFromName(faction_to).Name, "war")
 	end
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
@@ -3668,8 +3656,7 @@ end
 
 function OfferPeace(faction_from, faction_to)
 	if (faction_from ~= "" and faction_to ~= "") then
-		GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "Offering Peace"
-		GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "Peace Offered"
+		SetFactionDiplomacyStateProposal(GetFactionFromName(faction_from).Civilization, GetFactionFromName(faction_from).Name, GetFactionFromName(faction_to).Civilization, GetFactionFromName(faction_to).Name, "peace")
 	end
 
 	if (faction_to == GrandStrategyFaction.Name) then -- if the player was declared war on, notify him
@@ -3705,27 +3692,17 @@ end
 
 function RespondPeaceOffer(faction_from, faction_to, accept)
 	if (accept) then
-		if (faction_from == GrandStrategyFaction.Name) then
-			GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "Peace Offer Accepted"
-			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "Peace"
-		else
-			GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "Peace"
-			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "Peace"
-		end
-	else
-		if (faction_from == GrandStrategyFaction.Name) then
-			GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "Peace Offer Rejected"
-			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "War"
-		else
-			GetFactionFromName(faction_from).Diplomacy[GetFactionKeyFromName(faction_to)] = "War"
-			GetFactionFromName(faction_to).Diplomacy[GetFactionKeyFromName(faction_from)] = "War"
-		end
+		SetFactionDiplomacyState(GetFactionFromName(faction_from).Civilization, faction_from, GetFactionFromName(faction_to).Civilization, faction_to, "peace")
+	end
+	
+	if (faction_from ~= GrandStrategyFaction.Name) then
+		SetFactionDiplomacyStateProposal(GetFactionFromName(faction_from).Civilization, faction_from, GetFactionFromName(faction_to).Civilization, faction_to, "")
 	end
 end
 
 function AtPeace(faction)
 	for key, value in pairs(Factions) do
-		if (faction.Diplomacy[key] == "War") then
+		if (GetFactionDiplomacyState(faction.Civilization, faction.Name, Factions[key].Civilization, Factions[key].Name) == "war") then
 			return false
 		end
 	end
@@ -4075,11 +4052,13 @@ function FormFaction(old_faction, new_faction)
 	SetFactionCurrentResearch(new_faction.Civilization, new_faction.Name, GetFactionCurrentResearch(old_faction.Civilization, old_faction.Name))
 
 	for key, value in pairs(Factions) do
-		Factions[key].Diplomacy[new_faction_key] = Factions[key].Diplomacy[old_faction_key]
-		Factions[new_faction_key].Diplomacy[key] = Factions[old_faction_key].Diplomacy[key]
+		SetFactionDiplomacyState(Factions[new_faction_key].Civilization, Factions[new_faction_key].Name, Factions[key].Civilization, Factions[key].Name, GetFactionDiplomacyState(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name))
 		
-		Factions[key].Diplomacy[old_faction_key] = "Peace"
-		Factions[old_faction_key].Diplomacy[key] = "Peace"
+		SetFactionDiplomacyState(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name, "peace")
+		
+		SetFactionDiplomacyStateProposal(Factions[new_faction_key].Civilization, Factions[new_faction_key].Name, Factions[key].Civilization, Factions[key].Name, GetFactionDiplomacyStateProposal(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name))
+		
+		SetFactionDiplomacyStateProposal(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name, "")
 	end
 
 	if (GrandStrategyFaction == old_faction) then

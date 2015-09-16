@@ -98,11 +98,11 @@ local TeutonEvents = {
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.Brandenburg)
 				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.France) -- should be Alsace
-				and EventFaction.Diplomacy.AeduiTribe == "Peace"
-				and EventFaction.Diplomacy.ArverniTribe == "Peace"
-				and EventFaction.Diplomacy.SequaniTribe == "Peace"
-				and Factions.ArverniTribe.Diplomacy.AeduiTribe == "War"
-				and Factions.SequaniTribe.Diplomacy.AeduiTribe == "War"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe") == "peace"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Arverni Tribe") == "peace"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Sequani Tribe") == "peace"
+				and GetFactionDiplomacyState("celt", "Arverni Tribe", "celt", "Aedui Tribe") == "war"
+				and GetFactionDiplomacyState("celt", "Sequani Tribe", "celt", "Aedui Tribe") == "war"
 			) then
 				return true
 			else
@@ -112,8 +112,7 @@ local TeutonEvents = {
 		Options = {"~!Accept", "~!Reject"},
 		OptionEffects = {
 			function(s)
-				EventFaction.Diplomacy.AeduiTribe = "War"
-				Factions.AeduiTribe.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe", "war")
 			end,
 			function(s)
 			end
@@ -125,11 +124,11 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Suebi Tribe"
-				and EventFaction.Diplomacy.AeduiTribe == "War"
-				and EventFaction.Diplomacy.ArverniTribe == "Peace"
-				and EventFaction.Diplomacy.SequaniTribe == "Peace"
-				and Factions.ArverniTribe.Diplomacy.AeduiTribe == "War"
-				and Factions.SequaniTribe.Diplomacy.AeduiTribe == "War"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe") == "war"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Arverni Tribe") == "peace"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Sequani Tribe") == "peace"
+				and GetFactionDiplomacyState("celt", "Arverni Tribe", "celt", "Aedui Tribe") == "war"
+				and GetFactionDiplomacyState("celt", "Sequani Tribe", "celt", "Aedui Tribe") == "war"
 				and GetProvinceOwner("Franche Comte") == "Sequani Tribe"
 				and GetProvinceOwner("Burgundy") == "Aedui Tribe"
 			) then

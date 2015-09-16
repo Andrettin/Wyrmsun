@@ -383,7 +383,7 @@ DefineFaction("Muscovy", {
 	SecondaryColor = "red",
 	Playable = false,
 	Titles = {
-		"monarchy", "Dominion"
+		"monarchy", "Principality"
 	}
 })
 

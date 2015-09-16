@@ -442,8 +442,7 @@ local NidavellirEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
-				EventFaction.Diplomacy.NorlundClan = "War"
-				Factions.NorlundClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
@@ -481,8 +480,7 @@ local NidavellirEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.SouthernTunnels, "Shinsplitter Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shinsplitter Clan")
-				EventFaction.Diplomacy.ShinsplitterClan = "War"
-				Factions.ShinsplitterClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shinsplitter Clan", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
@@ -520,8 +518,7 @@ local NidavellirEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shorbear Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shorbear Clan")
-				EventFaction.Diplomacy.ShorbearClan = "War"
-				Factions.ShorbearClan.Diplomacy[GetFactionKeyFromName(EventFaction.Name)] = "War"
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "dwarf", "Shorbear Clan", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
@@ -713,8 +710,7 @@ local NidavellirEvents = {
 				end
 			end
 			if (("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("Shinsplitter Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
-				Factions.NorlundClan.Diplomacy.ShinsplitterClan = "War" -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-				Factions.ShinsplitterClan.Diplomacy.NorlundClan = "War"
+				SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war") -- begin war between Norlund Clan and Shinsplitter Clan
 				ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
@@ -1043,8 +1039,7 @@ local NidavellirEvents = {
 			end
 			
 			if ((GrandStrategyFaction.Name ~= "Norlund Clan" and GrandStrategyFaction.Name ~= "Shinsplitter Clan" and GrandStrategyFaction.Name ~= "Shorbear Clan") or wyr.preferences.AutomaticBattles) then
-				Factions.NorlundClan.Diplomacy.ShorbearClan = "War"
-				Factions.ShorbearClan.Diplomacy.NorlundClan = "War"
+				SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shorbear Clan", "war")
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1) -- Kalnar
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -3) -- Lyndar, Gaenlar and Glinan
 				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
@@ -1328,8 +1323,7 @@ local NidavellirEvents = {
 				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- payment for the crafting of the Scepter
 				ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
-				Factions.NorlundClan.Diplomacy["ShinsplitterClan"] = "Peace"
-				Factions.ShinsplitterClan.Diplomacy["NorlundClan"] = "Peace"
+				SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
 				
 				ChangeFactionResource("dwarf", "Norlund Clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 				

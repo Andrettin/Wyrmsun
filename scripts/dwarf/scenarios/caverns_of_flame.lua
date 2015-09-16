@@ -864,8 +864,7 @@ AddTrigger(
 										ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500)
 										ChangeFactionResource("gnome", "Untersberg", "gold", -2500)
 										AcquireProvince(WorldMapProvinces.ShorbearHills, "Norlund Clan")
-										Factions.NorlundClan.Diplomacy.ShinsplitterClan = "Peace"
-										Factions.ShinsplitterClan.Diplomacy.NorlundClan = "Peace"
+										SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
 										ChangeFactionResource("dwarf", "Norlund Clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 									end
 									Event(

@@ -303,7 +303,7 @@ function SinglePlayerTriggers()
 			end,
 			function()
 				local revolt = false
-				if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionFromName(Attacker).Diplomacy[GetFactionKeyFromName(Defender)] == "Peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
+				if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
 					revolt = true
 				end
 				
