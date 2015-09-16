@@ -327,6 +327,8 @@ local GermanicEvents = {
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 						SetProvinceCivilization("Scania", "germanic")
+						SetProvinceCivilization("Gotaland", "germanic")
+						SetProvinceCivilization("Sweden", "germanic")
 						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 						
@@ -360,6 +362,8 @@ local GermanicEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 					SetProvinceCivilization("Scania", "germanic")
+					SetProvinceCivilization("Gotaland", "germanic")
+					SetProvinceCivilization("Sweden", "germanic")
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 					FormFaction(EventFaction, Factions.SwedeTribe)
@@ -401,6 +405,8 @@ local GermanicEvents = {
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
 				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 				SetProvinceCivilization("Scania", "germanic")
+				SetProvinceCivilization("Gotaland", "germanic")
+				SetProvinceCivilization("Sweden", "germanic")
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
@@ -438,6 +444,8 @@ local GermanicEvents = {
 				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
 				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
 				SetProvinceCivilization("Scania", "germanic")
+				SetProvinceCivilization("Gotaland", "germanic")
+				SetProvinceCivilization("Sweden", "germanic")
 				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 				FormFaction(EventFaction, Factions.SwedeTribe)
