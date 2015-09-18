@@ -619,6 +619,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"greek", "Thrace",
 				"thracian", "Odrysae Tribe"
 			}
 		},
@@ -751,7 +752,8 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"minoan", "Minoan Tribe",
-				"minoan", "Crete"
+				"minoan", "Crete",
+				"greek", "Crete"
 			}
 		},
 		Crimea = {
@@ -848,7 +850,11 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {560, 130}, -- Constanta
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains"
+			SettlementTerrain = "Plains",
+			Claims = {
+				"greek", "Thrace",
+				"thracian", "Getae Tribe"
+			}
 		},
 		Don = {
 			Name = "Don",
@@ -940,7 +946,8 @@ function LoadProvinces(world)
 			SettlementLocation = {538, 144}, -- Nicopolis
 			Map = "maps/random_maps/random-map-forest.smp",
 			Claims = {
-				"greek", "Chaoni Tribe"
+				"greek", "Chaoni Tribe",
+				"greek", "Epirus"
 			},
 			SettlementTerrain = "Plains",
 			Coastal = true
@@ -1552,6 +1559,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true, -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
 			Claims = {
+				"latin", "Elymian Tribe",
+				"latin", "Sicanian Tribe",
 				"latin", "Sicily"
 			}
 		},
@@ -1747,7 +1756,10 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {552, 139}, -- Komotini
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains"
+			SettlementTerrain = "Plains",
+			Claims = {
+				"greek", "Thrace"
+			}
 		},
 		Romagna = {
 			Name = "Romagna",
@@ -2061,6 +2073,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
+				"latin", "Sicel Tribe",
 				"latin", "Sicily"
 			}
 		},
@@ -2105,7 +2118,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"thracian", "Apsinthii Tribe"
+				"thracian", "Apsinthii Tribe",
+				"greek", "Thrace"
 			}
 		},
 		Transylvania = {
@@ -2168,7 +2182,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
-				"etruscan", "Etruscan Tribe"
+				"etruscan", "Etruscan Tribe",
+				"etruscan", "Etruria"
 			}
 		},
 		Ukraine = {
@@ -2258,7 +2273,13 @@ function LoadProvinces(world)
 			SettlementLocation = {515, 134}, -- Perugia
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
-			Coastal = true
+			Coastal = true,
+			Claims = {
+				"latin", "Aequian Tribe",
+				"latin", "Picentian Tribe",
+				"latin", "Sabine Tribe",
+				"latin", "Umbrian Tribe"
+			}
 		},
 		Venetia = {
 			Name = "Venetia",
@@ -2285,6 +2306,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
+				"latin", "Venetian Tribe",
 				"latin", "Venice"
 			}
 		},

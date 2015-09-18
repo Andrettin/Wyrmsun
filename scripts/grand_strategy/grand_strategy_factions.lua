@@ -74,6 +74,11 @@ function LoadFactions(world)
 			Name = "Etruscan Tribe",
 			Civilization = "etruscan"
 		},
+		-- Etruscan polities
+		Etruria = {
+			Name = "Etruria",
+			Civilization = "etruscan"
+		},
 		-- Germanic tribes
 		AlamanniTribe = {
 			Name = "Alamanni Tribe",
@@ -247,6 +252,14 @@ function LoadFactions(world)
 			Name = "Athens",
 			Civilization = "greek"
 		},
+		Crete = {
+			Name = "Crete",
+			Civilization = "greek"
+		},
+		Epirus = {
+			Name = "Epirus",
+			Civilization = "greek"
+		},
 		Macedon = {
 			Name = "Macedon",
 			Civilization = "greek"
@@ -263,6 +276,10 @@ function LoadFactions(world)
 			Name = "Thebes",
 			Civilization = "greek"
 		},
+		Thrace = {
+			Name = "Thrace",
+			Civilization = "greek"
+		},
 		-- Illyrian tribes
 		IllyrianTribe = {
 			Name = "Illyrian Tribe",
@@ -273,8 +290,40 @@ function LoadFactions(world)
 			Civilization = "illyrian"
 		},
 		-- Latin tribes
+		AequianTribe = {
+			Name = "Aequian Tribe",
+			Civilization = "latin"
+		},
+		ElymianTribe = {
+			Name = "Elymian Tribe",
+			Civilization = "latin"
+		},
 		LatinTribe = {
 			Name = "Latin Tribe",
+			Civilization = "latin"
+		},
+		PicentianTribe = {
+			Name = "Picentian Tribe",
+			Civilization = "latin"
+		},
+		SabineTribe = {
+			Name = "Sabine Tribe",
+			Civilization = "latin"
+		},
+		SicanianTribe = {
+			Name = "Sicanian Tribe",
+			Civilization = "latin"
+		},
+		SicelTribe = {
+			Name = "Sicel Tribe",
+			Civilization = "latin"
+		},
+		UmbrianTribe = {
+			Name = "Umbrian Tribe",
+			Civilization = "latin"
+		},
+		VenetianTribe = {
+			Name = "Venetian Tribe",
 			Civilization = "latin"
 		},
 		-- Latin polities

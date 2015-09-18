@@ -25,12 +25,68 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Aequian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "teal",
+	SecondaryColor = "teal"
+})
+
+DefineFaction("Elymian Tribe", {
+	Civilization = "latin", -- were they actually an Italic people?
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "red"
+})
+
 DefineFaction("Latin Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "yellow",
 	DevelopsTo = {"Rome"}
+})
+
+DefineFaction("Picentian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
+
+DefineFaction("Sabine Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
+})
+
+DefineFaction("Sicanian Tribe", {
+	Civilization = "latin", -- were they actually an Italic people?
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "red"
+})
+
+DefineFaction("Sicel Tribe", {
+	Civilization = "latin", -- were they actually an Italic people?
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "yellow"
+})
+
+DefineFaction("Umbrian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "pink",
+	SecondaryColor = "pink"
+})
+
+DefineFaction("Venetian Tribe", {
+	Civilization = "latin", -- is not correct, but they could be reasonably close to justify it for game purposes
+	Type = "tribe",
+	Color = "teal",
+	SecondaryColor = "teal"
 })
 
 -- polities

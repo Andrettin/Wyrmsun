@@ -31,7 +31,8 @@ DefineFaction("Chaoni Tribe", {
 	Civilization = "greek",
 	Type = "tribe",
 	Color = "yellow",
-	SecondaryColor = "yellow"
+	SecondaryColor = "yellow",
+	DevelopsTo = {"Epirus"}
 })
 
 DefineFaction("Dolopes Tribe", {
@@ -62,6 +63,26 @@ DefineFaction("Athens", {
 	Titles = {
 		"monarchy", "City-State",
 		"republic", "City-State"
+	}
+})
+
+DefineFaction("Crete", {
+	Civilization = "greek",
+	Type = "polity",
+	Color = "yellow",
+	SecondaryColor = "yellow",
+	Titles = {
+		"monarchy", "Kingdom"
+	}
+})
+
+DefineFaction("Epirus", {
+	Civilization = "greek",
+	Type = "polity",
+	Color = "yellow",
+	SecondaryColor = "yellow",
+	Titles = {
+		"monarchy", "Kingdom"
 	}
 })
 
@@ -105,5 +126,15 @@ DefineFaction("Thebes", {
 	Titles = {
 		"monarchy", "City-State",
 		"republic", "City-State"
+	}
+})
+
+DefineFaction("Thrace", {
+	Civilization = "greek",
+	Type = "polity",
+	Color = "orange",
+	SecondaryColor = "orange",
+	Titles = {
+		"monarchy", "Kingdom"
 	}
 })

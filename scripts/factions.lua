@@ -250,6 +250,14 @@ DefineFaction("Etruscan Tribe", {
 	Civilization = "etruscan",
 	Type = "tribe",
 	Color = "yellow",
+	SecondaryColor = "yellow",
+	DevelopsTo = {"Etruria"}
+})
+
+DefineFaction("Etruria", {
+	Civilization = "etruscan",
+	Type = "polity",
+	Color = "yellow",
 	SecondaryColor = "yellow"
 })
 

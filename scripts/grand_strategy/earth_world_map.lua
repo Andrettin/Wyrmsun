@@ -10045,7 +10045,6 @@ end
 
 if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	-- Greek settlements existed in Greece proper, Crete, Rhodes, Asia Minor, the Ionian islands, Sinope, Trapezus, eastern Sicily, southern Italy and northern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-	SetProvinceCivilization("Syracuse", "greek")
 	SetProvinceCivilization("Naples", "greek") -- Magna Graecia
 	
 	-- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
@@ -10159,6 +10158,36 @@ if (GrandStrategyYear >= -500) then
 	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "war")
 	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "war")
 	SetProvinceCivilization("Thrace", "thracian") -- Apsinthii
+	
+	-- Roman territory in 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	SetProvinceOwner("Latium", "latin", "Rome") -- was not actually all of Latium, but only the vicinity of the city of Rome
+	AcquireFactionTechnologies("latin", "Latin Tribe", "latin", "Rome")
+	SetFactionGovernmentType("latin", "Rome", "republic") -- should be earlier?
+	
+	-- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	-- Sicily was inhabited by the Elymians, Sicanians and Sicels
+	SetProvinceOwner("Syracuse", "latin", "Sicel Tribe")
+	SetProvinceCivilization("Syracuse", "latin")
+	SetProvinceSettlementBuilding("Syracuse", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Palermo", "latin", "Sicanian Tribe")
+	SetProvinceCivilization("Palermo", "latin")
+	SetProvinceSettlementBuilding("Palermo", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Tuscany", "etruscan", "Etruria")
+	SetProvinceOwner("Romagna", "etruscan", "Etruria")
+	SetProvinceCivilization("Romagna", "etruscan")
+	SetProvinceSettlementBuilding("Romagna", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Modena", "etruscan", "Etruria")
+	SetProvinceCivilization("Modena", "etruscan")
+	SetProvinceSettlementBuilding("Modena", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Venetia", "latin", "Venetian Tribe")
+	SetProvinceCivilization("Venetia", "latin")
+	SetProvinceSettlementBuilding("Venetia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Umbria", "latin", "Umbrian Tribe") -- the Aequians, Picentians and Sabines also inhabited this region
+	SetProvinceCivilization("Umbria", "latin")
+	SetProvinceSettlementBuilding("Umbria", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -479) then
@@ -10254,6 +10283,8 @@ if (GrandStrategyYear >= -336) then
 	SetProvinceOwner("Astrakhan", "persian", "Sarmatian Tribe")
 	SetProvinceCivilization("Astrakhan", "persian")
 	SetProvinceSettlementBuilding("Astrakhan", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Epirus", "greek", "Epirus")
 end
 
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
@@ -10271,10 +10302,26 @@ if (GrandStrategyYear >= -323) then
 	SetProvinceSettlementBuilding("Dobruja", "unit-teuton-town-hall", true)
 end
 
+if (GrandStrategyYear >= -301) then
+	-- Kingdoms of the Diadochi about 301 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+	SetProvinceOwner("Thrace", "greek", "Thrace")
+	SetProvinceOwner("Bulgaria", "greek", "Thrace")
+	SetProvinceOwner("Dobruja", "greek", "Thrace")
+	SetProvinceOwner("Rhodope", "greek", "Thrace")
+	
+	SetProvinceOwner("Crete", "greek", "Crete")
+	SetProvinceCivilization("Crete", "greek")
+	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", true)
+
+	-- Greece in vassalage to Macedon
+	SetFactionDiplomacyState("greek", "Argos", "greek", "Macedon", "vassal")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "vassal")
+	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "vassal")
+	SetFactionDiplomacyState("greek", "Thebes", "greek", "Macedon", "vassal")
+end
+
 if (GrandStrategyYear >= -264) then
 	-- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Latium", "latin", "Rome")
-	AcquireFactionTechnologies("latin", "Latin Tribe", "latin", "Rome")
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-barracks", true)
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-lumber-mill", true)
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-smithy", true)
@@ -10284,8 +10331,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceSettlementBuilding("Tuscany", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Umbria", "latin", "Rome")
 	SetProvinceSettlementBuilding("Umbria", "unit-teuton-town-hall", true)
-	
-	SetFactionGovernmentType("latin", "Rome", "republic") -- should be earlier
 	
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
@@ -10322,9 +10367,19 @@ if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC
 	SetProvinceSettlementBuilding("Aragon", "unit-teuton-town-hall", true)
 end
 
-if (GrandStrategyYear >= -200) then -- Kingdoms of the Diadochi about 200 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Thrace", "", "")
+if (GrandStrategyYear >= -200) then
+	-- Kingdoms of the Diadochi about 200 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+	SetProvinceOwner("Rhodope", "greek", "Macedon")
 	SetProvinceOwner("Bulgaria", "", "")
+	SetProvinceOwner("Dobruja", "", "")
+	
+	SetProvinceOwner("Albania", "", "")
+	
+	-- End of Greece's vassalage to Macedon
+	SetFactionDiplomacyState("greek", "Argos", "greek", "Macedon", "peace")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "peace")
+	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "peace")
+	SetFactionDiplomacyState("greek", "Thebes", "greek", "Macedon", "peace")
 end
 
 if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
