@@ -895,13 +895,6 @@ function AcquireProvince(province, faction)
 	UpdateProvinceMinimap(province.Name)
 end
 
-OldChangeFactionCulture = ChangeFactionCulture
-
-function ChangeFactionCulture(old_civilization, faction_name, new_civilization)
-	GetFactionFromName(faction_name).Civilization = new_civilization
-	OldChangeFactionCulture(old_civilization, faction_name, new_civilization)
-end
-
 function CalculateProvinceBorderTiles()
 	for key, value in pairs(WorldMapProvinces) do
 		WorldMapProvinces[key]["BorderProvinces"] = {}
@@ -4021,55 +4014,24 @@ function DoEvents()
 	end
 end
 
+OldFormFaction = FormFaction
+
 function FormFaction(old_faction, new_faction)
 	local old_faction_key = GetFactionKeyFromName(old_faction.Name)	
 	local new_faction_key = GetFactionKeyFromName(new_faction.Name)	
-
-	for key, value in pairs(WorldMapProvinces) do
-		if (GetProvinceOwner(WorldMapProvinces[key].Name) == old_faction.Name) then
-			AcquireProvince(WorldMapProvinces[key], new_faction.Name)
-			if (ProvinceHasClaim(WorldMapProvinces[key].Name, old_faction.Civilization, old_faction.Name)) then
-				AddProvinceClaim(WorldMapProvinces[key].Name, new_faction.Civilization, new_faction.Name)
-			end
-		end
-	end
 	
-	new_faction.Civilization = old_faction.Civilization
-	SetFactionResource(new_faction.Civilization, new_faction.Name, "gold", GetFactionResource(old_faction.Civilization, old_faction.Name, "gold"))
-	for key, value in pairs(GrandStrategyCommodities) do
-		SetFactionResource(new_faction.Civilization, new_faction.Name, string.lower(key), GetFactionResource(old_faction.Civilization, old_faction.Name, string.lower(key)))
-		SetFactionCommodityTrade(new_faction.Civilization, new_faction.Name, string.lower(key), GetFactionCommodityTrade(old_faction.Civilization, old_faction.Name, string.lower(key)))
-		SetFactionCommodityTrade(old_faction.Civilization, old_faction.Name, string.lower(key), 0)
-	end
-	SetFactionResource(new_faction.Civilization, new_faction.Name, "research", GetFactionResource(old_faction.Civilization, old_faction.Name, "research"))
-	SetFactionResource(new_faction.Civilization, new_faction.Name, "prestige", GetFactionResource(old_faction.Civilization, old_faction.Name, "prestige"))
-	
-	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") ~= nil) then
-			SetFactionTechnology(new_faction.Civilization, new_faction.Name, unitName, GetFactionTechnology(old_faction.Civilization, old_faction.Name, unitName))
-		end
-	end
-	SetFactionCurrentResearch(new_faction.Civilization, new_faction.Name, GetFactionCurrentResearch(old_faction.Civilization, old_faction.Name))
-
-	for key, value in pairs(Factions) do
-		SetFactionDiplomacyState(Factions[new_faction_key].Civilization, Factions[new_faction_key].Name, Factions[key].Civilization, Factions[key].Name, GetFactionDiplomacyState(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name))
-		
-		SetFactionDiplomacyState(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name, "peace")
-		
-		SetFactionDiplomacyStateProposal(Factions[new_faction_key].Civilization, Factions[new_faction_key].Name, Factions[key].Civilization, Factions[key].Name, GetFactionDiplomacyStateProposal(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name))
-		
-		SetFactionDiplomacyStateProposal(Factions[old_faction_key].Civilization, Factions[old_faction_key].Name, Factions[key].Civilization, Factions[key].Name, "")
-	end
+	OldFormFaction(old_faction.Civilization, old_faction.Name, new_faction.Civilization, new_faction.Name)
 
 	if (GrandStrategyFaction == old_faction) then
 		GrandStrategyFaction = new_faction
-		SetPlayerFaction(new_faction.Civilization, new_faction.Name)
 	end
 
-	CalculateFactionIncomes(old_faction.Civilization, old_faction.Name)
-	CalculateFactionIncomes(new_faction.Civilization, new_faction.Name)
-	
 	DrawGrandStrategyInterface()
+end
+
+function ChangeFactionCulture(old_civilization, faction_name, new_civilization)
+	GetFactionFromName(faction_name).Civilization = new_civilization
+	OldFormFaction(old_civilization, faction_name, new_civilization, faction_name)
 end
 
 function GetUnitTypeUpkeep(unit_type)
@@ -4350,7 +4312,7 @@ function ChangeProvinceOwner(province, faction) -- used to change the owner and 
 	end
 end
 
-function GrandStrategyDialog(title, message)
+function GrandStrategyDialog(title, message, tooltip)
 	GrandStrategyGamePaused = true
 	local menu = WarGrandStrategyGameMenu(panel(1))
 	menu:setDrawMenusUnder(true)
@@ -4363,12 +4325,15 @@ function GrandStrategyDialog(title, message)
 	l:setLineWidth(228)
 	menu:add(l, 14, 35)
 	l:setCaption(message)
-	menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
+	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
 		function()
 			GrandStrategyGamePaused = false
 			menu:stop()
 		end
 	)
+	if (tooltip) then
+		ok_button:setTooltip(_(tooltip))
+	end
 	menu:addButton("", "return", -1, -1, -- allow enter to be used as a way to close the battle dialog
 		function()
 			GrandStrategyGamePaused = false

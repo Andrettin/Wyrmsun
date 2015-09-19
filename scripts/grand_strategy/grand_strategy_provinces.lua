@@ -392,8 +392,7 @@ function LoadProvinces(world)
 			Map = "maps/earth/regensburg.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Bavarian Tribe",
-				"teuton", "Bavaria"
+				"teuton", "Bavarian Tribe"
 			}
 		},
 		Belgium = {
@@ -424,8 +423,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"celt", "Menapii Tribe",
-				"teuton", "Francia"
+				"celt", "Menapii Tribe"
 			}
 		},
 		Bessarabia = {
@@ -643,7 +641,6 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Aedui Tribe",
-				"teuton", "Francia",
 				"latin", "France"
 			}
 		},
@@ -1020,7 +1017,6 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Francia",
 				"latin", "France"
 			}
 		},
@@ -1045,7 +1041,6 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Sequani Tribe",
-				"teuton", "Francia",
 				"latin", "France"
 			}
 		},
@@ -1128,8 +1123,7 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"germanic", "Goth Tribe",
-				"goth", "Goth Tribe",
-				"goth", "Gothia"
+				"goth", "Goth Tribe"
 			}
 		},
 		Gotland = {
@@ -1146,8 +1140,7 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"germanic", "Goth Tribe",
-				"goth", "Goth Tribe",
-				"goth", "Gothia"
+				"goth", "Goth Tribe"
 			}
 		},
 		Hungary = {
@@ -1257,9 +1250,7 @@ function LoadProvinces(world)
 			Claims = {
 				"germanic", "Jute Tribe",
 				"norse", "Dane Tribe",
-				"norse", "Denmark",
-				"teuton", "Jute Tribe",
-				"teuton", "Jutland"
+				"teuton", "Jute Tribe"
 			}
 		},
 		Lacedaemonia = {
@@ -1307,6 +1298,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"latin", "Latin Tribe",
 				"latin", "Rome"
 			}
 		},
@@ -1511,7 +1503,6 @@ function LoadProvinces(world)
 			Claims = {
 				"germanic", "Frank Tribe",
 				"teuton", "Frank Tribe",
-				"teuton", "Francia",
 				"teuton", "Netherlands"
 			}
 		},
@@ -1717,7 +1708,6 @@ function LoadProvinces(world)
 			Claims = {
 				"germanic", "Saxon Tribe",
 				"teuton", "Saxon Tribe",
-				"teuton", "Saxony",
 				"teuton", "Westphalia"
 			}
 		},
@@ -1869,8 +1859,7 @@ function LoadProvinces(world)
 				"basque", "Ertebolle Tribe",
 				"basque", "Gylfing Tribe",
 				"germanic", "Dane Tribe",
-				"teuton", "Dane Tribe",
-				"teuton", "Denmark"
+				"teuton", "Dane Tribe"
 			}
 		},
 		Scotland = {
@@ -2015,8 +2004,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"germanic", "Swede Tribe",
-				"norse", "Swede Tribe",
-				"norse", "Sweden"
+				"norse", "Swede Tribe"
 			}
 		},
 		Switzerland = {
@@ -2399,8 +2387,7 @@ function LoadProvinces(world)
 				"basque", "Maglemose Tribe",
 				"basque", "Kongemose Tribe",
 				"germanic", "Dane Tribe",
-				"norse", "Dane Tribe",
-				"norse", "Denmark"
+				"norse", "Dane Tribe"
 			}
 		}
 	}

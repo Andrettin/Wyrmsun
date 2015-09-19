@@ -46,7 +46,7 @@ DefineFaction("Norlund Clan", {
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "orange",
-	DevelopsTo = {"Knalga"}
+	DevelopsTo = {"Kal Kartha", "Knalga"}
 })
 
 DefineFaction("Shinsplitter Clan", {

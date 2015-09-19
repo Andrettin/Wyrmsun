@@ -887,56 +887,6 @@ local GermanicEvents = {
 			end
 		},
 		OptionTooltips = {"+1 Research, +1 Prestige"}
-	},
-	TheFoundingOfGothia = {
-		Name = "The Founding of Gothia",
-		Description = "As our people gain in sophistication, we have become more and more settled down. Now it is high time for us to to found a new realm, Gothia!",
-		Conditions = function(s)
-			if (
-				GetFactionProvinceCount(Factions.Gothia) == 0
-				and (EventFaction.Name == "Goth Tribe" or EventFaction.Name == "Ostrogoth Tribe" or EventFaction.Name == "Visigoth Tribe")
-				and EventFaction.Civilization == "goth"
-				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
-				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
-				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Persistent = true,
-		Options = {"~!OK"},
-		OptionEffects = {function(s)
-			FormFaction(EventFaction, Factions.Gothia)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
-		end},
-		OptionTooltips = {"Our faction becomes Gothia, +10 Prestige"}
-	},
-	TheFoundingOfVandalia = {
-		Name = "The Founding of Vandalia",
-		Description = "As our people gain in sophistication, we have become more and more settled down. Now it is high time for us to to found a new realm, Vandalia!",
-		Conditions = function(s)
-			if (
-				GetFactionProvinceCount(Factions.Vandalia) == 0
-				and EventFaction.Name == "Vandal Tribe"
-				and EventFaction.Civilization == "goth"
-				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
-				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
-				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Persistent = true,
-		Options = {"~!OK"},
-		OptionEffects = {function(s)
-			FormFaction(EventFaction, Factions.Vandalia)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
-		end},
-		OptionTooltips = {"Our faction becomes Vandalia, +10 Prestige"}
 	}
 }
 	

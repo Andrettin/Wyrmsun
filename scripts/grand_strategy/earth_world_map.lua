@@ -10783,6 +10783,7 @@ end
 
 if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	SetProvinceOwner("Belgium", "teuton", "Francia")
+	AddProvinceClaim("Belgium", "teuton", "Francia")
 	AcquireFactionTechnologies("teuton", "Frank Tribe", "teuton", "Francia")
 end
 
@@ -10790,7 +10791,9 @@ if (GrandStrategyYear >= 486) then
 	 -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("France", "teuton", "Francia")
 	SetProvinceUnitQuantity("France", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	AddProvinceClaim("France", "teuton", "Francia")
 	SetProvinceOwner("Normandy", "teuton", "Francia")
+	AddProvinceClaim("Normandy", "teuton", "Francia")
 
 	SetProvinceOwner("Transylvania", "", "")
 	SetProvinceOwner("Corsica", "goth", "Vandal Tribe") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -10844,6 +10847,7 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Bohemia", "", "")
 	SetProvinceOwner("Brandenburg", "", "")
 	SetProvinceOwner("Aquitaine", "teuton", "Francia") -- Aquitania conquered by the Franks in 507
+	AddProvinceClaim("Aquitaine", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -10861,9 +10865,13 @@ end
 if (GrandStrategyYear >= 534) then
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Burgundy", "teuton", "Francia")
+	AddProvinceClaim("Burgundy", "teuton", "Francia")
 	SetProvinceOwner("Franche Comte", "teuton", "Francia")
+	AddProvinceClaim("Franche Comte", "teuton", "Francia")
 	SetProvinceOwner("Savoy", "teuton", "Francia")
+	AddProvinceClaim("Svoy", "teuton", "Francia")
 	SetProvinceOwner("Switzerland", "teuton", "Francia")
+	AddProvinceClaim("Switzerland", "teuton", "Francia")
 	
 	SetProvinceOwner("Corsica", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Sardinia", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -10872,8 +10880,10 @@ end
 
 if (GrandStrategyYear >= 537) then
 	SetProvinceOwner("Bavaria", "teuton", "Francia") -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	AddProvinceClaim("Bavaria", "teuton", "Francia")
 	
 	SetProvinceOwner("Provence", "teuton", "Francia") -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	AddProvinceClaim("Provence", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 563) then
@@ -10953,6 +10963,7 @@ end
 
 if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	SetProvinceOwner("Netherlands", "teuton", "Francia")
+	AddProvinceClaim("Netherlands", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 765) then
@@ -11167,6 +11178,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Gotland", "norse", "Denmark")
 
 	SetProvinceOwner("Bavaria", "teuton", "Bavaria")
+	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
+	
 	SetProvinceOwner("Brandenburg", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	

@@ -38,7 +38,7 @@ DefineFaction("Bavarian Tribe", {
 	Type = "tribe",
 	Color = "cyan",
 	SecondaryColor = "white",
-	DevelopsTo = {"Austria", "Bavaria"}
+	DevelopsTo = {"Bavaria", "Austria"}
 })
 
 DefineFaction("Burgundian Tribe", {
@@ -100,7 +100,7 @@ DefineFaction("Marcomanni Tribe", {
 	Type = "tribe",
 	Color = "orange", -- change to a better one?
 	SecondaryColor = "red",
-	DevelopsTo = {"Austria", "Bavaria", "Galicia"}
+	DevelopsTo = {"Bavaria", "Galicia", "Austria"}
 })
 
 DefineFaction("Ostrogoth Tribe", {
@@ -124,7 +124,7 @@ DefineFaction("Saxon Tribe", {
 	Type = "tribe",
 	Color = "pink",
 	SecondaryColor = "pink",
-	DevelopsTo = {"Brandenburg", "England", "Prussia", "Saxony", "Scotland", "Westphalia"}
+	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland", "Westphalia"}
 })
 
 DefineFaction("Suebi Tribe", {
@@ -132,7 +132,7 @@ DefineFaction("Suebi Tribe", {
 	Type = "tribe",
 	Color = "black",
 	SecondaryColor = "black",
-	DevelopsTo = {"Austria", "Bavaria", "Galicia"}
+	DevelopsTo = {"Galicia", "Bavaria", "Austria"}
 })
 
 DefineFaction("Swede Tribe", {
@@ -195,7 +195,8 @@ DefineFaction("Brandenburg", {
 	SecondaryColor = "blue",
 	Titles = {
 		"monarchy", "Margravate"
-	}
+	},
+	DevelopsTo = {"Prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
 })
 
 DefineFaction("Burgundy", {

@@ -51,32 +51,6 @@ local GreekEvents = {
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
-	},
-	TheFoundingOfEpirus = {
-		Name = "The Founding of Epirus",
-		Description = "As our people gain in sophistication, we have become more and more settled down. Now it is high time for us to to found a new polity, Epirus!",
-		Conditions = function(s)
-			if (
-				GetFactionProvinceCount(Factions.Epirus) == 0
-				and (EventFaction.Name == "Chaoni Tribe")
-				and EventFaction.Civilization == "greek"
-				and GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") == "tribe"
-				and GetProvinceOwner("Epirus") == EventFaction.Name
-				and FactionHasTechnologyType(EventFaction, "writing") -- becoming a polity requires writing
-				and FactionHasTechnologyType(EventFaction, "masonry") -- becoming a polity requires masonry
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Persistent = true,
-		Options = {"~!OK"},
-		OptionEffects = {function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 10)
-			FormFaction(EventFaction, Factions.Epirus)
-		end},
-		OptionTooltips = {"Our faction becomes Epirus, +10 Prestige"}
 	}
 }
 	
