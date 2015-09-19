@@ -298,16 +298,44 @@ function LoadFactions(world)
 			Name = "Elymian Tribe",
 			Civilization = "latin"
 		},
+		FrentanianTribe = {
+			Name = "Frentanian Tribe",
+			Civilization = "latin"
+		},
+		IapygianTribe = {
+			Name = "Iapygian Tribe",
+			Civilization = "latin"
+		},
 		LatinTribe = {
 			Name = "Latin Tribe",
+			Civilization = "latin"
+		},
+		MarsianTribe = {
+			Name = "Marsian Tribe",
+			Civilization = "latin"
+		},
+		MessapianTribe = {
+			Name = "Messapian Tribe",
+			Civilization = "latin"
+		},
+		OenotrianTribe = {
+			Name = "Oenotrian Tribe",
 			Civilization = "latin"
 		},
 		PicentianTribe = {
 			Name = "Picentian Tribe",
 			Civilization = "latin"
 		},
+		SabellianTribe = {
+			Name = "Sabellian Tribe",
+			Civilization = "latin"
+		},
 		SabineTribe = {
 			Name = "Sabine Tribe",
+			Civilization = "latin"
+		},
+		SamniteTribe = {
+			Name = "Samnite Tribe",
 			Civilization = "latin"
 		},
 		SicanianTribe = {

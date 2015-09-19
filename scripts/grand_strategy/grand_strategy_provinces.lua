@@ -32,18 +32,18 @@ Regions = {
 	Czechoslovakia = {"Bohemia"},
 	England = {"England"},
 	Eurasia = {"Astrakhan", "Bessarabia", "Bukowina", "Crimea", "Don", "Russia", "Ukraine", "White Russia"},
-	Europe = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Bessarabia", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bukowina", "Bulgaria", "Burgundy", "Carniola", "Castille", "Corsica", "Crete", "Crimea", "Croatia", "Dalmatia", "Dobruja", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Venetia", "Vojvodina", "Wallachia", "White Russia", "Zealand"},
+	Europe = {"Abruzzo", "Aetolia", "Albania", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Bessarabia", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bukowina", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corsica", "Crete", "Crimea", "Croatia", "Dalmatia", "Dobruja", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Venetia", "Vojvodina", "Wallachia", "White Russia", "Zealand"},
 	France = {"Aquitaine", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Rhineland", "Netherlands", "Silesia"},
 	Greece = {"Aetolia", "Albania", "Argolis", "Attica", "Boeotia", "Crete", "Epirus", "Euboea", "Lacedaemonia", "Macedonia", "Rhodes", "Rhodope", "Skopje", "Thessaly", "Thrace"},
 	Iberia = {"Andalusia", "Aragon", "Castille", "Gallaecia", "Portugal"},
-	Italy = {"Corsica", "Istria", "Latium", "Liguria", "Lombardy", "Modena", "Naples", "Palermo", "Parma", "Piedmont", "Romagna", "Sardinia", "Syracuse", "Tuscany", "Umbria", "Venetia"},
+	Italy = {"Abruzzo", "Apulia", "Calabria", "Corsica", "Istria", "Latium", "Liguria", "Lombardy", "Modena", "Naples", "Palermo", "Parma", "Piedmont", "Romagna", "Sardinia", "Syracuse", "Tuscany", "Umbria", "Venetia"},
 	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Franche Comte", "Ireland", "Netherlands", "Normandy", "Provence", "Savoy", "Scotland"},
 	Poland = {"Bukowina", "Galicia", "Poland", "White Russia"},
 	RomanDanube = {"Austria", "Bavaria", "Bulgaria", "Carniola", "Croatia", "Dalmatia", "Dobruja", "Hungary", "Montenegro", "Serbia", "Switzerland"},
 	Scandinavia = {"Gotaland", "Gotland", "Jutland", "Scania", "Sweden", "Zealand"},
-	WestandCentralEurope = {"Aetolia", "Albania", "Andalusia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Carniola", "Castille", "Corsica", "Crete", "Croatia", "Dalmatia", "Dobruja", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Umbria", "Venetia", "Vojvodina", "Wallachia", "Zealand"}
+	WestandCentralEurope = {"Abruzzo", "Aetolia", "Albania", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corsica", "Crete", "Croatia", "Dalmatia", "Dobruja", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Umbria", "Venetia", "Vojvodina", "Wallachia", "Zealand"}
 }
 
 function LoadProvinces(world)
@@ -53,6 +53,25 @@ function LoadProvinces(world)
 	WorldMapWaterProvinces = {}
 
 	local EarthProvinces = {
+		Abruzzo = {
+			Name = "Abruzzo",
+			Tiles = {
+				{517, 134}, {517, 135},
+				{518, 134}, {518, 135}, {518, 136},
+				{519, 134}, {519, 135}, {519, 136},
+				{520, 135}, {520, 136}, {520, 137},
+				{521, 136}, {521, 137},
+				{522, 137}
+			},
+			SettlementName = "L'Aquila",
+			CulturalSettlementNames = {
+				latin = "Amiternum"
+			},
+			SettlementLocation = {518, 135}, -- L'Aquila
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
+		},
 		Aetolia = {
 			Name = "Aetolia",
 			Tiles = {
@@ -137,6 +156,31 @@ function LoadProvinces(world)
 			SettlementLocation = {466, 148}, -- Cordoba
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
+		},
+		Apulia = {
+			Name = "Apulia",
+			CulturalNames = {
+				latin = "Apulia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
+			},
+			Tiles = {
+				{523, 137}, {523, 138}, 
+				{524, 137}, {524, 138},
+				{525, 138}, {525, 139},
+				{526, 139},
+				{527, 139},
+				{528, 139}, {528, 140},
+				{529, 140},
+				{530, 140},
+				{531, 140}, {531, 141}
+			},
+			SettlementName = "Bari",
+			CulturalSettlementNames = {
+				latin = "Barium"
+			},
+			SettlementLocation = {527, 139}, -- Bari
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
 		},
 		Aquitaine = {
 			Name = "Aquitaine",
@@ -643,6 +687,26 @@ function LoadProvinces(world)
 				"celt", "Aedui Tribe",
 				"latin", "France"
 			}
+		},
+		Calabria = {
+			Name = "Calabria",
+			CulturalNames = {
+				latin = "Brutium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
+			},
+			Tiles = {
+				{525, 142}, {525, 143}, {525, 146}, {525, 147},
+				{526, 142}, {526, 143}, {526, 144}, {526, 145}, {526, 146},
+				{527, 143}, {527, 144},
+				{528, 144}
+			},
+			SettlementName = "Catanzaro",
+			CulturalSettlementNames = {
+				latin = "Castra Hannibalis"
+			},
+			SettlementLocation = {526, 145}, -- Catanzaro
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true
 		},
 		Carniola = {
 			Name = "Carniola",
@@ -1442,25 +1506,21 @@ function LoadProvinces(world)
 		Naples = {
 			Name = "Naples",
 			CulturalNames = {
-				greek = "Magna Graecia"
+				greek = "Magna Graecia",
+				latin = "Campania" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 			},
 			Tiles = {
 				{130, 34}, {131, 34}, {131, 35}, {131, 36}, {132, 35}, -- old map
-				{517, 134}, {517, 135},
-				{518, 134}, {518, 135}, {518, 136}, {518, 137}, {518, 138},
-				{519, 134}, {519, 135}, {519, 136}, {519, 137}, {519, 138},
-				{520, 135}, {520, 136}, {520, 137}, {520, 138}, {520, 139},
-				{521, 136}, {521, 137}, {521, 138}, {521, 139},
-				{522, 137}, {522, 138}, {522, 139}, {522, 140},
-				{523, 137}, {523, 138}, {523, 139}, {523, 140}, {523, 141},
-				{524, 137}, {524, 138}, {524, 139}, {524, 140}, {524, 141},
-				{525, 138}, {525, 139}, {525, 140}, {525, 141}, {525, 142}, {525, 143}, {525, 146}, {525, 147},
-				{526, 139}, {526, 140}, {526, 141}, {526, 142}, {526, 143}, {526, 144}, {526, 145}, {526, 146},
-				{527, 139}, {527, 140}, {527, 141}, {527, 143}, {527, 144},
-				{528, 139}, {528, 140}, {528, 144},
-				{529, 140},
-				{530, 140},
-				{531, 140}, {531, 141},
+				{518, 137}, {518, 138},
+				{519, 137}, {519, 138},
+				{520, 138}, {520, 139},
+				{521, 138}, {521, 139},
+				{522, 138}, {522, 139}, {522, 140},
+				{523, 139}, {523, 140}, {523, 141},
+				{524, 139}, {524, 140}, {524, 141},
+				{525, 140}, {525, 141},
+				{526, 140}, {526, 141},
+				{527, 140}, {527, 141}
 			},
 			SettlementName = "Neapolis",
 			CulturalSettlementNames = {

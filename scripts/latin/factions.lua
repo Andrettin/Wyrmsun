@@ -39,12 +39,47 @@ DefineFaction("Elymian Tribe", {
 	SecondaryColor = "red"
 })
 
+DefineFaction("Frentanian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "orange",
+	SecondaryColor = "orange"
+})
+
+DefineFaction("Iapygian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "teal",
+	SecondaryColor = "teal"
+})
+
 DefineFaction("Latin Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "yellow",
 	DevelopsTo = {"Rome"}
+})
+
+DefineFaction("Marsian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown"
+})
+
+DefineFaction("Messapian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
+
+DefineFaction("Oenotrian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
 })
 
 DefineFaction("Picentian Tribe", {
@@ -54,11 +89,25 @@ DefineFaction("Picentian Tribe", {
 	SecondaryColor = "green"
 })
 
+DefineFaction("Sabellian Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "white",
+	SecondaryColor = "white"
+})
+
 DefineFaction("Sabine Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "blue"
+})
+
+DefineFaction("Samnite Tribe", {
+	Civilization = "latin",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow"
 })
 
 DefineFaction("Sicanian Tribe", {

@@ -10045,7 +10045,6 @@ end
 
 if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	-- Greek settlements existed in Greece proper, Crete, Rhodes, Asia Minor, the Ionian islands, Sinope, Trapezus, eastern Sicily, southern Italy and northern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-	SetProvinceCivilization("Naples", "greek") -- Magna Graecia
 	
 	-- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	SetProvinceCivilization("Palermo", "phoenician")
@@ -10188,6 +10187,22 @@ if (GrandStrategyYear >= -500) then
 	SetProvinceOwner("Umbria", "latin", "Umbrian Tribe") -- the Aequians, Picentians and Sabines also inhabited this region
 	SetProvinceCivilization("Umbria", "latin")
 	SetProvinceSettlementBuilding("Umbria", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Calabria", "latin", "Oenotrian Tribe")
+	SetProvinceCivilization("Calabria", "latin")
+	SetProvinceSettlementBuilding("Calabria", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Apulia", "latin", "Messapian Tribe") -- also inhabited by the Iapygians
+	SetProvinceCivilization("Apulia", "latin")
+	SetProvinceSettlementBuilding("Apulia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Abruzzo", "latin", "Sabellian Tribe") -- also inhabited by the Frentanians
+	SetProvinceCivilization("Abruzzo", "latin")
+	SetProvinceSettlementBuilding("Abruzzo", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Naples", "latin", "Samnite Tribe")
+	SetProvinceCivilization("Naples", "latin")
+	SetProvinceSettlementBuilding("Naples", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -479) then
@@ -10326,11 +10341,11 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-lumber-mill", true)
 	SetProvinceSettlementBuilding("Latium", "unit-teuton-smithy", true)
 	SetProvinceOwner("Naples", "latin", "Rome")
-	SetProvinceSettlementBuilding("Naples", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Abruzzo", "latin", "Rome")
+	SetProvinceOwner("Apulia", "latin", "Rome")
+	SetProvinceOwner("Calabria", "latin", "Rome")
 	SetProvinceOwner("Tuscany", "latin", "Rome")
-	SetProvinceSettlementBuilding("Tuscany", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Umbria", "latin", "Rome")
-	SetProvinceSettlementBuilding("Umbria", "unit-teuton-town-hall", true)
 	
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
@@ -10816,13 +10831,15 @@ if (GrandStrategyYear >= 493) then
 end
 
 if (GrandStrategyYear >= 495) then
-	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe") -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	-- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Lombardy", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
-	SetProvinceOwner("Latium", "goth", "Ostrogoth Tribe") -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Latium", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Latium", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
-	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe") -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Naples", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
-	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe") -- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe")
+	SetProvinceOwner("Abruzzo", "goth", "Ostrogoth Tribe")
 end
 
 if (GrandStrategyYear >= 500) then
