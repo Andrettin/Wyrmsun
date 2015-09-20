@@ -420,6 +420,11 @@ function LoadFactions(world)
 			Name = "Persia",
 			Civilization = "persian"
 		},
+		-- Phoenician polities
+		Carthage = {
+			Name = "Carthage",
+			Civilization = "phoenician"
+		},
 		-- Phrygian tribes
 		BrygesTribe = {
 			Name = "Bryges Tribe",

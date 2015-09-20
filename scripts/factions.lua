@@ -354,6 +354,13 @@ DefineFaction("Persia", {
 	}
 })
 
+DefineFaction("Carthage", {
+	Civilization = "phoenician",
+	Type = "polity",
+	Color = "black",
+	SecondaryColor = "black"
+})
+
 DefineFaction("Bryges Tribe", {
 	Civilization = "phrygian",
 	Type = "tribe",

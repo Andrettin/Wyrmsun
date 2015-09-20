@@ -10377,6 +10377,13 @@ if (GrandStrategyYear >= -219) then
 	SetProvinceOwner("Dalmatia", "latin", "Rome")
 end
 
+if (GrandStrategyYear >= -218) then
+	-- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+	SetProvinceOwner("Andalusia", "phoenician", "Carthage") -- should also include Portugal and Castille south of the Tagus, and Aragon south of the Ebrus
+	SetProvinceSettlementBuilding("Andalusia", "unit-teuton-town-hall", true)
+	SetFactionGovernmentType("phoenician", "Carthage", "republic")
+end
+
 if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Aragon", "latin", "Rome")
 	SetProvinceSettlementBuilding("Aragon", "unit-teuton-town-hall", true)
@@ -10387,8 +10394,6 @@ if (GrandStrategyYear >= -200) then
 	SetProvinceOwner("Rhodope", "greek", "Macedon")
 	SetProvinceOwner("Bulgaria", "", "")
 	SetProvinceOwner("Dobruja", "", "")
-	
-	SetProvinceOwner("Albania", "", "")
 	
 	-- End of Greece's vassalage to Macedon
 	SetFactionDiplomacyState("greek", "Argos", "greek", "Macedon", "peace")
@@ -10401,7 +10406,6 @@ if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and (most of) Fart
 	SetProvinceOwner("Castille", "latin", "Rome")
 	SetProvinceSettlementBuilding("Castille", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Andalusia", "latin", "Rome")
-	SetProvinceSettlementBuilding("Andalusia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -10708,7 +10712,7 @@ end
 
 if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --	SetProvinceOwner("Moldavia", "", "")
-	SetProvinceOwner("Transylvania", "", "")
+--	SetProvinceOwner("Transylvania", "", "")
 --	SetProvinceOwner("Wallachia", "", "")
 end
 
@@ -10732,7 +10736,11 @@ end
 
 if (GrandStrategyYear >= 395) then
 	SetProvinceOwner("Ireland", "celt", "Scot Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	SetProvinceCivilization("Ireland", "celt")
+	SetProvinceSettlementBuilding("Ireland", "unit-germanic-town-hall", true)
 	SetProvinceOwner("Scotland", "celt", "Pict Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	SetProvinceCivilization("Scotland", "celt")
+	SetProvinceSettlementBuilding("Scotland", "unit-germanic-town-hall", true)
 end
 
 if (GrandStrategyYear >= 397) then
@@ -10821,7 +10829,6 @@ if (GrandStrategyYear >= 486) then
 	SetProvinceOwner("Castille", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Castille", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Andalusia", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceUnitQuantity("Andalusia", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Aragon", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Aragon", "unit-germanic-warrior", 0)
 end
