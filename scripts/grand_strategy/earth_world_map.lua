@@ -10750,6 +10750,7 @@ end
 
 if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Pannonia", "latin", "Rome")
+	SetProvinceSettlementBuilding("Pannonia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= 19) then
