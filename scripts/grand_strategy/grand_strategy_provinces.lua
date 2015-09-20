@@ -854,12 +854,27 @@ function LoadProvinces(world)
 				Poland = "Croatia",
 				Russia = "Croatia"
 			},
-			Tiles = { {130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33} },
-			SettlementName = "Salonae",
-			CulturalSettlementNames = {
-				latin = "Salonae"
+			Tiles = {
+				{130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33}, -- old map
+				{521, 126},
+				{522, 126}, {522, 127}, {522, 128},
+				{523, 126}, {523, 127}, {523, 128}, {523, 129},
+				{524, 125}, {524, 126}, {524, 127}, {524, 128}, {524, 129},
+				{525, 124}, {525, 125}, {525, 126}, {525, 129},
+				{526, 124}, {526, 125}, {526, 126},
+				{527, 124}, {527, 125}, {527, 126},
+				{528, 125}, {528, 126},
+				{529, 125}, {529, 126},
+				{530, 125}, {530, 126},
+				{531, 126},
+				{532, 126},
+				{533, 126}, {533, 127}
 			},
-			SettlementLocation = {131, 31}, -- Zagreb
+			SettlementName = "Zagreb",
+			CulturalSettlementNames = {
+				latin = "Celeta" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+			},
+			SettlementLocation = {525, 125}, -- Zagreb
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
@@ -884,6 +899,9 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Zara",
 			SettlementLocation = {523, 130}, -- Zara
+			CulturalSettlementNames = {
+				latin = "Iadera" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+			},
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
@@ -2361,6 +2379,7 @@ function LoadProvinces(world)
 		Vojvodina = {
 			Name = "Vojvodina",
 			Tiles = {
+				{534, 125}, {534, 126}, {534, 127},
 				{535, 125}, {535, 126}, {535, 127},
 				{536, 125}, {536, 126}, {536, 127},
 				{537, 125}, {537, 126}, {537, 127}, {537, 128},
