@@ -203,8 +203,9 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Abilities
-- Added the learnable ability Deadly Precision (icon by Jinn).
-- Decreased Critical Strike's bonus.
+- Added the learnable ability Deadly Precision (icon by Jinn), which increases critical strike chance by 10%.
+- Decreased Critical Strike's bonus to 10%.
+- Added the learnable ability Eagle Eye (icon by Jinn), which increases accuracy by 2.
 
 * Buildings
 - The Teuton Farm now changes its graphics after Masonry is researched (new graphics by Jinn).

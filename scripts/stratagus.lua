@@ -571,6 +571,10 @@ function StandardTriggers()
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision")
 										SavePreferences()
 									end
+									if (UnitHasAbility(uncount[unit1], "upgrade-eagle-eye") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye")
+										SavePreferences()
+									end
 									if (UnitHasAbility(uncount[unit1], "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
 										SavePreferences()
@@ -1480,29 +1484,29 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-modsognir" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
 		return { "unit-dwarven-thane" }
 	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-modsognir-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-dwarven-yale-rider") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-dwarven-scout") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-teuton-swordsman" or unit_type == "unit-hero-marbod") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-gnomish-recruit") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-gnomish-herbalist") then
 		return { "upgrade-portent" }
 	elseif (unit_type == "unit-goblin-thief") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-goblin-spearman") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-goblin-archer") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-hero-greebo") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	else
 		return {}
 	end

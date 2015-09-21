@@ -309,6 +309,7 @@ local upgrades = {
 	{"upgrade-sword-mastery", _("Sword Mastery"), "icon-sword-mastery"},
 	{"upgrade-critical-strike", _("Critical Strike"), "icon-critical-strike"},
 	{"upgrade-deadly-precision", _("Deadly Precision"), "icon-deadly-precision"},
+	{"upgrade-eagle-eye", _("Eagle Eye"), "icon-eagle-eye"},
 	{"upgrade-portent", _("Portent"), "icon-portent"}
 }
 
@@ -337,11 +338,15 @@ DefineModifier("upgrade-sword-mastery",
 )
 
 DefineModifier("upgrade-critical-strike",
-	{"CriticalStrikeChance", 5}
+	{"CriticalStrikeChance", 10}
 )
 
 DefineModifier("upgrade-deadly-precision",
 	{"CriticalStrikeChance", 10}
+)
+
+DefineModifier("upgrade-eagle-eye",
+	{"Accuracy", 2}
 )
 
 -- traits
