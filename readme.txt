@@ -229,7 +229,7 @@ https://github.com/Andrettin/Wyrmsun
 - Interface tooltips are now drawn as popups.
 - Provinces now show a (cosmetic) population number.
 - Added a gold deposit in the Lyr province.
-- Stone and lumber are now harvested from a tile only if a quarry or timber lodge is present there.
+- Stone and lumber are now harvested from a tile only if a quarry or timber lodge is present there (resource building tile graphics by Jinn).
 - New food resources: grain (produced by grain farms), mushrooms (produced by mushroom farms) and fish (produced by settlements adjacent to water); contrary to other resources, food is stored by the province, not by the faction (resource building tile graphics by Jinn).
 - Provinces now have worker units, who contribute to the province's labor pool (used for producing resources) and consume food (except for workers who are employed in food-producing occupations, who don't contribute to food consumption).
 - When a province accumulates 10,000 food, its population will grow, with the creation of a new worker.
@@ -237,6 +237,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Wood Plow and Iron-Tipped Wood Plow technologies are now researchable in grand strategy mode (each provides +100% to food production).
 - The Bountiful Harvest event now grants additional food in every province, rather than giving extra gold to the player.
 - Added an enormous number of new factions to populate historical Europe.
+- Grand strategy gold mine graphics have been reworked, and now have player color (by Jinn).
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.
