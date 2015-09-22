@@ -125,24 +125,10 @@ DefineCivilizationFactions("celt",
 
 DefineCivilizationFactions("germanic",
 	"faction", {
-		"name", "Alamanni Tribe",
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "blue",
-		"playable", false
-	},
-	"faction", {
 		"name", "Asa Tribe",
 		"type", "tribe",
 		"color", "orange",
 		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Bavarian Tribe",
-		"type", "tribe",
-		"color", "cyan",
-		"secondary_color", "white",
-		"playable", false
 	},
 	"faction", {
 		"name", "Burgundian Tribe",

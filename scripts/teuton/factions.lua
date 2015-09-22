@@ -30,7 +30,7 @@ DefineFaction("Alamanni Tribe", {
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "blue",
-	DevelopsTo = {"Switzerland"}
+	DevelopsTo = {"Baden", "Switzerland", "Wurtemberg"}
 })
 
 DefineFaction("Bavarian Tribe", {
@@ -175,6 +175,16 @@ DefineFaction("Austria", {
 	SecondaryColor = "red",
 	Titles = {
 		"monarchy", "Duchy" -- later Archduchy
+	}
+})
+
+DefineFaction("Baden", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "black",
+	SecondaryColor = "black",
+	Titles = {
+		"monarchy", "Grand Duchy"
 	}
 })
 
@@ -342,6 +352,17 @@ DefineFaction("Westphalia", {
 		"monarchy", "Duchy"
 	}
 })
+
+DefineFaction("Wurtemberg", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "red",
+	SecondaryColor = "red",
+	Titles = {
+		"monarchy", "Kingdom"
+	}
+})
+
 -- Non-Playable Polities
 
 DefineFaction("Crimea", {

@@ -97,7 +97,7 @@ local TeutonEvents = {
 				EventFaction.Name == "Suebi Tribe"
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.Brandenburg)
-				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.France) -- should be Alsace
+				and ProvinceHasBorderWith(WorldMapProvinces.Baden, WorldMapProvinces.France) -- should be Alsace
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Arverni Tribe") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Sequani Tribe") == "peace"

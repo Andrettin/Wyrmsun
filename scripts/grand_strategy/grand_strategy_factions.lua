@@ -162,6 +162,10 @@ function LoadFactions(world)
 			Name = "Austria",
 			Civilization = "teuton"
 		},
+		Baden = {
+			Name = "Baden",
+			Civilization = "teuton"
+		},
 		Bavaria = {
 			Name = "Bavaria",
 			Civilization = "teuton"
@@ -232,6 +236,10 @@ function LoadFactions(world)
 		},
 		Westphalia = {
 			Name = "Westphalia",
+			Civilization = "teuton"
+		},
+		Wurtemberg = {
+			Name = "Wurtemberg",
 			Civilization = "teuton"
 		},
 		-- Greek tribes
