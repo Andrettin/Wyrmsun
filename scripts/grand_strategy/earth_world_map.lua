@@ -10292,12 +10292,12 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetProvinceUnitQuantity("Rhineland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
 
-	SetProvinceUnitQuantity("Netherlands", "unit-germanic-warrior", 0)
+	SetProvinceUnitQuantity("Holland", "unit-germanic-warrior", 0)
 	ChangeFactionCulture("germanic", "Frank Tribe", "teuton")
-	SetProvinceOwner("Netherlands", "teuton", "Frank Tribe") -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceCivilization("Netherlands", "teuton")
-	SetProvinceSettlementBuilding("Netherlands", "unit-teuton-town-hall", true)
-	SetProvinceUnitQuantity("Netherlands", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
+	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceCivilization("Holland", "teuton")
+	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
+	SetProvinceUnitQuantity("Holland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
 	
 	GrandStrategyEvents.VegdegsKingdom = nil
@@ -10836,6 +10836,7 @@ end
 
 if (GrandStrategyYear >= 43) then
 	SetProvinceOwner("England", "latin", "Rome")  -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceSettlementBuilding("England", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Rhodes", "latin", "Rome")  -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
@@ -10847,6 +10848,12 @@ if (GrandStrategyYear >= 63) then -- estimated date
 	GrandStrategyEvents.HuldsCurse = nil
 end
 
+if (GrandStrategyYear >= 80) then
+	-- Lowland Scotland acquired by Rome in 80 AD (its frontier being the Wall of Antoninus or Severus); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Lowland Scotland", "latin", "Rome")
+	SetProvinceSettlementBuilding("Lowland Scotland", "unit-teuton-town-hall", true)
+end
+	
 if (GrandStrategyYear >= 98) then
 	-- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Rugian Tribe")
@@ -10865,6 +10872,8 @@ if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: 
 	SetProvinceOwner("Transylvania", "latin", "Rome")
 	SetProvinceSettlementBuilding("Transylvania", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Wallachia", "latin", "Rome")
+	SetProvinceOwner("Vojvodina", "latin", "Rome")
+	SetProvinceSettlementBuilding("Vojvodina", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= 142) then
@@ -10908,6 +10917,7 @@ if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: Will
 --	SetProvinceOwner("Moldavia", "", "")
 --	SetProvinceOwner("Transylvania", "", "")
 --	SetProvinceOwner("Wallachia", "", "")
+	SetProvinceOwner("Vojvodina", "", "")
 end
 
 if (GrandStrategyYear >= 300) then
@@ -10932,9 +10942,9 @@ if (GrandStrategyYear >= 395) then
 	SetProvinceOwner("Ireland", "celt", "Scot Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	SetProvinceCivilization("Ireland", "celt")
 	SetProvinceSettlementBuilding("Ireland", "unit-germanic-town-hall", true)
-	SetProvinceOwner("Scotland", "celt", "Pict Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	SetProvinceCivilization("Scotland", "celt")
-	SetProvinceSettlementBuilding("Scotland", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Highland Scotland", "celt", "Pict Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	SetProvinceCivilization("Highland Scotland", "celt")
+	SetProvinceSettlementBuilding("Highland Scotland", "unit-germanic-town-hall", true)
 end
 
 if (GrandStrategyYear >= 397) then
@@ -10987,7 +10997,7 @@ if (GrandStrategyYear >= 445) then
 end
 
 if (GrandStrategyYear >= 450) then
-	SetProvinceOwner("Netherlands", "", "") -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+	SetProvinceOwner("Holland", "", "") -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 	SetProvinceOwner("Belgium", "teuton", "Frank Tribe") -- Frankish territory included modern Belgium in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 	SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Portugal", "teuton", "Suebi Tribe") -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -11074,8 +11084,11 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceOwner("Bavaria", "teuton", "Bavarian Tribe")
 	AcquireFactionTechnologies("teuton", "Marcomanni Tribe", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bavaria", "teuton")
-	SetProvinceOwner("Netherlands", "teuton", "Frisian Tribe")
+	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
+	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
+	SetProvinceCivilization("Friesland", "teuton")
+	SetProvinceSettlementBuilding("Friesland", "unit-teuton-town-hall", true)
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 --	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
 	SetProvinceOwner("England", "teuton", "Saxon Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -11182,8 +11195,10 @@ if (GrandStrategyYear >= 731) then
 end
 
 if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Netherlands", "teuton", "Francia")
-	AddProvinceClaim("Netherlands", "teuton", "Francia")
+	SetProvinceOwner("Holland", "teuton", "Francia")
+	AddProvinceClaim("Holland", "teuton", "Francia")
+	SetProvinceOwner("Friesland", "teuton", "Francia")
+	AddProvinceClaim("Friesland", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 765) then
@@ -11386,7 +11401,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Syracuse", "latin", "Spain")
 
 	SetProvinceOwner("Belgium", "latin", "Spain")
-	SetProvinceOwner("Netherlands", "latin", "Spain")
+	SetProvinceOwner("Holland", "latin", "Spain")
+	SetProvinceOwner("Friesland", "latin", "Spain")
 	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	
@@ -11416,7 +11432,6 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Pannonia", "teuton", "Turkey")
 	SetProvinceOwner("Hungary", "teuton", "Turkey")
 	SetProvinceOwner("Vojvodina", "teuton", "Turkey")
-	SetProvinceSettlementBuilding("Vojvodina", "unit-teuton-town-hall", true)
 	
 	SetProvinceOwner("Transylvania", "latin", "Transylvania")
 	
@@ -11438,7 +11453,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Dobruja", "teuton", "Turkey")
 	
 	SetProvinceOwner("England", "teuton", "England")
-	SetProvinceOwner("Scotland", "teuton", "Scotland")
+	SetProvinceOwner("Lowland Scotland", "teuton", "Scotland")
+	SetProvinceOwner("Highland Scotland", "teuton", "Scotland")
 end
 
 if (GrandStrategyYear >= 1561) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
@@ -11474,6 +11490,7 @@ end
 
 if (GrandStrategyYear >= 1648) then -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	SetProvinceOwner("Netherlands", "teuton", "Netherlands")
+	SetProvinceOwner("Friesland", "teuton", "Netherlands")
 	SetProvinceOwner("Rhineland", "teuton", "Westphalia")
 end
 

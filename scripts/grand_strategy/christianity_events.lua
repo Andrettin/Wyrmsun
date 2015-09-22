@@ -160,10 +160,10 @@ local ChristianityEvents = {
 		Description = "The Irish missionary Columba has arrived with twelve companions in the settlement of Hy in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Scotland") == EventFaction.Name
+				GetProvinceOwner("Lowland Scotland") == EventFaction.Name -- I couldn't find where Hy is, so this is a supposition
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
-				EventProvince = WorldMapProvinces.Scotland
+				EventProvince = WorldMapProvinces.LowlandScotland
 				return true
 			else
 				return false
@@ -184,11 +184,11 @@ local ChristianityEvents = {
 		Description = "The missionary Mohonna has been sent by Columba to christianize the Picts.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Scotland") == EventFaction.Name
-				and GetProvinceCivilization("Scotland") == "celt" -- there must be Picts in Scotland for this event to fire
+				GetProvinceOwner("Highland Scotland") == EventFaction.Name
+				and GetProvinceCivilization("Highland Scotland") == "celt" -- there must be Picts in Highland Scotland for this event to fire
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
-				EventProvince = WorldMapProvinces.Scotland
+				EventProvince = WorldMapProvinces.HighlandScotland
 				return true
 			else
 				return false
@@ -467,9 +467,9 @@ local ChristianityEvents = {
 		Description = "The missionary Willibrord, who studied for twelve years in Ireland, has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Netherlands") == EventFaction.Name
+				GetProvinceOwner("Friesland") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.Netherlands
+				EventProvince = WorldMapProvinces.Friesland
 				return true
 			else
 				return false
@@ -514,10 +514,10 @@ local ChristianityEvents = {
 		Description = "After journeying from Utrecht to the Ijssel river, the Anglo-Saxon missionary Liafwin has founded an oratory on its left bank.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Netherlands") == EventFaction.Name
+				GetProvinceOwner("Holland") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
 			) then
-				EventProvince = WorldMapProvinces.Netherlands
+				EventProvince = WorldMapProvinces.Holland
 				return true
 			else
 				return false
@@ -635,13 +635,13 @@ local ChristianityEvents = {
 		Description = "A charter has been enacted granting the church of Utrecht estates in the Arnhem region.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Netherlands") == EventFaction.Name
-				and GetProvinceCivilization("Netherlands") == "teuton"
---				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "temple")
+				GetProvinceOwner("Holland") == EventFaction.Name
+				and GetProvinceCivilization("Holland") == "teuton"
+--				and ProvinceHasBuildingClass(WorldMapProvinces.Holland.Name, "temple")
 				and SyncRand(100) < 5
 				-- should add some check for Christianity being present
 			) then
-				EventProvince = WorldMapProvinces.Netherlands
+				EventProvince = WorldMapProvinces.Holland
 				return true
 			else
 				return false

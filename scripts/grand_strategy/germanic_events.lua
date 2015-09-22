@@ -731,8 +731,8 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
-				and GetProvinceOwner("Netherlands") == EventFaction.Name -- the Netherlands were the Franks' homelands
-				and ProvinceHasBuildingClass(WorldMapProvinces.Netherlands.Name, "town-hall")
+				and GetProvinceOwner("Holland") == EventFaction.Name -- the Netherlands were the Franks' homelands
+				and ProvinceHasBuildingClass(WorldMapProvinces.Holland.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
 				return true
@@ -744,18 +744,18 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "Frank Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "Frank Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Netherlands, "Frank Tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "Frank Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.FrankTribe.Civilization, "Frank Tribe")
 				GrandStrategyFaction = Factions.FrankTribe
 				SetPlayerFaction(Factions.FrankTribe.Civilization, "Frank Tribe")
@@ -768,7 +768,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
-				and GetProvinceOwner("Brandenburg") == EventFaction.Name -- the Netherlands were the Franks' homelands
+				and GetProvinceOwner("Brandenburg") == EventFaction.Name -- Brandenburg was the Suebi's homelands
 				and ProvinceHasBuildingClass(WorldMapProvinces.Brandenburg.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then

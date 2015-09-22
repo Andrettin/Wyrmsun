@@ -28,22 +28,22 @@
 --
 
 Regions = {
-	BritishIsles = {"England", "Scotland", "Ireland"},
+	BritishIsles = {"England", "Highland Scotland", "Ireland", "Lowland Scotland"},
 	Czechoslovakia = {"Bohemia"},
 	England = {"England"},
 	Eurasia = {"Astrakhan", "Bessarabia", "Bukowina", "Crimea", "Don", "Russia", "Ukraine", "White Russia"},
-	Europe = {"Abruzzo", "Aetolia", "Albania", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Bessarabia", "Boeotia", "Bohemia", "Bosnia", "Brandenburg", "Brittany", "Bukowina", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corsica", "Crete", "Crimea", "Croatia", "Dalmatia", "Dobruja", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Pannonia", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Venetia", "Vojvodina", "Wallachia", "White Russia", "Zealand"},
+	Europe = {"Abruzzo", "Aetolia", "Albania", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Bessarabia", "Boeotia", "Bohemia", "Bosnia", "Brandenburg", "Brittany", "Bukowina", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corsica", "Crete", "Crimea", "Croatia", "Dalmatia", "Dobruja", "Don", "England", "Epirus", "Euboea", "France", "Franche Comte", "Friesland", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Highland Scotland", "Holland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Lowland Scotland", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Normandy", "Palermo", "Pannonia", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Venetia", "Vojvodina", "Wallachia", "White Russia", "Zealand"},
 	France = {"Aquitaine", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
 	Gaul = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comte", "Normandy", "Provence", "Savoy"},
-	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Rhineland", "Netherlands", "Silesia"},
+	GermanyNetherlands = {"Austria", "Bavaria", "Belgium", "Brandenburg", "Friesland", "Holland", "Rhineland", "Silesia"},
 	Greece = {"Aetolia", "Albania", "Argolis", "Attica", "Boeotia", "Crete", "Epirus", "Euboea", "Lacedaemonia", "Macedonia", "Rhodes", "Rhodope", "Skopje", "Thessaly", "Thrace"},
 	Iberia = {"Andalusia", "Aragon", "Castille", "Gallaecia", "Portugal"},
 	Italy = {"Abruzzo", "Apulia", "Calabria", "Corsica", "Istria", "Latium", "Liguria", "Lombardy", "Modena", "Naples", "Palermo", "Parma", "Piedmont", "Romagna", "Sardinia", "Syracuse", "Tuscany", "Umbria", "Venetia"},
-	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Franche Comte", "Ireland", "Netherlands", "Normandy", "Provence", "Savoy", "Scotland"},
+	NorthwestEurope = {"Aquitaine", "Belgium", "Brittany", "Burgundy", "England", "France", "Franche Comte", "Friesland", "Highland Scotland", "Holland", "Ireland", "Lowland Scotland", "Normandy", "Provence", "Savoy"},
 	Poland = {"Bukowina", "Galicia", "Poland", "White Russia"},
 	RomanDanube = {"Austria", "Bavaria", "Bosnia", "Bulgaria", "Carniola", "Croatia", "Dalmatia", "Dobruja", "Montenegro", "Pannonia", "Serbia", "Switzerland"},
 	Scandinavia = {"Gotaland", "Gotland", "Jutland", "Scania", "Sweden", "Zealand"},
-	WestandCentralEurope = {"Abruzzo", "Aetolia", "Albania", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Bosnia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corsica", "Crete", "Croatia", "Dalmatia", "Dobruja", "England", "Epirus", "Euboea", "France", "Franche Comte", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Netherlands", "Normandy", "Palermo", "Pannonia", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Sardinia", "Savoy", "Scania", "Scotland", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Umbria", "Venetia", "Vojvodina", "Wallachia", "Zealand"}
+	WestandCentralEurope = {"Abruzzo", "Aetolia", "Albania", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Attica", "Austria", "Baltic Lands", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Bosnia", "Brandenburg", "Brittany", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corsica", "Crete", "Croatia", "Dalmatia", "Dobruja", "England", "Epirus", "Euboea", "France", "Franche Comte", "Friesland", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Highland Scotland", "Holland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Liguria", "Lombardy", "Lowland Scotland", "Macedonia", "Modena", "Moldavia", "Montenegro", "Naples", "Normandy", "Palermo", "Pannonia", "Parma", "Piedmont", "Poland", "Portugal", "Provence", "Prussia", "Rhineland", "Rhodes", "Rhodope", "Romagna", "Sardinia", "Savoy", "Scania", "Serbia", "Silesia", "Skopje", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Transylvania", "Tuscany", "Umbria", "Venetia", "Vojvodina", "Wallachia", "Zealand"}
 }
 
 function LoadProvinces(world)
@@ -1146,6 +1146,31 @@ function LoadProvinces(world)
 				"latin", "France"
 			}
 		},
+		Friesland = {
+			Name = "Friesland",
+			CulturalNames = {
+				FrisianTribe = "Frisia",
+				teuton = "Friesland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+			},
+			Tiles = {
+				{496, 104}, {496, 105},
+				{497, 104}, {497, 105},
+				{498, 104}, {498, 105},
+				{499, 104}, {499, 105}
+			},
+			SettlementName = "Leeuwarden",
+			CulturalSettlementNames = {
+				teuton = "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+			},
+			SettlementLocation = {496, 104}, -- Leeuwarden
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true,
+			Claims = {
+				"teuton", "Frisian Tribe",
+				"teuton", "Netherlands"
+			}
+		},
 		Galicia = {
 			Name = "Galicia",
 			CulturalNames = {
@@ -1243,6 +1268,77 @@ function LoadProvinces(world)
 			Claims = {
 				"germanic", "Goth Tribe",
 				"goth", "Goth Tribe"
+			}
+		},
+		HighlandScotland = {
+			Name = "Highland Scotland",
+			CulturalNames = {
+				latin = "Caledonia",
+				England = "Highland Scotland",
+				ScotTribe = "Highland Scotland",
+				Scotland = "Highland Scotland",
+				teuton = "Highland Scotland"
+			},
+			Tiles = {
+				{116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24}, -- old map
+				{460, 90},
+				{461, 90}, {461, 92},
+				{462, 92}, {462, 95}, {462, 97},
+				{463, 94}, {463, 95},
+				{464, 91}, {464, 92}, {464, 93}, {464, 94}, {464, 95}, {464, 96}, {464, 97},
+				{465, 90}, {465, 91}, {465, 92}, {465, 93}, {465, 94}, {465, 95}, {465, 96},
+				{466, 89}, {466, 90}, {466, 91}, {466, 92}, {466, 93}, {466, 94}, {466, 95}, {466, 96},
+				{467, 90}, {467, 91}, {467, 92}, {467, 93}, {467, 94}, {467, 95}, {467, 96},
+				{468, 89}, {468, 90}, {468, 91}, {468, 92}, {468, 93}, {468, 94}, {468, 95}, {468, 96},
+				{469, 89}, {469, 90}, {469, 92}, {469, 93}, {469, 94}, {469, 95}, {469, 96},
+				{470, 89}, {470, 92}, {470, 93}, {470, 94}, {470, 95}, {470, 96}, 
+				{471, 92}, {471, 93}, {471, 94}, {471, 95},
+				{472, 92}, {472, 93}, {472, 94},
+				{473, 92}, {473, 93},
+				{474, 92},
+				{476, 84}
+			},
+			SettlementName = "Aberdeen",
+			SettlementLocation = {473, 93}, -- Aberdeen
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Hills",
+			Coastal = true,
+			Claims = {
+				"celt", "Pict Tribe",
+				"teuton", "Scotland" -- should be English
+			}
+		},
+		Holland = {
+			Name = "Holland",
+			CulturalNames = {
+				latin = "Batavia",
+				teuton = "Holland"
+			},
+			Tiles = {
+				{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
+				{490, 109},
+				{491, 108}, {491, 109},
+				{492, 107}, {492, 108}, {492, 109},
+				{493, 106}, {493, 107}, {493, 108}, {493, 109},
+				{494, 107}, {494, 108}, {494, 109},
+				{495, 107}, {495, 108}, {495, 109},
+				{496, 106}, {496, 107}, {496, 108}, {496, 109}, {496, 110},
+				{497, 106}, {497, 107}, {497, 109},
+				{498, 106}, {498, 107},
+				{499, 106}
+			},
+			SettlementName = "Amsterdam",
+			CulturalSettlementNames = {
+				teuton = "Amsterdam"
+			},
+			SettlementLocation = {494, 107}, -- Amsterdam
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Plains",
+			Coastal = true,
+			Claims = {
+				"germanic", "Frank Tribe",
+				"teuton", "Frank Tribe",
+				"teuton", "Netherlands"
 			}
 		},
 		Hungary = {
@@ -1455,6 +1551,35 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
+		LowlandScotland = {
+			Name = "Lowland Scotland",
+			CulturalNames = {
+				latin = "Valentia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+				England = "Lowland Scotland",
+				ScotTribe = "Lowland Scotland",
+				Scotland = "Lowland Scotland",
+				teuton = "Lowland Scotland"
+			},
+			Tiles = {
+				{466, 97}, {466, 98}, {466, 99},
+				{467, 97}, {467, 98}, {467, 99},
+				{468, 97}, {468, 98}, {468, 99},
+				{469, 97}, {469, 98}, {469, 99},
+				{470, 97}, {470, 98}, {470, 99},
+				{471, 97}, {471, 98},
+				{472, 97}, {472, 98},
+				{473, 97}, {473, 98},
+				{474, 97}
+			},
+			SettlementName = "Edinburgh",
+			SettlementLocation = {470, 97}, -- Edinburgh
+			Map = "maps/random_maps/random-map-forest.smp",
+			SettlementTerrain = "Hills",
+			Coastal = true,
+			Claims = {
+				"teuton", "Scotland" -- should be English
+			}
+		},
 		Macedonia = {
 			Name = "Macedonia",
 			Tiles = {
@@ -1575,40 +1700,6 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
-		},
-		Netherlands = {
-			Name = "Netherlands",
-			CulturalNames = {
-				FrisianTribe = "Frisia",
-				latin = "Batavia",
-				teuton = "Netherlands"
-			},
-			Tiles = {
-				{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
-				{490, 109},
-				{491, 108}, {491, 109},
-				{492, 107}, {492, 108}, {492, 109},
-				{493, 106}, {493, 107}, {493, 108}, {493, 109},
-				{494, 107}, {494, 108}, {494, 109},
-				{495, 107}, {495, 108}, {495, 109},
-				{496, 104}, {496, 105}, {496, 106}, {496, 107}, {496, 108}, {496, 109}, {496, 110},
-				{497, 104}, {497, 105}, {497, 106}, {497, 107}, {497, 109},
-				{498, 104}, {498, 105}, {498, 106}, {498, 107},
-				{499, 104}, {499, 105}, {499, 106}, {499, 107}
-			},
-			SettlementName = "Amsterdam",
-			CulturalSettlementNames = {
-				teuton = "Amsterdam"
-			},
-			SettlementLocation = {494, 107}, -- Amsterdam
-			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains",
-			Coastal = true,
-			Claims = {
-				"germanic", "Frank Tribe",
-				"teuton", "Frank Tribe",
-				"teuton", "Netherlands"
-			}
 		},
 		Normandy = {
 			Name = "Normandy",
@@ -1821,7 +1912,7 @@ function LoadProvinces(world)
 				{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
 				{497, 108}, {497, 110},
 				{498, 108}, {498, 109}, {498, 110},
-				{499, 108}, {499, 109}, {499, 110},
+				{499, 107}, {499, 108}, {499, 109}, {499, 110},
 				{500, 103}, {500, 104}, {500, 105}, {500, 106}, {500, 107}, {500, 108}, {500, 109}, {500, 110},
 				{501, 103}, {501, 104}, {501, 105}, {501, 106}, {501, 107}, {501, 108}, {501, 109}, {501, 110},
 				{502, 103}, {502, 104}, {502, 105}, {502, 106}, {502, 107}, {502, 108}, {502, 109}, {502, 110}
@@ -1988,43 +2079,6 @@ function LoadProvinces(world)
 				"basque", "Gylfing Tribe",
 				"germanic", "Dane Tribe",
 				"teuton", "Dane Tribe"
-			}
-		},
-		Scotland = {
-			Name = "Scotland",
-			CulturalNames = {
-				latin = "Caledonia",
-				England = "Scotland",
-				ScotTribe = "Scotland",
-				Scotland = "Scotland",
-				teuton = "Scotland"
-			},
-			Tiles = {
-				{116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24}, -- old map
-				{460, 90},
-				{461, 90}, {461, 92},
-				{462, 92}, {462, 95}, {462, 97},
-				{463, 94}, {463, 95},
-				{464, 91}, {464, 92}, {464, 93}, {464, 94}, {464, 95}, {464, 96}, {464, 97},
-				{465, 90}, {465, 91}, {465, 92}, {465, 93}, {465, 94}, {465, 95}, {465, 96},
-				{466, 89}, {466, 90}, {466, 91}, {466, 92}, {466, 93}, {466, 94}, {466, 95}, {466, 96}, {466, 97}, {466, 98}, {466, 99},
-				{467, 90}, {467, 91}, {467, 92}, {467, 93}, {467, 94}, {467, 95}, {467, 96}, {467, 97}, {467, 98}, {467, 99},
-				{468, 89}, {468, 90}, {468, 91}, {468, 92}, {468, 93}, {468, 94}, {468, 95}, {468, 96}, {468, 97}, {468, 98}, {468, 99},
-				{469, 89}, {469, 90}, {469, 92}, {469, 93}, {469, 94}, {469, 95}, {469, 96}, {469, 97}, {469, 98}, {469, 99},
-				{470, 89}, {470, 92}, {470, 93}, {470, 94}, {470, 95}, {470, 96}, {470, 97}, {470, 98}, {470, 99},
-				{471, 92}, {471, 93}, {471, 94}, {471, 95}, {471, 97}, {471, 98},
-				{472, 92}, {472, 93}, {472, 94}, {472, 97}, {472, 98},
-				{473, 92}, {473, 93}, {473, 97}, {473, 98},
-				{474, 92}, {474, 97},
-				{476, 84}
-			},
-			SettlementLocation = {470, 96}, -- Edinburgh
-			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Hills",
-			Coastal = true,
-			Claims = {
-				"celt", "Pict Tribe",
-				"teuton", "Scotland" -- should be English
 			}
 		},
 		Serbia = {
