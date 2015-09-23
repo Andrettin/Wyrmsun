@@ -56,6 +56,7 @@ DefineWorldMapTerrainTypes(
 		"name", "Water",
 		"tag", "ocean",
 		"base-tile", "Plains",
+		"water", true,
 		"has-transitions", true,
 		"variations", 3
 	},
