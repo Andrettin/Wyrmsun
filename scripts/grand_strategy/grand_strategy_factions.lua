@@ -149,6 +149,10 @@ function LoadFactions(world)
 			Name = "Swede Tribe",
 			Civilization = "germanic"
 		},
+		ThuringianTribe = {
+			Name = "Thuringian Tribe",
+			Civilization = "teuton"
+		},
 		VandalTribe = {
 			Name = "Vandal Tribe",
 			Civilization = "goth"

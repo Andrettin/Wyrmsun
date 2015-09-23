@@ -415,14 +415,15 @@ local ChristianityEvents = {
 		OptionTooltips = {"+1 Prestige"}
 	},
 	KilianMissionaryToFranconia = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
-		Name = "Kilian, Missionary to Franconia",
-		Description = "The Irish missionary Kilian has arrived with twelve companions in Franconia to spread the Christian faith.",
+		Name = "Kilian, Missionary to PROVINCE_NAME",
+		Description = "The Irish missionary Kilian has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Bavaria") == EventFaction.Name
-				and (GetProvinceCivilization("Bavaria") == "germanic" or GetProvinceCivilization("Bavaria") == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
+				GetProvinceOwner("Franconia") == EventFaction.Name
+				and (GetProvinceCivilization("Franconia") == "germanic" or GetProvinceCivilization("Franconia") == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
 				and GetProvinceCivilization("Ireland") == "celt"
 			) then
+				EventProvince = WorldMapProvinces.Franconia
 				return true
 			else
 				return false

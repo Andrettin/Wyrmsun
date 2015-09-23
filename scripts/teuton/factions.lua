@@ -143,12 +143,12 @@ DefineFaction("Swede Tribe", {
 	Playable = false
 })
 
---	"faction", {
---		"name", "Thuringian Tribe",
---		Type = "tribe",
---		Color = "yellow",
---		SecondaryColor = "yellow"
---	},
+DefineFaction("Thuringian Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
 
 DefineFaction("Vandal Tribe", {
 	Civilization = "teuton",
