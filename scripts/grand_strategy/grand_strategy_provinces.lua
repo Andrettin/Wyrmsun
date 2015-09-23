@@ -475,13 +475,23 @@ function LoadProvinces(world)
 				latin = "Raetia",
 				teuton = "Bavaria"
 			},
-			Tiles = { {126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29} },
+			Tiles = {
+				{126, 29}, {127, 28}, {127, 29}, {128, 28}, {128, 29}, -- old map
+				{511, 116}, {511, 117}, {511, 118}, {511, 119}, {511, 120},
+				{512, 116}, {512, 117}, {512, 118}, {512, 119},
+				{513, 114}, {513, 115}, {513, 116}, {513, 117}, {513, 118}, {513, 119},
+				{514, 114}, {514, 115}, {514, 116}, {514, 117}, {514, 118}, {514, 119},
+				{515, 114}, {515, 115}, {515, 116}, {515, 117}, {515, 118}, {515, 119},
+				{516, 116}, {516, 117}, {516, 118},
+				{517, 117}, {517, 118},
+				{518, 117}
+			},
 			SettlementName = "Ratisbon",
 			CulturalSettlementNames = {
 				latin = "Regina Castra",
 				teuton = "Regensburg"
 			},
-			SettlementLocation = {128, 29}, -- Regensburg
+			SettlementLocation = {514, 116}, -- Regensburg
 			Map = "maps/earth/regensburg.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
