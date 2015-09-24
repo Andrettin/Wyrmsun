@@ -852,8 +852,14 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest_3.png
 /graphics/tilesets/world/terrain/scrub_forest_4.png
 /graphics/tilesets/fogofwar.png
+/graphics/ui/backgrounds/gnashorn.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gnashorn_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/gryphon.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gryphon_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/wyrm_small.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/yale.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/yale_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/fonts/small.png
 /graphics/ui/bar_frame.png
@@ -984,8 +990,10 @@ StumpyStrust:
 /graphics/missiles/explosion.png (later modified by Jinn)
 
 Tanja Nov.:
+/graphics/ui/backgrounds/gnashorn.png (later modified by Jinn)
 /graphics/ui/backgrounds/gryphon.png (later modified by Jinn)
 /graphics/ui/backgrounds/wyrm.png (later modified by Jinn)
+/graphics/ui/backgrounds/yale.png (later modified by Jinn)
 
 TaShadan:
 /graphics/neutral/units/long_swordsman.png

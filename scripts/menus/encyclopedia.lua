@@ -1100,13 +1100,13 @@ function GetCivilizationBackground(civilization)
 	if (civilization == "basque") then
 		return "ui/backgrounds/gryphon.png"
 	elseif (civilization == "dwarf") then
-		return "ui/backgrounds/gryphon.png"
+		return "ui/backgrounds/yale.png"
 	elseif (civilization == "elf") then
-		return "ui/backgrounds/gryphon.png"
+		return "ui/backgrounds/yale.png"
 	elseif (civilization == "germanic") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "gnome") then
-		return "ui/backgrounds/gryphon.png"
+		return "ui/backgrounds/yale.png"
 	elseif (civilization == "goblin") then
 		return "ui/backgrounds/wyrm.png"
 	elseif (civilization == "goth") then
@@ -1142,6 +1142,10 @@ function GetUnitBackground(unit_name)
 			return GetCivilizationBackground(GetUnitTypeData(unit_name, "Civilization"))
 		elseif (unit_name == "unit-gryphon") then
 			return "ui/backgrounds/gryphon.png"
+		elseif (unit_name == "unit-wyrm") then
+			return "ui/backgrounds/wyrm.png"
+		elseif (unit_name == "unit-yale") then
+			return "ui/backgrounds/yale.png"
 		end
 	else
 		return GetCivilizationBackground(CUpgrade:Get(unit_name).Civilization)

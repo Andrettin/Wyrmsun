@@ -6,10 +6,10 @@ function RunResultsMenu()
 	if (GameResult == GameVictory) then
 		result = "Victory!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			background = GetBackground("ui/backgrounds/gryphon.png")
+			background = GetBackground("ui/backgrounds/yale.png")
 			PlayMusic("music/victory.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			background = GetBackground("ui/backgrounds/gryphon.png")
+			background = GetBackground("ui/backgrounds/yale.png")
 			PlayMusic("music/victory.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
@@ -26,8 +26,11 @@ function RunResultsMenu()
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
 			PlayMusic("music/defeat2.ogg")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+			background = GetBackground("ui/backgrounds/yale.png")
+			PlayMusic("music/defeat.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
-			background = GetBackground("ui/backgrounds/gryphon.png")
+			background = GetBackground("ui/backgrounds/yale.png")
 			PlayMusic("music/defeat.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			background = GetBackground("ui/backgrounds/wyrm.png")

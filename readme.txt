@@ -43,12 +43,18 @@ Getting Wyrmsun on Steam (http://store.steampowered.com/app/370070) provides you
 
 The Stratagus engine, as well as the code, artwork, sounds, music and story elements included in Wyrmsun are distributed under the GPL 2.0 license, with the exception of the following files:
 
+/graphics/ui/backgrounds/gnashorn.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_4_3.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_small.png (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gryphon.png (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gryphon_4_3.png (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gryphon_small.png (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/wyrm.png (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/wyrm_4_3.png (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/wyrm_small.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_4_3.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_small.png (used for Wyrmsun with permission)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
@@ -199,7 +205,7 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 1.3.4
+- 1.4.0
 -----------------------------------------------------------------------
 
 * Abilities
@@ -248,6 +254,7 @@ https://github.com/Andrettin/Wyrmsun
 - A idle worker button now appears in the upper right corner of the screen if there are any idle workers.
 - Fixed a few minor issues with button clicking.
 - Encyclopedia, tech tree and quest tooltips are now drawn as popups.
+- Added new Gnashorn and Yale backgrounds (used for Wyrmsun with permission).
 
 -----------------------------------------------------------------------
 - 1.3.3
