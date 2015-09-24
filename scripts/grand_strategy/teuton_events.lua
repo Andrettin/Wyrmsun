@@ -96,8 +96,11 @@ local TeutonEvents = {
 			if (
 				EventFaction.Name == "Suebi Tribe"
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
-				and ProvinceHasBorderWith(WorldMapProvinces.Bavaria, WorldMapProvinces.Brandenburg)
-				and ProvinceHasBorderWith(WorldMapProvinces.Baden, WorldMapProvinces.France) -- should be Alsace
+--				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Franconia)
+				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Bavaria)
+				and ProvinceHasBorderWith(WorldMapProvinces.Franconia, WorldMapProvinces.Baden)
+				and ProvinceHasBorderWith(WorldMapProvinces.Baden, WorldMapProvinces.Alsace)
+				and ProvinceHasBorderWith(WorldMapProvinces.Alsace, WorldMapProvinces.FrancheComte)
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Aedui Tribe") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Arverni Tribe") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "Sequani Tribe") == "peace"
@@ -147,14 +150,14 @@ local TeutonEvents = {
 					RunMap("maps/earth/belfort.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.FrancheComte, "Suebi Tribe")
+						AcquireProvince(WorldMapProvinces.Alsace, "Suebi Tribe")
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
-								SetProvinceUnitQuantity("Franche Comte", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+								SetProvinceUnitQuantity("Alsace", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
 						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.FrancheComte.SettlementLocation[1], WorldMapProvinces.FrancheComte.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Alsace.SettlementLocation[1], WorldMapProvinces.Alsace.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
@@ -163,11 +166,11 @@ local TeutonEvents = {
 						end
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Suebi Tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.FrancheComte, "Suebi Tribe")
+					AcquireProvince(WorldMapProvinces.Alsace, "Suebi Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Burgundy", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) * 3 / 4)) -- to give them something of a defense
-							SetProvinceUnitQuantity("Franche Comte", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
+							SetProvinceUnitQuantity("Alsace", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 						end
 					end
@@ -175,7 +178,7 @@ local TeutonEvents = {
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.FrancheComte.SettlementLocation[1], WorldMapProvinces.FrancheComte.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Alsace.SettlementLocation[1], WorldMapProvinces.Alsace.SettlementLocation[2])
 						GrandStrategyDialog("The Battle of Magetobria", "The Aedui have been crushed! We were granted land in Gaul by the Sequani and the Arverni. However, our chieftain Ariovistus wanted more, and took much of the Sequani's lands for settlement.")
 					end
 				end

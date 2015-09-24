@@ -47,9 +47,11 @@ local LatinEvents = {
 			if (
 				EventFaction.Name == "Rome"
 				and GetProvinceOwner("France") == EventFaction.Name -- Gaul must have been conquered
+				and GetProvinceOwner("Alsace") == EventFaction.Name
 				and GetProvinceOwner("Aquitaine") == EventFaction.Name
 				and GetProvinceOwner("Burgundy") == EventFaction.Name
 				and GetProvinceOwner("Franche Comte") == EventFaction.Name
+				and GetProvinceOwner("Moselle") == EventFaction.Name
 				and GetProvinceOwner("Normandy") == EventFaction.Name
 				and GetProvinceOwner("Provence") == EventFaction.Name
 				and GetProvinceOwner("Savoy") == EventFaction.Name

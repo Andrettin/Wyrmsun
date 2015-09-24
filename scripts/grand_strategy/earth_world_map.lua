@@ -9987,8 +9987,10 @@ LoadFactions("Earth")
 LoadProvinces("Earth")
 
 -- generate food resources to provinces that have none, and that don't have coastal settlements (which produce fish)
+AddProvinceResource(WorldMapProvinces.Alsace, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Bessarabia, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Carniola, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Moselle, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Parma, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Romagna, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Savoy, "grain", 1)
@@ -10967,11 +10969,11 @@ if (GrandStrategyYear >= -67) then -- Crete acquired by Rome in 67 BC; Source: W
 	SetProvinceOwner("Crete", "latin", "Rome")
 end
 
-if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Sequani lands (and Alsace?) and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
-	SetProvinceOwner("Franche Comte", "teuton", "Suebi Tribe")
+if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
+	SetProvinceOwner("Alsace", "teuton", "Suebi Tribe")
 	SetProvinceUnitQuantity("Brandenburg", "unit-teuton-swordsman", 4) -- to give them something of a defense
-	SetProvinceUnitQuantity("Franche Comte", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Franche Comte", "unit-teuton-swordsman", 13)
+	SetProvinceUnitQuantity("Alsace", "unit-germanic-warrior", 0)
+	SetProvinceUnitQuantity("Alsace", "unit-teuton-swordsman", 13)
 	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 0) -- Aedui forces defeated
 	GrandStrategyEvents.TheSequanisAppeal = nil
 	GrandStrategyEvents.TheBattleOfMagetobria = nil
@@ -10980,8 +10982,7 @@ end
 if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	GrandStrategyEvents.AskRomeForHelp = nil
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
-	SetProvinceOwner("Franche Comte", "", "")
-	SetProvinceUnitQuantity("Franche Comte", "unit-germanic-warrior", 10) -- to make the province harder to conquer
+	SetProvinceOwner("Alsace", "", "")
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
 --	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", true)
@@ -11006,6 +11007,8 @@ if (GrandStrategyYear >= -52) then
 end
 
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Alsace", "latin", "Rome")
+	SetProvinceSettlementBuilding("Alsace", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Aquitaine", "latin", "Rome")
 	SetProvinceOwner("Brittany", "latin", "Rome")
 	SetProvinceSettlementBuilding("Brittany", "unit-teuton-town-hall", true)
@@ -11013,6 +11016,8 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceOwner("France", "latin", "Rome")
 	SetProvinceSettlementBuilding("France", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Franche Comte", "latin", "Rome")
+	SetProvinceOwner("Moselle", "latin", "Rome")
+	SetProvinceSettlementBuilding("Moselle", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Normandy", "latin", "Rome")
 	SetProvinceSettlementBuilding("Normandy", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Belgium", "latin", "Rome")
@@ -11368,13 +11373,17 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Brandenburg", "", "")
 	SetProvinceOwner("Aquitaine", "teuton", "Francia") -- Aquitania conquered by the Franks in 507
 	AddProvinceClaim("Aquitaine", "teuton", "Francia")
+--	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
 --	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
+--	SetProvinceOwner("Moselle", "teuton", "Alamanni Tribe")
 --	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
 --	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
 	-- Alemanni lands (Alsace, Baden, Wurtemberg and Augsburg) conquered by the Franks in 506
+	SetProvinceOwner("Alsace", "teuton", "Francia")
 	SetProvinceOwner("Baden", "teuton", "Francia")
 	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
 	SetProvinceOwner("Augsburg", "teuton", "Francia")
+	SetProvinceOwner("Moselle", "teuton", "Francia")
 	
 	SetProvinceOwner("Franconia", "teuton", "Thuringian Tribe")
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Thuringian Tribe") -- who did the Thuringians actually stem from?

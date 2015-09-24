@@ -179,7 +179,7 @@ local EarthEvents = {
 				and GetProvinceOwner("Provence") == "Rome"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SuebiTribe.Civilization, "Suebi Tribe") == "war"
 				and GetFactionDiplomacyState("latin", "Rome", Factions.SuebiTribe.Civilization, "Suebi Tribe") == "peace"
-				and GetProvinceOwner("Franche Comte") == "Suebi Tribe"
+				and GetProvinceOwner("Alsace") == "Suebi Tribe"
 				and SyncRand(100) < 33
 			) then
 				return true
