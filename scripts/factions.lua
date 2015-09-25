@@ -131,12 +131,6 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "red"
 	},
 	"faction", {
-		"name", "Burgundian Tribe",
-		"type", "tribe",
-		"color", "brown",
-		"secondary_color", "brown"
-	},
-	"faction", {
 		"name", "Dane Tribe",
 		"type", "tribe",
 		"color", "red",
@@ -150,13 +144,6 @@ DefineCivilizationFactions("germanic",
 		"playable", false
 	},
 	"faction", {
-		"name", "Frisian Tribe",
-		"type", "tribe",
-		"color", "violet", -- change to a better one?
-		"secondary_color", "purple",
-		"playable", false
-	},
-	"faction", {
 		"name", "Goth Tribe",
 		"type", "tribe",
 		"color", "red",
@@ -167,27 +154,6 @@ DefineCivilizationFactions("germanic",
 		"type", "tribe",
 		"color", "red",
 		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Marcomanni Tribe",
-		"type", "tribe",
-		"color", "orange", -- change to a better one?
-		"secondary_color", "red",
-		"playable", false
-	},
-	"faction", {
-		"name", "Ostrogoth Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "red",
-		"playable", false
-	},
-	"faction", {
-		"name", "Rugian Tribe",
-		"type", "tribe",
-		"color", "red", -- change to a better one?
-		"secondary_color", "orange",
-		"playable", false
 	},
 	"faction", {
 		"name", "Saxon Tribe",
@@ -208,27 +174,6 @@ DefineCivilizationFactions("germanic",
 		"type", "tribe",
 		"color", "blue",
 		"secondary_color", "yellow"
-	},
---	"faction", {
---		"name", "Thuringian Tribe",
---		"type", "tribe",
---		"color", "yellow",
---		"secondary_color", "yellow",
---		"playable", false
---	},
-	"faction", {
-		"name", "Vandal Tribe",
-		"type", "tribe",
-		"color", "cyan",
-		"secondary_color", "blue",
-		"playable", false
-	},
-	"faction", {
-		"name", "Visigoth Tribe",
-		"type", "tribe",
-		"color", "pink",
-		"secondary_color", "pink",
-		"playable", false
 	}
 )
 

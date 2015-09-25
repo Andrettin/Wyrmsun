@@ -58,7 +58,7 @@ DefineWorldMapTerrainTypes(
 		"base-tile", "Plains",
 		"water", true,
 		"has-transitions", true,
-		"variations", 3
+		"variations", 4
 	},
 	"terrain-type", {
 		"name", "Conifer Forest",

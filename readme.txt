@@ -245,6 +245,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Bountiful Harvest event now grants additional food in every province, rather than giving extra gold to the player.
 - Added an enormous number of new factions to populate historical Europe.
 - Grand strategy gold mine graphics have been reworked, and now have player color (by Jinn).
+- New ocean tile variations (by Jinn).
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.

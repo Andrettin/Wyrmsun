@@ -41,14 +41,6 @@ DefineFaction("Bavarian Tribe", {
 	DevelopsTo = {"Bavaria", "Austria"}
 })
 
-DefineFaction("Burgundian Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown",
-	Playable = false
-})
-
 DefineFaction("Dane Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -103,22 +95,6 @@ DefineFaction("Marcomanni Tribe", {
 	DevelopsTo = {"Bavaria", "Galicia", "Austria"}
 })
 
-DefineFaction("Ostrogoth Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
-	Playable = false
-})
-
-DefineFaction("Rugian Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "red", -- change to a better one?
-	SecondaryColor = "orange",
-	Playable = false
-})
-
 DefineFaction("Saxon Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -148,22 +124,6 @@ DefineFaction("Thuringian Tribe", {
 	Type = "tribe",
 	Color = "green",
 	SecondaryColor = "green"
-})
-
-DefineFaction("Vandal Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "cyan",
-	SecondaryColor = "blue",
-	Playable = false
-})
-
-DefineFaction("Visigoth Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "pink",
-	SecondaryColor = "pink",
-	Playable = false
 })
 
 -- Teuton polities
