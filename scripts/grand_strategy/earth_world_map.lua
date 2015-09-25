@@ -11016,6 +11016,8 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceOwner("France", "latin", "Rome")
 	SetProvinceSettlementBuilding("France", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Franche Comte", "latin", "Rome")
+	SetProvinceOwner("Lorraine", "latin", "Rome")
+	SetProvinceSettlementBuilding("Lorraine", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Moselle", "latin", "Rome")
 	SetProvinceSettlementBuilding("Moselle", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Normandy", "latin", "Rome")
@@ -11357,6 +11359,22 @@ if (GrandStrategyYear >= 500) then
 	SetRegionPopulation("Eurasia", 6900000) -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
+if (GrandStrategyYear >= 506) then
+--	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
+--	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
+--	SetProvinceOwner("Lorraine", "teuton", "Alamanni Tribe")
+--	SetProvinceOwner("Moselle", "teuton", "Alamanni Tribe")
+--	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
+--	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
+	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and Lorraine) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	SetProvinceOwner("Alsace", "teuton", "Francia")
+	SetProvinceOwner("Baden", "teuton", "Francia")
+	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
+	SetProvinceOwner("Augsburg", "teuton", "Francia")
+	SetProvinceOwner("Lorraine", "teuton", "Francia")
+	SetProvinceOwner("Moselle", "teuton", "Francia")
+end
+
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Austria", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
@@ -11373,17 +11391,6 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Brandenburg", "", "")
 	SetProvinceOwner("Aquitaine", "teuton", "Francia") -- Aquitania conquered by the Franks in 507
 	AddProvinceClaim("Aquitaine", "teuton", "Francia")
---	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Moselle", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
-	-- Alemanni lands (Alsace, Baden, Wurtemberg and Augsburg) conquered by the Franks in 506
-	SetProvinceOwner("Alsace", "teuton", "Francia")
-	SetProvinceOwner("Baden", "teuton", "Francia")
-	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
-	SetProvinceOwner("Augsburg", "teuton", "Francia")
-	SetProvinceOwner("Moselle", "teuton", "Francia")
 	
 	SetProvinceOwner("Franconia", "teuton", "Thuringian Tribe")
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Thuringian Tribe") -- who did the Thuringians actually stem from?
