@@ -41,6 +41,20 @@ DefineFaction("Bavarian Tribe", {
 	DevelopsTo = {"Bavaria", "Austria"}
 })
 
+DefineFaction("Chauci Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "black",
+	SecondaryColor = "black"
+})
+
+DefineFaction("Cherusci Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "teal",
+	SecondaryColor = "teal"
+})
+
 DefineFaction("Dane Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",

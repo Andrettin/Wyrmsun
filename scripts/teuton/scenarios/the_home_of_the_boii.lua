@@ -139,10 +139,10 @@ if (LoadedGame == false) then
 		end
 
 		-- Lombards
-		if (GetProvinceOwner("Rhineland") == "Lombards") then
+		if (GetProvinceOwner("Hanover") == "Lombards") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(4, player_spawn_point[1], player_spawn_point[2])
-			CreateProvinceUnits("Rhineland", 4, 4)
+			CreateProvinceUnits("Hanover", 4, 4)
 		end
 	end
 end

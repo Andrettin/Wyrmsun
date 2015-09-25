@@ -663,10 +663,10 @@ local ChristianityEvents = {
 		Description = "The work \"Vita sancti Lebuini antiqua\" described the life of Liafwin (Lebuin), an Anglo-Saxon missionary who made extensive efforts to convert the Saxons, penetrating deep into their country, even undertaking as risky an act as appearing in the annual assembly of the pagan Saxons to spread his faith.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Rhineland") == EventFaction.Name
-				and GetProvinceCivilization("Rhineland") == "teuton"
+				GetProvinceOwner("Hanover") == EventFaction.Name
+				and GetProvinceCivilization("Hanover") == "teuton"
 			) then
-				EventProvince = WorldMapProvinces.Rhineland
+				EventProvince = WorldMapProvinces.Hanover
 				return true
 			else
 				return false
