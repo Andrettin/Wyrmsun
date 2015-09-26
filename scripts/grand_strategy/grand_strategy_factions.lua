@@ -84,6 +84,10 @@ function LoadFactions(world)
 			Name = "Alamanni Tribe",
 			Civilization = "teuton"
 		},
+		AngleTribe = {
+			Name = "Angle Tribe",
+			Civilization = "teuton"
+		},
 		AsaTribe = {
 			Name = "Asa Tribe",
 			Civilization = "germanic",
@@ -147,7 +151,7 @@ function LoadFactions(world)
 		},
 		SaxonTribe = {
 			Name = "Saxon Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		SuebiTribe = {
 			Name = "Suebi Tribe",
@@ -184,6 +188,14 @@ function LoadFactions(world)
 		},
 		Brandenburg = {
 			Name = "Brandenburg",
+			Civilization = "teuton"
+		},
+		Bremen = {
+			Name = "Bremen",
+			Civilization = "teuton"
+		},
+		Brunswick = {
+			Name = "Brunswick",
 			Civilization = "teuton"
 		},
 		Burgundy = {

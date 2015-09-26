@@ -10241,7 +10241,12 @@ if (GrandStrategyYear >= -5800) then
 	-- Cris culture migrates from southeastern Europe and the Lower Danube Valley to the region on the western side of the Dnieper/Dniester rivers; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 107-108.
 	
 	-- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+	SetProvinceOwner("Jutland", "basque", "Ertebolle Tribe")
+	SetProvinceCivilization("Jutland", "basque")
+	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
 	SetProvinceOwner("Scania", "basque", "Ertebolle Tribe")
+	SetProvinceCivilization("Scania", "basque")
+	SetProvinceSettlementBuilding("Scania", "unit-germanic-town-hall", true)
 end
 
 if (GrandStrategyYear >= -5500) then
@@ -10261,9 +10266,6 @@ if (GrandStrategyYear >= -5400) then
 	AcquireFactionTechnologies("basque", "Kongemose Tribe", "basque", "Ertebolle Tribe")
 	
 	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) begins being irregularly occupied at around 5400 BC; wild boars were hunted for their meat; pine martens and otters were hunted for their fur; the site was generally occupied between Fall and early Spring; Ringkloster may have been occupied by Ertebolle foragers, who would pass the remnant of the year at the coast; it may also have been inhabited by a people distinct from the coast-inhabitants; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
-	SetProvinceOwner("Jutland", "basque", "Ertebolle Tribe")
-	SetProvinceCivilization("Jutland", "basque")
-	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
 	
 	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) faced several occupations from 5400 BC; beavers, deer and ducks were hunted, and many sorts of freshwater fishes were caught, particularly pike and perch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 135-136.
 end
@@ -10373,7 +10375,6 @@ end
 
 if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors should have begun to rule in Scania
 	SetProvinceOwner("Scania", "basque", "Gylfing Tribe")
-	SetProvinceSettlementBuilding("Scania", "unit-germanic-town-hall", true)
 	SetProvinceSettlementBuilding("Scania", "unit-germanic-barracks", true)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-warrior", 4)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-archer", 4)
@@ -10666,14 +10667,6 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetProvinceSettlementBuilding("Brandenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
 	
-	SetProvinceUnitQuantity("Hanover", "unit-germanic-warrior", 0)
-	ChangeFactionCulture("germanic", "Saxon Tribe", "teuton")
-	SetProvinceOwner("Hanover", "teuton", "Saxon Tribe") -- The Saxons are the earliest Germanic people known to inhabit the Hanover area; Saxons (or rather, the Aviones, which could be a different form of the same name) attested in Tacitus' Germania, from 98 AD; shown as being in the Hannover area by William R. Shepherd's Historical Atlas (1911) p. 45
-	SetProvinceCivilization("Hanover", "teuton")
-	SetProvinceSettlementBuilding("Hanover", "unit-teuton-town-hall", true)
-	SetProvinceUnitQuantity("Hanover", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
-
 	SetProvinceUnitQuantity("Holland", "unit-germanic-warrior", 0)
 	ChangeFactionCulture("germanic", "Frank Tribe", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -11184,6 +11177,16 @@ if (GrandStrategyYear >= -27) then
 	SetProvinceCivilization("Hanover", "teuton")
 	SetProvinceSettlementBuilding("Hanover", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Lombard Tribe")
+	
+	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe")	
+	SetProvinceCivilization("Holstein", "teuton")
+	SetProvinceSettlementBuilding("Holstein", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
+	
+	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
+	SetProvinceCivilization("Schleswig", "teuton")
+	SetProvinceSettlementBuilding("Schleswig", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Angle Tribe")
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -11539,8 +11542,7 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceSettlementBuilding("East Friesland", "unit-teuton-town-hall", true)
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 --	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
-	SetProvinceOwner("England", "teuton", "Saxon Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	SetProvinceUnitQuantity("England", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	SetProvinceOwner("England", "teuton", "Angle Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 end
 
 if (GrandStrategyYear >= 531) then
@@ -11858,9 +11860,11 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	
-	SetProvinceOwner("Jutland", "norse", "Denmark")
-	SetProvinceOwner("Scania", "norse", "Denmark")
 	SetProvinceOwner("Zealand", "norse", "Denmark")
+	SetProvinceOwner("Jutland", "norse", "Denmark")
+	SetProvinceOwner("Schleswig", "norse", "Denmark")
+	SetProvinceOwner("Holstein", "norse", "Denmark")
+	SetProvinceOwner("Scania", "norse", "Denmark")
 	SetProvinceOwner("Gotaland", "norse", "Sweden")
 	SetProvinceOwner("Sweden", "norse", "Sweden")
 	SetProvinceOwner("Gotland", "norse", "Denmark")

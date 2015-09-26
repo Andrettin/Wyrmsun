@@ -156,13 +156,6 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "white"
 	},
 	"faction", {
-		"name", "Saxon Tribe",
-		"type", "tribe",
-		"color", "pink",
-		"secondary_color", "pink",
-		"playable", false
-	},
-	"faction", {
 		"name", "Suebi Tribe",
 		"type", "tribe",
 		"color", "black",

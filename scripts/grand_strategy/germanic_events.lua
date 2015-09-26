@@ -685,6 +685,7 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
+	--[[
 	BeldegsLands = { -- Beldeg (Baldr), the first legendary ruler of Westphalia (in the sagas he became ruler of Westphalia even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Westphalia); Source: "The Prose Edda", Snorri Sturlson, 1916, pp. 7-8.
 		Name = "Beldeg's Lands",
 		Description = "The territory of Westphalia has been entrusted to the warrior known by the name of Beldeg.",
@@ -725,6 +726,7 @@ local GermanicEvents = {
 			end
 		}
 	},
+	--]]
 	SigisLands = { -- Sigi, the first legendary ruler of "Frankland" (in the sagas he became ruler of Frankland even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Frankland); Source: "The Prose Edda", Snorri Sturlson, 1916, p. 8.
 		Name = "Sigi's Lands",
 		Description = "The territory of Frankland has been entrusted to the warrior known as Sigi.",

@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Angle Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "white",
+	SecondaryColor = "white",
+	DevelopsTo = {"England", "Scotland"}
+})
+
 DefineFaction("Alamanni Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -45,14 +53,16 @@ DefineFaction("Chauci Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "black",
-	SecondaryColor = "black"
+	SecondaryColor = "black",
+	DevelopsTo = {"Bremen"} -- same general area
 })
 
 DefineFaction("Cherusci Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "teal",
-	SecondaryColor = "teal"
+	SecondaryColor = "teal",
+	DevelopsTo = {"Brunswick"} -- same general area
 })
 
 DefineFaction("Dane Tribe", {
@@ -60,7 +70,8 @@ DefineFaction("Dane Tribe", {
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "white",
-	Playable = false
+	Playable = false,
+	DevelopsTo = {"Denmark"}
 })
 
 DefineFaction("Frank Tribe", {
@@ -75,7 +86,8 @@ DefineFaction("Frisian Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "violet", -- change to a better one?
-	SecondaryColor = "purple"
+	SecondaryColor = "purple",
+	DevelopsTo = {"Netherlands"} -- same general area
 })
 
 DefineFaction("Goth Tribe", {
@@ -83,7 +95,8 @@ DefineFaction("Goth Tribe", {
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "red",
-	Playable = false
+	Playable = false,
+	DevelopsTo = {"Gothia"}
 })
 
 DefineFaction("Jute Tribe", {
@@ -130,7 +143,8 @@ DefineFaction("Swede Tribe", {
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "yellow",
-	Playable = false
+	Playable = false,
+	DevelopsTo = {"Sweden"}
 })
 
 DefineFaction("Thuringian Tribe", {
@@ -183,14 +197,23 @@ DefineFaction("Brandenburg", {
 	DevelopsTo = {"Prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
 })
 
-DefineFaction("Burgundy", {
+DefineFaction("Bremen", {
 	Civilization = "teuton",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
-	Playable = false,
+	Color = "black",
+	SecondaryColor = "black",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "Duchy"
+	}
+})
+
+DefineFaction("Brunswick", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "green",
+	SecondaryColor = "green",
+	Titles = {
+		"monarchy", "Duchy"
 	}
 })
 
@@ -235,6 +258,14 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	}
 })
 
+DefineFaction("Gothia", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "red",
+	SecondaryColor = "red",
+	Playable = false
+})
+
 DefineFaction("Jutland", {
 	Civilization = "teuton",
 	Type = "polity",
@@ -252,17 +283,6 @@ DefineFaction("Netherlands", {
 	SecondaryColor = "blue",
 	Titles = {
 		"republic", "Republic"
-	}
-})
-
-DefineFaction("Norway", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "red",
-	Playable = false,
-	Titles = {
-		"monarchy", "Kingdom"
 	}
 })
 
