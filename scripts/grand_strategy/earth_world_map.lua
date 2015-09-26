@@ -10732,14 +10732,6 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	SetProvinceSettlementBuilding("Brandenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
 	
-	SetProvinceUnitQuantity("Holland", "unit-germanic-warrior", 0)
-	ChangeFactionCulture("germanic", "Frank Tribe", "teuton")
-	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks are one of the earliest Germanic peoples known to inhabit the Netherlands area; Franks were the people settled in the modern Netherlands in 150 AD, Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceCivilization("Holland", "teuton")
-	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
-	SetProvinceUnitQuantity("Holland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
-	
 	GrandStrategyEvents.VegdegsKingdom = nil
 	GrandStrategyEvents.BeldegsLands = nil
 	GrandStrategyEvents.SigisLands = nil
@@ -10981,6 +10973,53 @@ if (GrandStrategyYear >= -264) then
 	
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
+	
+	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("Bremen", "teuton", "Chauci Tribe")	
+	SetProvinceCivilization("Bremen", "teuton")
+	SetProvinceSettlementBuilding("Bremen", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
+	SetProvinceCivilization("Oldenburg", "teuton")
+	SetProvinceSettlementBuilding("Oldenburg", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chauci Tribe")
+
+	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
+	SetProvinceCivilization("Brunswick", "teuton")
+	SetProvinceSettlementBuilding("Brunswick", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Cherusci Tribe")
+	
+	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
+	SetProvinceCivilization("Hanover", "teuton")
+	SetProvinceSettlementBuilding("Hanover", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Lombard Tribe")
+	
+	SetProvinceOwner("Holland", "teuton", "Batavian Tribe")	
+	SetProvinceCivilization("Holland", "teuton")
+	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Batavian Tribe")
+	
+	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
+	SetProvinceCivilization("Friesland", "teuton")
+	SetProvinceSettlementBuilding("Friesland", "unit-teuton-town-hall", true)
+	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
+	SetProvinceCivilization("East Friesland", "teuton")
+	SetProvinceSettlementBuilding("East Friesland", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
+
+	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe") -- also inhabited by the Teutones
+	SetProvinceCivilization("Holstein", "teuton")
+	SetProvinceSettlementBuilding("Holstein", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
+	
+	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
+	SetProvinceCivilization("Schleswig", "teuton")
+	SetProvinceSettlementBuilding("Schleswig", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Angle Tribe")
+	
+	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")
+	SetProvinceCivilization("Mecklenburg", "teuton")
+	SetProvinceSettlementBuilding("Mecklenburg", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Varini Tribe")
 end
 
 if (GrandStrategyYear >= -241) then
@@ -11220,39 +11259,6 @@ if (GrandStrategyYear >= -27) then
 	 -- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	 
 	-- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
-	SetProvinceCivilization("Friesland", "teuton")
-	SetProvinceSettlementBuilding("Friesland", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
-	
-	SetProvinceOwner("Bremen", "teuton", "Chauci Tribe")	
-	SetProvinceCivilization("Bremen", "teuton")
-	SetProvinceSettlementBuilding("Bremen", "unit-teuton-town-hall", true)
-	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
-	SetProvinceCivilization("Oldenburg", "teuton")
-	SetProvinceSettlementBuilding("Oldenburg", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chauci Tribe")
-	
-	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
-	SetProvinceCivilization("Brunswick", "teuton")
-	SetProvinceSettlementBuilding("Brunswick", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Cherusci Tribe")
-	
-	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
-	SetProvinceCivilization("Hanover", "teuton")
-	SetProvinceSettlementBuilding("Hanover", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Lombard Tribe")
-	
-	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe")	
-	SetProvinceCivilization("Holstein", "teuton")
-	SetProvinceSettlementBuilding("Holstein", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
-	
-	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
-	SetProvinceCivilization("Schleswig", "teuton")
-	SetProvinceSettlementBuilding("Schleswig", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Angle Tribe")
-	
 	SetProvinceOwner("Zealand", "goth", "Herulian Tribe")	
 	SetProvinceCivilization("Zealand", "teuton")
 	SetProvinceSettlementBuilding("Zealand", "unit-teuton-town-hall", true)
@@ -11267,11 +11273,6 @@ if (GrandStrategyYear >= -27) then
 	SetProvinceCivilization("Franconia", "celt")
 	SetProvinceSettlementBuilding("Franconia", "unit-germanic-town-hall", true)
 	AcquireFactionTechnologies("celt", "Boii Tribe", "celt", "Turone Tribe")
-	
-	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")	
-	SetProvinceCivilization("Mecklenburg", "teuton")
-	SetProvinceSettlementBuilding("Mecklenburg", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Varini Tribe")
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -11397,6 +11398,11 @@ if (GrandStrategyYear >= 150) then
 	SetProvinceOwner("Gotland", "", "")
 	SetProvinceOwner("Prussia", "goth", "Goth Tribe") -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceUnitQuantity("Prussia", "unit-germanic-warrior", 0)
+	
+	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceCivilization("Holland", "teuton")
+	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
 end
 
 if (GrandStrategyYear >= 166) then
@@ -11616,13 +11622,6 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceOwner("Bohemia", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bohemia", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
-	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
-	SetProvinceCivilization("Friesland", "teuton")
-	SetProvinceSettlementBuilding("Friesland", "unit-teuton-town-hall", true)
-	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
-	SetProvinceCivilization("East Friesland", "teuton")
---	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
-	SetProvinceSettlementBuilding("East Friesland", "unit-teuton-town-hall", true)
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 --	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
 	SetProvinceOwner("England", "teuton", "Angle Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

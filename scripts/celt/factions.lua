@@ -56,8 +56,8 @@ DefineFaction("Helvetii Tribe", {
 DefineFaction("Menapii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "orange",
-	SecondaryColor = "orange"
+	Color = "yellow",
+	SecondaryColor = "yellow"
 })
 
 DefineFaction("Norici Tribe", {

@@ -1516,7 +1516,8 @@ function LoadProvinces(world)
 			Name = "Holland",
 			CulturalNames = {
 				latin = "Batavia",
-				teuton = "Holland"
+				teuton = "Holland",
+				BatavianTribe = "Batavia"
 			},
 			Tiles = {
 				{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
@@ -1541,6 +1542,7 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"germanic", "Frank Tribe",
+				"teuton", "Batavian Tribe",
 				"teuton", "Frank Tribe",
 				"teuton", "Netherlands"
 			}

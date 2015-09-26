@@ -48,6 +48,14 @@ DefineFaction("Avione Tribe", {
 	SecondaryColor = "white"
 })
 
+DefineFaction("Batavian Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "orange",
+	SecondaryColor = "orange",
+	DevelopsTo = {"Netherlands"}
+})
+
 DefineFaction("Bavarian Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
