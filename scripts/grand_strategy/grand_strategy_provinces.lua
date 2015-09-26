@@ -1534,7 +1534,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				teuton = "Amsterdam"
 			},
-			SettlementLocation = {494, 107}, -- Amsterdam
+			SettlementLocation = {493, 107}, -- Amsterdam
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
