@@ -4178,7 +4178,7 @@ SetWorldMapTileTerrain(496, 102, water_id)
 SetWorldMapTileTerrain(496, 103, water_id)
 SetWorldMapTileTerrain(496, 104, plains_id)
 SetWorldMapTileTerrain(496, 105, plains_id)
-SetWorldMapTileTerrain(496, 106, plains_id)
+SetWorldMapTileTerrain(496, 106, water_id)
 SetWorldMapTileTerrain(496, 107, plains_id)
 SetWorldMapTileTerrain(496, 108, plains_id)
 SetWorldMapTileTerrain(496, 109, plains_id)
@@ -11187,6 +11187,21 @@ if (GrandStrategyYear >= -27) then
 	SetProvinceCivilization("Schleswig", "teuton")
 	SetProvinceSettlementBuilding("Schleswig", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Angle Tribe")
+	
+	SetProvinceOwner("Zealand", "goth", "Herulian Tribe")	
+	SetProvinceCivilization("Zealand", "teuton")
+	SetProvinceSettlementBuilding("Zealand", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("goth", "Goth Tribe", "teuton", "Herulian Tribe")
+	
+	SetProvinceOwner("Jutland", "teuton", "Charude Tribe")	
+	SetProvinceCivilization("Jutland", "teuton")
+	SetProvinceSettlementBuilding("Jutland", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Charude Tribe")
+	
+	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
+	SetProvinceCivilization("Franconia", "celt")
+	SetProvinceSettlementBuilding("Franconia", "unit-germanic-town-hall", true)
+	AcquireFactionTechnologies("celt", "Boii Tribe", "celt", "Turone Tribe")
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

@@ -69,6 +69,10 @@ function LoadFactions(world)
 			Name = "Sequani Tribe",
 			Civilization = "celt"
 		},
+		TuroneTribe = {
+			Name = "Turone Tribe",
+			Civilization = "celt"
+		},
 		-- Etruscan tribes
 		EtruscanTribe = {
 			Name = "Etruscan Tribe",
@@ -80,14 +84,6 @@ function LoadFactions(world)
 			Civilization = "etruscan"
 		},
 		-- Germanic tribes
-		AlamanniTribe = {
-			Name = "Alamanni Tribe",
-			Civilization = "teuton"
-		},
-		AngleTribe = {
-			Name = "Angle Tribe",
-			Civilization = "teuton"
-		},
 		AsaTribe = {
 			Name = "Asa Tribe",
 			Civilization = "germanic",
@@ -97,13 +93,26 @@ function LoadFactions(world)
 				Stone = 1500 -- half of the gold value
 			}
 		},
+		-- Teuton tribes
+		AlamanniTribe = {
+			Name = "Alamanni Tribe",
+			Civilization = "teuton"
+		},
+		AngleTribe = {
+			Name = "Angle Tribe",
+			Civilization = "teuton"
+		},
+		AvioneTribe = {
+			Name = "Avione Tribe",
+			Civilization = "teuton"
+		},
 		BavarianTribe = {
 			Name = "Bavarian Tribe",
 			Civilization = "teuton"
 		},
-		BurgundianTribe = {
-			Name = "Burgundian Tribe",
-			Civilization = "goth"
+		CharudeTribe = {
+			Name = "Charude Tribe",
+			Civilization = "teuton"
 		},
 		ChauciTribe = {
 			Name = "Chauci Tribe",
@@ -113,10 +122,6 @@ function LoadFactions(world)
 			Name = "Cherusci Tribe",
 			Civilization = "teuton"
 		},
-		DaneTribe = {
-			Name = "Dane Tribe",
-			Civilization = "germanic"
-		},
 		FrankTribe = {
 			Name = "Frank Tribe",
 			Civilization = "germanic"
@@ -124,10 +129,6 @@ function LoadFactions(world)
 		FrisianTribe = {
 			Name = "Frisian Tribe",
 			Civilization = "teuton"
-		},
-		GothTribe = {
-			Name = "Goth Tribe",
-			Civilization = "germanic"
 		},
 		JuteTribe = {
 			Name = "Jute Tribe",
@@ -141,14 +142,6 @@ function LoadFactions(world)
 			Name = "Marcomanni Tribe",
 			Civilization = "teuton"
 		},
-		OstrogothTribe = {
-			Name = "Ostrogoth Tribe",
-			Civilization = "goth"
-		},
-		RugianTribe = {
-			Name = "Rugian Tribe",
-			Civilization = "goth"
-		},
 		SaxonTribe = {
 			Name = "Saxon Tribe",
 			Civilization = "teuton"
@@ -157,23 +150,11 @@ function LoadFactions(world)
 			Name = "Suebi Tribe",
 			Civilization = "germanic"
 		},
-		SwedeTribe = {
-			Name = "Swede Tribe",
-			Civilization = "germanic"
-		},
 		ThuringianTribe = {
 			Name = "Thuringian Tribe",
 			Civilization = "teuton"
 		},
-		VandalTribe = {
-			Name = "Vandal Tribe",
-			Civilization = "goth"
-		},
-		VisigothTribe = {
-			Name = "Visigoth Tribe",
-			Civilization = "goth"
-		},
-		-- Germanic polities
+		-- Teuton polities
 		Austria = {
 			Name = "Austria",
 			Civilization = "teuton"
@@ -198,14 +179,6 @@ function LoadFactions(world)
 			Name = "Brunswick",
 			Civilization = "teuton"
 		},
-		Burgundy = {
-			Name = "Burgundy",
-			Civilization = "goth"
-		},
-		Denmark = {
-			Name = "Denmark",
-			Civilization = "norse"
-		},
 		England = {
 			Name = "England",
 			Civilization = "teuton"
@@ -218,10 +191,6 @@ function LoadFactions(world)
 			Name = "Galicia",
 			Civilization = "teuton"
 		},
-		Gothia = {
-			Name = "Gothia",
-			Civilization = "goth"
-		},
 		Jutland = {
 			Name = "Jutland",
 			Civilization = "teuton"
@@ -229,10 +198,6 @@ function LoadFactions(world)
 		Netherlands = {
 			Name = "Netherlands",
 			Civilization = "teuton"
-		},
-		Norway = {
-			Name = "Norway",
-			Civilization = "norse"
 		},
 		Prussia = {
 			Name = "Prussia",
@@ -246,17 +211,9 @@ function LoadFactions(world)
 			Name = "Scotland",
 			Civilization = "teuton"
 		},
-		Sweden = {
-			Name = "Sweden",
-			Civilization = "norse"
-		},
 		Switzerland = {
 			Name = "Switzerland",
 			Civilization = "teuton"
-		},
-		Vandalia = {
-			Name = "Vandalia",
-			Civilization = "goth"
 		},
 		Westphalia = {
 			Name = "Westphalia",
@@ -265,6 +222,70 @@ function LoadFactions(world)
 		Wurtemberg = {
 			Name = "Wurtemberg",
 			Civilization = "teuton"
+		},
+		-- Norse tribes
+		DaneTribe = {
+			Name = "Dane Tribe",
+			Civilization = "germanic"
+		},
+		SwedeTribe = {
+			Name = "Swede Tribe",
+			Civilization = "germanic"
+		},
+		-- Norse polities
+		Denmark = {
+			Name = "Denmark",
+			Civilization = "norse"
+		},
+		Norway = {
+			Name = "Norway",
+			Civilization = "norse"
+		},
+		Sweden = {
+			Name = "Sweden",
+			Civilization = "norse"
+		},
+		-- Goth tribes
+		BurgundianTribe = {
+			Name = "Burgundian Tribe",
+			Civilization = "goth"
+		},
+		GothTribe = {
+			Name = "Goth Tribe",
+			Civilization = "germanic"
+		},
+		HerulianTribe = {
+			Name = "Herulian Tribe",
+			Civilization = "goth"
+		},
+		OstrogothTribe = {
+			Name = "Ostrogoth Tribe",
+			Civilization = "goth"
+		},
+		RugianTribe = {
+			Name = "Rugian Tribe",
+			Civilization = "goth"
+		},
+		VandalTribe = {
+			Name = "Vandal Tribe",
+			Civilization = "goth"
+		},
+		VisigothTribe = {
+			Name = "Visigoth Tribe",
+			Civilization = "goth"
+		},
+		-- Goth polities
+		Burgundy = {
+			Name = "Burgundy",
+			Civilization = "goth"
+		},
+		Vandalia = {
+			Name = "Vandalia",
+			Civilization = "goth"
+		},
+		Gothia = {
+			Name = "Gothia",
+			Civilization = "goth"
 		},
 		-- Greek tribes
 		ChaoniTribe = {

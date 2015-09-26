@@ -41,12 +41,26 @@ DefineFaction("Alamanni Tribe", {
 	DevelopsTo = {"Baden", "Switzerland", "Wurtemberg"}
 })
 
+DefineFaction("Avione Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "white",
+	SecondaryColor = "white"
+})
+
 DefineFaction("Bavarian Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "cyan",
 	SecondaryColor = "white",
 	DevelopsTo = {"Bavaria", "Austria"}
+})
+
+DefineFaction("Charude Tribe", {
+	Civilization = "teuton", -- were the Charudes actually West Germanic?
+	Type = "tribe",
+	Color = "purple",
+	SecondaryColor = "purple"
 })
 
 DefineFaction("Chauci Tribe", {

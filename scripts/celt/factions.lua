@@ -25,88 +25,82 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Burgundian Tribe", {
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown",
-	DevelopsTo = {"Burgundy"}
-})
-
-DefineFaction("Goth Tribe", {
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
-	DevelopsTo = {"Gothia"}
-})
-
-DefineFaction("Herulian Tribe", {
-	Civilization = "goth",
+DefineFaction("Aedui Tribe", {
+	Civilization = "celt",
 	Type = "tribe",
 	Color = "green",
 	SecondaryColor = "green"
 })
 
-DefineFaction("Ostrogoth Tribe", {
-	Civilization = "goth",
+DefineFaction("Arverni Tribe", {
+	Civilization = "celt",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
-	DevelopsTo = {"Gothia"}
+	Color = "blue",
+	SecondaryColor = "blue"
 })
 
-DefineFaction("Rugian Tribe", {
-	Civilization = "goth",
+DefineFaction("Boii Tribe", {
+	Civilization = "celt",
 	Type = "tribe",
-	Color = "red", -- change to a better one?
+	Color = "brown",
+	SecondaryColor = "brown"
+})
+
+DefineFaction("Helvetii Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
+	Color = "violet", -- another color, perhaps?
+	SecondaryColor = "violet"
+})
+
+DefineFaction("Menapii Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
+	Color = "orange",
 	SecondaryColor = "orange"
 })
 
-DefineFaction("Vandal Tribe", {
-	Civilization = "goth",
+DefineFaction("Norici Tribe", {
+	Civilization = "celt",
 	Type = "tribe",
-	Color = "cyan",
-	SecondaryColor = "blue",
-	DevelopsTo = {"Vandalia"}
+	Color = "white", -- another color, perhaps?
+	SecondaryColor = "white"
 })
 
-DefineFaction("Visigoth Tribe", {
-	Civilization = "goth",
+DefineFaction("Pict Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
+	Color = "cyan",
+	SecondaryColor = "cyan"
+})
+
+DefineFaction("Scot Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown"
+})
+
+DefineFaction("Sequani Tribe", {
+	Civilization = "celt",
 	Type = "tribe",
 	Color = "pink",
-	SecondaryColor = "pink",
-	DevelopsTo = {"Gothia"}
+	SecondaryColor = "red"
 })
 
--- polities
-
-DefineFaction("Burgundy", {
-	Civilization = "goth",
-	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
-	Titles = {
-		"monarchy", "Kingdom"
-	}
-})
-
-DefineFaction("Gothia", {
-	Civilization = "goth",
-	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
-	Titles = {
-		"monarchy", "Kingdom"
-	}
-})
-
-DefineFaction("Vandalia", {
-	Civilization = "goth",
-	Type = "polity",
+DefineFaction("Turone Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
 	Color = "cyan",
-	SecondaryColor = "blue",
-	Titles = {
-		"monarchy", "Kingdom"
-	}
+	SecondaryColor = "cyan"
+})
+
+-- Non-Playable Tribes
+
+DefineFaction("Vana Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "cyan",
+	Playable = false
 })
