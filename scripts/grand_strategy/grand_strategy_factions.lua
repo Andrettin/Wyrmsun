@@ -154,6 +154,10 @@ function LoadFactions(world)
 			Name = "Thuringian Tribe",
 			Civilization = "teuton"
 		},
+		VariniTribe = {
+			Name = "Varini Tribe",
+			Civilization = "teuton"
+		},
 		-- Teuton polities
 		Austria = {
 			Name = "Austria",
@@ -193,6 +197,10 @@ function LoadFactions(world)
 		},
 		Jutland = {
 			Name = "Jutland",
+			Civilization = "teuton"
+		},
+		Mecklenburg = {
+			Name = "Mecklenburg",
 			Civilization = "teuton"
 		},
 		Netherlands = {

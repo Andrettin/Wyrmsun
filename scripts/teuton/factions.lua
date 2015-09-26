@@ -168,6 +168,14 @@ DefineFaction("Thuringian Tribe", {
 	SecondaryColor = "green"
 })
 
+DefineFaction("Varini Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown",
+	DevelopsTo = {"Mecklenburg"} -- same general area
+})
+
 -- Teuton polities
 
 DefineFaction("Austria", {
@@ -287,6 +295,16 @@ DefineFaction("Jutland", {
 	SecondaryColor = "white",
 	Titles = {
 		"monarchy", "Duchy"
+	}
+})
+
+DefineFaction("Mecklenburg", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "brown",
+	SecondaryColor = "brown",
+	Titles = {
+		"monarchy", "Grand Duchy"
 	}
 })
 
