@@ -87,10 +87,11 @@ function LoadFactions(world)
 		AsaTribe = {
 			Name = "Asa Tribe",
 			Civilization = "germanic",
-			Gold = 3000,
+			Gold = 300000,
+			Research = 30000,
 			Commodities = {
-				Lumber = 1500, -- half of the gold value
-				Stone = 1500 -- half of the gold value
+				Lumber = 150000, -- half of the gold value
+				Stone = 150000 -- half of the gold value
 			}
 		},
 		-- Teuton tribes
@@ -128,7 +129,7 @@ function LoadFactions(world)
 		},
 		FrankTribe = {
 			Name = "Frank Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		FrisianTribe = {
 			Name = "Frisian Tribe",
@@ -136,7 +137,7 @@ function LoadFactions(world)
 		},
 		JuteTribe = {
 			Name = "Jute Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		LombardTribe = {
 			Name = "Lombard Tribe",
@@ -152,7 +153,7 @@ function LoadFactions(world)
 		},
 		SuebiTribe = {
 			Name = "Suebi Tribe",
-			Civilization = "germanic"
+			Civilization = "teuton"
 		},
 		ThuringianTribe = {
 			Name = "Thuringian Tribe",
@@ -238,11 +239,11 @@ function LoadFactions(world)
 		-- Norse tribes
 		DaneTribe = {
 			Name = "Dane Tribe",
-			Civilization = "germanic"
+			Civilization = "norse"
 		},
 		SwedeTribe = {
 			Name = "Swede Tribe",
-			Civilization = "germanic"
+			Civilization = "norse"
 		},
 		-- Norse polities
 		Denmark = {
@@ -264,7 +265,7 @@ function LoadFactions(world)
 		},
 		GothTribe = {
 			Name = "Goth Tribe",
-			Civilization = "germanic"
+			Civilization = "goth"
 		},
 		HerulianTribe = {
 			Name = "Herulian Tribe",
@@ -681,6 +682,9 @@ function LoadFactions(world)
 			Factions[key]["Civilization"] = faction_table[key].Civilization
 			if (faction_table[key].Gold ~= nil) then
 				SetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", faction_table[key].Gold)
+			end
+			if (faction_table[key].Research ~= nil) then
+				SetFactionResource(Factions[key].Civilization, Factions[key].Name, "research", faction_table[key].Research)
 			end
 			Factions[key]["Commodities"] = {}
 			if (faction_table[key].Commodities ~= nil) then

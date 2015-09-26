@@ -246,6 +246,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added an enormous number of new factions to populate historical Europe.
 - Grand strategy gold mine graphics have been reworked, and now have player color (by Jinn).
 - New ocean tile variations (by Jinn).
+- The Asa migration event chain (if followed to the end) now results in a unified Asa Tribe holding the whole conquered territory, only to be split later on.
 
 * Maps
 - Improvements to the generation of the Belfort, Braga, Malmo, Novgorod, Oderzo, Regensburg, Salzburg and Tanais maps.

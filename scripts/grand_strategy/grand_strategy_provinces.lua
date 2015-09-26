@@ -682,7 +682,6 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"germanic", "Suebi Tribe",
 				"teuton", "Suebi Tribe",
 				"teuton", "Brandenburg"
 			}
@@ -1427,7 +1426,6 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
-				"germanic", "Goth Tribe",
 				"goth", "Goth Tribe"
 			}
 		},
@@ -1444,7 +1442,6 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
-				"germanic", "Goth Tribe",
 				"goth", "Goth Tribe"
 			}
 		},
@@ -1541,7 +1538,6 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
-				"germanic", "Frank Tribe",
 				"teuton", "Batavian Tribe",
 				"teuton", "Frank Tribe",
 				"teuton", "Netherlands"
@@ -1683,7 +1679,6 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
-				"germanic", "Jute Tribe",
 				"norse", "Dane Tribe",
 				"teuton", "Charude Tribe",
 				"teuton", "Jute Tribe"
@@ -2398,7 +2393,6 @@ function LoadProvinces(world)
 			Claims = {
 				"basque", "Ertebolle Tribe",
 				"basque", "Gylfing Tribe",
-				"germanic", "Dane Tribe",
 				"teuton", "Dane Tribe"
 			}
 		},
@@ -2529,7 +2523,6 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Claims = {
-				"germanic", "Swede Tribe",
 				"norse", "Swede Tribe"
 			}
 		},
@@ -2938,7 +2931,6 @@ function LoadProvinces(world)
 				"basque", "Funnelbeaker Tribe",
 				"basque", "Maglemose Tribe",
 				"basque", "Kongemose Tribe",
-				"germanic", "Dane Tribe",
 				"norse", "Dane Tribe",
 				"goth", "Herulian Tribe"
 			}

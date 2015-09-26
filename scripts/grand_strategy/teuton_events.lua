@@ -36,8 +36,9 @@ local TeutonEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and ((EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Frank Tribe" or EventFaction.Name == "Jute Tribe" or EventFaction.Name == "Suebi Tribe") or (EventFaction.Name == GrandStrategyFaction.Name and (EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Goth Tribe" or EventFaction.Name == "Swede Tribe")))
+				and EventFaction.Name == "Asa Tribe"
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "teuton"))
+				and GetProvinceOwner("Jutland") == EventFaction.Name
 			) then
 				return true
 			end
@@ -48,10 +49,10 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				if (EventFaction.Name == "Asa Tribe" and GetFactionProvinceCount(Factions.JuteTribe) == 0) then
-					FormFaction(EventFaction, Factions.JuteTribe)
+					FormFactionLua(EventFaction, Factions.JuteTribe)
 					EventFaction = Factions.JuteTribe
 				end
-				ChangeFactionCulture("germanic", EventFaction.Name, "teuton")
+				--[[
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
@@ -59,6 +60,14 @@ local TeutonEvents = {
 						SetProvinceCivilization(WorldMapProvinces[province_key].Name, "teuton") -- change the culture of only one province, and let cultural spread do the rest
 						break
 					end
+				end
+				--]]
+				SetProvinceCivilization("Jutland", "teuton")
+				if (GetProvinceOwner("Gotaland") == EventFaction.Name) then
+					SetProvinceCivilization("Gotaland", "goth")
+				end
+				if (GetProvinceOwner("Sweden") == EventFaction.Name) then
+					SetProvinceCivilization("Sweden", "norse")
 				end
 			end
 		}

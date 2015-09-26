@@ -51,7 +51,7 @@ local NorseEvents = {
 		OptionEffects = {
 			function(s)
 				if (EventFaction.Name == "Asa Tribe") then
-					FormFaction(EventFaction, Factions.SwedeTribe)
+					FormFactionLua(EventFaction, Factions.SwedeTribe)
 					EventFaction = Factions.SwedeTribe
 				end
 				ChangeFactionCulture("germanic", EventFaction.Name, "norse")

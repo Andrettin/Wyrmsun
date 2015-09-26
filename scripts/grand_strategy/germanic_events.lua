@@ -298,7 +298,7 @@ local GermanicEvents = {
 	},
 	GylvesRealm = {
 		Name = "Gylve's Realm",
-		Description = "After establishing ourselves in the Jutland peninsula and the neighboring islands, we now have the opportunity to travel to the other side of this short sea... what will await us? Shall we set sail, entrusting a couple of our chieftains to rule this peninsula and the surrounding isles?",
+		Description = "After establishing ourselves in the Jutland peninsula and the neighboring islands, we now have the opportunity to travel to the other side of this short sea... what will await us? Shall we set sail, throwing ourselves upon those new shores?",
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
@@ -315,7 +315,7 @@ local GermanicEvents = {
 				return false
 			end
 		end,
-		Options = {"~!Embark!", "~!Seafaring is not for us.", "Play as the ~!Jute Tribe", "Play as the ~!Dane Tribe"},
+		Options = {"~!Embark!", "~!Seafaring is not for us."},
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
@@ -332,7 +332,6 @@ local GermanicEvents = {
 						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
 						
-						FormFaction(EventFaction, Factions.SwedeTribe)
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Sweden", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -346,12 +345,6 @@ local GermanicEvents = {
 						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
-						-- give Gotaland to the Goth Tribe
-						EqualizeProvinceUnits(EventFaction)
-						AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-						AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
-						-- give Scania to the Dane Tribe
-						AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
 					elseif (GameResult == GameDefeat) then
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
@@ -366,7 +359,6 @@ local GermanicEvents = {
 					SetProvinceCivilization("Sweden", "germanic")
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
-					FormFaction(EventFaction, Factions.SwedeTribe)
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Scania", unitName, 0)
@@ -383,101 +375,13 @@ local GermanicEvents = {
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
-					EqualizeProvinceUnits(EventFaction)
-					-- give Gotaland to the Goth Tribe
-					AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-					AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
-					-- give Scania to the Dane Tribe
-					AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
-					if (GrandStrategyFaction.Name == "Swede Tribe") then
+					if (GrandStrategyFaction.Name == "Asa Tribe") then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
-						GrandStrategyDialog("Gylve's Realm", "Gylve has been defeated, and subsequently swore an oath of fealty to us. After entrusting lordship over him to one of our chieftains, we have moved north... We came upon a lake, with fair fields spread around it. We founded a hall by the lake, Sigtun, from which we shall rule for untold generations!")
+						GrandStrategyDialog("Gylve's Realm", "Gylve has been defeated, and subsequently swore an oath of fealty to us. We moved north... and came upon a lake with fair fields spread around it. We founded a hall by the lake, Sigtun, from which we shall rule for untold generations!")
 					end
 				end
-				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
-				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
 			end,
 			function(s)
-			end,
-			function(s)
-				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
-				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
-				SetProvinceCivilization("Scania", "germanic")
-				SetProvinceCivilization("Gotaland", "germanic")
-				SetProvinceCivilization("Sweden", "germanic")
-				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
-				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
-				FormFaction(EventFaction, Factions.SwedeTribe)
-				for i, unitName in ipairs(Units) do
-					if (IsOffensiveMilitaryUnit(unitName)) then
-						SetProvinceUnitQuantity("Scania", unitName, 0)
-						SetProvinceUnitQuantity("Gotaland", unitName, 0)
-						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
-						SetProvinceUnitQuantity("Jutland", unitName, 0)
-						SetProvinceUnitQuantity("Zealand", unitName, 0)
-					elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
-						ChangeProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-						ChangeProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-						ChangeProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-						ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
-					end
-				end
-				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
-				-- give Gotaland to the Goth Tribe
-				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
-				
-				-- give Scania to the Dane Tribe
-				AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
-					
-				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
-				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
-				GrandStrategyFaction = Factions.JuteTribe
-				SetPlayerFaction("germanic", "Jute Tribe")
-			end,
-			function(s)
-				ChangeFactionResource("germanic", "Asa Tribe", "prestige", 25)
-				AcquireProvince(WorldMapProvinces.Scania, EventFaction.Name)
-				SetProvinceCivilization("Scania", "germanic")
-				SetProvinceCivilization("Gotaland", "germanic")
-				SetProvinceCivilization("Sweden", "germanic")
-				AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
-				AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
-				FormFaction(EventFaction, Factions.SwedeTribe)
-				for i, unitName in ipairs(Units) do
-					if (IsOffensiveMilitaryUnit(unitName)) then
-						SetProvinceUnitQuantity("Scania", unitName, 0)
-						SetProvinceUnitQuantity("Gotaland", unitName, 0)
-						SetProvinceUnitQuantity("Sweden", unitName, math.floor(GetProvinceUnitQuantity("Jutland", unitName) * 3 / 4))
-						SetProvinceUnitQuantity("Jutland", unitName, 0)
-						SetProvinceUnitQuantity("Zealand", unitName, 0)
-					elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
-						ChangeProvinceUnitQuantity("Sweden", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-						ChangeProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-						ChangeProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
-						ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
-					end
-				end
-				SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
-				-- give Gotaland to the Goth Tribe
-				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Gotaland, "Goth Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Goth Tribe")
-				
-				-- give Scania to the Dane Tribe
-				AcquireProvince(WorldMapProvinces.Scania, "Dane Tribe")
-					
-				AcquireProvince(WorldMapProvinces.Jutland, "Jute Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Jute Tribe")
-				AcquireProvince(WorldMapProvinces.Zealand, "Dane Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Dane Tribe")
-				GrandStrategyFaction = Factions.DaneTribe
-				SetPlayerFaction("germanic", "Dane Tribe")
 			end
 		}
 	},
@@ -726,7 +630,6 @@ local GermanicEvents = {
 			end
 		}
 	},
-	--]]
 	SigisLands = { -- Sigi, the first legendary ruler of "Frankland" (in the sagas he became ruler of Frankland even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Frankland); Source: "The Prose Edda", Snorri Sturlson, 1916, p. 8.
 		Name = "Sigi's Lands",
 		Description = "The territory of Frankland has been entrusted to the warrior known as Sigi.",
@@ -801,6 +704,7 @@ local GermanicEvents = {
 			end
 		}
 	},
+	--]]
 	GothCultureDevelops = {
 		Name = "Goth Culture Develops",
 		Description = "With the passage of time, our customs and language have diverged significantly from the general Germanic ones. The East Germanic tongue has become predominant amongst us, and with it the Goth culture.",
@@ -811,7 +715,7 @@ local GermanicEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Goth Tribe")
+				and EventFaction.Name == "Asa Tribe"
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the goth civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "goth"))
 			) then
@@ -824,7 +728,7 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				if (EventFaction.Name == "Asa Tribe") then
-					FormFaction(EventFaction, Factions.GothTribe)
+					FormFactionLua(EventFaction, Factions.GothTribe)
 					EventFaction = Factions.GothTribe
 				end
 				ChangeFactionCulture("germanic", EventFaction.Name, "goth")

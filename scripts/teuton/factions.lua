@@ -87,15 +87,6 @@ DefineFaction("Cherusci Tribe", {
 	DevelopsTo = {"Brunswick"} -- same general area
 })
 
-DefineFaction("Dane Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white",
-	Playable = false,
-	DevelopsTo = {"Denmark"}
-})
-
 DefineFaction("Frank Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -110,15 +101,6 @@ DefineFaction("Frisian Tribe", {
 	Color = "violet", -- change to a better one?
 	SecondaryColor = "purple",
 	DevelopsTo = {"Netherlands"} -- same general area
-})
-
-DefineFaction("Goth Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
-	Playable = false,
-	DevelopsTo = {"Gothia"}
 })
 
 DefineFaction("Jute Tribe", {
@@ -158,15 +140,6 @@ DefineFaction("Suebi Tribe", {
 	Color = "black",
 	SecondaryColor = "black",
 	DevelopsTo = {"Galicia", "Bavaria", "Austria"}
-})
-
-DefineFaction("Swede Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "yellow",
-	Playable = false,
-	DevelopsTo = {"Sweden"}
 })
 
 DefineFaction("Thuringian Tribe", {
@@ -247,17 +220,6 @@ DefineFaction("Brunswick", {
 	}
 })
 
-DefineFaction("Denmark", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "red",
-	SecondaryColor = "white",
-	Playable = false,
-	Titles = {
-		"monarchy", "Kingdom"
-	}
-})
-
 DefineFaction("England", {
 	Civilization = "teuton",
 	Type = "polity",
@@ -286,14 +248,6 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	Titles = {
 		"monarchy", "Kingdom"
 	}
-})
-
-DefineFaction("Gothia", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
-	Playable = false
 })
 
 DefineFaction("Jutland", {
@@ -351,17 +305,6 @@ DefineFaction("Scotland", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "white",
-	Titles = {
-		"monarchy", "Kingdom"
-	}
-})
-
-DefineFaction("Sweden", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "yellow",
-	Playable = false,
 	Titles = {
 		"monarchy", "Kingdom"
 	}

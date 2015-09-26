@@ -66,42 +66,22 @@ DefineCivilizationFactions("germanic",
 		"secondary_color", "red"
 	},
 	"faction", {
-		"name", "Dane Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Frank Tribe",
-		"type", "tribe",
-		"color", "green",
-		"secondary_color", "orange",
-		"playable", false
-	},
-	"faction", {
-		"name", "Goth Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Jute Tribe",
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Suebi Tribe",
-		"type", "tribe",
-		"color", "black",
-		"secondary_color", "black",
-		"playable", false
-	},
-	"faction", {
-		"name", "Swede Tribe",
+		"name", "Jastorf Tribe", -- just to give some alternative Germanic tribes
 		"type", "tribe",
 		"color", "blue",
+		"secondary_color", "blue"
+	},
+	"faction", {
+		"name", "Ripdorf Tribe",
+		"type", "tribe",
+		"color", "yellow",
 		"secondary_color", "yellow"
+	},
+	"faction", {
+		"name", "Seedorf Tribe",
+		"type", "tribe",
+		"color", "cyan",
+		"secondary_color", "cyan"
 	}
 )
 

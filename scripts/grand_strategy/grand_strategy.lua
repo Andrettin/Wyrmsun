@@ -4015,17 +4015,8 @@ function DoEvents()
 	end
 end
 
-OldFormFaction = FormFaction
-
-function FormFaction(old_faction, new_faction)
-	local old_faction_key = GetFactionKeyFromName(old_faction.Name)	
-	local new_faction_key = GetFactionKeyFromName(new_faction.Name)	
-	
-	OldFormFaction(old_faction.Civilization, old_faction.Name, new_faction.Civilization, new_faction.Name)
-
-	if (GrandStrategyFaction == old_faction) then
-		GrandStrategyFaction = new_faction
-	end
+function FormFactionLua(old_faction, new_faction)
+	FormFaction(old_faction.Civilization, old_faction.Name, new_faction.Civilization, new_faction.Name)
 
 	DrawGrandStrategyInterface()
 end

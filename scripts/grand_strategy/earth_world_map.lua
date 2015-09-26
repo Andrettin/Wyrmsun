@@ -10455,32 +10455,22 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Funnel Beaker culture ends in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	SetProvinceOwner("Jutland", "germanic", "Jute Tribe")
+	SetProvinceOwner("Jutland", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Jute Tribe")
 	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
-	SetProvinceUnitQuantity("Jutland", "unit-germanic-warrior", 4) -- enough troops for them to hold their own
-	SetProvinceUnitQuantity("Jutland", "unit-germanic-archer", 0)
 	
-	SetProvinceOwner("Sweden", "germanic", "Swede Tribe")
+	SetProvinceOwner("Sweden", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Sweden", "germanic")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Swede Tribe")
 	SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
-	SetProvinceSettlementBuilding("Sweden", "unit-germanic-barracks", true) -- to prevent the Goth Tribe from conquering Sweden too easily
-	SetProvinceUnitQuantity("Sweden", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Sweden", "unit-germanic-archer", 0)
 	
-	SetProvinceOwner("Scania", "germanic", "Dane Tribe")
+	SetProvinceOwner("Scania", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Scania", "germanic")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Dane Tribe")
-	SetProvinceUnitQuantity("Scania", "unit-germanic-warrior", 4) -- enough troops for them to hold their own
-	SetProvinceUnitQuantity("Scania", "unit-germanic-archer", 0)
-	
-	SetProvinceOwner("Zealand", "germanic", "Dane Tribe")
+	SetProvinceOwner("Zealand", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Zealand", "germanic")
-	SetProvinceUnitQuantity("Zealand", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Zealand", "unit-germanic-archer", 0)
 
+	SetProvinceOwner("Gotaland", "germanic", "Asa Tribe")
+	SetProvinceCivilization("Gotaland", "germanic")
+	
 	SetProvinceOwner("Astrakhan", "", "")
 	SetProvinceSettlementBuilding("Astrakhan", "unit-germanic-town-hall", false)
 	SetProvinceSettlementBuilding("Astrakhan", "unit-germanic-barracks", false)
@@ -10490,22 +10480,11 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceSettlementBuilding("Don", "unit-germanic-barracks", false)
 	SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
 
-	SetProvinceOwner("Gotaland", "germanic", "Goth Tribe") -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceCivilization("Gotaland", "germanic")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Goth Tribe")
-	SetProvinceUnitQuantity("Gotaland", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Gotaland", "unit-germanic-archer", 0)
-	
-	SetProvinceOwner("Gotland", "germanic", "Goth Tribe") -- maybe should be later?
-	SetProvinceSettlementBuilding("Gotland", "unit-germanic-town-hall", true)
-
 	GrandStrategyEvents.OnTheVanaquisl = nil
 	GrandStrategyEvents.AsaRaid = nil
 	GrandStrategyEvents.WestwardMigration = nil
 	GrandStrategyEvents.NorthwardsToTheSea = nil
 	GrandStrategyEvents.GylvesRealm = nil
-	GrandStrategyEvents.DagChieftainOfTheGoths = nil
-	GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe = nil
 	GrandStrategyEvents.DivisionOfDomains = nil
 	GrandStrategyEvents.AsaLawgiving = nil
 	GrandStrategyEvents.TheBirthOfSaeming = nil
@@ -10647,19 +10626,11 @@ end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-bronze-shield", true)
-	SetFactionTechnology("germanic", "Swede Tribe", "upgrade-germanic-bronze-shield", true)
-	SetFactionTechnology("germanic", "Dane Tribe", "upgrade-germanic-bronze-shield", true)
-	SetFactionTechnology("germanic", "Jute Tribe", "upgrade-germanic-bronze-shield", true)
-	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-bronze-shield", true)
 	GrandStrategyEvents.TheSunShields = nil
 end
 
 if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-broad-sword", true)
-	SetFactionTechnology("germanic", "Swede Tribe", "upgrade-germanic-broad-sword", true)
-	SetFactionTechnology("germanic", "Dane Tribe", "upgrade-germanic-broad-sword", true)
-	SetFactionTechnology("germanic", "Jute Tribe", "upgrade-germanic-broad-sword", true)
-	SetFactionTechnology("germanic", "Goth Tribe", "upgrade-germanic-broad-sword", true)
 	
 	-- Widespread accretion of fine-grained floodpain alluvium in Northern European lowland rivers after 1000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 129.
 	
@@ -10725,33 +10696,9 @@ if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. 
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
-	SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 0)
-	ChangeFactionCulture("germanic", "Suebi Tribe", "teuton")
-	SetProvinceOwner("Brandenburg", "teuton", "Suebi Tribe") -- The Suebi are the earliest Germanic people known to inhabit the Brandenburg area; the Suebi attested in Tacitus' Germania, from 98 AD; shown as being in the Brandenburg area by William R. Shepherd's Historical Atlas (1911) p. 45
-	SetProvinceCivilization("Brandenburg", "teuton")
-	SetProvinceSettlementBuilding("Brandenburg", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
-	
 	GrandStrategyEvents.VegdegsKingdom = nil
 	GrandStrategyEvents.BeldegsLands = nil
 	GrandStrategyEvents.SigisLands = nil
-	
-	-- should put it at a more proper date (when Proto-Germanic split into West Germanic, East Germanic and North Germanic, respectively represented by the Teuton, Goth and Norse cultures in the game), but this will do; update culture in Sweden, Zealand, Jutland, Gotaland and Scania
-	ChangeFactionCulture("germanic", "Swede Tribe", "norse")
-	SetProvinceCivilization("Sweden", "norse")
-	
-	ChangeFactionCulture("germanic", "Dane Tribe", "norse")
-	SetProvinceCivilization("Scania", "norse")
-	SetProvinceCivilization("Zealand", "norse")
-	
-	ChangeFactionCulture("germanic", "Jute Tribe", "teuton")
-	SetProvinceCivilization("Jutland", "teuton")
-	SetProvinceUnitQuantity("Jutland", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Jutland", "unit-teuton-swordsman", 4) -- enough troops for them to hold their own
-	
-	ChangeFactionCulture("germanic", "Goth Tribe", "goth")
-	SetProvinceCivilization("Gotaland", "goth")
-	SetProvinceCivilization("Gotland", "goth")
 	
 	-- Late Hallstatt in West-Central Europe between 600 and 480 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 24.
 	
@@ -10927,7 +10874,17 @@ if (GrandStrategyYear >= -336) then
 end
 
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
-	PytheasVoyageGoths = nil
+	GrandStrategyEvents.PytheasVoyageGoths = nil
+	
+	SetProvinceOwner("Gotaland", "goth", "Goth Tribe") -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceCivilization("Gotaland", "goth")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Goth Tribe")
+	
+	SetProvinceOwner("Gotland", "goth", "Goth Tribe") -- maybe should be later?
+	SetProvinceSettlementBuilding("Gotland", "unit-teuton-town-hall", true)
+	
+	GrandStrategyEvents.DagChieftainOfTheGoths = nil
+	GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe = nil
 end
 
 if (GrandStrategyYear >= -323) then
@@ -11020,6 +10977,16 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Mecklenburg", "teuton")
 	SetProvinceSettlementBuilding("Mecklenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Varini Tribe")
+	
+	SetProvinceOwner("Sweden", "teuton", "Swede Tribe")
+	SetProvinceCivilization("Sweden", "teuton")
+	SetProvinceSettlementBuilding("Sweden", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Swede Tribe")
+	
+	SetProvinceOwner("Brandenburg", "teuton", "Suebi Tribe")
+	SetProvinceCivilization("Brandenburg", "teuton")
+	SetProvinceSettlementBuilding("Brandenburg", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
 end
 
 if (GrandStrategyYear >= -241) then
@@ -11622,8 +11589,13 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceOwner("Bohemia", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bohemia", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
---	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
---	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
+	
+	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	SetProvinceCivilization("Scania", "norse")
+	SetProvinceOwner("Zealand", "norse", "Dane Tribe")
+	SetProvinceCivilization("Zealand", "norse")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
+	
 	SetProvinceOwner("England", "teuton", "Angle Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 end
 
