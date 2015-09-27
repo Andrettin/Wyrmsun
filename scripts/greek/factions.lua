@@ -66,7 +66,7 @@ DefineFaction("Athens", {
 	}
 })
 
-DefineFaction("Crete", {
+DefineFaction("Krete", {
 	Civilization = "greek",
 	Type = "polity",
 	Color = "yellow",

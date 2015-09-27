@@ -4021,11 +4021,6 @@ function FormFactionLua(old_faction, new_faction)
 	DrawGrandStrategyInterface()
 end
 
-function ChangeFactionCulture(old_civilization, faction_name, new_civilization)
-	GetFactionFromName(faction_name).Civilization = new_civilization
-	OldFormFaction(old_civilization, faction_name, new_civilization, faction_name)
-end
-
 function GetUnitTypeUpkeep(unit_type)
 	if (GetUnitTypeData(unit_type, "Class") == "infantry" or GetUnitTypeData(unit_type, "Class") == "veteran-infantry" or GetUnitTypeData(unit_type, "Class") == "heroic-infantry") then
 		return 25
