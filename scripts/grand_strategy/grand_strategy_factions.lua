@@ -87,11 +87,10 @@ function LoadFactions(world)
 		AsaTribe = {
 			Name = "Asa Tribe",
 			Civilization = "germanic",
-			Gold = 300000,
-			Research = 30000,
+			Gold = 3000,
 			Commodities = {
-				Lumber = 150000, -- half of the gold value
-				Stone = 150000 -- half of the gold value
+				Lumber = 1500, -- half of the gold value
+				Stone = 1500 -- half of the gold value
 			}
 		},
 		-- Teuton tribes
