@@ -11501,6 +11501,8 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceOwner("Franche Comte", "latin", "Rome")
 	SetProvinceOwner("Lorraine", "latin", "Rome")
 	SetProvinceSettlementBuilding("Lorraine", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Lower Rhine", "latin", "Rome")
+	SetProvinceSettlementBuilding("Lower Rhine", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Moselle", "latin", "Rome")
 	SetProvinceSettlementBuilding("Moselle", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Normandy", "latin", "Rome")
