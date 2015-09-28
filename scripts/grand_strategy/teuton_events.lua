@@ -63,6 +63,13 @@ local TeutonEvents = {
 				end
 				--]]
 				SetProvinceCivilization("Jutland", "teuton")
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do -- remove claims from all provinces that are still Germanic, to make it more likely that they will split off
+					if (
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
+					) then
+						RemoveProvinceClaim(WorldMapProvinces[province_key].Name, EventFaction.Civilization, EventFaction.Name)
+					end
+				end
 				if (GetProvinceOwner("Gotaland") == EventFaction.Name) then
 					SetProvinceCivilization("Gotaland", "goth")
 				end
@@ -540,11 +547,11 @@ local TeutonEvents = {
 	},
 	ThePeasantsAndShepherdsOrdinance = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
 		Name = "The Peasants' and Shepherds' Ordinance",
-		Description = "The passage of the Peasants' and Shepherds' Ordinance has extinguished hereditary tenure of land amongst the peasantry, so that they now hold these lands as a lease from their lords.",
+		Description = "The passage of the Peasants' and Shepherds' Ordinance has extinguished hereditary tenure of land amongst the peasantry in Pomerania, so that they now hold these lands as a lease from their lords.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Brandenburg" or EventFaction.Name == "Prussia") -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-				and (GetProvinceOwner("Prussia") == EventFaction.Name or GetProvinceOwner("Brandenburg") == EventFaction.Name) -- can happen in either Western or Eastern Pommerania (historically it happened in both)
+				and (GetProvinceOwner("Farther Pomerania") == EventFaction.Name or GetProvinceOwner("Hither Pomerania") == EventFaction.Name) -- can happen in either Western or Eastern Pomerania (historically it happened in both; first in Farther Pomerania in 1616, being later extended to Hither Pomerania in 1645)
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true
@@ -611,7 +618,7 @@ local TeutonEvents = {
 	},
 	HansRutenbergsEviction = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 37.
 		Name = "Hans Rutenberg's Eviction",
-		Description = "The farmer Hans Rutenberg, from the village of Woddrow in PROVINCE_NAME, has refused as a form of protest to do the work required of him to his lord, and as a consequence was evicted from his land.",
+		Description = "The farmer Hans Rutenberg, from the village of Woddrow in PROVINCE_NAME, has refused as a form of protest to do the work required of him to his lord, and as a consequence was evicted from his land.", -- Woddrow is a village in Brandenburg
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "teuton"

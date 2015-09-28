@@ -5687,6 +5687,16 @@ SetWorldMapTileTerrain(518, 98, water_id)
 SetWorldMapTileTerrain(518, 99, water_id)
 SetWorldMapTileTerrain(518, 100, water_id)
 SetWorldMapTileTerrain(518, 101, water_id)
+SetWorldMapTileTerrain(518, 102, plains_id)
+SetWorldMapTileTerrain(518, 103, plains_id)
+SetWorldMapTileTerrain(518, 104, plains_id)
+SetWorldMapTileTerrain(518, 105, plains_id)
+SetWorldMapTileTerrain(518, 106, plains_id)
+SetWorldMapTileTerrain(518, 107, plains_id)
+SetWorldMapTileTerrain(518, 108, plains_id)
+SetWorldMapTileTerrain(518, 109, plains_id)
+SetWorldMapTileTerrain(518, 110, plains_id)
+SetWorldMapTileTerrain(518, 111, plains_id)
 SetWorldMapTileTerrain(518, 112, plains_id)
 SetWorldMapTileTerrain(518, 113, plains_id)
 SetWorldMapTileTerrain(518, 114, plains_id)
@@ -5761,6 +5771,14 @@ SetWorldMapTileTerrain(519, 99, water_id)
 SetWorldMapTileTerrain(519, 100, water_id)
 SetWorldMapTileTerrain(519, 101, water_id)
 SetWorldMapTileTerrain(519, 102, water_id)
+SetWorldMapTileTerrain(519, 103, plains_id)
+SetWorldMapTileTerrain(519, 104, plains_id)
+SetWorldMapTileTerrain(519, 105, plains_id)
+SetWorldMapTileTerrain(519, 106, plains_id)
+SetWorldMapTileTerrain(519, 107, plains_id)
+SetWorldMapTileTerrain(519, 108, plains_id)
+SetWorldMapTileTerrain(519, 109, plains_id)
+SetWorldMapTileTerrain(519, 110, plains_id)
 SetWorldMapTileTerrain(519, 111, plains_id)
 SetWorldMapTileTerrain(519, 112, plains_id)
 SetWorldMapTileTerrain(519, 113, plains_id)
@@ -5838,6 +5856,14 @@ SetWorldMapTileTerrain(520, 99, water_id)
 SetWorldMapTileTerrain(520, 100, water_id)
 SetWorldMapTileTerrain(520, 101, water_id)
 SetWorldMapTileTerrain(520, 102, water_id)
+SetWorldMapTileTerrain(520, 103, plains_id)
+SetWorldMapTileTerrain(520, 104, plains_id)
+SetWorldMapTileTerrain(520, 105, plains_id)
+SetWorldMapTileTerrain(520, 106, plains_id)
+SetWorldMapTileTerrain(520, 107, plains_id)
+SetWorldMapTileTerrain(520, 108, plains_id)
+SetWorldMapTileTerrain(520, 109, plains_id)
+SetWorldMapTileTerrain(520, 110, plains_id)
 SetWorldMapTileTerrain(520, 111, plains_id)
 SetWorldMapTileTerrain(520, 112, plains_id)
 SetWorldMapTileTerrain(520, 113, plains_id)
@@ -5912,6 +5938,14 @@ SetWorldMapTileTerrain(521, 99, water_id)
 SetWorldMapTileTerrain(521, 100, water_id)
 SetWorldMapTileTerrain(521, 101, water_id)
 SetWorldMapTileTerrain(521, 102, water_id)
+SetWorldMapTileTerrain(521, 103, plains_id)
+SetWorldMapTileTerrain(521, 104, plains_id)
+SetWorldMapTileTerrain(521, 105, plains_id)
+SetWorldMapTileTerrain(521, 106, plains_id)
+SetWorldMapTileTerrain(521, 107, plains_id)
+SetWorldMapTileTerrain(521, 108, plains_id)
+SetWorldMapTileTerrain(521, 109, plains_id)
+SetWorldMapTileTerrain(521, 110, plains_id)
 SetWorldMapTileTerrain(521, 111, plains_id)
 SetWorldMapTileTerrain(521, 112, plains_id)
 SetWorldMapTileTerrain(521, 113, plains_id)
@@ -5988,6 +6022,15 @@ SetWorldMapTileTerrain(522, 98, water_id)
 SetWorldMapTileTerrain(522, 99, water_id)
 SetWorldMapTileTerrain(522, 100, water_id)
 SetWorldMapTileTerrain(522, 101, water_id)
+SetWorldMapTileTerrain(522, 102, plains_id)
+SetWorldMapTileTerrain(522, 103, plains_id)
+SetWorldMapTileTerrain(522, 104, plains_id)
+SetWorldMapTileTerrain(522, 105, plains_id)
+SetWorldMapTileTerrain(522, 106, plains_id)
+SetWorldMapTileTerrain(522, 107, plains_id)
+SetWorldMapTileTerrain(522, 108, plains_id)
+SetWorldMapTileTerrain(522, 109, plains_id)
+SetWorldMapTileTerrain(522, 110, plains_id)
 SetWorldMapTileTerrain(522, 111, plains_id)
 SetWorldMapTileTerrain(522, 112, plains_id)
 SetWorldMapTileTerrain(522, 113, plains_id)
@@ -6064,6 +6107,15 @@ SetWorldMapTileTerrain(523, 98, water_id)
 SetWorldMapTileTerrain(523, 99, water_id)
 SetWorldMapTileTerrain(523, 100, water_id)
 SetWorldMapTileTerrain(523, 101, water_id)
+SetWorldMapTileTerrain(523, 102, plains_id)
+SetWorldMapTileTerrain(523, 103, plains_id)
+SetWorldMapTileTerrain(523, 104, plains_id)
+SetWorldMapTileTerrain(523, 105, plains_id)
+SetWorldMapTileTerrain(523, 106, plains_id)
+SetWorldMapTileTerrain(523, 107, plains_id)
+SetWorldMapTileTerrain(523, 108, plains_id)
+SetWorldMapTileTerrain(523, 109, plains_id)
+SetWorldMapTileTerrain(523, 110, plains_id)
 SetWorldMapTileTerrain(523, 111, plains_id)
 SetWorldMapTileTerrain(523, 112, plains_id)
 SetWorldMapTileTerrain(523, 113, plains_id)
@@ -6138,6 +6190,15 @@ SetWorldMapTileTerrain(524, 98, water_id)
 SetWorldMapTileTerrain(524, 99, water_id)
 SetWorldMapTileTerrain(524, 100, water_id)
 SetWorldMapTileTerrain(524, 101, water_id)
+SetWorldMapTileTerrain(524, 102, plains_id)
+SetWorldMapTileTerrain(524, 103, plains_id)
+SetWorldMapTileTerrain(524, 104, plains_id)
+SetWorldMapTileTerrain(524, 105, plains_id)
+SetWorldMapTileTerrain(524, 106, plains_id)
+SetWorldMapTileTerrain(524, 107, plains_id)
+SetWorldMapTileTerrain(524, 108, plains_id)
+SetWorldMapTileTerrain(524, 109, plains_id)
+SetWorldMapTileTerrain(524, 110, plains_id)
 SetWorldMapTileTerrain(524, 111, plains_id)
 SetWorldMapTileTerrain(524, 112, plains_id)
 SetWorldMapTileTerrain(524, 113, plains_id)
@@ -6213,6 +6274,16 @@ SetWorldMapTileTerrain(525, 98, water_id)
 SetWorldMapTileTerrain(525, 99, water_id)
 SetWorldMapTileTerrain(525, 100, water_id)
 SetWorldMapTileTerrain(525, 101, water_id)
+SetWorldMapTileTerrain(525, 102, plains_id)
+SetWorldMapTileTerrain(525, 103, plains_id)
+SetWorldMapTileTerrain(525, 104, plains_id)
+SetWorldMapTileTerrain(525, 105, plains_id)
+SetWorldMapTileTerrain(525, 106, plains_id)
+SetWorldMapTileTerrain(525, 107, plains_id)
+SetWorldMapTileTerrain(525, 108, plains_id)
+SetWorldMapTileTerrain(525, 109, plains_id)
+SetWorldMapTileTerrain(525, 110, plains_id)
+SetWorldMapTileTerrain(525, 111, plains_id)
 SetWorldMapTileTerrain(525, 112, plains_id)
 SetWorldMapTileTerrain(525, 113, plains_id)
 SetWorldMapTileTerrain(525, 114, plains_id)
@@ -6289,6 +6360,18 @@ SetWorldMapTileTerrain(526, 97, water_id)
 SetWorldMapTileTerrain(526, 98, water_id)
 SetWorldMapTileTerrain(526, 99, water_id)
 SetWorldMapTileTerrain(526, 100, water_id)
+SetWorldMapTileTerrain(526, 101, plains_id)
+SetWorldMapTileTerrain(526, 102, plains_id)
+SetWorldMapTileTerrain(526, 103, plains_id)
+SetWorldMapTileTerrain(526, 104, plains_id)
+SetWorldMapTileTerrain(526, 105, plains_id)
+SetWorldMapTileTerrain(526, 106, plains_id)
+SetWorldMapTileTerrain(526, 107, plains_id)
+SetWorldMapTileTerrain(526, 108, plains_id)
+SetWorldMapTileTerrain(526, 109, plains_id)
+SetWorldMapTileTerrain(526, 110, plains_id)
+SetWorldMapTileTerrain(526, 111, plains_id)
+SetWorldMapTileTerrain(526, 112, plains_id)
 SetWorldMapTileTerrain(526, 113, plains_id)
 SetWorldMapTileTerrain(526, 114, plains_id)
 SetWorldMapTileTerrain(526, 115, plains_id)
@@ -6363,6 +6446,19 @@ SetWorldMapTileTerrain(527, 97, water_id)
 SetWorldMapTileTerrain(527, 98, water_id)
 SetWorldMapTileTerrain(527, 99, water_id)
 SetWorldMapTileTerrain(527, 100, water_id)
+SetWorldMapTileTerrain(527, 101, plains_id)
+SetWorldMapTileTerrain(527, 102, plains_id)
+SetWorldMapTileTerrain(527, 103, plains_id)
+SetWorldMapTileTerrain(527, 104, plains_id)
+SetWorldMapTileTerrain(527, 105, plains_id)
+SetWorldMapTileTerrain(527, 106, plains_id)
+SetWorldMapTileTerrain(527, 107, plains_id)
+SetWorldMapTileTerrain(527, 108, plains_id)
+SetWorldMapTileTerrain(527, 109, plains_id)
+SetWorldMapTileTerrain(527, 110, plains_id)
+SetWorldMapTileTerrain(527, 111, plains_id)
+SetWorldMapTileTerrain(527, 112, plains_id)
+SetWorldMapTileTerrain(527, 113, plains_id)
 SetWorldMapTileTerrain(527, 114, plains_id)
 SetWorldMapTileTerrain(527, 115, plains_id)
 SetWorldMapTileTerrain(527, 116, plains_id) -- Brünn
@@ -6437,6 +6533,18 @@ SetWorldMapTileTerrain(528, 97, water_id)
 SetWorldMapTileTerrain(528, 98, water_id)
 SetWorldMapTileTerrain(528, 99, water_id)
 SetWorldMapTileTerrain(528, 100, water_id)
+SetWorldMapTileTerrain(528, 101, plains_id)
+SetWorldMapTileTerrain(528, 102, plains_id)
+SetWorldMapTileTerrain(528, 103, plains_id)
+SetWorldMapTileTerrain(528, 104, plains_id)
+SetWorldMapTileTerrain(528, 105, plains_id)
+SetWorldMapTileTerrain(528, 106, plains_id)
+SetWorldMapTileTerrain(528, 107, plains_id)
+SetWorldMapTileTerrain(528, 108, plains_id)
+SetWorldMapTileTerrain(528, 109, plains_id)
+SetWorldMapTileTerrain(528, 110, plains_id)
+SetWorldMapTileTerrain(528, 111, plains_id)
+SetWorldMapTileTerrain(528, 112, plains_id)
 SetWorldMapTileTerrain(528, 113, plains_id)
 SetWorldMapTileTerrain(528, 114, plains_id)
 SetWorldMapTileTerrain(528, 115, plains_id)
@@ -6514,6 +6622,19 @@ SetWorldMapTileTerrain(529, 96, water_id)
 SetWorldMapTileTerrain(529, 97, water_id)
 SetWorldMapTileTerrain(529, 98, water_id)
 SetWorldMapTileTerrain(529, 99, water_id)
+SetWorldMapTileTerrain(529, 100, plains_id)
+SetWorldMapTileTerrain(529, 101, plains_id)
+SetWorldMapTileTerrain(529, 102, plains_id)
+SetWorldMapTileTerrain(529, 103, plains_id)
+SetWorldMapTileTerrain(529, 104, plains_id)
+SetWorldMapTileTerrain(529, 105, plains_id)
+SetWorldMapTileTerrain(529, 106, plains_id)
+SetWorldMapTileTerrain(529, 107, plains_id)
+SetWorldMapTileTerrain(529, 108, plains_id)
+SetWorldMapTileTerrain(529, 109, plains_id)
+SetWorldMapTileTerrain(529, 110, plains_id)
+SetWorldMapTileTerrain(529, 111, plains_id)
+SetWorldMapTileTerrain(529, 112, plains_id)
 SetWorldMapTileTerrain(529, 113, plains_id)
 SetWorldMapTileTerrain(529, 114, plains_id)
 SetWorldMapTileTerrain(529, 115, plains_id)
@@ -6592,6 +6713,20 @@ SetWorldMapTileTerrain(530, 96, water_id)
 SetWorldMapTileTerrain(530, 97, water_id)
 SetWorldMapTileTerrain(530, 98, water_id)
 SetWorldMapTileTerrain(530, 99, water_id)
+SetWorldMapTileTerrain(530, 100, plains_id)
+SetWorldMapTileTerrain(530, 101, plains_id)
+SetWorldMapTileTerrain(530, 102, plains_id)
+SetWorldMapTileTerrain(530, 103, plains_id)
+SetWorldMapTileTerrain(530, 104, plains_id)
+SetWorldMapTileTerrain(530, 105, plains_id)
+SetWorldMapTileTerrain(530, 106, plains_id)
+SetWorldMapTileTerrain(530, 107, plains_id)
+SetWorldMapTileTerrain(530, 108, plains_id)
+SetWorldMapTileTerrain(530, 109, plains_id)
+SetWorldMapTileTerrain(530, 110, plains_id)
+SetWorldMapTileTerrain(530, 111, plains_id)
+SetWorldMapTileTerrain(530, 112, plains_id)
+SetWorldMapTileTerrain(530, 113, plains_id)
 SetWorldMapTileTerrain(530, 114, plains_id)
 SetWorldMapTileTerrain(530, 115, plains_id)
 SetWorldMapTileTerrain(530, 116, plains_id)
@@ -10488,9 +10623,7 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	GrandStrategyEvents.DivisionOfDomains = nil
 	GrandStrategyEvents.AsaLawgiving = nil
 	GrandStrategyEvents.TheBirthOfSaeming = nil
-	
-	SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6) -- to make this province less easily conquered
-	
+
 	-- Corded Ware culture (neolithic) begins in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 end
 
@@ -10987,6 +11120,14 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Brandenburg", "teuton")
 	SetProvinceSettlementBuilding("Brandenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
+	
+	SetProvinceOwner("Hither Pomerania", "goth", "Rugian Tribe")
+	SetProvinceCivilization("Hither Pomerania", "goth")
+	SetProvinceSettlementBuilding("Hither Pomerania", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Farther Pomerania", "goth", "Rugian Tribe")
+	SetProvinceCivilization("Farther Pomerania", "goth")
+	SetProvinceSettlementBuilding("Farther Pomerania", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Rugian Tribe")
 end
 
 if (GrandStrategyYear >= -241) then
@@ -11333,8 +11474,6 @@ if (GrandStrategyYear >= 83) then
 end
 	
 if (GrandStrategyYear >= 98) then
-	-- Rugians attested in Tacitus' Germania, from 98 AD; shown as being in Bavaria by William R. Shepherd's Historical Atlas (1911) p. 45
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Rugian Tribe")
 --	SetProvinceOwner("Sweden", "norse", "Swede Tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
@@ -11366,10 +11505,14 @@ if (GrandStrategyYear >= 150) then
 	SetProvinceOwner("Prussia", "goth", "Goth Tribe") -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceUnitQuantity("Prussia", "unit-germanic-warrior", 0)
 	
-	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Holland", "teuton")
 	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
+	
+	-- Rugians shown as being in Bavaria (presumably) in 150 AD; Source William R. Shepherd's Historical Atlas, 1911, p. 45.
+	SetProvinceOwner("Bavaria", "goth", "Rugian Tribe")
+	SetProvinceOwner("Franconia", "goth", "Rugian Tribe")
 end
 
 if (GrandStrategyYear >= 166) then
@@ -11986,11 +12129,11 @@ if (GrandStrategyYear >= 1600) then
 	SetRegionPopulation("Scandinavia", 2000000) -- 2 million people lived in Scandinavia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
-if (GrandStrategyYear >= 1616) then -- The Peasants' and Shepherds' Ordinance passed in Western and Eastern Pommerania; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
+if (GrandStrategyYear >= 1616) then -- The Peasants' and Shepherds' Ordinance passed in Eastern Pomerania in 1616 (it would later be extended to Western Pomerania in 1645); Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 30.
 	GrandStrategyEvents.ThePeasantsAndShepherdsOrdinance = nil
 end
 
-if (GrandStrategyYear >= 1618) then -- Brandenburg acquired the Duchy of Prussia in 1618, although it remained under Polish suzerainty until 1657-1660, and Farther Pommerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+if (GrandStrategyYear >= 1618) then -- Brandenburg acquired the Duchy of Prussia in 1618, although it remained under Polish suzerainty until 1657-1660; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
 	SetProvinceOwner("Prussia", "teuton", "Brandenburg")
 end
 
@@ -11998,10 +12141,19 @@ if (GrandStrategyYear >= 1629) then -- Sweden acquired Estonia in 1561 and Livon
 	SetProvinceOwner("Baltic Lands", "norse", "Sweden")
 end
 
-if (GrandStrategyYear >= 1648) then -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+if (GrandStrategyYear >= 1635) then -- Saxony acquired Upper Lusatia in 1635; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+end
+
+if (GrandStrategyYear >= 1648) then
+	-- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	SetProvinceOwner("Netherlands", "teuton", "Netherlands")
 	SetProvinceOwner("Friesland", "teuton", "Netherlands")
 	SetProvinceOwner("Rhineland", "teuton", "Westphalia")
+	SetProvinceOwner("Hither Pomerania", "norse", "Sweden")
+	SetProvinceOwner("Bremen", "norse", "Sweden")
+	
+	 -- Farther Pomerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	SetProvinceOwner("Farther Pomerania", "teuton", "Brandenburg")
 end
 
 if (GrandStrategyYear >= 1649) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
