@@ -11505,6 +11505,8 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceSettlementBuilding("Moselle", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Normandy", "latin", "Rome")
 	SetProvinceSettlementBuilding("Normandy", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Palatinate", "latin", "Rome")
+	SetProvinceSettlementBuilding("Palatinate", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Belgium", "latin", "Rome")
 	SetProvinceOwner("Switzerland", "latin", "Rome")
 end
@@ -11872,13 +11874,15 @@ if (GrandStrategyYear >= 506) then
 --	SetProvinceOwner("Moselle", "teuton", "Alamanni Tribe")
 --	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
 --	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
-	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and Lorraine) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+--	SetProvinceOwner("Palatinate", "teuton", "Alamanni Tribe")
+	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg, Lorraine and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Alsace", "teuton", "Francia")
 	SetProvinceOwner("Baden", "teuton", "Francia")
 	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
 	SetProvinceOwner("Augsburg", "teuton", "Francia")
 	SetProvinceOwner("Lorraine", "teuton", "Francia")
 	SetProvinceOwner("Moselle", "teuton", "Francia")
+	SetProvinceOwner("Palatinate", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
