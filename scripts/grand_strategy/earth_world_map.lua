@@ -4638,9 +4638,8 @@ SetWorldMapTileTerrain(504, 99, water_id)
 SetWorldMapTileTerrain(504, 100, water_id)
 SetWorldMapTileTerrain(504, 101, water_id)
 SetWorldMapTileTerrain(504, 102, water_id)
-SetWorldMapTileRiver(504, 102, "south", "Elbe")
+SetWorldMapTileRiver(504, 102, "southeast", "Elbe")
 SetWorldMapTileTerrain(504, 103, plains_id)
-SetWorldMapTileRiver(504, 103, "north", "Elbe")
 SetWorldMapTileTerrain(504, 104, plains_id)
 SetWorldMapTileTerrain(504, 105, plains_id)
 SetWorldMapTileTerrain(504, 106, plains_id)
@@ -10312,6 +10311,13 @@ SetWorldMapTileTerrain(623, 121, plains_id)
 SetWorldMapTileTerrain(623, 122, plains_id)
 SetWorldMapTileTerrain(624, 121, plains_id)
 SetWorldMapTileTerrain(624, 122, plains_id)
+
+--SetRiverCulturalName("Rhine", "latin", "Rhenus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Danube", "latin", "Danuvius") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Danube", "teuton", "Donau")
+SetRiverCulturalName("Elbe", "latin", "Albis") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Tagus", "latin", "Tagus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Guadiana", "latin", "Anas") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
 --[[
 WorldMapResources = {
