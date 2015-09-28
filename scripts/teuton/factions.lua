@@ -134,11 +134,20 @@ DefineFaction("Saxon Tribe", {
 	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland", "Westphalia"}
 })
 
+DefineFaction("Semnone Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "black",
+	SecondaryColor = "black",
+	DevelopsTo = {"Suebi Tribe", "Bavaria", "Austria"}
+})
+
 DefineFaction("Suebi Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "black",
 	SecondaryColor = "black",
+	DefaultTier = "duchy",
 	DevelopsTo = {"Galicia", "Bavaria", "Austria"}
 })
 

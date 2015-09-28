@@ -669,19 +669,22 @@ function LoadProvinces(world)
 			Name = "Brandenburg",
 			CulturalNames = {
 				teuton = "Brandenburg",
+				SemnoneTribe = "Semnonia",
 				SuebiTribe = "Semnonia"
 			},
 			Tiles = {
 				{127, 27}, {128, 25}, {128, 26}, {128, 27}, {129, 25}, {129, 26}, {129, 27}, -- old map
+				{518, 106},
 			},
 			SettlementName = "Berlin",
 			CulturalSettlementNames = {
 				teuton = "Berlin"
 			},
-			SettlementLocation = {129, 26}, -- Berlin
+			SettlementLocation = {518, 106}, -- Berlin
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"teuton", "Semnone Tribe",
 				"teuton", "Suebi Tribe",
 				"teuton", "Brandenburg"
 			}
@@ -1249,7 +1252,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"goth", "Rugian Tribe"
+				"goth", "Turcilingian Tribe"
 			},
 			Coastal = true
 		},
