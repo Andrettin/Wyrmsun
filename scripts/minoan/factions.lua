@@ -40,7 +40,8 @@ DefineFaction("Crete", { -- Minoans
 	Type = "polity",
 	Color = "yellow",
 	SecondaryColor = "yellow",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })

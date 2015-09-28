@@ -48,8 +48,9 @@ DefineFaction("Denmark", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -58,8 +59,9 @@ DefineFaction("Norway", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "red",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -68,7 +70,8 @@ DefineFaction("Sweden", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "yellow",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })

@@ -145,9 +145,12 @@ DefineFaction("France", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "white",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom",
-		"republic", "Republic"
+		"monarchy", "kingdom", "Kingdom",
+		"monarchy", "empire", "Empire",
+		"republic", "kingdom", "Republic",
+		"republic", "empire", "Republic"
 	}
 })
 
@@ -156,8 +159,9 @@ DefineFaction("Moldavia", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Principality"
+		"monarchy", "duchy", "Principality"
 	}
 })
 
@@ -166,9 +170,10 @@ DefineFaction("Portugal", {
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "red",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom",
-		"republic", "Republic"
+		"monarchy", "kingdom", "Kingdom",
+		"republic", "kingdom", "Republic"
 	}
 })
 
@@ -177,9 +182,12 @@ DefineFaction("Rome", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "yellow",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Empire",
-		"republic", "Republic"
+		"monarchy", "kingdom", "Kingdom",
+		"monarchy", "empire", "Empire",
+		"republic", "kingdom", "Republic",
+		"republic", "empire", "Republic"
 	}
 })
 
@@ -188,8 +196,9 @@ DefineFaction("Savoy", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy"
 	}
 })
 
@@ -198,8 +207,9 @@ DefineFaction("Sicily", {
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "green",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy"
 	}
 })
 
@@ -208,9 +218,10 @@ DefineFaction("Spain", {
 	Type = "polity",
 	Color = "yellow",
 	SecondaryColor = "red",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom",
-		"republic", "Republic"
+		"monarchy", "kingdom", "Kingdom",
+		"monarchy", "kingdom", "Republic"
 	}
 })
 
@@ -219,8 +230,9 @@ DefineFaction("Transylvania", {
 	Type = "polity",
 	Color = "cyan",
 	SecondaryColor = "cyan",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Principality"
+		"monarchy", "duchy", "Principality"
 	}
 })
 
@@ -229,8 +241,9 @@ DefineFaction("Venice", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "red",
+	DefaultTier = "duchy",
 	Titles = {
-		"republic", "Republic"
+		"republic", "duchy", "Republic"
 	}
 })
 
@@ -239,7 +252,8 @@ DefineFaction("Wallachia", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Principality"
+		"monarchy", "duchy", "Principality"
 	}
 })

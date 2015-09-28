@@ -49,9 +49,10 @@ DefineFaction("Argos", {
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "green",
+	DefaultTier = "county",
 	Titles = {
-		"monarchy", "City-State",
-		"republic", "City-State"
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
 	}
 })
 
@@ -60,19 +61,10 @@ DefineFaction("Athens", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "red",
+	DefaultTier = "county",
 	Titles = {
-		"monarchy", "City-State",
-		"republic", "City-State"
-	}
-})
-
-DefineFaction("Krete", {
-	Civilization = "greek",
-	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "yellow",
-	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
 	}
 })
 
@@ -81,8 +73,20 @@ DefineFaction("Epirus", {
 	Type = "polity",
 	Color = "yellow",
 	SecondaryColor = "yellow",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
+	}
+})
+
+DefineFaction("Krete", {
+	Civilization = "greek",
+	Type = "polity",
+	Color = "yellow",
+	SecondaryColor = "yellow",
+	DefaultTier = "kingdom",
+	Titles = {
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -91,8 +95,9 @@ DefineFaction("Macedon", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "red",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -101,9 +106,10 @@ DefineFaction("Mycenae", {
 	Type = "polity",
 	Color = "orange",
 	SecondaryColor = "orange",
+	DefaultTier = "county",
 	Titles = {
-		"monarchy", "City-State",
-		"republic", "City-State"
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
 	}
 })
 
@@ -112,9 +118,10 @@ DefineFaction("Sparta", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
+	DefaultTier = "county",
 	Titles = {
-		"monarchy", "City-State",
-		"republic", "City-State"
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
 	}
 })
 
@@ -123,9 +130,10 @@ DefineFaction("Thebes", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "blue",
+	DefaultTier = "county",
 	Titles = {
-		"monarchy", "City-State",
-		"republic", "City-State"
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
 	}
 })
 
@@ -134,7 +142,8 @@ DefineFaction("Thrace", {
 	Type = "polity",
 	Color = "orange",
 	SecondaryColor = "orange",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })

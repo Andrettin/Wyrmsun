@@ -10978,8 +10978,8 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceSettlementBuilding("Mecklenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Varini Tribe")
 	
-	SetProvinceOwner("Sweden", "teuton", "Swede Tribe")
-	SetProvinceCivilization("Sweden", "teuton")
+	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
+	SetProvinceCivilization("Sweden", "norse")
 	SetProvinceSettlementBuilding("Sweden", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Swede Tribe")
 	
@@ -11929,7 +11929,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Brandenburg", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	
---	Factions.Austria.Title = "Archduchy"
+	SetFactionTier("teuton", "Austria", "grand duchy")
 	SetProvinceOwner("Austria", "teuton", "Austria")
 	SetProvinceOwner("Bohemia", "teuton", "Austria")
 	SetProvinceOwner("Carniola", "teuton", "Austria")

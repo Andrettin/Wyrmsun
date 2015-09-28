@@ -164,8 +164,10 @@ DefineFaction("Austria", {
 	Type = "polity",
 	Color = "white",
 	SecondaryColor = "red",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy" -- later Archduchy
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "grand duchy", "Archduchy"
 	}
 })
 
@@ -174,8 +176,9 @@ DefineFaction("Baden", {
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
+	DefaultTier = "grand duchy",
 	Titles = {
-		"monarchy", "Grand Duchy"
+		"monarchy", "grand duchy", "Grand Duchy"
 	}
 })
 
@@ -184,8 +187,10 @@ DefineFaction("Bavaria", {
 	Type = "polity",
 	Color = "cyan",
 	SecondaryColor = "white",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -194,8 +199,9 @@ DefineFaction("Brandenburg", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "blue",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Margravate"
+		"monarchy", "duchy", "Margravate"
 	},
 	DevelopsTo = {"Prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
 })
@@ -205,8 +211,9 @@ DefineFaction("Bremen", {
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy"
 	}
 })
 
@@ -215,8 +222,9 @@ DefineFaction("Brunswick", {
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "green",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy"
 	}
 })
 
@@ -225,8 +233,9 @@ DefineFaction("England", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -235,8 +244,9 @@ DefineFaction("Francia", {
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "orange",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -245,8 +255,9 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -255,8 +266,9 @@ DefineFaction("Jutland", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy"
 	}
 })
 
@@ -265,8 +277,9 @@ DefineFaction("Mecklenburg", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
+	DefaultTier = "grand duchy",
 	Titles = {
-		"monarchy", "Grand Duchy"
+		"monarchy", "grand duchy", "Grand Duchy"
 	}
 })
 
@@ -275,8 +288,10 @@ DefineFaction("Netherlands", {
 	Type = "polity",
 	Color = "orange",
 	SecondaryColor = "blue",
+	DefaultTier = "kingdom",
 	Titles = {
-		"republic", "Republic"
+		"monarchy", "kingdom", "Kingdom",
+		"republic", "kingdom", "Republic"
 	}
 })
 
@@ -285,8 +300,10 @@ DefineFaction("Prussia", {
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "white",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -295,8 +312,10 @@ DefineFaction("Saxony", {
 	Type = "polity",
 	Color = "pink",
 	SecondaryColor = "pink",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -305,8 +324,9 @@ DefineFaction("Scotland", {
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "white",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -315,8 +335,9 @@ DefineFaction("Switzerland", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
+	DefaultTier = "kingdom",
 	Titles = {
-		"republic", "Confederation"
+		"republic", "kingdom", "Confederation"
 	}
 })
 
@@ -325,8 +346,9 @@ DefineFaction("Westphalia", {
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Duchy"
+		"monarchy", "duchy", "Duchy"
 	}
 })
 
@@ -335,8 +357,9 @@ DefineFaction("Wurtemberg", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "red",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -348,8 +371,9 @@ DefineFaction("Crimea", {
 	Color = "brown",
 	SecondaryColor = "brown",
 	Playable = false,
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Khanate"
+		"monarchy", "kingdom", "Khanate"
 	}
 })
 
@@ -359,8 +383,9 @@ DefineFaction("Croatia", {
 	Color = "blue",
 	SecondaryColor = "red",
 	Playable = false,
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -370,8 +395,9 @@ DefineFaction("Hungary", {
 	Color = "green",
 	SecondaryColor = "green",
 	Playable = false,
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -381,8 +407,9 @@ DefineFaction("Muscovy", {
 	Color = "red",
 	SecondaryColor = "red",
 	Playable = false,
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Principality"
+		"monarchy", "duchy", "Principality"
 	}
 })
 
@@ -392,8 +419,9 @@ DefineFaction("Poland", {
 	Color = "red",
 	SecondaryColor = "white",
 	Playable = false,
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -403,8 +431,9 @@ DefineFaction("Russia", {
 	Color = "blue",
 	SecondaryColor = "red",
 	Playable = false,
+	DefaultTier = "empire",
 	Titles = {
-		"monarchy", "Empire"
+		"monarchy", "empire", "Empire"
 	}
 })
 
@@ -414,7 +443,8 @@ DefineFaction("Turkey", {
 	Color = "brown",
 	SecondaryColor = "brown",
 	Playable = false,
+	DefaultTier = "empire",
 	Titles = {
-		"monarchy", "Empire"
+		"monarchy", "empire", "Empire"
 	}
 })

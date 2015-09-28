@@ -86,8 +86,9 @@ DefineFaction("Burgundy", {
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -96,8 +97,9 @@ DefineFaction("Gothia", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "red",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -106,7 +108,8 @@ DefineFaction("Vandalia", {
 	Type = "polity",
 	Color = "cyan",
 	SecondaryColor = "blue",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })

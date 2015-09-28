@@ -70,8 +70,9 @@ DefineFaction("Kal Kartha", {
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Lordship"
+		"monarchy", "duchy", "Lordship"
 	}
 })
 
@@ -80,8 +81,9 @@ DefineFaction("Knalga", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "orange",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Lordship"
+		"monarchy", "duchy", "Lordship"
 	}
 })
 
@@ -90,7 +92,8 @@ DefineFaction("Lyr", {
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "teal",
+	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "Lordship"
+		"monarchy", "duchy", "Lordship"
 	}
 })

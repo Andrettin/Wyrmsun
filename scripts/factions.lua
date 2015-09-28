@@ -129,8 +129,9 @@ DefineFaction("Untersberg", {
 	Type = "polity",
 	Color = "purple",
 	SecondaryColor = "purple",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
@@ -188,8 +189,9 @@ DefineFaction("Persia", {
 	Type = "polity",
 	Color = "yellow",
 	SecondaryColor = "green",
+	DefaultTier = "kingdom",
 	Titles = {
-		"monarchy", "Kingdom"
+		"monarchy", "kingdom", "Kingdom"
 	}
 })
 
